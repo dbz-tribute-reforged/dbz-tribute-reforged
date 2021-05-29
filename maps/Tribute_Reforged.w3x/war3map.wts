@@ -485,9 +485,9 @@ Gotenks
 }
 
 STRING 81
-// Units: n00N (Witch), Name (Name)
+// Units: H03Y (Martial Artist), Name (Name)
 {
-Witch
+Martial Artist
 }
 
 STRING 82
@@ -524,9 +524,9 @@ A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: S
 }
 
 STRING 87
-// Units: n00O (Unknown Demon), Name (Name)
+// Units: N01G (Krillin), Name (Name)
 {
-Unknown Demon
+Krillin
 }
 
 STRING 88
@@ -823,9 +823,9 @@ S
 }
 
 STRING 131
-// Units: n014 (Mountain Beast), Name (Name)
+// Units: H03Y (Martial Artist), Awakentip (Tooltip - Awaken)
 {
-Mountain Beast
+[|cffffff00W|r] Choose Krillin
 }
 
 STRING 132
@@ -944,15 +944,22 @@ Red Ribbon Enforcer Droid
 }
 
 STRING 150
-// Units: n01D (Bandit), Name (Name)
+// Units: H03Y (Martial Artist), Ubertip (Tooltip - Extended)
 {
-Bandit
+A well-rounded hero who gains multiplier slightly quicker than others and can deal devastating damage based on the enemy's max health. Has the unique ability to throw senzu beans to other heroes.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 151
-// Units: n01E (Rogue), Name (Name)
+// Units: n014 (Wolf), Name (Name)
 {
-Rogue
+Wolf
 }
 
 STRING 152
@@ -1023,13 +1030,13 @@ Gohan
 }
 
 STRING 163
-// Units: N01G (Krillin), Name (Name)
+// Units: N01G (Krillin), Propernames (Proper Names)
 {
 Krillin
 }
 
 STRING 164
-// Units: N01G (Krillin), Propernames (Proper Names)
+// Units: H03Y (Martial Artist), Propernames (Proper Names)
 {
 Krillin
 }
@@ -1222,9 +1229,9 @@ Civilian Controlled By Bebi
 }
 
 STRING 196
-// Units: n01U (Baby Snapping Turtle), Name (Name)
+// Units: H03Y (Martial Artist), Tip (Tooltip - Basic)
 {
-Baby Snapping Turtle
+[|cffffff00W|r] Choose Krillin
 }
 
 STRING 197
@@ -1354,9 +1361,9 @@ Nappa
 }
 
 STRING 218
-// Units: n020 (Forest Spider), Name (Name)
+// Units: H03B (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
-Forest Spider
+(Kid)
 }
 
 STRING 219
@@ -1426,9 +1433,9 @@ Lord Slug Guard
 }
 
 STRING 230
-// Units: n023 (Nocturnal Creature), Name (Name)
+// Units: u003 (Geti Star Resource Transporter), Hotkey (Hotkey)
 {
-Nocturnal Creature
+W
 }
 
 STRING 231
@@ -2400,15 +2407,21 @@ Teen Dinosaur
 }
 
 STRING 391
-// Units: n02G (Forest Monster), Name (Name)
+// Abilities: A007 (Sword Of Hope), Name (Name)
 {
-Forest Monster
+Sword Of Hope
 }
 
 STRING 392
-// Units: n02H (Adult Snapping Turtle), Name (Name)
+// Abilities: A007 (Sword Of Hope), Ubertip (Tooltip - Normal - Extended)
 {
-Adult Snapping Turtle
+Trunks absorbs the energy of his friends into himself and forms an unstoppable blade of energy to destroy his enemies. Deals +10% additional damage for each allied player.
+|cffff2020Note: Will be cast at melee range!
+|cff00ff00Damage: ? * (Str + Agi + Int)
+Duration: <A007,Dur1> seconds
+|cff00ffffCooldown: <A007,Cool1> seconds
+
+|cff808080"I don't give a damn about your so called justice!"|r
 }
 
 STRING 393
@@ -3084,9 +3097,9 @@ STRING 504
 }
 
 STRING 505
-// Units: n00A (Treacherous Lobster), Name (Name)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
-Treacherous Lobster
+F
 }
 
 STRING 506
@@ -3699,7 +3712,7 @@ STRING 605
 }
 
 STRING 606
-// Units: H03Y (Martial Artist), Propernames (Proper Names)
+// Units: H03B (Martial Artist), Propernames (Proper Names)
 {
 Krillin
 }
@@ -3708,6 +3721,18 @@ STRING 607
 // Items: I045 (Krabby Patty), Ubertip (Tooltip - Extended)
 {
 |cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 4% of max health per second. Doubles the rate of stamina regen.|r|cff00ff00|nDuration: <A0N4,Dur1>s|r|n|cff00ffffCooldown: <A0N4,Cool1>s|r|n|cff808080"Can you take the crust off my Krabby Patty."|r
+}
+
+STRING 608
+// Units: n01E (Red Ribbon Soldier), Name (Name)
+{
+Red Ribbon Soldier
+}
+
+STRING 609
+// Abilities: A007 (Sword Of Hope), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Sword Of Hope
 }
 
 STRING 610
@@ -4049,9 +4074,9 @@ Namekian Frog
 }
 
 STRING 665
-// Units: n02Q (Giant Crab), Name (Name)
+// Abilities: A007 (Sword Of Hope), EditorSuffix (Editor Suffix)
 {
-Giant Crab
+(ft)
 }
 
 STRING 666
@@ -4076,12 +4101,6 @@ STRING 669
 // Units: n02R (Frieza's Henchman), Name (Name)
 {
 Frieza's Henchman
-}
-
-STRING 670
-// Units: n02S (Mother Crab), Name (Name)
-{
-Mother Crab
 }
 
 STRING 671
@@ -4416,6 +4435,12 @@ STRING 721
 Namekian
 }
 
+STRING 722
+// Units: H085 (Daughter of Hercule), Name (Name)
+{
+Daughter of Hercule
+}
+
 STRING 723
 // Units: H04X (Namekian), Awakentip (Tooltip - Awaken)
 {
@@ -4433,6 +4458,45 @@ STRING 725
 // Units: H04X (Namekian), Tip (Tooltip - Basic)
 {
 Choose Piccolo
+}
+
+STRING 726
+// Units: H085 (Daughter of Hercule), Propernames (Proper Names)
+{
+Videl
+}
+
+STRING 727
+// Units: H085 (Daughter of Hercule), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00W|r] Choose Videl
+}
+
+STRING 728
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+{
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+
+|cffffcc00Budokai Champion:|r +50% stats from tournaments.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 729
+// Units: H085 (Daughter of Hercule), Tip (Tooltip - Basic)
+{
+[|cffffff00W|r] Choose Videl
+}
+
+STRING 730
+// Units: H00S (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
+{
+(Long Hair)
 }
 
 STRING 731
@@ -4526,12 +4590,6 @@ STRING 744
 Primal Demon King
 }
 
-STRING 745
-// Units: n034 (Immortal Demon), Name (Name)
-{
-Immortal Demon
-}
-
 STRING 746
 // Units: H055 (Three-Eyed Baldy), Name (Name)
 {
@@ -4544,6 +4602,12 @@ STRING 747
 Tien
 }
 
+STRING 748
+// Units: H03Y (Martial Artist), Hotkey (Hotkey)
+{
+W
+}
+
 STRING 749
 // Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4553,6 +4617,12 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff00FFFFCooldown: <A0U9,Cool1>s|r
 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 750
+// Units: n01D (Red Ribbon Fighter), Name (Name)
+{
+Red Ribbon Fighter
 }
 
 STRING 751
@@ -4802,6 +4872,12 @@ STRING 790
 // Units: H05Y ( ), Name (Name)
 {
  
+}
+
+STRING 791
+// Units: n01D (Red Ribbon Fighter), EditorSuffix (Name - Editor Suffix)
+{
+(soldier 1)
 }
 
 STRING 792
@@ -5079,6 +5155,12 @@ STRING 831
 Kid Trunks
 }
 
+STRING 832
+// Units: n01E (Red Ribbon Soldier), EditorSuffix (Name - Editor Suffix)
+{
+(soldier gun 2)
+}
+
 STRING 833
 // Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5245,7 +5327,7 @@ Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldow
 }
 
 STRING 855
-// Units: u003 (Geti Star Resource Transporter), Hotkey (Hotkey)
+// Units: E001 (Master Roshi), Hotkey (Hotkey)
 {
 W
 }
@@ -5936,12 +6018,6 @@ STRING 964
 Snipe Test
 }
 
-STRING 965
-// Units: n03G (Bandit Lord), Name (Name)
-{
-Bandit Lord
-}
-
 STRING 966
 // Units: U01J (Ogre), Name (Name)
 {
@@ -6135,7 +6211,7 @@ STRING 997
 }
 
 STRING 998
-// Units: H03Y (Martial Artist), Hotkey (Hotkey)
+// Units: E004 (Master Roshi), Hotkey (Hotkey)
 {
 W
 }
@@ -6158,6 +6234,12 @@ STRING 1001
 Kamehameha Charge
 }
 
+STRING 1002
+// Units: n01U (Baby Fish), Name (Name)
+{
+Baby Fish
+}
+
 STRING 1003
 // Units: H09T (Shinigami), Hotkey (Hotkey)
 {
@@ -6165,7 +6247,7 @@ D
 }
 
 STRING 1004
-// Units: E001 (Master Roshi), Hotkey (Hotkey)
+// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
 {
 W
 }
@@ -6672,12 +6754,6 @@ STRING 1082
 YellowSpark
 }
 
-STRING 1083
-// Units: n03L (Spooky Demon), Name (Name)
-{
-Spooky Demon
-}
-
 STRING 1084
 // Units: n03M (Bird Hater), Name (Name)
 {
@@ -7058,6 +7134,18 @@ STRING 1142
 // Units: H07X (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 Bebi
+}
+
+STRING 1143
+// Units: n020 (Baby Wolf), Name (Name)
+{
+Baby Wolf
+}
+
+STRING 1144
+// Units: n02H (Adult Fish), Name (Name)
+{
+Adult Fish
 }
 
 STRING 1145
@@ -7447,6 +7535,12 @@ STRING 1201
 S
 }
 
+STRING 1202
+// Units: n00A (Sea Serpent), Name (Name)
+{
+Sea Serpent
+}
+
 STRING 1203
 // Units: E01P (Pride Trooper), Name (Name)
 {
@@ -7594,13 +7688,13 @@ Q
 }
 
 STRING 1225
-// Units: H085 (Daughter of Hercule), Name (Name)
+// Units: H00S (Daughter of Hercule), Name (Name)
 {
 Daughter of Hercule
 }
 
 STRING 1226
-// Units: H085 (Daughter of Hercule), Propernames (Proper Names)
+// Units: H00S (Daughter of Hercule), Propernames (Proper Names)
 {
 Videl
 }
@@ -7769,7 +7863,7 @@ King Piccolo
 }
 
 STRING 1253
-// Units: H08E (Mummy), Name (Name)
+// Units: n00N (Mummy), Name (Name)
 {
 Mummy
 }
@@ -7957,6 +8051,12 @@ STRING 1280
 Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
 |cffffff00Costs 2 time skip charges.|r
 |cff00FFFFCooldown: <A0FU,Cool7,.>s|r
+}
+
+STRING 1281
+// Units: n02Q (Giant Crocodile), Name (Name)
+{
+Giant Crocodile
 }
 
 STRING 1282
@@ -9448,7 +9548,7 @@ Train Speed |cffffff00(W)|r
 }
 
 STRING 1527
-// Units: E004 (Master Roshi), Hotkey (Hotkey)
+// Units: H09C (Leader of the Pride Troopers), Hotkey (Hotkey)
 {
 W
 }
@@ -10176,6 +10276,12 @@ STRING 1645
 // Units: H091 (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (bulky body 2)
+}
+
+STRING 1646
+// Units: n02S (Crocodile Mother), Name (Name)
+{
+Crocodile Mother
 }
 
 STRING 1647
@@ -11494,6 +11600,48 @@ STRING 1863
 Vision Corrector
 }
 
+STRING 1864
+// Units: n02G (Alpha Wolf), Name (Name)
+{
+Alpha Wolf
+}
+
+STRING 1865
+// Units: n03G (Red Ribbon Corporal), Name (Name)
+{
+Red Ribbon Corporal
+}
+
+STRING 1866
+// Units: n03G (Red Ribbon Corporal), EditorSuffix (Name - Editor Suffix)
+{
+(soldier 4)
+}
+
+STRING 1867
+// Units: n00O (Angry Ghost), Name (Name)
+{
+Angry Ghost
+}
+
+STRING 1868
+// Units: n023 (Evil Spirit), Name (Name)
+{
+Evil Spirit
+}
+
+STRING 1869
+// Units: n02T (Immortal Demon), EditorSuffix (Name - Editor Suffix)
+{
+(archimonde)
+}
+
+STRING 1870
+// Units: n034 (Dark Spirit), Name (Name)
+{
+Dark Spirit
+}
+
 STRING 1871
 // Abilities: ANht (Chaos Scream), Ubertip (Tooltip - Normal - Extended)
 {
@@ -11872,8 +12020,26 @@ STRING 1933
 30str, 25agl, 5intel
 }
 
+STRING 1934
+// Units: n038 (Adult Wolf), Name (Name)
+{
+Adult Wolf
+}
+
+STRING 1935
+// Units: n03L (Spooky Ghost), Name (Name)
+{
+Spooky Ghost
+}
+
+STRING 1936
+// Units: H08E (Mummy), Name (Name)
+{
+Mummy
+}
+
 STRING 1940
-// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
+// Units: H09J (Ginyu Force Member), Hotkey (Hotkey)
 {
 W
 }
@@ -11885,7 +12051,7 @@ Babidi's Magic
 }
 
 STRING 1944
-// Units: H09C (Leader of the Pride Troopers), Hotkey (Hotkey)
+// Units: H0A1 (Legendary Hero), Hotkey (Hotkey)
 {
 W
 }
@@ -12167,7 +12333,7 @@ Turns every unit in a line into a defenseless piece of candy. Basic attacks agai
 }
 
 STRING 1999
-// Units: H09J (Ginyu Force Member), Hotkey (Hotkey)
+// Units: H00S (Daughter of Hercule), Hotkey (Hotkey)
 {
 W
 }
@@ -12191,7 +12357,7 @@ Ginyu fires a powerful energy ball that slows movement and attack speed upon det
 }
 
 STRING 2003
-// Units: H0A1 (Legendary Hero), Hotkey (Hotkey)
+// Units: H03B (Martial Artist), Hotkey (Hotkey)
 {
 W
 }
@@ -32840,8 +33006,8 @@ Transformations:
 [lvl 75]  3/1.5/1.5x  "uss2" [unlocks heat dome attack]
 [lvl 100] 2.00x  "ss2"
 [lvl 150] 2.40x  "ss2"
-[lvl 200] 2.50x  "ss2" [unlocks ss rage]
-[lvl 250] 2.60x  "ss2"
+[lvl 200] 2.50x  "ss2" [unlocks SS Rage]
+[lvl 250] 2.60x  "ss2" [unlocks Sword Of Hope during SS Rage]
 }
 
 STRING 5696
@@ -46177,7 +46343,7 @@ STRING 8165
 }
 
 STRING 8166
-// Units: H085 (Daughter of Hercule), Awakentip (Tooltip - Awaken)
+// Units: H00S (Daughter of Hercule), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Videl
 }
@@ -56067,12 +56233,6 @@ STRING 9792
 Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
-STRING 9793
-// Units: n038 (Sabertooth Rider), Name (Name)
-{
-Sabertooth Rider
-}
-
 STRING 9794
 // Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
 {
@@ -64032,7 +64192,7 @@ Tapion dances across the battlefield, bouncing and damaging up to 15 times betwe
 }
 
 STRING 11109
-// Units: H085 (Daughter of Hercule), Tip (Tooltip - Basic)
+// Units: H00S (Daughter of Hercule), Tip (Tooltip - Basic)
 {
 [|cffffff00W|r] Choose Videl
 }
@@ -68594,11 +68754,11 @@ Stats
 
 STRING 11861
 {
-|cffff2020Strength: Increases HP by 20, increases HP regen by 0.4.|r
+|cffff2020Strength: Increases HP by 20 and HP regen by 0.4.|r
 
-|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.25% per 1000 AGI, whichever is lower.|r
+|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.25% per 1000 AGI, whichever is lower. Increases stamina.|r
 
-|cff00ffffIntelligence: Increases mana by 10, increases mana regen by 0.1.
+|cff00ffffIntelligence: Increases mana by 10 and mana regen by 0.1.
 }
 
 STRING 11862
@@ -82616,7 +82776,7 @@ STRING 14091
 }
 
 STRING 14092
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+// Units: H00S (Daughter of Hercule), Ubertip (Tooltip - Extended)
 {
 A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
 
@@ -84118,13 +84278,13 @@ Transformations:
 }
 
 STRING 14328
-// Units: H03Y (Martial Artist), Name (Name)
+// Units: H03B (Martial Artist), Name (Name)
 {
 Martial Artist
 }
 
 STRING 14329
-// Units: H03Y (Martial Artist), Awakentip (Tooltip - Awaken)
+// Units: H03B (Martial Artist), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Krillin
 }
@@ -84136,7 +84296,7 @@ Dragoon Flourish
 }
 
 STRING 14331
-// Units: H03Y (Martial Artist), Tip (Tooltip - Basic)
+// Units: H03B (Martial Artist), Tip (Tooltip - Basic)
 {
 [|cffffff00W|r] Choose Krillin
 }
@@ -102162,7 +102322,7 @@ They fuse into Super Android 13, who specializes in using massive high DPS AoE n
 }
 
 STRING 16894
-// Units: H03Y (Martial Artist), Ubertip (Tooltip - Extended)
+// Units: H03B (Martial Artist), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who gains multiplier slightly quicker than others and can deal devastating damage based on the enemy's max health. Has the unique ability to throw senzu beans to other heroes.
 

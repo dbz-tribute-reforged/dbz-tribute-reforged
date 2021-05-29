@@ -78,8 +78,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.FutureTrunks.BURNING_ATTACK, 
       AbilityNames.Vegeta.BIG_BANG_ATTACK, 
       AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, 
+      AbilityNames.FutureTrunks.SWORD_OF_HOPE, 
       AbilityNames.FutureTrunks.BLAZING_RUSH, 
-      AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE
+      AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
     ]],
     // ss rage
     [FourCC("H08I"), [

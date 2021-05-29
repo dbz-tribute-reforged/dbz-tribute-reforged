@@ -33,6 +33,12 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // future trunks
     [Id.finishBuster, AbilityNames.FutureTrunks.FINISH_BUSTER],
+    [Id.heatDomeAttack, AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],
+    [Id.burningAttack, AbilityNames.FutureTrunks.BURNING_ATTACK],
+    [Id.blazingRush, AbilityNames.FutureTrunks.BLAZING_RUSH],
+    [Id.shiningSwordAttack, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK],
+    [Id.ftSwordOfHope, AbilityNames.FutureTrunks.SWORD_OF_HOPE],
+    [Id.superSaiyanRage, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE],
 
     // goten
     [Id.gotenRockThrow, AbilityNames.Goten.ROCK_THROW],
@@ -50,13 +56,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.superGhostKamikazeAttack2, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2],
     [Id.gotenksSS3, AbilityNames.Gotenks.GOTENKS_SS3],
 
-    // future trunks
-    [Id.heatDomeAttack, AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],
-    [Id.burningAttack, AbilityNames.FutureTrunks.BURNING_ATTACK],
-    // [FourCC('A064'), "High Power Rush"],
-    [Id.blazingRush, AbilityNames.FutureTrunks.BLAZING_RUSH],
-    [Id.shiningSwordAttack, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK],
-    [Id.superSaiyanRage, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE],
 
     // piccolo
     [Id.piccoloSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],

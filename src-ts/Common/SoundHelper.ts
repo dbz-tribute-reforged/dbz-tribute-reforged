@@ -649,6 +649,12 @@ export module SoundHelper {
         }
         break;
 
+      case Id.ftSwordOfHope:
+        if (unitId == Id.ft) {
+          playSoundOnUnit(unit, "Audio/Voice/FT/SwordOfHope.mp3", 2500);
+        }
+        break;
+
       // ginyu
       case Id.milkyCannon:
         if (unitId == Id.ginyu) {

@@ -43,6 +43,7 @@ export module AbilityNames {
     export const BURNING_ATTACK: string = "Burning Attack";
     export const BLAZING_RUSH: string = "Blazing Rush";
     export const SHINING_SWORD_ATTACK: string = "Shining Sword Attack";
+    export const SWORD_OF_HOPE: string = "FT Sword Of Hope";
     export const SUPER_SAIYAN_RAGE: string = "Super Saiyan Rage";
   }
 

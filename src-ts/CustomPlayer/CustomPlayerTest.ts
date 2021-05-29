@@ -309,6 +309,12 @@ export function CustomPlayerTest() {
         const caster = GetTriggerUnit();
         const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
         Globals.customPlayers[playerId].selectedUnit = caster;
+        let damageMult = 1.0;
+        if (abilityId == Id.ftSwordOfHope) {
+          damageMult = getSwordOfHopeMult(player);
+        }
+
+
         let spellTargetUnit = undefined;
         if (GetSpellTargetUnit()) {
           Globals.customPlayers[playerId].targetUnit = GetSpellTargetUnit();
@@ -332,6 +338,7 @@ export function CustomPlayerTest() {
                 Globals.customPlayers[playerId].lastCastPoint.clone(),
                 spellTargetUnit,
                 GetSpellTargetUnit(),
+                damageMult
               ),
             );
           }
@@ -2637,4 +2644,18 @@ export function convertIntToCommaString(n: number): string {
   }
 
   return parts.reverse().join(",");
+}
+
+export function getSwordOfHopeMult(player: player): number {
+  let result = 1.0;
+  const playerAllies = GetPlayersAllies(player);
+  ForForce(playerAllies, () => {
+    const p = GetEnumPlayer();
+    const pId = GetPlayerId(p);
+    if (p != player && pId >= 0 && pId < Constants.maxActivePlayers) {
+      result += 0.1;
+    }
+  });
+  DestroyForce(playerAllies);
+  return result;
 }

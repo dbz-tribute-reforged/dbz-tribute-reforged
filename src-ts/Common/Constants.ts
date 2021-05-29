@@ -391,6 +391,7 @@ export module Id {
   export const burningAttack = FourCC("A03I");
   export const blazingRush = FourCC("A0LE");
   export const shiningSwordAttack = FourCC("A0LF");
+  export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
 
   export const ginyu = FourCC("H09E");

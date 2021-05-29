@@ -259,7 +259,7 @@ export function CustomUiTest() {
 		grandpa,
 		0, 
 		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.17),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.18),
 		new StatusBarData(0, 0, 100)
 	);
 
@@ -267,7 +267,7 @@ export function CustomUiTest() {
 		grandpa,
 		0, 
 		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.15),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
 		new StatusBarData(0, 0, 100)
 	);
 
@@ -275,7 +275,7 @@ export function CustomUiTest() {
 		grandpa,
 		0, 
 		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.13),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
 		new StatusBarData(0, 0, 100)
 	);
 

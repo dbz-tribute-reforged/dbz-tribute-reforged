@@ -17,8 +17,10 @@ export const AbilitiesList = [
     // NOTE: animations aren't implemented yet
     animation: "walk",
     icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
+      // enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+      // disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
+      enabled: "BTNBasicZanzo.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
       title: "(Z) Zanzo Dash",
@@ -47,8 +49,10 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
+      // enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
+      // disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
+      enabled: "BTNBasicGuard.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicGuard.blp",
     },
     tooltip: {
       title: "(X) Guard",
@@ -76,8 +80,10 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNNagaUnBurrow.blp",
+      // enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
+      // disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNNagaUnBurrow.blp",
+      enabled: "BTNBasicMaxPower.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicMaxPower.blp",
     },
     tooltip: {
       title: "(C) Max Power",
@@ -105,8 +111,10 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNArcaniteArmor.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNArcaniteArmor.blp",
+      // enabled: "Replaceabletextures\\CommandButtons\\BTNArcaniteArmor.blp",
+      // disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNArcaniteArmor.blp",
+      enabled: "BTNBasicDeflect.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicDeflect.blp",
     },
     tooltip: {
       title: "(V) Deflect",
@@ -1107,6 +1115,32 @@ export const AbilitiesList = [
       { name: "spell amp super saiyan rage" },
       { name: "block super saiyan rage" },
       { name: "sfx super saiyan rage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FutureTrunks.SWORD_OF_HOPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 5,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFTSwordOfHope.blp",
+      disabled: "BTNFTSwordOfHope.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.FutureTrunks.SWORD_OF_HOPE,
+      body: 
+        AbilityNames.FutureTrunks.SWORD_OF_HOPE,
+    },
+    components: [
+      { name: "multi ft sword of hope" },
     ],
   },
   // -------------------------------------------
