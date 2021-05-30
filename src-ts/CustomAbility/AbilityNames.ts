@@ -3,6 +3,7 @@ export module AbilityNames {
     export const ZANZO_DASH: string = "Zanzo Dash";
     export const GUARD: string = "Guard";
     export const MAX_POWER: string = "Max Power";
+    export const DEFLECT: string = "Deflect";
   }
 
   export module Goku {
@@ -42,6 +43,7 @@ export module AbilityNames {
     export const BURNING_ATTACK: string = "Burning Attack";
     export const BLAZING_RUSH: string = "Blazing Rush";
     export const SHINING_SWORD_ATTACK: string = "Shining Sword Attack";
+    export const SWORD_OF_HOPE: string = "FT Sword Of Hope";
     export const SUPER_SAIYAN_RAGE: string = "Super Saiyan Rage";
   }
 
@@ -133,6 +135,7 @@ export module AbilityNames {
     export const MEDITATE_2 = "Meditate 2";
     export const ULTIMATE_BURNING_WARRIOR = "Ultimate Burning Warrior";
     export const ULTIMATE_BURNING_WARRIOR_2 = "Ultimate Burning Warrior 2";
+    export const ULTIMATE_BURNING_WARRIOR_3 = "Ultimate Burning Warrior 3";
   }
 
   export module Toppo {
@@ -374,6 +377,17 @@ export module AbilityNames {
     export const AURA_STORM: string = "Aura Storm";
     export const GIGANTAMAX: string = "Gigantamax Lucario";
     export const GIGA_SPHERE: string = "Giga Sphere";
+  }
+
+  export module Saitama {
+    export const NORMAL_PUNCH = "Saitama Normal Punch";
+    export const CONSECUTIVE_PUNCHES = "Saitama Consecutive Punches";
+    export const LEAP = "Saitama Leap";
+    export const TABLE_FLIP = "Saitama Table Flip";
+    export const OK = "Saitama OK";
+    export const SERIOUS_SERIES = "Saitama Serious Series";
+    export const SERIOUS_PUNCH = "Saitama Serious Punch";
+    export const SERIOUS_SIDEWAYS_JUMPS = "Saitama Serious Sideways Jumps";
   }
 
 

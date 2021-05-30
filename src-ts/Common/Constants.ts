@@ -1,16 +1,23 @@
 import { Vector2D } from "./Vector2D";
+import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
+  
+  export const customPlayers: CustomPlayer[] = [];
+  export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
+  export let canUseCustomUi = true;
 }
 
 export module Constants {
-  export const maxSubAbilities = 3;
+  export const maxSubAbilities = 4;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
   export const dummyBeamUnitId = FourCC("hpea");
   export const dummyCasterId = FourCC("h054");
+  export const korinFlag = FourCC("h09A");
+
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
@@ -64,6 +71,30 @@ export module Constants {
   export const gameStartIndicatorUnit: number = FourCC("hkni");
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
+
+  export const uiButtonSize: number = 0.036;
+  export const uiXButtonSpacing: number = 0.001;
+  export const uiYButtonSpacing: number = 0.001;
+
+  export const BASE_STAMINA = 100.0;
+}
+
+export enum CostType {
+  HP = "Life",
+  MP = "Mana",
+  SP = "Stamina",
+  TMP_SP = "TMP Stamina",
+}
+
+export function stringToCostType(costType: string): CostType {
+  if (costType == "Life" || costType == "HP") {
+    return CostType.HP;
+  } else if (costType == "Mana" || costType == "MP") {
+    return CostType.MP;
+  } else if (costType == "TMP_SP") {
+    return CostType.TMP_SP;
+  }
+  return CostType.SP;
 }
   
 export module BASE_DMG {
@@ -105,6 +136,7 @@ export module DebuffAbilities {
   export const GRAN_REY_SLOW = FourCC("A0V7");
   export const FINAL_BURST_SLOW = FourCC("A0VE");
   export const LIGHTNING_3_SLOW = FourCC("A0WN");
+  export const TABLE_FLIP = FourCC("A03U");
 
   // entangling roots
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -148,6 +180,8 @@ export module OrderIds {
   export const SLEEP = 852227;
   export const INNER_FIRE = 852066;
   export const HOLY_BOLT = 852092;
+  export const STOP = 851972;
+  export const HOLD_POSITION = 851993;
 }
 
 export module Id {
@@ -358,6 +392,7 @@ export module Id {
   export const burningAttack = FourCC("A03I");
   export const blazingRush = FourCC("A0LE");
   export const shiningSwordAttack = FourCC("A0LF");
+  export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
 
   export const ginyu = FourCC("H09E");
@@ -459,6 +494,7 @@ export module Id {
   export const meditate2 = FourCC("A0SM");
   export const ultimateBurningWarrior = FourCC("A0KC");
   export const ultimateBurningWarrior2 = FourCC("A0SN");
+  export const ultimateBurningWarrior3 = FourCC("A005");
 
   export const krillin = FourCC("H03Y");
   export const scatteringBullet = FourCC("A0R9");
@@ -547,6 +583,16 @@ export module Id {
   export const rustGobble = FourCC("A0VH");
   export const tyrannoRoar = FourCC("A0VJ");
 
+  export const saitama = FourCC("H04Y");
+  export const saitamaNormalPunch = FourCC("A008");
+  export const saitamaConsecutivePunches = FourCC("A00I");
+  export const saitamaLeap = FourCC("A00Z");
+  export const saitamaTableFlip = FourCC("A011");
+  export const saitamaOK = FourCC("A03H");
+  export const saitamaSeriousSeries = FourCC("A02J");
+  export const saitamaSeriousPunch = FourCC("A02U");
+  export const saitamaSeriousSidewaysJumps = FourCC("A032");
+
   export const sephiroth = FourCC("H09M");
   export const sephirothOctoslash = FourCC("A0T7");
   export const sephirothHellsGate = FourCC("A0T8");
@@ -615,4 +661,9 @@ export module Id {
   export const yamchaRSuperSpiritBall = FourCC("A0RI");
   export const yamchaRFullPowerKame = FourCC("A0RJ");
   export const yamchaRWolfFangBlast = FourCC("A0RK");
+
+  export const yamchaSparking = FourCC("A0SB");
+
+
+  export const itemHealingBuff = FourCC("BIrg");
 }

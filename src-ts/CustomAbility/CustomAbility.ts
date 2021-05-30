@@ -6,21 +6,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
-
-export enum CostType {
-  HP = "Life",
-  MP = "Mana",
-  STAMINA = "Stamina",
-}
-
-export function stringToCostType(costType: string): CostType {
-  if (costType == "Life" || costType == "HP") {
-    return CostType.HP;
-  } else if (costType == "Mana" || costType == "MP") {
-    return CostType.MP;
-  }
-  return CostType.STAMINA;
-}
+import { CostType, stringToCostType, Globals } from "Common/Constants";
 
 export class CustomAbility implements Serializable<CustomAbility>, AddableComponent {
   static readonly BASE_DAMAGE = 1500;
@@ -83,18 +69,32 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     if (UnitHelper.isUnitStunned(input.caster.unit)) {
       return false;
     }
-    if (
-      (this.costType == CostType.HP && GetUnitState(input.caster.unit, UNIT_STATE_LIFE) < this.costAmount)
-      ||
-      (this.costType == CostType.MP && GetUnitState(input.caster.unit, UNIT_STATE_MANA) < this.costAmount)
-    ) {
+    if (!this.canTakeCosts(input)) {
       return false;
     }
     return true;
   }
 
+  canTakeCosts(input: CustomAbilityInput) {
+    if (this.costType == CostType.HP) {
+      return GetUnitState(input.caster.unit, UNIT_STATE_LIFE) > this.costAmount;
+
+    } else if (this.costType == CostType.MP) {
+      return GetUnitState(input.caster.unit, UNIT_STATE_MANA) > this.costAmount;
+
+    } else if (this.costType == CostType.SP) {
+      // stamina
+      const playerId = GetPlayerId(input.casterPlayer);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
+      if (customHero) {
+        return customHero.getCurrentSP() > this.costAmount;
+      }
+    }
+
+    return true;
+  }
+
   takeCosts(input: CustomAbilityInput) {
-    this.currentCd = this.maxCd;
     if (this.costType == CostType.HP) {
       SetUnitState(
         input.caster.unit, 
@@ -107,9 +107,22 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
         UNIT_STATE_MANA,
         GetUnitState(input.caster.unit, UNIT_STATE_MANA) - this.costAmount
       );
-    } else {
+    } else if (this.costType == CostType.SP) {
       // stamina
+      const playerId = GetPlayerId(input.casterPlayer);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
+      if (customHero) {
+        customHero.setCurrentSP(customHero.getCurrentSP() - this.costAmount);
+      }
+    } else if (this.costType == CostType.TMP_SP) {
+      // stamina
+      const playerId = GetPlayerId(input.casterPlayer);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
+      if (customHero) {
+        customHero.setCurrentSP(Math.max(0, customHero.getCurrentSP() - this.costAmount));
+      }
     }
+    this.currentCd = this.maxCd;
   }
 
   getName(): string {

@@ -99,7 +99,7 @@ Frame "SIMPLESTATUSBAR" "MyLevelBar" {
 Frame "SIMPLESTATUSBAR" "MyHPBar" {
    Width 0.3, //Default Width
    Height 0.02, //Default Height
-   BarTexture "Replaceabletextures\Teamcolor\Teamcolor06.blp", //Default BarTexture
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor00.blp", //Default BarTexture
    Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
        Texture "MyHPBarBackground"{ //the BACKGROUND Texture named "MyHPBarBackground" its also a frame and a child
            File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyHPBarBackground"
@@ -137,6 +137,29 @@ Frame "SIMPLESTATUSBAR" "MyMPBar" {
            }
            String "MyMPBarText" INHERITS "MyBarTextTemplate" {
                Text "", //Default Text for "MyMPBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MySPBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor06.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MySPBarBackground"{ //the BACKGROUND Texture named "MySPBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MySPBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MySPBarFrame" { //Child of "MySPBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MySPBar"
+       Layer "ARTWORK" {
+           Texture "MySPBarBorder" {
+               File "SimpleXpBarBorder", //Default Texture for "MySPBarBorder"
+           }
+           String "MySPBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MySPBarText" which takes over Data from "MyBarTextTemplate"
            }
        }
    }

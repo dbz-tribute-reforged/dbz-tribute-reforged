@@ -33,6 +33,12 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // future trunks
     [Id.finishBuster, AbilityNames.FutureTrunks.FINISH_BUSTER],
+    [Id.heatDomeAttack, AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],
+    [Id.burningAttack, AbilityNames.FutureTrunks.BURNING_ATTACK],
+    [Id.blazingRush, AbilityNames.FutureTrunks.BLAZING_RUSH],
+    [Id.shiningSwordAttack, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK],
+    [Id.ftSwordOfHope, AbilityNames.FutureTrunks.SWORD_OF_HOPE],
+    [Id.superSaiyanRage, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE],
 
     // goten
     [Id.gotenRockThrow, AbilityNames.Goten.ROCK_THROW],
@@ -50,13 +56,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.superGhostKamikazeAttack2, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2],
     [Id.gotenksSS3, AbilityNames.Gotenks.GOTENKS_SS3],
 
-    // future trunks
-    [Id.heatDomeAttack, AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],
-    [Id.burningAttack, AbilityNames.FutureTrunks.BURNING_ATTACK],
-    // [FourCC('A064'), "High Power Rush"],
-    [Id.blazingRush, AbilityNames.FutureTrunks.BLAZING_RUSH],
-    [Id.shiningSwordAttack, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK],
-    [Id.superSaiyanRage, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE],
 
     // piccolo
     [Id.piccoloSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],
@@ -122,6 +121,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.meditate2, AbilityNames.Jiren.MEDITATE_2],
     [Id.ultimateBurningWarrior, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR],
     [Id.ultimateBurningWarrior2, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2],
+    [Id.ultimateBurningWarrior3, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_3],
 
     // toppo
     [Id.justiceFlash, AbilityNames.Toppo.JUSTICE_FLASH],
@@ -324,6 +324,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.auraStorm, AbilityNames.Lucario.AURA_STORM],
     [Id.lucarioGigantomax, AbilityNames.Lucario.GIGANTAMAX],
     [Id.gigaSphere, AbilityNames.Lucario.GIGA_SPHERE],
+
+    // saitama
+    [Id.saitamaNormalPunch, AbilityNames.Saitama.NORMAL_PUNCH],
+    [Id.saitamaConsecutivePunches, AbilityNames.Saitama.CONSECUTIVE_PUNCHES],
+    [Id.saitamaLeap, AbilityNames.Saitama.LEAP],
+    [Id.saitamaTableFlip, AbilityNames.Saitama.TABLE_FLIP],
+    [Id.saitamaOK, AbilityNames.Saitama.OK],
+    [Id.saitamaSeriousSeries, AbilityNames.Saitama.SERIOUS_SERIES],
+    [Id.saitamaSeriousPunch, AbilityNames.Saitama.SERIOUS_PUNCH],
+    [Id.saitamaSeriousSidewaysJumps, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

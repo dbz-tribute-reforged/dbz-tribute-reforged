@@ -25,6 +25,7 @@ export class CreepManager {
   protected creepResearchUpgradeTimer: timer;
 
 
+  
   constructor (
     public creepUpgradeConfigs: CreepUpgradeConfig = DefaultCreepUpgradeConfig
   ) {

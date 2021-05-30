@@ -7,10 +7,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 50,
+    blockPerDamage: 70,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 3,
+    multiplier: 5,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -63,11 +63,11 @@ export const DamageBlockComponents = [
     name: "block perfect basic guard",
     repeatInterval: 1,
     startTick: 9,
-    endTick: 22,
-    blockPerDamage: 75,
+    endTick: 18,
+    blockPerDamage: 90,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 2,
+    multiplier: 4,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -125,7 +125,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 10,
+    multiplier: 12,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -182,7 +182,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 15,
+    multiplier: 16,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -1787,6 +1787,42 @@ export const DamageBlockComponents = [
         persistent: true,
         attachmentPoint: "origin",
       },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block saitama serious sideways jumps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 90,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_AGI,
+    multiplier: 5,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
     ],
   },
   // ----------------------------------------

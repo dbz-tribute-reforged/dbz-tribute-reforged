@@ -19,10 +19,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { SoundHelper } from "Common/SoundHelper";
 import { DamageData } from "Common/DamageData";
-
-// global?
-export const customPlayers: CustomPlayer[] = [];
-export let hostPlayer: player = Constants.sagaPlayer;
+import { setupCustomUI } from "./SetupCustomUI";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -31,7 +28,7 @@ export function setupHostPlayerTransfer() {
   }
   TriggerAddAction(hostPlayerTransfer, () => {
     if (
-      GetTriggerPlayer() == hostPlayer && 
+      GetTriggerPlayer() == Globals.hostPlayer && 
       GetPlayerController(GetTriggerPlayer()) == MAP_CONTROL_USER
     ) {
       transferHostPlayer();
@@ -45,9 +42,9 @@ export function transferHostPlayer() {
     if (
       IsPlayerSlotState(newHost, PLAYER_SLOT_STATE_PLAYING) && 
       GetPlayerController(newHost) == MAP_CONTROL_USER && 
-      newHost != hostPlayer
+      newHost != Globals.hostPlayer
     ) {
-      hostPlayer = newHost;
+      Globals.hostPlayer = newHost;
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 
         15, 
@@ -66,18 +63,18 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
     // it will cause weird selection bugs during multiplayer
     // that is not normally testable via singleplayer
 
-    // const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
-    for (const customHero of customPlayers[playerId].allHeroes) {
+    // const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
+    for (const customHero of Globals.customPlayers[playerId].allHeroes) {
       if (customHero && IsUnitSelected(customHero.unit, player)) {
         const abilityInput = new CustomAbilityInput(
           customHero,
           player,
           1,
-          customPlayers[playerId].orderPoint,
-          customPlayers[playerId].mouseData,
-          customPlayers[playerId].lastCastPoint.clone(),
-          customPlayers[playerId].targetUnit,
-          customPlayers[playerId].lastCastUnit,
+          Globals.customPlayers[playerId].orderPoint,
+          Globals.customPlayers[playerId].mouseData,
+          Globals.customPlayers[playerId].lastCastPoint.clone(),
+          Globals.customPlayers[playerId].targetUnit,
+          Globals.customPlayers[playerId].lastCastUnit,
         );
 
         if (customHero.canCastAbility(name, abilityInput)) {
@@ -126,14 +123,19 @@ export function updateSelectedUnitBars(
   maxHp: string, 
   currentMp: string,
   maxMp: string,
+  currentSp: string,
+  maxSp: string,
+  percentSp: number,
   level: string,
   percentXp: number,
 ) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
+  BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), percentSp);
   BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), percentXp);
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
+  BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), currentSp + " / " + maxSp);
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
 }
 
@@ -151,10 +153,10 @@ export function isValidOrderByPlayer(
 
 export function CustomPlayerTest() {
   
-  // customPlayers = [];
+  // Globals.customPlayers = [];
   
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    customPlayers.push(new CustomPlayer(
+    Globals.customPlayers.push(new CustomPlayer(
       i,
       GetPlayerName(Player(i)),
     ));
@@ -169,11 +171,11 @@ export function CustomPlayerTest() {
     const addedHero = GetTriggerUnit();
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    customPlayers[playerId].addHero(addedHero);
-    customPlayers[playerId].selectedUnit = GetTriggerUnit();
+    Globals.customPlayers[playerId].addHero(addedHero);
+    Globals.customPlayers[playerId].selectedUnit = GetTriggerUnit();
 
     for (let i = 0 ; i < Constants.maxSubAbilities; ++i) {
-      let customHero = customPlayers[playerId].getLastSelectedOwnedCustomHero();
+      let customHero = Globals.customPlayers[playerId].getLastSelectedOwnedCustomHero();
       // prevent string table desyncs
       let tooltipName = "abilityButton" + i + "ToolTip";
       if (customHero) {
@@ -203,7 +205,7 @@ export function CustomPlayerTest() {
   });
   
   TimerStart(CreateTimer(), 30.0, true, () => {
-    for (const customPlayer of customPlayers) {
+    for (const customPlayer of Globals.customPlayers) {
       customPlayer.cleanupRemovedHeroes();
     }
   });
@@ -223,8 +225,8 @@ export function CustomPlayerTest() {
   //     const x = BlzGetTriggerPlayerMouseX();
   //     const y = BlzGetTriggerPlayerMouseY();
   //     if (x != 0 && y != 0) {
-  //       customPlayers[playerId].mouseData.x = x;
-  //       customPlayers[playerId].mouseData.y = y;
+  //       Globals.customPlayers[playerId].mouseData.x = x;
+  //       Globals.customPlayers[playerId].mouseData.y = y;
   //     }
   //   }
   // });
@@ -245,8 +247,8 @@ export function CustomPlayerTest() {
       const y = GetOrderPointY();
       if (x != 0 && y != 0) {
         const playerId = GetPlayerId(GetTriggerPlayer());
-        customPlayers[playerId].orderPoint.x = x;
-        customPlayers[playerId].orderPoint.y = y;
+        Globals.customPlayers[playerId].orderPoint.x = x;
+        Globals.customPlayers[playerId].orderPoint.y = y;
       }
     }
     return false;
@@ -259,9 +261,9 @@ export function CustomPlayerTest() {
   TriggerAddCondition(updatePlayerTargetPoint, Condition(() => {
     if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
       const playerId = GetPlayerId(GetTriggerPlayer());
-      customPlayers[playerId].targetUnit = GetOrderTargetUnit();
-      customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
-      customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
+      Globals.customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+      Globals.customPlayers[playerId].orderPoint.x = GetUnitX(Globals.customPlayers[playerId].targetUnit);
+      Globals.customPlayers[playerId].orderPoint.y = GetUnitY(Globals.customPlayers[playerId].targetUnit);
     }
     return false;
   }));
@@ -273,8 +275,8 @@ export function CustomPlayerTest() {
   TriggerAddCondition(updatePlayerLastCastPoint, Condition(() => {
     if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
       const playerId = GetPlayerId(GetTriggerPlayer());
-      customPlayers[playerId].lastCastPoint.x = GetSpellTargetX();
-      customPlayers[playerId].lastCastPoint.y = GetSpellTargetY();
+      Globals.customPlayers[playerId].lastCastPoint.x = GetSpellTargetX();
+      Globals.customPlayers[playerId].lastCastPoint.y = GetSpellTargetY();
     }
     return false;
   }));
@@ -288,7 +290,7 @@ export function CustomPlayerTest() {
       const player = GetTriggerPlayer();
       const playerId = GetPlayerId(player);
       const abilityId = GetSpellAbilityId();
-      customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
+      Globals.customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
   
       if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
         // show ability name on activation
@@ -306,13 +308,19 @@ export function CustomPlayerTest() {
       if (spellName) { 
         const caster = GetTriggerUnit();
         const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
-        customPlayers[playerId].selectedUnit = caster;
+        Globals.customPlayers[playerId].selectedUnit = caster;
+        let damageMult = 1.0;
+        if (abilityId == Id.ftSwordOfHope) {
+          damageMult = getSwordOfHopeMult(player);
+        }
+
+
         let spellTargetUnit = undefined;
         if (GetSpellTargetUnit()) {
-          customPlayers[playerId].targetUnit = GetSpellTargetUnit();
-          spellTargetUnit = customPlayers[playerId].targetUnit;
+          Globals.customPlayers[playerId].targetUnit = GetSpellTargetUnit();
+          spellTargetUnit = Globals.customPlayers[playerId].targetUnit;
         }
-        const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+        const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
         if (customHero) {
           // temp fix for double ss rage trigger
           if (
@@ -325,11 +333,12 @@ export function CustomPlayerTest() {
                 customHero,
                 player,
                 abilityLevel,
-                customPlayers[playerId].orderPoint,
-                customPlayers[playerId].mouseData,
-                customPlayers[playerId].lastCastPoint.clone(),
+                Globals.customPlayers[playerId].orderPoint,
+                Globals.customPlayers[playerId].mouseData,
+                Globals.customPlayers[playerId].lastCastPoint.clone(),
                 spellTargetUnit,
                 GetSpellTargetUnit(),
+                damageMult
               ),
             );
           }
@@ -340,6 +349,42 @@ export function CustomPlayerTest() {
   }));
 
   
+  // stop replacement trigger
+  const stopOrderTrigger = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    BlzTriggerRegisterPlayerKeyEvent(stopOrderTrigger, Player(i), OSKEY_S, 0, true);
+  }
+  TriggerAddAction(stopOrderTrigger, () => {
+    const player = GetTriggerPlayer();
+    const group = GetUnitsSelectedAll(player);
+    ForGroup(group, () => {
+      const unit = GetEnumUnit();
+      if (GetOwningPlayer(unit) == player) {
+        IssueImmediateOrderById(unit, OrderIds.STOP);
+      }
+    });
+    DestroyGroup(group);
+    return false;
+  });
+
+  // hold replacement trigger
+  const holdPositionOrderTrigger = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    BlzTriggerRegisterPlayerKeyEvent(holdPositionOrderTrigger, Player(i), OSKEY_H, 0, true);
+  }
+  TriggerAddAction(holdPositionOrderTrigger, () => {
+    const player = GetTriggerPlayer();
+    const group = GetUnitsSelectedAll(player);
+    ForGroup(group, () => {
+      const unit = GetEnumUnit();
+      if (GetOwningPlayer(unit) == player) {
+        IssueImmediateOrderById(unit, OrderIds.HOLD_POSITION);
+      }
+    });
+    DestroyGroup(group);
+    return false;
+  });
+
   // zanzo activation trigger
   // tied to z for now
   const abil0 = CreateTrigger();
@@ -358,7 +403,13 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
+
+  const abil3 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil3, OSKEY_V, 0, true);
+  addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
   
+
   /*
 
   const abil3 = CreateTrigger();
@@ -428,7 +479,7 @@ export function CustomPlayerTest() {
 	TimerStart(CreateTimer(), 0.03, true, () => {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       let playerId = i;
-      let unit = customPlayers[playerId].selectedUnit;
+      let unit = Globals.customPlayers[playerId].selectedUnit;
 
       if (unit) {
         // make sure strings dont desync
@@ -436,29 +487,47 @@ export function CustomPlayerTest() {
         const maxHp = I2S(BlzGetUnitMaxHP(unit));
         const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
         const maxMp = I2S(BlzGetUnitMaxMana(unit));
+        let currentSp = "0";
+        let maxSp = "0";
+        let percentSp = 0;
+
         let percentXp = 0;
         if (IsUnitType(unit, UNIT_TYPE_HERO)) {
           const currentLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit));
           const nextLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
           const currentXp = GetHeroXP(unit) - currentLevelXp;
           const maxXp = nextLevelXp - currentLevelXp;
-          percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp))
+          percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp));
+          const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+          if (customHero) {
+            currentSp = I2S(R2I(customHero.getCurrentSP()));
+            maxSp = I2S(R2I(customHero.getMaxSP()));
+            percentSp = 100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP()));
+          }
         }
         const level = I2S(GetUnitLevel(unit));
 
         // update stats
+        let nameString = "";
+        const armrString = "|cffffff20ARMR:|n" + R2SW(BlzGetUnitArmor(unit), 2, 2) + "|r";
+        const msString = "|cff808080MS:|n" + R2SW(GetUnitMoveSpeed(unit), 2, 2) + "|r";
         let strength = "|cffff2020STR:|n";
         let agility = "|cff20ff20AGI:|n";
         let intelligence = "|cff20ffffINT:|n";
 
         if (IsUnitType(unit, UNIT_TYPE_HERO)) {
-          strength += I2S(GetHeroStr(unit, true));
-          agility += I2S(GetHeroAgi(unit, true));
-          intelligence += I2S(GetHeroInt(unit, true));
+          // strength += I2S(GetHeroStr(unit, true));
+          // agility += I2S(GetHeroAgi(unit, true));
+          // intelligence += I2S(GetHeroInt(unit, true));
+          strength += convertIntToCommaString(GetHeroStr(unit, true));
+          agility += convertIntToCommaString(GetHeroAgi(unit, true));
+          intelligence += convertIntToCommaString(GetHeroInt(unit, true));
+          nameString += GetHeroProperName(unit);
         } else {
           strength += "0";
           agility += "0";
           intelligence += "0";
+          nameString += GetUnitName(unit);
         }
         strength += "|r";
         agility += "|r";
@@ -469,11 +538,14 @@ export function CustomPlayerTest() {
         const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
-          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level, percentXp);
+          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, currentSp, maxSp, percentSp, level, percentXp);
+          BlzFrameSetText(BlzGetFrameByName("unitNameText", 0), nameString);
+          BlzFrameSetText(BlzGetFrameByName("heroArmorText", 0), armrString);
+          BlzFrameSetText(BlzGetFrameByName("heroBaseMSText", 0), msString);
           BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
           BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
           BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
-          if (customPlayers[playerId].usingCustomUI) {
+          if (Globals.customPlayers[playerId].usingCustomUI) {
             BlzFrameSetVisible(unitPanel, false);
             BlzFrameSetVisible(inventoryCover, false);
             BlzFrameSetVisible(inventoryCoverTexture, false);
@@ -482,7 +554,7 @@ export function CustomPlayerTest() {
       }
 
       // make sure strings dont desync
-      let ownedHero = customPlayers[playerId].getLastSelectedOwnedCustomHero();
+      let ownedHero = Globals.customPlayers[playerId].getLastSelectedOwnedCustomHero();
       if (ownedHero) {
         for (let j = 0; j < Constants.maxSubAbilities; ++j) {
           let heroAbility = ownedHero.getAbilityByIndex(j);
@@ -515,242 +587,19 @@ export function CustomPlayerTest() {
 	// hides first 5 command buttons
   // sets parent of inventory to parent of bottom right command buttons
 
-  let canUseCustomUi = true;
 	const hideTrig = CreateTrigger();
-  // TriggerRegisterTimerEventSingle(hideTrig, 5.0);
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
 		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
   }
 	TriggerAddAction(hideTrig, () => {
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    if (!canUseCustomUi) {
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 10, 
-        "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
-      );
-    } else if (
-      !customPlayers[playerId].usingCustomUI && 
-      IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-      GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-    ) {
-      // BJDebugMsg("Enabling Custom UI for all players.");
-      // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
-      //   if (
-      //     !customPlayers[playerId].usingCustomUI && 
-      //     IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-      //     GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-      //   ) {
-      //     customPlayers[playerId].usingCustomUI = true;
-      //   }
-      // }
-      customPlayers[playerId].usingCustomUI = true;
-
-      const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
-      const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
-      const rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
-
-      const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
-      const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
-
-      const abilityButtonHotbar = BlzGetFrameByName("abilityButtonHotBar", 0);
-      
-      const hpBar = BlzGetFrameByName("MyHPBar", 0);
-      const mpBar = BlzGetFrameByName("MyMPBar", 0);
-
-      const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
-      
-      const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
-      const minimapParent = BlzFrameGetParent(minimap);
-      const minimapButtons: framehandle[] = [];
-      for (let i = 0; i < 5; ++i) {
-        minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
-      }
-
-      const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
-      const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
-
-      const heroPortrait = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0);
-      const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
-      const unitPanelParent = BlzFrameGetParent(unitPanel);
-      
-      const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
-      const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
-
-      const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
-      const inventoryBar = BlzFrameGetParent(BlzGetFrameByName("SimpleInventoryBar", 0));
-      // const inventoryFrames: framehandle[] = [];
-      // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryCover",0));
-      // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryBar",0));
-      // inventoryFrames.push(BlzGetFrameByName("InventoryCoverTexture",0));
-      // inventoryFrames.push(BlzGetFrameByName("InventoryText",0));
-
-      const inventoryButtons: framehandle[] = [];
-      for (let i = 0; i < 6; ++i) {
-        // const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
-        // inventoryButtons.push(frame);
-        inventoryButtons.push(BlzGetFrameByName("InventoryButton_".concat(I2S(i)), 0));
-      }
-
-      const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
-      const commandCardBar = BlzFrameGetParent(BlzGetFrameByName("CommandBarFrame", 0));
-      const commandCardButtons: framehandle[] = [];
-      for (let i = 0; i < 12; ++i) {
-        // commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
-        commandCardButtons.push(BlzGetFrameByName("CommandButton_".concat(I2S(i)), 0));
-      }
-
-      // const buffBar = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_PANEL_BUFF_BAR, 0);
-      // const buffBarParent = BlzFrameGetParent(buffBar);
-      
-      const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
-      const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
-      const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
-
-      if (GetLocalPlayer() == GetTriggerPlayer()) {
-        BlzHideOriginFrames(true);
-        BlzFrameSetAllPoints(worldFrame, grandpa);
-        // let frame = BlzGetFrameByName("ConsoleUI", 0);
-        // BlzFrameSetAllPoints(frame, grandpa);
-        // BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
-        BlzFrameSetVisible(rm, false);
-
-        BlzFrameSetVisible(upperBar, true);
-        BlzFrameSetVisible(resourceBar, true);
-
-        BlzFrameClearAllPoints(abilityButtonHotbar);
-        BlzFrameSetPoint(
-          abilityButtonHotbar, 
-          FRAMEPOINT_BOTTOMRIGHT, 
-          hpBar, 
-          FRAMEPOINT_TOPRIGHT, 
-          -0.002, 0.001
-        );
-
-        BlzFrameClearAllPoints(hpBar);
-        BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
-        BlzFrameClearAllPoints(mpBar);
-        BlzFrameSetPoint(mpBar, FRAMEPOINT_TOP, hpBar, FRAMEPOINT_BOTTOM, 0, 0.00);
-        
-        BlzFrameSetVisible(heroBarButtons, true);
-
-        BlzFrameSetVisible(minimapParent, true);
-        BlzFrameSetVisible(minimap, true);
-        // buttons still not showing up
-        FrameHelper.setFramesVisibility(minimapButtons, true);
-
-        BlzFrameSetVisible(chatMsg, true);
-        BlzFrameSetVisible(gameMsg, true);
-        BlzFrameSetPoint(gameMsg, FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOMLEFT, -0.1, 0.22);
-        // still too short for most hs
-        // BlzFrameSetPoint(gameMsg, FRAMEPOINT_TOPRIGHT, grandpa, FRAMEPOINT_BOTTOMLEFT, 0.6, 0.3);
-
-        BlzFrameSetVisible(heroPortrait, true);
-        BlzFrameClearAllPoints(heroPortrait);
-        BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.135, 0.003);
-        BlzFrameSetSize(heroPortrait, 0.08, 0.08);
-
-        // buff bar doenst seem to work...
-        // BlzFrameSetVisible(buffBarParent, true);
-        // BlzFrameSetVisible(buffBar, true);
-        // BlzFrameClearAllPoints(buffBar);
-        // BlzFrameSetAbsPoint(buffBar, FRAMEPOINT_CENTER, 0.4, 0.3);
-        // BlzFrameSetPoint(buffBar, FRAMEPOINT_BOTTOMRIGHT, mpBar, FRAMEPOINT_BOTTOMLEFT, 0, 0);
-
-        BlzFrameSetVisible(unitPanelParent, true);
-        BlzFrameSetVisible(unitPanel, false);
-
-        BlzFrameSetVisible(inventoryCover, false);
-        // BlzFrameSetSize(inventoryCover, 0.001, 0.001);
-        // BlzFrameSetPoint(
-        //   inventoryCover, FRAMEPOINT_BOTTOMRIGHT,
-        //   grandpa, FRAMEPOINT_BOTTOMRIGHT,
-        //   -0.2, 0
-        // );
-
-        BlzFrameSetVisible(inventoryCoverTexture, false);
-        // BlzFrameSetSize(inventoryCoverTexture, 0.0001, 0.0001);
-        // BlzFrameSetPoint(
-        //   inventoryCoverTexture, FRAMEPOINT_BOTTOMRIGHT,
-        //   inventoryCover, FRAMEPOINT_BOTTOMRIGHT,
-        //   0, 0
-        // );
-        
-        BlzFrameSetParent(inventoryParent, commandCardParent);
-
-        BlzFrameSetVisible(commandCardParent, true);
-        BlzFrameSetVisible(inventoryParent, true);
-        FrameHelper.setFramesVisibility(inventoryButtons, true);
-        // FrameHelper.setFramesVisibility(inventoryFrames, true);
-        
-
-        // relocates the inventory buttons (but not the inventroy bar)
-        // for (let i = 0; i < 3; ++i) {
-        //   for (let j = 0; j < 2; ++j) {
-        //     BlzFrameClearAllPoints(inventoryButtons[i*2+j]);
-        //     BlzFrameSetAbsPoint(
-        //       inventoryButtons[i*2+j], FRAMEPOINT_TOPLEFT,
-        //       0.7+0.04*j, 0.12-0.04*i
-        //     )
-        //   }
-        // }
-
-
-        // heroStatsUI.setRenderVisible(true);
-        BlzFrameSetVisible(customStrengthLabel, true);
-        BlzFrameSetVisible(customAgilityLabel, true);
-        BlzFrameSetVisible(customIntelligenceLabel, true);
-      }
+    setupCustomUI(GetTriggerPlayer());
+  });
+ 
+  TimerStart(CreateTimer(), 1.0, false, () => {  
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      setupCustomUI(Player(i));
+      DestroyTimer(GetExpiredTimer());
     }
-  });
-  
-  // disable after pick phase
-  TimerStart(CreateTimer(), 60, false, () => {
-    canUseCustomUi = false;
-    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, 
-    //   "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
-    // );
-    DestroyTimer(GetExpiredTimer());
-  });
-
-	const resetUnitPanelTrigger = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(resetUnitPanelTrigger, Player(i), "hideunitpanel", true);
-	}
-	TriggerAddAction(resetUnitPanelTrigger, () => {
-		const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
-		const unitPanelParent = BlzFrameGetParent(unitPanel);
-		
-		const toBeHidden: framehandle[] = [
-			// BlzGetFrameByName("SimpleInfoPanelIconDamage", 0),
-			// BlzGetFrameByName("SimpleInfoPanelIconDamage", 1),
-			// BlzGetFrameByName("SimpleInfoPanelIconArmor", 2),
-			// BlzGetFrameByName("SimpleInfoPanelIconRank", 3),
-			// BlzGetFrameByName("SimpleInfoPanelIconFood", 4),
-			// BlzGetFrameByName("SimpleInfoPanelIconGold", 5),
-			// BlzGetFrameByName("InfoPanelIconHeroIcon", 6),
-			// BlzGetFrameByName("SimpleInfoPanelIconAlly", 7),
-
-			// BlzGetFrameByName("InfoPanelIconHeroStrengthLabel", 6),
-			// BlzGetFrameByName("InfoPanelIconHeroStrengthValue", 6),
-			// BlzGetFrameByName("InfoPanelIconHeroAgilityLabel", 6),
-			// BlzGetFrameByName("InfoPanelIconHeroAgilityValue", 6),
-			// BlzGetFrameByName("InfoPanelIconHeroIntellectLabel", 6),
-			// BlzGetFrameByName("InfoPanelIconHeroIntellectValue", 6),
-			// BlzGetFrameByName("SimpleInfoPanelIconHeroText", 6),
-			// BlzGetFrameByName("SimpleInfoPanelIconHero", 6),
-			BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0),
-			BlzGetFrameByName("SimpleInventoryCover", 0),
-			BlzGetFrameByName("SimpleInventoryCoverTexture", 0),
-		]
-
-		for (let i = 0; i < toBeHidden.length; ++i) {
-			BJDebugMsg(i + ": " + toBeHidden[i]);
-		}
-
-		const player = GetTriggerPlayer();
-		if (GetLocalPlayer() == player) {
-			FrameHelper.setFramesVisibility(toBeHidden, false);
-		}
-
   });
 
 
@@ -855,7 +704,7 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerChatEvent(swapPlayersCommand, Player(i), "-swap", false);
   }
   TriggerAddAction(swapPlayersCommand, () => {
-    if (GetTriggerPlayer() == hostPlayer) {
+    if (GetTriggerPlayer() == Globals.hostPlayer) {
       const playerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
       if (playerId >= 0 && playerId < bj_MAX_PLAYERS) {
         const targetPlayer = Player(playerId);
@@ -1118,7 +967,7 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerChatEvent(freeModeTrig, Player(i), "-fbsimtest", true);
   }
   TriggerAddAction(freeModeTrig, () => {
-    if (GetTriggerPlayer() == hostPlayer) {
+    if (GetTriggerPlayer() == Globals.hostPlayer) {
       Globals.isFreemode = true;
       if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
 
@@ -1252,27 +1101,27 @@ export function CustomPlayerTest() {
   TriggerRegisterAnyUnitEventBJ(independentSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
 
   TimerStart(CreateTimer(), 3, false, () => {
-    SetupBraveSwordAttack(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupDragonFistSfx(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupGinyuChangeNow(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupGinyuTelekinesis(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupGuldoTimeStop(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupOmegaShenronShadowFist(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupKrillinSenzuThrow(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupJirenGlare(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupBraveSwordAttack(independentSpellTrigger, independentSpellHashtable);
+    SetupDragonFistSfx(independentSpellTrigger, independentSpellHashtable);
+    SetupGinyuChangeNow(independentSpellTrigger, independentSpellHashtable);
+    SetupGinyuTelekinesis(independentSpellTrigger, independentSpellHashtable);
+    SetupGuldoTimeStop(independentSpellTrigger, independentSpellHashtable);
+    SetupOmegaShenronShadowFist(independentSpellTrigger, independentSpellHashtable);
+    SetupKrillinSenzuThrow(independentSpellTrigger, independentSpellHashtable);
+    SetupJirenGlare(independentSpellTrigger, independentSpellHashtable);
 
-    SetupCero(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupBankai(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupCero(independentSpellTrigger, independentSpellHashtable);
+    SetupBankai(independentSpellTrigger, independentSpellHashtable);
 
-    SetupDartSpells(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupDartSpells(independentSpellTrigger, independentSpellHashtable);
+    SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable);
 
-    SetupAylaCharm(independentSpellTrigger, independentSpellHashtable, customPlayers);
-    SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupAylaCharm(independentSpellTrigger, independentSpellHashtable);
+    SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable);
 
-    // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, Globals.customPlayers);
 
-    SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable);
     SoundHelper.SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
   });
@@ -1281,7 +1130,6 @@ export function CustomPlayerTest() {
 export function SetupBraveSwordAttack(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   // 0 : target x
   // 1 : target y
@@ -1366,7 +1214,7 @@ export function SetupBraveSwordAttack(
             );
 
             let spellPower = 1.0;
-            const customHero = customPlayers[GetPlayerId(player)].getCustomHero(caster);
+            const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(caster);
             if (customHero) {
               spellPower = customHero.spellPower;
             }
@@ -1485,8 +1333,7 @@ export function SetupBraveSwordAttack(
 
 export function SetupDragonFistSfx(
   spellTrigger: trigger, 
-  spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
+  spellHashtable: hashtable,
 ) {
   const sfxHeadModel = "DragonHead2.mdl";
   const sfxSpiralModel = "DragonSegment2.mdl";
@@ -1556,7 +1403,7 @@ export function DoDragonFistSFX(
   let currentPos = new Vector2D(0, 0);
   let newPos = new Vector2D(0, 0);
 
-  // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
+  // const targetPos = Globals.customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
   const sfxList: effect[] = [];
   let sfxIndex = 0;
   const sfxHead = AddSpecialEffect(headModel, casterPos.x, casterPos.y);
@@ -1657,8 +1504,7 @@ export function DoDragonFistSFX(
 
 export function SetupGinyuChangeNow(
   spellTrigger: trigger, 
-  spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
+  spellHashtable: hashtable,
 ) {
   const changeNow = FourCC("A0PN");
 
@@ -1679,7 +1525,7 @@ export function SetupGinyuChangeNow(
       const targetY = GetUnitY(targetUnit);
 
       if (
-        customPlayers[targetPlayerId].hasHero(targetUnit) && 
+        Globals.customPlayers[targetPlayerId].hasHero(targetUnit) && 
         IsUnitType(targetUnit, UNIT_TYPE_HERO) &&
         !IsUnitType(targetUnit, UNIT_TYPE_SUMMONED) &&
         (
@@ -1694,15 +1540,15 @@ export function SetupGinyuChangeNow(
         ) && 
         !TournamentManager.getInstance().isTournamentActive(Constants.finalBattleName)
       ) {
-        const tmp = customPlayers[casterPlayerId].heroes;
-        customPlayers[casterPlayerId].heroes = customPlayers[targetPlayerId].heroes;
-        customPlayers[targetPlayerId].heroes = tmp;
-        for (const hero of customPlayers[targetPlayerId].allHeroes) {
+        const tmp = Globals.customPlayers[casterPlayerId].heroes;
+        Globals.customPlayers[casterPlayerId].heroes = Globals.customPlayers[targetPlayerId].heroes;
+        Globals.customPlayers[targetPlayerId].heroes = tmp;
+        for (const hero of Globals.customPlayers[targetPlayerId].allHeroes) {
           if (IsUnitType(hero.unit, UNIT_TYPE_SUMMONED) && GetOwningPlayer(hero.unit) != targetPlayer) {
             SetUnitOwner(hero.unit, targetPlayer, true);
           }
         }
-        for (const hero of customPlayers[casterPlayerId].allHeroes) {
+        for (const hero of Globals.customPlayers[casterPlayerId].allHeroes) {
           if (IsUnitType(hero.unit, UNIT_TYPE_SUMMONED) && GetOwningPlayer(hero.unit) != casterPlayer) {
             SetUnitOwner(hero.unit, casterPlayer, true);
           }
@@ -1715,7 +1561,6 @@ export function SetupGinyuChangeNow(
 export function SetupGinyuTelekinesis(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const ignoreItem = FourCC("wtlg");
   const telekinesisDuration = 30;
@@ -1824,7 +1669,6 @@ export function SetupGinyuTelekinesis(
 export function SetupGuldoTimeStop(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const originalBAT: number = 1.8;
   const timeStopBAT: number = 0.4;
@@ -1847,7 +1691,6 @@ export function SetupGuldoTimeStop(
 export function SetupOmegaShenronShadowFist(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const shadowFistId = Id.shadowFist;
   const shadowFistAOE = 350;
@@ -1948,7 +1791,6 @@ export function SetupOmegaShenronShadowFist(
 export function SetupKrillinSenzuThrow(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const senzuThrowDuration = 40;
   const senzuThrowSpeed = 49;
@@ -2033,7 +1875,6 @@ export function SetupKrillinSenzuThrow(
 export function SetupJirenGlare(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   /**
    * hashtable
@@ -2105,7 +1946,7 @@ export function SetupJirenGlare(
         );
         UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
 
-        const customHero = customPlayers[GetPlayerId(player)].getCustomHero(unit);
+        const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(unit);
         let spellPower = 1.0;
         if (customHero) {
           spellPower = customHero.spellPower;
@@ -2169,7 +2010,6 @@ export function SetupJirenGlare(
 export function SetupCero(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const casterLoc = new Vector2D(0,0);
   /**
@@ -2183,7 +2023,7 @@ export function SetupCero(
       const casterId = GetHandleId(caster);
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
-      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       const chargeAbil = (customHero) ? customHero.getAbility(AbilityNames.Ichigo.CERO_CHARGE) : undefined;
 
       casterLoc.setPos(GetUnitX(caster), GetUnitY(caster));
@@ -2205,7 +2045,7 @@ export function SetupCero(
             caster
           );
           SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Ichigo/Cero.mp3", 1880);
-          doCeroFire(caster, player, spellHashtable, customPlayers);
+          doCeroFire(caster, player, spellHashtable);
           DestroyTimer(GetExpiredTimer());
           SaveReal(spellHashtable, casterId, 0, 0);
         }
@@ -2226,7 +2066,7 @@ export function SetupCero(
     } else if (spellId == Id.ceroFire) {
       const caster = GetTriggerUnit();
       const player = GetOwningPlayer(caster);
-      doCeroFire(caster, player, spellHashtable, customPlayers);
+      doCeroFire(caster, player, spellHashtable);
     }
   });
 }
@@ -2235,7 +2075,6 @@ export function doCeroFire(
   caster: unit,
   player: player,
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const casterId = GetHandleId(caster);
   const playerId = GetPlayerId(player);
@@ -2253,21 +2092,21 @@ export function doCeroFire(
   const spellName = abilityCodesToNames.get(Id.ceroFire);
   if (spellName) { 
     const abilityLevel = GetUnitAbilityLevel(caster, Id.ceroCharge);
-    customPlayers[playerId].selectedUnit = caster;
+    Globals.customPlayers[playerId].selectedUnit = caster;
     // let spellTargetUnit = undefined;
     // if (GetSpellTargetUnit()) {
-    //   customPlayers[playerId].targetUnit = GetSpellTargetUnit();
-    //   spellTargetUnit = customPlayers[playerId].targetUnit;
+    //   Globals.customPlayers[playerId].targetUnit = GetSpellTargetUnit();
+    //   spellTargetUnit = Globals.customPlayers[playerId].targetUnit;
     // }
-    const customHero = customPlayers[playerId].getCustomHero(caster);
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     if (customHero) {
       const abilityInput = new CustomAbilityInput(
         customHero,
         player,
         abilityLevel,
-        customPlayers[playerId].orderPoint,
-        customPlayers[playerId].mouseData,
-        customPlayers[playerId].lastCastPoint.clone(),
+        Globals.customPlayers[playerId].orderPoint,
+        Globals.customPlayers[playerId].mouseData,
+        Globals.customPlayers[playerId].lastCastPoint.clone(),
         undefined,
         undefined,
         damageMult
@@ -2280,7 +2119,6 @@ export function doCeroFire(
 export function SetupBankai(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
 
   TriggerAddAction(spellTrigger, () => {
@@ -2305,16 +2143,16 @@ export function SetupBankai(
         spellName = AbilityNames.Ichigo.BANKAI_HOLLOW;
       }
       
-      customPlayers[playerId].selectedUnit = caster;
-      const customHero = customPlayers[playerId].getCustomHero(caster);
+      Globals.customPlayers[playerId].selectedUnit = caster;
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       if (customHero) {
         const abilityInput = new CustomAbilityInput(
           customHero,
           player,
           abilityLevel,
-          customPlayers[playerId].orderPoint,
-          customPlayers[playerId].mouseData,
-          customPlayers[playerId].lastCastPoint.clone(),
+          Globals.customPlayers[playerId].orderPoint,
+          Globals.customPlayers[playerId].mouseData,
+          Globals.customPlayers[playerId].lastCastPoint.clone(),
           spellTargetUnit,
           spellTargetUnit
         );
@@ -2327,7 +2165,6 @@ export function SetupBankai(
 export function SetupDartSpells(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const dragoonTransformationBuff = FourCC("B049");
   const spellAmpBonus = 0.25;
@@ -2339,7 +2176,7 @@ export function SetupDartSpells(
       const caster = GetTriggerUnit();
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
-      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       if (customHero) {
         let elapsedTime = 0;
 
@@ -2359,7 +2196,7 @@ export function SetupDartSpells(
       const caster = GetTriggerUnit();
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
-      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       if (customHero) {
         let elapsedTime = 0;
         const abil = customHero.getAbility(AbilityNames.DartFeld.DRAGOON_TRANSFORMATION);
@@ -2385,7 +2222,6 @@ export function SetupDartSpells(
 export function SetupMadnessDebuff(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   // 0: stacks
   const madnessHashtable = InitHashtable();
@@ -2452,7 +2288,6 @@ export function SetupMadnessDebuff(
 export function SetupMagusDarkMatter(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const darkMatterDamage: DamageData = new DamageData(
     BASE_DMG.SPIRIT_BOMB_DPS * 0.1,
@@ -2478,7 +2313,7 @@ export function SetupMagusDarkMatter(
       const caster = GetTriggerUnit();
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
-      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       const abilityLevel = GetUnitAbilityLevel(caster, spellId);
       const currentPos = new Vector2D();
 
@@ -2621,7 +2456,6 @@ export function performGroundVortex(
 export function SetupAylaCharm(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
   const charmDuration = 10.0;
   const maxHPReduction = 0.13;
@@ -2699,7 +2533,7 @@ export function SetupAylaCharm(
 // export function SetupAylaTripleKick(
 //   spellTrigger: trigger, 
 //   spellHashtable: hashtable, 
-//   customPlayers: CustomPlayer[]
+//   Globals.customPlayers: CustomPlayer[]
 // ) {
 //   const tripleKickMaxCast: number = 3;
 //   const tripleKickLongCooldown: number = 30.0;
@@ -2731,20 +2565,20 @@ export function SetupAylaCharm(
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
-  customPlayers: CustomPlayer[]
 ) {
-  const ginyuPoseUltimate = FourCC("A0PS");
-  const yamchaSparking = FourCC("A0SB");
+  const stamRestore = 4;
+
 
   // reset cd of custom abilities
   TriggerAddAction(spellTrigger, () => {
     const spellId = GetSpellAbilityId();
-    if (spellId == yamchaSparking || spellId == Id.ginyuPoseUltimate) {
+    if (spellId == Id.yamchaSparking || spellId == Id.ginyuPoseUltimate) {
       const caster = GetTriggerUnit();
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
-      for (const customHero of customPlayers[playerId].allHeroes) {
+      for (const customHero of Globals.customPlayers[playerId].allHeroes) {
         if (customHero.unit == caster) {
+          customHero.setCurrentSP(customHero.getCurrentSP() + stamRestore);
           for (const [name, abil] of customHero.abilities.abilities) {
             if (abil) {
               abil.currentCd = 0;
@@ -2769,9 +2603,10 @@ export function createCdTrigger() {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
     if (Globals.isFBSimTest) {
-      for (const customHero of customPlayers[playerId].allHeroes) {
+      for (const customHero of Globals.customPlayers[playerId].allHeroes) {
         if (customHero) {
           UnitResetCooldown(customHero.unit);
+          customHero.setCurrentSP(customHero.getMaxSP());
           for (const [name, abil] of customHero.abilities.abilities) {
             if (abil) {
               abil.currentCd = 0;
@@ -2783,3 +2618,52 @@ export function createCdTrigger() {
   });
 }
 
+export function convertIntToCommaString(n: number): string {
+  // const result: string[] = [];
+  // let tmp = n;
+  // let divisor = 1000;
+
+  // if (tmp < divisor) {
+  //   result.push(I2S(tmp));
+  // } else {
+  //   while (Math.floor(tmp / divisor) > 0) {
+  //     result.push(I2S(tmp % divisor).substr(0, 3));
+  //     divisor *= 1000;
+  //   }
+  // }
+  if (n < 1000) return n.toString();
+
+  const parts: string[] = [];
+  let str = n.toString();
+  let i = 0;
+  /**
+   * 012 345 678
+   * 123 456 789
+   * 
+   * 
+   * 1 234
+   */
+  for (i = str.length-3; i >= 0; i -= 3) {
+    parts.push(str.substr(i, 3));
+  }
+
+  if (i > -3) {
+    parts.push(str.substr(0, i+3));
+  }
+
+  return parts.reverse().join(",");
+}
+
+export function getSwordOfHopeMult(player: player): number {
+  let result = 1.0;
+  const playerAllies = GetPlayersAllies(player);
+  ForForce(playerAllies, () => {
+    const p = GetEnumPlayer();
+    const pId = GetPlayerId(p);
+    if (p != player && pId >= 0 && pId < Constants.maxActivePlayers) {
+      result += 0.1;
+    }
+  });
+  DestroyForce(playerAllies);
+  return result;
+}

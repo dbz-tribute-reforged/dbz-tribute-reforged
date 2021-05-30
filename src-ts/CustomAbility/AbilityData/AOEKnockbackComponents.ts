@@ -65,6 +65,22 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // knockback deflect
+  {
+    name: "knockback deflect",
+    repeatInterval: 1, 
+    startTick: 9,
+    endTick: 18,
+    knockbackData: {
+      speed: 30, 
+      angle: 0, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: false,
+  },
   // super dragon flight
   {
     name: "knockback super dragon flight",
@@ -1150,6 +1166,38 @@ export const AOEKnockbackComponents = [
       speed: 15, 
       angle: 180, 
       aoe: 700,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // saitama serious punch
+  {
+    name: "knockback saitama serious punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 15, 
+      angle: 180, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // saitama serious sideways jumps
+  {
+    name: "knockback saitama serious sideways jumps",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 20, 
+      angle: 0, 
+      aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
