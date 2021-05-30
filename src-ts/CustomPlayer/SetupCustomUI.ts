@@ -120,9 +120,12 @@ export function setupCustomUI(player: player) {
 		const buffBar = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_PANEL_BUFF_BAR, 0);
 		const buffBarParent = BlzFrameGetParent(buffBar);
 		
+		const customNameLabel = BlzGetFrameByName("unitNameText", 0);
 		const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
 		const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
 		const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
+		const customArmrLabel = BlzGetFrameByName("heroArmorText", 0);
+		const customBaseMSLabel = BlzGetFrameByName("heroBaseMSText", 0);
 
     // const heroNameLabel = BlzGetFrameByName("SimpleNameValue", 0);
     // const heroLevelBar = BlzGetFrameByName("SimpleHeroLevelBar", 0);
@@ -179,7 +182,7 @@ export function setupCustomUI(player: player) {
       BlzFrameSetPoint(fButton, FRAMEPOINT_LEFT, dButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
 
 
-      // put msha ontop of qwer
+      // put msha below of qwer
       // m
       BlzFrameSetPoint(mButton, FRAMEPOINT_TOP, qButton, FRAMEPOINT_BOTTOM, 0, -Constants.uiYButtonSpacing);
       // s h a
@@ -345,17 +348,31 @@ export function setupCustomUI(player: player) {
 			//   }
 			// }
 
+      // adjust hero label above hero portrait
+			BlzFrameSetVisible(customNameLabel, true);
+      BlzFrameClearAllPoints(customNameLabel);
+      FrameHelper.clearFrameAndSetPoint(customNameLabel, FRAMEPOINT_BOTTOMLEFT, heroPortrait, FRAMEPOINT_TOPLEFT, -0.11, 0.005);
 
 			// heroStatsUI.setRenderVisible(true);
+
 			BlzFrameSetVisible(customStrengthLabel, true);
 			BlzFrameSetVisible(customAgilityLabel, true);
 			BlzFrameSetVisible(customIntelligenceLabel, true);
+			BlzFrameSetVisible(customArmrLabel, true);
+			BlzFrameSetVisible(customBaseMSLabel, true);
+
       BlzFrameClearAllPoints(customStrengthLabel);
       BlzFrameClearAllPoints(customAgilityLabel);
       BlzFrameClearAllPoints(customIntelligenceLabel);
-      BlzFrameSetAbsPoint(customStrengthLabel, FRAMEPOINT_CENTER, 0.624, 0.11);
-      BlzFrameSetAbsPoint(customAgilityLabel, FRAMEPOINT_CENTER, 0.624, 0.11-0.025);
-      BlzFrameSetAbsPoint(customIntelligenceLabel, FRAMEPOINT_CENTER, 0.624, 0.11-0.05);
+      BlzFrameClearAllPoints(customArmrLabel);
+      BlzFrameClearAllPoints(customBaseMSLabel);
+      
+      const customLabelStartY = 0.125;
+      BlzFrameSetAbsPoint(customStrengthLabel, FRAMEPOINT_CENTER, 0.624, customLabelStartY);
+      BlzFrameSetAbsPoint(customAgilityLabel, FRAMEPOINT_CENTER, 0.624, customLabelStartY-0.025);
+      BlzFrameSetAbsPoint(customIntelligenceLabel, FRAMEPOINT_CENTER, 0.624, customLabelStartY-0.05);
+      BlzFrameSetAbsPoint(customArmrLabel, FRAMEPOINT_CENTER, 0.624, customLabelStartY-0.075);
+      BlzFrameSetAbsPoint(customBaseMSLabel, FRAMEPOINT_CENTER, 0.624, customLabelStartY-0.1);
       // BlzFrameSetPoint(customStrengthLabel, FRAMEPOINT_BOTTOMLEFT, buffBarLabel, FRAMEPOINT_TOPLEFT, 0.0, 0.003);
       // BlzFrameSetPoint(customAgilityLabel, FRAMEPOINT_BOTTOMLEFT, buffBarLabel, FRAMEPOINT_TOPLEFT, 0.04, 0.003);
       // BlzFrameSetPoint(customIntelligenceLabel, FRAMEPOINT_BOTTOMLEFT, buffBarLabel, FRAMEPOINT_TOPLEFT, 0.08, 0.003);

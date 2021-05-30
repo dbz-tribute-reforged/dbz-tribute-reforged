@@ -6885,6 +6885,203 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Saitama.NORMAL_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi saitama normal punch" },
+      { name: "dash ground forward all might right smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.CONSECUTIVE_PUNCHES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi saitama consecutive normal punches" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.LEAP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "damage saitama leap explosion" },
+      { name: "jump saitama leap" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.TABLE_FLIP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam saitama table flip" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.SERIOUS_SERIES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground forward saitama serious series" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.SERIOUS_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim saitama serious punch" },
+      { name: "dash ground point saitama serious punch" },
+      { name: "damage saitama serious punch dps" },
+      { name: "damage saitama serious punch explosion" },
+      { name: "debuff stun saitama serious punch" },
+      { name: "knockback saitama serious punch" },
+      { name: "sfx saitama serious punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaitama.blp",
+      disabled: "BTNSaitama.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "dash ground forward saitama serious sideways jumps" },
+      { name: "block saitama serious sideways jumps" },
+      { name: "knockback saitama serious sideways jumps" },
+      { name: "sfx saitama serious sideways jumps" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

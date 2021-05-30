@@ -199,4 +199,14 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump saitama leap",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 25,
+    maxHeight: 500,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]

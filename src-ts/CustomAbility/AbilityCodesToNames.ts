@@ -325,6 +325,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.lucarioGigantomax, AbilityNames.Lucario.GIGANTAMAX],
     [Id.gigaSphere, AbilityNames.Lucario.GIGA_SPHERE],
 
+    // saitama
+    [Id.saitamaNormalPunch, AbilityNames.Saitama.NORMAL_PUNCH],
+    [Id.saitamaConsecutivePunches, AbilityNames.Saitama.CONSECUTIVE_PUNCHES],
+    [Id.saitamaLeap, AbilityNames.Saitama.LEAP],
+    [Id.saitamaTableFlip, AbilityNames.Saitama.TABLE_FLIP],
+    [Id.saitamaOK, AbilityNames.Saitama.OK],
+    [Id.saitamaSeriousSeries, AbilityNames.Saitama.SERIOUS_SERIES],
+    [Id.saitamaSeriousPunch, AbilityNames.Saitama.SERIOUS_PUNCH],
+    [Id.saitamaSeriousSidewaysJumps, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],

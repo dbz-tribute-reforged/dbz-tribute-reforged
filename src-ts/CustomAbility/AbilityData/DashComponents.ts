@@ -1243,6 +1243,45 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 12,
   },
+  // saitama serious series
+  {
+    name: "dash ground forward saitama serious series",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
+  },
+  // saitama serious punch
+  {
+    name: "dash ground point saitama serious punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
+  },
+  // saitama serious sideways jumps
+  {
+    name: "dash ground forward saitama serious sideways jumps",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 5,
+  },
   // ----------------------------
   // cell-x
   {

@@ -391,5 +391,35 @@ export function CustomUiTest() {
 		"|cff20ffffINT:|n0|r",
 	).setRenderVisible(false);
 
+	const heroArmorText = new BasicTextFrame(
+		"heroArmorText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+		"|cffffff20ARMR:|n0|r",
+	).setRenderVisible(false);
+
+	const heroMSText = new BasicTextFrame(
+		"heroBaseMSText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+		"|cffffff20MS:|n0|r",
+	).setRenderVisible(false);
+
+	const unitNameText = new BasicTextFrame(
+		"unitNameText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.1, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+		"?",
+	).setRenderVisible(false);
+
 	Logger.LogDebug("Custom UI Setup Complete.");
 }

@@ -434,6 +434,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucario.GIGA_SPHERE,
     ]],
 
+    [Id.saitama, [
+      AbilityNames.Saitama.NORMAL_PUNCH,
+      AbilityNames.Saitama.CONSECUTIVE_PUNCHES,
+      AbilityNames.Saitama.LEAP,
+      AbilityNames.Saitama.TABLE_FLIP,
+      AbilityNames.Saitama.OK,
+      AbilityNames.Saitama.SERIOUS_SERIES,
+      AbilityNames.Saitama.SERIOUS_PUNCH,
+      AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
+    ]],
 
 
 
@@ -518,6 +528,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ayla.BOULDER_TOSS, AbilityNames.Lucca.HYPNOWAVE,
       AbilityNames.Marle.AURA, AbilityNames.Marle.ALLURE,
       AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
+      AbilityNames.Saitama.SERIOUS_SERIES, AbilityNames.Saitama.SERIOUS_PUNCH, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

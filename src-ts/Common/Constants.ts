@@ -136,6 +136,7 @@ export module DebuffAbilities {
   export const GRAN_REY_SLOW = FourCC("A0V7");
   export const FINAL_BURST_SLOW = FourCC("A0VE");
   export const LIGHTNING_3_SLOW = FourCC("A0WN");
+  export const TABLE_FLIP = FourCC("A03U");
 
   // entangling roots
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -581,6 +582,16 @@ export module Id {
   export const rustChomp = FourCC("A0VG");
   export const rustGobble = FourCC("A0VH");
   export const tyrannoRoar = FourCC("A0VJ");
+
+  export const saitama = FourCC("H04Y");
+  export const saitamaNormalPunch = FourCC("A008");
+  export const saitamaConsecutivePunches = FourCC("A00I");
+  export const saitamaLeap = FourCC("A00Z");
+  export const saitamaTableFlip = FourCC("A011");
+  export const saitamaOK = FourCC("A03H");
+  export const saitamaSeriousSeries = FourCC("A02J");
+  export const saitamaSeriousPunch = FourCC("A02U");
+  export const saitamaSeriousSidewaysJumps = FourCC("A032");
 
   export const sephiroth = FourCC("H09M");
   export const sephirothOctoslash = FourCC("A0T7");

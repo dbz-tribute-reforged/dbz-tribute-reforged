@@ -508,6 +508,9 @@ export function CustomPlayerTest() {
         const level = I2S(GetUnitLevel(unit));
 
         // update stats
+        let nameString = "";
+        const armrString = "|cffffff20ARMR:|n" + R2SW(BlzGetUnitArmor(unit), 2, 2) + "|r";
+        const msString = "|cff808080MS:|n" + R2SW(GetUnitMoveSpeed(unit), 2, 2) + "|r";
         let strength = "|cffff2020STR:|n";
         let agility = "|cff20ff20AGI:|n";
         let intelligence = "|cff20ffffINT:|n";
@@ -519,10 +522,12 @@ export function CustomPlayerTest() {
           strength += convertIntToCommaString(GetHeroStr(unit, true));
           agility += convertIntToCommaString(GetHeroAgi(unit, true));
           intelligence += convertIntToCommaString(GetHeroInt(unit, true));
+          nameString += GetHeroProperName(unit);
         } else {
           strength += "0";
           agility += "0";
           intelligence += "0";
+          nameString += GetUnitName(unit);
         }
         strength += "|r";
         agility += "|r";
@@ -534,6 +539,9 @@ export function CustomPlayerTest() {
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
           updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, currentSp, maxSp, percentSp, level, percentXp);
+          BlzFrameSetText(BlzGetFrameByName("unitNameText", 0), nameString);
+          BlzFrameSetText(BlzGetFrameByName("heroArmorText", 0), armrString);
+          BlzFrameSetText(BlzGetFrameByName("heroBaseMSText", 0), msString);
           BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
           BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
           BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);

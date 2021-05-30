@@ -379,6 +379,17 @@ export module AbilityNames {
     export const GIGA_SPHERE: string = "Giga Sphere";
   }
 
+  export module Saitama {
+    export const NORMAL_PUNCH = "Saitama Normal Punch";
+    export const CONSECUTIVE_PUNCHES = "Saitama Consecutive Punches";
+    export const LEAP = "Saitama Leap";
+    export const TABLE_FLIP = "Saitama Table Flip";
+    export const OK = "Saitama OK";
+    export const SERIOUS_SERIES = "Saitama Serious Series";
+    export const SERIOUS_PUNCH = "Saitama Serious Punch";
+    export const SERIOUS_SIDEWAYS_JUMPS = "Saitama Serious Sideways Jumps";
+  }
+
 
 
   export module Babidi {

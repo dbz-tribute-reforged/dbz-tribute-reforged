@@ -1363,6 +1363,63 @@ export module SoundHelper {
           }
         }
         break;
+      
+      // saitama
+      case Id.saitamaNormalPunch:
+        if (unitId == Id.saitama) {
+          if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/Saitama/PunchYou.mp3", 768);
+          } else if (rng < 30) {
+            playSoundOnUnit(unit, "Audio/Voice/Saitama/Hyah.mp3", 288);
+          } else if (rng < 80) {
+            playSoundOnUnit(unit, "Audio/Voice/Saitama/Yah.mp3", 600);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Saitama/TakeThat.mp3", 528);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+        break;
+
+      case Id.saitamaConsecutivePunches:
+        if (unitId == Id.saitama) {
+          playSoundOnUnit(unit, "Audio/Voice/Saitama/ConsecutiveNormalPunches.mp3", 1944);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+        break;
+
+      case Id.saitamaLeap:
+        if (unitId == Id.saitama) {
+          if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Saitama/AlleOop.mp3", 696);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Saitama/MovePlease.mp3", 864);
+          }
+        }
+        break;
+      
+      case Id.saitamaTableFlip:
+        if (unitId == Id.saitama) {
+          playSoundOnUnit(unit, "Audio/Voice/Saitama/AskedForIt.mp3", 1224);
+        }
+        break;
+
+      case Id.saitamaOK:
+        if (unitId == Id.saitama) {
+          playSoundOnUnit(unit, "Audio/Voice/Saitama/OK.mp3", 408);
+        }
+        break;
+      
+      case Id.saitamaSeriousSeries:
+        playSoundOnUnit(unit, "Audio/Voice/Saitama/SeriousSeries.mp3", 2136);
+        break;
+
+      case Id.saitamaSeriousPunch:
+        playSoundOnUnit(unit, "Audio/Voice/Saitama/SeriousPunch.mp3", 1320);
+        break;
+
+      case Id.saitamaSeriousSidewaysJumps:
+        playSoundOnUnit(unit, "Audio/Voice/Saitama/SeriousSidewaysJumps.mp3", 1750);
+        break;
 
       // sephiroth
       case Id.sephirothOctoslash:
