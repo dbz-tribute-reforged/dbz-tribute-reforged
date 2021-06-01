@@ -2,7 +2,9 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {
+  public player: player;
   public heroes: Map<unit, CustomHero>;
+  public units: Map<unit, unit>;
   protected currentlySelectedUnit: unit;
   protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;
@@ -16,7 +18,9 @@ export class CustomPlayer {
     public id: number, 
     public name: string,
   ) {
+    this.player = Player(id);
     this.heroes = new Map();
+    this.units = new Map();
     this.currentlySelectedUnit = GetEnumUnit();
     this.lastSelectedOwnedHero = GetEnumUnit();
     this.mouseData = new Vector2D(0, 0);
@@ -31,7 +35,7 @@ export class CustomPlayer {
     if (
       IsUnitType(hero, UNIT_TYPE_HERO) 
       && 
-      IsUnitOwnedByPlayer(hero, Player(this.id))
+      IsUnitOwnedByPlayer(hero, this.player)
       &&
       !this.hasHero(hero)
       &&
@@ -58,6 +62,21 @@ export class CustomPlayer {
       return true;
     }
     return false;
+  }
+
+  public addUnit(unit: unit): this {
+    if (
+      IsUnitOwnedByPlayer(unit, this.player)
+      &&
+      !this.hasUnit(unit)
+    ) {
+      this.units.set(unit, unit);
+    }
+    return this;
+  }
+
+  public hasUnit(unit: unit): boolean {
+    return this.units.has(unit);
   }
 
   public getCustomHero(hero: unit): CustomHero | undefined {
@@ -87,6 +106,10 @@ export class CustomPlayer {
     return this.heroes.values();
   }
 
+  get allUnits(): IterableIterator<unit> {
+    return this.units.values();
+  }
+
   cleanupRemovedHeroes() {
     const removed = [];
     for (const [unit, customHero] of this.heroes) {
@@ -98,6 +121,17 @@ export class CustomPlayer {
     removed.map((removedUnit: unit) => {
       this.heroes.delete(removedUnit);
     }, this);
+  }
 
+  cleanupRemovedUnits () {
+    const removed = [];
+    for (const [k, v] of this.units) {
+      if (GetUnitTypeId(v) == 0 || !IsUnitSelected(v, this.player)) {
+        removed.push(v);
+      }
+    }
+    removed.map((removedUnit: unit) => {
+      this.units.delete(removedUnit);
+    }, this);
   }
 }

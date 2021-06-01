@@ -764,9 +764,14 @@ export function setupSPData(customHero: CustomHero) {
   TimerStart(spTimer, 0.03, true, () => {
     // regen: 1 stam per 6 second base
     // +1% per 1k AGI
+    let currentSP = customHero.getCurrentSP();
+    let maxSP = customHero.getMaxSP();
     let incSp = 0.05 * (1 + 0.00001 * GetHeroAgi(customHero.unit, true));
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
+    }
+    if (currentSP < 0.2 * maxSP) {
+      incSp *= 0.5;
     }
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
   });

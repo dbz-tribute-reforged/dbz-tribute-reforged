@@ -169,33 +169,33 @@ export function setupCustomUI(player: player) {
 				BlzFrameSetSize(button, Constants.uiButtonSize, Constants.uiButtonSize);
 			});
 
-      // q
-      BlzFrameSetPoint(qButton, FRAMEPOINT_TOPLEFT, spBar, FRAMEPOINT_BOTTOMLEFT, Constants.uiXButtonSpacing, -Constants.uiYButtonSpacing);
-      // w e r
-      for (let i = 9; i < 12; ++i) {
-        const prevButton = commandCardButtons[i-1];
-        const button = commandCardButtons[i];
-        BlzFrameSetPoint(button, FRAMEPOINT_LEFT, prevButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
-      }
-      // d f
-      BlzFrameSetPoint(dButton, FRAMEPOINT_LEFT, rButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
-      BlzFrameSetPoint(fButton, FRAMEPOINT_LEFT, dButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
-
 
       // put msha below of qwer
       // m
-      BlzFrameSetPoint(mButton, FRAMEPOINT_TOP, qButton, FRAMEPOINT_BOTTOM, 0, -Constants.uiYButtonSpacing);
+      BlzFrameSetPoint(mButton, FRAMEPOINT_TOPLEFT, spBar, FRAMEPOINT_BOTTOMLEFT, Constants.uiXButtonSpacing, -Constants.uiYButtonSpacing);
       // s h a
       for (let i = 1; i < 4; ++i) {
         const prevButton = commandCardButtons[i-1];
         const button = commandCardButtons[i];
         BlzFrameSetPoint(button, FRAMEPOINT_LEFT, prevButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
       }
-      // p o
+      // p d
       BlzFrameSetPoint(pButton, FRAMEPOINT_LEFT, aButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
-      BlzFrameSetPoint(oButton, FRAMEPOINT_LEFT, pButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
+      BlzFrameSetPoint(dButton, FRAMEPOINT_LEFT, pButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
+      
+      // f o
+      BlzFrameSetPoint(fButton, FRAMEPOINT_TOP, mButton, FRAMEPOINT_BOTTOM, 0, -Constants.uiYButtonSpacing);
+      BlzFrameSetPoint(oButton, FRAMEPOINT_LEFT, fButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
+      // q
+      BlzFrameSetPoint(qButton, FRAMEPOINT_LEFT, oButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
+      // w e r
+      for (let i = 9; i < 12; ++i) {
+        const prevButton = commandCardButtons[i-1];
+        const button = commandCardButtons[i];
+        BlzFrameSetPoint(button, FRAMEPOINT_LEFT, prevButton, FRAMEPOINT_RIGHT, Constants.uiXButtonSpacing, 0);
+      }
 
-      // 
+
 			BlzFrameSetVisible(heroBarButtons, true);
 
 			BlzFrameSetVisible(minimapButtonBar, true);
@@ -221,20 +221,20 @@ export function setupCustomUI(player: player) {
 			// still too short for most hs
 			// BlzFrameSetPoint(gameMsg, FRAMEPOINT_TOPRIGHT, grandpa, FRAMEPOINT_BOTTOMLEFT, 0.6, 0.3);
 
-			FrameHelper.clearFrameAndSetPoint(heroPortrait, FRAMEPOINT_TOPRIGHT, hpBar, FRAMEPOINT_BOTTOMLEFT, 0.05, 0.012);
+			FrameHelper.clearFrameAndSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, abilityButtonHotbar, FRAMEPOINT_TOP, 0.056, 0.012);
 
-      // adjust level bar above hero portrait
-      FrameHelper.clearFrameAndSetPoint(levelBar, FRAMEPOINT_BOTTOMLEFT, heroPortrait, FRAMEPOINT_BOTTOMLEFT, -0.11, 0);
+      // adjust level bar below hero portrait
+      FrameHelper.clearFrameAndSetPoint(levelBar, FRAMEPOINT_BOTTOM, abilityButtonHotbar, FRAMEPOINT_TOP, 0, 0.002);
       BlzFrameSetSize(levelBar, 0.09, 0.015);
 
       // ability hotbar below portrait + lvl bar
 			BlzFrameClearAllPoints(abilityButtonHotbar);
 			BlzFrameSetPoint(
 				abilityButtonHotbar, 
-				FRAMEPOINT_TOPLEFT, 
-				levelBar, 
-				FRAMEPOINT_BOTTOMLEFT, 
-				-Constants.uiXButtonSpacing - 0.04, -5*Constants.uiYButtonSpacing
+				FRAMEPOINT_RIGHT, 
+				fButton, 
+				FRAMEPOINT_LEFT, 
+				Constants.uiXButtonSpacing * 3, 0
 			);
 
 			// buff bar doenst seem to work..., crashes the game unless simple info unit panel is enabled
@@ -351,7 +351,7 @@ export function setupCustomUI(player: player) {
       // adjust hero label above hero portrait
 			BlzFrameSetVisible(customNameLabel, true);
       BlzFrameClearAllPoints(customNameLabel);
-      FrameHelper.clearFrameAndSetPoint(customNameLabel, FRAMEPOINT_BOTTOMLEFT, heroPortrait, FRAMEPOINT_TOPLEFT, -0.11, 0.005);
+      FrameHelper.clearFrameAndSetPoint(customNameLabel, FRAMEPOINT_TOPLEFT, levelBar, FRAMEPOINT_TOPLEFT, 0.0, 0.106);
 
 			// heroStatsUI.setRenderVisible(true);
 
