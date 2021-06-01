@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id, Globals, BASE_DMG, DebuffAbilities, Buffs, OrderIds } from "Common/Constants";
+import { Constants, Id, Globals, BASE_DMG, DebuffAbilities, Buffs, OrderIds, CostType } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -168,10 +168,11 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
   }
 	TriggerAddAction(addHeroToPlayer, () => {
-    const addedHero = GetTriggerUnit();
+    const selectedUnit = GetTriggerUnit();
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    Globals.customPlayers[playerId].addHero(addedHero);
+    Globals.customPlayers[playerId].addHero(selectedUnit);
+    Globals.customPlayers[playerId].addUnit(selectedUnit);
     Globals.customPlayers[playerId].selectedUnit = GetTriggerUnit();
 
     for (let i = 0 ; i < Constants.maxSubAbilities; ++i) {
@@ -207,6 +208,12 @@ export function CustomPlayerTest() {
   TimerStart(CreateTimer(), 30.0, true, () => {
     for (const customPlayer of Globals.customPlayers) {
       customPlayer.cleanupRemovedHeroes();
+    }
+  });
+
+  TimerStart(CreateTimer(), 1, true, () => {
+    for (const customPlayer of Globals.customPlayers) {
+      customPlayer.cleanupRemovedUnits();
     }
   });
 
@@ -356,14 +363,12 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(stopOrderTrigger, () => {
     const player = GetTriggerPlayer();
-    const group = GetUnitsSelectedAll(player);
-    ForGroup(group, () => {
-      const unit = GetEnumUnit();
-      if (GetOwningPlayer(unit) == player) {
+    const playerId = GetPlayerId(player);
+    for (const unit of Globals.customPlayers[playerId].allUnits) {
+      if (unit && IsUnitSelected(unit, player)) {
         IssueImmediateOrderById(unit, OrderIds.STOP);
       }
-    });
-    DestroyGroup(group);
+    }
     return false;
   });
 
@@ -374,14 +379,12 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(holdPositionOrderTrigger, () => {
     const player = GetTriggerPlayer();
-    const group = GetUnitsSelectedAll(player);
-    ForGroup(group, () => {
-      const unit = GetEnumUnit();
-      if (GetOwningPlayer(unit) == player) {
+    const playerId = GetPlayerId(player);
+    for (const unit of Globals.customPlayers[playerId].allUnits) {
+      if (unit && IsUnitSelected(unit, player)) {
         IssueImmediateOrderById(unit, OrderIds.HOLD_POSITION);
       }
-    });
-    DestroyGroup(group);
+    }
     return false;
   });
 
@@ -564,11 +567,19 @@ export function CustomPlayerTest() {
             if (abilityCd > 0) {
               cdText = R2SW(abilityCd,2,2) + "s";
             }
+
+            let overwriteCd = (
+              heroAbility.costType == CostType.SP 
+              && heroAbility.costAmount > ownedHero.getCurrentSP()
+            );
             // BJDebugMsg(cdText);
             if (GetPlayerId(GetLocalPlayer()) == playerId) {
               // POSSIBLY LAGGY
               // might be a bit slow having to constantly update text and icon, but we'll see
-              let cdValue = 100 * (1 - heroAbility.currentCd / heroAbility.maxCd);
+              let cdValue = 0;
+              if (!overwriteCd) {
+                cdValue = 100 * (1 - heroAbility.currentCd / heroAbility.maxCd);
+              }
               updateHeroAbilityCD(heroAbility, j, cdText, cdValue);
             }
           }
@@ -595,12 +606,12 @@ export function CustomPlayerTest() {
     setupCustomUI(GetTriggerPlayer());
   });
  
-  TimerStart(CreateTimer(), 1.0, false, () => {  
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      setupCustomUI(Player(i));
-      DestroyTimer(GetExpiredTimer());
-    }
-  });
+  // TimerStart(CreateTimer(), 1.0, false, () => {  
+  //   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  //     setupCustomUI(Player(i));
+  //     DestroyTimer(GetExpiredTimer());
+  //   }
+  // });
 
 
 

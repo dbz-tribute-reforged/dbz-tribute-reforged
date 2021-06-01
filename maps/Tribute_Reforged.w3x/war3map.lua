@@ -14771,6 +14771,8 @@ function Trig_Setup_Quests_Actions()
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_11860", "TRIGSTR_11861", "ReplaceableTextures\\CommandButtons\\BTNTome.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2676", "TRIGSTR_2677", "BTNBasicZanzo.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
 end
 
@@ -35317,7 +35319,7 @@ function Trig_Cell_Absorb_Actions()
             end
         else
             if (Trig_Cell_Absorb_Func001Func006Func001C()) then
-                udg_StatMultReal = (0.00 + I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit())))
+                udg_StatMultReal = (1.00 + I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit())))
                 TriggerExecute(gg_trg_Add_To_Base_Stats)
                 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
                 TriggerExecute(gg_trg_Update_Current_Stats)

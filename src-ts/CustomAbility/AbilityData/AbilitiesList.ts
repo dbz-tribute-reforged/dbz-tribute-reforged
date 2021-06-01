@@ -8,7 +8,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 3,
     costType: CostType.SP,
-    costAmount: 60,
+    costAmount: 55,
     duration: 25,
     updateRate: 0.03,
     castTime: 0.03,
@@ -39,9 +39,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
-    maxCd: 2,
+    maxCd: 4,
     costType: CostType.SP,
-    costAmount: 30,
+    costAmount: 35,
     duration: 50,
     updateRate: 0.03,
     castTime: 0.25,
@@ -57,9 +57,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 70% of incoming damage until more than 5 * AGI damage is blocked.|n" + 
-        "Damage is perfectly blocked during ticks 9 to 18, reducing damage by 50% up to 4 * AGI.|n" +
-        "Cost: 30 SP|nCD: 2"
+        "Basic Guard ability that blocks 60% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
+        "Cost: 30 SP|nCD: 3"
     },
     components: [
       { name: "block basic guard" },
@@ -70,7 +69,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.MAX_POWER,
     currentCd: 0,
-    maxCd: 6,
+    maxCd: 7,
     costType: CostType.SP,
     costAmount: 40,
     duration: 166,
@@ -88,8 +87,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Max Power",
       body: 
-        "Boosts your ability damage by 20% and increases movement speed by 66 for 10 seconds." + 
-        "|nCost: 40 SP|nCD: 6"
+        "Boosts your ability damage by 20% and increases movement speed by 132 for 5 seconds." + 
+        "|nCost: 40 SP|nCD: 7"
     },
     components: [
       { name: "spell amp max power" },
@@ -101,9 +100,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.DEFLECT,
     currentCd: 0,
-    maxCd: 2,
+    maxCd: 3,
     costType: CostType.SP,
-    costAmount: 50,
+    costAmount: 40,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.25,
@@ -119,9 +118,9 @@ export const AbilitiesList = [
     tooltip: {
       title: "(V) Deflect",
       body: 
-        "After a 0.3s delay, damage is reduced by 90% up to 4 * AGI for the next 0.3s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming beams are deflected during this period.|n" +
-        "Cost: 50 SP|nCD: 2"
+        "Cost: 40 SP|nCD: 3"
     },
     components: [
       { name: "block perfect basic guard" },
