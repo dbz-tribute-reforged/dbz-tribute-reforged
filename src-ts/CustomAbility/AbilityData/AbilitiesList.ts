@@ -8,7 +8,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 3,
     costType: CostType.SP,
-    costAmount: 55,
+    costAmount: 40,
     duration: 25,
     updateRate: 0.03,
     castTime: 0.03,
@@ -28,7 +28,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
         "Can be used to cross cliffs unlike many other dashes. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 60 SP|nCD: 3 (varies)",
+        "|nCost: 40 SP|nCD: 3 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -41,7 +41,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 4,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 30,
     duration: 50,
     updateRate: 0.03,
     castTime: 0.25,
@@ -69,7 +69,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.MAX_POWER,
     currentCd: 0,
-    maxCd: 7,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 40,
     duration: 166,
@@ -88,7 +88,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "Boosts your ability damage by 20% and increases movement speed by 132 for 5 seconds." + 
-        "|nCost: 40 SP|nCD: 7"
+        "|nCost: 40 SP|nCD: 5"
     },
     components: [
       { name: "spell amp max power" },
@@ -100,9 +100,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.DEFLECT,
     currentCd: 0,
-    maxCd: 3,
+    maxCd: 2,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 30,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.25,
@@ -120,7 +120,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming beams are deflected during this period.|n" +
-        "Cost: 40 SP|nCD: 3"
+        "Cost: 30 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
