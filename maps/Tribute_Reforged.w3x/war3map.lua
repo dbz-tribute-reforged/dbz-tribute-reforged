@@ -251,6 +251,7 @@ udg_MarleAllureGroup = nil
 udg_LucarioIornDefenseUnitGroup = nil
 udg_EisAbsoluteZeroUnitGroup = nil
 udg_IsNightmareMode = false
+udg_DKBananaCount = __jarray(0)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -876,6 +877,7 @@ gg_trg_Transformations_Marle = nil
 gg_trg_Transformations_Ayla = nil
 gg_trg_Transformations_Lucario = nil
 gg_trg_Transformations_Saitama = nil
+gg_trg_Transformations_Donkey_Kong = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -904,6 +906,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Banana_Multi = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1252,6 +1255,12 @@ function InitGlobals()
     udg_LucarioIornDefenseUnitGroup = CreateGroup()
     udg_EisAbsoluteZeroUnitGroup = CreateGroup()
     udg_IsNightmareMode = false
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_DKBananaCount[i] = 0
+        i = i + 1
+    end
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -20532,6 +20541,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H05Q"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H04Y"))) then
         return false
@@ -20841,6 +20857,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                                         if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                             udg_TempString = "BTNSaitamaOk.blp"
                                                         else
+                                                            if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                udg_TempString = "BTNDK.blp"
+                                                            else
+                                                            end
                                                         end
                                                     end
                                                 end
@@ -23501,6 +23521,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A7")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H04Y")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H05Q")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
@@ -28782,6 +28804,13 @@ function Trig_Transformations_Parse_String_Func001Func005C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func006C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05Q"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001A()
     udg_StatMultUnit = GetEnumUnit()
     if (Trig_Transformations_Parse_String_Func001Func002C()) then
@@ -29040,6 +29069,10 @@ function Trig_Transformations_Parse_String_Func001A()
                 end
             end
         end
+    end
+    if (Trig_Transformations_Parse_String_Func001Func006C()) then
+        TriggerExecute(gg_trg_Transformations_Donkey_Kong)
+    else
     end
 end
 
@@ -46056,6 +46089,206 @@ function InitTrig_Transformations_Saitama()
     TriggerAddAction(gg_trg_Transformations_Saitama, Trig_Transformations_Saitama_Actions)
 end
 
+function Trig_Transformations_Donkey_Kong_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func016C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func019Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Donkey_Kong_Func019Func002C()
+    if (not Trig_Transformations_Donkey_Kong_Func019Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Func019C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Donkey_Kong_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Donkey_Kong_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_6204")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func011C()) then
+        udg_StatMultReal = 1.00
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func012C()) then
+        udg_StatMultReal = 1.25
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func013C()) then
+        udg_StatMultReal = 1.50
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func014C()) then
+        udg_StatMultReal = 2.00
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func015C()) then
+        udg_StatMultReal = 2.25
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Donkey_Kong_Func016C()) then
+        udg_StatMultReal = 2.50
+        udg_StatMultStr = (udg_StatMultReal + (I2R(udg_DKBananaCount[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) / 100.00))
+        udg_StatMultAgi = udg_StatMultReal
+        udg_StatMultInt = udg_StatMultReal
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Donkey_Kong_Func019C()) then
+        if (Trig_Transformations_Donkey_Kong_Func019Func002C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+                        udg_TransformationID = FourCC('H05Q')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Donkey_Kong()
+    gg_trg_Transformations_Donkey_Kong = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Donkey_Kong, Trig_Transformations_Donkey_Kong_Actions)
+end
+
+function Trig_Banana_Multi_Func002C()
+    if (GetItemTypeId(GetManipulatedItem()) == FourCC("I044")) then
+        return true
+    end
+    if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04F")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Banana_Multi_Conditions()
+    if (not Trig_Banana_Multi_Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Banana_Multi_Actions()
+    udg_DKBananaCount[GetConvertedPlayerId(GetTriggerPlayer())] = (udg_DKBananaCount[GetConvertedPlayerId(GetTriggerPlayer())] + 1)
+end
+
+function InitTrig_Banana_Multi()
+    gg_trg_Banana_Multi = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Banana_Multi, EVENT_PLAYER_UNIT_USE_ITEM)
+    TriggerAddCondition(gg_trg_Banana_Multi, Condition(Trig_Banana_Multi_Conditions))
+    TriggerAddAction(gg_trg_Banana_Multi, Trig_Banana_Multi_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
     if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
@@ -47854,6 +48087,8 @@ function InitCustomTriggers()
     InitTrig_Transformations_Ayla()
     InitTrig_Transformations_Lucario()
     InitTrig_Transformations_Saitama()
+    InitTrig_Transformations_Donkey_Kong()
+    InitTrig_Banana_Multi()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()
