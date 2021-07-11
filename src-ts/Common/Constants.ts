@@ -66,6 +66,7 @@ export module Constants {
   export const locustAbility: number = FourCC("Aloc")
   export const shopSellItemAbility: number = FourCC("Asit");
   export const buffImmortal: number = FourCC("B01U");
+  export const wishImmortalAbility: number = FourCC("A0M8");
   export const floatingTextVisionRange: number = 3000;
   export const beamSpawnOffset: number = 40;
   export const gameStartIndicatorUnit: number = FourCC("hkni");
@@ -137,6 +138,7 @@ export module DebuffAbilities {
   export const FINAL_BURST_SLOW = FourCC("A0VE");
   export const LIGHTNING_3_SLOW = FourCC("A0WN");
   export const TABLE_FLIP = FourCC("A03U");
+  export const DK_GROUND_POUND_SLOW = FourCC("A06E");
 
   // entangling roots
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -333,6 +335,14 @@ export module Id {
   export const paragonOfFlame = FourCC("A0UZ");
   export const finalBurst = FourCC("A0V0");
   export const redEyedDragonSummoning = FourCC("A0V3");
+
+  export const donkeyKong = FourCC("H05Q");
+  export const dkGroundPound = FourCC("A041");
+  export const dkRoll = FourCC("A05Z");
+  export const dkBarrelRoll = FourCC("A05Q");
+  export const dkBananaSlamma = FourCC("A06A");
+  export const dkJungleRush = FourCC("A06B");
+  export const dkBarrelCannon = FourCC("A069");
 
   export const dyspo = FourCC("H09H");
   export const lightBullet = FourCC("A0QY");

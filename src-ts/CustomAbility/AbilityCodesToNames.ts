@@ -335,6 +335,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.saitamaSeriousPunch, AbilityNames.Saitama.SERIOUS_PUNCH],
     [Id.saitamaSeriousSidewaysJumps, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS],
 
+    // donkey kong
+    [Id.dkGroundPound, AbilityNames.DonkeyKong.GROUND_POUND],
+    [Id.dkRoll, AbilityNames.DonkeyKong.ROLL],
+    [Id.dkBarrelRoll, AbilityNames.DonkeyKong.BARREL_ROLL],
+    [Id.dkBananaSlamma, AbilityNames.DonkeyKong.BANANA_SLAMMA],
+    [Id.dkJungleRush, AbilityNames.DonkeyKong.JUNGLE_RUSH],
+    [Id.dkBarrelCannon, AbilityNames.DonkeyKong.BARREL_CANNON],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],
@@ -360,8 +368,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LC'), AbilityNames.Android13.SS_DEADLY_HAMMER],
     // new
     [FourCC('A0LD'), AbilityNames.Android13.SS_DEADLY_BOMBER],
-    // old
-    [FourCC('A041'), AbilityNames.Android13.SS_DEADLY_BOMBER],
     [FourCC('A01Y'), AbilityNames.Android13.NUKE],
     [FourCC('A0K2'), AbilityNames.Android13.OVERCHARGE],
 

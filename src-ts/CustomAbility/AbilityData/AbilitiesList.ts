@@ -8,13 +8,14 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 3,
     costType: CostType.SP,
-    costAmount: 55,
+    costAmount: 40,
     duration: 25,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: true,
     // NOTE: animations aren't implemented yet
+    canUseWhenStunned: false,
     animation: "walk",
     icon: {
       // enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
@@ -28,7 +29,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
         "Can be used to cross cliffs unlike many other dashes. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 60 SP|nCD: 3 (varies)",
+        "|nCost: 40 SP|nCD: 3 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -41,12 +42,13 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 4,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 30,
     duration: 50,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       // enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
@@ -69,7 +71,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.MAX_POWER,
     currentCd: 0,
-    maxCd: 7,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 40,
     duration: 166,
@@ -77,6 +79,7 @@ export const AbilitiesList = [
     castTime: 0.25,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       // enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
@@ -88,7 +91,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "Boosts your ability damage by 20% and increases movement speed by 132 for 5 seconds." + 
-        "|nCost: 40 SP|nCD: 7"
+        "|nCost: 40 SP|nCD: 5"
     },
     components: [
       { name: "spell amp max power" },
@@ -100,14 +103,15 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.DEFLECT,
     currentCd: 0,
-    maxCd: 3,
+    maxCd: 2,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 30,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       // enabled: "Replaceabletextures\\CommandButtons\\BTNArcaniteArmor.blp",
@@ -120,7 +124,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming beams are deflected during this period.|n" +
-        "Cost: 40 SP|nCD: 3"
+        "Cost: 30 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -140,6 +144,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKame2.blp",
@@ -166,6 +171,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKameGod.blp",
@@ -192,6 +198,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSpiritbomb.blp",
@@ -218,6 +225,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDragonFist.blp",
@@ -248,6 +256,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDragonFist.blp",
@@ -278,6 +287,7 @@ export const AbilitiesList = [
     castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGokuUltraInstinct.blp",
@@ -306,6 +316,7 @@ export const AbilitiesList = [
     castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGokuMasteredUltraInstinct.blp",
@@ -336,6 +347,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGalickGun.blp",
@@ -362,6 +374,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFinalFlash.blp",
@@ -388,6 +401,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFinalFlash2.blp",
@@ -415,6 +429,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBigBangAttack.blp",
@@ -441,6 +456,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNVegetaEnergyBlastVolley.blp",
@@ -467,6 +483,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTwinDragonShot.blp",
@@ -493,6 +510,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMasenko.blp",
@@ -519,6 +537,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMasenko.blp",
@@ -545,6 +564,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSuperDragonFlight.blp",
@@ -575,6 +595,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGohanFatherSonKame.blp",
@@ -605,6 +626,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNUnlockPotential.blp",
@@ -632,6 +654,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJusticePose.blp",
@@ -659,6 +682,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPotentialUnleashed.blp",
@@ -687,6 +711,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenRockThrow.blp",
@@ -713,6 +738,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenStrike.blp",
@@ -742,6 +768,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKidTrunksFinalCannon.blp",
@@ -768,6 +795,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKidTrunksSwordOfHope.blp",
@@ -797,6 +825,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksDieDieMissileBarrage.blp",
@@ -823,6 +852,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksGalacticDonut.blp",
@@ -849,6 +879,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksUltraVolleyball.blp",
@@ -875,6 +906,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksGhostKamikaze.blp",
@@ -901,6 +933,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksGhostKamikaze2.blp",
@@ -927,6 +960,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGotenksSS3.blp",
@@ -958,6 +992,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFTFinishBuster.blp",
@@ -984,6 +1019,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFTHeatDomeAttack.blp",
@@ -1013,6 +1049,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBurningAttack.blp",
@@ -1039,6 +1076,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "attack",
     icon: {
       enabled: "BTNFTShiningSwordAttack.blp",
@@ -1069,6 +1107,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFTBlazingRush.blp",
@@ -1098,6 +1137,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFTSSRage.blp",
@@ -1128,6 +1168,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFTSwordOfHope.blp",
@@ -1154,6 +1195,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSpecialBeamCannon.blp",
@@ -1180,6 +1222,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPiccoloSlappyHand.blp",
@@ -1206,6 +1249,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPiccoloHellzoneGrenade.blp",
@@ -1233,6 +1277,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPiccoloKyodaika.blp",
@@ -1260,6 +1305,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockFutureSight.blp",
@@ -1288,6 +1334,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockTyrantBreaker.blp",
@@ -1318,6 +1365,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockTyrantLancer.blp",
@@ -1344,6 +1392,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockSaiyanSpirit.blp",
@@ -1376,6 +1425,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockRiotJavelin.blp",
@@ -1402,6 +1452,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBardockRebellionSpear.blp",
@@ -1431,6 +1482,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOozaru.blp",
@@ -1461,6 +1513,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKame2.blp",
@@ -1488,6 +1541,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKameGod.blp",
@@ -1515,6 +1569,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPanMaidenBlast.blp",
@@ -1544,6 +1599,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPanReliableFriend.blp",
@@ -1572,6 +1628,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPanHoneyBee.blp",
@@ -1599,6 +1656,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGiru.blp",
@@ -1625,6 +1683,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17PowerBlitz.blp",
@@ -1651,6 +1710,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17PowerBlitzBarrage.blp",
@@ -1679,6 +1739,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17BarrierPrison.blp",
@@ -1706,6 +1767,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17BarrierWall.blp",
@@ -1732,6 +1794,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17SuperElectricStrike.blp",
@@ -1758,6 +1821,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNVidel.blp",
@@ -1786,6 +1850,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNVidel.blp",
@@ -1816,6 +1881,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNVidel.blp",
@@ -1852,6 +1918,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNUpaQ.blp",
@@ -1878,6 +1945,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNUpaW.blp",
@@ -1907,6 +1975,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNUpaE.blp",
@@ -1933,6 +2002,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNUpaR.blp",
@@ -1960,6 +2030,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTapion.blp",
@@ -1987,6 +2058,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTapion.blp",
@@ -2013,6 +2085,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTapionShiningSword.blp",
@@ -2042,6 +2115,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTapionHerosFlute.blp",
@@ -2075,6 +2149,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTapionBraveSwordAttack.blp",
@@ -2101,6 +2176,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenPowerImpact.blp",
@@ -2127,6 +2203,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenPowerImpact2.blp",
@@ -2153,6 +2230,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenHeatwave.blp",
@@ -2179,6 +2257,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenHeatwave2.blp",
@@ -2205,6 +2284,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenMeditate.blp",
@@ -2232,6 +2312,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenMeditate.blp",
@@ -2259,6 +2340,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenUltimateBurningWarrior.blp",
@@ -2288,6 +2370,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenUltimateBurningWarrior2.blp",
@@ -2317,6 +2400,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJirenUltimateBurningWarrior2.blp",
@@ -2346,6 +2430,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeFlash.blp",
@@ -2373,6 +2458,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeFlash.blp",
@@ -2400,6 +2486,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticePunch.blp",
@@ -2428,6 +2515,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticePunch.blp",
@@ -2456,6 +2544,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeTornado.blp",
@@ -2485,6 +2574,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeTornado.blp",
@@ -2514,6 +2604,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeHold.blp",
@@ -2542,6 +2633,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticeHold.blp",
@@ -2570,6 +2662,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoJusticePose.blp",
@@ -2598,6 +2691,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNToppoGoD.blp",
@@ -2626,6 +2720,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoLightBullet.blp",
@@ -2654,6 +2749,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticeKick.blp",
@@ -2682,6 +2778,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticeKick2.blp",
@@ -2711,6 +2808,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticeKick.blp",
@@ -2740,6 +2838,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticeCannon.blp",
@@ -2766,6 +2865,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticeCannon2.blp",
@@ -2792,6 +2892,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoCircleFlash.blp",
@@ -2818,6 +2919,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoCircleFlash2.blp",
@@ -2844,6 +2946,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoJusticePose.blp",
@@ -2871,6 +2974,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDyspoSuperMax.blp",
@@ -2899,6 +3003,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKrillinScatteringBullet.blp",
@@ -2926,6 +3031,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKrillinDestructoDisc.blp",
@@ -2952,6 +3058,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -2980,6 +3087,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3008,6 +3116,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3036,6 +3145,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3063,6 +3173,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3090,6 +3201,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3117,6 +3229,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3143,6 +3256,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3170,6 +3284,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3198,6 +3313,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3228,6 +3344,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3256,6 +3373,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3285,6 +3403,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3314,6 +3433,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3340,6 +3460,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3368,6 +3489,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3397,6 +3519,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3423,6 +3546,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3452,6 +3576,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3478,6 +3603,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3504,6 +3630,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3530,6 +3657,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3559,6 +3687,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3589,6 +3718,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3618,6 +3748,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3644,6 +3775,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3672,6 +3804,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3699,6 +3832,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3725,6 +3859,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3753,6 +3888,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYamcha.blp",
@@ -3780,6 +3916,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiKamehameha.blp",
@@ -3806,6 +3943,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiKamehamehaFire.blp",
@@ -3832,6 +3970,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiKamehameha2.blp",
@@ -3858,6 +3997,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiKamehamehaFire2.blp",
@@ -3884,6 +4024,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiLightningSurprise.blp",
@@ -3911,6 +4052,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoshiFullPower.blp",
@@ -3940,6 +4082,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightDetroitSmash.blp",
@@ -3968,6 +4111,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightLeftSmash.blp",
@@ -3996,6 +4140,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightRightSmash.blp",
@@ -4024,6 +4169,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightUnitedStatesOfSmash.blp",
@@ -4058,6 +4204,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightOneForAll.blp",
@@ -4091,6 +4238,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightOklahomaSmash.blp",
@@ -4122,6 +4270,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightCarolinaSmash.blp",
@@ -4151,6 +4300,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightCaliforniaSmash.blp",
@@ -4182,6 +4332,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAllMightNewHampshireSmash.blp",
@@ -4213,6 +4364,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioQ.blp",
@@ -4239,6 +4391,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioW.blp",
@@ -4265,6 +4418,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioQ.blp",
@@ -4292,6 +4446,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioQ.blp",
@@ -4318,6 +4473,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioQ.blp",
@@ -4344,6 +4500,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarioF.blp",
@@ -4370,6 +4527,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTienDodonRay.blp",
@@ -4396,6 +4554,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTienTriBeamCharge.blp",
@@ -4422,6 +4581,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTienTriBeamFire.blp",
@@ -4448,6 +4608,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNTienKiai.blp",
@@ -4478,6 +4639,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou.blp",
@@ -4504,6 +4666,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaKuroi.blp",
@@ -4530,6 +4693,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaGran.blp",
@@ -4556,6 +4720,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou2.blp",
@@ -4582,6 +4747,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou2.blp",
@@ -4608,6 +4774,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou2.blp",
@@ -4634,6 +4801,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou2.blp",
@@ -4660,6 +4828,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoGetsugaTenshou2.blp",
@@ -4686,6 +4855,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoBankai.blp",
@@ -4713,6 +4883,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoBankai.blp",
@@ -4739,6 +4910,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoBankai2.blp",
@@ -4765,6 +4937,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoCero.blp",
@@ -4794,6 +4967,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoCeroFire.blp",
@@ -4820,6 +4994,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoCeroGigante.blp",
@@ -4846,6 +5021,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoMugetsu2.blp",
@@ -4873,6 +5049,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoMugetsu3.blp",
@@ -4900,6 +5077,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoShunpo.blp",
@@ -4928,6 +5106,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoHirenkyaku.blp",
@@ -4956,6 +5135,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNIchigoBlutVene.blp",
@@ -5034,6 +5214,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5060,6 +5241,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5088,6 +5270,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5116,6 +5299,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5144,6 +5328,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5170,6 +5355,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5196,6 +5382,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5222,6 +5409,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5255,6 +5443,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5281,6 +5470,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5307,6 +5497,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5333,6 +5524,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5359,6 +5551,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5386,6 +5579,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5412,6 +5606,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5438,6 +5633,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5468,6 +5664,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDartFeld.blp",
@@ -5494,6 +5691,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoCyclone.blp",
@@ -5524,6 +5722,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoSlash.blp",
@@ -5551,6 +5750,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoLightning.blp",
@@ -5578,6 +5778,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoLightning.blp",
@@ -5606,6 +5807,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoLightning3.blp",
@@ -5634,6 +5836,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoCleave.blp",
@@ -5664,6 +5867,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoLuminaire.blp",
@@ -5693,6 +5897,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell slam",
     icon: {
       enabled: "BTNFrogSlurpCut.blp",
@@ -5719,6 +5924,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell slam",
     icon: {
       enabled: "BTNFrogSlurp.blp",
@@ -5745,6 +5951,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFrogWater.blp",
@@ -5771,6 +5978,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFrogWater2.blp",
@@ -5800,6 +6008,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFrogSquash.blp",
@@ -5826,6 +6035,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFrogLeapSlash.blp",
@@ -5857,6 +6067,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoboTackle.blp",
@@ -5886,6 +6097,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoboLaserSpin.blp",
@@ -5915,6 +6127,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoboHealBeam.blp",
@@ -5942,6 +6155,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoboUzziPunch.blp",
@@ -5970,6 +6184,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRoboShock.blp",
@@ -5999,6 +6214,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLuccaFlamethrower.blp",
@@ -6025,6 +6241,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell channel",
     icon: {
       enabled: "BTNLuccaHypnowave.blp",
@@ -6052,6 +6269,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLuccaFire.blp",
@@ -6079,6 +6297,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusFire2.blp",
@@ -6106,6 +6325,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLuccaNapalm.blp",
@@ -6132,6 +6352,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLuccaNapalmMegabomb.blp",
@@ -6158,6 +6379,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLuccaFlare.blp",
@@ -6187,6 +6409,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolHandKannon2.blp",
@@ -6213,6 +6436,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBabidiQ.blp",
@@ -6239,6 +6463,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoCyclone.blp",
@@ -6269,6 +6494,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAylaDinoTail.blp",
@@ -6298,6 +6524,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNAylaTripleKick.blp",
@@ -6328,6 +6555,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarleIce.blp",
@@ -6354,6 +6582,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusIce2.blp",
@@ -6380,6 +6609,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarleAura.blp",
@@ -6408,6 +6638,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarleCure.blp",
@@ -6434,6 +6665,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMarleHaste.blp",
@@ -6462,6 +6694,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusDarkBomb.blp",
@@ -6488,7 +6721,8 @@ export const AbilitiesList = [
       castTime: 0.0,
       canMultiCast: true,
       waitsForNextClick: false,
-      animation: "spell",
+      canUseWhenStunned: false,
+    animation: "spell",
       icon: {
         enabled: "BTNFrogWater2.blp",
         disabled: "BTNFrogWater2.blp",
@@ -6517,6 +6751,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCronoLightning.blp",
@@ -6545,6 +6780,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusFire2.blp",
@@ -6572,6 +6808,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusIce2.blp",
@@ -6598,7 +6835,8 @@ export const AbilitiesList = [
       castTime: 0.0,
       canMultiCast: true,
       waitsForNextClick: false,
-      animation: "spell",
+      canUseWhenStunned: false,
+    animation: "spell",
       icon: {
         enabled: "BTNMagusDarkMist.blp",
         disabled: "BTNMagusDarkMist.blp",
@@ -6624,6 +6862,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMagusDarkMatter.blp",
@@ -6653,6 +6892,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6680,6 +6920,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6706,6 +6947,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6732,6 +6974,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6759,6 +7002,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6785,6 +7029,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6812,6 +7057,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6841,6 +7087,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6868,6 +7115,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNLucario.blp",
@@ -6894,6 +7142,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -6921,6 +7170,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -6948,6 +7198,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -6977,6 +7228,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -7003,6 +7255,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -7029,6 +7282,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -7061,6 +7315,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaitama.blp",
@@ -7081,6 +7336,195 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
+    currentCd: 0,
+    maxCd: 5,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
+    },
+    tooltip: {
+      title: "(V) Thrilla Gorilla",
+      body: 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Instantly purges all debuffs from Donkey Kong.|n" + 
+        "Can be used while stunned.|n" +
+        "Cost: 40 SP|n" +
+        "CD: 5"
+    },
+    components: [
+      { name: "hide unit dk thrilla gorilla" },
+      { name: "sfx dk thrilla gorilla" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.GROUND_POUND,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDKQ.blp",
+      disabled: "BTNDKQ.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage dk ground pound aoe explosion" },
+      { name: "debuff slow dk ground pound start" },
+      { name: "debuff slow dk ground pound continuous" },
+      { name: "multi dk ground pound" },
+      { name: "sfx dk ground pound aoe" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.ROLL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "BTNDK.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      // { name: "anim dk roll" },
+      { name: "dash ground point dk roll 1" },
+      { name: "dash ground point dk roll 2" },
+      { name: "dash ground point dk roll 3" },
+      { name: "dash ground point dk roll 4" },
+      { name: "damage dk roll explosion" },
+      { name: "sfx dk roll" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.BARREL_ROLL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "BTNDK.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam dk barrel roll" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.BANANA_SLAMMA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "BTNDK.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      // { name: "teleport dk banana slamma" },
+      { name: "multi dk banana slamma" },
+      { name: "sfx dk banana slamma charge" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.JUNGLE_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "BTNDK.blp",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim dk jungle rush" },
+      { name: "dash ground point dk jungle rush" },
+      { name: "jump dk jungle rush" },
+      { name: "damage dk jungle rush dps" },
+      { name: "damage dk jungle rush explosion" },
+      { name: "debuff stun dk jungle rush start" },
+      { name: "debuff stun dk jungle rush end" },
+      { name: "knockback dk jungle rush" },
+      { name: "sfx dk jungle rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
@@ -7091,6 +7535,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN13Beam.blp",
@@ -7117,6 +7562,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN13Hammer.blp",
@@ -7147,6 +7593,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN13SSDB.blp",
@@ -7173,6 +7620,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN13Nuke.blp",
@@ -7199,6 +7647,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN13Barrier.blp",
@@ -7226,6 +7675,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
@@ -7254,6 +7704,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBabidiQ.blp",
@@ -7281,6 +7732,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBabidiW.blp",
@@ -7309,6 +7761,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPuiPui.blp",
@@ -7335,6 +7788,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNYakon.blp",
@@ -7361,6 +7815,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDabura.blp",
@@ -7387,6 +7842,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNImpalingBolt.blp",
@@ -7413,6 +7869,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuFleshAttack.blp",
@@ -7440,6 +7897,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuInnocenceBreath.blp",
@@ -7466,6 +7924,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuAngryExplosion.blp",
@@ -7494,6 +7953,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuVanishingBall.blp",
@@ -7520,6 +7980,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuMankind.blp",
@@ -7547,6 +8008,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBrolyEnergyPunch.blp",
@@ -7580,6 +8042,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPowerLevelRising.blp",
@@ -7609,6 +8072,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPlanetCrusher.blp",
@@ -7636,6 +8100,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGiganticRoar.blp",
@@ -7664,6 +8129,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGiganticOmegastorm.blp",
@@ -7691,6 +8157,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCellJunior.blp",
@@ -7717,6 +8184,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "Replaceabletextures\\CommandButtons\\BTNCellAbsorb.blp",
@@ -7743,6 +8211,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCellSolarKamehameha.blp",
@@ -7772,6 +8241,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCellXForm.blp",
@@ -7802,6 +8272,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNDeathBeam.blp",
@@ -7828,6 +8299,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCoolerSupernova.blp",
@@ -7854,6 +8326,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCoolerNovaChariot.blp",
@@ -7883,6 +8356,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
@@ -7909,6 +8383,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp",
@@ -7935,6 +8410,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCoolerGoldenSupernova.blp",
@@ -7961,6 +8437,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRaditzDoubleSunday.blp",
@@ -7987,6 +8464,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRaditzSaturdayCrash.blp",
@@ -8013,6 +8491,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRaditzBehindYou.blp",
@@ -8043,6 +8522,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRaditzDoubleSundae.blp",
@@ -8069,6 +8549,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNNappaGiantStorm.blp",
@@ -8095,6 +8576,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNNappaBlazingStorm.blp",
@@ -8126,6 +8608,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNNappaBreakCannon.blp",
@@ -8152,6 +8635,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaibamanBomb.blp",
@@ -8182,6 +8666,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaibamanAcid.blp",
@@ -8208,6 +8693,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMoro.blp",
@@ -8236,6 +8722,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMoro.blp",
@@ -8262,6 +8749,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMoro.blp",
@@ -8288,6 +8776,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMoro.blp",
@@ -8315,6 +8804,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMoroPowerLevelRising.blp",
@@ -8341,6 +8831,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperDemonMark1.blp",
@@ -8367,6 +8858,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperDemonMark2.blp",
@@ -8393,6 +8885,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperRakshasaClaw.blp",
@@ -8419,6 +8912,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperRakshasaClaw.blp",
@@ -8445,6 +8939,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperRakshasaClaw2.blp",
@@ -8471,6 +8966,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperRakshasaClaw2.blp",
@@ -8497,6 +8993,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperBunkaiTeleport.blp",
@@ -8528,6 +9025,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperDemonicBlade.blp",
@@ -8555,6 +9053,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperRakshasaClaw.blp",
@@ -8581,6 +9080,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperHellsGate.blp",
@@ -8607,6 +9107,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNJanembaSuperLightningShowerRain.blp",
@@ -8633,6 +9134,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolBellyArmor.blp",
@@ -8662,6 +9164,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKroolCrownToss.blp",
@@ -8688,6 +9191,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKroolCharge.blp",
@@ -8717,6 +9221,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolCannon.blp",
@@ -8746,6 +9251,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolHandKannon2.blp",
@@ -8773,6 +9279,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNMonkeySmasher.blp",
@@ -8800,6 +9307,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolBlastOMatic.blp",
@@ -8829,6 +9337,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKingKRoolKingsThrone.blp",
@@ -8855,6 +9364,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNEisShenronFrostClaws.blp",
@@ -8881,6 +9391,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNEisShenronIceSlash.blp",
@@ -8909,6 +9420,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNEisShenronAbsoluteZero.blp",
@@ -8937,6 +9449,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNEisShenronIceCannon.blp",
@@ -8963,6 +9476,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGinyuMilkyCannon.blp",
@@ -8989,6 +9503,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGinyuGalaxyDynamite.blp",
@@ -9015,6 +9530,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGinyuPoseFighting.blp",
@@ -9044,6 +9560,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNPiccoloSlappyHand.blp",
@@ -9071,6 +9588,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathBeam.blp",
@@ -9097,6 +9615,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathCannon.blp",
@@ -9123,6 +9642,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaLastEmperor.blp",
@@ -9149,6 +9669,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaNovaStrike.blp",
@@ -9177,6 +9698,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaSupernova.blp",
@@ -9203,6 +9725,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaSupernova2.blp",
@@ -9229,6 +9752,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaEmperorsThrone.blp",
@@ -9255,6 +9779,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathStorm.blp",
@@ -9288,6 +9813,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaImaplingRush.blp",
@@ -9317,6 +9843,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathBeamBarrage.blp",
@@ -9343,6 +9870,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaNovaRush.blp",
@@ -9374,6 +9902,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathBall.blp",
@@ -9400,6 +9929,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaTail.blp",
@@ -9427,6 +9957,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaDeathSaucer.blp",
@@ -9454,6 +9985,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaGoldenDeathBeam.blp",
@@ -9480,6 +10012,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaGoldenDeathCannon.blp",
@@ -9506,6 +10039,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaGoldenRush.blp",
@@ -9537,6 +10071,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaEarthBreaker.blp",
@@ -9566,6 +10101,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNFriezaCageOfLight.blp",
@@ -9594,6 +10130,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOmegaShenronDragonFlashBullet.blp",
@@ -9620,6 +10157,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOmegaShenronNegativeEnergyBall.blp",
@@ -9646,6 +10184,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOmegaShenronShadowFist.blp",
@@ -9675,6 +10214,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOmegaShenronDragonicRage.blp",
@@ -9703,6 +10243,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNEisShenronIceCannon.blp",
@@ -9729,6 +10270,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNNuovaShenronNovaStar.blp",
@@ -9758,6 +10300,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNOmegaShenronDragonThunder.blp",
@@ -9786,6 +10329,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGuldoPsychoJavelin.blp",
@@ -9812,6 +10356,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGuldoPsychicRockThrow.blp",
@@ -9838,6 +10383,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGuldoTelekinesis.blp",
@@ -9865,6 +10411,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGuldoTimeStop.blp",
@@ -9892,6 +10439,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNGuldoPose.blp",
@@ -9920,6 +10468,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNZamasuDivineAuthority.blp",
@@ -9947,6 +10496,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNZamasuGodSlash.blp",
@@ -9977,6 +10527,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNZamasuHolyLightGrenade.blp",
@@ -10003,6 +10554,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSuperDragonFlight.blp",
@@ -10032,6 +10584,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNZamasuEnergyBlades.blp",
@@ -10058,6 +10611,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothQ.blp",
@@ -10085,6 +10639,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothW.blp",
@@ -10115,6 +10670,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothE.blp",
@@ -10142,6 +10698,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothE2.blp",
@@ -10171,6 +10728,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothR.blp",
@@ -10197,6 +10755,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothD.blp",
@@ -10225,6 +10784,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSephirothF.blp",
@@ -10251,6 +10811,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNHitTimeSkip.blp",
@@ -10279,6 +10840,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNHitPocketDimension.blp",
@@ -10305,6 +10867,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNHitFlashFist.blp",
@@ -10331,6 +10894,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNHitTimeCage.blp",
@@ -10357,6 +10921,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNHitPureProgress.blp",
@@ -10383,6 +10948,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRustTyranno.blp",
@@ -10409,6 +10975,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRustTyranno.blp",
@@ -10436,6 +11003,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRustTyranno.blp",
@@ -10464,6 +11032,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNRustTyranno.blp",
@@ -10493,6 +11062,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKame2.blp",
@@ -10519,6 +11089,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNKame2.blp",
@@ -10545,6 +11116,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "walk",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
@@ -10573,6 +11145,7 @@ export const AbilitiesList = [
     castTime: 0.25,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
@@ -10602,6 +11175,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTN17PowerBlitzBarrage.blp",
@@ -10629,6 +11203,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNCellSolarKamehameha.blp",
@@ -10658,6 +11233,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNNuovaShenronNovaStar.blp",
@@ -10687,6 +11263,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBuuMankind.blp",
@@ -10713,6 +11290,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNSaibamanBomb.blp",
@@ -10742,6 +11320,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp",
@@ -10768,6 +11347,7 @@ export const AbilitiesList = [
     castTime: 0.25,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
@@ -10799,6 +11379,7 @@ export const AbilitiesList = [
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: true,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "BTNBigBangKamehameha.blp",
@@ -10825,6 +11406,7 @@ export const AbilitiesList = [
     castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: false,
+    canUseWhenStunned: false,
     animation: "spell",
     icon: {
       enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",

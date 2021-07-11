@@ -411,6 +411,7 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_V, 0, true);
   addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
+  addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
   
 
   /*
@@ -1131,6 +1132,8 @@ export function CustomPlayerTest() {
     SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable);
 
     // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, Globals.customPlayers);
+    SetupJungleRushBananaFallout(independentSpellTrigger, independentSpellHashtable);
+    SetupBarrelCannon(independentSpellTrigger, independentSpellHashtable);
 
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable);
     SoundHelper.SetupSpellSoundEffects();
@@ -1818,70 +1821,104 @@ export function SetupKrillinSenzuThrow(
       // const casterPlayerId = GetPlayerId(casterPlayer);
       const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
       const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
-      const newPos = new Vector2D(casterPos.x, casterPos.y);
       const senzuItem = CreateItem(senzuItemId, casterPos.x, casterPos.y);
       const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
-
-      let counter: number = 0;
-      TimerStart(CreateTimer(), 0.03, true, () => {
-        if (
-          counter >= senzuThrowDuration
-        ) {
-          DestroyTimer(GetExpiredTimer());
-        } else {
-          if (counter < senzuThrowDuration) {
-            newPos.polarProjectCoords(
-              newPos,
-              direction,
-              senzuThrowSpeed
-            );
-
-            if (PathingCheck.isGroundWalkable(newPos)) {
-              SetItemPosition(senzuItem, newPos.x, newPos.y);
-            } else {
-              newPos.x = GetItemX(senzuItem);
-              newPos.y = GetItemY(senzuItem);
-            }
-          }
-          
-          if (counter > senzuThrowStealMinDuration) {
-            GroupEnumUnitsInRange(
-              beanStealUnits, 
-              newPos.x, 
-              newPos.y, 
-              senzuThrowStealAOE,
-              null
-            );
-  
-            ForGroup(beanStealUnits, () => {
-              const targetUnit = GetEnumUnit();
-              const playerId = GetPlayerId(GetOwningPlayer(targetUnit));
-              if (
-                IsUnitType(targetUnit, UNIT_TYPE_HERO) && 
-                playerId < Constants.maxActivePlayers &&
-                !UnitHelper.isUnitDead(targetUnit) &&
-                !UnitHelper.isUnitStunned(targetUnit) &&
-                !IsUnitType(targetUnit, UNIT_TYPE_ETHEREAL)
-              ) {
-                if (
-                  counter < senzuThrowDuration && 
-                  UnitInventoryCount(targetUnit) < UnitInventorySize(targetUnit)
-                ) {
-                  UnitAddItem(targetUnit, senzuItem);
-                  counter = senzuThrowDuration;
-                }
-              }
-            });
-            
-            GroupClear(beanStealUnits);
-          }
-
-          ++counter;
-        }
-      });
+      moveItemAndDoPickup(
+        senzuItem,
+        senzuThrowSpeed,
+        direction,
+        senzuThrowDuration,
+        senzuThrowStealMinDuration,
+        senzuThrowStealAOE,
+        beanStealUnits
+      );
     }
   });
 }
+
+export function moveItemAndDoPickup(
+  movedItem: item,
+  itemMS: number,
+  direction: number,
+  duration: number,
+  minDuration: number,
+  stealAOE: number,
+  stealGroup: group
+) {
+  const newPos = new Vector2D(GetItemX(movedItem), GetItemY(movedItem));
+  let counter: number = 0;
+  TimerStart(CreateTimer(), 0.03, true, () => {
+    if (
+      counter >= duration
+    ) {
+      DestroyTimer(GetExpiredTimer());
+    } else {
+      if (counter < duration) {
+        newPos.polarProjectCoords(
+          newPos,
+          direction,
+          itemMS
+        );
+
+        if (PathingCheck.isGroundWalkable(newPos)) {
+          SetItemPosition(movedItem, newPos.x, newPos.y);
+        } else {
+          newPos.x = GetItemX(movedItem);
+          newPos.y = GetItemY(movedItem);
+        }
+      }
+      
+      if (
+        counter > minDuration
+        && doAOEItemPickup(movedItem, newPos, stealAOE, stealGroup)
+      ) {
+        counter = duration;
+      }
+
+      ++counter;
+    }
+  });
+}
+
+export function doAOEItemPickup(
+  pickupItem: item,
+  pos: Vector2D,
+  stealAOE: number,
+  unitGroup: group,
+) {
+  let result = false;
+
+  GroupEnumUnitsInRange(
+    unitGroup, 
+    pos.x, 
+    pos.y, 
+    stealAOE,
+    null
+  );
+
+  ForGroup(unitGroup, () => {
+    const targetUnit = GetEnumUnit();
+    const playerId = GetPlayerId(GetOwningPlayer(targetUnit));
+    if (
+      !result &&
+      IsUnitType(targetUnit, UNIT_TYPE_HERO) && 
+      playerId < Constants.maxActivePlayers &&
+      !UnitHelper.isUnitDead(targetUnit) &&
+      !UnitHelper.isUnitStunned(targetUnit) &&
+      !IsUnitType(targetUnit, UNIT_TYPE_ETHEREAL) &&
+      UnitInventoryCount(targetUnit) < UnitInventorySize(targetUnit)
+    ) {
+      UnitAddItem(targetUnit, pickupItem);
+      // SetItemPlayer(pickupItem, GetOwningPlayer(targetUnit), false);
+      result = true;
+    }
+  });
+  
+  GroupClear(unitGroup);
+
+  return result;
+}
+
 
 export function SetupJirenGlare(
   spellTrigger: trigger, 
@@ -2573,11 +2610,237 @@ export function SetupAylaCharm(
 
 // }
 
+
+
+export function SetupJungleRushBananaFallout(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+) {
+  const bananaThrowDuration = 24;
+  const bananaThrowSpeed = 49;
+  const bananaThrowStealMinDuration = 16;
+  const bananaThrowStealAOE = 300;
+  const bananaThrowAmount = 6;
+  const bananaThrowDirectionOffset = 360 / Math.max(1, bananaThrowAmount);
+  const bananaItemId = FourCC("I044");
+  const beanStealUnits = CreateGroup();
+  
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.dkJungleRush) {
+      const caster = GetTriggerUnit();
+      const casterPlayer = GetTriggerPlayer();
+      // const casterPlayerId = GetPlayerId(casterPlayer);
+      const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+      const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
+
+      TimerStart(CreateTimer(), 1.0, false, () => {
+        DestroyTimer(GetExpiredTimer());
+
+        for (let i = 0; i < bananaThrowAmount; ++i) {
+          const bananaItem = CreateItem(bananaItemId, GetUnitX(caster), GetUnitY(caster));
+          moveItemAndDoPickup(
+            bananaItem,
+            bananaThrowSpeed,
+            direction + i * bananaThrowDirectionOffset,
+            bananaThrowDuration,
+            bananaThrowStealMinDuration,
+            bananaThrowStealAOE,
+            beanStealUnits
+          );
+
+          TimerStart(CreateTimer(), 10.0, false, () => {
+            if (!IsItemOwned(bananaItem)) {
+              RemoveItem(bananaItem);
+            }
+          });
+        }
+      });
+    }
+  });
+}
+
+
+export function SetupBarrelCannon(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+) {
+  const barrelDuration = 33 * 10;
+  const barrelShootMinDuration = 33;
+  const updateRate = 0.03;
+  const turnRate = 9.0;
+  const barrelAOE = 300;
+  const barrelMoveSpeed = 50;
+  const barrelMoveDuration = 24;
+  const barrelMoveMinDuration = 12;
+  const minOffsetDistance = 30;
+  const casterPos: Vector2D = new Vector2D(0, 0);
+  const tmpPos: Vector2D = new Vector2D(0, 0);
+  const barrelMoveGroup = CreateGroup();
+  const barrelMoveTrigger = CreateTrigger();
+
+  // 0: timer
+  // 1: direction (angle)
+  // 2: prev x
+  // 3: prev y
+  const barrelMoveHashtable = InitHashtable();
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.dkBarrelCannon) {
+      const caster = GetTriggerUnit();
+      const casterId = GetHandleId(caster);
+      const player = GetTriggerPlayer();
+
+      casterPos.setUnit(caster);
+
+      // create a barrel blast
+      const barrelDummy = CreateUnit(
+        player, 
+        Constants.dummyCasterId, 
+        casterPos.x, casterPos.y, 
+        0
+      );
+
+      const newHP = 250 * GetHeroLevel(caster) + 1000;
+      BlzSetUnitMaxHP(barrelDummy, newHP);
+      ShowUnitHide(barrelDummy);
+
+      const barrelSfx = AddSpecialEffect(
+        "DKBarrelCannon.mdl",
+        casterPos.x,
+        casterPos.y
+      );
+      BlzSetSpecialEffectScale(barrelSfx, 1.5);
+
+      let direction = GetUnitFacing(caster);
+      BlzSetSpecialEffectYaw(barrelSfx, direction * CoordMath.degreesToRadians);
+      
+
+      let counter = 0;
+      TimerStart(CreateTimer(), updateRate, true, () => {
+        if (counter >= barrelDuration || UnitHelper.isUnitDead(barrelDummy)) {
+          if (UnitHelper.isUnitAlive(barrelDummy)) {
+            RemoveUnit(barrelDummy);
+          }
+          DestroyEffect(barrelSfx);
+          DestroyTimer(GetExpiredTimer());
+
+        } else if (counter >= barrelShootMinDuration) {
+          BlzSetSpecialEffectYaw(barrelSfx, direction * CoordMath.degreesToRadians);
+          BlzSetSpecialEffectX(barrelSfx, GetUnitX(barrelDummy));
+          BlzSetSpecialEffectY(barrelSfx, GetUnitY(barrelDummy));
+
+          // collect nearby units and shoot them away
+          const barrelGroup = CreateGroup();
+          GroupEnumUnitsInRange(
+            barrelGroup,
+            GetUnitX(barrelDummy),
+            GetUnitY(barrelDummy),
+            barrelAOE,
+            null
+          );
+
+          ForGroup(barrelGroup, () => {
+            const unit = GetEnumUnit();
+            const unitId = GetHandleId(unit);
+            const barrelMoveTime = LoadInteger(barrelMoveHashtable, unitId, 0);
+            if (
+              UnitHelper.isUnitAlive(unit)
+              // && IsUnitType(unit, UNIT_TYPE_HERO)
+              && UnitHelper.isUnitTargetableForPlayer(unit, player, true)
+              && (
+                barrelMoveTime <= 0 ||
+                barrelMoveTime > barrelMoveMinDuration
+              )
+            ) {
+              SaveInteger(barrelMoveHashtable, unitId, 0, 1);
+              SaveReal(barrelMoveHashtable, unitId, 1, direction);
+              SaveReal(barrelMoveHashtable, unitId, 2, GetUnitX(unit));
+              SaveReal(barrelMoveHashtable, unitId, 3, GetUnitY(unit));
+              GroupAddUnit(barrelMoveGroup, unit);
+              EnableTrigger(barrelMoveTrigger);
+
+              DestroyEffect(
+                AddSpecialEffect(
+                  "Abilities\\Weapons\\Mortar\\MortarMissile.mdl",
+                  GetUnitX(unit),
+                  GetUnitY(unit)
+                )
+              );
+            }
+          });
+
+          
+          DestroyGroup(barrelGroup);
+          
+          // make it spin
+          direction += turnRate;
+        }
+
+        counter++;
+      });
+    }
+  });
+
+  TriggerRegisterTimerEventPeriodic(barrelMoveTrigger, 0.03);
+  TriggerAddAction(barrelMoveTrigger, () => {
+    ForGroup(barrelMoveGroup, () => {
+      // move barrel
+      const unit = GetEnumUnit();
+      const unitId = GetHandleId(unit);
+      const angle = LoadReal(barrelMoveHashtable, unitId, 1);
+      const expectedX = LoadReal(barrelMoveHashtable, unitId, 2);
+      const expectedY = LoadReal(barrelMoveHashtable, unitId, 3);
+
+      tmpPos.setPos(expectedX, expectedY);
+      casterPos.setUnit(unit);
+      const offsetFromExpected = CoordMath.distance(casterPos, tmpPos);
+
+      // normal direction movement
+      casterPos.polarProjectCoords(casterPos, angle, barrelMoveSpeed);
+      PathingCheck.moveGroundUnitToCoord(unit, casterPos);
+      
+      // if barrel strayed from expected path, attempt to move it back (up to a limit)
+      if (offsetFromExpected >= minOffsetDistance) {
+        tmpPos.polarProjectCoords(tmpPos, angle, barrelMoveSpeed);
+
+        const reverseAngle = CoordMath.angleBetweenCoords(casterPos, tmpPos);
+        casterPos.polarProjectCoords(
+          casterPos, 
+          reverseAngle, 
+          Math.min(offsetFromExpected, minOffsetDistance)
+        );
+        PathingCheck.moveGroundUnitToCoord(unit, casterPos);
+      }
+
+      SaveReal(barrelMoveHashtable, unitId, 2, GetUnitX(unit));
+      SaveReal(barrelMoveHashtable, unitId, 3, GetUnitY(unit));
+      SetUnitFacingTimed(unit, angle, 0.03);
+
+      const duration = LoadInteger(barrelMoveHashtable, unitId, 0);
+      if (duration >= barrelMoveDuration) {
+        FlushChildHashtable(barrelMoveHashtable, unitId);
+        GroupRemoveUnit(barrelMoveGroup, unit);
+      } else {
+        SaveInteger(barrelMoveHashtable, unitId, 0, duration + 1);
+      }
+    });
+
+    if (CountUnitsInGroup(barrelMoveGroup) == 0) {
+      DisableTrigger(barrelMoveTrigger);
+    }
+  });
+  DisableTrigger(barrelMoveTrigger);
+}
+
+
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
 ) {
-  const stamRestore = 4;
+  const stamRestore = 25;
 
 
   // reset cd of custom abilities

@@ -7,7 +7,7 @@ import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive, HeroPassiveManager } from "./HeroPassive/HeroPassive";
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
-import { Constants } from "Common/Constants";
+import { Constants, Id } from "Common/Constants";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -46,7 +46,12 @@ export class CustomHero {
     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
-    this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
+
+    if (GetUnitTypeId(this.unit) == Id.donkeyKong) {
+      this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
+    } else {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
+    }
     
     // TODO: fix item abilities for heroes... 
     // item workaround.... for now
@@ -75,6 +80,7 @@ export class CustomHero {
         abil.costAmount, abil.duration,
         abil.updateRate, abil.castTime, 
         abil.canMultiCast, abil.waitsForNextClick,
+        abil.canUseWhenStunned,
         abil.animation, abil.icon, abil.tooltip,
         AbilityComponentHelper.clone(abil.components),
       )

@@ -390,6 +390,16 @@ export module AbilityNames {
     export const SERIOUS_SIDEWAYS_JUMPS = "Saitama Serious Sideways Jumps";
   }
 
+  export module DonkeyKong {
+    export const GROUND_POUND = "DK Ground Pound";
+    export const ROLL = "DK Roll";
+    export const BARREL_ROLL = "DK Barrel Roll";
+    export const BANANA_SLAMMA = "DK Banana Slamma";
+    export const JUNGLE_RUSH = "DK Jungle Rush";
+    export const BARREL_CANNON = "DK Barrel Blast";
+    export const THRILLA_GORILLA = "Thrilla Gorilla";
+  }
+
 
 
   export module Babidi {

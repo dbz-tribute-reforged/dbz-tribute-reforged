@@ -770,9 +770,10 @@ export function setupSPData(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
     }
-    if (currentSP < 0.2 * maxSP) {
-      incSp *= 0.5;
-    }
+    // if (currentSP < 0.2 * maxSP) {
+    //   incSp *= 0.5;
+    // }
+    incSp *= (0.66+(currentSP/maxSP));    
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
   });
 

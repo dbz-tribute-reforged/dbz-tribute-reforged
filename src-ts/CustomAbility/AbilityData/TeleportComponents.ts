@@ -91,4 +91,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.ORIGINAL_POINT,
     maxRange: Teleport.INFINITE_RANGE,
   },
+  // {
+  //   name: "teleport dk banana slamma", 
+  //   repeatInterval: 1, 
+  //   startTick: 0,
+  //   endTick: -1,
+  //   teleportTick: 0,
+  //   teleportOnce: false,
+  //   teleportTarget: Teleport.ORIGINAL_POINT,
+  //   maxRange: 400,
+  // },
 ];

@@ -283,7 +283,7 @@ export function CustomUiTest() {
 		grandpa, 
 		0,
 		new Vector2D(0.06, 0.015),
-		new FramePosition(FRAMEPOINT_RIGHT, hpBar.frameHandle, FRAMEPOINT_LEFT, -0.0015, 0),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, spBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -302,7 +302,7 @@ export function CustomUiTest() {
 		grandpa,
 		0,
 		new Vector2D(Constants.uiButtonSize * (Constants.maxSubAbilities) + 0.003, Constants.uiButtonSize),
-		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.06, 0.005),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {

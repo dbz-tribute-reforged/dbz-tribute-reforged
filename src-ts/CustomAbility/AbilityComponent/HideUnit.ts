@@ -11,7 +11,9 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public doHide: boolean = true,
     public preventMovement: boolean = true,
+    public removeNegativeBuffs: boolean = false,
   ) {
     this.isHidden = false;
   }
@@ -19,16 +21,17 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.isHidden) {
       this.isHidden = true;
-      ShowUnitHide(source);
+      if (this.doHide) ShowUnitHide(source);
       if (this.preventMovement) {
         PauseUnit(source, true);
       }
+      if (this.removeNegativeBuffs) UnitRemoveBuffs(source, false, true);
       SetUnitInvulnerable(source, true);
     }
 
     if (ability.isFinishedUsing(this)) {
       this.isHidden = false;
-      ShowUnitShow(source);
+      if (this.doHide) ShowUnitShow(source);
       if (this.preventMovement) {
         PauseUnit(source, false);
       }
@@ -44,7 +47,9 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
   clone(): AbilityComponent {
     return new HideUnit(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.doHide,
       this.preventMovement,
+      this.removeNegativeBuffs
     );
   }
   
@@ -54,14 +59,18 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      doHide: boolean;
       preventMovement: boolean;
+      removeNegativeBuffs: boolean;
     }
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.doHide = input.doHide;
     this.preventMovement = input.preventMovement;
+    this.removeNegativeBuffs = input.removeNegativeBuffs;
     return this;
   }
 }

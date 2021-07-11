@@ -86,6 +86,7 @@ export module UnitHelper {
   export function isImmortal(unit: unit): boolean {
     return (
       UnitHasBuffBJ(unit, Constants.buffImmortal)
+      || GetUnitAbilityLevel(unit, Constants.wishImmortalAbility) > 0
     );
   }
 
