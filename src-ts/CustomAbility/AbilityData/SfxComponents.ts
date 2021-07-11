@@ -17306,7 +17306,7 @@ export const SfxComponents = [
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
         repeatInterval: 6,
         group: 0,
-        scale: 0.8,
+        scale: 1.2,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,

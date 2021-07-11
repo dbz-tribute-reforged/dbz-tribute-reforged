@@ -46276,6 +46276,9 @@ function Trig_Transformations_Donkey_Kong_Actions()
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H05Q')
+            udg_KKRSize = (300.00 + RMaxBJ(0.00, (3.00 * I2R(LoadIntegerBJ(47, udg_ID, udg_StatMultHashtable)))))
+            SetUnitScalePercent(udg_StatMultUnit, udg_KKRSize, udg_KKRSize, udg_KKRSize)
+            SetUnitTimeScalePercent(udg_StatMultUnit, (100.00 + (0.50 * I2R(LoadIntegerBJ(47, udg_ID, udg_StatMultHashtable)))))
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
         end
@@ -46304,7 +46307,7 @@ function Trig_Banana_Multi_Actions()
     udg_StatMultUnit = GetTriggerUnit()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempInt = LoadIntegerBJ(47, udg_ID, udg_StatMultHashtable)
-    SaveIntegerBJ((udg_TempInt + 1), 47, udg_ID, udg_StatMultHashtable)
+    SaveIntegerBJ(IMinBJ(100, (udg_TempInt + 1)), 47, udg_ID, udg_StatMultHashtable)
     TriggerExecute(gg_trg_Temp_Skin_Revert)
 end
 
