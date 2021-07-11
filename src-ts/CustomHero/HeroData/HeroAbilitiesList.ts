@@ -445,6 +445,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
     ]],
 
+    [Id.donkeyKong, [
+      AbilityNames.DonkeyKong.GROUND_POUND,
+      AbilityNames.DonkeyKong.ROLL,
+      AbilityNames.DonkeyKong.BARREL_ROLL,
+      AbilityNames.DonkeyKong.BANANA_SLAMMA,
+      AbilityNames.DonkeyKong.JUNGLE_RUSH,
+      AbilityNames.DonkeyKong.BARREL_CANNON,
+    ]],
+
 
 
     // androids 13 14 15
@@ -529,6 +538,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Marle.AURA, AbilityNames.Marle.ALLURE,
       AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
       AbilityNames.Saitama.SERIOUS_SERIES, AbilityNames.Saitama.SERIOUS_PUNCH, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
+      AbilityNames.DonkeyKong.GROUND_POUND, AbilityNames.DonkeyKong.BARREL_CANNON,
+      
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

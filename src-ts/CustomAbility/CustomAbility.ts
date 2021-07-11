@@ -26,6 +26,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     public castTime: number = 0.25,
     public canMultiCast: boolean = false,
     public waitsForNextClick: boolean = false,
+    public canUseWhenStunned: boolean = false,
     public animation: string = "spell",
     public icon: Icon = new Icon(),
     public tooltip: Tooltip = new Tooltip(),
@@ -66,7 +67,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     if (this.currentCd > 0) return false;
     if (this.currentTick > 0) return false;
     if (!input || !input.caster || !input.casterPlayer || !input.targetPoint || !input.mouseData) return false;
-    if (UnitHelper.isUnitStunned(input.caster.unit)) {
+    if (!this.canUseWhenStunned && UnitHelper.isUnitStunned(input.caster.unit)) {
       return false;
     }
     if (!this.canTakeCosts(input)) {
@@ -241,6 +242,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       castTime: number;
       canMultiCast: boolean;
       waitsForNextClick: boolean;
+      canUseWhenStunned: boolean;
       animation: string;
       icon: {
         enabled: string;
@@ -265,6 +267,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     this.castTime = input.castTime;
     this.canMultiCast = input.canMultiCast;
     this.waitsForNextClick = input.waitsForNextClick;
+    this.canUseWhenStunned = input.canUseWhenStunned;
     this.animation = input.animation;
     this.icon = new Icon().deserialize(input.icon);
     this.tooltip = new Tooltip().deserialize(input.tooltip);

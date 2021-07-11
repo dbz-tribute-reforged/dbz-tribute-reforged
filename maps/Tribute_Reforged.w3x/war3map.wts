@@ -4114,7 +4114,7 @@ Transformations:
 [lvl 250] 2.75x "fp" [Unlocks Serious Series]
 
 |cffff25aaDumb|r: -0.5x Int Mult
-|cffff2020ONE PUNCH|r: 100% chance for 2x crit
+|cffff2020ONE PUNCH|r: 100% chance for 1.5x crit
 }
 
 STRING 671
@@ -5181,13 +5181,6 @@ STRING 832
 (soldier gun 2)
 }
 
-STRING 833
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
-{
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool1> seconds|r
-}
-
 STRING 834
 // Abilities: A0RB (Senzu Throw), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5225,38 +5218,44 @@ D
 }
 
 STRING 838
-// Abilities: A0PS (Ginyu Pose Ultimate), Researchubertip (Tooltip - Learn - Extended)
+// Units: H05Q (Alpha Ape), Ubertip (Tooltip - Extended)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool1> - <A0PS,Cool10> seconds|r
+A bulky hero that specializes in mobility and bullying.
+
+Has Thrilla Gorilla instead of Deflect.
+Gains a permanent |cff00ff00+0.01x|r strength multiplier for each banana consumed.|r
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+|cff808080"The Prime Primate"|r
 }
 
 STRING 839
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool2> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 2|r]
 }
 
 STRING 840
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool3> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 3|r]
 }
 
 STRING 841
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool4> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 4|r]
 }
 
 STRING 842
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool5> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 5|r]
 }
 
 STRING 843
@@ -5313,10 +5312,9 @@ X
 }
 
 STRING 850
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool6> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 6|r]
 }
 
 STRING 851
@@ -5326,24 +5324,21 @@ Vegeta
 }
 
 STRING 852
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool7> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 1|r]
 }
 
 STRING 853
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool8> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 7|r]
 }
 
 STRING 854
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool9> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 8|r]
 }
 
 STRING 855
@@ -5353,10 +5348,9 @@ W
 }
 
 STRING 856
-// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 40 stamina.
-|cff00ffffCooldown: <A0PS,Cool10> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 9|r]
 }
 
 STRING 857
@@ -5372,13 +5366,9 @@ STRING 858
 }
 
 STRING 859
-// Abilities: A0SB (Sparking!), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
 {
-All ability cooldowns are refreshed. Effects of existing abilities are instantly terminated. Restores 40 stamina.
-Nearby enemies are knocked away from Yamcha.
-Yamcha's abilities generate +1% of max mana.
-|cff2020ffMana Cost: 100% of max mana.|r
-|cff00ffffCooldown: <A0RO,Cool1> seconds|r
+[|cff00ff00W|r] Consecutive Normal Punches - [|cffffcc00Level 10|r]
 }
 
 STRING 860
@@ -13529,48 +13519,6 @@ Saitama delivers a combo of rapid fire punches.
 |cff00FFFFCooldown: <A00I,Cool7> seconds|r
 }
 
-STRING 2168
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 2|r]
-}
-
-STRING 2169
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 3|r]
-}
-
-STRING 2170
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 4|r]
-}
-
-STRING 2171
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 5|r]
-}
-
-STRING 2172
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 6|r]
-}
-
-STRING 2173
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 1|r]
-}
-
-STRING 2174
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 7|r]
-}
-
 STRING 2175
 // Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
 {
@@ -14016,24 +13964,6 @@ STRING 2248
 // Abilities: A00I (Consecutive Normal Punches), EditorSuffix (Editor Suffix)
 {
 (saitama)
-}
-
-STRING 2249
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 8|r]
-}
-
-STRING 2250
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 9|r]
-}
-
-STRING 2251
-// Abilities: A00I (Consecutive Normal Punches), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Consecutive Normal Punches - [|cffffcc00Level 10|r]
 }
 
 STRING 2252
@@ -16677,36 +16607,19 @@ STRING 2677
 }
 
 STRING 2678
-// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-A strong melee fighter with high auto-attack damage.
-
-|cffff2020One Punch|r: 100% Chance for 1.75x Crit.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-|cff808080ONE PAAAAWNCH!|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool1> seconds|r
 }
 
 STRING 2679
-// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Saitama's face becomes more serious. 
-Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
-Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
-|cffffff00+0.2x stat mult.
-Reduces base attack time.
-Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 2.25x crit.
-Gains true strike.
-+66ms and unlocks movement speed cap.|r
-|cff00FF00Duration: <A02J,Dur1> seconds|r
-|cff00FFFFCooldown: <A02J,Cool1> seconds|r
-
-|cff808080Note: Saitama does not actually consider these moves to be something special.|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool2> seconds|r
 }
 
 STRING 2680
@@ -18276,24 +18189,19 @@ STRING 2934
 }
 
 STRING 2935
-// Units: H05Q (Alpha Ape), Ubertip (Tooltip - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-A bulky hero that specializes in mobility and bullying.
-
-Gains a permanent |cff00ff00+0.01x|r strength multiplier for each banana consumed.|r
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool3> seconds|r
 }
 
 STRING 2936
-// Units: H05Q (Alpha Ape), Tip (Tooltip - Basic)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffffff00S|r] Choose Donkey Kong
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool4> seconds|r
 }
 
 STRING 2937
@@ -18783,9 +18691,11 @@ F
 }
 
 STRING 3018
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff2020Channel Duration: <A041,Dur1> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool1>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool5> seconds|r
 }
 
 STRING 3019
@@ -19005,123 +18915,152 @@ V
 }
 
 STRING 3055
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff2020Channel Duration: <A041,Dur2> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool2>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool6> seconds|r
 }
 
 STRING 3056
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff3030Channel Duration: <A041,Dur3> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool3>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool7> seconds|r
 }
 
 STRING 3057
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff4040Channel Duration: <A041,Dur4> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool4>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool8> seconds|r
 }
 
 STRING 3058
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff5050Channel Duration: <A041,Dur5> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool5>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool9> seconds|r
 }
 
 STRING 3059
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff6060Channel Duration: <A041,Dur6> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool6>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool10> seconds|r
 }
 
 STRING 3060
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06A (Banana Slamma), Researchubertip (Tooltip - Learn - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff7070Channel Duration: <A041,Dur7> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool7>s|r
+Donkey Kong winds up for a brief moment before unleashing a mighty punch. 
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A06A,Cool1> - <A06A,Cool10> seconds|r
 }
 
 STRING 3061
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 2|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool1> seconds|r
 }
 
 STRING 3062
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 3|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool1> - <A0PS,Cool10> seconds|r
 }
 
 STRING 3063
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 4|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool2> seconds|r
 }
 
 STRING 3064
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 5|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool3> seconds|r
 }
 
 STRING 3065
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 6|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool4> seconds|r
 }
 
 STRING 3066
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 1|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool5> seconds|r
 }
 
 STRING 3067
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 7|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool6> seconds|r
 }
 
 STRING 3068
-// Abilities: A041 (Hand Slap), Name (Name)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-Hand Slap
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool7> seconds|r
 }
 
 STRING 3069
-// Abilities: A041 (Hand Slap), Researchtip (Tooltip - Learn)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Learn Hand Slap - [|cffffcc00Level %d|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool8> seconds|r
 }
 
 STRING 3070
-// Abilities: A041 (Hand Slap), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff2020Channel Duration: <A041,Dur1> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool1> - <A041,Cool10> seconds|r
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool9> seconds|r
 }
 
 STRING 3071
-// Abilities: A041 (Hand Slap), EditorSuffix (Editor Suffix)
+// Abilities: A041 (Ground Pound), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
 
 STRING 3072
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 8|r]
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. Existing ability effects are instantly terminated. Restores 25 stamina.
+|cff00ffffCooldown: <A0PS,Cool10> seconds|r
 }
 
 STRING 3073
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A0SB (Sparking!), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 9|r]
+All ability cooldowns are refreshed. Effects of existing abilities are instantly terminated. Restores 25 stamina.
+Nearby enemies are knocked away from Yamcha.
+Yamcha's abilities generate +1% of max mana.
+|cff2020ffMana Cost: 100% of max mana.|r
+|cff00ffffCooldown: <A0RO,Cool1> seconds|r
 }
 
 STRING 3074
-// Abilities: A041 (Hand Slap), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Hand Slap - [|cffffcc00Level 10|r]
+Donkey Kong slams the ground, revealing a hidden Barrel Cannon. After a brief delay, the cannon will spin in circles and start launching any hero that touches it in the same direction that the Barrel Cannon is facing.
+|cff00FF00Duration: 10s|r
+|cff00FFFFCooldown: <A069,Cool1>s|r
 }
 
 STRING 3075
@@ -19137,15 +19076,15 @@ Vanishing Ball
 }
 
 STRING 3077
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff8080Channel Duration: <A041,Dur8> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool8>s|r
+[|cff00ff00D|r] Barrel Cannon
 }
 
 STRING 3078
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Name (Name)
 {
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff9090Channel Duration: <A041,Dur9> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool9>s|r
+Barrel Cannon
 }
 
 STRING 3079
@@ -19369,90 +19308,6 @@ STRING 3115
 A
 }
 
-STRING 3116
-// Abilities: A041 (Hand Slap), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong slaps the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.|n|cffff100100Channel Duration: <A041,Dur10> seconds|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A041,Cool10>s|r
-}
-
-STRING 3117
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3118
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3119
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3120
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3121
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3122
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3123
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3124
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3125
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 3126
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 1|r]
-}
-
-STRING 3127
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 2|r]
-}
-
-STRING 3128
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 3|r]
-}
-
-STRING 3129
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 4|r]
-}
-
 STRING 3130
 // Abilities: A0C1 (Supernova), Name (Name)
 {
@@ -19463,12 +19318,6 @@ STRING 3131
 // Abilities: A0C1 (Supernova), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Supernova - [|cffffcc00Level %d|r]
-}
-
-STRING 3132
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 5|r]
 }
 
 STRING 3133
@@ -20336,30 +20185,6 @@ STRING 3276
 Q
 }
 
-STRING 3277
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 6|r]
-}
-
-STRING 3278
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 7|r]
-}
-
-STRING 3279
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 8|r]
-}
-
-STRING 3280
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 9|r]
-}
-
 STRING 3281
 // Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
@@ -20370,18 +20195,6 @@ STRING 3282
 // Abilities: A05Q (Barrel Roll), Name (Name)
 {
 Barrel Roll
-}
-
-STRING 3283
-// Abilities: A05Q (Barrel Roll), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00E|r] Learn Barrel Roll - [|cffffcc00Level %d|r]
-}
-
-STRING 3284
-// Abilities: A05Q (Barrel Roll), Researchubertip (Tooltip - Learn - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3285
@@ -20403,7 +20216,7 @@ E
 }
 
 STRING 3288
-// Abilities: A05Q (Barrel Roll), EditorSuffix (Editor Suffix)
+// Abilities: A05Z (Roll), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
@@ -20478,18 +20291,6 @@ STRING 3300
 // Abilities: A07H (Energy Generation), Name (Name)
 {
 Energy Generation
-}
-
-STRING 3301
-// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] Barrel Roll - [|cffffcc00Level 10|r]
-}
-
-STRING 3302
-// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong throws a barrel, damaging enemy units in a line. |n|cff00ff00(Damage: (str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3303
@@ -20856,12 +20657,6 @@ STRING 3361
 [|cff00ff00W|r] Roll - [|cffffcc00Level 1|r]
 }
 
-STRING 3362
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool1>s|r
-}
-
 STRING 3363
 // Abilities: A05Z (Roll), Name (Name)
 {
@@ -20958,12 +20753,6 @@ STRING 3378
 [|cff00ff00W|r] Learn Roll - [|cffffcc00Level %d|r]
 }
 
-STRING 3379
-// Abilities: A05Z (Roll), Researchubertip (Tooltip - Learn - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool1> - <A05Z,Cool10> seconds|r
-}
-
 STRING 3380
 // Abilities: A05Z (Roll), Tip (Tooltip - Normal)
 {
@@ -20994,36 +20783,6 @@ STRING 3384
 [|cff00ff00W|r] Roll - [|cffffcc00Level 6|r]
 }
 
-STRING 3385
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool2>s|r
-}
-
-STRING 3386
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool3>s|r
-}
-
-STRING 3387
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool4>s|r
-}
-
-STRING 3388
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool5>s|r
-}
-
-STRING 3389
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool6>s|r
-}
-
 STRING 3390
 // Abilities: A05Z (Roll), Tip (Tooltip - Normal)
 {
@@ -21042,24 +20801,6 @@ STRING 3392
 [|cff00ff00W|r] Roll - [|cffffcc00Level 9|r]
 }
 
-STRING 3393
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool7>s|r
-}
-
-STRING 3394
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool8>s|r
-}
-
-STRING 3395
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool9>s|r
-}
-
 STRING 3396
 // Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
@@ -21073,7 +20814,7 @@ Finish Buster
 }
 
 STRING 3398
-// Abilities: A05Z (Roll), EditorSuffix (Editor Suffix)
+// Abilities: A069 (Barrel Cannon), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
@@ -21664,12 +21405,6 @@ STRING 3496
 // Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 3497
-// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong rolls in the targeted direction, damaging enemies in his path.|n|cff00FF00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A05Z,Cool10>s|r
 }
 
 STRING 3498
@@ -22371,44 +22106,38 @@ STRING 3611
 For every level of this spell your control over this body and power grows.
 }
 
-STRING 3612
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool1>s|r
-}
-
 STRING 3613
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool2>s|r
 }
 
 STRING 3614
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool3>s|r
 }
 
 STRING 3615
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool4>s|r
 }
 
 STRING 3616
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool5>s|r
 }
 
 STRING 3617
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool6>s|r
 }
 
 STRING 3618
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool7>s|r
 }
@@ -22474,7 +22203,7 @@ STRING 3628
 }
 
 STRING 3629
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 2|r]
 }
@@ -22857,7 +22586,7 @@ STRING 3691
 }
 
 STRING 3692
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 3|r]
 }
@@ -23377,25 +23106,41 @@ All +50
 }
 
 STRING 3779
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 4|r]
 }
 
 STRING 3780
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 5|r]
 }
 
 STRING 3781
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 6|r]
 }
 
+STRING 3782
+// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
+{
+A strong melee fighter with high auto-attack damage.
+
+|cffff2020One Punch|r: 100% Chance for 1.5x Crit.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080ONE PAAAAWNCH!|r
+}
+
 STRING 3783
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 7|r]
 }
@@ -23406,14 +23151,8 @@ STRING 3784
 R
 }
 
-STRING 3785
-// Abilities: A069 (Barrel Blast), Name (Name)
-{
-Barrel Blast
-}
-
 STRING 3786
-// Abilities: A069 (Barrel Blast), Researchtip (Tooltip - Learn)
+// Abilities: A069 (Barrel Cannon), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Barrel Blast - [|cffffcc00Level %d|r]
 }
@@ -23425,31 +23164,31 @@ R
 }
 
 STRING 3788
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 9|r]
 }
 
 STRING 3789
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 8|r]
 }
 
 STRING 3790
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
+// Abilities: A069 (Barrel Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Barrel Blast - [|cffffcc00Level 10|r]
 }
 
 STRING 3791
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool8>s|r
 }
 
 STRING 3792
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool9>s|r
 }
@@ -23461,13 +23200,13 @@ Big Bang Attack
 }
 
 STRING 3794
-// Abilities: A069 (Barrel Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A069 (Barrel Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool10>s|r
 }
 
 STRING 3795
-// Abilities: A069 (Barrel Blast), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A069 (Barrel Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
 Donkey Kong slams the ground, revealing a hidden Barrel Cannon. The cannon will spin for a brief time, launching any heroes that touch it in the direction it is currently facing.|n|cff00FF00Duration: 10s|r|n|cff00FFFFCooldown: <A069,Cool1>-<A069,Cool10>s|r
 }
@@ -24808,7 +24547,7 @@ namek house 3
 }
 
 STRING 4009
-// Abilities: A069 (Barrel Blast), EditorSuffix (Editor Suffix)
+// Abilities: A06A (Banana Slamma), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
@@ -24817,12 +24556,6 @@ STRING 4010
 // Abilities: A0H6 (Gigantic Omegastorm), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Gigantic Omegastorm - [|cffffcc00Level %d|r]
-}
-
-STRING 4011
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool1>s|r
 }
 
 STRING 4012
@@ -25029,18 +24762,6 @@ STRING 4045
 Dr. Gero's Programming allows the android to dodge attack's and have a higher chance to do critical's.
 }
 
-STRING 4046
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool2>s|r
-}
-
-STRING 4047
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool3>s|r
-}
-
 STRING 4048
 // Abilities: A08G (HPR Clone), Hotkey (Hotkey - Normal)
 {
@@ -25053,34 +24774,71 @@ STRING 4049
 Angry Explosion
 }
 
-STRING 4050
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool4>s|r
-}
-
-STRING 4051
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool5>s|r
-}
-
 STRING 4052
 // Abilities: A08N (Self-Destruct), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 4053
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
+STRING 4055
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
 {
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool6>s|r
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.1x Int mult (+0.1x when under 30k Int)
+-0.1x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
 }
 
-STRING 4054
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
+STRING 4056
+// Items: I009 (Z Sword), Description (Description)
 {
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool7>s|r
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.1x Int mult (+0.1x when under 30k Int)
+-0.1x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 4057
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+{
+(broly)
+}
+
+STRING 4058
+// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+{
+(broly)
+}
+
+STRING 4059
+// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+{
+(broly)
+}
+
+STRING 4060
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+{
+(broly)
+}
+
+STRING 4061
+// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama's face becomes more serious. 
+Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
+Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
+|cffffff00+0.2x stat mult.
+Reduces base attack time.
+Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 2.0x crit.
+Gains true strike.
++66ms and unlocks movement speed cap.|r
+|cff00FF00Duration: <A02J,Dur1> seconds|r
+|cff00FFFFCooldown: <A02J,Cool1> seconds|r
+
+|cff808080Note: Saitama does not actually consider these moves to be something special.|r
 }
 
 STRING 4062
@@ -25095,6 +24853,33 @@ STRING 4063
 Banana Slamma
 }
 
+STRING 4064
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur1> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool1> seconds|r
+}
+
+STRING 4065
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur2> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool2> seconds|r
+}
+
+STRING 4066
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur3> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool3> seconds|r
+}
+
 STRING 4067
 // Doodads: D00Y (namek house 6), Name (Name)
 {
@@ -25105,6 +24890,24 @@ STRING 4068
 // Abilities: A0ES (Special Beam Cannon), Name (Name)
 {
 Special Beam Cannon
+}
+
+STRING 4069
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur4> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool4> seconds|r
+}
+
+STRING 4070
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur5> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool5> seconds|r
 }
 
 STRING 4071
@@ -26580,32 +26383,8 @@ Tien releases a powerful air shockwave from his hands that deflects and nullifie
 |cff00FFFFCooldown: <A0TR,Cool9,.> seconds|r
 }
 
-STRING 4313
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool8>s|r
-}
-
-STRING 4314
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool9>s|r
-}
-
-STRING 4315
-// Abilities: A06A (Banana Slamma), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool10>s|r
-}
-
-STRING 4316
-// Abilities: A06A (Banana Slamma), Researchubertip (Tooltip - Learn - Extended)
-{
-Donkey Kong winds up for a brief moment before unleashing a mighty punch. |n|cffff2020Channel Duration: 1s|r|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A06A,Cool1> - <A06A,Cool10> seconds|r
-}
-
 STRING 4317
-// Abilities: A06A (Banana Slamma), EditorSuffix (Editor Suffix)
+// Abilities: A06B (Jungle Rush), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
@@ -26614,6 +26393,15 @@ STRING 4318
 // Abilities: A09U (Photon Strike Barrage), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 4319
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur6> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool6> seconds|r
 }
 
 STRING 4320
@@ -26653,6 +26441,21 @@ STRING 4324
 // Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 4325
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur7> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool7> seconds|r
+}
+
+STRING 4326
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 2|r]
 }
 
 STRING 4327
@@ -27362,6 +27165,54 @@ STRING 4444
 D
 }
 
+STRING 4445
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 3|r]
+}
+
+STRING 4446
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 4|r]
+}
+
+STRING 4447
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 5|r]
+}
+
+STRING 4448
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 6|r]
+}
+
+STRING 4449
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 1|r]
+}
+
+STRING 4450
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 7|r]
+}
+
+STRING 4451
+// Abilities: A0TK (Ground Pound), Name (Name)
+{
+Ground Pound
+}
+
+STRING 4452
+// Abilities: A0TK (Ground Pound), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Ground Pound - [|cffffcc00Level %d|r]
+}
+
 STRING 4453
 // Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
@@ -27372,6 +27223,17 @@ STRING 4454
 // Abilities: A0KO (Solar Flare), Name (Name)
 {
 Solar Flare
+}
+
+STRING 4455
+// Abilities: A041 (Ground Pound), Researchubertip (Tooltip - Learn - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur1> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool1> - <A041,Cool10> seconds|r
+
+|cff808080"D...K! D...K! D...K!"|r
 }
 
 STRING 4456
@@ -27828,6 +27690,12 @@ STRING 4521
 E
 }
 
+STRING 4522
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 8|r]
+}
+
 STRING 4523
 // Abilities: A0GO (Big Bang Attack), Researchtip (Tooltip - Learn)
 {
@@ -28078,6 +27946,18 @@ STRING 4564
 // Abilities: A07Z (Super Buu Kamikaze Attack), Name (Name)
 {
 Super Buu Kamikaze Attack
+}
+
+STRING 4565
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 9|r]
+}
+
+STRING 4566
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 10|r]
 }
 
 STRING 4567
@@ -34120,6 +34000,15 @@ STRING 5561
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 8|r]
 }
 
+STRING 5562
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur8> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool8> seconds|r
+}
+
 STRING 5563
 // Units: z000 (Shenron Dummy), EditorSuffix (Name - Editor Suffix)
 {
@@ -34292,6 +34181,15 @@ STRING 5591
 // Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool9> seconds|r
+}
+
+STRING 5592
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur9> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool9> seconds|r
 }
 
 STRING 5593
@@ -34496,6 +34394,15 @@ STRING 5626
 // Abilities: A0C3 (BeerusBall), Researchubertip (Tooltip - Learn - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 5627
+// Abilities: A041 (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong smashes the ground in front of him, causing shockwaves that damage and slow nearby enemies. Enemies that are directly hit by the slaps take additional damage.
+|cffff2020Channel Duration: <A041,Dur10> seconds|r
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A041,Cool10> seconds|r
 }
 
 STRING 5635
@@ -34999,28 +34906,10 @@ STRING 5706
 [|cff00FF00F|r] Jungle Rush - [|cffffcc00Level 1|r]
 }
 
-STRING 5707
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool1>s|r
-}
-
 STRING 5708
 // Abilities: A06B (Jungle Rush), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Jungle Rush - [|cffffcc00Level %d|r]
-}
-
-STRING 5709
-// Abilities: A06B (Jungle Rush), Researchubertip (Tooltip - Learn - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool1> - <A06B,Cool10> seconds|r
 }
 
 STRING 5710
@@ -35036,7 +34925,7 @@ F
 }
 
 STRING 5712
-// Abilities: A06B (Jungle Rush), EditorSuffix (Editor Suffix)
+// Abilities: A05Q (Barrel Roll), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
 }
@@ -35557,24 +35446,6 @@ STRING 5794
 [|cff00FF00F|r] Jungle Rush - [|cffffcc00Level 3|r]
 }
 
-STRING 5795
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool2>s|r
-}
-
-STRING 5796
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool3>s|r
-}
-
 STRING 5797
 // Abilities: A06B (Jungle Rush), Tip (Tooltip - Normal)
 {
@@ -35629,15 +35500,6 @@ STRING 5805
 E
 }
 
-STRING 5806
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool4>s|r
-}
-
 STRING 5807
 // Abilities: A0CY (Sample ????), Ubertip (Tooltip - Normal - Extended)
 {
@@ -35674,33 +35536,6 @@ STRING 5812
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. |n|cff00ff00(Damage: (Int * lvl * 2.25) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
-STRING 5813
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool5>s|r
-}
-
-STRING 5814
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool6>s|r
-}
-
-STRING 5815
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool7>s|r
-}
-
 STRING 5816
 // Abilities: A0TW (Super Goten Strike), Tip (Tooltip - Normal)
 {
@@ -35711,15 +35546,6 @@ STRING 5817
 // Abilities: A0TW (Super Goten Strike), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Super Goten Strike - [|cffffcc00Level 4|r]
-}
-
-STRING 5818
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool8>s|r
 }
 
 STRING 5819
@@ -35738,15 +35564,6 @@ STRING 5821
 // Abilities: A0U2 (Galactic Donut), Name (Name)
 {
 Galactic Donut
-}
-
-STRING 5822
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool9>s|r
 }
 
 STRING 5823
@@ -37965,15 +37782,6 @@ STRING 6191
 Moves your revive point to Tao's starting location, in the southeast part of the map.
 }
 
-STRING 6192
-// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Donkey Kong Jumps towards the target area, trapping any heroes caught in range and punches the crap out of them.
-
-|cff00ff00Damage: Str * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A06B,Cool10>s|r
-}
-
 STRING 6193
 // Abilities: A0E4 (Transform - Fourth), Ubertip (Tooltip - Normal - Extended)
 {
@@ -38044,7 +37852,7 @@ STRING 6204
 {
 Type "r" to revert.
 Transformations:
-[lvl 20]   1.25x "fp"
+[lvl 20]  1.25x "fp"
 [lvl 35]  1.50x "fp"
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
@@ -38063,12 +37871,6 @@ STRING 6206
 // Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 6208
-// Abilities: A069 (Barrel Blast), Tip (Tooltip - Normal)
-{
-[|cff00ff00D|r] Barrel Blast - [|cffffcc00Level 1|r]
 }
 
 STRING 6209
@@ -40927,16 +40729,64 @@ STRING 6693
 D
 }
 
+STRING 6694
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool1> seconds|r
+}
+
 STRING 6695
 // Abilities: A0PZ (Death Beam), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Death Beam - [|cffffcc00Level %d|r]
 }
 
+STRING 6696
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool3> seconds|r
+}
+
 STRING 6697
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
+}
+
+STRING 6698
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool4> seconds|r
+}
+
+STRING 6699
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool5> seconds|r
+}
+
+STRING 6700
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool6> seconds|r
+}
+
+STRING 6701
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool7> seconds|r
 }
 
 STRING 6702
@@ -41302,6 +41152,12 @@ STRING 6759
 R
 }
 
+STRING 6760
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 2|r]
+}
+
 STRING 6761
 // Abilities: A0PN (Change Now), Name (Name)
 {
@@ -41356,6 +41212,48 @@ STRING 6769
 [|cff00ff00E|r] Hellzone Grenade - [|cffffcc00Level 2|r]
 }
 
+STRING 6770
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 3|r]
+}
+
+STRING 6771
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 4|r]
+}
+
+STRING 6772
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 5|r]
+}
+
+STRING 6773
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 6|r]
+}
+
+STRING 6774
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 1|r]
+}
+
+STRING 6775
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 7|r]
+}
+
+STRING 6776
+// Abilities: A05Q (Barrel Roll), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Barrel Roll - [|cffffcc00Level %d|r]
+}
+
 STRING 6777
 // Abilities: A0ES (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -41398,10 +41296,22 @@ STRING 6783
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 7|r]
 }
 
+STRING 6784
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 9|r]
+}
+
 STRING 6785
 // Abilities: A0ES (Special Beam Cannon), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
+}
+
+STRING 6786
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 8|r]
 }
 
 STRING 6787
@@ -41416,10 +41326,122 @@ STRING 6788
 Q
 }
 
+STRING 6789
+// Abilities: A05Q (Barrel Roll), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 10|r]
+}
+
+STRING 6790
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool8> seconds|r
+}
+
+STRING 6791
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool9> seconds|r
+}
+
+STRING 6792
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool10> seconds|r
+}
+
+STRING 6794
+// Abilities: A05Q (Barrel Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool2> seconds|r
+}
+
+STRING 6795
+// Abilities: A0TJ (Jump), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 6796
+// Abilities: A06E (Ground Pound Slow), Name (Name)
+{
+Ground Pound Slow
+}
+
+STRING 6797
+// Abilities: A06E (Ground Pound Slow), Tip (Tooltip - Normal)
+{
+Ground Pound Slow
+}
+
+STRING 6798
+// Abilities: A06E (Ground Pound Slow), EditorSuffix (Editor Suffix)
+{
+(donkey kong)
+}
+
+STRING 6799
+// Units: H05Q (Alpha Ape), Tip (Tooltip - Basic)
+{
+[|cffffff00F|r] Choose Donkey Kong
+}
+
+STRING 6801
+// Abilities: A05Q (Barrel Roll), Researchubertip (Tooltip - Learn - Extended)
+{
+Donkey Kong rolls a barrel to target location, damaging nearby units along the way.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A05Q,Cool1> - <A05Q,Cool10> seconds|r
+}
+
+STRING 6802
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur1>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool1> seconds|r
+}
+
 STRING 6803
 // Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
+}
+
+STRING 6804
+// Abilities: A05Z (Roll), Researchubertip (Tooltip - Learn - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur1>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool1> - <A05Z,Cool10> seconds|r
+}
+
+STRING 6805
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur2>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool2> seconds|r
+}
+
+STRING 6806
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur3>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool3> seconds|r
 }
 
 STRING 6807
@@ -43534,16 +43556,52 @@ STRING 7130
 E
 }
 
+STRING 7131
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur4>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool4> seconds|r
+}
+
 STRING 7132
 // Abilities: A0GA (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
 ...
 }
 
+STRING 7133
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur5>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool5> seconds|r
+}
+
 STRING 7134
 // Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 7135
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur6>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool6> seconds|r
+}
+
+STRING 7136
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur7>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool7> seconds|r
 }
 
 STRING 7137
@@ -43600,16 +43658,61 @@ STRING 7145
 Q
 }
 
+STRING 7146
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur8>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool8> seconds|r
+}
+
 STRING 7147
 // Abilities: A0G9 (Eye Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Caster does a thing|n|cff00FF00Damage:int*lvl*2+100|r|n|cff00FFFFCooldown:15s|r
 }
 
+STRING 7148
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur9>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool9> seconds|r
+}
+
 STRING 7149
 // Abilities: A0IH (Wish for Book), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 7150
+// Abilities: A05Z (Roll), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolling speed increases over time.
+|cffff2020Channel Duration: <A05Z,Dur10>s
+|cff00FF00Damage: Str * Lvl * ?|r
+|cff00FFFFCooldown: <A05Z,Cool10> seconds|r
+}
+
+STRING 7151
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool1> seconds|r
+}
+
+STRING 7152
+// Abilities: A06B (Jungle Rush), Researchubertip (Tooltip - Learn - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool1> - <A06B,Cool10> seconds|r
 }
 
 STRING 7153
@@ -43628,6 +43731,15 @@ STRING 7155
 // Abilities: A0MM (Saibaman Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
+}
+
+STRING 7156
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool2> seconds|r
 }
 
 STRING 7157
@@ -43802,6 +43914,15 @@ STRING 7181
 [|cffFFFF00W|r] Final Flash
 }
 
+STRING 7182
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool3> seconds|r
+}
+
 STRING 7183
 // Abilities: A0GA (Final Flash), Name (Name)
 {
@@ -43874,6 +43995,24 @@ STRING 7194
 Meme Heroes
 }
 
+STRING 7195
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool4> seconds|r
+}
+
+STRING 7196
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool5> seconds|r
+}
+
 STRING 7197
 // Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
@@ -43896,6 +44035,15 @@ STRING 7200
 // Units: H08U (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 7201
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool6> seconds|r
 }
 
 STRING 7202
@@ -44012,6 +44160,15 @@ STRING 7217
 [|cffFFFF00Q|r] Power Blitz
 }
 
+STRING 7218
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool7> seconds|r
+}
+
 STRING 7219
 // Abilities: A0GF (Power Blitz), Name (Name)
 {
@@ -44022,6 +44179,33 @@ STRING 7220
 // Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 7221
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool8> seconds|r
+}
+
+STRING 7222
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool9> seconds|r
+}
+
+STRING 7223
+// Abilities: A06B (Jungle Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Donkey Kong jumps towards the target area, trapping anyone caught in range and then beats the bananas out of them. Stuns for 0.5s during the jump and stuns for 1s upon landing.
+
+|cff00ff00Damage: Str * Lvl * ? Jump + Str x Lvl x ? Landing|r
+|cff00ffffCooldown: <A06B,Cool10> seconds|r
 }
 
 STRING 7224
@@ -59253,7 +59437,7 @@ Cooler surrounds himself with a purple barrier and flies at the enemy, ramming t
 }
 
 STRING 9940
-// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -59598,7 +59782,7 @@ STRING 9998
 }
 
 STRING 9999
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -59794,7 +59978,7 @@ STRING 10029
 }
 
 STRING 10030
-// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60216,7 +60400,7 @@ E
 }
 
 STRING 10106
-// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+// Abilities: A0KR (Ultra Instinct), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -62079,7 +62263,7 @@ Buu gets so angry he makes himself explode damaging nearby units. |n|cff00ff00(D
 }
 
 STRING 10416
-// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+// Abilities: A0MZ (Mastered Ultra Instinct), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -63505,7 +63689,7 @@ X
 }
 
 STRING 10640
-// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
+// Abilities: A0NP (Dimension Sword 1), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -66345,7 +66529,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11112
-// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
+// Abilities: A0P0 (Super Dragon Fist), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -66624,12 +66808,6 @@ This Android can produce infinite energy.|n|cff2080ffMana Regen: +2% of max mana
 STRING 11157
 {
 |cffff2020Captain's Mode Detected. Automatic catchup stats disabled.|r
-}
-
-STRING 11158
-// Abilities: A0KR (Ultra Instinct), EditorSuffix (Editor Suffix)
-{
-(actual)
 }
 
 STRING 11159
@@ -67545,12 +67723,6 @@ STRING 11311
 // Abilities: A0OX (Tyrant Breaker), EditorSuffix (Editor Suffix)
 {
 (Bardock)
-}
-
-STRING 11312
-// Abilities: A0MZ (Mastered Ultra Instinct), EditorSuffix (Editor Suffix)
-{
-(actual)
 }
 
 STRING 11313
@@ -69511,12 +69683,6 @@ STRING 11631
 [|cff00FF00D|r] Mastered Ultra Instinct
 }
 
-STRING 11632
-// Abilities: A0NP (Dimension Sword 1), EditorSuffix (Editor Suffix)
-{
-(actual)
-}
-
 STRING 11633
 // Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
@@ -69572,12 +69738,6 @@ STRING 11641
 // Abilities: A01X (Senzu Bean), EditorSuffix (Editor Suffix)
 {
 (actual?)
-}
-
-STRING 11642
-// Abilities: A0P0 (Super Dragon Fist), EditorSuffix (Editor Suffix)
-{
-(actual)
 }
 
 STRING 11643
@@ -76330,30 +76490,10 @@ STRING 12732
 Ice Cannon
 }
 
-STRING 12733
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
-{
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.1x Int mult.
--0.1x Agi mult.
-Reduces max movement speed by 30.|r
-}
-
 STRING 12734
 // Abilities: A0QG (Earth Breaker), Researchhotkey (Hotkey - Learn)
 {
 R
-}
-
-STRING 12735
-// Items: I009 (Z Sword), Description (Description)
-{
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.1x Int mult.
--0.1x Agi mult.
-Reduces max movement speed by 30.|r
 }
 
 STRING 12736
@@ -91114,13 +91254,13 @@ Q
 }
 
 STRING 15034
-// Abilities: A041 (Hand Slap), Researchhotkey (Hotkey - Learn)
+// Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15035
-// Abilities: A041 (Hand Slap), Hotkey (Hotkey - Normal)
+// Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -97900,7 +98040,7 @@ STRING 16004
 }
 
 STRING 16005
-// Abilities: A0TJ (Jump), EditorSuffix (Editor Suffix)
+// Abilities: A0TK (Ground Pound), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -98091,19 +98231,19 @@ Mario performs a forward roll in the air before slamming towards the ground, fla
 }
 
 STRING 16035
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 1|r]
 }
 
 STRING 16036
-// Abilities: A0TK (Ground Pound), Name (Name)
+// Abilities: A041 (Ground Pound), Name (Name)
 {
 Ground Pound
 }
 
 STRING 16037
-// Abilities: A069 (Barrel Blast), Hotkey (Hotkey - Normal)
+// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -98115,7 +98255,7 @@ STRING 16038
 }
 
 STRING 16039
-// Abilities: A0TK (Ground Pound), Researchtip (Tooltip - Learn)
+// Abilities: A041 (Ground Pound), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Ground Pound - [|cffffcc00Level %d|r]
 }
@@ -98159,7 +98299,7 @@ W
 }
 
 STRING 16045
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 2|r]
 }
@@ -98171,7 +98311,7 @@ This unit is in a pocket dimension and is immune to damage.
 }
 
 STRING 16047
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 3|r]
 }
@@ -98183,19 +98323,19 @@ W
 }
 
 STRING 16049
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 4|r]
 }
 
 STRING 16050
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 5|r]
 }
 
 STRING 16051
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 6|r]
 }
@@ -98233,7 +98373,7 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 }
 
 STRING 16057
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 7|r]
 }
@@ -98263,25 +98403,25 @@ STRING 16061
 }
 
 STRING 16062
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 8|r]
 }
 
 STRING 16063
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 9|r]
 }
 
 STRING 16064
-// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+// Abilities: A041 (Ground Pound), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 10|r]
 }
 
 STRING 16065
-// Abilities: A0TK (Ground Pound), EditorSuffix (Editor Suffix)
+// Abilities: A0TL (Hammer Time), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -98749,7 +98889,7 @@ STRING 16124
 }
 
 STRING 16125
-// Abilities: A0TL (Hammer Time), EditorSuffix (Editor Suffix)
+// Abilities: A0TM (Spin Jump), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -98917,7 +99057,7 @@ STRING 16150
 }
 
 STRING 16151
-// Abilities: A0TM (Spin Jump), EditorSuffix (Editor Suffix)
+// Abilities: A0TN (Super Cape), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -98941,7 +99081,7 @@ STRING 16154
 }
 
 STRING 16155
-// Abilities: A0TN (Super Cape), EditorSuffix (Editor Suffix)
+// Abilities: A0TO (Power Up Block), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -99102,7 +99242,7 @@ STRING 16180
 }
 
 STRING 16181
-// Abilities: A0TO (Power Up Block), EditorSuffix (Editor Suffix)
+// Abilities: A0TP (Fireball), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -99267,7 +99407,7 @@ Fireball.
 }
 
 STRING 16207
-// Abilities: A0TP (Fireball), EditorSuffix (Editor Suffix)
+// Abilities: A0TQ (Ground Pound Flatten), EditorSuffix (Editor Suffix)
 {
 (mario)
 }
@@ -113314,7 +113454,7 @@ STRING 18187
 }
 
 STRING 18188
-// Abilities: A069 (Barrel Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }

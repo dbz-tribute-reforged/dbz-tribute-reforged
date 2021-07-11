@@ -773,7 +773,7 @@ export function setupSPData(customHero: CustomHero) {
     // if (currentSP < 0.2 * maxSP) {
     //   incSp *= 0.5;
     // }
-    incSp *= (0.75+(currentSP/maxSP));    
+    incSp *= (0.66+(currentSP/maxSP));    
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
   });
 

@@ -75,24 +75,24 @@ function tsMain() {
   TimerStart(CreateTimer(), 10, false, () => {
     // teamManager = TeamManager.getInstance();
     creepManager = CreepManager.getInstance();
-
-    const checkUnit = CreateUnit(
-      Player(PLAYER_NEUTRAL_PASSIVE), 
-      Constants.gameStartIndicatorUnit,
-      DragonBallsConstants.shenronWaitingRoom.x, DragonBallsConstants.shenronWaitingRoom.y, 0
-    );
-    TimerStart(CreateTimer(), 1, true, () => {
-      if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
-        // anything that happens after hero picking is done, should be placed here
-        sagaManager = SagaManager.getInstance();
-        tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
-        dragonBallsManager = DragonBallsManager.getInstance();
-        creepManager.setupCreepResearchUpgrade();
-        DestroyTimer(GetExpiredTimer());
-      }
-    })
     DestroyTimer(GetExpiredTimer());
   })
+
+  const checkUnit = CreateUnit(
+    Player(PLAYER_NEUTRAL_PASSIVE), 
+    Constants.gameStartIndicatorUnit,
+    DragonBallsConstants.shenronWaitingRoom.x, DragonBallsConstants.shenronWaitingRoom.y, 0
+  );
+  TimerStart(CreateTimer(), 1, true, () => {
+    if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
+      // anything that happens after hero picking is done, should be placed here
+      sagaManager = SagaManager.getInstance();
+      tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
+      dragonBallsManager = DragonBallsManager.getInstance();
+      creepManager.setupCreepResearchUpgrade();
+      DestroyTimer(GetExpiredTimer());
+    }
+  });
 
   TimerStart(CreateTimer(), 15, false, () => {
     experienceManager = ExperienceManager.getInstance();
