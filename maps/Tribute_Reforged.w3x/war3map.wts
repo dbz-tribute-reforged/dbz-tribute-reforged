@@ -5181,6 +5181,12 @@ STRING 832
 (soldier gun 2)
 }
 
+STRING 833
+// Abilities: A06K (VegetaGoD), Name (Name)
+{
+VegetaGoD
+}
+
 STRING 834
 // Abilities: A0RB (Senzu Throw), Ubertip (Tooltip - Normal - Extended)
 {
@@ -8543,24 +8549,6 @@ STRING 1358
 // Items: I024 (Saibamen Seeds), Name (Name)
 {
 Saibamen Seeds
-}
-
-STRING 1359
-// Items: I024 (Saibamen Seeds), Ubertip (Tooltip - Extended)
-{
-You can plant these to grow saibamen.
-}
-
-STRING 1360
-// Items: I024 (Saibamen Seeds), Description (Description)
-{
-You can plant these to grow saibamen.
-}
-
-STRING 1361
-// Items: I024 (Saibamen Seeds), Tip (Tooltip - Basic)
-{
-You can plant these to grow saibamen.
 }
 
 STRING 1362
@@ -13519,6 +13507,39 @@ Saitama delivers a combo of rapid fire punches.
 |cff00FFFFCooldown: <A00I,Cool7> seconds|r
 }
 
+STRING 2168
+// Items: I024 (Saibamen Seeds), Ubertip (Tooltip - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay. 
+|cffffff00When used by Raditz or Nappa, all saibamen are 25% stronger and last for 5s longer.
+|cff00ff00Saibamen Planted: 3|r
+|cff00ffffCooldown: 30s.|r
+}
+
+STRING 2169
+// Items: I024 (Saibamen Seeds), Description (Description)
+{
+Plants saibamen seeds that spawn saibamen after a short delay. 
+|cffffff00When used by Raditz or Nappa, all saibamen are 25% stronger and last for 5s longer.
+|cff00ff00Saibamen Planted: 3|r
+|cff00ffffCooldown: 30s.|r
+}
+
+STRING 2170
+// Items: I024 (Saibamen Seeds), Tip (Tooltip - Basic)
+{
+Plants saibamen seeds that spawn saibamen after a short delay. 
+|cffffff00When used by Raditz or Nappa, all saibamen are 25% stronger and last for 5s longer.
+|cff00ff00Saibamen Planted: 3|r
+|cff00ffffCooldown: 30s.|r
+}
+
+STRING 2171
+// Abilities: A0NU (Time Ring), EditorSuffix (Editor Suffix)
+{
+(item)
+}
+
 STRING 2175
 // Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
 {
@@ -15454,7 +15475,7 @@ Bardock's ability to see into the future allows him to dodge most incoming attac
 }
 
 STRING 2494
-// Abilities: A0NU (Time Ring), EditorSuffix (Editor Suffix)
+// Abilities: A00T (Saibamen), EditorSuffix (Editor Suffix)
 {
 (item)
 }
@@ -34759,6 +34780,7 @@ Transformations:
 [lvl 150] 2.50x "ssg"
 [lvl 200] 2.60x "ssb" [unlocks final flash 2]
 [lvl 225] 2.70x "ssbe"
+[lvl 300] 2.80x "god"
 }
 
 STRING 5691

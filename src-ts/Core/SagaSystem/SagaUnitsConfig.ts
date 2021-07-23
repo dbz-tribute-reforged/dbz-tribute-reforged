@@ -48,6 +48,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
         ItemConstants.SagaDrops.SCOUTER_1,
+        ItemConstants.SagaDrops.SAIBAMEN_SEEDS,
       ]
     )],
     ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(8800, 1700),

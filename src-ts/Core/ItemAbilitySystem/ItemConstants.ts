@@ -99,6 +99,7 @@ export module ItemConstants {
 
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
   export const rainbowShell = FourCC("I04P");
+  export const saibamenSeeds = FourCC("I024");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -140,5 +141,6 @@ export module ItemConstants {
     export const TIME_RING = timeRing[0];
     export const SORROWFUL_SCYTHE = sorrowfulScythe[0];
     export const RAINBOW_SHELL = rainbowShell;
+    export const SAIBAMEN_SEEDS = saibamenSeeds;
   }
 }

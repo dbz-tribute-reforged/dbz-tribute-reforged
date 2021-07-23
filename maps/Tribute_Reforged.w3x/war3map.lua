@@ -251,6 +251,7 @@ udg_MarleAllureGroup = nil
 udg_LucarioIornDefenseUnitGroup = nil
 udg_EisAbsoluteZeroUnitGroup = nil
 udg_IsNightmareMode = false
+udg_SummonsSaibamenHashtable = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1463,6 +1464,7 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I009"), 5546.3, 10211.3, FourCC("I009"))
     BlzCreateItemWithSkin(FourCC("I00D"), 11316.4, 21667.5, FourCC("I00D"))
     BlzCreateItemWithSkin(FourCC("I00I"), 11288.0, 21923.3, FourCC("I00I"))
+    BlzCreateItemWithSkin(FourCC("I024"), 11039.7, 21198.9, FourCC("I024"))
     BlzCreateItemWithSkin(FourCC("I02E"), 11246.9, 21397.2, FourCC("I02E"))
     BlzCreateItemWithSkin(FourCC("I02V"), 10881.5, 22103.8, FourCC("I02V"))
     BlzCreateItemWithSkin(FourCC("I035"), 11183.0, 21379.8, FourCC("I035"))
@@ -1490,10 +1492,10 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I04J"), 11311.4, 21230.7, FourCC("I04J"))
     BlzCreateItemWithSkin(FourCC("I04K"), 11372.7, 21230.7, FourCC("I04K"))
     BlzCreateItemWithSkin(FourCC("I04L"), 11381.0, 21293.3, FourCC("I04L"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -5874.4, 17608.8, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -5876.6, 17922.5, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -6028.9, 17861.2, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -5736.9, 17804.2, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -5874.4, 17608.8, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -6039.0, 17667.5, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04O"), 11313.0, 21366.0, FourCC("I04O"))
 end
@@ -4221,14 +4223,54 @@ function InitTrig_Raditz_Double_Sundae()
     TriggerAddAction(gg_trg_Raditz_Double_Sundae, Trig_Raditz_Double_Sundae_Actions)
 end
 
+function Trig_Nappa_Plant_Saibamen_Func001C()
+    if (GetSpellAbilityId() == FourCC("A0MK")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A00T")) then
+        return true
+    end
+    return false
+end
+
 function Trig_Nappa_Plant_Saibamen_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0MK"))) then
+    if (not Trig_Nappa_Plant_Saibamen_Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func002Func001C()
+function Trig_Nappa_Plant_Saibamen_Func003Func006C()
+    if (GetSpellAbilityId() == FourCC("A00T")) then
+        return true
+    end
+    if (UnitHasItemOfTypeBJ(GetTriggerUnit(), FourCC("I024")) == true) then
+        return true
+    end
+    return false
+end
+
+function Trig_Nappa_Plant_Saibamen_Func003Func007C()
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08U")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08W")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Nappa_Plant_Saibamen_Func003C()
+    if (not Trig_Nappa_Plant_Saibamen_Func003Func006C()) then
+        return false
+    end
+    if (not Trig_Nappa_Plant_Saibamen_Func003Func007C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func002Func001C()
     if (SubStringBJ(udg_OriginalPlayerNames[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))], 1, 11) == "randomkilla") then
         return true
     end
@@ -4238,56 +4280,56 @@ function Trig_Nappa_Plant_Saibamen_Func006Func018Func002Func001C()
     return false
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func002C()
-    if (not Trig_Nappa_Plant_Saibamen_Func006Func018Func002Func001C()) then
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func002C()
+    if (not Trig_Nappa_Plant_Saibamen_Func005Func019Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001Func001Func001C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001Func001C()
     if (not (udg_TempReal < 4.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001C()
     if (not (udg_TempReal < 3.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002C()
     if (not (udg_TempReal < 2.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002C()
     if (not (udg_TempReal < 1.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018Func003C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019Func003C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func018C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019C()
     if (not (udg_TempBool == true)) then
         return false
     end
@@ -4296,9 +4338,17 @@ end
 
 function Trig_Nappa_Plant_Saibamen_Actions()
     udg_TempLoc = GetUnitLoc(GetTriggerUnit())
-    udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 6)
-    udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 6)
-    udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 6)
+    if (Trig_Nappa_Plant_Saibamen_Func003C()) then
+        udg_TempReal2 = 50.00
+        udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 5)
+        udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 5)
+        udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 5)
+    else
+        udg_TempReal2 = 45.00
+        udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 6)
+        udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 6)
+        udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 6)
+    end
     udg_TempBool = true
     udg_TempInt4 = 1
     while (true) do
@@ -4307,7 +4357,8 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         udg_TempUnit = GetLastCreatedUnit()
         GroupAddUnitSimple(udg_TempUnit, udg_SaibamenGroup)
                 udg_ID = GetHandleId(udg_TempUnit)
-        SaveIntegerBJ(1, 0, udg_ID, udg_SummonsHashtable)
+        SaveIntegerBJ(1, 0, udg_ID, udg_SummonsSaibamenHashtable)
+        SaveRealBJ(udg_TempReal2, 1, udg_ID, udg_SummonsSaibamenHashtable)
         SetUnitInvulnerable(udg_TempUnit, true)
         ShowUnitHide(udg_TempUnit)
         PauseUnitBJ(true, udg_TempUnit)
@@ -4320,34 +4371,34 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         BlzSetHeroProperName(udg_TempUnit, "Saibaman")
         udg_StatMultUnit = udg_TempUnit
         TriggerExecute(gg_trg_Base_Armor_Set)
-        if (Trig_Nappa_Plant_Saibamen_Func006Func018C()) then
+        if (Trig_Nappa_Plant_Saibamen_Func005Func019C()) then
             udg_TempReal = GetRandomReal(0, 100.00)
-            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func002C()) then
+            if (Trig_Nappa_Plant_Saibamen_Func005Func019Func002C()) then
                 udg_TempReal = GetRandomReal(0, 50.00)
             else
             end
-            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003C()) then
+            if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003C()) then
                 udg_TempBool = false
-                if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002C()) then
+                if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002C()) then
                     BlzSetHeroProperName(udg_TempUnit, "Snuggles")
                     SetUnitScalePercent(udg_TempUnit, 220.00, 220.00, 220.00)
                 else
-                    if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002C()) then
+                    if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002C()) then
                         BlzSetHeroProperName(udg_TempUnit, "Fufu")
                         SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
                         SetUnitScalePercent(udg_TempUnit, 75.00, 75.00, 75.00)
                     else
-                        if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001C()) then
+                        if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001C()) then
                             BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
                             SetUnitTimeScalePercent(udg_TempUnit, 150.00)
                             SetUnitVertexColorBJ(udg_TempUnit, 80.00, 100.00, 60.00, 0)
                         else
-                            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001C()) then
+                            if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001Func001C()) then
                                 BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
                                 SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
                                 SetUnitScalePercent(udg_TempUnit, 200.00, 200.00, 200.00)
                             else
-                                if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001Func001C()) then
+                                if (Trig_Nappa_Plant_Saibamen_Func005Func019Func003Func002Func002Func001Func001Func001C()) then
                                     BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
                                     SetUnitTimeScalePercent(udg_TempUnit, 75.00)
                                     SetUnitVertexColorBJ(udg_TempUnit, 60.00, 100.00, 80.00, 0)
@@ -4381,35 +4432,35 @@ function Trig_Saibamen_Loop_Func002Func004C()
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func015Func001Func001Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Vegeta Jr.")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func015Func001Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Other Cabbagehead")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func015Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Cabbagehead")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func014Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func015Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Fufu")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func014C()
+function Trig_Saibamen_Loop_Func002Func005Func015C()
     if (not (GetHeroProperName(udg_TempUnit) == "Snuggles")) then
         return false
     end
@@ -4426,7 +4477,7 @@ end
 function Trig_Saibamen_Loop_Func002A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
-    udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
+    udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsSaibamenHashtable)
     if (Trig_Saibamen_Loop_Func002Func004C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
@@ -4443,23 +4494,24 @@ function Trig_Saibamen_Loop_Func002A()
         SetUnitInvulnerable(udg_TempUnit, false)
         ShowUnitShow(udg_TempUnit)
         PauseUnitBJ(false, udg_TempUnit)
-        UnitApplyTimedLifeBJ(45.00, FourCC("BTLF"), udg_TempUnit)
+        udg_TempReal = LoadRealBJ(1, udg_ID, udg_SummonsSaibamenHashtable)
+        UnitApplyTimedLifeBJ(udg_TempReal, FourCC("BTLF"), udg_TempUnit)
         SelectUnitAddForPlayer(udg_TempUnit, GetOwningPlayer(udg_TempUnit))
         GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
-        FlushChildHashtableBJ(udg_ID, udg_SummonsHashtable)
-        if (Trig_Saibamen_Loop_Func002Func005Func014C()) then
+        FlushChildHashtableBJ(udg_ID, udg_SummonsSaibamenHashtable)
+        if (Trig_Saibamen_Loop_Func002Func005Func015C()) then
                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenSnuggles.mp3", 2352)
         else
-            if (Trig_Saibamen_Loop_Func002Func005Func014Func001C()) then
+            if (Trig_Saibamen_Loop_Func002Func005Func015Func001C()) then
                                 playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenFufu.mp3", 2544)
             else
-                if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001C()) then
+                if (Trig_Saibamen_Loop_Func002Func005Func015Func001Func001C()) then
                                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead1.mp3", 2256)
                 else
-                    if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001C()) then
+                    if (Trig_Saibamen_Loop_Func002Func005Func015Func001Func001Func001C()) then
                                                 playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead2.mp3", 3360)
                     else
-                        if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001Func001C()) then
+                        if (Trig_Saibamen_Loop_Func002Func005Func015Func001Func001Func001Func001C()) then
                                                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenVegetaJr.mp3", 3936)
                         else
                         end
@@ -4468,7 +4520,7 @@ function Trig_Saibamen_Loop_Func002A()
             end
         end
     else
-        SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
+        SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsSaibamenHashtable)
     end
 end
 
@@ -14845,6 +14897,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A06K"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TempPlayer)
@@ -14988,6 +15041,8 @@ function Trig_Map_Setup_Hashtables_Actions()
     udg_HeroRespawnHashtable = GetLastCreatedHashtableBJ()
     InitHashtableBJ()
     udg_SummonsHashtable = GetLastCreatedHashtableBJ()
+    InitHashtableBJ()
+    udg_SummonsSaibamenHashtable = GetLastCreatedHashtableBJ()
     InitHashtableBJ()
     udg_TeleporterHashtable = GetLastCreatedHashtableBJ()
     InitHashtableBJ()
@@ -28289,8 +28344,6 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "luss"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "god"
-    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssb"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "xeno janemba"
@@ -28300,6 +28353,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "ssbkao"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssbe"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "god"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ui"
     udg_TempInt = (udg_TempInt + 1)
@@ -29961,7 +30016,17 @@ function Trig_Transformations_Vegeta_Func017C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func019Func002Func001C()
+function Trig_Transformations_Vegeta_Func018C()
+    if (not (udg_TransformationString == "god")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -29971,14 +30036,14 @@ function Trig_Transformations_Vegeta_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Vegeta_Func019Func002Func011C()
+function Trig_Transformations_Vegeta_Func020Func002Func012C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func019Func002Func012Func001Func007C()
+function Trig_Transformations_Vegeta_Func020Func002Func013Func001Func007C()
     if (udg_TransformationString == "ssbe") then
         return true
     end
@@ -29988,28 +30053,28 @@ function Trig_Transformations_Vegeta_Func019Func002Func012Func001Func007C()
     return false
 end
 
-function Trig_Transformations_Vegeta_Func019Func002Func012Func001C()
-    if (not Trig_Transformations_Vegeta_Func019Func002Func012Func001Func007C()) then
+function Trig_Transformations_Vegeta_Func020Func002Func013Func001C()
+    if (not Trig_Transformations_Vegeta_Func020Func002Func013Func001Func007C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func019Func002Func012C()
+function Trig_Transformations_Vegeta_Func020Func002Func013C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func019Func002C()
-    if (not Trig_Transformations_Vegeta_Func019Func002Func001C()) then
+function Trig_Transformations_Vegeta_Func020Func002C()
+    if (not Trig_Transformations_Vegeta_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func019C()
+function Trig_Transformations_Vegeta_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -30075,25 +30140,32 @@ function Trig_Transformations_Vegeta_Actions()
         udg_TransformationSFXString2 = "AuraRoyalBlue2.mdx"
     else
     end
+    if (Trig_Transformations_Vegeta_Func018C()) then
+        udg_StatMultReal = 2.80
+        udg_TransformationAbility = FourCC("A06K")
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Vegeta_Func019C()) then
-        if (Trig_Transformations_Vegeta_Func019Func002C()) then
+    if (Trig_Transformations_Vegeta_Func020C()) then
+        if (Trig_Transformations_Vegeta_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AG"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A06K"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('E003')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            if (Trig_Transformations_Vegeta_Func019Func002Func011C()) then
+            if (Trig_Transformations_Vegeta_Func020Func002Func012C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A01B"), udg_TransformationPlayer)
             else
                 SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
             end
-            if (Trig_Transformations_Vegeta_Func019Func002Func012C()) then
-                if (Trig_Transformations_Vegeta_Func019Func002Func012Func001C()) then
+            if (Trig_Transformations_Vegeta_Func020Func002Func013C()) then
+                if (Trig_Transformations_Vegeta_Func020Func002Func013Func001C()) then
                     UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
                     SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 7)
                                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L4'))
