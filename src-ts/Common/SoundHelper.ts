@@ -1581,6 +1581,7 @@ export module SoundHelper {
 
       // vegeta
       case Id.galickGun:
+      case Id.egoGalickGun:
         if (unitId == Id.vegeta) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
         }

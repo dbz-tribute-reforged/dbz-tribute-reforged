@@ -5,6 +5,7 @@ import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { UnitHelper } from "Common/UnitHelper";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -135,7 +136,10 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     }
 
     if (ability.isFinishedUsing(this)) {
-      if (this.dashType == Dash.DASH_TYPE_ZANZO) {
+      if (
+        this.dashType == Dash.DASH_TYPE_ZANZO 
+        && ability.name != AbilityNames.Saga.ZANZO_DASH
+      ) {
           // change cooldown based on distance travelled of zanzo dash
           const duration = ability.getDuration();
           const distanceRatio = Math.min(1.1, this.distanceTravelled / (this.distance * duration));

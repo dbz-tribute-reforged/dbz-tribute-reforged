@@ -14,6 +14,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     public doHide: boolean = true,
     public preventMovement: boolean = true,
     public removeNegativeBuffs: boolean = false,
+    public forceReselect: boolean = false,
   ) {
     this.isHidden = false;
   }
@@ -35,6 +36,9 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       if (this.preventMovement) {
         PauseUnit(source, false);
       }
+      if (this.forceReselect) {
+        SelectUnitAddForPlayer(source, input.casterPlayer);
+      }
       SetUnitInvulnerable(source, false);
     }
   }
@@ -49,7 +53,8 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.doHide,
       this.preventMovement,
-      this.removeNegativeBuffs
+      this.removeNegativeBuffs,
+      this.forceReselect,
     );
   }
   
@@ -62,6 +67,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       doHide: boolean;
       preventMovement: boolean;
       removeNegativeBuffs: boolean;
+      forceReselect: boolean;
     }
   ) {
     this.name = input.name;
@@ -71,6 +77,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     this.doHide = input.doHide;
     this.preventMovement = input.preventMovement;
     this.removeNegativeBuffs = input.removeNegativeBuffs;
+    this.forceReselect = input.forceReselect;
     return this;
   }
 }

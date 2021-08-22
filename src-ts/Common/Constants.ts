@@ -456,6 +456,22 @@ export module Id {
   export const guldoTimeStop = FourCC("A0SF");
   export const ginyuPoseGuldo = FourCC("A0SG");
 
+  export const hirudegarn = FourCC("H05U");
+  export const hirudegarnFlameBreath = FourCC("A081");
+  export const hirudegarnFlameBall = FourCC("A082");
+  export const hirudegarnDarkMist = FourCC("A083");
+  export const hirudegarnChouMakousen = FourCC("A0CP");
+  export const hirudegarnTailSweep = FourCC("A0CQ");
+  export const hirudegarnTailAttack = FourCC("A0DI");
+  export const hirudegarnHeavyStomp = FourCC("A0EM");
+  export const hirudegarnDarkEyes = FourCC("A0EO");
+  export const hirudegarnMolting = FourCC("A0ET");
+  export const hirudegarnFlight = FourCC("A0G3");
+  export const hirudegarnEnrage = FourCC("A0G6");
+  export const hirudegarnDeactivateEnrage = FourCC("A0G7");
+  export const hirudegarnPassive = FourCC("A0GG");
+
+
   export const hit = FourCC("E00K");
   export const timeSkip = FourCC("A0FT");
   export const pocketDimension = FourCC("A0FU");
@@ -654,6 +670,11 @@ export module Id {
   export const energyBlastVolley = FourCC("A0L3");
   export const moonlight = FourCC("A035");
   export const angryShout = FourCC("A0LS");
+  export const ultraEgo = FourCC("A0GI");
+  export const egoGalickGun = FourCC("A0GJ");
+  export const vegetaHakai = FourCC("A0GK");
+  export const vegetaHakaiBarrage = FourCC("A0GL");
+  export const vegetaFightingSpirit = FourCC("A0GM");
 
   export const videl = FourCC("H085");
   export const punch = FourCC("A073");

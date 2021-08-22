@@ -898,4 +898,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff stun hirudegarn heavy stomp",
+    repeatInterval: 1,
+    startTick: 4,
+    endTick: 4,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.STUN_HALF_SECOND,
+    orderId: OrderIds.THUNDERBOLT,
+    aoe: 600,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]
