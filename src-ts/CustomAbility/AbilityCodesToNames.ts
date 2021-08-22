@@ -20,6 +20,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.energyBlastVolley, AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY],
     [Id.moonlight, AbilityNames.Vegeta.MOONLIGHT],
     [Id.angryShout, AbilityNames.Vegeta.ANGRY_SHOUT],
+    [Id.ultraEgo, AbilityNames.Vegeta.ULTRA_EGO],
+    [Id.egoGalickGun, AbilityNames.Vegeta.EGO_GALICK_GUN],
+    [Id.vegetaHakaiBarrage, AbilityNames.Vegeta.HAKAI_BARRAGE],
 
     // gohan
     [Id.unlockPotential, AbilityNames.Gohan.UNLOCK_POTENTIAL],
@@ -343,6 +346,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.dkJungleRush, AbilityNames.DonkeyKong.JUNGLE_RUSH],
     [Id.dkBarrelCannon, AbilityNames.DonkeyKong.BARREL_CANNON],
 
+
+
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],
@@ -521,6 +527,22 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.rustChomp, AbilityNames.RustTyranno.RUST_CHOMP],
     [Id.rustGobble, AbilityNames.RustTyranno.RUST_GOBBLE],
     [Id.tyrannoRoar, AbilityNames.RustTyranno.TYRANNO_ROAR],
+
+
+
+    [Id.hirudegarnFlameBreath, AbilityNames.Hirudegarn.FLAME_BREATH],
+    [Id.hirudegarnFlameBall, AbilityNames.Hirudegarn.FLAME_BALL],
+    [Id.hirudegarnDarkMist, AbilityNames.Hirudegarn.DARK_MIST],
+    [Id.hirudegarnChouMakousen, AbilityNames.Hirudegarn.CHOU_MAKOUSEN],
+    [Id.hirudegarnTailSweep, AbilityNames.Hirudegarn.TAIL_SWEEP],
+    [Id.hirudegarnTailAttack, AbilityNames.Hirudegarn.TAIL_ATTACK],
+    [Id.hirudegarnHeavyStomp, AbilityNames.Hirudegarn.HEAVY_STOMP],
+    [Id.hirudegarnDarkEyes, AbilityNames.Hirudegarn.DARK_EYES],
+    [Id.hirudegarnMolting, AbilityNames.Hirudegarn.MOLTING],
+    [Id.hirudegarnFlight, AbilityNames.Hirudegarn.FLIGHT],
+    [Id.hirudegarnEnrage, AbilityNames.Hirudegarn.ENRAGE],
+    [Id.hirudegarnDeactivateEnrage, AbilityNames.Hirudegarn.DEACTIVATE_ENRAGE],
+
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

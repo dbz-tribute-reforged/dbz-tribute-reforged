@@ -24,7 +24,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // vegeta
-    [FourCC("E003"), [
+    [Id.vegeta, [
       AbilityNames.Vegeta.GALICK_GUN, 
       AbilityNames.Vegeta.BIG_BANG_ATTACK, 
       AbilityNames.Vegeta.FINAL_FLASH, 
@@ -32,6 +32,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.MOONLIGHT, 
       AbilityNames.Vegeta.ANGRY_SHOUT, 
       AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
+      AbilityNames.Vegeta.ULTRA_EGO,
+      AbilityNames.Vegeta.EGO_GALICK_GUN, 
+      AbilityNames.Vegeta.HAKAI_BARRAGE, 
     ]],
     
     // gohan
@@ -738,6 +741,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hit.FLASH_FIST,
       AbilityNames.Hit.TIME_CAGE,
       AbilityNames.Hit.PURE_PROGRESS,
+    ]],
+
+    // hirudegarn
+    [Id.hirudegarn, [
+      AbilityNames.Hirudegarn.FLAME_BREATH,
+      AbilityNames.Hirudegarn.FLAME_BALL,
+      AbilityNames.Hirudegarn.DARK_MIST,
+      AbilityNames.Hirudegarn.CHOU_MAKOUSEN,
+      AbilityNames.Hirudegarn.TAIL_SWEEP,
+      AbilityNames.Hirudegarn.TAIL_ATTACK,
+      AbilityNames.Hirudegarn.HEAVY_STOMP,
+      AbilityNames.Hirudegarn.DARK_EYES,
+      AbilityNames.Hirudegarn.MOLTING,
+      AbilityNames.Hirudegarn.FLIGHT,
+      AbilityNames.Hirudegarn.ENRAGE,
+      AbilityNames.Hirudegarn.DEACTIVATE_ENRAGE,
     ]],
 
     // androids 13 14 15

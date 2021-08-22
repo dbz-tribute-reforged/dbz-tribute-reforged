@@ -108,4 +108,16 @@ export const AnimationComponents = [
     onlyApplyAtStart: false,
     resetAnimation: true,
   },
+  {
+    name: "anim hirudegarn chou fire",
+    repeatInterval: 33,
+    startTick: 33,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: -1,
+    animationString: "throw",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
 ];

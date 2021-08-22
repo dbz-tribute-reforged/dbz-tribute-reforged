@@ -1220,4 +1220,36 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // chou makousen
+  {
+    name: "knockback chou makousen",
+    repeatInterval: 1, 
+    startTick: 52,
+    endTick: -1,
+    knockbackData: {
+      speed: 40, 
+      angle: 180, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // tail sweep
+  {
+    name: "knockback hirudegarn tail sweep",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 35, 
+      angle: 0, 
+      aoe: 700,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

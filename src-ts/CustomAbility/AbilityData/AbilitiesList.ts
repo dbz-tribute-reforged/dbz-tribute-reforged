@@ -16,7 +16,7 @@ export const AbilitiesList = [
     waitsForNextClick: true,
     // NOTE: animations aren't implemented yet
     canUseWhenStunned: false,
-    animation: "walk",
+    animation: "",
     icon: {
       // enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
       // disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
@@ -356,7 +356,7 @@ export const AbilitiesList = [
     tooltip: {
       title: AbilityNames.Vegeta.GALICK_GUN,
       body: 
-        "galick gun stuff"
+        AbilityNames.Vegeta.GALICK_GUN
     },
     components: [
       { name: "beam galick gun" },
@@ -469,6 +469,90 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi energy blast volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.ULTRA_EGO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 833,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVegeta.blp",
+      disabled: "BTNVegeta.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Vegeta.ULTRA_EGO,
+      body: 
+        AbilityNames.Vegeta.ULTRA_EGO
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "temp ability vegeta hakai" },
+      { name: "temp ability vegeta hakai barrage" },
+      { name: "temp ability blazing dynamo spell immunity" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.EGO_GALICK_GUN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGalickGun.blp",
+      disabled: "BTNGalickGun.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Vegeta.GALICK_GUN,
+      body: 
+        AbilityNames.Vegeta.GALICK_GUN
+    },
+    components: [
+      { name: "beam ego galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.HAKAI_BARRAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVegeta.blp",
+      disabled: "BTNVegeta.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Vegeta.HAKAI_BARRAGE,
+      body: 
+        AbilityNames.Vegeta.HAKAI_BARRAGE
+    },
+    components: [
+      { name: "multi vegeta hakai barrage" },
     ],
   },
   // -------------------------------------------
@@ -6823,33 +6907,33 @@ export const AbilitiesList = [
       { name: "beam magus ice 2" },
     ],
   },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Magus.DARK_MIST,
-      currentCd: 0,
-      maxCd: 1,
-      costType: CostType.MP,
-      costAmount: 0,
-      duration: 330,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      canUseWhenStunned: false,
-    animation: "spell",
-      icon: {
-        enabled: "BTNMagusDarkMist.blp",
-        disabled: "BTNMagusDarkMist.blp",
-      },
-      tooltip: {
-        title:  AbilityNames.Magus.DARK_MIST,
-        body: 
-          AbilityNames.Magus.DARK_MIST,
-      },
-      components: [
-        { name: "beam dark mist" },
-      ],
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.DARK_MIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+  animation: "spell",
+    icon: {
+      enabled: "BTNMagusDarkMist.blp",
+      disabled: "BTNMagusDarkMist.blp",
     },
+    tooltip: {
+      title:  AbilityNames.Magus.DARK_MIST,
+      body: 
+        AbilityNames.Magus.DARK_MIST,
+    },
+    components: [
+      { name: "beam dark mist" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Magus.DARK_MATTER,
@@ -7485,6 +7569,7 @@ export const AbilitiesList = [
     components: [
       // { name: "teleport dk banana slamma" },
       { name: "multi dk banana slamma" },
+      { name: "knockback banana slamma" },
       { name: "sfx dk banana slamma charge" },
     ],
   },
@@ -10938,6 +11023,266 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Hirudegarn.FLAME_BREATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.FLAME_BREATH,
+      body: 
+        AbilityNames.Hirudegarn.FLAME_BREATH
+    },
+    components: [
+      { name: "beam flamethrower" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.FLAME_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.FLAME_BALL,
+      body: 
+        AbilityNames.Hirudegarn.FLAME_BALL
+    },
+    components: [
+      { name: "beam hirudegarn flame ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.DARK_MIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.DARK_MIST,
+      body: 
+        AbilityNames.Hirudegarn.DARK_MIST
+    },
+    components: [
+      { name: "hide unit hirudegarn dark mist" },
+      { name: "dash ground point 40dist" },
+      { name: "damage hirudegarn dark mist dps" },
+      { name: "sfx beam dark mist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.CHOU_MAKOUSEN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.CHOU_MAKOUSEN,
+      body: 
+        AbilityNames.Hirudegarn.CHOU_MAKOUSEN
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "anim hirudegarn chou fire" },
+      { name: "multi chou makousen" },
+      { name: "damage chou makousen charging" },
+      { name: "sfx chou makousen caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.TAIL_SWEEP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.TAIL_SWEEP,
+      body: 
+        AbilityNames.Hirudegarn.TAIL_SWEEP
+    },
+    components: [
+      { name: "damage hirudegarn tail sweep explosion" },
+      { name: "knockback hirudegarn tail sweep" },
+      { name: "dash ground forward videl speed boost" },
+      { name: "sfx hirudegarn tail sweep" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.TAIL_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.TAIL_ATTACK,
+      body: 
+        AbilityNames.Hirudegarn.TAIL_ATTACK
+    },
+    components: [
+      { name: "hook hirudegarn tail attack" },
+      { name: "heal hirudegarn tail attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.HEAVY_STOMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 6,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.TAIL_ATTACK,
+      body: 
+        AbilityNames.Hirudegarn.TAIL_ATTACK
+    },
+    components: [
+      { name: "damage hirudegarn heavy stomp explosion" },
+      { name: "debuff stun hirudegarn heavy stomp" },
+      { name: "sfx hirudegarn heavy stomp" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.MOLTING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.MOLTING,
+      body: 
+        AbilityNames.Hirudegarn.MOLTING
+    },
+    components: [
+      { name: "block hirudegarn molting" },
+      { name: "heal hirudegarn molting" },
+      { name: "temp ability hirudegarn flight" },
+      { name: "sfx hirudegarn molting" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hirudegarn.FLIGHT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHirudegarn.blp",
+      disabled: "BTNHirudegarn.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hirudegarn.FLIGHT,
+      body: 
+        AbilityNames.Hirudegarn.FLIGHT
+    },
+    components: [
+      { name: "dash ground point 50dist" },
+      { name: "sfx zanzo dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.RustTyranno.TYRANNO_FLAME,
     currentCd: 0,
     maxCd: 1,
@@ -11108,9 +11453,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Saga.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 19,
+    maxCd: 15,
     costType: CostType.MP,
-    costAmount: 25,
+    costAmount: 40,
     duration: 25,
     updateRate: 0.03,
     castTime: 0.0,

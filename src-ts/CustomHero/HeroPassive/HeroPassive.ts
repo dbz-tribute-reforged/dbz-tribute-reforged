@@ -24,6 +24,10 @@ export module HeroPassiveData {
 
   export const DYSPO = FourCC("H09H");
   export const JUSTICE_KICK_ABILITY = FourCC("A0QZ");
+
+  
+  export const HIRUDEGARN_MANA_BURN_PERCENT = 0.01;
+  export const HIRUDEGARN_MANA_HEAL_PERCENT = 0.01;
 }
 
 export interface HeroPassive {
@@ -78,6 +82,8 @@ export class HeroPassiveManager {
         break;
       case Id.lucario:
         lucarioPassive(customHero);
+      case Id.hirudegarn:
+        hirudegarnPassive(customHero);
       default:
         break;
     }
@@ -756,6 +762,87 @@ export function lucarioPassive(customHero: CustomHero) {
   );
 }
 
+export function hirudegarnPassive(customHero: CustomHero) {
+  let spellAmpBonus = 0;
+  const spellDamageTimer = CreateTimer();
+  customHero.addTimer(spellDamageTimer);
+
+  TimerStart(spellDamageTimer, 1.0, true, () => {
+    const formLevel = GetUnitAbilityLevel(customHero.unit, Id.hirudegarnPassive);
+    let maxSpellAmpBonus = 0.2;
+    if (formLevel == 3) {
+      maxSpellAmpBonus = 0.6;
+    }
+    // BJDebugMsg("CURR: " + customHero.spellPower + " BONUS: " + spellAmpBonus);
+
+    customHero.removeSpellPower(spellAmpBonus);
+    const currentMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
+    const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+
+    spellAmpBonus = Math.max(
+      0, 
+      maxSpellAmpBonus * currentMana / Math.max(1, maxMana)
+    );
+    customHero.addSpellPower(spellAmpBonus);
+  });
+
+  // on hit 
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      const attacked = GetTriggerUnit();
+      const attackerPlayer = GetOwningPlayer(attacker);
+      if (
+        GetUnitTypeId(attacker) == GetUnitTypeId(customHero.unit) && 
+        attackerPlayer == GetOwningPlayer(customHero.unit) &&
+        IsUnitType(attacked, UNIT_TYPE_HERO) &&
+        UnitHelper.isUnitTargetableForPlayer(attacked, attackerPlayer)
+      ) {
+        let manaLoss = 25;
+        const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA);
+        manaLoss += attackedMana * HeroPassiveData.HIRUDEGARN_MANA_BURN_PERCENT;
+        
+        SetUnitState(
+          attacked, 
+          UNIT_STATE_MANA, 
+          Math.max(0, attackedMana - manaLoss)
+        );
+
+        let manaGain = 25;
+        const attackerMana = GetUnitState(attacker, UNIT_STATE_MANA);
+        const attackerMaxMana = GetUnitState(attacker, UNIT_STATE_MAX_MANA);
+        manaGain += attackerMana * HeroPassiveData.HIRUDEGARN_MANA_HEAL_PERCENT;
+        
+        SetUnitState(
+          attacker,
+          UNIT_STATE_MANA,
+          Math.min(attackerMaxMana, attackerMana + manaLoss + manaGain)
+        );
+
+        const manaDrainSfx = AddSpecialEffect(
+          "Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl",
+          GetUnitX(attacker),
+          GetUnitY(attacker),
+        );
+        BlzSetSpecialEffectScale(manaDrainSfx, 4.0);
+        DestroyEffect(manaDrainSfx);
+      }
+
+      return false;
+    })
+  );
+
+
+}
+
 
 export function setupSPData(customHero: CustomHero) {
   const spTimer = CreateTimer();
@@ -766,14 +853,20 @@ export function setupSPData(customHero: CustomHero) {
     // +1% per 1k AGI
     let currentSP = customHero.getCurrentSP();
     let maxSP = customHero.getMaxSP();
-    let incSp = 0.05 * (1 + 0.00001 * GetHeroAgi(customHero.unit, true));
+
+    let agiBonus = Math.min(
+      1.5,
+      (1 + 0.00001 * GetHeroAgi(customHero.unit, true))
+    )
+    let incSp = 0.05 * agiBonus;
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
     }
     // if (currentSP < 0.2 * maxSP) {
     //   incSp *= 0.5;
     // }
-    incSp *= (0.66+(currentSP/maxSP));    
+    const spRatio = Math.max(0, currentSP/maxSP);
+    incSp *= (0.6+spRatio);    
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
   });
 
@@ -782,7 +875,10 @@ export function setupSPData(customHero: CustomHero) {
   TimerStart(maxSpUpdateTimer, 5.0, true, () => {
     customHero.setMaxSP(
       Constants.BASE_STAMINA + 
-      0.0005 * GetHeroAgi(customHero.unit, true)
+      Math.min(
+        25,
+        0.0005 * GetHeroAgi(customHero.unit, true)
+      )
     );
   });
 }

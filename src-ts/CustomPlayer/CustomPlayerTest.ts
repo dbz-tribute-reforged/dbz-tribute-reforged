@@ -769,7 +769,7 @@ export function CustomPlayerTest() {
     }
   }
 
-  BJDebugMsg("Num players detected: " + numActivePlayers);
+  // BJDebugMsg("Num players detected: " + numActivePlayers);
 
   if (numActivePlayers == 1) {
 
@@ -1134,6 +1134,9 @@ export function CustomPlayerTest() {
     // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, Globals.customPlayers);
     SetupJungleRushBananaFallout(independentSpellTrigger, independentSpellHashtable);
     SetupBarrelCannon(independentSpellTrigger, independentSpellHashtable);
+    
+    SetupHirudegarnSkinChange(independentSpellTrigger, independentSpellHashtable);
+    SetupVegetaFightingSpirit(independentSpellTrigger, independentSpellHashtable);
 
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable);
     SoundHelper.SetupSpellSoundEffects();
@@ -1932,6 +1935,7 @@ export function SetupJirenGlare(
    */
 
   const glareDuration = 2.5;
+  const darkEyesDuration = 4.0;
   const maxGlareDistance = 2500;
   const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.53;
   const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.75;
@@ -1939,6 +1943,7 @@ export function SetupJirenGlare(
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
   const glarePunishDamageMult = 0.15;
+  const darkEyesPunishDamageMult = 0.25;
   
   const jirenGlareUnitGroup = CreateGroup();
 
@@ -1946,13 +1951,19 @@ export function SetupJirenGlare(
 
   TriggerAddAction(spellTrigger, () => {
     const spellId = GetSpellAbilityId();
-    if (spellId == Id.glare || spellId == Id.glare2) {
+    if (spellId == Id.glare || spellId == Id.glare2 || spellId == Id.hirudegarnDarkEyes) {
       const unit = GetTriggerUnit();
       const unitId = GetHandleId(unit);
       SaveInteger(spellHashtable, unitId, 0, spellId);
       
-      const effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
-      BlzSetSpecialEffectScale(effect, 1.5);
+      let effect: effect;
+      if (spellId == Id.glare || spellId == Id.glare2) {
+        effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
+        // BlzSetSpecialEffectScale(effect, 1.5);
+      } else {
+        effect = AddSpecialEffectTarget("MagusDarkMist.mdl", unit, "head");
+        // BlzSetSpecialEffectScale(effect, 2.0);
+      }
       SaveEffectHandle(spellHashtable, unitId, 1, effect);
       SaveInteger(spellHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
       
@@ -1960,12 +1971,17 @@ export function SetupJirenGlare(
         GroupAddUnit(jirenGlareUnitGroup, unit);
         TriggerRegisterUnitEvent(glareActivateTrigger, unit, EVENT_UNIT_DAMAGED);
       }
+      
+      let timerDuration = glareDuration;
+      if (spellId == Id.hirudegarnDarkEyes) {
+        timerDuration = darkEyesDuration;
+      }
 
-      TimerStart(CreateTimer(), glareDuration, false, () => {
+      TimerStart(CreateTimer(), timerDuration, false, () => {
         DestroyTimer(GetExpiredTimer());
         SaveInteger(spellHashtable, unitId, 0, 0);
-        DestroyEffect(LoadEffectHandle(spellHashtable, unitId, 1));
         SaveInteger(spellHashtable, unitId, 2, 0);
+        DestroyEffect(LoadEffectHandle(spellHashtable, unitId, 1));
       });
     }
   });
@@ -2000,12 +2016,13 @@ export function SetupJirenGlare(
           spellPower = customHero.spellPower;
         }
 
-        const punishDamage = GetEventDamage() * glarePunishDamageMult;
+        let punishMult = glarePunishDamageMult;
+        if (spellId == Id.hirudegarnDarkEyes) {
+          punishMult = darkEyesPunishDamageMult;
+        }
 
-        let damageMult = 1.0;
-        if (spellId == Id.glare) {
-          damageMult = glareDamageMult;
-        } else if (spellId == Id.glare2) {
+        let damageMult = glareDamageMult;
+        if (spellId == Id.glare2) {
           damageMult = glare2DamageMult;
         }
 
@@ -2017,7 +2034,7 @@ export function SetupJirenGlare(
         const abilityLevel = LoadInteger(spellHashtable, unitId, 2);
         const damage = (
           (abilityLevel * spellPower * damageMult * damageBase) +
-          punishDamage
+          GetEventDamage() * punishMult
         );
 
         UnitDamageTarget(
@@ -2836,11 +2853,94 @@ export function SetupBarrelCannon(
 }
 
 
+export function SetupHirudegarnSkinChange(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+) {
+  TriggerAddAction(spellTrigger, () => {
+    const unit = GetTriggerUnit();
+    const unitId = GetUnitTypeId(unit);
+    const player = GetOwningPlayer(unit);
+    if (unitId == Id.hirudegarn) {
+      const abilityId = GetSpellAbilityId();
+      if (abilityId == Id.hirudegarnDarkMist) {
+
+
+        const formLevel = GetUnitAbilityLevel(unit, Id.hirudegarnPassive);
+        const heroLevel = GetHeroLevel(unit);
+        if (formLevel == 1) {
+          AddUnitAnimationProperties(unit, "alternate", false);
+          AddUnitAnimationProperties(unit, "gold", true);
+          SetUnitAbilityLevel(unit, Id.hirudegarnPassive, 2);
+
+          SetPlayerAbilityAvailable(player, Id.hirudegarnFlameBreath, false);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnFlameBall, false);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnChouMakousen, false);
+          // form 2 abilities
+          SetPlayerAbilityAvailable(player, Id.hirudegarnTailSweep, true);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnTailAttack, true);
+          if (heroLevel >= 150) {
+            SetPlayerAbilityAvailable(player, Id.hirudegarnHeavyStomp, true);
+          }
+
+        } else if (formLevel == 2) {
+          AddUnitAnimationProperties(unit, "alternate", true);
+          AddUnitAnimationProperties(unit, "gold", false);
+          SetUnitAbilityLevel(unit, Id.hirudegarnPassive, 1);
+
+          SetPlayerAbilityAvailable(player, Id.hirudegarnTailSweep, false);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnTailAttack, false);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnHeavyStomp, false);
+          // form 1 abilities
+          SetPlayerAbilityAvailable(player, Id.hirudegarnFlameBreath, true);
+          SetPlayerAbilityAvailable(player, Id.hirudegarnFlameBall, true);
+          if (heroLevel >= 150) {
+            SetPlayerAbilityAvailable(player, Id.hirudegarnChouMakousen, true);
+          }
+        }
+      }
+    }
+  });
+}
+
+
+export function SetupVegetaFightingSpirit(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+) {
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.vegetaFightingSpirit) {
+      const unit = GetTriggerUnit();
+      const player = GetOwningPlayer(unit);
+      const playerId = GetPlayerId(player);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+
+      if (customHero) {
+        // give spell amp
+        const spellAmp = 0.2 * (
+          Math.max(
+            0, 
+            1 - GetUnitState(unit, UNIT_STATE_LIFE) / Math.max(1, GetUnitState(unit, UNIT_STATE_MAX_LIFE))
+          )
+        );
+        customHero.addSpellPower(spellAmp);
+
+        // timer remove it
+        TimerStart(CreateTimer(), 5.0, false, () => {
+          customHero.removeSpellPower(spellAmp);
+          DestroyTimer(GetExpiredTimer());
+        });
+      }
+    }
+  });
+}
+
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
 ) {
-  const stamRestore = 25;
+  const stamRestore = 20;
 
 
   // reset cd of custom abilities

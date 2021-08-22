@@ -7,6 +7,7 @@ export const HideUnitComponents = [
     doHide: true,
     preventMovement: true,
     removeNegativeBuffs: false,
+    forceReselect: false,
   },
   {
     name: "hide unit allow movement", 
@@ -16,6 +17,7 @@ export const HideUnitComponents = [
     doHide: true,
     preventMovement: false,
     removeNegativeBuffs: false,
+    forceReselect: false,
   },
   {
     name: "hide unit prevent movement", 
@@ -25,6 +27,7 @@ export const HideUnitComponents = [
     doHide: true,
     preventMovement: true,
     removeNegativeBuffs: false,
+    forceReselect: false,
   },
   {
     name: "hide unit scattering bullet start", 
@@ -34,6 +37,7 @@ export const HideUnitComponents = [
     doHide: true,
     preventMovement: false,
     removeNegativeBuffs: false,
+    forceReselect: false,
   },
   {
     name: "hide unit yamcha r play dead", 
@@ -43,6 +47,7 @@ export const HideUnitComponents = [
     doHide: true,
     preventMovement: true,
     removeNegativeBuffs: false,
+    forceReselect: false,
   },
   {
     name: "hide unit dk thrilla gorilla", 
@@ -52,5 +57,16 @@ export const HideUnitComponents = [
     doHide: false,
     preventMovement: true,
     removeNegativeBuffs: true,
+    forceReselect: false,
+  },
+  {
+    name: "hide unit hirudegarn dark mist", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    doHide: true,
+    preventMovement: false,
+    removeNegativeBuffs: false,
+    forceReselect: true,
   },
 ];

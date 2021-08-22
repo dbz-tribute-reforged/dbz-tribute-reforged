@@ -24,6 +24,9 @@ export module AbilityNames {
     export const ENERGY_BLAST_VOLLEY: string = "Energy Blast Volley";
     export const MOONLIGHT: string = "Moonlight";
     export const ANGRY_SHOUT: string = "Angry Shout";
+    export const ULTRA_EGO: string = "Ultra Ego";
+    export const EGO_GALICK_GUN: string = "Ego Galick Gun";
+    export const HAKAI_BARRAGE: string = "Vegeta Hakai Barrage";
   }
 
   export module Gohan {
@@ -613,6 +616,24 @@ export module AbilityNames {
     export const RUST_GOBBLE: string = "Rust Gobble";
     export const TYRANNO_ROAR: string = "Tyranno Roar";
   }
+
+  export module Hirudegarn {
+    export const FLAME_BREATH: string = "Hirudegarn Flame Breath";
+    export const FLAME_BALL: string = "Hirudegarn Flame Ball";
+    export const DARK_MIST: string = "Hirudegarn Dark Mist";
+    export const CHOU_MAKOUSEN: string = "Hirudegarn Chou Makousen";
+    export const TAIL_SWEEP: string = "Hirudegarn Tail Sweep";
+    export const TAIL_ATTACK: string = "Hirudegarn Tail Attack";
+    export const HEAVY_STOMP: string = "Hirudegarn Heavy Stomp";
+    export const DARK_EYES: string = "Hirudegarn Dark Eyes";
+    export const MOLTING: string = "Hirudegarn Molting";
+    export const FLIGHT: string = "Hirudegarn Flight";
+    export const ENRAGE: string = "Hirudegarn Enrage";
+    export const DEACTIVATE_ENRAGE: string = "Hirudegarn Enrage Deactivate";
+  }
+
+
+
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

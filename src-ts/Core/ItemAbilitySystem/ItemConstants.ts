@@ -1,9 +1,9 @@
 export module ItemConstants {
   export const ABILITY_UPGRADE_ITEM = FourCC("A0F1");
   export const ABILITY_TIME_RING = FourCC("A0NU");
-  export const BIO_LAB_AOE = 600;
+  export const BIO_LAB_AOE = 750;
   export const BIO_LAB_DAMAGE = 0.014;
-  export const BRAVE_SWORD_AOE = 600;
+  export const BRAVE_SWORD_AOE = 900;
   export const BRAVE_SWORD_MANA_LOSS = 0.02;
 
   export const battleArmor = [

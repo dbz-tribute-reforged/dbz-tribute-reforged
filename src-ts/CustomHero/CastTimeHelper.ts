@@ -87,7 +87,9 @@ export module CastTimeHelper {
     stopCastingTrigger: trigger,
   ) {
     let castTimeCounter = 0;
-    SetUnitAnimation(input.caster.unit, ability.animation);
+    if (ability.animation) {
+      SetUnitAnimation(input.caster.unit, ability.animation);
+    }
     const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
     const angle = CoordMath.angleBetweenCoords(casterCoord, input.targetPoint);
 
