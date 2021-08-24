@@ -66,20 +66,31 @@ export class CellSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.semiperfectCell, 0.5, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.perfectCell)
     ) {
+      // SagaHelper.showMessagesChanceOfJoke(
+      //   [
+      //     "|cffffcc00Perfect Cell|r: Witness the power of my perfect form."
+      //   ],
+      //   [
+      //     "|cffffcc00Perfect Cell|r: \"P\" is for \"Priceless\", the look upon your faces.",
+      //     "|cffffcc00Perfect Cell|r: \"E\" is for \"Extinction\", all your puny races.",
+      //     "|cffffcc00Perfect Cell|r: \"R\" is for \"Revolution\", which will be televised.",
+      //     "|cffffcc00Perfect Cell|r: \"F\" is for how \"F-ed\" you are, now allow me to reprise~",
+      //     "|cffffcc00Perfect Cell|r: \"E\" is for \"Eccentric\" just listen to my song.",
+      //     "|cffffcc00Perfect Cell|r: \"C\" is for \"Completion\", that I've waited for so long!",
+      //     "|cffffcc00Perfect Cell|r: \"T\" is for the \"Terror\", upon you I bestow...",
+      //     "|cffffcc00Perfect Cell|r: My name is Perfect Cell. And I'd like to say...",
+      //     "|cffffcc00Perfect Cell|r: Hello.",
+      //   ], Constants.sagaDisplayTextDelay, Constants.sagaDisplayTextDuration, 0.01
+      // );
       SagaHelper.showMessagesChanceOfJoke(
         [
-          "|cffffcc00Perfect Cell|r: Witness the power of my perfect form."
+          "|cffffcc00Perfect Cell|r: Heh... Heh... Heh... Thought you got rid of me?",
+          "|cffffcc00Perfect Cell|r: With my new found powers, I'm going to crush you all!",
         ],
         [
-          "|cffffcc00Perfect Cell|r: \"P\" is for \"Priceless\", the look upon your faces.",
-          "|cffffcc00Perfect Cell|r: \"E\" is for \"Extinction\", all your puny races.",
-          "|cffffcc00Perfect Cell|r: \"R\" is for \"Revolution\", which will be televised.",
-          "|cffffcc00Perfect Cell|r: \"F\" is for how \"F-ed\" you are, now allow me to reprise~",
-          "|cffffcc00Perfect Cell|r: \"E\" is for \"Eccentric\" just listen to my song.",
-          "|cffffcc00Perfect Cell|r: \"C\" is for \"Completion\", that I've waited for so long!",
-          "|cffffcc00Perfect Cell|r: \"T\" is for the \"Terror\", upon you I bestow...",
-          "|cffffcc00Perfect Cell|r: My name is Perfect Cell. And I'd like to say...",
-          "|cffffcc00Perfect Cell|r: Hello.",
+          "|cffffcc00Perfect Cell|r: I... am now...",
+          "|cffffcc00Yamcha|r: Perfect-er Cell!",
+          "|cffffcc00Perfect Cell|r: Okay, Yamcha. Accurate, but tone it down",
         ], Constants.sagaDisplayTextDelay, Constants.sagaDisplayTextDuration, 0.01
       );
       SagaHelper.genericTransformAndPing(this.perfectCell, this.semiperfectCell, this);
@@ -177,7 +188,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
           );
           SagaHelper.genericTransformAndPing(this.superPerfectCell, this.perfectCell, this);
         }
-      })
+      });
     }
   }
 

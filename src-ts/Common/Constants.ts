@@ -478,6 +478,7 @@ export module Id {
   export const flashFist = FourCC("A0FV");
   export const timeCage = FourCC("A0FW");
   export const pureProgress = FourCC("A0TH");
+  export const hitDeathBlow = FourCC("A0GP");
 
   export const ichigo = FourCC("H09S");
   export const getsugaTensho = FourCC("A0U7");

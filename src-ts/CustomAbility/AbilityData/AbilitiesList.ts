@@ -496,8 +496,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward last stand" },
-      { name: "temp ability vegeta hakai" },
-      { name: "temp ability vegeta hakai barrage" },
+      // { name: "temp ability vegeta hakai" },
+      // { name: "temp ability vegeta hakai barrage" },
       { name: "temp ability blazing dynamo spell immunity" },
     ],
   },
@@ -11023,6 +11023,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Hit.DEATH_BLOW,
+    currentCd: 0,
+    maxCd: 0.03,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitDeathBlow.blp",
+      disabled: "BTNHitDeathBlow.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.DEATH_BLOW,
+      body: 
+        AbilityNames.Hit.DEATH_BLOW
+    },
+    components: [
+      { name: "damage target death blow explosion 1" },
+      { name: "damage target death blow explosion 2" },
+      { name: "sfx hit death blow" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Hirudegarn.FLAME_BREATH,
     currentCd: 0,
     maxCd: 1,
@@ -11045,7 +11074,7 @@ export const AbilitiesList = [
         AbilityNames.Hirudegarn.FLAME_BREATH
     },
     components: [
-      { name: "beam flamethrower" },
+      { name: "beam hirudegarn flame breath" },
     ],
   },
   // -------------------------------------------

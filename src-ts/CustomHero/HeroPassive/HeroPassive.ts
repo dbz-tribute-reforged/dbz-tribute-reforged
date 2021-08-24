@@ -769,9 +769,9 @@ export function hirudegarnPassive(customHero: CustomHero) {
 
   TimerStart(spellDamageTimer, 1.0, true, () => {
     const formLevel = GetUnitAbilityLevel(customHero.unit, Id.hirudegarnPassive);
-    let maxSpellAmpBonus = 0.2;
+    let maxSpellAmpBonus = 0.4;
     if (formLevel == 3) {
-      maxSpellAmpBonus = 0.6;
+      maxSpellAmpBonus = 1.0;
     }
     // BJDebugMsg("CURR: " + customHero.spellPower + " BONUS: " + spellAmpBonus);
 

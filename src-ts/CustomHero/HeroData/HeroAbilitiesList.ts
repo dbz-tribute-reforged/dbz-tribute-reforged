@@ -512,7 +512,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tien.DODON_RAY,
       AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL,
       AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT, 
-      AbilityNames.Vegeta.GALICK_GUN, 
+      AbilityNames.Vegeta.EGO_GALICK_GUN, AbilityNames.Vegeta.ULTRA_EGO, AbilityNames.Vegeta.HAKAI_BARRAGE,
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
       AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
@@ -562,7 +562,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.OmegaShenron.DRAGON_THUNDER,
       AbilityNames.Guldo.PSYCHO_JAVELIN,
       AbilityNames.Zamasu.DIVINE_AUTHORITY, AbilityNames.Zamasu.ENERGY_BLADES,
-      AbilityNames.Sephiroth.OCTOSLASH, AbilityNames.Sephiroth.ONE_WINGED_ANGEL
+      AbilityNames.Sephiroth.OCTOSLASH, AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
+      AbilityNames.Hirudegarn.FLAME_BREATH,
+
     ]],
 
     // broly
@@ -735,12 +737,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // hit
-    [FourCC("E00K"), [
+    [Id.hit, [
       AbilityNames.Hit.TIME_SKIP,
       AbilityNames.Hit.POCKET_DIMENSION,
       AbilityNames.Hit.FLASH_FIST,
       AbilityNames.Hit.TIME_CAGE,
       AbilityNames.Hit.PURE_PROGRESS,
+      AbilityNames.Hit.DEATH_BLOW,
     ]],
 
     // hirudegarn

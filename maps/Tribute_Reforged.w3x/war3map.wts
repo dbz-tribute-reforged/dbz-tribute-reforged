@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.66
+DBZ Tribute Reforged 0.66a
 }
 
 STRING 4
@@ -13558,6 +13558,14 @@ STRING 2171
 (item)
 }
 
+STRING 2172
+// Items: I04I (Vegeta's Tail), Description (Description)
+{
+Vegeta's sliced-off tail resonates immense strength.
+|cffffff00+0.1x Str mult.
++5ms.|r
+}
+
 STRING 2173
 // Units: H05U (Demon God), Tip (Tooltip - Basic)
 {
@@ -19031,10 +19039,107 @@ Donkey Kong winds up for a brief moment before unleashing a mighty punch.
 |cff00ffffCooldown: <A06A,Cool1> - <A06A,Cool10> seconds|r
 }
 
+STRING 3061
+// Items: I04I (Vegeta's Tail), Ubertip (Tooltip - Extended)
+{
+Vegeta's sliced-off tail resonates immense strength.
+|cffffff00+0.1x Str mult.
++5ms.|r
+}
+
+STRING 3062
+// Items: I04R (King Cold's Armor [|cffFFFF004/5|r]), Name (Name)
+{
+King Cold's Armor [|cffFFFF004/5|r]
+}
+
+STRING 3063
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Tip (Tooltip - Basic)
+{
+Purchase Saiyan Armor [|cffFFFF001/5|r]
+}
+
+STRING 3064
+// Items: I04R (King Cold's Armor [|cffFFFF004/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [4/5]|r
+|cffFFFF00+8 armor.
++0.1x Int Mult.
+Does not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 3065
+// Items: I04R (King Cold's Armor [|cffFFFF004/5|r]), Description (Description)
+{
+|cff00FF00Level [4/5]|r
+|cffFFFF00+8 armor.
++0.1x Int Mult.
+Does not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 3066
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+{
+Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+}
+
+STRING 3067
+// Abilities: A0PH (Hakai), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo slowly gathers the power of destruction into his hand before unleashing it in a devastating orb that obliterates any mortal standing before him. During the channel, non-hero units near Toppo are instantly destroyed. Does not work against those who are immortal.
+|cffff2020Channel Duration: <A0PH,Dur1> seconds|r
+|cff00ff00Damage: 25% of Current HP + 10% of Max HP
+|cff00ffffCooldown: <A0PH,Cool1> seconds
+
+|cff808080"...Hakai"
+}
+
+STRING 3068
+// Abilities: A0GK (Hakai), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta rapidly charges destruction energy into a devastating orb before firing it at his enemies and obliterating any mortal before him. Non-hero units are instantly destroyed. Does not affect those who are immortal.
+|cffff2020Channel Duration: <A0GK,Dur1>s
+|cff00ff00Damage: 20% of Current HP + 5% of Max HP|r
+|cff00ffffCooldown: <A0GK,Cool1> seconds|r
+}
+
+STRING 3069
+// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +25% based on Vegeta's missing HP.
+
+|cff00FF00Duration: <A0GM,Dur1> seconds|r
+|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
+}
+
+STRING 3070
+// Items: I04S (Babidi's Energy Absorber), Description (Description)
+{
+|cffffff00Drains an enemy's energy and slows them significantly. Instantly kills creeps.|r
+|cff00ff00Slow: 25% for 5s
+Mana Drain: 30% of Max Mana
+|cff00ffffCooldown: 45s|r
+}
+
 STRING 3071
 // Abilities: A041 (Ground Pound), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
+}
+
+STRING 3072
+// Items: I04S (Babidi's Energy Absorber), Ubertip (Tooltip - Extended)
+{
+|cffffff00Drains an enemy's energy and slows them significantly. Instantly kills creeps.|r
+|cff00ff00Slow: 25% for 5s
+Mana Drain: 30% of Max Mana
+|cff00ffffCooldown: 45s|r
+}
+
+STRING 3073
+// Items: I04S (Babidi's Energy Absorber), Name (Name)
+{
+Babidi's Energy Absorber
 }
 
 STRING 3074
@@ -19348,6 +19453,12 @@ STRING 3125
 // Abilities: A0GI (Ultra Ego), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Ultra Ego
+}
+
+STRING 3126
+// Abilities: A0GN (Babidi's Energy Absorber), Name (Name)
+{
+Babidi's Energy Absorber
 }
 
 STRING 3127
@@ -20754,12 +20865,13 @@ Max Permanent Stat Mult:
 [lvl 90]  2.00x
 [lvl 120] 2.20x
 [lvl 150] 2.40x
+[lvl 200] 2.50x
 
-Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
+Moro increases his stat mult by draining the stat mult of other heroes with [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
 
-Each [Q] increases his permanent stat multiplier by:
+Each [Q] increases his permanent stat mult by:
 [0.2 * (enemy stat mult - 1.000x) or 0.050x if higher]
-capped at his maximum permanent stat multiplier.
+up to his maximum permanent stat multiplier.
 }
 
 STRING 3360
@@ -45336,6 +45448,42 @@ STRING 7305
 W
 }
 
+STRING 7306
+// Abilities: A0DZ (Frieza Transforms), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza's can transform into many forms with different power levels.
+|cffffff00Passive: +5 armor.
+Changing forms regenerates 20% max mp.|r
+}
+
+STRING 7307
+// Abilities: A0GI (Ultra Ego), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta taps into the unbounded power derived solely from his fighting, granting destructive powers on par with Ultra Instinct.
+However, this power comes at great risk and Vegeta becomes over-exerted when falling below certain HP thresholds. At 75% HP, he suffers -2.5 armr / -10ms. At 50% HP, he suffers -5 armr / -20ms. At 25% HP he suffers -10 armr / -40ms.
+
+|cffffff00+0.1-0.4x stat mult based on missing HP.
+Unlocks Hakai and Hakai Barrage.
++33ms and unlocks movement speed cap.
+Immunity to debuffs.|r
+|cff00FF00Duration: <A0GI,Dur1> seconds|r
+|cff00FFFFCooldown: <A0GI,Cool1> seconds|r
+}
+
+STRING 7308
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's upper half is better at dodging but slightly weaker in power.
+
+|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 10% of current mana (excluding Dark Mist).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
+|cffffcc00Critical|r - <A0GG,DataA1>% 
+|cffffcc00Damage|r - <A0GG,DataB1,.> times
+}
+
 STRING 7309
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
@@ -45396,6 +45544,20 @@ STRING 7318
 [|cff00FF00Q|r] Learn Slurp Cut  [|cffffcc00Level %d|r]
 }
 
+STRING 7319
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's lower half has deadlier attacks but is worse at dodging.
+
+|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 10% of current mana (excluding Dark Mist).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
+|cffffcc00Critical|r - <A0GG,DataA2>% 
+|cffffcc00Damage|r - <A0GG,DataB2,.> times
+}
+
 STRING 7320
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
@@ -45406,6 +45568,20 @@ STRING 7321
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Tail Attack [|cffffcc00Level 5|r]
+}
+
+STRING 7322
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's fully matured form empowers every attack with deadly force.
+
+|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +100%).
+Spells cost an additional 25% of current mana (excluding Dark Eyes and Flight).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
+|cffffcc00Critical|r - <A0GG,DataA3>% 
+|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 7323
@@ -45444,16 +45620,40 @@ STRING 7328
 [|cff00FF00W|r] Tail Attack [|cffffcc00Level 10|r]
 }
 
+STRING 7329
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 7330
+// Abilities: A0GP (Death Blow), Name (Name)
+{
+Death Blow
+}
+
 STRING 7331
 // Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
+STRING 7332
+// Abilities: A0GP (Death Blow), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Death Blow
+}
+
 STRING 7333
 // Abilities: A0N1 (BrolyRevert2), Name (Name)
 {
 BrolyRevert2
+}
+
+STRING 7334
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+{
+F
 }
 
 STRING 7335
@@ -45463,7 +45663,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45502,6 +45702,15 @@ STRING 7342
 // Abilities: A0L1 (Transform), Name (Name)
 {
 Transform
+}
+
+STRING 7343
+// Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Hit delivers a powerful death blow to assassinate his target. Deals +10% Max HP damage if the enemy is below 50% Max HP. Reduces Time Skip charge rate by -1.5% per 1% of enemy's missing HP.
+|cffffff00Costs 2 Time Skip charges.
+|cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
+|cff00ffffCooldown: <A0GP,Cool1>s|r
 }
 
 STRING 7344
@@ -45601,7 +45810,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7359
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45847,6 +46056,12 @@ STRING 7396
 [|cff00ff00Q|r] Ego Galick Gun
 }
 
+STRING 7397
+// Abilities: A0FT (Time Skip), EditorSuffix (Editor Suffix)
+{
+(hit)
+}
+
 STRING 7398
 // Abilities: A0GK (Hakai), Tip (Tooltip - Normal)
 {
@@ -45949,6 +46164,18 @@ STRING 7413
 Vegeta fires a powerful Galick Gun infused with the powers of destruction. Deals additional damage when on low HP (max +100%).
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0GJ,Cool1> seconds|r
+}
+
+STRING 7414
+// Abilities: A0ET (Dark Transformation), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn slowly gathers energy into himself as he sheds his outer layer of skin to undergo a dark transformation.
+For the next 3 seconds, incoming damage is reduced.
+For the next 20 seconds, increase health regeneration and unlock [|cff00ff00F|r] Flight.
+
+|cff00ff00Damage Block: Str * Lvl * ? @ 50%
+Heal: Int * ? + 0.3% max HP|r
+|cff00ffffCooldown: <A0ET,Cool1> seconds|r
 }
 
 STRING 7415
@@ -46293,7 +46520,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -46492,7 +46719,7 @@ STRING 7501
 }
 
 STRING 7502
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -47465,7 +47692,7 @@ STRING 7655
 }
 
 STRING 7656
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -49934,7 +50161,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50198,7 +50425,7 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 8092
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50216,7 +50443,7 @@ STRING 8094
 }
 
 STRING 8095
-// Abilities: A0FT (Time Skip), EditorSuffix (Editor Suffix)
+// Abilities: A0FU (Pocket Dimension), EditorSuffix (Editor Suffix)
 {
 (hit)
 }
@@ -50306,7 +50533,7 @@ STRING 8109
 }
 
 STRING 8110
-// Abilities: A0FU (Pocket Dimension), EditorSuffix (Editor Suffix)
+// Abilities: A0FV (Flash Fist), EditorSuffix (Editor Suffix)
 {
 (hit)
 }
@@ -50454,7 +50681,7 @@ Mario Fire
 }
 
 STRING 8134
-// Abilities: A0FV (Flash Fist), EditorSuffix (Editor Suffix)
+// Abilities: A0FW (Time Cage), EditorSuffix (Editor Suffix)
 {
 (hit)
 }
@@ -50839,7 +51066,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -53427,7 +53654,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53906,7 +54133,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -54764,7 +54991,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -54906,12 +55133,6 @@ STRING 8847
 // Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
 {
 Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 8848
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
-{
-Undergo a dark transformation...|n|cffffff00+0.4x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
 STRING 8849
@@ -56981,7 +57202,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57005,13 +57226,13 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57233,7 +57454,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57257,7 +57478,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -60892,7 +61113,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 9816
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61454,7 +61675,7 @@ STRING 9908
 }
 
 STRING 9909
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61466,7 +61687,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62108,7 +62329,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62126,7 +62347,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63109,13 +63330,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63643,7 +63864,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63661,7 +63882,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64384,7 +64605,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64492,19 +64713,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65406,7 +65627,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65424,7 +65645,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65628,10 +65849,9 @@ Transformations:
 Super Buu:
 [lvl 250] 2.30x "fp"
 
-Carries over some of the stat mult from Fat Buu.
 Gains additional stat multiplier by absorbing players using [|cff00ff00E|r] Flesh Attack when they are on low hp.
-Gains +0.4x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
-Turns into Kid Buu 120s after your first absorb.
+Multiplier becomes 2.30 +0.1x for every absorb.
+Turns into Kid Buu 300s after your first absorb, -30s per absorb. Type "kid" to transform early.
 
 Kid Buu:
 Carries over the stat multiplier from Super Buu's absorbs.
@@ -66053,7 +66273,7 @@ Transformations:
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 30+] 2.00x (absorb 17/18)
 [lvl 120] 2.50x "super perfect"
-[lvl 250] 2.50x "cell-x" [unlocks cell-x form]
+[lvl 250] 2.70x "cell-x" [unlocks cell-x form]
 
 To reach Cell's higher forms you must absorb 17/18.
 }
@@ -66223,7 +66443,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66911,7 +67131,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68033,7 +68253,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68051,7 +68271,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68934,7 +69154,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68977,7 +69197,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -69117,7 +69337,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69600,7 +69820,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69618,7 +69838,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70389,13 +70609,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -71560,7 +71780,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -71578,7 +71798,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -71912,7 +72132,7 @@ Broly's Fur Pelt [|cffFFFF006/5|r]
 }
 
 STRING 11616
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Tip (Tooltip - Basic)
+// Items: I04R (King Cold's Armor [|cffFFFF004/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Saiyan Armor [|cffFFFF001/5|r]
 }
@@ -73570,7 +73790,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -73588,7 +73808,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -74437,7 +74657,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76560,7 +76780,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77160,7 +77380,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77184,7 +77404,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77424,7 +77644,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77442,7 +77662,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77496,7 +77716,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77514,7 +77734,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79512,7 +79732,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80069,12 +80289,6 @@ STRING 12921
 Toppo's God of Destruction form.
 }
 
-STRING 12922
-// Abilities: A0PH (Hakai), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo slowly gathers the power of destruction into his hand before unleashing it in a devastating orb that obliterates any mortal standing before him. During the channel, non-hero units near Toppo are instantly destroyed. Does not work against those who are immortal.|n|r|cffff2020Channel Duration: <A0PH,Dur1> seconds|r|n|cff00ff00Damage: 45% of Current HP|n|cff00ffffCooldown: <A0PH,Cool1> seconds|n|n|cff808080"...Hakai"
-}
-
 STRING 12923
 // Abilities: A0PN (Change Now), Tip (Tooltip - Normal)
 {
@@ -80160,7 +80374,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80190,7 +80404,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12942
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80235,20 +80449,6 @@ STRING 12949
 // Items: I04I (Vegeta's Tail), Name (Name)
 {
 Vegeta's Tail
-}
-
-STRING 12950
-// Items: I04I (Vegeta's Tail), Description (Description)
-{
-Vegeta's sliced-off tail resonates immense strength.
-|cffffff00+0.1x Str mult.|r
-}
-
-STRING 12951
-// Items: I04I (Vegeta's Tail), Ubertip (Tooltip - Extended)
-{
-Vegeta's sliced-off tail resonates immense strength.
-|cffffff00+0.1x Str mult.|r
 }
 
 STRING 12952
@@ -80440,7 +80640,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81864,7 +82064,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81900,7 +82100,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81921,13 +82121,6 @@ STRING 13223
 // Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 3|r]
-}
-
-STRING 13224
-// Abilities: A0DZ (Frieza Transforms), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza's can transform into many forms with different power levels.
-|cffffff00Changing forms regenerates 10% max hp/mp.|r
 }
 
 STRING 13225
@@ -82576,13 +82769,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83117,7 +83310,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83153,7 +83346,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83523,7 +83716,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83541,7 +83734,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83835,7 +84028,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83853,7 +84046,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84264,7 +84457,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84308,7 +84501,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84642,7 +84835,7 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 13652
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84669,7 +84862,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85474,7 +85667,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -87761,7 +87954,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -87795,7 +87988,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88565,7 +88758,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -88860,7 +89053,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88878,7 +89071,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -91386,7 +91579,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -94074,18 +94267,6 @@ A spirit ball.
 |cff00ffffCooldown: <A0RV,Cool10> seconds|r
 }
 
-STRING 15073
-// Abilities: A0ET (Dark Transformation), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn slowly gathers energy into himself as he sheds his outer layer of skin to undergo a dark transformation.
-For the next 3 seconds, incoming damage is reduced.
-For the next 20 seconds, increase health regeneration and unlock [|cff00ff00F|r] Flight.
-
-|cff00ff00Damage Block: Str * Lvl * ? @ 50%
-Heal: Int * ? + 0.6% max HP|r
-|cff00ffffCooldown: <A0ET,Cool1> seconds|r
-}
-
 STRING 15074
 // Abilities: A0SC (Psycho Javelin), Tip (Tooltip - Normal)
 {
@@ -94713,7 +94894,7 @@ Guldo holds his breath and temporarily freezes the time for all nearby enemies. 
 }
 
 STRING 15167
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -94755,7 +94936,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -95487,15 +95668,6 @@ STRING 15278
 Max Power
 }
 
-STRING 15279
-// Abilities: A0GK (Hakai), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta rapidly charges destruction energy into a devastating orb before firing it at his enemies and obliterating any mortal before him. Non-hero units are instantly destroyed. Does not affect those who are immortal.
-|cffff2020Channel Duration: <A0GK,Dur1>s
-|cff00ff00Damage: 30% of Current HP|r
-|cff00ffffCooldown: <A0GK,Cool1> seconds|r
-}
-
 STRING 15280
 // Units: H05U (Demon God), Ubertip (Tooltip - Extended)
 {
@@ -95578,7 +95750,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -95646,19 +95818,6 @@ STRING 15300
 {
 The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool4> seconds|r
-}
-
-STRING 15302
-// Abilities: A0GI (Ultra Ego), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta taps into the unbounded power derived solely from his fighting, granting destructive powers on par with Ultra Instinct. When Vegeta falls below 50% max HP, he becomes over-exerted and suffers -50ms and -10 armr.
-
-|cffffff00+0.1-0.4x stat mult based on missing HP.
-Unlocks Hakai and Hakai Barrage.
-+33ms and unlocks movement speed cap.
-Immunity to debuffs.|r
-|cff00FF00Duration: <A0GI,Dur1> seconds|r
-|cff00FFFFCooldown: <A0GI,Cool1> seconds|r
 }
 
 STRING 15309
@@ -95773,20 +95932,6 @@ STRING 15326
 {
 The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool10> seconds|r
-}
-
-STRING 15327
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's upper half is better at dodging but slightly weaker in power.
-
-|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +20%).
-Spells cost an additional 5% of current mana (excluding Dark Mist).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
-|cffffcc00Critical|r - <A0GG,DataA1>% 
-|cffffcc00Damage|r - <A0GG,DataB1,.> times
 }
 
 STRING 15328
@@ -96317,7 +96462,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -97478,20 +97623,6 @@ Zamasu unleashes a powerful energy ball that imediately detonates at the target 
 |cff00ffffCooldown: <A0ST,Cool1> seconds|r
 }
 
-STRING 15555
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's lower half has deadlier attacks but is worse at dodging.
-
-|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +20%).
-Spells cost an additional 5% of current mana (excluding Dark Mist).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
-|cffffcc00Critical|r - <A0GG,DataA2>% 
-|cffffcc00Damage|r - <A0GG,DataB2,.> times
-}
-
 STRING 15556
 // Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
 {
@@ -98203,20 +98334,6 @@ STRING 15662
 // Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
 {
 S
-}
-
-STRING 15663
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's fully matured form empowers every attack with deadly force.
-
-|cffffff00Auto attacks against heroes absorb 1% of enemy's current mana and restore an additional 1% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +60%).
-Spells cost an additional 20% of current mana (excluding Dark Eyes and Flight).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
-|cffffcc00Critical|r - <A0GG,DataA3>% 
-|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 15664
@@ -100098,15 +100215,6 @@ Sephiroth delivers a swift sequence of sword slashes.
 |cff808080"Traitor... you will pay!"|r
 }
 
-STRING 15921
-// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +20% based on Vegeta's missing HP.
-
-|cff00FF00Duration: <A0GM,Dur1> seconds|r
-|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
-}
-
 STRING 15922
 // Abilities: A0TC (One Winged Angel), Tip (Tooltip - Normal)
 {
@@ -100137,7 +100245,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100166,7 +100274,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100970,7 +101078,7 @@ Pure Progress
 }
 
 STRING 16041
-// Abilities: A0FW (Time Cage), EditorSuffix (Editor Suffix)
+// Abilities: A0TH (Pure Progress), EditorSuffix (Editor Suffix)
 {
 (hit)
 }
@@ -100979,7 +101087,7 @@ STRING 16042
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "fp"
+[lvl 30]  1.50x "fp" [unlocks Death Blow]
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.40x "fp" 
@@ -102042,7 +102150,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -102060,7 +102168,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -106336,7 +106444,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -107599,7 +107707,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108359,7 +108467,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108491,7 +108599,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -109160,7 +109268,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109264,7 +109372,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -111701,7 +111809,7 @@ STRING 17506
 }
 
 STRING 17507
-// Abilities: A0TH (Pure Progress), EditorSuffix (Editor Suffix)
+// Abilities: A0GP (Death Blow), EditorSuffix (Editor Suffix)
 {
 (hit)
 }
@@ -116373,7 +116481,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -116829,7 +116937,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -118257,7 +118365,7 @@ STRING 18520
 }
 
 STRING 18521
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -121106,7 +121214,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -121449,7 +121557,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -121473,7 +121581,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }

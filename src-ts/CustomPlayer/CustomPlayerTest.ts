@@ -2918,7 +2918,7 @@ export function SetupVegetaFightingSpirit(
 
       if (customHero) {
         // give spell amp
-        const spellAmp = 0.2 * (
+        const spellAmp = 0.25 * (
           Math.max(
             0, 
             1 - GetUnitState(unit, UNIT_STATE_LIFE) / Math.max(1, GetUnitState(unit, UNIT_STATE_MAX_LIFE))
