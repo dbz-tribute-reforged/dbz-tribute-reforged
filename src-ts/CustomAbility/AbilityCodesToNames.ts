@@ -515,12 +515,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.sephirothOneWingedAngel, AbilityNames.Sephiroth.ONE_WINGED_ANGEL],
     [Id.sephirothParry, AbilityNames.Sephiroth.PARRY],
 
-
+    // hit
     [Id.timeSkip, AbilityNames.Hit.TIME_SKIP],
     [Id.pocketDimension, AbilityNames.Hit.POCKET_DIMENSION],
     [Id.flashFist, AbilityNames.Hit.FLASH_FIST],
     [Id.timeCage, AbilityNames.Hit.TIME_CAGE],
     [Id.pureProgress, AbilityNames.Hit.PURE_PROGRESS],
+    [Id.hitDeathBlow, AbilityNames.Hit.DEATH_BLOW],
 
 
     [Id.tyrannoFlame, AbilityNames.RustTyranno.TYRANNO_FLAME],

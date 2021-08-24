@@ -286,13 +286,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 70, 2500, 410, 1000, new Vector2D(24000, 6500),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
       ],
     )],
-    ["King Cold", new SagaUnit(FourCC("U00K"), 30, 2500, 410, 2000, new Vector2D(24400, 6500),
+    ["King Cold", new SagaUnit(FourCC("U00K"), 50, 2500, 410, 2000, new Vector2D(24400, 6500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Saga.GENERIC_BOMB,
       ],
+      [
+        ItemConstants.SagaDrops.KING_COLD_ARMOR,
+      ]
     )],
 
     // androids 19/20 saga
@@ -529,10 +534,13 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // buu saga
     // babidi
-    ["Babidi", new SagaUnit(FourCC("O001"), 50, 4000, 400, 12000, new Vector2D(16500, 12000),
+    ["Babidi", new SagaUnit(FourCC("O001"), 60, 4000, 400, 12000, new Vector2D(16500, 12000),
       [
         SagaAbilities.Babidi.HARETSU,
         SagaAbilities.Babidi.BABIDI_BARRIER
+      ],
+      [
+        ItemConstants.SagaDrops.BABIDI_ENERGY_ABSORBER,
       ],
     )],
     ["Fat Buu", new SagaUnit(FourCC("O005"), 100, 12000, 400, 12000, new Vector2D(16500, 12000),

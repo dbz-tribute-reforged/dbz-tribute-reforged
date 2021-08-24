@@ -608,6 +608,7 @@ export module AbilityNames {
     export const FLASH_FIST = "Flash Fist";
     export const TIME_CAGE = "Time Cage";
     export const PURE_PROGRESS = "Pure Progress";
+    export const DEATH_BLOW = "Hit Death Blow";
   }
 
   export module RustTyranno {

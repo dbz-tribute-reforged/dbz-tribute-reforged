@@ -11,6 +11,7 @@ export module ItemConstants {
     FourCC("I037"),
     FourCC("I03C"),
     FourCC("I03D"),
+    FourCC("I04R"),
     FourCC("I03E"),
     FourCC("I04B"),
   ];
@@ -100,6 +101,7 @@ export module ItemConstants {
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
   export const rainbowShell = FourCC("I04P");
   export const saibamenSeeds = FourCC("I024");
+  export const babidiEnergyAbsorber = FourCC("I04S");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -114,8 +116,9 @@ export module ItemConstants {
     export const BATTLE_ARMOR_2 = battleArmor[1];
     export const BATTLE_ARMOR_3 = battleArmor[2];
     export const BATTLE_ARMOR_4 = battleArmor[3];
-    export const BATTLE_ARMOR_5 = battleArmor[4];
-    export const BROLY_FUR = battleArmor[5];
+    export const KING_COLD_ARMOR = battleArmor[4];
+    export const BATTLE_ARMOR_5 = battleArmor[5];
+    export const BROLY_FUR = battleArmor[6];
 
     export const POWER_POLE = powerPole[0];
     export const VEGETA_TAIL = vegetaTail[0];
@@ -142,5 +145,6 @@ export module ItemConstants {
     export const SORROWFUL_SCYTHE = sorrowfulScythe[0];
     export const RAINBOW_SHELL = rainbowShell;
     export const SAIBAMEN_SEEDS = saibamenSeeds;
+    export const BABIDI_ENERGY_ABSORBER = babidiEnergyAbsorber;
   }
 }

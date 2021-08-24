@@ -253,6 +253,9 @@ udg_EisAbsoluteZeroUnitGroup = nil
 udg_IsNightmareMode = false
 udg_SummonsSaibamenHashtable = nil
 udg_VegetaHakaiUnitGroup = nil
+udg_KidBuuTimer = 0
+udg_BabidiLampTimer = nil
+udg_BabidiLampLightning = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -504,6 +507,7 @@ gg_trg_Lucario_Iron_Defense_Loop = nil
 gg_trg_Saitama_OK = nil
 gg_trg_Hirudegarn_Auto_Level = nil
 gg_trg_Hirudegarn_CDs = nil
+gg_trg_Hirudegarn_Spell_Cost = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -754,6 +758,7 @@ gg_trg_Dart_Feld_Dragoon_Transformation = nil
 gg_trg_Lucario_Mega_Evolution = nil
 gg_trg_Lucario_Gigantomax = nil
 gg_trg_Saitama_Serious_Series = nil
+gg_trg_Vegeta_Ultra_Ego = nil
 gg_trg_Temp_Skin_Transformation_Loop = nil
 gg_trg_Temp_Skin_Transformation_NonUI_Revert = nil
 gg_trg_Temp_Skin_Revert = nil
@@ -907,6 +912,8 @@ gg_trg_Scouter_Scout = nil
 gg_trg_Scouter_Drop = nil
 gg_trg_Sorbets_Ring = nil
 gg_trg_Sorbets_Ring_Lightning = nil
+gg_trg_Babidi_Lamp = nil
+gg_trg_Babidi_Lamp_Lightning = nil
 gg_trg_Darkness_Generator_Init = nil
 gg_trg_Darkness_Generator_Loop = nil
 gg_trg_Banana_Generator = nil
@@ -918,8 +925,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Vegeta_Ultra_Ego = nil
-gg_trg_Hirudegarn_Spell_Cost = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1269,6 +1274,8 @@ function InitGlobals()
     udg_EisAbsoluteZeroUnitGroup = CreateGroup()
     udg_IsNightmareMode = false
     udg_VegetaHakaiUnitGroup = CreateGroup()
+    udg_KidBuuTimer = 300
+    udg_BabidiLampTimer = CreateTimer()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -1512,6 +1519,8 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I04M"), -5874.4, 17608.8, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -6039.0, 17667.5, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04O"), 11313.0, 21366.0, FourCC("I04O"))
+    BlzCreateItemWithSkin(FourCC("I04R"), 11062.3, 21359.5, FourCC("I04R"))
+    BlzCreateItemWithSkin(FourCC("I04S"), 11117.8, 21168.7, FourCC("I04S"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -3209,7 +3218,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(9))
     u = BlzCreateUnitWithSkin(p, FourCC("h07V"), 17754.7, 30811.6, 0.000, FourCC("h07V"))
     u = BlzCreateUnitWithSkin(p, FourCC("O00F"), 22099.5, 29492.1, 270.000, FourCC("O00F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H092"), 11086.8, 21635.7, 274.571, FourCC("H092"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H092"), 10877.0, 21677.2, 274.571, FourCC("H092"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("n03W"), 10673.7, 22082.9, 273.121, FourCC("n03W"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -3882,7 +3891,7 @@ function Trig_Vegeta_Hakai_Launched_Damage_Func003A()
         else
             if (Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001Func001C()) then
                 GroupAddUnitSimple(udg_TempUnit2, udg_TempUnitGroup2)
-                UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.30), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+                UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, ((GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.20) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit2) * 0.05)), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                 udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
                 AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
                 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
@@ -4147,7 +4156,7 @@ function Trig_Babidi_Summons_Actions()
             udg_TempReal4 = 0.60
         else
             if (Trig_Babidi_Summons_Func001Func001Func001C()) then
-                udg_TempReal4 = 0.80
+                udg_TempReal4 = 0.85
                 UnitAddAbilityBJ(FourCC("A0OG"), GetSummonedUnit())
                 SetUnitAbilityLevelSwapped(FourCC("A0OG"), GetSummonedUnit(), IMinBJ(10, IMaxBJ(1, ((GetHeroLevel(GetSummoningUnit()) + 20) // 50))))
             else
@@ -6411,35 +6420,35 @@ function Trig_Toppo_Hakai_Loop_Func001Func005C()
     if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) ~= 1)) then
         return false
     end
-    if (not (udg_TempInt < 65)) then
+    if (not (udg_TempInt < 32)) then
         return false
     end
     return true
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()
-    if (not (udg_TempInt == 98)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()
     if (not (udg_TempInt == 65)) then
         return false
     end
     return true
 end
 
+function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()
+    if (not (udg_TempInt == 32)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001C()
-    if (not (udg_TempInt > 65)) then
+    if (not (udg_TempInt > 32)) then
         return false
     end
     return true
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()
-    if (not (udg_TempInt == 19)) then
+    if (not (udg_TempInt == 18)) then
         return false
     end
     return true
@@ -6453,14 +6462,14 @@ function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002C()
-    if (not (udg_TempInt < 65)) then
+    if (not (udg_TempInt < 32)) then
         return false
     end
     return true
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006C()
-    if (not (udg_TempInt >= 99)) then
+    if (not (udg_TempInt >= 66)) then
         return false
     end
     return true
@@ -6472,8 +6481,8 @@ function Trig_Toppo_Hakai_Loop_Func001A()
     udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
     udg_TempSpecialEffect = LoadEffectHandleBJ(4, udg_ID, udg_SummonsHashtable)
     if (Trig_Toppo_Hakai_Loop_Func001Func005C()) then
-        SaveIntegerBJ(99, 0, udg_ID, udg_SummonsHashtable)
-        udg_TempInt = 99
+        SaveIntegerBJ(66, 0, udg_ID, udg_SummonsHashtable)
+        udg_TempInt = 66
     else
     end
     if (Trig_Toppo_Hakai_Loop_Func001Func006C()) then
@@ -6485,7 +6494,7 @@ function Trig_Toppo_Hakai_Loop_Func001A()
     else
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
         if (Trig_Toppo_Hakai_Loop_Func001Func006Func002C()) then
-            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.02)))
+            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.04)))
             if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()) then
                                 playGenericSpellSound(udg_TempUnit, "Audio/Effects/HakaiToppo.mp3", 3082)
             else
@@ -6674,7 +6683,7 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003A()
         else
             if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()) then
                 GroupAddUnitSimple(udg_TempUnit2, udg_TempUnitGroup2)
-                UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.45), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+                UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, ((GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.25) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit2) * 0.10)), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                 udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
                 AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
                 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
@@ -11281,6 +11290,9 @@ function Trig_Hit_Begin_Cast_Spell_Func005C()
     if (GetSpellAbilityId() == FourCC("A0FW")) then
         return true
     end
+    if (GetSpellAbilityId() == FourCC("A0GP")) then
+        return true
+    end
     return false
 end
 
@@ -11291,11 +11303,21 @@ function Trig_Hit_Begin_Cast_Spell_Conditions()
     return true
 end
 
+function Trig_Hit_Begin_Cast_Spell_Func004Func004Func002Func001C()
+    if (GetSpellAbilityId() == FourCC("A0FU")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0GP")) then
+        return true
+    end
+    return false
+end
+
 function Trig_Hit_Begin_Cast_Spell_Func004Func004Func002C()
-    if (not (udg_TempInt < 2)) then
+    if (not Trig_Hit_Begin_Cast_Spell_Func004Func004Func002Func001C()) then
         return false
     end
-    if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
+    if (not (udg_TempInt < 2)) then
         return false
     end
     return true
@@ -11337,7 +11359,7 @@ function InitTrig_Hit_Begin_Cast_Spell()
     TriggerAddAction(gg_trg_Hit_Begin_Cast_Spell, Trig_Hit_Begin_Cast_Spell_Actions)
 end
 
-function Trig_Hit_Cast_Spell_Actual_Func013C()
+function Trig_Hit_Cast_Spell_Actual_Func014C()
     if (GetSpellAbilityId() == FourCC("A0FT")) then
         return true
     end
@@ -11350,24 +11372,51 @@ function Trig_Hit_Cast_Spell_Actual_Func013C()
     if (GetSpellAbilityId() == FourCC("A0FW")) then
         return true
     end
+    if (GetSpellAbilityId() == FourCC("A0GP")) then
+        return true
+    end
     return false
 end
 
 function Trig_Hit_Cast_Spell_Actual_Conditions()
-    if (not Trig_Hit_Cast_Spell_Actual_Func013C()) then
+    if (not Trig_Hit_Cast_Spell_Actual_Func014C()) then
         return false
     end
     return true
+end
+
+function Trig_Hit_Cast_Spell_Actual_Func004Func001C()
+    if (GetSpellAbilityId() == FourCC("A0FU")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0GP")) then
+        return true
+    end
+    return false
 end
 
 function Trig_Hit_Cast_Spell_Actual_Func004C()
-    if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
+    if (not Trig_Hit_Cast_Spell_Actual_Func004Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Hit_Cast_Spell_Actual_Func012C()
+function Trig_Hit_Cast_Spell_Actual_Func009Func001C()
+    if (not (GetUnitLifePercent(GetSpellTargetUnit()) <= 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Cast_Spell_Actual_Func009C()
+    if (not (GetSpellAbilityId() == FourCC("A0GP"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Cast_Spell_Actual_Func013C()
     if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
         return false
     end
@@ -11387,10 +11436,18 @@ function Trig_Hit_Cast_Spell_Actual_Actions()
     udg_TempInt2 = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
     udg_TempInt4 = IMaxBJ(((0 - 3) * (udg_TempInt3 // (udg_TempInt + 1))), (udg_TempInt2 - udg_TempInt3))
+    if (Trig_Hit_Cast_Spell_Actual_Func009C()) then
+        if (Trig_Hit_Cast_Spell_Actual_Func009Func001C()) then
+            UnitDamageTargetBJ(GetTriggerUnit(), GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) * 0.10), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+            udg_TempInt4 = (udg_TempInt4 + ((100 - R2I(GetUnitLifePercent(GetSpellTargetUnit()))) * 150))
+        else
+        end
+    else
+    end
     SaveIntegerBJ(udg_TempInt4, 0, udg_ID, udg_HitHashtable)
     udg_StatMultUnit = udg_TempUnit
     TriggerExecute(gg_trg_Hit_Set_Charges_String)
-    if (Trig_Hit_Cast_Spell_Actual_Func012C()) then
+    if (Trig_Hit_Cast_Spell_Actual_Func013C()) then
         TriggerExecute(gg_trg_Hit_Pocket_Dimension_Cast)
     else
     end
@@ -11508,7 +11565,7 @@ function Trig_Hit_Charges_Loop_Func002A()
             if (Trig_Hit_Charges_Loop_Func002Func007Func002Func003C()) then
                 udg_TempInt4 = (udg_TempInt4 + 1)
                 SaveIntegerBJ(udg_TempInt4, 11, udg_ID, udg_StatMultHashtable)
-                SaveIntegerBJ(0, 0, udg_ID, udg_HitHashtable)
+                SaveIntegerBJ((udg_TempInt - udg_TempInt3), 0, udg_ID, udg_HitHashtable)
                 udg_StatMultUnit = udg_TempUnit
                 TriggerExecute(gg_trg_Hit_Set_Charges_String)
             else
@@ -14168,9 +14225,9 @@ end
 
 function Trig_Hirudegarn_Spell_Cost_Actions()
     if (Trig_Hirudegarn_Spell_Cost_Func002C()) then
-        udg_TempInt = (25 + R2I((GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) * 0.20)))
+        udg_TempInt = (25 + R2I((GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) * 0.25)))
     else
-        udg_TempInt = (25 + R2I((GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) * 0.05)))
+        udg_TempInt = (25 + R2I((GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) * 0.10)))
     end
     SetUnitManaBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) - I2R(udg_TempInt))))
 end
@@ -18968,14 +19025,24 @@ function InitTrig_Base_Armor_Loop()
     TriggerAddAction(gg_trg_Base_Armor_Loop, Trig_Base_Armor_Loop_Actions)
 end
 
-function Trig_Base_Armor_Set_Func003Func001Func001Func001Func001Func001C()
+function Trig_Base_Armor_Set_Func003Func001Func001Func001Func001C()
+    if (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I03D")) == true) then
+        return true
+    end
+    if (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04R")) == true) then
+        return true
+    end
+    return false
+end
+
+function Trig_Base_Armor_Set_Func003Func001Func001Func001Func002Func001C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04B")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func003Func001Func001Func001Func001C()
+function Trig_Base_Armor_Set_Func003Func001Func001Func001Func002C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I03E")) == true)) then
         return false
     end
@@ -18983,7 +19050,7 @@ function Trig_Base_Armor_Set_Func003Func001Func001Func001Func001C()
 end
 
 function Trig_Base_Armor_Set_Func003Func001Func001Func001C()
-    if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I03D")) == true)) then
+    if (not Trig_Base_Armor_Set_Func003Func001Func001Func001Func001C()) then
         return false
     end
     return true
@@ -19381,31 +19448,42 @@ function Trig_Base_Armor_Set_Func015C()
 end
 
 function Trig_Base_Armor_Set_Func016C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0DZ"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func017C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0GI"), udg_StatMultUnit) > 0)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
         return false
     end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func018Func001Func001Func001C()
+    if (not (GetUnitLifePercent(udg_StatMultUnit) < 75.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func018Func001Func001C()
     if (not (GetUnitLifePercent(udg_StatMultUnit) < 50.00)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func018Func003C()
-    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
+function Trig_Base_Armor_Set_Func018Func001C()
+    if (not (GetUnitLifePercent(udg_StatMultUnit) < 25.00)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func018C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0GI"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
@@ -19422,34 +19500,48 @@ function Trig_Base_Armor_Set_Func019C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0Y1"), udg_StatMultUnit) > 0)) then
+    return true
+end
+
+function Trig_Base_Armor_Set_Func020Func003C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func020C()
-    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func021Func003C()
-    if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0Y1"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func021C()
-    if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func022Func003C()
+    if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func022C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func023C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
         return false
     end
@@ -19471,10 +19563,10 @@ function Trig_Base_Armor_Set_Actions()
                 if (Trig_Base_Armor_Set_Func003Func001Func001Func001C()) then
                     udg_BaseArmorReal = (udg_BaseArmorReal + 8.00)
                 else
-                    if (Trig_Base_Armor_Set_Func003Func001Func001Func001Func001C()) then
+                    if (Trig_Base_Armor_Set_Func003Func001Func001Func001Func002C()) then
                         udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
                     else
-                        if (Trig_Base_Armor_Set_Func003Func001Func001Func001Func001Func001C()) then
+                        if (Trig_Base_Armor_Set_Func003Func001Func001Func001Func002Func001C()) then
                             udg_BaseArmorReal = (udg_BaseArmorReal + 15.00)
                         else
                         end
@@ -19716,44 +19808,59 @@ function Trig_Base_Armor_Set_Actions()
     else
     end
     if (Trig_Base_Armor_Set_Func017C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal - 10.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
     else
     end
     if (Trig_Base_Armor_Set_Func018C()) then
-                old = udg_ID
-                udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func018Func003C()) then
-            udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
+        if (Trig_Base_Armor_Set_Func018Func001C()) then
+            udg_BaseArmorReal = (udg_BaseArmorReal - 10.00)
         else
+            if (Trig_Base_Armor_Set_Func018Func001Func001C()) then
+                udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
+            else
+                if (Trig_Base_Armor_Set_Func018Func001Func001Func001C()) then
+                    udg_BaseArmorReal = (udg_BaseArmorReal - 2.50)
+                else
+                end
+            end
         end
-                udg_ID = old
     else
     end
     if (Trig_Base_Armor_Set_Func019C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
         if (Trig_Base_Armor_Set_Func019Func003C()) then
-            udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
+            udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
         else
         end
                 udg_ID = old
     else
     end
     if (Trig_Base_Armor_Set_Func020C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+                old = udg_ID
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        if (Trig_Base_Armor_Set_Func020Func003C()) then
+            udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
+        else
+        end
+                udg_ID = old
     else
     end
     if (Trig_Base_Armor_Set_Func021C()) then
+        udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+    else
+    end
+    if (Trig_Base_Armor_Set_Func022C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func021Func003C()) then
+        if (Trig_Base_Armor_Set_Func022Func003C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
         else
         end
                 udg_ID = old
     else
     end
-    if (Trig_Base_Armor_Set_Func022C()) then
+    if (Trig_Base_Armor_Set_Func023C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal * 0.40)
     else
     end
@@ -22799,44 +22906,69 @@ function Trig_Set_HP_scaled_MS_for_TempUnit_Func005C()
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Func006C()
-    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04O")) == true)) then
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04I")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Func007C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0GI"), udg_TempUnit) > 0)) then
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04O")) == true)) then
         return false
     end
+    return true
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001Func001Func001C()
+    if (not (GetUnitLifePercent(udg_TempUnit) < 75.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001Func001C()
     if (not (GetUnitLifePercent(udg_TempUnit) < 50.00)) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001Func001Func001C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001C()
+    if (not (GetUnitLifePercent(udg_TempUnit) < 25.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func008C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0GI"), udg_TempUnit) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001Func001Func001C()
     if (not (BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0Y0")) >= (BlzGetUnitAbilityCooldown(udg_TempUnit, FourCC("A0Y0"), 0) - 30.00))) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001Func001C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A7"))) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09S"))) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func009C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func010C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09Q"))) then
         return false
     end
@@ -22855,21 +22987,36 @@ function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
     else
     end
     if (Trig_Set_HP_scaled_MS_for_TempUnit_Func006C()) then
-        udg_TempReal2 = (udg_TempReal2 - 10.00)
+        udg_TempReal2 = (udg_TempReal2 - 5.00)
     else
     end
     if (Trig_Set_HP_scaled_MS_for_TempUnit_Func007C()) then
-        udg_TempReal2 = (udg_TempReal2 + 50.00)
+        udg_TempReal2 = (udg_TempReal2 - 10.00)
     else
     end
-    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func009C()) then
+    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func008C()) then
+        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001C()) then
+            udg_TempReal2 = (udg_TempReal2 + 40.00)
+        else
+            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001Func001C()) then
+                udg_TempReal2 = (udg_TempReal2 + 20.00)
+            else
+                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func008Func001Func001Func001C()) then
+                    udg_TempReal2 = (udg_TempReal2 + 10.00)
+                else
+                end
+            end
+        end
+    else
+    end
+    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func010C()) then
         udg_TempReal2 = (udg_TempReal2 - 50.00)
     else
-        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001C()) then
+        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001C()) then
             udg_TempReal2 = (udg_TempReal2 - 20.00)
         else
-            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001Func001C()) then
-                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func009Func001Func001Func001C()) then
+            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001Func001C()) then
+                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func010Func001Func001Func001C()) then
                     udg_TempReal2 = (udg_TempReal2 - (60.00 * (1.00 - (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))
                 else
                     udg_TempReal2 = (udg_TempReal2 - (30.00 * (1.00 - (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))
@@ -26393,10 +26540,11 @@ function Trig_Cell_X_Form_Actions()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     if (Trig_Cell_X_Form_Func005C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        udg_StatMultReal = (udg_StatMultInt + 0.40)
-        udg_StatMultStr = (udg_StatMultStr + 0.40)
-        udg_StatMultAgi = (udg_StatMultAgi + 0.40)
-        udg_StatMultInt = (udg_StatMultInt + 0.40)
+        udg_TempReal4 = 0.30
+        udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
+        udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultInt = (udg_StatMultInt + udg_TempReal4)
         udg_TransformationSFXString = "AuraBlack.mdx"
         udg_TransformationSFXString2 = "AuraKaox10.mdx"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -27267,6 +27415,13 @@ function Trig_Gotenks_SS3_Conditions()
     return true
 end
 
+function Trig_Gotenks_SS3_Func005Func012C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0AN"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Gotenks_SS3_Func005C()
     if (not (udg_TempBool == true)) then
         return false
@@ -27280,6 +27435,7 @@ function Trig_Gotenks_SS3_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     if (Trig_Gotenks_SS3_Func005C()) then
+        udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_TempReal4 = 0.10
         udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
@@ -27290,6 +27446,13 @@ function Trig_Gotenks_SS3_Actions()
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         SetUnitScalePercent(udg_StatMultUnit, 180.00, 180.00, 180.00)
+        if (Trig_Gotenks_SS3_Func005Func012C()) then
+            UnitAddAbilityBJ(FourCC("A0AN"), udg_StatMultUnit)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0AO"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0AP"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0AQ"), udg_TempPlayer)
+        else
+        end
     else
     end
         udg_TransformationID = FourCC('H00A')
@@ -27886,8 +28049,29 @@ function Trig_Vegeta_Ultra_Ego_Conditions()
     return true
 end
 
+function Trig_Vegeta_Ultra_Ego_Func005Func016C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0AI"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Vegeta_Ultra_Ego_Func005C()
     if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Vegeta_Ultra_Ego_Func007Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Vegeta_Ultra_Ego_Func007C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
         return false
     end
     return true
@@ -27914,7 +28098,27 @@ function Trig_Vegeta_Ultra_Ego_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A06K"), udg_TransformationPlayer)
+        if (Trig_Vegeta_Ultra_Ego_Func005Func016C()) then
+            UnitAddAbilityBJ(FourCC("A0AI"), udg_StatMultUnit)
+        else
+        end
     else
+    end
+    udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+    if (Trig_Vegeta_Ultra_Ego_Func007C()) then
+        UnitAddAbilityBJ(FourCC("A0GK"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0GK"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0GO"), udg_TransformationPlayer)
+        UnitAddAbilityBJ(FourCC("A0GL"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0GL"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0L3"), udg_TransformationPlayer)
+    else
+        if (Trig_Vegeta_Ultra_Ego_Func007Func001C()) then
+            UnitAddAbilityBJ(FourCC("A0GL"), udg_StatMultUnit)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0GL"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0C0"), udg_TransformationPlayer)
+        else
+        end
     end
         udg_TransformationID = FourCC('E003')
     TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
@@ -28028,7 +28232,28 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func003C()
     return true
 end
 
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func001Func002C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()
+    if (not (udg_TransformationAbility == FourCC("A0GI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005C()
     if (not (udg_TransformationAbility == FourCC("A0KT"))) then
         return false
     end
@@ -28041,42 +28266,42 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006C()
     if (not (udg_TransformationAbility == FourCC("A0R1"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func002Func001C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func002Func001C()
     if (not (udg_TransformationAbility == FourCC("A005"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func002C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func002C()
     if (not (udg_TransformationAbility == FourCC("A0SN"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func003C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0SN"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func004C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A005"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005Func001C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func005Func001C()
     if (not (udg_TempInt >= 3)) then
         return false
     end
@@ -28086,7 +28311,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005Func001C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func005C()
     if (not (udg_TempInt == 2)) then
         return false
     end
@@ -28096,7 +28321,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func006C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func006C()
     if (not (udg_TempInt >= 1)) then
         return false
     end
@@ -28106,7 +28331,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func006C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func007C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func007C()
     if (udg_TransformationAbility == FourCC("A0KC")) then
         return true
     end
@@ -28119,14 +28344,14 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func007C()
     return false
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func006C()
-    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func007C()) then
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()
+    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func007C()) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func004C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func008Func004C()
     if (not (LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable) ~= 0)) then
         return false
     end
@@ -28136,14 +28361,14 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func004C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()
     if (not (udg_TransformationAbility == FourCC("A0FH"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func009C()
     if (not (udg_TransformationAbility == FourCC("A0TC"))) then
         return false
     end
@@ -28153,49 +28378,49 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func009C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func010C()
     if (not (udg_TransformationAbility == FourCC("A0TH"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func010C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()
     if (not (udg_TransformationAbility == FourCC("A0TS"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()
     if (not (udg_TransformationAbility == FourCC("A0U0"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func008C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func008C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func009C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func009C()
     if (not (udg_TransformationAbility == FourCC("A0U8"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func010C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func010C()
     if (not (udg_TransformationAbility == FourCC("A0U9"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func011C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func011C()
     if (udg_TransformationAbility == FourCC("A0U8")) then
         return true
     end
@@ -28205,28 +28430,14 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func011C()
     return false
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()
-    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func011C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func004C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UR"), udg_StatMultUnit) == 0)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013C()
-    if (not (udg_TransformationAbility == FourCC("A0UU"))) then
+    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func011C()) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func014Func002C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func014Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UR"), udg_StatMultUnit) == 0)) then
         return false
     end
@@ -28234,62 +28445,90 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func014Func002C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func014C()
-    if (not (udg_TransformationAbility == FourCC("A0V1"))) then
+    if (not (udg_TransformationAbility == FourCC("A0UU"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func015Func001C()
-    if (not (udg_TransformationAbility == FourCC("A0Y1"))) then
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func015Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UR"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func015C()
-    if (not (udg_TransformationAbility == FourCC("A0Y0"))) then
+    if (not (udg_TransformationAbility == FourCC("A0V1"))) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func005Func003C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func005C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H04Y"))) then
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func001C()
+    if (not (udg_TransformationAbility == FourCC("A0Y1"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func016C()
-    if (not (udg_TransformationAbility == FourCC("A02J"))) then
+    if (not (udg_TransformationAbility == FourCC("A0Y0"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func017Func005Func003C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func017Func005C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H04Y"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func017C()
-    if (not (udg_TransformationAbility == FourCC("A0TO"))) then
+    if (not (udg_TransformationAbility == FourCC("A02J"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func018Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func018C()
+    if (not (udg_TransformationAbility == FourCC("A0U0"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func019C()
+    if (not (udg_TransformationAbility == FourCC("A0TO"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func020Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func020C()
     if (not (udg_TransformationAbility == FourCC("A0PV"))) then
         return false
     end
@@ -28317,52 +28556,67 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func001C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0GO"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0L3"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0GK"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0GL"), udg_TempPlayer)
+        else
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func001Func002C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0C0"), udg_TempPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0GL"), udg_TempPlayer)
+            else
+            end
+        end
+    else
+    end
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005C()) then
         SetPlayerAbilityAvailableBJ(true, FourCC("A0LF"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A007"), GetOwningPlayer(udg_StatMultUnit))
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006C()) then
         SetUnitTimeScalePercent(udg_StatMultUnit, 100.00)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()) then
         udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func002C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func002C()) then
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0KC"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0SN")))
         else
-            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func002Func001C()) then
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func002Func001C()) then
                 BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0KC"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A005")))
             else
             end
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func003C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func003C()) then
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0SN"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
         else
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func004C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func004C()) then
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A005"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
         else
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func005C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SN"), GetOwningPlayer(udg_StatMultUnit))
         else
-            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func005Func001C()) then
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func005Func001C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A005"), GetOwningPlayer(udg_StatMultUnit))
             else
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0KC"), GetOwningPlayer(udg_StatMultUnit))
             end
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func006Func006C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func006C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SM"), GetOwningPlayer(udg_StatMultUnit))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0KD"), GetOwningPlayer(udg_StatMultUnit))
         end
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0SO"), GetOwningPlayer(udg_StatMultUnit))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0SP"), GetOwningPlayer(udg_StatMultUnit))
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007Func004C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func008Func004C()) then
             SetPlayerAbilityAvailableBJ(false, FourCC("A0FG"), GetOwningPlayer(udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0JE"), GetOwningPlayer(udg_StatMultUnit))
         else
@@ -28373,23 +28627,23 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0JE"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0SP")))
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func009C()) then
         AddUnitAnimationPropertiesBJ(false, "alternate", udg_StatMultUnit)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func009C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func010C()) then
         SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) + 1200), 2, udg_ID, udg_HitHashtable)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func010C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()) then
         SetUnitScalePercent(udg_StatMultUnit, 170.00, 170.00, 170.00)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()) then
         SetUnitScalePercent(udg_StatMultUnit, 160.00, 160.00, 160.00)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013C()) then
         AddUnitAnimationPropertiesBJ(false, "alternate", udg_StatMultUnit)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.80, (0 + 0))
         UnitRemoveAbilityBJ(FourCC("A0UJ"), udg_StatMultUnit)
@@ -28397,16 +28651,16 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UK"), GetOwningPlayer(udg_StatMultUnit))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UO"), GetOwningPlayer(udg_StatMultUnit))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0V6"), udg_TempPlayer)
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func008C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func008C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0U7"), GetOwningPlayer(udg_StatMultUnit))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UH"), GetOwningPlayer(udg_StatMultUnit))
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func009C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func009C()) then
             SetPlayerAbilityAvailableBJ(false, FourCC("A0V4"), GetOwningPlayer(udg_StatMultUnit))
         else
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func010C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func010C()) then
             SetPlayerAbilityAvailableBJ(false, FourCC("A0V5"), GetOwningPlayer(udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(false, FourCC("A0VL"), GetOwningPlayer(udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(false, FourCC("A0VM"), GetOwningPlayer(udg_StatMultUnit))
@@ -28418,19 +28672,19 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         end
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func014C()) then
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.80, (0 + 0))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UW"), udg_TempPlayer)
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func004C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func014Func004C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UQ"), udg_TempPlayer)
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UR"), udg_TempPlayer)
         end
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func014C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func015C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UX"), udg_TempPlayer)
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func014Func002C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func015Func002C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UQ"), udg_TempPlayer)
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UR"), udg_TempPlayer)
@@ -28462,11 +28716,11 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0V1"), udg_TempReal)
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func015C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016C()) then
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.80, (0 + 0))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0Y3"), udg_TempPlayer)
     else
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func015Func001C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func001C()) then
             SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
             BlzSetUnitWeaponBooleanFieldBJ(udg_StatMultUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, true)
             BlzSetUnitWeaponBooleanFieldBJ(udg_StatMultUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
@@ -28474,16 +28728,16 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         else
         end
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func017C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A02U"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A02J"), udg_TempPlayer)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.80, (0 + 0))
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func005C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func017Func005C()) then
             SetUnitAbilityLevelSwapped(FourCC("A01E"), udg_StatMultUnit, 1)
             SetPlayerAbilityAvailableBJ(false, FourCC("A032"), udg_TempPlayer)
             SetPlayerAbilityAvailableBJ(true, FourCC("A03H"), udg_TempPlayer)
         else
-            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func005Func003C()) then
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func017Func005Func003C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A032"), udg_TempPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0C0"), udg_TempPlayer)
             else
@@ -28491,15 +28745,22 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
         end
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func017C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func018C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func018Func001C()) then
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0AQ"), udg_TempPlayer)
+        else
+        end
+    else
+    end
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func019C()) then
         SetUnitScalePercent(udg_StatMultUnit, 160.00, 160.00, 160.00)
                 playGenericSpellSound(udg_StatMultUnit,"Audio/Effects/Mario/PowerDown.mp3", 900)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0TP"), GetOwningPlayer(udg_StatMultUnit))
         MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], "BTNMario.blp")
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func018C()) then
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func018Func001C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func020C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func020Func001C()) then
             AddUnitAnimationPropertiesBJ(false, "gold", udg_StatMultUnit)
             SetUnitScalePercent(udg_StatMultUnit, 105.00, 105.00, 105.00)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0PR"), GetOwningPlayer(udg_StatMultUnit))
@@ -28552,20 +28813,27 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Func006C()
 end
 
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func007C()
-    if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04J")) == true)) then
+    if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04R")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func008C()
+    if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04J")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04A")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func010Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) ~= FourCC("H062"))) then
         return false
     end
@@ -28575,35 +28843,35 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001C()
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func010C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04K")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func010C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04L")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func011Func003C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func012Func003C()
     if (not (GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true) < 30000)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I009")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04N")) == true)) then
         return false
     end
@@ -28613,14 +28881,14 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func013Func001Func001C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func014Func001Func001C()
     if (not (GetItemTypeId(UnitItemInSlotBJ(udg_StatMultUnit, udg_TransformationItemInt)) == FourCC("I04M"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04M")) == true)) then
         return false
     end
@@ -28647,46 +28915,50 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Actions()
     else
     end
     if (Trig_Transformations_Item_Stat_Mult_Boosts_Func007C()) then
-        udg_StatMultAgi = (udg_StatMultAgi + 0.10)
+        udg_StatMultInt = (udg_StatMultInt + 0.10)
     else
     end
     if (Trig_Transformations_Item_Stat_Mult_Boosts_Func008C()) then
+        udg_StatMultAgi = (udg_StatMultAgi + 0.10)
+    else
+    end
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()) then
         udg_StatMultAgi = (udg_StatMultAgi + 0.20)
         udg_StatMultInt = (udg_StatMultInt - 0.10)
     else
     end
-    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()) then
-        if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001C()) then
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func010C()) then
+        if (Trig_Transformations_Item_Stat_Mult_Boosts_Func010Func001C()) then
             udg_StatMultStr = (udg_StatMultStr - 0.20)
         else
         end
         udg_StatMultAgi = (udg_StatMultAgi + 0.10)
     else
     end
-    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func010C()) then
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()) then
         udg_StatMultInt = (udg_StatMultInt + 0.15)
     else
     end
-    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()) then
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()) then
         udg_StatMultAgi = (udg_StatMultAgi - 0.10)
         udg_StatMultInt = (udg_StatMultInt + 0.10)
-        if (Trig_Transformations_Item_Stat_Mult_Boosts_Func011Func003C()) then
+        if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012Func003C()) then
             udg_StatMultInt = (udg_StatMultInt + 0.10)
         else
         end
     else
     end
-    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()) then
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()) then
         udg_StatMultStr = (udg_StatMultStr - 0.20)
         udg_StatMultAgi = (udg_StatMultAgi - 0.20)
         udg_StatMultInt = (udg_StatMultInt - 0.20)
     else
     end
-    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()) then
+    if (Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()) then
         udg_TransformationItemInt = 1
         while (true) do
             if (udg_TransformationItemInt > 6) then break end
-            if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013Func001Func001C()) then
+            if (Trig_Transformations_Item_Stat_Mult_Boosts_Func014Func001Func001C()) then
                 udg_StatMultStr = (udg_StatMultStr - 0.10)
                 udg_StatMultAgi = (udg_StatMultAgi - 0.10)
                 udg_StatMultInt = (udg_StatMultInt - 0.10)
@@ -28900,6 +29172,9 @@ function Trig_Transformations_Item_Check_Manipulated_Item_Func001Func003C()
     if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04O")) then
         return true
     end
+    if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04R")) then
+        return true
+    end
     if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04M")) then
         return true
     end
@@ -28933,6 +29208,8 @@ function Trig_Transformations_Init_Commands_Non_Auto_Actions()
     udg_TransformationCommandsNonAuto[udg_TempInt] = "-hs"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommandsNonAuto[udg_TempInt] = "super"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "kid"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommandsNonAuto[udg_TempInt] = "release"
     udg_TempInt = (udg_TempInt + 1)
@@ -34675,14 +34952,24 @@ function Trig_Super_Buu_to_Kid_Buu_Func001Func004C()
     if (not (ModuloInteger(udg_TempInt, 30) == 0)) then
         return false
     end
-    if (not (udg_TempInt < 120)) then
+    if (not (udg_TempInt < udg_KidBuuTimer)) then
         return false
     end
     return true
 end
 
+function Trig_Super_Buu_to_Kid_Buu_Func001Func006Func001C()
+    if (udg_TempInt > udg_KidBuuTimer) then
+        return true
+    end
+    if (udg_ScoreboardTimeMinutes >= 33) then
+        return true
+    end
+    return false
+end
+
 function Trig_Super_Buu_to_Kid_Buu_Func001Func006C()
-    if (not (udg_TempInt > 120)) then
+    if (not Trig_Super_Buu_to_Kid_Buu_Func001Func006Func001C()) then
         return false
     end
     if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_TempUnit) == false)) then
@@ -34700,7 +34987,7 @@ function Trig_Super_Buu_to_Kid_Buu_Func001A()
     udg_TempInt = LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable)
     if (Trig_Super_Buu_to_Kid_Buu_Func001Func004C()) then
         udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
-        DisplayTextToForce(udg_TempPlayerGroup, ("|cffff00ffTime till Kid Buu: " .. (I2S((120 - udg_TempInt)) .. "s|r")))
+        DisplayTextToForce(udg_TempPlayerGroup, ("|cffff88ffTime till Kid Buu: " .. (I2S((udg_KidBuuTimer - udg_TempInt)) .. "s|r")))
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
@@ -35203,7 +35490,14 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func058C()
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func060C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func059C()
+    if (not (udg_TempUnitType == FourCC("H05U"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func061C()
     if (not (udg_TempBool == false)) then
         return false
     end
@@ -35232,9 +35526,10 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func011C()) then
             udg_TempBool = true
-            UnitAddAbilityBJ(FourCC("A03N"), udg_TransformationResultUnit)
-            SetUnitAbilityLevelSwapped(FourCC("A03N"), udg_TransformationResultUnit, 7)
-                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A03N'))
+            UnitAddAbilityBJ(FourCC("A0GJ"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0GJ'))
+            UnitAddAbilityBJ(FourCC("A0GI"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0GI'))
         else
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func012C()) then
@@ -35666,7 +35961,14 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A069'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func060C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func059C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A081"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A081"), udg_TransformationResultUnit, 10)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A081'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func061C()) then
             UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -35705,32 +36007,32 @@ function Trig_Super_Buu_Absorb_Conditions()
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func006C()
+function Trig_Super_Buu_Absorb_Func001Func007C()
     if (not (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("H00A"))) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func007Func002C()
+function Trig_Super_Buu_Absorb_Func001Func008Func003C()
     if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == false)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func007C()
+function Trig_Super_Buu_Absorb_Func001Func008C()
     if (not (LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func025C()
-    if (GetUnitLifePercent(GetSpellTargetUnit()) <= 20.00) then
+function Trig_Super_Buu_Absorb_Func001Func028C()
+    if (GetUnitLifePercent(GetSpellTargetUnit()) <= 25.00) then
         return true
     end
-    if (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) <= 2000.00) then
+    if (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) <= 2500.00) then
         return true
     end
     return false
@@ -35740,7 +36042,7 @@ function Trig_Super_Buu_Absorb_Func001C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
-    if (not Trig_Super_Buu_Absorb_Func001Func025C()) then
+    if (not Trig_Super_Buu_Absorb_Func001Func028C()) then
         return false
     end
     if (not (RectContainsUnit(gg_rct_HeavenZone, GetSpellTargetUnit()) == false)) then
@@ -35758,17 +36060,17 @@ function Trig_Super_Buu_Absorb_Actions()
         udg_StatMultUnit = GetSpellAbilityUnit()
                 udg_ID = GetHandleId(udg_StatMultUnit)
         SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
-        if (Trig_Super_Buu_Absorb_Func001Func006C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
+        if (Trig_Super_Buu_Absorb_Func001Func007C()) then
             SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
-            udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
             DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00[Bonus]|r: +0.1x absorb mult for absorbing " .. GetHeroProperName(GetSpellTargetUnit())))
-                        DestroyForce(udg_TempPlayerGroup)
         else
         end
-        if (Trig_Super_Buu_Absorb_Func001Func007C()) then
+        if (Trig_Super_Buu_Absorb_Func001Func008C()) then
+            SaveIntegerBJ((LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) + 30), 15, udg_ID, udg_StatMultHashtable)
         else
             SaveIntegerBJ(0, 15, udg_ID, udg_StatMultHashtable)
-            if (Trig_Super_Buu_Absorb_Func001Func007Func002C()) then
+            if (Trig_Super_Buu_Absorb_Func001Func008Func003C()) then
                 udg_TempUnitType = GetUnitTypeId(GetSpellTargetUnit())
                                 udg_TempInt = udg_TempUnitType
                 SaveIntegerBJ(udg_TempInt, 18, udg_ID, udg_StatMultHashtable)
@@ -35777,6 +36079,8 @@ function Trig_Super_Buu_Absorb_Actions()
         end
         udg_StatMultReal = (2.30 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
         SaveRealBJ(udg_StatMultReal, 12, udg_ID, udg_StatMultHashtable)
+        DisplayTextToForce(udg_TempPlayerGroup, (("|cffff88ff[Absorb Mult]|r: " .. R2S(udg_StatMultReal)) .. "x"))
+                DestroyForce(udg_TempPlayerGroup)
         TriggerExecute(gg_trg_Set_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         EnableTrigger(gg_trg_Super_Buu_to_Kid_Buu)
@@ -35914,6 +36218,16 @@ function Trig_Transformations_Super_Buu_Func012C()
 end
 
 function Trig_Transformations_Super_Buu_Func013C()
+    if (not (udg_TransformationString == "kid")) then
+        return false
+    end
+    if (not (LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) > 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Buu_Func014C()
     if (not (LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) > 0)) then
         return false
     end
@@ -35951,6 +36265,10 @@ function Trig_Transformations_Super_Buu_Actions()
     else
     end
     if (Trig_Transformations_Super_Buu_Func013C()) then
+        SaveIntegerBJ((udg_KidBuuTimer + 1), 15, udg_ID, udg_StatMultHashtable)
+    else
+    end
+    if (Trig_Transformations_Super_Buu_Func014C()) then
         udg_StatMultReal = (2.30 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
     else
     end
@@ -36651,7 +36969,7 @@ function Trig_Transformations_Cell_Perfect_Actions()
     else
     end
     if (Trig_Transformations_Cell_Perfect_Func013C()) then
-        udg_StatMultReal = 2.50
+        udg_StatMultReal = 2.70
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
@@ -38296,6 +38614,13 @@ function InitTrig_Moro_Modify_Temp_Mult()
     TriggerAddAction(gg_trg_Moro_Modify_Temp_Mult, Trig_Moro_Modify_Temp_Mult_Actions)
 end
 
+function Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001Func001C()
+    if (not (udg_MoroInt < 200)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001C()
     if (not (udg_MoroInt < 150)) then
         return false
@@ -38347,7 +38672,11 @@ function Trig_Moro_Get_Max_Permanent_Mult_Actions()
                     if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001C()) then
                         udg_MoroStatMultReal = 2.20
                     else
-                        udg_MoroStatMultReal = 2.40
+                        if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001Func001C()) then
+                            udg_MoroStatMultReal = 2.40
+                        else
+                            udg_MoroStatMultReal = 2.50
+                        end
                     end
                 end
             end
@@ -41012,9 +41341,7 @@ function Trig_Frieza_Transform_Add_Abilities_Actions()
             SetPlayerAbilityAvailableBJ(true, FourCC("A0IG"), udg_TempPlayer)
         else
         end
-        udg_TempReal = RMinBJ(GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit), (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.10)))
-        SetUnitLifeBJ(udg_StatMultUnit, udg_TempReal)
-        udg_TempReal = RMinBJ(GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit), (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.10)))
+        udg_TempReal = RMinBJ(GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit), (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.20)))
         SetUnitManaBJ(udg_StatMultUnit, udg_TempReal)
                 udg_ID = GetHandleId(udg_StatMultUnit)
         udg_TempInt = LoadIntegerBJ(31, udg_ID, udg_StatMultHashtable)
@@ -43709,6 +44036,16 @@ function Trig_Transformations_Hit_Func017C()
 end
 
 function Trig_Transformations_Hit_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0GP"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Hit_Func019C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
@@ -43718,7 +44055,7 @@ function Trig_Transformations_Hit_Func018C()
     return true
 end
 
-function Trig_Transformations_Hit_Func021Func002Func001C()
+function Trig_Transformations_Hit_Func022Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -43728,14 +44065,14 @@ function Trig_Transformations_Hit_Func021Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Hit_Func021Func002C()
-    if (not Trig_Transformations_Hit_Func021Func002Func001C()) then
+function Trig_Transformations_Hit_Func022Func002C()
+    if (not Trig_Transformations_Hit_Func022Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Hit_Func021C()
+function Trig_Transformations_Hit_Func022C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -43800,13 +44137,18 @@ function Trig_Transformations_Hit_Actions()
     else
     end
     if (Trig_Transformations_Hit_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0GP"), udg_StatMultUnit)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0GP'))
+    else
+    end
+    if (Trig_Transformations_Hit_Func019C()) then
         UnitAddAbilityBJ(FourCC("A0TH"), udg_StatMultUnit)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0TH'))
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Hit_Func021C()) then
-        if (Trig_Transformations_Hit_Func021Func002C()) then
+    if (Trig_Transformations_Hit_Func022C()) then
+        if (Trig_Transformations_Hit_Func022Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('E00K')
@@ -48473,7 +48815,7 @@ function Trig_Sorbets_Ring_Conditions()
     return true
 end
 
-function Trig_Sorbets_Ring_Func017Func003C()
+function Trig_Sorbets_Ring_Func018Func003C()
     if (not (udg_StatMultStr <= 1.00)) then
         return false
     end
@@ -48486,7 +48828,7 @@ function Trig_Sorbets_Ring_Func017Func003C()
     return true
 end
 
-function Trig_Sorbets_Ring_Func017C()
+function Trig_Sorbets_Ring_Func018C()
     if (not (IsPlayerInForce(GetOwningPlayer(udg_StatMultUnit), udg_ActivePlayerGroup) == true)) then
         return false
     end
@@ -48496,14 +48838,14 @@ function Trig_Sorbets_Ring_Func017C()
     return true
 end
 
-function Trig_Sorbets_Ring_Func018Func001C()
+function Trig_Sorbets_Ring_Func019Func001C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == false)) then
         return false
     end
     return true
 end
 
-function Trig_Sorbets_Ring_Func018C()
+function Trig_Sorbets_Ring_Func019C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_HERO) == true)) then
         return false
     end
@@ -48511,6 +48853,7 @@ function Trig_Sorbets_Ring_Func018C()
 end
 
 function Trig_Sorbets_Ring_Actions()
+    DestroyLightningBJ(udg_SorbetLightning)
     udg_TempUnit = GetSpellAbilityUnit()
     udg_StatMultUnit = GetSpellTargetUnit()
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
@@ -48527,16 +48870,16 @@ function Trig_Sorbets_Ring_Actions()
     StartTimerBJ(udg_SorbetTimer, false, 0.50)
         RemoveLocation(udg_TempLoc2)
         RemoveLocation(udg_TempLoc)
-    if (Trig_Sorbets_Ring_Func017C()) then
+    if (Trig_Sorbets_Ring_Func018C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        if (Trig_Sorbets_Ring_Func017Func003C()) then
+        if (Trig_Sorbets_Ring_Func018Func003C()) then
             UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) * 0.85), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         else
         end
     else
     end
-    if (Trig_Sorbets_Ring_Func018C()) then
-        if (Trig_Sorbets_Ring_Func018Func001C()) then
+    if (Trig_Sorbets_Ring_Func019C()) then
+        if (Trig_Sorbets_Ring_Func019Func001C()) then
             UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.08), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         else
             UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.85), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
@@ -48562,6 +48905,65 @@ function InitTrig_Sorbets_Ring_Lightning()
     gg_trg_Sorbets_Ring_Lightning = CreateTrigger()
     TriggerRegisterTimerExpireEventBJ(gg_trg_Sorbets_Ring_Lightning, udg_SorbetTimer)
     TriggerAddAction(gg_trg_Sorbets_Ring_Lightning, Trig_Sorbets_Ring_Lightning_Actions)
+end
+
+function Trig_Babidi_Lamp_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0GN"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Babidi_Lamp_Func018C()
+    if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Babidi_Lamp_Actions()
+    DestroyLightningBJ(udg_BabidiLampLightning)
+    udg_TempUnit = GetSpellAbilityUnit()
+    udg_StatMultUnit = GetSpellTargetUnit()
+    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    udg_TempLoc2 = GetUnitLoc(udg_StatMultUnit)
+    CreateNUnitsAtLoc(1, FourCC("h054"), GetOwningPlayer(udg_TempUnit), udg_TempLoc2, bj_UNIT_FACING)
+    udg_TempUnit2 = GetLastCreatedUnit()
+    UnitAddAbilityBJ(FourCC("A03U"), udg_TempUnit2)
+    UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit2)
+    IssueTargetOrderBJ(udg_TempUnit2, "slow", udg_StatMultUnit)
+    AddSpecialEffectLocBJ(udg_TempLoc2, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+    AddLightningLoc("MBUR", udg_TempLoc, udg_TempLoc2)
+    udg_BabidiLampLightning = GetLastCreatedLightningBJ()
+    StartTimerBJ(udg_BabidiLampTimer, false, 0.50)
+        RemoveLocation(udg_TempLoc2)
+        RemoveLocation(udg_TempLoc)
+    if (Trig_Babidi_Lamp_Func018C()) then
+        udg_TempReal = (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.25)
+        SetUnitManaBJ(udg_StatMultUnit, RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) - udg_TempReal)))
+        SetUnitManaBJ(udg_TempUnit, RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + udg_TempReal)))
+    else
+        SetUnitLifeBJ(udg_StatMultUnit, 1.00)
+        UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+    end
+end
+
+function InitTrig_Babidi_Lamp()
+    gg_trg_Babidi_Lamp = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Babidi_Lamp, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Babidi_Lamp, Condition(Trig_Babidi_Lamp_Conditions))
+    TriggerAddAction(gg_trg_Babidi_Lamp, Trig_Babidi_Lamp_Actions)
+end
+
+function Trig_Babidi_Lamp_Lightning_Actions()
+    DestroyLightningBJ(udg_BabidiLampLightning)
+end
+
+function InitTrig_Babidi_Lamp_Lightning()
+    gg_trg_Babidi_Lamp_Lightning = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Babidi_Lamp_Lightning, udg_BabidiLampTimer)
+    TriggerAddAction(gg_trg_Babidi_Lamp_Lightning, Trig_Babidi_Lamp_Lightning_Actions)
 end
 
 function Trig_Darkness_Generator_Init_Conditions()
@@ -49309,6 +49711,8 @@ function InitCustomTriggers()
     InitTrig_Scouter_Drop()
     InitTrig_Sorbets_Ring()
     InitTrig_Sorbets_Ring_Lightning()
+    InitTrig_Babidi_Lamp()
+    InitTrig_Babidi_Lamp_Lightning()
     InitTrig_Darkness_Generator_Init()
     InitTrig_Darkness_Generator_Loop()
     InitTrig_Banana_Generator()
