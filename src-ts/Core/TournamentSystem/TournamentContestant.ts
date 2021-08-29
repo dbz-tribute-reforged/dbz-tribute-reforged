@@ -1,6 +1,7 @@
 import { Vector2D } from "Common/Vector2D";
 import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
+import { Globals } from "Common/Constants";
 
 
 export class UnitContestant {
@@ -70,6 +71,12 @@ export class TournamentContestant {
           ),
         );
         UnitResetCooldown(unit);
+        
+        // reset stamina
+        const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+        if (customHero) {
+          customHero.setCurrentSP(customHero.getMaxSP());
+        }
       }
     })
 

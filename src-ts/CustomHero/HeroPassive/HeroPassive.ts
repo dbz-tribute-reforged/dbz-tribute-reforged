@@ -26,8 +26,11 @@ export module HeroPassiveData {
   export const JUSTICE_KICK_ABILITY = FourCC("A0QZ");
 
   
-  export const HIRUDEGARN_MANA_BURN_PERCENT = 0.01;
-  export const HIRUDEGARN_MANA_HEAL_PERCENT = 0.01;
+  export const HIRUDEGARN_MANA_BURN_PERCENT = 0.015;
+  export const HIRUDEGARN_MANA_HEAL_PERCENT = 0.015;
+
+  export const SUPER_17_STYLE = FourCC("A01U");
+  export const SUPER_17_MANA_BURN_PERCENT = 0.001;
 }
 
 export interface HeroPassive {
@@ -82,8 +85,13 @@ export class HeroPassiveManager {
         break;
       case Id.lucario:
         lucarioPassive(customHero);
+        break;
       case Id.hirudegarn:
         hirudegarnPassive(customHero);
+        break;
+      case Id.super17:
+        super17Passive(customHero);
+        break;
       default:
         break;
     }
@@ -343,29 +351,142 @@ export function dyspoPassive(customHero: CustomHero) {
 
 
 export function ichigoPassive(customHero: CustomHero) {
-  // const player = GetOwningPlayer(customHero.unit);
-  // const heroId = GetUnitTypeId(customHero.unit);
+  const player = GetOwningPlayer(customHero.unit);
+  const heroId = GetUnitTypeId(customHero.unit);
 
+  // const getsugaBase = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO);
   // const bankaiFinal = customHero.getAbility(AbilityNames.Ichigo.BANKAI_FINAL);
   // const mugetsuAbsorb = customHero.getAbility(AbilityNames.Ichigo.MUGETSU_SLASH);
-  // const getsuga1 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1);
-  // const getsuga2 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2);
-  // const getsuga3 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3);
-  // const getsuga4 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4);
+  const getsuga1 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_ON_HIT_1);
+  const getsuga2 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_ON_HIT_2);
+  const getsuga3 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_ON_HIT_3);
+  const getsuga4 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_ON_HIT_4);
 
   // const dash1 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_1);
   // const dash2 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_2);
 
-  // if (
-  //   !bankaiFinal || 
-  //   !getsuga1 || !getsuga2 || !getsuga3 || !getsuga4 || 
-  //   !mugetsuAbsorb ||
-  //   !dash1 || !dash2
-  // ) return;
+  if (
+    // !bankaiFinal || 
+    // !getsugaBase ||
+    !getsuga1 || !getsuga2 
+    || !getsuga3 || !getsuga4 // || 
+    // !mugetsuAbsorb ||
+    // !dash1 || !dash2
+  ) return;
+  // const getsugas: CustomAbility[] = [getsuga1, getsuga2];
   // const getsugas: CustomAbility[] = [getsuga1, getsuga2, getsuga3, getsuga4];
 
   // const casterPos: Vector2D = new Vector2D(0, 0);
-  // const targetPos: Vector2D = new Vector2D(0, 0);
+  const targetPos: Vector2D = new Vector2D(0, 0);
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == player
+      ) {
+        // const doBankaiFinal: boolean = (bankaiFinal.isInUse());
+        const target = GetTriggerUnit();
+        const doGetsuga1: boolean = (
+          BlzGetUnitAbilityCooldownRemaining(attacker, Id.getsugaTensho) > 0
+        );
+        const doGetsuga2: boolean = (
+          BlzGetUnitAbilityCooldownRemaining(attacker, Id.getsugaKuroi) > 0
+        );
+        const doGetsuga3: boolean = (
+          BlzGetUnitAbilityCooldownRemaining(attacker, Id.getsugaJujisho) > 0
+        );
+        const doGetsuga4: boolean = (
+          BlzGetUnitAbilityCooldownRemaining(attacker, Id.getsugaGran) > 0
+        );
+        targetPos.setPos(GetUnitX(target), GetUnitY(target));
+        
+        if (
+          !getsuga4.isInUse() &&
+          (doGetsuga4)
+        ) {
+          customHero.useAbility(
+            getsuga4.getName(),
+            new CustomAbilityInput(
+              customHero, 
+              GetOwningPlayer(customHero.unit),
+              GetUnitAbilityLevel(attacker, Id.getsugaJujisho),
+              targetPos,
+              targetPos,
+              targetPos,
+              target,
+              target,
+            )
+          );
+        } else if (
+          !getsuga3.isInUse() &&
+          (doGetsuga3)
+          // (doGetsuga4 || doGetsuga3)
+        ) {
+          customHero.useAbility(
+            getsuga3.getName(),
+            new CustomAbilityInput(
+              customHero, 
+              GetOwningPlayer(customHero.unit),
+              GetUnitAbilityLevel(attacker, Id.getsugaJujisho),
+              targetPos,
+              targetPos,
+              targetPos,
+              target,
+              target,
+            )
+          );
+        } else if (
+          !getsuga2.isInUse() &&
+          // (doGetsuga4 || doGetsuga3 || doGetsuga2)
+          (doGetsuga2)
+        ) {
+          customHero.useAbility(
+            getsuga2.getName(),
+            new CustomAbilityInput(
+              customHero, 
+              GetOwningPlayer(customHero.unit),
+              GetUnitAbilityLevel(attacker, Id.getsugaTensho),
+              targetPos,
+              targetPos,
+              targetPos,
+              target,
+              target,
+            )
+          );
+        }
+        else if (
+          !getsuga1.isInUse() && 
+          // (doGetsuga4 || doGetsuga3 || doGetsuga2 || doGetsuga1)
+          (doGetsuga1)
+        ) {
+          customHero.useAbility(
+            getsuga1.getName(),
+            new CustomAbilityInput(
+              customHero, 
+              GetOwningPlayer(customHero.unit),
+              GetUnitAbilityLevel(attacker, Id.getsugaTensho),
+              targetPos,
+              targetPos,
+              targetPos,
+              target,
+              target,
+            )
+          );
+        }
+      }
+      
+      return false;
+    })
+  );
 
   // const onHitTrigger = CreateTrigger();
   // customHero.addPassiveTrigger(onHitTrigger);
@@ -834,6 +955,80 @@ export function hirudegarnPassive(customHero: CustomHero) {
         );
         BlzSetSpecialEffectScale(manaDrainSfx, 4.0);
         DestroyEffect(manaDrainSfx);
+      }
+
+      return false;
+    })
+  );
+}
+
+export function super17Passive(customHero: CustomHero) {
+  // on hit 
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      const attacked = GetTriggerUnit();
+      const attackerPlayer = GetOwningPlayer(attacker);
+      if (
+        GetUnitTypeId(attacker) == GetUnitTypeId(customHero.unit) && 
+        attackerPlayer == GetOwningPlayer(customHero.unit) &&
+        IsUnitType(attacked, UNIT_TYPE_HERO) &&
+        UnitHelper.isUnitTargetableForPlayer(attacked, attackerPlayer) &&
+        GetUnitAbilityLevel(attacker, HeroPassiveData.SUPER_17_STYLE) > 0
+      ) {
+        const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA);
+        let manaBurn = 25 + attackedMana * (
+          GetUnitAbilityLevel(attacker, HeroPassiveData.SUPER_17_STYLE) * 
+          HeroPassiveData.SUPER_17_MANA_BURN_PERCENT
+        );
+
+        if (attackedMana < manaBurn) {
+          manaBurn = attackedMana;
+        }
+        
+        // mana loss
+        SetUnitState(
+          attacked, 
+          UNIT_STATE_MANA, 
+          Math.max(0, attackedMana - manaBurn)
+        );
+        
+        // mana burn
+        UnitDamageTarget(
+          attacker, 
+          attacked, 
+          manaBurn, 
+          true, 
+          false, 
+          ATTACK_TYPE_HERO, 
+          DAMAGE_TYPE_NORMAL, 
+          WEAPON_TYPE_WHOKNOWS
+        );
+
+        const attackerMana = GetUnitState(attacker, UNIT_STATE_MANA);
+        const attackerMaxMana = GetUnitState(attacker, UNIT_STATE_MAX_MANA);
+        // mana restore
+        SetUnitState(
+          attacker,
+          UNIT_STATE_MANA,
+          Math.min(attackerMaxMana, attackerMana + manaBurn)
+        );
+
+        const manaBurnSfx = AddSpecialEffect(
+          "Abilities\\Spells\\Human\\Feedback\\ArcaneTowerAttack.mdl",
+          GetUnitX(attacked),
+          GetUnitY(attacked),
+        );
+        BlzSetSpecialEffectScale(manaBurnSfx, 2.0);
+        DestroyEffect(manaBurnSfx);
       }
 
       return false;

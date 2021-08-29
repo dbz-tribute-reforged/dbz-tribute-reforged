@@ -638,7 +638,7 @@ export const AOEDebuffComponents = [
     startTick: 0,
     endTick: -1,
     debuffSource: AOEDebuff.SOURCE_UNIT,
-    abilityId: DebuffAbilities.STUN_THREE_SECOND,
+    abilityId: DebuffAbilities.STUN_ONE_AND_A_HALF_SECOND,
     orderId: OrderIds.THUNDERBOLT,
     aoe: 850,
     keepCasting: false, 

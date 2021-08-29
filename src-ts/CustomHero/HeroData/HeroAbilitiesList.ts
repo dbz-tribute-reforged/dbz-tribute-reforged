@@ -321,10 +321,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.GETSUGA_KUROI,
       AbilityNames.Ichigo.GETSUGA_GRAN,
       AbilityNames.Ichigo.GETSUGA_JUJISHO,
-      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
-      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
-      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
-      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
+      AbilityNames.Ichigo.GETSUGA_ON_HIT_1,
+      AbilityNames.Ichigo.GETSUGA_ON_HIT_2,
+      AbilityNames.Ichigo.GETSUGA_ON_HIT_3,
+      AbilityNames.Ichigo.GETSUGA_ON_HIT_4,
       AbilityNames.Ichigo.BANKAI,
       AbilityNames.Ichigo.BANKAI_HOLLOW,
       AbilityNames.Ichigo.BANKAI_BLUT_VENE,
@@ -564,6 +564,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Zamasu.DIVINE_AUTHORITY, AbilityNames.Zamasu.ENERGY_BLADES,
       AbilityNames.Sephiroth.OCTOSLASH, AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
       AbilityNames.Hirudegarn.FLAME_BREATH,
+      AbilityNames.Super17.FLASH_BOMBER_2,
 
     ]],
 
@@ -762,7 +763,17 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hirudegarn.DEACTIVATE_ENRAGE,
     ]],
 
-    // androids 13 14 15
+    // super 17
+    [Id.super17, [
+      AbilityNames.Super17.FLASH_BOMBER,
+      AbilityNames.Super17.FLASH_BOMBER_2,
+      AbilityNames.Super17.HELL_STORM,
+      AbilityNames.Super17.SHOCKING_DEATH_BALL,
+      AbilityNames.Super17.ABSORPTION,
+      AbilityNames.Super17.ANDROID_BARRIER,
+    ]],
+
+    // rusty
     [Id.rustTyranno, [
       AbilityNames.RustTyranno.TYRANNO_FLAME,
       AbilityNames.RustTyranno.RUST_CHOMP,

@@ -186,6 +186,20 @@ export module OrderIds {
   export const HOLD_POSITION = 851993;
 }
 
+export module Capsules {
+  export const itemMysterBox = FourCC("I04V");
+
+  export const saibamenSeeds = FourCC("A0GQ");
+  export const wheeloResearch = FourCC("A0IH");
+  export const deadZone = FourCC("A0JB");
+  export const scouter2 = FourCC("A0JC");
+  
+  export const getiStarFragment = FourCC("A0IK");
+  export const dimensionSword = FourCC("A0JA");
+  export const braveSword = FourCC("A0IJ");
+  export const timeRing = FourCC("A0II");
+}
+
 export module Id {
   export const summonShenron = FourCC("I01V");
 
@@ -629,6 +643,14 @@ export module Id {
   export const sephirothOneWingedAngel = FourCC("A0TC");
   export const sephirothParry = FourCC("A0TD");
 
+  export const super17 = FourCC("H05V");
+  export const super17Skin = FourCC("H05B");
+  export const super17FlashBomber = FourCC("A0GT");
+  export const super17FlashBomber2 = FourCC("A0XJ");
+  export const super17HellStorm = FourCC("A0GU");
+  export const super17ShockingDeathBall = FourCC("A0H1");
+  export const super17Absorption = FourCC("A0P8");
+
   export const tapion = FourCC("E014");
   export const braveSlash = FourCC('A0I9');
   export const braveCannon = FourCC('A0I8');
@@ -698,4 +720,5 @@ export module Id {
 
 
   export const itemHealingBuff = FourCC("BIrg");
+
 }

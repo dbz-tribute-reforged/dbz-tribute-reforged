@@ -266,10 +266,10 @@ export module AbilityNames {
     export const GETSUGA_KUROI: string = "Getsuga Kuroi";
     export const GETSUGA_GRAN: string = "Getsuga Gran";
     export const GETSUGA_JUJISHO: string = "Getsuga Jujisho";
-    export const GETSUGA_JUJISHO_ON_HIT_1: string = "Getsuga Jujisho 1";
-    export const GETSUGA_JUJISHO_ON_HIT_2: string = "Getsuga Jujisho 2";
-    export const GETSUGA_JUJISHO_ON_HIT_3: string = "Getsuga Jujisho 3";
-    export const GETSUGA_JUJISHO_ON_HIT_4: string = "Getsuga Jujisho 4";
+    export const GETSUGA_ON_HIT_1: string = "Getsuga On Hit 1";
+    export const GETSUGA_ON_HIT_2: string = "Getsuga On Hit 2";
+    export const GETSUGA_ON_HIT_3: string = "Getsuga On Hit 3";
+    export const GETSUGA_ON_HIT_4: string = "Getsuga On Hit 4";
     export const BANKAI: string = "Bankai";
     export const BANKAI_HOLLOW: string = "Bankai Hollow";
     export const BANKAI_BLUT_VENE: string = "Bankai Blut Vene";
@@ -633,7 +633,15 @@ export module AbilityNames {
     export const DEACTIVATE_ENRAGE: string = "Hirudegarn Enrage Deactivate";
   }
 
-
+  export module Super17 {
+    export const FLASH_BOMBER: string = "Super 17 Flash Bomber";
+    export const FLASH_BOMBER_2: string = "Super 17 Flash Bomber 2";
+    export const HELL_STORM: string = "Super 17 Hell Storm";
+    export const SHOCKING_DEATH_BALL: string = "Super 17 Shocking Death Ball";
+    export const ANDROID_BARRIER: string = Android17DBS.ANDROID_BARRIER;
+    export const ABSORPTION: string = "Super 17 Absorption";
+    export const PASSIVE: string = "Super 17 Passive";
+  }
 
 
   export module Saga {

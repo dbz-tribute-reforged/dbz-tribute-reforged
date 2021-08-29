@@ -118,4 +118,18 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 70,
   },
+  {
+    name: "timed life beam super 17 flash bomber", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 40,
+  },
+  {
+    name: "timed life beam super 17 hell storm", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 12,
+  },
 ];

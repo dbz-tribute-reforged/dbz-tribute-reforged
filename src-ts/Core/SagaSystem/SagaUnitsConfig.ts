@@ -470,7 +470,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     
     // dbs: broly
-    ["Broly DBS", new SagaUnit(FourCC("H00M"), 190, 1, 1, 1, new Vector2D(5000, 18000),
+    ["Broly DBS", new SagaUnit(FourCC("H00M"), 190, 1, 1, 1, new Vector2D(-5500, 18000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Broly.POWER_LEVEL_RISING,
@@ -572,7 +572,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // fusion reborn
-    ["Janemba", new SagaUnit(FourCC("H061"), 80, 11000, 400, 11000, new Vector2D(19000, 16000),
+    ["Janemba", new SagaUnit(FourCC("H061"), 80, 11000, 400, 11000, new Vector2D(19300, 18000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BEAM,
@@ -619,15 +619,21 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Hirudegarn Upper", new SagaUnit(FourCC("U00A"), 40, 4000, 400, 4000, new Vector2D(17333, -7358))],
     ["Hirudegarn", new SagaUnit(FourCC("U00B"), 90, 12000, 400, 12000, new Vector2D(25000, -2700),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Hirudgarn.FLAME_BREATH,
+        SagaAbilities.Hirudgarn.FLAME_BALL,
+        SagaAbilities.Hirudgarn.TAIL_SWEEP,
+        SagaAbilities.Hirudgarn.TAIL_ATTACK,
+        SagaAbilities.Hirudgarn.HEAVY_STOMP,
+        SagaAbilities.Hirudgarn.DARK_MIST,
       ],
     )],
-    ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 150, 17000, 400, 15000, new Vector2D(25000, -2700),
+    ["Mature Hirudegarn", new SagaUnit(FourCC("H05U"), 175, 17000, 400, 15000, new Vector2D(25000, -2700),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Hirudgarn.FLAME_BREATH,
+        SagaAbilities.Hirudgarn.TAIL_ATTACK,
+        SagaAbilities.Hirudgarn.DARK_MIST,
+        SagaAbilities.Hirudgarn.DARK_TRANSFORMATION,
+        SagaAbilities.Hirudgarn.FLIGHT,
       ],
       [
         ItemConstants.SagaDrops.BRAVE_SWORD,

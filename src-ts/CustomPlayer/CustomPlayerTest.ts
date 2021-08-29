@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id, Globals, BASE_DMG, DebuffAbilities, Buffs, OrderIds, CostType } from "Common/Constants";
+import { Constants, Id, Globals, BASE_DMG, DebuffAbilities, Buffs, OrderIds, CostType, Capsules } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -20,6 +20,7 @@ import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { SoundHelper } from "Common/SoundHelper";
 import { DamageData } from "Common/DamageData";
 import { setupCustomUI } from "./SetupCustomUI";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1138,6 +1139,8 @@ export function CustomPlayerTest() {
     SetupHirudegarnSkinChange(independentSpellTrigger, independentSpellHashtable);
     SetupVegetaFightingSpirit(independentSpellTrigger, independentSpellHashtable);
 
+    SetupMysteryCapsuleBox(independentSpellTrigger, independentSpellHashtable);
+
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable);
     SoundHelper.SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
@@ -1742,7 +1745,7 @@ export function SetupOmegaShenronShadowFist(
           
           let stolenDragonBalls = 0;
 
-          const casterDragonBallIndex = GetInventoryIndexOfItemTypeBJ(caster, dballItem)-1;
+          const casterDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(caster, dballItem);
           const casterInventoryCount = UnitInventoryCount(caster);
 
           ForGroup(targetGroup, () => {
@@ -1751,7 +1754,7 @@ export function SetupOmegaShenronShadowFist(
               UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
               totalStolenDragonBalls < maxDragonBallsToSteal
             ) {
-              const targetDragonBallIndex = GetInventoryIndexOfItemTypeBJ(targetUnit, dballItem)-1;
+              const targetDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(targetUnit, dballItem);
               if (targetDragonBallIndex >= 0) {
                 const stealItem = UnitItemInSlot(targetUnit, targetDragonBallIndex);
                 const numCharges = GetItemCharges(stealItem);
@@ -2211,6 +2214,12 @@ export function SetupBankai(
       Globals.customPlayers[playerId].selectedUnit = caster;
       const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       if (customHero) {
+        // reset bankai cooldown if it is already active
+        const abil = customHero.getAbility(spellName);
+        if (abil) {
+          abil.resetCooldown();
+          abil.endAbility();
+        }
         const abilityInput = new CustomAbilityInput(
           customHero,
           player,
@@ -2936,6 +2945,65 @@ export function SetupVegetaFightingSpirit(
   });
 }
 
+export function SetupMysteryCapsuleBox(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+) {
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (
+      spellId == Capsules.saibamenSeeds
+      || spellId == Capsules.wheeloResearch
+      || spellId == Capsules.deadZone
+      || spellId == Capsules.scouter2
+
+      || spellId == Capsules.getiStarFragment
+      || spellId == Capsules.dimensionSword
+      || spellId == Capsules.braveSword
+      || spellId == Capsules.timeRing
+    ) {
+      const unit = GetTriggerUnit();
+      const index = UnitHelper.getInventoryIndexOfItemType(unit, Capsules.itemMysterBox);
+      if (index >= 0) {
+        const mysteryBoxItem = UnitItemInSlot(unit, index);
+        RemoveItem(mysteryBoxItem);
+        const x = GetUnitX(unit);
+        const y = GetUnitX(unit);
+        let item: item | undefined;
+        if (spellId == Capsules.saibamenSeeds) {
+          item = CreateItem(ItemConstants.SagaDrops.SAIBAMEN_SEEDS, x, y);
+
+        } else if (spellId == Capsules.wheeloResearch) {
+          item = CreateItem(ItemConstants.SagaDrops.WHEELO_RESEARCH_1, x, y);
+
+        } else if (spellId == Capsules.deadZone) {
+          item = CreateItem(ItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT, x, y);
+
+        } else if (spellId == Capsules.scouter2) {
+          item = CreateItem(ItemConstants.SagaDrops.SCOUTER_2, x, y);
+
+
+        } else if (spellId == Capsules.getiStarFragment) {
+          item = CreateItem(ItemConstants.SagaDrops.GETI_STAR_FRAGMENT, x, y);
+
+        } else if (spellId == Capsules.dimensionSword) {
+          item = CreateItem(ItemConstants.SagaDrops.DIMENSION_SWORD, x, y);
+
+        } else if (spellId == Capsules.braveSword) {
+          item = CreateItem(ItemConstants.SagaDrops.BRAVE_SWORD, x, y);
+
+        } else if (spellId == Capsules.timeRing) {
+          item = CreateItem(ItemConstants.SagaDrops.TIME_RING, x, y);
+        }
+
+        if (item) {
+          UnitAddItem(unit, item);
+        }
+      }
+    }
+  });
+}
+
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
@@ -2955,10 +3023,12 @@ export function SetupCustomAbilityRefresh(
           customHero.setCurrentSP(customHero.getCurrentSP() + stamRestore);
           for (const [name, abil] of customHero.abilities.abilities) {
             if (abil) {
-              abil.currentCd = 0;
-              if (abil.currentTick > 0) {
-                abil.currentTick = abil.duration;
-              }
+              abil.resetCooldown();
+              abil.endAbility();
+              // abil.currentCd = 0;
+              // if (abil.currentTick > 0) {
+              //   abil.currentTick = abil.duration;
+              // }
             }
           }
         }

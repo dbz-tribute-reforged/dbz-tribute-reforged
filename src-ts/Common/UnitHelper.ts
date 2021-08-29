@@ -98,4 +98,15 @@ export module UnitHelper {
       GetUnitState(unit, UNIT_STATE_MAX_LIFE) * healPercent
     );
   }
+
+  export function getInventoryIndexOfItemType(unit: unit, itemId: number): number {
+    const index = 0;
+    for (let i = 0; i < 6; ++i) {
+      const item = UnitItemInSlot(unit, i);
+      if (item != null && GetItemTypeId(item) == itemId) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
