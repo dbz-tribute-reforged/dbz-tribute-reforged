@@ -5,6 +5,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { Constants } from "Common/Constants";
 import { Colorizer } from "Common/Colorizer";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class DragonBallsManager {
   static instance: DragonBallsManager;
@@ -192,10 +193,10 @@ export class DragonBallsManager {
           ForGroup(carryingDb, () => {
             const dbUnit = GetEnumUnit();
             if (IsUnitType(dbUnit, UNIT_TYPE_HERO)) {
-              const index = GetInventoryIndexOfItemTypeBJ(dbUnit, DragonBallsConstants.dragonBallItem)
-              if (index > 0) {
+              const index = UnitHelper.getInventoryIndexOfItemType(dbUnit, DragonBallsConstants.dragonBallItem)
+              if (index >= 0) {
                 numDragonBalls += this.radarPingDragonball(
-                  UnitItemInSlotBJ(dbUnit, index), 
+                  UnitItemInSlot(dbUnit, index), 
                   player, 
                   GetUnitX(dbUnit),
                   GetUnitY(dbUnit)

@@ -164,6 +164,16 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     return this.duration;
   }
 
+  resetCooldown() {
+    this.currentCd = 0;
+  }
+
+  endAbility() {
+    if (this.currentTick > 0) {
+      this.currentTick = this.duration;
+    }
+  }
+
   isReadyToUse(repeatInterval: number, startTick: number, endTick: number): boolean {
     return (
       (

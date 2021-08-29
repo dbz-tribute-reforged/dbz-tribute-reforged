@@ -2,6 +2,7 @@ import { Hooks } from "Libs/TreeLib/Hooks";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { ItemStackingConstants } from "./ItemStackingConstants";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class ItemStackingManager {
   static instance: ItemStackingManager;
@@ -60,15 +61,15 @@ export class ItemStackingManager {
         const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
         if (callback) {
           const pickupUnit = GetManipulatingUnit();
-          let heldItem = UnitItemInSlotBJ(pickupUnit, 1);
-          for (let i = 2; i <= 6; ++i) {
+          let heldItem = UnitItemInSlot(pickupUnit, 0);
+          for (let i = 1; i < 6; ++i) {
             if (
               GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
               heldItem != pickupItem
             ) {
               break;
             } else {
-              heldItem = UnitItemInSlotBJ(pickupUnit, i);
+              heldItem = UnitItemInSlot(pickupUnit, i);
             }
           }
           if (
@@ -92,12 +93,12 @@ export class ItemStackingManager {
     const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
     if (callback != undefined) {
       const pickupItemId = GetItemTypeId(pickupItem);
-      const heldItemIndex = GetInventoryIndexOfItemTypeBJ(pickupUnit, pickupItemId);
-      const heldItem = UnitItemInSlotBJ(pickupUnit, heldItemIndex);
+      const heldItemIndex = UnitHelper.getInventoryIndexOfItemType(pickupUnit, pickupItemId);
+      const heldItem = UnitItemInSlot(pickupUnit, heldItemIndex);
       // BJDebugMsg("held index: " + heldItemIndex + " pickup item: " + GetItemName(pickupItem) + " charges: " + GetItemCharges(heldItem));
       if (
         // manipulating item type is already carried
-        heldItemIndex > 0 &&
+        heldItemIndex >= 0 &&
         // item being manipulated comes from external source
         pickupItem != GetItemOfTypeFromUnitBJ(pickupUnit, GetItemTypeId(pickupItem)) &&
         GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0

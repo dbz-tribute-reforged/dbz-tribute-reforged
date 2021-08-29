@@ -362,6 +362,33 @@ export module SagaAbilities {
     );
   }
 
+  export module Hirudgarn {
+    export const FLAME_BREATH = new SagaAbility(
+      AbilityNames.Hirudegarn.FLAME_BREATH, 10, 10, 10, SHORT_CAST_TIME
+    );
+    export const FLAME_BALL = new SagaAbility(
+      AbilityNames.Hirudegarn.FLAME_BREATH, 10, 7, 10, SHORT_CAST_TIME
+    );
+    export const DARK_MIST = new SagaAbility(
+      AbilityNames.Hirudegarn.DARK_MIST, 10, 40, 5, MEDIUM_CAST_TIME
+    );
+    export const TAIL_SWEEP = new SagaAbility(
+      AbilityNames.Hirudegarn.TAIL_ATTACK, 10, 8, 5, SHORT_CAST_TIME
+    );
+    export const TAIL_ATTACK = new SagaAbility(
+      AbilityNames.Hirudegarn.TAIL_ATTACK, 10, 25, 20, SHORT_CAST_TIME
+    );
+    export const HEAVY_STOMP = new SagaAbility(
+      AbilityNames.Hirudegarn.HEAVY_STOMP, 10, 30, 10, LONG_CAST_TIME
+    );
+    export const DARK_TRANSFORMATION = new SagaAbility(
+      AbilityNames.Hirudegarn.MOLTING, 1, 120, 5, EXTRA_LONG_CAST_TIME
+    );
+    export const FLIGHT = new SagaAbility(
+      AbilityNames.Hirudegarn.FLIGHT, 1, 15, 5, EXTRA_SHORT_CAST_TIME
+    );
+  }
+
   export module Whis {
     export const ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME

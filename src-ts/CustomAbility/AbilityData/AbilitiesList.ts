@@ -4821,11 +4821,65 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
+    name: AbilityNames.Ichigo.GETSUGA_ON_HIT_1,
     currentCd: 0,
-    maxCd: 0.5,
+    maxCd: 1.0,
     costType: CostType.MP,
-    costAmount: 0,
+    costAmount: 120,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga tensho on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_ON_HIT_2,
+    currentCd: 0,
+    maxCd: 1.0,
+    costType: CostType.MP,
+    costAmount: 750,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga kuroi on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_ON_HIT_3,
+    currentCd: 0,
+    maxCd: 1.0,
+    costType: CostType.MP,
+    costAmount: 5000,
     duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
@@ -4848,11 +4902,11 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
+    name: AbilityNames.Ichigo.GETSUGA_ON_HIT_4,
     currentCd: 0,
-    maxCd: 0.5,
+    maxCd: 1.0,
     costType: CostType.MP,
-    costAmount: 0,
+    costAmount: 7500,
     duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
@@ -4870,61 +4924,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "beam getsuga jujisho on hit" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
-    currentCd: 0,
-    maxCd: 0.5,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 16,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNIchigoGetsugaTenshou2.blp",
-      disabled: "BTNIchigoGetsugaTenshou2.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
-      body: 
-        ""
-    },
-    components: [
-      { name: "beam getsuga jujisho on hit" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
-    currentCd: 0,
-    maxCd: 0.5,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 16,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNIchigoGetsugaTenshou2.blp",
-      disabled: "BTNIchigoGetsugaTenshou2.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
-      body: 
-        ""
-    },
-    components: [
-      { name: "beam getsuga jujisho on hit" },
+      { name: "beam getsuga gran on hit" },
     ],
   },
   // -------------------------------------------
@@ -4952,6 +4952,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "heal caster bankai hollow" },
+      { name: "dash ground forward bankai hollow" },
       { name: "sfx bankai hollow" },
     ],
   },
@@ -4962,7 +4963,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 500,
+    duration: 833,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4980,6 +4981,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block bankai blut vene" },
+      { name: "dash ground forward bankai blut vene" },
     ],
   },
   // -------------------------------------------
@@ -4989,7 +4991,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 666,
+    duration: 833,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5006,7 +5008,7 @@ export const AbilitiesList = [
         AbilityNames.Ichigo.BANKAI_FINAL
     },
     components: [
-      { name: "dash ground forward bankai" },
+      { name: "dash ground forward bankai final" },
     ],
   },
   // -------------------------------------------
@@ -11308,6 +11310,117 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground point 50dist" },
       { name: "sfx zanzo dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Super17.FLASH_BOMBER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 80,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuper17.blp",
+      disabled: "BTNSuper17.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Super17.FLASH_BOMBER,
+      body: 
+        AbilityNames.Super17.FLASH_BOMBER
+    },
+    components: [
+      { name: "multi super 17 flash bomber" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Super17.FLASH_BOMBER_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 80,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuper17.blp",
+      disabled: "BTNSuper17.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Super17.FLASH_BOMBER,
+      body: 
+        AbilityNames.Super17.FLASH_BOMBER
+    },
+    components: [
+      { name: "multi super 17 flash bomber 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Super17.HELL_STORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuper17.blp",
+      disabled: "BTNSuper17.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Super17.HELL_STORM,
+      body: 
+        AbilityNames.Super17.HELL_STORM
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi super 17 hell storm visual" },
+      { name: "multi super 17 hell storm" },
+      // { name: "sfx super 17 hell storm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Super17.SHOCKING_DEATH_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuper17.blp",
+      disabled: "BTNSuper17.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Super17.SHOCKING_DEATH_BALL,
+      body: 
+        AbilityNames.Super17.SHOCKING_DEATH_BALL
+    },
+    components: [
+      { name: "beam super 17 shocking death ball" },
     ],
   },
   // -------------------------------------------

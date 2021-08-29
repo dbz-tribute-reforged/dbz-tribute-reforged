@@ -197,7 +197,10 @@ export class ItemAbilityManager {
     TriggerAddCondition(
       this.itemFinalBattleTrigger,
       Condition(() => {
-        if (GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL) {
+        if (
+          GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL
+          && GetPlayerId(GetTriggerPlayer()) < Constants.maxActivePlayers 
+        ) {
           TournamentManager.getInstance().startTournament(Constants.finalBattleName);
         }
         return false;

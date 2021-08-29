@@ -11,10 +11,10 @@ export module DragonBallsConstants {
   export const shenronUnit: number = FourCC("z001");
   // export const shenronUnit: number = FourCC("n03O");
   export const shenronWaitingRoom: Vector2D = new Vector2D(10500, 22000);
-  export const shenronVisionRadius: number = 600;
+  export const shenronVisionRadius: number = 800;
   export const shenronSfxInterval: number = 2;
   export const shenronDelay: number = 7.7;
-  export const restoreDragonBallsTime: number = 120;
+  export const restoreDragonBallsTime: number = 180;
   export const wishImmortalityItem: number = FourCC("I042");
   export const wishImmortalityAbility: number = FourCC("A0M9");
   export const immortalDelay: number = 4.1;
@@ -52,5 +52,7 @@ export module DragonBallsConstants {
     new Vector2D(10450, 4000),
     new Vector2D(5788, 15164),
     new Vector2D(27050, 1900),
+    new Vector2D(-5500, 18000),
+    new Vector2D(17500, 18300),
   ];
 }

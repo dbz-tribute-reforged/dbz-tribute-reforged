@@ -514,6 +514,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.sephirothBlackMateria, AbilityNames.Sephiroth.BLACK_MATERIA],
     [Id.sephirothOneWingedAngel, AbilityNames.Sephiroth.ONE_WINGED_ANGEL],
     [Id.sephirothParry, AbilityNames.Sephiroth.PARRY],
+    
+    // super 17
+    [Id.super17FlashBomber, AbilityNames.Super17.FLASH_BOMBER],
+    [Id.super17FlashBomber2, AbilityNames.Super17.FLASH_BOMBER_2],
+    [Id.super17HellStorm, AbilityNames.Super17.HELL_STORM],
+    [Id.super17ShockingDeathBall, AbilityNames.Super17.SHOCKING_DEATH_BALL],
+    [Id.super17Absorption, AbilityNames.Super17.ABSORPTION],
+
 
     // hit
     [Id.timeSkip, AbilityNames.Hit.TIME_SKIP],
