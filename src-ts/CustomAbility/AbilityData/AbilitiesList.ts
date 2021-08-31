@@ -413,6 +413,7 @@ export const AbilitiesList = [
         AbilityNames.Vegeta.FINAL_FLASH_2
     },
     components: [
+      { name: "sfx final flash 2 caster" },
       { name: "multi final flash 2" },
       { name: "knockback power level rising" },
     ],
