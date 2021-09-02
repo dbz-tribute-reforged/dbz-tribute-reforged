@@ -133,7 +133,20 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 45,
+  },
+  // zanzoken
+  {
+    name: "dash zanzoken",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_ZANZO,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 660,
   },
   // max power
   {
@@ -1110,7 +1123,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 325,
+    distance: 300,
   },
   // dash bankai final on hit
   {

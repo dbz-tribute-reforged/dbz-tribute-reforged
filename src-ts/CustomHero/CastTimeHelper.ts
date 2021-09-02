@@ -102,7 +102,10 @@ export module CastTimeHelper {
         // then if ready
         // actually activate the ability
         ability.activate(input);
-        if (ability.name == AbilityNames.BasicAbility.ZANZO_DASH) {
+        if (
+          ability.name == AbilityNames.BasicAbility.ZANZO_DASH
+          || ability.name == AbilityNames.BasicAbility.ZANZOKEN
+        ) {
           SoundHelper.playSoundOnUnit(hero.unit, "Audio/Effects/Zanzo.mp3", 1149);
         }
         cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);

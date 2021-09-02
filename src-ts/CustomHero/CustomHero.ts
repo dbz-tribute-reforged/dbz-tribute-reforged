@@ -43,7 +43,8 @@ export class CustomHero {
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
     // relevant heroes
-    this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    // this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
 

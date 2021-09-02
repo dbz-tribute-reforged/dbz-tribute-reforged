@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.67
+DBZ Tribute Reforged 0.67a
 }
 
 STRING 4
@@ -5933,7 +5933,7 @@ STRING 950
 {
 Type "r" to revert.
 Transformations:
-[lvl 15]  1.15x "frieza"
+[lvl 15]  1.10x "frieza"
 [lvl 30]  1.20x "frieza"
 [lvl 50]  1.40x "frieza"
 [lvl 90]  1.80x "frieza"
@@ -5945,12 +5945,13 @@ Frieza can precisely control his power level by using [|cff00ff00D|r] Transform.
 }
 
 STRING 951
-// Abilities: A0E4 (Transform - Fourth), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his fourth form.
-|cff00FFFFMultiplier: +0.2x All|r
-|cffffff00Unlocks Death Ball and Tail Whip.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool1> seconds|r
 }
 
 STRING 952
@@ -19082,10 +19083,21 @@ STRING 3064
 Super 17 has further improved his mechanical body by absorbing Android 18.
 }
 
-STRING 3066
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+STRING 3065
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
 {
-Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +250 base stats / +10 lvls
+After 20 mins: +500 base stats / +20 lvls
+After 30 mins: +500 base stats / +30 lvls
+}
+
+STRING 3066
+// Abilities: A0DZ (Frieza Transforms), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza's can transform into many forms with different power levels.
+|cffffff00Passive: +1 armor per 10 seconds of cooldown.
+Changing forms regenerates 20% max mp.|r
 }
 
 STRING 3067
@@ -21754,6 +21766,15 @@ STRING 3505
 // Abilities: A02L (Finish Buster), EditorSuffix (Editor Suffix)
 {
 FT Current
+}
+
+STRING 3506
+// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+{
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +250 base stats / +10 lvls
+After 20 mins: +500 base stats / +20 lvls
+After 30 mins: +500 base stats / +30 lvls
 }
 
 STRING 3507
@@ -33528,7 +33549,7 @@ Transformations:
 [lvl 200] 2.50x "omega"
 [lvl 250] 2.60x "omega"
 
-Gains +0.05x for each dragon ball held.
+Gains +0.06x for each dragon ball held.
 Shadow Dragon Abilities can also be unlocked by collecting all 7 dragon balls.
 Envoy of the End will be located inside [D] Shadow Dragon Abilities.
 }
@@ -43639,6 +43660,18 @@ STRING 7022
 The user punches in front of them, dealing damage to enemies and deflecting beams.|n|cffff2020Warning: Actual range is shorter than cast range!|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1,.>s|r
 }
 
+STRING 7023
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+{
+Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n70% damage block up to 8 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (50%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+}
+
+STRING 7024
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
+}
+
 STRING 7025
 // Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
 {
@@ -45529,11 +45562,13 @@ W
 }
 
 STRING 7306
-// Abilities: A0DZ (Frieza Transforms), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza's can transform into many forms with different power levels.
-|cffffff00Passive: +5 armor.
-Changing forms regenerates 20% max mp.|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur2> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool2> seconds|r
 }
 
 STRING 7307
@@ -45624,9 +45659,9 @@ STRING 7319
 Type "r" to revert.
 Transformations:
 [lvl 17]  1.25x "fp"
-[lvl 50]  1.70x "fp" [unlocks Absorption]
-[lvl 50+] 2.00x "fp" (absorb 17) [upgrades D]
-[lvl 50+] 2.25x "fp" (absorb 18) [upgrades D]
+[lvl 60]  1.70x "fp" [unlocks Absorption]
+[lvl 60+] 2.00x "fp" (absorb 17) [upgrades D]
+[lvl 60+] 2.25x "fp" (absorb 18) [upgrades D]
 [lvl 200] 2.50x "fp" [unlocks Super Flash Bomber]
 
 }
@@ -45641,6 +45676,12 @@ STRING 7321
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Tail Attack [|cffffcc00Level 5|r]
+}
+
+STRING 7322
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
 }
 
 STRING 7323
@@ -50022,6 +50063,12 @@ A high damage close-range hero that deals bonus damage on his spells by auto-att
 
 }
 
+STRING 8026
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
+}
+
 STRING 8027
 // Items: I048 (Geti Star Fragment), Description (Description)
 {
@@ -50448,7 +50495,7 @@ Split Transformations:
 [lvl 35]  1.50x "fp"
 [lvl 60]  2.00x "fp" [unlocks Mature Hirudegarn]
 [lvl 150] 2.40x "fp" [unlocks R abilities]
-[lvl 200] 2.50x "fp"
+[lvl 200] 2.60x "fp"
 
 Type "mature" after level 60 to turn into Mature Hirudegarn.
 Mature Transformations:
@@ -55235,12 +55282,12 @@ Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff
 }
 
 STRING 8848
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+// Abilities: A0E1 (Transform - First), Ubertip (Tooltip - Normal - Extended)
 {
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +250 base stats / +10 lvls
-After 20 mins: +500 base stats / +20 lvls
-After 30 mins: +750 base stats / +30 lvls
+Frieza transforms into his first form.
+|cff00FFFFMultiplier: +0.3x Int, +0.1x Str|r
+|cffffff00Unlocks Supernova, Emperor's Throne and Frieza Force Aura.|r
+|cff00FF00Cooldown: <A0E1,Cool1> seconds|r
 }
 
 STRING 8849
@@ -61941,12 +61988,12 @@ Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 tim
 }
 
 STRING 9935
-// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+// Abilities: A0E2 (Transform - Second), Ubertip (Tooltip - Normal - Extended)
 {
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +250 base stats / +10 lvls
-After 20 mins: +500 base stats / +20 lvls
-After 30 mins: +750 base stats / +30 lvls
+Frieza transforms into his second form.
+|cff00FFFFMultiplier: +0.3x Str, +0.1x Agi|r
+|cffffff00Unlocks Death Storm and Impaling Rush.|r
+|cff00FF00Cooldown: <A0E2,Cool1> seconds|r
 }
 
 STRING 9936
@@ -63299,6 +63346,7 @@ Transformations:
 [lvl 15]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 125] 2.00x "fp"
+[lvl 200] 3.00x "fp"
 
 For Super 13 type "super" when all androids lvl greater than 35 and are not in heaven/hell.
 }
@@ -75382,6 +75430,18 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 |cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
 }
 
+STRING 12115
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
+}
+
+STRING 12116
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
+}
+
 STRING 12117
 // Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
@@ -78897,7 +78957,7 @@ Transformations:
 [lvl 200] 2.50x "fp"
 
 Gains +0.03x for each dragon ball held.
-Gains +0.03x for holding 3 or more dragon balls.
+Gains +0.10x for holding 3 or more dragon balls.
 Gains +0.06x for holding the cleansed dragon ball (omega shenron drop)
 }
 
@@ -80642,6 +80702,12 @@ STRING 12949
 Vegeta's Tail
 }
 
+STRING 12950
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
+}
+
 STRING 12951
 // Abilities: A0IH (Capsule: Dr Wheelo's Research), Tip (Tooltip - Normal)
 {
@@ -81739,6 +81805,12 @@ STRING 13130
 // Units: H09J (Ginyu Force Member), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Guldo
+}
+
+STRING 13131
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
 }
 
 STRING 13132
@@ -82891,45 +82963,43 @@ STRING 13319
 }
 
 STRING 13320
-// Abilities: A0E2 (Transform - Second), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his second form.
-|cff00FFFFMultiplier: +0.3x Str, +0.1x Agi|r
-|cffffff00Unlocks Death Storm and Impaling Rush.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur3> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool3> seconds|r
 }
 
 STRING 13321
-// Abilities: A0E3 (Transform - Third), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his third form.
-|cff00FFFFMultiplier: +0.3x Agi, +0.1x Int|r
-|cffffff00Unlocks Death Beam Barrage and Nova Rush.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur4> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool4> seconds|r
 }
 
 STRING 13322
-// Abilities: A0E5 (Transform - 100%), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his 100% full power fourth form.
-|cff00FFFFMultiplier: +0.35x All|r
-|cffffff00Only useable while in fourth form and below 75% hp.
-Drains 1.3% of max mana per second.
-Automatically reverts when below 10% of max mana.
-Unlocks Death Ball and Death Saucer.
-Unlocks Last Emperor when below 25% hp.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur5> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool5> seconds|r
 }
 
 STRING 13323
-// Abilities: A0IF (Transform - Mecha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his mecha form.
-|cff00FFFFMultiplier: +0.3x All|r
-|cffffff00Only useable in Heaven/Hell.
-Grants 20% cooldown reduction.
-Unlocks Supernova.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur6> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool6> seconds|r
 }
 
 STRING 13324
@@ -84330,12 +84400,13 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 13553
-// Abilities: A0E1 (Transform - First), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his first form.
-|cff00FFFFMultiplier: +0.3x Int, +0.1x Str|r
-|cffffff00Unlocks Supernova, Emperor's Throne and Frieza Force Aura.|r
-|cff00FF00Cooldown: 90 seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur7> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool7> seconds|r
 }
 
 STRING 13554
@@ -87930,9 +88001,12 @@ Book Dyspo Evasion
 }
 
 STRING 14101
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0E3 (Transform - Third), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
+Frieza transforms into his third form.
+|cff00FFFFMultiplier: +0.3x Agi, +0.1x Int|r
+|cffffff00Unlocks Death Beam Barrage and Nova Rush.|r
+|cff00FF00Cooldown: <A0E3,Cool1> seconds|r
 }
 
 STRING 14102
@@ -88401,9 +88475,12 @@ STRING 14176
 }
 
 STRING 14177
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0E4 (Transform - Fourth), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
+Frieza transforms into his fourth form.
+|cff00FFFFMultiplier: +0.2x All|r
+|cffffff00Unlocks Death Ball and Tail Whip.|r
+|cff00FF00Cooldown: <A0E4,Cool1> seconds|r
 }
 
 STRING 14178
@@ -88425,9 +88502,16 @@ STRING 14180
 }
 
 STRING 14181
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0E5 (Transform - 100%), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
+Frieza transforms into his 100% full power fourth form.
+|cff00FFFFMultiplier: +0.35x All|r
+|cffffff00Only useable while in fourth form and below 75% hp.
+Drains 1.3% of max mana per second.
+Automatically reverts when below 10% of max mana.
+Unlocks Death Ball and Death Saucer.
+Unlocks Last Emperor when below 25% hp.|r
+|cff00FF00Cooldown: <A0E5,Cool1> seconds|r
 }
 
 STRING 14182
@@ -88461,21 +88545,40 @@ STRING 14186
 }
 
 STRING 14187
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IF (Transform - Mecha), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
+Frieza transforms into his mecha form.
+|cff00FFFFMultiplier: +0.3x All|r
+|cffffff00Only useable in Heaven/Hell.
+Grants 20% cooldown reduction.
+Unlocks Supernova.|r
+|cff00FF00Cooldown: <A0IF,Cool1> seconds|r
 }
 
 STRING 14188
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.6x All|r
+|cffffff00Drains 2.2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
+|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
 }
 
 STRING 14189
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.7x All|r
+|cffffff00Drains 1.7% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
 }
 
 STRING 14190
@@ -88485,9 +88588,13 @@ STRING 14190
 }
 
 STRING 14191
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur8> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool8> seconds|r
 }
 
 STRING 14192
@@ -88497,27 +88604,33 @@ STRING 14192
 }
 
 STRING 14193
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur9> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool9> seconds|r
 }
 
 STRING 14194
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool10> seconds|r
 }
 
 STRING 14195
-// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GU (Hell Storm), Researchubertip (Tooltip - Learn - Extended)
 {
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
-}
-
-STRING 14196
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur1> - <A0GU,Cool10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool1> - <A0GU,Cool10> seconds|r
 }
 
 STRING 14197
@@ -94607,6 +94720,12 @@ STRING 15094
 // Abilities: A0SD (Psychic Rock Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Guldo uses telekinesis to lift a large boulder from the ground nearby, and then throws it at his opponent.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0SD,Cool7> seconds|r
+}
+
+STRING 15095
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
 }
 
 STRING 15096
@@ -103683,32 +103802,6 @@ STRING 16363
 Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
 }
 
-STRING 16364
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Drains 2.2% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: 90 seconds|r
-}
-
-STRING 16365
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.7x All|r
-|cffffff00Drains 1.7% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: 90 seconds|r
-}
-
 STRING 16366
 // Abilities: A0K6 (Glare), Ubertip (Tooltip - Normal - Extended)
 {
@@ -106980,6 +107073,18 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
+STRING 16791
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
+}
+
+STRING 16792
+// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
+}
+
 STRING 16793
 // Abilities: A0UJ (Bankai Attack Speed), EditorSuffix (Editor Suffix)
 {
@@ -107358,6 +107463,12 @@ STRING 16846
 // Abilities: A0UC (Mugetsu), Name (Name)
 {
 Mugetsu
+}
+
+STRING 16847
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
 }
 
 STRING 16848
@@ -108031,6 +108142,20 @@ STRING 16916
 [|cffffff00F|r] Choose Dart Feld
 }
 
+STRING 16917
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's upper half is better at dodging but slightly weaker in power.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 10% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
+|cffffcc00Critical|r - <A0GG,DataA1>% 
+|cffffcc00Damage|r - <A0GG,DataB1,.> times
+}
+
 STRING 16918
 // Units: H09Y (Red-Eyed Dragoon), Tip (Tooltip - Basic)
 {
@@ -108122,16 +108247,6 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
-}
-
-STRING 16933
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur1> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool1> seconds|r
 }
 
 STRING 16934
@@ -109051,16 +109166,6 @@ STRING 17058
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 17059
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur2> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool2> seconds|r
 }
 
 STRING 17060
@@ -110162,16 +110267,6 @@ STRING 17222
 // Abilities: A0V2 (Red-Eyed Dragoon), Ubertip (Tooltip - Normal - Extended)
 {
 While in his Dragoon form, Dart is able to move faster gaining +50ms.
-}
-
-STRING 17223
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur3> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool3> seconds|r
 }
 
 STRING 17224
@@ -112980,16 +113075,6 @@ STRING 17620
 (crono)
 }
 
-STRING 17621
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur4> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool4> seconds|r
-}
-
 STRING 17622
 // Abilities: A0VU (Luminaire), Tip (Tooltip - Normal)
 {
@@ -113008,16 +113093,6 @@ STRING 17624
 // Abilities: A0VU (Luminaire), Name (Name)
 {
 Luminaire
-}
-
-STRING 17625
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur5> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool5> seconds|r
 }
 
 STRING 17626
@@ -117036,16 +117111,6 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
-STRING 18218
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur6> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool6> seconds|r
-}
-
 STRING 18219
 // Abilities: A0WT (Magic Barrier), Name (Name)
 {
@@ -117275,20 +117340,6 @@ STRING 18255
 // Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
 {
 Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool10>s
-}
-
-STRING 18256
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's upper half is better at dodging but slightly weaker in power.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 10% of current mana (excluding Dark Mist).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
-|cffffcc00Critical|r - <A0GG,DataA1>% 
-|cffffcc00Damage|r - <A0GG,DataB1,.> times
 }
 
 STRING 18257
@@ -117628,20 +117679,6 @@ STRING 18300
 (Tavern)
 }
 
-STRING 18301
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's lower half has deadlier attacks but is worse at dodging.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 10% of current mana (excluding Dark Mist).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
-|cffffcc00Critical|r - <A0GG,DataA2>% 
-|cffffcc00Damage|r - <A0GG,DataB2,.> times
-}
-
 STRING 18302
 // Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117949,20 +117986,6 @@ STRING 18349
 // Abilities: A0X0 (Hypnowave), EditorSuffix (Editor Suffix)
 {
 (lucca)
-}
-
-STRING 18350
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's fully matured form empowers every attack with deadly force.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +100%).
-Spells cost an additional 25% of current mana (excluding Dark Eyes and Flight).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
-|cffffcc00Critical|r - <A0GG,DataA3>% 
-|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 18351
@@ -118995,16 +119018,6 @@ STRING 18505
 [|cff00ff00W|r] Hell Storm - [|cffffcc00Level 10|r]
 }
 
-STRING 18506
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur7> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool7> seconds|r
-}
-
 STRING 18507
 // Abilities: A0XA (Aura), Tip (Tooltip - Normal)
 {
@@ -119164,16 +119177,6 @@ STRING 18530
 (marle)
 }
 
-STRING 18531
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur8> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool8> seconds|r
-}
-
 STRING 18532
 // Abilities: A0XB (Allure), Tip (Tooltip - Normal)
 {
@@ -119192,16 +119195,6 @@ STRING 18534
 // Abilities: A0XB (Allure), Name (Name)
 {
 Allure
-}
-
-STRING 18535
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur9> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool9> seconds|r
 }
 
 STRING 18536
@@ -119350,16 +119343,6 @@ STRING 18556
 // Abilities: A0XC (Ice), EditorSuffix (Editor Suffix)
 {
 (marle)
-}
-
-STRING 18557
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur10> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool10> seconds|r
 }
 
 STRING 18558
@@ -119546,16 +119529,6 @@ STRING 18584
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
 }
 
-STRING 18585
-// Abilities: A0GU (Hell Storm), Researchubertip (Tooltip - Learn - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur1> - <A0GU,Cool10> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool1> - <A0GU,Cool10> seconds|r
-}
-
 STRING 18586
 // Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
 {
@@ -119574,6 +119547,20 @@ STRING 18588
 // Abilities: A0XD (Ice 2), Name (Name)
 {
 Ice 2
+}
+
+STRING 18589
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's lower half has deadlier attacks but is worse at dodging.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 10% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
+|cffffcc00Critical|r - <A0GG,DataA2>% 
+|cffffcc00Damage|r - <A0GG,DataB2,.> times
 }
 
 STRING 18590
@@ -119896,6 +119883,20 @@ STRING 18636
 // Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
+}
+
+STRING 18637
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's fully matured form empowers every attack with deadly force.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +100%).
+Spells cost an additional 25% of current mana (excluding Dark Eyes and Flight) (has half cost on Flame Breath).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
+|cffffcc00Critical|r - <A0GG,DataA3>% 
+|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 18638

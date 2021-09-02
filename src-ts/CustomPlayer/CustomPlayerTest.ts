@@ -397,6 +397,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil0, OSKEY_Z, 0, true);
   addKeyEvent(abil0, OSKEY_Y, 0, true);
   addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
+  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
 
   const abil1 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
@@ -2663,6 +2664,8 @@ export function SetupJungleRushBananaFallout(
 
       TimerStart(CreateTimer(), 1.0, false, () => {
         DestroyTimer(GetExpiredTimer());
+
+        SoundHelper.playSoundOnUnit(caster, "Audio/Effects/BananaBunch.mp3", 1071);
 
         for (let i = 0; i < bananaThrowAmount; ++i) {
           const bananaItem = CreateItem(bananaItemId, GetUnitX(caster), GetUnitY(caster));

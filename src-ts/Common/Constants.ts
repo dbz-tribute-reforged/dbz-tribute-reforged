@@ -184,6 +184,7 @@ export module OrderIds {
   export const HOLY_BOLT = 852092;
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
+  export const MOVE = 851986
 }
 
 export module Capsules {
