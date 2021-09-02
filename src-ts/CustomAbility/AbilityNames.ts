@@ -1,6 +1,7 @@
 export module AbilityNames {
   export module BasicAbility {
     export const ZANZO_DASH: string = "Zanzo Dash";
+    export const ZANZOKEN: string = "Zanzoken";
     export const GUARD: string = "Guard";
     export const MAX_POWER: string = "Max Power";
     export const DEFLECT: string = "Deflect";

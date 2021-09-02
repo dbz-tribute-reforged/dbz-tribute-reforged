@@ -6,10 +6,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 3,
+    maxCd: 4,
     costType: CostType.SP,
-    costAmount: 40,
-    duration: 25,
+    costAmount: 50,
+    duration: 20,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: true,
@@ -29,7 +29,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
         "Can be used to cross cliffs unlike many other dashes. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 40 SP|nCD: 3 (varies)",
+        "|nCost: 50 SP|nCD: 4 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -37,6 +37,40 @@ export const AbilitiesList = [
     ],
   },
   // to here, and replace with unique name
+  
+  // test
+  {
+    name: AbilityNames.BasicAbility.ZANZOKEN,
+    currentCd: 0,
+    maxCd: 4,
+    costType: CostType.SP,
+    costAmount: 50,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.03,
+    canMultiCast: true,
+    waitsForNextClick: true,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNBasicZanzo.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
+    },
+    tooltip: {
+      title: "(Z) Zanzoken",
+      body: 
+        "Teleports to your next right click. Cooldown is based on distance travelled. " + 
+        "Can be used to cross cliffs." + 
+        "Y is also a valid hotkey if using a QWERTZ keyboard." + 
+        "|nCost: 50 SP|nCD: 4 (varies)",
+    },
+    components: [
+      { name: "sfx shunpo start" },
+      { name: "dash zanzoken" },
+      { name: "sfx shunpo end" },
+    ],
+  },
+  // -------------------------------------------
   {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
@@ -4880,7 +4914,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 1.0,
     costType: CostType.MP,
-    costAmount: 5000,
+    costAmount: 6000,
     duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
@@ -4907,7 +4941,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 1.0,
     costType: CostType.MP,
-    costAmount: 7500,
+    costAmount: 9000,
     duration: 16,
     updateRate: 0.03,
     castTime: 0.0,

@@ -178,6 +178,8 @@ export module SoundHelper {
       case Id.androidBarrier:
         if (unitId == Id.android17dbs) {
           playSoundOnUnit(unit, "Audio/Voice/Android17GetOutOfHere.mp3", 984);
+        } else if (unitId == Id.super17) {
+          playSoundOnUnit(unit, "Audio/Voice/Super17/YouFools.mp3", 1968);
         }
         break;
 
@@ -463,7 +465,47 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/DartFeld/DragonSummon.mp3", 3631);
         }
         break;
+      
+      // donkey kong
+      case Id.groundPound:
+      case Id.dkBarrelRoll:
+        if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/DK/Drum.mp3", 1671);
+        }
+        break;
 
+      case Id.dkRoll:
+        if (unitId == Id.donkeyKong) {
+          if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/DK/Hurry.mp3", 3030);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/DK/Drum.mp3", 1671);
+          }
+        }
+        break;
+
+      case Id.dkBananaSlamma:
+        if (unitId == Id.donkeyKong) {
+          if (rng < 95) {
+            playSoundOnUnit(unit, "Audio/Voice/DK/BananaSlamma.mp3", 1906); 
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/DK/BananaSlamma2.mp3", 3761);
+          }
+        }
+        break;
+
+      case Id.dkJungleRush:
+        if (unitId == Id.donkeyKong) {
+          playSoundOnUnit(unit, "Audio/Voice/DK/BigKahuna.mp3", 1906);
+        }
+        break;
+      
+      case Id.dkBarrelCannon:
+        if (unitId == Id.donkeyKong) {
+          playSoundOnUnit(unit, "Audio/Voice/DK/MonkeyBusiness.mp3", 3082);
+        }
+        break;
+      
       // dyspo
       case Id.lightBullet:
         if (unitId == Id.dyspo) {
@@ -1466,6 +1508,27 @@ export module SoundHelper {
         }
         break;
       
+      // super 17
+      case Id.super17FlashBomber:
+      case Id.super17FlashBomber2:
+        if (unitId == Id.super17) {
+          playSoundOnUnit(unit, "Audio/Voice/Super17/TakeThat.mp3", 1248);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+        break;
+      
+      case Id.super17HellStorm:
+        if (unitId == Id.super17) {
+          playSoundOnUnit(unit, "Audio/Voice/Super17/TakeThis.mp3", 3456);
+        }
+        break;
+      
+      case Id.super17ShockingDeathBall:
+        if (unitId == Id.super17) {
+          playSoundOnUnit(unit, "Audio/Voice/Super17/HellSphere.mp3", 2736);
+        }
+        break;
+
       // tapion
       case Id.shiningSword:
         playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);
