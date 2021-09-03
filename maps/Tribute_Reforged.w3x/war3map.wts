@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.67a
+DBZ Tribute Reforged 0.68
 }
 
 STRING 4
@@ -78723,7 +78723,7 @@ Z
 }
 
 STRING 12641
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H05W (Princess of Zeal), Hotkey (Hotkey)
 {
 Z
 }
@@ -78749,7 +78749,7 @@ STRING 12644
 }
 
 STRING 12645
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -88633,6 +88633,12 @@ Super 17 removes his left hand and then fires thousands of bullets at his oppone
 |cff00ffffCooldown: <A0GU,Cool1> - <A0GU,Cool10> seconds|r
 }
 
+STRING 14196
+// Units: H05W (Princess of Zeal), Name (Name)
+{
+Princess of Zeal
+}
+
 STRING 14197
 // Abilities: A0R3 (Justice Kick 2), Tip (Tooltip - Normal)
 {
@@ -95660,13 +95666,13 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15233
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15234
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96339,7 +96345,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 15333
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YK (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -96862,7 +96868,7 @@ STRING 15402
 }
 
 STRING 15403
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YK (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -103802,6 +103808,18 @@ STRING 16363
 Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
 }
 
+STRING 16364
+// Units: H05W (Princess of Zeal), Propernames (Proper Names)
+{
+Schala
+}
+
+STRING 16365
+// Units: H05W (Princess of Zeal), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Schala
+}
+
 STRING 16366
 // Abilities: A0K6 (Glare), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108249,6 +108267,19 @@ STRING 16932
 (dart)
 }
 
+STRING 16933
+// Units: H05W (Princess of Zeal), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong support and utility capabilities, while being capable of dealing damage when needed.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 16934
 // Abilities: A0V6 (Bankai True Strike), Name (Name)
 {
@@ -109166,6 +109197,12 @@ STRING 17058
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 17059
+// Units: H05W (Princess of Zeal), Tip (Tooltip - Basic)
+{
+[|cffffff00Z|r] Choose Schala
 }
 
 STRING 17060
@@ -110267,6 +110304,12 @@ STRING 17222
 // Abilities: A0V2 (Red-Eyed Dragoon), Ubertip (Tooltip - Normal - Extended)
 {
 While in his Dragoon form, Dart is able to move faster gaining +50ms.
+}
+
+STRING 17223
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 17224
@@ -112187,7 +112230,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113075,6 +113118,12 @@ STRING 17620
 (crono)
 }
 
+STRING 17621
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
 STRING 17622
 // Abilities: A0VU (Luminaire), Tip (Tooltip - Normal)
 {
@@ -113093,6 +113142,12 @@ STRING 17624
 // Abilities: A0VU (Luminaire), Name (Name)
 {
 Luminaire
+}
+
+STRING 17625
+// Abilities: A0YA (Book Schala Passives), Name (Name)
+{
+Book Schala Passives
 }
 
 STRING 17626
@@ -113316,7 +113371,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113865,7 +113920,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117111,6 +117166,12 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
+STRING 18218
+// Abilities: A0YB (Schala Crit Passive), Name (Name)
+{
+Schala Crit Passive
+}
+
 STRING 18219
 // Abilities: A0WT (Magic Barrier), Name (Name)
 {
@@ -117340,6 +117401,12 @@ STRING 18255
 // Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
 {
 Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool10>s
+}
+
+STRING 18256
+// Abilities: A0YB (Schala Crit Passive), EditorSuffix (Editor Suffix)
+{
+(schala)
 }
 
 STRING 18257
@@ -117674,9 +117741,15 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 18301
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18302
@@ -117854,7 +117927,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117986,6 +118059,12 @@ STRING 18349
 // Abilities: A0X0 (Hypnowave), EditorSuffix (Editor Suffix)
 {
 (lucca)
+}
+
+STRING 18350
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18351
@@ -119007,7 +119086,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119016,6 +119095,12 @@ STRING 18505
 // Abilities: A0GU (Hell Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hell Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 18506
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18507
@@ -119104,7 +119189,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119177,6 +119262,12 @@ STRING 18530
 (marle)
 }
 
+STRING 18531
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
 STRING 18532
 // Abilities: A0XB (Allure), Tip (Tooltip - Normal)
 {
@@ -119195,6 +119286,12 @@ STRING 18534
 // Abilities: A0XB (Allure), Name (Name)
 {
 Allure
+}
+
+STRING 18535
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18536
@@ -119343,6 +119440,12 @@ STRING 18556
 // Abilities: A0XC (Ice), EditorSuffix (Editor Suffix)
 {
 (marle)
+}
+
+STRING 18557
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18558
@@ -119527,6 +119630,12 @@ STRING 18584
 // Abilities: A0XC (Ice), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+
+STRING 18585
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18586
@@ -120007,6 +120116,12 @@ STRING 18652
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
+STRING 18653
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
 STRING 18654
 // Abilities: A0XF (Haste), Name (Name)
 {
@@ -120017,6 +120132,12 @@ STRING 18655
 // Abilities: A0XF (Haste), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 18656
+// Abilities: A0YC (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18657
@@ -120086,6 +120207,12 @@ STRING 18664
 // Abilities: A0XQ (Marle Attack Passive), EditorSuffix (Editor Suffix)
 {
 (marle)
+}
+
+STRING 18665
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 1|r]
 }
 
 STRING 18666
@@ -120266,6 +120393,12 @@ STRING 18688
 (ayla)
 }
 
+STRING 18689
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 2|r]
+}
+
 STRING 18690
 // Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
@@ -120304,6 +120437,12 @@ STRING 18694
 // Abilities: A0XH (Charm), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Charn - [|cffffcc00Level %d|r]
+}
+
+STRING 18695
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 3|r]
 }
 
 STRING 18696
@@ -120457,10 +120596,22 @@ Marle casts a delayed heal at the target location that activates after 2 seconds
 |cff00ffffCooldown: <A0XE,Cool1>s|r
 }
 
+STRING 18714
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 4|r]
+}
+
 STRING 18715
 // Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Tail Spin - [|cffffcc00Level 1|r]
+}
+
+STRING 18716
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 5|r]
 }
 
 STRING 18717
@@ -120529,10 +120680,52 @@ STRING 18727
 E
 }
 
+STRING 18728
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 6|r]
+}
+
+STRING 18729
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 7|r]
+}
+
+STRING 18730
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 8|r]
+}
+
 STRING 18731
 // Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Tail Spin - [|cffffcc00Level 7|r]
+}
+
+STRING 18732
+// Abilities: A0YC (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 9|r]
+}
+
+STRING 18733
+// Abilities: A0YC (Magic Orbs), Name (Name)
+{
+Magic Orbs
+}
+
+STRING 18734
+// Abilities: A0YC (Magic Orbs), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Magic Orbs - [|cffffcc00Level %d|r]
+}
+
+STRING 18735
+// Abilities: A0YC (Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18736
@@ -120571,6 +120764,12 @@ STRING 18741
 D
 }
 
+STRING 18742
+// Abilities: A0YC (Magic Orbs), EditorSuffix (Editor Suffix)
+{
+(schala)
+}
+
 STRING 18743
 // Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
 {
@@ -120587,6 +120786,18 @@ STRING 18745
 // Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
+}
+
+STRING 18746
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 6)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 18747
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 9)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
 }
 
 STRING 18748
@@ -120610,6 +120821,12 @@ STRING 18750
 D
 }
 
+STRING 18751
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 12)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
 STRING 18752
 // Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
 {
@@ -120626,6 +120843,12 @@ STRING 18754
 // Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
+}
+
+STRING 18755
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 3)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
 }
 
 STRING 18756
@@ -120929,6 +121152,12 @@ STRING 18804
 // Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Triple Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 18805
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 1|r]
 }
 
 STRING 18806
@@ -122181,6 +122410,12 @@ STRING 18977
 Hell Android 17 can now absorb Android 17 to become Super 17.
 }
 
+STRING 18978
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 2|r]
+}
+
 STRING 18979
 // Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
 {
@@ -122326,6 +122561,12 @@ STRING 18999
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
+STRING 19000
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 3|r]
+}
+
 STRING 19001
 // Abilities: A0Y0 (Mega Evolution), Name (Name)
 {
@@ -122336,6 +122577,12 @@ STRING 19002
 // Abilities: A0Y0 (Mega Evolution), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 19003
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 4|r]
 }
 
 STRING 19004
@@ -122496,6 +122743,12 @@ STRING 19025
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
+STRING 19026
+// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
 STRING 19027
 // Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -122509,6 +122762,12 @@ STRING 19028
 // Abilities: A0Y1 (Gigantamax), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 19029
+// Abilities: A0YD (Protect), Name (Name)
+{
+Protect
 }
 
 STRING 19030
@@ -122846,6 +123105,12 @@ STRING 19079
 [|cff00ff00F|r] Aura Storm - [|cffffcc00Level 7|r]
 }
 
+STRING 19080
+// Abilities: A0YD (Protect), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Protect - [|cffffcc00Level %d|r]
+}
+
 STRING 19081
 // Abilities: A0Y3 (Aura Storm), Name (Name)
 {
@@ -122946,7 +123211,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123538,6 +123803,12 @@ STRING 19171
 This unit is under the effects of |cffffff00Iron Defense|r; it has increased armor.
 }
 
+STRING 19172
+// Abilities: A0YD (Protect), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1>-<A0YD,Cool10> seconds)|r
+}
+
 STRING 19173
 // Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
 {
@@ -123763,6 +124034,72 @@ Duration: <A0XI,Dur10>s
 |cff00FFFFCooldown: <A0XI,Cool10>s|r
 }
 
+STRING 19200
+// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 19201
+// Abilities: A0YD (Protect), EditorSuffix (Editor Suffix)
+{
+(Schala)
+}
+
+STRING 19202
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 5|r]
+}
+
+STRING 19203
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 6|r]
+}
+
+STRING 19204
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 7|r]
+}
+
+STRING 19205
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 8|r]
+}
+
+STRING 19206
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 9|r]
+}
+
+STRING 19207
+// Abilities: A0YD (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 10|r]
+}
+
+STRING 19208
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 15)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19209
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 18)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19210
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 21)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
 STRING 19211
 // Abilities: A0H1 (Shocking Death Ball), Tip (Tooltip - Normal)
 {
@@ -123823,6 +124160,24 @@ STRING 19220
 [|cff00ff00E|r] Shocking Death Ball - [|cffffcc00Level 10|r]
 }
 
+STRING 19221
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 24)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19222
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 27)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19223
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 30)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
 STRING 19224
 // Abilities: A0H1 (Shocking Death Ball), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -123830,6 +124185,78 @@ Super 17 places his hands forward and forms a sphere of deep black energy. It is
 |cff2080ffMana Cost: +25% Max Mana
 |cff00FF00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A0H1,Cool1> - <A0H1,Cool10> seconds|r
+}
+
+STRING 19225
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool3> seconds)|r
+}
+
+STRING 19226
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
+STRING 19227
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool5> seconds)|r
+}
+
+STRING 19228
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool4> seconds)|r
+}
+
+STRING 19229
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool6> seconds)|r
+}
+
+STRING 19230
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool7> seconds)|r
+}
+
+STRING 19231
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool8> seconds)|r
+}
+
+STRING 19232
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
+}
+
+STRING 19233
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool1> seconds)|r
+}
+
+STRING 19234
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 1|r]
+}
+
+STRING 19235
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 2|r]
+}
+
+STRING 19236
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 3|r]
 }
 
 STRING 19237
@@ -123950,6 +124377,12 @@ Super 17 places both of his hands forward with his fingers stretching out, conce
 |cff00FFFFCooldown: <A0GT,Cool1> seconds|r
 }
 
+STRING 19254
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 4|r]
+}
+
 STRING 19255
 // Abilities: A0XJ (Flash Bomber 2), Tip (Tooltip - Normal)
 {
@@ -124028,10 +124461,34 @@ STRING 19266
 [|cff00FF00D|r] Super 17 (Absorbed 18)
 }
 
+STRING 19267
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 5|r]
+}
+
+STRING 19268
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 6|r]
+}
+
+STRING 19269
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 7|r]
+}
+
 STRING 19270
 {
 [|cffffcc00Absorb|r] Android 17
 Super 17 has upgraded into his true form after absorbing Android 17.
+}
+
+STRING 19271
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 8|r]
 }
 
 STRING 19272
@@ -124079,6 +124536,12 @@ STRING 19278
 [|cff00FF00D|r] Super Android 17
 }
 
+STRING 19279
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 9|r]
+}
+
 STRING 19280
 // Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124095,6 +124558,84 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 
 |cffffff00Regenerate +3% max mana per second
 |cff00ffffCooldown: <A0H7,Cool2>s
+}
+
+STRING 19282
+// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 19283
+// Abilities: A0YE (Teleportation), Name (Name)
+{
+Teleportation
+}
+
+STRING 19284
+// Abilities: A0YE (Teleportation), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Teleportation - [|cffffcc00Level %d|r]
+}
+
+STRING 19285
+// Abilities: A0YE (Teleportation), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool1>- <A0YE,Cool10> seconds)|r
+}
+
+STRING 19286
+// Abilities: A0YE (Teleportation), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19287
+// Abilities: A0YE (Teleportation), EditorSuffix (Editor Suffix)
+{
+(schala)
+}
+
+STRING 19288
+// Abilities: A0YE (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 10|r]
+}
+
+STRING 19289
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
+}
+
+STRING 19290
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool1> seconds|r
+}
+
+STRING 19291
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur2> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool2> seconds|r
+}
+
+STRING 19292
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff3080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur3> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool3> seconds|r
 }
 
 STRING 19293
@@ -124185,5 +124726,1679 @@ Super 17 places his hands forward and forms a sphere of deep black energy. It is
 |cff2080ffMana Cost: +30% Max Mana
 |cff00FF00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A0H1,Cool10> seconds|r
+}
+
+STRING 19303
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff4080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur4> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool4> seconds|r
+}
+
+STRING 19304
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff5080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur5> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool5> seconds|r
+}
+
+STRING 19305
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff6080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur6> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool6> seconds|r
+}
+
+STRING 19306
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff7080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur7> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool7> seconds|r
+}
+
+STRING 19307
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 2|r]
+}
+
+STRING 19308
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 3|r]
+}
+
+STRING 19309
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 4|r]
+}
+
+STRING 19310
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 5|r]
+}
+
+STRING 19311
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 6|r]
+}
+
+STRING 19312
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 1|r]
+}
+
+STRING 19313
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 7|r]
+}
+
+STRING 19314
+// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19315
+// Abilities: A0YF (Skygate), Name (Name)
+{
+Skygate
+}
+
+STRING 19316
+// Abilities: A0YF (Skygate), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Skygate - [|cffffcc00Level %d|r]
+}
+
+STRING 19317
+// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19318
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 9|r]
+}
+
+STRING 19319
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 8|r]
+}
+
+STRING 19320
+// Abilities: A0YF (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 10|r]
+}
+
+STRING 19321
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff8080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur8> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool8> seconds|r
+}
+
+STRING 19322
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff9080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur9> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool9> seconds|r
+}
+
+STRING 19323
+// Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff10080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool10> seconds|r
+}
+
+STRING 19324
+// Abilities: A0YF (Skygate), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool1> - <A0YF,Cool10> seconds|r
+}
+
+STRING 19325
+// Abilities: A0YF (Skygate), EditorSuffix (Editor Suffix)
+{
+(Schala)
+}
+
+STRING 19326
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur1> seconds|r
+|cff00ffffCooldown: <A0YG,Cool1> seconds|r
+}
+
+STRING 19327
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur2> seconds|r
+|cff00ffffCooldown: <A0YG,Cool2> seconds|r
+}
+
+STRING 19328
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur3> seconds|r
+|cff00ffffCooldown: <A0YG,Cool3> seconds|r
+}
+
+STRING 19329
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur4> seconds|r
+|cff00ffffCooldown: <A0YG,Cool4> seconds|r
+}
+
+STRING 19330
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur5> seconds|r
+|cff00ffffCooldown: <A0YG,Cool5> seconds|r
+}
+
+STRING 19331
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur6> seconds|r
+|cff00ffffCooldown: <A0YG,Cool6> seconds|r
+}
+
+STRING 19332
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur7> seconds|r
+|cff00ffffCooldown: <A0YG,Cool7> seconds|r
+}
+
+STRING 19333
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 19334
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 19335
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 19336
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 19337
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
+}
+
+STRING 19338
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 1|r]
+}
+
+STRING 19339
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 19340
+// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 19341
+// Abilities: A0YG (Magic Seal), Name (Name)
+{
+Magic Seal
+}
+
+STRING 19342
+// Abilities: A0YG (Magic Seal), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Magic Seal - [|cffffcc00Level %d|r]
+}
+
+STRING 19343
+// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 19344
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 19345
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 19346
+// Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 19347
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur8> seconds|r
+|cff00ffffCooldown: <A0YG,Cool8> seconds|r
+}
+
+STRING 19348
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur9> seconds|r
+|cff00ffffCooldown: <A0YG,Cool9> seconds|r
+}
+
+STRING 19349
+// Abilities: A0YG (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur10> seconds|r
+|cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
+STRING 19350
+// Abilities: A0YG (Magic Seal), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur1> seconds|r
+|cff00ffffCooldown: <A0YG,Cool1> - <A0YG,Cool10> seconds|r
+}
+
+STRING 19351
+// Abilities: A0YG (Magic Seal), EditorSuffix (Editor Suffix)
+{
+(Schala)
+}
+
+STRING 19352
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19353
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur2> seconds|r
+|cff00ffffCooldown: <A0YG,Cool2> seconds|r
+}
+
+STRING 19354
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur3> seconds|r
+|cff00ffffCooldown: <A0YG,Cool3> seconds|r
+}
+
+STRING 19355
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur4> seconds|r
+|cff00ffffCooldown: <A0YG,Cool4> seconds|r
+}
+
+STRING 19356
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur5> seconds|r
+|cff00ffffCooldown: <A0YG,Cool5> seconds|r
+}
+
+STRING 19357
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur6> seconds|r
+|cff00ffffCooldown: <A0YG,Cool6> seconds|r
+}
+
+STRING 19358
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur7> seconds|r
+|cff00ffffCooldown: <A0YG,Cool7> seconds|r
+}
+
+STRING 19359
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 19360
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 19361
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 19362
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 19363
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
+}
+
+STRING 19364
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Pray
+}
+
+STRING 19365
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 19366
+// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 19367
+// Abilities: A0YH (Pray), Name (Name)
+{
+Pray
+}
+
+STRING 19368
+// Abilities: A0YH (Pray), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Magic Seal - [|cffffcc00Level %d|r]
+}
+
+STRING 19369
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19370
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 19371
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 19372
+// Abilities: A0YH (Pray), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 19373
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur8> seconds|r
+|cff00ffffCooldown: <A0YG,Cool8> seconds|r
+}
+
+STRING 19374
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur9> seconds|r
+|cff00ffffCooldown: <A0YG,Cool9> seconds|r
+}
+
+STRING 19375
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur10> seconds|r
+|cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
+STRING 19376
+// Abilities: A0YH (Pray), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur1> seconds|r
+|cff00ffffCooldown: <A0YG,Cool1> - <A0YG,Cool10> seconds|r
+}
+
+STRING 19377
+// Abilities: A0YH (Pray), EditorSuffix (Editor Suffix)
+{
+(Schala)
+}
+
+STRING 19378
+// Abilities: A0YI (Dream Devourer), Name (Name)
+{
+Dream Devourer
+}
+
+STRING 19379
+// Abilities: A0YI (Dream Devourer), Ubertip (Tooltip - Normal - Extended)
+{
+Schala succumbs to Lavos' influence temporarily, granting her:
+|cffffff00+0.5x stat multiplier.
++66ms and unlocks movement speed cap.
++20% Damage Block up to 7.5x Agi
+All basic spells are upgraded
+
+|cff00ff00Duration: <A0YI,Dur1> seconds|n|cff00ffffCooldown: <A0YI,Cool1> seconds|n|n|cff808080"It is no doubt but a matter of time before Lavos consumes the whole of my awareness. It was I, after all, who wished it—wished from the depths of my sadness and despair that all that was would be erased."
+}
+
+STRING 19380
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19381
+// Abilities: A0YI (Dream Devourer), Tip (Tooltip - Normal)
+{
+[|cffDD00EEF|r] Dream Devourer
+}
+
+STRING 19382
+// Abilities: A0YI (Dream Devourer), EditorSuffix (Editor Suffix)
+{
+(Schala)
+}
+
+STRING 19383
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19384
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19385
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.15x "fp" - Enables |cffFFFF00Pray (F)|r
+[lvl 35]  1.4x "fp"
+[lvl 85]  1.7x "fp"
+[lvl 125] 2.0xx "fp"
+[lvl 150] 2.3x "fp"
+[lvl 200] Unlock |cffFF0000Dream Devourer (F)|r
+When bonus multiplier for Pray is maxed out, enables  |CffFF0000Dream Devourer|r, a transformation that increases Schala's combat capabilities and enhances her abilities to be more deadly.
+}
+
+STRING 19386
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19387
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19388
+{
+[|cffffcc00Unlock|r] Pray
+Schala can now channel the power of Lavos through her pendant, restoring her mana and granting bonus multiplier.
+}
+
+STRING 19389
+{
+[|cffffcc00Unlock|r] |cffFF0000DREAM DEVOURER|r
+When Schala's multiplier is maxed out, she can succumb to the power of Lavos, granting her increased combat capabilities and enhanced abilities.
+}
+
+STRING 19390
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala prays, channeling the power of Lavos through her pendant.
+|cff2080ffMana Regeneration: 3% Max Mana per second|n|r|cff00FF00Bonus Multiplier: +.02x per second. Each spell cast by Schala will reduce her bonus multiplier by 25%.|r
+}
+
+STRING 19391
+// Abilities: A0YJ (Schala Protection), Name (Name)
+{
+Schala Protection
+}
+
+STRING 19392
+// Buffs/Effects: B051 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19393
+// Buffs/Effects: B051 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19394
+// Buffs/Effects: B051 (), EditorSuffix (Editor Suffix)
+{
+1
+}
+
+STRING 19395
+// Buffs/Effects: B052 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19396
+// Buffs/Effects: B052 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19397
+// Buffs/Effects: B052 (), EditorSuffix (Editor Suffix)
+{
+2
+}
+
+STRING 19398
+// Buffs/Effects: B053 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19399
+// Buffs/Effects: B053 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19400
+// Buffs/Effects: B053 (), EditorSuffix (Editor Suffix)
+{
+3
+}
+
+STRING 19401
+// Buffs/Effects: B054 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19402
+// Buffs/Effects: B054 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19403
+// Buffs/Effects: B054 (), EditorSuffix (Editor Suffix)
+{
+4
+}
+
+STRING 19404
+// Buffs/Effects: B055 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19405
+// Buffs/Effects: B055 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19406
+// Buffs/Effects: B055 (), EditorSuffix (Editor Suffix)
+{
+5
+}
+
+STRING 19407
+// Buffs/Effects: B056 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19408
+// Buffs/Effects: B056 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19409
+// Buffs/Effects: B056 (), EditorSuffix (Editor Suffix)
+{
+6
+}
+
+STRING 19410
+// Buffs/Effects: B057 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19411
+// Buffs/Effects: B057 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19412
+// Buffs/Effects: B057 (), EditorSuffix (Editor Suffix)
+{
+7
+}
+
+STRING 19413
+// Buffs/Effects: B058 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19414
+// Buffs/Effects: B058 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19415
+// Buffs/Effects: B058 (), EditorSuffix (Editor Suffix)
+{
+8
+}
+
+STRING 19416
+// Buffs/Effects: B059 (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19417
+// Buffs/Effects: B059 (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19418
+// Buffs/Effects: B059 (), EditorSuffix (Editor Suffix)
+{
+9
+}
+
+STRING 19419
+// Buffs/Effects: B05A (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19420
+// Buffs/Effects: B05A (), Buffubertip (Tooltip - Extended)
+{
+This unit is protected; it has additional armor
+}
+
+STRING 19421
+// Buffs/Effects: B05A (), EditorSuffix (Editor Suffix)
+{
+10
+}
+
+STRING 19422
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19423
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19424
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19425
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19426
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area.|n|cffFF0000Empowered: Orbs restore HP to allies in range of the explosion. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19427
+// Abilities: A0YK (Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19428
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 1|r]
+}
+
+STRING 19429
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 2|r]
+}
+
+STRING 19430
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 3|r]
+}
+
+STRING 19431
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 4|r]
+}
+
+STRING 19432
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 5|r]
+}
+
+STRING 19433
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 6|r]
+}
+
+STRING 19434
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 7|r]
+}
+
+STRING 19435
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 8|r]
+}
+
+STRING 19436
+// Abilities: A0YK (Magic Orbs), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Magic Orbs - [|cffffcc00Level 9|r]
+}
+
+STRING 19437
+// Abilities: A0YK (Magic Orbs), Name (Name)
+{
+Magic Orbs
+}
+
+STRING 19438
+// Abilities: A0YK (Magic Orbs), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Magic Orbs - [|cffffcc00Level %d|r]
+}
+
+STRING 19439
+// Abilities: A0YK (Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area. |n|cff00ff00(Damage: (Int * lvl * ?) per orb|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 19440
+// Abilities: A0YK (Magic Orbs), EditorSuffix (Editor Suffix)
+{
+(schala empowered)
+}
+
+STRING 19441
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 6)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19442
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 9)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19443
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 12)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19444
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 3)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19445
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 1|r]
+}
+
+STRING 19446
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 2|r]
+}
+
+STRING 19447
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 3|r]
+}
+
+STRING 19448
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 4|r]
+}
+
+STRING 19449
+// Abilities: A0YL (Protect), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 19450
+// Abilities: A0YL (Protect), Name (Name)
+{
+Protect
+}
+
+STRING 19451
+// Abilities: A0YL (Protect), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Protect - [|cffffcc00Level %d|r]
+}
+
+STRING 19452
+// Abilities: A0YL (Protect), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1>-<A0YD,Cool10> seconds)|r
+}
+
+STRING 19453
+// Abilities: A0YL (Protect), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 19454
+// Abilities: A0YL (Protect), EditorSuffix (Editor Suffix)
+{
+(Schala Empowered)
+}
+
+STRING 19455
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 5|r]
+}
+
+STRING 19456
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 6|r]
+}
+
+STRING 19457
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 7|r]
+}
+
+STRING 19458
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 8|r]
+}
+
+STRING 19459
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 9|r]
+}
+
+STRING 19460
+// Abilities: A0YL (Protect), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Protect - [|cffffcc00Level 10|r]
+}
+
+STRING 19461
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 15)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19462
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 18)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19463
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 21)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19464
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 24)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19465
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffFFFF00(Bonus Armor: 27)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19466
+// Abilities: A0YL (Protect), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates a protective aura, increasing the armor of nearby allies.|n|cffff0000Empowered: Reduces attack damage of nearby enemies by 30%|r|n|cffFFFF00(Bonus Armor: 30)|r|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0YD,Cool1> seconds)|r
+}
+
+STRING 19467
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool1> seconds|r
+}
+
+STRING 19468
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur2> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool2> seconds|r
+}
+
+STRING 19469
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff3080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur3> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool3> seconds|r
+}
+
+STRING 19470
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff4080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur4> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool4> seconds|r
+}
+
+STRING 19471
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff5080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur5> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool5> seconds|r
+}
+
+STRING 19472
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff6080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur6> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool6> seconds|r
+}
+
+STRING 19473
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff7080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur7> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool7> seconds|r
+}
+
+STRING 19474
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 2|r]
+}
+
+STRING 19475
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 3|r]
+}
+
+STRING 19476
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 4|r]
+}
+
+STRING 19477
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 5|r]
+}
+
+STRING 19478
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 6|r]
+}
+
+STRING 19479
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 1|r]
+}
+
+STRING 19480
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 7|r]
+}
+
+STRING 19481
+// Abilities: A0YM (Skygate), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19482
+// Abilities: A0YM (Skygate), Name (Name)
+{
+Skygate
+}
+
+STRING 19483
+// Abilities: A0YM (Skygate), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Skygate - [|cffffcc00Level %d|r]
+}
+
+STRING 19484
+// Abilities: A0YM (Skygate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19485
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 9|r]
+}
+
+STRING 19486
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 8|r]
+}
+
+STRING 19487
+// Abilities: A0YM (Skygate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 10|r]
+}
+
+STRING 19488
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff8080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur8> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool8> seconds|r
+}
+
+STRING 19489
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff9080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur9> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool9> seconds|r
+}
+
+STRING 19490
+// Abilities: A0YM (Skygate), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down fire from the sky that bombards the target area.|n|cffFF0000Empowered: Increased AoE, dmg, explosion radius|r
+|cff10080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool10> seconds|r
+}
+
+STRING 19491
+// Abilities: A0YM (Skygate), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool1> - <A0YF,Cool10> seconds|r
+}
+
+STRING 19492
+// Abilities: A0YM (Skygate), EditorSuffix (Editor Suffix)
+{
+(Schala Empowered)
+}
+
+STRING 19493
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool3> seconds)|r
+}
+
+STRING 19494
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
+STRING 19495
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool5> seconds)|r
+}
+
+STRING 19496
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool4> seconds)|r
+}
+
+STRING 19497
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool6> seconds)|r
+}
+
+STRING 19498
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool7> seconds)|r
+}
+
+STRING 19499
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool8> seconds)|r
+}
+
+STRING 19500
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
+}
+
+STRING 19501
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool1> seconds)|r
+}
+
+STRING 19502
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 1|r]
+}
+
+STRING 19503
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 2|r]
+}
+
+STRING 19504
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 3|r]
+}
+
+STRING 19505
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 4|r]
+}
+
+STRING 19506
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 5|r]
+}
+
+STRING 19507
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 6|r]
+}
+
+STRING 19508
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 7|r]
+}
+
+STRING 19509
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 8|r]
+}
+
+STRING 19510
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 9|r]
+}
+
+STRING 19511
+// Abilities: A0YN (Teleportation), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 19512
+// Abilities: A0YN (Teleportation), Name (Name)
+{
+Teleportation
+}
+
+STRING 19513
+// Abilities: A0YN (Teleportation), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Teleportation - [|cffffcc00Level %d|r]
+}
+
+STRING 19514
+// Abilities: A0YN (Teleportation), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cff00ffff(Cooldown: <A0YE,Cool1>- <A0YE,Cool10> seconds)|r
+}
+
+STRING 19515
+// Abilities: A0YN (Teleportation), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19516
+// Abilities: A0YN (Teleportation), EditorSuffix (Editor Suffix)
+{
+(schala empowered)
+}
+
+STRING 19517
+// Abilities: A0YN (Teleportation), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Teleportation - [|cffffcc00Level 10|r]
+}
+
+STRING 19518
+// Abilities: A0YN (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 1.5s and then transports all nearby allies to the target location. Allies are invulnerable while being teleported.|n|cffFF0000Empowered: Schala pulls in nearby enemies, reducing their ability to chase her allies.|r|n|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
+}
+
+STRING 19519
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur1> seconds|r
+|cff00ffffCooldown: <A0YG,Cool1> seconds|r
+}
+
+STRING 19520
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur2> seconds|r
+|cff00ffffCooldown: <A0YG,Cool2> seconds|r
+}
+
+STRING 19521
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur3> seconds|r
+|cff00ffffCooldown: <A0YG,Cool3> seconds|r
+}
+
+STRING 19522
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur4> seconds|r
+|cff00ffffCooldown: <A0YG,Cool4> seconds|r
+}
+
+STRING 19523
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur5> seconds|r
+|cff00ffffCooldown: <A0YG,Cool5> seconds|r
+}
+
+STRING 19524
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur6> seconds|r
+|cff00ffffCooldown: <A0YG,Cool6> seconds|r
+}
+
+STRING 19525
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur7> seconds|r
+|cff00ffffCooldown: <A0YG,Cool7> seconds|r
+}
+
+STRING 19526
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 19527
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 19528
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 19529
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 19530
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
+}
+
+STRING 19531
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 1|r]
+}
+
+STRING 19532
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 19533
+// Abilities: A0YO (Magic Seal), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 19534
+// Abilities: A0YO (Magic Seal), Name (Name)
+{
+Magic Seal
+}
+
+STRING 19535
+// Abilities: A0YO (Magic Seal), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Magic Seal - [|cffffcc00Level %d|r]
+}
+
+STRING 19536
+// Abilities: A0YO (Magic Seal), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 19537
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 19538
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 19539
+// Abilities: A0YO (Magic Seal), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 19540
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur8> seconds|r
+|cff00ffffCooldown: <A0YG,Cool8> seconds|r
+}
+
+STRING 19541
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur9> seconds|r
+|cff00ffffCooldown: <A0YG,Cool9> seconds|r
+}
+
+STRING 19542
+// Abilities: A0YO (Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.|n|cffFF0000Empowered: Drains 3% hp/ 10% mana per second from any heroes caught inside the seal.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur10> seconds|r
+|cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
+STRING 19543
+// Abilities: A0YO (Magic Seal), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels an unbreakable barrier at the target location that lasts until she stops casting.
+|cff2080ffMana Cost: 15% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur1> seconds|r
+|cff00ffffCooldown: <A0YG,Cool1> - <A0YG,Cool10> seconds|r
+}
+
+STRING 19544
+// Abilities: A0YO (Magic Seal), EditorSuffix (Editor Suffix)
+{
+(Schala Empowered)
+}
+
+STRING 19545
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19546
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19547
+// Abilities: A0YP (Schala Protection Empowered), Name (Name)
+{
+Schala Protection Empowered
+}
+
+STRING 19548
+// Buffs/Effects: B05B (), Bufftip (Tooltip)
+{
+Protection
+}
+
+STRING 19549
+// Buffs/Effects: B05B (), Buffubertip (Tooltip - Extended)
+{
+This unit is weakened; it has reduced attack damage.
+}
+
+STRING 19550
+// Buffs/Effects: B05B (), EditorSuffix (Editor Suffix)
+{
+11
 }
 
