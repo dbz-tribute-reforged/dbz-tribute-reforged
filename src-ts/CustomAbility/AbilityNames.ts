@@ -404,6 +404,21 @@ export module AbilityNames {
     export const THRILLA_GORILLA = "Thrilla Gorilla";
   }
 
+  export module Schala {
+    export const MAGIC_ORBS = "Schala Magic Orbs";
+    export const MAGIC_ORBS_2 = "Schala Magic Orbs 2";
+    export const PROTECT = "Schala Protect";
+    export const PROTECT_2 = "Schala Protect 2";
+    export const TELEPORTATION = "Schala Teleportation";
+    export const TELEPORTATION_2 = "Schala Teleportation 2";
+    export const SKYGATE = "Schala Skygate";
+    export const SKYGATE_2 = "Schala Skygate 2";
+    export const MAGIC_SEAL = "Schala Magic Seal";
+    export const MAGIC_SEAL_2 = "Schala Magic Seal 2";
+    export const PRAY = "Schala Pray";
+    export const DREAM_DEVOURER = "Schala Dream Devourer";
+  }
+
 
 
   export module Babidi {

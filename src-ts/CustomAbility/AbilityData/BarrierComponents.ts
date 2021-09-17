@@ -39,4 +39,14 @@ export const BarrierComponents = [
     affectAllies: true,
     canWalkOut: false,
   },
+  {
+    name: "barrier schala magic seal", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    aoe: 400,
+    repelOutsidersSpeed: 15,
+    affectAllies: true,
+    canWalkOut: false,
+  },
 ];

@@ -174,6 +174,28 @@ export const AOEHealComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // schala magic orbs
+  {
+    name: "heal schala magic orbs",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    healSource: AOEHeal.SOURCE_UNIT,
+    sourceHPHealScale: 0,
+    useInverseHealScale: true,
+    useLastCastPoint: false,
+    aoe: 900,
+    maxHealTargets: AOEHeal.UNLIMITED_HEAL_TARGETS,
+    onlyHealHeroes: true,
+    onlyHealCaster: false,
+    canHealCaster: true,
+    maxHealTicks: AOEHeal.UNLIMITED_HEAL_TICKS,
+    healMult: BASE_DMG.KAME_DPS * 0.5,
+    healAttribute: bj_HEROSTAT_INT,
+    maxHealthHealPercent: 0.005,
+    requireBuff: false,
+    buffId: 0,
+  },
   // rust gobble
   {
     name: "heal caster rust gobble",

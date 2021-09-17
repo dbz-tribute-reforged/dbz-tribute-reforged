@@ -15,7 +15,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 45;
+    this.delay = 15;
     this.stats = 100;
     this.isFinalForm = false;
   }
@@ -53,7 +53,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
       this.isFinalForm = true;
       BlzSetUnitSkin(this.cooler, FourCC("H043"));
       SetUnitScale(this.cooler, 2.0, 2.0, 2.0);
-      SetHeroLevel(this.cooler, GetHeroLevel(this.cooler) + 5, true);
+      SetHeroLevel(this.cooler, GetHeroLevel(this.cooler) + 15, true);
       SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.2 + 50), true);
       SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.2 + 50), true);
       SetHeroInt(this.cooler, Math.floor(GetHeroInt(this.cooler, true) * 1.2 + 50), true);
@@ -105,10 +105,10 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 45;
     this.stats = 100;
     this.metalCoolers = [];
-    this.revives = 3;
+    this.revives = 1;
   }
 
   spawnSagaUnits(): void {

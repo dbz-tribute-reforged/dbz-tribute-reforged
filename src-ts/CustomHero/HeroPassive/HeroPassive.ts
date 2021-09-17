@@ -8,6 +8,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
+import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -774,7 +775,7 @@ export function lucarioPassive(customHero: CustomHero) {
           );
           UnitAddAbility(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF);
           
-          let bonusDamageMult = 0.0013;
+          let bonusDamageMult = 1;
           if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_1) > 0) {
             UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_1);
             SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 2);
@@ -831,7 +832,12 @@ export function lucarioPassive(customHero: CustomHero) {
           RemoveUnit(castDummy);
           
           if (bonusDamageMult > 0) {
-            const bonusDamage = bonusDamageMult * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+            // 0.0005 * 20000 * 20 = 200 max hp dmg per stack
+            // 0.01 * 20000 = 200 int dmg per stack
+            const bonusDamage = AOEDamage.getIntDamageMult(attacker) * bonusDamageMult * (
+              0.0005 * GetUnitState(target, UNIT_STATE_MAX_LIFE)
+              + 0.01 * GetHeroInt(attacker, true)
+            );
             if (bonusDamage > 0) {
               UnitDamageTarget(
                 attacker, 

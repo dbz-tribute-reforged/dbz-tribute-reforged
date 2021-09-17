@@ -14,6 +14,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_UNIT_TARGET = 2;
   static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
   static readonly DIRECTION_CASTER_POINT = 4;
+  static readonly DIRECTION_LAST_CAST_POINT = 5;
 
   static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.00125 * 0.01;
   static readonly MINIMUM_STR_AGI_RATIO = 0.8;
@@ -75,11 +76,11 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
         direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
         SetUnitFacing(source, direction);
-
-      } else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
+      } 
+      else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
         direction = GetUnitFacing(source);
-
-      } else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
+      } 
+      else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
         if (input.targetUnit) {
           if (UnitHelper.isUnitAlive(input.targetUnit)) {
             this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
@@ -88,14 +89,21 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           }
         }
         direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-      } else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
+      } 
+      else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
         if (input.castUnit) {
           this.dashTargetPoint.setPos(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
         }
         direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-      } else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
+      } 
+      else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
         this.dashTargetPoint.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
         direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+      } 
+      else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_POINT) {
+        this.dashTargetPoint.setVector(input.castPoint);
+        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+        SetUnitFacing(source, direction);
       }
 
       direction += this.angleOffset;
@@ -159,6 +167,10 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
             }
             this.distanceTravelled += distMove;
             PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
+            
+            if (ability.currentTick == 0) {
+              IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
+            }
           }
         }
         this.targetCoord.setUnit(source);

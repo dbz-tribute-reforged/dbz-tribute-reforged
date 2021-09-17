@@ -4,10 +4,15 @@ import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
+  export let isNightmare: boolean = false;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export let canUseCustomUi = true;
+
+  // to save number of events and triggers
+  export const genericSpellTrigger = CreateTrigger();
+  export const genericSpellHashtable = InitHashtable();
 }
 
 export module Constants {
@@ -99,9 +104,9 @@ export function stringToCostType(costType: string): CostType {
 }
   
 export module BASE_DMG {
-  export const KAME_DPS = 0.0115;
+  export const KAME_DPS = 0.0112;
   export const KAME_EXPLOSION = 0.053;
-  export const SPIRIT_BOMB_DPS = 0.0075;
+  export const SPIRIT_BOMB_DPS = 0.008;
   export const SPIRIT_BOMB_EXPLOSION = 0.25;
   export const DFIST_DPS = 0.013;
   export const DFIST_EXPLOSION = 0.25;
@@ -185,6 +190,8 @@ export module OrderIds {
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
   export const MOVE = 851986
+  export const PHASE_SHIFT_OFF = 852516;
+  export const PHASE_SHIFT_ON = 852515;
 }
 
 export module Capsules {
@@ -634,6 +641,20 @@ export module Id {
   export const saitamaSeriousSeries = FourCC("A02J");
   export const saitamaSeriousPunch = FourCC("A02U");
   export const saitamaSeriousSidewaysJumps = FourCC("A032");
+
+  export const schala = FourCC("H05W");
+  export const schalaMagicOrbs = FourCC("A0YC");
+  export const schalaMagicOrbs2 = FourCC("A0YK");
+  export const schalaProtect = FourCC("A0YD");
+  export const schalaProtect2 = FourCC("A0YL");
+  export const schalaTeleportation = FourCC("A0YE");
+  export const schalaTeleportation2 = FourCC("A0YN");
+  export const schalaSkygate = FourCC("A0YF");
+  export const schalaSkygate2 = FourCC("A0YM");
+  export const schalaMagicSeal = FourCC("A0YG");
+  export const schalaMagicSeal2 = FourCC("A0YO");
+  export const schalaPray = FourCC("A0YH");
+  export const schalaDreamDevourer = FourCC("A0YI");
 
   export const sephiroth = FourCC("H09M");
   export const sephirothOctoslash = FourCC("A0T7");

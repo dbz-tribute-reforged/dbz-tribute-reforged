@@ -28,6 +28,7 @@ export class Vector2D {
     return this;
   }
 
+  // polar project from source distance to an angle in degrees
   public polarProjectCoords(source: Vector2D, angle: number, distance: number): this {
     this.x = source.x + distance * Math.cos(angle * Vector2D.degreesToRadians);
     this.y = source.y + distance * Math.sin(angle * Vector2D.degreesToRadians);

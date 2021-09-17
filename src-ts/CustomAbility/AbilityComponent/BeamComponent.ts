@@ -73,6 +73,7 @@ export class BeamComponent implements
     ),
     public isTracking: boolean = false,
     public isFixedAngle: boolean = true,
+    public isGroundPathing: boolean = false,
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
@@ -113,7 +114,7 @@ export class BeamComponent implements
         null
       );
       
-      const numEnemyHeroes = UnitHelper.countEnemyHeroes(this.beamClashGroup, input.casterPlayer);
+      const numEnemyHeroes = UnitHelper.countEnemyHeroes(this.beamClashGroup, input.casterPlayer, false);
       
       const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(this.beamClashGroup) > 0);
       
@@ -148,8 +149,12 @@ export class BeamComponent implements
         this.angle = GetUnitFacing(this.beamUnit);
       }
       this.targetCoord.polarProjectCoords(this.beamCoord, this.angle, this.speed);
-      PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
 
+      if (!this.isGroundPathing) {
+        PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
+      } else {
+        PathingCheck.moveGroundUnitToCoord(this.beamUnit, this.targetCoord);
+      }
       // if wanting to explode prematurely then
       // check if at maximal explode tick AND close enough to target
       if (
@@ -381,7 +386,8 @@ export class BeamComponent implements
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, this.turnSpeed,
       this.heightVariation, this.isTracking,
-      this.isFixedAngle, this.canClashWithHero, 
+      this.isFixedAngle, this.isGroundPathing, 
+      this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
       this.explodeOnContact,
@@ -412,6 +418,7 @@ export class BeamComponent implements
       };
       isTracking: boolean;
       isFixedAngle: boolean;
+      isGroundPathing: boolean;
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
@@ -440,6 +447,7 @@ export class BeamComponent implements
     this.heightVariation = new HeightVariation().deserialize(input.heightVariation);
     this.isTracking = input.isTracking;
     this.isFixedAngle = input.isFixedAngle;
+    this.isGroundPathing = input.isGroundPathing;
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;

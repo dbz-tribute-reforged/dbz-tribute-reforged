@@ -18,7 +18,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SCALE_HP_CASTER_UNIT = 1;
 
   static readonly UNLIMITED_DAMAGE_TICKS = -1;
-  static readonly DEFAULT_MAX_DAMAGE_TICKS = 12;
+  static readonly DEFAULT_MAX_DAMAGE_TICKS = 8;
 
   static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.85;
 
@@ -50,6 +50,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       WEAPON_TYPE_WHOKNOWS
     ), 
     public maxHealthDamagePercent: number = 0,
+    public maxManaLossPercent: number = 0,
     public requireBuff: boolean = false,
     public buffId: number = 0,
   ) {
@@ -57,6 +58,19 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.damageStarted = false;
     this.damagedTargets = new Map();
     this.damagedGroup = CreateGroup();
+  }
+
+  static getIntDamageMult(unit: unit): number {
+    const hInt = GetHeroInt(unit, true);
+    return Math.max(0.8, Math.min(1.3, 
+      1.05 * hInt / (
+        0.333 * (
+          GetHeroStr(unit, true) + 
+          GetHeroAgi(unit, true) + 
+          hInt
+        )
+      )
+    ));
   }
 
   protected scaleDamageToSourceHP(damage: number, sourceHPPercent: number): number {
@@ -86,6 +100,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     if (input.isBeamClash && input.isBeamClash == true) {
       damage *= AOEDamage.BEAM_CLASH_DAMAGE_MULTIPLIER;
     }
+
+    damage *= AOEDamage.getIntDamageMult(input.caster.unit);
+    
     if (input.damageMult) {
       damage *= input.damageMult;
     }
@@ -102,6 +119,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       if (this.sourceHPDamageScale != 0) {
         bonusMaxHpDamage = this.scaleDamageToSourceHP(bonusMaxHpDamage, sourceHPPercent);
       }
+    }
+    if (this.maxManaLossPercent > 0) {
+      SetUnitState(target, UNIT_STATE_MANA, 
+        Math.max(0, 
+          GetUnitState(target, UNIT_STATE_MANA) - 
+          GetUnitState(target, UNIT_STATE_MAX_MANA) * this.maxManaLossPercent
+        )
+      );
     }
     UnitDamageTarget(
       input.caster.unit, 
@@ -246,6 +271,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.maxDamageTicks,
       this.damageData,
       this.maxHealthDamagePercent,
+      this.maxManaLossPercent,
       this.requireBuff,
       this.buffId,
     );
@@ -274,6 +300,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         weaponType: number; 
       }; 
       maxHealthDamagePercent: number;
+      maxManaLossPercent: number;
       requireBuff: boolean;
       buffId: number;
     }
@@ -293,6 +320,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.maxDamageTicks = input.maxDamageTicks;
     this.damageData = new DamageData().deserialize(input.damageData);
     this.maxHealthDamagePercent = input.maxHealthDamagePercent;
+    this.maxManaLossPercent = input.maxManaLossPercent;
     this.requireBuff = input.requireBuff;
     this.buffId = input.buffId;
     return this;

@@ -208,6 +208,12 @@ export class ExperienceManager {
         // 1 : 100%
         // 2 : 90% * 2
         // 3 : 80% * 3 and so on
+
+        // new
+        // 1 : 100%
+        // 2 : 85% * 2
+        // 3 : 70% * 3
+        // etc until 10%
         const rewardMult = Math.max(
           ExperienceConstants.nearbyPlayerXPMult, 
           Math.min(

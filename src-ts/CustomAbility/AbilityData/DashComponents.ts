@@ -146,7 +146,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 660,
+    distance: 750,
   },
   // max power
   {
@@ -1404,6 +1404,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 30,
+  },
+  // schala magic orbs delayed dash to target unit
+  {
+    name: "dash flying point schala magic orbs",
+    repeatInterval: 1, 
+    startTick: 16,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 10,
   },
   // ----------------------------
   // cell-x

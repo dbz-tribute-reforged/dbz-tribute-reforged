@@ -57,9 +57,9 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
       );
       this.superRustTyranno = true;
       SetUnitScale(this.rustTyranno, 2.75, 2.75, 2.75);
-      SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.5 + 3000), true);
-      SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.3 + 1000), true);
-      SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.4 + 2000), true);
+      SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.2 + 3000), true);
+      SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.1 + 1000), true);
+      SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.2 + 2000), true);
       BlzSetUnitArmor(this.rustTyranno, (GetHeroAgi(this.rustTyranno, true) / 1000) + 10);
       SetUnitState(
         this.rustTyranno, 
@@ -97,9 +97,9 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
       );
       this.ultraRustTyranno = true;
       SetUnitScale(this.rustTyranno, 3.25, 3.25, 3.25);
-      SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.5 + 3000), true);
-      SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.3 + 1000), true);
-      SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.4 + 2000), true);
+      SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.3 + 3000), true);
+      SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.2 + 1000), true);
+      SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.2 + 2000), true);
       BlzSetUnitArmor(this.rustTyranno, (GetHeroAgi(this.rustTyranno, true) / 1000) + 15);
       SetUnitState(
         this.rustTyranno, 
@@ -135,13 +135,13 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
       if (rustHP > 0.05 * rustMaxHP) {
         let newHP = rustHP;
         if (rustHP > 0.75 * rustMaxHP) {
-          newHP = rustHP + 0.00002 * rustMaxHP;
+          newHP = rustHP + 0.000005 * rustMaxHP;
         } else if (rustHP > 0.5 * rustMaxHP) {
-          newHP = rustHP + 0.00004 * rustMaxHP;
+          newHP = rustHP + 0.00001 * rustMaxHP;
         } else if (rustHP > 0.25 * rustMaxHP) {
-          newHP = rustHP + 0.00006 * rustMaxHP;
+          newHP = rustHP + 0.000015 * rustMaxHP;
         } else {
-          newHP = rustHP + 0.00008 * rustMaxHP;
+          newHP = rustHP + 0.00002 * rustMaxHP;
         }
         SetUnitState(
           this.rustTyranno,

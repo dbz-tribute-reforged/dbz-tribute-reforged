@@ -457,6 +457,21 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.DonkeyKong.BARREL_CANNON,
     ]],
 
+    [Id.schala, [
+      AbilityNames.Schala.MAGIC_ORBS,
+      AbilityNames.Schala.MAGIC_ORBS_2,
+      // AbilityNames.Schala.PROTECT,
+      // AbilityNames.Schala.PROTECT_2,
+      // AbilityNames.Schala.TELEPORTATION,
+      // AbilityNames.Schala.TELEPORTATION_2,
+      AbilityNames.Schala.SKYGATE,
+      AbilityNames.Schala.SKYGATE_2,
+      AbilityNames.Schala.MAGIC_SEAL,
+      AbilityNames.Schala.MAGIC_SEAL_2,
+      AbilityNames.Schala.PRAY,
+      AbilityNames.Schala.DREAM_DEVOURER,
+    ]],
+
 
 
     // androids 13 14 15
@@ -566,6 +581,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hirudegarn.FLAME_BREATH,
       AbilityNames.Super17.FLASH_BOMBER_2,
 
+      AbilityNames.Schala.MAGIC_ORBS,
+      AbilityNames.Schala.MAGIC_SEAL,
     ]],
 
     // broly

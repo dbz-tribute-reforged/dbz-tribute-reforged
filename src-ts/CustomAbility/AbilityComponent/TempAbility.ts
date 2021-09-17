@@ -19,6 +19,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     public addAbility: boolean = false,
     public tempPermanence: boolean = false,
     public equalizeLevels: boolean = false,
+    public linkCooldowns: number = -1,
   ) {
     this.hasStarted = false;
     this.abilityWasAdded = false;
@@ -53,10 +54,22 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
           SetUnitAbilityLevel(source, this.newAbility, oldAbilityLevel);
         }
       }
+      if (this.performSwap && this.linkCooldowns >= 0) {
+        BlzStartUnitAbilityCooldown(source, this.newAbility, 
+          this.linkCooldowns + 
+          Math.max(0, 
+            Math.max(
+              BlzGetUnitAbilityCooldownRemaining(source, this.oldAbility),
+              BlzGetUnitAbilityCooldownRemaining(source, this.newAbility)
+            )
+          )
+        );
+      }
     }
 
     if (ability.isFinishedUsing(this)) {
       this.hasStarted = false;
+
       if (this.enableAbility) {
         SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, false);
         if (this.performSwap) {
@@ -73,6 +86,18 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       }
       if (this.tempPermanence) {
         UnitMakeAbilityPermanent(source, false, this.newAbility);
+      }
+      
+      if (this.performSwap && this.linkCooldowns >= 0) {
+        BlzStartUnitAbilityCooldown(source, this.oldAbility, 
+          this.linkCooldowns + 
+          Math.max(0, 
+            Math.max(
+              BlzGetUnitAbilityCooldownRemaining(source, this.oldAbility),
+              BlzGetUnitAbilityCooldownRemaining(source, this.newAbility)
+            )
+          )
+        );
       }
     }
   }
@@ -93,6 +118,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       this.addAbility,
       this.tempPermanence,
       this.equalizeLevels,
+      this.linkCooldowns,
     );
   }
   
@@ -110,6 +136,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       addAbility: boolean;
       tempPermanence: boolean;
       equalizeLevels: boolean;
+      linkCooldowns: number;
     }
   ) {
     this.name = input.name;
@@ -124,6 +151,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     this.addAbility = input.addAbility;
     this.tempPermanence = input.tempPermanence;
     this.equalizeLevels = input.equalizeLevels;
+    this.linkCooldowns = input.linkCooldowns;
     return this;
   }
 }
