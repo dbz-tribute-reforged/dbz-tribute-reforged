@@ -958,6 +958,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Schala_Multi_Drain_Copy = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -15037,7 +15038,7 @@ end
 function Trig_Schala_Pray_Cast_Actions()
     GroupAddUnitSimple(GetTriggerUnit(), udg_SchalaPrayGroup)
     if (Trig_Schala_Pray_Cast_Func002C()) then
-        StartTimerBJ(udg_SchalaPrayTime, true, 1.00)
+        StartTimerBJ(udg_SchalaPrayTime, true, 0.33)
     else
     end
 end
@@ -15050,7 +15051,7 @@ function InitTrig_Schala_Pray_Cast()
 end
 
 function Trig_Schala_Pray_Loop_Func001Func001Func004C()
-    if (not (udg_TempReal < 0.48)) then
+    if (not (udg_TempReal < 0.49)) then
         return false
     end
     return true
@@ -15061,16 +15062,16 @@ function Trig_Schala_Pray_Loop_Func001Func001A()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempReal = LoadRealBJ(0, udg_ID, udg_SummonsHashtable)
     if (Trig_Schala_Pray_Loop_Func001Func001Func004C()) then
-        SaveRealBJ((udg_TempReal + 0.02), 0, udg_ID, udg_SummonsHashtable)
+        SaveRealBJ((udg_TempReal + 0.01), 0, udg_ID, udg_SummonsHashtable)
     else
         SaveRealBJ(0.50, 0, udg_ID, udg_SummonsHashtable)
     end
-    SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.03)))
+    SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (0.01 * 1.00))))
     AddSpecialEffectTargetUnitBJ("chest", udg_TempUnit, "ValkKameCharge2.mdx")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     udg_StatMultUnit = udg_TempUnit
-    udg_TransformationString = "fp"
-    TriggerExecute(gg_trg_Transformations_Schala)
+    udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+    TriggerExecute(gg_trg_Auto_Transform_Player_Units)
 end
 
 function Trig_Schala_Pray_Loop_Func001C()
@@ -15199,8 +15200,8 @@ function Trig_Schala_Multi_Drain_Actions()
         SetPlayerAbilityAvailableBJ(true, FourCC("A0YH"), GetTriggerPlayer())
         SaveRealBJ(RMaxBJ(0.00, (udg_TempReal * 0.75)), 0, udg_ID, udg_SummonsHashtable)
         udg_StatMultUnit = udg_TempUnit
-        udg_TransformationString = "fp"
-        TriggerExecute(gg_trg_Transformations_Schala)
+        udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+        TriggerExecute(gg_trg_Auto_Transform_Player_Units)
     end
 end
 
@@ -15209,6 +15210,44 @@ function InitTrig_Schala_Multi_Drain()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Schala_Multi_Drain, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Schala_Multi_Drain, Condition(Trig_Schala_Multi_Drain_Conditions))
     TriggerAddAction(gg_trg_Schala_Multi_Drain, Trig_Schala_Multi_Drain_Actions)
+end
+
+function Trig_Schala_Multi_Drain_Copy_Func003C()
+    if (GetSpellAbilityId() == FourCC("A0YK")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0YO")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0YL")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0YM")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0YN")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Schala_Multi_Drain_Copy_Conditions()
+    if (not Trig_Schala_Multi_Drain_Copy_Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Schala_Multi_Drain_Copy_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (0.20 * 1.00))))
+end
+
+function InitTrig_Schala_Multi_Drain_Copy()
+    gg_trg_Schala_Multi_Drain_Copy = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Schala_Multi_Drain_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Schala_Multi_Drain_Copy, Condition(Trig_Schala_Multi_Drain_Copy_Conditions))
+    TriggerAddAction(gg_trg_Schala_Multi_Drain_Copy, Trig_Schala_Multi_Drain_Copy_Actions)
 end
 
 function Trig_Schala_Protect_Func002C()
@@ -27514,7 +27553,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
             end
         else
             if (Trig_Add_Unit_To_StatMult_Func001Func001Func001C()) then
-                BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 80), 0)
+                BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 100), 0)
             else
                 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 130), 0)
                 if (Trig_Add_Unit_To_StatMult_Func001Func001Func001Func002C()) then
@@ -52194,6 +52233,7 @@ function InitCustomTriggers()
     InitTrig_Schala_Pray_Loop()
     InitTrig_Schala_Pray_Stop()
     InitTrig_Schala_Multi_Drain()
+    InitTrig_Schala_Multi_Drain_Copy()
     InitTrig_Schala_Protect()
     InitTrig_Schala_Channel_Cast()
     InitTrig_Schala_Channel_Stop()

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.68
+DBZ Tribute Reforged 0.68a
 }
 
 STRING 4
@@ -8917,11 +8917,17 @@ Allows the holder to slowly drain the life out of nearby enemies.
 }
 
 STRING 1418
-// Items: I02E (Bio Lab Research), Description (Description)
+// Abilities: A0YI (Dream Devourer), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Reduces the health of nearby enemies by 1.4% of their current health per second.|r
+Schala succumbs to Lavos' influence temporarily, granting her:
+|cffffff00+0.6x stat multiplier.
++66ms and unlocks movement speed cap.
+20% Damage Block up to 7.5x Agi.
+Casting spells restores 20% of Max Mana.
+Unlocks empowered abilities.
 
-A sample of the substance |cffff8c00Bio Broly|r was covered in
+|cff00ff00Duration: <A0YI,Dur1> seconds
+|cff00ffffCooldown: <A0YI,Cool1> seconds|n|n|cff808080"It is no doubt but a matter of time before Lavos consumes the whole of my awareness. It was I, after all, who wished it—wished from the depths of my sadness and despair that all that was would be erased."
 }
 
 STRING 1419
@@ -9847,14 +9853,6 @@ STRING 1571
 A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
-STRING 1572
-// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
-{
-|cffffff00Reduces the health of nearby enemies by 1.4% of their current health per second.|r
-
-A sample of the substance |cffff8c00Bio Broly|r was covered in
-}
-
 STRING 1573
 // Items: I01Z (Dr Wheelo's Research), Description (Description)
 {
@@ -10615,6 +10613,12 @@ STRING 1692
 // Items: I047 (Android Bomb), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
+}
+
+STRING 1693
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 1694
@@ -47067,7 +47071,7 @@ Transformations:
 }
 
 STRING 7539
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
 {
 Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
@@ -73267,6 +73271,12 @@ Unlocks Giga Sphere|r
 |cff00ffffCooldown: <A0Y1,Cool1>s
 }
 
+STRING 11767
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
+}
+
 STRING 11768
 // Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
 {
@@ -82011,6 +82021,12 @@ STRING 13164
 {
 Banishes the target's physical body to the dead zone, slowing them and causing them to be invulnerable and unable to attack for 2.5 seconds. The target can still use abilities.
 |cff00ffffCooldown: 45 seconds|r
+}
+
+STRING 13165
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
 }
 
 STRING 13166
@@ -96864,7 +96880,7 @@ Q
 }
 
 STRING 15404
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98405,19 +98421,19 @@ STRING 15617
 }
 
 STRING 15618
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15619
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15620
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107934,6 +107950,12 @@ A hero that has mastered the Kamehameha. Has less abilities than standard but ea
 |cff808080"Kamehame... HAAAAAA!"
 }
 
+STRING 16899
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
+}
+
 STRING 16900
 // Units: E014 (Legendary Hero), Ubertip (Tooltip - Extended)
 {
@@ -108883,6 +108905,12 @@ STRING 17015
 [|cff00FF00R|r] Madness Hero - [|cffffcc00Level 7|r]
 }
 
+STRING 17016
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
+}
+
 STRING 17017
 // Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
@@ -109169,6 +109197,12 @@ STRING 17058
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 17059
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
 }
 
 STRING 17060
@@ -113082,6 +113116,12 @@ STRING 17620
 // Abilities: A0VT (Cleave), EditorSuffix (Editor Suffix)
 {
 (crono)
+}
+
+STRING 17621
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
 }
 
 STRING 17622
@@ -117706,6 +117746,12 @@ STRING 18300
 (Tavern)
 }
 
+STRING 18301
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 2|r]
+}
+
 STRING 18302
 // Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
 {
@@ -118013,6 +118059,12 @@ STRING 18349
 // Abilities: A0X0 (Hypnowave), EditorSuffix (Editor Suffix)
 {
 (lucca)
+}
+
+STRING 18350
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 3|r]
 }
 
 STRING 18351
@@ -119045,6 +119097,12 @@ STRING 18505
 [|cff00ff00W|r] Hell Storm - [|cffffcc00Level 10|r]
 }
 
+STRING 18506
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 4|r]
+}
+
 STRING 18507
 // Abilities: A0XA (Aura), Tip (Tooltip - Normal)
 {
@@ -119204,6 +119262,12 @@ STRING 18530
 (marle)
 }
 
+STRING 18531
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 5|r]
+}
+
 STRING 18532
 // Abilities: A0XB (Allure), Tip (Tooltip - Normal)
 {
@@ -119222,6 +119286,12 @@ STRING 18534
 // Abilities: A0XB (Allure), Name (Name)
 {
 Allure
+}
+
+STRING 18535
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 6|r]
 }
 
 STRING 18536
@@ -120736,6 +120806,18 @@ STRING 18745
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
+STRING 18746
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 1|r]
+}
+
+STRING 18747
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 7|r]
+}
+
 STRING 18748
 // Abilities: A0H7 (Scan for Androids), Ubertip (Tooltip - Normal - Extended)
 {
@@ -120757,6 +120839,12 @@ STRING 18750
 D
 }
 
+STRING 18751
+// Abilities: A009 (Dummy Abil), Name (Name)
+{
+Dummy Abil
+}
+
 STRING 18752
 // Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
 {
@@ -120773,6 +120861,12 @@ STRING 18754
 // Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
+}
+
+STRING 18755
+// Abilities: A009 (Dummy Abil), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Energy Drain - [|cffffcc00Level %d|r]
 }
 
 STRING 18756
@@ -121076,6 +121170,12 @@ STRING 18804
 // Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Triple Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 18805
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 9|r]
 }
 
 STRING 18806
@@ -122330,6 +122430,12 @@ STRING 18977
 Hell Android 17 can now absorb Android 17 to become Super 17.
 }
 
+STRING 18978
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 8|r]
+}
+
 STRING 18979
 // Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
 {
@@ -122475,6 +122581,12 @@ STRING 18999
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
+STRING 19000
+// Abilities: A009 (Dummy Abil), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 10|r]
+}
+
 STRING 19001
 // Abilities: A0Y0 (Mega Evolution), Name (Name)
 {
@@ -122485,6 +122597,12 @@ STRING 19002
 // Abilities: A0Y0 (Mega Evolution), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 19003
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
 }
 
 STRING 19004
@@ -123005,6 +123123,12 @@ STRING 19079
 // Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Aura Storm - [|cffffcc00Level 7|r]
+}
+
+STRING 19080
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
 }
 
 STRING 19081
@@ -123699,6 +123823,12 @@ STRING 19171
 This unit is under the effects of |cffffff00Iron Defense|r; it has increased armor.
 }
 
+STRING 19172
+// Abilities: A009 (Dummy Abil), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+}
+
 STRING 19173
 // Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
 {
@@ -123936,6 +124066,60 @@ STRING 19201
 (Schala)
 }
 
+STRING 19202
+// Abilities: A009 (Dummy Abil), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit (0.5% at lvl 6)|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> - <A0MO,Cool10> seconds|r
+}
+
+STRING 19203
+// Abilities: A009 (Dummy Abil), EditorSuffix (Editor Suffix)
+{
+(NAN)
+}
+
+STRING 19204
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
+STRING 19205
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
+}
+
+STRING 19206
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
+}
+
+STRING 19207
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
+}
+
+STRING 19208
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
+}
+
+STRING 19209
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
+}
+
+STRING 19210
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
+}
+
 STRING 19211
 // Abilities: A0H1 (Shocking Death Ball), Tip (Tooltip - Normal)
 {
@@ -123994,6 +124178,24 @@ STRING 19220
 // Abilities: A0H1 (Shocking Death Ball), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Shocking Death Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 19221
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 2|r]
+}
+
+STRING 19222
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 3|r]
+}
+
+STRING 19223
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 4|r]
 }
 
 STRING 19224
@@ -124746,6 +124948,12 @@ STRING 19325
 (Schala)
 }
 
+STRING 19326
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 5|r]
+}
+
 STRING 19327
 // Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124935,6 +125143,42 @@ STRING 19352
 [|cff00ff00W|r] Protect - [|cffffcc00Level 2|r]
 }
 
+STRING 19353
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 6|r]
+}
+
+STRING 19354
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 1|r]
+}
+
+STRING 19355
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 7|r]
+}
+
+STRING 19356
+// Abilities: A0A1 (Dummy Abil 2), Name (Name)
+{
+Dummy Abil 2
+}
+
+STRING 19357
+// Abilities: A0A1 (Dummy Abil 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Energy Drain - [|cffffcc00Level %d|r]
+}
+
+STRING 19358
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 9|r]
+}
+
 STRING 19359
 // Abilities: A0YL (Empowered Protect), Tip (Tooltip - Normal)
 {
@@ -125001,6 +125245,12 @@ STRING 19369
 F
 }
 
+STRING 19370
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 8|r]
+}
+
 STRING 19371
 // Abilities: A0YL (Empowered Protect), Researchtip (Tooltip - Learn)
 {
@@ -125013,6 +125263,24 @@ STRING 19372
 [|cff00ff00W|r] Protect - [|cffffcc00Level 9|r]
 }
 
+STRING 19373
+// Abilities: A0A1 (Dummy Abil 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 10|r]
+}
+
+STRING 19374
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
+}
+
+STRING 19375
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
+}
+
 STRING 19376
 // Abilities: A0YO (Empowered Magic Seal), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -125020,6 +125288,12 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff2080ffMana Cost: 15% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur1> seconds|r
 |cff00ffffCooldown: <A0YG,Cool1> - <A0YG,Cool10> seconds|r
+}
+
+STRING 19377
+// Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
 }
 
 STRING 19378
@@ -125044,6 +125318,12 @@ STRING 19381
 // Abilities: A0YI (Dream Devourer), Tip (Tooltip - Normal)
 {
 [|cffDD00EEF|r] Dream Devourer
+}
+
+STRING 19382
+// Abilities: A0A1 (Dummy Abil 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit (0.5% at lvl 6)|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> - <A0MO,Cool10> seconds|r
 }
 
 STRING 19383
@@ -125099,13 +125379,6 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
 |cff00FF00Duration: <A0YD,Dur9> seconds|r
 |cff00ffffCooldown: <A0YD,Cool9> seconds|r
-}
-
-STRING 19390
-// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
-{
-Schala prays, channeling the power of Lavos through her pendant.
-|cff2080ffMana Regeneration: 3% Max Mana per second|n|r|cff00FF00Bonus Multiplier: +.02x per second. Each spell cast by Schala will reduce her bonus multiplier by 25%.|r
 }
 
 STRING 19391
@@ -125325,6 +125598,53 @@ STRING 19425
 Empowered Protect
 }
 
+STRING 19426
+// Abilities: A0A1 (Dummy Abil 2), EditorSuffix (Editor Suffix)
+{
+(NAN)
+}
+
+STRING 19427
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19428
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19429
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19430
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19431
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala prays, channeling the power of Lavos through her pendant.
+|cff2080ffMana Regeneration: 3% Max Mana per second|n|r|cff00FF00Bonus Multiplier: +.03x per second. Each spell cast by Schala will reduce her bonus multiplier by 25%.|r
+}
+
+STRING 19433
+// Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels an almost unbreakable barrier at the target location that lasts until she stops casting.
+|cffffff00Empowered: Enemies lose 3% Max HP + 10% Max MP per second
+|cff2080ffMana Cost: 25% Max Mana per second
+|cffff2020Channel Duration: <A0YG,Dur10> seconds|r
+|cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
 STRING 19436
 // Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
 {
@@ -125361,16 +125681,116 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff00ffffCooldown: <A0YG,Cool4> seconds|r
 }
 
+STRING 19441
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool1> seconds)|r
+}
+
+STRING 19442
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool3> seconds)|r
+}
+
+STRING 19443
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool4> seconds)|r
+}
+
+STRING 19444
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool5> seconds)|r
+}
+
+STRING 19445
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool6> seconds)|r
+}
+
+STRING 19446
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool7> seconds)|r
+}
+
+STRING 19447
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool8> seconds)|r
+}
+
+STRING 19448
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
+}
+
 STRING 19449
 // Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
+STRING 19450
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
+}
+
+STRING 19451
+// Abilities: A0YE (Teleportation), Researchubertip (Tooltip - Learn - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location.  Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool1>- <A0YE,Cool10> seconds)|r
+}
+
+STRING 19452
+// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
 STRING 19453
 // Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 19454
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
+{
+Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
+|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
+}
+
+STRING 19455
+// Items: I02E (Bio Lab Research), Description (Description)
+{
+|cffffff00Reduces the health of nearby enemies by 2.5% of their current health per second.|r
+
+A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 19456
+// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
+{
+|cffffff00Reduces the health of nearby enemies by 2.5% of their current health per second.|r
+
+A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
 STRING 19467
@@ -125606,16 +126026,6 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff00ffffCooldown: <A0YG,Cool9> seconds|r
 }
 
-STRING 19498
-// Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels an almost unbreakable barrier at the target location that lasts until she stops casting.
-|cffffff00Empowered: Enemies lose 4% Max HP + 10% Max MP per second
-|cff2080ffMana Cost: 25% Max Mana per second
-|cffff2020Channel Duration: <A0YG,Dur10> seconds|r
-|cff00ffffCooldown: <A0YG,Cool10> seconds|r
-}
-
 STRING 19511
 // Abilities: A0YN (Empowered Teleportation), Researchhotkey (Hotkey - Learn)
 {
@@ -125740,19 +126150,6 @@ STRING 19562
 // Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Magic Seal - [|cffffcc00Level 10|r]
-}
-
-STRING 19563
-// Abilities: A0YI (Dream Devourer), Ubertip (Tooltip - Normal - Extended)
-{
-Schala succumbs to Lavos' influence temporarily, granting her:
-|cffffff00+0.6x stat multiplier.
-+66ms and unlocks movement speed cap.
-20% Damage Block up to 7.5x Agi.
-Unlocks empowered abilities.
-
-|cff00ff00Duration: <A0YI,Dur1> seconds
-|cff00ffffCooldown: <A0YI,Cool1> seconds|n|n|cff808080"It is no doubt but a matter of time before Lavos consumes the whole of my awareness. It was I, after all, who wished it—wished from the depths of my sadness and despair that all that was would be erased."
 }
 
 STRING 19564
@@ -126159,42 +126556,42 @@ X
 }
 
 STRING 19626
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool1> seconds)|r
 }
 
 STRING 19627
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool3> seconds)|r
 }
 
 STRING 19628
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool4> seconds)|r
 }
 
 STRING 19629
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool5> seconds)|r
 }
 
 STRING 19630
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool6> seconds)|r
 }
 
 STRING 19631
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool7> seconds)|r
@@ -126267,80 +126664,31 @@ STRING 19642
 }
 
 STRING 19643
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool8> seconds)|r
 }
 
 STRING 19644
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
 }
 
-STRING 19645
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
-}
-
 STRING 19646
-// Abilities: A0YE (Teleportation), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YN (Empowered Teleportation), Researchubertip (Tooltip - Learn - Extended)
 {
 Schala channels for 1.5s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool1>- <A0YE,Cool10> seconds)|r
 }
 
 STRING 19647
-// Abilities: A0YE (Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
-}
-
-STRING 19648
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool1> seconds)|r
-}
-
-STRING 19649
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool3> seconds)|r
-}
-
-STRING 19650
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool4> seconds)|r
-}
-
-STRING 19651
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool5> seconds)|r
-}
-
-STRING 19652
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool6> seconds)|r
-}
-
-STRING 19653
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool7> seconds)|r
 }
 
 STRING 19654
@@ -126407,41 +126755,6 @@ STRING 19664
 // Abilities: A0YN (Empowered Teleportation), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Teleportation - [|cffffcc00Level 10|r]
-}
-
-STRING 19665
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool8> seconds)|r
-}
-
-STRING 19666
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
-}
-
-STRING 19667
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool10> seconds)|r
-}
-
-STRING 19668
-// Abilities: A0YN (Empowered Teleportation), Researchubertip (Tooltip - Learn - Extended)
-{
-Schala channels for 1.5s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool1>- <A0YE,Cool10> seconds)|r
-}
-
-STRING 19669
-// Abilities: A0YN (Empowered Teleportation), Ubertip (Tooltip - Normal - Extended)
-{
-Schala channels for 2s and then transports nearby allies to the target location. 
-|cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
 }
 
 STRING 19670
