@@ -346,6 +346,18 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.dkJungleRush, AbilityNames.DonkeyKong.JUNGLE_RUSH],
     [Id.dkBarrelCannon, AbilityNames.DonkeyKong.BARREL_CANNON],
 
+    // schala
+    [Id.schalaMagicOrbs, AbilityNames.Schala.MAGIC_ORBS],
+    [Id.schalaMagicOrbs2, AbilityNames.Schala.MAGIC_ORBS_2],
+    // [Id.schalaProtect, AbilityNames.Schala.PROTECT],
+    // [Id.schalaProtect2, AbilityNames.Schala.PROTECT_2],
+    [Id.schalaTeleportation, AbilityNames.Schala.TELEPORTATION],
+    [Id.schalaTeleportation2, AbilityNames.Schala.TELEPORTATION_2],
+    [Id.schalaSkygate, AbilityNames.Schala.SKYGATE],
+    [Id.schalaSkygate2, AbilityNames.Schala.SKYGATE_2],
+    [Id.schalaMagicSeal, AbilityNames.Schala.MAGIC_SEAL],
+    [Id.schalaMagicSeal2, AbilityNames.Schala.MAGIC_SEAL_2],
+    [Id.schalaDreamDevourer, AbilityNames.Schala.DREAM_DEVOURER],
 
 
 

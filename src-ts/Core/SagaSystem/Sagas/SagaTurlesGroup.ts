@@ -13,7 +13,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     super();
     this.delay = 40;
     this.stats = 25;
-    this.availableFruits = 2;
+    this.availableFruits = 1;
   }
 
   spawnSagaUnits(): void {
@@ -41,7 +41,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.turles, 0.10, true, false, true)
     ) {
       --this.availableFruits;
-      SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
+      SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 5, true);
       SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.05 + 20), true);
       SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.1 + 20), true);
       SetHeroInt(this.turles, Math.floor(GetHeroInt(this.turles, true) * 1.1 + 20), true);

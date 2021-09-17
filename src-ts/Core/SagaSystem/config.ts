@@ -143,8 +143,11 @@ export const sagaSystemConfig: SagaSystemConfig = {
     Super13Saga: [
       [ CoolerReturnSaga, SagaState.Completed ],
     ],
+    BojackSaga: [
+      [ Super13Saga, SagaState.Completed ],
+    ],
     BrolyDBZMovieSaga1: [
-      [ CellSaga, SagaState.Completed ],
+      [ BojackSaga, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga2: [
       [ BrolyDBZMovieSaga1, SagaState.Completed ],
@@ -164,10 +167,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     FutureCellSaga: [
       [ FutureAndroidsSaga, SagaState.Completed ],
-    ],
-    BojackSaga: [
-      [ FutureAndroidsSaga, SagaState.Completed ],
-      [ FutureCellSaga, SagaState.Completed ],
     ],
     FutureBabidiSaga: [
       [ BojackSaga, SagaState.Completed ],

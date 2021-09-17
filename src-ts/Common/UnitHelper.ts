@@ -46,7 +46,7 @@ export module UnitHelper {
     }
   }
   
-  export function countEnemyHeroes(group: group, player: player): number {
+  export function countEnemyHeroes(group: group, player: player, includeSummons: boolean): number {
     let numEnemies = 0;
     ForGroup(group, () => {
       const unit = GetEnumUnit();
@@ -54,7 +54,11 @@ export module UnitHelper {
         IsUnitType(unit, UNIT_TYPE_HERO) &&
         IsUnitEnemy(unit, player) &&
         !isUnitDead(unit) && 
-        isUnitTargetableForPlayer(unit, player)
+        isUnitTargetableForPlayer(unit, player) &&
+        (
+          includeSummons ||
+          !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+        )
       ) {
         ++numEnemies;
       }

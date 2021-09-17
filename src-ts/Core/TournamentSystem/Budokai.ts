@@ -67,13 +67,19 @@ export class Budokai extends AdvancedTournament implements Tournament {
         true
       );
       TriggerRegisterPlayerChatEvent(
+        this.registerTrigger, 
+        player, 
+        TournamentData.budokaiEnterCommandShortcut,
+        true
+      );
+      TriggerRegisterPlayerChatEvent(
         this.showBracketTrigger,
         player,
         TournamentData.budokaiShowBracketCommand,
         true
       )
     }
-    // TODO: dont let heaven/hell people register
+
     TriggerAddAction(this.registerTrigger, () => {
       const player = GetTriggerPlayer();
       this.addPlayerContestant(player);

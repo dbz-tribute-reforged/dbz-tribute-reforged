@@ -7647,6 +7647,207 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Schala.MAGIC_ORBS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.MAGIC_ORBS,
+      body: 
+        AbilityNames.Schala.MAGIC_ORBS
+    },
+    components: [
+      { name: "multi schala magic orbs" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.MAGIC_ORBS_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.MAGIC_ORBS,
+      body: 
+        AbilityNames.Schala.MAGIC_ORBS
+    },
+    components: [
+      { name: "multi schala magic orbs 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.SKYGATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.SKYGATE,
+      body: 
+        AbilityNames.Schala.SKYGATE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage schala skygate explosion" },
+      { name: "sfx schala skygate" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.SKYGATE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.SKYGATE,
+      body: 
+        AbilityNames.Schala.SKYGATE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage schala skygate 2 explosion" },
+      { name: "sfx schala skygate 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.MAGIC_SEAL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.MAGIC_SEAL,
+      body: 
+        AbilityNames.Schala.MAGIC_SEAL
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam schala magic seal" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.MAGIC_SEAL_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.MAGIC_SEAL,
+      body: 
+        AbilityNames.Schala.MAGIC_SEAL
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam schala magic seal 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Schala.DREAM_DEVOURER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSchalaF.blp",
+      disabled: "BTNSchalaF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Schala.DREAM_DEVOURER,
+      body: 
+        AbilityNames.Schala.DREAM_DEVOURER
+    },
+    components: [
+      { name: "temp ability schala magic orbs 2" },
+      { name: "temp ability schala protect 2" },
+      { name: "temp ability schala teleport 2" },
+      { name: "temp ability schala skygate 2" },
+      { name: "temp ability schala seal 2" },
+      { name: "dash ground forward bankai final" },
+      { name: "block schala dream devourer" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

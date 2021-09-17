@@ -22,12 +22,11 @@ export module SagaAIData {
     MOVE = "smart",
   };
 
-  export const DELAY_TO_INTERVALS = 4;
+  export let DELAY_TO_INTERVALS = 4;
+  export let defaultActionInterval: number = 25;
 
-  export const defaultSpellPowerModifier: number = -0.12;
-  export const defaultActionInterval: number = 25;
-  export const defaultAggroInterval: number = 10;
-  export const defaultConsecutiveAttacksAllowed: number = 10;
+  export const defaultSpellPowerModifier: number = -0.15;
+  export const defaultConsecutiveAttacksAllowed: number = 9;
   export const defaultBeamsToDodge: number = 4;
   export const defaultDodgeAOE: number = 1600;
   export const defaultDodgeDistance: number = 400;

@@ -177,8 +177,8 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.AngryGhost, 1.0)
           ]],
           [Creep.FishBaby, [
-            new RandomCreepType(Creep.FishAdult, 0.7),
-            new RandomCreepType(Creep.SeaSerpent, 0.3),
+            new RandomCreepType(Creep.FishAdult, 0.85),
+            new RandomCreepType(Creep.SeaSerpent, 0.15),
           ]],
           [Creep.CrocodileGIant, [
             new RandomCreepType(Creep.CrocodileMother, 1.0),
