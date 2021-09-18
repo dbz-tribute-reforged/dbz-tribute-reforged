@@ -7,7 +7,7 @@ import { Id } from "Common/Constants";
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
     // dead zone
-    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 9, 30, 25, 20, new Vector2D(24500, 20700),
+    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 10, 30, 25, 20, new Vector2D(24500, 20700),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -18,7 +18,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(25000, 19500))],
     ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(24000, 19000))],
-    ["Sansho", new SagaUnit(FourCC("N00C"), 3, 10, 5, 5, new Vector2D(25500, 19200))],
+    ["Sansho", new SagaUnit(FourCC("N00C"), 2, 10, 5, 5, new Vector2D(25500, 19200))],
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],

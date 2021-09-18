@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.68a
+DBZ Tribute Reforged 0.68b
 }
 
 STRING 4
@@ -4113,7 +4113,7 @@ Transformations:
 [lvl 150] 2.60x "fp"
 [lvl 250] 2.75x "fp" [Unlocks Serious Series]
 
-|cffff25aaDumb|r: -0.5x Int Mult
+|cffff25aaDumb|r: -10% Int Mult
 |cffff2020ONE PUNCH|r: 100% chance for 1.5x crit
 }
 
@@ -9851,6 +9851,16 @@ STRING 1571
 {
 |cffffff00Drains 1% of nearby enemy's health per second.|r
 A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 1572
+// Items: I04O (Frieza's Tail), Description (Description)
+{
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.
++0.05x Int Mult.
++10ms on Low HP.|r
 }
 
 STRING 1573
@@ -39526,15 +39536,6 @@ Upgrades to Getsuga Jujisho at max level.
 |cff00ffffCooldown: <A0U7,Cool1> seconds|r
 }
 
-STRING 6368
-// Items: I04O (Frieza's Tail), Description (Description)
-{
-The tail of Frieza, Emperor of the Universe.
-|cffffff00+0.05x Str mult.
-+0.05x Agi mult.
-+10ms on Low HP.|r
-}
-
 STRING 6369
 // Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39599,15 +39600,6 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff00FFFFCooldown: <A0U8,Cool7>s|r
 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
-STRING 6375
-// Items: I04O (Frieza's Tail), Ubertip (Tooltip - Extended)
-{
-The tail of Frieza, Emperor of the Universe.
-|cffffff00+0.05x Str mult.
-+0.05x Agi mult.
-+10ms on Low HP.|r
 }
 
 STRING 6376
@@ -42775,16 +42767,6 @@ STRING 6883
 // Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 6884
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool1>s
 }
 
 STRING 6885
@@ -54415,56 +54397,6 @@ STRING 8712
 Q
 }
 
-STRING 8713
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur2>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool2>s
-}
-
-STRING 8714
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur4>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool4>s
-}
-
-STRING 8715
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur3>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool3>s
-}
-
-STRING 8716
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur5>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool5>s
-}
-
-STRING 8717
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur6>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool6>s
-}
-
 STRING 8718
 // Abilities: A0IE (Lightning Surprise), Researchtip (Tooltip - Learn)
 {
@@ -54505,50 +54437,10 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 |cffffcc00Damage|r - <A00S,DataB10,.> times
 }
 
-STRING 8724
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur7>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool7>s
-}
-
-STRING 8725
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur8>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool8>s
-}
-
-STRING 8726
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur9>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool9>s
-}
-
 STRING 8727
 // Abilities: A0IE (Lightning Surprise), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Lightning Surprise - [|cffffcc00Level 10|r]
-}
-
-STRING 8728
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur10>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool10>s
 }
 
 STRING 8729
@@ -62205,16 +62097,6 @@ STRING 9972
 // Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
-}
-
-STRING 9973
-// Abilities: A0IE (Lightning Surprise), Researchubertip (Tooltip - Learn - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool1> - <A0IE,Cool10>s
 }
 
 STRING 9974
@@ -118935,7 +118817,7 @@ STRING 18480
 {
 Type "r" to revert.
 Transformations:
-Int multiplier permanently increased by 20%
+Int multiplier permanently increased by 10%
 [lvl 20]  1.25x "fp"
 [lvl 35]  1.50x "fp"
 [lvl 85]  2.00x "fp"
@@ -118969,12 +118851,6 @@ STRING 18484
 // Abilities: A0X4 (Mega Bomb), EditorSuffix (Editor Suffix)
 {
 (lucca)
-}
-
-STRING 18485
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>s|r
 }
 
 STRING 18486
@@ -119017,66 +118893,6 @@ STRING 18492
 {
 [|cffffcc00Upgrade|r] Napalm
 Lucca's Napalm has been upgraded to Mega Bomb, a larger, more damaging version.
-}
-
-STRING 18493
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool2>s|r
-}
-
-STRING 18494
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool3>s|r
-}
-
-STRING 18495
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool4>s|r
-}
-
-STRING 18496
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
-}
-
-STRING 18497
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool6>s|r
-}
-
-STRING 18498
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool7>s|r
-}
-
-STRING 18499
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool8>s|r
-}
-
-STRING 18500
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool9>s|r
-}
-
-STRING 18501
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool10>s|r
-}
-
-STRING 18502
-// Abilities: A0X0 (Hypnowave), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
 }
 
 STRING 18503
@@ -125381,6 +125197,16 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cff00ffffCooldown: <A0YD,Cool9> seconds|r
 }
 
+STRING 19390
+// Items: I04O (Frieza's Tail), Ubertip (Tooltip - Extended)
+{
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.
++0.05x Int Mult.
++10ms on Low HP.|r
+}
+
 STRING 19391
 // Abilities: A0YJ (Schala Protection), Name (Name)
 {
@@ -125628,11 +125454,14 @@ STRING 19430
 Q
 }
 
-STRING 19431
-// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+STRING 19432
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Schala prays, channeling the power of Lavos through her pendant.
-|cff2080ffMana Regeneration: 3% Max Mana per second|n|r|cff00FF00Bonus Multiplier: +.03x per second. Each spell cast by Schala will reduce her bonus multiplier by 25%.|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool1>s
 }
 
 STRING 19433
@@ -125643,6 +125472,26 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 |cff2080ffMana Cost: 25% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur10> seconds|r
 |cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
+STRING 19434
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool2>s
+}
+
+STRING 19435
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool4>s
 }
 
 STRING 19436
@@ -125679,6 +125528,16 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff2080ffMana Cost: 20% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur4> seconds|r
 |cff00ffffCooldown: <A0YG,Cool4> seconds|r
+}
+
+STRING 19440
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool5>s
 }
 
 STRING 19441
@@ -125791,6 +125650,94 @@ STRING 19456
 |cffffff00Reduces the health of nearby enemies by 2.5% of their current health per second.|r
 
 A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 19457
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool6>s
+}
+
+STRING 19458
+// Abilities: A0IE (Lightning Surprise), Researchubertip (Tooltip - Learn - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool1> - <A0IE,Cool10>s
+}
+
+STRING 19459
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool7>s
+}
+
+STRING 19460
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool8>s
+}
+
+STRING 19461
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool9>s
+}
+
+STRING 19462
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool10>s
+}
+
+STRING 19463
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool3>s
+}
+
+STRING 19464
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool1>s|r
+}
+
+STRING 19465
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool2>s|r
+}
+
+STRING 19466
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool3>s|r
 }
 
 STRING 19467
@@ -125911,6 +125858,12 @@ STRING 19481
 R
 }
 
+STRING 19482
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool4>s|r
+}
+
 STRING 19483
 // Abilities: A0YM (Empowered Skygate), Researchtip (Tooltip - Learn)
 {
@@ -125981,6 +125934,12 @@ Schala calls down lightning from the sky that bombards the target area.
 |cff00ffffCooldown: <A0YF,Cool1> - <A0YF,Cool10> seconds|r
 }
 
+STRING 19492
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
+}
+
 STRING 19493
 // Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
 {
@@ -126024,6 +125983,50 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff2080ffMana Cost: 20% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur9> seconds|r
 |cff00ffffCooldown: <A0YG,Cool9> seconds|r
+}
+
+STRING 19498
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool6>s|r
+}
+
+STRING 19499
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool7>s|r
+}
+
+STRING 19500
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool8>s|r
+}
+
+STRING 19501
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool9>s|r
+}
+
+STRING 19502
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool10>s|r
+}
+
+STRING 19503
+// Abilities: A0X0 (Hypnowave), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
+}
+
+STRING 19504
+// Abilities: A0YH (Pray), Ubertip (Tooltip - Normal - Extended)
+{
+Schala prays, channeling the power of Lavos through her pendant.
+|cff2080ffMana Regeneration: 3% Max Mana per second|n|r|cff00FF00Bonus Multiplier: +.04x per second up to +0.5x. 
+Each spell cast by Schala will reduce her bonus multiplier by 25%.|r
 }
 
 STRING 19511
