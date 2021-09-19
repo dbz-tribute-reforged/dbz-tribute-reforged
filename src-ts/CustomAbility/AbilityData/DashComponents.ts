@@ -133,7 +133,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 45,
+    distance: 50,
   },
   // zanzoken
   {
@@ -1416,7 +1416,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 10,
+    distance: 12,
   },
   // ----------------------------
   // cell-x

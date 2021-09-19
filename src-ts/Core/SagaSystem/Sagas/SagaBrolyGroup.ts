@@ -13,7 +13,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 15;
     this.isLSS = false;
     this.auraLSS = GetLastCreatedEffectBJ();
   }

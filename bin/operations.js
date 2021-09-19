@@ -50,7 +50,7 @@ switch (operation) {
     break;
   case "gen-defs":
     // Create definitions file for generated globals
-    const luaFile = "maps/map.w3x/war3map.lua";
+    const luaFile = "maps/Tribute_Reforged.w3x/war3map.lua";
 
     try {
       const contents = fs.readFileSync(luaFile, "utf8");

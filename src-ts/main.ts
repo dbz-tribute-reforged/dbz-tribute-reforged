@@ -18,9 +18,11 @@ import { Constants } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
 import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
 import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstants';
+import { FusionManager } from 'Core/FusionSystem/FusionManager';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
+let fusionManager: FusionManager;
 let creepManager: CreepManager;
 let teamManager: TeamManager;
 let itemStackingManager: ItemStackingManager;
@@ -69,12 +71,14 @@ function tsMain() {
 
   TimerStart(CreateTimer(), 5, false, () => {
     itemAbilityManager = ItemAbilityManager.getInstance();
+    fusionManager = FusionManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })
 
   TimerStart(CreateTimer(), 10, false, () => {
     // teamManager = TeamManager.getInstance();
     creepManager = CreepManager.getInstance();
+    experienceManager = ExperienceManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })
 
@@ -95,11 +99,6 @@ function tsMain() {
   });
 
   TimerStart(CreateTimer(), 15, false, () => {
-    experienceManager = ExperienceManager.getInstance();
-    DestroyTimer(GetExpiredTimer());
-  });
-
-  TimerStart(CreateTimer(), 20, false, () => {
     itemStackingManager = ItemStackingManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })

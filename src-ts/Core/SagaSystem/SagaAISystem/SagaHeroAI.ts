@@ -2,7 +2,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { SagaAIData } from "./SagaAIData";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
-import { Constants, OrderIds } from "Common/Constants";
+import { Constants, OrderIds, Globals } from "Common/Constants";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { CoordMath } from "Common/CoordMath";
 import { AbilityNames } from "CustomAbility/AbilityNames";
@@ -385,10 +385,15 @@ export class SagaHeroAI {
           }
 
           this.numWaits = 0;
-          this.maxWait = ability.castDelay * SagaAIData.DELAY_TO_INTERVALS;
+          
+          let delay = ability.castDelay;
+          if (Globals.isNightmare) {
+            delay *= 0.75;
+          }
+          this.maxWait = delay * SagaAIData.DELAY_TO_INTERVALS;
           this.performWait();
 
-          TimerStart(CreateTimer(), ability.castDelay, false, () => {
+          TimerStart(CreateTimer(), delay, false, () => {
             if (UnitHelper.isUnitAlive(this.sagaUnit)) {
               this.useCustomAbility(AbilityNames.Saga.MAX_POWER, true, 1);
               this.useCustomAbilityWithInput(ability.name, abilityInput, false);

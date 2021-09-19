@@ -1000,6 +1000,7 @@ export function CustomPlayerTest() {
   const nightmareTrigger = CreateTrigger();
   for (let i = 0; i < Constants.maxActivePlayers; ++i) {
     TriggerRegisterPlayerChatEvent(nightmareTrigger, Player(i), "-nm", true);
+    TriggerRegisterPlayerChatEvent(nightmareTrigger, Player(i), "-nightmare", true);
   }
   TriggerAddAction(nightmareTrigger, () => {
     if (GetTriggerPlayer() == Globals.hostPlayer) {
@@ -1950,7 +1951,7 @@ export function SetupJirenGlare() {
   const glareDuration = 2.5;
   const darkEyesDuration = 4.0;
   const maxGlareDistance = 2500;
-  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.53;
+  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.48;
   const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.75;
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
@@ -2929,9 +2930,9 @@ export function SetupVegetaFightingSpirit() {
 
 export function SetupSchalaTeleportation() {
   const schalaTpMoveDuration = 66;
-  const schalaTpMoveDuration2 = 50;
+  const schalaTpMoveDuration2 = 33;
   const schalaTpEndTick = 100;
-  const schalaTpAOE = 900;
+  const schalaTpAOE = 600;
   const schalaTpMaxDist = 6000;
 
   const tmpPos = new Vector2D(0, 0);
@@ -2958,7 +2959,12 @@ export function SetupSchalaTeleportation() {
       const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
       const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
       const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
-      const beamSpeed = Math.min(4000, Math.max(1500, CoordMath.distance(casterPos, targetPos))) / schalaTpMoveDuration;
+      let beamSpeed = Math.min(4000, Math.max(1500, CoordMath.distance(casterPos, targetPos)));
+      if (spellId == Id.schalaTeleportation) {
+        beamSpeed /= schalaTpMoveDuration;
+      } else if (spellId == Id.schalaTeleportation2) {
+        beamSpeed /= schalaTpMoveDuration2;
+      }
       const sfxCast = AddSpecialEffect(
         "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
         casterPos.x, casterPos.y
@@ -2978,7 +2984,16 @@ export function SetupSchalaTeleportation() {
           DestroyEffect(sfxBeam);
           DestroyTimer(GetExpiredTimer());
         } else {
-          if (tick < schalaTpMoveDuration) {
+          if (
+            (
+              spellId == Id.schalaTeleportation && 
+              tick < schalaTpMoveDuration
+            ) ||
+            (
+              spellId == Id.schalaTeleportation2 &&
+              tick < schalaTpMoveDuration2
+            )
+          ) {
             targetPos.setPos(GetUnitX(tpUnit), GetUnitY(tpUnit));
             targetPos.polarProjectCoords(targetPos, direction, beamSpeed);
             BlzSetSpecialEffectX(sfxBeam, targetPos.x);
