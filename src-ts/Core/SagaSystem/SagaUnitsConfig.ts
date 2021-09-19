@@ -435,7 +435,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // broly - lss
-    ["Broly DBZ 1", new SagaUnit(FourCC("H00M"), 75, 3000, 400, 2500, new Vector2D(8700, -5400),
+    ["Broly DBZ 1", new SagaUnit(FourCC("H00M"), 75, 3000, 400, 2500, new Vector2D(-3000, 11000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Broly.POWER_LEVEL_RISING,
