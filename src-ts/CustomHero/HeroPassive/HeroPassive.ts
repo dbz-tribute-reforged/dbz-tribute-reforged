@@ -1074,12 +1074,13 @@ export function setupSPData(customHero: CustomHero) {
   const maxSpUpdateTimer = CreateTimer();
   customHero.addTimer(maxSpUpdateTimer);
   TimerStart(maxSpUpdateTimer, 5.0, true, () => {
-    customHero.setMaxSP(
-      Constants.BASE_STAMINA + 
-      Math.min(
-        25,
-        0.0005 * GetHeroAgi(customHero.unit, true)
-      )
+    let maxStamina = Constants.BASE_STAMINA + Math.min(
+      25,
+      0.0005 * GetHeroAgi(customHero.unit, true)
     );
+    if (IsUnitType(customHero.unit, UNIT_TYPE_SUMMONED)) {
+      maxStamina *= 0.55;
+    }
+    customHero.setMaxSP(maxStamina);
   });
 }

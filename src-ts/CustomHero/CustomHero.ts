@@ -36,6 +36,10 @@ export class CustomHero {
     this.spellPower = 1.0;
     this.currentSp = Constants.BASE_STAMINA;
     this.maxSp = Constants.BASE_STAMINA;
+    if(IsUnitType(unit, UNIT_TYPE_SUMMONED)) {
+      this.currentSp *= 0.55;
+      this.maxSp *= 0.55;
+    }
 
     this.passiveTrigger = [];
     this.timers = [];
