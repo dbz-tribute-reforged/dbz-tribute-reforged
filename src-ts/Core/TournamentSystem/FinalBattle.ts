@@ -109,7 +109,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       })
       DestroyGroup(playerUnits);
 
-      PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0);
+      PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0.1);
 
     }
   }

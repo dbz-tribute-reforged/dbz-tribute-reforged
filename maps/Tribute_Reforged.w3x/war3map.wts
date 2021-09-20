@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.68c
+DBZ Tribute Reforged 0.68d
 }
 
 STRING 4
@@ -9846,6 +9846,12 @@ STRING 1571
 A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
+STRING 1572
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+{
+Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n60% damage block up to 7 x Str.|nUpgrades Cell Jrs into Cell-X Jrs (50% stats).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+}
+
 STRING 1573
 // Items: I01Z (Dr Wheelo's Research), Description (Description)
 {
@@ -12168,6 +12174,13 @@ STRING 1952
 D
 }
 
+STRING 1953
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool1> seconds|r
+}
+
 STRING 1954
 // Abilities: A0XS (Book Saitama Passives), Name (Name)
 {
@@ -12232,10 +12245,51 @@ STRING 1961
 [|cff00ff00Q|r] Learn S.S. Deadly Hammer - [|cffffcc00Level %d|r]
 }
 
+STRING 1962
+// Destructibles: B00N (West City Building), Name (Name)
+{
+West City Building
+}
+
+STRING 1963
+// Destructibles: B00X (West City Building), EditorSuffix (Editor Suffix)
+{
+Sphere Tower
+}
+
+STRING 1964
+{
+|cff666666Leaver
+}
+
+STRING 1965
+{
+Stats
+}
+
+STRING 1966
+{
+Stats
+}
+
 STRING 1967
 // Units: H08Z (Park Ranger), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 1968
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool2> seconds|r
+}
+
+STRING 1969
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool3> seconds|r
 }
 
 STRING 1970
@@ -43588,12 +43642,6 @@ STRING 7022
 The user punches in front of them, dealing damage to enemies and deflecting beams.|n|cffff2020Warning: Actual range is shorter than cast range!|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1,.>s|r
 }
 
-STRING 7023
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
-{
-Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n70% damage block up to 8 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (50%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
-}
-
 STRING 7024
 // Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
@@ -56393,6 +56441,13 @@ STRING 9037
 // Abilities: A0K2 (Overcharge), Name (Name)
 {
 Overcharge
+}
+
+STRING 9038
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool4> seconds|r
 }
 
 STRING 9039
@@ -72557,19 +72612,19 @@ STRING 11663
 }
 
 STRING 11664
-// Destructibles: B00N (West City Building), Name (Name)
-{
-West City Building
-}
-
-STRING 11665
 // Destructibles: B00O (West City Building), Name (Name)
 {
 West City Building
 }
 
-STRING 11666
+STRING 11665
 // Destructibles: B00P (West City Building), Name (Name)
+{
+West City Building
+}
+
+STRING 11666
+// Destructibles: B00Q (West City Building), Name (Name)
 {
 West City Building
 }
@@ -72581,7 +72636,7 @@ STRING 11667
 }
 
 STRING 11668
-// Destructibles: B00Q (West City Building), Name (Name)
+// Destructibles: B00R (West City Building), Name (Name)
 {
 West City Building
 }
@@ -72593,7 +72648,7 @@ STRING 11669
 }
 
 STRING 11670
-// Destructibles: B00R (West City Building), Name (Name)
+// Destructibles: B00S (West City Building), Name (Name)
 {
 West City Building
 }
@@ -72605,7 +72660,7 @@ STRING 11671
 }
 
 STRING 11672
-// Destructibles: B00S (West City Building), Name (Name)
+// Destructibles: B00X (West City Building), Name (Name)
 {
 West City Building
 }
@@ -94971,55 +95026,6 @@ Guldo focuses his telekinetic powers to hold down all enemies at the target loca
 |cff00ffffCooldown: <A0SE,Cool1> seconds|r
 }
 
-STRING 15141
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool1> seconds|r
-}
-
-STRING 15142
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool2> seconds|r
-}
-
-STRING 15143
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool3> seconds|r
-}
-
-STRING 15144
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool4> seconds|r
-}
-
-STRING 15145
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool5> seconds|r
-}
-
-STRING 15146
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool6> seconds|r
-}
-
-STRING 15147
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool7> seconds|r
-}
-
 STRING 15148
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
@@ -95080,13 +95086,6 @@ STRING 15157
 [|cff00FF00R|r] Learn Time Stop - [|cffffcc00Level %d|r]
 }
 
-STRING 15158
-// Abilities: A0SF (Time Stop), Researchubertip (Tooltip - Learn - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level.
-|cff00FFFFCooldown: <A0SF,Cool1> - <A0SF,Cool10> seconds|r
-}
-
 STRING 15159
 // Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
 {
@@ -95115,27 +95114,6 @@ STRING 15163
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Time Stop - [|cffffcc00Level 10|r]
-}
-
-STRING 15164
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool8> seconds|r
-}
-
-STRING 15165
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool9> seconds|r
-}
-
-STRING 15166
-// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
-{
-Guldo holds his breath and temporarily freezes the time for all nearby enemies. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds.
-|cff00FFFFCooldown: <A0SF,Cool10> seconds|r
 }
 
 STRING 15167
@@ -112283,6 +112261,13 @@ STRING 17510
 [|cffFF2222F|r] Ultimate Burning Warrior 3
 }
 
+STRING 17511
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool5> seconds|r
+}
+
 STRING 17512
 // Abilities: A005 (Ultimate Burning Warrior 3), Name (Name)
 {
@@ -125291,6 +125276,13 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cff00ffffCooldown: <A0YD,Cool9> seconds|r
 }
 
+STRING 19390
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool6> seconds|r
+}
+
 STRING 19391
 // Abilities: A0YJ (Schala Protection), Name (Name)
 {
@@ -125719,6 +125711,13 @@ STRING 19453
 W
 }
 
+STRING 19454
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool7> seconds|r
+}
+
 STRING 19455
 // Items: I02E (Bio Lab Research), Description (Description)
 {
@@ -126104,10 +126103,38 @@ STRING 19503
 Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
 }
 
+STRING 19504
+// Abilities: A0SF (Time Stop), Researchubertip (Tooltip - Learn - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool1> - <A0SF,Cool10> seconds|r
+}
+
 STRING 19505
 // Abilities: A0YQ (Revive - ??? Respawn), Hotkey (Hotkey - Normal)
 {
 A
+}
+
+STRING 19506
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool8> seconds|r
+}
+
+STRING 19507
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool9> seconds|r
+}
+
+STRING 19508
+// Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
+{
+Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
+|cff00FFFFCooldown: <A0SF,Cool10> seconds|r
 }
 
 STRING 19511

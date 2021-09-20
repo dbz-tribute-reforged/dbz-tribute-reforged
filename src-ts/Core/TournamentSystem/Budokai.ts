@@ -312,7 +312,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 Player(contestant.id), 
                 unitContestant.oldPosition.x, 
                 unitContestant.oldPosition.y, 
-                0
+                0.1
               );
               break;
             }
@@ -425,7 +425,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
       if (j % 2 != 0) {
         spawnPos = TournamentData.budokaiSpawn2;
       }
-      PanCameraToTimedForPlayer(Player(contestant.id), spawnPos.x, spawnPos.y, 0);
+      PanCameraToTimedForPlayer(Player(contestant.id), spawnPos.x, spawnPos.y, 0.1);
       // Logger.LogDebug("Contestant: " + contestant.id + " units: " + contestant.units.size);
       for (const unit of contestant.getUnits()) {
         DestroyEffect(
