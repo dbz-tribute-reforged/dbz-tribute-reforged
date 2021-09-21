@@ -709,7 +709,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 4,
+    distance: 8,
   },
   // yamcha r medium punch
   {
@@ -722,7 +722,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 3,
+    distance: 6,
   },
   // yamcha r heavy punch
   {
@@ -735,20 +735,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 2,
-  },
-  // yamcha r dash left
-  {
-    name: "dash ground forward yamcha r dash left",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
-    useLastCastPoint: true,
-    angleOffset: 90,
-    distance: 35,
+    distance: 4,
   },
   // yamcha r dash forward
   {
@@ -761,6 +748,19 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
+    distance: 35,
+  },
+  // yamcha r dash left
+  {
+    name: "dash ground forward yamcha r dash left",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 90,
     distance: 35,
   },
   // yamcha r dash right
@@ -801,18 +801,18 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 50,
   },
-  // yamcha r sledgehammer
+  // yamcha r uppercut
   {
-    name: "dash ground forward yamcha r sledgehammer",
+    name: "dash ground forward yamcha r uppercut",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 10,
+    distance: 9,
   },
   // yamcha r meteor crash
   {
@@ -827,18 +827,18 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 6,
   },
-  // yamcha r meteor crash
+  // yamcha r sledgehammer
   {
-    name: "dash ground forward yamcha r uppercut",
+    name: "dash ground forward yamcha r sledgehammer",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
+    checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 3,
+    distance: 5,
   },
   // yamcha r wolf fang hurricane
   {
@@ -877,7 +877,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 6,
+    distance: 5,
   },
   // yamcha r spirit ball
   {

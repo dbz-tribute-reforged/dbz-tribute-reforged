@@ -301,8 +301,13 @@ export function CustomPlayerTest() {
       const playerId = GetPlayerId(player);
       const abilityId = GetSpellAbilityId();
       Globals.customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
-  
-      if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
+
+      if (
+        IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
+        && abilityId != Id.yamchaRLightPunch
+        && abilityId == Id.yamchaRMediumPunch 
+        && abilityId == Id.yamchaRHeavyPunch
+      ) {
         // show ability name on activation
         TextTagHelper.showPlayerColorTextOnUnit(
           GetAbilityName(abilityId), 
@@ -1173,6 +1178,8 @@ export function CustomPlayerTest() {
     SetupVegetaFightingSpirit();
 
     SetupSchalaTeleportation();
+
+    SetupYamchaCombos();
 
     SetupMysteryCapsuleBox();
 
@@ -3064,6 +3071,169 @@ export function SetupSchalaTeleportation() {
   });
 
 }
+
+export function SetupYamchaCombos() {
+  // globals hashtable
+  // 0: 1st slot
+  // 1: 2nd slot
+  // 2: 3rd slot
+
+
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (
+      spellId == Id.yamchaRLightPunch 
+      || spellId == Id.yamchaRMediumPunch
+      || spellId == Id.yamchaRHeavyPunch
+    ) {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      const player = GetOwningPlayer(unit);
+      const playerId = GetPlayerId(player);
+
+      const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+      if (customHero) {
+
+        IssuePointOrderById(
+          unit, 
+          OrderIds.MOVE, 
+          Globals.customPlayers[playerId].orderPoint.x, 
+          Globals.customPlayers[playerId].orderPoint.y
+        );
+
+        let s1 = LoadInteger(Globals.genericSpellHashtable, unitId, 0);
+        let s2 = LoadInteger(Globals.genericSpellHashtable, unitId, 1);
+        let s3 = LoadInteger(Globals.genericSpellHashtable, unitId, 2);
+
+        if (s3 > 0) {
+          SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
+          SaveInteger(Globals.genericSpellHashtable, unitId, 1, 0);
+          SaveInteger(Globals.genericSpellHashtable, unitId, 2, 0);
+          s1 = 0;
+          s2 = 0;
+          s3 = 0;
+        }
+  
+        let castVal = 0;
+        if (spellId == Id.yamchaRLightPunch) {
+          castVal = 1;
+        } else if (spellId == Id.yamchaRMediumPunch) {
+          castVal = 2;
+        } else if (spellId == Id.yamchaRHeavyPunch) {
+          castVal = 3;
+        }
+  
+        if (s1 == 0) {
+          SaveInteger(Globals.genericSpellHashtable, unitId, 0, castVal);
+        } else if (s2 == 0) {
+          SaveInteger(Globals.genericSpellHashtable, unitId, 1, castVal);
+        } else if (s3 == 0) {
+          s3 = castVal;
+          SaveInteger(Globals.genericSpellHashtable, unitId, 2, castVal);
+          
+          // BJDebugMsg(I2S(s1) + I2S(s2) + I2S(s3));
+
+          let sum = s1 * 100 + s2 * 10 + s3; 
+          let abilName = AbilityNames.YamchaR.LIGHT_PUNCH;
+          
+          if (sum == 111) {
+            abilName = AbilityNames.YamchaR.DASH_FORWARD;
+          } else if (sum == 112) {
+            abilName = AbilityNames.YamchaR.DASH_LEFT;
+          } else if (sum == 113) {
+            abilName = AbilityNames.YamchaR.DASH_RIGHT;
+          } else if (sum == 121) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_HURRICANE;
+          } else if (sum == 122) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_VOLLEY;
+          } else if (sum == 123) {
+            abilName = AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST;
+          } else if (sum == 131) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK;
+          } else if (sum == 132) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_FLASH;
+          } else if (sum == 133) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_FINISHER;
+          } else if (sum == 211) {
+            abilName = AbilityNames.YamchaR.SPIRIT_BALL;
+          } else if (sum == 212) {
+            abilName = AbilityNames.YamchaR.FLASH_KAME;
+          } else if (sum == 213) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_BARRAGE;
+          } else if (sum == 221) {
+            abilName = AbilityNames.YamchaR.SUPER_SPIRIT_BALL;
+          } else if (sum == 222) {
+            abilName = AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA;
+          } else if (sum == 223) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_BLAST;
+          } else if (sum == 231) {
+            abilName = AbilityNames.YamchaR.HOMERUN;
+          } else if (sum == 232) {
+            abilName = AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST;
+          } else if (sum == 233) {
+            abilName = AbilityNames.YamchaR.BATTER_UP;
+          } else if (sum == 311) {
+            abilName = AbilityNames.YamchaR.NEO_WOLF_FANG_FIST;
+          } else if (sum == 312) {
+            abilName = AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST;
+          } else if (sum == 313) {
+            abilName = AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST;
+          } else if (sum == 321) {
+            abilName = AbilityNames.YamchaR.SUMMON_PUAR;
+          } else if (sum == 322) {
+            abilName = AbilityNames.YamchaR.YAMCHA_BLAST;
+          } else if (sum == 323) {
+            abilName = AbilityNames.YamchaR.PLAY_DEAD;
+          } else if (sum == 331) {
+            abilName = AbilityNames.YamchaR.UPPERCUT;
+          } else if (sum == 332) {
+            abilName = AbilityNames.YamchaR.METEOR_CRASH;
+          } else if (sum == 333) {          
+            abilName = AbilityNames.YamchaR.SLEDGEHAMMER;
+          }
+
+          SetUnitState(
+            unit, 
+            UNIT_STATE_MANA, 
+            GetUnitState(unit, UNIT_STATE_MANA) 
+            + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
+          );
+
+          let dmgMult = 0.5;
+          if (GetHeroLevel(unit) >= 90) {
+            dmgMult = 1.0;
+          }
+
+          // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
+          // fire a special qwe
+          const abilityInput = new CustomAbilityInput(
+            customHero,
+            player,
+            GetUnitAbilityLevel(unit, spellId),
+            Globals.customPlayers[playerId].orderPoint,
+            Globals.customPlayers[playerId].mouseData,
+            Globals.customPlayers[playerId].orderPoint.clone(),
+            undefined,
+            undefined,
+            0.3
+          );
+
+          if (customHero.canCastAbility(abilName, abilityInput)) {
+            TextTagHelper.showPlayerColorTextOnUnit(
+              abilName, 
+              playerId, 
+              unit
+            );
+            customHero.useAbility(abilName, abilityInput);
+          }
+        }
+      }
+    }
+  });
+}
+
+
+
 
 export function SetupMysteryCapsuleBox() {
   TriggerAddAction(Globals.genericSpellTrigger, () => {

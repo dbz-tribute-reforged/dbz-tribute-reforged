@@ -1,6 +1,8 @@
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CostType } from "Common/Constants";
 
+const YAMCHAR_CD = 7;
+
 export const AbilitiesList = [
   // copy from here
   {
@@ -3169,10 +3171,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.LIGHT_PUNCH,
     currentCd: 0,
-    maxCd: 0.3,
+    maxCd: 0.15,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 16,
+    duration: 5,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3198,10 +3200,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.MEDIUM_PUNCH,
     currentCd: 0,
-    maxCd: 0.3,
+    maxCd: 0.15,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 16,
+    duration: 5,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3227,10 +3229,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.HEAVY_PUNCH,
     currentCd: 0,
-    maxCd: 0.3,
+    maxCd: 0.15,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 16,
+    duration: 5,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3256,7 +3258,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.DASH_LEFT,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 16,
@@ -3284,7 +3286,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.DASH_FORWARD,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 16,
@@ -3312,7 +3314,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.DASH_RIGHT,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 16,
@@ -3340,7 +3342,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 60,
@@ -3367,7 +3369,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
@@ -3395,7 +3397,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_BLAST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
@@ -3422,9 +3424,69 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.YamchaR.UPPERCUT,
+    currentCd: 0,
+    maxCd: YAMCHAR_CD,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.UPPERCUT,
+      body: 
+        AbilityNames.YamchaR.UPPERCUT,
+    },
+    components: [
+      { name: "dash ground forward yamcha r heavy punch" },
+      { name: "damage yamcha r uppercut" },
+      { name: "debuff stun yamcha r uppercut" },
+      { name: "sfx yamcha r uppercut" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.METEOR_CRASH,
+    currentCd: 0,
+    maxCd: YAMCHAR_CD,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.METEOR_CRASH,
+      body: 
+        AbilityNames.YamchaR.METEOR_CRASH,
+    },
+    components: [
+      { name: "dash ground forward yamcha r meteor crash" },
+      { name: "damage yamcha r meteor crash" },
+      { name: "damage yamcha r meteor crash stun bonus" },
+      { name: "sfx yamcha r meteor crash" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.YamchaR.SLEDGEHAMMER,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 16,
@@ -3453,68 +3515,9 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.YamchaR.METEOR_CRASH,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 40,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNYamcha.blp",
-      disabled: "BTNYamcha.blp",
-    },
-    tooltip: {
-      title:  AbilityNames.YamchaR.METEOR_CRASH,
-      body: 
-        AbilityNames.YamchaR.METEOR_CRASH,
-    },
-    components: [
-      { name: "dash ground forward yamcha r meteor crash" },
-      { name: "damage yamcha r meteor crash" },
-      { name: "sfx yamcha r meteor crash" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.YamchaR.UPPERCUT,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 10,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNYamcha.blp",
-      disabled: "BTNYamcha.blp",
-    },
-    tooltip: {
-      title:  AbilityNames.YamchaR.UPPERCUT,
-      body: 
-        AbilityNames.YamchaR.UPPERCUT,
-    },
-    components: [
-      { name: "dash ground forward yamcha r heavy punch" },
-      { name: "damage yamcha r uppercut" },
-      { name: "debuff stun yamcha r uppercut" },
-      { name: "sfx yamcha r uppercut" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.YamchaR.WOLF_FANG_HURRICANE,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 100,
@@ -3544,7 +3547,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_VOLLEY,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 66,
@@ -3571,7 +3574,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
@@ -3600,7 +3603,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3630,7 +3633,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3657,7 +3660,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.NEO_WOLF_FANG_FIST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3687,7 +3690,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.SPIRIT_BALL,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 60,
@@ -3714,7 +3717,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.FLASH_KAME,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
@@ -3741,7 +3744,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_BARRAGE,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
@@ -3768,7 +3771,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3798,7 +3801,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_FLASH,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 30,
@@ -3829,7 +3832,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_FINISHER,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3857,9 +3860,37 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.YamchaR.SUMMON_PUAR,
+    currentCd: 0,
+    maxCd: YAMCHAR_CD,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.SUMMON_PUAR,
+      body: 
+        AbilityNames.YamchaR.SUMMON_PUAR,
+    },
+    components: [
+      { name: "spell amp yamcha r summon puar" },
+      { name: "beam puar barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.YamchaR.YAMCHA_BLAST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3886,7 +3917,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.PLAY_DEAD,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 67,
@@ -3915,7 +3946,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.HOMERUN,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 165,
@@ -3943,7 +3974,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 33,
@@ -3970,7 +4001,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.BATTER_UP,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 12,
@@ -3999,7 +4030,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.SPARKING,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: YAMCHAR_CD,
     costType: CostType.MP,
     costAmount: 0,
     duration: 1,

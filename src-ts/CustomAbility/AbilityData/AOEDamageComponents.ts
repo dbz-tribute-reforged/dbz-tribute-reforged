@@ -3241,7 +3241,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.1,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.05,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3268,7 +3268,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.15,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.075,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3295,7 +3295,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.2,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.11,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -3402,7 +3402,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 1.25,
+      multiplier: BASE_DMG.KAME_DPS * 1.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -3428,7 +3428,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 1.25,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 1.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -3493,9 +3493,9 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
-  // yamcha r sledgehammer
+  // yamcha r uppercut
   {
-    name: "damage yamcha r sledgehammer",
+    name: "damage yamcha r uppercut",
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
@@ -3509,7 +3509,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.4,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.33,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -3536,7 +3536,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 24,
     damageData: {
-      multiplier: BASE_DMG.DFIST_DPS * 0.65,
+      multiplier: BASE_DMG.DFIST_DPS * 0.4,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3547,9 +3547,35 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
-  // yamcha r uppercut
   {
-    name: "damage yamcha r uppercut",
+    name: "damage yamcha r meteor crash stun bonus",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: 0,
+    useInverseDamageScale: true,
+    useLastCastPoint: true,
+    aoe: 300,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: 24,
+    damageData: {
+      multiplier: BASE_DMG.DFIST_DPS * 0.8,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    maxManaLossPercent: 0,
+    requireBuff: false,
+    buffId: FourCC("BPSE"),
+  },
+  // yamcha r sledgehammer
+  {
+    name: "damage yamcha r sledgehammer",
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
@@ -3563,7 +3589,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.33,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -3778,7 +3804,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.75,
+      multiplier: BASE_DMG.KAME_DPS * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -3804,7 +3830,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 1.1,
+      multiplier: BASE_DMG.KAME_DPS * 1.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -3830,7 +3856,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 0.65,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -3884,7 +3910,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.17,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.1,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3910,7 +3936,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.22,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.35,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3963,7 +3989,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.15,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.3,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -3990,7 +4016,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.15,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.1,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -4016,7 +4042,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.25,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -4051,6 +4077,33 @@ export const AOEDamageComponents = [
     },
     maxHealthDamagePercent: 0,
     maxManaLossPercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // beam yamcha r yamcha blast
+  {
+    name: "damage beam yamcha r yamcha blast dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: -1,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 300,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE_DMG.KAME_DPS * 0.01,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    maxManaLossPercent: 0.1,
     requireBuff: false,
     buffId: 0,
   },
