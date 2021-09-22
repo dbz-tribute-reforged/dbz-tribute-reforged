@@ -227,15 +227,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.YamchaR.LIGHT_PUNCH,
       AbilityNames.YamchaR.MEDIUM_PUNCH,
       AbilityNames.YamchaR.HEAVY_PUNCH,
+
       AbilityNames.YamchaR.DASH_LEFT,
       AbilityNames.YamchaR.DASH_FORWARD,
       AbilityNames.YamchaR.DASH_RIGHT,
+
       AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
       AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
       AbilityNames.YamchaR.WOLF_FANG_BLAST,
-      AbilityNames.YamchaR.SLEDGEHAMMER,
-      AbilityNames.YamchaR.METEOR_CRASH,
+      
       AbilityNames.YamchaR.UPPERCUT,
+      AbilityNames.YamchaR.METEOR_CRASH,
+      AbilityNames.YamchaR.SLEDGEHAMMER,
 
       AbilityNames.YamchaR.WOLF_FANG_HURRICANE,
       AbilityNames.YamchaR.WOLF_FANG_VOLLEY,

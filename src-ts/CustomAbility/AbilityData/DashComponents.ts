@@ -424,25 +424,25 @@ export const DashComponents = [
     name: "dash flying point hellzone grenade",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 66,
+    endTick: 33,
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_FLYING,
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 55,
+    distance: 65,
   },
   {
     name: "dash flying unit hellzone grenade",
     repeatInterval: 1, 
-    startTick: 99,
+    startTick: 66,
     endTick: -1,
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     dashType: Dash.DASH_TYPE_FLYING,
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 55,
+    distance: 65,
   },
   // videl speed boost
   {
@@ -709,7 +709,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 8,
+    distance: 3,
   },
   // yamcha r medium punch
   {
@@ -722,7 +722,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 6,
+    distance: 2,
   },
   // yamcha r heavy punch
   {
@@ -735,7 +735,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 4,
+    distance: 1,
   },
   // yamcha r dash forward
   {
@@ -748,7 +748,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 35,
+    distance: 30,
   },
   // yamcha r dash left
   {
@@ -761,7 +761,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 90,
-    distance: 35,
+    distance: 40,
   },
   // yamcha r dash right
   {
@@ -774,7 +774,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 270,
-    distance: 35,
+    distance: 40,
   },
   // yamcha r super spirit ball
   {
@@ -812,7 +812,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 9,
+    distance: 6,
   },
   // yamcha r meteor crash
   {
@@ -825,7 +825,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 6,
+    distance: 4,
   },
   // yamcha r sledgehammer
   {
@@ -838,7 +838,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 5,
+    distance: 3,
   },
   // yamcha r wolf fang hurricane
   {
@@ -851,7 +851,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 2,
+    distance: 1.5,
   },
   // yamcha r reverse wolf fang blast
   {
@@ -864,7 +864,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 8,
+    distance: 6,
   },
   // yamcha r wolf fang fist
   {
@@ -877,7 +877,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 5,
+    distance: 4,
   },
   // yamcha r spirit ball
   {
@@ -915,7 +915,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 5,
+    distance: 3,
   },
   // yamcha r homerun
   {
@@ -928,7 +928,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 6,
+    distance: 5,
   },
   // yamcha r full power kame pushback
   {
