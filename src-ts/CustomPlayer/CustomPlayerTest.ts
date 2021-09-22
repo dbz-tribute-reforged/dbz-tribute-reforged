@@ -3199,10 +3199,7 @@ export function SetupYamchaCombos() {
             + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
           );
 
-          let dmgMult = 0.5;
-          if (GetHeroLevel(unit) >= 90) {
-            dmgMult = 1.0;
-          }
+          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0004);
 
           // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
           // fire a special qwe
@@ -3215,7 +3212,7 @@ export function SetupYamchaCombos() {
             Globals.customPlayers[playerId].orderPoint.clone(),
             undefined,
             undefined,
-            0.3
+            dmgMult
           );
 
           if (customHero.canCastAbility(abilName, abilityInput)) {
@@ -3225,11 +3222,29 @@ export function SetupYamchaCombos() {
               unit
             );
             customHero.useAbility(abilName, abilityInput);
+
+            // BlzStartUnitAbilityCooldown(unit, Id.yamchaRLightPunch, 0);
+            // BlzStartUnitAbilityCooldown(unit, Id.yamchaRMediumPunch, 0);
+            // BlzStartUnitAbilityCooldown(unit, Id.yamchaRHeavyPunch, 0);
+            // const lPunch = customHero.getAbility(AbilityNames.YamchaR.LIGHT_PUNCH);
+            // if (lPunch) {
+            //   lPunch.setCd(0);
+            // }
+            // const mPunch = customHero.getAbility(AbilityNames.YamchaR.MEDIUM_PUNCH);
+            // if (mPunch) {
+            //   mPunch.setCd(0);
+            // }
+            // const hPunch = customHero.getAbility(AbilityNames.YamchaR.HEAVY_PUNCH);
+            // if (hPunch) {
+            //   hPunch.setCd(0);
+            // }
           }
         }
       }
     }
   });
+
+  // const resetAfterComboTrigger = CreateTrigger();
 }
 
 
