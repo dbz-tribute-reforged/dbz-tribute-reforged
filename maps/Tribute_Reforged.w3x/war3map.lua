@@ -436,6 +436,7 @@ gg_trg_Yamcha_Disable_Abilities = nil
 gg_trg_Yamcha_Combo = nil
 gg_trg_Yamcha_Combo_Copy = nil
 gg_trg_Yamcha_Loop = nil
+gg_trg_Yamcha_Combo_String_Update = nil
 gg_trg_Yamcha_Get_Slot_To_String = nil
 gg_trg_Yamcha_Play_Dead_Start = nil
 gg_trg_Yamcha_Play_Dead_Finish = nil
@@ -9772,7 +9773,7 @@ function Trig_Yamcha_Combo_Copy_Func010C()
     return true
 end
 
-function Trig_Yamcha_Combo_Copy_Func015C()
+function Trig_Yamcha_Combo_Copy_Func014C()
     if (not (udg_TempInt > GetUnitAbilityLevelSwapped(FourCC("A0RC"), udg_StatMultUnit))) then
         return false
     end
@@ -9821,15 +9822,15 @@ function Trig_Yamcha_Combo_Copy_Actions()
         end
     end
     udg_StatMultUnit = GetTriggerUnit()
-    BlzSetUnitAbilityManaCost(udg_StatMultUnit, FourCC("A0SB"), 0, R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.95)))
     udg_TempInt = 0
     udg_TempInt = IMinBJ(8, ((GetHeroLevel(udg_StatMultUnit) + 11) // 11))
-    if (Trig_Yamcha_Combo_Copy_Func015C()) then
+    if (Trig_Yamcha_Combo_Copy_Func014C()) then
         SetUnitAbilityLevelSwapped(FourCC("A0RC"), udg_StatMultUnit, udg_TempInt)
         SetUnitAbilityLevelSwapped(FourCC("A0RD"), udg_StatMultUnit, udg_TempInt)
         SetUnitAbilityLevelSwapped(FourCC("A0RE"), udg_StatMultUnit, udg_TempInt)
     else
     end
+    ConditionalTriggerExecute(gg_trg_Yamcha_Combo_String_Update)
 end
 
 function InitTrig_Yamcha_Combo_Copy()
@@ -9841,6 +9842,33 @@ end
 
 function Trig_Yamcha_Loop_Func001A()
     udg_StatMultUnit = GetEnumUnit()
+    BlzSetUnitAbilityManaCost(udg_StatMultUnit, FourCC("A0SB"), 0, IMaxBJ(BlzGetUnitAbilityManaCost(udg_StatMultUnit, FourCC("A0SB"), 0), R2I((0.95 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit)))))
+    ConditionalTriggerExecute(gg_trg_Yamcha_Combo_String_Update)
+end
+
+function Trig_Yamcha_Loop_Func002C()
+    if (not (CountUnitsInGroup(udg_YamchaUnitGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Loop_Actions()
+    ForGroupBJ(udg_YamchaUnitGroup, Trig_Yamcha_Loop_Func001A)
+    if (Trig_Yamcha_Loop_Func002C()) then
+        DisableTrigger(GetTriggeringTrigger())
+    else
+    end
+end
+
+function InitTrig_Yamcha_Loop()
+    gg_trg_Yamcha_Loop = CreateTrigger()
+    DisableTrigger(gg_trg_Yamcha_Loop)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Yamcha_Loop, 0.03)
+    TriggerAddAction(gg_trg_Yamcha_Loop, Trig_Yamcha_Loop_Actions)
+end
+
+function Trig_Yamcha_Combo_String_Update_Actions()
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_YamchaHashtable)
@@ -9865,26 +9893,9 @@ function Trig_Yamcha_Loop_Func001A()
         RemoveLocation(udg_TempLoc)
 end
 
-function Trig_Yamcha_Loop_Func002C()
-    if (not (CountUnitsInGroup(udg_YamchaUnitGroup) == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Yamcha_Loop_Actions()
-    ForGroupBJ(udg_YamchaUnitGroup, Trig_Yamcha_Loop_Func001A)
-    if (Trig_Yamcha_Loop_Func002C()) then
-        DisableTrigger(GetTriggeringTrigger())
-    else
-    end
-end
-
-function InitTrig_Yamcha_Loop()
-    gg_trg_Yamcha_Loop = CreateTrigger()
-    DisableTrigger(gg_trg_Yamcha_Loop)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Yamcha_Loop, 0.03)
-    TriggerAddAction(gg_trg_Yamcha_Loop, Trig_Yamcha_Loop_Actions)
+function InitTrig_Yamcha_Combo_String_Update()
+    gg_trg_Yamcha_Combo_String_Update = CreateTrigger()
+    TriggerAddAction(gg_trg_Yamcha_Combo_String_Update, Trig_Yamcha_Combo_String_Update_Actions)
 end
 
 function Trig_Yamcha_Get_Slot_To_String_Func001Func001Func001C()
@@ -17632,7 +17643,7 @@ function Trig_Get_Saga_Catchup_Multiplier_Actions()
     udg_TempInt2 = 1
     if (Trig_Get_Saga_Catchup_Multiplier_Func004C()) then
         udg_TempInt = 1
-        udg_TempInt2 = 1
+        udg_TempInt2 = 0
     else
     end
     udg_TempReal4 = 1.00
@@ -21978,7 +21989,7 @@ function InitTrig_HBTC_Enter()
 end
 
 function Trig_Scoreboard_Init_Func005Func002C()
-    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+    if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_EMPTY)) then
         return false
     end
     return true
@@ -38031,6 +38042,9 @@ function InitTrig_Kid_Buu_Bonus_Ability()
 end
 
 function Trig_Super_Buu_Absorb_Conditions()
+    if (not (udg_IsLeadingToFinalBattle == false)) then
+        return false
+    end
     if (not (GetSpellAbilityId() == FourCC("A01C"))) then
         return false
     end
@@ -38049,28 +38063,28 @@ function Trig_Super_Buu_Absorb_Conditions()
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func007C()
+function Trig_Super_Buu_Absorb_Func001Func006C()
     if (not (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("H00A"))) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func008Func003C()
+function Trig_Super_Buu_Absorb_Func001Func007Func003C()
     if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == false)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func008C()
+function Trig_Super_Buu_Absorb_Func001Func007C()
     if (not (LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func028C()
+function Trig_Super_Buu_Absorb_Func001Func027C()
     if (GetUnitLifePercent(GetSpellTargetUnit()) <= 25.00) then
         return true
     end
@@ -38081,10 +38095,7 @@ function Trig_Super_Buu_Absorb_Func001Func028C()
 end
 
 function Trig_Super_Buu_Absorb_Func001C()
-    if (not (udg_IsLeadingToFinalBattle == false)) then
-        return false
-    end
-    if (not Trig_Super_Buu_Absorb_Func001Func028C()) then
+    if (not Trig_Super_Buu_Absorb_Func001Func027C()) then
         return false
     end
     if (not (RectContainsUnit(gg_rct_HeavenZone, GetSpellTargetUnit()) == false)) then
@@ -38103,16 +38114,16 @@ function Trig_Super_Buu_Absorb_Actions()
                 udg_ID = GetHandleId(udg_StatMultUnit)
         SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
         udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
-        if (Trig_Super_Buu_Absorb_Func001Func007C()) then
+        if (Trig_Super_Buu_Absorb_Func001Func006C()) then
             SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
             DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00[Bonus]|r: +0.1x absorb mult for absorbing " .. GetHeroProperName(GetSpellTargetUnit())))
         else
         end
-        if (Trig_Super_Buu_Absorb_Func001Func008C()) then
+        if (Trig_Super_Buu_Absorb_Func001Func007C()) then
             SaveIntegerBJ((LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) + 30), 15, udg_ID, udg_StatMultHashtable)
         else
             SaveIntegerBJ(0, 15, udg_ID, udg_StatMultHashtable)
-            if (Trig_Super_Buu_Absorb_Func001Func008Func003C()) then
+            if (Trig_Super_Buu_Absorb_Func001Func007Func003C()) then
                 udg_TempUnitType = GetUnitTypeId(GetSpellTargetUnit())
                                 udg_TempInt = udg_TempUnitType
                 SaveIntegerBJ(udg_TempInt, 18, udg_ID, udg_StatMultHashtable)
@@ -51937,6 +51948,7 @@ function InitCustomTriggers()
     InitTrig_Yamcha_Disable_Abilities()
     InitTrig_Yamcha_Combo_Copy()
     InitTrig_Yamcha_Loop()
+    InitTrig_Yamcha_Combo_String_Update()
     InitTrig_Yamcha_Get_Slot_To_String()
     InitTrig_Yamcha_Play_Dead_Start()
     InitTrig_Yamcha_Play_Dead_Finish()
