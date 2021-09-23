@@ -17588,7 +17588,7 @@ function Trig_Get_Saga_Catchup_Multiplier_Func004C()
     return true
 end
 
-function Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func003A()
+function Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func002A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
     udg_TempReal4 = ((udg_TempReal4 + (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))) + 30.00)
@@ -17604,7 +17604,7 @@ end
 function Trig_Get_Saga_Catchup_Multiplier_Func009A()
     if (Trig_Get_Saga_Catchup_Multiplier_Func009Func001C()) then
         udg_TempInt3 = (udg_TempInt3 + 1)
-        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func003A)
+        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func002A)
     else
     end
 end
@@ -17612,7 +17612,7 @@ end
 function Trig_Get_Saga_Catchup_Multiplier_Func013Func001Func003A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
-    udg_TempReal4 = ((udg_TempReal4 + (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))) + 30.00)
+    udg_TempReal5 = ((udg_TempReal5 + (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))) + 30.00)
 end
 
 function Trig_Get_Saga_Catchup_Multiplier_Func013Func001C()
