@@ -1769,6 +1769,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
+  // shoto ice path
+  {
+    name: "dash ground forward shoto ice path",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 5,
+  },
   // ---
   // saga zanzo
   {

@@ -8,14 +8,14 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 75;
+    this.delay = 45;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "|cffff2020--- Under Construction ---|r"
+        "|cffff2020The assassin Hit has arrived looking for his contract target|r"
       ],
     );
 

@@ -2,8 +2,8 @@ import { Vector2D } from "Common/Vector2D";
 
 // maybe put all the tournament data into a config file
 export module TournamentData {
-  export const tournamentSpawn1: Vector2D = new Vector2D(503, 29700);
-  export const tournamentSpawn2: Vector2D = new Vector2D(-4000, 25100);
+  export const tournamentSpawn1: Vector2D = new Vector2D(1600, 27500);
+  export const tournamentSpawn2: Vector2D = new Vector2D(-4900, 27500);
   export const tournamentWaitRoom1: Vector2D = new Vector2D(3639, 30584);
   export const tournamentWaitRoom2: Vector2D = new Vector2D(3639, 25734);
   export const tournamentBottomLeft: Vector2D = new Vector2D(-5610, 23068);

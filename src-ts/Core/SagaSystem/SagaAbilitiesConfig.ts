@@ -395,6 +395,27 @@ export module SagaAbilities {
     );
   }
 
+  export module Hit {
+    export const TIME_SKIP = new SagaAbility(
+      AbilityNames.Hit.TIME_SKIP, 10, 10, 20, EXTRA_SHORT_CAST_TIME
+    );
+    export const TIME_SKIP_2 = new SagaAbility(
+      AbilityNames.Hit.TIME_SKIP, 10, 10, 20, EXTRA_SHORT_CAST_TIME
+    );
+    export const FLASH_FIST = new SagaAbility(
+      AbilityNames.Hit.FLASH_FIST, 10, 6, 10, SHORT_CAST_TIME
+    );
+    export const FLASH_FIST_2 = new SagaAbility(
+      AbilityNames.Hit.FLASH_FIST, 10, 6, 10, SHORT_CAST_TIME
+    );
+    export const TIME_CAGE = new SagaAbility(
+      AbilityNames.Hit.TIME_CAGE, 10, 10, 10, SHORT_CAST_TIME
+    );
+    export const PURE_PROGRESS = new SagaAbility(
+      AbilityNames.Hit.PURE_PROGRESS, 1, 180, 2, EXTRA_SHORT_CAST_TIME
+    );
+  }
+
   export module RustTyranno {
     export const TYRANNO_FLAME = new SagaAbility(
       AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 35, SHORT_CAST_TIME

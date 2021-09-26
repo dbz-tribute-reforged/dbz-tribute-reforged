@@ -305,8 +305,8 @@ export function CustomPlayerTest() {
       if (
         IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
         && abilityId != Id.yamchaRLightPunch
-        && abilityId == Id.yamchaRMediumPunch 
-        && abilityId == Id.yamchaRHeavyPunch
+        && abilityId != Id.yamchaRMediumPunch 
+        && abilityId != Id.yamchaRHeavyPunch
       ) {
         // show ability name on activation
         TextTagHelper.showPlayerColorTextOnUnit(
@@ -326,7 +326,11 @@ export function CustomPlayerTest() {
         Globals.customPlayers[playerId].selectedUnit = caster;
         let damageMult = 1.0;
         if (abilityId == Id.ftSwordOfHope) {
-          damageMult = getSwordOfHopeMult(player);
+          damageMult *= getSwordOfHopeMult(player);
+        }
+
+        if (GetUnitTypeId(caster) == Id.shotoTodoroki) {
+          damageMult *= getTodorokiMult(caster, abilityId);
         }
 
 
@@ -2917,7 +2921,7 @@ export function SetupVegetaFightingSpirit() {
 
       if (customHero) {
         // give spell amp
-        const spellAmp = 0.4 * (
+        const spellAmp = 0.2 * (
           Math.max(
             0, 
             1 - GetUnitState(unit, UNIT_STATE_LIFE) / Math.max(1, GetUnitState(unit, UNIT_STATE_MAX_LIFE))
@@ -3199,7 +3203,7 @@ export function SetupYamchaCombos() {
             + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
           );
 
-          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0004);
+          const dmgMult = 0.44 + (GetHeroLevel(unit) * 0.00044);
 
           // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
           // fire a special qwe
@@ -3246,7 +3250,6 @@ export function SetupYamchaCombos() {
 
   // const resetAfterComboTrigger = CreateTrigger();
 }
-
 
 
 
@@ -3408,5 +3411,53 @@ export function getSwordOfHopeMult(player: player): number {
     }
   });
   DestroyForce(playerAllies);
+  return result;
+}
+
+export function getTodorokiMult(unit: unit, abilityId: number) {
+  const unitId = GetHandleId(unit);
+  if (!HaveSavedReal(Globals.genericSpellHashtable, unitId, 0)) return 1.0;
+
+  // globals hashtable
+  // 0: heat
+  // 1: heat state (1 = cooling down, 2 = heating up)
+
+  const heat = LoadReal(Globals.genericSpellHashtable, unitId, 0);
+  const heatMode = LoadInteger(Globals.genericSpellHashtable, unitId, 1);
+
+  let result = 1.0; 
+  if (
+    abilityId == Id.shotoTodorokiGlacier
+    || abilityId == Id.shotoTodorokiIcePath
+  ) {
+    result += Math.max(0, (50 - heat) * 0.01);
+
+    if (heatMode == 1) {
+      result += 0.1;
+    }
+  }
+
+  if (
+    abilityId == Id.shotoTodorokiWallOfFlames
+  ) {
+    result += Math.max(0, (heat - 50) * 0.01);
+
+    if (heatMode == 1) {
+      result += 0.1;
+    }
+  }
+
+  if (abilityId == Id.shotoTodorokiFlashfreezeHeatwave) {
+    result *= (1 + Math.abs(heat - 50) * 0.01)
+    if (Math.abs(heat - 50) >= 25) {
+      result += 0.1;
+    }
+    
+    if (heatMode > 0) {
+      result += 0.1;
+    }
+  }
+  
+  // BJDebugMsg("todoroki Mult: " + R2S(result));
   return result;
 }

@@ -51,6 +51,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ), 
     public maxHealthDamagePercent: number = 0,
     public maxManaLossPercent: number = 0,
+    public applyDamageOverTime: boolean = false,
     public requireBuff: boolean = false,
     public buffId: number = 0,
   ) {
@@ -62,7 +63,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   static getIntDamageMult(unit: unit): number {
     const hInt = GetHeroInt(unit, true);
-    return Math.max(0.8, Math.min(1.3, 
+    return Math.max(0.9, Math.min(1.3, 
       1.05 * hInt / (
         0.333 * (
           GetHeroStr(unit, true) + 
@@ -107,6 +108,37 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       damage *= input.damageMult;
     }
     return damage;
+  }
+
+  protected dealDamageToUnit(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
+    if (
+      UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) ||
+      (
+        this.canDamageCaster && 
+        GetOwningPlayer(target) == input.casterPlayer &&
+        IsUnitType(target, UNIT_TYPE_HERO)
+      )
+    ) {
+      if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+        if (
+          this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
+          (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
+        ) {
+          const damageCount = this.damagedTargets.get(target);
+          if (damageCount) {
+            if (damageCount < this.maxDamageTicks) {
+              this.damagedTargets.set(target, damageCount + 1);
+              this.performDamage(input, target, damage, sourceHPPercent);
+            }
+          } else {
+            this.damagedTargets.set(target, 1);
+            this.performDamage(input, target, damage, sourceHPPercent);
+          }
+        } else {    
+          this.performDamage(input, target, damage, sourceHPPercent);
+        }
+      }
+    }
   }
 
   protected performDamage(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
@@ -208,36 +240,15 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     }
     const damage = this.calculateDamage(input, source, sourceHPPercent);
 
+    if (this.applyDamageOverTime) {
+      for (const target of this.damagedTargets.keys()) {
+        this.dealDamageToUnit(input, target, damage, sourceHPPercent);
+      }
+    }
+
     ForGroup(this.damagedGroup, () => {
       const target = GetEnumUnit();
-      if (
-        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) ||
-        (
-          this.canDamageCaster && 
-          GetOwningPlayer(target) == input.casterPlayer &&
-          IsUnitType(target, UNIT_TYPE_HERO)
-        )
-      ) {
-        if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
-          if (
-            this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
-            (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
-          ) {
-            const damageCount = this.damagedTargets.get(target);
-            if (damageCount) {
-              if (damageCount < this.maxDamageTicks) {
-                this.damagedTargets.set(target, damageCount + 1);
-                this.performDamage(input, target, damage, sourceHPPercent);
-              }
-            } else {
-              this.damagedTargets.set(target, 1);
-              this.performDamage(input, target, damage, sourceHPPercent);
-            }
-          } else {    
-            this.performDamage(input, target, damage, sourceHPPercent);
-          }
-        }
-      }
+      this.dealDamageToUnit(input, target, damage, sourceHPPercent);
     });
 
     GroupClear(this.damagedGroup);
@@ -272,6 +283,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.damageData,
       this.maxHealthDamagePercent,
       this.maxManaLossPercent,
+      this.applyDamageOverTime,
       this.requireBuff,
       this.buffId,
     );
@@ -301,6 +313,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       }; 
       maxHealthDamagePercent: number;
       maxManaLossPercent: number;
+      applyDamageOverTime: boolean;
       requireBuff: boolean;
       buffId: number;
     }
@@ -321,6 +334,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.damageData = new DamageData().deserialize(input.damageData);
     this.maxHealthDamagePercent = input.maxHealthDamagePercent;
     this.maxManaLossPercent = input.maxManaLossPercent;
+    this.applyDamageOverTime = input.applyDamageOverTime;
     this.requireBuff = input.requireBuff;
     this.buffId = input.buffId;
     return this;

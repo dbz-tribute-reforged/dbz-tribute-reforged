@@ -302,6 +302,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Mario.SUPER_CAPE,
       AbilityNames.Mario.POWER_UP_BLOCK,
       AbilityNames.Mario.FIREBALL,
+      AbilityNames.Mario.SUPER_FIREBALL,
     ]],
 
     // tien
@@ -473,6 +474,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Schala.MAGIC_SEAL_2,
       AbilityNames.Schala.PRAY,
       AbilityNames.Schala.DREAM_DEVOURER,
+    ]],
+
+    [Id.shotoTodoroki, [
+      AbilityNames.ShotoTodoroki.GLACIER,
+      AbilityNames.ShotoTodoroki.WALL_OF_FLAMES,
+      AbilityNames.ShotoTodoroki.ICE_PATH,
+      AbilityNames.ShotoTodoroki.FLASHFREEZE_HEATWAVE,
+      AbilityNames.ShotoTodoroki.HEATING_UP,
+      AbilityNames.ShotoTodoroki.COOLING_DOWN,
     ]],
 
 

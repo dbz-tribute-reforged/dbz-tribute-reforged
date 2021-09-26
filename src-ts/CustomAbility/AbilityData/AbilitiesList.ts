@@ -4668,6 +4668,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Mario.SUPER_FIREBALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioF.blp",
+      disabled: "BTNMarioF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.FIREBALL,
+      body: 
+        AbilityNames.Mario.FIREBALL
+    },
+    components: [
+      { name: "beam mario super fireball"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Tien.DODON_RAY,
     currentCd: 0,
     maxCd: 1,
@@ -7876,6 +7903,115 @@ export const AbilitiesList = [
       { name: "temp ability schala seal 2" },
       { name: "dash ground forward bankai final" },
       { name: "block schala dream devourer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.ShotoTodoroki.GLACIER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.GLACIER,
+      body:
+        AbilityNames.ShotoTodoroki.GLACIER
+    },
+    components: [
+      { name: "beam shoto glacier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.ShotoTodoroki.WALL_OF_FLAMES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.WALL_OF_FLAMES,
+      body:
+        AbilityNames.ShotoTodoroki.WALL_OF_FLAMES
+    },
+    components: [
+      { name: "multi shoto wall of flames" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.ShotoTodoroki.ICE_PATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.GLACIER,
+      body:
+        AbilityNames.ShotoTodoroki.GLACIER
+    },
+    components: [
+      { name: "dash ground forward shoto ice path" },
+      { name: "multi shoto ice path" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.ShotoTodoroki.FLASHFREEZE_HEATWAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.GLACIER,
+      body:
+        AbilityNames.ShotoTodoroki.GLACIER
+    },
+    components: [
+      { name: "beam shoto flashfreeze heatwave" },
     ],
   },
   // -------------------------------------------

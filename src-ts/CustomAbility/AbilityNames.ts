@@ -251,6 +251,7 @@ export module AbilityNames {
     export const SUPER_CAPE: string = "Super Cape";
     export const POWER_UP_BLOCK: string = "Power Up Block";
     export const FIREBALL: string = "Fireball";
+    export const SUPER_FIREBALL: string = "Mario Super Fireball";
   }
 
   export module Tien {
@@ -417,6 +418,15 @@ export module AbilityNames {
     export const MAGIC_SEAL_2 = "Schala Magic Seal 2";
     export const PRAY = "Schala Pray";
     export const DREAM_DEVOURER = "Schala Dream Devourer";
+  }
+
+  export module ShotoTodoroki {
+    export const GLACIER: string = "Shoto Todoroki Glacier";
+    export const WALL_OF_FLAMES: string = "Shoto Todoroki Wall Of Flames";
+    export const ICE_PATH: string = "Shoto Todoroki Ice Path";
+    export const FLASHFREEZE_HEATWAVE: string = "Shoto Todoroki Flashfreeze Heatwave";
+    export const HEATING_UP: string = "Shoto Heating Up";
+    export const COOLING_DOWN: string = "Shoto Cooling Down";
   }
 
 

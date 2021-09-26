@@ -102,6 +102,7 @@ export module ItemConstants {
   export const rainbowShell = FourCC("I04P");
   export const saibamenSeeds = FourCC("I024");
   export const babidiEnergyAbsorber = FourCC("I04S");
+  export const hitContract = FourCC("I04X");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -146,5 +147,6 @@ export module ItemConstants {
     export const RAINBOW_SHELL = rainbowShell;
     export const SAIBAMEN_SEEDS = saibamenSeeds;
     export const BABIDI_ENERGY_ABSORBER = babidiEnergyAbsorber;
+    export const HIT_CONTRACT = hitContract;
   }
 }
