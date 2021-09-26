@@ -13,6 +13,9 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
+
+  // reuseable unit group
+  export const tmpUnitGroup = CreateGroup();
 }
 
 export module Constants {
@@ -177,6 +180,8 @@ export module Buffs {
   export const LUCARIO_FORCE_10 = FourCC("B050");
 
   export const EXTREME_SPEED = FourCC("B04O");
+
+  export const FROSTBITE = FourCC("B02T");
 }
 
 export module OrderIds {
@@ -594,6 +599,7 @@ export module Id {
   export const superCape = FourCC("A0TN");
   export const powerUpBlock = FourCC("A0TO");
   export const fireball = FourCC("A0TP");
+  export const marioSuperFireball = FourCC("A0YX");
 
   export const nappa = FourCC("H08W");
   export const giantStorm = FourCC("A0MI");
@@ -664,6 +670,14 @@ export module Id {
   export const sephirothBlackMateria = FourCC("A0TB");
   export const sephirothOneWingedAngel = FourCC("A0TC");
   export const sephirothParry = FourCC("A0TD");
+
+  export const shotoTodoroki = FourCC("H05X");
+  export const shotoTodorokiGlacier = FourCC("A0YR");
+  export const shotoTodorokiWallOfFlames = FourCC("A0YS");
+  export const shotoTodorokiIcePath = FourCC("A0YT");
+  export const shotoTodorokiFlashfreezeHeatwave = FourCC("A0YU");
+  export const shotoTodorokiHeatingUp = FourCC("A0YV");
+  export const shotoTodorokiCoolingDown = FourCC("A0YW");
 
   export const super17 = FourCC("H05V");
   export const super17Skin = FourCC("H05B");

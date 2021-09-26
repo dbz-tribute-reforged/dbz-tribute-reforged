@@ -370,7 +370,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // cell saga
-    ["Imperfect Cell", new SagaUnit(FourCC("H00E"), 50, 3500, 400, 3500, new Vector2D(30500, 16000),
+    ["Imperfect Cell", new SagaUnit(FourCC("H00E"), 50, 3500, 400, 3500, new Vector2D(30000, 15000),
       [
         SagaAbilities.Cell.KAMEHAMEHA,
       ],
@@ -381,7 +381,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
       ],
     )],
-    ["Perfect Cell 1", new SagaUnit(FourCC("H00G"), 95, 6000, 400, 7000, new Vector2D(30500, 16000),
+    ["Perfect Cell 1", new SagaUnit(FourCC("H00G"), 100, 6000, 400, 7000, new Vector2D(30500, 16000),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cell.KAMEHAMEHA,
@@ -391,6 +391,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.HBTC_TRAINING_TICKET,
+        ItemConstants.Consumables.SENZU_BEAN,
       ]
     )],
     
@@ -623,7 +624,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Hirudgarn.DARK_MIST,
       ],
     )],
-    ["Mature Hirudegarn", new SagaUnit(FourCC("H05U"), 175, 17000, 400, 15000, new Vector2D(25000, -2700),
+    ["Mature Hirudegarn", new SagaUnit(FourCC("H05U"), 175, 17000, 400, 15000, new Vector2D(30000, -2000),
       [
         SagaAbilities.Hirudgarn.FLAME_BREATH,
         SagaAbilities.Hirudgarn.TAIL_ATTACK,
@@ -663,7 +664,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // super 17 saga
     // hell fighter 17
-    ["Super 17", new SagaUnit(FourCC("H05B"), 170, 17000, 400, 17000, new Vector2D(15000, 17000),
+    ["Super 17", new SagaUnit(FourCC("H05B"), 170, 17000, 400, 17000, new Vector2D(30000, 15000),
       [
         SagaAbilities.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
@@ -725,7 +726,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // battle of gods movie/super
     // beerus
-    ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(5000, 14000),
+    ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(11000, 5500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
@@ -739,7 +740,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // possible whis training saga?
     // whis E01I
-    ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(5000, 14000),
+    ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(11000, 5500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -783,13 +784,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // cabba
     // hit
     // monaka?
-    ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 160, 21000, 400, 21000, new Vector2D(16000, -6000),
+    ["Hit Universe 6", new SagaUnit(Id.hit, 175, 21000, 400, 21000, new Vector2D(14500, -7000),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
-        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Hit.TIME_SKIP,
+        SagaAbilities.Hit.TIME_SKIP_2,
+        SagaAbilities.Hit.FLASH_FIST,
+        SagaAbilities.Hit.FLASH_FIST_2,
+        SagaAbilities.Hit.TIME_CAGE,
+        SagaAbilities.Hit.PURE_PROGRESS,
       ],
+      [
+        ItemConstants.SagaDrops.HIT_CONTRACT,
+      ]
     )],
 
     // copy-vegeta saga

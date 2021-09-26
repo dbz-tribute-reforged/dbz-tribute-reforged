@@ -169,7 +169,8 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ FutureAndroidsSaga, SagaState.Completed ],
     ],
     FutureBabidiSaga: [
-      [ BojackSaga, SagaState.Completed ],
+      // [ BojackSaga, SagaState.Completed ],
+      [ FutureCellSaga, SagaState.Completed ],
     ],
     FTSuperSaga1: [
       [ FutureBabidiSaga, SagaState.Completed ],
@@ -188,10 +189,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ WhisTrainingSaga, SagaState.Completed ],
     ],
     Universe6Saga: [
-      [ BeerusSaga, SagaState.Completed ],
-      [ BeerusSaga, SagaState.NotStarted ],
+      [ GoldenFriezaSaga, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
+      [ Universe6Saga, SagaState.Completed ],
       [ BioBrolySaga, SagaState.Completed ],
       [ GoldenFriezaSaga, SagaState.Completed ],
     ],

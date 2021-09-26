@@ -6,7 +6,7 @@ import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 
 export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback> {
   static readonly SOURCE_UNIT = 0;
@@ -30,11 +30,25 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     public useLastCastPoint: boolean = false,
     public reflectBeams: boolean = false,
     public affectAllies: boolean = false,
+    public isPersistent: boolean = false,
   ) {
     this.sourceCoord = new Vector2D();
     this.targetCoord = new Vector2D();
     this.newTargetCoord = new Vector2D();
     this.affectedGroup = CreateGroup();
+  }
+
+  doKnockback(input: CustomAbilityInput, target: unit) {
+    if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
+      this.targetCoord.setUnit(target);
+      const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
+      if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
+        SetUnitFacing(target, sourceToTargetAngle);
+      }
+      const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
+      this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
+      PathingCheck.moveGroundUnitToCoord(target, this.newTargetCoord);
+    }
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -47,29 +61,41 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
         this.sourceCoord.setVector(input.targetPoint);
       }
     }
-
-    GroupEnumUnitsInRange(
-      this.affectedGroup, 
-      this.sourceCoord.x, 
-      this.sourceCoord.y, 
-      this.knockbackData.aoe,
-      null
-    );
+    
+    if (!this.isPersistent) {
+      GroupEnumUnitsInRange(
+        this.affectedGroup, 
+        this.sourceCoord.x, 
+        this.sourceCoord.y, 
+        this.knockbackData.aoe,
+        null
+      );
+    } else {
+      GroupClear(Globals.tmpUnitGroup);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        this.sourceCoord.x, 
+        this.sourceCoord.y, 
+        this.knockbackData.aoe,
+        null
+      );
+      GroupAddGroup(Globals.tmpUnitGroup, this.affectedGroup);
+    }
 
     ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
-        this.targetCoord.setUnit(target);
-        const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
-        if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
-          SetUnitFacing(target, sourceToTargetAngle);
-        }
-        const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
-        this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
-        PathingCheck.moveGroundUnitToCoord(target, this.newTargetCoord);
-      }
+      this.doKnockback(input, target);
     });
-    GroupClear(this.affectedGroup);
+    
+    if (!this.isPersistent) {
+      GroupClear(this.affectedGroup);
+    } else {    
+      GroupClear(Globals.tmpUnitGroup);
+    }
+
+    if (ability.isFinishedUsing(this)) {
+      GroupClear(this.affectedGroup);
+    }
   }
 
   cleanup() {
@@ -82,6 +108,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.knockbackData, 
       this.knockbackSource, this.useLastCastPoint,
       this.reflectBeams, this.affectAllies,
+      this.isPersistent,
     );
   }
 
@@ -100,6 +127,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       useLastCastPoint: boolean;
       reflectBeams: boolean;
       affectAllies: boolean; 
+      isPersistent: boolean;
     }
   ) {
     this.name = input.name;
@@ -111,6 +139,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.useLastCastPoint = input.useLastCastPoint;
     this.reflectBeams = input.reflectBeams;
     this.affectAllies = input.affectAllies;
+    this.isPersistent = input.isPersistent;
     return this;
   }
 }

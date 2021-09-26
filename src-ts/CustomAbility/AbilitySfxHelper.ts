@@ -46,7 +46,13 @@ export module AbilitySfxHelper {
       }
     }
     const createdSfx = AddSpecialEffect(sfxData.model, target.x, target.y);
-    BlzSetSpecialEffectScale(createdSfx, sfxData.scale);
+    if (sfxData.endScale >= 0) {
+      BlzSetSpecialEffectScale(createdSfx, 
+        sfxData.scale + (sfxData.endScale - sfxData.scale) * timeRatio
+      );
+    } else {
+      BlzSetSpecialEffectScale(createdSfx, sfxData.scale);
+    }
     const newYaw = yaw + sfxData.extraDirectionalYaw * CoordMath.degreesToRadians;
     if (newYaw > 0) {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);

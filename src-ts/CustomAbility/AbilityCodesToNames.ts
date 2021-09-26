@@ -223,6 +223,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.superCape, AbilityNames.Mario.SUPER_CAPE],
     [Id.powerUpBlock, AbilityNames.Mario.POWER_UP_BLOCK],
     [Id.fireball, AbilityNames.Mario.FIREBALL],
+    [Id.marioSuperFireball, AbilityNames.Mario.SUPER_FIREBALL],
 
     // tien
     [Id.dodonRay, AbilityNames.Tien.DODON_RAY],
@@ -359,6 +360,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.schalaMagicSeal2, AbilityNames.Schala.MAGIC_SEAL_2],
     [Id.schalaDreamDevourer, AbilityNames.Schala.DREAM_DEVOURER],
 
+    // shoto todoroki
+    [Id.shotoTodorokiGlacier, AbilityNames.ShotoTodoroki.GLACIER],
+    [Id.shotoTodorokiWallOfFlames, AbilityNames.ShotoTodoroki.WALL_OF_FLAMES],
+    [Id.shotoTodorokiIcePath, AbilityNames.ShotoTodoroki.ICE_PATH],
+    [Id.shotoTodorokiFlashfreezeHeatwave, AbilityNames.ShotoTodoroki.FLASHFREEZE_HEATWAVE],
+    [Id.shotoTodorokiHeatingUp, AbilityNames.ShotoTodoroki.HEATING_UP],
+    [Id.shotoTodorokiCoolingDown, AbilityNames.ShotoTodoroki.COOLING_DOWN],
 
 
     // babidi

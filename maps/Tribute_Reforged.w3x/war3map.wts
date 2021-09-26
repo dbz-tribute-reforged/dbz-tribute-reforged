@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.68g
+DBZ Tribute Reforged 0.69
 }
 
 STRING 4
@@ -5284,12 +5284,12 @@ Tien
 }
 
 STRING 846
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur1>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool1,.> seconds|r
+Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 10 heat bars, Shoto overheats and loses 10% of max HP plus 3% of max HP per second.
+|cffffff00Adds +10% fire damage.
+Adds +10% fire damage for each heat bar above 5.
+|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
 }
 
 STRING 847
@@ -5300,12 +5300,12 @@ Extra character. Not selected by default.
 }
 
 STRING 848
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur2>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool2,.> seconds|r
+Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat bars, Shoto suffers from frostbite and loses 10% of max HP plus 3% of max HP per second.
+|cffffff00Adds +10% frost damage.
+Adds +10% frost damage for each heat bar below 5.
+|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 
 STRING 849
@@ -5938,8 +5938,8 @@ Transformations:
 [lvl 50]  1.40x "frieza"
 [lvl 90]  1.80x "frieza"
 [lvl 150] 2.00x "frieza"
-[lvl 200] 2.10x "golden" [unlocks Golden Frieza]
-[lvl 250] 2.20x "golden" [upgrades Golden Frieza]
+[lvl 200] 2.30x "golden" [unlocks Golden Frieza]
+[lvl 250] 2.40x "golden" [upgrades Golden Frieza]
 
 Frieza can precisely control his power level by using [|cff00ff00D|r] Transform. Gains Full Power 100% when less than 75% hp in Fourth Form. Gains Mecha Form while dead (heaven/hell).
 }
@@ -7521,6 +7521,12 @@ STRING 1195
 // Units: E01O (Desert Bandit), EditorSuffix (Name - Editor Suffix)
 {
 Bebi
+}
+
+STRING 1196
+// Units: H05X (Provisional Hero), Name (Name)
+{
+Provisional Hero
 }
 
 STRING 1197
@@ -10925,15 +10931,27 @@ Scouter 2.0
 }
 
 STRING 1746
-// Items: I03Q (Scouter 2.0), Description (Description)
+// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
 {
-Reveals an area of the map for 10 seconds, giving the user vision and detecting invisible units.|n|cff00FF00Duration:|r 10s|n|cffFFFF00AoE:|r 4,000|n|cff00FFFFCooldown: 60s|r
+Super 17 can create a high powered energy barrier that is capable of absorbing all incoming beams. Use this ability when standing near Android 17 or Android 18 to absorb their parts for a power upgrade. Adds 5s of cooldown to Android Barrier.
+|cffff2020All base armor is reduced by 50% for the next 5s.
+|cffffff00On the first beam absorbed, gain +0.02x mult.
+On each beam, restore 15% of max mana.
+|cff00ff00Channel Duration: <A0P8,Dur1>s
+|cff00ffffCooldown: <A0P8,Cool1>s
 }
 
 STRING 1747
-// Items: I03Q (Scouter 2.0), Ubertip (Tooltip - Extended)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Reveals an area of the map for 10 seconds, giving the user vision and detecting invisible units.|n|cff00FF00Duration:|r 10s|n|cffFFFF00AoE:|r 4,000|n|cff00FFFFCooldown: 60s|r
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.5x All|r
+|cffffff00Drains 2.2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
+|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
 }
 
 STRING 1748
@@ -13583,7 +13601,7 @@ STRING 2174
 }
 
 STRING 2175
-// Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
+// Units: H05X (Provisional Hero), Hotkey (Hotkey)
 {
 W
 }
@@ -13622,7 +13640,7 @@ Saitama delivers a combo of rapid fire punches.
 }
 
 STRING 2181
-// Items: I042 (|cffffcc00Wish for Immortality|r), Hotkey (Hotkey)
+// Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
 {
 W
 }
@@ -14525,7 +14543,7 @@ Power Wish
 }
 
 STRING 2328
-// Abilities: A071 (Kick), Researchhotkey (Hotkey - Learn)
+// Items: I042 (|cffffcc00Wish for Immortality|r), Hotkey (Hotkey)
 {
 W
 }
@@ -15556,6 +15574,12 @@ Doubles the effect of |cff00ffffAura|r
 |cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
 }
 
+STRING 2496
+// Units: H05X (Provisional Hero), Propernames (Proper Names)
+{
+Shoto Todoroki
+}
+
 STRING 2497
 // Abilities: A0SN (Ultimate Burning Warrior 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -16522,12 +16546,13 @@ STRING 2652
 }
 
 STRING 2653
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur3>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool3,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
 }
 
 STRING 2654
@@ -17200,7 +17225,7 @@ Tao throws a pillar into the air and rides it to his destination.|n|cff00ff00(Da
 }
 
 STRING 2764
-// Abilities: A071 (Kick), Hotkey (Hotkey - Normal)
+// Abilities: A071 (Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -17290,7 +17315,7 @@ STRING 2778
 }
 
 STRING 2779
-// Abilities: A055 (Power Wish), Hotkey (Hotkey - Normal)
+// Abilities: A071 (Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17314,7 +17339,7 @@ Vegito creates a special energy beam that the user can extend and use to pierce 
 }
 
 STRING 2783
-// Abilities: A07A (Power Wish), Hotkey (Hotkey - Normal)
+// Abilities: A055 (Power Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17900,7 +17925,7 @@ STRING 2876
 }
 
 STRING 2877
-// Abilities: A00B (Spirit Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A07A (Power Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17924,7 +17949,7 @@ STRING 2880
 }
 
 STRING 2881
-// Abilities: A00B (Spirit Sword), Hotkey (Hotkey - Normal)
+// Abilities: A00B (Spirit Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18020,7 +18045,7 @@ STRING 2896
 }
 
 STRING 2897
-// Abilities: A03C (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A00B (Spirit Sword), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18044,7 +18069,7 @@ A ball of energy much like the Spirit bomb, but this is filled with all the ange
 }
 
 STRING 2901
-// Abilities: A03C (Revenge Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A03C (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18362,7 +18387,7 @@ D|cffffcc00e|rnde's Healing - [|cffffcc00Level 7|r]
 }
 
 STRING 2952
-// Abilities: A07C (Android Repair), Researchhotkey (Hotkey - Learn)
+// Abilities: A03C (Revenge Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18386,7 +18411,7 @@ Repairs any android type unit. Androids include Metal Cooler, Bebi, Androids 13-
 }
 
 STRING 2956
-// Abilities: A07C (Android Repair), Hotkey (Hotkey - Normal)
+// Abilities: A07C (Android Repair), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18410,7 +18435,7 @@ STRING 2959
 }
 
 STRING 2960
-// Abilities: A01D (Mankind Destruction Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07C (Android Repair), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18434,7 +18459,7 @@ Buu creates hundreds of thousands of energy beams to destroy all the earthlings.
 }
 
 STRING 2964
-// Abilities: A01D (Mankind Destruction Attack), Hotkey (Hotkey - Normal)
+// Abilities: A01D (Mankind Destruction Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -19678,7 +19703,7 @@ STRING 3164
 }
 
 STRING 3165
-// Abilities: A03F (Shine Shine Missile), Researchhotkey (Hotkey - Learn)
+// Abilities: A01D (Mankind Destruction Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -19702,7 +19727,7 @@ This is a more powerful version of Renzoku Energy Dan where the user quickly sho
 }
 
 STRING 3169
-// Abilities: A03F (Shine Shine Missile), Hotkey (Hotkey - Normal)
+// Abilities: A03F (Shine Shine Missile), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -20513,7 +20538,7 @@ E
 }
 
 STRING 3304
-// Abilities: A06I (Destruction Wish), Hotkey (Hotkey - Normal)
+// Abilities: A03F (Shine Shine Missile), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20801,7 +20826,7 @@ Destruction Wish
 }
 
 STRING 3352
-// Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
+// Abilities: A06I (Destruction Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20884,7 +20909,7 @@ Roll
 }
 
 STRING 3364
-// Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
+// Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -20896,7 +20921,7 @@ Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * l
 }
 
 STRING 3366
-// Abilities: A04J (Saiya-jin memories), Hotkey (Hotkey - Normal)
+// Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20920,7 +20945,7 @@ Park Ranger
 }
 
 STRING 3370
-// Abilities: A00L (Energy Sparkle), Researchhotkey (Hotkey - Learn)
+// Abilities: A04J (Saiya-jin memories), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -21072,7 +21097,7 @@ STRING 3394
 }
 
 STRING 3395
-// Abilities: A00L (Energy Sparkle), Hotkey (Hotkey - Normal)
+// Abilities: A00L (Energy Sparkle), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -21168,7 +21193,7 @@ Bebi remembers when his race was wiped out by the Saiya-jin race. This angers Be
 }
 
 STRING 3411
-// Abilities: A02O (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A00L (Energy Sparkle), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -21522,7 +21547,7 @@ STRING 3469
 }
 
 STRING 3470
-// Abilities: A02O (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A02O (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -21546,7 +21571,7 @@ A brilliant sparkle of energy that can cut straight through opponents. .|cff00ff
 }
 
 STRING 3474
-// Abilities: A02O (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A02O (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -22675,13 +22700,13 @@ Deactivate Distortion Field
 }
 
 STRING 3658
-// Abilities: A06T (Sacred Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A02O (Distortion Field), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 3659
-// Abilities: A06T (Sacred Water), Hotkey (Hotkey - Normal)
+// Abilities: A06T (Sacred Water), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -22705,7 +22730,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 3663
-// Abilities: A05X (Summon Tsufuru Jin), Researchhotkey (Hotkey - Learn)
+// Abilities: A06T (Sacred Water), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -24207,7 +24232,7 @@ Bardock
 }
 
 STRING 3912
-// Abilities: A05X (Summon Tsufuru Jin), Hotkey (Hotkey - Normal)
+// Abilities: A05X (Summon Tsufuru Jin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -24659,7 +24684,7 @@ STRING 3977
 }
 
 STRING 3978
-// Abilities: A06Y (Pressure Point Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A05X (Summon Tsufuru Jin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -24683,7 +24708,7 @@ Removes corruptions and weak evil from the area. Forces Bebi out of bodies, remo
 }
 
 STRING 3982
-// Abilities: A06Y (Pressure Point Attack), Hotkey (Hotkey - Normal)
+// Abilities: A06Y (Pressure Point Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -25230,13 +25255,16 @@ Reduces max movement speed by 30 when under 30k Str.|r
 }
 
 STRING 4056
-// Items: I009 (Z Sword), Description (Description)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.1x Int mult (+0.1x when under 30k Int)
--0.1x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.6x All|r
+|cffffff00Drains 1.7% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
 }
 
 STRING 4057
@@ -26730,7 +26758,7 @@ STRING 4300
 }
 
 STRING 4301
-// Abilities: A05S (Fusion Dance), Hotkey (Hotkey - Normal)
+// Abilities: A06Y (Pressure Point Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -26754,72 +26782,79 @@ Bebi summons two Tsufuru Jins from an alternate dimension.
 }
 
 STRING 4305
-// Abilities: A05S (Fusion Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A05S (Fusion Dance), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 4306
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur4>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool4,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
 }
 
 STRING 4307
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur5>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool5,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
 }
 
 STRING 4308
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur6>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool6,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
 }
 
 STRING 4309
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur7>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool7,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
 }
 
 STRING 4310
-// Abilities: A0TR (Kiai), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur1>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool1,.> - <A0TR,Cool10,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
 }
 
 STRING 4311
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur8>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool8,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
 }
 
 STRING 4312
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur9>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool9,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
 }
 
 STRING 4313
@@ -26888,12 +26923,13 @@ Dodon Ray
 }
 
 STRING 4322
-// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
-|cffff2020Channel Duration: <A0TR,Dur10>s
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0TR,Cool10,.> seconds|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
 }
 
 STRING 4323
@@ -27217,7 +27253,7 @@ STRING 4374
 }
 
 STRING 4375
-// Abilities: A08C (Meteor Break), Researchhotkey (Hotkey - Learn)
+// Abilities: A05S (Fusion Dance), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27235,7 +27271,7 @@ STRING 4377
 }
 
 STRING 4378
-// Abilities: A08C (Meteor Break), Hotkey (Hotkey - Normal)
+// Abilities: A08C (Meteor Break), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27247,7 +27283,7 @@ Nuclear Bomb
 }
 
 STRING 4380
-// Abilities: A08I (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A08C (Meteor Break), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27259,7 +27295,7 @@ STRING 4381
 }
 
 STRING 4382
-// Abilities: A08I (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A08I (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27313,7 +27349,7 @@ STRING 4390
 }
 
 STRING 4391
-// Abilities: A08J (Tri Beam Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A08I (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27337,7 +27373,7 @@ Raditz raises both of his arms up and charges two purple energy spheres. He then
 }
 
 STRING 4395
-// Abilities: A08J (Tri Beam Fire), Hotkey (Hotkey - Normal)
+// Abilities: A08J (Tri Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27493,7 +27529,7 @@ STRING 4420
 }
 
 STRING 4421
-// Abilities: A09L (Final Battle Wish), Hotkey (Hotkey - Normal)
+// Abilities: A08J (Tri Beam Fire), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27517,7 +27553,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 4425
-// Abilities: A09Q (Charm), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -28468,13 +28504,13 @@ Goten and Trunks perform the fusion dance. They must be touching each other for 
 }
 
 STRING 4573
-// Abilities: A09Q (Charm), Hotkey (Hotkey - Normal)
+// Abilities: A09Q (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 4574
-// Abilities: A09S (Laser Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A09Q (Charm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -28906,7 +28942,7 @@ STRING 4645
 }
 
 STRING 4646
-// Abilities: A09S (Laser Shot), Hotkey (Hotkey - Normal)
+// Abilities: A09S (Laser Shot), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -28930,7 +28966,7 @@ Turles rushes at the target and performs a series of damaging attacks. |n|cff00f
 }
 
 STRING 4650
-// Abilities: A09W (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A09S (Laser Shot), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -29528,7 +29564,7 @@ STRING 4747
 }
 
 STRING 4748
-// Abilities: A09W (Shocking Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A09W (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -29552,7 +29588,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 4752
-// Abilities: A0BI (Train Agility), Hotkey (Hotkey - Normal)
+// Abilities: A09W (Shocking Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -29570,7 +29606,7 @@ STRING 4754
 }
 
 STRING 4755
-// Abilities: A0BP (Teleport 19), Hotkey (Hotkey - Normal)
+// Abilities: A0BI (Train Agility), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30241,7 +30277,7 @@ Tao throws a pillar into the air and rides it to his destination.|n|cff00ff00(Da
 }
 
 STRING 4864
-// Abilities: A0BS (Rapid Energy Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BP (Teleport 19), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30571,7 +30607,7 @@ STRING 4918
 }
 
 STRING 4919
-// Abilities: A0BS (Rapid Energy Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0BS (Rapid Energy Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -30595,7 +30631,7 @@ Though cold and inhuman, Android 18 is still capable of beguiling her enemies. A
 }
 
 STRING 4923
-// Abilities: A0BW (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BS (Rapid Energy Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30799,7 +30835,7 @@ STRING 4956
 }
 
 STRING 4957
-// Abilities: A0BW (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0BW (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -30823,7 +30859,7 @@ Android 17 carries a small laser pistol. The pistol shoots small ki beams that d
 }
 
 STRING 4961
-// Abilities: A0C1 (Supernova), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BW (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -31293,7 +31329,7 @@ STRING 5038
 }
 
 STRING 5039
-// Abilities: A0C1 (Supernova), Hotkey (Hotkey - Normal)
+// Abilities: A0C1 (Supernova), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -31311,7 +31347,7 @@ STRING 5041
 }
 
 STRING 5042
-// Abilities: A0C7 (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C1 (Supernova), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -32692,7 +32728,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5272
-// Abilities: A0C7 (Revenge Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0C7 (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33145,7 +33181,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5347
-// Abilities: A0C8 (Slappy Hand), Hotkey (Hotkey - Normal)
+// Abilities: A0C7 (Revenge Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33157,13 +33193,13 @@ STRING 5348
 }
 
 STRING 5349
-// Abilities: A0C8 (Slappy Hand), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C8 (Slappy Hand), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 5350
-// Abilities: A0CB (Revive - Vegeta Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C8 (Slappy Hand), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33448,7 +33484,7 @@ STRING 5395
 }
 
 STRING 5396
-// Abilities: A0CC (Revive - Gohan Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CB (Revive - Vegeta Spawn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33460,7 +33496,7 @@ Rapid Energy Cannon
 }
 
 STRING 5398
-// Abilities: A0CO (Lightning Shower New Janemba spell), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CC (Revive - Gohan Spawn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33880,7 +33916,7 @@ STRING 5464
 }
 
 STRING 5465
-// Abilities: A0CO (Lightning Shower New Janemba spell), Hotkey (Hotkey - Normal)
+// Abilities: A0CO (Lightning Shower New Janemba spell), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33904,7 +33940,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 5469
-// Abilities: A0CT (Beerus Generic Slam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CO (Lightning Shower New Janemba spell), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -34643,7 +34679,7 @@ Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff
 }
 
 STRING 5590
-// Abilities: A0CT (Beerus Generic Slam), Hotkey (Hotkey - Normal)
+// Abilities: A0CT (Beerus Generic Slam), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -34664,7 +34700,7 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 }
 
 STRING 5593
-// Abilities: A0CY (Sample ????), Hotkey (Hotkey - Normal)
+// Abilities: A0CT (Beerus Generic Slam), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -34891,7 +34927,7 @@ STRING 5629
 }
 
 STRING 5630
-// Abilities: A0DF (Beerus Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35149,7 +35185,7 @@ STRING 5671
 }
 
 STRING 5672
-// Abilities: A0DF (Beerus Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0DF (Beerus Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -35167,7 +35203,7 @@ STRING 5674
 }
 
 STRING 5675
-// Abilities: A0DY (Super Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DF (Beerus Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35278,7 +35314,7 @@ Transformations:
 [lvl 150] 2.50x "ssg"
 [lvl 200] 2.60x "ssb" [unlocks final flash 2]
 [lvl 225] 2.70x "ssbe"
-[lvl 300] 2.75x "ultra ego"
+[lvl 300] 3/2.75/2.75x "ultra ego"
 }
 
 STRING 5691
@@ -35529,7 +35565,7 @@ Moves your revive point to the southeast corner of the map.
 }
 
 STRING 5721
-// Abilities: A0DY (Super Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0DY (Super Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -35553,7 +35589,7 @@ Moves your revive point to West City.
 }
 
 STRING 5725
-// Abilities: A0E2 (Transform - Second), Hotkey (Hotkey - Normal)
+// Abilities: A0DY (Super Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35871,7 +35907,7 @@ STRING 5776
 }
 
 STRING 5777
-// Abilities: A0FJ (Mokuton Kajukai Korin), Hotkey (Hotkey - Normal)
+// Abilities: A0E2 (Transform - Second), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35895,7 +35931,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 5781
-// Abilities: A0FJ (Mokuton Kajukai Korin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FJ (Mokuton Kajukai Korin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36143,7 +36179,7 @@ STRING 5819
 }
 
 STRING 5820
-// Abilities: A0FU (Pocket Dimension), Hotkey (Hotkey - Normal)
+// Abilities: A0FJ (Mokuton Kajukai Korin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -36169,7 +36205,7 @@ STRING 5823
 }
 
 STRING 5824
-// Abilities: A0FU (Pocket Dimension), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FU (Pocket Dimension), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36181,13 +36217,13 @@ Donut Slow
 }
 
 STRING 5826
-// Abilities: A0GA (Final Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0FU (Pocket Dimension), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 5827
-// Abilities: A0HN (Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0GA (Final Flash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36889,7 +36925,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5944
-// Abilities: A0HN (Wolf Fang Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HN (Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -38139,7 +38175,7 @@ STRING 6151
 }
 
 STRING 6152
-// Abilities: A0I0 (God Cutter), Hotkey (Hotkey - Normal)
+// Abilities: A0HN (Wolf Fang Fist), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -38157,7 +38193,7 @@ STRING 6154
 }
 
 STRING 6155
-// Abilities: A0I0 (God Cutter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I0 (God Cutter), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -39598,7 +39634,7 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 6378
-// Abilities: A0IC (Shining Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0I0 (God Cutter), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -39622,7 +39658,7 @@ Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)
 }
 
 STRING 6382
-// Abilities: A0IC (Shining Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IC (Shining Sword), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -39880,7 +39916,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6425
-// Abilities: A0IE (Lightning Surprise), Hotkey (Hotkey - Normal)
+// Abilities: A0IC (Shining Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -42986,7 +43022,7 @@ Q
 }
 
 STRING 6923
-// Abilities: A0IE (Lightning Surprise), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IE (Lightning Surprise), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43022,7 +43058,7 @@ Madara creates a small forest of flowering trees that will release pollen that h
 }
 
 STRING 6929
-// Abilities: A0IH (Capsule: Dr Wheelo's Research), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (Lightning Surprise), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -43560,7 +43596,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 7013
-// Abilities: A0IH (Capsule: Dr Wheelo's Research), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IH (Capsule: Dr Wheelo's Research), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43596,7 +43632,7 @@ STRING 7018
 }
 
 STRING 7019
-// Abilities: A0II (Capsule: Time Ring), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IH (Capsule: Dr Wheelo's Research), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -43622,12 +43658,6 @@ The user punches in front of them, dealing damage to enemies and deflecting beam
 STRING 7023
 {
 |cff666666Game
-}
-
-STRING 7024
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 7025
@@ -44478,7 +44508,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7149
-// Abilities: A0IJ (Capsule: Brave Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0II (Capsule: Time Ring), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -44698,7 +44728,7 @@ Eye Beam
 }
 
 STRING 7180
-// Abilities: A0IK (Capsule: Geti Star Fragment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IJ (Capsule: Brave Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -45514,7 +45544,7 @@ Tail Attack
 }
 
 STRING 7305
-// Abilities: A0IM (Divine Lasso), Hotkey (Hotkey - Normal)
+// Abilities: A0IK (Capsule: Geti Star Fragment), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -45634,12 +45664,6 @@ STRING 7321
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Tail Attack [|cffffcc00Level 5|r]
-}
-
-STRING 7322
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
 }
 
 STRING 7323
@@ -48961,7 +48985,7 @@ buu
 }
 
 STRING 7853
-// Abilities: A0IM (Divine Lasso), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IM (Divine Lasso), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49095,7 +49119,7 @@ Yamcha rushes the target unit, holding it in place while he unleashes a series o
 }
 
 STRING 7875
-// Abilities: A0IW (Kharge), Hotkey (Hotkey - Normal)
+// Abilities: A0IM (Divine Lasso), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -49757,7 +49781,7 @@ Q
 }
 
 STRING 7983
-// Abilities: A0IW (Kharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IW (Kharge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49883,7 +49907,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8004
-// Abilities: A0J0 (Distortion Field babidi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IW (Kharge), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -50021,16 +50045,13 @@ A high damage close-range hero that deals bonus damage on his spells by auto-att
 
 }
 
-STRING 8026
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
-}
-
 STRING 8027
-// Items: I048 (Geti Star Fragment), Description (Description)
+// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+50 stats.|nActivate this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +20% based on Vegeta's missing HP.
+|cffffff00Passively provides +10 armr.
+|cff00FF00Duration: <A0GM,Dur1> seconds|r
+|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
 }
 
 STRING 8028
@@ -50808,7 +50829,7 @@ STRING 8142
 }
 
 STRING 8143
-// Abilities: A0J0 (Distortion Field babidi), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0J0 (Distortion Field babidi), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -50952,7 +50973,7 @@ STRING 8166
 }
 
 STRING 8167
-// Abilities: A0J0 (Distortion Field babidi), Hotkey (Hotkey - Normal)
+// Abilities: A0J0 (Distortion Field babidi), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -51168,13 +51189,13 @@ Lightning Surprise
 }
 
 STRING 8203
-// Abilities: A0JA (Capsule: Dimension Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (Distortion Field babidi), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 8204
-// Abilities: A0JB (Capsule: Dead Zone Fragment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JA (Capsule: Dimension Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51612,15 +51633,9 @@ Frieza concentrates energy into a sphere at the tip of his index finger before t
 }
 
 STRING 8271
-// Abilities: A0JC (Capsule: Scouter 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JB (Capsule: Dead Zone Fragment), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 8272
-// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
-{
-|cffffff00+50 stats.|nActivate this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
 }
 
 STRING 8273
@@ -51748,7 +51763,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8292
-// Abilities: A0JJ (Temporal Do-Over), Hotkey (Hotkey - Normal)
+// Abilities: A0JC (Capsule: Scouter 2.0), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51890,7 +51905,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8314
-// Abilities: A0JJ (Temporal Do-Over), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JJ (Temporal Do-Over), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52028,7 +52043,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8336
-// Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0JJ (Temporal Do-Over), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52166,7 +52181,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8358
-// Abilities: A0JP (Spirit Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52310,7 +52325,7 @@ Goku Black fires a Kamehameha in the target direction, dealing damage to all uni
 }
 
 STRING 8382
-// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0JP (Spirit Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52334,7 +52349,7 @@ Divine Lasso
 }
 
 STRING 8386
-// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52856,7 +52871,7 @@ Dummy Slow 30% 1.5s
 }
 
 STRING 8473
-// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
+// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52880,7 +52895,7 @@ Twin Dragon Shot
 }
 
 STRING 8477
-// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53434,7 +53449,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 8557
-// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53458,7 +53473,7 @@ Kharge
 }
 
 STRING 8561
-// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53877,13 +53892,13 @@ Deactivate Distortion Field
 }
 
 STRING 8629
-// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 8630
-// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53907,7 +53922,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 8634
-// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54099,7 +54114,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8666
-// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54231,7 +54246,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8688
-// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
+// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54363,7 +54378,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8710
-// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54796,7 +54811,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8775
-// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54821,7 +54836,7 @@ Temporal Do-Over
 }
 
 STRING 8779
-// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55225,7 +55240,7 @@ BEB/VEG/GOT/DEF
 }
 
 STRING 8846
-// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -55256,7 +55271,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8850
-// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55411,13 +55426,13 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 8872
-// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
+// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 8873
-// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56763,7 +56778,7 @@ R
 }
 
 STRING 9087
-// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -56868,7 +56883,7 @@ STRING 9100
 }
 
 STRING 9101
-// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -63326,7 +63341,7 @@ Transformations:
 [lvl 150] 2.40x "uss"
 [lvl 200] 2.50x "luss"
 
-|cff00ff00Unstoppable|r: Briefly gains 12% damage block after casting a spell.
+|cff00ff00Unstoppable|r: Briefly gains 15% damage block after casting a spell.
 }
 
 STRING 10162
@@ -65498,7 +65513,7 @@ STRING 10518
 }
 
 STRING 10519
-// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -65516,7 +65531,7 @@ STRING 10521
 }
 
 STRING 10522
-// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
+// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -66541,7 +66556,7 @@ STRING 10674
 }
 
 STRING 10675
-// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -66559,7 +66574,7 @@ STRING 10677
 }
 
 STRING 10678
-// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -67799,7 +67814,7 @@ STRING 10878
 }
 
 STRING 10879
-// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -67817,7 +67832,7 @@ STRING 10881
 }
 
 STRING 10882
-// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
+// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -68596,7 +68611,7 @@ STRING 11008
 }
 
 STRING 11009
-// Abilities: A0O2 (Bunkai Teleport), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69096,7 +69111,7 @@ STRING 11094
 }
 
 STRING 11095
-// Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -69114,7 +69129,7 @@ STRING 11097
 }
 
 STRING 11098
-// Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69762,7 +69777,7 @@ STRING 11202
 }
 
 STRING 11203
-// Abilities: A0OI (Whirlwind Tempest), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69780,7 +69795,7 @@ STRING 11205
 }
 
 STRING 11206
-// Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OI (Whirlwind Tempest), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -70269,7 +70284,7 @@ STRING 11286
 }
 
 STRING 11287
-// Abilities: A0P2 (Ice Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -70773,7 +70788,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 11370
-// Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P2 (Ice Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -70911,7 +70926,7 @@ STRING 11392
 }
 
 STRING 11393
-// Abilities: A0PD (Justice Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -70929,7 +70944,7 @@ STRING 11395
 }
 
 STRING 11396
-// Abilities: A0PD (Justice Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PD (Justice Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -71629,7 +71644,7 @@ STRING 11508
 }
 
 STRING 11509
-// Abilities: A0PK (Justice Punch 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PD (Justice Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -72120,7 +72135,7 @@ All Might punches the air behind him while in the air to propel himself backward
 }
 
 STRING 11588
-// Abilities: A0PK (Justice Punch 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PK (Justice Punch 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -74526,7 +74541,7 @@ STRING 11975
 }
 
 STRING 11976
-// Abilities: A0PQ (Galaxy Dynamite), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PK (Justice Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -74538,7 +74553,7 @@ STRING 11977
 }
 
 STRING 11978
-// Abilities: A0PQ (Galaxy Dynamite), Hotkey (Hotkey - Normal)
+// Abilities: A0PQ (Galaxy Dynamite), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -74658,7 +74673,7 @@ Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff
 }
 
 STRING 11998
-// Abilities: A0Q0 (Death Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PQ (Galaxy Dynamite), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -75366,18 +75381,6 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 |cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
 }
 
-STRING 12115
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
-}
-
-STRING 12116
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
-}
-
 STRING 12117
 // Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
@@ -75435,9 +75438,13 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 12126
-// Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-(geti star fragment)
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
 }
 
 STRING 12127
@@ -75545,9 +75552,13 @@ Transformations:
 }
 
 STRING 12143
-// Items: I00D (Scouter), Description (Description)
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
-Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's number.|r|n|cffffff00Example: "scout 1" to scout player red|r|n|cffff0000Warning: % chance of breaking on each use.|r
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Super Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
 }
 
 STRING 12144
@@ -75557,9 +75568,11 @@ Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff
 }
 
 STRING 12145
-// Items: I00D (Scouter), Ubertip (Tooltip - Extended)
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's number.|r|n|cffffff00Example: "scout 1" to scout player red|r|n|cffff0000Warning: % chance of breaking on each use.|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool1> seconds|r
 }
 
 STRING 12146
@@ -76111,7 +76124,7 @@ STRING 12232
 }
 
 STRING 12233
-// Abilities: A0Q0 (Death Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0Q0 (Death Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -76243,7 +76256,7 @@ Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff
 }
 
 STRING 12255
-// Abilities: A0QB (Last Emperor), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q0 (Death Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -76764,7 +76777,7 @@ Transformations:
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.40x "fp"
-[lvl 200] 2.45x "fp" [Unlocks Sparking!]
+[lvl 200] 2.50x "fp" [Unlocks Sparking!]
 
 |cff22ff22Speed Demon:|r Cast point reduced to 0s.
 |cffff44ffI'm Scaling:|r +1% damage per 10 levels
@@ -78804,7 +78817,7 @@ STRING 12664
 }
 
 STRING 12665
-// Abilities: A0QB (Last Emperor), Hotkey (Hotkey - Normal)
+// Abilities: A0QB (Last Emperor), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -78846,7 +78859,7 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12671
-// Abilities: A0QE (Golden Death Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QB (Last Emperor), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -79481,12 +79494,11 @@ Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFros
 }
 
 STRING 12763
-// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +40% based on Vegeta's missing HP.
-|cffffff00Passively provides +5 armr.
-|cff00FF00Duration: <A0GM,Dur1> seconds|r
-|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool3> seconds|r
 }
 
 STRING 12764
@@ -79568,7 +79580,7 @@ STRING 12775
 }
 
 STRING 12776
-// Abilities: A0QE (Golden Death Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QE (Golden Death Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -79586,7 +79598,7 @@ STRING 12778
 }
 
 STRING 12779
-// Abilities: A0QK (Negative Energy Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QE (Golden Death Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -79813,7 +79825,7 @@ STRING 12812
 }
 
 STRING 12813
-// Abilities: A0QK (Negative Energy Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0QK (Negative Energy Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -79948,7 +79960,7 @@ STRING 12834
 }
 
 STRING 12835
-// Abilities: A0QP (Ice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QK (Negative Energy Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -80664,12 +80676,6 @@ STRING 12949
 Vegeta's Tail
 }
 
-STRING 12950
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
-}
-
 STRING 12951
 // Abilities: A0IH (Capsule: Dr Wheelo's Research), Tip (Tooltip - Normal)
 {
@@ -80761,7 +80767,7 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 12966
-// Abilities: A0QP (Ice Cannon), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QP (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -80883,7 +80889,7 @@ Justice Tornado
 }
 
 STRING 12986
-// Abilities: A0QZ (Justice Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0QP (Ice Cannon), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -81772,12 +81778,6 @@ STRING 13130
 [|cffffff00W|r] Choose Guldo
 }
 
-STRING 13131
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
-}
-
 STRING 13132
 // Units: H09J (Ginyu Force Member), Tip (Tooltip - Basic)
 {
@@ -81881,7 +81881,7 @@ STRING 13148
 }
 
 STRING 13149
-// Abilities: A0QZ (Justice Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QZ (Justice Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -81899,7 +81899,7 @@ STRING 13151
 }
 
 STRING 13152
-// Abilities: A0R3 (Justice Kick 2), Hotkey (Hotkey - Normal)
+// Abilities: A0QZ (Justice Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -83140,7 +83140,7 @@ STRING 13352
 }
 
 STRING 13353
-// Abilities: A0R3 (Justice Kick 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R3 (Justice Kick 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -83158,7 +83158,7 @@ STRING 13355
 }
 
 STRING 13356
-// Abilities: A0R9 (Scattering Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R3 (Justice Kick 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -83596,7 +83596,7 @@ STRING 13428
 }
 
 STRING 13429
-// Abilities: A0R9 (Scattering Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0R9 (Scattering Bullet), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -84968,7 +84968,7 @@ STRING 13638
 }
 
 STRING 13639
-// Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0R9 (Scattering Bullet), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -84986,7 +84986,7 @@ STRING 13641
 }
 
 STRING 13642
-// Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
+// Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85443,7 +85443,7 @@ STRING 13714
 }
 
 STRING 13715
-// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85461,7 +85461,7 @@ STRING 13717
 }
 
 STRING 13718
-// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86542,7 +86542,7 @@ STRING 13881
 }
 
 STRING 13882
-// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86560,7 +86560,7 @@ STRING 13884
 }
 
 STRING 13885
-// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86682,7 +86682,7 @@ Transformations:
 [lvl 85]  2.00x "justice"
 [lvl 100] 2.25x "justice"
 [lvl 150] 2.50x "justice"
-[lvl 225] 2.60x "max" [unlocks Super Maximum Light Speed Mode]
+[lvl 225] 2.70x "max" [unlocks Super Maximum Light Speed Mode]
 
 Gains +0.02x for each pride trooper on his team.
 |cff00ffffLightning Reflexes:|r +20% Evasion.
@@ -86996,7 +86996,7 @@ Envoy of the End - [|cffffcc00Passive|r]
 }
 
 STRING 13955
-// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87014,7 +87014,7 @@ STRING 13957
 }
 
 STRING 13958
-// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87158,7 +87158,7 @@ STRING 13981
 }
 
 STRING 13982
-// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87810,7 +87810,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14080
-// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87834,7 +87834,7 @@ Justice Kick
 }
 
 STRING 14084
-// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88425,7 +88425,7 @@ STRING 14174
 }
 
 STRING 14175
-// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -88452,7 +88452,7 @@ Justice Kick 2
 }
 
 STRING 14179
-// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88518,29 +88518,19 @@ Unlocks Supernova.|r
 }
 
 STRING 14188
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Drains 2.2% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool4> seconds|r
 }
 
 STRING 14189
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.7x All|r
-|cffffff00Drains 1.7% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool5> seconds|r
 }
 
 STRING 14190
@@ -88985,7 +88975,7 @@ STRING 14260
 }
 
 STRING 14261
-// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89003,7 +88993,7 @@ STRING 14263
 }
 
 STRING 14264
-// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89470,7 +89460,7 @@ STRING 14332
 }
 
 STRING 14333
-// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89546,7 +89536,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14343
-// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89639,7 +89629,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14357
-// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89727,7 +89717,7 @@ STRING 14370
 }
 
 STRING 14371
-// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89811,7 +89801,7 @@ STRING 14384
 }
 
 STRING 14385
-// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89902,6 +89892,84 @@ STRING 14399
 [|cff22FF22Q|r] Light Punch - [|cffffcc00Level 10|r]
 }
 
+STRING 14400
+// Units: H05X (Provisional Hero), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00W|r] Choose Shoto
+}
+
+STRING 14401
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool6> seconds|r
+}
+
+STRING 14402
+// Units: H05X (Provisional Hero), Tip (Tooltip - Basic)
+{
+[|cffffff00W|r] Choose Shoto
+}
+
+STRING 14403
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 14404
+// Items: I009 (Z Sword), Description (Description)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.2x Int Mult when under 30k Int else +0.1x
+-0.1x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 14405
+// Items: I00D (Scouter), Description (Description)
+{
+Gives detailed information on the location and power level of enemies. Increases vision range by 500.
+|cff00ff00To use, type scout, followed by the enemy's number.|r
+|cffffff00Example: "scout 1" to scout player red|r
+|cffff0000Warning: % chance of breaking on each use.|r
+}
+
+STRING 14406
+// Items: I00D (Scouter), Ubertip (Tooltip - Extended)
+{
+Gives detailed information on the location and power level of enemies. Increases vision range by 500.
+|cff00ff00To use, type scout, followed by the enemy's number.|r
+|cffffff00Example: "scout 1" to scout player red|r
+|cffff0000Warning: % chance of breaking on each use.|r
+}
+
+STRING 14407
+// Items: I03Q (Scouter 2.0), Description (Description)
+{
+Reveals an area of the map for 10 seconds, giving the user vision and detecting invisible units. Increases vision range by 1000.
+|cff00FF00Duration:|r 10s
+|cffFFFF00AoE:|r 4,000
+|cff00FFFFCooldown: 60s|r
+}
+
+STRING 14408
+// Items: I03Q (Scouter 2.0), Ubertip (Tooltip - Extended)
+{
+Reveals an area of the map for 10 seconds, giving the user vision and detecting invisible units. Increases vision range by 1000.
+|cff00FF00Duration:|r 10s
+|cffFFFF00AoE:|r 4,000
+|cff00FFFFCooldown: 60s|r
+}
+
+STRING 14409
+// Items: I048 (Geti Star Fragment), Description (Description)
+{
+|cffffff00Activate this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
 STRING 14410
 // Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
 {
@@ -89962,6 +90030,81 @@ STRING 14419
 [|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 10|r]
 }
 
+STRING 14420
+// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
+{
+|cffffff00Activate this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
+STRING 14421
+// Items: I04X (Hit's Assassination Contract), Name (Name)
+{
+Hit's Assassination Contract
+}
+
+STRING 14422
+// Items: I04X (Hit's Assassination Contract), Description (Description)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by 100%.|r
+}
+
+STRING 14423
+// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by 100%.|r
+}
+
+STRING 14424
+// Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
+{
+(+50 all)
+}
+
+STRING 14425
+// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14426
+// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
+|cffffff00+0.35x stat mult.
++33ms and unlocks movement speed cap.
+20% damage block up to 4x STR.
+Heals 7% of max HP.
+Deals constant AOE damage around All Might.
+|cff00FF00Duration: <A0T0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+}
+
+STRING 14427
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool7> seconds|r
+}
+
+STRING 14428
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool8> seconds|r
+}
+
+STRING 14429
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool9> seconds|r
+}
+
 STRING 14430
 // Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
 {
@@ -90020,6 +90163,74 @@ STRING 14439
 // Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
 {
 [|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 14440
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool10> seconds|r
+}
+
+STRING 14441
+// Abilities: A0TP (Fireball), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool1> - <A0TP,Cool10> seconds|r
+}
+
+STRING 14442
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool2> seconds|r
+}
+
+STRING 14443
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool1> seconds|r
+}
+
+STRING 14444
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool3> seconds|r
+}
+
+STRING 14445
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool4> seconds|r
+}
+
+STRING 14446
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool5> seconds|r
+}
+
+STRING 14447
+// Abilities: A0YR (Glacier), Name (Name)
+{
+Glacier
+}
+
+STRING 14448
+// Abilities: A0YR (Glacier), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Glacier - [|cffffcc00Level %d|r]
 }
 
 STRING 14449
@@ -94458,12 +94669,6 @@ STRING 15094
 Guldo uses telekinesis to lift a large boulder from the ground nearby, and then throws it at his opponent.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0SD,Cool7> seconds|r
 }
 
-STRING 15095
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
-}
-
 STRING 15096
 // Abilities: A0KE (Jiren's fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
@@ -98614,15 +98819,11 @@ STRING 15681
 }
 
 STRING 15682
-// Abilities: A0TS (Four Fist Technique), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Tien temporarily grows two extra arms from his back, allowing him to attack with twice the intensity that he would normally be capable of.
-|cffffff00+0.1x stat mult
-+10 armor
-+5% multi form clone stats
-Reduced Tri Beam charge time|r
-|cff00FF00Duration: <A0TS,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TS,Cool1> seconds|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool6> seconds|r
 }
 
 STRING 15683
@@ -99450,13 +99651,13 @@ STRING 15800
 }
 
 STRING 15801
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15802
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -102223,11 +102424,9 @@ Mario pulls out a cape and swings it in front of him to reflect incoming project
 }
 
 STRING 16183
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool1,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 16184
@@ -102367,7 +102566,7 @@ STRING 16205
 }
 
 STRING 16206
-// Abilities: A0TP (Fireball), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YX (Super Fireball), Researchubertip (Tooltip - Learn - Extended)
 {
 Fireball.
 |cff00ff00Damage: Int * lvl * ?|r
@@ -102647,75 +102846,57 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 16243
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool3,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
 }
 
 STRING 16244
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool4,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
 }
 
 STRING 16245
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool5,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
 }
 
 STRING 16246
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool6,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
 }
 
 STRING 16247
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool7,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
 }
 
 STRING 16248
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool8,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
 }
 
 STRING 16249
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool9,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
 }
 
 STRING 16250
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool10,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
 }
 
 STRING 16251
-// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
 {
-Fireball.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0TP,Cool2,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 16252
@@ -103433,30 +103614,23 @@ STRING 16347
 }
 
 STRING 16348
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool2,.> seconds|r
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool7> seconds|r
 }
 
 STRING 16349
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool3,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 2|r]
 }
 
 STRING 16350
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool4,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 3|r]
 }
 
 STRING 16351
@@ -103472,12 +103646,9 @@ STRING 16352
 }
 
 STRING 16353
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool5,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 4|r]
 }
 
 STRING 16354
@@ -103487,21 +103658,15 @@ Four Fist Technique
 }
 
 STRING 16355
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool6,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 5|r]
 }
 
 STRING 16356
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool7,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 6|r]
 }
 
 STRING 16357
@@ -103514,39 +103679,27 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 16358
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool8,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 1|r]
 }
 
 STRING 16359
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool9,.> seconds|r
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 7|r]
 }
 
 STRING 16360
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool10,.> seconds|r
+F
 }
 
 STRING 16361
-// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Name (Name)
 {
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 20% Enemy Max HP
-|cff00ffffCooldown: <A08J,Cool1,.> seconds|r
+Super Fireball
 }
 
 STRING 16362
@@ -104188,16 +104341,9 @@ All Might fires a powerful right-handed smash. Increases spell amp by 5%.
 }
 
 STRING 16433
-// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Researchtip (Tooltip - Learn)
 {
-All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
-|cffffff00+0.35x stat mult.
-+33ms and unlocks movement speed cap.
-10% damage block up to 2x STR.
-Heals 7% of max HP.
-Deals constant AOE damage around All Might.
-|cff00FF00Duration: <A0T0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+[|cff00ff00F|r] Learn Fireball - [|cffffcc00Level %d|r]
 }
 
 STRING 16434
@@ -104837,53 +104983,57 @@ Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and rest
 }
 
 STRING 16528
-// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 33% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
 }
 
 STRING 16529
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool3> seconds|r
 }
 
 STRING 16530
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool4> seconds|r
 }
 
 STRING 16531
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool5> seconds|r
 }
 
 STRING 16532
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool6> seconds|r
 }
 
 STRING 16533
@@ -104971,43 +105121,51 @@ STRING 16546
 }
 
 STRING 16547
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool7> seconds|r
 }
 
 STRING 16548
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool8> seconds|r
 }
 
 STRING 16549
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool9> seconds|r
 }
 
 STRING 16550
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool10> seconds|r
 }
 
 STRING 16551
@@ -105017,23 +105175,27 @@ STRING 16551
 }
 
 STRING 16552
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Researchubertip (Tooltip - Learn - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool1> - <A0YU,Cool10> seconds|r
 }
 
 STRING 16553
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.2x Str/Agi Mult
-Fire Flower: +0.4x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool2> seconds|r
 }
 
 STRING 16554
@@ -106421,7 +106583,7 @@ W
 }
 
 STRING 16733
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -106703,7 +106865,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -106845,18 +107007,6 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
 |cff00ff00Damage: Agi * lvl * ?|r
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
-}
-
-STRING 16791
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
-}
-
-STRING 16792
-// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 16793
@@ -107239,12 +107389,6 @@ STRING 16846
 Mugetsu
 }
 
-STRING 16847
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 36% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
-}
-
 STRING 16848
 // Buffs/Effects: B03T (), Buffubertip (Tooltip - Extended)
 {
@@ -107288,7 +107432,7 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 16855
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -107575,18 +107719,9 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 }
 
 STRING 16890
-// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
-A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
-
-|cff00ff00Unstoppable|r: Briefly gains 12% damage block after casting a spell.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
+F
 }
 
 STRING 16891
@@ -107988,7 +108123,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108012,19 +108147,6 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
-}
-
-STRING 16933
-// Units: H05W (Princess of Zeal), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong support and utility capabilities, while being capable of dealing damage when needed.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 16934
@@ -108659,7 +108781,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 17017
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -108728,7 +108850,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -108752,7 +108874,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108884,7 +109006,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -109554,7 +109676,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109658,7 +109780,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -110054,7 +110176,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -111977,7 +112099,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113110,7 +113232,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113659,7 +113781,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -116954,7 +117076,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -117416,7 +117538,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117480,7 +117602,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117666,7 +117788,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118828,7 +118950,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118931,13 +119053,13 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 18521
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -119669,14 +119791,9 @@ STRING 18626
 }
 
 STRING 18627
-// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
-Super 17 can create a high powered energy barrier that is capable of absorbing all incoming beams. Use this ability when standing near Android 17 or Android 18 to absorb their parts for a power upgrade. Adds 5s of cooldown to Android Barrier.
-|cffff2020All base armor is removed for the next 5s.
-|cffffff00On the first beam absorbed, gain +0.01x mult.
-On each beam, restore 10% of max mana.
-|cff00ff00Channel Duration: <A0P8,Dur1>s
-|cff00ffffCooldown: <A0P8,Cool1>s
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 9|r]
 }
 
 STRING 18628
@@ -120696,7 +120813,7 @@ STRING 18768
 }
 
 STRING 18769
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -122222,7 +122339,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122589,7 +122706,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122613,7 +122730,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122973,7 +123090,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -124982,7 +125099,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125051,7 +125168,7 @@ STRING 19379
 }
 
 STRING 19380
-// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -126185,10 +126302,22 @@ A heavy punch.
 |cff00ffffCooldown: <A0RE,Cool10> seconds|r
 }
 
+STRING 19532
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 8|r]
+}
+
 STRING 19533
 // Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
+}
+
+STRING 19534
+// Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Fireball - [|cffffcc00Level 10|r]
 }
 
 STRING 19535
@@ -126201,6 +126330,62 @@ STRING 19536
 // Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 19537
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool8> seconds|r
+}
+
+STRING 19538
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool9> seconds|r
+}
+
+STRING 19539
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool10> seconds|r
+}
+
+STRING 19540
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool1> seconds|r
+}
+
+STRING 19541
+// Abilities: A0YR (Glacier), EditorSuffix (Editor Suffix)
+{
+(shoto)
+}
+
+STRING 19542
+// Abilities: A0YX (Super Fireball), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 19543
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19544
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
 STRING 19545
@@ -126233,10 +126418,28 @@ STRING 19549
 This unit is weakened; it has reduced attack damage.
 }
 
+STRING 19550
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool2,.> seconds|r
+}
+
 STRING 19551
 {
 [|cffffcc00Unlock|r] |cffFF2020DREAM DEVOURER|r
 When Schala's multiplier is maxed out, she can succumb to the power of Lavos, granting her increased combat capabilities and enhanced abilities.
+}
+
+STRING 19552
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool3,.> seconds|r
 }
 
 STRING 19553
@@ -126297,6 +126500,15 @@ STRING 19562
 // Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Magic Seal - [|cffffcc00Level 10|r]
+}
+
+STRING 19563
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool4,.> seconds|r
 }
 
 STRING 19564
@@ -126603,6 +126815,15 @@ STRING 19608
 [|cff00ff00Q|r] Magic Orbs - [|cffffcc00Level 7|r]
 }
 
+STRING 19609
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool5,.> seconds|r
+}
+
 STRING 19610
 // Abilities: A0YK (Empowered Magic Orbs), Researchtip (Tooltip - Learn)
 {
@@ -126650,6 +126871,15 @@ Schala creates 5 magical orbs in a line and fires them at the target area.
 |cffffff00Empowered: Orbs restore HP to allies in range of the explosion. 
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0YK,Cool10> seconds|r
+}
+
+STRING 19617
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool6,.> seconds|r
 }
 
 STRING 19618
@@ -126824,6 +127054,15 @@ Schala channels for 2s and then transports nearby allies to the target location.
 |cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
 }
 
+STRING 19645
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool7,.> seconds|r
+}
+
 STRING 19646
 // Abilities: A0YN (Empowered Teleportation), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -126836,6 +127075,60 @@ STRING 19647
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
+STRING 19648
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool8,.> seconds|r
+}
+
+STRING 19649
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool9,.> seconds|r
+}
+
+STRING 19650
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool10,.> seconds|r
+}
+
+STRING 19651
+// Abilities: A08J (Tri Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 10% Enemy Max HP
+|cff00ffffCooldown: <A08J,Cool1,.> seconds|r
+}
+
+STRING 19652
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur1>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool1,.> seconds|r
+}
+
+STRING 19653
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur2>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool2,.> seconds|r
 }
 
 STRING 19654
@@ -126902,6 +127195,51 @@ STRING 19664
 // Abilities: A0YN (Empowered Teleportation), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Teleportation - [|cffffcc00Level 10|r]
+}
+
+STRING 19665
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur3>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool3,.> seconds|r
+}
+
+STRING 19666
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur4>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool4,.> seconds|r
+}
+
+STRING 19667
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur5>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool5,.> seconds|r
+}
+
+STRING 19668
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur6>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool6,.> seconds|r
+}
+
+STRING 19669
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur7>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool7,.> seconds|r
 }
 
 STRING 19670
@@ -127008,5 +127346,782 @@ STRING 19681
 |cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
 |cff00FF00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A0XU,Cool10>s|r
+}
+
+STRING 19682
+// Abilities: A0TR (Kiai), Researchubertip (Tooltip - Learn - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur1>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool1,.> - <A0TR,Cool10,.> seconds|r
+}
+
+STRING 19683
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur8>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool8,.> seconds|r
+}
+
+STRING 19684
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur9>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool9,.> seconds|r
+}
+
+STRING 19685
+// Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
+{
+Tien releases a powerful air shockwave from his hands that deflects and nullifies incoming beams.
+|cffff2020Channel Duration: <A0TR,Dur10>s
+|cff00ff00Damage: Str * lvl * ? + 6% Max HP/s|r
+|cff00FFFFCooldown: <A0TR,Cool10,.> seconds|r
+}
+
+STRING 19686
+// Abilities: A0TS (Four Fist Technique), Ubertip (Tooltip - Normal - Extended)
+{
+Tien temporarily grows two extra arms from his back, allowing him to attack with twice the intensity that he would normally be capable of.
+|cffffff00+0.2x stat mult
++10 armor
++5% multi form clone stats
+Reduced Tri Beam charge time|r
+|cff00FF00Duration: <A0TS,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TS,Cool1> seconds|r
+}
+
+STRING 19687
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 150] 2.50x "fp" 
+[lvl 200] 2.60x "fp"
+[lvl 300] 2.75x "fp"
+}
+
+STRING 19688
+// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
+{
+A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
+
+|cff00ff00Unstoppable|r: Briefly gains 15% damage block after casting a spell.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19689
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool3> seconds|r
+}
+
+STRING 19690
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool4> seconds|r
+}
+
+STRING 19691
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool5> seconds|r
+}
+
+STRING 19692
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool6> seconds|r
+}
+
+STRING 19693
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool7> seconds|r
+}
+
+STRING 19694
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 2|r]
+}
+
+STRING 19695
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 3|r]
+}
+
+STRING 19696
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 4|r]
+}
+
+STRING 19697
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 5|r]
+}
+
+STRING 19698
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 6|r]
+}
+
+STRING 19699
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 1|r]
+}
+
+STRING 19700
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 7|r]
+}
+
+STRING 19701
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 9|r]
+}
+
+STRING 19702
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 8|r]
+}
+
+STRING 19703
+// Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Glacier - [|cffffcc00Level 10|r]
+}
+
+STRING 19704
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool8> seconds|r
+}
+
+STRING 19705
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool9> seconds|r
+}
+
+STRING 19706
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool10> seconds|r
+}
+
+STRING 19707
+// Abilities: A0YR (Glacier), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool1> - <A0YR,Cool10> seconds|r
+}
+
+STRING 19708
+// Abilities: A0YR (Glacier), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto instantaneously creates a massive ice glacier that afflicts his enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YR,Cool2> seconds|r
+}
+
+STRING 19709
+// Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Mario throws a fireball to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YX,Cool2> seconds|r
+}
+
+STRING 19710
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
++10% damage when above 75 heat or below 25 heat.
+Significantly increases heat gauge.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool1> seconds|r
+}
+
+STRING 19712
+// Abilities: A0YV (Heating Up), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Heating Up
+}
+
+STRING 19714
+// Abilities: A0YW (Cooling Down), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cooling Down
+}
+
+STRING 19715
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 2|r]
+}
+
+STRING 19716
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 3|r]
+}
+
+STRING 19717
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 4|r]
+}
+
+STRING 19718
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 5|r]
+}
+
+STRING 19719
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 6|r]
+}
+
+STRING 19720
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 1|r]
+}
+
+STRING 19721
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 7|r]
+}
+
+STRING 19722
+// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 19723
+// Abilities: A0YS (Wall of Flames), Name (Name)
+{
+Wall of Flames
+}
+
+STRING 19724
+// Abilities: A0YS (Wall of Flames), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Wall of Flames - [|cffffcc00Level %d|r]
+}
+
+STRING 19725
+// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 19726
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 9|r]
+}
+
+STRING 19727
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 8|r]
+}
+
+STRING 19728
+// Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 10|r]
+}
+
+STRING 19731
+// Units: H05W (Princess of Zeal), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong support and utility capabilities, while being capable of dealing damage when needed.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19732
+// Units: H05X (Provisional Hero), Ubertip (Tooltip - Extended)
+{
+A powerful nuker who must carefully maintain the balance of his half-cold half-hot quirk to maximize his damage output.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19733
+// Abilities: A0YS (Wall of Flames), EditorSuffix (Editor Suffix)
+{
+(shoto)
+}
+
+STRING 19734
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool1> seconds|r
+}
+
+STRING 19741
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 2|r]
+}
+
+STRING 19742
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 3|r]
+}
+
+STRING 19743
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 4|r]
+}
+
+STRING 19744
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 5|r]
+}
+
+STRING 19745
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 6|r]
+}
+
+STRING 19746
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 1|r]
+}
+
+STRING 19747
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 7|r]
+}
+
+STRING 19748
+// Abilities: A0YT (Ice Path), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 19749
+// Abilities: A0YT (Ice Path), Name (Name)
+{
+Ice Path
+}
+
+STRING 19750
+// Abilities: A0YT (Ice Path), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Ice Path - [|cffffcc00Level %d|r]
+}
+
+STRING 19751
+// Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19752
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 9|r]
+}
+
+STRING 19753
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 8|r]
+}
+
+STRING 19754
+// Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice Path - [|cffffcc00Level 10|r]
+}
+
+STRING 19759
+// Abilities: A0YT (Ice Path), EditorSuffix (Editor Suffix)
+{
+(shoto)
+}
+
+STRING 19766
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 2|r]
+}
+
+STRING 19767
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 3|r]
+}
+
+STRING 19768
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 4|r]
+}
+
+STRING 19769
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 5|r]
+}
+
+STRING 19770
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 6|r]
+}
+
+STRING 19771
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 1|r]
+}
+
+STRING 19772
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 7|r]
+}
+
+STRING 19773
+// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19774
+// Abilities: A0YU (Flashfreeze Heatwave), Name (Name)
+{
+Flashfreeze Heatwave
+}
+
+STRING 19775
+// Abilities: A0YU (Flashfreeze Heatwave), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Flashfreeze Heatwave - [|cffffcc00Level %d|r]
+}
+
+STRING 19776
+// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19777
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 9|r]
+}
+
+STRING 19778
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 8|r]
+}
+
+STRING 19779
+// Abilities: A0YU (Flashfreeze Heatwave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 10|r]
+}
+
+STRING 19784
+// Abilities: A0YU (Flashfreeze Heatwave), EditorSuffix (Editor Suffix)
+{
+(frieza)
+}
+
+STRING 19787
+// Abilities: A0YV (Heating Up), Name (Name)
+{
+Heating Up
+}
+
+STRING 19789
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 19790
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur3> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool3> seconds|r
+}
+
+STRING 19791
+// Abilities: A0YV (Heating Up), EditorSuffix (Editor Suffix)
+{
+(Shoto)
+}
+
+STRING 19792
+// Abilities: A0YW (Cooling Down), Name (Name)
+{
+Cooling Down
+}
+
+STRING 19794
+// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19795
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur4> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool4> seconds|r
+}
+
+STRING 19796
+// Abilities: A0YW (Cooling Down), EditorSuffix (Editor Suffix)
+{
+(Shoto)
+}
+
+STRING 19797
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool1> seconds|r
+}
+
+STRING 19798
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool3> seconds|r
+}
+
+STRING 19799
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool4> seconds|r
+}
+
+STRING 19800
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool5> seconds|r
+}
+
+STRING 19801
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool6> seconds|r
+}
+
+STRING 19802
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool7> seconds|r
+}
+
+STRING 19803
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool8> seconds|r
+}
+
+STRING 19804
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool9> seconds|r
+}
+
+STRING 19805
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool10> seconds|r
+}
+
+STRING 19806
+// Abilities: A0YS (Wall of Flames), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool1> - <A0YS,Cool10> seconds|r
+}
+
+STRING 19807
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to burn his enemies.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool2> seconds|r
+}
+
+STRING 19808
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur5> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool5> seconds|r
+}
+
+STRING 19809
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur6> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool6> seconds|r
+}
+
+STRING 19810
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur7> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool7> seconds|r
+}
+
+STRING 19811
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur8> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool8> seconds|r
+}
+
+STRING 19812
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur9> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool9> seconds|r
+}
+
+STRING 19813
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur10> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool10> seconds|r
+}
+
+STRING 19814
+// Abilities: A0YT (Ice Path), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool1> - <A0YT,Cool10> seconds|r
+}
+
+STRING 19815
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 165ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur2> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool2> seconds|r
 }
 

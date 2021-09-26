@@ -3,7 +3,7 @@ import { Vector2D } from "Common/Vector2D";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Hooks } from "Libs/TreeLib/Hooks";
-import { Id, Constants, Buffs, OrderIds, DebuffAbilities } from "Common/Constants";
+import { Id, Constants, Buffs, OrderIds, DebuffAbilities, Globals } from "Common/Constants";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { TextTagHelper } from "Common/TextTagHelper";
@@ -93,6 +93,9 @@ export class HeroPassiveManager {
       case Id.super17:
         super17Passive(customHero);
         break;
+      case Id.shotoTodoroki:
+        shotoTodorokiPassive(customHero);
+        break;
       default:
         break;
     }
@@ -110,7 +113,6 @@ export function kidBuuPassive(customHero: CustomHero) {
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
@@ -118,14 +120,14 @@ export function superJanembaPassive(customHero: CustomHero) {
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
-  )
+  );
   TriggerAddCondition(
     onHitTrigger,
     Condition(() => {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const target = GetTriggerUnit();
         targetPos.setUnit(target);
@@ -198,7 +200,7 @@ export function superJanembaPassive(customHero: CustomHero) {
 }
 
 export function tapionPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
@@ -230,7 +232,7 @@ export function tapionPassive(customHero: CustomHero) {
       // const attacked = BlzGetEventDamageTarget();
       if (
         GetUnitTypeId(attacker) == heroId &&
-        GetOwningPlayer(attacker) == player && 
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
         IsUnitType(attacked, UNIT_TYPE_HERO) &&
         GetUnitAbilityLevel(attacked, HeroPassiveData.HEROS_SONG) > 0
       ) {
@@ -288,7 +290,7 @@ export function tapionPassive(customHero: CustomHero) {
 
 
 export function dyspoPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
   const targetPos = new Vector2D();
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
@@ -304,7 +306,7 @@ export function dyspoPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const justiceKickLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.JUSTICE_KICK_ABILITY);
         // const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
@@ -352,7 +354,7 @@ export function dyspoPassive(customHero: CustomHero) {
 
 
 export function ichigoPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
 
   // const getsugaBase = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO);
@@ -392,7 +394,7 @@ export function ichigoPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         // const doBankaiFinal: boolean = (bankaiFinal.isInUse());
         const target = GetTriggerUnit();
@@ -615,7 +617,7 @@ export function ichigoPassive(customHero: CustomHero) {
 }
 
 export function dartFeldPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
 
   const madnessHero = customHero.getAbility(AbilityNames.DartFeld.MADNESS_HERO);
@@ -652,7 +654,7 @@ export function dartFeldPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const doMadness = (
           madnessHero.isInUse() && 
@@ -743,7 +745,7 @@ export function dartFeldPassive(customHero: CustomHero) {
 
 
 export function lucarioPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
@@ -760,10 +762,12 @@ export function lucarioPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const target = GetTriggerUnit();
         targetPos.setUnit(target);
+
+        const player = GetOwningPlayer(customHero.unit);
         
         // force
         if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
@@ -860,7 +864,7 @@ export function lucarioPassive(customHero: CustomHero) {
         ) {
           const input = new CustomAbilityInput(
             customHero, 
-            GetOwningPlayer(customHero.unit),
+            player,
             GetUnitAbilityLevel(customHero.unit, Id.extremeSpeed),
             targetPos,
             targetPos,
@@ -872,7 +876,7 @@ export function lucarioPassive(customHero: CustomHero) {
           if (customHero.canCastAbility(AbilityNames.Lucario.EXTREME_SPEED_ON_HIT, input)) {
             TextTagHelper.showPlayerColorTextOnUnit(
               AbilityNames.Lucario.EXTREME_SPEED_ON_HIT, 
-              GetPlayerId(GetOwningPlayer(customHero.unit)), 
+              GetPlayerId(player), 
               customHero.unit
             );
             customHero.useAbility(
@@ -1040,8 +1044,319 @@ export function super17Passive(customHero: CustomHero) {
       return false;
     })
   );
+}
+
+export function getHeatString(
+  heat: number, 
+  isHeatingUp: boolean, 
+  isCoolingDown: boolean
+): string {
+  // return R2S(heat);
+  let result = "|cffff2222";
+  let i = 0;
+  for (; i < heat * 0.1 - 1; ++i) {
+    result += "I";
+  }
+
+  if (i < 10 && heat != 0) {
+    let mod = heat;
+    while (mod > 10) {
+      mod -= 10;
+    }
+
+    if (mod <= 5) {
+      result += ".";
+    } else {
+      result += ":";
+    }
+    ++i;
+  }
+
+  if (i < 10) {
+    result += "|cff00ffff";
+    for (; i < 10; ++i) {
+      result += "I";
+    }
+  } else if (isCoolingDown) {
+    result += "|cff00ffff";
+  }
+  
+  if (isHeatingUp) {
+    result += "|cffff2222^";
+  } else if (isCoolingDown) {
+    result += "v";
+  }
+
+  return result + "|r";
+}
+
+export function shotoTodorokiPassive(customHero: CustomHero) {
+  const unitHandle = GetHandleId(customHero.unit);
+  if (unitHandle == 0) return;
+
+  // globals hashtable
+  // 0: heat
+  // 1: heat state (1 = cooling down, 2 = heating up)
+
+  const heatHeatingUp = 5;
+  const heatCoolingDown = -5;
+  const heatGlacier = -15;
+  const heatWallOfFlames = 20;
+  const heatIcePath = -10;
+  const heatFlashfreezeHeatwave = 30;
+  const heatLossPerTick = 0.02;
+  const heatHPPenaltyPerTick = 0.01;
+  const heatHPPenaltyInitial = 10;
+  const heatHPPenaltyPerSecond = 3;
+
+  // update stuff
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const textTag = CreateTextTag();
+  let heat = 50;
+  let heatSpeed = 0;
+  let isHeatingUp = false;
+  let isCoolingDown = false;
+  let penaltyTick = 0;
+
+  let player = GetOwningPlayer(customHero.unit);
+  let playerForce = CreateForce();
+  ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
+  SetTextTagPermanent(textTag, true);
+  SetTextTagVisibility(textTag, true);
+  ShowTextTagForceBJ(false, textTag, bj_FORCE_ALL_PLAYERS);
+  ShowTextTagForceBJ(true, textTag, playerForce);
+
+  let coldSfx: effect | undefined;
+  let hotSfx: effect | undefined;
+  let hotSfx2: effect | undefined;
+  let hotSfx3: effect | undefined;
+
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) return;
+    if (UnitHelper.isUnitDead(customHero.unit)) {
+      heat = 50;
+      heatSpeed = 0;
+      isHeatingUp = false;
+      isCoolingDown = false;
+      return;
+    }
+
+    if (GetOwningPlayer(customHero.unit) != player) {
+      player = GetOwningPlayer(customHero.unit);
+      ForceClear(playerForce);
+      ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
+      ShowTextTagForceBJ(true, textTag, playerForce);
+    }
+
+    // additional heat from heating up / cooling down
+    if (isHeatingUp) {
+      heatSpeed = heatSpeed + heatHeatingUp * heatLossPerTick * 0.5;
+    } else if (isCoolingDown) {
+      heatSpeed = heatSpeed + heatCoolingDown * heatLossPerTick * 0.5;
+    }
+
+    // heat speed loss
+    let heatSpeedDelta = heatSpeed * heatLossPerTick;
+    heatSpeed = heatSpeed - heatSpeedDelta;
+    if (heatSpeedDelta > 0) {
+      heatSpeed = Math.max(0, heatSpeed);
+    } else {
+      heatSpeed = Math.min(0, heatSpeed);
+    }
+
+    heat = Math.max(0, Math.min(100, heat + heatSpeed * 0.03));
+    SaveReal(Globals.genericSpellHashtable, unitHandle, 0, heat);
+
+    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 10);
+    SetTextTagTextBJ(textTag, getHeatString(heat, isHeatingUp, isCoolingDown), 10);
+
+    // heat penalty
+    if (
+      !BlzIsUnitInvulnerable(customHero.unit)
+      && (
+        heat == 100
+        || heat == 0
+      )
+    ) {
+      // if (heat == 100) {
+      //   heatSpeed += heatCoolingDown * 0.1;
+      // } else {
+      //   heatSpeed += heatHeatingUp * 0.1;
+      // }
+
+      // let percentHP = GetUnitLifePercent(customHero.unit);
+      // let newHP = percentHP - heatHPPenaltyPerTick;
+      // // if (penaltyTick > 33) {
+      // //   newHP -= Math.round(penaltyTick/99) * heatHPPenaltyPerTick;
+      // // }
+      // if (newHP > 1) {
+      //   SetUnitLifePercentBJ(customHero.unit, newHP);
+      // }
+
+      // sfx on 0
+      if (penaltyTick % 33 == 0) {
+        let percentHP = 0;
+        if (penaltyTick == 0) {
+          percentHP = GetUnitLifePercent(customHero.unit);
+          if (percentHP > 10) {
+            SetUnitLifePercentBJ(customHero.unit, percentHP - heatHPPenaltyInitial);
+          }
+        } else {
+          percentHP = GetUnitLifePercent(customHero.unit);
+          if (percentHP > heatHPPenaltyPerSecond) {
+            SetUnitLifePercentBJ(customHero.unit, percentHP - heatHPPenaltyPerSecond);
+          }
+        }
+
+        if (heat == 100) {
+          DestroyEffect(
+            AddSpecialEffect(
+              "ValkFireExplosion.mdl",
+              GetUnitX(customHero.unit),
+              GetUnitY(customHero.unit),
+            )
+          );
+        } else {
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+              GetUnitX(customHero.unit),
+              GetUnitY(customHero.unit),
+            )
+          );
+        }
+      }
+
+      ++penaltyTick;
+    } else {
+      penaltyTick = 0;
+    }
+
+    // update sfx
+    if (heat < 50) {
+      AddUnitAnimationProperties(customHero.unit, "alternate", true);
+      if (!coldSfx) {
+        coldSfx = AddSpecialEffectTarget(
+          "Abilities\\Weapons\\ZigguratFrostMissile\\ZigguratFrostMissile.mdl",
+          customHero.unit,
+          "right hand"
+        );
+      }
+      if (hotSfx) {
+        DestroyEffect(hotSfx);
+        hotSfx = undefined;
+      }
+      if (hotSfx2) {
+        DestroyEffect(hotSfx2);
+        hotSfx2 = undefined;
+      }
+      if (hotSfx3) {
+        DestroyEffect(hotSfx3);
+        hotSfx3 = undefined;
+      }
+    } else if (heat > 50) {
+      AddUnitAnimationProperties(customHero.unit, "alternate", false);
+      if (!hotSfx) {
+        hotSfx = AddSpecialEffectTarget(
+          "Environment\\LargeBuildingFire\\LargeBuildingFire1.mdl",
+          customHero.unit,
+          "left hand"
+        );
+      }
+      if (!hotSfx2) {
+        hotSfx2 = AddSpecialEffectTarget(
+          "Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl",
+          customHero.unit,
+          "left hand"
+        );
+      }
+      if (!hotSfx3) {
+        hotSfx3 = AddSpecialEffectTarget(
+          "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+          customHero.unit,
+          "head"
+        );
+      }
+      if (coldSfx) {
+        DestroyEffect(coldSfx);
+        coldSfx = undefined;
+      }
+    }
+  });
 
 
+  // spells changing heat
+  const castTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(castTrigger);
+  TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(castTrigger, Condition(() => {
+    const unit = GetTriggerUnit();
+    if (GetHandleId(unit) != unitHandle) return false;
+    
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.shotoTodorokiCoolingDown) {
+      heatSpeed += heatCoolingDown;
+      if (isHeatingUp) {
+        isHeatingUp = false;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 0);
+      } else {
+        isCoolingDown = true;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 1);
+      }
+    } else if (spellId == Id.shotoTodorokiHeatingUp) {
+      heatSpeed += heatHeatingUp;
+      if (isCoolingDown) {
+        isCoolingDown = false;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 0);
+      } else {
+        isHeatingUp = true;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 2);
+      }
+    } else if (spellId == Id.shotoTodorokiGlacier) {
+      heatSpeed += heatGlacier;
+    } else if (spellId == Id.shotoTodorokiWallOfFlames) {
+      heatSpeed += heatWallOfFlames;
+    } else if (spellId == Id.shotoTodorokiIcePath) {
+      heatSpeed += heatIcePath;
+    } else if (spellId == Id.shotoTodorokiFlashfreezeHeatwave) {
+      if (heatSpeed < 0) {
+        heatSpeed = heatFlashfreezeHeatwave;
+      } else {
+        heatSpeed += heatFlashfreezeHeatwave * 0.5;
+      }
+      heatSpeed *= 1.1;
+    }
+
+    return false;
+  }));
+
+  TimerStart(CreateTimer(), 0.3, true, () => {
+    // cleanup text tag and self hashtable
+    if (GetUnitTypeId(customHero.unit) != 0) return
+
+    if (hotSfx) {
+      DestroyEffect(hotSfx);
+      hotSfx = undefined;
+    }
+    if (hotSfx2) {
+      DestroyEffect(hotSfx2);
+      hotSfx2 = undefined;
+    }
+    if (hotSfx3) {
+      DestroyEffect(hotSfx3);
+      hotSfx3 = undefined;
+    }
+    if (coldSfx) {
+      DestroyEffect(coldSfx);
+      coldSfx = undefined;
+    }
+
+    DestroyTextTag(textTag);
+    FlushChildHashtable(Globals.genericSpellHashtable, unitHandle);
+    DestroyTimer(GetExpiredTimer());
+  });
 }
 
 
