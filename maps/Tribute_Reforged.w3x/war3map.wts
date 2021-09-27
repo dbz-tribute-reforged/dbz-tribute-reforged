@@ -107466,15 +107466,6 @@ STRING 16846
 Mugetsu
 }
 
-STRING 16847
-// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
-{
-Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 10% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% fire damage.
-Adds +1% fire damage for each heat above 50.
-|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
-}
-
 STRING 16848
 // Buffs/Effects: B03T (), Buffubertip (Tooltip - Extended)
 {
@@ -108233,15 +108224,6 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
-}
-
-STRING 16933
-// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
-{
-Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 10% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% frost damage.
-Adds +1% frost damage for each heat below 50.
-|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 
 STRING 16934
@@ -127766,6 +127748,24 @@ STRING 19728
 // Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 10|r]
+}
+
+STRING 19729
+// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 12% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% fire damage.
+Adds +1% fire damage for each heat above 50.
+|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
+}
+
+STRING 19730
+// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
+{
+Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 12% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% frost damage.
+Adds +1% frost damage for each heat below 50.
+|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 
 STRING 19731

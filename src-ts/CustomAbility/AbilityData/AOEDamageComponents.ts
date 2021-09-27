@@ -7714,7 +7714,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 66,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.04,
+      multiplier: BASE_DMG.KAME_DPS * 0.06,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -7797,7 +7797,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 66,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.15,
+      multiplier: BASE_DMG.KAME_DPS * 0.12,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

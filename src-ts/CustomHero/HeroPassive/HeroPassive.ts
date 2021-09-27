@@ -1117,7 +1117,7 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   const heatHeatingUp = 8;
   const heatCoolingDown = -8;
   const heatGlacier = -15;
-  const heatWallOfFlames = 20;
+  const heatWallOfFlames = 25;
   const heatIcePath = -10;
   const heatFlashfreezeHeatwave = 35;
   const heatHeavenPiercingIceWall = -25;
@@ -1374,8 +1374,9 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     } else if (spellId == Id.shotoTodorokiFlashfireFist) {
       heatSpeed += heatFlashfireFist;
     }
-
-    if (!isCoolingDown && !isHeatingUp) {
+    
+    const isFlashFireFistReady = GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiFlashfireFist) > 0;
+    if (!isCoolingDown && (!isHeatingUp || !isFlashFireFistReady)) {
       // flashfreeze heatwave
       SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, true);
       SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, false);
@@ -1388,7 +1389,7 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
       SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, true);
       SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, false);
     }
-    else if (GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiFlashfireFist) > 0 && isHeatingUp)
+    else if (isFlashFireFistReady && isHeatingUp)
     {
       // flashfire fist
       SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, false);
