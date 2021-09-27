@@ -1,4 +1,4 @@
-import { Id, DebuffAbilities, OrderIds } from "Common/Constants";
+import { Id, DebuffAbilities, OrderIds, Buffs } from "Common/Constants";
 import { AOEDebuff } from "CustomAbility/AbilityComponent/AOEDebuff";
 
 export const AOEDebuffComponents = [
@@ -280,7 +280,7 @@ export const AOEDebuffComponents = [
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: true,
-    buffId: FourCC("B02T"),
+    buffId: Buffs.FROSTBITE,
   },
   {
     name: "debuff stun ice cannon",
@@ -294,7 +294,7 @@ export const AOEDebuffComponents = [
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: true,
-    buffId: FourCC("B02T"),
+    buffId: Buffs.FROSTBITE,
   },
   {
     name: "debuff slow milky cannon",
@@ -953,5 +953,19 @@ export const AOEDebuffComponents = [
     onlyAffectHeroes: true,
     requireBuff: false,
     buffId: 0,
+  },
+  {
+    name: "debuff stun shoto heaven piercing ice wall",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.STUN_HALF_SECOND,
+    orderId: OrderIds.THUNDERBOLT,
+    aoe: 500,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: true,
+    buffId: Buffs.FROSTBITE,
   },
 ]

@@ -1048,43 +1048,59 @@ export function super17Passive(customHero: CustomHero) {
 
 export function getHeatString(
   heat: number, 
+  heatSpeed: number,
   isHeatingUp: boolean, 
   isCoolingDown: boolean
 ): string {
   // return R2S(heat);
-  let result = "|cffff2222";
-  let i = 0;
-  for (; i < heat * 0.1 - 1; ++i) {
-    result += "I";
-  }
+  // let result = "|cffff2222";
+  // let i = 0;
+  // for (; i < heat * 0.1 - 1; ++i) {
+  //   result += "I";
+  // }
 
-  if (i < 10 && heat != 0) {
-    let mod = heat;
-    while (mod > 10) {
-      mod -= 10;
-    }
+  // if (i < 10 && heat != 0) {
+  //   let mod = heat;
+  //   while (mod > 10) {
+  //     mod -= 10;
+  //   }
 
-    if (mod <= 5) {
-      result += ".";
-    } else {
-      result += ":";
-    }
-    ++i;
-  }
+  //   if (mod <= 5) {
+  //     result += ".";
+  //   } else {
+  //     result += ":";
+  //   }
+  //   ++i;
+  // }
 
-  if (i < 10) {
-    result += "|cff00ffff";
-    for (; i < 10; ++i) {
-      result += "I";
-    }
-  } else if (isCoolingDown) {
-    result += "|cff00ffff";
+  // if (i < 10) {
+  //   result += "|cff00ffff";
+  //   for (; i < 10; ++i) {
+  //     result += "I";
+  //   }
+  // } else if (isCoolingDown) {
+  //   result += "|cff00ffff";
+  // }
+  let result = "";
+  if (heat <= 50) {
+    result += "|cff00ffff" + I2S(Math.round(heat));
+  } else {
+    result += "|cffff2222" + I2S(Math.round(heat));
   }
   
+  if (heatSpeed < 0) {
+    result += "|cff00ffff";
+  } else if (heatSpeed > 0) {
+    result += "|cffff2222";
+  } else {
+    result += "|cffffcc00";
+  }
   if (isHeatingUp) {
-    result += "|cffff2222^";
+    result += "^";
   } else if (isCoolingDown) {
     result += "v";
+  } else {
+    result += "-";
   }
 
   return result + "|r";
@@ -1098,16 +1114,18 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   // 0: heat
   // 1: heat state (1 = cooling down, 2 = heating up)
 
-  const heatHeatingUp = 5;
-  const heatCoolingDown = -5;
+  const heatHeatingUp = 8;
+  const heatCoolingDown = -8;
   const heatGlacier = -15;
-  const heatWallOfFlames = 20;
+  const heatWallOfFlames = 25;
   const heatIcePath = -10;
-  const heatFlashfreezeHeatwave = 30;
+  const heatFlashfreezeHeatwave = 35;
+  const heatHeavenPiercingIceWall = -25;
+  const heatFlashfireFist = 25;
   const heatLossPerTick = 0.02;
   const heatHPPenaltyPerTick = 0.01;
-  const heatHPPenaltyInitial = 10;
-  const heatHPPenaltyPerSecond = 3;
+  const heatHPPenaltyInitial = 12;
+  const heatHPPenaltyPerSecond = 4;
 
   // update stuff
   const timer = CreateTimer();
@@ -1119,6 +1137,7 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   let isHeatingUp = false;
   let isCoolingDown = false;
   let penaltyTick = 0;
+  let ultMode = 0;
 
   let player = GetOwningPlayer(customHero.unit);
   let playerForce = CreateForce();
@@ -1169,8 +1188,30 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     heat = Math.max(0, Math.min(100, heat + heatSpeed * 0.03));
     SaveReal(Globals.genericSpellHashtable, unitHandle, 0, heat);
 
-    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 10);
-    SetTextTagTextBJ(textTag, getHeatString(heat, isHeatingUp, isCoolingDown), 10);
+    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 20);
+    SetTextTagTextBJ(textTag, getHeatString(heat, heatSpeed, isHeatingUp, isCoolingDown), 13);
+
+    // if (GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiHeavenPiercingIceWall) > 0) {
+    //   if ((ultMode == 1 && heat >= 50) || (ultMode == 2 && heat <= 50)) {
+    //     ultMode = 0;
+    //     // flashfreeze heatwave
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, true);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, false);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, false);
+    //   } else if (ultMode != 1 && heat >= 10) {
+    //     ultMode = 1;
+    //     // heaven piercing ice wall
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, false);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, true);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, false);
+    //   } else if (ultMode != 2 && heat <= 90 && GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiFlashfireFist) > 0) {
+    //     ultMode = 2;
+    //     // flashfire fist
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, false);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, false);
+    //     SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, true);
+    //   } 
+    // }
 
     // heat penalty
     if (
@@ -1297,21 +1338,23 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     
     const spellId = GetSpellAbilityId();
     if (spellId == Id.shotoTodorokiCoolingDown) {
-      heatSpeed += heatCoolingDown;
-      if (isHeatingUp) {
-        isHeatingUp = false;
-        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 0);
-      } else {
-        isCoolingDown = true;
-        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 1);
-      }
-    } else if (spellId == Id.shotoTodorokiHeatingUp) {
-      heatSpeed += heatHeatingUp;
       if (isCoolingDown) {
         isCoolingDown = false;
         SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 0);
       } else {
+        heatSpeed += heatCoolingDown;
+        isCoolingDown = true;
+        isHeatingUp = false;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 1);
+      }
+    } else if (spellId == Id.shotoTodorokiHeatingUp) {
+      if (isHeatingUp) {
+        isHeatingUp = false;
+        SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 0);
+      } else {
+        heatSpeed += heatHeatingUp;
         isHeatingUp = true;
+        isCoolingDown = false;
         SaveInteger(Globals.genericSpellHashtable, unitHandle, 1, 2);
       }
     } else if (spellId == Id.shotoTodorokiGlacier) {
@@ -1321,12 +1364,37 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     } else if (spellId == Id.shotoTodorokiIcePath) {
       heatSpeed += heatIcePath;
     } else if (spellId == Id.shotoTodorokiFlashfreezeHeatwave) {
-      if (heatSpeed < 0) {
-        heatSpeed = heatFlashfreezeHeatwave;
+      if (heat < 50) {
+        heatSpeed += heatFlashfreezeHeatwave;
       } else {
-        heatSpeed += heatFlashfreezeHeatwave * 0.5;
+        heatSpeed -= heatFlashfreezeHeatwave;
       }
-      heatSpeed *= 1.1;
+    } else if (spellId == Id.shotoTodorokiHeavenPiercingIceWall) {
+      heatSpeed += heatHeavenPiercingIceWall;
+    } else if (spellId == Id.shotoTodorokiFlashfireFist) {
+      heatSpeed += heatFlashfireFist;
+    }
+    
+    const isFlashFireFistReady = GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiFlashfireFist) > 0;
+    if (!isCoolingDown && (!isHeatingUp || !isFlashFireFistReady)) {
+      // flashfreeze heatwave
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, true);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, false);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, false);
+    } 
+    else if (GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiHeavenPiercingIceWall) > 0 && isCoolingDown)
+    {
+      // heaven piercing ice wall
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, false);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, true);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, false);
+    }
+    else if (isFlashFireFistReady && isHeatingUp)
+    {
+      // flashfire fist
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfreezeHeatwave, false);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiHeavenPiercingIceWall, false);
+      SetPlayerAbilityAvailable(player, Id.shotoTodorokiFlashfireFist, true);
     }
 
     return false;

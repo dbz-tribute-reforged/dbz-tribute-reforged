@@ -425,6 +425,8 @@ export module AbilityNames {
     export const WALL_OF_FLAMES: string = "Shoto Todoroki Wall Of Flames";
     export const ICE_PATH: string = "Shoto Todoroki Ice Path";
     export const FLASHFREEZE_HEATWAVE: string = "Shoto Todoroki Flashfreeze Heatwave";
+    export const HEAVEN_PIERCING_ICE_WALL: string = "Shoto Todoroki Heaven Piercing Ice Wall";
+    export const FLASHFIRE_FIST: string = "Shoto Todoroki Flashfire Fist";
     export const HEATING_UP: string = "Shoto Heating Up";
     export const COOLING_DOWN: string = "Shoto Cooling Down";
   }

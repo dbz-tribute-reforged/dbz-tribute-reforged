@@ -2604,6 +2604,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi shoto heaven piercing ice wall", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -10,
+    angleMax: 10,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 2,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 3,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam shoto heaven piercing ice wall" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

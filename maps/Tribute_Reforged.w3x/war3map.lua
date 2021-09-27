@@ -8055,6 +8055,9 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0H7"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0YH"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YI"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YU"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YY"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YZ"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -16538,6 +16541,8 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0ET"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YV"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YW"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YY"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YZ"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -26343,6 +26348,9 @@ function Trig_Hero_Pick_Reset_Abilities_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0GT"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0YH"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YI"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0YU"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YY"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YZ"), udg_TempPlayer)
 end
 
 function InitTrig_Hero_Pick_Reset_Abilities()
@@ -40067,7 +40075,7 @@ function Trig_Transformations_Raditz_Func017C()
     return true
 end
 
-function Trig_Transformations_Raditz_Func019Func002Func001C()
+function Trig_Transformations_Raditz_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -40077,14 +40085,14 @@ function Trig_Transformations_Raditz_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Raditz_Func019Func002C()
-    if (not Trig_Transformations_Raditz_Func019Func002Func001C()) then
+function Trig_Transformations_Raditz_Func020Func002C()
+    if (not Trig_Transformations_Raditz_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Raditz_Func019C()
+function Trig_Transformations_Raditz_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -40150,8 +40158,8 @@ function Trig_Transformations_Raditz_Actions()
         udg_TransformationSFXString = "AuraBlue.mdx"
     else
     end
-    if (Trig_Transformations_Raditz_Func019C()) then
-        if (Trig_Transformations_Raditz_Func019Func002C()) then
+    if (Trig_Transformations_Raditz_Func020C()) then
+        if (Trig_Transformations_Raditz_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(false, FourCC("A0NG"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0NH"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0NJ"), udg_TransformationPlayer)
@@ -45069,7 +45077,17 @@ function Trig_Transformations_Guldo_Func015C()
     return true
 end
 
-function Trig_Transformations_Guldo_Func019Func002Func001C()
+function Trig_Transformations_Guldo_Func016C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Guldo_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -45079,14 +45097,14 @@ function Trig_Transformations_Guldo_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Guldo_Func019Func002C()
-    if (not Trig_Transformations_Guldo_Func019Func002Func001C()) then
+function Trig_Transformations_Guldo_Func020Func002C()
+    if (not Trig_Transformations_Guldo_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Guldo_Func019C()
+function Trig_Transformations_Guldo_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -45138,10 +45156,16 @@ function Trig_Transformations_Guldo_Actions()
         udg_TransformationSFXString = "AuraDarkGreen.mdx"
     else
     end
+    if (Trig_Transformations_Guldo_Func016C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
     TriggerExecute(gg_trg_Ginyu_Force_Team_Stat_Mult_Bonus)
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Guldo_Func019C()) then
-        if (Trig_Transformations_Guldo_Func019Func002C()) then
+    if (Trig_Transformations_Guldo_Func020C()) then
+        if (Trig_Transformations_Guldo_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H09J')
@@ -49527,7 +49551,6 @@ function Trig_Transformations_Saitama_Actions()
         if (Trig_Transformations_Saitama_Func020Func003C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            udg_StatMultInt = (udg_StatMultInt * 0.90)
                         udg_TransformationID = FourCC('H04Y')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
@@ -50555,7 +50578,27 @@ function Trig_Transformations_Shoto_Todoroki_Func017C()
     return true
 end
 
-function Trig_Transformations_Shoto_Todoroki_Func020Func002Func001C()
+function Trig_Transformations_Shoto_Todoroki_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0YY"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Shoto_Todoroki_Func019C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0YZ"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Shoto_Todoroki_Func022Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -50565,14 +50608,14 @@ function Trig_Transformations_Shoto_Todoroki_Func020Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Shoto_Todoroki_Func020Func002C()
-    if (not Trig_Transformations_Shoto_Todoroki_Func020Func002Func001C()) then
+function Trig_Transformations_Shoto_Todoroki_Func022Func002C()
+    if (not Trig_Transformations_Shoto_Todoroki_Func022Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Shoto_Todoroki_Func020C()
+function Trig_Transformations_Shoto_Todoroki_Func022C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -50630,9 +50673,27 @@ function Trig_Transformations_Shoto_Todoroki_Actions()
         udg_TransformationAbility = FourCC("AUan")
     else
     end
+    if (Trig_Transformations_Shoto_Todoroki_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0YY"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0YY"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0YY'))
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_19711")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Shoto_Todoroki_Func019C()) then
+        UnitAddAbilityBJ(FourCC("A0YZ"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0YZ"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0YZ'))
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_19712")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Shoto_Todoroki_Func020C()) then
-        if (Trig_Transformations_Shoto_Todoroki_Func020Func002C()) then
+    if (Trig_Transformations_Shoto_Todoroki_Func022C()) then
+        if (Trig_Transformations_Shoto_Todoroki_Func022Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0YV"), udg_TransformationPlayer)
