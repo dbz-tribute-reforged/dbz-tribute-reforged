@@ -676,6 +676,8 @@ export module Id {
   export const shotoTodorokiWallOfFlames = FourCC("A0YS");
   export const shotoTodorokiIcePath = FourCC("A0YT");
   export const shotoTodorokiFlashfreezeHeatwave = FourCC("A0YU");
+  export const shotoTodorokiHeavenPiercingIceWall = FourCC("A0YY");
+  export const shotoTodorokiFlashfireFist = FourCC("A0YZ");
   export const shotoTodorokiHeatingUp = FourCC("A0YV");
   export const shotoTodorokiCoolingDown = FourCC("A0YW");
 

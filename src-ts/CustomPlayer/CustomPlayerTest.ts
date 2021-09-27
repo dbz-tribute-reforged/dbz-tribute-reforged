@@ -3429,6 +3429,7 @@ export function getTodorokiMult(unit: unit, abilityId: number) {
   if (
     abilityId == Id.shotoTodorokiGlacier
     || abilityId == Id.shotoTodorokiIcePath
+    || abilityId == Id.shotoTodorokiHeavenPiercingIceWall
   ) {
     result += Math.max(0, (50 - heat) * 0.01);
 
@@ -3439,20 +3440,18 @@ export function getTodorokiMult(unit: unit, abilityId: number) {
 
   if (
     abilityId == Id.shotoTodorokiWallOfFlames
+    || abilityId == Id.shotoTodorokiFlashfireFist
   ) {
     result += Math.max(0, (heat - 50) * 0.01);
 
-    if (heatMode == 1) {
+    if (heatMode == 2) {
       result += 0.1;
     }
   }
 
   if (abilityId == Id.shotoTodorokiFlashfreezeHeatwave) {
     result *= (1 + Math.abs(heat - 50) * 0.01)
-    if (Math.abs(heat - 50) >= 25) {
-      result += 0.1;
-    }
-    
+
     if (heatMode > 0) {
       result += 0.1;
     }

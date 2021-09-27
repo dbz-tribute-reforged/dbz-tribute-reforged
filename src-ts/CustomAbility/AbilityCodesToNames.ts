@@ -365,6 +365,8 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.shotoTodorokiWallOfFlames, AbilityNames.ShotoTodoroki.WALL_OF_FLAMES],
     [Id.shotoTodorokiIcePath, AbilityNames.ShotoTodoroki.ICE_PATH],
     [Id.shotoTodorokiFlashfreezeHeatwave, AbilityNames.ShotoTodoroki.FLASHFREEZE_HEATWAVE],
+    [Id.shotoTodorokiHeavenPiercingIceWall, AbilityNames.ShotoTodoroki.HEAVEN_PIERCING_ICE_WALL],
+    [Id.shotoTodorokiFlashfireFist, AbilityNames.ShotoTodoroki.FLASHFIRE_FIST],
     [Id.shotoTodorokiHeatingUp, AbilityNames.ShotoTodoroki.HEATING_UP],
     [Id.shotoTodorokiCoolingDown, AbilityNames.ShotoTodoroki.COOLING_DOWN],
 

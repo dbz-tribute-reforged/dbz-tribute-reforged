@@ -481,6 +481,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.ShotoTodoroki.WALL_OF_FLAMES,
       AbilityNames.ShotoTodoroki.ICE_PATH,
       AbilityNames.ShotoTodoroki.FLASHFREEZE_HEATWAVE,
+      AbilityNames.ShotoTodoroki.HEAVEN_PIERCING_ICE_WALL,
+      AbilityNames.ShotoTodoroki.FLASHFIRE_FIST,
       AbilityNames.ShotoTodoroki.HEATING_UP,
       AbilityNames.ShotoTodoroki.COOLING_DOWN,
     ]],

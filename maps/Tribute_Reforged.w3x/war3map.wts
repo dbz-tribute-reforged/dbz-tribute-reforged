@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.69
+DBZ Tribute Reforged 0.69a
 }
 
 STRING 4
@@ -4113,7 +4113,6 @@ Transformations:
 [lvl 150] 2.60x "fp"
 [lvl 250] 2.75x "fp" [Unlocks Serious Series]
 
-|cffff25aaDumb|r: -10% Int Mult
 |cffff2020ONE PUNCH|r: 100% chance for 1.5x crit
 }
 
@@ -5284,12 +5283,14 @@ Tien
 }
 
 STRING 846
-// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 10 heat bars, Shoto overheats and loses 10% of max HP plus 3% of max HP per second.
-|cffffff00Adds +10% fire damage.
-Adds +10% fire damage for each heat bar above 5.
-|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool3> seconds|r
 }
 
 STRING 847
@@ -5300,12 +5301,14 @@ Extra character. Not selected by default.
 }
 
 STRING 848
-// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
-Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat bars, Shoto suffers from frostbite and loses 10% of max HP plus 3% of max HP per second.
-|cffffff00Adds +10% frost damage.
-Adds +10% frost damage for each heat bar below 5.
-|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool4> seconds|r
 }
 
 STRING 849
@@ -34378,6 +34381,7 @@ Transformations:
 [lvl 35]  1.50x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.40x "fp"
+[lvl 200] 2.50x "fp"
 
 Gains +0.02x for each Ginyu Force member on their team.
 }
@@ -43660,6 +43664,14 @@ STRING 7023
 |cff666666Game
 }
 
+STRING 7024
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool1,.> seconds|r
+}
+
 STRING 7025
 // Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
 {
@@ -45664,6 +45676,14 @@ STRING 7321
 // Abilities: A0DI (Tail Attack), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Tail Attack [|cffffcc00Level 5|r]
+}
+
+STRING 7322
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool3,.> seconds|r
 }
 
 STRING 7323
@@ -50045,6 +50065,14 @@ A high damage close-range hero that deals bonus damage on his spells by auto-att
 
 }
 
+STRING 8026
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool4,.> seconds|r
+}
+
 STRING 8027
 // Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
 {
@@ -51636,6 +51664,14 @@ STRING 8271
 // Abilities: A0JB (Capsule: Dead Zone Fragment), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 8272
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool5,.> seconds|r
 }
 
 STRING 8273
@@ -75381,6 +75417,22 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 |cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
 }
 
+STRING 12115
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool6,.> seconds|r
+}
+
+STRING 12116
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool7,.> seconds|r
+}
+
 STRING 12117
 // Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
@@ -80676,6 +80728,14 @@ STRING 12949
 Vegeta's Tail
 }
 
+STRING 12950
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool8,.> seconds|r
+}
+
 STRING 12951
 // Abilities: A0IH (Capsule: Dr Wheelo's Research), Tip (Tooltip - Normal)
 {
@@ -81776,6 +81836,14 @@ STRING 13130
 // Units: H09J (Ginyu Force Member), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Guldo
+}
+
+STRING 13131
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool9,.> seconds|r
 }
 
 STRING 13132
@@ -94669,6 +94737,14 @@ STRING 15094
 Guldo uses telekinesis to lift a large boulder from the ground nearby, and then throws it at his opponent.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0SD,Cool7> seconds|r
 }
 
+STRING 15095
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool10,.> seconds|r
+}
+
 STRING 15096
 // Abilities: A0KE (Jiren's fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
@@ -104994,10 +105070,9 @@ STRING 16529
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool3> seconds|r
+|cff00ffffCooldown: <A0YU,Cool5> seconds|r
 }
 
 STRING 16530
@@ -105006,10 +105081,9 @@ STRING 16530
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool4> seconds|r
+|cff00ffffCooldown: <A0YU,Cool6> seconds|r
 }
 
 STRING 16531
@@ -105018,10 +105092,9 @@ STRING 16531
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool5> seconds|r
+|cff00ffffCooldown: <A0YU,Cool7> seconds|r
 }
 
 STRING 16532
@@ -105030,10 +105103,9 @@ STRING 16532
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool6> seconds|r
+|cff00ffffCooldown: <A0YU,Cool8> seconds|r
 }
 
 STRING 16533
@@ -105126,10 +105198,9 @@ STRING 16547
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool7> seconds|r
+|cff00ffffCooldown: <A0YU,Cool9> seconds|r
 }
 
 STRING 16548
@@ -105138,34 +105209,26 @@ STRING 16548
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool8> seconds|r
+|cff00ffffCooldown: <A0YU,Cool10> seconds|r
 }
 
 STRING 16549
-// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Researchubertip (Tooltip - Learn - Extended)
 {
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool9> seconds|r
+|cff00ffffCooldown: <A0YU,Cool1> - <A0YU,Cool10> seconds|r
 }
 
 STRING 16550
-// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YR (Glacier), EditorSuffix (Editor Suffix)
 {
-Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
-Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
-|cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool10> seconds|r
+(shoto)
 }
 
 STRING 16551
@@ -105175,15 +105238,14 @@ STRING 16551
 }
 
 STRING 16552
-// Abilities: A0YU (Flashfreeze Heatwave), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool1> - <A0YU,Cool10> seconds|r
+|cff00ffffCooldown: <A0YU,Cool2> seconds|r
 }
 
 STRING 16553
@@ -105192,10 +105254,9 @@ STRING 16553
 Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
 Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
 |cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool2> seconds|r
+|cff00ffffCooldown: <A0YU,Cool1> seconds|r
 }
 
 STRING 16554
@@ -107009,6 +107070,22 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
+STRING 16791
+// Abilities: A0YS (Wall of Flames), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool1> - <A0YS,Cool10> seconds|r
+}
+
+STRING 16792
+// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto uses his left side to generate a burst of flames to incinerate his enemies. Enemies hit by the flames will take lingering burn damage over time.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YS,Cool2,.> seconds|r
+}
+
 STRING 16793
 // Abilities: A0UJ (Bankai Attack Speed), EditorSuffix (Editor Suffix)
 {
@@ -107387,6 +107464,15 @@ STRING 16846
 // Abilities: A0UC (Mugetsu), Name (Name)
 {
 Mugetsu
+}
+
+STRING 16847
+// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 10% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% fire damage.
+Adds +1% fire damage for each heat above 50.
+|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
 }
 
 STRING 16848
@@ -108147,6 +108233,15 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
+}
+
+STRING 16933
+// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
+{
+Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 10% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% frost damage.
+Adds +1% frost damage for each heat below 50.
+|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 
 STRING 16934
@@ -125099,7 +125194,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -126365,7 +126460,7 @@ Shoto instantaneously creates a massive ice glacier that afflicts his enemies wi
 }
 
 STRING 19541
-// Abilities: A0YR (Glacier), EditorSuffix (Editor Suffix)
+// Abilities: A0YS (Wall of Flames), EditorSuffix (Editor Suffix)
 {
 (shoto)
 }
@@ -127403,8 +127498,8 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.50x "fp" 
-[lvl 200] 2.60x "fp"
+[lvl 150] 2.50x "fp" [unlocks Heaven Piercing Ice Wall at Low Heat] 
+[lvl 200] 2.60x "fp" [unlocks Flashfire Fist at High Heat]
 [lvl 300] 2.75x "fp"
 }
 
@@ -127572,27 +127667,21 @@ Mario throws a fireball to burn his enemies.
 }
 
 STRING 19710
-// Abilities: A0YU (Flashfreeze Heatwave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YV (Heating Up), Tip (Tooltip - Normal)
 {
-Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
-Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
-|cffffff00Considered both a frost and fire spell.
-+10% damage when above 75 heat or below 25 heat.
-Significantly increases heat gauge.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YU,Cool1> seconds|r
+[|cff00ff00F|r] Heating Up
+}
+
+STRING 19711
+{
+[|cffffcc00Unlock|r] Heaven Piercing Ice Wall
+When cooling down, Flashfreeze Heatwave is replaced with Heaven Piercing Ice Wall. Disablecooling down to revert back to Flashfreeze Heatwave.
 }
 
 STRING 19712
-// Abilities: A0YV (Heating Up), Tip (Tooltip - Normal)
 {
-[|cff00ff00D|r] Heating Up
-}
-
-STRING 19714
-// Abilities: A0YW (Cooling Down), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Cooling Down
+[|cffffcc00Unlock|r] Flashfire Fist
+When heating up, Flashfreeze Heatwave is replaced with Flashfire Fist. Disable heating up to revert back to Flashfreeze Heatwave.
 }
 
 STRING 19715
@@ -127706,7 +127795,7 @@ A powerful nuker who must carefully maintain the balance of his half-cold half-h
 }
 
 STRING 19733
-// Abilities: A0YS (Wall of Flames), EditorSuffix (Editor Suffix)
+// Abilities: A0YT (Ice Path), EditorSuffix (Editor Suffix)
 {
 (shoto)
 }
@@ -127805,10 +127894,79 @@ STRING 19754
 [|cff00ff00E|r] Ice Path - [|cffffcc00Level 10|r]
 }
 
+STRING 19756
+// Abilities: A0YW (Cooling Down), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Cooling Down
+}
+
+STRING 19757
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool3> seconds|r
+}
+
+STRING 19758
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool4> seconds|r
+}
+
 STRING 19759
-// Abilities: A0YT (Ice Path), EditorSuffix (Editor Suffix)
+// Abilities: A0YU (Flashfreeze Heatwave), EditorSuffix (Editor Suffix)
 {
 (shoto)
+}
+
+STRING 19760
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool5> seconds|r
+}
+
+STRING 19761
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool6> seconds|r
+}
+
+STRING 19762
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool7> seconds|r
+}
+
+STRING 19763
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 2|r]
+}
+
+STRING 19764
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 3|r]
+}
+
+STRING 19765
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 4|r]
 }
 
 STRING 19766
@@ -127895,10 +128053,40 @@ STRING 19779
 [|cff00ff00R|r] Flashfreeze Heatwave - [|cffffcc00Level 10|r]
 }
 
-STRING 19784
-// Abilities: A0YU (Flashfreeze Heatwave), EditorSuffix (Editor Suffix)
+STRING 19780
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
-(frieza)
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 5|r]
+}
+
+STRING 19781
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 6|r]
+}
+
+STRING 19782
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 1|r]
+}
+
+STRING 19783
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 7|r]
+}
+
+STRING 19785
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19786
+// Abilities: A0YY (Heaven Piercing Ice Wall), Name (Name)
+{
+Heaven Piercing Ice Wall
 }
 
 STRING 19787
@@ -127907,8 +128095,14 @@ STRING 19787
 Heating Up
 }
 
+STRING 19788
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Flashfreeze Heatwave - [|cffffcc00Level %d|r]
+}
+
 STRING 19789
-// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -127935,6 +128129,12 @@ STRING 19792
 Cooling Down
 }
 
+STRING 19793
+// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
+{
+R
+}
+
 STRING 19794
 // Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
 {
@@ -127958,91 +128158,92 @@ STRING 19796
 }
 
 STRING 19797
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool1> seconds|r
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 9|r]
 }
 
 STRING 19798
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool3> seconds|r
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 8|r]
 }
 
 STRING 19799
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool4> seconds|r
+[|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 10|r]
 }
 
 STRING 19800
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool5> seconds|r
+|cff00ffffCooldown: <A0YY,Cool8> seconds|r
 }
 
 STRING 19801
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool6> seconds|r
+|cff00ffffCooldown: <A0YY,Cool9> seconds|r
 }
 
 STRING 19802
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool7> seconds|r
+|cff00ffffCooldown: <A0YY,Cool10> seconds|r
 }
 
 STRING 19803
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchubertip (Tooltip - Learn - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool8> seconds|r
+|cff00ffffCooldown: <A0YU,Cool1> - <A0YU,Cool10> seconds|r
 }
 
 STRING 19804
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), EditorSuffix (Editor Suffix)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool9> seconds|r
+(shoto)
 }
 
 STRING 19805
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool10> seconds|r
+|cff00ffffCooldown: <A0YY,Cool2> seconds|r
 }
 
 STRING 19806
-// Abilities: A0YS (Wall of Flames), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Shoto creates an enormous ice glacier, that freezes enemies in place. Enemies affected by |cff00ccffFrostbite|r are stunned for 0.5 seconds.
+|cffffff00Rapidly cools Shoto down.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool1> - <A0YS,Cool10> seconds|r
+|cff00ffffCooldown: <A0YY,Cool1> seconds|r
 }
 
 STRING 19807
-// Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto uses his left side to generate a burst of flames to burn his enemies.
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YS,Cool2> seconds|r
+|cff00ffffCooldown: <A0YY,Cool3> seconds|r
 }
 
 STRING 19808
@@ -128123,5 +128324,187 @@ Shoto freezes the ground around him to create an ice path that accelerates his m
 |cff00ff00Damage: Int * lvl * ?
 Duration: <A0YT,Dur2> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool2> seconds|r
+}
+
+STRING 19816
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool4> seconds|r
+}
+
+STRING 19817
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool5> seconds|r
+}
+
+STRING 19818
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool6> seconds|r
+}
+
+STRING 19819
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool7> seconds|r
+}
+
+STRING 19820
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 2|r]
+}
+
+STRING 19821
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 3|r]
+}
+
+STRING 19822
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 4|r]
+}
+
+STRING 19823
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 19824
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 6|r]
+}
+
+STRING 19825
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 19826
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 7|r]
+}
+
+STRING 19827
+// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19828
+// Abilities: A0YZ (Flashfire Fist), Name (Name)
+{
+Flashfire Fist
+}
+
+STRING 19829
+// Abilities: A0YZ (Flashfire Fist), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Flashfreeze Heatwave - [|cffffcc00Level %d|r]
+}
+
+STRING 19830
+// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19831
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 9|r]
+}
+
+STRING 19832
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 8|r]
+}
+
+STRING 19833
+// Abilities: A0YZ (Flashfire Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Flashfire Fist - [|cffffcc00Level 10|r]
+}
+
+STRING 19834
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool8> seconds|r
+}
+
+STRING 19835
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool9> seconds|r
+}
+
+STRING 19836
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool10> seconds|r
+}
+
+STRING 19837
+// Abilities: A0YZ (Flashfire Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto rapidly chills the air around him, stunning enemies for 0.5 seconds. He then switches to his fire side to release a superheated blast that causes the air to detonate in a massive explosion that knocks enemies away.
+Deals bonus damage to enemies afflicted by |cff00ccffFrostbite|r.
+|cffffff00Considered both a frost and fire spell.
+When below 50 heat, rapidly heats Shoto up, when above 50 heat, rapidly cools Shoto down.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YU,Cool1> - <A0YU,Cool10> seconds|r
+}
+
+STRING 19838
+// Abilities: A0YZ (Flashfire Fist), EditorSuffix (Editor Suffix)
+{
+(shoto)
+}
+
+STRING 19839
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool2> seconds|r
+}
+
+STRING 19840
+// Abilities: A0YZ (Flashfire Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Endeavour's signature technique that was passed down to Shoto. The user rushes to the target location before launching an explosive punch.
+|cffffff00Rapidly heats Shoto up.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0YY,Cool1> seconds|r
 }
 

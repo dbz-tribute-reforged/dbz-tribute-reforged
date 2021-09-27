@@ -8016,6 +8016,63 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.ShotoTodoroki.HEAVEN_PIERCING_ICE_WALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.GLACIER,
+      body:
+        AbilityNames.ShotoTodoroki.GLACIER
+    },
+    components: [
+      { name: "multi shoto heaven piercing ice wall" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.ShotoTodoroki.FLASHFIRE_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTodoroki.blp",
+      disabled: "BTNTodoroki.blp",
+    },
+    tooltip: {
+      title: AbilityNames.ShotoTodoroki.GLACIER,
+      body:
+        AbilityNames.ShotoTodoroki.GLACIER
+    },
+    components: [
+      { name: "dash ground point 30dist" },
+      { name: "damage shoto flashfire fist dps" },
+      { name: "damage shoto flashfire fist explosion" },
+      { name: "sfx shoto flashfire fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
