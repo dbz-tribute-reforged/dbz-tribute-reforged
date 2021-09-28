@@ -968,6 +968,10 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Skurvy = nil
+gg_trg_Skurvy_Item_Mutli = nil
+gg_trg_Skurvy_Q1 = nil
+gg_trg_Skurvy_Q2 = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -14638,6 +14642,85 @@ function InitTrig_Super_17_Sense()
     TriggerAddAction(gg_trg_Super_17_Sense, Trig_Super_17_Sense_Actions)
 end
 
+function Trig_Skurvy_Item_Mutli_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H07Y"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_Item_Mutli_Func002Func001C()
+    if (not (UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA()) ~= nil)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_Item_Mutli_Actions()
+    udg_TempReal = 0.00
+    bj_forLoopAIndex = 1
+    bj_forLoopAIndexEnd = 6
+    while (true) do
+        if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+        if (Trig_Skurvy_Item_Mutli_Func002Func001C()) then
+            udg_TempReal = (udg_TempReal + 0.10)
+        else
+        end
+        bj_forLoopAIndex = bj_forLoopAIndex + 1
+    end
+    udg_TempUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_TempUnit)
+    SaveRealBJ(udg_TempReal, 0, udg_ID, udg_SummonsHashtable)
+    udg_StatMultUnit = GetTriggerUnit()
+    udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+    TriggerExecute(gg_trg_Auto_Transform_Player_Units)
+end
+
+function InitTrig_Skurvy_Item_Mutli()
+    gg_trg_Skurvy_Item_Mutli = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Item_Mutli, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Item_Mutli, EVENT_PLAYER_UNIT_DROP_ITEM)
+    TriggerAddCondition(gg_trg_Skurvy_Item_Mutli, Condition(Trig_Skurvy_Item_Mutli_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_Item_Mutli, Trig_Skurvy_Item_Mutli_Actions)
+end
+
+function Trig_Skurvy_Q1_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0Z0"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_Q1_Actions()
+    AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
+end
+
+function InitTrig_Skurvy_Q1()
+    gg_trg_Skurvy_Q1 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q1, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Skurvy_Q1, Condition(Trig_Skurvy_Q1_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_Q1, Trig_Skurvy_Q1_Actions)
+end
+
+function Trig_Skurvy_Q2_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0Z1"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_Q2_Actions()
+    TriggerSleepAction(1.25)
+    AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
+end
+
+function InitTrig_Skurvy_Q2()
+    gg_trg_Skurvy_Q2 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Skurvy_Q2, Condition(Trig_Skurvy_Q2_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_Q2, Trig_Skurvy_Q2_Actions)
+end
+
 function Trig_Schala_Pray_Cast_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0YH"))) then
         return false
@@ -22554,6 +22637,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H07Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H05X"))) then
         return false
@@ -22913,6 +23003,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                                                             if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                                 udg_TempString = "BTNTodoroki.blp"
                                                                             else
+                                                                                if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                                    udg_TempString = "BTNSkurvy.blp"
+                                                                                else
+                                                                                end
                                                                             end
                                                                         end
                                                                     end
@@ -24661,6 +24755,13 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()
     return true
 end
 
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001Func001C()
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04Y")) == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001C()
     if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I00D")) == true)) then
         return false
@@ -24704,6 +24805,10 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
             if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001C()) then
                 udg_TempReal = (udg_TempReal + 500.00)
             else
+                if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001Func001C()) then
+                    udg_TempReal = (udg_TempReal + 2000.00)
+                else
+                end
             end
         end
         CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -31945,6 +32050,13 @@ function Trig_Transformations_Parse_String_Func001Func005C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H07Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05X"))) then
         return false
@@ -32254,6 +32366,10 @@ function Trig_Transformations_Parse_String_Func001A()
                     if (Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001C()) then
                         TriggerExecute(gg_trg_Transformations_Shoto_Todoroki)
                     else
+                        if (Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001C()) then
+                            TriggerExecute(gg_trg_Transformations_Skurvy)
+                        else
+                        end
                     end
                 end
             end
@@ -50713,6 +50829,163 @@ function InitTrig_Transformations_Shoto_Todoroki()
     TriggerAddAction(gg_trg_Transformations_Shoto_Todoroki, Trig_Transformations_Shoto_Todoroki_Actions)
 end
 
+function Trig_Transformations_Skurvy_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func016C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0Z6"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func019Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Skurvy_Func019Func002C()
+    if (not Trig_Transformations_Skurvy_Func019Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Func019C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Skurvy_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Skurvy_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20017")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func011C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func012C()) then
+        udg_StatMultReal = 1.30
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func013C()) then
+        udg_StatMultReal = 1.70
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func014C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func015C()) then
+        udg_StatMultReal = 2.30
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Skurvy_Func016C()) then
+        UnitAddAbilityBJ(FourCC("A0Z6"), udg_StatMultUnit)
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20019")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Skurvy_Func019C()) then
+        if (Trig_Transformations_Skurvy_Func019Func002C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_StatMultReal = (udg_StatMultReal + LoadRealBJ(0, udg_ID, udg_SummonsHashtable))
+                        udg_TransformationID = FourCC('H07Y')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Skurvy()
+    gg_trg_Transformations_Skurvy = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Skurvy, Trig_Transformations_Skurvy_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
     if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
@@ -52432,6 +52705,9 @@ function InitCustomTriggers()
     InitTrig_Super_17_Hell_Storm_Loop()
     InitTrig_Super_17_Shocking_Mana()
     InitTrig_Super_17_Sense()
+    InitTrig_Skurvy_Item_Mutli()
+    InitTrig_Skurvy_Q1()
+    InitTrig_Skurvy_Q2()
     InitTrig_Schala_Pray_Cast()
     InitTrig_Schala_Pray_Loop()
     InitTrig_Schala_Pray_Stop()
@@ -52811,6 +53087,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Super_17()
     InitTrig_Transformations_Schala()
     InitTrig_Transformations_Shoto_Todoroki()
+    InitTrig_Transformations_Skurvy()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Capsule_Unlock()
     InitTrig_Saga_Unit_Loop()
