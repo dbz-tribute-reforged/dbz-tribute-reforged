@@ -14652,42 +14652,52 @@ function Trig_Skurvy_Item_Mutli_Conditions()
     return true
 end
 
-function Trig_Skurvy_Item_Mutli_Func002Func001Func001C()
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) == FourCC("I04Y"))) then
+function Trig_Skurvy_Item_Mutli_Func003C()
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04Y"))) then
+        return false
+    end
+    if (not (UnitHasItem(GetTriggerUnit(), GetManipulatedItem()) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Skurvy_Item_Mutli_Func002Func001C()
-    if (not (UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA()) ~= nil)) then
+function Trig_Skurvy_Item_Mutli_Func004Func002Func001C()
+    if (not (GetItemTypeId(udg_TempItem) == FourCC("I04Y"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I04Y"))) then
+    return true
+end
+
+function Trig_Skurvy_Item_Mutli_Func004Func002C()
+    if (not (udg_TempItem ~= nil)) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I044"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I04Y"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I001"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I044"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I000"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I001"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I045"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I000"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I02S"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I045"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I02A"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I02S"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I00D"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I02A"))) then
         return false
     end
-    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I04M"))) then
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I00D"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I04M"))) then
         return false
     end
     return true
@@ -14695,24 +14705,31 @@ end
 
 function Trig_Skurvy_Item_Mutli_Actions()
     udg_TempReal = 0.00
+    udg_TempUnit = GetTriggerUnit()
+    if (Trig_Skurvy_Item_Mutli_Func003C()) then
+        udg_KillHeroVoicelineUnit = udg_TempUnit
+        udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyCoconutAcquire.mp3"
+        udg_KillHeroVoicelineDuration = 5929
+    else
+    end
     bj_forLoopAIndex = 1
     bj_forLoopAIndexEnd = 6
     while (true) do
         if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-        if (Trig_Skurvy_Item_Mutli_Func002Func001C()) then
+        udg_TempItem = UnitItemInSlotBJ(udg_TempUnit, GetForLoopIndexA())
+        if (Trig_Skurvy_Item_Mutli_Func004Func002C()) then
             udg_TempReal = (udg_TempReal + 0.10)
         else
-            if (Trig_Skurvy_Item_Mutli_Func002Func001Func001C()) then
+            if (Trig_Skurvy_Item_Mutli_Func004Func002Func001C()) then
                 udg_TempReal = (udg_TempReal + 0.30)
             else
             end
         end
         bj_forLoopAIndex = bj_forLoopAIndex + 1
     end
-    udg_TempUnit = GetTriggerUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     SaveRealBJ(udg_TempReal, 0, udg_ID, udg_SummonsHashtable)
-    udg_StatMultUnit = GetTriggerUnit()
+    udg_StatMultUnit = udg_TempUnit
     udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
     TriggerExecute(gg_trg_Auto_Transform_Player_Units)
 end
