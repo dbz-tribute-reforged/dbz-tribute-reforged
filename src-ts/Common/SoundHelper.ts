@@ -465,7 +465,57 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/DartFeld/DragonSummon.mp3", 3631);
         }
         break;
+
+      // skurvy
+
+      case Id.skurvyBigKannon:
+        if (rng<20) {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQ2.mp3", 5004);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQ1.mp3", 2920);
+        }
+          break;
+
+      case Id.skurvyKannonFire:
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQorBoat.mp3", 2279);
+        break;
+
+      case Id.skurvyRunThrough:
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyW.mp3", 2336);
+        break;
+
+      case Id.skurvyPlunder:
+        if (rng<10) {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyE5.mp3", 3337);
+        } else if (rng<25)  {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyE1.mp3", 2995);
+        } else if (rng<50) {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyE3.mp3", 1465);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyE4.mp3", 1182);
+        }        
+        break;
+
+      case Id.skurvyMirrorNeverLies:
+      if (rng<25) {
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR1.mp3", 3540);
+      } else if (rng<50)  {
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR2.mp3", 6079);
+      } else if (rng<75) {
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR3.mp3", 5050);
+      } else {
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR4.mp3", 5515);
+      }        
+      break;
+
+      case Id.skurvyPlank:
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyF.mp3", 3387);
+        break;
       
+      case Id.skurvyScorn:
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQorBoat.mp3", 2279);
+        break;
+
       // donkey kong
       case Id.groundPound:
       case Id.dkBarrelRoll:

@@ -535,6 +535,7 @@ gg_trg_Super_17_Sense = nil
 gg_trg_Skurvy_Item_Mutli = nil
 gg_trg_Skurvy_Q1 = nil
 gg_trg_Skurvy_Q2 = nil
+gg_trg_Spawn_Crystal_Coconut = nil
 gg_trg_Schala_Pray_Cast = nil
 gg_trg_Schala_Pray_Loop = nil
 gg_trg_Schala_Pray_Stop = nil
@@ -973,7 +974,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Spawn_Crystal_Coconut = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -18316,9 +18316,6 @@ function Trig_Kill_Hero_Voiceline_Dying_Func019C()
 end
 
 function Trig_Kill_Hero_Voiceline_Dying_Func020Func002C()
-    if (not (udg_TempReal < 5.00)) then
-        return false
-    end
     return true
 end
 
@@ -18327,6 +18324,27 @@ function Trig_Kill_Hero_Voiceline_Dying_Func020C()
         return false
     end
     if (not (udg_TempReal < 5.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Dying_Func021Func001Func001C()
+    if (not (udg_TempReal < 66.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Dying_Func021Func001C()
+    if (not (udg_TempReal < 33.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Dying_Func021C()
+    if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("H07Y"))) then
         return false
     end
     return true
@@ -18554,6 +18572,24 @@ function Trig_Kill_Hero_Voiceline_Dying_Actions()
             udg_KillHeroVoicelinePath = "Audio/Voice/VegetaSwagger.mp3"
             udg_KillHeroVoicelineDuration = 2351
         else
+        end
+    else
+    end
+    if (Trig_Kill_Hero_Voiceline_Dying_Func021C()) then
+        if (Trig_Kill_Hero_Voiceline_Dying_Func021Func001C()) then
+            udg_KillHeroVoicelineUnit = GetDyingUnit()
+            udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath1.mp3"
+            udg_KillHeroVoicelineDuration = 4230
+        else
+            if (Trig_Kill_Hero_Voiceline_Dying_Func021Func001Func001C()) then
+                udg_KillHeroVoicelineUnit = GetDyingUnit()
+                udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath2.mp3"
+                udg_KillHeroVoicelineDuration = 3348
+            else
+                udg_KillHeroVoicelineUnit = GetDyingUnit()
+                udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath3.mp3"
+                udg_KillHeroVoicelineDuration = 2367
+            end
         end
     else
     end
@@ -19412,6 +19448,27 @@ function Trig_Kill_Hero_Voiceline_Killing_Func029C()
     return true
 end
 
+function Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func001C()
+    if (not (udg_TempReal < 66.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func030Func002C()
+    if (not (udg_TempReal < 33.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func030C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H07Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Kill_Hero_Voiceline_Killing_Actions()
     udg_TempReal = GetRandomReal(0, 100.00)
     if (Trig_Kill_Hero_Voiceline_Killing_Func002C()) then
@@ -19874,6 +19931,22 @@ function Trig_Kill_Hero_Voiceline_Killing_Actions()
                 udg_KillHeroVoicelinePath = "Audio/Voice/VegetaHype.mp3"
                 udg_KillHeroVoicelineDuration = 1384
             else
+            end
+        end
+    else
+    end
+    if (Trig_Kill_Hero_Voiceline_Killing_Func030C()) then
+        udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+        if (Trig_Kill_Hero_Voiceline_Killing_Func030Func002C()) then
+            udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill1.mp3"
+            udg_KillHeroVoicelineDuration = 2042
+        else
+            if (Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func001C()) then
+                udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill2.mp3"
+                udg_KillHeroVoicelineDuration = 4925
+            else
+                udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill3.mp3"
+                udg_KillHeroVoicelineDuration = 3493
             end
         end
     else
