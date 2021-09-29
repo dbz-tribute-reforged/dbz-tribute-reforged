@@ -742,6 +742,15 @@ export module Id {
   export const kick = FourCC("A071");
   export const flyingKick = FourCC("A0JW");
 
+  export const skurvy = FourCC("H07Y");
+  export const skurvyBigKannon = FourCC("A0Z0");
+  export const skurvyKannonFire = FourCC("A0Z1");
+  export const skurvyRunThrough = FourCC("A0Z2");
+  export const skurvyPlunder = FourCC("A0Z3");
+  export const skurvyMirrorNeverLies = FourCC("A0Z4");
+  export const skurvyPlank = FourCC("A0Z5");
+  export const skurvyScorn = FourCC("A0Z6");
+
   export const yamchaRLightPunch = FourCC("A0RC");
   export const yamchaRMediumPunch = FourCC("A0RD");
   export const yamchaRHeavyPunch = FourCC("A0RE");

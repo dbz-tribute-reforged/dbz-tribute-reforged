@@ -370,6 +370,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.shotoTodorokiHeatingUp, AbilityNames.ShotoTodoroki.HEATING_UP],
     [Id.shotoTodorokiCoolingDown, AbilityNames.ShotoTodoroki.COOLING_DOWN],
 
+    //
+    [Id.skurvyBigKannon, AbilityNames.Skurvy.BIG_KANNON],
+    [Id.skurvyKannonFire, AbilityNames.Skurvy.KANNON_FIRE],
+    [Id.skurvyRunThrough, AbilityNames.Skurvy.RUN_YE_THROUGH],
+    [Id.skurvyPlunder, AbilityNames.Skurvy.PLUNDER],
+    [Id.skurvyMirrorNeverLies, AbilityNames.Skurvy.MIRROR_NEVER_LIES],
+    [Id.skurvyPlank, AbilityNames.Skurvy.WALK_THE_PLANK],
+    [Id.skurvyScorn, AbilityNames.Skurvy.PIRATES_SCORN],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

@@ -671,6 +671,16 @@ export module AbilityNames {
     export const PASSIVE: string = "Super 17 Passive";
   }
 
+  export module Skurvy {
+    export const BIG_KANNON: string = "Skurvy Big Kannon";
+    export const KANNON_FIRE: string = "Skurvy Kannon Fire";
+    export const RUN_YE_THROUGH: string = "Skurvy I'll Run Ye Through";
+    export const PLUNDER: string = "Skurvy Plunder";
+    export const MIRROR_NEVER_LIES: string = "Skurvy the Mirror Never Lies";
+    export const WALK_THE_PLANK: string = "Skurvy Walk The Plank";
+    export const PIRATES_SCORN: string = "Skurvy Pirate's Scorn";
+  }
+
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
