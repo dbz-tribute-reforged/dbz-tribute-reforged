@@ -265,6 +265,7 @@ udg_SchalaPrayTime = nil
 udg_SchalaChannelGroup = nil
 udg_TempIntDamageMult = 0.0
 udg_SagaCatchupMultiplier = 0.0
+udg_SkurvyCoconutBool = false
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -531,6 +532,9 @@ gg_trg_Super_17_Hell_Storm_Stop = nil
 gg_trg_Super_17_Hell_Storm_Loop = nil
 gg_trg_Super_17_Shocking_Mana = nil
 gg_trg_Super_17_Sense = nil
+gg_trg_Skurvy_Item_Mutli = nil
+gg_trg_Skurvy_Q1 = nil
+gg_trg_Skurvy_Q2 = nil
 gg_trg_Schala_Pray_Cast = nil
 gg_trg_Schala_Pray_Loop = nil
 gg_trg_Schala_Pray_Stop = nil
@@ -937,6 +941,7 @@ gg_trg_Transformations_Hirudegarn = nil
 gg_trg_Transformations_Super_17 = nil
 gg_trg_Transformations_Schala = nil
 gg_trg_Transformations_Shoto_Todoroki = nil
+gg_trg_Transformations_Skurvy = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -968,10 +973,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Skurvy = nil
-gg_trg_Skurvy_Item_Mutli = nil
-gg_trg_Skurvy_Q1 = nil
-gg_trg_Skurvy_Q2 = nil
+gg_trg_Spawn_Crystal_Coconut = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1331,6 +1333,7 @@ function InitGlobals()
     udg_SchalaChannelGroup = CreateGroup()
     udg_TempIntDamageMult = 0.0
     udg_SagaCatchupMultiplier = 0.0
+    udg_SkurvyCoconutBool = false
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -2832,7 +2835,6 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 13834.1, 18373.6, 236.273, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14997.5, 8672.9, 152.154, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 11622.4, 7411.4, 186.024, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13553.5, 11907.3, 85.872, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13745.2, 11714.1, 214.987, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13966.8, 11944.4, 104.956, FourCC("n020"))
@@ -3598,6 +3600,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H09R"), 11412.1, 22359.7, 206.150, FourCC("H09R"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 11622.4, 7411.4, 186.024, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("H00A"), 11020.5, 22635.2, 271.629, FourCC("H00A"))
     SetUnitState(u, UNIT_STATE_MANA, 800)
     u = BlzCreateUnitWithSkin(p, FourCC("H09S"), 10741.9, 22120.3, 283.270, FourCC("H09S"))
@@ -14649,8 +14652,42 @@ function Trig_Skurvy_Item_Mutli_Conditions()
     return true
 end
 
+function Trig_Skurvy_Item_Mutli_Func002Func001Func001C()
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) == FourCC("I04Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Skurvy_Item_Mutli_Func002Func001C()
     if (not (UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA()) ~= nil)) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I04Y"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I044"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I001"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I000"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I045"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I02S"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I02A"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I00D"))) then
+        return false
+    end
+    if (not (GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) ~= FourCC("I04M"))) then
         return false
     end
     return true
@@ -14665,6 +14702,10 @@ function Trig_Skurvy_Item_Mutli_Actions()
         if (Trig_Skurvy_Item_Mutli_Func002Func001C()) then
             udg_TempReal = (udg_TempReal + 0.10)
         else
+            if (Trig_Skurvy_Item_Mutli_Func002Func001Func001C()) then
+                udg_TempReal = (udg_TempReal + 0.30)
+            else
+            end
         end
         bj_forLoopAIndex = bj_forLoopAIndex + 1
     end
@@ -14691,8 +14732,27 @@ function Trig_Skurvy_Q1_Conditions()
     return true
 end
 
+function Trig_Skurvy_Q1_Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0Z1"), GetTriggerUnit()) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Skurvy_Q1_Actions()
     AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
+    if (Trig_Skurvy_Q1_Func002C()) then
+        UnitAddAbilityBJ(FourCC("A0Z1"), GetTriggerUnit())
+    else
+    end
+    SetUnitAbilityLevelSwapped(FourCC("A0Z1"), GetTriggerUnit(), GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z0"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z2"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z3"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z4"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z5"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z6"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z1"), GetTriggerPlayer())
 end
 
 function InitTrig_Skurvy_Q1()
@@ -14710,15 +14770,74 @@ function Trig_Skurvy_Q2_Conditions()
 end
 
 function Trig_Skurvy_Q2_Actions()
-    TriggerSleepAction(1.25)
     AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z0"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z2"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z3"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z4"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z5"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0Z6"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z1"), GetTriggerPlayer())
 end
 
 function InitTrig_Skurvy_Q2()
     gg_trg_Skurvy_Q2 = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q2, EVENT_PLAYER_UNIT_SPELL_FINISH)
     TriggerAddCondition(gg_trg_Skurvy_Q2, Condition(Trig_Skurvy_Q2_Conditions))
     TriggerAddAction(gg_trg_Skurvy_Q2, Trig_Skurvy_Q2_Actions)
+end
+
+function Trig_Spawn_Crystal_Coconut_Conditions()
+    if (not (GetKillingUnitBJ() ~= nil)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == false)) then
+        return false
+    end
+    if (not (GetUnitTypeId(GetTriggerUnit()) ~= FourCC("h054"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spawn_Crystal_Coconut_Func002Func002C()
+    if (not (udg_TempInt == 69)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spawn_Crystal_Coconut_Func002C()
+    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
+    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spawn_Crystal_Coconut_Actions()
+    if (Trig_Spawn_Crystal_Coconut_Func002C()) then
+        udg_TempInt = GetRandomInt(1, 100)
+        if (Trig_Spawn_Crystal_Coconut_Func002Func002C()) then
+            udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+            CreateItemLoc(FourCC("I04Y"), udg_TempLoc)
+            SetItemInvulnerableBJ(GetLastCreatedItem(), true)
+                        RemoveLocation(udg_TempLoc)
+            DisableTrigger(GetTriggeringTrigger())
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Spawn_Crystal_Coconut()
+    gg_trg_Spawn_Crystal_Coconut = CreateTrigger()
+    DisableTrigger(gg_trg_Spawn_Crystal_Coconut)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Spawn_Crystal_Coconut, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Spawn_Crystal_Coconut, Condition(Trig_Spawn_Crystal_Coconut_Conditions))
+    TriggerAddAction(gg_trg_Spawn_Crystal_Coconut, Trig_Spawn_Crystal_Coconut_Actions)
 end
 
 function Trig_Schala_Pray_Cast_Conditions()
@@ -16487,6 +16606,7 @@ end
 
 function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z1"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0XY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WP"), udg_TempPlayer)
@@ -50883,6 +51003,13 @@ function Trig_Transformations_Skurvy_Func015C()
     return true
 end
 
+function Trig_Transformations_Skurvy_Func016Func004C()
+    if (not (udg_SkurvyCoconutBool == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Skurvy_Func016C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
@@ -50962,6 +51089,11 @@ function Trig_Transformations_Skurvy_Actions()
         UnitAddAbilityBJ(FourCC("A0Z6"), udg_StatMultUnit)
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20019")
+        if (Trig_Transformations_Skurvy_Func016Func004C()) then
+            EnableTrigger(gg_trg_Spawn_Crystal_Coconut)
+            udg_SkurvyCoconutBool = true
+        else
+        end
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
@@ -52708,6 +52840,7 @@ function InitCustomTriggers()
     InitTrig_Skurvy_Item_Mutli()
     InitTrig_Skurvy_Q1()
     InitTrig_Skurvy_Q2()
+    InitTrig_Spawn_Crystal_Coconut()
     InitTrig_Schala_Pray_Cast()
     InitTrig_Schala_Pray_Loop()
     InitTrig_Schala_Pray_Stop()

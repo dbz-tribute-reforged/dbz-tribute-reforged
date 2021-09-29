@@ -129747,13 +129747,14 @@ Transformations:
 [lvl 125] 2.00x "fp"
 [lvl 150] 2.30x "fp"
 [lvl 150] Unlock |cffFF2020Pirate's Scorn (D)|r
+[lvl 150] Spawns |cff00FFFFCrystal Coconut|r somewhere on the map. (limit 1 per game)
 Each item held by Skurvy increases his mutliplier by 0.1x. If Skurvy acquires the |cff00FF00Crystal Coconut|r, his multiplier is increased by 0.3x.
 }
 
 STRING 20019
 {
 [|cffffcc00Unlock|r] |cffFF2020PIRATE'S SCORN (D)|r
-
+Skurvy summons his pirate ship and crew to wreak havoc on the battlefield. Rumor has it that the Crystal Coconut has been spotted somewhere nearby..
 }
 
 STRING 20020
