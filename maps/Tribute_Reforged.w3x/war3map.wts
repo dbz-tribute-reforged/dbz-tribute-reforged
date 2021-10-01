@@ -13643,7 +13643,7 @@ Saitama delivers a combo of rapid fire punches.
 }
 
 STRING 2181
-// Units: H07Y (Scourge of the Seven Seas), Hotkey (Hotkey)
+// Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
 {
 W
 }
@@ -14546,7 +14546,7 @@ Power Wish
 }
 
 STRING 2328
-// Items: I012 (Train Speed |cffffff00(W)|r), Hotkey (Hotkey)
+// Items: I042 (|cffffcc00Wish for Immortality|r), Hotkey (Hotkey)
 {
 W
 }
@@ -17228,7 +17228,7 @@ Tao throws a pillar into the air and rides it to his destination.|n|cff00ff00(Da
 }
 
 STRING 2764
-// Items: I042 (|cffffcc00Wish for Immortality|r), Hotkey (Hotkey)
+// Abilities: A071 (Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -17318,7 +17318,7 @@ STRING 2778
 }
 
 STRING 2779
-// Abilities: A071 (Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A071 (Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17342,7 +17342,7 @@ Vegito creates a special energy beam that the user can extend and use to pierce 
 }
 
 STRING 2783
-// Abilities: A071 (Kick), Hotkey (Hotkey - Normal)
+// Abilities: A055 (Power Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17928,7 +17928,7 @@ STRING 2876
 }
 
 STRING 2877
-// Abilities: A055 (Power Wish), Hotkey (Hotkey - Normal)
+// Abilities: A07A (Power Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17952,7 +17952,7 @@ STRING 2880
 }
 
 STRING 2881
-// Abilities: A07A (Power Wish), Hotkey (Hotkey - Normal)
+// Abilities: A00B (Spirit Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18048,7 +18048,7 @@ STRING 2896
 }
 
 STRING 2897
-// Abilities: A00B (Spirit Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A00B (Spirit Sword), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18072,7 +18072,7 @@ A ball of energy much like the Spirit bomb, but this is filled with all the ange
 }
 
 STRING 2901
-// Abilities: A00B (Spirit Sword), Hotkey (Hotkey - Normal)
+// Abilities: A03C (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18390,7 +18390,7 @@ D|cffffcc00e|rnde's Healing - [|cffffcc00Level 7|r]
 }
 
 STRING 2952
-// Abilities: A03C (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A03C (Revenge Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18414,7 +18414,7 @@ Repairs any android type unit. Androids include Metal Cooler, Bebi, Androids 13-
 }
 
 STRING 2956
-// Abilities: A03C (Revenge Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A07C (Android Repair), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -18438,7 +18438,7 @@ STRING 2959
 }
 
 STRING 2960
-// Abilities: A07C (Android Repair), Researchhotkey (Hotkey - Learn)
+// Abilities: A07C (Android Repair), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18462,7 +18462,7 @@ Buu creates hundreds of thousands of energy beams to destroy all the earthlings.
 }
 
 STRING 2964
-// Abilities: A07C (Android Repair), Hotkey (Hotkey - Normal)
+// Abilities: A01D (Mankind Destruction Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -19706,7 +19706,7 @@ STRING 3164
 }
 
 STRING 3165
-// Abilities: A01D (Mankind Destruction Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A01D (Mankind Destruction Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -19730,7 +19730,7 @@ This is a more powerful version of Renzoku Energy Dan where the user quickly sho
 }
 
 STRING 3169
-// Abilities: A01D (Mankind Destruction Attack), Hotkey (Hotkey - Normal)
+// Abilities: A03F (Shine Shine Missile), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -20541,7 +20541,7 @@ E
 }
 
 STRING 3304
-// Abilities: A03F (Shine Shine Missile), Researchhotkey (Hotkey - Learn)
+// Abilities: A03F (Shine Shine Missile), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20829,7 +20829,7 @@ Destruction Wish
 }
 
 STRING 3352
-// Abilities: A03F (Shine Shine Missile), Hotkey (Hotkey - Normal)
+// Abilities: A06I (Destruction Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20912,7 +20912,7 @@ Roll
 }
 
 STRING 3364
-// Abilities: A06I (Destruction Wish), Hotkey (Hotkey - Normal)
+// Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -20924,7 +20924,7 @@ Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * l
 }
 
 STRING 3366
-// Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
+// Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20948,7 +20948,7 @@ Park Ranger
 }
 
 STRING 3370
-// Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
+// Abilities: A04J (Saiya-jin memories), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -21100,7 +21100,7 @@ STRING 3394
 }
 
 STRING 3395
-// Abilities: A04J (Saiya-jin memories), Hotkey (Hotkey - Normal)
+// Abilities: A00L (Energy Sparkle), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -21196,7 +21196,7 @@ Bebi remembers when his race was wiped out by the Saiya-jin race. This angers Be
 }
 
 STRING 3411
-// Abilities: A00L (Energy Sparkle), Researchhotkey (Hotkey - Learn)
+// Abilities: A00L (Energy Sparkle), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -21550,7 +21550,7 @@ STRING 3469
 }
 
 STRING 3470
-// Abilities: A00L (Energy Sparkle), Hotkey (Hotkey - Normal)
+// Abilities: A02O (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -21574,7 +21574,7 @@ A brilliant sparkle of energy that can cut straight through opponents. .|cff00ff
 }
 
 STRING 3474
-// Abilities: A02O (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A02O (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -22703,13 +22703,13 @@ Deactivate Distortion Field
 }
 
 STRING 3658
-// Abilities: A02O (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A02O (Distortion Field), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 3659
-// Abilities: A02O (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A06T (Sacred Water), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -22733,7 +22733,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 3663
-// Abilities: A06T (Sacred Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A06T (Sacred Water), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -24235,7 +24235,7 @@ Bardock
 }
 
 STRING 3912
-// Abilities: A06T (Sacred Water), Hotkey (Hotkey - Normal)
+// Abilities: A05X (Summon Tsufuru Jin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -24687,7 +24687,7 @@ STRING 3977
 }
 
 STRING 3978
-// Abilities: A05X (Summon Tsufuru Jin), Researchhotkey (Hotkey - Learn)
+// Abilities: A05X (Summon Tsufuru Jin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -24711,7 +24711,7 @@ Removes corruptions and weak evil from the area. Forces Bebi out of bodies, remo
 }
 
 STRING 3982
-// Abilities: A05X (Summon Tsufuru Jin), Hotkey (Hotkey - Normal)
+// Abilities: A06Y (Pressure Point Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -26761,7 +26761,7 @@ STRING 4300
 }
 
 STRING 4301
-// Abilities: A06Y (Pressure Point Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Y (Pressure Point Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -26785,7 +26785,7 @@ Bebi summons two Tsufuru Jins from an alternate dimension.
 }
 
 STRING 4305
-// Abilities: A06Y (Pressure Point Attack), Hotkey (Hotkey - Normal)
+// Abilities: A05S (Fusion Dance), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27256,7 +27256,7 @@ STRING 4374
 }
 
 STRING 4375
-// Abilities: A05S (Fusion Dance), Hotkey (Hotkey - Normal)
+// Abilities: A05S (Fusion Dance), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27274,7 +27274,7 @@ STRING 4377
 }
 
 STRING 4378
-// Abilities: A05S (Fusion Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A08C (Meteor Break), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27286,7 +27286,7 @@ Nuclear Bomb
 }
 
 STRING 4380
-// Abilities: A08C (Meteor Break), Researchhotkey (Hotkey - Learn)
+// Abilities: A08C (Meteor Break), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27298,7 +27298,7 @@ STRING 4381
 }
 
 STRING 4382
-// Abilities: A08C (Meteor Break), Hotkey (Hotkey - Normal)
+// Abilities: A08I (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27352,7 +27352,7 @@ STRING 4390
 }
 
 STRING 4391
-// Abilities: A08I (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A08I (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27376,7 +27376,7 @@ Raditz raises both of his arms up and charges two purple energy spheres. He then
 }
 
 STRING 4395
-// Abilities: A08I (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A08J (Tri Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -27532,7 +27532,7 @@ STRING 4420
 }
 
 STRING 4421
-// Abilities: A08J (Tri Beam Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A08J (Tri Beam Fire), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -27556,7 +27556,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 4425
-// Abilities: A08J (Tri Beam Fire), Hotkey (Hotkey - Normal)
+// Abilities: A09L (Final Battle Wish), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -28507,13 +28507,13 @@ Goten and Trunks perform the fusion dance. They must be touching each other for 
 }
 
 STRING 4573
-// Abilities: A09L (Final Battle Wish), Hotkey (Hotkey - Normal)
+// Abilities: A09Q (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 4574
-// Abilities: A09Q (Charm), Researchhotkey (Hotkey - Learn)
+// Abilities: A09Q (Charm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -28945,7 +28945,7 @@ STRING 4645
 }
 
 STRING 4646
-// Abilities: A09Q (Charm), Hotkey (Hotkey - Normal)
+// Abilities: A09S (Laser Shot), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -28969,7 +28969,7 @@ Turles rushes at the target and performs a series of damaging attacks. |n|cff00f
 }
 
 STRING 4650
-// Abilities: A09S (Laser Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A09S (Laser Shot), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -29567,7 +29567,7 @@ STRING 4747
 }
 
 STRING 4748
-// Abilities: A09S (Laser Shot), Hotkey (Hotkey - Normal)
+// Abilities: A09W (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -29591,7 +29591,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 4752
-// Abilities: A09W (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A09W (Shocking Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -29609,7 +29609,7 @@ STRING 4754
 }
 
 STRING 4755
-// Abilities: A09W (Shocking Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0BI (Train Agility), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30280,7 +30280,7 @@ Tao throws a pillar into the air and rides it to his destination.|n|cff00ff00(Da
 }
 
 STRING 4864
-// Abilities: A0BI (Train Agility), Hotkey (Hotkey - Normal)
+// Abilities: A0BP (Teleport 19), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30610,7 +30610,7 @@ STRING 4918
 }
 
 STRING 4919
-// Abilities: A0BP (Teleport 19), Hotkey (Hotkey - Normal)
+// Abilities: A0BS (Rapid Energy Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -30634,7 +30634,7 @@ Though cold and inhuman, Android 18 is still capable of beguiling her enemies. A
 }
 
 STRING 4923
-// Abilities: A0BS (Rapid Energy Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BS (Rapid Energy Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -30838,7 +30838,7 @@ STRING 4956
 }
 
 STRING 4957
-// Abilities: A0BS (Rapid Energy Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0BW (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -30862,7 +30862,7 @@ Android 17 carries a small laser pistol. The pistol shoots small ki beams that d
 }
 
 STRING 4961
-// Abilities: A0BW (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BW (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -31332,7 +31332,7 @@ STRING 5038
 }
 
 STRING 5039
-// Abilities: A0BW (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0C1 (Supernova), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -31350,7 +31350,7 @@ STRING 5041
 }
 
 STRING 5042
-// Abilities: A0C1 (Supernova), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C1 (Supernova), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -32731,7 +32731,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5272
-// Abilities: A0C1 (Supernova), Hotkey (Hotkey - Normal)
+// Abilities: A0C7 (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33184,7 +33184,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5347
-// Abilities: A0C7 (Revenge Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C7 (Revenge Death Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33196,13 +33196,13 @@ STRING 5348
 }
 
 STRING 5349
-// Abilities: A0C7 (Revenge Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0C8 (Slappy Hand), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 5350
-// Abilities: A0C8 (Slappy Hand), Hotkey (Hotkey - Normal)
+// Abilities: A0C8 (Slappy Hand), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33487,7 +33487,7 @@ STRING 5395
 }
 
 STRING 5396
-// Abilities: A0C8 (Slappy Hand), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CB (Revive - Vegeta Spawn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33499,7 +33499,7 @@ Rapid Energy Cannon
 }
 
 STRING 5398
-// Abilities: A0CB (Revive - Vegeta Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CC (Revive - Gohan Spawn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -33919,7 +33919,7 @@ STRING 5464
 }
 
 STRING 5465
-// Abilities: A0CC (Revive - Gohan Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CO (Lightning Shower New Janemba spell), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -33943,7 +33943,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 5469
-// Abilities: A0CO (Lightning Shower New Janemba spell), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CO (Lightning Shower New Janemba spell), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -34683,7 +34683,7 @@ Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff
 }
 
 STRING 5590
-// Abilities: A0CO (Lightning Shower New Janemba spell), Hotkey (Hotkey - Normal)
+// Abilities: A0CT (Beerus Generic Slam), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -34704,7 +34704,7 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 }
 
 STRING 5593
-// Abilities: A0CT (Beerus Generic Slam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CT (Beerus Generic Slam), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -34931,7 +34931,7 @@ STRING 5629
 }
 
 STRING 5630
-// Abilities: A0CT (Beerus Generic Slam), Hotkey (Hotkey - Normal)
+// Abilities: A0CY (Sample ????), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35189,7 +35189,7 @@ STRING 5671
 }
 
 STRING 5672
-// Abilities: A0CY (Sample ????), Hotkey (Hotkey - Normal)
+// Abilities: A0DF (Beerus Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -35207,7 +35207,7 @@ STRING 5674
 }
 
 STRING 5675
-// Abilities: A0DF (Beerus Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DF (Beerus Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35569,7 +35569,7 @@ Moves your revive point to the southeast corner of the map.
 }
 
 STRING 5721
-// Abilities: A0DF (Beerus Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0DY (Super Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -35593,7 +35593,7 @@ Moves your revive point to West City.
 }
 
 STRING 5725
-// Abilities: A0DY (Super Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DY (Super Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35911,7 +35911,7 @@ STRING 5776
 }
 
 STRING 5777
-// Abilities: A0DY (Super Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0E2 (Transform - Second), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35935,7 +35935,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 5781
-// Abilities: A0E2 (Transform - Second), Hotkey (Hotkey - Normal)
+// Abilities: A0FJ (Mokuton Kajukai Korin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36183,7 +36183,7 @@ STRING 5819
 }
 
 STRING 5820
-// Abilities: A0FJ (Mokuton Kajukai Korin), Hotkey (Hotkey - Normal)
+// Abilities: A0FJ (Mokuton Kajukai Korin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -36209,7 +36209,7 @@ STRING 5823
 }
 
 STRING 5824
-// Abilities: A0FJ (Mokuton Kajukai Korin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FU (Pocket Dimension), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36221,13 +36221,13 @@ Donut Slow
 }
 
 STRING 5826
-// Abilities: A0FU (Pocket Dimension), Hotkey (Hotkey - Normal)
+// Abilities: A0FU (Pocket Dimension), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 5827
-// Abilities: A0FU (Pocket Dimension), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GA (Final Flash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -36929,7 +36929,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5944
-// Abilities: A0GA (Final Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0HN (Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -38179,7 +38179,7 @@ STRING 6151
 }
 
 STRING 6152
-// Abilities: A0HN (Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0HN (Wolf Fang Fist), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -38197,7 +38197,7 @@ STRING 6154
 }
 
 STRING 6155
-// Abilities: A0HN (Wolf Fang Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I0 (God Cutter), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -39638,7 +39638,7 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 6378
-// Abilities: A0I0 (God Cutter), Hotkey (Hotkey - Normal)
+// Abilities: A0I0 (God Cutter), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -39662,7 +39662,7 @@ Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)
 }
 
 STRING 6382
-// Abilities: A0I0 (God Cutter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IC (Shining Sword), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -39920,7 +39920,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6425
-// Abilities: A0IC (Shining Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IC (Shining Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -43026,7 +43026,7 @@ Q
 }
 
 STRING 6923
-// Abilities: A0IC (Shining Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IE (Lightning Surprise), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43062,7 +43062,7 @@ Madara creates a small forest of flowering trees that will release pollen that h
 }
 
 STRING 6929
-// Abilities: A0IE (Lightning Surprise), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (Lightning Surprise), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -43600,7 +43600,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 7013
-// Abilities: A0IE (Lightning Surprise), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IH (Capsule: Dr Wheelo's Research), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43636,7 +43636,7 @@ STRING 7018
 }
 
 STRING 7019
-// Abilities: A0IH (Capsule: Dr Wheelo's Research), Hotkey (Hotkey - Normal)
+// Abilities: A0IH (Capsule: Dr Wheelo's Research), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -44520,7 +44520,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7149
-// Abilities: A0IH (Capsule: Dr Wheelo's Research), Researchhotkey (Hotkey - Learn)
+// Abilities: A0II (Capsule: Time Ring), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -44740,7 +44740,7 @@ Eye Beam
 }
 
 STRING 7180
-// Abilities: A0II (Capsule: Time Ring), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IJ (Capsule: Brave Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -45556,7 +45556,7 @@ Tail Attack
 }
 
 STRING 7305
-// Abilities: A0IJ (Capsule: Brave Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IK (Capsule: Geti Star Fragment), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -49005,7 +49005,7 @@ buu
 }
 
 STRING 7853
-// Abilities: A0IK (Capsule: Geti Star Fragment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IM (Divine Lasso), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49139,7 +49139,7 @@ Yamcha rushes the target unit, holding it in place while he unleashes a series o
 }
 
 STRING 7875
-// Abilities: A0IM (Divine Lasso), Hotkey (Hotkey - Normal)
+// Abilities: A0IM (Divine Lasso), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -49801,7 +49801,7 @@ Q
 }
 
 STRING 7983
-// Abilities: A0IM (Divine Lasso), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IW (Kharge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49927,7 +49927,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8004
-// Abilities: A0IW (Kharge), Hotkey (Hotkey - Normal)
+// Abilities: A0IW (Kharge), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -50857,7 +50857,7 @@ STRING 8142
 }
 
 STRING 8143
-// Abilities: A0IW (Kharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (Distortion Field babidi), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51001,7 +51001,7 @@ STRING 8166
 }
 
 STRING 8167
-// Abilities: A0J0 (Distortion Field babidi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (Distortion Field babidi), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -51217,13 +51217,13 @@ Lightning Surprise
 }
 
 STRING 8203
-// Abilities: A0J0 (Distortion Field babidi), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0J0 (Distortion Field babidi), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 8204
-// Abilities: A0J0 (Distortion Field babidi), Hotkey (Hotkey - Normal)
+// Abilities: A0JA (Capsule: Dimension Sword), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51661,7 +51661,7 @@ Frieza concentrates energy into a sphere at the tip of his index finger before t
 }
 
 STRING 8271
-// Abilities: A0JA (Capsule: Dimension Sword), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JB (Capsule: Dead Zone Fragment), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51799,7 +51799,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8292
-// Abilities: A0JB (Capsule: Dead Zone Fragment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JC (Capsule: Scouter 2.0), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -51941,7 +51941,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8314
-// Abilities: A0JC (Capsule: Scouter 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JJ (Temporal Do-Over), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52079,7 +52079,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8336
-// Abilities: A0JJ (Temporal Do-Over), Hotkey (Hotkey - Normal)
+// Abilities: A0JJ (Temporal Do-Over), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52217,7 +52217,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8358
-// Abilities: A0JJ (Temporal Do-Over), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52361,7 +52361,7 @@ Goku Black fires a Kamehameha in the target direction, dealing damage to all uni
 }
 
 STRING 8382
-// Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0JP (Spirit Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52385,7 +52385,7 @@ Divine Lasso
 }
 
 STRING 8386
-// Abilities: A0JP (Spirit Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52907,7 +52907,7 @@ Dummy Slow 30% 1.5s
 }
 
 STRING 8473
-// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52931,7 +52931,7 @@ Twin Dragon Shot
 }
 
 STRING 8477
-// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53485,7 +53485,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 8557
-// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53509,7 +53509,7 @@ Kharge
 }
 
 STRING 8561
-// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53928,13 +53928,13 @@ Deactivate Distortion Field
 }
 
 STRING 8629
-// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 8630
-// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53958,7 +53958,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 8634
-// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54150,7 +54150,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8666
-// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54282,7 +54282,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8688
-// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54414,7 +54414,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8710
-// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54847,7 +54847,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8775
-// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
+// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -54872,7 +54872,7 @@ Temporal Do-Over
 }
 
 STRING 8779
-// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55276,7 +55276,7 @@ BEB/VEG/GOT/DEF
 }
 
 STRING 8846
-// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -55307,7 +55307,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8850
-// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55462,13 +55462,13 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 8872
-// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 8873
-// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56814,7 +56814,7 @@ R
 }
 
 STRING 9087
-// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
+// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -56919,7 +56919,7 @@ STRING 9100
 }
 
 STRING 9101
-// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -65549,7 +65549,7 @@ STRING 10518
 }
 
 STRING 10519
-// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -65567,7 +65567,7 @@ STRING 10521
 }
 
 STRING 10522
-// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -66592,7 +66592,7 @@ STRING 10674
 }
 
 STRING 10675
-// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -66610,7 +66610,7 @@ STRING 10677
 }
 
 STRING 10678
-// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
+// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -67850,7 +67850,7 @@ STRING 10878
 }
 
 STRING 10879
-// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -67868,7 +67868,7 @@ STRING 10881
 }
 
 STRING 10882
-// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -68647,7 +68647,7 @@ STRING 11008
 }
 
 STRING 11009
-// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69147,7 +69147,7 @@ STRING 11094
 }
 
 STRING 11095
-// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -69165,7 +69165,7 @@ STRING 11097
 }
 
 STRING 11098
-// Abilities: A0O2 (Bunkai Teleport), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69813,7 +69813,7 @@ STRING 11202
 }
 
 STRING 11203
-// Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69831,7 +69831,7 @@ STRING 11205
 }
 
 STRING 11206
-// Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
+// Abilities: A0OI (Whirlwind Tempest), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -70320,7 +70320,7 @@ STRING 11286
 }
 
 STRING 11287
-// Abilities: A0OI (Whirlwind Tempest), Hotkey (Hotkey - Normal)
+// Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -70824,7 +70824,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 11370
-// Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P2 (Ice Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -70962,7 +70962,7 @@ STRING 11392
 }
 
 STRING 11393
-// Abilities: A0P2 (Ice Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -70980,7 +70980,7 @@ STRING 11395
 }
 
 STRING 11396
-// Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PD (Justice Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -71680,7 +71680,7 @@ STRING 11508
 }
 
 STRING 11509
-// Abilities: A0PD (Justice Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0PD (Justice Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -72171,7 +72171,7 @@ All Might punches the air behind him while in the air to propel himself backward
 }
 
 STRING 11588
-// Abilities: A0PD (Justice Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PK (Justice Punch 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -74577,7 +74577,7 @@ STRING 11975
 }
 
 STRING 11976
-// Abilities: A0PK (Justice Punch 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PK (Justice Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -74589,7 +74589,7 @@ STRING 11977
 }
 
 STRING 11978
-// Abilities: A0PK (Justice Punch 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PQ (Galaxy Dynamite), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -74709,7 +74709,7 @@ Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff
 }
 
 STRING 11998
-// Abilities: A0PQ (Galaxy Dynamite), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PQ (Galaxy Dynamite), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -76176,7 +76176,7 @@ STRING 12232
 }
 
 STRING 12233
-// Abilities: A0PQ (Galaxy Dynamite), Hotkey (Hotkey - Normal)
+// Abilities: A0Q0 (Death Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -76308,7 +76308,7 @@ Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff
 }
 
 STRING 12255
-// Abilities: A0Q0 (Death Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q0 (Death Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -78723,7 +78723,7 @@ Z
 }
 
 STRING 12641
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H07Y (Scourge of the Seven Seas), Hotkey (Hotkey)
 {
 Z
 }
@@ -78749,7 +78749,7 @@ STRING 12644
 }
 
 STRING 12645
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -78869,7 +78869,7 @@ STRING 12664
 }
 
 STRING 12665
-// Abilities: A0Q0 (Death Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QB (Last Emperor), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -78911,7 +78911,7 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12671
-// Abilities: A0QB (Last Emperor), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QB (Last Emperor), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -79632,7 +79632,7 @@ STRING 12775
 }
 
 STRING 12776
-// Abilities: A0QB (Last Emperor), Hotkey (Hotkey - Normal)
+// Abilities: A0QE (Golden Death Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -79650,7 +79650,7 @@ STRING 12778
 }
 
 STRING 12779
-// Abilities: A0QE (Golden Death Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QE (Golden Death Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -79877,7 +79877,7 @@ STRING 12812
 }
 
 STRING 12813
-// Abilities: A0QE (Golden Death Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QK (Negative Energy Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -80012,7 +80012,7 @@ STRING 12834
 }
 
 STRING 12835
-// Abilities: A0QK (Negative Energy Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QK (Negative Energy Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -80827,7 +80827,7 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 12966
-// Abilities: A0QK (Negative Energy Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0QP (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -80949,7 +80949,7 @@ Justice Tornado
 }
 
 STRING 12986
-// Abilities: A0QP (Ice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QP (Ice Cannon), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -81949,7 +81949,7 @@ STRING 13148
 }
 
 STRING 13149
-// Abilities: A0QP (Ice Cannon), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QZ (Justice Kick), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -81967,7 +81967,7 @@ STRING 13151
 }
 
 STRING 13152
-// Abilities: A0QZ (Justice Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0QZ (Justice Kick), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -83208,7 +83208,7 @@ STRING 13352
 }
 
 STRING 13353
-// Abilities: A0QZ (Justice Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R3 (Justice Kick 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -83226,7 +83226,7 @@ STRING 13355
 }
 
 STRING 13356
-// Abilities: A0R3 (Justice Kick 2), Hotkey (Hotkey - Normal)
+// Abilities: A0R3 (Justice Kick 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -83664,7 +83664,7 @@ STRING 13428
 }
 
 STRING 13429
-// Abilities: A0R3 (Justice Kick 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R9 (Scattering Bullet), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -85036,7 +85036,7 @@ STRING 13638
 }
 
 STRING 13639
-// Abilities: A0R9 (Scattering Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R9 (Scattering Bullet), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85054,7 +85054,7 @@ STRING 13641
 }
 
 STRING 13642
-// Abilities: A0R9 (Scattering Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85511,7 +85511,7 @@ STRING 13714
 }
 
 STRING 13715
-// Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85529,7 +85529,7 @@ STRING 13717
 }
 
 STRING 13718
-// Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
+// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86610,7 +86610,7 @@ STRING 13881
 }
 
 STRING 13882
-// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86628,7 +86628,7 @@ STRING 13884
 }
 
 STRING 13885
-// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87064,7 +87064,7 @@ Envoy of the End - [|cffffcc00Passive|r]
 }
 
 STRING 13955
-// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87082,7 +87082,7 @@ STRING 13957
 }
 
 STRING 13958
-// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87226,7 +87226,7 @@ STRING 13981
 }
 
 STRING 13982
-// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87878,7 +87878,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14080
-// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87902,7 +87902,7 @@ Justice Kick
 }
 
 STRING 14084
-// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88493,7 +88493,7 @@ STRING 14174
 }
 
 STRING 14175
-// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -88520,7 +88520,7 @@ Justice Kick 2
 }
 
 STRING 14179
-// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89043,7 +89043,7 @@ STRING 14260
 }
 
 STRING 14261
-// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89061,7 +89061,7 @@ STRING 14263
 }
 
 STRING 14264
-// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89528,7 +89528,7 @@ STRING 14332
 }
 
 STRING 14333
-// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89604,7 +89604,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14343
-// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89697,7 +89697,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14357
-// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89785,7 +89785,7 @@ STRING 14370
 }
 
 STRING 14371
-// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89869,7 +89869,7 @@ STRING 14384
 }
 
 STRING 14385
-// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -90131,7 +90131,7 @@ STRING 14424
 }
 
 STRING 14425
-// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -91635,7 +91635,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14644
-// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T8 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -92119,7 +92119,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14712
-// Abilities: A0T8 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92587,7 +92587,7 @@ Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement s
 }
 
 STRING 14780
-// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0TL (Hammer Time), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92673,7 +92673,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14794
-// Abilities: A0TL (Hammer Time), Hotkey (Hotkey - Normal)
+// Abilities: A0TL (Hammer Time), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -93065,7 +93065,7 @@ Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
 }
 
 STRING 14848
-// Abilities: A0TL (Hammer Time), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TM (Spin Jump), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -93560,7 +93560,7 @@ STRING 14919
 }
 
 STRING 14920
-// Abilities: A0TM (Spin Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0TM (Spin Jump), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94006,7 +94006,7 @@ A wolf fang fist infused pitch!
 }
 
 STRING 14988
-// Abilities: A0TM (Spin Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TT (Tri Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94800,7 +94800,7 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15102
-// Abilities: A0TT (Tri Beam Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TT (Tri Beam Charge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -94818,7 +94818,7 @@ STRING 15104
 }
 
 STRING 15105
-// Abilities: A0TT (Tri Beam Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0TX (Rock Throw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -96272,7 +96272,7 @@ STRING 15315
 }
 
 STRING 15316
-// Abilities: A0TX (Rock Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TX (Rock Throw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -97696,7 +97696,7 @@ Zamasu channels his godly energy to deflect the attacks of lesser beings and pun
 }
 
 STRING 15504
-// Abilities: A0TX (Rock Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -97736,7 +97736,7 @@ All Might punches the air behind him while in the air to propel himself backward
 }
 
 STRING 15510
-// Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -99085,7 +99085,7 @@ All Might fires a swift left-handed smash.
 }
 
 STRING 15706
-// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -99369,7 +99369,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15747
-// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -99943,7 +99943,7 @@ STRING 15830
 }
 
 STRING 15831
-// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -99971,7 +99971,7 @@ Sephiroth leaps into the air before slamming into the ground, dealing massive AO
 }
 
 STRING 15835
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101538,7 +101538,7 @@ Dummy Stun 1.5s
 }
 
 STRING 16044
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101562,7 +101562,7 @@ STRING 16047
 }
 
 STRING 16048
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101598,7 +101598,7 @@ Hammer Time
 }
 
 STRING 16054
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101690,7 +101690,7 @@ Q
 }
 
 STRING 16069
-// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -102146,7 +102146,7 @@ STRING 16126
 }
 
 STRING 16127
-// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104616,7 +104616,7 @@ STRING 16461
 }
 
 STRING 16462
-// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104637,7 +104637,7 @@ Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and rest
 }
 
 STRING 16465
-// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104823,7 +104823,7 @@ STRING 16493
 }
 
 STRING 16494
-// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104852,7 +104852,7 @@ STRING 16498
 }
 
 STRING 16499
-// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105266,7 +105266,7 @@ STRING 16554
 }
 
 STRING 16555
-// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
+// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -105284,7 +105284,7 @@ STRING 16557
 }
 
 STRING 16558
-// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105859,13 +105859,13 @@ STRING 16625
 }
 
 STRING 16626
-// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 16627
-// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -105877,7 +105877,7 @@ STRING 16628
 }
 
 STRING 16629
-// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106084,7 +106084,7 @@ STRING 16655
 }
 
 STRING 16656
-// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106118,7 +106118,7 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 16660
-// Abilities: A0VQ (Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -106607,7 +106607,7 @@ Duration: <A0UA,Dur10>s
 }
 
 STRING 16729
-// Abilities: A0VQ (Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W3 (Dark Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106638,7 +106638,7 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 16732
-// Abilities: A0W3 (Dark Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0W3 (Dark Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -107404,7 +107404,7 @@ STRING 16836
 }
 
 STRING 16837
-// Abilities: A0W3 (Dark Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -108416,7 +108416,7 @@ STRING 16953
 }
 
 STRING 16954
-// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
+// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108545,7 +108545,7 @@ STRING 16971
 }
 
 STRING 16972
-// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -109185,7 +109185,7 @@ STRING 17062
 }
 
 STRING 17063
-// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -109301,7 +109301,7 @@ STRING 17079
 }
 
 STRING 17080
-// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -109499,13 +109499,13 @@ Chomp
 }
 
 STRING 17112
-// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 17113
-// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -110862,13 +110862,13 @@ Gobble
 }
 
 STRING 17315
-// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17316
-// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -112200,7 +112200,7 @@ STRING 17490
 }
 
 STRING 17491
-// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -112357,7 +112357,7 @@ STRING 17516
 }
 
 STRING 17517
-// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
+// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -112481,7 +112481,7 @@ STRING 17534
 }
 
 STRING 17535
-// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -113367,7 +113367,7 @@ fail
 }
 
 STRING 17666
-// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -113393,7 +113393,7 @@ Dark Bomb
 }
 
 STRING 17670
-// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -113405,7 +113405,7 @@ STRING 17671
 }
 
 STRING 17672
-// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -114282,13 +114282,13 @@ Slurp
 }
 
 STRING 17810
-// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17811
-// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -115695,7 +115695,7 @@ STRING 18022
 }
 
 STRING 18023
-// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -115713,7 +115713,7 @@ STRING 18025
 }
 
 STRING 18026
-// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -117931,7 +117931,7 @@ STRING 18337
 }
 
 STRING 18338
-// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -117949,7 +117949,7 @@ STRING 18340
 }
 
 STRING 18341
-// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -118536,7 +118536,7 @@ Mega Bomb
 }
 
 STRING 18430
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -118870,7 +118870,7 @@ STRING 18477
 }
 
 STRING 18478
-// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -122712,7 +122712,7 @@ STRING 19025
 }
 
 STRING 19026
-// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -124003,7 +124003,7 @@ Duration: <A0XI,Dur10>s
 }
 
 STRING 19200
-// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -125732,7 +125732,7 @@ Schala channels for 2s and then transports nearby allies to the target location.
 }
 
 STRING 19449
-// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -125759,7 +125759,7 @@ Schala channels for 2s and then transports nearby allies to the target location.
 }
 
 STRING 19453
-// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -127678,12 +127678,6 @@ STRING 19712
 When heating up, Flashfreeze Heatwave is replaced with Flashfire Fist. Disable heating up to revert back to Flashfreeze Heatwave.
 }
 
-STRING 19713
-// Units: H07Y (Scourge of the Seven Seas), Awakentip (Tooltip - Awaken)
-{
-[|cffffff00W|r] Choose Kaptain Skurvy
-}
-
 STRING 19714
 // Units: H07Y (Scourge of the Seven Seas), Ubertip (Tooltip - Extended)
 {
@@ -127740,7 +127734,7 @@ STRING 19721
 }
 
 STRING 19722
-// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -127758,7 +127752,7 @@ STRING 19724
 }
 
 STRING 19725
-// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -127841,12 +127835,6 @@ Duration: <A0YT,Dur1> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool1> seconds|r
 }
 
-STRING 19735
-// Units: H07Y (Scourge of the Seven Seas), Tip (Tooltip - Basic)
-{
-[|cffffff00W|r] Choose Kaptain Skurvy
-}
-
 STRING 19736
 // Units: H07Y (Scourge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
@@ -127854,27 +127842,9 @@ STRING 19736
 }
 
 STRING 19737
-// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 19738
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
-}
-
-STRING 19739
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool2> seconds|r
-}
-
-STRING 19740
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool3> seconds|r
 }
 
 STRING 19741
@@ -127959,12 +127929,6 @@ STRING 19754
 // Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Ice Path - [|cffffcc00Level 10|r]
-}
-
-STRING 19755
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool4> seconds|r
 }
 
 STRING 19756
@@ -128148,12 +128112,6 @@ STRING 19783
 // Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 7|r]
-}
-
-STRING 19784
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool5> seconds|r
 }
 
 STRING 19785
@@ -128587,18 +128545,6 @@ Endeavour's signature technique that was passed down to Shoto. The user rushes t
 |cff00ffffCooldown: <A0YY,Cool1> seconds|r
 }
 
-STRING 19841
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool6> seconds|r
-}
-
-STRING 19842
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool7> seconds|r
-}
-
 STRING 19843
 // Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
 {
@@ -128671,24 +128617,6 @@ STRING 19854
 [|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
 }
 
-STRING 19855
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool8> seconds|r
-}
-
-STRING 19856
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool9> seconds|r
-}
-
-STRING 19857
-// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.|r|n|cff00ffffCooldown: <A0Z0,Cool10> seconds|r
-}
-
 STRING 19858
 // Abilities: A0Z0 (Big Kannon), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128699,69 +128627,6 @@ STRING 19859
 // Abilities: A0Z0 (Big Kannon), EditorSuffix (Editor Suffix)
 {
 (skurvy)
-}
-
-STRING 19860
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff2020Channel Duration: <A0Z1,Dur1> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool1> seconds|r
-}
-
-STRING 19861
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff2020Channel Duration: <A0Z1,Dur2> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool2> seconds|r
-}
-
-STRING 19862
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff3030Channel Duration: <A0Z1,Dur3> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool3> seconds|r
-}
-
-STRING 19863
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff4040Channel Duration: <A0Z1,Dur4> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool4> seconds|r
-}
-
-STRING 19864
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff5050Channel Duration: <A0Z1,Dur5> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool5> seconds|r
-}
-
-STRING 19865
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff6060Channel Duration: <A0Z1,Dur6> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool6> seconds|r
-}
-
-STRING 19866
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff7070Channel Duration: <A0Z1,Dur7> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool7> seconds|r
 }
 
 STRING 19867
@@ -128830,33 +128695,6 @@ STRING 19877
 [|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
 }
 
-STRING 19878
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff8080Channel Duration: <A0Z1,Dur8> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool8> seconds|r
-}
-
-STRING 19879
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff9090Channel Duration: <A0Z1,Dur9> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool9> seconds|r
-}
-
-STRING 19880
-// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy lights the fuse before firing a might kannonball that pushes enemy units to their doom.
-|cffff100100Channel Duration: <A0Z1,Dur10> seconds|r
-|cff00ff00Damage: Lvl x str x ?|r
-|cff00ffffCooldown: <A0Z1,Cool10> seconds|r
-}
-
 STRING 19881
 // Abilities: A0Z1 (Kannon Fire), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128879,7 +128717,7 @@ Kannon Fire
 }
 
 STRING 19884
-// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -128896,32 +128734,10 @@ STRING 19886
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 1|r]
 }
 
-STRING 19887
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
-}
-
 STRING 19888
 // Abilities: A0Z2 (I'll Run Ye Through!), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn I'll Run Ye Through! - [|cffffcc00Level %d|r]
-}
-
-STRING 19889
-// Abilities: A0Z2 (I'll Run Ye Through!), Researchubertip (Tooltip - Learn - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
-}
-
-STRING 19890
-// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
-{
-W
 }
 
 STRING 19891
@@ -128940,22 +128756,6 @@ STRING 19893
 // Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 3|r]
-}
-
-STRING 19894
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool2> seconds|r
-}
-
-STRING 19895
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool3> seconds|r
 }
 
 STRING 19896
@@ -128994,66 +128794,10 @@ STRING 19901
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 9|r]
 }
 
-STRING 19902
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool4> seconds|r
-}
-
-STRING 19903
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool5> seconds|r
-}
-
-STRING 19904
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool6> seconds|r
-}
-
-STRING 19905
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool7> seconds|r
-}
-
-STRING 19906
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool8> seconds|r
-}
-
-STRING 19907
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool9> seconds|r
-}
-
 STRING 19908
 // Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 10|r]
-}
-
-STRING 19909
-// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy slashes units directly in front of him for light damage.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A0Z2,Cool10> seconds|r
 }
 
 STRING 19910
@@ -129230,48 +128974,6 @@ STRING 19938
 E
 }
 
-STRING 19939
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1>  seconds|r
-}
-
-STRING 19940
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool2>  seconds|r
-}
-
-STRING 19941
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool3>  seconds|r
-}
-
-STRING 19942
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool4>  seconds|r
-}
-
-STRING 19943
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool5>  seconds|r
-}
-
-STRING 19944
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool6>  seconds|r
-}
-
-STRING 19945
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool7>  seconds|r
-}
-
 STRING 19946
 // Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
 {
@@ -129354,30 +129056,6 @@ STRING 19959
 // Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 10|r]
-}
-
-STRING 19960
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool8>  seconds|r
-}
-
-STRING 19961
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool9>  seconds|r
-}
-
-STRING 19962
-// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool10>  seconds|r
-}
-
-STRING 19963
-// Abilities: A0Z4 (The Mirror Never Lies), Researchubertip (Tooltip - Learn - Extended)
-{
-Skurvy summons a mirror and tricks the targeted heroes into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1> - <A0Z4,Cool10> seconds|r
 }
 
 STRING 19964
@@ -129638,22 +129316,10 @@ STRING 20002
 [|cff00ff00R|r] Skygate - [|cffffcc00Level 6|r]
 }
 
-STRING 20003
-// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
-{
-[|cff00ff00D|r] Pirate's Scorn
-}
-
 STRING 20004
 // Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Skygate - [|cffffcc00Level 7|r]
-}
-
-STRING 20005
-// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
-{
-R
 }
 
 STRING 20006
@@ -129662,14 +129328,8 @@ STRING 20006
 Pirate's Scorn
 }
 
-STRING 20007
-// Abilities: A0Z6 (Pirate's Scorn), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00R|r] Learn Skygate - [|cffffcc00Level %d|r]
-}
-
 STRING 20008
-// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -129722,16 +129382,6 @@ Schala calls down lightning from the sky that bombards the target area.
 |cff00ffffCooldown: <A0YF,Cool10> seconds|r
 }
 
-STRING 20015
-// Abilities: A0Z6 (Pirate's Scorn), Researchubertip (Tooltip - Learn - Extended)
-{
-Schala calls down lightning from the sky that bombards the target area.
-|cff2080ffMana Cost: 5% Max Mana per second
-|cffff2020Channel Duration: <A0YF,Dur1> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0YF,Cool1> - <A0YF,Cool10> seconds|r
-}
-
 STRING 20016
 // Abilities: A0Z6 (Pirate's Scorn), EditorSuffix (Editor Suffix)
 {
@@ -129751,10 +129401,16 @@ Transformations:
 Each item held by Skurvy increases his mutliplier by 0.1x. If Skurvy acquires the |cff00FF00Crystal Coconut|r, his multiplier is increased by 0.3x.
 }
 
+STRING 20018
+// Units: H07Y (Scourge of the Seven Seas), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Kaptain Skurvy
+}
+
 STRING 20019
 {
-[|cffffcc00Unlock|r] |cffFF2020PIRATE'S SCORN (D)|r
-Skurvy summons his pirate ship and crew to wreak havoc on the battlefield. Rumor has it that the Crystal Coconut has been spotted somewhere nearby..
+[|cffffcc00Unlock|r] |cff00FFFFCrystal Coconut|r
+Skurvy has heard rumors that thar be a |cff00FFFFCrystal Coconut|r somewhere on this island. If he finds it, he will gain extraordinary power!
 }
 
 STRING 20020
@@ -129779,5 +129435,458 @@ STRING 20023
 // Items: I04Y (Crystal Coconut), Tip (Tooltip - Basic)
 {
 Take Crystal Coconut
+}
+
+STRING 20024
+// Units: H07Y (Scourge of the Seven Seas), Tip (Tooltip - Basic)
+{
+[|cffffff00Z|r] Choose Kaptain Skurvy
+}
+
+STRING 20025
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 20026
+// Abilities: A0Z7 (Book Skurvy Passives), Name (Name)
+{
+Book Skurvy Passives
+}
+
+STRING 20027
+// Abilities: A0Z8 (Skurvy Attack Passive), Name (Name)
+{
+Skurvy Attack Passive
+}
+
+STRING 20028
+// Abilities: A0Z8 (Skurvy Attack Passive), EditorSuffix (Editor Suffix)
+{
+(skurvy
+}
+
+STRING 20029
+// Abilities: A0Z9 (Skurvy Crit Passive), Name (Name)
+{
+Skurvy Crit Passive
+}
+
+STRING 20030
+// Abilities: A0Z9 (Skurvy Crit Passive), EditorSuffix (Editor Suffix)
+{
+(skurvy
+}
+
+STRING 20031
+// Buffs/Effects: B05C (), Buffubertip (Tooltip - Extended)
+{
+Skurvy's Hand Kannon grants him increased damage, range, and critical strike
+}
+
+STRING 20032
+// Buffs/Effects: B05C (), Bufftip (Tooltip)
+{
+Skurvy's Hand Kannon
+}
+
+STRING 20033
+// Buffs/Effects: B05D (), Buffubertip (Tooltip - Extended)
+{
+Skurvy's Big Kannon grants him increased damage, range, and critical strike
+}
+
+STRING 20034
+// Buffs/Effects: B05D (), Bufftip (Tooltip)
+{
+Skurvy's Big Kannon
+}
+
+STRING 20035
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20036
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20037
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20038
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20039
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20040
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20041
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20042
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20043
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20044
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability.
+|cff00FF00Bonus Attack DMG: 100%|r|r|n|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20045
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20046
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20047
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20048
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20049
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20050
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20051
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20052
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20053
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20054
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20055
+// Abilities: A0Z1 (Kannon Fire), Untip (Tooltip - Turn Off)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Lvl x str x ?|r
+}
+
+STRING 20056
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
+}
+
+STRING 20057
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
+}
+
+STRING 20058
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool2> seconds|r
+}
+
+STRING 20059
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool3> seconds|r
+}
+
+STRING 20060
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool4> seconds|r
+}
+
+STRING 20061
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool5> seconds|r
+}
+
+STRING 20062
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool6> seconds|r
+}
+
+STRING 20063
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool7> seconds|r
+}
+
+STRING 20064
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool8> seconds|r
+}
+
+STRING 20065
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool9> seconds|r
+}
+
+STRING 20066
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: 2s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool10> seconds|r
+}
+
+STRING 20067
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1>  seconds|r
+}
+
+STRING 20068
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool2>  seconds|r
+}
+
+STRING 20069
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool3>  seconds|r
+}
+
+STRING 20070
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool4>  seconds|r
+}
+
+STRING 20071
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool5>  seconds|r
+}
+
+STRING 20072
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool6>  seconds|r
+}
+
+STRING 20073
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool7>  seconds|r
+}
+
+STRING 20074
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool8>  seconds|r
+}
+
+STRING 20075
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool9>  seconds|r
+}
+
+STRING 20076
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool10>  seconds|r
+}
+
+STRING 20077
+// Abilities: A0Z4 (The Mirror Never Lies), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1> - <A0Z4,Cool10> seconds|r
+}
+
+STRING 20078
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Pirate's Scorn
+}
+
+STRING 20079
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 20080
+// Abilities: A0Z6 (Pirate's Scorn), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Pirate's Scorn
+}
+
+STRING 20081
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 20082
+// Abilities: A0Z6 (Pirate's Scorn), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy calls his ship and crew to bombard the target area. The ship deals damage to anything it runs over and fires kannonballs off to either side of the ship.|n|cff00FF00Ship Damage: str * lvl * ??|nKannonball Damage: str * lvl * ??|N|cff00FFFFCooldown: 45s|r
+}
+
+STRING 20083
+// Abilities: A0ZA (Extraordinary Power), Name (Name)
+{
+Extraordinary Power
+}
+
+STRING 20084
+// Abilities: A0ZA (Extraordinary Power), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Extraordinary Power
+}
+
+STRING 20085
+// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
+STRING 20086
+// Abilities: A0ZA (Extraordinary Power), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks the power of the Crystal Coconut
+|cffffff00+50% spell amp / + 165 ms
+|cff00ff00Duration: 15s
+|cff00ffffCooldown: 45s
+}
+
+STRING 20087
+// Abilities: A0ZA (Extraordinary Power), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 20088
+// Buffs/Effects: B05E (), Buffubertip (Tooltip - Extended)
+{
+This unit possesses extraordinary power, granting +50% spell damage.
+}
+
+STRING 20089
+// Buffs/Effects: B05E (), Bufftip (Tooltip)
+{
+Extraordinary Power
 }
 

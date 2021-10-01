@@ -511,9 +511,13 @@ export module SoundHelper {
       case Id.skurvyPlank:
         playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyF.mp3", 3387);
         break;
+
+      case Id.skurvyPower:
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyCoconutAcquire.mp3", 5929);
+        break;
       
       case Id.skurvyScorn:
-        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQorBoat.mp3", 2279);
+        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyF.mp3", 2279);
         break;
 
       // donkey kong

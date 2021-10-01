@@ -814,6 +814,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Skurvy.MIRROR_NEVER_LIES,
       AbilityNames.Skurvy.WALK_THE_PLANK,
       AbilityNames.Skurvy.PIRATES_SCORN,
+      AbilityNames.Skurvy.EXTRAORDINARY_POWER,
   ]],
 
     // rusty

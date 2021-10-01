@@ -1178,6 +1178,23 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     isPersistent: false,
   },
+  // skurvy kannon
+  {
+    name: "knockback skurvy kannon",
+    repeatInterval: 1, 
+    startTick: 33,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 180, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
   // cyclone knock-in
   {
     name: "knockback cyclone",

@@ -378,6 +378,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.skurvyMirrorNeverLies, AbilityNames.Skurvy.MIRROR_NEVER_LIES],
     [Id.skurvyPlank, AbilityNames.Skurvy.WALK_THE_PLANK],
     [Id.skurvyScorn, AbilityNames.Skurvy.PIRATES_SCORN],
+    [Id.skurvyPower, AbilityNames.Skurvy.EXTRAORDINARY_POWER],
 
 
     // babidi

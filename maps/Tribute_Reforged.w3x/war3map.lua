@@ -266,6 +266,9 @@ udg_SchalaChannelGroup = nil
 udg_TempIntDamageMult = 0.0
 udg_SagaCatchupMultiplier = 0.0
 udg_SkurvyCoconutBool = false
+udg_SkurvyItem = nil
+udg_SkurvyRRegistered = __jarray(false)
+udg_SkurvyRTarget = {}
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -535,6 +538,10 @@ gg_trg_Super_17_Sense = nil
 gg_trg_Skurvy_Item_Mutli = nil
 gg_trg_Skurvy_Q1 = nil
 gg_trg_Skurvy_Q2 = nil
+gg_trg_Skurvy_R = nil
+gg_trg_Skurvy_R_Orders = nil
+gg_trg_Skurvy_E = nil
+gg_trg_Skurvy_E_Copy = nil
 gg_trg_Spawn_Crystal_Coconut = nil
 gg_trg_Schala_Pray_Cast = nil
 gg_trg_Schala_Pray_Loop = nil
@@ -974,6 +981,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_snd_SkurvyCoconutAcquire = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1334,6 +1342,12 @@ function InitGlobals()
     udg_TempIntDamageMult = 0.0
     udg_SagaCatchupMultiplier = 0.0
     udg_SkurvyCoconutBool = false
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_SkurvyRRegistered[i] = false
+        i = i + 1
+    end
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -1535,6 +1549,11 @@ function InitSounds()
     SetSoundChannel(gg_snd_DBZSagaTheme, 8)
     SetSoundVolume(gg_snd_DBZSagaTheme, 127)
     SetSoundPitch(gg_snd_DBZSagaTheme, 1.0)
+    gg_snd_SkurvyCoconutAcquire = CreateSound("Audio/Voice/Skurvy/SkurvyCoconutAcquire.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundDuration(gg_snd_SkurvyCoconutAcquire, 5929)
+    SetSoundChannel(gg_snd_SkurvyCoconutAcquire, 0)
+    SetSoundVolume(gg_snd_SkurvyCoconutAcquire, 127)
+    SetSoundPitch(gg_snd_SkurvyCoconutAcquire, 1.0)
 end
 
 function CreateAllItems()
@@ -14652,6 +14671,16 @@ function Trig_Skurvy_Item_Mutli_Conditions()
     return true
 end
 
+function Trig_Skurvy_Item_Mutli_Func003Func001C()
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04Y"))) then
+        return false
+    end
+    if (not (UnitHasItem(GetTriggerUnit(), GetManipulatedItem()) == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Skurvy_Item_Mutli_Func003C()
     if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04Y"))) then
         return false
@@ -14710,7 +14739,12 @@ function Trig_Skurvy_Item_Mutli_Actions()
         udg_KillHeroVoicelineUnit = udg_TempUnit
         udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyCoconutAcquire.mp3"
         udg_KillHeroVoicelineDuration = 5929
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0ZA"), GetTriggerPlayer())
     else
+        if (Trig_Skurvy_Item_Mutli_Func003Func001C()) then
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0ZA"), GetTriggerPlayer())
+        else
+        end
     end
     bj_forLoopAIndex = 1
     bj_forLoopAIndexEnd = 6
@@ -14749,7 +14783,7 @@ function Trig_Skurvy_Q1_Conditions()
     return true
 end
 
-function Trig_Skurvy_Q1_Func002C()
+function Trig_Skurvy_Q1_Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0Z1"), GetTriggerUnit()) == 0)) then
         return false
     end
@@ -14757,8 +14791,9 @@ function Trig_Skurvy_Q1_Func002C()
 end
 
 function Trig_Skurvy_Q1_Actions()
+    SetUnitAbilityLevelSwapped(FourCC("A0Z8"), GetTriggerUnit(), 2)
     AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
-    if (Trig_Skurvy_Q1_Func002C()) then
+    if (Trig_Skurvy_Q1_Func003C()) then
         UnitAddAbilityBJ(FourCC("A0Z1"), GetTriggerUnit())
     else
     end
@@ -14787,6 +14822,7 @@ function Trig_Skurvy_Q2_Conditions()
 end
 
 function Trig_Skurvy_Q2_Actions()
+    SetUnitAbilityLevelSwapped(FourCC("A0Z8"), GetTriggerUnit(), 1)
     AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(true, FourCC("A0Z0"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(true, FourCC("A0Z2"), GetTriggerPlayer())
@@ -14799,9 +14835,273 @@ end
 
 function InitTrig_Skurvy_Q2()
     gg_trg_Skurvy_Q2 = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q2, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_Q2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Skurvy_Q2, Condition(Trig_Skurvy_Q2_Conditions))
     TriggerAddAction(gg_trg_Skurvy_Q2, Trig_Skurvy_Q2_Actions)
+end
+
+function Trig_Skurvy_R_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0Z4"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Func001C()
+    if (not (udg_SkurvyRRegistered[GetConvertedPlayerId(GetTriggerPlayer())] == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Actions()
+    if (Trig_Skurvy_R_Func001C()) then
+        udg_SkurvyRRegistered[GetConvertedPlayerId(udg_TempPlayer)] = true
+        TriggerRegisterUnitEvent(gg_trg_Skurvy_R_Orders, GetTriggerUnit(), EVENT_UNIT_ISSUED_TARGET_ORDER)
+        TriggerRegisterUnitEvent(gg_trg_Skurvy_R_Orders, GetTriggerUnit(), EVENT_UNIT_ISSUED_POINT_ORDER)
+        TriggerRegisterUnitEvent(gg_trg_Skurvy_R_Orders, GetTriggerUnit(), EVENT_UNIT_ISSUED_ORDER)
+    else
+    end
+    udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())] = GetSpellTargetUnit()
+    TriggerSleepAction(4.00)
+    udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())] = nil
+end
+
+function InitTrig_Skurvy_R()
+    gg_trg_Skurvy_R = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_R, EVENT_PLAYER_UNIT_SPELL_CAST)
+    TriggerAddCondition(gg_trg_Skurvy_R, Condition(Trig_Skurvy_R_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_R, Trig_Skurvy_R_Actions)
+end
+
+function Trig_Skurvy_R_Orders_Conditions()
+    if (not (udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())] ~= nil)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func002C()
+    if (not (GetOrderTargetUnit() ~= nil)) then
+        return false
+    end
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("attack"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func003C()
+    if (not (GetOrderTargetUnit() == nil)) then
+        return false
+    end
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("attack"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func004C()
+    if (not (GetOrderTargetUnit() == nil)) then
+        return false
+    end
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("smart"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func005C()
+    if (not (GetOrderTargetUnit() ~= nil)) then
+        return false
+    end
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("smart"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func006C()
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("stop"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Func007C()
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("holdposition"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_R_Orders_Actions()
+    if (Trig_Skurvy_R_Orders_Func002C()) then
+        IssueTargetOrderBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "attack", GetOrderTargetUnit())
+    else
+    end
+    if (Trig_Skurvy_R_Orders_Func003C()) then
+        udg_TempLoc = GetOrderPointLoc()
+        IssuePointOrderLocBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "attack", udg_TempLoc)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+    if (Trig_Skurvy_R_Orders_Func004C()) then
+        udg_TempLoc = GetOrderPointLoc()
+        IssuePointOrderLocBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "smart", udg_TempLoc)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+    if (Trig_Skurvy_R_Orders_Func005C()) then
+        IssueTargetOrderBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "smart", GetOrderTargetUnit())
+    else
+    end
+    if (Trig_Skurvy_R_Orders_Func006C()) then
+        IssueImmediateOrderBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "stop")
+    else
+    end
+    if (Trig_Skurvy_R_Orders_Func007C()) then
+        IssueImmediateOrderBJ(udg_SkurvyRTarget[GetConvertedPlayerId(GetTriggerPlayer())], "holdposition")
+    else
+    end
+end
+
+function InitTrig_Skurvy_R_Orders()
+    gg_trg_Skurvy_R_Orders = CreateTrigger()
+    TriggerAddCondition(gg_trg_Skurvy_R_Orders, Condition(Trig_Skurvy_R_Orders_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_R_Orders, Trig_Skurvy_R_Orders_Actions)
+end
+
+function Trig_Skurvy_E_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0Z3"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Func003Func001Func002C()
+    if (not (udg_TempItem ~= nil)) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I04N"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03E"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03D"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03C"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I037"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I036"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Func003Func001C()
+    if (not (udg_SkurvyItem == nil)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Actions()
+    udg_SkurvyItem = nil
+    udg_TempUnit = GetSpellTargetUnit()
+    bj_forLoopAIndex = 1
+    bj_forLoopAIndexEnd = 6
+    while (true) do
+        if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+        if (Trig_Skurvy_E_Func003Func001C()) then
+            udg_TempItem = UnitItemInSlotBJ(udg_TempUnit, GetForLoopIndexA())
+            if (Trig_Skurvy_E_Func003Func001Func002C()) then
+                udg_SkurvyItem = udg_TempItem
+            else
+            end
+        else
+        end
+        bj_forLoopAIndex = bj_forLoopAIndex + 1
+    end
+    UnitAddItemSwapped(udg_SkurvyItem, GetTriggerUnit())
+end
+
+function InitTrig_Skurvy_E()
+    gg_trg_Skurvy_E = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_E, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Skurvy_E, Condition(Trig_Skurvy_E_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_E, Trig_Skurvy_E_Actions)
+end
+
+function Trig_Skurvy_E_Copy_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0Z3"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Copy_Func003Func001Func002C()
+    if (not (udg_TempItem ~= nil)) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I04N"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03E"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03D"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I03C"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I037"))) then
+        return false
+    end
+    if (not (GetItemTypeId(udg_TempItem) ~= FourCC("I036"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Copy_Func003Func001C()
+    if (not (udg_SkurvyItem == nil)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Skurvy_E_Copy_Actions()
+    udg_SkurvyItem = nil
+    udg_TempUnit = GetSpellTargetUnit()
+    bj_forLoopAIndex = 1
+    bj_forLoopAIndexEnd = 6
+    while (true) do
+        if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+        if (Trig_Skurvy_E_Copy_Func003Func001C()) then
+            udg_TempItem = UnitItemInSlotBJ(udg_TempUnit, GetForLoopIndexA())
+            if (Trig_Skurvy_E_Copy_Func003Func001Func002C()) then
+                udg_SkurvyItem = udg_TempItem
+            else
+            end
+        else
+        end
+        bj_forLoopAIndex = bj_forLoopAIndex + 1
+    end
+    UnitAddItemSwapped(udg_SkurvyItem, GetTriggerUnit())
+end
+
+function InitTrig_Skurvy_E_Copy()
+    gg_trg_Skurvy_E_Copy = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Skurvy_E_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Skurvy_E_Copy, Condition(Trig_Skurvy_E_Copy_Conditions))
+    TriggerAddAction(gg_trg_Skurvy_E_Copy, Trig_Skurvy_E_Copy_Actions)
 end
 
 function Trig_Spawn_Crystal_Coconut_Conditions()
@@ -16624,6 +16924,8 @@ end
 function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0Z1"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0ZA"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Z7"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0XY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WP"), udg_TempPlayer)
@@ -16768,6 +17070,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
+    udg_SkurvyRRegistered[GetConvertedPlayerId(udg_TempPlayer)] = false
 end
 
 function InitTrig_Disable_Abilities_for_TempPlayer()
@@ -51176,7 +51479,6 @@ function Trig_Transformations_Skurvy_Actions()
     else
     end
     if (Trig_Transformations_Skurvy_Func016C()) then
-        UnitAddAbilityBJ(FourCC("A0Z6"), udg_StatMultUnit)
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20019")
         if (Trig_Transformations_Skurvy_Func016Func004C()) then
@@ -52930,6 +53232,10 @@ function InitCustomTriggers()
     InitTrig_Skurvy_Item_Mutli()
     InitTrig_Skurvy_Q1()
     InitTrig_Skurvy_Q2()
+    InitTrig_Skurvy_R()
+    InitTrig_Skurvy_R_Orders()
+    InitTrig_Skurvy_E()
+    InitTrig_Skurvy_E_Copy()
     InitTrig_Spawn_Crystal_Coconut()
     InitTrig_Schala_Pray_Cast()
     InitTrig_Schala_Pray_Loop()

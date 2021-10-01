@@ -750,6 +750,7 @@ export module Id {
   export const skurvyMirrorNeverLies = FourCC("A0Z4");
   export const skurvyPlank = FourCC("A0Z5");
   export const skurvyScorn = FourCC("A0Z6");
+  export const skurvyPower = FourCC("A0ZA");
 
   export const yamchaRLightPunch = FourCC("A0RC");
   export const yamchaRMediumPunch = FourCC("A0RD");

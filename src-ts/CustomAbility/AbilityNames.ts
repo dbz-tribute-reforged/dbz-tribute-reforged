@@ -679,6 +679,7 @@ export module AbilityNames {
     export const MIRROR_NEVER_LIES: string = "Skurvy the Mirror Never Lies";
     export const WALK_THE_PLANK: string = "Skurvy Walk The Plank";
     export const PIRATES_SCORN: string = "Skurvy Pirate's Scorn";
+    export const EXTRAORDINARY_POWER: string = "Skurvy Extraordinary Power";
   }
 
 

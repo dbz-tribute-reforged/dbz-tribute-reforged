@@ -8073,6 +8073,119 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Skurvy.KANNON_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell alternate",
+    icon: {
+      enabled: "BTNSkurvyQ2.blp",
+      disabled: "BTNSkurvyQ2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Skurvy.KANNON_FIRE,
+      body: 
+        AbilityNames.Skurvy.KANNON_FIRE,
+    },
+    components: [
+      //{ name: "channel caster default" },
+      { name: "multi skurvy kannon" },
+    ],
+  },
+    // -------------------------------------------
+//  {
+//    name: AbilityNames.Skurvy.RUN_YE_THROUGH,
+//    currentCd: 0,
+//    maxCd: 1,
+//    costType: CostType.MP,
+//    costAmount: 0,
+//    duration: 10,
+//    updateRate: 0.03,
+//    castTime: 0.0,
+//    canMultiCast: true,
+//    waitsForNextClick: false,
+//    canUseWhenStunned: false,
+//    animation: "spell",
+//    icon: {
+//      enabled: "BTNSkurvyW.blp",
+//      disabled: "BTNSkurvyW.blp",
+//    },
+//    tooltip: {
+//      title:  AbilityNames.Skurvy.RUN_YE_THROUGH,
+//      body: 
+//        AbilityNames.Skurvy.RUN_YE_THROUGH,
+//    },
+//    components: [
+//      { name: "multi run ye through" },
+      // { name: "temp ability brave cannon" },
+//    ],
+//  },  
+// -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.RUN_YE_THROUGH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell Throw",
+    icon: {
+      enabled: "BTNSkurvyW.blp",
+      disabled: "BTNSkurvyW.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Skurvy.RUN_YE_THROUGH,
+      body: 
+        AbilityNames.Skurvy.RUN_YE_THROUGH,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi octoslash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNCrystalCoconut.blp",
+      disabled: "BTNCrystalCoconut.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+      body: 
+        AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+    },
+    components: [
+      { name: "spell amp extraordinary power" },
+      { name: "dash ground forward extraordinary power" },
+      { name: "sfx unlock potential" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
