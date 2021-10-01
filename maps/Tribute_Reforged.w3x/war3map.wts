@@ -127678,6 +127678,15 @@ STRING 19712
 When heating up, Flashfreeze Heatwave is replaced with Flashfire Fist. Disable heating up to revert back to Flashfreeze Heatwave.
 }
 
+STRING 19713
+// Abilities: A0ZA (Extraordinary Power), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks the power of the Crystal Coconut
+|cffffff00+50% spell amp / + 99 ms
+|cff00ff00Duration: 15s
+|cff00ffffCooldown: 45s
+}
+
 STRING 19714
 // Units: H07Y (Scourge of the Seven Seas), Ubertip (Tooltip - Extended)
 {
@@ -129861,15 +129870,6 @@ STRING 20085
 // Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
 {
 D
-}
-
-STRING 20086
-// Abilities: A0ZA (Extraordinary Power), Ubertip (Tooltip - Normal - Extended)
-{
-Unlocks the power of the Crystal Coconut
-|cffffff00+50% spell amp / + 165 ms
-|cff00ff00Duration: 15s
-|cff00ffffCooldown: 45s
 }
 
 STRING 20087

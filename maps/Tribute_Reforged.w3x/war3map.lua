@@ -51516,7 +51516,7 @@ function Trig_Transformations_Skurvy_Func015C()
     return true
 end
 
-function Trig_Transformations_Skurvy_Func016Func006C()
+function Trig_Transformations_Skurvy_Func016Func003C()
     if (not (udg_SkurvyCoconutBool == false)) then
         return false
     end
@@ -51527,7 +51527,7 @@ function Trig_Transformations_Skurvy_Func016C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0Z6"), udg_StatMultUnit) == 0)) then
+    if (not (udg_SkurvyCoconutBool == false)) then
         return false
     end
     return true
@@ -51599,11 +51599,9 @@ function Trig_Transformations_Skurvy_Actions()
     else
     end
     if (Trig_Transformations_Skurvy_Func016C()) then
-        ModifyHeroSkillPoints(udg_StatMultUnit, bj_MODIFYMETHOD_ADD, 1)
-        SelectHeroSkill(udg_StatMultUnit, FourCC("A0Z6"))
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20019")
-        if (Trig_Transformations_Skurvy_Func016Func006C()) then
+        if (Trig_Transformations_Skurvy_Func016Func003C()) then
             EnableTrigger(gg_trg_Spawn_Crystal_Coconut)
             udg_SkurvyCoconutBool = true
         else
