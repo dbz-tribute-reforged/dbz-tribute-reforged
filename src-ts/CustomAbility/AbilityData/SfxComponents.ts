@@ -29348,7 +29348,7 @@ export const SfxComponents = [
     name: "sfx beam skurvy kannon release", 
     repeatInterval: 1,
     startTick: 1,
-    endTick: -1,
+    endTick: 2,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,

@@ -1182,7 +1182,7 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback skurvy kannon",
     repeatInterval: 1, 
-    startTick: 33,
+    startTick: 1,
     endTick: -1,
     knockbackData: {
       speed: 50, 
