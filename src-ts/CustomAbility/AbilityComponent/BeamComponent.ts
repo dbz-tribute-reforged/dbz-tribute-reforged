@@ -20,6 +20,7 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_SOURCE = 1;
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
+  static readonly BEAM_UNIT_SPAWN_BEAM = 4;
 
   static readonly BEAM_HP_MODIFIER = 0.75;
 
@@ -34,6 +35,8 @@ export class BeamComponent implements
   static readonly BEAM_SPEED_VERY_FAST = 65;
   static readonly BEAM_SPEED_SUPER_FAST = 70;
 
+  static readonly BEAM_STUCK_DELAY_TICKS = 16;
+
   public beamUnit: unit | null;
   public delayTicks: number;
   public angle: number;
@@ -42,6 +45,7 @@ export class BeamComponent implements
   protected beamCoord: Vector2D;
   protected targetCoord: Vector2D;
   protected beamTargetPoint: Vector2D;
+  protected nextMoveTick: number;
   // time to explode = 
   // distance from start position to cast point
   // divided by speed
@@ -54,6 +58,7 @@ export class BeamComponent implements
 
 
   protected oldIsBeamClash: boolean | undefined;
+
 
   constructor(
     public name: string = "BeamComponent",
@@ -79,6 +84,7 @@ export class BeamComponent implements
     public explodeAtCastPoint: boolean = false,
     public explodeOnDeath: boolean = false,
     public explodeOnContact: boolean = false,
+    public setAsSpawnedBeam: boolean = false,
     public beamUnitSpawn: number = BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     public beamUnitType: number = Constants.dummyBeamUnitId,
     public beamUnitSkin: number = Constants.dummyBeamUnitId,
@@ -92,6 +98,7 @@ export class BeamComponent implements
     this.beamCoord = new Vector2D();
     this.targetCoord = new Vector2D();
     this.beamTargetPoint = new Vector2D();
+    this.nextMoveTick = 0;
     this.explodeTick = 0;
     this.explodeMinDistance = 0;
     this.explodePosition = new Vector2D(0, 0);
@@ -145,15 +152,22 @@ export class BeamComponent implements
     if (!this.beamUnit) return this;
 
     if (this.delayTicks <= 0) {
-      if (!this.isFixedAngle) {
-        this.angle = GetUnitFacing(this.beamUnit);
-      }
-      this.targetCoord.polarProjectCoords(this.beamCoord, this.angle, this.speed);
+      if (ability.currentTick >= this.nextMoveTick) {
+        if (!this.isFixedAngle) {
+          this.angle = GetUnitFacing(this.beamUnit);
+        }
+        this.targetCoord.polarProjectCoords(this.beamCoord, this.angle, this.speed);
+      
+        let hasMoved = false;
+        if (!this.isGroundPathing) {
+          hasMoved = PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
+        } else {
+          hasMoved = PathingCheck.moveGroundUnitToCoord(this.beamUnit, this.targetCoord);
+        }
 
-      if (!this.isGroundPathing) {
-        PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
-      } else {
-        PathingCheck.moveGroundUnitToCoord(this.beamUnit, this.targetCoord);
+        if (!hasMoved) {
+          this.nextMoveTick = ability.currentTick + BeamComponent.BEAM_STUCK_DELAY_TICKS;
+        }
       }
       // if wanting to explode prematurely then
       // check if at maximal explode tick AND close enough to target
@@ -229,20 +243,31 @@ export class BeamComponent implements
     if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_SOURCE) {
       // move beam slightly out of the source unit
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
-    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
       this.beamCoord.setVector(this.beamTargetPoint);
-    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_UNIT) {
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_UNIT) {
       if (input.targetUnit) {
         this.beamCoord.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
       } else {
         this.beamCoord.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
         this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
       }
-    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_CASTER) {
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_CASTER) {
       // caster
       this.beamCoord.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_BEAM) {
+      if (input.spawnedBeam) {
+        this.beamCoord.setUnit(input.spawnedBeam);
+        this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
+      }
+      this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     }
+
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
       this.beamUnitType, 
@@ -308,6 +333,7 @@ export class BeamComponent implements
 
     if (!this.isTracking) {
       PauseUnit(this.beamUnit, true);
+      ShowUnit(this.beamUnit, false);
     } else {
       // possible selection bug again?
       // SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);
@@ -319,12 +345,17 @@ export class BeamComponent implements
         IssuePointOrder(this.beamUnit, "move", this.beamTargetPoint.x, this.beamTargetPoint.y);
       }
     }
+
+    if (this.setAsSpawnedBeam) {
+      input.spawnedBeam = this.beamUnit;
+    }
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
+      this.nextMoveTick = ability.currentTick;
     }
     
     if (this.hasBeamUnit && !this.hasExploded && this.beamUnit) {
@@ -391,6 +422,7 @@ export class BeamComponent implements
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
       this.explodeOnContact,
+      this.setAsSpawnedBeam,
       this.beamUnitSpawn,
       this.beamUnitType, this.beamUnitSkin,
       AbilityComponentHelper.clone(this.components),
@@ -424,6 +456,7 @@ export class BeamComponent implements
       explodeAtCastPoint: boolean;
       explodeOnDeath: boolean;
       explodeOnContact: boolean;
+      setAsSpawnedBeam: boolean;
       beamUnitSpawn: number;
       beamUnitType: number;
       beamUnitSkin: number;
@@ -453,6 +486,7 @@ export class BeamComponent implements
     this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.explodeOnDeath = input.explodeOnDeath;
     this.explodeOnContact = input.explodeOnContact;
+    this.setAsSpawnedBeam = input.setAsSpawnedBeam;
     this.beamUnitSpawn = input.beamUnitSpawn;
     this.beamUnitType = input.beamUnitType;
     this.beamUnitSkin = input.beamUnitSkin;

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.69a
+DBZ Tribute Reforged 0.70
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 52+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 56+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -15826,14 +15826,6 @@ STRING 2533
 Saitama leaps from one point to another, dealing damage upon landing.
 |cff00ff00Damage: Agi * lvl * ?|r
 |cff00ffffCooldown: <A00Z,Cool10> seconds|r
-}
-
-STRING 2534
-// Abilities: A00Z (Leap), Researchubertip (Tooltip - Learn - Extended)
-{
-Saitama leaps from one point to another, dealing damage upon landing.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A00Z,Cool1> seconds|r
 }
 
 STRING 2535
@@ -76831,6 +76823,7 @@ Transformations:
 [lvl 150] 2.40x "fp"
 [lvl 200] 2.50x "fp" [Unlocks Sparking!]
 
+|cffffcc00Combo:|r Press the correct combination of Q, W, E to cast a combo spell at your last right click.
 |cff22ff22Speed Demon:|r Cast point reduced to 0s.
 |cffff44ffI'm Scaling:|r +1% damage per 10 levels
 }
@@ -78723,7 +78716,7 @@ Z
 }
 
 STRING 12641
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H07Y (Skurge of the Seven Seas), Hotkey (Hotkey)
 {
 Z
 }
@@ -78749,7 +78742,7 @@ STRING 12644
 }
 
 STRING 12645
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -95059,18 +95052,10 @@ STRING 15141
 }
 
 STRING 15142
-// Units: E010 (Baseball Bandit), Ubertip (Tooltip - Extended)
+// Items: I04Y (|cff00ffffCrystal Coconut|r), Description (Description)
 {
-A true-combo hero that relies on sequencing the right attacks together to access more powerful moves. To play correctly, a low latency and a deep understanding of Yamcha's abilities is required.
-
-|cff22ff22Speed Demon:|r Cast point reduced to 0s.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
+|cffffff00Increases sight radius by 2000. 
++0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
 STRING 15143
@@ -99739,13 +99724,13 @@ Q
 }
 
 STRING 15803
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15804
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -100854,13 +100839,13 @@ STRING 15951
 }
 
 STRING 15952
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15953
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -101521,8 +101506,8 @@ STRING 16042
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "fp" [unlocks Death Blow]
-[lvl 65]  1.75x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 65]  1.75x "fp" [unlocks Death Blow]
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.40x "fp" 
 [lvl 200] 2.50x "fp" [unlocks Pure Progress]
@@ -107466,6 +107451,15 @@ STRING 16846
 Mugetsu
 }
 
+STRING 16847
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA1>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
+}
+
 STRING 16848
 // Buffs/Effects: B03T (), Buffubertip (Tooltip - Extended)
 {
@@ -108224,6 +108218,12 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
+}
+
+STRING 16933
+// Units: H07Y (Skurge of the Seven Seas), Propernames (Proper Names)
+{
+Kaptain Skurvy
 }
 
 STRING 16934
@@ -127666,6 +127666,24 @@ STRING 19712
 When heating up, Flashfreeze Heatwave is replaced with Flashfire Fist. Disable heating up to revert back to Flashfreeze Heatwave.
 }
 
+STRING 19713
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA1>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool1> seconds|r
+}
+
+STRING 19714
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA2>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool2> seconds|r
+}
+
 STRING 19715
 // Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
 {
@@ -127750,24 +127768,6 @@ STRING 19728
 [|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 10|r]
 }
 
-STRING 19729
-// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
-{
-Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 12% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% fire damage.
-Adds +1% fire damage for each heat above 50.
-|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
-}
-
-STRING 19730
-// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
-{
-Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 12% of max HP plus 4% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% frost damage.
-Adds +1% frost damage for each heat below 50.
-|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
-}
-
 STRING 19731
 // Units: H05W (Princess of Zeal), Ubertip (Tooltip - Extended)
 {
@@ -127808,6 +127808,54 @@ Shoto freezes the ground around him to create an ice path that accelerates his m
 |cff00ff00Damage: Int * lvl * ?
 Duration: <A0YT,Dur1> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool1> seconds|r
+}
+
+STRING 19735
+// Units: E010 (Baseball Bandit), Ubertip (Tooltip - Extended)
+{
+A true-combo hero that relies on sequencing the right attacks together to access more powerful moves. To play correctly, a low latency and a deep understanding of Yamcha's abilities is required.
+
+|cffffcc00Combo:|r Press the correct combination of Q, W, E to cast a combo spell at your last right click.
+|cff22ff22Speed Demon:|r Cast point reduced to 0s.
+|cffff44ffI'm Scaling:|r +1% damage per 10 levels
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19736
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 19737
+// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 19738
+// Abilities: A0HQ (Brave Sword Damage 1), EditorSuffix (Editor Suffix)
+{
+(+750)
+}
+
+STRING 19739
+// Abilities: A0HR (Brave Sword Damage 2), EditorSuffix (Editor Suffix)
+{
+(+1500)
+}
+
+STRING 19740
+// Items: I04Y (|cff00ffffCrystal Coconut|r), Ubertip (Tooltip - Extended)
+{
+|cffffff00Increases sight radius by 2000. 
++0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
 STRING 19741
@@ -127892,6 +127940,12 @@ STRING 19754
 // Abilities: A0YT (Ice Path), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Ice Path - [|cffffcc00Level 10|r]
+}
+
+STRING 19755
+// Units: H07Y (Skurge of the Seven Seas), Name (Name)
+{
+Skurge of the Seven Seas
 }
 
 STRING 19756
@@ -128075,6 +128129,21 @@ STRING 19783
 // Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 7|r]
+}
+
+STRING 19784
+// Units: H07Y (Skurge of the Seven Seas), Ubertip (Tooltip - Extended)
+{
+A bulky hero that specializes in disrupting teams and stealing booty.
+
+|cffffcc00Booty:|r +0.1x for each rare item held. +0.3x for holding the |cff00FF00Crystal Coconut|r
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 19785
@@ -128506,5 +128575,1375 @@ Endeavour's signature technique that was passed down to Shoto. The user rushes t
 |cffffff00Rapidly heats Shoto up.
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0YY,Cool1> seconds|r
+}
+
+STRING 19843
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 2|r]
+}
+
+STRING 19844
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 3|r]
+}
+
+STRING 19845
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 4|r]
+}
+
+STRING 19846
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 5|r]
+}
+
+STRING 19847
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 6|r]
+}
+
+STRING 19848
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 1|r]
+}
+
+STRING 19849
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 7|r]
+}
+
+STRING 19850
+// Abilities: A0Z0 (Big Kannon), Name (Name)
+{
+Big Kannon
+}
+
+STRING 19851
+// Abilities: A0Z0 (Big Kannon), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Big Kannon - [|cffffcc00Level %d|r]
+}
+
+STRING 19852
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 9|r]
+}
+
+STRING 19853
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 8|r]
+}
+
+STRING 19854
+// Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
+}
+
+STRING 19858
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA3>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool3> seconds|r
+}
+
+STRING 19859
+// Abilities: A0Z0 (Big Kannon), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 19867
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 2|r]
+}
+
+STRING 19868
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 3|r]
+}
+
+STRING 19869
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 4|r]
+}
+
+STRING 19870
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 5|r]
+}
+
+STRING 19871
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 6|r]
+}
+
+STRING 19872
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 1|r]
+}
+
+STRING 19873
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 7|r]
+}
+
+STRING 19874
+// Abilities: A0Z1 (Kannon Fire), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Water 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 19875
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 9|r]
+}
+
+STRING 19876
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 8|r]
+}
+
+STRING 19877
+// Abilities: A0Z1 (Kannon Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
+}
+
+STRING 19881
+// Abilities: A0Z1 (Kannon Fire), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 19882
+// Abilities: A0Z1 (Kannon Fire), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 19883
+// Abilities: A0Z1 (Kannon Fire), Name (Name)
+{
+Kannon Fire
+}
+
+STRING 19884
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 19885
+// Abilities: A0Z2 (I'll Run Ye Through!), Name (Name)
+{
+I'll Run Ye Through!
+}
+
+STRING 19886
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 1|r]
+}
+
+STRING 19888
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn I'll Run Ye Through! - [|cffffcc00Level %d|r]
+}
+
+STRING 19891
+// Abilities: A0Z2 (I'll Run Ye Through!), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 19892
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 2|r]
+}
+
+STRING 19893
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 3|r]
+}
+
+STRING 19896
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 4|r]
+}
+
+STRING 19897
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 5|r]
+}
+
+STRING 19898
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 6|r]
+}
+
+STRING 19899
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 7|r]
+}
+
+STRING 19900
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 8|r]
+}
+
+STRING 19901
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 9|r]
+}
+
+STRING 19908
+// Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 10|r]
+}
+
+STRING 19910
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19911
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19912
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19913
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19914
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA4>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool4> seconds|r
+}
+
+STRING 19915
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA5>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool5> seconds|r
+}
+
+STRING 19916
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA6>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool6> seconds|r
+}
+
+STRING 19917
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA7>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool7> seconds|r
+}
+
+STRING 19918
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA8>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool8> seconds|r
+}
+
+STRING 19919
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA9>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool9> seconds|r
+}
+
+STRING 19920
+// Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy slashes units directly in front of him for light damage.
+|cffFFFF00Channel Duration: <A0Z2,DataA10>s|r
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0Z2,Cool10> seconds|r
+}
+
+STRING 19921
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy calls his ship and crew to bombard the target area. The ship deals damage to anything it runs over and fires kannonballs from both sides of the ship.|n|cff00FF00Ship Damage: Str * Lvl * ?|nKannonball Damage: Str * Lvl * ?|N|cff00FFFFCooldown: <A0Z6,Cool1>s|r
+}
+
+STRING 19922
+// Abilities: A0Z6 (Pirate's Scorn), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy calls his ship and crew to bombard the target area. The ship deals damage to anything it runs over and fires explosive kannonballs from both sides.|n|cff00FF00Ship Damage: Str * Lvl * ?|nKannonball Damage: Str * Lvl * ?|N|cff00FFFFCooldown: <A0Z6,Cool1>s|r
+}
+
+STRING 19923
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19924
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19925
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19926
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19927
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19928
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19929
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19930
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19931
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19932
+// Abilities: A0Z1 (Kannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy fires a mighty kannonball that pushes enemy units to their doom.
+|cff00ff00Damage: Str x Lvl x ?|r
+}
+
+STRING 19934
+// Abilities: A0Z3 (Plunder), Name (Name)
+{
+Plunder
+}
+
+STRING 19938
+// Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 19941
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 2|r]
+}
+
+STRING 19942
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 3|r]
+}
+
+STRING 19943
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 4|r]
+}
+
+STRING 19944
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 5|r]
+}
+
+STRING 19945
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 6|r]
+}
+
+STRING 19946
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 2|r]
+}
+
+STRING 19947
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 3|r]
+}
+
+STRING 19948
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 4|r]
+}
+
+STRING 19949
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 5|r]
+}
+
+STRING 19950
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 6|r]
+}
+
+STRING 19951
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 1|r]
+}
+
+STRING 19952
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 7|r]
+}
+
+STRING 19953
+// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19954
+// Abilities: A0Z4 (The Mirror Never Lies), Name (Name)
+{
+The Mirror Never Lies
+}
+
+STRING 19955
+// Abilities: A0Z4 (The Mirror Never Lies), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn The Mirror Never Lies - [|cffffcc00Level %d|r]
+}
+
+STRING 19956
+// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19957
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 9|r]
+}
+
+STRING 19958
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 8|r]
+}
+
+STRING 19959
+// Abilities: A0Z4 (The Mirror Never Lies), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] The Mirror Never Lies - [|cffffcc00Level 10|r]
+}
+
+STRING 19960
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 1|r]
+}
+
+STRING 19961
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 7|r]
+}
+
+STRING 19962
+// Abilities: A0Z3 (Plunder), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Plunder - [|cffffcc00Level %d|r]
+}
+
+STRING 19963
+// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19964
+// Abilities: A0Z4 (The Mirror Never Lies), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 19965
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool2>s
+}
+
+STRING 19966
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool3>s
+}
+
+STRING 19967
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool4>s
+}
+
+STRING 19968
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool5>s
+}
+
+STRING 19969
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool6>s
+}
+
+STRING 19970
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool7>s
+}
+
+STRING 19971
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 2|r]
+}
+
+STRING 19972
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 3|r]
+}
+
+STRING 19973
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 4|r]
+}
+
+STRING 19974
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 5|r]
+}
+
+STRING 19975
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 6|r]
+}
+
+STRING 19976
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 1|r]
+}
+
+STRING 19977
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 7|r]
+}
+
+STRING 19978
+// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 19979
+// Abilities: A0Z5 (Walk the Plank!), Name (Name)
+{
+Walk the Plank!
+}
+
+STRING 19980
+// Abilities: A0Z5 (Walk the Plank!), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Walk the Plank! - [|cffffcc00Level %d|r]
+}
+
+STRING 19981
+// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19982
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 9|r]
+}
+
+STRING 19983
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 8|r]
+}
+
+STRING 19984
+// Abilities: A0Z5 (Walk the Plank!), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Walk the Plank! - [|cffffcc00Level 10|r]
+}
+
+STRING 19985
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool8>s
+}
+
+STRING 19986
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool9>s
+}
+
+STRING 19987
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool10>s
+}
+
+STRING 19988
+// Abilities: A0Z5 (Walk the Plank!), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool1>-<A0Z5,Cool10>s
+}
+
+STRING 19989
+// Abilities: A0Z5 (Walk the Plank!), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 19990
+// Abilities: A0Z5 (Walk the Plank!), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool1>s
+}
+
+STRING 19992
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff2080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur2> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool2> seconds|r
+}
+
+STRING 19993
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff3080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur3> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool3> seconds|r
+}
+
+STRING 19994
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff4080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur4> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool4> seconds|r
+}
+
+STRING 19995
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff5080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur5> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool5> seconds|r
+}
+
+STRING 19996
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff6080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur6> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool6> seconds|r
+}
+
+STRING 19997
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff7080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur7> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool7> seconds|r
+}
+
+STRING 19998
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 2|r]
+}
+
+STRING 19999
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 3|r]
+}
+
+STRING 20000
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 4|r]
+}
+
+STRING 20001
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 5|r]
+}
+
+STRING 20002
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 6|r]
+}
+
+STRING 20003
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 9|r]
+}
+
+STRING 20004
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 7|r]
+}
+
+STRING 20005
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 8|r]
+}
+
+STRING 20006
+// Abilities: A0Z6 (Pirate's Scorn), Name (Name)
+{
+Pirate's Scorn
+}
+
+STRING 20007
+// Abilities: A0Z3 (Plunder), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Plunder - [|cffffcc00Level 10|r]
+}
+
+STRING 20008
+// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 20009
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 9|r]
+}
+
+STRING 20010
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 8|r]
+}
+
+STRING 20011
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Skygate - [|cffffcc00Level 10|r]
+}
+
+STRING 20012
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff8080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur8> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool8> seconds|r
+}
+
+STRING 20013
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff9080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur9> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool9> seconds|r
+}
+
+STRING 20014
+// Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
+{
+Schala calls down lightning from the sky that bombards the target area.
+|cff10080ffMana Cost: 5% Max Mana per second
+|cffff2020Channel Duration: <A0YF,Dur10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0YF,Cool10> seconds|r
+}
+
+STRING 20016
+// Abilities: A0Z6 (Pirate's Scorn), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 20017
+{
+Type "r" to revert.
+Transformations:
+[lvl 35]  1.30x "fp"
+[lvl 85]  1.70x "fp"
+[lvl 125] 2.00x "fp"
+[lvl 150] 2.30x "fp" [Unlock |cffFF2020[F] Pirate's Scorn|r]
+[lvl 150] Spawns the |cff00FFFFCrystal Coconut|r somewhere on the map. (limit 1 per game)
+|cffffcc00Booty:|r +0.1x for each rare item held. +0.3x for holding the |cff00FFFFCrystal Coconut|r
+}
+
+STRING 20018
+// Units: H07Y (Skurge of the Seven Seas), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Kaptain Skurvy
+}
+
+STRING 20019
+{
+[|cffffcc00Unlock|r] |cff00FFFFCrystal Coconut|r
+Skurvy has heard rumors that thar be a |cff00FFFFCrystal Coconut|r somewhere on this island. If he finds it, he will gain extraordinary power!
+}
+
+STRING 20023
+// Items: I04Y (|cff00ffffCrystal Coconut|r), Tip (Tooltip - Basic)
+{
+Take Crystal Coconut
+}
+
+STRING 20024
+// Units: H07Y (Skurge of the Seven Seas), Tip (Tooltip - Basic)
+{
+[|cffffff00Z|r] Choose Kaptain Skurvy
+}
+
+STRING 20025
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 20026
+// Abilities: A0Z7 (Book Skurvy Passives), Name (Name)
+{
+Book Skurvy Passives
+}
+
+STRING 20027
+// Abilities: A0Z8 (Skurvy Attack Passive), Name (Name)
+{
+Skurvy Attack Passive
+}
+
+STRING 20028
+// Abilities: A0Z8 (Skurvy Attack Passive), EditorSuffix (Editor Suffix)
+{
+(skurvy
+}
+
+STRING 20029
+// Abilities: A0Z9 (Skurvy Crit Passive), Name (Name)
+{
+Skurvy Crit Passive
+}
+
+STRING 20030
+// Abilities: A0Z9 (Skurvy Crit Passive), EditorSuffix (Editor Suffix)
+{
+(skurvy
+}
+
+STRING 20031
+// Buffs/Effects: B05C (), Buffubertip (Tooltip - Extended)
+{
+Skurvy's Hand Kannon grants him increased damage, range, and critical strike
+}
+
+STRING 20032
+// Buffs/Effects: B05C (), Bufftip (Tooltip)
+{
+Skurvy's Hand Kannon
+}
+
+STRING 20033
+// Buffs/Effects: B05D (), Buffubertip (Tooltip - Extended)
+{
+Skurvy's Big Kannon grants him increased damage, range, and critical strike
+}
+
+STRING 20034
+// Buffs/Effects: B05D (), Bufftip (Tooltip)
+{
+Skurvy's Big Kannon
+}
+
+STRING 20040
+{
+The |cff00ffffCrystal Coconut|r has been discovered!
+}
+
+STRING 20042
+// Items: I04Y (|cff00ffffCrystal Coconut|r), Name (Name)
+{
+|cff00ffffCrystal Coconut|r
+}
+
+STRING 20043
+// Abilities: A00Z (Leap), Researchubertip (Tooltip - Learn - Extended)
+{
+Saitama leaps from one point to another, dealing damage upon landing.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A00Z,Cool1> - <A00Z,Cool1> seconds|r
+}
+
+STRING 20044
+// Abilities: A0ZA (Extraordinary Power), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks the power of the |cff00ffffCrystal Coconut|r
+|cffffff00+50% spell amp
++99 ms
+|cff00ff00Duration: 15s
+|cff00ffffCooldown: 45s
+}
+
+STRING 20056
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool1> seconds|r
+}
+
+STRING 20057
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool3> seconds|r
+}
+
+STRING 20058
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool4> seconds|r
+}
+
+STRING 20059
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool5> seconds|r
+}
+
+STRING 20060
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool6> seconds|r
+}
+
+STRING 20061
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool7> seconds|r
+}
+
+STRING 20062
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool8> seconds|r
+}
+
+STRING 20063
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool9> seconds|r
+}
+
+STRING 20064
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool10> seconds|r
+}
+
+STRING 20065
+// Abilities: A0Z3 (Plunder), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool1> - <A0Z3,Cool10> seconds|r
+}
+
+STRING 20066
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool1> seconds|r
+}
+
+STRING 20067
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1>  seconds|r
+}
+
+STRING 20068
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool2>  seconds|r
+}
+
+STRING 20069
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool3>  seconds|r
+}
+
+STRING 20070
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool4>  seconds|r
+}
+
+STRING 20071
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool5>  seconds|r
+}
+
+STRING 20072
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool6>  seconds|r
+}
+
+STRING 20073
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool7>  seconds|r
+}
+
+STRING 20074
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool8>  seconds|r
+}
+
+STRING 20075
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool9>  seconds|r
+}
+
+STRING 20076
+// Abilities: A0Z4 (The Mirror Never Lies), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool10>  seconds|r
+}
+
+STRING 20077
+// Abilities: A0Z4 (The Mirror Never Lies), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy summons a mirror and tricks the targeted hero into mirroring his movements.|n|CffFFFF00Duration: 4s|r|r|n|cff00ffffCooldown: <A0Z4,Cool1> - <A0Z4,Cool10> seconds|r
+}
+
+STRING 20078
+// Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Pirate's Scorn
+}
+
+STRING 20079
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 20080
+// Abilities: A0Z6 (Pirate's Scorn), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Pirate's Scorn
+}
+
+STRING 20081
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 20083
+// Abilities: A0ZA (Extraordinary Power), Name (Name)
+{
+Extraordinary Power
+}
+
+STRING 20084
+// Abilities: A0ZA (Extraordinary Power), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Extraordinary Power
+}
+
+STRING 20085
+// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
+STRING 20087
+// Abilities: A0ZA (Extraordinary Power), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 20088
+// Buffs/Effects: B05E (), Buffubertip (Tooltip - Extended)
+{
+This unit possesses extraordinary power, granting +50% spell damage.
+}
+
+STRING 20089
+// Buffs/Effects: B05E (), Bufftip (Tooltip)
+{
+Extraordinary Power
+}
+
+STRING 20090
+// Abilities: A0Z3 (Plunder), EditorSuffix (Editor Suffix)
+{
+(skurvy)
+}
+
+STRING 20091
+// Abilities: A0Z3 (Plunder), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy commands a dastardly bird to steal an item from his enemies. The bird cannot steal items that are too heavy.
+|cff00ff00Damage: Agi * lvl * ? + 20% per enemy item
+|cff00ffffCooldown: <A0Z3,Cool2> seconds|r
+}
+
+STRING 20092
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool2> seconds|r
+}
+
+STRING 20093
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool3> seconds|r
+}
+
+STRING 20094
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool4> seconds|r
+}
+
+STRING 20095
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool5> seconds|r
+}
+
+STRING 20096
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool6> seconds|r
+}
+
+STRING 20097
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool7> seconds|r
+}
+
+STRING 20098
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool8> seconds|r
+}
+
+STRING 20099
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool9> seconds|r
+}
+
+STRING 20100
+// Abilities: A0Z0 (Big Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool10> seconds|r
+}
+
+STRING 20101
+// Abilities: A0Z0 (Big Kannon), Researchubertip (Tooltip - Learn - Extended)
+{
+Skurvy summons a kannon from the depths, disabling his other abilities and enabling the Kannon Fire ability. Also grants +100% attack damage.
+|cff00ff00Damage: Str * Lvl * ?
+|cff00ffffCooldown: <A0Z0,Cool1> - <A0Z0,Cool10> seconds|r
+}
+
+STRING 20102
+// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 6% of max HP plus 3% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% fire damage.
+Adds +1% fire damage for each heat above 50.
+|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
+}
+
+STRING 20103
+// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
+{
+Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 6% of max HP plus 3% of max HP per second. Activate this ability again to disable it.
+|cffffff00Adds +10% frost damage.
+Adds +1% frost damage for each heat below 50.
+|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 

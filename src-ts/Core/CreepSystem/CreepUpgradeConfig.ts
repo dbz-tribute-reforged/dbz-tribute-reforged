@@ -134,6 +134,15 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DinosaurSmall, 0.9),
             new RandomCreepType(Creep.Pterodactyl, 0.1)
           ]],
+          [Creep.CrocodileGIant, [
+            new RandomCreepType(Creep.CrocodileMother, 1.0),
+          ]],
+          [Creep.NamekianFrog, [
+            new RandomCreepType(Creep.CrocodileGIant, 0.25),
+          ]],
+          [Creep.FriezaScout, [
+            new RandomCreepType(Creep.FriezaHenchmen, 0.25)
+          ]],
         ]
       )
     },
@@ -179,9 +188,6 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           [Creep.FishBaby, [
             new RandomCreepType(Creep.FishAdult, 0.85),
             new RandomCreepType(Creep.SeaSerpent, 0.15),
-          ]],
-          [Creep.CrocodileGIant, [
-            new RandomCreepType(Creep.CrocodileMother, 1.0),
           ]],
           [Creep.DinosaurTeen, [
             new RandomCreepType(Creep.Pterodactyl, 0.65),

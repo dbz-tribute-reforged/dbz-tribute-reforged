@@ -121,10 +121,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BabidiSaga, SagaState.Completed ],
     ],
     // z movie branch
-    TurlesSaga: [
+    WheeloSaga: [
       [ DeadZoneSaga, SagaState.Completed ],
     ],
-    WheeloSaga: [
+    TurlesSaga: [
       [ VegetaSaga, SagaState.Completed ],
     ],
     LordSlugSaga: [

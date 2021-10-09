@@ -13,8 +13,8 @@ export class CustomAbilityInput {
     public castUnit?: unit,
     public damageMult?: number,
     public isBeamClash?: boolean,
+    public spawnedBeam?: unit
   ) {
-
   }
 
   clone(): CustomAbilityInput {
@@ -29,6 +29,7 @@ export class CustomAbilityInput {
       this.castUnit,
       this.damageMult,
       this.isBeamClash,
+      this.spawnedBeam
     );
   }
 }

@@ -804,6 +804,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Super17.ABSORPTION,
       AbilityNames.Super17.ANDROID_BARRIER,
     ]],
+    
+    // skurvy
+    [Id.skurvy, [
+      AbilityNames.Skurvy.BIG_KANNON,
+      AbilityNames.Skurvy.KANNON_FIRE,
+      AbilityNames.Skurvy.RUN_YE_THROUGH,
+      AbilityNames.Skurvy.PLUNDER,
+      AbilityNames.Skurvy.MIRROR_NEVER_LIES,
+      AbilityNames.Skurvy.WALK_THE_PLANK,
+      AbilityNames.Skurvy.PIRATES_SCORN,
+      AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+  ]],
 
     // rusty
     [Id.rustTyranno, [

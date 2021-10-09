@@ -32,7 +32,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.superJanemba);
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, 9000);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();

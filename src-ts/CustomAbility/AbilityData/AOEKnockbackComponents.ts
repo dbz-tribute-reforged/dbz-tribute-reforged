@@ -1396,4 +1396,38 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     isPersistent: true,
   },
+  // skurvy kannon
+  {
+    name: "knockback skurvy kannon",
+    repeatInterval: 1, 
+    startTick: 1,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 180, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
+  // skurvy pirate scorn cannon
+  {
+    name: "knockback skurvy pirate scorn cannon",
+    repeatInterval: 1, 
+    startTick: -1,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
 ];

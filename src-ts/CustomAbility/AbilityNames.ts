@@ -180,41 +180,41 @@ export module AbilityNames {
     export const MEDIUM_PUNCH: string = "Medium Punch!";
     export const HEAVY_PUNCH: string = "Heavy Punch!";
     
-    export const DASH_FORWARD: string = "Dash Forward!";
-    export const DASH_LEFT: string = "Dash Left!";
-    export const DASH_RIGHT: string = "Dash Right!";
+    export const DASH_FORWARD: string = "YamchaR Dash Forward!";
+    export const DASH_LEFT: string = "YamchaR Dash Left!";
+    export const DASH_RIGHT: string = "YamchaR Dash Right!";
     
-    export const SUPER_SPIRIT_BALL: string = "Super Spirit Ball!";
-    export const FULL_POWER_KAMEHAMEHA: string = "Full Power Kame!";
-    export const WOLF_FANG_BLAST: string = "Wolf Fang Blast!";
+    export const SUPER_SPIRIT_BALL: string = "YamchaR Super Spirit Ball!";
+    export const FULL_POWER_KAMEHAMEHA: string = "YamchaR Full Power Kame!";
+    export const WOLF_FANG_BLAST: string = "YamchaR Wolf Fang Blast!";
     
-    export const UPPERCUT: string = "Uppercut!";
-    export const METEOR_CRASH: string = "Meteor Crash!";
-    export const SLEDGEHAMMER: string = "Sledgehammer!";
+    export const UPPERCUT: string = "YamchaR Uppercut!";
+    export const METEOR_CRASH: string = "YamchaR Meteor Crash!";
+    export const SLEDGEHAMMER: string = "YamchaR Sledgehammer!";
 
-    export const WOLF_FANG_HURRICANE: string = "Wolf Fang Hurricane!";
-    export const WOLF_FANG_VOLLEY: string = "Wolf Fang Volley!";
-    export const REVERSE_WOLF_FANG_BLAST: string = "Reverse Wolf Fang Blast!";
+    export const WOLF_FANG_HURRICANE: string = "YamchaR Wolf Fang Hurricane!";
+    export const WOLF_FANG_VOLLEY: string = "YamchaR Wolf Fang Volley!";
+    export const REVERSE_WOLF_FANG_BLAST: string = "YamchaR Reverse Wolf Fang Blast!";
     
-    export const BLINDING_WOLF_FANG_FIST: string = "Blinding Wolf Fang Fist!";
-    export const NEO_WOLF_FANG_BLAST: string = "Neo Wolf Fang Blast!";
-    export const NEO_WOLF_FANG_FIST: string = "Neo Wolf Fang Fist!";
+    export const BLINDING_WOLF_FANG_FIST: string = "YamchaR Blinding Wolf Fang Fist!";
+    export const NEO_WOLF_FANG_BLAST: string = "YamchaR Neo Wolf Fang Blast!";
+    export const NEO_WOLF_FANG_FIST: string = "YamchaR Neo Wolf Fang Fist!";
     
-    export const SPIRIT_BALL: string = "Spirit Ball!";
-    export const FLASH_KAME: string = "Flash Kame!";
-    export const WOLF_FANG_BARRAGE: string = "Wolf Fang Barrage!";
+    export const SPIRIT_BALL: string = "YamchaR Spirit Ball!";
+    export const FLASH_KAME: string = "YamchaR Flash Kame!";
+    export const WOLF_FANG_BARRAGE: string = "YamchaR Wolf Fang Barrage!";
 
-    export const WOLF_FANG_PACK_ATTACK: string = "Wolf Fang Pack Attack!";
-    export const WOLF_FANG_FLASH: string = "Wolf Fang Flash!";
-    export const WOLF_FANG_FINISHER: string = "Wolf Fang Finisher!";
+    export const WOLF_FANG_PACK_ATTACK: string = "YamchaR Wolf Fang Pack Attack!";
+    export const WOLF_FANG_FLASH: string = "YamchaR Wolf Fang Flash!";
+    export const WOLF_FANG_FINISHER: string = "YamchaR Wolf Fang Finisher!";
 
-    export const SUMMON_PUAR: string = "Summon Puar!";
-    export const YAMCHA_BLAST: string = "Yamcha Blast!";
-    export const PLAY_DEAD: string = "Play Dead!";
+    export const SUMMON_PUAR: string = "YamchaR Summon Puar!";
+    export const YAMCHA_BLAST: string = "YamchaR Yamcha Blast!";
+    export const PLAY_DEAD: string = "YamchaR Play Dead!";
 
-    export const HOMERUN: string = "Homerun!";
-    export const WOLF_FANG_PITCHING_FIST: string = "Wolf Fang Pitching Fist!";
-    export const BATTER_UP: string = "Batter Up!";
+    export const HOMERUN: string = "YamchaR Homerun!";
+    export const WOLF_FANG_PITCHING_FIST: string = "YamchaR Wolf Fang Pitching Fist!";
+    export const BATTER_UP: string = "YamchaR Batter Up!";
 
     export const SPARKING: string = "Sparking!";
   }
@@ -669,6 +669,17 @@ export module AbilityNames {
     export const ANDROID_BARRIER: string = Android17DBS.ANDROID_BARRIER;
     export const ABSORPTION: string = "Super 17 Absorption";
     export const PASSIVE: string = "Super 17 Passive";
+  }
+
+  export module Skurvy {
+    export const BIG_KANNON: string = "Skurvy Big Kannon";
+    export const KANNON_FIRE: string = "Skurvy Kannon Fire";
+    export const RUN_YE_THROUGH: string = "Skurvy I'll Run Ye Through";
+    export const PLUNDER: string = "Skurvy Plunder";
+    export const MIRROR_NEVER_LIES: string = "Skurvy the Mirror Never Lies";
+    export const WALK_THE_PLANK: string = "Skurvy Walk The Plank";
+    export const PIRATES_SCORN: string = "Skurvy Pirate's Scorn";
+    export const EXTRAORDINARY_POWER: string = "Skurvy Extraordinary Power";
   }
 
 

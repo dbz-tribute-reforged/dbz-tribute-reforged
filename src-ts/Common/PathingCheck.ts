@@ -85,26 +85,32 @@ export module PathingCheck {
     unit: unit, 
     target: Vector2D, 
     range: number = defaultMaxRange,
-  ) {
+  ): boolean {
     if (isGroundWalkable(target, range)) {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
+      return true;
     }
+    return false;
   }
 
-  export function moveFlyingUnitToCoord(unit: unit, target: Vector2D) {
+  export function moveFlyingUnitToCoord(unit: unit, target: Vector2D): boolean {
     if (isFlyingWalkable(target)) {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
+      return true;
     }
+    return false;
   }
 
-  export function moveFlyingUnitToCoordExcludingDeepWater(unit: unit, target: Vector2D) {
+  export function moveFlyingUnitToCoordExcludingDeepWater(unit: unit, target: Vector2D): boolean {
     if (isFlyingWalkable(target) && !isDeepWater(target))
     {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
+      return true;
     }
+    return false;
   }
 
   export function isGroundSmooth(target: Vector2D): boolean {

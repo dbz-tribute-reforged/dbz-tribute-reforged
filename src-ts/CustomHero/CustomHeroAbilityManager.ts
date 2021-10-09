@@ -33,6 +33,10 @@ export class CustomHeroAbilityManager {
     return this.abilities.get(abilityName);
   }
 
+  public getCustomAbilities(): IterableIterator<CustomAbility> {
+    return this.abilities.values();
+  }
+
   public add(name: string, ability: CustomAbility): this {
     this.abilities.set(name, ability);
     return this;

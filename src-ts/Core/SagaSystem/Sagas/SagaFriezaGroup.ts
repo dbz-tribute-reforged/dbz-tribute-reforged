@@ -286,7 +286,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 45;
     this.stats = 100;
   }
 

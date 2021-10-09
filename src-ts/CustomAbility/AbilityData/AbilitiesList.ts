@@ -1,7 +1,7 @@
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CostType } from "Common/Constants";
 
-const YAMCHAR_CD = 7;
+const YAMCHAR_CD = 10;
 
 export const AbilitiesList = [
   // copy from here
@@ -1040,6 +1040,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi super ghost kamikaze attack" },
+      { name: "multi super ghost kamikaze attack reverse" },
     ],
   },
   // -------------------------------------------
@@ -1067,6 +1068,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi super ghost kamikaze attack 2" },
+      { name: "multi super ghost kamikaze attack 2 reverse" },
     ],
   },
   // -------------------------------------------
@@ -3119,7 +3121,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3171,7 +3173,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.LIGHT_PUNCH,
     currentCd: 0,
-    maxCd: 0.03,
+    maxCd: 0.5,
     costType: CostType.MP,
     costAmount: 0,
     duration: 1,
@@ -3200,7 +3202,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.MEDIUM_PUNCH,
     currentCd: 0,
-    maxCd: 0.03,
+    maxCd: 0.5,
     costType: CostType.MP,
     costAmount: 0,
     duration: 1,
@@ -3229,7 +3231,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.HEAVY_PUNCH,
     currentCd: 0,
-    maxCd: 0.03,
+    maxCd: 0.5,
     costType: CostType.MP,
     costAmount: 0,
     duration: 1,
@@ -8069,6 +8071,119 @@ export const AbilitiesList = [
       { name: "damage shoto flashfire fist dps" },
       { name: "damage shoto flashfire fist explosion" },
       { name: "sfx shoto flashfire fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.KANNON_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell alternate",
+    icon: {
+      enabled: "BTNSkurvyQ2.blp",
+      disabled: "BTNSkurvyQ2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Skurvy.KANNON_FIRE,
+      body: 
+        AbilityNames.Skurvy.KANNON_FIRE,
+    },
+    components: [
+      { name: "multi skurvy kannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.RUN_YE_THROUGH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell Throw",
+    icon: {
+      enabled: "BTNSkurvyW.blp",
+      disabled: "BTNSkurvyW.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Skurvy.RUN_YE_THROUGH,
+      body: 
+        AbilityNames.Skurvy.RUN_YE_THROUGH,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi skurvy run ye through" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.PIRATES_SCORN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell Throw",
+    icon: {
+      enabled: "BTNSkurvyW.blp",
+      disabled: "BTNSkurvyW.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Skurvy.RUN_YE_THROUGH,
+      body: 
+        AbilityNames.Skurvy.RUN_YE_THROUGH,
+    },
+    components: [
+      { name: "beam skurvy pirate scorn boat" },
+      { name: "multi skurvy pirate scorn cannon 1" },
+      { name: "multi skurvy pirate scorn cannon 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNCrystalCoconut.blp",
+      disabled: "BTNCrystalCoconut.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+      body: 
+        AbilityNames.Skurvy.EXTRAORDINARY_POWER,
+    },
+    components: [
+      { name: "spell amp extraordinary power" },
+      { name: "dash ground forward extraordinary power" },
+      { name: "sfx unlock potential" },
     ],
   },
   // -------------------------------------------
