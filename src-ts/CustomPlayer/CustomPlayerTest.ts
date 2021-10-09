@@ -23,6 +23,7 @@ import { setupCustomUI } from "./SetupCustomUI";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
+import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -245,21 +246,30 @@ export function CustomPlayerTest() {
   const updatePlayerOrderPoint = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
     const unitTypeId = GetUnitTypeId(GetTriggerUnit());
+    const targetUnit = GetOrderTargetUnit();
     if (
       GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
       unitTypeId != Constants.dummyBeamUnitId && 
       unitTypeId != Constants.dummyCasterId
     ) {
-      const x = GetOrderPointX();
-      const y = GetOrderPointY();
-      if (x != 0 && y != 0) {
-        const playerId = GetPlayerId(GetTriggerPlayer());
-        Globals.customPlayers[playerId].orderPoint.x = x;
-        Globals.customPlayers[playerId].orderPoint.y = y;
+      const playerId = GetPlayerId(GetTriggerPlayer())
+      if (targetUnit) {
+        Globals.customPlayers[playerId].orderPoint.setUnit(targetUnit);
+      } else {
+        const x = GetOrderPointX();
+        const y = GetOrderPointY();
+        if (x != 0 && y != 0) {
+          Globals.customPlayers[playerId].orderPoint.x = x;
+          Globals.customPlayers[playerId].orderPoint.y = y;
+        }
       }
+    }
+    if (unitTypeId == Id.skurvy) {
+      skurvyMirrorProcessOrder();
     }
     return false;
   }));
@@ -1185,6 +1195,9 @@ export function CustomPlayerTest() {
 
     SetupYamchaCombos();
 
+    SetupSkurvyPlunder();
+    SetupSkurvyMirror();
+
     SetupMysteryCapsuleBox();
 
     SetupCustomAbilityRefresh();
@@ -1744,7 +1757,6 @@ export function SetupOmegaShenronShadowFist() {
   const shadowFistAOE = 350;
   const shadowFistDuration = 48;
   const tickRate = 0.03;
-  const dballItem = FourCC("I01V");
   const maxDragonBallsToSteal = 1;
   const maxSizedDragonBallStackToSteal = 7;
   const targetGroup = CreateGroup();
@@ -1773,7 +1785,7 @@ export function SetupOmegaShenronShadowFist() {
           
           let stolenDragonBalls = 0;
 
-          const casterDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(caster, dballItem);
+          const casterDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(caster, DragonBallsConstants.dragonBallItem);
           const casterInventoryCount = UnitInventoryCount(caster);
 
           ForGroup(targetGroup, () => {
@@ -1782,7 +1794,7 @@ export function SetupOmegaShenronShadowFist() {
               UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
               totalStolenDragonBalls < maxDragonBallsToSteal
             ) {
-              const targetDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(targetUnit, dballItem);
+              const targetDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(targetUnit, DragonBallsConstants.dragonBallItem);
               if (targetDragonBallIndex >= 0) {
                 const stealItem = UnitItemInSlot(targetUnit, targetDragonBallIndex);
                 const numCharges = GetItemCharges(stealItem);
@@ -1799,7 +1811,7 @@ export function SetupOmegaShenronShadowFist() {
                     }
                   } else if (casterInventoryCount <= 5) {
                     // no dball but has space
-                    UnitAddItemById(caster, dballItem);
+                    UnitAddItemById(caster, DragonBallsConstants.dragonBallItem);
                     if (numCharges == 1) {
                       RemoveItem(stealItem);
                     }
@@ -1808,7 +1820,7 @@ export function SetupOmegaShenronShadowFist() {
                     if (numCharges == 1) {
                       SetItemPosition(stealItem, targetPos.x, targetPos.y);
                     } else {
-                      CreateItem(dballItem, targetPos.x, targetPos.y);
+                      CreateItem(DragonBallsConstants.dragonBallItem, targetPos.x, targetPos.y);
                     }
                   }
                   ++stolenDragonBalls;
@@ -3081,6 +3093,8 @@ export function SetupYamchaCombos() {
   // 0: 1st slot
   // 1: 2nd slot
   // 2: 3rd slot
+  const yamchaComobCdInc = 0.25;
+  const yamchaComobCdMax = 25;
 
 
   TriggerAddAction(Globals.genericSpellTrigger, () => {
@@ -3203,7 +3217,7 @@ export function SetupYamchaCombos() {
             + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
           );
 
-          const dmgMult = 0.44 + (GetHeroLevel(unit) * 0.00044);
+          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0004);
 
           // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
           // fire a special qwe
@@ -3220,6 +3234,32 @@ export function SetupYamchaCombos() {
           );
 
           if (customHero.canCastAbility(abilName, abilityInput)) {
+            // apply cooldown penalty
+
+            const abilNames = [];
+            let numCd = 0;
+            for (const customAbility of customHero.getCustomAbilities()) {
+              if (
+                SubString(customAbility.getName(), 0, 7) == "YamchaR"
+                && customAbility.isOnCooldown()
+              ) {
+                abilNames.push(customAbility.getName());
+                numCd++;
+              }
+            }
+
+            for (const name of abilNames) {
+              const customAbility = customHero.getAbility(name);
+              if (customAbility) {
+                customAbility.setCd(
+                  Math.min(
+                    yamchaComobCdMax,
+                    customAbility.getCurrentCd() + (yamchaComobCdInc * numCd)
+                  )
+                );
+              }
+            }
+
             TextTagHelper.showPlayerColorTextOnUnit(
               abilName, 
               playerId, 
@@ -3242,6 +3282,24 @@ export function SetupYamchaCombos() {
             // if (hPunch) {
             //   hPunch.setCd(0);
             // }
+          } else {
+            const customAbil = customHero.getAbility(abilName);
+            if (customAbil) {
+              const playerForce = Globals.tmpForce;
+              ForceClear(playerForce);
+              ForceAddPlayer(playerForce, player);
+              TextTagHelper.showPlayerColorTextToForce(
+                R2S(customAbil.getCurrentCd()),
+                GetUnitX(customHero.unit),
+                GetUnitY(customHero.unit),
+                0, 0, 0,
+                playerForce,
+                10, 
+                255, 255, 255, 255,
+                40, 90, 2.0, 3.0
+              );
+              ForceClear(playerForce);
+            }
           }
         }
       }
@@ -3251,6 +3309,241 @@ export function SetupYamchaCombos() {
   // const resetAfterComboTrigger = CreateTrigger();
 }
 
+
+
+
+
+export function SetupSkurvyPlunder() {
+  const plunderAOE = 350;
+  const plunderDuration = 80; // RTT 
+  const plunderSendOutDuration = 40;
+  const plunderSpeed = 40;
+  const plunderDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.7;
+  const plunderDamageMultPerItem = 0.2;
+  const maxPlunderItems = 1;
+
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.skurvyPlunder) {
+      const caster = GetTriggerUnit();
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+
+      const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+      if (!customHero) return;
+      
+      Globals.tmpVector.setPos(GetUnitX(caster), GetUnitY(caster));
+      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+      const direction = CoordMath.angleBetweenCoords(Globals.tmpVector, targetPos);
+
+      const plunderBird = CreateUnit(
+        player, 
+        Constants.dummyBeamUnitId, 
+        GetUnitX(caster), 
+        GetUnitY(caster),
+        direction
+      );
+      SetUnitScale(plunderBird, 1.5, 1.5, 1.5);
+      BlzSetUnitSkin(plunderBird, Id.skurvyPlunderBird);
+      UnitAddAbility(plunderBird, Id.inventoryHero);
+      PauseUnit(plunderBird, true);
+
+      const newHP = 150 * GetHeroLevel(caster) + 1000;
+      BlzSetUnitMaxHP(plunderBird, newHP);
+      SetUnitState(plunderBird, UNIT_STATE_LIFE, newHP);
+      // ShowUnit(plunderBird, false);
+      
+      let time = 0;
+      let itemsStolen = 0;
+      let birdSpeed = plunderSpeed;
+      let lootSignalSfx: effect | undefined = undefined;
+      TimerStart(CreateTimer(), 0.03, true, () => {
+        if (
+          time > plunderDuration 
+          // || itemsStolen >= maxPlunderItems
+          || UnitHelper.isUnitDead(plunderBird)
+        ) {
+          // drop loot
+          if (itemsStolen > 0) {
+            Globals.tmpVector.setUnit(plunderBird);
+            for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+              const lootItem = UnitItemInSlot(plunderBird, i);
+              SetItemPosition(lootItem, Globals.tmpVector.x, Globals.tmpVector.y);
+            }
+          }
+          if (lootSignalSfx) {
+            DestroyEffect(lootSignalSfx);
+          }
+          RemoveUnit(plunderBird);
+          DestroyTimer(GetExpiredTimer());
+        } else {
+          Globals.tmpVector.setUnit(plunderBird);
+
+          if (
+            time > plunderSendOutDuration
+            || itemsStolen > 0
+          ) {
+            // make bird return to caster
+            targetPos.setUnit(caster);
+            SetUnitFacing(plunderBird, CoordMath.angleBetweenCoords(Globals.tmpVector, targetPos));
+            birdSpeed = plunderSpeed * 2;
+          }
+
+          Globals.tmpVector.polarProjectCoords(Globals.tmpVector, GetUnitFacing(plunderBird), birdSpeed);
+          PathingCheck.moveFlyingUnitToCoord(plunderBird, Globals.tmpVector);
+          
+          Globals.tmpVector.setUnit(plunderBird);
+          GroupEnumUnitsInRange(
+            Globals.tmpUnitGroup, 
+            Globals.tmpVector.x, 
+            Globals.tmpVector.y, 
+            plunderAOE,
+            null
+          );
+
+          ForGroup(Globals.tmpUnitGroup, () => {
+            const targetUnit = GetEnumUnit();
+            if (
+              UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
+              itemsStolen < maxPlunderItems
+            ) {
+              for (let i = 0; i < bj_MAX_INVENTORY && itemsStolen < maxPlunderItems; ++i) {
+                const stealItem = UnitItemInSlot(targetUnit, i);
+                const itemId = GetItemTypeId(stealItem);
+                if (
+                  itemsStolen < maxPlunderItems
+                  && BlzGetItemBooleanField(stealItem, ITEM_BF_CAN_BE_DROPPED)
+                  && BlzGetItemBooleanField(stealItem, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
+                  && itemId != ItemConstants.SagaDrops.KING_COLD_ARMOR
+                  && itemId != ItemConstants.SagaDrops.BROLY_FUR
+                  && itemId != DragonBallsConstants.dragonBallItem
+                ) {
+                  AOEDamage.dealDamageRaw(
+                    GetUnitAbilityLevel(caster, spellId),
+                    customHero.spellPower,
+                    plunderDamageMult,
+                    1.0 + plunderDamageMultPerItem * UnitHelper.countInventory(targetUnit),
+                    caster,
+                    bj_HEROSTAT_AGI,
+                    targetUnit
+                  );
+
+                  UnitDropItemPoint(targetUnit, stealItem, Globals.tmpVector.x, Globals.tmpVector.y);
+                  UnitAddItem(plunderBird, stealItem);
+                  ++itemsStolen;
+
+                  const auraSfx = AddSpecialEffect(
+                    "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl",
+                    Globals.tmpVector.x, Globals.tmpVector.y
+                  );
+                  BlzSetSpecialEffectScale(auraSfx, 2.0);
+                  DestroyEffect(auraSfx);
+
+                  lootSignalSfx = AddSpecialEffectTarget(
+                    "Objects\\InventoryItems\\PotofGold\\PotofGold.mdl",
+                    plunderBird,
+                    "overhead"
+                  );
+                }
+              }
+            } 
+            else if (
+              itemsStolen > 0 
+              && targetUnit == caster 
+              && !UnitHelper.isUnitDead(caster))
+            { 
+              time = plunderDuration;
+              targetPos.setUnit(caster);
+              // transfer loot to caster
+              for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+                const lootItem = UnitItemInSlot(plunderBird, i);
+                if (lootItem) {
+                  SetItemPosition(lootItem, targetPos.x, targetPos.y);
+                  UnitAddItem(caster, lootItem);
+                }
+              }
+            }
+          });
+
+          ++time;
+          GroupClear(Globals.tmpUnitGroup);
+        }
+      });
+    }
+  });
+}
+
+export function skurvyMirrorProcessOrder() {
+  const unit = GetTriggerUnit();
+  const unitId = GetHandleId(unit);
+  const target = GetOrderTargetUnit();
+  const order = GetIssuedOrderId();
+  const mirrorState: number = LoadInteger(Globals.genericSpellHashtable, unitId, 0);
+
+  if (mirrorState == 1) {
+    const mirrorTarget: unit = LoadUnitHandle(Globals.genericSpellHashtable, unitId, 1);
+
+    if (order == OrderIds.STOP) {
+      IssueImmediateOrderById(mirrorTarget, OrderIds.STOP);
+    } 
+    else if (!target) {
+      const x = GetOrderPointX();
+      const y = GetOrderPointY();
+      if (x != 0 && y != 0) {
+        IssuePointOrderById(mirrorTarget, OrderIds.MOVE, x, y);
+      }
+    } 
+    else if (order == OrderIds.ATTACK) {
+      IssueTargetOrderById(mirrorTarget, OrderIds.ATTACK, target);
+    }
+  }
+}
+
+export function SetupSkurvyMirror() {
+  // globals hashtable
+  // 0: is mirrored
+  // 1: mirror target
+
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.skurvyMirrorNeverLies) {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      // const player = GetTriggerPlayer();
+      const target = GetSpellTargetUnit();
+
+      if (LoadInteger(Globals.genericSpellHashtable, unitId, 0) == 0) {
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 1);
+        SaveUnitHandle(Globals.genericSpellHashtable, unitId, 1, target);
+
+        Globals.tmpVector.setUnit(unit);
+        Globals.tmpVector2.setUnit(target);
+        const angle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+        Globals.tmpVector.polarProjectCoords(
+          Globals.tmpVector,
+          angle,
+          0.5 * CoordMath.distance(Globals.tmpVector, Globals.tmpVector2)
+        );
+        
+        const sfx = AddSpecialEffect("SkurvyMirror.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+        BlzSetSpecialEffectScale(sfx, 1.5);
+        BlzSetSpecialEffectYaw(sfx, angle * CoordMath.degreesToRadians);
+ 
+        DestroyEffect(
+          AddSpecialEffect("SpiritBombShine.mdl", Globals.tmpVector.x, Globals.tmpVector.y)
+        );
+
+        TimerStart(CreateTimer(), 4.0, false, () => {
+          if (sfx) {
+            DestroyEffect(sfx);
+          }
+          FlushChildHashtable(Globals.genericSpellHashtable, unitId);
+          DestroyTimer(GetExpiredTimer());
+        });
+      }
+    }
+  });
+}
 
 
 export function SetupMysteryCapsuleBox() {

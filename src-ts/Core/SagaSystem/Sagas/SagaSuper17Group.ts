@@ -31,7 +31,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
     }
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();

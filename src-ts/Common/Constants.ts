@@ -16,6 +16,9 @@ export module Globals {
 
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();
+  export const tmpForce = CreateForce();
+  export const tmpVector = new Vector2D();
+  export const tmpVector2 = new Vector2D();
 }
 
 export module Constants {
@@ -194,6 +197,7 @@ export module OrderIds {
   export const HOLY_BOLT = 852092;
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
+  export const ATTACK = 851983
   export const MOVE = 851986
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
@@ -214,6 +218,8 @@ export module Capsules {
 }
 
 export module Id {
+  export const inventoryHero = FourCC("AInv");
+
   export const summonShenron = FourCC("I01V");
 
   export const allMight = FourCC("H09K");
@@ -250,6 +256,8 @@ export module Id {
   export const babidiBarrier = FourCC("A0LG");
   export const babidiMagic = FourCC("A0JQ");
   export const babidiDabura = FourCC("A03E");
+  export const babidiDaburaUnit = FourCC("O000");
+  export const babidiYakonUnit = FourCC("O009");
 
   export const bardock = FourCC("H08M");
   export const futureSight = FourCC('A0LN');
@@ -751,6 +759,7 @@ export module Id {
   export const skurvyPlank = FourCC("A0Z5");
   export const skurvyScorn = FourCC("A0Z6");
   export const skurvyPower = FourCC("A0ZA");
+  export const skurvyPlunderBird = FourCC("nalb");
 
   export const yamchaRLightPunch = FourCC("A0RC");
   export const yamchaRMediumPunch = FourCC("A0RD");

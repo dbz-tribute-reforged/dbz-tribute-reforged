@@ -144,16 +144,20 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     }
   }
 
-  reduceCurrentTick(amount: number) {
-    this.currentTick = Math.max(2, this.currentTick - amount);
-  }
-
   getCurrentCd(): number {
     return this.currentCd;
   }
 
   setCd(amount: number) {
     this.currentCd = amount;
+  }
+
+  isOnCooldown(): boolean {
+    return this.currentCd > 0;
+  }
+
+  reduceCurrentTick(amount: number) {
+    this.currentTick = Math.max(2, this.currentTick - amount);
   }
 
   setCurrentTick(amount: number) {

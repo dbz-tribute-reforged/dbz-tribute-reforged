@@ -36,7 +36,13 @@ export class CustomHero {
     this.spellPower = 1.0;
     this.currentSp = Constants.BASE_STAMINA;
     this.maxSp = Constants.BASE_STAMINA;
-    if(IsUnitType(unit, UNIT_TYPE_SUMMONED)) {
+
+    const id = GetUnitTypeId(unit);
+    if (
+      IsUnitType(unit, UNIT_TYPE_SUMMONED)
+      && id != Id.babidiDaburaUnit 
+      && id != Id.babidiYakonUnit
+    ) {
       this.currentSp *= 0.55;
       this.maxSp *= 0.55;
     }
@@ -52,7 +58,7 @@ export class CustomHero {
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
 
-    if (GetUnitTypeId(this.unit) == Id.donkeyKong) {
+    if (id == Id.donkeyKong) {
       this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
     } else {
       this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
@@ -129,6 +135,10 @@ export class CustomHero {
 
   public getAbility(name: string): CustomAbility | undefined {
     return this.abilities.getCustomAbilityByName(name);
+  }
+
+  public getCustomAbilities(): IterableIterator<CustomAbility> {
+    return this.abilities.getCustomAbilities();
   }
 
   public addAbility(name: string, ability: CustomAbility): this {

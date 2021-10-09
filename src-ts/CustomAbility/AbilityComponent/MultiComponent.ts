@@ -23,6 +23,7 @@ export class MultiComponent implements
   static readonly SOURCE_CASTER = 0;
   static readonly SOURCE_TARGET_UNIT = 1;
   static readonly SOURCE_TARGET_POINT = 2;
+  static readonly SOURCE_SPAWNED_BEAM = 3;
 
   protected hasStarted: boolean;
   protected angleCurrent: number;
@@ -36,6 +37,8 @@ export class MultiComponent implements
   protected replacementCoords: Map<AbilityComponent, Vector2D>;
   protected currentDelay: number;
   protected activeComponents: AbilityComponent[];
+
+  protected startAtMax: boolean;
 
   protected targettedPoint: Vector2D;
   protected newCoord: Vector2D;
@@ -74,6 +77,9 @@ export class MultiComponent implements
     this.replacementCoords = new Map();
     this.currentDelay = 0;
     this.activeComponents = [];
+
+    this.startAtMax = false;
+
     this.targettedPoint = new Vector2D();
     this.newCoord = new Vector2D();
   }
@@ -149,12 +155,12 @@ export class MultiComponent implements
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.fixedSourceCoords || !this.hasStarted) {
       if (this.targetSource == MultiComponent.SOURCE_CASTER) {
-        this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
+        this.sourceCoords.setUnit(source);
       } else if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT) {
         if (input.targetUnit) {
           this.sourceCoords.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
         } else {
-          this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
+          this.sourceCoords.setUnit(source);
         }
       } else if (this.targetSource == MultiComponent.SOURCE_TARGET_POINT) {
         if (this.useLastCastPoint) {
@@ -162,17 +168,29 @@ export class MultiComponent implements
         } else {
           this.sourceCoords.setVector(input.targetPoint);
         }
+      } else if (this.targetSource == MultiComponent.SOURCE_SPAWNED_BEAM) {
+        if (input.spawnedBeam) {
+          this.sourceCoords.setUnit(input.spawnedBeam);
+        } else {
+          this.sourceCoords.setUnit(source);
+        }
       }
     }
 
     if (!this.hasStarted) {
       this.hasStarted = true;
-
-      this.angleCurrent = this.angleMin;
+      
+      if (this.startAtMax) {
+        this.angleCurrent = this.angleMax;
+      } else {
+        this.angleCurrent = this.angleMin;
+      }
+      
       if (this.angleMax > this.angleMin) {
         this.angleRange = this.angleMax - this.angleMin;
         this.angleDirection = 1;
       } else {
+        this.startAtMax = true;
         this.angleRange = this.angleMin - this.angleMax;
         
         const tmp = this.angleMax;

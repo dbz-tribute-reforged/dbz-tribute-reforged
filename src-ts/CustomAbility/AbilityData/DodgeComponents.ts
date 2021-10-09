@@ -61,6 +61,21 @@ export const DodgeComponents = [
     addRandomAngle: false,
     ignoreHeroes: false,
   },
+  {
+    name: "dodge scattering bullet homing",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    groundOnly: false,
+    knockbackData: {
+      speed: 25, 
+      angle: 150, 
+      aoe: 1200,
+    },
+    maxEnemies: 1,
+    addRandomAngle: false,
+    ignoreHeroes: false,
+  },
   // --------------------------------------------
   {
     name: "dodge basic",

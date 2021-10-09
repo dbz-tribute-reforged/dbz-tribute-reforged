@@ -1081,7 +1081,7 @@ export function getHeatString(
   // } else if (isCoolingDown) {
   //   result += "|cff00ffff";
   // }
-  let result = "";
+  let result = "      ";
   if (heat <= 50) {
     result += "|cff00ffff" + I2S(Math.round(heat));
   } else {
@@ -1124,8 +1124,8 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   const heatFlashfireFist = 25;
   const heatLossPerTick = 0.02;
   const heatHPPenaltyPerTick = 0.01;
-  const heatHPPenaltyInitial = 12;
-  const heatHPPenaltyPerSecond = 4;
+  const heatHPPenaltyInitial = 9;
+  const heatHPPenaltyPerSecond = 3;
 
   // update stuff
   const timer = CreateTimer();
@@ -1168,28 +1168,31 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
       ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
       ShowTextTagForceBJ(true, textTag, playerForce);
     }
+    
+    const isStunned = UnitHelper.isUnitStunned(customHero.unit);
+    if (!isStunned) {
+      // additional heat from heating up / cooling down
+      if (isHeatingUp) {
+        heatSpeed = heatSpeed + heatHeatingUp * heatLossPerTick * 0.5;
+      } else if (isCoolingDown) {
+        heatSpeed = heatSpeed + heatCoolingDown * heatLossPerTick * 0.5;
+      }
 
-    // additional heat from heating up / cooling down
-    if (isHeatingUp) {
-      heatSpeed = heatSpeed + heatHeatingUp * heatLossPerTick * 0.5;
-    } else if (isCoolingDown) {
-      heatSpeed = heatSpeed + heatCoolingDown * heatLossPerTick * 0.5;
+      // heat speed loss
+      let heatSpeedDelta = heatSpeed * heatLossPerTick;
+      heatSpeed = heatSpeed - heatSpeedDelta;
+      if (heatSpeedDelta > 0) {
+        heatSpeed = Math.max(0, heatSpeed);
+      } else {
+        heatSpeed = Math.min(0, heatSpeed);
+      }
+
+      heat = Math.max(0, Math.min(100, heat + heatSpeed * 0.03));
+      SaveReal(Globals.genericSpellHashtable, unitHandle, 0, heat);
     }
 
-    // heat speed loss
-    let heatSpeedDelta = heatSpeed * heatLossPerTick;
-    heatSpeed = heatSpeed - heatSpeedDelta;
-    if (heatSpeedDelta > 0) {
-      heatSpeed = Math.max(0, heatSpeed);
-    } else {
-      heatSpeed = Math.min(0, heatSpeed);
-    }
-
-    heat = Math.max(0, Math.min(100, heat + heatSpeed * 0.03));
-    SaveReal(Globals.genericSpellHashtable, unitHandle, 0, heat);
-
-    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 20);
-    SetTextTagTextBJ(textTag, getHeatString(heat, heatSpeed, isHeatingUp, isCoolingDown), 13);
+    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 25);
+    SetTextTagTextBJ(textTag, getHeatString(heat, heatSpeed, isHeatingUp, isCoolingDown), 15);
 
     // if (GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiHeavenPiercingIceWall) > 0) {
     //   if ((ultMode == 1 && heat >= 50) || (ultMode == 2 && heat <= 50)) {
@@ -1216,6 +1219,7 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     // heat penalty
     if (
       !BlzIsUnitInvulnerable(customHero.unit)
+      && !isStunned
       && (
         heat == 100
         || heat == 0
@@ -1462,7 +1466,13 @@ export function setupSPData(customHero: CustomHero) {
       0.0005 * GetHeroAgi(customHero.unit, true)
     );
     if (IsUnitType(customHero.unit, UNIT_TYPE_SUMMONED)) {
-      maxStamina *= 0.55;
+      const id = GetUnitTypeId(customHero.unit);
+      if (
+        id != Id.babidiDaburaUnit 
+        && id != Id.babidiYakonUnit
+      ) {
+        maxStamina *= 0.55;
+      }
     }
     customHero.setMaxSP(maxStamina);
   });

@@ -105,12 +105,23 @@ export module UnitHelper {
 
   export function getInventoryIndexOfItemType(unit: unit, itemId: number): number {
     const index = 0;
-    for (let i = 0; i < 6; ++i) {
+    for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
       const item = UnitItemInSlot(unit, i);
       if (item != null && GetItemTypeId(item) == itemId) {
         return i;
       }
     }
     return -1;
+  }
+
+  export function countInventory(unit: unit): number {
+    let sum = 0;
+    for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+      const item = UnitItemInSlot(unit, i);
+      if (item && item != null) {
+        ++sum;
+      }
+    }
+    return sum;
   }
 }

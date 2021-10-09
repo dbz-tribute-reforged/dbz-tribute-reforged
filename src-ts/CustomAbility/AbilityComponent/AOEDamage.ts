@@ -22,6 +22,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.85;
 
+  static readonly INT_DAMAGE_MULT_MIN = 0.9;
+  static readonly INT_DAMAGE_MULT_MAX = 1.25;
+
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
 
@@ -63,7 +66,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   static getIntDamageMult(unit: unit): number {
     const hInt = GetHeroInt(unit, true);
-    return Math.max(0.9, Math.min(1.3, 
+    return Math.max(AOEDamage.INT_DAMAGE_MULT_MIN, Math.min(AOEDamage.INT_DAMAGE_MULT_MAX, 
       1.05 * hInt / (
         0.333 * (
           GetHeroStr(unit, true) + 
@@ -72,6 +75,44 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         )
       )
     ));
+  }
+
+  static calculateDamageRaw(
+    level: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    caster: unit,
+    stat: number // bj_HEROSTAT_INT
+  ): number {
+    return (
+      damageMult 
+      * AOEDamage.getIntDamageMult(caster) 
+      * level * spellPower * damageDataMultiplier * 
+      (
+        CustomAbility.BASE_DAMAGE + 
+        GetHeroStatBJ(stat, caster, true)
+      )
+    );
+  }
+
+  static dealDamageRaw(
+    level: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    caster: unit,
+    stat: number,
+    target: widget
+  ): boolean {
+    return UnitDamageTarget(
+      caster, target, 
+      AOEDamage.calculateDamageRaw(level, spellPower, damageDataMultiplier, damageMult, caster, stat),
+      true, false,
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL, 
+      WEAPON_TYPE_WHOKNOWS
+    );
   }
 
   protected scaleDamageToSourceHP(damage: number, sourceHPPercent: number): number {
@@ -83,7 +124,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   protected calculateDamage(input: CustomAbilityInput, source: unit, sourceHPPercent: number): number {
-    let damage = input.level * input.caster.spellPower * this.damageData.multiplier * 
+    let damage = AOEDamage.getIntDamageMult(input.caster.unit) * input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
@@ -101,8 +142,6 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     if (input.isBeamClash && input.isBeamClash == true) {
       damage *= AOEDamage.BEAM_CLASH_DAMAGE_MULTIPLIER;
     }
-
-    damage *= AOEDamage.getIntDamageMult(input.caster.unit);
     
     if (input.damageMult) {
       damage *= input.damageMult;
