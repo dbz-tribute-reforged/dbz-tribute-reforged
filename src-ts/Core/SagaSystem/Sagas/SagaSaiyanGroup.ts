@@ -15,7 +15,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.delay = 60;
-    this.stats = 15;
+    this.stats = 20;
   }
 
   spawnSagaUnits(): void {
