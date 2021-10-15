@@ -3495,7 +3495,7 @@ export function skurvyMirrorProcessOrder() {
   if (mirrorState == 1) {
     const mirrorTarget: unit = LoadUnitHandle(Globals.genericSpellHashtable, unitId, 1);
 
-    const mirrorTargetId: number = GetHandleId(unit);
+    const mirrorTargetId: number = GetHandleId(target);
     // only mirror-ify if that unit is not also mirror-ing someone else
     if (LoadInteger(Globals.genericSpellHashtable, mirrorTargetId, 0) == 0) {
       if (order == OrderIds.STOP) {
