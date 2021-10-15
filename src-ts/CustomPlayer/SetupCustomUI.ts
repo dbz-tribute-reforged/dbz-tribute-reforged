@@ -7,7 +7,7 @@ import { Globals, Constants } from "Common/Constants";
 // chat msgs, game msgs
 // hides first 5 command buttons
 // sets parent of inventory to parent of bottom right command buttons
-export function setupCustomUI(player: player) {
+export function setupCustomUI(player: player, mode: number) {
 	const playerId = GetPlayerId(player);
 	if (!Globals.canUseCustomUi) {
 		DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, 
@@ -146,8 +146,10 @@ export function setupCustomUI(player: player) {
     
     ClearSelectionForPlayer(player);
 		if (GetLocalPlayer() == player) {
-			BlzHideOriginFrames(true);
-      BlzEnableUIAutoPosition(false);
+      if (mode < 3) {
+        BlzHideOriginFrames(true);
+        BlzEnableUIAutoPosition(false);
+      }
 			BlzFrameSetAllPoints(worldFrame, grandpa);
 			// let frame = BlzGetFrameByName("ConsoleUI", 0);
 			// BlzFrameSetAllPoints(frame, grandpa);
@@ -238,7 +240,9 @@ export function setupCustomUI(player: player) {
 			);
 
 			// buff bar doenst seem to work..., crashes the game unless simple info unit panel is enabled
-			BlzFrameSetParent(buffBar, hpBar);
+			if (mode < 2) {
+        BlzFrameSetParent(buffBar, hpBar);
+      }
 			BlzFrameClearAllPoints(buffBar);
 			BlzFrameClearAllPoints(buffBarLabel);
 			BlzFrameSetVisible(buffBarParent, true);
@@ -295,8 +299,10 @@ export function setupCustomUI(player: player) {
       // const heroInfoPanelIconHeroIcon = BlzGetFrameByName("InfoPanelIconHeroIcon", 6);
       // const heroSimpleInfoPanelIconHero = BlzGetFrameByName("SimpleInfoPanelIconHero", 6);
       // const heroSimpleInfoPanelIconHeroText = BlzGetFrameByName("SimpleInfoPanelIconHeroText", 6);
-
-      BlzFrameSetAlpha(inventoryCover, 0);
+      
+      if (mode < 1) {
+        BlzFrameSetAlpha(inventoryCover, 0);
+      }
 			BlzFrameSetVisible(inventoryCover, false);
 			// BlzFrameSetSize(inventoryCover, 0.001, 0.001);
 			// BlzFrameSetPoint(
@@ -313,7 +319,9 @@ export function setupCustomUI(player: player) {
 			//   0, 0
 			// );
 			
-			BlzFrameSetParent(inventoryParent, commandCardParent);
+      if (mode < 2) {
+        BlzFrameSetParent(inventoryParent, commandCardParent);
+      }
 
 			BlzFrameSetVisible(commandCardParent, true);
 			BlzFrameSetVisible(inventoryParent, true);

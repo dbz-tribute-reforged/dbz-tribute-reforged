@@ -8460,6 +8460,17 @@ STRING 1343
 Earrings worn by the Kais
 }
 
+STRING 1344
+// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
+|cffffff00+0.1x stat mult
++20% spell amp
+20% Damage Block up to 4x Str
+|cff00FF00Duration: <A0ZF,Dur1> seconds|r
+|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
+}
+
 STRING 1345
 // Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
 {
@@ -44783,7 +44794,7 @@ Transformations:
 [lvl 30]  1.50x "sega mega"
 [lvl 60]  1.75x "sega mega"
 [lvl 90]  2.00x "sega mega"
-[lvl 125] 2.40x "sega mega"
+[lvl 125] 2.40x "sega mega" [unlocks Super Sonic]
 }
 
 STRING 7195
@@ -128677,7 +128688,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 125] 2.40x "fp"
+[lvl 125] 2.40x "fp" [unlocks Super Sonic]
 }
 
 STRING 19861
@@ -130647,16 +130658,6 @@ STRING 20161
 [|cff00FF00D|r] Super Sonic
 }
 
-STRING 20162
-// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
-|cffffff00+30% Spell Amp
-20% Damage Block up to 4x Str
-|cff00FF00Duration: <A0ZF,Dur1> seconds|r
-|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
-}
-
 STRING 20163
 // Abilities: A0ZF (Super Sonic), Name (Name)
 {
@@ -130713,5 +130714,11 @@ STRING 20171
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 20172
+{
+[|cffffcc00Super Sonic|r]
+Sonic can now enter his Super Sonic form.
 }
 

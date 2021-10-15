@@ -824,6 +824,7 @@ gg_trg_Saitama_Serious_Series = nil
 gg_trg_Vegeta_Ultra_Ego = nil
 gg_trg_Schala_Dream_Devourer = nil
 gg_trg_Schala_Dream_Devourer_Cast = nil
+gg_trg_Super_Sonic = nil
 gg_trg_show_me_the_ss = nil
 gg_trg_show_me_the_ss_Copy = nil
 gg_trg_Test_LVL_command = nil
@@ -991,12 +992,12 @@ gg_trg_Banana_Generator = nil
 gg_trg_HBTC_Training_Ticket_Pickup = nil
 gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
+gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_trg_Upgrade_Item_Init = nil
 gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Tree_of_Might_Fruit_Bonus = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -31228,6 +31229,47 @@ function InitTrig_Schala_Dream_Devourer()
     TriggerAddAction(gg_trg_Schala_Dream_Devourer, Trig_Schala_Dream_Devourer_Actions)
 end
 
+function Trig_Super_Sonic_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0ZF"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Super_Sonic_Func005C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Super_Sonic_Actions()
+    udg_StatMultUnit = GetSpellAbilityUnit()
+    udg_TempReal = 15.00
+        udg_TempInt = GetSpellAbilityId()
+    TriggerExecute(gg_trg_Temp_Skin_Change_Init)
+    if (Trig_Super_Sonic_Func005C()) then
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_TempReal4 = 0.10
+        udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
+        udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultInt = (udg_StatMultInt + udg_TempReal4)
+        udg_TransformationSFXString = "AuraSS.mdx"
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+    end
+        udg_TransformationID = FourCC('H0AB')
+    TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+end
+
+function InitTrig_Super_Sonic()
+    gg_trg_Super_Sonic = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Super_Sonic, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Super_Sonic, Condition(Trig_Super_Sonic_Conditions))
+    TriggerAddAction(gg_trg_Super_Sonic, Trig_Super_Sonic_Actions)
+end
+
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func004C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04I")) == true)) then
         return false
@@ -51640,7 +51682,17 @@ function Trig_Transformations_Sonic_Func016C()
     return true
 end
 
-function Trig_Transformations_Sonic_Func019Func002Func001C()
+function Trig_Transformations_Sonic_Func017C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0ZF"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Sonic_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -51650,14 +51702,14 @@ function Trig_Transformations_Sonic_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Sonic_Func019Func002C()
-    if (not Trig_Transformations_Sonic_Func019Func002Func001C()) then
+function Trig_Transformations_Sonic_Func020Func002C()
+    if (not Trig_Transformations_Sonic_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Sonic_Func019C()
+function Trig_Transformations_Sonic_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -51714,9 +51766,17 @@ function Trig_Transformations_Sonic_Actions()
         udg_TransformationAbility = FourCC("AUan")
     else
     end
+    if (Trig_Transformations_Sonic_Func017C()) then
+        UnitAddAbilityBJ(FourCC("A0ZF"), udg_StatMultUnit)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0ZF'))
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20172")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Sonic_Func019C()) then
-        if (Trig_Transformations_Sonic_Func019Func002C()) then
+    if (Trig_Transformations_Sonic_Func020C()) then
+        if (Trig_Transformations_Sonic_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0AA')
@@ -53746,6 +53806,7 @@ function InitCustomTriggers()
     InitTrig_Saitama_Serious_Series()
     InitTrig_Vegeta_Ultra_Ego()
     InitTrig_Schala_Dream_Devourer()
+    InitTrig_Super_Sonic()
     InitTrig_Transformations_Item_Stat_Mult_Boosts()
     InitTrig_Transformations_Item_Auto_Transform_On_Death()
     InitTrig_Transformations_Item_Pickup()

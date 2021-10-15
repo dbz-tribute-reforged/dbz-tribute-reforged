@@ -1448,26 +1448,25 @@ export function sonicPassive(customHero: CustomHero) {
   const timer = CreateTimer();
   customHero.addTimer(timer);
 
-  const magnitudeMaxBase = 24;
-  const magnitudeMaxUpg = 28;
-  const magnitudeMaxUpg2 = 32;
+  const sonicId = GetHandleId(customHero.unit);
+  const magnitudeMaxBase = 20;
+  const magnitudeMaxUpg = 5;
+  const magnitudeMaxUpg2 = 10;
   const bonusSpeedDmgMult = 2;
-  const bonusSpeedDmgMinMagnitude = 24;
-  const magnitudeLossStunned = 0.99;
+  const magnitudeLossStunned = 0.98;
+  const magnitudeLossStuck = 0.8;
   const dmgAOE = 300;
   const dmgMagnitudeMult = 0.1;
-  const dmgDataMult = BASE_DMG.DFIST_DPS * 0.12;
+  const dmgDataMult = BASE_DMG.DFIST_DPS * 0.1;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.5;
   const oldPos = new Vector2D(0, 0);
   const speedResetDist = 3000;
 
-  let magnitudeMax = magnitudeMaxBase;
   let counter = 0;
-  const counterMax = 6;
+  const counterMax = 4;
 
-  AddUnitAnimationProperties(customHero.unit, "alternate", true);
   UnitAddAbility(customHero.unit, Id.ghostVisible);
 
   const textTag = CreateTextTag();
@@ -1491,13 +1490,9 @@ export function sonicPassive(customHero: CustomHero) {
       return;
     }
 
-    SetUnitMoveSpeed(customHero.unit, 100);
-
-    const lvl = GetHeroLevel(customHero.unit);
-    if (lvl >= 125) {
-      magnitudeMax = magnitudeMaxUpg2;
-    } else if (lvl >= 60) {
-      magnitudeMax = magnitudeMaxUpg;
+    const spinVal = LoadInteger(Globals.genericSpellHashtable, sonicId, 0);
+    if (spinVal == 1) {
+      SetUnitMoveSpeed(customHero.unit, 100);
     }
 
     if (GetOwningPlayer(customHero.unit) != player) {
@@ -1510,20 +1505,43 @@ export function sonicPassive(customHero: CustomHero) {
       }
     }
 
+    let magnitudeMax = magnitudeMaxBase;;
+    const lvl = GetHeroLevel(customHero.unit);
+    if (lvl >= 125) {
+      magnitudeMax += magnitudeMaxUpg2;
+    } else if (lvl >= 60) {
+      magnitudeMax += magnitudeMaxUpg;
+    }
+
+    if (spinVal == 0) {
+      magnitudeMax *= 0.25;
+    }
+
     Globals.tmpVector2.setUnit(customHero.unit);
 
-    if (CoordMath.distance(Globals.tmpVector2, oldPos) > speedResetDist) {
+    const oldDist = CoordMath.distance(Globals.tmpVector2, oldPos);
+    if (oldDist > speedResetDist) {
       moveDir.setPos(0, 0);
       Globals.customPlayers[playerId].orderPoint.setPos(0, 0);
+    } else if (oldDist < moveDist) {
+      CoordMath.multiply(moveDir, magnitudeLossStunned);
     }
-
-    let dist = moveDistSpin;
-    if (
+    
+    const isStunned = (
+      UnitHelper.isUnitStunned(customHero.unit) 
+      || IsUnitType(customHero.unit, UNIT_TYPE_ETHEREAL)
+    );
+    const isBadOrderPoint = (
       Globals.customPlayers[playerId].orderPoint.x == 0
       && Globals.customPlayers[playerId].orderPoint.y == 0
-    ) {
+    );
+    let dist = moveDist;
+    if (isBadOrderPoint || isStunned) {
       dist = 0;
+    } else if (spinVal == 1) {
+      dist = moveDistSpin;
     }
+
     const angle = CoordMath.angleBetweenCoords(
       Globals.tmpVector2,
       Globals.customPlayers[playerId].orderPoint
@@ -1544,60 +1562,73 @@ export function sonicPassive(customHero: CustomHero) {
       CoordMath.multiply(moveDir, 0);
     } else {
       Globals.tmpVector2.add(moveDir);
-      const isStunned = UnitHelper.isUnitStunned(customHero.unit);
-      if (!isStunned && PathingCheck.moveGroundUnitToCoord(customHero.unit, Globals.tmpVector2)) {
-        // if (counter >= counterMax) {
-        //   IssuePointOrderById(
-        //     customHero.unit, OrderIds.MOVE, 
-        //     Globals.customPlayers[playerId].orderPoint.x,
-        //     Globals.customPlayers[playerId].orderPoint.y 
-        //   );
-        //   counter = 0;
-        // }
-        // ++counter;
-        SetUnitFacing(customHero.unit, angle);
-
-        
-        let speedToMult = Math.max(0.1, m * dmgMagnitudeMult);
-        if (m >= magnitudeMax * 0.75) {
-          speedToMult *= bonusSpeedDmgMult;
-        }
-        speedToMult = Math.min(10, speedToMult);
-  
-        GroupClear(Globals.tmpUnitGroup);
-        GroupEnumUnitsInRange(
-          Globals.tmpUnitGroup,
-          GetUnitX(customHero.unit),
-          GetUnitY(customHero.unit),
-          dmgAOE,
-          null
-        );
-  
-        ForGroup(Globals.tmpUnitGroup, () => {
-          const target = GetEnumUnit();
-          if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
-            const dmg = AOEDamage.calculateDamageRaw(
-              Math.min(10, 1 + lvl / 10),
-              customHero.spellPower,
-              dmgDataMult,
-              speedToMult,
-              customHero.unit,
-              bj_HEROSTAT_AGI
-            );
-            UnitDamageTarget(
-              customHero.unit, 
-              target,
-              dmg,
-              true, false,
-              ATTACK_TYPE_HERO,
-              DAMAGE_TYPE_NORMAL,
-              WEAPON_TYPE_WHOKNOWS
-            );
-          }
-        });
-  
-      } else {
+      if (isStunned) {
         CoordMath.multiply(moveDir, magnitudeLossStunned);
+      } else {
+        if (!PathingCheck.moveGroundUnitToCoord(customHero.unit, Globals.tmpVector2)) {
+          CoordMath.multiply(moveDir, magnitudeLossStuck);
+        } else {
+          SetUnitFacing(customHero.unit, angle);
+  
+          const currentOrder = GetUnitCurrentOrder(customHero.unit);
+          if (!isBadOrderPoint
+            && (
+              currentOrder == OrderIds.MOVE
+              // || currentOrder == OrderIds.SMART
+            )
+          ) {
+            if (counter >= counterMax) {
+              IssuePointOrderById(
+                customHero.unit, OrderIds.MOVE, 
+                Globals.customPlayers[playerId].orderPoint.x,
+                Globals.customPlayers[playerId].orderPoint.y 
+              );
+              counter = 0;
+            }
+            ++counter;
+          }
+          
+          // deal AOE damage
+          if (spinVal == 1) {
+            let speedToMult = Math.max(0.1, m * dmgMagnitudeMult);
+            if (m >= magnitudeMax * 0.75) {
+              speedToMult *= bonusSpeedDmgMult;
+            }
+            speedToMult = Math.min(10, speedToMult);
+      
+            GroupClear(Globals.tmpUnitGroup);
+            GroupEnumUnitsInRange(
+              Globals.tmpUnitGroup,
+              GetUnitX(customHero.unit),
+              GetUnitY(customHero.unit),
+              dmgAOE,
+              null
+            );
+      
+            ForGroup(Globals.tmpUnitGroup, () => {
+              const target = GetEnumUnit();
+              if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+                const dmg = AOEDamage.calculateDamageRaw(
+                  Math.min(10, 1 + lvl / 10),
+                  customHero.spellPower,
+                  dmgDataMult,
+                  speedToMult,
+                  customHero.unit,
+                  bj_HEROSTAT_AGI
+                );
+                UnitDamageTarget(
+                  customHero.unit, 
+                  target,
+                  dmg,
+                  true, false,
+                  ATTACK_TYPE_HERO,
+                  DAMAGE_TYPE_NORMAL,
+                  WEAPON_TYPE_WHOKNOWS
+                );
+              }
+            });
+          }
+        }  
       }
     }
 

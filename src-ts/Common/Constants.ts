@@ -200,8 +200,9 @@ export module OrderIds {
   export const HOLY_BOLT = 852092;
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
-  export const ATTACK = 851983
-  export const MOVE = 851986
+  export const ATTACK = 851983;
+  export const MOVE = 851986;
+  export const SMART = 851971;
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
 }
@@ -702,6 +703,9 @@ export module Id {
   export const shotoTodorokiCoolingDown = FourCC("A0YW");
   
   export const sonic = FourCC("H0AA");
+  export const sonicJump = FourCC("A0ZE");
+  export const sonicSpin = FourCC("A0ZG");
+  export const sonicSuper = FourCC("A0ZF");
 
   export const super17 = FourCC("H05V");
   export const super17Skin = FourCC("H05B");

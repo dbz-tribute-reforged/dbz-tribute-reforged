@@ -624,10 +624,18 @@ export function CustomPlayerTest() {
 
 	const hideTrig = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
+		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", false);
   }
 	TriggerAddAction(hideTrig, () => {
-    setupCustomUI(GetTriggerPlayer());
+    const str = GetEventPlayerChatString();
+    const substr = SubString(str, 10, 11);
+    const mode = S2I(substr);
+
+    if (substr == "" || mode == 0) {
+      setupCustomUI(GetTriggerPlayer(), 0);
+    } else {
+      setupCustomUI(GetTriggerPlayer(), mode);
+    }
   });
  
   // TimerStart(CreateTimer(), 1.0, false, () => {  
@@ -1197,6 +1205,8 @@ export function CustomPlayerTest() {
 
     SetupSkurvyPlunder();
     SetupSkurvyMirror();
+
+    SetupSonicSpeed();
     
     SetupTreeOfMightSapling();
 
@@ -3551,6 +3561,28 @@ export function SetupSkurvyMirror() {
   });
 }
 
+export function SetupSonicSpeed() {
+  // globals hashtable
+  // 0: is spinning
+  
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.sonicSpin) {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      const spinVal = LoadInteger(Globals.genericSpellHashtable, unitId, 0);
+      
+      if (spinVal == 0) {
+        AddUnitAnimationProperties(unit, "alternate", true);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 1);
+      } else {
+        AddUnitAnimationProperties(unit, "alternate", false);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
+      }
+    }
+  });
+}
+
 export function SetupTreeOfMightSapling() {
   const trigger = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_USE_ITEM);
@@ -3565,14 +3597,6 @@ export function SetupTreeOfMightSapling() {
       const x = GetUnitX(caster);
       const y = GetUnitY(caster)
 
-      const tree = CreateUnit(
-        Player(PLAYER_NEUTRAL_PASSIVE),
-        Constants.dummyBeamUnitId, 
-        x, y, 0
-      );
-      SetUnitInvulnerable(tree, true);
-      UnitAddAbility(tree, Id.ghostVisible);
-      ShowUnit(tree, false);
       const sfx = AddSpecialEffect(
         "Doodads\\Ashenvale\\Structures\\Worldtree\\Worldtree.mdl",
         x, y
@@ -3585,31 +3609,31 @@ export function SetupTreeOfMightSapling() {
       
       // grow wait
       let counter = 0;
-      TimerStart(CreateTimer(), 1, true, () => {
-        if (counter > 30) {
+      TimerStart(CreateTimer(), 0.03, true, () => {
+        if (counter > 1000) {
           // drop
           CreateItem(ItemConstants.treeOfMightFruit, x, y);
-          DestroyEffect(
-            AddSpecialEffect(
-              "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
-              x, y
-            )
+          const explodeSfx = AddSpecialEffect(
+            "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
+            x, y
           );
+          BlzSetSpecialEffectScale(explodeSfx, 3);
+          DestroyEffect(explodeSfx);
           DestroyEffect(sfx);
           DestroyEffect(sfx2);
           DestroyTimer(GetExpiredTimer());
           return;
         }
 
-        BlzSetSpecialEffectScale(sfx, 0.01 + counter * 0.01);
+        BlzSetSpecialEffectScale(sfx, 0.01 + counter * 0.0003);
 
-        if (counter % 10 == 0) {
-          DestroyEffect(
-            AddSpecialEffect(
-              "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdll",
-              x, y
-            )
+        if (counter % 100 == 0) {
+          const sfxPeriodic = AddSpecialEffect(
+            "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdll",
+            x, y
           );
+          BlzSetSpecialEffectScale(sfxPeriodic, 1 + counter * 0.003);
+          DestroyEffect(sfxPeriodic);
         }
 
         ++counter;

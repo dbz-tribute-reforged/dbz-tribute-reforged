@@ -8075,6 +8075,64 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Sonic.JUMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSonic.blp",
+      disabled: "BTNSonic.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sonic.JUMP,
+      body: 
+        AbilityNames.Sonic.JUMP
+    },
+    components: [
+      { name: "anim sonic jump" },
+      { name: "jump nova rush" },
+      { name: "damage sonic jump explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sonic.SUPER_SONIC,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSonic.blp",
+      disabled: "BTNSonic.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sonic.SUPER_SONIC,
+      body: 
+        AbilityNames.Sonic.SUPER_SONIC
+    },
+    components: [
+      { name: "spell amp max power" },
+      { name: "block sonic super sonic" },
+      { name: "sfx max power" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,

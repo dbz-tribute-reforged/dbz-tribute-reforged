@@ -7946,6 +7946,58 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // sonic jump
+  {
+    name: "damage sonic jump explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: 0,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.75,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    maxManaLossPercent: 0,
+    applyDamageOverTime: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // 13 energy beam
   {
     name: "damage energy beam dps",
