@@ -120,4 +120,16 @@ export const AnimationComponents = [
     onlyApplyAtStart: false,
     resetAnimation: true,
   },
+  {
+    name: "anim sonic jump",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 11,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
 ];

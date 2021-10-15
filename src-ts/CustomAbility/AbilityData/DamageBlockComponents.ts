@@ -1941,6 +1941,42 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
+    name: "block sonic super sonic",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 20,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 4,
+    sfxList: [
+      {
+        model: "Slam.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 2.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 185,
+          z: 55,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // ----------------------------------------
+  {
     name: "block geti star fragment item",
     repeatInterval: 1,
     startTick: 0,

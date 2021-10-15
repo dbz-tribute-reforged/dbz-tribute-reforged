@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.70
+DBZ Tribute Reforged 0.70a
 }
 
 STRING 4
@@ -8455,25 +8455,30 @@ Unsigned Revive Ticket
 }
 
 STRING 1343
-// Items: I00L (Potara Earing "Left"), Tip (Tooltip - Basic)
+// Items: I00L (Potara Earing), Tip (Tooltip - Basic)
 {
 Earrings worn by the Kais
 }
 
 STRING 1344
-// Items: I00L (Potara Earing "Left"), Name (Name)
+// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
 {
-Potara Earing "Left"
+Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
+|cffffff00+0.1x stat mult
++20% spell amp
+20% Damage Block up to 4x Str
+|cff00FF00Duration: <A0ZF,Dur1> seconds|r
+|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
 }
 
 STRING 1345
-// Items: I00L (Potara Earing "Left"), Ubertip (Tooltip - Extended)
+// Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
 {
 Both the left and right earring wearer must use this item at the same time to trigger the fusion, both users must stand close to each other as well.
 }
 
 STRING 1346
-// Items: I00L (Potara Earing "Left"), Description (Description)
+// Items: I00L (Potara Earing), Description (Description)
 {
 Earrings worn by the Kais
 }
@@ -8586,38 +8591,20 @@ STRING 1364
 Experience from saga mobs
 }
 
-STRING 1365
-// Items: I025 (Tree of Might Seed Pouch), Name (Name)
-{
-Tree of Might Seed Pouch
-}
-
-STRING 1366
-// Items: I025 (Tree of Might Seed Pouch), Description (Description)
-{
-Seedlings from the tree of might. They don't look to be in good condition. If you plant them, the tree might be able to grow at least one fruit.
-}
-
-STRING 1367
-// Items: I025 (Tree of Might Seed Pouch), Ubertip (Tooltip - Extended)
-{
-Seedlings from the tree of might. They don't look to be in good condition. If you plant them, the tree might be able to grow at least one fruit.
-}
-
 STRING 1368
-// Items: I026 (Small Tree of Might Fruit), Name (Name)
+// Items: I01R (Small Tree of Might Fruit), Name (Name)
 {
 Small Tree of Might Fruit
 }
 
 STRING 1369
-// Items: I026 (Small Tree of Might Fruit), Description (Description)
+// Items: I01R (Small Tree of Might Fruit), Description (Description)
 {
 A Small Tree of Might Fruit.
 }
 
 STRING 1370
-// Items: I026 (Small Tree of Might Fruit), Ubertip (Tooltip - Extended)
+// Items: I01R (Small Tree of Might Fruit), Ubertip (Tooltip - Extended)
 {
 Increases the strength of anyone that eats it.
 A Small Tree of Might Fruit.
@@ -9809,25 +9796,6 @@ STRING 1565
 Bomb
 }
 
-STRING 1566
-// Items: I01R (Small Tree of Might Fruit), Name (Name)
-{
-Small Tree of Might Fruit
-}
-
-STRING 1567
-// Items: I01R (Small Tree of Might Fruit), Description (Description)
-{
-A Small Tree of Might Fruit.
-}
-
-STRING 1568
-// Items: I01R (Small Tree of Might Fruit), Ubertip (Tooltip - Extended)
-{
-Increases the strength of anyone that eats it.
-A Small Tree of Might Fruit.
-}
-
 STRING 1569
 // Items: I01Y (Bio Lab Research), Name (Name)
 {
@@ -10910,7 +10878,7 @@ STRING 1741
 }
 
 STRING 1742
-// Items: I03P (Tree of Might Fruit), Name (Name)
+// Items: I026 (Tree of Might Fruit), Name (Name)
 {
 Tree of Might Fruit
 }
@@ -11201,12 +11169,6 @@ STRING 1788
 // Abilities: AIta (Scouter 2.0), Name (Name)
 {
 Scouter 2.0
-}
-
-STRING 1789
-// Destructibles: B001 (Fruit Tree), Name (Name)
-{
-Fruit Tree
 }
 
 STRING 1790
@@ -15826,6 +15788,12 @@ STRING 2533
 Saitama leaps from one point to another, dealing damage upon landing.
 |cff00ff00Damage: Agi * lvl * ?|r
 |cff00ffffCooldown: <A00Z,Cool10> seconds|r
+}
+
+STRING 2534
+// Units: n048 (Sega Mega), Name (Name)
+{
+Sega Mega
 }
 
 STRING 2535
@@ -38387,7 +38355,7 @@ Beerus fires many ki blasts in all directions. |n|cff00FF00Channeled for 30s|r|n
 }
 
 STRING 6188
-// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
+// Units: H0AA (The Hedgehog), Hotkey (Hotkey)
 {
 X
 }
@@ -44819,9 +44787,14 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 7194
-// Units: n048 (Meme Heroes), Name (Name)
 {
-Meme Heroes
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "sega mega"
+[lvl 30]  1.50x "sega mega"
+[lvl 60]  1.75x "sega mega"
+[lvl 90]  2.00x "sega mega"
+[lvl 125] 2.40x "sega mega" [unlocks Super Sonic]
 }
 
 STRING 7195
@@ -48219,7 +48192,7 @@ STRING 7725
 }
 
 STRING 7726
-// Abilities: A068 (Scattering Bullet), EditorSuffix (Editor Suffix)
+// Abilities: A014 (Use Potara Earrings), EditorSuffix (Editor Suffix)
 {
 old
 }
@@ -57649,12 +57622,6 @@ STRING 9220
 Saga Generic Autocast Spell
 }
 
-STRING 9221
-// Abilities: A0KL (Use Potara 2.0), Name (Name)
-{
-Use Potara 2.0
-}
-
 STRING 9222
 // Abilities: A0KM (Saga Generic Spammed Spell), Name (Name)
 {
@@ -66347,7 +66314,7 @@ STRING 10638
 }
 
 STRING 10639
-// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
+// Units: H0AB (The Hedgehog), Hotkey (Hotkey)
 {
 X
 }
@@ -73567,7 +73534,7 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 11814
-// Abilities: A0GR (Scattering Bullet), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Scattering Bullet), EditorSuffix (Editor Suffix)
 {
 old
 }
@@ -76102,7 +76069,7 @@ Dypso's signature flying kick.
 }
 
 STRING 12223
-// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
+// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -78692,7 +78659,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -101280,13 +101247,13 @@ STRING 16006
 }
 
 STRING 16007
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16008
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -127004,7 +126971,7 @@ STRING 19624
 }
 
 STRING 19625
-// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -127766,6 +127733,18 @@ STRING 19728
 // Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 10|r]
+}
+
+STRING 19729
+// Units: H0AA (The Hedgehog), Name (Name)
+{
+The Hedgehog
+}
+
+STRING 19730
+// Units: H0AA (The Hedgehog), Propernames (Proper Names)
+{
+Sonic
 }
 
 STRING 19731
@@ -128577,6 +128556,25 @@ Endeavour's signature technique that was passed down to Shoto. The user rushes t
 |cff00ffffCooldown: <A0YY,Cool1> seconds|r
 }
 
+STRING 19841
+// Units: H0AA (The Hedgehog), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00X|r] Choose Sonic
+}
+
+STRING 19842
+// Units: H0AA (The Hedgehog), Ubertip (Tooltip - Extended)
+{
+A very fast hero. |cffff2020Warning: Unfinished hero.|r
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 19843
 // Abilities: A0Z0 (Big Kannon), Tip (Tooltip - Normal)
 {
@@ -128649,6 +128647,24 @@ STRING 19854
 [|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
 }
 
+STRING 19855
+// Units: H0AA (The Hedgehog), Tip (Tooltip - Basic)
+{
+[|cffffff00X|r] Choose Sonic
+}
+
+STRING 19856
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 19857
+// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
+{
+X
+}
+
 STRING 19858
 // Abilities: A0Z2 (I'll Run Ye Through!), Ubertip (Tooltip - Normal - Extended)
 {
@@ -128662,6 +128678,60 @@ STRING 19859
 // Abilities: A0Z0 (Big Kannon), EditorSuffix (Editor Suffix)
 {
 (skurvy)
+}
+
+STRING 19860
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 125] 2.40x "fp" [unlocks Super Sonic]
+}
+
+STRING 19861
+// Units: H0AB (The Hedgehog), Name (Name)
+{
+The Hedgehog
+}
+
+STRING 19862
+// Units: H0AB (The Hedgehog), Propernames (Proper Names)
+{
+Sonic
+}
+
+STRING 19863
+// Units: H0AB (The Hedgehog), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00X|r] Choose Sonic
+}
+
+STRING 19864
+// Units: H0AB (The Hedgehog), Ubertip (Tooltip - Extended)
+{
+A very fast hero. |cffff2020Warning: Unfinished hero.|r
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19865
+// Units: H0AB (The Hedgehog), Tip (Tooltip - Basic)
+{
+[|cffffff00X|r] Choose Sonic
+}
+
+STRING 19866
+// Units: H0AB (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+{
+Super
 }
 
 STRING 19867
@@ -128730,6 +128800,24 @@ STRING 19877
 [|cff00ff00Q|r] Big Kannon - [|cffffcc00Level 10|r]
 }
 
+STRING 19878
+// Items: I00L (Potara Earing), Name (Name)
+{
+Potara Earing
+}
+
+STRING 19879
+// Items: I025 (Tree of Might Sapling), Name (Name)
+{
+Tree of Might Sapling
+}
+
+STRING 19880
+// Items: I025 (Tree of Might Sapling), Description (Description)
+{
+A Sapling from the Tree of Might that can be planted to grow fruits that empower whoever consumes them.
+}
+
 STRING 19881
 // Abilities: A0Z1 (Kannon Fire), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128769,10 +128857,29 @@ STRING 19886
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 1|r]
 }
 
+STRING 19887
+// Items: I025 (Tree of Might Sapling), Ubertip (Tooltip - Extended)
+{
+A Sapling from the Tree of Might that can be planted to grow fruits that empower whoever consumes them.
+}
+
 STRING 19888
 // Abilities: A0Z2 (I'll Run Ye Through!), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn I'll Run Ye Through! - [|cffffcc00Level %d|r]
+}
+
+STRING 19889
+// Items: I026 (Tree of Might Fruit), Description (Description)
+{
+Tree of Might Fruit
+}
+
+STRING 19890
+// Items: I026 (Tree of Might Fruit), Ubertip (Tooltip - Extended)
+{
+|cffffff00Provides 1.5 * level stats.
+Restores 10% of Max HP.|r
 }
 
 STRING 19891
@@ -128791,6 +128898,18 @@ STRING 19893
 // Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 3|r]
+}
+
+STRING 19894
+// Items: I03P (Tree of Might Fruit), Name (Name)
+{
+Tree of Might Fruit
+}
+
+STRING 19895
+// Destructibles: B001 (Ashenvale Fruit Tree), Name (Name)
+{
+Ashenvale Fruit Tree
 }
 
 STRING 19896
@@ -128829,10 +128948,52 @@ STRING 19901
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 9|r]
 }
 
+STRING 19902
+// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 19903
+// Abilities: A0GR (Scattering Bullet), EditorSuffix (Editor Suffix)
+{
+old
+}
+
+STRING 19904
+// Abilities: A0KL (Use Potara), Name (Name)
+{
+Use Potara
+}
+
+STRING 19905
+// Abilities: A0KL (Use Potara), EditorSuffix (Editor Suffix)
+{
+2.0
+}
+
+STRING 19906
+// Abilities: A0ZB (Capsule: Battle Armor 5), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 19907
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00X|r] Capsule: Battle Armor 5
+}
+
 STRING 19908
 // Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] I'll Run Ye Through! - [|cffffcc00Level 10|r]
+}
+
+STRING 19909
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Open a capsule containing Battle Armor 5.
 }
 
 STRING 19910
@@ -129004,16 +129165,52 @@ Skurvy fires a mighty kannonball that pushes enemy units to their doom.
 |cff00ff00Damage: Str x Lvl x ?|r
 }
 
+STRING 19933
+// Abilities: A0ZB (Capsule: Battle Armor 5), Name (Name)
+{
+Capsule: Battle Armor 5
+}
+
 STRING 19934
 // Abilities: A0Z3 (Plunder), Name (Name)
 {
 Plunder
 }
 
+STRING 19935
+// Abilities: A0ZB (Capsule: Battle Armor 5), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn God Cutter
+}
+
+STRING 19936
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 2|r
+}
+
+STRING 19937
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 3|r
+}
+
 STRING 19938
 // Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 19939
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 4|r
+}
+
+STRING 19940
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 5|r
 }
 
 STRING 19941
@@ -129316,6 +129513,12 @@ STRING 19990
 Skurvy summons a plank between him and his target. The first unit to step off the plank will be attacked by a shark, dealing heavy damage.|n|cff00FF00Damage: Str * lvl * ??|r|n|cff00FFFFCooldown: <A0Z5,Cool1>s
 }
 
+STRING 19991
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 6|r
+}
+
 STRING 19992
 // Abilities: A0Z6 (Pirate's Scorn), Ubertip (Tooltip - Normal - Extended)
 {
@@ -129490,6 +129693,12 @@ Schala calls down lightning from the sky that bombards the target area.
 |cff00ffffCooldown: <A0YF,Cool10> seconds|r
 }
 
+STRING 20015
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 7|r
+}
+
 STRING 20016
 // Abilities: A0Z6 (Pirate's Scorn), EditorSuffix (Editor Suffix)
 {
@@ -129518,6 +129727,24 @@ STRING 20019
 {
 [|cffffcc00Unlock|r] |cff00FFFFCrystal Coconut|r
 Skurvy has heard rumors that thar be a |cff00FFFFCrystal Coconut|r somewhere on this island. If he finds it, he will gain extraordinary power!
+}
+
+STRING 20020
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 8|r
+}
+
+STRING 20021
+// Abilities: A0ZB (Capsule: Battle Armor 5), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 9|r
+}
+
+STRING 20022
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
 }
 
 STRING 20023
@@ -129592,9 +129819,45 @@ STRING 20034
 Skurvy's Big Kannon
 }
 
+STRING 20035
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20036
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20037
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20038
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20039
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
 STRING 20040
 {
 The |cff00ffffCrystal Coconut|r has been discovered!
+}
+
+STRING 20041
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
 }
 
 STRING 20042
@@ -129619,6 +129882,72 @@ Unlocks the power of the |cff00ffffCrystal Coconut|r
 +99 ms
 |cff00ff00Duration: 15s
 |cff00ffffCooldown: 45s
+}
+
+STRING 20045
+// Abilities: A0ZB (Capsule: Battle Armor 5), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20046
+// Abilities: A0ZB (Capsule: Battle Armor 5), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 20047
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 20048
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Z|r] Capsule: Tree of Might Sapling
+}
+
+STRING 20049
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Open a capsule containing a Tree of Might Sapling.
+}
+
+STRING 20050
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Name (Name)
+{
+Capsule: Tree of Might Sapling
+}
+
+STRING 20051
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn God Cutter
+}
+
+STRING 20052
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 2|r
+}
+
+STRING 20053
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 3|r
+}
+
+STRING 20054
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 4|r
+}
+
+STRING 20055
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 5|r
 }
 
 STRING 20056
@@ -129799,6 +130128,12 @@ STRING 20081
 F
 }
 
+STRING 20082
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 6|r
+}
+
 STRING 20083
 // Abilities: A0ZA (Extraordinary Power), Name (Name)
 {
@@ -129815,6 +130150,12 @@ STRING 20085
 // Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
 {
 D
+}
+
+STRING 20086
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 7|r
 }
 
 STRING 20087
@@ -129945,5 +130286,439 @@ Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of he
 |cffffff00Adds +10% frost damage.
 Adds +1% frost damage for each heat below 50.
 |cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
+}
+
+STRING 20104
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 8|r
+}
+
+STRING 20105
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 9|r
+}
+
+STRING 20106
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20107
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20108
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20109
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20110
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20111
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20112
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20113
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20114
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 20115
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00C|r] Capsule: Potara Earrings
+}
+
+STRING 20116
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Open a capsule containing Potara Earrings.
+}
+
+STRING 20117
+// Abilities: A0ZD (Capsule: Potara Earrings), Name (Name)
+{
+Capsule: Potara Earrings
+}
+
+STRING 20118
+// Abilities: A0ZD (Capsule: Potara Earrings), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn God Cutter
+}
+
+STRING 20119
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 2|r
+}
+
+STRING 20120
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 3|r
+}
+
+STRING 20121
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 4|r
+}
+
+STRING 20122
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 5|r
+}
+
+STRING 20123
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 6|r
+}
+
+STRING 20124
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 7|r
+}
+
+STRING 20125
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 8|r
+}
+
+STRING 20126
+// Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] God Cutter |cffFFFF00Lvl 9|r
+}
+
+STRING 20127
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20128
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20129
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20130
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20131
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20132
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20133
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20134
+// Abilities: A0ZD (Capsule: Potara Earrings), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu spins his energy blade in a circle, dealing damage to all units in range.|n|cff00FF00Damage: int*lvl*1+50|r|n|cff00FFFFCooldown: 3s|r
+}
+
+STRING 20135
+// Abilities: A0ZD (Capsule: Potara Earrings), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 20136
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool1> seconds|r
+}
+
+STRING 20137
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool3> seconds|r
+}
+
+STRING 20138
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool4> seconds|r
+}
+
+STRING 20139
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool5> seconds|r
+}
+
+STRING 20140
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool6> seconds|r
+}
+
+STRING 20141
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool7> seconds|r
+}
+
+STRING 20142
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 2|r]
+}
+
+STRING 20143
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 3|r]
+}
+
+STRING 20144
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 4|r]
+}
+
+STRING 20145
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 5|r]
+}
+
+STRING 20146
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 6|r]
+}
+
+STRING 20147
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 1|r]
+}
+
+STRING 20148
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 7|r]
+}
+
+STRING 20149
+// Abilities: A0ZE (Jump), Name (Name)
+{
+Jump
+}
+
+STRING 20150
+// Abilities: A0ZE (Jump), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Jump - [|cffffcc00Level %d|r]
+}
+
+STRING 20151
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 9|r]
+}
+
+STRING 20152
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 8|r]
+}
+
+STRING 20153
+// Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 10|r]
+}
+
+STRING 20154
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool8> seconds|r
+}
+
+STRING 20155
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool9> seconds|r
+}
+
+STRING 20156
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool10> seconds|r
+}
+
+STRING 20157
+// Abilities: A0ZE (Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool1> seconds|r
+}
+
+STRING 20158
+// Abilities: A0ZE (Jump), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20159
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool2> seconds|r
+}
+
+STRING 20160
+// Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 20161
+// Abilities: A0ZF (Super Sonic), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Super Sonic
+}
+
+STRING 20163
+// Abilities: A0ZF (Super Sonic), Name (Name)
+{
+Super Sonic
+}
+
+STRING 20164
+// Abilities: A0ZF (Super Sonic), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20165
+// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 20166
+// Abilities: A0ZG (Toggle Spin), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Toggle Spin
+}
+
+STRING 20167
+// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
+|cffffff00+1% spin damage per hero level up to +100%.
+x2 spin damage when above 75% max speed.|r
+|cff00FF00Damage: Agi * Sonic Speed
+|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
+}
+
+STRING 20168
+// Abilities: A0ZG (Toggle Spin), Name (Name)
+{
+Toggle Spin
+}
+
+STRING 20169
+// Abilities: A0ZG (Toggle Spin), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20170
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20171
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20172
+{
+[|cffffcc00Super Sonic|r]
+Sonic can now enter his Super Sonic form.
 }
 

@@ -431,6 +431,12 @@ export module AbilityNames {
     export const COOLING_DOWN: string = "Shoto Cooling Down";
   }
 
+  export module Sonic {
+    export const JUMP: string = "Sonic Jump";
+    export const SPIN: string = "Sonic Toggle Spin";
+    export const SUPER_SONIC: string = "Sonic Super Sonic";
+  }
+
 
 
   export module Babidi {

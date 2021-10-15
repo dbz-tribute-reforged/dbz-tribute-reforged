@@ -89,8 +89,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
         ItemConstants.SagaDrops.SCOUTER_1,
+        ItemConstants.SagaDrops.TREE_OF_MIGHT_FRUIT,
+        ItemConstants.SagaDrops.TREE_OF_MIGHT_SAPLING,
       ]
     )],
 
@@ -390,8 +392,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
       ],
       [
-        ItemConstants.SagaDrops.HBTC_TRAINING_TICKET,
         ItemConstants.Consumables.SENZU_BEAN,
+        ItemConstants.Consumables.SENZU_BEAN,
+        ItemConstants.SagaDrops.HBTC_TRAINING_TICKET,
       ]
     )],
     

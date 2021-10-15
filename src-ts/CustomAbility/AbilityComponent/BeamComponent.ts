@@ -8,7 +8,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { AddableComponent } from "./AddableComponent";
-import { Constants } from "Common/Constants";
+import { Constants, Id } from "Common/Constants";
 import { TextTagHelper } from "Common/TextTagHelper";
 
 export class BeamComponent implements 
@@ -331,9 +331,15 @@ export class BeamComponent implements
     this.previousHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
     BlzSetUnitName(this.beamUnit, this.name);
 
+    SetUnitPathing(this.beamUnit, false);
+    UnitAddAbility(this.beamUnit, Id.ghostNonVis);
+    UnitAddAbility(this.beamUnit, Id.ghostVisible);
+    
     if (!this.isTracking) {
       PauseUnit(this.beamUnit, true);
-      ShowUnit(this.beamUnit, false);
+      // hidden units cannot be selected by GroupEnumUnit
+      // hence beams cannot be hidden unless they are invulnerable
+      // ShowUnit(this.beamUnit, false);
     } else {
       // possible selection bug again?
       // SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);

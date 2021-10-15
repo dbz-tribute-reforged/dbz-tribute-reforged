@@ -487,6 +487,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.ShotoTodoroki.COOLING_DOWN,
     ]],
 
+    [Id.sonic, [
+      AbilityNames.Sonic.JUMP,
+      AbilityNames.Sonic.SPIN,
+      AbilityNames.Sonic.SUPER_SONIC,
+    ]],
+    
+
 
 
     // androids 13 14 15
@@ -815,7 +822,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Skurvy.WALK_THE_PLANK,
       AbilityNames.Skurvy.PIRATES_SCORN,
       AbilityNames.Skurvy.EXTRAORDINARY_POWER,
-  ]],
+    ]],
 
     // rusty
     [Id.rustTyranno, [

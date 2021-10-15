@@ -2392,7 +2392,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 1.3,
+      multiplier: BASE_DMG.KAME_DPS * 1.301,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -2419,7 +2419,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 1.3,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 1.301,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -7272,7 +7272,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.052,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.05,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -7294,12 +7294,12 @@ export const AOEDamageComponents = [
     sourceHPDamageScale: 0,
     useInverseDamageScale: true,
     useLastCastPoint: true,
-    aoe: 400,
+    aoe: 300,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.052,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.05,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -7946,6 +7946,58 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // sonic jump
+  {
+    name: "damage sonic jump explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: 0,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.75,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    maxManaLossPercent: 0,
+    applyDamageOverTime: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // 13 energy beam
   {
     name: "damage energy beam dps",
@@ -8124,7 +8176,7 @@ export const AOEDamageComponents = [
     sourceHPDamageScale: 0,
     useInverseDamageScale: true,
     useLastCastPoint: true,
-    aoe: 150,
+    aoe: 100,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,

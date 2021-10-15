@@ -54,7 +54,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     // if zarbon dead, replace with stornger zarbon
     if (
       this.zarbon && this.zarbon2 &&
-      SagaHelper.checkUnitHp(this.zarbon, 0.5, false, false, true) &&
+      SagaHelper.checkUnitHp(this.zarbon, 0.6, false, false, true) &&
       SagaHelper.isUnitSagaHidden(this.zarbon2)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
