@@ -14,6 +14,9 @@ export module Globals {
   export const genericSpellTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
 
+  // global beam units
+  export const beamUnitGroup = CreateGroup();
+
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();
   export const tmpForce = CreateForce();
@@ -215,10 +218,19 @@ export module Capsules {
   export const dimensionSword = FourCC("A0JA");
   export const braveSword = FourCC("A0IJ");
   export const timeRing = FourCC("A0II");
+
+  export const battleArmor5 = FourCC("A0ZB");
+  export const treeOfMightSapling = FourCC("A0ZC");
+  export const potaraEarring = FourCC("A0ZD");
 }
 
 export module Id {
   export const inventoryHero = FourCC("AInv");
+  export const ghostNonVis = FourCC("Agho");
+  export const ghostVisible = FourCC("Aeth");
+  export const locust = FourCC("Aloc");
+
+  export const useItem = FourCC("A0VF");
 
   export const summonShenron = FourCC("I01V");
 
@@ -688,6 +700,8 @@ export module Id {
   export const shotoTodorokiFlashfireFist = FourCC("A0YZ");
   export const shotoTodorokiHeatingUp = FourCC("A0YV");
   export const shotoTodorokiCoolingDown = FourCC("A0YW");
+  
+  export const sonic = FourCC("H0AA");
 
   export const super17 = FourCC("H05V");
   export const super17Skin = FourCC("H05B");

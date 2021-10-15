@@ -23,6 +23,23 @@ export module CoordMath {
     );
   }
 
+  export function magnitude(source: Vector2D): number {
+    return Math.sqrt(source.x * source.x + source.y * source.y);
+  }
+
+  export function normalize(source: Vector2D) {
+    const m = magnitude(source);
+    if (m > 0) {
+      source.x /= m;
+      source.y /= m;
+    }
+  }
+
+  export function multiply(source: Vector2D, amount: number) {
+    source.x *= amount;
+    source.y *= amount;
+  }
+
   export function isInsideMapBounds(position: Vector2D): boolean {
     return (
       position.x > -8500 &&

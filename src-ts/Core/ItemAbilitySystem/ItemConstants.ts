@@ -104,6 +104,11 @@ export module ItemConstants {
   export const babidiEnergyAbsorber = FourCC("I04S");
   export const hitContract = FourCC("I04X");
 
+  export const treeOfMightSapling = FourCC("I025");
+  export const treeOfMightFruit = FourCC("I026");
+
+  export const potaraEarrings = FourCC("I00L");
+
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
     export const ROAST_HAM = FourCC("I001");
@@ -148,5 +153,7 @@ export module ItemConstants {
     export const SAIBAMEN_SEEDS = saibamenSeeds;
     export const BABIDI_ENERGY_ABSORBER = babidiEnergyAbsorber;
     export const HIT_CONTRACT = hitContract;
+    export const TREE_OF_MIGHT_SAPLING = treeOfMightSapling;
+    export const TREE_OF_MIGHT_FRUIT = treeOfMightFruit;
   }
 }

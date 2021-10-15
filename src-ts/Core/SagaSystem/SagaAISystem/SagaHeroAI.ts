@@ -674,7 +674,9 @@ export class SagaHeroAI {
     );
 
     let closestUnit = undefined;
+    let closestNonSummonUnit = undefined;
     let closestDistance = acquireRange;
+
     ForGroup(this.nearbyEnemies, () => {
       const enemyUnit = GetEnumUnit();
       const x = GetUnitX(enemyUnit);
@@ -682,7 +684,6 @@ export class SagaHeroAI {
       if (
         IsUnitEnemy(enemyUnit, bossPlayer) &&
         IsUnitType(enemyUnit, UNIT_TYPE_HERO) && 
-        !IsUnitType(enemyUnit, UNIT_TYPE_SUMMONED) && 
         !UnitHelper.isUnitDead(enemyUnit) &&
         !BlzIsUnitInvulnerable(enemyUnit) && 
         !IsUnitHidden(enemyUnit) && 
@@ -697,13 +698,18 @@ export class SagaHeroAI {
         const enemyDistance = CoordMath.distance(this.tmpPos, this.bossPos);
         if (enemyDistance < closestDistance) {
           closestUnit = enemyUnit;
+          if (!IsUnitType(enemyUnit, UNIT_TYPE_SUMMONED)) {
+            closestNonSummonUnit = enemyUnit;
+          }
           closestDistance = enemyDistance;
         }
       }
     });
     GroupClear(this.nearbyEnemies);
-
-    if (closestUnit != undefined) {
+    
+    if (closestNonSummonUnit != undefined) {
+      result = closestNonSummonUnit;
+    } else if (closestUnit != undefined) {
       result = closestUnit;
     }
 

@@ -1197,6 +1197,8 @@ export function CustomPlayerTest() {
 
     SetupSkurvyPlunder();
     SetupSkurvyMirror();
+    
+    SetupTreeOfMightSapling();
 
     SetupMysteryCapsuleBox();
 
@@ -3483,18 +3485,22 @@ export function skurvyMirrorProcessOrder() {
   if (mirrorState == 1) {
     const mirrorTarget: unit = LoadUnitHandle(Globals.genericSpellHashtable, unitId, 1);
 
-    if (order == OrderIds.STOP) {
-      IssueImmediateOrderById(mirrorTarget, OrderIds.STOP);
-    } 
-    else if (!target) {
-      const x = GetOrderPointX();
-      const y = GetOrderPointY();
-      if (x != 0 && y != 0) {
-        IssuePointOrderById(mirrorTarget, OrderIds.MOVE, x, y);
+    const mirrorTargetId: number = GetHandleId(unit);
+    // only mirror-ify if that unit is not also mirror-ing someone else
+    if (LoadInteger(Globals.genericSpellHashtable, mirrorTargetId, 0) == 0) {
+      if (order == OrderIds.STOP) {
+        IssueImmediateOrderById(mirrorTarget, OrderIds.STOP);
+      } 
+      else if (!target) {
+        const x = GetOrderPointX();
+        const y = GetOrderPointY();
+        if (x != 0 && y != 0) {
+          IssuePointOrderById(mirrorTarget, OrderIds.MOVE, x, y);
+        }
+      } 
+      else if (order == OrderIds.ATTACK) {
+        IssueTargetOrderById(mirrorTarget, OrderIds.ATTACK, target);
       }
-    } 
-    else if (order == OrderIds.ATTACK) {
-      IssueTargetOrderById(mirrorTarget, OrderIds.ATTACK, target);
     }
   }
 }
@@ -3545,6 +3551,74 @@ export function SetupSkurvyMirror() {
   });
 }
 
+export function SetupTreeOfMightSapling() {
+  const trigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_USE_ITEM);
+
+  TriggerAddCondition(trigger, Condition(() => {
+    const item = GetManipulatedItem();
+    if (GetItemTypeId(item) == ItemConstants.treeOfMightSapling) {
+      const caster = GetManipulatingUnit();
+      // plant
+      RemoveItem(item);
+
+      const x = GetUnitX(caster);
+      const y = GetUnitY(caster)
+
+      const tree = CreateUnit(
+        Player(PLAYER_NEUTRAL_PASSIVE),
+        Constants.dummyBeamUnitId, 
+        x, y, 0
+      );
+      SetUnitInvulnerable(tree, true);
+      UnitAddAbility(tree, Id.ghostVisible);
+      ShowUnit(tree, false);
+      const sfx = AddSpecialEffect(
+        "Doodads\\Ashenvale\\Structures\\Worldtree\\Worldtree.mdl",
+        x, y
+      );
+      BlzSetSpecialEffectScale(sfx, 0.01);
+      const sfx2 = AddSpecialEffect(
+        "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        x, y
+      );
+      
+      // grow wait
+      let counter = 0;
+      TimerStart(CreateTimer(), 1, true, () => {
+        if (counter > 30) {
+          // drop
+          CreateItem(ItemConstants.treeOfMightFruit, x, y);
+          DestroyEffect(
+            AddSpecialEffect(
+              "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
+              x, y
+            )
+          );
+          DestroyEffect(sfx);
+          DestroyEffect(sfx2);
+          DestroyTimer(GetExpiredTimer());
+          return;
+        }
+
+        BlzSetSpecialEffectScale(sfx, 0.01 + counter * 0.01);
+
+        if (counter % 10 == 0) {
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdll",
+              x, y
+            )
+          );
+        }
+
+        ++counter;
+      });
+
+    }
+    return false;
+  }));
+}
 
 export function SetupMysteryCapsuleBox() {
   TriggerAddAction(Globals.genericSpellTrigger, () => {
@@ -3559,6 +3633,10 @@ export function SetupMysteryCapsuleBox() {
       || spellId == Capsules.dimensionSword
       || spellId == Capsules.braveSword
       || spellId == Capsules.timeRing
+
+      || spellId == Capsules.battleArmor5
+      || spellId == Capsules.treeOfMightSapling
+      || spellId == Capsules.potaraEarring
     ) {
       const unit = GetTriggerUnit();
       const index = UnitHelper.getInventoryIndexOfItemType(unit, Capsules.itemMysterBox);
@@ -3592,6 +3670,15 @@ export function SetupMysteryCapsuleBox() {
 
         } else if (spellId == Capsules.timeRing) {
           item = CreateItem(ItemConstants.SagaDrops.TIME_RING, x, y);
+
+        } else if (spellId == Capsules.battleArmor5) {
+          item = CreateItem(ItemConstants.SagaDrops.BATTLE_ARMOR_5, x, y);
+
+        } else if (spellId == Capsules.treeOfMightSapling) {
+          item = CreateItem(ItemConstants.SagaDrops.TREE_OF_MIGHT_SAPLING, x, y);
+
+        } else if (spellId == Capsules.potaraEarring) {
+          item = CreateItem(ItemConstants.potaraEarrings, x, y);
         }
 
         if (item) {

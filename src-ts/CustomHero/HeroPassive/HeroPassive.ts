@@ -3,12 +3,13 @@ import { Vector2D } from "Common/Vector2D";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Hooks } from "Libs/TreeLib/Hooks";
-import { Id, Constants, Buffs, OrderIds, DebuffAbilities, Globals } from "Common/Constants";
+import { Id, Constants, Buffs, OrderIds, DebuffAbilities, Globals, BASE_DMG } from "Common/Constants";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
+import { PathingCheck } from "Common/PathingCheck";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -95,6 +96,9 @@ export class HeroPassiveManager {
         break;
       case Id.shotoTodoroki:
         shotoTodorokiPassive(customHero);
+        break;
+      case Id.sonic:
+        sonicPassive(customHero);
         break;
       default:
         break;
@@ -1140,7 +1144,7 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   let ultMode = 0;
 
   let player = GetOwningPlayer(customHero.unit);
-  let playerForce = CreateForce();
+  let playerForce: force | undefined = CreateForce();
   ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
   SetTextTagPermanent(textTag, true);
   SetTextTagVisibility(textTag, true);
@@ -1153,7 +1157,13 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   let hotSfx3: effect | undefined;
 
   TimerStart(timer, 0.03, true, () => {
-    if (GetUnitTypeId(customHero.unit) == 0) return;
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (playerForce) {
+        DestroyForce(playerForce);
+        playerForce = undefined;
+      }
+      return;
+    }
     if (UnitHelper.isUnitDead(customHero.unit)) {
       heat = 50;
       heatSpeed = 0;
@@ -1164,9 +1174,11 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
 
     if (GetOwningPlayer(customHero.unit) != player) {
       player = GetOwningPlayer(customHero.unit);
-      ForceClear(playerForce);
-      ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
-      ShowTextTagForceBJ(true, textTag, playerForce);
+      if (playerForce) {
+        ForceClear(playerForce);
+        ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
+        ShowTextTagForceBJ(true, textTag, playerForce);
+      }
     }
     
     const isStunned = UnitHelper.isUnitStunned(customHero.unit);
@@ -1428,6 +1440,171 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
     DestroyTextTag(textTag);
     FlushChildHashtable(Globals.genericSpellHashtable, unitHandle);
     DestroyTimer(GetExpiredTimer());
+  });
+}
+
+export function sonicPassive(customHero: CustomHero) {
+  // update stuff
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const magnitudeMaxBase = 24;
+  const magnitudeMaxUpg = 28;
+  const magnitudeMaxUpg2 = 32;
+  const bonusSpeedDmgMult = 2;
+  const bonusSpeedDmgMinMagnitude = 24;
+  const magnitudeLossStunned = 0.99;
+  const dmgAOE = 300;
+  const dmgMagnitudeMult = 0.1;
+  const dmgDataMult = BASE_DMG.DFIST_DPS * 0.12;
+  const moveDir = new Vector2D(0, 0);
+  const moveDist = 1.0;
+  const moveDistSpin = 0.5;
+  const oldPos = new Vector2D(0, 0);
+  const speedResetDist = 3000;
+
+  let magnitudeMax = magnitudeMaxBase;
+  let counter = 0;
+  const counterMax = 6;
+
+  AddUnitAnimationProperties(customHero.unit, "alternate", true);
+  UnitAddAbility(customHero.unit, Id.ghostVisible);
+
+  const textTag = CreateTextTag();
+  let player = GetOwningPlayer(customHero.unit);
+  let playerId = GetPlayerId(player);
+  let playerForce: force | undefined = CreateForce();
+  ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
+  SetTextTagPermanent(textTag, true);
+  SetTextTagVisibility(textTag, true);
+  ShowTextTagForceBJ(false, textTag, bj_FORCE_ALL_PLAYERS);
+  ShowTextTagForceBJ(true, textTag, playerForce);
+  SetTextTagText(textTag, "0", 15);
+
+
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (playerForce) {
+        DestroyForce(playerForce);
+        playerForce = undefined;
+      }
+      return;
+    }
+
+    SetUnitMoveSpeed(customHero.unit, 100);
+
+    const lvl = GetHeroLevel(customHero.unit);
+    if (lvl >= 125) {
+      magnitudeMax = magnitudeMaxUpg2;
+    } else if (lvl >= 60) {
+      magnitudeMax = magnitudeMaxUpg;
+    }
+
+    if (GetOwningPlayer(customHero.unit) != player) {
+      player = GetOwningPlayer(customHero.unit);
+      playerId = GetPlayerId(player);
+      if (playerForce) {
+        ForceClear(playerForce);
+        ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
+        ShowTextTagForceBJ(true, textTag, playerForce);
+      }
+    }
+
+    Globals.tmpVector2.setUnit(customHero.unit);
+
+    if (CoordMath.distance(Globals.tmpVector2, oldPos) > speedResetDist) {
+      moveDir.setPos(0, 0);
+      Globals.customPlayers[playerId].orderPoint.setPos(0, 0);
+    }
+
+    let dist = moveDistSpin;
+    if (
+      Globals.customPlayers[playerId].orderPoint.x == 0
+      && Globals.customPlayers[playerId].orderPoint.y == 0
+    ) {
+      dist = 0;
+    }
+    const angle = CoordMath.angleBetweenCoords(
+      Globals.tmpVector2,
+      Globals.customPlayers[playerId].orderPoint
+    );
+
+    Globals.tmpVector.setPos(0, 0);
+    CoordMath.polarProjectCoords(Globals.tmpVector, Globals.tmpVector, angle, dist);
+    moveDir.add(Globals.tmpVector);
+
+    let m = CoordMath.magnitude(moveDir);
+    if (m > magnitudeMax) {
+      CoordMath.normalize(moveDir);
+      CoordMath.multiply(moveDir, magnitudeMax);
+      m = magnitudeMax;
+    }
+
+    if (UnitHelper.isUnitDead(customHero.unit)) {
+      CoordMath.multiply(moveDir, 0);
+    } else {
+      Globals.tmpVector2.add(moveDir);
+      const isStunned = UnitHelper.isUnitStunned(customHero.unit);
+      if (!isStunned && PathingCheck.moveGroundUnitToCoord(customHero.unit, Globals.tmpVector2)) {
+        // if (counter >= counterMax) {
+        //   IssuePointOrderById(
+        //     customHero.unit, OrderIds.MOVE, 
+        //     Globals.customPlayers[playerId].orderPoint.x,
+        //     Globals.customPlayers[playerId].orderPoint.y 
+        //   );
+        //   counter = 0;
+        // }
+        // ++counter;
+        SetUnitFacing(customHero.unit, angle);
+
+        
+        let speedToMult = Math.max(0.1, m * dmgMagnitudeMult);
+        if (m >= magnitudeMax * 0.75) {
+          speedToMult *= bonusSpeedDmgMult;
+        }
+        speedToMult = Math.min(10, speedToMult);
+  
+        GroupClear(Globals.tmpUnitGroup);
+        GroupEnumUnitsInRange(
+          Globals.tmpUnitGroup,
+          GetUnitX(customHero.unit),
+          GetUnitY(customHero.unit),
+          dmgAOE,
+          null
+        );
+  
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const target = GetEnumUnit();
+          if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+            const dmg = AOEDamage.calculateDamageRaw(
+              Math.min(10, 1 + lvl / 10),
+              customHero.spellPower,
+              dmgDataMult,
+              speedToMult,
+              customHero.unit,
+              bj_HEROSTAT_AGI
+            );
+            UnitDamageTarget(
+              customHero.unit, 
+              target,
+              dmg,
+              true, false,
+              ATTACK_TYPE_HERO,
+              DAMAGE_TYPE_NORMAL,
+              WEAPON_TYPE_WHOKNOWS
+            );
+          }
+        });
+  
+      } else {
+        CoordMath.multiply(moveDir, magnitudeLossStunned);
+      }
+    }
+
+    SetTextTagPos(textTag, Globals.tmpVector2.x, Globals.tmpVector2.y, 25);
+    SetTextTagTextBJ(textTag, R2S(m), 10);
+
+    oldPos.setUnit(customHero.unit);
   });
 }
 
