@@ -1464,7 +1464,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeLossStuck = 0.8;
   const dmgAOE = 300;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.08;
+  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.07;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.5;
@@ -1477,14 +1477,14 @@ export function sonicPassive(customHero: CustomHero) {
   const homingMagnitudeMaxMult = 1.5;
   const homingForwardsLatestTick = 12;
   const homingReversalDuration = 9;
-  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.3;
+  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.2;
 
   const magnitudeLossSpinDash = 0.9;
 
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 1.0;
+  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.8;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
