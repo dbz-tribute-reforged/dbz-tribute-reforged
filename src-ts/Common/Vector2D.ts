@@ -10,6 +10,16 @@ export class Vector2D {
     return this;
   }
 
+  public subtract(v: Vector2D): this {
+    this.x -= v.x;
+    this.y -= v.y;
+    return this;
+  }
+
+  public angle(): number {
+    return Math.atan2(this.y, this.x);
+  }
+
   public setVector(v: Vector2D): this {
     this.x = v.x;
     this.y = v.y;
@@ -25,6 +35,12 @@ export class Vector2D {
   public setUnit(unit: unit): this {
     this.x = GetUnitX(unit);
     this.y = GetUnitY(unit);
+    return this;
+  }
+
+  public setWidget(widget: widget): this {
+    this.x = GetWidgetX(widget);
+    this.y = GetWidgetY(widget);
     return this;
   }
 

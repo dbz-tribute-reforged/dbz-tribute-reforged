@@ -250,21 +250,24 @@ export function CustomPlayerTest() {
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
     const unitTypeId = GetUnitTypeId(GetTriggerUnit());
-    const targetUnit = GetOrderTargetUnit();
+    const targetWidget = GetOrderTarget();
     if (
       GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
       unitTypeId != Constants.dummyBeamUnitId && 
       unitTypeId != Constants.dummyCasterId
     ) {
-      const playerId = GetPlayerId(GetTriggerPlayer())
-      if (targetUnit) {
-        Globals.customPlayers[playerId].orderPoint.setUnit(targetUnit);
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      Globals.customPlayers[playerId].lastOrderId = GetIssuedOrderId();
+      if (targetWidget) {
+        Globals.customPlayers[playerId].orderPoint.setWidget(targetWidget);
+        Globals.customPlayers[playerId].orderWidget = targetWidget;
       } else {
         const x = GetOrderPointX();
         const y = GetOrderPointY();
         if (x != 0 && y != 0) {
           Globals.customPlayers[playerId].orderPoint.x = x;
           Globals.customPlayers[playerId].orderPoint.y = y;
+          Globals.customPlayers[playerId].orderWidget = null;
         }
       }
     }
@@ -282,8 +285,6 @@ export function CustomPlayerTest() {
     if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
       const playerId = GetPlayerId(GetTriggerPlayer());
       Globals.customPlayers[playerId].targetUnit = GetOrderTargetUnit();
-      Globals.customPlayers[playerId].orderPoint.x = GetUnitX(Globals.customPlayers[playerId].targetUnit);
-      Globals.customPlayers[playerId].orderPoint.y = GetUnitY(Globals.customPlayers[playerId].targetUnit);
     }
     return false;
   }));
@@ -1056,6 +1057,33 @@ export function CustomPlayerTest() {
   });
 
 
+  const zanzoToggleTrigger = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zanzo", true);
+    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zd", true);
+    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zz", true);
+  }
+  TriggerAddAction(zanzoToggleTrigger, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      Globals.customPlayers[playerId].useZanzoDash = !Globals.customPlayers[playerId].useZanzoDash;
+
+      if (Globals.customPlayers[playerId].useZanzoDash) {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Enabled|r");
+      } else {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Disabled|r");
+      }
+    }
+  });
+  TimerStart(CreateTimer(), 60, false, () => {
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 
+      10, 
+      "|cffff2020Zanzo Dash Toggle Disabled|r"
+    );
+    DisableTrigger(zanzoToggleTrigger);
+  });
+
   createCdTrigger();
 
   // force final battle
@@ -1206,7 +1234,7 @@ export function CustomPlayerTest() {
     SetupSkurvyPlunder();
     SetupSkurvyMirror();
 
-    SetupSonicSpeed();
+    SetupSonicAbilities();
     
     SetupTreeOfMightSapling();
 
@@ -3105,8 +3133,8 @@ export function SetupYamchaCombos() {
   // 0: 1st slot
   // 1: 2nd slot
   // 2: 3rd slot
-  const yamchaComobCdInc = 0.25;
-  const yamchaComobCdMax = 25;
+  const yamchaComobCdInc = 0.2;
+  const yamchaComobCdMax = 15;
 
 
   TriggerAddAction(Globals.genericSpellTrigger, () => {
@@ -3229,7 +3257,7 @@ export function SetupYamchaCombos() {
             + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
           );
 
-          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0004);
+          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0008);
 
           // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
           // fire a special qwe
@@ -3360,7 +3388,7 @@ export function SetupSkurvyPlunder() {
       UnitAddAbility(plunderBird, Id.inventoryHero);
       PauseUnit(plunderBird, true);
 
-      const newHP = 150 * GetHeroLevel(caster) + 1000;
+      const newHP = 100 * GetHeroLevel(caster) + 500;
       BlzSetUnitMaxHP(plunderBird, newHP);
       SetUnitState(plunderBird, UNIT_STATE_LIFE, newHP);
       // ShowUnit(plunderBird, false);
@@ -3561,23 +3589,101 @@ export function SetupSkurvyMirror() {
   });
 }
 
-export function SetupSonicSpeed() {
+export function SetupSonicAbilities() {
   // globals hashtable
-  // 0: is spinning
+  // 0: is spinning (0 = false, 1 = true)
+  // 1: homing attack ticks
+  // 2: homing attack x
+  // 3: homing attack y
+  // 4: homing attack (original) angle?
+  // 5: homing attack state (0 = forwards, 1 = backwards, 2 = re-forwards)
+  // 6: homing re-forwards tick
+  // 7: homing attack spell level
+  // 8: spin dash ticks
+  // 9: spin dash level
+  // 10: previous speed magnitude
+  // 11: light speed dash ticks
+  // 12: light speed x
+  // 13: light speed y
+  // 14: light speed angle
+  // 15: light speed dash state (0 = non-init, 1 = charge, 2 = forwards)
+  // 16: super sonic ticks
+
   
   TriggerAddAction(Globals.genericSpellTrigger, () => {
     const spellId = GetSpellAbilityId();
-    if (spellId == Id.sonicSpin) {
-      const unit = GetTriggerUnit();
-      const unitId = GetHandleId(unit);
-      const spinVal = LoadInteger(Globals.genericSpellHashtable, unitId, 0);
+    if (
+      spellId == Id.sonicSpin 
+      || spellId == Id.sonicHomingAttack
+      || spellId == Id.sonicSpinDash
+      || spellId == Id.sonicLightSpeedDash
+      || spellId == Id.sonicSuper
+    ) {
       
-      if (spinVal == 0) {
-        AddUnitAnimationProperties(unit, "alternate", true);
-        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 1);
-      } else {
-        AddUnitAnimationProperties(unit, "alternate", false);
-        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
+      const unit = GetTriggerUnit();
+      const sonicId = GetHandleId(unit);
+      let spinVal = LoadInteger(Globals.genericSpellHashtable, sonicId, 0);
+
+      if (
+        spellId == Id.sonicSpin || 
+        spellId == Id.sonicSpinDash
+      ) {
+        if (spellId == Id.sonicSpinDash) {
+          spinVal = 0;
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 8, 28);
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 9, GetUnitAbilityLevel(unit, Id.sonicSpinDash));
+        }
+
+        if (spinVal == 0) {
+          AddUnitAnimationProperties(unit, "alternate", true);
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 0, 1);
+        } else {
+          AddUnitAnimationProperties(unit, "alternate", false);
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 0, 0);
+        }
+      } 
+      else if (spellId == Id.sonicHomingAttack) {
+        const x = GetSpellTargetX();
+        const y = GetSpellTargetY();
+        
+        // due to some sort of race condition
+        // tmpVector2 must be caster
+        Globals.tmpVector2.setUnit(unit);
+        Globals.tmpVector.setPos(x, y);
+        const angle = CoordMath.angleBetweenCoords(
+          Globals.tmpVector2,
+          Globals.tmpVector
+        );
+
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 1, 32);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 2, x);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 3, y);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 4, angle);
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 5, 0);
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 6, 0);
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 7, GetUnitAbilityLevel(unit, Id.sonicHomingAttack));
+      } 
+      else if (spellId == Id.sonicLightSpeedDash) {
+        const x = GetSpellTargetX();
+        const y = GetSpellTargetY();
+
+        // due to some sort of race condition
+        // tmpVector2 must be caster
+        Globals.tmpVector2.setUnit(unit);
+        Globals.tmpVector.setPos(x, y);
+        const angle = CoordMath.angleBetweenCoords(
+          Globals.tmpVector2,
+          Globals.tmpVector
+        );
+
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 11, 166);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 12, x);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 13, y);
+        SaveReal(Globals.genericSpellHashtable, sonicId, 14, angle);
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 15, 0);
+      }
+      else if (spellId == Id.sonicSuper) {
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 16, 500);
       }
     }
   });

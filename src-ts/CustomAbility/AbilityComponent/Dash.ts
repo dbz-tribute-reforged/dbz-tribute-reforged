@@ -26,7 +26,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DASH_TYPE_FLYING = 1;
   static readonly DASH_TYPE_ZANZO = 2;
 
-  static readonly ZANZO_DYNAMIC_CD = 3;
+  static readonly ZANZO_DYNAMIC_CD = 4;
   static readonly ZANZO_STATIC_CD = 1;
 
   protected previousCoord: Vector2D;

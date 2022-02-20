@@ -13,6 +13,10 @@ export class CustomPlayer {
   public targetUnit: unit;
   public lastCastUnit: unit;
   public usingCustomUI: boolean;
+  public orderWidget: widget | null;
+  public lastOrderId: number;
+
+  public useZanzoDash: boolean;
 
   constructor(
     public id: number, 
@@ -29,6 +33,10 @@ export class CustomPlayer {
     this.targetUnit = GetEnumUnit();
     this.lastCastUnit = GetEnumUnit();
     this.usingCustomUI = false;
+    this.orderWidget = null;
+    this.lastOrderId = 0;
+
+    this.useZanzoDash = false;
   }
 
   public addHero(hero: unit): this {

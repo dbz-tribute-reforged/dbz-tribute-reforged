@@ -10,6 +10,7 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { PathingCheck } from "Common/PathingCheck";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -1127,9 +1128,9 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   const heatHeavenPiercingIceWall = -25;
   const heatFlashfireFist = 25;
   const heatLossPerTick = 0.02;
-  const heatHPPenaltyPerTick = 0.01;
-  const heatHPPenaltyInitial = 9;
+  const heatHPPenaltyInitial = 6;
   const heatHPPenaltyPerSecond = 3;
+  const heatHPPenaltyTickInterval = 33;
 
   // update stuff
   const timer = CreateTimer();
@@ -1253,11 +1254,14 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
       // }
 
       // sfx on 0
-      if (penaltyTick % 33 == 0) {
+      if (
+        penaltyTick > heatHPPenaltyTickInterval-1 
+        && penaltyTick % heatHPPenaltyTickInterval == 0
+      ) {
         let percentHP = 0;
-        if (penaltyTick == 0) {
+        if (penaltyTick == heatHPPenaltyTickInterval) {
           percentHP = GetUnitLifePercent(customHero.unit);
-          if (percentHP > 10) {
+          if (percentHP > heatHPPenaltyInitial+1) {
             SetUnitLifePercentBJ(customHero.unit, percentHP - heatHPPenaltyInitial);
           }
         } else {
@@ -1449,23 +1453,44 @@ export function sonicPassive(customHero: CustomHero) {
   customHero.addTimer(timer);
 
   const sonicId = GetHandleId(customHero.unit);
+  const upgLevel = 60;
+  const upg2Level = 125;
   const magnitudeMaxBase = 20;
   const magnitudeMaxUpg = 5;
-  const magnitudeMaxUpg2 = 10;
+  const magnitudeMaxUpg2 = 5;
   const bonusSpeedDmgMult = 2;
-  const magnitudeLossStunned = 0.98;
+  const minMagnitudeBonus = 15;
+  const magnitudeLossStunned = 0.95;
   const magnitudeLossStuck = 0.8;
   const dmgAOE = 300;
   const dmgMagnitudeMult = 0.1;
-  const dmgDataMult = BASE_DMG.DFIST_DPS * 0.1;
+  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.07;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.5;
+  const moveDistSpinUpg = 0.025;
+  const moveDistSpinUpg2 = 0.025;
   const oldPos = new Vector2D(0, 0);
-  const speedResetDist = 3000;
+  oldPos.setUnit(customHero.unit);
+  const speedResetDist = 6000;
+
+  const homingMagnitudeMaxMult = 1.5;
+  const homingForwardsLatestTick = 12;
+  const homingReversalDuration = 9;
+  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.2;
+
+  const magnitudeLossSpinDash = 0.9;
+
+  const lightSpeedMult = 1.5;
+  const lightSpeedOffset = 60;
+  const lightSpeedMaxDistTravelled = 6000;
+  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.8;
+
+  const superSonicDistMult = 1.5;
+  const superSonicMagnitudeMult = 1.5;
 
   let counter = 0;
-  const counterMax = 4;
+  const counterMax = 3;
 
   UnitAddAbility(customHero.unit, Id.ghostVisible);
 
@@ -1491,6 +1516,14 @@ export function sonicPassive(customHero: CustomHero) {
     }
 
     const spinVal = LoadInteger(Globals.genericSpellHashtable, sonicId, 0);
+    let homingTicks = LoadInteger(Globals.genericSpellHashtable, sonicId, 1);
+    const isHoming = homingTicks > 0;
+    const spinDashTicks = LoadInteger(Globals.genericSpellHashtable, sonicId, 8);
+    const prevSpeedMagnitude = LoadReal(Globals.genericSpellHashtable, sonicId, 10);
+    let lightSpeedTicks = LoadInteger(Globals.genericSpellHashtable, sonicId, 11);
+    const superSonicTicks = LoadInteger(Globals.genericSpellHashtable, sonicId, 16);
+
+
     if (spinVal == 1) {
       SetUnitMoveSpeed(customHero.unit, 100);
     }
@@ -1505,17 +1538,23 @@ export function sonicPassive(customHero: CustomHero) {
       }
     }
 
-    let magnitudeMax = magnitudeMaxBase;;
+    let magnitudeMax = magnitudeMaxBase;
     const lvl = GetHeroLevel(customHero.unit);
-    if (lvl >= 125) {
-      magnitudeMax += magnitudeMaxUpg2;
-    } else if (lvl >= 60) {
+    const isUpg = lvl >= upgLevel;
+    const isUpg2 = lvl >= upg2Level;
+
+
+    if (isUpg) {
       magnitudeMax += magnitudeMaxUpg;
     }
-
-    if (spinVal == 0) {
-      magnitudeMax *= 0.25;
+    if (isUpg2) {
+      magnitudeMax += magnitudeMaxUpg2;
     }
+
+    if (spinVal == 0 && !isHoming) {
+      magnitudeMax *= 0.1;
+    }
+
 
     Globals.tmpVector2.setUnit(customHero.unit);
 
@@ -1540,22 +1579,155 @@ export function sonicPassive(customHero: CustomHero) {
       dist = 0;
     } else if (spinVal == 1) {
       dist = moveDistSpin;
+      if (isUpg) {
+        dist += moveDistSpinUpg;
+      }
+      if (isUpg2) {
+        dist += moveDistSpinUpg2;
+      }
     }
 
-    const angle = CoordMath.angleBetweenCoords(
+    let addToMoveDir = true;
+    let angle = CoordMath.angleBetweenCoords(
       Globals.tmpVector2,
       Globals.customPlayers[playerId].orderPoint
     );
 
-    Globals.tmpVector.setPos(0, 0);
-    CoordMath.polarProjectCoords(Globals.tmpVector, Globals.tmpVector, angle, dist);
-    moveDir.add(Globals.tmpVector);
 
-    let m = CoordMath.magnitude(moveDir);
-    if (m > magnitudeMax) {
+    if (superSonicTicks > 0) {
+      dist *= superSonicDistMult;
+      magnitudeMax *= superSonicMagnitudeMult;
+
+      SaveInteger(Globals.genericSpellHashtable, sonicId, 16, Math.max(0, superSonicTicks-1));
+    }
+
+    if (lightSpeedTicks > 0) {
+      dist *= lightSpeedMult;
+      magnitudeMax *= lightSpeedMult;
+
+      SaveInteger(Globals.genericSpellHashtable, sonicId, 11, Math.max(0, lightSpeedTicks-1));
+    }
+
+
+
+
+    if (isHoming) {
+      const homingX = LoadReal(Globals.genericSpellHashtable, sonicId, 2);
+      const homingY = LoadReal(Globals.genericSpellHashtable, sonicId, 3);
+      const homingAngle = LoadReal(Globals.genericSpellHashtable, sonicId, 4);
+      const homingState = LoadInteger(Globals.genericSpellHashtable, sonicId, 5);
+      const homingReForwardsTick = LoadInteger(Globals.genericSpellHashtable, sonicId, 6);
+      magnitudeMax *= homingMagnitudeMaxMult;
+      const homingMagnitude = Math.max(magnitudeMax * 0.25, prevSpeedMagnitude * homingMagnitudeMaxMult);
+      addToMoveDir = false;
+      Globals.tmpVector.setPos(homingX, homingY);
+
+      if (homingState == 0) {
+        if (
+          CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) < homingMagnitude * 1.2
+          || homingTicks < homingForwardsLatestTick
+        ) {
+          // homing impact
+          moveDir.setPos(0, 0);
+          CoordMath.polarProjectCoords(moveDir, moveDir, homingAngle + 180, homingMagnitude * 0.8);
+
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 5, 1);
+
+          DestroyEffect(
+            AddSpecialEffect(
+              "BlueBigExplosion.mdl",
+              GetUnitX(customHero.unit),
+              GetUnitY(customHero.unit),
+            )
+          );
+
+          const homingAttackSpellLevel = LoadInteger(Globals.genericSpellHashtable, sonicId, 7);
+
+          AOEDamage.genericDealAOEDamage(
+            Globals.tmpUnitGroup,
+            customHero.unit,
+            GetUnitX(customHero.unit),
+            GetUnitY(customHero.unit),
+            dmgAOE,
+            homingAttackSpellLevel,
+            customHero.spellPower,
+            dmgHomingAttack,
+            1.0,
+            bj_HEROSTAT_AGI
+          );
+        } else {
+          // rush homing
+          angle = CoordMath.angleBetweenCoords(
+            Globals.tmpVector2,
+            Globals.tmpVector
+          );
+          
+          Globals.tmpVector.subtract(Globals.tmpVector2);
+          moveDir.setVector(Globals.tmpVector);
+        }
+      }
+      else if (homingState == 1) {
+        moveDir.setPos(0, 0);
+        CoordMath.polarProjectCoords(moveDir, moveDir, homingAngle + 180, homingMagnitude * 0.8);
+        SaveInteger(Globals.genericSpellHashtable, sonicId, 6, homingReForwardsTick+1);
+
+        if (homingReForwardsTick >= homingReversalDuration || homingTicks <= 2) {
+          moveDir.setPos(0, 0);
+          CoordMath.polarProjectCoords(moveDir, moveDir, homingAngle, homingMagnitude * 0.1);
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 5, 2);
+        }
+      } 
+      else if (homingState == 2) {
+        // do homing re-forwards
+        angle = CoordMath.angleBetweenCoords(
+          Globals.tmpVector2,
+          Globals.customPlayers[playerId].orderPoint
+        );
+        dist *= 3;
+        homingTicks = 1;
+        addToMoveDir = true;
+      }
+
+      SaveInteger(Globals.genericSpellHashtable, sonicId, 1, Math.max(0, homingTicks-1));
+    }
+
+
+
+    if (spinDashTicks > 0) {
+      SaveInteger(Globals.genericSpellHashtable, sonicId, 8, spinDashTicks-1);
+
+      if (spinDashTicks == 1) {
+        const spinDashLevel = LoadInteger(Globals.genericSpellHashtable, sonicId, 9);
+        
+        angle = CoordMath.angleBetweenCoords(
+          Globals.tmpVector2,
+          Globals.customPlayers[playerId].orderPoint
+        );
+        CoordMath.polarProjectCoords(moveDir, moveDir, angle, magnitudeMax * (0.4 + 0.06 * spinDashLevel));
+      } else {
+        dist = 0;
+        angle = 0;
+        CoordMath.multiply(moveDir, magnitudeLossSpinDash);
+      }
+    }
+
+    if (addToMoveDir) {
+      Globals.tmpVector.setPos(0, 0);
+      CoordMath.polarProjectCoords(Globals.tmpVector, Globals.tmpVector, angle, dist);
+      moveDir.add(Globals.tmpVector);
+    }
+
+
+    let currentSpeedMagnitude = CoordMath.magnitude(moveDir);
+    if (currentSpeedMagnitude > magnitudeMax) {
       CoordMath.normalize(moveDir);
       CoordMath.multiply(moveDir, magnitudeMax);
-      m = magnitudeMax;
+      currentSpeedMagnitude = magnitudeMax;
+    }
+    if (spinDashTicks > 0) {
+      currentSpeedMagnitude = prevSpeedMagnitude;
+    } else {
+      SaveReal(Globals.genericSpellHashtable, sonicId, 10, currentSpeedMagnitude);
     }
 
     if (UnitHelper.isUnitDead(customHero.unit)) {
@@ -1565,75 +1737,193 @@ export function sonicPassive(customHero: CustomHero) {
       if (isStunned) {
         CoordMath.multiply(moveDir, magnitudeLossStunned);
       } else {
-        if (!PathingCheck.moveGroundUnitToCoord(customHero.unit, Globals.tmpVector2)) {
-          CoordMath.multiply(moveDir, magnitudeLossStuck);
-        } else {
-          SetUnitFacing(customHero.unit, angle);
-  
-          const currentOrder = GetUnitCurrentOrder(customHero.unit);
-          if (!isBadOrderPoint
-            && (
-              currentOrder == OrderIds.MOVE
-              // || currentOrder == OrderIds.SMART
-            )
+        
+        let doMove = true;
+        let wasMoved = false;
+        
+        const currentOrder = GetUnitCurrentOrder(customHero.unit);
+
+        // not spinning and not attacking
+        if (spinVal == 0) {
+          if (currentOrder == OrderIds.ATTACK && !isHoming) {
+            doMove = false;
+          } else {
+            // if too close to target, stop moving fast
+            if (Globals.customPlayers[playerId].orderWidget != null) {
+              Globals.tmpVector.setWidget(Globals.customPlayers[playerId].orderWidget!);
+            } else {
+              Globals.tmpVector.setVector(Globals.customPlayers[playerId].orderPoint);
+            }
+            if (CoordMath.distance(oldPos, Globals.tmpVector) < currentSpeedMagnitude) {
+              doMove = false;
+            }
+          }
+        }
+
+        if (doMove) {
+          if (
+            counter >= counterMax
+            && Globals.customPlayers[playerId].lastOrderId != OrderIds.STOP
           ) {
-            if (counter >= counterMax) {
+            if (Globals.customPlayers[playerId].orderWidget != null) {
+              IssueTargetOrderById(
+                customHero.unit, 
+                Globals.customPlayers[playerId].lastOrderId,
+                Globals.customPlayers[playerId].orderWidget!
+              );
+            } else {
               IssuePointOrderById(
-                customHero.unit, OrderIds.MOVE, 
+                customHero.unit, 
+                Globals.customPlayers[playerId].lastOrderId, 
                 Globals.customPlayers[playerId].orderPoint.x,
                 Globals.customPlayers[playerId].orderPoint.y 
               );
-              counter = 0;
             }
-            ++counter;
+            counter = 0;
           }
-          
-          // deal AOE damage
-          if (spinVal == 1) {
-            let speedToMult = Math.max(0.1, m * dmgMagnitudeMult);
-            if (m >= magnitudeMax * 0.75) {
+          ++counter;
+
+          wasMoved = PathingCheck.moveGroundUnitToCoord(customHero.unit, Globals.tmpVector2);
+        }
+
+
+
+        if (spinVal == 1) {
+          if (!wasMoved) {
+            CoordMath.multiply(moveDir, magnitudeLossStuck);
+          } else {
+            SetUnitFacing(customHero.unit, angle);
+
+            // spin damage
+            let speedToMult = Math.max(0.1, currentSpeedMagnitude * dmgMagnitudeMult);
+            if (currentSpeedMagnitude >= minMagnitudeBonus) {
               speedToMult *= bonusSpeedDmgMult;
             }
             speedToMult = Math.min(10, speedToMult);
-      
-            GroupClear(Globals.tmpUnitGroup);
-            GroupEnumUnitsInRange(
+
+            const spinLvl = Math.min(10, 1 + lvl / 10);
+            AOEDamage.genericDealAOEDamage(
               Globals.tmpUnitGroup,
+              customHero.unit,
               GetUnitX(customHero.unit),
               GetUnitY(customHero.unit),
               dmgAOE,
-              null
+              spinLvl,
+              customHero.spellPower,
+              spinDmgDataMult,
+              speedToMult,
+              bj_HEROSTAT_AGI
             );
-      
-            ForGroup(Globals.tmpUnitGroup, () => {
-              const target = GetEnumUnit();
-              if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
-                const dmg = AOEDamage.calculateDamageRaw(
-                  Math.min(10, 1 + lvl / 10),
-                  customHero.spellPower,
-                  dmgDataMult,
-                  speedToMult,
-                  customHero.unit,
-                  bj_HEROSTAT_AGI
-                );
-                UnitDamageTarget(
-                  customHero.unit, 
-                  target,
-                  dmg,
-                  true, false,
-                  ATTACK_TYPE_HERO,
-                  DAMAGE_TYPE_NORMAL,
-                  WEAPON_TYPE_WHOKNOWS
-                );
-              }
-            });
           }
-        }  
+        }
       }
     }
 
+
+    if (lightSpeedTicks > 0) {
+      if (
+        homingTicks <= 0
+        && spinDashTicks <= 0
+      ) {
+        const lightSpeedX = LoadReal(Globals.genericSpellHashtable, sonicId, 12);
+        const lightSpeedY = LoadReal(Globals.genericSpellHashtable, sonicId, 13);
+        const lightSpeedAngle = LoadReal(Globals.genericSpellHashtable, sonicId, 14);
+        const lightSpeedState = LoadInteger(Globals.genericSpellHashtable, sonicId, 15);
+        if (lightSpeedState == 0) {
+          // move forwards until reached destination
+          // or can no longer move forwards
+          GroupClear(Globals.tmpUnitGroup);
+          GroupClear(Globals.tmpUnitGroup2);
+
+          Globals.tmpVector.setPos(lightSpeedX, lightSpeedY);
+          Globals.tmpVector3.setUnit(customHero.unit);
+          
+          let sfxCounter = 0;
+          let distTravelled = 0;
+          while (
+            CoordMath.distance(Globals.tmpVector3, Globals.tmpVector) > lightSpeedOffset * 1.2
+            && distTravelled < lightSpeedMaxDistTravelled
+          ) {
+            CoordMath.polarProjectCoords(Globals.tmpVector3, Globals.tmpVector3, lightSpeedAngle, lightSpeedOffset);
+            distTravelled += lightSpeedOffset;
+
+            // create sfx
+            if (sfxCounter % 8 == 0) {
+              const tmpLightSpeedDashSfx = AddSpecialEffect(
+                "LaxusSpark.mdl",
+                Globals.tmpVector3.x,
+                Globals.tmpVector3.y
+              );
+              BlzSetSpecialEffectScale(tmpLightSpeedDashSfx, 3.0);
+              BlzSetSpecialEffectTimeScale(tmpLightSpeedDashSfx, 0.5);
+              DestroyEffect(tmpLightSpeedDashSfx);
+            }
+            sfxCounter++;
+
+            GroupEnumUnitsInRange(
+              Globals.tmpUnitGroup2,
+              Globals.tmpVector3.x,
+              Globals.tmpVector3.y,
+              2*dmgAOE,
+              null
+            );
+            ForGroup(Globals.tmpUnitGroup2, () => {
+              if (!IsUnitInGroup(GetEnumUnit(), Globals.tmpUnitGroup)) {
+                GroupAddUnit(Globals.tmpUnitGroup, GetEnumUnit());
+              }
+            });
+
+            if (
+              !PathingCheck.isFlyingWalkable(Globals.tmpVector3) 
+              || PathingCheck.isDeepWater(Globals.tmpVector3)
+            ) {
+              distTravelled = lightSpeedMaxDistTravelled;
+            }
+          }
+
+          AOEDamage.genericDealDamageToGroup(
+            Globals.tmpUnitGroup,
+            customHero.unit,
+            GetUnitAbilityLevel(customHero.unit, Id.sonicLightSpeedDash),
+            customHero.spellPower,
+            dmgLightSpeed,
+            1.0,
+            bj_HEROSTAT_AGI
+          );
+
+          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(customHero.unit, Globals.tmpVector3);
+          PathingCheck.unstuckGroundUnitFromCliff(customHero.unit, Globals.tmpVector3);
+          
+          SaveInteger(Globals.genericSpellHashtable, sonicId, 15, 1);
+
+          DestroyEffect(
+            AddSpecialEffect(
+              "LightStrikeArray2.mdl",
+              Globals.tmpVector3.x,
+              Globals.tmpVector3.y
+            )
+          );
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+              Globals.tmpVector3.x,
+              Globals.tmpVector3.y
+            )
+          );
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+              Globals.tmpVector3.x,
+              Globals.tmpVector3.y
+            )
+          );
+        }
+      }
+    }
+
+
     SetTextTagPos(textTag, Globals.tmpVector2.x, Globals.tmpVector2.y, 25);
-    SetTextTagTextBJ(textTag, R2S(m), 10);
+    SetTextTagTextBJ(textTag, R2S(currentSpeedMagnitude), 10);
 
     oldPos.setUnit(customHero.unit);
   });
@@ -1662,7 +1952,7 @@ export function setupSPData(customHero: CustomHero) {
     //   incSp *= 0.5;
     // }
     const spRatio = Math.max(0, currentSP/maxSP);
-    incSp *= (0.6+spRatio);    
+    incSp *= (0.55+spRatio);    
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
   });
 

@@ -8,15 +8,14 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 5,
     costType: CostType.SP,
-    costAmount: 50,
+    costAmount: 55,
     duration: 20,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: true,
-    // NOTE: animations aren't implemented yet
     canUseWhenStunned: false,
     animation: "",
     icon: {
@@ -30,8 +29,8 @@ export const AbilitiesList = [
       body: 
         "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
         "Can be used to cross cliffs unlike many other dashes. " + 
-        "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 50 SP|nCD: 4 (varies)",
+        "Y is also a valid hotkey if using a QWERTZ keyboard. " + 
+        "|nCost: 55 SP|nCD: 5 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -40,13 +39,13 @@ export const AbilitiesList = [
   },
   // to here, and replace with unique name
   
-  // test
+  // -------------------------------------------
   {
     name: AbilityNames.BasicAbility.ZANZOKEN,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 8,
     costType: CostType.SP,
-    costAmount: 50,
+    costAmount: 65,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.03,
@@ -61,10 +60,10 @@ export const AbilitiesList = [
     tooltip: {
       title: "(Z) Zanzoken",
       body: 
-        "Teleports to your next right click. Cooldown is based on distance travelled. " + 
-        "Can be used to cross cliffs." + 
+        "Teleports to your next right click. " + 
+        "Can be used to cross cliffs. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 50 SP|nCD: 4 (varies)",
+        "|nCost: 65 SP|nCD: 8",
     },
     components: [
       { name: "sfx shunpo start" },
@@ -8100,6 +8099,35 @@ export const AbilitiesList = [
       { name: "anim sonic jump" },
       { name: "jump nova rush" },
       { name: "damage sonic jump explosion" },
+      { name: "temp ability sonic insta shield" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sonic.INSTA_SHIELD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSonic.blp",
+      disabled: "BTNSonic.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sonic.INSTA_SHIELD,
+      body: 
+        AbilityNames.Sonic.INSTA_SHIELD
+    },
+    components: [
+      { name: "block basic guard" },
+      { name: "temp ability blazing dynamo spell immunity" },
     ],
   },
   // -------------------------------------------

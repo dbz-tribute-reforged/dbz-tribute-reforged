@@ -146,7 +146,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 750,
+    distance: 700,
   },
   // max power
   {

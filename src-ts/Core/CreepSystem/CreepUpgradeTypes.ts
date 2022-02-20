@@ -11,12 +11,14 @@ export module RandomCreepTypeHelper {
   export function getType(randomCreepTypes: RandomCreepType[]): number {
     const rand = Math.random();
     let max = randomCreepTypes[0].probability;
-    for (let i = 0; i < randomCreepTypes.length - 1; ++i) {
-      if (max >= rand) {
+    for (let i = 0; i < randomCreepTypes.length; ++i) {
+      if (i > 0) {
+        max += randomCreepTypes[i].probability;
+      }
+      if (max >= rand - 0.00003) {
         return randomCreepTypes[i].creepType;
       }
-      max += randomCreepTypes[i+1].probability;
     }
-    return randomCreepTypes[randomCreepTypes.length - 1].creepType;
+    return -1;
   }
 }

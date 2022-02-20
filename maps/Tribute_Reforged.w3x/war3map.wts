@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.70b
+DBZ Tribute Reforged 0.71
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 56+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 60+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -8460,17 +8460,6 @@ STRING 1343
 Earrings worn by the Kais
 }
 
-STRING 1344
-// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
-|cffffff00+0.1x stat mult
-+20% spell amp
-20% Damage Block up to 4x Str
-|cff00FF00Duration: <A0ZF,Dur1> seconds|r
-|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
-}
-
 STRING 1345
 // Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
 {
@@ -8589,6 +8578,34 @@ STRING 1364
 // Items: I023 (Quest Xp), Ubertip (Tooltip - Extended)
 {
 Experience from saga mobs
+}
+
+STRING 1365
+// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
+|cffffff00+1% spin damage per hero level up to +100%.
+x2 spin damage when above 15 speed.|r
+|cff00FF00Damage: Agi * Sonic Speed
+|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
+}
+
+STRING 1366
+// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
+|cffffff00+0.1x stat mult
++20% spell amp
+20% Damage Block up to 4x Str
+x2 Acceleration and x1.5 Max Speed
+|cff00FF00Duration: <A0ZF,Dur1> seconds|r
+|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
+}
+
+STRING 1367
+{
+[|cffffcc00Talent|r] Super Masenko
+Gohan now fires two high powered masenkos.
 }
 
 STRING 1368
@@ -9794,6 +9811,24 @@ STRING 1565
 // Items: I01J (King Kai's food), EditorSuffix (Name - Editor Suffix)
 {
 Bomb
+}
+
+STRING 1566
+{
+[|cffffcc00Talent|r] God Kamehameha
+Gohan can now infuse his kamehameha with mystic energy, allowing them to deal even greater damage.
+}
+
+STRING 1567
+{
+[|cffffcc00Unlock|r] Solar Kamehameha
+Cell can charge a super-powered kamehameha that is strong enough to destroy the solar system.
+}
+
+STRING 1568
+{
+[|cffffcc00Unlock|r] Father-Son Kamehameha
+Gohan can now charge a high-powered kamehameha to annihilate his enemies.
 }
 
 STRING 1569
@@ -11169,6 +11204,12 @@ STRING 1788
 // Abilities: AIta (Scouter 2.0), Name (Name)
 {
 Scouter 2.0
+}
+
+STRING 1789
+// Abilities: A066 (Use Item), Name (Name)
+{
+Use Item
 }
 
 STRING 1790
@@ -15561,10 +15602,12 @@ Cannot be used with [|cff00ff00D|r] Meditate.
 }
 
 STRING 2498
-// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
-|cff00ff00Damage Blocked: 5 * Agi @ 70%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool1> seconds|r
 }
 
 STRING 2499
@@ -35260,12 +35303,12 @@ Transformations:
 [lvl 150] 2.50x "ssg"
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.70x "ssbkao"
+[lvl 250] 2.70x "ui" [unlocks Ultra Instinct]
+
 |cff00ff00Pick ONE of the following:|r
 [lvl 150] "|cff00afffgod kame|r"
 [lvl 150] "|cffffcc00super dfist|r"
-|cff00ffffUltra Instinct:|r
-Type "ui" at lvl 250 to receive [D] Ultra Instinct. 
-3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct. Both of these abilities can only be used |cffff1010ONCE PER GAME|r.
+
 }
 
 STRING 5690
@@ -35287,6 +35330,7 @@ Type "r" to revert.
 Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 70]  2.00x "ss2"
+[lvl 90]  [unlocks Father-Son kame]
 [lvl 110] 2.10x "saiyaman"
 [lvl 120] 2.20x "ss"
 [lvl 130] 2.30x "ss2"
@@ -44795,6 +44839,8 @@ Transformations:
 [lvl 60]  1.75x "sega mega"
 [lvl 90]  2.00x "sega mega"
 [lvl 125] 2.40x "sega mega" [unlocks Super Sonic]
+
+Spin Max Speed upgrades at level 60 and 125.
 }
 
 STRING 7195
@@ -57622,6 +57668,13 @@ STRING 9220
 Saga Generic Autocast Spell
 }
 
+STRING 9221
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
+|cff00ff00Damage Blocked: 5 * Agi @ 70%|r|n|cff00ffffCooldown: <A0VM,Cool1> seconds|r
+}
+
 STRING 9222
 // Abilities: A0KM (Saga Generic Spammed Spell), Name (Name)
 {
@@ -66452,7 +66505,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 30+] 2.00x (absorb 17/18)
-[lvl 120] 2.50x "super perfect"
+[lvl 120] 2.50x "super perfect" [unlocks Solar Kame]
 [lvl 250] 2.70x "cell-x" [unlocks cell-x form]
 
 To reach Cell's higher forms you must absorb 17/18.
@@ -79434,7 +79487,7 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 }
 
 STRING 12751
-// Abilities: A066 (Use Item), Name (Name)
+// Abilities: A0VF (Use Item), Name (Name)
 {
 Use Item
 }
@@ -101630,13 +101683,13 @@ STRING 16066
 }
 
 STRING 16067
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16068
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -105230,9 +105283,12 @@ Blut Vene
 }
 
 STRING 16557
-// Abilities: A0VM (Blut Vene), Researchtip (Tooltip - Learn)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool2> seconds|r
 }
 
 STRING 16558
@@ -108017,9 +108073,12 @@ A weak early-game hero with powerful close-range offensive capabilities. Can gai
 }
 
 STRING 16911
-// Abilities: A0VM (Blut Vene), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool3> seconds|r
 }
 
 STRING 16912
@@ -108220,7 +108279,7 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Lightning 2]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] Upgrades sword to "Rainbow" - increased crit and base damage
+[lvl 175] Upgrades sword to "Rainbow" - increased crit and base damage
 [lvl 200] [Unlocks Rust Tyranno Quest] - NYI
 }
 
@@ -109442,9 +109501,12 @@ Saga Fighting Skills
 }
 
 STRING 17110
-// Abilities: A0VF (use Item), Name (Name)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-use Item
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool4> seconds|r
 }
 
 STRING 17111
@@ -128689,6 +128751,8 @@ Transformations:
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.40x "fp" [unlocks Super Sonic]
+
+Spin Max Speed upgrades at level 60 and 125.
 }
 
 STRING 19861
@@ -130481,7 +130545,7 @@ W
 }
 
 STRING 20136
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZH (Insta-Shield), Researchubertip (Tooltip - Learn - Extended)
 {
 Sonic jumps into the air before crashing down on his enemies.
 |cff00ff00Damage: Agi * lvl * ?|r
@@ -130489,43 +130553,48 @@ Sonic jumps into the air before crashing down on his enemies.
 }
 
 STRING 20137
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool3> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool5> seconds|r
 }
 
 STRING 20138
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool4> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool6> seconds|r
 }
 
 STRING 20139
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool5> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool7> seconds|r
 }
 
 STRING 20140
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool6> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool8> seconds|r
 }
 
 STRING 20141
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool7> seconds|r
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool9> seconds|r
 }
 
 STRING 20142
@@ -130601,35 +130670,35 @@ STRING 20153
 }
 
 STRING 20154
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool8> seconds|r
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool1> seconds|r
 }
 
 STRING 20155
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool9> seconds|r
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool3> seconds|r
 }
 
 STRING 20156
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool10> seconds|r
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool4> seconds|r
 }
 
 STRING 20157
-// Abilities: A0ZE (Jump), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool1> seconds|r
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool5> seconds|r
 }
 
 STRING 20158
@@ -130639,11 +130708,11 @@ STRING 20158
 }
 
 STRING 20159
-// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic jumps into the air before crashing down on his enemies.
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0ZE,Cool2> seconds|r
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool6> seconds|r
 }
 
 STRING 20160
@@ -130656,6 +130725,14 @@ STRING 20161
 // Abilities: A0ZF (Super Sonic), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Sonic
+}
+
+STRING 20162
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool1> seconds|r
 }
 
 STRING 20163
@@ -130680,16 +130757,6 @@ STRING 20166
 // Abilities: A0ZG (Toggle Spin), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Toggle Spin
-}
-
-STRING 20167
-// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
-|cffffff00+1% spin damage per hero level up to +100%.
-x2 spin damage when above 75% max speed.|r
-|cff00FF00Damage: Agi * Sonic Speed
-|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
 }
 
 STRING 20168
@@ -130720,5 +130787,701 @@ STRING 20172
 {
 [|cffffcc00Super Sonic|r]
 Sonic can now enter his Super Sonic form.
+}
+
+STRING 20173
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool3> seconds|r
+}
+
+STRING 20174
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool4> seconds|r
+}
+
+STRING 20175
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool5> seconds|r
+}
+
+STRING 20176
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool6> seconds|r
+}
+
+STRING 20177
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool7> seconds|r
+}
+
+STRING 20178
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool8> seconds|r
+}
+
+STRING 20179
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool9> seconds|r
+}
+
+STRING 20180
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool10> seconds|r
+}
+
+STRING 20181
+// Abilities: A0ZE (Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool1> seconds|r
+}
+
+STRING 20182
+// Abilities: A0ZE (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff00Q|r] Insta-Shield.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0ZE,Cool2> seconds|r
+}
+
+STRING 20183
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool1> seconds|r
+}
+
+STRING 20184
+// Abilities: A0ZJ (Spin Dash), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40% + 6% per level of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool1> - <A0ZJ,Cool10> seconds|r
+}
+
+STRING 20185
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool2> seconds|r
+}
+
+STRING 20186
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool3> seconds|r
+}
+
+STRING 20187
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool4> seconds|r
+}
+
+STRING 20188
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool5> seconds|r
+}
+
+STRING 20189
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 2|r]
+}
+
+STRING 20190
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 3|r]
+}
+
+STRING 20191
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 4|r]
+}
+
+STRING 20192
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 5|r]
+}
+
+STRING 20193
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 6|r]
+}
+
+STRING 20194
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 1|r]
+}
+
+STRING 20195
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 7|r]
+}
+
+STRING 20196
+// Abilities: A0ZH (Insta-Shield), Name (Name)
+{
+Insta-Shield
+}
+
+STRING 20197
+// Abilities: A0ZH (Insta-Shield), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Jump - [|cffffcc00Level %d|r]
+}
+
+STRING 20198
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 9|r]
+}
+
+STRING 20199
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 8|r]
+}
+
+STRING 20200
+// Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 10|r]
+}
+
+STRING 20201
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool6> seconds|r
+}
+
+STRING 20202
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool7> seconds|r
+}
+
+STRING 20203
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool8> seconds|r
+}
+
+STRING 20204
+// Abilities: A0ZH (Insta-Shield), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20205
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool9> seconds|r
+}
+
+STRING 20206
+// Abilities: A0ZI (Homing Attack), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 20207
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 20208
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool1> seconds|r
+}
+
+STRING 20209
+// Abilities: A0ZI (Homing Attack), Name (Name)
+{
+Homing Attack
+}
+
+STRING 20210
+// Abilities: A0ZI (Homing Attack), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 20211
+// Abilities: A0ZI (Homing Attack), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Homing Attack - [|cffffcc00Level %d|r]
+}
+
+STRING 20212
+// Abilities: A0ZI (Homing Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool1> - <A0ZI,Cool10> seconds|r
+}
+
+STRING 20213
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 20214
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 20215
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 20216
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 20217
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 20218
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool2> seconds|r
+}
+
+STRING 20219
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool3> seconds|r
+}
+
+STRING 20220
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool4> seconds|r
+}
+
+STRING 20221
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool5> seconds|r
+}
+
+STRING 20222
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool6> seconds|r
+}
+
+STRING 20223
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 20224
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 20225
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 20226
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool7> seconds|r
+}
+
+STRING 20227
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool8> seconds|r
+}
+
+STRING 20228
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool9> seconds|r
+}
+
+STRING 20229
+// Abilities: A0ZI (Homing Attack), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20230
+// Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Homing Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 20231
+// Abilities: A0ZI (Homing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic swerves in midair, curling up into a spinball and launching himself straight into his target.
+|cff00FF00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A0ZI,Cool10> seconds|r
+}
+
+STRING 20232
+// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 20233
+// Abilities: A0ZJ (Spin Dash), Name (Name)
+{
+Spin Dash
+}
+
+STRING 20234
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 1|r]
+}
+
+STRING 20235
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool7> seconds|r
+}
+
+STRING 20236
+// Abilities: A0ZJ (Spin Dash), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Spin Dash - [|cffffcc00Level %d|r]
+}
+
+STRING 20237
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool8> seconds|r
+}
+
+STRING 20238
+// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 20239
+// Abilities: A0ZJ (Spin Dash), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20240
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 2|r]
+}
+
+STRING 20241
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 3|r]
+}
+
+STRING 20242
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool9> seconds|r
+}
+
+STRING 20243
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool10> seconds|r
+}
+
+STRING 20244
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 4|r]
+}
+
+STRING 20245
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 5|r]
+}
+
+STRING 20246
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 6|r]
+}
+
+STRING 20247
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 7|r]
+}
+
+STRING 20248
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 8|r]
+}
+
+STRING 20249
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 9|r]
+}
+
+STRING 20250
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool2> seconds|r
+}
+
+STRING 20251
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool10> seconds|r
+}
+
+STRING 20252
+// Abilities: A0ZK (Light Speed Dash), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool1> - <A0ZK,Cool10> seconds|r
+}
+
+STRING 20253
+// Abilities: A0ZK (Light Speed Dash), EditorSuffix (Editor Suffix)
+{
+(sonic)
+}
+
+STRING 20256
+// Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Spin Dash - [|cffffcc00Level 10|r]
+}
+
+STRING 20265
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 2|r]
+}
+
+STRING 20266
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 3|r]
+}
+
+STRING 20267
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 4|r]
+}
+
+STRING 20268
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 5|r]
+}
+
+STRING 20269
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 6|r]
+}
+
+STRING 20270
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 1|r]
+}
+
+STRING 20271
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 7|r]
+}
+
+STRING 20272
+// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 20273
+// Abilities: A0ZK (Light Speed Dash), Name (Name)
+{
+Light Speed Dash
+}
+
+STRING 20274
+// Abilities: A0ZK (Light Speed Dash), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Light Speed Dash - [|cffffcc00Level %d|r]
+}
+
+STRING 20275
+// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 20276
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 9|r]
+}
+
+STRING 20277
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 8|r]
+}
+
+STRING 20278
+// Abilities: A0ZK (Light Speed Dash), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 10|r]
+}
+
+STRING 20284
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20285
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20291
+// Abilities: A0ZJ (Spin Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic immediately brings himself to a stop before revving himself up to a percentage of max speed. While revving up, Sonic deals damage to nearby enemies based on his speed prior to stopping.
+|cffffff00Accelerates up to 40 + 6% per lvl of max speed.
+Transforms Sonic into spin mode.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A0ZJ,Cool10> seconds|r
 }
 
