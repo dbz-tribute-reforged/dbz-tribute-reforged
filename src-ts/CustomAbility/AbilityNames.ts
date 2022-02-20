@@ -433,6 +433,10 @@ export module AbilityNames {
 
   export module Sonic {
     export const JUMP: string = "Sonic Jump";
+    export const INSTA_SHIELD: string = "Sonic Insta-Shield";
+    export const HOMING_ATTACK: string = "Sonic Homing Attack";
+    export const SPIN_DASH: string = "Sonic Spin Dash";
+    export const LIGHT_SPEED_DASH: string = "Sonic :ight Speed Dash";
     export const SPIN: string = "Sonic Toggle Spin";
     export const SUPER_SONIC: string = "Sonic Super Sonic";
   }

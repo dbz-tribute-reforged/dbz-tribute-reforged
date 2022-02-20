@@ -138,10 +138,10 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.CrocodileMother, 1.0),
           ]],
           [Creep.NamekianFrog, [
-            new RandomCreepType(Creep.CrocodileGIant, 0.25),
+            new RandomCreepType(Creep.CrocodileGIant, 0.2),
           ]],
           [Creep.FriezaScout, [
-            new RandomCreepType(Creep.FriezaHenchmen, 0.25)
+            new RandomCreepType(Creep.FriezaHenchmen, 0.2),
           ]],
         ]
       )

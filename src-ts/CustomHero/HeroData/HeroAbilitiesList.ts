@@ -490,6 +490,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [Id.sonic, [
       AbilityNames.Sonic.JUMP,
       AbilityNames.Sonic.SPIN,
+      AbilityNames.Sonic.INSTA_SHIELD,
+      AbilityNames.Sonic.HOMING_ATTACK,
+      AbilityNames.Sonic.SPIN_DASH,
+      AbilityNames.Sonic.LIGHT_SPEED_DASH,
       AbilityNames.Sonic.SUPER_SONIC,
     ]],
     

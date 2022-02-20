@@ -383,6 +383,10 @@ export const abilityCodesToNames = new Map<number, string>(
     // sonic
     [Id.sonicJump, AbilityNames.Sonic.JUMP],
     [Id.sonicSpin, AbilityNames.Sonic.SPIN],
+    [Id.sonicInstaShield, AbilityNames.Sonic.INSTA_SHIELD],
+    [Id.sonicHomingAttack, AbilityNames.Sonic.HOMING_ATTACK],
+    [Id.sonicSpinDash, AbilityNames.Sonic.SPIN_DASH],
+    [Id.sonicLightSpeedDash, AbilityNames.Sonic.LIGHT_SPEED_DASH],
     [Id.sonicSuper, AbilityNames.Sonic.SUPER_SONIC],
 
 

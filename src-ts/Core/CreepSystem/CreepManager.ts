@@ -282,7 +282,9 @@ export class CreepManager {
       for (const [unit, customCreep] of this.customCreeps) {
         const newType = config.map.get(customCreep.unitTypeId);
         if (newType) {
-          customCreep.unitTypeId = RandomCreepTypeHelper.getType(newType);
+          const newUnitTypeId = RandomCreepTypeHelper.getType(newType);
+          if (newUnitTypeId == -1) continue;
+          customCreep.unitTypeId = newUnitTypeId;
           // if not chaining, force replace
           const unitY = GetUnitY(unit);
           const unitX = GetUnitX(unit);

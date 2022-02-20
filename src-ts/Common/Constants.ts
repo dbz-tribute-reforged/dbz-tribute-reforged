@@ -5,6 +5,7 @@ export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
+  export let isZanzoDash: boolean = false;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
@@ -19,9 +20,11 @@ export module Globals {
 
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();
+  export const tmpUnitGroup2 = CreateGroup();
   export const tmpForce = CreateForce();
   export const tmpVector = new Vector2D();
   export const tmpVector2 = new Vector2D();
+  export const tmpVector3 = new Vector2D();
 }
 
 export module Constants {
@@ -704,6 +707,10 @@ export module Id {
   
   export const sonic = FourCC("H0AA");
   export const sonicJump = FourCC("A0ZE");
+  export const sonicInstaShield = FourCC("A0ZH");
+  export const sonicHomingAttack = FourCC("A0ZI");
+  export const sonicSpinDash = FourCC("A0ZJ");
+  export const sonicLightSpeedDash = FourCC("A0ZK");
   export const sonicSpin = FourCC("A0ZG");
   export const sonicSuper = FourCC("A0ZF");
 

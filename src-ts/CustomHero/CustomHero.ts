@@ -7,7 +7,7 @@ import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive, HeroPassiveManager } from "./HeroPassive/HeroPassive";
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
-import { Constants, Id } from "Common/Constants";
+import { Constants, Id, Globals } from "Common/Constants";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -53,8 +53,16 @@ export class CustomHero {
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
     // relevant heroes
-    // this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
-    this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+    const playerId = GetPlayerId(GetOwningPlayer(unit));
+    if (
+      playerId >= 0 
+      && playerId < Constants.maxActivePlayers 
+      && Globals.customPlayers[playerId].useZanzoDash
+    ) {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    } else {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+    }
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
 

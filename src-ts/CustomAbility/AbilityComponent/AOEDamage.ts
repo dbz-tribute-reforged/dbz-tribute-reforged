@@ -115,6 +115,72 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
   }
 
+  static genericDealDamageToGroup(
+    targetGroup: group,
+    caster: unit,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    const player = GetOwningPlayer(caster);
+    ForGroup(targetGroup, () => {
+      const target = GetEnumUnit();
+      if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+        const dmg = AOEDamage.calculateDamageRaw(
+          spellLevel,
+          spellPower,
+          damageDataMultiplier,
+          damageMult,
+          caster,
+          damageStat
+        );
+        UnitDamageTarget(
+          caster, 
+          target,
+          dmg,
+          true, false,
+          ATTACK_TYPE_HERO,
+          DAMAGE_TYPE_NORMAL,
+          WEAPON_TYPE_WHOKNOWS
+        );
+      }
+    });
+
+  }
+
+  static genericDealAOEDamage(
+    targetGroup: group,
+    caster: unit,
+    x: number,
+    y: number,
+    aoe: number,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    GroupClear(targetGroup);
+    GroupEnumUnitsInRange(
+      targetGroup,
+      x,
+      y,
+      aoe,
+      null
+    );
+    AOEDamage.genericDealDamageToGroup(
+      targetGroup,
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat,
+    );
+  }
+
   protected scaleDamageToSourceHP(damage: number, sourceHPPercent: number): number {
     let percentHP = sourceHPPercent;
     if (this.useInverseDamageScale) {
