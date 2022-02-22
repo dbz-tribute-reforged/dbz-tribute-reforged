@@ -1458,7 +1458,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeMaxBase = 20;
   const magnitudeMaxUpg = 5;
   const magnitudeMaxUpg2 = 5;
-  const magnitudeLowHPThreshold = 0.5;
+  const magnitudeLowHPThreshold = 50;
   const bonusSpeedDmgMult = 2;
   const minMagnitudeBonus = 15;
   const magnitudeLossStunned = 0.95;
@@ -1558,7 +1558,7 @@ export function sonicPassive(customHero: CustomHero) {
 
     const percentHP = GetUnitStatePercent(customHero.unit, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE);
     if (percentHP < magnitudeLowHPThreshold) {
-      magnitudeMax *= (percentHP + magnitudeLowHPThreshold);
+      magnitudeMax *= ((percentHP + magnitudeLowHPThreshold) * 0.01);
     }
 
 
