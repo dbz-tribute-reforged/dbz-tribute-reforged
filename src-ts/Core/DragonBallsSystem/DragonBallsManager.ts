@@ -59,7 +59,7 @@ export class DragonBallsManager {
 
     this.distributeDragonBalls();
     ItemStackingManager.getInstance().addStackableItemType(
-      DragonBallsConstants.dragonBallItem,
+      DragonBallsConstants.dragonBallItem, 7
     );
     this.setupRadar();
     

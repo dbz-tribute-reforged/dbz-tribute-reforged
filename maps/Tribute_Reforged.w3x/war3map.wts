@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.71
+DBZ Tribute Reforged 0.71a
 }
 
 STRING 4
@@ -8460,6 +8460,19 @@ STRING 1343
 Earrings worn by the Kais
 }
 
+STRING 1344
+// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
+|cffffff00+0.35x stat mult.
++33ms and unlocks movement speed cap.
+25% damage block up to 5x STR.
+Heals 7% of max HP.
+Deals constant AOE damage around All Might.
+|cff00FF00Duration: <A0T0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+}
+
 STRING 1345
 // Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
 {
@@ -8580,26 +8593,10 @@ STRING 1364
 Experience from saga mobs
 }
 
-STRING 1365
-// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
-|cffffff00+1% spin damage per hero level up to +100%.
-x2 spin damage when above 15 speed.|r
-|cff00FF00Damage: Agi * Sonic Speed
-|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
-}
-
 STRING 1366
-// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
-|cffffff00+0.1x stat mult
-+20% spell amp
-20% Damage Block up to 4x Str
-x2 Acceleration and x1.5 Max Speed
-|cff00FF00Duration: <A0ZF,Dur1> seconds|r
-|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
+|cff00ff00+1 Chaos Emerald|r
+
 }
 
 STRING 1367
@@ -10594,10 +10591,8 @@ Transformations:
 [lvl 150] 2.50x "ssg" [unlocks god kame]
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.70x "ssbkao"
+[lvl 250] 2.70x "ui" [unlocks |cff00ffffUltra Instinct|r]
 
-|cff00ffffUltra Instinct:|r
-Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.
-3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
 }
 
 STRING 1690
@@ -15602,12 +15597,14 @@ Cannot be used with [|cff00ff00D|r] Meditate.
 }
 
 STRING 2498
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool1> seconds|r
+Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
+|cffffff00+1% spin damage per hero level up to +100%.
+x2 spin damage when above 15 speed.
+Maximum speed decreases when below 50% HP.|r
+|cff00FF00Damage: Agi * Sonic Speed
+|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
 }
 
 STRING 2499
@@ -44834,13 +44831,16 @@ STRING 7194
 {
 Type "r" to revert.
 Transformations:
-[lvl 15]  1.25x "sega mega"
-[lvl 30]  1.50x "sega mega"
-[lvl 60]  1.75x "sega mega"
-[lvl 90]  2.00x "sega mega"
-[lvl 125] 2.40x "sega mega" [unlocks Super Sonic]
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 125] 2.30x "fp"
+[lvl 200] 2.40x "fp"
 
-Spin Max Speed upgrades at level 60 and 125.
+Max speed upgrades at level 60 and 125.
+Find Chaos Emeralds by killing players or sagas above level 50.
+Collect all 7 Chaos Emeralds to unlock Super Sonic.
 }
 
 STRING 7195
@@ -73880,7 +73880,7 @@ STRING 11861
 
 |cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.25% per 1000 AGI, whichever is lower. Increases stamina.|r
 
-|cff00ffffIntelligence: Increases mana by 10 and mana regen by 0.1.
+|cff00ffffIntelligence: Increases mana by 10 and mana regen by 0.1. Increases/decreases spell damage proportionally to stat average.
 }
 
 STRING 11862
@@ -90150,16 +90150,16 @@ W
 }
 
 STRING 14426
-// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+// Units: H0AA (The Hedgehog), Ubertip (Tooltip - Extended)
 {
-All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
-|cffffff00+0.35x stat mult.
-+33ms and unlocks movement speed cap.
-20% damage block up to 4x STR.
-Heals 7% of max HP.
-Deals constant AOE damage around All Might.
-|cff00FF00Duration: <A0T0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+A very fast hero that relies on moving quickly to deal damage in close range. Has a unique spin ability that is difficult to control but allows him to move faster than any other hero in the game.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 14427
@@ -105282,15 +105282,6 @@ STRING 16556
 Blut Vene
 }
 
-STRING 16557
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool2> seconds|r
-}
-
 STRING 16558
 // Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
 {
@@ -108072,15 +108063,6 @@ A weak early-game hero with powerful close-range offensive capabilities. Can gai
 
 }
 
-STRING 16911
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool3> seconds|r
-}
-
 STRING 16912
 // Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
 {
@@ -109498,15 +109480,6 @@ STRING 17109
 // Abilities: A03Z (Saga Fighting Skills), Tip (Tooltip - Normal)
 {
 Saga Fighting Skills
-}
-
-STRING 17110
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool4> seconds|r
 }
 
 STRING 17111
@@ -128625,7 +128598,7 @@ STRING 19841
 }
 
 STRING 19842
-// Units: H0AA (The Hedgehog), Ubertip (Tooltip - Extended)
+// Units: H0AB (The Hedgehog), Ubertip (Tooltip - Extended)
 {
 A very fast hero. |cffff2020Warning: Unfinished hero.|r
 
@@ -128750,9 +128723,12 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 125] 2.40x "fp" [unlocks Super Sonic]
+[lvl 125] 2.30x "fp"
+[lvl 200] 2.40x "fp"
 
-Spin Max Speed upgrades at level 60 and 125.
+Max speed upgrades at level 60 and 125.
+Find Chaos Emeralds by killing players or sagas above level 50.
+Collect all 7 Chaos Emeralds to unlock Super Sonic.
 }
 
 STRING 19861
@@ -128771,19 +128747,6 @@ STRING 19863
 // Units: H0AB (The Hedgehog), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00X|r] Choose Sonic
-}
-
-STRING 19864
-// Units: H0AB (The Hedgehog), Ubertip (Tooltip - Extended)
-{
-A very fast hero. |cffff2020Warning: Unfinished hero.|r
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 19865
@@ -130552,51 +130515,6 @@ Sonic jumps into the air before crashing down on his enemies.
 |cff00ffffCooldown: <A0ZE,Cool1> seconds|r
 }
 
-STRING 20137
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool5> seconds|r
-}
-
-STRING 20138
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool6> seconds|r
-}
-
-STRING 20139
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool7> seconds|r
-}
-
-STRING 20140
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool8> seconds|r
-}
-
-STRING 20141
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool9> seconds|r
-}
-
 STRING 20142
 // Abilities: A0ZE (Jump), Tip (Tooltip - Normal)
 {
@@ -130781,12 +130699,6 @@ STRING 20171
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 20172
-{
-[|cffffcc00Super Sonic|r]
-Sonic can now enter his Super Sonic form.
 }
 
 STRING 20173
@@ -131349,34 +131261,102 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 |cff00ffffCooldown: <A0ZH,Cool2> seconds|r
 }
 
-STRING 20251
-// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool10> seconds|r
-}
-
-STRING 20252
-// Abilities: A0ZK (Light Speed Dash), Researchubertip (Tooltip - Learn - Extended)
-{
-Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
-|cffffff00Temporarily boosts acceleration and max speed.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0ZK,Cool1> - <A0ZK,Cool10> seconds|r
-}
-
 STRING 20253
 // Abilities: A0ZK (Light Speed Dash), EditorSuffix (Editor Suffix)
 {
 (sonic)
 }
 
+STRING 20254
+{
+[|cffffcc00Super Sonic|r]
+After collecting all 7 Chaos Emeralds, Sonic can now enter his Super Sonic form.
+}
+
+STRING 20255
+// Items: I04Z (|cffff0000C|r|cffea1400h|r|cffd52900a|r|cffc03e00o|r|cffaa5400s|r|cff956900 |r|), Name (Name)
+{
+|cffff0000C|r|cffea1400h|r|cffd52900a|r|cffc03e00o|r|cffaa5400s|r|cff956900 |r|cff807e00E|r|cff6b9300m|r|cff55a900e|r|cff40be00r|r|cff2bd300a|r|cff16e800l|r|cff00fe00d|r
+}
+
 STRING 20256
 // Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Spin Dash - [|cffffcc00Level 10|r]
+}
+
+STRING 20257
+// Items: I04Z (|cffff0000C|r|cffea1400h|r|cffd52900a|r|cffc03e00o|r|cffaa5400s|r|cff956900 |r|), Description (Description)
+{
+An ancient emerald and mystical relic tied to the Master Emerald that grants powerful abilities to those who wield them. Anyone who combines all seven Chaos Emeralds can control unimaginable power.
+}
+
+STRING 20258
+// Items: I04Z (|cffff0000C|r|cffea1400h|r|cffd52900a|r|cffc03e00o|r|cffaa5400s|r|cff956900 |r|), Ubertip (Tooltip - Extended)
+{
+An ancient emerald and mystical relic tied to the Master Emerald that grants powerful abilities to those who wield them. Anyone who combines all seven Chaos Emeralds can control unimaginable power.
+}
+
+STRING 20259
+// Abilities: A0ZF (Super Sonic), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic harnesses the power of the 7 Chaos Emeralds into himself to become Super Sonic.
+|cffffff00+0.1x stat mult
++20% spell amp
+20% Damage Block up to 4x Str
+x1.5 Acceleration and Max Speed
+|cff00FF00Duration: <A0ZF,Dur1> seconds|r
+|cff00FFFFCooldown: <A0ZF,Cool1> seconds|r
+}
+
+STRING 20260
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng1>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool1> seconds|r
+}
+
+STRING 20261
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng2>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool2> seconds|r
+}
+
+STRING 20262
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng3>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool3> seconds|r
+}
+
+STRING 20263
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng4>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool4> seconds|r
+}
+
+STRING 20264
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng5>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool5> seconds|r
 }
 
 STRING 20265
@@ -131463,6 +131443,56 @@ STRING 20278
 [|cff00ff00R|r] Light Speed Dash - [|cffffcc00Level 10|r]
 }
 
+STRING 20279
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng6>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool6> seconds|r
+}
+
+STRING 20280
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng7>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool7> seconds|r
+}
+
+STRING 20281
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng8>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool8> seconds|r
+}
+
+STRING 20282
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng9>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool9> seconds|r
+}
+
+STRING 20283
+// Abilities: A0ZK (Light Speed Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng10>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool10> seconds|r
+}
+
 STRING 20284
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -131473,6 +131503,16 @@ STRING 20285
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 20286
+// Abilities: A0ZK (Light Speed Dash), Researchubertip (Tooltip - Learn - Extended)
+{
+Sonic runs at light speed towards the target point, dealing massive damage to all enemies along the way based on his current speed. Will not activate until homing attack and spin dash have completed.
+|cffffff00Range: <A0ZK,Rng1> - <A0ZK,Rng10>
+Temporarily boosts acceleration and max speed.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0ZK,Cool1> - <A0ZK,Cool10> seconds|r
 }
 
 STRING 20291
