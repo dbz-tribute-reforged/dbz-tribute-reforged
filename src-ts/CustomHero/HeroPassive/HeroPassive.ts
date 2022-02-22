@@ -1458,11 +1458,12 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeMaxBase = 20;
   const magnitudeMaxUpg = 5;
   const magnitudeMaxUpg2 = 5;
+  const magnitudeLowHPThreshold = 50;
   const bonusSpeedDmgMult = 2;
   const minMagnitudeBonus = 15;
   const magnitudeLossStunned = 0.95;
   const magnitudeLossStuck = 0.8;
-  const dmgAOE = 300;
+  const dmgAOE = 290;
   const dmgMagnitudeMult = 0.1;
   const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.07;
   const moveDir = new Vector2D(0, 0);
@@ -1484,7 +1485,7 @@ export function sonicPassive(customHero: CustomHero) {
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.8;
+  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.85;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -1553,6 +1554,11 @@ export function sonicPassive(customHero: CustomHero) {
 
     if (spinVal == 0 && !isHoming) {
       magnitudeMax *= 0.1;
+    }
+
+    const percentHP = GetUnitStatePercent(customHero.unit, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE);
+    if (percentHP < magnitudeLowHPThreshold) {
+      magnitudeMax *= ((percentHP + magnitudeLowHPThreshold) * 0.01);
     }
 
 
@@ -1881,6 +1887,9 @@ export function sonicPassive(customHero: CustomHero) {
             }
           }
 
+          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(customHero.unit, Globals.tmpVector3);
+          PathingCheck.unstuckGroundUnitFromCliff(customHero.unit, Globals.tmpVector3);
+
           AOEDamage.genericDealDamageToGroup(
             Globals.tmpUnitGroup,
             customHero.unit,
@@ -1891,8 +1900,6 @@ export function sonicPassive(customHero: CustomHero) {
             bj_HEROSTAT_AGI
           );
 
-          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(customHero.unit, Globals.tmpVector3);
-          PathingCheck.unstuckGroundUnitFromCliff(customHero.unit, Globals.tmpVector3);
           
           SaveInteger(Globals.genericSpellHashtable, sonicId, 15, 1);
 

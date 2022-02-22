@@ -24,6 +24,7 @@ import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
+import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1074,6 +1075,14 @@ export function CustomPlayerTest() {
         DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Disabled|r");
       }
     }
+  });
+  TimerStart(CreateTimer(), 15, false, () => {
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 
+      10, 
+      "|cffffff00Last chance to change to zanzo dash! (Requires repick)|r"
+    );
+    DisableTrigger(zanzoToggleTrigger);
   });
   TimerStart(CreateTimer(), 60, false, () => {
     DisplayTimedTextToForce(
@@ -3687,6 +3696,10 @@ export function SetupSonicAbilities() {
       }
     }
   });
+
+  
+  // if unit picks up dragonball and is sonic, add chaos emerald
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.chaosEmerald, 7);
 }
 
 export function SetupTreeOfMightSapling() {

@@ -966,6 +966,7 @@ gg_trg_Skurvy_Item_Mutli = nil
 gg_trg_Skurvy_Item_Mutli_Copy = nil
 gg_trg_Transformations_Skurvy = nil
 gg_trg_Transformations_Sonic = nil
+gg_trg_Sonic_Chaos_Emerald_Kill_Hook = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -7919,21 +7920,35 @@ function Trig_Ginyu_Change_Now_Func015A()
     TriggerExecute(gg_trg_Ginyu_Change_Now_Swap_Control)
 end
 
-function Trig_Ginyu_Change_Now_Func020C()
+function Trig_Ginyu_Change_Now_Func020Func001C()
+    if (not (BlzGetItemBooleanField(UnitItemInSlotBJ(udg_GinyuTargetUnit, udg_TempInt4), ITEM_BF_CAN_BE_DROPPED) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ginyu_Change_Now_Func021C()
+    if (not (udg_TempItem2 == nil)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ginyu_Change_Now_Func022C()
     if (not (udg_TempItem2 ~= nil)) then
         return false
     end
     return true
 end
 
-function Trig_Ginyu_Change_Now_Func025Func001C()
+function Trig_Ginyu_Change_Now_Func027Func001C()
     if (not (udg_TempReal < 60.00)) then
         return false
     end
     return true
 end
 
-function Trig_Ginyu_Change_Now_Func025C()
+function Trig_Ginyu_Change_Now_Func027C()
     if (not (udg_TempReal < 20.00)) then
         return false
     end
@@ -7958,8 +7973,22 @@ function Trig_Ginyu_Change_Now_Actions()
     udg_TempLoc = GetUnitLoc(udg_GinyuTargetUnit)
     SetItemPositionLoc(udg_TempItem, udg_TempLoc)
         RemoveLocation(udg_TempLoc)
-    udg_TempItem2 = UnitItemInSlotBJ(udg_GinyuTargetUnit, 1)
-    if (Trig_Ginyu_Change_Now_Func020C()) then
+    udg_TempItem2 = nil
+    udg_TempInt4 = 1
+    while (true) do
+        if (udg_TempInt4 > 6) then break end
+        if (Trig_Ginyu_Change_Now_Func020Func001C()) then
+            udg_TempItem2 = UnitItemInSlotBJ(udg_GinyuTargetUnit, udg_TempInt4)
+            udg_TempInt4 = 6
+        else
+        end
+        udg_TempInt4 = udg_TempInt4 + 1
+    end
+    if (Trig_Ginyu_Change_Now_Func021C()) then
+        udg_TempItem2 = UnitItemInSlotBJ(udg_GinyuTargetUnit, 6)
+    else
+    end
+    if (Trig_Ginyu_Change_Now_Func022C()) then
         udg_TempLoc = GetUnitLoc(udg_GinyuSourceUnit)
         SetItemPositionLoc(udg_TempItem2, udg_TempLoc)
                 RemoveLocation(udg_TempLoc)
@@ -7970,10 +7999,10 @@ function Trig_Ginyu_Change_Now_Actions()
     udg_TempReal = 180.00
         BlzStartUnitAbilityCooldown(udg_GinyuTargetUnit, FourCC("A0PO"), udg_TempReal)
     udg_TempReal = GetRandomReal(0, 100.00)
-    if (Trig_Ginyu_Change_Now_Func025C()) then
+    if (Trig_Ginyu_Change_Now_Func027C()) then
                 playGenericSpellSound(udg_GinyuTargetUnit, "Audio/Voice/GinyuLikeStrongBody.mp3", 3336)
     else
-        if (Trig_Ginyu_Change_Now_Func025Func001C()) then
+        if (Trig_Ginyu_Change_Now_Func027Func001C()) then
                         playGenericSpellSound(udg_GinyuTargetUnit, "Audio/Voice/GinyuLaugh1.mp3", 1368)
         else
                         playGenericSpellSound(udg_GinyuTargetUnit, "Audio/Voice/GinyuLaugh2.mp3", 1272)
@@ -17538,6 +17567,7 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
                 DestroyGroup(udg_TempGroup)
                 RemoveLocation(udg_TempLoc2)
     end
+    TriggerExecute(gg_trg_Sonic_Chaos_Emerald_Kill_Hook)
 end
 
 function InitTrig_Kill_Hero_PvP_and_Saga()
@@ -25352,6 +25382,7 @@ function Trig_Move_and_Revive_Hero_To_Dead_Zone_Actions()
         udg_TempInt = udg_TempInt + 1
     end
     SaveIntegerBJ(1, 3, udg_ID, udg_HeroRespawnHashtable)
+    SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 10.00), 0, udg_ID, udg_HeroRespawnHashtable)
     udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
     PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0.10)
         RemoveLocation(udg_TempLoc)
@@ -25531,7 +25562,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
         SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
                 SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
-        udg_TempReal = RMinBJ(140.00, (35.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50)))
+        udg_TempReal = RMinBJ(140.00, (25.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
         SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
                 udg_TempLoc = Location(GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
@@ -27866,28 +27897,35 @@ function Trig_Add_Unit_To_StatMult_Func001Func037C()
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func039C()
-    if (not (udg_IsAOEFlyingVision == true)) then
+function Trig_Add_Unit_To_StatMult_Func001Func038C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AA"))) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func040C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Add_Unit_To_StatMult_Func001Func041Func012C()
-    if (not (udg_TempInt2 > 200)) then
+    if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func041C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func042Func012C()
+    if (not (udg_TempInt2 > 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func042C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
         return false
     end
@@ -28043,8 +28081,12 @@ function Trig_Add_Unit_To_StatMult_Actions()
             BlzSetHeroProperName(udg_StatMultUnit, "Hell Android 17")
         else
         end
+        if (Trig_Add_Unit_To_StatMult_Func001Func038C()) then
+            UnitAddItemByIdSwapped(FourCC("I04Z"), udg_StatMultUnit)
+        else
+        end
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
-        if (Trig_Add_Unit_To_StatMult_Func001Func039C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func040C()) then
             udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
             udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * 0.66)))
             CreateFogModifierRadiusLocBJ(true, GetOwningPlayer(udg_StatMultUnit), FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -28052,11 +28094,11 @@ function Trig_Add_Unit_To_StatMult_Actions()
                         RemoveLocation(udg_TempLoc)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func040C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func041C()) then
             TriggerExecute(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func041C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func042C()) then
             SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
             GroupAddUnitSimple(udg_StatMultUnit, udg_FriezaTransformationUnitGroup)
             EnableTrigger(gg_trg_Frieza_Transformation_Loop)
@@ -28068,7 +28110,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
             SetPlayerAbilityAvailableBJ(true, FourCC("A0QA"), GetOwningPlayer(udg_StatMultUnit))
             UnitAddAbilityBJ(FourCC("A0Q8"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0Q8'))
-            if (Trig_Add_Unit_To_StatMult_Func001Func041Func012C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func042Func012C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUnit))
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0Q9"), GetOwningPlayer(udg_StatMultUnit))
                 UnitAddAbilityBJ(FourCC("A0Q9"), udg_StatMultUnit)
@@ -38237,6 +38279,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func015C()) then
             udg_TempBool = true
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0LO"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0LO"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0LO"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LO'))
@@ -51729,17 +51772,27 @@ function Trig_Transformations_Sonic_Func016C()
     if (not Trig_Transformations_Sonic_Func016Func003C()) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
 end
 
+function Trig_Transformations_Sonic_Func017Func003C()
+    if (udg_TransformationString == "fp") then
+        return true
+    end
+    if (udg_TransformationString == "sega mega") then
+        return true
+    end
+    return false
+end
+
 function Trig_Transformations_Sonic_Func017C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+    if (not Trig_Transformations_Sonic_Func017Func003C()) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0ZF"), udg_StatMultUnit) == 0)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
@@ -51815,16 +51868,13 @@ function Trig_Transformations_Sonic_Actions()
     else
     end
     if (Trig_Transformations_Sonic_Func016C()) then
-        udg_StatMultReal = 2.40
+        udg_StatMultReal = 2.30
         udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Sonic_Func017C()) then
-        UnitAddAbilityBJ(FourCC("A0ZF"), udg_StatMultUnit)
-                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0ZF'))
-        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
-        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20172")
-                DestroyForce(udg_TempPlayerGroup)
+        udg_StatMultReal = 2.40
+        udg_TransformationAbility = FourCC("AUan")
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
@@ -51845,6 +51895,89 @@ end
 function InitTrig_Transformations_Sonic()
     gg_trg_Transformations_Sonic = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Sonic, Trig_Transformations_Sonic_Actions)
+end
+
+function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func004Func001Func001C()
+    if (not (GetItemCharges(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt4)) == 6)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func004Func001C()
+    if (not (GetItemTypeId(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt4)) == FourCC("I04Z"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func005C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AA"))) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0ZF"), GetKillingUnitBJ()) == 0)) then
+        return false
+    end
+    if (not (GetHeroLevel(GetDyingUnit()) >= 50)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_HeavenZone, GetDyingUnit()) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_HellZone, GetDyingUnit()) == false)) then
+        return false
+    end
+    if (not (GetOwningPlayer(GetDyingUnit()) ~= GetOwningPlayer(GetKillingUnitBJ()))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Sonic_Chaos_Emerald_Kill_Hook_Actions()
+    if (Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001C()) then
+        udg_StatMultUnit = GetKillingUnitBJ()
+        udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+        udg_TempBool = true
+        udg_TempInt4 = 1
+        while (true) do
+            if (udg_TempInt4 > 6) then break end
+            if (Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func004Func001C()) then
+                if (Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func004Func001Func001C()) then
+                    RemoveItem(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt4))
+                    udg_TempBool = false
+                    udg_TempInt4 = 6
+                    UnitAddAbilityBJ(FourCC("A0ZF"), udg_StatMultUnit)
+                                        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0ZF'))
+                    udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+                    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20254")
+                                        DestroyForce(udg_TempPlayerGroup)
+                else
+                    SetItemCharges(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt4), (GetItemCharges(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt4)) + 1))
+                    udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+                    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_1366")
+                                        DestroyForce(udg_TempPlayerGroup)
+                end
+            else
+            end
+            udg_TempInt4 = udg_TempInt4 + 1
+        end
+        if (Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func005C()) then
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Sonic_Chaos_Emerald_Kill_Hook()
+    gg_trg_Sonic_Chaos_Emerald_Kill_Hook = CreateTrigger()
+    TriggerAddAction(gg_trg_Sonic_Chaos_Emerald_Kill_Hook, Trig_Sonic_Chaos_Emerald_Kill_Hook_Actions)
 end
 
 function Trig_Saga_Unit_Init_Conditions()
@@ -53996,6 +54129,7 @@ function InitCustomTriggers()
     InitTrig_Skurvy_Item_Mutli_Copy()
     InitTrig_Transformations_Skurvy()
     InitTrig_Transformations_Sonic()
+    InitTrig_Sonic_Chaos_Emerald_Kill_Hook()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Capsule_Unlock()
     InitTrig_Saga_Unit_Loop()

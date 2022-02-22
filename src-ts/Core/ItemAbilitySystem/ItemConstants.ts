@@ -109,6 +109,8 @@ export module ItemConstants {
 
   export const potaraEarrings = FourCC("I00L");
 
+  export const chaosEmerald = FourCC("I04Z");
+
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
     export const ROAST_HAM = FourCC("I001");

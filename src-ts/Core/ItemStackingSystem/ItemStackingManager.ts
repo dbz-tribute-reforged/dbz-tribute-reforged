@@ -7,7 +7,7 @@ import { UnitHelper } from "Common/UnitHelper";
 export class ItemStackingManager {
   static instance: ItemStackingManager;
 
-  protected stackableItemTypes: Map<number, () => void>;
+  protected stackableItemTypes: Map<number, number>;
   protected itemTargetPickupTrigger: trigger;
   protected numDelayedPickupTimer: number;
   protected itemAcquireTrigger: trigger;
@@ -58,8 +58,8 @@ export class ItemStackingManager {
       this.itemAcquireTrigger, 
       Condition(() => {
         const pickupItem = GetManipulatedItem();
-        const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
-        if (callback) {
+        const maxStacks = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
+        if (maxStacks) {
           const pickupUnit = GetManipulatingUnit();
           let heldItem = UnitItemInSlot(pickupUnit, 0);
           for (let i = 1; i < 6; ++i) {
@@ -77,7 +77,7 @@ export class ItemStackingManager {
             heldItem != pickupItem &&
             GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
           ) {
-            this.stackItem(heldItem, pickupItem, callback);
+            this.stackItem(heldItem, pickupItem, maxStacks);
           }
         }
         
@@ -117,9 +117,9 @@ export class ItemStackingManager {
 
   public addStackableItemType(
     itemType: number, 
-    callback: () => void = () => {},
+    maxStacks: number,
   ) {
-    return this.stackableItemTypes.set(itemType, callback);
+    return this.stackableItemTypes.set(itemType, maxStacks);
   }
 
   unitNearItem(pickupUnit: unit, pickupItem: item): boolean {
@@ -138,11 +138,19 @@ export class ItemStackingManager {
   stackItem(
     heldItem: item, 
     pickupItem: item, 
-    callback: () => void = () => {},
+    maxStacks: number,
   ) {
-    SetItemCharges(heldItem, GetItemCharges(heldItem) + GetItemCharges(pickupItem));
-    RemoveItem(pickupItem);
-    callback();
+    const heldCharges = GetItemCharges(heldItem);
+    const pickupCharges = GetItemCharges(pickupItem)
+    if (heldCharges >= maxStacks || pickupCharges >= maxStacks) return;
+
+    if (heldCharges + pickupCharges < maxStacks) {
+      SetItemCharges(heldItem, heldCharges + pickupCharges);
+      RemoveItem(pickupItem);
+    } else {
+      SetItemCharges(heldItem, maxStacks);
+      SetItemCharges(pickupItem, heldCharges + pickupCharges - maxStacks);
+    }
   }
 
   cleanupDelayedPickup(
@@ -159,7 +167,7 @@ export class ItemStackingManager {
     pickupUnit: unit, 
     heldItem: item, 
     pickupItem: item,
-    callback: () => void = () => {},
+    maxStacks: number,
   ) {
     if (this.numDelayedPickupTimer < ItemStackingConstants.maxPickupTimers) {
       ++this.numDelayedPickupTimer;
@@ -182,7 +190,7 @@ export class ItemStackingManager {
           );
         } else {
           if (this.unitNearItem(pickupUnit, pickupItem)) {
-            this.stackItem(heldItem, pickupItem, callback);
+            this.stackItem(heldItem, pickupItem, maxStacks);
             this.cleanupDelayedPickup(
               delayedPickupTimer,
               acquiredItemTrigger,
@@ -201,7 +209,7 @@ export class ItemStackingManager {
         acquiredItemTrigger,
         Condition(() => {
           if (GetManipulatedItem() == pickupItem) {
-            this.stackItem(heldItem, pickupItem, callback);
+            this.stackItem(heldItem, pickupItem, maxStacks);
             this.cleanupDelayedPickup(
               delayedPickupTimer,
               acquiredItemTrigger,
@@ -230,7 +238,7 @@ export class ItemStackingManager {
 
       TriggerAddCondition(cancelDelayedPickup, Condition(() => {
         if (this.unitNearItem(pickupUnit, pickupItem)) {
-          this.stackItem(heldItem, pickupItem, callback);
+          this.stackItem(heldItem, pickupItem, maxStacks);
         }
         this.cleanupDelayedPickup(
           delayedPickupTimer,
