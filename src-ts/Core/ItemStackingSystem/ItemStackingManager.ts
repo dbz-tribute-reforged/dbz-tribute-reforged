@@ -3,6 +3,7 @@ import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { ItemStackingConstants } from "./ItemStackingConstants";
 import { UnitHelper } from "Common/UnitHelper";
+import { OrderIds } from "Common/Constants";
 
 export class ItemStackingManager {
   static instance: ItemStackingManager;
@@ -29,6 +30,16 @@ export class ItemStackingManager {
     return this.instance;
   }
 
+  disable() {
+    DisableTrigger(this.itemTargetPickupTrigger);
+    DisableTrigger(this.itemAcquireTrigger);
+  }
+
+  enable() {
+    EnableTrigger(this.itemTargetPickupTrigger);
+    EnableTrigger(this.itemAcquireTrigger);
+  }
+
   initialize() {
 
     // if unit targets picking up an item
@@ -43,10 +54,13 @@ export class ItemStackingManager {
         // note: no auto stack unless in range
         const pickupUnit = GetTriggerUnit();
         const pickupItem = GetOrderTargetItem();
-        if (!this.unitNearItem(pickupUnit, pickupItem)) {
-          this.setupDelayedPickup(pickupUnit, pickupItem);
-        } else {
-          this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+        const orderId = GetIssuedOrderId();
+        if (orderId == OrderIds.PICK_UP_ITEM || orderId == OrderIds.SMART) {
+          if (!this.unitNearItem(pickupUnit, pickupItem)) {
+            this.setupDelayedPickup(pickupUnit, pickupItem);
+          } else {
+            this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+          }
         }
         return false;
       })
@@ -148,6 +162,17 @@ export class ItemStackingManager {
     RemoveLocation(unitLoc);
     RemoveLocation(itemLoc);
     return result;
+  }
+
+  stackItemAutoMaxStacks(
+    heldItem: item, 
+    pickupItem: item,
+  ) {
+    const pickupItemId = GetItemTypeId(pickupItem);
+    const maxStacks = this.stackableItemTypes.get(pickupItemId);
+    if (maxStacks) {
+      this.stackItem(heldItem, pickupItem, maxStacks);
+    }
   }
 
   stackItem(

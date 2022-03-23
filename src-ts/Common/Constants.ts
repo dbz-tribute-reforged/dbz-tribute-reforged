@@ -211,6 +211,9 @@ export module OrderIds {
   export const SMART = 851971;
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
+  export const MOVE_SLOT_1 = 852002;
+  export const MOVE_SLOT_6 = 852007;
+  export const PICK_UP_ITEM = 851981;
 }
 
 export module Capsules {

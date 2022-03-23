@@ -12,7 +12,7 @@ export class FarmingManager {
   static readonly HARVESTER_PRNG_REQ: number = 40;
   static readonly HARVESTER_PRNG_SREQ: number = 80;
   static readonly HARVESTER_PRNG_ADD: number = 10;
-  static readonly HARVESTER_REQ_RESEARCH_MULT: number = 4;
+  static readonly HARVESTER_REQ_RESEARCH_MULT: number = 2;
 
   protected numCrops: number;
 
@@ -205,7 +205,9 @@ setupUpdateCrops() {
             this.plantCropFromSpell(spellId, itemX, itemY);
             prngOffset = 0;
             prng = Math.random() * 100;
+            BJDebugMsg("Hit " + prng);
           } else {
+            BJDebugMsg("Miss " + prng);
             prngOffset += FarmingManager.HARVESTER_PRNG_ADD;
             prng += Math.random() * 100 - prngOffset;
           }
