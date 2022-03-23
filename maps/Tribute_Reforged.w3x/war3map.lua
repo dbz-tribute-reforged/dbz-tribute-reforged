@@ -291,6 +291,7 @@ udg_FarmerBuildTempInt2 = 0
 udg_FarmerTempItem = nil
 udg_FarmerTempItem2 = nil
 udg_FarmerBuildTempReal = 0.0
+udg_FarmerDefenseSystemLimits = __jarray(0)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1033,6 +1034,10 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Farmer_Building_Pickup = nil
+gg_trg_Farmer_Defence_System_Build_Start = nil
+gg_trg_Farmer_Defense_System_Killed = nil
+gg_trg_Init_Disable_Abilities_For_TempPlayer = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1431,6 +1436,12 @@ function InitGlobals()
     udg_FarmerBuildTempInt = 0
     udg_FarmerBuildTempInt2 = 0
     udg_FarmerBuildTempReal = 0.0
+    i = 0
+    while (true) do
+        if ((i > 30)) then break end
+        udg_FarmerDefenseSystemLimits[i] = 0
+        i = i + 1
+    end
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -15695,7 +15706,7 @@ function Trig_Farmer_Warehouse_Build_Start_Conditions()
 end
 
 function Trig_Farmer_Warehouse_Build_Start_Func005C()
-    if (not (udg_FarmerWarehouseLimits[udg_TempInt] >= 5)) then
+    if (not (udg_FarmerWarehouseLimits[udg_TempInt] >= 10)) then
         return false
     end
     return true
@@ -15759,7 +15770,7 @@ function Trig_Farmer_Warehouse_Killed_Conditions()
 end
 
 function Trig_Farmer_Warehouse_Killed_Func005C()
-    if (not (udg_FarmerWarehouseLimits[udg_TempInt] < 5)) then
+    if (not (udg_FarmerWarehouseLimits[udg_TempInt] < 10)) then
         return false
     end
     return true
@@ -15935,7 +15946,7 @@ end
 function Trig_Farmer_Super_Warehouse_Build_Start_Actions()
     udg_TempPlayer = GetOwningPlayer(GetTriggerUnit())
     udg_FarmerBuildUnit = GetTriggerUnit()
-    udg_FarmerBuildNumReqCrops = 20
+    udg_FarmerBuildNumReqCrops = 10
     TriggerExecute(gg_trg_Farmer_Build_Consume_Num_Req_Crops)
     if (Trig_Farmer_Super_Warehouse_Build_Start_Func005C()) then
                 IssueImmediateOrderById(udg_FarmerBuildUnit, 851976)
@@ -15961,7 +15972,7 @@ function Trig_Farmer_Harvester_Build_Start_Conditions()
 end
 
 function Trig_Farmer_Harvester_Build_Start_Func005C()
-    if (not (udg_FarmerHarvesterLimits[udg_TempInt] >= 3)) then
+    if (not (udg_FarmerHarvesterLimits[udg_TempInt] >= 5)) then
         return false
     end
     return true
@@ -15989,7 +16000,7 @@ function Trig_Farmer_Harvester_Build_Start_Actions()
     end
     ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Farmer_Harvester_Build_Start_Func006A)
     udg_FarmerBuildUnit = udg_TempUnit2
-    udg_FarmerBuildNumReqCrops = 10
+    udg_FarmerBuildNumReqCrops = 5
     TriggerExecute(gg_trg_Farmer_Build_Consume_Num_Req_Crops)
     if (Trig_Farmer_Harvester_Build_Start_Func010C()) then
         KillUnit(udg_TempUnit)
@@ -16025,7 +16036,7 @@ function Trig_Farmer_Harvester_Killed_Conditions()
 end
 
 function Trig_Farmer_Harvester_Killed_Func005C()
-    if (not (udg_FarmerHarvesterLimits[udg_TempInt] < 3)) then
+    if (not (udg_FarmerHarvesterLimits[udg_TempInt] < 5)) then
         return false
     end
     return true
@@ -16065,7 +16076,7 @@ end
 function Trig_Farmer_Super_Harvester_Build_Start_Actions()
     udg_TempPlayer = GetOwningPlayer(GetTriggerUnit())
     udg_FarmerBuildUnit = GetTriggerUnit()
-    udg_FarmerBuildNumReqCrops = 30
+    udg_FarmerBuildNumReqCrops = 20
     TriggerExecute(gg_trg_Farmer_Build_Consume_Num_Req_Crops)
     if (Trig_Farmer_Super_Harvester_Build_Start_Func005C()) then
                 IssueImmediateOrderById(udg_FarmerBuildUnit, 851976)
@@ -16135,6 +16146,12 @@ function Trig_Farmer_Researching_Upgrade_Func001C()
     if (GetResearched() == FourCC("R00C")) then
         return true
     end
+    if (GetResearched() == FourCC("R00E")) then
+        return true
+    end
+    if (GetResearched() == FourCC("R00F")) then
+        return true
+    end
     return false
 end
 
@@ -16169,6 +16186,98 @@ function InitTrig_Farmer_Researching_Upgrade()
     TriggerAddAction(gg_trg_Farmer_Researching_Upgrade, Trig_Farmer_Researching_Upgrade_Actions)
 end
 
+function Trig_Farmer_Defence_System_Build_Start_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AH"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Defence_System_Build_Start_Func005C()
+    if (not (udg_FarmerDefenseSystemLimits[udg_TempInt] >= 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Defence_System_Build_Start_Func006A()
+    udg_TempUnit2 = GetEnumUnit()
+end
+
+function Trig_Farmer_Defence_System_Build_Start_Func010C()
+    if (not (udg_FarmerBuildIsValid == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Defence_System_Build_Start_Actions()
+    udg_TempUnit = GetTriggerUnit()
+    udg_TempPlayer = GetOwningPlayer(GetTriggerUnit())
+    udg_TempInt = GetConvertedPlayerId(udg_TempPlayer)
+    udg_FarmerDefenseSystemLimits[udg_TempInt] = (udg_FarmerDefenseSystemLimits[udg_TempInt] + 1)
+    if (Trig_Farmer_Defence_System_Build_Start_Func005C()) then
+        SetPlayerUnitAvailableBJ(FourCC("h0AH"), false, udg_TempPlayer)
+    else
+    end
+    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Farmer_Defence_System_Build_Start_Func006A)
+    udg_FarmerBuildUnit = udg_TempUnit2
+    udg_FarmerBuildNumReqCrops = 5
+    TriggerExecute(gg_trg_Farmer_Build_Consume_Num_Req_Crops)
+    if (Trig_Farmer_Defence_System_Build_Start_Func010C()) then
+        KillUnit(udg_TempUnit)
+    else
+        udg_FarmerBuildUnit = udg_TempUnit
+        udg_FarmerBuildTempInt = GetHeroLevel(udg_TempUnit2)
+        TriggerExecute(gg_trg_Farmer_Update_Building_Max_HP)
+    end
+end
+
+function InitTrig_Farmer_Defence_System_Build_Start()
+    gg_trg_Farmer_Defence_System_Build_Start = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Farmer_Defence_System_Build_Start, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+    TriggerAddCondition(gg_trg_Farmer_Defence_System_Build_Start, Condition(Trig_Farmer_Defence_System_Build_Start_Conditions))
+    TriggerAddAction(gg_trg_Farmer_Defence_System_Build_Start, Trig_Farmer_Defence_System_Build_Start_Actions)
+end
+
+function Trig_Farmer_Defense_System_Killed_Func001C()
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AH")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Farmer_Defense_System_Killed_Conditions()
+    if (not Trig_Farmer_Defense_System_Killed_Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Defense_System_Killed_Func005C()
+    if (not (udg_FarmerDefenseSystemLimits[udg_TempInt] < 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Defense_System_Killed_Actions()
+    udg_TempPlayer = GetOwningPlayer(GetTriggerUnit())
+    udg_TempInt = GetConvertedPlayerId(udg_TempPlayer)
+    udg_FarmerDefenseSystemLimits[udg_TempInt] = (udg_FarmerDefenseSystemLimits[udg_TempInt] - 1)
+    if (Trig_Farmer_Defense_System_Killed_Func005C()) then
+        SetPlayerUnitAvailableBJ(FourCC("h0AH"), true, udg_TempPlayer)
+    else
+    end
+end
+
+function InitTrig_Farmer_Defense_System_Killed()
+    gg_trg_Farmer_Defense_System_Killed = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Farmer_Defense_System_Killed, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Farmer_Defense_System_Killed, Condition(Trig_Farmer_Defense_System_Killed_Conditions))
+    TriggerAddAction(gg_trg_Farmer_Defense_System_Killed, Trig_Farmer_Defense_System_Killed_Actions)
+end
+
 function Trig_Farmer_Update_Building_Max_HP_Func002Func002A()
     udg_FarmerBuildTempInt = GetHeroLevel(GetEnumUnit())
 end
@@ -16185,6 +16294,9 @@ function Trig_Farmer_Update_Building_Max_HP_Func003Func001Func001C()
         return true
     end
     if (GetUnitTypeId(udg_FarmerBuildUnit) == FourCC("h0AG")) then
+        return true
+    end
+    if (GetUnitTypeId(udg_FarmerBuildUnit) == FourCC("h0AH")) then
         return true
     end
     return false
@@ -16222,20 +16334,20 @@ function Trig_Farmer_Update_Building_Max_HP_Actions()
     else
     end
     if (Trig_Farmer_Update_Building_Max_HP_Func003C()) then
-        udg_FarmerBuildTempInt2 = (2000 + (udg_FarmerBuildTempInt * 50))
+        udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 200))
     else
         if (Trig_Farmer_Update_Building_Max_HP_Func003Func001C()) then
-            udg_FarmerBuildTempInt2 = (3000 + (udg_FarmerBuildTempInt * 100))
+            udg_FarmerBuildTempInt2 = (6000 + (udg_FarmerBuildTempInt * 400))
         else
             if (Trig_Farmer_Update_Building_Max_HP_Func003Func001Func002C()) then
-                udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 200))
+                udg_FarmerBuildTempInt2 = (8000 + (udg_FarmerBuildTempInt * 600))
             else
-                udg_FarmerBuildTempInt2 = (2000 + (udg_FarmerBuildTempInt * 50))
+                udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 200))
             end
         end
     end
-    BlzSetUnitMaxHP(udg_TempUnit, udg_FarmerBuildTempInt2)
-    SetUnitLifePercentBJ(udg_TempUnit, udg_FarmerBuildTempReal)
+    BlzSetUnitMaxHP(udg_FarmerBuildUnit, udg_FarmerBuildTempInt2)
+    SetUnitLifePercentBJ(udg_FarmerBuildUnit, udg_FarmerBuildTempReal)
 end
 
 function InitTrig_Farmer_Update_Building_Max_HP()
@@ -16355,7 +16467,7 @@ function Trig_Farmer_Self_Repair_Actions()
     AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
-    udg_TempReal = ((0.20 * GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)) + GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit))
+    udg_TempReal = ((0.40 * GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)) + GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit))
     SetUnitLifeBJ(udg_TempUnit, udg_TempReal)
     udg_FarmerBuildUnit = udg_TempUnit
     udg_FarmerBuildTempInt = 0
@@ -16496,6 +16608,60 @@ function InitTrig_Farmer_Crops_Debug()
     gg_trg_Farmer_Crops_Debug = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Farmer_Crops_Debug, 5.00)
     TriggerAddAction(gg_trg_Farmer_Crops_Debug, Trig_Farmer_Crops_Debug_Actions)
+end
+
+function Trig_Farmer_Building_Pickup_Func004C()
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AC")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AF")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AD")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AE")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AG")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h0AH")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Farmer_Building_Pickup_Conditions()
+    if (not Trig_Farmer_Building_Pickup_Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Building_Pickup_Func003C()
+    if (not (udg_StatMultReal == 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Farmer_Building_Pickup_Actions()
+    udg_FarmerTempItem = GetManipulatedItem()
+    TriggerExecute(gg_trg_Farmer_Get_Food_Bonus)
+    if (Trig_Farmer_Building_Pickup_Func003C()) then
+        udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+                SetItemPosition(udg_FarmerTempItem, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc))
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+end
+
+function InitTrig_Farmer_Building_Pickup()
+    gg_trg_Farmer_Building_Pickup = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Farmer_Building_Pickup, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerAddCondition(gg_trg_Farmer_Building_Pickup, Condition(Trig_Farmer_Building_Pickup_Conditions))
+    TriggerAddAction(gg_trg_Farmer_Building_Pickup, Trig_Farmer_Building_Pickup_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -17644,6 +17810,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
         udg_OriginalPlayerNames[udg_TempInt] = GetPlayerName(udg_TempPlayer)
+        TriggerExecute(gg_trg_Init_Disable_Abilities_For_TempPlayer)
         TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
@@ -17696,6 +17863,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
         FogModifierStart(GetLastCreatedFogModifier())
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision_2)
         FogModifierStart(GetLastCreatedFogModifier())
+        TriggerExecute(gg_trg_Init_Disable_Abilities_For_TempPlayer)
         TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
         udg_TempInt = udg_TempInt + 1
     end
@@ -17744,6 +17912,20 @@ function InitTrig_Setup_Quests()
     gg_trg_Setup_Quests = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Setup_Quests, 5)
     TriggerAddAction(gg_trg_Setup_Quests, Trig_Setup_Quests_Actions)
+end
+
+function Trig_Init_Disable_Abilities_For_TempPlayer_Actions()
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YV"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0YW"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RE"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0ZM"), udg_TempPlayer)
+end
+
+function InitTrig_Init_Disable_Abilities_For_TempPlayer()
+    gg_trg_Init_Disable_Abilities_For_TempPlayer = CreateTrigger()
+    TriggerAddAction(gg_trg_Init_Disable_Abilities_For_TempPlayer, Trig_Init_Disable_Abilities_For_TempPlayer_Actions)
 end
 
 function Trig_Disable_Abilities_for_TempPlayer_Actions()
@@ -17798,7 +17980,6 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0W2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0Y7"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0XS"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0ZM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T4"), udg_TempPlayer)
@@ -17889,13 +18070,8 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0EM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0EO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0ET"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0YV"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0YW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0YZ"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0RC"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0RD"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0RE"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -31404,6 +31580,7 @@ function Trig_Goku_UI_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     if (Trig_Goku_UI_Func005C()) then
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_TempReal4 = 0.10
         udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
         udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
@@ -31465,6 +31642,7 @@ function Trig_Goku_MUI_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     if (Trig_Goku_MUI_Func005C()) then
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_TempReal4 = 0.20
         udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
         udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
@@ -55047,6 +55225,8 @@ function InitCustomTriggers()
     InitTrig_Farmer_Super_Harvester_Build_Start()
     InitTrig_Farmer_Research_Centre_Build_Start()
     InitTrig_Farmer_Researching_Upgrade()
+    InitTrig_Farmer_Defence_System_Build_Start()
+    InitTrig_Farmer_Defense_System_Killed()
     InitTrig_Farmer_Update_Building_Max_HP()
     InitTrig_Farmer_Drop_Items()
     InitTrig_Farmer_Self_Destruct()
@@ -55054,6 +55234,7 @@ function InitCustomTriggers()
     InitTrig_Farmer_Enable_Disable_Harvesting()
     InitTrig_Farmer_Crop_Circles()
     InitTrig_Farmer_Crops_Debug()
+    InitTrig_Farmer_Building_Pickup()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
@@ -55083,6 +55264,7 @@ function InitCustomTriggers()
     InitTrig_Setup_Per_Player_Properties()
     InitTrig_Lock_Time_To_Day()
     InitTrig_Setup_Quests()
+    InitTrig_Init_Disable_Abilities_For_TempPlayer()
     InitTrig_Disable_Abilities_for_TempPlayer()
     InitTrig_Prevent_Invalid_Buildings()
     InitTrig_Setup_Spawns_Other()

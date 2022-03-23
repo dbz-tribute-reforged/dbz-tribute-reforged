@@ -26,11 +26,15 @@ export function doTimeRingSwap(source: unit, target: unit) {
       DestroyLightning(swapLightning);
       DestroyTimer(GetExpiredTimer());
     });
-  
-    SetUnitX(source, targetX);
-    SetUnitY(source, targetY);
-    SetUnitX(target, unitX);
-    SetUnitY(target, unitY);
+    
+    if (!IsUnitType(source, UNIT_TYPE_STRUCTURE)) {
+      SetUnitX(source, targetX);
+      SetUnitY(source, targetY);
+    }
+    if (!IsUnitType(target, UNIT_TYPE_STRUCTURE)) {
+      SetUnitX(target, unitX);
+      SetUnitY(target, unitY);
+    }
   
     UnitHelper.healMaxHPPercent(source, 0.05);
     UnitHelper.healMaxHPPercent(target, 0.05);

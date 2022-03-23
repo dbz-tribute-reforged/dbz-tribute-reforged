@@ -1249,6 +1249,7 @@ export function CustomPlayerTest() {
     SetupTreeOfMightSapling();
 
     SetupMysteryCapsuleBox();
+    SetupItemSplitter();
 
     SetupCustomAbilityRefresh();
     SoundHelper.SetupSpellSoundEffects();
@@ -3984,4 +3985,48 @@ export function getTodorokiMult(unit: unit, abilityId: number) {
   
   // BJDebugMsg("todoroki Mult: " + R2S(result));
   return result;
+}
+
+
+
+export function SetupItemSplitter() {
+  const itemSplitTrigger = CreateTrigger();
+
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(itemSplitTrigger, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
+  }
+
+  TriggerAddCondition(itemSplitTrigger, Condition(() => {
+    const orderId = GetIssuedOrderId();
+    if (orderId >= OrderIds.MOVE_SLOT_1 && orderId <= OrderIds.MOVE_SLOT_6) {
+      const unit = GetTriggerUnit();
+      const item = GetOrderTargetItem();
+      if (!UnitHasItem(unit, item)) {
+        return false;
+      }
+      const itemSlot = orderId - OrderIds.MOVE_SLOT_1;
+      const itemInSlot = UnitItemInSlot(unit, itemSlot);
+      if (item == itemInSlot) {
+        // split
+        const charges = GetItemCharges(item);
+        const loss = R2I(charges * 0.5);
+        if (charges > 1 && loss > 0 && charges > loss) {
+          SetItemCharges(item, charges - loss);
+          const newItem = CreateItem(GetItemTypeId(item), GetUnitX(unit), GetUnitY(unit));
+          SetItemCharges(newItem, loss);
+          ItemStackingManager.getInstance().disable();
+          UnitAddItem(unit, newItem);
+          ItemStackingManager.getInstance().enable();
+        }
+      } else if (GetItemTypeId(item) == GetItemTypeId(itemInSlot)) {
+        // stack
+        ItemStackingManager.getInstance().stackItemAutoMaxStacks(item, itemInSlot);
+      }
+    }
+    return false;
+  }));
+
+  
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.SAIBAMEN_SEEDS, 3);
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.BEERUS_PUDDING, 4);
 }
