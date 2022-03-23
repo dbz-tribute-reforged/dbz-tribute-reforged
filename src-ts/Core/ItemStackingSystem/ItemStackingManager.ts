@@ -37,14 +37,17 @@ export class ItemStackingManager {
       this.itemTargetPickupTrigger,
       EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER
     );
-    // conditions faster than actions hrm?
     TriggerAddCondition(
       this.itemTargetPickupTrigger,
       Condition(() => {
         // note: no auto stack unless in range
         const pickupUnit = GetTriggerUnit();
         const pickupItem = GetOrderTargetItem();
-        this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+        if (!this.unitNearItem(pickupUnit, pickupItem)) {
+          this.setupDelayedPickup(pickupUnit, pickupItem);
+        } else {
+          this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+        }
         return false;
       })
     )
@@ -57,29 +60,32 @@ export class ItemStackingManager {
     TriggerAddCondition(
       this.itemAcquireTrigger, 
       Condition(() => {
+        const pickupUnit = GetManipulatingUnit();
         const pickupItem = GetManipulatedItem();
-        const maxStacks = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
-        if (maxStacks) {
-          const pickupUnit = GetManipulatingUnit();
-          let heldItem = UnitItemInSlot(pickupUnit, 0);
-          for (let i = 1; i < 6; ++i) {
-            if (
-              GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
-              heldItem != pickupItem
-            ) {
-              break;
-            } else {
-              heldItem = UnitItemInSlot(pickupUnit, i);
-            }
-          }
-          if (
-            GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
-            heldItem != pickupItem &&
-            GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
-          ) {
-            this.stackItem(heldItem, pickupItem, maxStacks);
-          }
-        }
+        this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+        // const maxStacks = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
+        // if (maxStacks) {
+        //   const pickupUnit = GetManipulatingUnit();
+        //   let heldItem = UnitItemInSlot(pickupUnit, 0);
+        //   for (let i = 1; i < 6; ++i) {
+        //     if (
+        //       GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
+        //       heldItem != pickupItem
+        //     ) {
+        //       if (GetItemCharges(heldItem) < maxStacks) {
+        //         heldItem = UnitItemInSlot(pickupUnit, i);
+        //         break;
+        //       }
+        //     }
+        //   }
+        //   if (
+        //     GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
+        //     heldItem != pickupItem &&
+        //     GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
+        //   ) {
+        //     this.stackItem(heldItem, pickupItem, maxStacks);
+        //   }
+        // }
         
         return false;
       })
@@ -90,28 +96,37 @@ export class ItemStackingManager {
   // then removes pickupitem
   pickupStackedItemForUnit(pickupUnit: unit, pickupItem: item) {
     // check if item is pickup stackable
-    const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
-    if (callback != undefined) {
-      const pickupItemId = GetItemTypeId(pickupItem);
-      const heldItemIndex = UnitHelper.getInventoryIndexOfItemType(pickupUnit, pickupItemId);
-      const heldItem = UnitItemInSlot(pickupUnit, heldItemIndex);
-      // BJDebugMsg("held index: " + heldItemIndex + " pickup item: " + GetItemName(pickupItem) + " charges: " + GetItemCharges(heldItem));
-      if (
-        // manipulating item type is already carried
-        heldItemIndex >= 0 &&
-        // item being manipulated comes from external source
-        pickupItem != GetItemOfTypeFromUnitBJ(pickupUnit, GetItemTypeId(pickupItem)) &&
-        GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
-      ) {
-        if (this.unitNearItem(pickupUnit, pickupItem)) {
-          this.stackItem(heldItem, pickupItem, callback);
-        } else {
-          // too far away to stack
-          // hrm..
-          // poll? until the unit gets there
-          this.setupDelayedPickup(pickupUnit, heldItem, pickupItem, callback);
+    const pickupItemId = GetItemTypeId(pickupItem);
+    const maxStacks = this.stackableItemTypes.get(pickupItemId);
+    if (maxStacks) {
+      const pickupCharges = GetItemCharges(pickupItem);
+      if (pickupCharges >= maxStacks) return;
+
+      let heldItemIndex = -1;
+      let heldItem = GetLastCreatedItem();
+
+      for (let i = 0; i < 6; ++i) {
+        heldItem = UnitItemInSlot(pickupUnit, i);
+        if (
+          GetItemTypeId(heldItem) == pickupItemId
+          && heldItem != pickupItem
+          && GetItemCharges(heldItem) < maxStacks
+        ) {
+          heldItemIndex = i;
+          this.stackItem(heldItem, pickupItem, maxStacks);
+          break;
         }
       }
+      
+      // BJDebugMsg(
+      //   "held index: " + heldItemIndex + " held item: " + GetItemName(heldItem) + 
+      //   " held charges: " + GetItemCharges(heldItem)
+      // );
+      // BJDebugMsg(
+      //   "pickup item: " + GetItemName(pickupItem) +
+      //   " pickup charges: " + GetItemCharges(pickupItem)
+      // );
+      // BJDebugMsg("equal? " + (heldItem == pickupItem));
     }
   }
 
@@ -144,7 +159,7 @@ export class ItemStackingManager {
     const pickupCharges = GetItemCharges(pickupItem)
     if (heldCharges >= maxStacks || pickupCharges >= maxStacks) return;
 
-    if (heldCharges + pickupCharges < maxStacks) {
+    if (heldCharges + pickupCharges <= maxStacks) {
       SetItemCharges(heldItem, heldCharges + pickupCharges);
       RemoveItem(pickupItem);
     } else {
@@ -165,9 +180,7 @@ export class ItemStackingManager {
 
   setupDelayedPickup(
     pickupUnit: unit, 
-    heldItem: item, 
     pickupItem: item,
-    maxStacks: number,
   ) {
     if (this.numDelayedPickupTimer < ItemStackingConstants.maxPickupTimers) {
       ++this.numDelayedPickupTimer;
@@ -190,7 +203,7 @@ export class ItemStackingManager {
           );
         } else {
           if (this.unitNearItem(pickupUnit, pickupItem)) {
-            this.stackItem(heldItem, pickupItem, maxStacks);
+            this.pickupStackedItemForUnit(pickupUnit, pickupItem);
             this.cleanupDelayedPickup(
               delayedPickupTimer,
               acquiredItemTrigger,
@@ -209,7 +222,7 @@ export class ItemStackingManager {
         acquiredItemTrigger,
         Condition(() => {
           if (GetManipulatedItem() == pickupItem) {
-            this.stackItem(heldItem, pickupItem, maxStacks);
+            this.pickupStackedItemForUnit(pickupUnit, pickupItem);
             this.cleanupDelayedPickup(
               delayedPickupTimer,
               acquiredItemTrigger,
@@ -238,7 +251,7 @@ export class ItemStackingManager {
 
       TriggerAddCondition(cancelDelayedPickup, Condition(() => {
         if (this.unitNearItem(pickupUnit, pickupItem)) {
-          this.stackItem(heldItem, pickupItem, maxStacks);
+          this.pickupStackedItemForUnit(pickupUnit, pickupItem);
         }
         this.cleanupDelayedPickup(
           delayedPickupTimer,

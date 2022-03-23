@@ -46,6 +46,7 @@ export class BeamComponent implements
   protected targetCoord: Vector2D;
   protected beamTargetPoint: Vector2D;
   protected nextMoveTick: number;
+  protected boundaryTicks: number;
   // time to explode = 
   // distance from start position to cast point
   // divided by speed
@@ -72,6 +73,7 @@ export class BeamComponent implements
     public clashingDelayTicks: number = 1,
     public maxDelayTicks: number = 8,
     public durationIncPerDelay: number = 15,
+    public boundaryRemoveDelay: number = 1,
     public turnSpeed: number = 0.1,
     public heightVariation: HeightVariation = new HeightVariation(
       250, 0, HeightVariation.LINEAR_VARIATION
@@ -99,6 +101,7 @@ export class BeamComponent implements
     this.targetCoord = new Vector2D();
     this.beamTargetPoint = new Vector2D();
     this.nextMoveTick = 0;
+    this.boundaryTicks = 0;
     this.explodeTick = 0;
     this.explodeMinDistance = 0;
     this.explodePosition = new Vector2D(0, 0);
@@ -168,6 +171,10 @@ export class BeamComponent implements
         if (!hasMoved) {
           this.nextMoveTick = ability.currentTick + BeamComponent.BEAM_STUCK_DELAY_TICKS;
         }
+
+        if (!PathingCheck.isFlyingWalkable(this.targetCoord)) {
+          this.boundaryTicks += 1;
+        }
       }
       // if wanting to explode prematurely then
       // check if at maximal explode tick AND close enough to target
@@ -176,6 +183,14 @@ export class BeamComponent implements
         !this.forcedExplode &&
         ability.currentTick > this.explodeTick &&
         CoordMath.distance(this.beamCoord, this.explodePosition) < this.explodeMinDistance
+      ) {
+        this.forcedExplode = true;
+      }
+
+      if (
+        this.boundaryRemoveDelay > 0 && 
+        !this.forcedExplode && 
+        this.boundaryTicks >= this.boundaryRemoveDelay
       ) {
         this.forcedExplode = true;
       }
@@ -232,6 +247,7 @@ export class BeamComponent implements
   }
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    this.boundaryTicks = 0;
     this.beamCoord.setPos(GetUnitX(source), GetUnitY(source));
     if (!this.useLastCastPoint) {
       this.beamTargetPoint.setVector(input.targetPoint);
@@ -423,7 +439,9 @@ export class BeamComponent implements
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.beamHpMult, this.beamHpAttribute, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
-      this.durationIncPerDelay, this.turnSpeed,
+      this.durationIncPerDelay, 
+      this.boundaryRemoveDelay,
+      this.turnSpeed,
       this.heightVariation, this.isTracking,
       this.isFixedAngle, this.isGroundPathing, 
       this.canClashWithHero, 
@@ -450,6 +468,7 @@ export class BeamComponent implements
       clashingDelayTicks: number;
       maxDelayTicks: number;
       durationIncPerDelay: number;
+      boundaryRemoveDelay: number;
       turnSpeed: number;
       heightVariation: {
         start: number;
@@ -484,6 +503,7 @@ export class BeamComponent implements
     this.clashingDelayTicks = input.clashingDelayTicks;
     this.maxDelayTicks = input.maxDelayTicks;
     this.durationIncPerDelay = input.durationIncPerDelay;
+    this.boundaryRemoveDelay = input.boundaryRemoveDelay;
     this.turnSpeed = input.turnSpeed;
     this.heightVariation = new HeightVariation().deserialize(input.heightVariation);
     this.isTracking = input.isTracking;

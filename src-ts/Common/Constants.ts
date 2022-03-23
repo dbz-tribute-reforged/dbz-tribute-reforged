@@ -95,6 +95,9 @@ export module Constants {
   export const uiYButtonSpacing: number = 0.001;
 
   export const BASE_STAMINA = 100.0;
+
+  export const FARMING_TICK_INTERVAL = 0.05;
+  export const FARMING_STANDARD_DURATION = 200;
 }
 
 export enum CostType {
@@ -226,6 +229,27 @@ export module Capsules {
   export const battleArmor5 = FourCC("A0ZB");
   export const treeOfMightSapling = FourCC("A0ZC");
   export const potaraEarring = FourCC("A0ZD");
+}
+
+
+export module Terrain {
+  export const any = -1;
+  export const dirt = FourCC("Ldrt");
+  export const grass = FourCC("Lgrs");
+  export const grassyDirt = FourCC("Ldrg");
+  export const sand = FourCC("Zsan");
+  export const darkDesert = FourCC("Bdsd");
+  export const ice = FourCC("Iice");
+  export const vines = FourCC("Avin");
+  export const brick = FourCC("Ybtl");
+  export const greyStone = FourCC("Dgrs");
+  export const lavaCracks = FourCC("Dlvc");
+  export const poison = FourCC("Cpos");
+  export const abyss = FourCC("Oaby");
+  export const stonePath = 1366520944;
+  export const crops = FourCC("Vcrp");
+  export const snow = 1665753905;
+  export const winterGrass = 1666671410;
 }
 
 export module Id {
@@ -424,6 +448,16 @@ export module Id {
   export const iceCannon = FourCC("A0P4");
 
   export const farmerWithShotgun = FourCC("H08S");
+  export const plantWheat = FourCC("A0ZN");
+  export const plantCorn = FourCC("A0ZO");
+  export const plantRice = FourCC("A0ZP");
+  export const farmerWarehouse = FourCC("h0AC");
+  export const farmerSuperWarehouse = FourCC("h0AF");
+  export const farmerHarvester = FourCC("h0AD");
+  export const farmerToggleHarvestEngine = FourCC("A0ZR");
+  export const farmerDisableWarehousing = FourCC("A0ZV");
+  export const farmerEnableWarehousing = FourCC("A0ZW");
+  export const farmerAdvancedHarvester = FourCC("h0AE");
 
   export const frieza = FourCC("H06X");
   export const deathBeamFrieza = FourCC("A0PZ");

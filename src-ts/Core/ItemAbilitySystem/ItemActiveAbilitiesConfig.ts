@@ -2,14 +2,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { ItemConstants } from "./ItemConstants";
 
-// on item's ability usage, perform actions
-export const itemActiveAbilityConfig = new Map<number, () => void> (
-  [
-    [ItemConstants.ABILITY_TIME_RING, performTimeRingAction],
-  ]
-);
-
-function performTimeRingAction() {
+export function performTimeRingAction() {
   const source = GetTriggerUnit();
   const target = GetSpellTargetUnit();
   doTimeRingSwap(source, target);

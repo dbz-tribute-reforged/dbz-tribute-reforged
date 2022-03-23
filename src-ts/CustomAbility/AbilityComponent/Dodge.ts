@@ -52,7 +52,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
 
     ForGroup(this.affectedGroup, () => {
       const enemy = GetEnumUnit();
-      if (UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(enemy))) {
+      if (UnitHelper.isUnitAlive(enemy) && UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(enemy))) {
         if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
           if (!IsUnitType(enemy, UNIT_TYPE_HERO) || !this.ignoreHeroes) {
             const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
