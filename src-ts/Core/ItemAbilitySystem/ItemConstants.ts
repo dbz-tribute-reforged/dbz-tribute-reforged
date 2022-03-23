@@ -118,6 +118,13 @@ export module ItemConstants {
     export const KRABBY_PATTY = FourCC("I045");
     export const PUDDING = FourCC("I04D");
   }
+  
+  export module Farming {
+    export const WHEAT = FourCC("I050");
+    export const CORN = FourCC("I051");
+    export const RICE = FourCC("I052");
+    export const RICE_SNOW = FourCC("I053");
+  }
 
   export module SagaDrops {
     export const BATTLE_ARMOR_1 = battleArmor[0];

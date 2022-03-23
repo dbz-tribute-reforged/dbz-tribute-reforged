@@ -45,7 +45,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 8,
     costType: CostType.SP,
-    costAmount: 65,
+    costAmount: 60,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.03,
@@ -63,7 +63,7 @@ export const AbilitiesList = [
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 65 SP|nCD: 8",
+        "|nCost: 60 SP|nCD: 8",
     },
     components: [
       { name: "sfx shunpo start" },

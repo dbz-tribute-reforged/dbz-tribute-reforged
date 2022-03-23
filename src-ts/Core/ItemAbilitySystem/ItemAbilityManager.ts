@@ -4,8 +4,8 @@ import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
-import { itemActiveAbilityConfig } from "./ItemActiveAbilitiesConfig";
 import { itemPassiveAbilityConfig } from "./ItemPassiveAbilitiesConfig";
+import { performTimeRingAction } from "./ItemActiveAbilitiesConfig";
 
 export class ItemAbilityManager {
   static instance: ItemAbilityManager;
@@ -29,7 +29,7 @@ export class ItemAbilityManager {
   public static getInstance() {
     if (this.instance == null) {
       this.instance = new ItemAbilityManager();
-      Hooks.set("SagaItemManager", this.instance);
+      Hooks.set("ItemAbilityManager", this.instance);
     }
     return this.instance;
   }
@@ -153,9 +153,8 @@ export class ItemAbilityManager {
     TriggerAddCondition(
       this.itemActiveAbilityTrigger,
       Condition(() => {
-        const itemAbility = itemActiveAbilityConfig.get(GetSpellAbilityId());
-        if (itemAbility) {
-          itemAbility();
+        if (GetSpellAbilityId() == ItemConstants.ABILITY_TIME_RING) {
+          performTimeRingAction();
         }
         return false;
       })

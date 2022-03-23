@@ -1082,7 +1082,7 @@ export function CustomPlayerTest() {
       10, 
       "|cffffff00Last chance to change to zanzo dash! (Requires repick)|r"
     );
-    DisableTrigger(zanzoToggleTrigger);
+    DestroyTimer(GetExpiredTimer());
   });
   TimerStart(CreateTimer(), 60, false, () => {
     DisplayTimedTextToForce(
@@ -1091,6 +1091,7 @@ export function CustomPlayerTest() {
       "|cffff2020Zanzo Dash Toggle Disabled|r"
     );
     DisableTrigger(zanzoToggleTrigger);
+    DestroyTimer(GetExpiredTimer());
   });
 
   createCdTrigger();
@@ -2023,8 +2024,9 @@ export function SetupJirenGlare() {
   const glareDuration = 2.5;
   const darkEyesDuration = 4.0;
   const maxGlareDistance = 2500;
-  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.48;
-  const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.75;
+  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.5;
+  const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.7;
+  const glare2StrDiffJirenBonus = 1.05;
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
@@ -2114,7 +2116,7 @@ export function SetupJirenGlare() {
 
         let damageBase = CustomAbility.BASE_DAMAGE + GetHeroStr(unit, true);
         if (spellId == Id.glare2) {
-          damageBase += Math.max(0, glare2StrDiffMult * GetHeroStr(unit, true) - GetHeroStr(source, true));
+          damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(unit, true) - GetHeroStr(source, true)));
         }
 
         const abilityLevel = LoadInteger(Globals.genericSpellHashtable, unitId, 2);

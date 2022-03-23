@@ -1512,6 +1512,7 @@ export function sonicPassive(customHero: CustomHero) {
       if (playerForce) {
         DestroyForce(playerForce);
         playerForce = undefined;
+        DestroyTextTag(textTag);
       }
       return;
     }

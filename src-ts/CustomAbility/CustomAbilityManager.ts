@@ -76,7 +76,7 @@ export class CustomAbilityManager {
     }
 
     for (const component of AnimationComponents) {
-     this.setComponent(new AnimationComponent().deserialize(component));
+      this.setComponent(new AnimationComponent().deserialize(component));
     }
 
     // create components then
