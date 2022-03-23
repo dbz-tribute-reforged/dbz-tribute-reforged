@@ -110,7 +110,8 @@ function tsMain() {
 }
 
 function playLobbyMusic() {
-  PlayMusic("Audio\\Music\\DBSuperOp2.mp3");
+  // PlayMusic("Audio\\Music\\DBSuperOp2.mp3");
+  PlayMusic("Audio\\Music\\GatoSong.mp3");
 }
 
 // Configure libraries
