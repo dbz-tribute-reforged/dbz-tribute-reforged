@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.71c
+DBZ Tribute Reforged 0.71d
 }
 
 STRING 4
@@ -85109,7 +85109,7 @@ STRING 13647
 }
 
 STRING 13649
-// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
+// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85671,7 +85671,7 @@ STRING 13740
 }
 
 STRING 13741
-// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85689,7 +85689,7 @@ STRING 13743
 }
 
 STRING 13744
-// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85790,7 +85790,7 @@ Deals bonus damage based on mana spent.|r
 }
 
 STRING 13760
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -85851,19 +85851,19 @@ Improved Farmor
 }
 
 STRING 13771
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13772
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13773
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86553,7 +86553,7 @@ STRING 13881
 }
 
 STRING 13882
-// Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86571,7 +86571,7 @@ STRING 13884
 }
 
 STRING 13885
-// Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -86725,7 +86725,7 @@ STRING 13907
 }
 
 STRING 13908
-// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86743,7 +86743,7 @@ STRING 13910
 }
 
 STRING 13911
-// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87007,7 +87007,7 @@ Envoy of the End - [|cffffcc00Passive|r]
 }
 
 STRING 13955
-// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87025,7 +87025,7 @@ STRING 13957
 }
 
 STRING 13958
-// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87043,7 +87043,7 @@ STRING 13960
 }
 
 STRING 13961
-// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
+// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87061,7 +87061,7 @@ STRING 13963
 }
 
 STRING 13964
-// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87169,13 +87169,13 @@ STRING 13981
 }
 
 STRING 13982
-// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 13983
-// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87549,7 +87549,7 @@ STRING 14042
 }
 
 STRING 14043
-// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
+// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87567,7 +87567,7 @@ STRING 14045
 }
 
 STRING 14046
-// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87821,7 +87821,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14080
-// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -87845,7 +87845,7 @@ Justice Kick
 }
 
 STRING 14084
-// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88436,7 +88436,7 @@ STRING 14174
 }
 
 STRING 14175
-// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -88463,7 +88463,7 @@ Justice Kick 2
 }
 
 STRING 14179
-// Abilities: A0SD (Psychic Rock Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88705,7 +88705,7 @@ STRING 14213
 }
 
 STRING 14214
-// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -88723,7 +88723,7 @@ STRING 14216
 }
 
 STRING 14217
-// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88986,7 +88986,7 @@ STRING 14260
 }
 
 STRING 14261
-// Abilities: A0SD (Psychic Rock Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89004,7 +89004,7 @@ STRING 14263
 }
 
 STRING 14264
-// Abilities: A0SJ (Mighty Punch 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89064,7 +89064,7 @@ This unit is temporarily blinded.
 }
 
 STRING 14274
-// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89093,7 +89093,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14278
-// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89471,7 +89471,7 @@ STRING 14332
 }
 
 STRING 14333
-// Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89547,7 +89547,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14343
-// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89581,7 +89581,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14348
-// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
+// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89640,7 +89640,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14357
-// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89672,7 +89672,7 @@ Wolf Fang Hurricane
 }
 
 STRING 14362
-// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89728,7 +89728,7 @@ STRING 14370
 }
 
 STRING 14371
-// Abilities: A0SY (Left Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89758,7 +89758,7 @@ STRING 14375
 }
 
 STRING 14376
-// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
+// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89812,7 +89812,7 @@ STRING 14384
 }
 
 STRING 14385
-// Abilities: A0SY (Left Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89842,7 +89842,7 @@ STRING 14389
 }
 
 STRING 14390
-// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -90074,7 +90074,7 @@ STRING 14424
 }
 
 STRING 14425
-// Abilities: A0T3 (Oklahoma Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -91023,7 +91023,7 @@ STRING 14561
 }
 
 STRING 14562
-// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -91578,7 +91578,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14644
-// Abilities: A0T4 (Carolina Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T8 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -91756,7 +91756,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14667
-// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -92062,7 +92062,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14712
-// Abilities: A0T8 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92220,7 +92220,7 @@ A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals b
 }
 
 STRING 14735
-// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -92530,7 +92530,7 @@ Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement s
 }
 
 STRING 14780
-// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0TL (Hammer Time), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92602,7 +92602,7 @@ STRING 14791
 }
 
 STRING 14792
-// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -92616,7 +92616,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14794
-// Abilities: A0TL (Hammer Time), Hotkey (Hotkey - Normal)
+// Abilities: A0TL (Hammer Time), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -92684,7 +92684,7 @@ A heavy pummelling attack launched from above that briefly stuns the enemy.
 }
 
 STRING 14803
-// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -93008,7 +93008,7 @@ Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
 }
 
 STRING 14848
-// Abilities: A0TL (Hammer Time), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TM (Spin Jump), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -93164,7 +93164,7 @@ STRING 14870
 }
 
 STRING 14871
-// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -93503,7 +93503,7 @@ STRING 14919
 }
 
 STRING 14920
-// Abilities: A0TM (Spin Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0TM (Spin Jump), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -93659,7 +93659,7 @@ Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive da
 }
 
 STRING 14943
-// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -93949,7 +93949,7 @@ A wolf fang fist infused pitch!
 }
 
 STRING 14988
-// Abilities: A0TM (Spin Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TT (Tri Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94107,7 +94107,7 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15011
-// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -94743,7 +94743,7 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15102
-// Abilities: A0TT (Tri Beam Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TT (Tri Beam Charge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -94761,7 +94761,7 @@ STRING 15104
 }
 
 STRING 15105
-// Abilities: A0TT (Tri Beam Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0TX (Rock Throw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94907,7 +94907,7 @@ STRING 15126
 }
 
 STRING 15127
-// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -94925,7 +94925,7 @@ STRING 15129
 }
 
 STRING 15130
-// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -96207,7 +96207,7 @@ STRING 15315
 }
 
 STRING 15316
-// Abilities: A0TX (Rock Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TX (Rock Throw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -96373,7 +96373,7 @@ STRING 15341
 }
 
 STRING 15342
-// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97035,7 +97035,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15432
-// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97631,7 +97631,7 @@ Zamasu channels his godly energy to deflect the attacks of lesser beings and pun
 }
 
 STRING 15504
-// Abilities: A0TX (Rock Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -97671,7 +97671,7 @@ All Might punches the air behind him while in the air to propel himself backward
 }
 
 STRING 15510
-// Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -97759,7 +97759,7 @@ STRING 15523
 }
 
 STRING 15524
-// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -97895,7 +97895,7 @@ STRING 15543
 }
 
 STRING 15544
-// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97913,7 +97913,7 @@ STRING 15546
 }
 
 STRING 15547
-// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98226,7 +98226,7 @@ SOLDIER 1st Class
 }
 
 STRING 15593
-// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -99020,7 +99020,7 @@ All Might fires a swift left-handed smash.
 }
 
 STRING 15706
-// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -99304,7 +99304,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15747
-// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -99476,7 +99476,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15772
-// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -99878,7 +99878,7 @@ STRING 15830
 }
 
 STRING 15831
-// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -99906,7 +99906,7 @@ Sephiroth leaps into the air before slamming into the ground, dealing massive AO
 }
 
 STRING 15835
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -100078,7 +100078,7 @@ STRING 15856
 }
 
 STRING 15857
-// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100106,7 +100106,7 @@ Sephiroth's slashes send shockwaves through the air, knocking enemies away from 
 }
 
 STRING 15861
-// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100278,7 +100278,7 @@ STRING 15882
 }
 
 STRING 15883
-// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100306,7 +100306,7 @@ Sephiroth's slashes send shockwaves through the air, knocking enemies away from 
 }
 
 STRING 15887
-// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -101473,7 +101473,7 @@ Dummy Stun 1.5s
 }
 
 STRING 16044
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101497,7 +101497,7 @@ STRING 16047
 }
 
 STRING 16048
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101533,7 +101533,7 @@ Hammer Time
 }
 
 STRING 16054
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101625,7 +101625,7 @@ Q
 }
 
 STRING 16069
-// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -102081,7 +102081,7 @@ STRING 16126
 }
 
 STRING 16127
-// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104547,7 +104547,7 @@ STRING 16461
 }
 
 STRING 16462
-// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104568,7 +104568,7 @@ Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and rest
 }
 
 STRING 16465
-// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104712,7 +104712,7 @@ STRING 16486
 }
 
 STRING 16487
-// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -104730,7 +104730,7 @@ STRING 16489
 }
 
 STRING 16490
-// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
+// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -104754,7 +104754,7 @@ STRING 16493
 }
 
 STRING 16494
-// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104783,7 +104783,7 @@ STRING 16498
 }
 
 STRING 16499
-// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105197,7 +105197,7 @@ STRING 16554
 }
 
 STRING 16555
-// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
+// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -105222,7 +105222,7 @@ A high damage close-range hero that deals bonus damage on his spells by auto-att
 }
 
 STRING 16558
-// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105797,13 +105797,13 @@ STRING 16625
 }
 
 STRING 16626
-// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 16627
-// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -105815,7 +105815,7 @@ STRING 16628
 }
 
 STRING 16629
-// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106022,7 +106022,7 @@ STRING 16655
 }
 
 STRING 16656
-// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106056,7 +106056,7 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 16660
-// Abilities: A0VQ (Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -106215,7 +106215,7 @@ STRING 16681
 }
 
 STRING 16682
-// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106239,7 +106239,7 @@ STRING 16685
 }
 
 STRING 16686
-// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106461,7 +106461,7 @@ STRING 16716
 }
 
 STRING 16717
-// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -106488,7 +106488,7 @@ Duration: <A0UA,Dur1>s
 }
 
 STRING 16721
-// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106545,7 +106545,7 @@ Duration: <A0UA,Dur10>s
 }
 
 STRING 16729
-// Abilities: A0VQ (Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W3 (Dark Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106576,7 +106576,7 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 16732
-// Abilities: A0W3 (Dark Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0W3 (Dark Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -107342,7 +107342,7 @@ STRING 16836
 }
 
 STRING 16837
-// Abilities: A0W3 (Dark Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -108355,7 +108355,7 @@ STRING 16953
 }
 
 STRING 16954
-// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
+// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108484,7 +108484,7 @@ STRING 16971
 }
 
 STRING 16972
-// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108541,7 +108541,7 @@ STRING 16979
 }
 
 STRING 16980
-// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -108585,7 +108585,7 @@ Duration: 10s
 }
 
 STRING 16986
-// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -109124,7 +109124,7 @@ STRING 17062
 }
 
 STRING 17063
-// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -109240,7 +109240,7 @@ STRING 17079
 }
 
 STRING 17080
-// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -109318,7 +109318,7 @@ Q
 }
 
 STRING 17092
-// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -109348,7 +109348,7 @@ STRING 17096
 }
 
 STRING 17097
-// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -109443,13 +109443,13 @@ Chomp
 }
 
 STRING 17112
-// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 17113
-// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -110806,13 +110806,13 @@ Gobble
 }
 
 STRING 17315
-// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17316
-// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -111235,7 +111235,7 @@ Rust Tyranno unleashes a deadly wave of fire.
 }
 
 STRING 17374
-// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -111317,7 +111317,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 17385
-// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -111953,7 +111953,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17466
-// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -111974,7 +111974,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17469
-// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112144,13 +112144,13 @@ STRING 17490
 }
 
 STRING 17491
-// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17492
-// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
+// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112301,7 +112301,7 @@ STRING 17516
 }
 
 STRING 17517
-// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
+// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -112425,7 +112425,7 @@ STRING 17534
 }
 
 STRING 17535
-// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -112479,7 +112479,7 @@ STRING 17542
 }
 
 STRING 17543
-// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112603,7 +112603,7 @@ STRING 17560
 }
 
 STRING 17561
-// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112657,7 +112657,7 @@ STRING 17568
 }
 
 STRING 17569
-// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112683,7 +112683,7 @@ Lightning 2
 }
 
 STRING 17573
-// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
+// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113311,7 +113311,7 @@ fail
 }
 
 STRING 17666
-// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -113337,7 +113337,7 @@ Dark Bomb
 }
 
 STRING 17670
-// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -113349,7 +113349,7 @@ STRING 17671
 }
 
 STRING 17672
-// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -113405,7 +113405,7 @@ Fire 2
 }
 
 STRING 17681
-// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -113650,7 +113650,7 @@ Lightning 2
 }
 
 STRING 17721
-// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
+// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114226,13 +114226,13 @@ Slurp
 }
 
 STRING 17810
-// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17811
-// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -114388,7 +114388,7 @@ STRING 17834
 }
 
 STRING 17835
-// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114414,7 +114414,7 @@ Water
 }
 
 STRING 17839
-// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114690,7 +114690,7 @@ Electrocute
 }
 
 STRING 17877
-// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114708,7 +114708,7 @@ STRING 17879
 }
 
 STRING 17880
-// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115205,7 +115205,7 @@ STRING 17954
 }
 
 STRING 17955
-// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115231,7 +115231,7 @@ STRING 17958
 }
 
 STRING 17959
-// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115293,7 +115293,7 @@ STRING 17968
 }
 
 STRING 17969
-// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115373,7 +115373,7 @@ Ice 2
 }
 
 STRING 17982
-// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115639,7 +115639,7 @@ STRING 18022
 }
 
 STRING 18023
-// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -115657,7 +115657,7 @@ STRING 18025
 }
 
 STRING 18026
-// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -115783,7 +115783,7 @@ STRING 18044
 }
 
 STRING 18045
-// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
+// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115809,7 +115809,7 @@ Frog throws a ball of water at the target area that explodes at its destination,
 }
 
 STRING 18049
-// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -117875,7 +117875,7 @@ STRING 18337
 }
 
 STRING 18338
-// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -117893,7 +117893,7 @@ STRING 18340
 }
 
 STRING 18341
-// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -118480,7 +118480,7 @@ Mega Bomb
 }
 
 STRING 18430
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -118814,7 +118814,7 @@ STRING 18477
 }
 
 STRING 18478
-// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -120513,7 +120513,7 @@ Tail Spin
 }
 
 STRING 18718
-// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0YE (Teleportation), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -120567,7 +120567,7 @@ STRING 18726
 }
 
 STRING 18727
-// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YN (Empowered Teleportation), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -122662,7 +122662,7 @@ STRING 19025
 }
 
 STRING 19026
-// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -123953,7 +123953,7 @@ Duration: <A0XI,Dur10>s
 }
 
 STRING 19200
-// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -123997,13 +123997,13 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 19207
-// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 19208
-// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -124499,7 +124499,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 19282
-// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0YN (Empowered Teleportation), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -124529,7 +124529,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 19286
-// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YT (Ice Path), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -125684,7 +125684,7 @@ Schala channels for 2s and then transports nearby allies to the target location.
 }
 
 STRING 19449
-// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -125711,7 +125711,7 @@ Schala channels for 2s and then transports nearby allies to the target location.
 }
 
 STRING 19453
-// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -126161,7 +126161,7 @@ A medium punch.
 }
 
 STRING 19511
-// Abilities: A0YE (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -126194,7 +126194,7 @@ A medium punch.
 }
 
 STRING 19515
-// Abilities: A0YN (Empowered Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -127691,7 +127691,7 @@ STRING 19721
 }
 
 STRING 19722
-// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -127709,7 +127709,7 @@ STRING 19724
 }
 
 STRING 19725
-// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -127810,7 +127810,7 @@ STRING 19736
 }
 
 STRING 19737
-// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZB (Capsule: Battle Armor 5), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -127877,7 +127877,7 @@ STRING 19747
 }
 
 STRING 19748
-// Abilities: A0YN (Empowered Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -127895,7 +127895,7 @@ STRING 19750
 }
 
 STRING 19751
-// Abilities: A0YT (Ice Path), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -128835,7 +128835,7 @@ Kannon Fire
 }
 
 STRING 19884
-// Abilities: A0ZB (Capsule: Battle Armor 5), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -129191,7 +129191,7 @@ STRING 19937
 }
 
 STRING 19938
-// Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
+// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -129341,7 +129341,7 @@ STRING 19962
 }
 
 STRING 19963
-// Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -129886,7 +129886,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 20046
-// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZD (Capsule: Potara Earrings), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -130344,7 +130344,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 20114
-// Abilities: A0ZD (Capsule: Potara Earrings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZI (Homing Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -130470,7 +130470,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 20135
-// Abilities: A0ZI (Homing Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0ZI (Homing Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -130970,7 +130970,7 @@ Transforms Sonic into spin mode.
 }
 
 STRING 20206
-// Abilities: A0ZI (Homing Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZO (Plant Corn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -130996,7 +130996,7 @@ Homing Attack
 }
 
 STRING 20210
-// Abilities: A0ZO (Plant Corn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZV (Disable Warehousing), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -131148,7 +131148,7 @@ Sonic swerves in midair, curling up into a spinball and launching himself straig
 }
 
 STRING 20232
-// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -131188,7 +131188,7 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 }
 
 STRING 20238
-// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -131817,7 +131817,7 @@ Plant Corn
 }
 
 STRING 20332
-// Abilities: A0ZV (Disable Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A0ZW (Enable Warehousing), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -131841,7 +131841,7 @@ Plant Rice
 }
 
 STRING 20336
-// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -131957,7 +131957,7 @@ Drops held items.
 }
 
 STRING 20355
-// Abilities: A0ZW (Enable Warehousing), Hotkey (Hotkey - Normal)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
