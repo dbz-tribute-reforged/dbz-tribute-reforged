@@ -205,9 +205,9 @@ setupUpdateCrops() {
             this.plantCropFromSpell(spellId, itemX, itemY);
             prngOffset = 0;
             prng = Math.random() * 100;
-            BJDebugMsg("Hit " + prng);
+            // BJDebugMsg("Hit " + prng);
           } else {
-            BJDebugMsg("Miss " + prng);
+            // BJDebugMsg("Miss " + prng);
             prngOffset += FarmingManager.HARVESTER_PRNG_ADD;
             prng += Math.random() * 100 - prngOffset;
           }
