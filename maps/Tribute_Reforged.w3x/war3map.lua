@@ -15613,16 +15613,16 @@ function Trig_Farmer_Get_Food_Bonus_Actions()
     udg_StatMultInt = 0.00
     if (Trig_Farmer_Get_Food_Bonus_Func005C()) then
         if (Trig_Farmer_Get_Food_Bonus_Func005Func001C()) then
-            udg_StatMultStr = 5.00
+            udg_StatMultStr = 4.00
         else
             if (Trig_Farmer_Get_Food_Bonus_Func005Func001Func001C()) then
-                udg_StatMultAgi = 5.00
+                udg_StatMultAgi = 4.00
             else
                 if (Trig_Farmer_Get_Food_Bonus_Func005Func001Func001Func001C()) then
-                    udg_StatMultInt = 5.00
+                    udg_StatMultInt = 4.00
                 else
                     if (Trig_Farmer_Get_Food_Bonus_Func005Func001Func001Func001Func001C()) then
-                        udg_StatMultInt = 7.50
+                        udg_StatMultInt = 6.00
                     else
                     end
                 end
