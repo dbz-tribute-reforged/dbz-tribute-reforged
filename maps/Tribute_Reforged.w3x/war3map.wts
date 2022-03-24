@@ -44729,13 +44729,6 @@ STRING 7174
 Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool1> seconds|r
 }
 
-STRING 7175
-// Items: I050 (Wheat), Description (Description)
-{
-A nutritious bundle of wheat.
-|cffffff00Consume for +5 STR per stack
-}
-
 STRING 7176
 // Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
@@ -50081,13 +50074,6 @@ STRING 8024
 // Abilities: A0I2 (Passive: Bleed Out), Ubertip (Tooltip - Normal - Extended)
 {
 Units hit by Zamasu's auto attacks take extra damage from Zamasu's spells.
-}
-
-STRING 8025
-// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
-{
-A nutritious bundle of wheat.
-|cffffff00Consume for +5 STR per stack
 }
 
 STRING 8026
@@ -64389,13 +64375,6 @@ STRING 10322
 [|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
 }
 
-STRING 10323
-// Items: I051 (Corn), Description (Description)
-{
-Nutritious corn.
-|cffffff00Consume for +5 AGI per stack
-}
-
 STRING 10324
 // Abilities: A0LG (Babidi Barrier), Tip (Tooltip - Normal)
 {
@@ -64562,27 +64541,6 @@ STRING 10351
 // Abilities: A0LM (Hellzone Grenade), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Hellzone Grenade - [|cffffcc00Level %d|r]
-}
-
-STRING 10352
-// Items: I051 (Corn), Ubertip (Tooltip - Extended)
-{
-Nutritious corn.
-|cffffff00Consume for +5 AGI per stack
-}
-
-STRING 10353
-// Items: I052 (Rice), Description (Description)
-{
-Nutritious grains of rice.
-|cffffff00Consume for +5 INT per stack
-}
-
-STRING 10354
-// Items: I052 (Rice), Ubertip (Tooltip - Extended)
-{
-Nutritious grains of rice.
-|cffffff00Consume for +5 INT per stack
 }
 
 STRING 10355
@@ -81433,24 +81391,10 @@ STRING 13060
 |cffffff00+10 armor.|nDoes not drop on death.|r|n|cff999999"One size fits all!"|r
 }
 
-STRING 13061
-// Items: I053 (Snow Rice), Description (Description)
-{
-Nutritious grains of snow rice.
-|cffffff00Consume for +7.5 INT per stack
-}
-
 STRING 13062
 // Abilities: A0PL (Justice Tornado 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 10|r]
-}
-
-STRING 13063
-// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
-{
-Nutritious grains of snow rice.
-|cffffff00Consume for +7.5 INT per stack
 }
 
 STRING 13064
@@ -84978,6 +84922,13 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool1> seconds|r
 }
 
+STRING 13627
+// Items: I050 (Wheat), Description (Description)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +4 STR per stack
+}
+
 STRING 13628
 // Abilities: A0DZ (Frieza Transforms), Ubertip (Tooltip - Normal - Extended)
 {
@@ -85106,6 +85057,13 @@ STRING 13647
 // Units: h0AH (Not Geti Defence Tower), Tip (Tooltip - Basic)
 {
 [|cff00ff00E|r] Build Farming Defence System
+}
+
+STRING 13648
+// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +4 STR per stack
 }
 
 STRING 13649
@@ -85813,6 +85771,13 @@ STRING 13763
 [|cff00FF00R|r] Learn Earth Breaker - [|cffffcc00Level %d|r]
 }
 
+STRING 13764
+// Items: I051 (Corn), Description (Description)
+{
+Nutritious corn.
+|cffffff00Consume for +4 AGI per stack
+}
+
 STRING 13765
 // Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
@@ -85866,6 +85831,13 @@ STRING 13773
 // Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 13774
+// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+{
+Nutritious corn.
+|cffffff00Consume for +4 AGI per stack
 }
 
 STRING 13775
@@ -131981,6 +131953,13 @@ STRING 20358
 (farmer)
 }
 
+STRING 20359
+// Items: I052 (Rice), Description (Description)
+{
+Nutritious grains of rice.
+|cffffff00Consume for +4 INT per stack
+}
+
 STRING 20360
 // Abilities: A0ZV (Disable Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -132005,10 +131984,31 @@ STRING 20363
 [|cff00ff00D|r] Upgrade to Super Warehouse
 }
 
+STRING 20364
+// Items: I052 (Rice), Ubertip (Tooltip - Extended)
+{
+Nutritious grains of rice.
+|cffffff00Consume for +4 INT per stack
+}
+
 STRING 20365
 // Units: h0AG (Farming Research Centre), Name (Name)
 {
 Farming Research Centre
+}
+
+STRING 20366
+// Items: I053 (Snow Rice), Description (Description)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +6 INT per stack
+}
+
+STRING 20367
+// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +6 INT per stack
 }
 
 STRING 20368

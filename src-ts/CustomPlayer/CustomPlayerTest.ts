@@ -4013,6 +4013,9 @@ export function SetupItemSplitter() {
         if (charges > 1 && loss > 0 && charges > loss) {
           SetItemCharges(item, charges - loss);
           const newItem = CreateItem(GetItemTypeId(item), GetUnitX(unit), GetUnitY(unit));
+          if (IsItemInvulnerable(item)) {
+            SetItemInvulnerable(newItem, true);
+          }
           SetItemCharges(newItem, loss);
           ItemStackingManager.getInstance().disable();
           UnitAddItem(unit, newItem);
