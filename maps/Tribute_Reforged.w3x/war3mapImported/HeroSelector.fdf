@@ -1,0 +1,106 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+Frame "GLUEBUTTON" "HeroSelectorButton" {
+	Width 0.035,
+	Height 0.035,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    ControlBackdrop "HeroSelectorButtonIcon",
+    Frame "BACKDROP" "HeroSelectorButtonIcon" {
+    }
+
+    ControlDisabledBackdrop "HeroSelectorButtonIconDisabled",
+    Frame "BACKDROP" "HeroSelectorButtonIconDisabled" {
+    }
+    
+    ControlPushedBackdrop "HeroSelectorButtonIconPushed",
+    Frame "BACKDROP" "HeroSelectorButtonIconPushed" {
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+    }
+
+    ControlMouseOverHighlight "HeroSelectorButtonHighLight",
+	Frame "HIGHLIGHT" "HeroSelectorButtonHighLight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+
+}
+
+Frame "GLUEBUTTON" "HeroSelectorCategoryButton" {
+	Width 0.02,
+	Height 0.02,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    ControlBackdrop "HeroSelectorCategoryButtonIcon",
+    Frame "BACKDROP" "HeroSelectorCategoryButtonIcon" {
+    }
+   
+    ControlPushedBackdrop "HeroSelectorCategoryButtonIconPushed",
+    Frame "BACKDROP" "HeroSelectorCategoryButtonIconPushed" {
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+    }
+
+    ControlMouseOverHighlight "HeroSelectorCategoryButtonHighLight",
+	Frame "HIGHLIGHT" "HeroSelectorCategoryButtonHighLight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+
+}
+
+Frame "TEXT" "HeroSelectorTitle" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.0145, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+Frame "TEXT" "HeroSelectorText" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.011, "",
+    FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+Frame "TEXTAREA" "HeroSelectorTextArea" INHERITS WITHCHILDREN "EscMenuTextAreaTemplate" {
+	DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.011, "",
+}
+
+Frame "BACKDROP" "HeroSelectorTextBox" INHERITS "EscMenuControlBackdropTemplate" {
+
+}
+
+Frame "BACKDROP" "HeroSelectorRaceBox" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackground  "EscMenuBackground",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.036,
+    BackdropBackgroundSize  0.256,
+    BackdropBackgroundInsets 0.007 0.007 0.007 0.007,
+    BackdropEdgeFile  "EscMenuBorder",
+    BackdropBlendAll,
+}
+Frame "BACKDROP" "HeroSelectorRaceTopBox" {
+    DecorateFileNames,
+    BackdropBackground  "EscMenuBlankBackground",
+    BackdropCornerFlags "T",
+    BackdropCornerSize  0.012,
+    BackdropEdgeFile  "EscMenuBorder",
+    BackdropBlendAll,
+}
+
+Frame "GLUETEXTBUTTON" "HeroSelectorTextButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+    UseActiveContext,
+    ButtonText "HeroSelectorTextButtonText",
+	Frame "TEXT" "HeroSelectorTextButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		Text "",
+	}
+}

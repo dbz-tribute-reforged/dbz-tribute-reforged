@@ -4,6 +4,7 @@ AgiDefenseBase=0.0
 AgiDefenseBonus=0.0
 AgiMoveBonus=0.2
 BoneDecayTime=20.0
+BuildingPlacementNotifyRadius=400.0
 CallForHelp=400.0
 ChanceToMiss=0.0
 ConstructionRefundRate=1.0
