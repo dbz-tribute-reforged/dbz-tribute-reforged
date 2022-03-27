@@ -828,6 +828,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Skurvy.EXTRAORDINARY_POWER,
     ]],
 
+    [Id.appule, [
+      AbilityNames.Appule.APPULE_BLASTER,
+    ]],
+
     // rusty
     [Id.rustTyranno, [
       AbilityNames.RustTyranno.TYRANNO_FLAME,

@@ -62,7 +62,7 @@ function tsMain() {
   SetCreepCampFilterState(false);
 
   // delay init
-  TimerStart(CreateTimer(), 0.1, false, () => {
+  TimerStart(CreateTimer(), 0.05, false, () => {
     DestroyTimer(GetExpiredTimer());
     // initialize some systems
     PathingCheck.Init();
@@ -71,7 +71,7 @@ function tsMain() {
     CustomPlayerTest();
   })
 
-  TimerStart(CreateTimer(), 0.2, false, () => {
+  TimerStart(CreateTimer(), 0.1, false, () => {
     DestroyTimer(GetExpiredTimer());
     heroSelectorManager = HeroSelectorManager.getInstance();
   });

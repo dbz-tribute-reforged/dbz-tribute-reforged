@@ -15,14 +15,22 @@ export class HeroSelectUnit implements Serializable<HeroSelectUnit> {
     }
   }
 
-  setUnitReq(who: any = null) {
-    if (this.onlyRandom) return;
+  isInvalid() {
+    return this.unitCode == 0;
+  }
 
+  setUnitReq(who: any = null) {
+    if (this.isInvalid() || this.onlyRandom) return;
     HeroSelector.setUnitReq(this.unitCode, who);
   }
 
+  counterSetUnitCode(set: number, player: player) {
+    if (this.isInvalid()) return;
+    HeroSelector.counterSetUnitCode(this.unitCode, set, player);
+  }
+
   hasCategory(cmp: number) {
-    return BlzBitAnd(this.category, cmp) != 0;
+    return BlzBitAnd(this.category, cmp) > 0;
   }
 
   deserialize(

@@ -53,7 +53,7 @@ function moveButton3Around() {
 }
 
 export function CustomUiTest() {
-	BJDebugMsg("Setting up Custom UI ... ");
+	// BJDebugMsg("Setting up Custom UI ... ");
 
 	let loaded = LoadToc("CustomUI\\templates.toc");
 	

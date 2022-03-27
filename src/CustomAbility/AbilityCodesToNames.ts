@@ -594,6 +594,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.hirudegarnDeactivateEnrage, AbilityNames.Hirudegarn.DEACTIVATE_ENRAGE],
 
 
+    [Id.appuleBlaster, AbilityNames.Appule.APPULE_BLASTER],
+
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

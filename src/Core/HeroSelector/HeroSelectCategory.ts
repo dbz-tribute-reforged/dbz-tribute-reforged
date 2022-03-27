@@ -21,17 +21,17 @@ export module HeroSelectCategory {
   export let MICRO = c_index; c_index*=2;
 
   export function setupHeroSelectCategories() {
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp", "Good");
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNDeathCoil.blp", "Evil");
-    HeroSelector.addCategory("BTNCrono.blp", "Crono");
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp", "Meme");
+    HeroSelector.addCategory("BTNHSGood.blp", "Good");
+    HeroSelector.addCategory("BTNHSEvil.blp", "Evil");
+    HeroSelector.addCategory("BTNHSCrono.blp", "Crono");
+    HeroSelector.addCategory("BTNHSMeme.blp", "Meme");
 
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp", "Brioser");
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNDaggerOfEscape.blp", "Assassin");
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNBrilliance.blp", "Beamer");
+    HeroSelector.addCategory("BTNFTSwordOfHope.blp", "Bruiser");
+    HeroSelector.addCategory("BTNHitFlashFist.blp", "Assassin");
+    HeroSelector.addCategory("BTNKame2.blp", "Beamer");
 
     HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNTransmute.blp", "Carry");
     HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNSentryWard.blp", "Support");
-    HeroSelector.addCategory("ReplaceableTextures\\CommandButtons\\BTNDarkSummoning.blp", "Micro");
+    HeroSelector.addCategory("BTNFriezaArmy.blp", "Micro");
   }
 }

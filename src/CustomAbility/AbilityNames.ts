@@ -692,6 +692,10 @@ export module AbilityNames {
     export const EXTRAORDINARY_POWER: string = "Skurvy Extraordinary Power";
   }
 
+  export module Appule {
+    export const APPULE_BLASTER: string = "Appule Blaster";
+  }
+
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

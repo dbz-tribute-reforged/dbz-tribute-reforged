@@ -188,6 +188,10 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Android17BeatYouLikeARug.mp3", 1608);
         }
         break;
+
+      case Id.appuleBlaster:
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+        break;
       
       // babidi
       case Id.haretsu:

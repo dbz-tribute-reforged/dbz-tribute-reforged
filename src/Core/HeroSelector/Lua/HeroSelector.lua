@@ -130,10 +130,10 @@ HeroSelector = {}
 
 --Box
 HeroSelector.BoxFrameName           = "HeroSelectorRaceBox" --this is the background box being created
-HeroSelector.BoxPosX                = 0.3
+HeroSelector.BoxPosX                = 0.4
 HeroSelector.BoxPosY                = 0.4
 HeroSelector.BoxPosPoint            = FRAMEPOINT_CENTER
-HeroSelector.AutoShow               = true --(true) shows the box and the Selection at 0.0 for all players
+HeroSelector.AutoShow               = false --(true) shows the box and the Selection at 0.0 for all players
 --Unique Picks
 HeroSelector.UnitCount              = 2 --each hero is in total allowed to be picked this amount of times (includes random, repicking allows a hero again).
 HeroSelector.UnitCountPerTeam       = 1 --Each Team is allowed to pick this amount of each unitType
@@ -150,7 +150,8 @@ HeroSelector.CategoryData = {
     {"ReplaceableTextures\\CommandButtons\\BTNMantleOfIntelligence", "INTELLECT"},   --16
 }
 HeroSelector.CategoryAffectRandom   = true  --(false) random will not care about selected category
-HeroSelector.CategoryMultiSelect    = false --(false) deselect other category when selecting one, (true) can selected multiple categories and all heroes having any of them are not filtered.
+HeroSelector.CategoryMultiSelect    = true  --(false) deselect other category when selecting one, (true) can selected multiple categories and all heroes having any of them are not filtered.
+HeroSelector.CategoryMultiMatchAll  = true  --(false) hero must match all categories
 HeroSelector.CategorySize           = 0.02  --the size of the Category Button
 HeroSelector.CategorySpaceX         = 0.0008 --space between 2 category Buttons, it is meant to need only one line of Categoryy Buttons.
 HeroSelector.CategoryFilteredAlpha  = 45     -- Alpha value of Heroes being filtered by unselected categories
@@ -448,7 +449,8 @@ function HeroSelector.CategoryClickAction()
             local button = HeroSelector.HeroButtons[buttonIndex].Frame
             local unitCode = HeroSelector.UnitData[buttonIndex]
             if unitCode and unitCode > 0 then
-                if playerData == 0 or BlzBitAnd(HeroSelector.UnitData[unitCode].Category, playerData) > 0 then
+                local filter = BlzBitAnd(HeroSelector.UnitData[unitCode].Category, playerData)
+                if playerData == 0 or (HeroSelector.CategoryMultiMatchAll and filter == playerData) or (not HeroSelector.CategoryMultiMatchAll and filter > 0) then
                     BlzFrameSetAlpha(button, 255)
                 else
                     BlzFrameSetAlpha(button, HeroSelector.CategoryFilteredAlpha)
@@ -475,17 +477,29 @@ end
 function HeroSelector.updateTooltip(unitCode)
     local tooltipFrame = HeroSelector.HeroButtons[HeroSelector.UnitData[unitCode].Index].Tooltip 
     local unitData = HeroSelector.UnitData[unitCode]
+    local hName = getHeroName(unitCode)
     if unitData.Count > HeroSelector.UnitCount then
-        BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.BanTooltip)..")")
+        BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.BanTooltip)..")")
     else
         if unitData.Count == HeroSelector.UnitCount or unitData.InTeam[GetPlayerTeam(GetLocalPlayer())] >= HeroSelector.UnitCountPerTeam then
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.ToManyTooltip)..")")
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.ToManyTooltip)..")")
         elseif not HeroSelector.buttonRequirementDone(unitCode, GetLocalPlayer()) then
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
         else
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode))
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName)
         end
     end
+    -- if unitData.Count > HeroSelector.UnitCount then
+    --     BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.BanTooltip)..")")
+    -- else
+    --     if unitData.Count == HeroSelector.UnitCount or unitData.InTeam[GetPlayerTeam(GetLocalPlayer())] >= HeroSelector.UnitCountPerTeam then
+    --         BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.ToManyTooltip)..")")
+    --     elseif not HeroSelector.buttonRequirementDone(unitCode, GetLocalPlayer()) then
+    --         BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode).."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
+    --     else
+    --         BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..GetObjectName(unitCode))
+    --     end
+    -- end
 end
 
 function HeroSelector.addCategory(icon, text)
@@ -790,8 +804,10 @@ function HeroSelector.rollOption(player, includeRandomOnly, excludedIndex, categ
             --print("rejected requirement")
             allowed = false
         end
+        local filter = BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category)
+        if allowed and category and category > 0 and ((HeroSelector.CategoryMultiMatchAll and filter ~= category) or (not HeroSelector.CategoryMultiMatchAll and filter == 0)) then
         --when having an given an category only allow options having that category atleast partly
-        if allowed and category and category > 0 and BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category) == 0 then
+        -- if allowed and category and category > 0 and BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category) == 0 then
             --print(GetObjectName(unitCode))
             --print("  rejected category", category, HeroSelector.UnitData[unitCode].Category)
             allowed = false
@@ -1088,6 +1104,9 @@ end
 
 function HeroSelector.show(flag, who)
     HeroSelector.showFrame(HeroSelector.Box, flag, who)
+    if HeroSelector.includesPlayer(who, GetLocalPlayer()) then
+        BlzHideOriginFrames(flag)
+    end
 end
 
 do

@@ -71,6 +71,7 @@ declare var gg_snd_Warning: sound;
 declare var gg_snd_KachiDaze: string;
 declare var gg_snd_DBZSagaTheme: sound;
 declare var gg_snd_SkurvyCoconutAcquire: sound;
+declare var gg_snd_BattleNetTick: sound;
 declare var gg_trg_Get_Int_Damage_Multiplier: trigger;
 declare var gg_trg_SolarFlare: trigger;
 declare var gg_trg_Oozaru_Vegeta_Old: trigger;

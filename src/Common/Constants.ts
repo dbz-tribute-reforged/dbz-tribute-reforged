@@ -77,7 +77,7 @@ export module Constants {
   ];
   export const maxHeroLevel: number = 1000;
   export const maxCreepLvl: number = 99;
-  export const creepAggroRange: number = 900;
+  export const creepAggroRange: number = 750;
   export const finalBattleName: string = "Final Battle";
   export const budokaiName: string = "Tournament";
   export const locustAbility: number = FourCC("Aloc")
@@ -294,6 +294,9 @@ export module Id {
   export const superElectricStrike = FourCC("A0MV");
   export const barrierPrison = FourCC('A0MT');
   export const barrierWall = FourCC('A0MU');
+
+  export const appule = FourCC("H0AI");
+  export const appuleBlaster = FourCC("A104");
 
   export const babidi = FourCC("O001");
   export const haretsu = FourCC("A02E");

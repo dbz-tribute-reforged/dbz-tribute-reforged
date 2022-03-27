@@ -2283,6 +2283,7 @@ export const AbilitiesList = [
         AbilityNames.Tapion.BRAVE_SWORD_ATTACK,
     },
     components: [
+      { name: "dash ground point 15dist" },
       { name: "sfx brave sword attack" },
     ],
   },
@@ -6032,6 +6033,7 @@ export const AbilitiesList = [
       { name: "anim crono cleave" },
       { name: "dash ground point 25dist" },
       { name: "damage crono cleave explosion" },
+      { name: "damage crono cleave explosion inner" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
     ],
@@ -12083,6 +12085,33 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam super 17 shocking death ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Appule.APPULE_BLASTER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAppule.blp",
+      disabled: "BTNAppule.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Appule.APPULE_BLASTER,
+      body: 
+        AbilityNames.Appule.APPULE_BLASTER
+    },
+    components: [
+      { name: "beam appule blaster" },
     ],
   },
   // -------------------------------------------

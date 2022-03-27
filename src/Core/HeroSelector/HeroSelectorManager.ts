@@ -1,5 +1,6 @@
 import { Constants, Globals, Id } from "Common/Constants";
 import { HeroAbilitiesList } from "CustomHero/HeroData/HeroAbilitiesList";
+import { CustomUI } from "CustomUI/CustomUI";
 import { HeroSelectCategory } from "./HeroSelectCategory";
 import { HeroSelectUnit } from "./HeroSelectUnit";
 import { HeroSelectUnitList } from "./HeroSelectUnitList";
@@ -7,7 +8,7 @@ import { HeroSelectUnitList } from "./HeroSelectUnitList";
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
 
-  static readonly BAN_TIME = 25;
+  static readonly BAN_TIME = 10;
   static readonly PICK_TIME = 50;
   
 
@@ -18,11 +19,14 @@ export class HeroSelectorManager {
   public allowRepick: boolean;
 
   public gameModeTrigger: trigger;
+  public gameModeString: string;
 
+  public isPicking: boolean;
   public setupFinished: boolean;
   public isGameStarted: boolean;
 
   public heroSelectUnits: HeroSelectUnit[];
+
 
   public static getInstance() {
     if (this.instance == null) {
@@ -40,7 +44,9 @@ export class HeroSelectorManager {
     this.allowRepick = true;
 
     this.gameModeTrigger = CreateTrigger();
+    this.gameModeString = "-ap";
 
+    this.isPicking = false;
     this.setupFinished = false;
     this.isGameStarted = false;
 
@@ -58,13 +64,25 @@ export class HeroSelectorManager {
     this.setupHeroes();
     this.setupGameModes();
     HeroSelector.show(true);
+    CustomUI.show(false);
 
     TimerStart(CreateTimer(), 1.0, true, () => {
       if (this.setupFinished) {
         DestroyTimer(GetExpiredTimer());
-        this.modeAllPick();
+
+        this.startHeroSelection(true);
+        TimerStart(this.selectTimer, 1.0, true, () => {
+          this.runHeroSelectTimer();
+        });
       }
     })
+  }
+
+  enableFBSimTest(state: boolean) {
+    this.allowRepick = state;
+    for (const hsUnit of this.heroSelectUnits) {
+      hsUnit.setUnitReq(null);
+    }
   }
 
   setupPlayerSpawns() {
@@ -75,6 +93,7 @@ export class HeroSelectorManager {
         const unit = GetEnumUnit();
         if (GetUnitTypeId(unit) == Id.heroSelectorUnit) {
           Globals.customPlayers[i].heroPickSpawn.setUnit(unit);
+          ShowUnit(unit, false);
         }
       });
     }
@@ -128,6 +147,7 @@ export class HeroSelectorManager {
       SelectUnitForPlayerSingle(unit, player)
       HeroSelector.enablePick(false, player)
       HeroSelector.show(false, player);
+      CustomUI.show(true, player);
 
       // do other stuff
 
@@ -145,7 +165,20 @@ export class HeroSelectorManager {
     }
     TriggerAddCondition(this.repickTrigger, Condition(() => {
       if (this.allowRepick) {
-        this.doRepickForPlayer(GetTriggerPlayer());
+        const player = GetTriggerPlayer();
+        this.doRepickForPlayer(player);
+
+        if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
+          HeroSelector.show(false, player);
+          HeroSelector.forceRandom(player);
+        } else {
+          HeroSelector.show(true, player);
+          HeroSelector.enablePick(true, player);
+          CustomUI.show(false, player);
+        }
+
+        udg_TempInt = GetConvertedPlayerId(player);
+        TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
       }
       return false;
     }));
@@ -163,14 +196,17 @@ export class HeroSelectorManager {
         GroupRemoveUnit(udg_PlayerPickedHeroesUnitGroup[playerId], unit);
 
         const unitId = GetUnitTypeId(unit);
-        if (
-          unitId == Id.kidTrunks
-          || unitId == Id.android14
-          || unitId == Id.android15
-        ) {
+
+        let isRemoved = false;
+        for (const hsUnit of this.heroSelectUnits) {
+          if (unitId == hsUnit.unitCode) {
+            HeroSelector.repick(unit);
+            isRemoved = true;
+            break;
+          }
+        }
+        if (!isRemoved) {
           RemoveUnit(unit);
-        } else {
-          HeroSelector.repick(unit);
         }
       }
     });
@@ -196,13 +232,12 @@ export class HeroSelectorManager {
 
 
 
-  startHeroSelection(doBans: boolean = true) {
+  startHeroSelection(doBans: boolean = false) {
     HeroSelector.deselectButtons();
     HeroSelector.update();
     HeroSelector.deselectButtons();
     this.forceAllRepick();
     // this.resetBansAndPicks();
-    PauseTimer(this.selectTimer);
     if (doBans) {
       this.runBanPhase();
     } else {
@@ -220,48 +255,51 @@ export class HeroSelectorManager {
     const t1Player = Constants.defaultTeam1[0];
     const t2Player = Constants.defaultTeam2[0];
     for (const hsUnit of this.heroSelectUnits) {
-      HeroSelector.counterSetUnitCode(hsUnit.unitCode, 0, t1Player);
-      HeroSelector.counterSetUnitCode(hsUnit.unitCode, 0, t2Player);
+      hsUnit.counterSetUnitCode(0, t1Player);
+      hsUnit.counterSetUnitCode(0, t2Player);
     }
+  }
+
+  runPickPhase() {
+    this.time = HeroSelectorManager.PICK_TIME;
+    HeroSelector.setTitleText("Picking: " + this.time);
+    HeroSelector.enablePick(true);
+    HeroSelector.update();
+    HeroSelector.show(true);
+    CustomUI.show(false);
+    this.isPicking = true;
   }
 
   runBanPhase() {
     this.time = HeroSelectorManager.BAN_TIME;
+    HeroSelector.setTitleText(GetLocalizedString(HeroSelector.BanButtonText) + ": " + this.time);
     HeroSelector.enableBan(true);
     HeroSelector.update();
     HeroSelector.show(true);
-    
-    TimerStart(this.selectTimer, 1.0, true, () => {
-      HeroSelector.setTitleText(GetLocalizedString(HeroSelector.BanButtonText) + ": " + this.time);
-      
-      if (this.time <= 0) {
-        PauseTimer(this.selectTimer);
-        HeroSelector.enablePick(true);
-        HeroSelector.setTitleText("Picking: " + this.time);
-        this.runPickPhase();
-      }
-      
-      this.time -= 1;
-    });
+    CustomUI.show(false);
+    this.isPicking = false;
   }
 
-
-  runPickPhase() {
-    this.time = HeroSelectorManager.PICK_TIME;
-    HeroSelector.enablePick(true);
-    HeroSelector.update();
-    HeroSelector.show(true);
-
-    TimerStart(this.selectTimer, 1.0, true, () => {
-      HeroSelector.setTitleText("Picking: " + this.time);
-      
-      if (this.time <= 0) {
-        PauseTimer(this.selectTimer);
+  runHeroSelectTimer() {
+    if (this.time <= 0) {
+      if (this.isPicking) {
         this.finishHeroPick();
+      } else {
+        this.runPickPhase();
       }
-      
-      this.time -= 1;
-    });
+    }
+    
+    if (this.time <= 5) {
+      PlaySoundBJ(gg_snd_BattleNetTick);
+    }
+
+    if (this.isPicking) {
+      HeroSelector.setTitleText("Pick: " + this.time);
+    } else {
+      HeroSelector.setTitleText(GetLocalizedString(HeroSelector.BanButtonText) + ": " + this.time);
+    }
+
+    this.time -= 1;
   }
 
 
@@ -269,8 +307,10 @@ export class HeroSelectorManager {
     this.allowRepick = false;
     this.isGameStarted = true;
     DisableTrigger(this.gameModeTrigger);
+    PauseTimer(this.selectTimer);
 
     HeroSelector.show(false);
+    CustomUI.show(true);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
@@ -280,6 +320,9 @@ export class HeroSelectorManager {
           HeroSelector.forcePick(udg_TempPlayer);
         }
       }
+      // if (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[i]) == 0) {
+      //   HeroSelector.forcePick(udg_TempPlayer);
+      // }
 
 
       // force pick if not picked
@@ -299,10 +342,12 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ap", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar2", true);
-      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-crono", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-meme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-antimeme", true);
-      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-crono", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-original", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "rush", true);
     }
     TriggerAddCondition(this.gameModeTrigger, Condition(() => {
       const player = GetTriggerPlayer();
@@ -310,21 +355,32 @@ export class HeroSelectorManager {
 
       
       const str = GetEventPlayerChatString();
+      if (str == "rush") {
+        this.time = 1;
+        return;
+      }
+
+
+
       print("Game Mode: " + str);
-      
+      this.gameModeString = str;
       this.allowRepick = true;
 
       switch (str) {
+        case "-original":
+          this.modeOriginal();
+          break;
+
         case "-classic":
           this.modeClassic();
           break;
         
-        case "-meme":
-          this.modeMeme();
-          break;
-
         case "-antimeme":
           this.modeAntiMeme();
+          break;
+
+        case "-meme":
+          this.modeMeme();
           break;
 
         case "-crono":
@@ -359,17 +415,21 @@ export class HeroSelectorManager {
 
   modeAllRandom(repickable: boolean) {
     for (const hsUnit of this.heroSelectUnits) {
-      hsUnit.setUnitReq(RACE_DEMON);
+      hsUnit.setUnitReq(null);
     }
     HeroSelector.deselectButtons();
     HeroSelector.update();
+    this.forceAllRepick();
 
     this.runPickPhase();
 
     if (!repickable) {
       this.allowRepick = false;
+    } else {
+
     }
     HeroSelector.show(false);
+    CustomUI.show(true);
     this.time = 15;
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -380,15 +440,33 @@ export class HeroSelectorManager {
     }
   }
 
-  modeClassic() {
+  modeOriginal() {
     for (const hsUnit of this.heroSelectUnits) {
-      if (hsUnit.hasCategory(HeroSelectCategory.MEME + HeroSelectCategory.CRONO)) {
+      if (
+        hsUnit.hasCategory(HeroSelectCategory.MEME)
+        || hsUnit.hasCategory(HeroSelectCategory.CRONO)
+      ) {
         hsUnit.setUnitReq(RACE_DEMON);
       } else {
         if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
-          hsUnit.setUnitReq(1);
+          hsUnit.setUnitReq(0);
         } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
-          hsUnit.setUnitReq(2);
+          hsUnit.setUnitReq(1);
+        }
+      }
+    }
+    this.startHeroSelection();
+  }
+
+  modeClassic() {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.MEME)) {
+        hsUnit.setUnitReq(RACE_DEMON);
+      } else {
+        if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
+          hsUnit.setUnitReq(0);
+        } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
+          hsUnit.setUnitReq(1);
         }
       }
     }
@@ -418,9 +496,11 @@ export class HeroSelectorManager {
   }
 
   modeCrono() {
+    let sum = 0;
     for (const hsUnit of this.heroSelectUnits) {
       if (hsUnit.hasCategory(HeroSelectCategory.CRONO)) {
         hsUnit.setUnitReq(null);
+        ++sum;
       } else {
         hsUnit.setUnitReq(RACE_DEMON);
       }

@@ -20,9 +20,9 @@
     "plugins": [
       {
         "transform": "war3-transformer",
-        "mapDir": "D:/Games/DBZTR/dbz-tribute-reforged-2/maps/Tribute_Reforged.w3x",
-        "entryFile": "D:/Games/DBZTR/dbz-tribute-reforged-2/src/main.ts",
-        "outputDir": "D:/Games/DBZTR/dbz-tribute-reforged-2/dist/Tribute_Reforged.w3x"
+        "mapDir": "D:/Games/DBZTR/dbz-tribute-reforged-3/maps/Tribute_Reforged.w3x",
+        "entryFile": "D:/Games/DBZTR/dbz-tribute-reforged-3/src/main.ts",
+        "outputDir": "D:/Games/DBZTR/dbz-tribute-reforged-3/dist/Tribute_Reforged.w3x"
       }
     ],
     "types": [

@@ -6,7 +6,7 @@ const emptySpace = {
   unitCode: 0,
   onlyRandom: false,
   requirement: null,
-  category: null
+  category: 0
 };
 
 const gokuData = {
@@ -212,7 +212,7 @@ const toppoData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER + 
@@ -238,8 +238,7 @@ const jirenData = {
     HeroSelectCategory.STR +
     HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER + 
-    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.BRUISER +
     HeroSelectCategory.CARRY
   )
 }
@@ -292,11 +291,9 @@ const cellData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.BRUISER +
     HeroSelectCategory.CARRY +
     HeroSelectCategory.MICRO
   )
@@ -344,7 +341,7 @@ const janembaData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.AGI + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ASSASSIN +
     HeroSelectCategory.CARRY
   )
 }
@@ -402,7 +399,6 @@ const omegaShenronData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER + 
     HeroSelectCategory.ASSASSIN + 
     HeroSelectCategory.CARRY
   )
@@ -422,12 +418,10 @@ const friezaData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.STR + 
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.BEAMER +
     HeroSelectCategory.CARRY
   )
 }
@@ -450,9 +444,19 @@ const guldoData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN +
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.SUPPORT
+  )
+}
+const appuleData = {
+  unitCode: Id.appule,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER
   )
 }
 const hitData = {
@@ -485,7 +489,6 @@ const frogData = {
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.CRONO + 
     HeroSelectCategory.BRUISER +
@@ -501,8 +504,7 @@ const roboData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.CRONO + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.BRUISER
   )
 }
 const magusData = {
@@ -738,14 +740,14 @@ export const HeroSelectUnitList = [
   piccoloData,
   bardockData,
   panData,
-  farmerData,
+  videlData,
   android17DbsData,
   // 10
-  videlData,
   roshiData,
   krillinData,
   tienData,
   yamchaRData,
+  farmerData,
 
   // ====
   // 15
@@ -753,8 +755,8 @@ export const HeroSelectUnitList = [
   upaData,
   tapionData,
   toppoData,
-  dyspoData,
   jirenData,
+  dyspoData,
   // 20
   emptySpace,
   emptySpace,
@@ -785,10 +787,10 @@ export const HeroSelectUnitList = [
   hirudegarnData,
   // 40
   super17Data,
-  zamasuData,
-  moroData,
   omegaShenronData,
   eisShenronData,
+  zamasuData,
+  moroData,
 
   // ====
   // 45
@@ -797,8 +799,8 @@ export const HeroSelectUnitList = [
   friezaData,
   ginyuData,
   guldoData,
+  appuleData,
   hitData,
-  emptySpace,
   // 50
   emptySpace,
   emptySpace,

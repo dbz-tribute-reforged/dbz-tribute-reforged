@@ -25,6 +25,7 @@ import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
+import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1021,7 +1022,8 @@ export function CustomPlayerTest() {
           15, 
           "-fbsimtest activated (ts)"
         );
-        Globals.isFBSimTest =  true;
+        Globals.isFBSimTest = true;
+        HeroSelectorManager.getInstance().enableFBSimTest(true);
       }
     }
   });
@@ -1209,8 +1211,13 @@ export function CustomPlayerTest() {
 		}
   });
 
-  TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
 
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.BANANA, 3);
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.ROAST_HAM, 2);
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.KRABBY_PATTY, 2);
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.SENZU_BEAN, 2);
+
+  TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
   TimerStart(CreateTimer(), 3, false, () => {
     SetupBraveSwordAttack();
     SetupDragonFistSfx();
@@ -1415,24 +1422,24 @@ export function SetupBraveSwordAttack() {
             );
             SetUnitFlyHeight(caster, height, 0);
             
-            tmpPos.setPos(
-              LoadReal(Globals.genericSpellHashtable, casterId, 0),
-              LoadReal(Globals.genericSpellHashtable, casterId, 1),
-            )
-            const distanceToTarget = CoordMath.distance(casterPos, tmpPos);
+            // tmpPos.setPos(
+            //   LoadReal(Globals.genericSpellHashtable, casterId, 0),
+            //   LoadReal(Globals.genericSpellHashtable, casterId, 1),
+            // )
+            // const distanceToTarget = CoordMath.distance(casterPos, tmpPos);
 
-            tmpPos.polarProjectCoords(
-              casterPos, moveAngle, 
-              Math.max(
-                jumpSpeedModifierMin, 
-                Math.min(
-                  jumpSpeedModifierMax, 
-                  distanceToTarget * jumpSpeedModifier
-                )
-              ) * jumpMoveDistance
-            );
+            // tmpPos.polarProjectCoords(
+            //   casterPos, moveAngle, 
+            //   Math.max(
+            //     jumpSpeedModifierMin, 
+            //     Math.min(
+            //       jumpSpeedModifierMax, 
+            //       distanceToTarget * jumpSpeedModifier
+            //     )
+            //   ) * jumpMoveDistance
+            // );
 
-            PathingCheck.moveGroundUnitToCoord(caster, tmpPos);
+            // PathingCheck.moveGroundUnitToCoord(caster, tmpPos);
           }
           ++time;
         });
@@ -3933,7 +3940,7 @@ export function getSwordOfHopeMult(player: player): number {
     const p = GetEnumPlayer();
     const pId = GetPlayerId(p);
     if (p != player && pId >= 0 && pId < Constants.maxActivePlayers) {
-      result += 0.1;
+      result += 0.2;
     }
   });
   DestroyForce(playerAllies);

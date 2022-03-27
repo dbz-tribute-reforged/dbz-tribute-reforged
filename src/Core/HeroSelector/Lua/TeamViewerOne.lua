@@ -1,18 +1,15 @@
---TeamViewer 1.3c
+--TeamViewer (one) 1.3c
 --Plugin for HeroSelector by Tasyen
---It shows the selection of Teams in groups
---Default setup could be suited for 2 team games
+--It shows the selection of Players in cols, when a col is full right of it a new is started
 
 TeamViewer = {}
 
-TeamViewer.ShowNonAllies        = true --show non allies
-TeamViewer.UpdateNonAllies      = true --update the image of non allies when the select or pick
 TeamViewer.Scale                = 1.0
---position when TeamViewer.ShowNonAllies = false or when a TeamPos is not set
 TeamViewer.TeamPosX             = 0.02
 TeamViewer.TeamPosY             = 0.5
 TeamViewer.TeamPosGapY          = 0.015
-TeamViewer.TeamPosLeft2Right    = true --(true) button is left and text is right, (false) button is right and text ist left
+TeamViewer.TeamPosGapX          = 0.015
+TeamViewer.TeamRowCount         = 5
 --how big are the Faces
 TeamViewer.ButtonSize           = 0.03
 TeamViewer.ButtonAlphaSelected  = 150
@@ -20,22 +17,7 @@ TeamViewer.ButtonDefaultIcon    = "UI\\Widgets\\EscMenu\\Human\\quest-unknown.bl
 TeamViewer.CategoryButtonSize   = 0.015 --size of the CategoryButtons below an players name
 TeamViewer.CategoryButtonGap    = 0.002 -- space between 2 CategoryButtons
 
---used when ShowNonAllies = true
---warcraft 3 Teams start with 0
-TeamViewer.TeamPos = {}
-TeamViewer.TeamPos[0] = {}
---abs positions on the screen
-TeamViewer.TeamPos[0].X = 0.02
-TeamViewer.TeamPos[0].Y = 0.5
-TeamViewer.TeamPos[0].GapY = 0.015
-TeamViewer.TeamPos[0].Left2Right = true
 
-TeamViewer.TeamPos[1] = {}
-TeamViewer.TeamPos[1].X = 0.76
-TeamViewer.TeamPos[1].Y = 0.5
-TeamViewer.TeamPos[1].Left2Right = false
-
-TeamViewer.Frames = {} --this is used to destroy all frames created by TeamViewer.
 TeamViewer.HasPicked = {}
 TeamViewer.BackupSelected = HeroSelector.buttonSelected
 TeamViewer.BackupCreated = HeroSelector.unitCreated
@@ -68,21 +50,11 @@ function HeroSelector.destroy()
     TeamViewer.BackupDestroy() 
     TeamViewer = nil    
 end
-function TeamViewer.PosFirstFrame(movingFrame, relativFrame, left2Right)
-    if left2Right then
-        --BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPLEFT, relativFrame, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
-        BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPLEFT, relativFrame, FRAMEPOINT_BOTTOMLEFT, 0, 0)
-    else
-        BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPRIGHT, relativFrame, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
-    end
+
+function TeamViewer.PosFrame(movingFrame, relativFrame)
+    BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPLEFT, relativFrame, FRAMEPOINT_TOPRIGHT, TeamViewer.CategoryButtonGap, 0)
 end
-function TeamViewer.PosFrame(movingFrame, relativFrame, left2Right)
-    if left2Right then
-        BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPLEFT, relativFrame, FRAMEPOINT_TOPRIGHT, TeamViewer.CategoryButtonGap, 0)
-    else
-        BlzFrameSetPoint(movingFrame, FRAMEPOINT_TOPRIGHT, relativFrame, FRAMEPOINT_TOPLEFT, -TeamViewer.CategoryButtonGap, 0)
-    end
-end
+
 function TeamViewer.Init()
     TeamViewer.Frames = {} --this is used to destroy all frames created by TeamViewer.
     while table.remove(TeamViewer) do end
@@ -91,12 +63,11 @@ function TeamViewer.Init()
         TeamViewer.ButtonClicked(GetTriggerPlayer(), TeamViewer[frame])        
     end
 
+    local colRemain = TeamViewer.TeamRowCount
     for index= 0, GetBJMaxPlayers() - 1,1 do
         local player = Player(index)
         if TeamViewer.AllowPlayer(player) then
-            local teamNr = GetPlayerTeam(player)
-            if not TeamViewer[teamNr] then TeamViewer[teamNr] = {} end
-            table.insert(TeamViewer[teamNr], player)
+            table.insert(TeamViewer, player)
             
             local createContext = 1000 + index
             --local playerFrame = BlzCreateFrameByType("FRAME", "TeamViewerPlayerFrame", HeroSelector.Box, "", createContext)
@@ -105,17 +76,16 @@ function TeamViewer.Init()
             local button = BlzCreateFrame("HeroSelectorButton", playerFrame, 0, createContext)
             local textFrame = BlzCreateFrame("HeroSelectorText", playerFrame, 0, createContext) -- do not the buttons child, else it is affected by Alpha change
             local icon = BlzGetFrameByName("HeroSelectorButtonIcon", createContext)
-            local iconPushed = BlzGetFrameByName("HeroSelectorButtonIconPushed", createContext)
             local iconDisabled = BlzGetFrameByName("HeroSelectorButtonIconDisabled", createContext)
+            local iconPushed = BlzGetFrameByName("HeroSelectorButtonIconPushed", createContext)
             local tooltipBox = BlzCreateFrame("HeroSelectorTextBox", button, 0, createContext)
             local tooltip = BlzCreateFrame("HeroSelectorText", tooltipBox, 0, createContext)
-            local left2Right = nil
             TasButtonAction.Set(button , buttonActionFunc)
             BlzFrameSetSize(playerFrame, 0.11 + TeamViewer.ButtonSize, TeamViewer.ButtonSize + TeamViewer.CategoryButtonSize + 0.001)
             BlzFrameSetPoint(colorFrame, FRAMEPOINT_TOPLEFT, playerFrame, FRAMEPOINT_TOPLEFT, 0.005, -0.0035)
             BlzFrameSetPoint(colorFrame, FRAMEPOINT_TOPRIGHT, playerFrame, FRAMEPOINT_TOPRIGHT, -0.005, -0.0035)
             BlzFrameSetSize(colorFrame, 0, 0.003)
-            
+
             local colorIndex = GetHandleId(GetPlayerColor(player))
             if colorIndex < 10 then
                 BlzFrameSetTexture(colorFrame, "ReplaceableTextures\\TeamColor\\TeamColor0"..colorIndex, 0, false)
@@ -123,49 +93,41 @@ function TeamViewer.Init()
                  BlzFrameSetTexture(colorFrame, "ReplaceableTextures\\TeamColor\\TeamColor"..colorIndex, 0, false)
             end
 
-            if TeamViewer.ShowNonAllies and TeamViewer.TeamPos[teamNr] then
-                left2Right = TeamViewer.TeamPos[teamNr].Left2Right
-            else
-                left2Right = TeamViewer.TeamPosLeft2Right
-            end
+
             BlzFrameSetSize(button, TeamViewer.ButtonSize, TeamViewer.ButtonSize)
             BlzFrameSetSize(textFrame, 0.105 - TeamViewer.ButtonSize, 0.013)
-            if #TeamViewer[teamNr] == 1 then
-                if TeamViewer.ShowNonAllies and TeamViewer.TeamPos[teamNr] then
-                    BlzFrameSetAbsPoint(button, FRAMEPOINT_BOTTOMLEFT, TeamViewer.TeamPos[teamNr].X, TeamViewer.TeamPos[teamNr].Y)
-                else
-                    BlzFrameSetAbsPoint(button,  FRAMEPOINT_BOTTOMLEFT, TeamViewer.TeamPosX, TeamViewer.TeamPosY)
-                end
+            
+            if #TeamViewer == 1 then
+                BlzFrameSetAbsPoint(button,  FRAMEPOINT_BOTTOMLEFT, TeamViewer.TeamPosX, TeamViewer.TeamPosY)
             else
-                local prevTeamPlayer = TeamViewer[teamNr][#TeamViewer[teamNr] - 1]
-
-                if TeamViewer.TeamPos[teamNr].GapY then
-                    BlzFrameSetPoint(button, FRAMEPOINT_TOPLEFT, TeamViewer[prevTeamPlayer].Button, FRAMEPOINT_BOTTOMLEFT, 0, -TeamViewer.TeamPos[teamNr].GapY)
+                if colRemain <= 0 then
+                    local prevTeamPlayer = TeamViewer[#TeamViewer - TeamViewer.TeamRowCount]
+                    colRemain = TeamViewer.TeamRowCount
+                    BlzFrameSetPoint(button, FRAMEPOINT_TOPLEFT, TeamViewer[prevTeamPlayer].Button, FRAMEPOINT_TOPRIGHT, TeamViewer.TeamPosGapX + 0.11, 0)
                 else
+                    local prevTeamPlayer = TeamViewer[#TeamViewer - 1]
                     BlzFrameSetPoint(button, FRAMEPOINT_TOPLEFT, TeamViewer[prevTeamPlayer].Button, FRAMEPOINT_BOTTOMLEFT, 0, -TeamViewer.TeamPosGapY)
                 end
+                    
             end
-            TeamViewer.PosFrame(textFrame, button, left2Right)
-            if left2Right then
-                BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOMLEFT, button, FRAMEPOINT_TOPLEFT, 0, 0.007)
-                BlzFrameSetPoint(playerFrame, FRAMEPOINT_TOPLEFT, button, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
-            else
-                BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOMRIGHT, button, FRAMEPOINT_TOPRIGHT, 0, 0.007)
-                BlzFrameSetPoint(playerFrame, FRAMEPOINT_TOPRIGHT, button, FRAMEPOINT_TOPRIGHT, 0.007, 0.007)
-                BlzFrameSetTextAlignment(textFrame, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_RIGHT)
-            end
+            colRemain = colRemain - 1
+            TeamViewer.PosFrame(textFrame, button)
+            BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOMLEFT, button, FRAMEPOINT_TOPLEFT, 0, 0.007)
+            BlzFrameSetPoint(playerFrame, FRAMEPOINT_TOPLEFT, button, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
+            
             BlzFrameSetPoint(tooltipBox, FRAMEPOINT_BOTTOMLEFT, tooltip, FRAMEPOINT_BOTTOMLEFT, -0.007, -0.007)
             BlzFrameSetPoint(tooltipBox, FRAMEPOINT_TOPRIGHT, tooltip, FRAMEPOINT_TOPRIGHT, 0.007, 0.007)
             BlzFrameSetText(textFrame, GetPlayerName(player))
             BlzFrameSetTooltip(button, tooltipBox)
             BlzFrameSetTexture(icon, TeamViewer.ButtonDefaultIcon, 0, true)
-            BlzFrameSetTexture(iconPusheds, TeamViewer.ButtonDefaultIcon, 0, true)
+            BlzFrameSetTexture(iconPushed, TeamViewer.ButtonDefaultIcon, 0, true)
+
             table.insert(TeamViewer.Frames, button)
             table.insert(TeamViewer.Frames, textFrame)
             table.insert(TeamViewer.Frames, icon)
             table.insert(TeamViewer.Frames, iconDisabled)
-            table.insert(TeamViewer.Frames, iconPushed)
-            table.insert(TeamViewer.Frames, tooltip)            
+            table.insert(TeamViewer.Frames, iconPushed)            
+            table.insert(TeamViewer.Frames, tooltip)
             table.insert(TeamViewer.Frames, playerFrame)
 
             TeamViewer[player] = {}
@@ -174,8 +136,8 @@ function TeamViewer.Init()
             TeamViewer[player].Button = button
             TeamViewer[button] = player
             TeamViewer[player].Icon = icon
-            TeamViewer[player].IconPushed = iconPusheds
             TeamViewer[player].IconDisabled = iconDisabled
+            TeamViewer[player].IconPushed = iconPushed            
             TeamViewer[player].Tooltip = tooltip
             TeamViewer[player].Category = {}
             local prevCategoryButton = nil
@@ -188,6 +150,7 @@ function TeamViewer.Init()
                 categoryButton.Icon = BlzCreateFrameByType("BACKDROP", "", categoryButton.Button, "", 0)
                 categoryButton.TooltipBox = BlzCreateFrame("HeroSelectorTextBox", categoryButton.Button, 0, createContext)
                 categoryButton.Tooltip = BlzCreateFrame("HeroSelectorText", categoryButton.TooltipBox, 0, key)
+                
                 BlzFrameSetPoint(categoryButton.TooltipBox, FRAMEPOINT_BOTTOMLEFT, categoryButton.Tooltip, FRAMEPOINT_BOTTOMLEFT, -0.007, -0.007)
                 BlzFrameSetPoint(categoryButton.TooltipBox, FRAMEPOINT_TOPRIGHT, categoryButton.Tooltip, FRAMEPOINT_TOPRIGHT, 0.007, 0.007)
                 BlzFrameSetText(categoryButton.Tooltip, BlzFrameGetText(value.Text))
@@ -204,12 +167,7 @@ function TeamViewer.Init()
                 table.insert(TeamViewer.Frames, categoryButton.Tooltip)
                 
             end
-            
             BlzFrameSetScale(playerFrame, TeamViewer.Scale)
-            --When showning only allies, hide non allies
-            if not TeamViewer.ShowNonAllies and not IsPlayerAlly(player, GetLocalPlayer()) then
-                BlzFrameSetVisible(playerFrame, false)
-            end
         end
     end
 end
@@ -223,74 +181,48 @@ function HeroSelector.buttonSelected(player, unitCode)
     TeamViewer.BackupSelected(player, unitCode)
     
     if not TeamViewer.HasPicked[player] then
-        local teamNr = GetPlayerTeam(player)
-        if TeamViewer.UpdateNonAllies or IsPlayerAlly(GetLocalPlayer(), player) then
-            local hName = getHeroName(unitCode)
-            BlzFrameSetText(TeamViewer[player].Tooltip, hName)
-            BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
-            BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
-            BlzFrameSetAlpha(TeamViewer[player].Button, TeamViewer.ButtonAlphaSelected)
-            local category = 1
-            local prevCategoryButton = nil
-            local left2Right = nil
-            if TeamViewer.ShowNonAllies and TeamViewer.TeamPos[teamNr] then
-                left2Right = TeamViewer.TeamPos[teamNr].Left2Right
-            else
-                left2Right = TeamViewer.TeamPosLeft2Right
-            end
-            for key, value in ipairs(HeroSelector.Category)
-            do
-                local categoryButton = TeamViewer[player].Category[key]
-                BlzFrameClearAllPoints(categoryButton.Button)
-                if BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category) > 0 then
-                    
-                    BlzFrameSetVisible(categoryButton.Button, true)
-                    
-                    if TeamViewer.ShowNonAllies and TeamViewer.TeamPos[teamNr] then
-                        if not prevCategoryButton then
-                            --TeamViewer.PosFirstFrame(categoryButton.Button, TeamViewer[player].Button, left2Right)
-                            TeamViewer.PosFirstFrame(categoryButton.Button, TeamViewer[player].Text, left2Right)
-                            --TeamViewer[player].Text
-                        else
-                            TeamViewer.PosFrame(categoryButton.Button, prevCategoryButton, left2Right)
-                        end
-                    else
-                        if not prevCategoryButton then
-                            TeamViewer.PosFirstFrame(categoryButton.Button, TeamViewer[player].Button, left2Right)
-                        else
-                            TeamViewer.PosFrame(categoryButton.Button, prevCategoryButton, left2Right)
-                        end
-                    end
-                    
-                    prevCategoryButton = categoryButton.Button
+        BlzFrameSetText(TeamViewer[player].Tooltip, GetObjectName(unitCode))
+        BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
+        BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
+        BlzFrameSetAlpha(TeamViewer[player].Button, TeamViewer.ButtonAlphaSelected)
+        local category = 1
+        local prevCategoryButton = nil
+        for key, value in ipairs(HeroSelector.Category)
+        do
+            local categoryButton = TeamViewer[player].Category[key]
+            BlzFrameClearAllPoints(categoryButton.Button)
+            if BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category) > 0 then
+                BlzFrameSetVisible(categoryButton.Button, true)
+                if not prevCategoryButton then
+                    BlzFrameSetPoint(categoryButton.Button, FRAMEPOINT_TOPLEFT, TeamViewer[player].Text, FRAMEPOINT_BOTTOMLEFT, 0, 0)
                 else
-                    BlzFrameSetVisible(categoryButton.Button, false)
+                    TeamViewer.PosFrame(categoryButton.Button, prevCategoryButton)
                 end
-                category = category + category                
+                prevCategoryButton = categoryButton.Button
+            else
+                BlzFrameSetVisible(categoryButton.Button, false)
             end
+            category = category + category                
         end
     end
 end
 
 function HeroSelector.unitCreated(player, unitCode, isRandom)
     TeamViewer.BackupCreated(player, unitCode, isRandom)
-    if TeamViewer.UpdateNonAllies or IsPlayerAlly(GetLocalPlayer(), player) then
-        BlzFrameSetText(TeamViewer[player].Tooltip, GetObjectName(unitCode))
-        BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
-        BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
-        BlzFrameSetAlpha(TeamViewer[player].Button, 255)
-    end
+    BlzFrameSetText(TeamViewer[player].Tooltip, GetObjectName(unitCode))
+    BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
+    BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
+    
+    BlzFrameSetAlpha(TeamViewer[player].Button, 255)
     TeamViewer.HasPicked[player] = true
 end
 
 function HeroSelector.repick(unit, player)
     TeamViewer.BackupRepick(unit, player)
     if not player then player = GetOwningPlayer(unit) end
-    if TeamViewer.UpdateNonAllies or IsPlayerAlly(GetLocalPlayer(), player) then
-        BlzFrameSetText(TeamViewer[player].Tooltip, "")
-        BlzFrameSetTexture(TeamViewer[player].Icon, TeamViewer.ButtonDefaultIcon, 0, true)
-        BlzFrameSetTexture(TeamViewer[player].IconPushed, TeamViewer.ButtonDefaultIcon, 0, true)
-        BlzFrameSetAlpha(TeamViewer[player].Button, 255)
-    end
+    BlzFrameSetText(TeamViewer[player].Tooltip, "")
+    BlzFrameSetTexture(TeamViewer[player].Icon, TeamViewer.ButtonDefaultIcon, 0, true)
+    BlzFrameSetTexture(TeamViewer[player].IconPushed, TeamViewer.ButtonDefaultIcon, 0, true)
+    BlzFrameSetAlpha(TeamViewer[player].Button, 255)
     TeamViewer.HasPicked[player] = false
 end
