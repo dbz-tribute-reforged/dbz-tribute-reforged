@@ -1,0 +1,260 @@
+-- --[[ TasFrameAction by Tasyen
+-- TasFrameAction is an Lua system to not have to care about Trigger and FrameEvents for FrameAction. All FrameEvents are binded to one trigger that trigger than calls the action for
+-- handles frame Events in one trigger, care only about the actionFunction itself.
+-- calls give Actions inside xpcall.
+-- Supports only one Action per Event+Frame
+
+-- Example
+-- TasSliderAction(sliderFrame, function(frame, player, value)
+--     print(BlzFrameGetName(frame), GetPlayerId(player), value)
+-- end)
+
+-- TasButtonAction(frame, function(frame, player))
+--     wrapper for TasFrameAction meant for BUTTON just ControlClick
+--     Removes focus & StopCamera
+--     takes FRAMEEVENT_CONTROL_CLICK from TasFrameAction for this frame
+
+-- TasSliderAction(frame, function(frame, player, value))
+--     action happens when a Value is set
+--     TasSliderAction.AvoidPoll (true) skip actions with the same value in a row by 1 player
+--     takes FRAMEEVENT_MOUSE_WHEEL and FRAMEEVENT_SLIDER_VALUE_CHANGED from TasFrameAction for this frame
+
+-- TasEditBoxAction(frame[, actionEnter, actionEdit])
+--     skip an action to not have one for that event
+--     function(frame, player, text)
+
+-- TasDialogAction(frame, function(frame, player, accept))
+-- TasCheckBoxAction(frame, function(frame, player, checked))
+-- TasFrameMouseMoveAction(frame, actionEnter(frame, player), actionLeave(frame, player), actionWheel(frame, player, upwards))
+-- TasFrameMouseUpAction(frame, action(frame, player, rightClick)
+--     Happens when the mouse click is released over frame
+--     rightClick does not work probably during Paused Games
+
+-- TasMenuAction(frame, function(frame, player, value))
+--     for POPUPMENU
+
+-- functions above use an entry in TasFrameAction
+-- TasFrameAction(frame, action, frameEvent)
+--     action = function(frame, player, value, text)
+-- ]]
+-- TasFrameAction = setmetatable({
+--     EVENTNAME= {
+--         "CONTROL_CLICK", "MOUSE_ENTER", "MOUSE_LEAVE", "MOUSE_UP"
+--         , "MOUSE_DOWN", "MOUSE_WHEEL", "CHECKBOX_CHECKED", "CHECKBOX_UNCHECKED"
+--         , "EDITBOX_TEXT_CHANGED", "POPUPMENU_ITEM_CHANGED", "MOUSE_DOUBLECLICK", "SPRITE_ANIM_UPDATE"
+--         , "SLIDER_VALUE_CHANGED", "DIALOG_CANCEL", "DIALOG_ACCEPT", "EDITBOX_ENTER"
+--     }
+--     ,ERROR = function(x)
+--         print("TasFrameAction - ERROR")
+--         print("FrameName", BlzFrameGetName(BlzGetTriggerFrame()), TasFrameAction.EVENTNAME[GetHandleId(BlzGetTriggerFrameEvent())]
+--         , "PlayerId:", GetPlayerId(GetTriggerPlayer())
+--      --   , BlzGetTriggerFrameValue(), BlzGetTriggerFrameText()
+--         )
+--         print(x)
+--         return x
+--     end
+-- }
+-- ,{
+--     __call = function(table, frame, action, frameEvent)
+--         -- first call?
+--         if not TasFrameAction.Trigger then
+--             -- FrameEventData
+--             for i = 1, 16 do
+--                 TasFrameAction[ConvertFrameEventType(i)] = {}
+--             end
+--             -- yes, Create the Trigger and the click handler.
+--             TasFrameAction.Trigger = CreateTrigger()
+--             TriggerAddAction(TasFrameAction.Trigger, function()
+--                 local frame = BlzGetTriggerFrame()
+--                 local event = BlzGetTriggerFrameEvent()
+
+--                 -- call the action set for that frame&Event
+--                 if TasFrameAction[event][frame] then
+                    
+--                     xpcall(TasFrameAction[event][frame], TasFrameAction.ERROR, frame, GetTriggerPlayer(), BlzGetTriggerFrameValue(), BlzGetTriggerFrameText())
+--                     --TasFrameAction[event][frame](frame, GetTriggerPlayer(), BlzGetTriggerFrameValue(), BlzGetTriggerFrameText())
+--                 end
+--                 frame = nil
+--                 event = nil
+--             end)
+--         end
+
+--         -- create the click event only when it does not exist yet.
+--         if not TasFrameAction[frameEvent][frame] then
+--             BlzTriggerRegisterFrameEvent(TasFrameAction.Trigger, frame, frameEvent)
+--         end
+        
+--         -- Using [frameEvent][frame] brings a fixed amout of Tables.
+--         TasFrameAction[frameEvent][frame] = action
+--     end
+-- })
+
+-- TasSliderAction = setmetatable({
+--     AvoidPoll = true
+--     ,WHEEL = function(frame, player, value, text)
+--         if GetLocalPlayer() == player then
+--             if value > 0 then
+--                 BlzFrameSetValue(frame, BlzFrameGetValue(frame) + 1)
+--             else
+--                 BlzFrameSetValue(frame, BlzFrameGetValue(frame) - 1)
+--             end
+--         end
+--     end
+--     ,VALUE = function(frame, player, value, text)
+--         -- avoid Polling
+--         if not TasSliderAction.AvoidPoll or TasSliderAction.AvoidPollData[player][frame] ~= value then
+--             TasSliderAction.AvoidPollData[player][frame] = value
+--             TasSliderAction[frame](frame, player, value)
+--         end
+--     end
+-- }
+-- ,{__call = function(table, frame, action)
+--     -- first call?
+--     if not TasSliderAction.AvoidPollData then
+--         TasSliderAction.AvoidPollData = {}
+--         for i=0, bj_MAX_PLAYER_SLOTS - 1 do TasSliderAction.AvoidPollData[Player(i)] = __jarray(0.0) end
+--     end
+
+--     TasFrameAction(frame, TasSliderAction.WHEEL, FRAMEEVENT_MOUSE_WHEEL)
+--     TasFrameAction(frame, TasSliderAction.VALUE, FRAMEEVENT_SLIDER_VALUE_CHANGED)       
+--     TasSliderAction[frame] = action
+--  end
+-- })
+-- TasSliderAction.Set = TasSliderAction
+
+-- TasButtonAction = setmetatable({
+--     ACTION = function(frame, player, value, text)
+--         -- remove Focus for the local clicking player
+--         if player == GetLocalPlayer() then
+--             BlzFrameSetEnable(frame, false)
+--             BlzFrameSetEnable(frame, true)
+--             StopCamera()
+--         end
+--         -- call the action set for that frame
+--         TasButtonAction[frame](frame, player)
+--     end 
+-- },{
+--     __call = function(table, frame, action)
+--         TasFrameAction(frame, TasButtonAction.ACTION, FRAMEEVENT_CONTROL_CLICK)
+--         TasButtonAction[frame] = action
+--     end
+-- })
+-- TasButtonAction.Set = TasButtonAction
+
+-- TasEditBoxAction = setmetatable({
+--     A = {}
+--     ,B = {}
+--     ,ENTER = function(frame, player, value, text)
+--         TasEditBoxAction.A[frame](frame, player, text)
+--     end
+--     ,EDIT = function(frame, player, value, text)
+--         TasEditBoxAction.B[frame](frame, player, text)
+--     end
+-- },{
+--     __call = function(table, frame, actionEnter, actionEdit)
+--         if actionEnter then
+--             TasFrameAction(frame, TasEditBoxAction.ENTER, FRAMEEVENT_EDITBOX_ENTER)
+--             TasEditBoxAction.A[frame] = actionEnter
+--         end
+--         if actionEdit then
+--             TasFrameAction(frame, TasEditBoxAction.EDIT, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
+--             TasEditBoxAction.B[frame] = actionEdit
+--         end
+--     end
+-- })
+-- TasEditBoxAction.Set = TasEditBoxAction
+
+-- TasDialogAction = setmetatable({
+--     ACTION = function(frame, player)
+--         TasDialogAction[frame](frame, player, BlzGetTriggerFrameEvent() == FRAMEEVENT_DIALOG_ACCEPT)
+--     end
+-- },{
+--     __call = function(table, frame, action)
+--         TasFrameAction(frame, TasDialogAction.ACTION, FRAMEEVENT_DIALOG_ACCEPT)
+--         TasFrameAction(frame, TasDialogAction.ACTION, FRAMEEVENT_DIALOG_CANCEL)
+--         TasDialogAction[frame] = action
+--     end
+-- })
+-- TasDialogAction.Set = TasDialogAction
+
+-- TasCheckBoxAction = setmetatable({
+--     ACTION = function(frame, player)
+--         TasCheckBoxAction[frame](frame, player, BlzGetTriggerFrameEvent() == FRAMEEVENT_CHECKBOX_CHECKED)
+--     end
+-- },{
+--     __call = function(table, frame, action)
+--         TasFrameAction(frame, TasCheckBoxAction.ACTION, FRAMEEVENT_CHECKBOX_CHECKED)
+--         TasFrameAction(frame, TasCheckBoxAction.ACTION, FRAMEEVENT_CHECKBOX_UNCHECKED)
+--         TasCheckBoxAction[frame] = action
+--     end
+-- })
+-- TasCheckBoxAction.Set = TasCheckBoxAction
+
+-- TasFrameMouseMoveAction = setmetatable({
+--     A = {}
+--     ,B = {}
+--     ,C = {}
+--     ,ENTER = function(frame, player)
+--         TasFrameMouseMoveAction.A[frame](frame, player)
+--     end
+--     ,LEAVE = function(frame, player)
+--         TasFrameMouseMoveAction.B[frame](frame, player)
+--     end
+--     ,WHEEL = function(frame, player, value)
+--         TasFrameMouseMoveAction.C[frame](frame, player, value > 0)
+--     end
+-- },{
+--     __call = function(table, frame, actionEnter, actionLeave, actionWheel)
+--         if actionEnter then
+--             TasFrameAction(frame, TasFrameMouseMoveAction.ENTER, FRAMEEVENT_MOUSE_ENTER)
+--             TasFrameMouseMoveAction.A[frame] = actionEnter
+--         end
+--         if actionLeave then
+--             TasFrameAction(frame, TasFrameMouseMoveAction.LEAVE, FRAMEEVENT_MOUSE_LEAVE)
+--             TasFrameMouseMoveAction.B[frame] = actionLeave
+--         end
+--         if actionWheel then
+--             TasFrameAction(frame, TasFrameMouseMoveAction.WHEEL, FRAMEEVENT_MOUSE_WHEEL)
+--             TasFrameMouseMoveAction.C[frame] = actionWheel
+--         end
+--     end
+-- })
+-- TasFrameMouseMoveAction.Set = TasFrameMouseMoveAction
+
+-- TasFrameMouseUpAction = setmetatable({
+--     TriggerCount = 0
+--     ,ACTION = function(frame, player)
+--         -- during Pause EVENT_PLAYER_MOUSE_UP does not work, -> when The counter didn't increase since last Time do not allow this count as right click
+--         local clickWorked = GetTriggerExecCount(TasFrameMouseUpAction.MouseTrigger) > TasFrameMouseUpAction.TriggerCount
+--         TasFrameMouseUpAction[frame](frame, player, TasFrameMouseUpAction.RightClick[player] and clickWorked)
+--         TasFrameMouseUpAction.TriggerCount = GetTriggerExecCount(TasFrameMouseUpAction.MouseTrigger)
+--     end
+-- },{
+--     __call = function(table, frame, action)
+--         if not TasFrameMouseUpAction.MouseTrigger then
+--             TasFrameMouseUpAction.RightClick = __jarray(false)
+--             TasFrameMouseUpAction.MouseTrigger = CreateTrigger()
+--             for i = 0, bj_MAX_PLAYERS - 1 do
+--                 TriggerRegisterPlayerEvent(TasFrameMouseUpAction.MouseTrigger, Player(i), EVENT_PLAYER_MOUSE_UP)
+--             end
+--             TriggerAddAction(TasFrameMouseUpAction.MouseTrigger, function()
+--                 TasFrameMouseUpAction.RightClick[GetTriggerPlayer()] = GetHandleId(BlzGetTriggerPlayerMouseButton()) == GetHandleId(MOUSE_BUTTON_TYPE_RIGHT)
+--             end)
+--         end
+--         TasFrameAction(frame, TasFrameMouseUpAction.ACTION, FRAMEEVENT_MOUSE_UP)
+--         TasFrameMouseUpAction[frame] = action
+--     end
+-- })
+-- TasFrameMouseUpAction.Set = TasFrameMouseUpAction
+
+-- TasMenuAction = setmetatable({
+--     ACTION = function(frame, player, value)
+--         TasMenuAction[frame](frame, player, value)
+--     end 
+-- },{
+--     __call = function(table, frame, action)
+--         TasFrameAction(frame, TasMenuAction.ACTION, FRAMEEVENT_POPUPMENU_ITEM_CHANGED)
+--         TasMenuAction[frame] = action
+--     end
+-- })
+-- TasMenuAction.Set = TasMenuAction

@@ -1,33 +1,32 @@
 {
   "compilerOptions": {
-    "outDir": "src",
-    "baseUrl": "src-ts",
-    "rootDir": "src-ts",
-    "paths": {
-      "*": [
-        "./node_modules/*/src/index",
-        "./node_modules/*/lib/index",
-        "./node_modules/*/index",
-        "./node_modules/*/dist/index"
-      ]
-    },
-    "plugins": [
-      {
-        "transform": "ts-transformer-imports"
-      }
-    ],
-    "allowJs": false,
+    "baseUrl": "./src",
+    "allowJs": true,
     "target": "es6",
     "lib": [
       "es6"
     ],
     "moduleResolution": "classic",
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
+    "paths": {
+      "*": [
+        "../node_modules/*/src/index",
+        "../node_modules/*/lib/index",
+        "../node_modules/*/index",
+        "../node_modules/*/dist/index",
+        "../node_modules/*",
+        "../src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "war3-transformer",
+        "mapDir": "D:/Games/DBZTR/dbz-tribute-reforged-3/maps/Tribute_Reforged.w3x",
+        "entryFile": "D:/Games/DBZTR/dbz-tribute-reforged-3/src/main.ts",
+        "outputDir": "D:/Games/DBZTR/dbz-tribute-reforged-3/dist/Tribute_Reforged.w3x"
+      }
+    ],
     "types": [
+      "lua-types/core/index",
       "lua-types/core/coroutine",
       "lua-types/core/global",
       "lua-types/core/math",
@@ -35,7 +34,6 @@
       "lua-types/core/modules",
       "lua-types/core/string",
       "lua-types/core/table",
-      "lua-types/core/debug",
       "lua-types/core/os",
       "lua-types/special/5.3",
       "war3-types/core/compat",
@@ -43,25 +41,19 @@
       "war3-types/core/blizzard",
       "war3-types/core/commonai",
       "war3-types/core/polyfill",
-      "war3-types/special/ceres"
+      "war3-types/special/w3ts"
     ]
   },
   "include": [
-    "src-ts",
-    "src-ts/node_modules"
+    "src"
   ],
-  "exclude": [
-    "src-ts/node_modules/*/test",
-    "src-ts/node_modules/*/tests",
-    "src-ts/node_modules/war3-types",
-    "src-ts/node_modules/lua-types",
-    "src-ts/node_modules/convertjasstots",
-    "src-ts/node_modules/@types",
-  ],
+  "exclude": [],
   "tstl": {
     "luaTarget": "5.3",
     "noHeader": true,
     "luaLibImport": "require",
-    "noImplicitSelf": true
+    "noImplicitSelf": true,
+    "luaBundle": "dist/tstl_output.lua",
+    "luaBundleEntry": "./src/main.ts"
   }
 }
