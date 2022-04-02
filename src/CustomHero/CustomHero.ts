@@ -64,7 +64,12 @@ export class CustomHero {
       this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
     }
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
-    this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+
+    if (id == Id.cellPerfect) {
+      this.addAbilityFromAll(AbilityNames.Cell.SUPER_CHARGE);
+    } else {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    }
 
     if (id == Id.donkeyKong) {
       this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);

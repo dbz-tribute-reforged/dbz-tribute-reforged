@@ -94,7 +94,7 @@ export class FarmingManager {
       fcCopy.init(x, y);
       this.plantedCropsMap.set(this.numCrops, fcCopy);
       this.numCrops += 1;
-      BJDebugMsg("numCrops: " + this.numCrops);
+      // BJDebugMsg("numCrops: " + this.numCrops);
     }
   }
 
@@ -202,10 +202,10 @@ setupUpdateCrops() {
             const itemX = GetItemX(item);
             const itemY = GetItemY(item);
             this.plantCropFromSpell(spellId, itemX, itemY);
-            BJDebugMsg("Hit " + prng);
+            // BJDebugMsg("Hit " + prng);
             prngOffset = 0;
           } else {
-            BJDebugMsg("Miss " + prng);
+            // BJDebugMsg("Miss " + prng);
             prngOffset += FarmingManager.HARVESTER_PRNG_ADD;
           }
         }

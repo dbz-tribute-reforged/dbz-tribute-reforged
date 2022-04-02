@@ -496,6 +496,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Sonic.LIGHT_SPEED_DASH,
       AbilityNames.Sonic.SUPER_SONIC,
     ]],
+
+    [Id.guts, [
+      AbilityNames.Guts.HEAVY_SLASH,
+      AbilityNames.Guts.HEAVY_SLAM,
+      AbilityNames.Guts.CANNON_ARM,
+      AbilityNames.Guts.CANNON_SLASH,
+      AbilityNames.Guts.RECKLESS_CHARGE,
+      AbilityNames.Guts.RELENTLESS_ASSAULT,
+      AbilityNames.Guts.RAGE,
+      AbilityNames.Guts.BERSERK,
+      AbilityNames.Guts.BERSERKER_ARMOR,
+      AbilityNames.Guts.BEAST_OF_DARKNESS,
+    ]],
     
 
 

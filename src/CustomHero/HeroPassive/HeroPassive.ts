@@ -99,6 +99,8 @@ export class HeroPassiveManager {
       case Id.sonic:
         sonicPassive(customHero);
         break;
+      case Id.guts:
+        gutsPassive(customHero);
       default:
         break;
     }
@@ -1935,6 +1937,215 @@ export function sonicPassive(customHero: CustomHero) {
   });
 }
 
+
+
+
+export function gutsPassive(customHero: CustomHero) {
+  const rageBasePercentHp = 10;
+  const rageLevelPercentHp = 1;
+  const ragePunishPercent = 0.9;
+  const berserkBasePercentHp = 15;
+  const berserkLevelPercentHp = 1.5;
+  const berserkPunishPercent = 0.8;
+
+  const castTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(castTrigger);
+
+  const slashKey = 1;
+  const cannonKey = 2;
+  const chargeKey = 3;
+  const rageKey = 4;
+  const armorKey = 5;
+
+  const rageHpKey = 6;
+  const rageTimerKey = 7;
+  const berserkHpKey = 8;
+  const berserkTimerKey = 9;
+
+  const beastTimer = CreateTimer();
+  customHero.addTimer(beastTimer);
+
+  TriggerRegisterUnitEvent(castTrigger, customHero.unit, EVENT_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(castTrigger, Condition(() => {
+    const unit = GetTriggerUnit();
+    if (unit == customHero.unit) {
+      const unitId = GetHandleId(unit);
+      const spellId = GetSpellAbilityId();
+      const player = GetOwningPlayer(unit);
+
+      switch (spellId) {
+        case Id.gutsHeavySlash:
+          SaveReal(
+            Globals.genericSpellHashtable, 
+            unitId, slashKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          break;
+        case Id.gutsCannonArm:
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, cannonKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          break;
+        case Id.gutsRecklessCharge:
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, chargeKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          break;
+        case Id.gutsRage:
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, rageKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          doGutsRage(
+            customHero, unitId, 
+            rageBasePercentHp, rageLevelPercentHp,
+            GetUnitAbilityLevel(customHero.unit, spellId),
+            ragePunishPercent,
+            rageHpKey, rageTimerKey
+          );
+          break;
+        case Id.gutsBerserkerArmor:
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, armorKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          break;
+        case Id.gutsHeavySlam:
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsHeavySlam, Id.gutsHeavySlash, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, slashKey, 0);
+          break;
+        case Id.gutsCannonSlash:
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsCannonSlash, Id.gutsCannonArm, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, cannonKey, 0);
+          break;
+        case Id.gutsRelentlessAssault:
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsRelentlessAssault, Id.gutsRecklessCharge, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, chargeKey, 0);
+          break;
+        case Id.gutsBerserk:
+          doGutsRage(
+            customHero, unitId, 
+            berserkBasePercentHp, berserkLevelPercentHp,
+            GetUnitAbilityLevel(customHero.unit, spellId),
+            berserkPunishPercent,
+            berserkHpKey, berserkTimerKey
+          );
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsBerserk, Id.gutsRage, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, rageKey, 0);
+          break;
+        case Id.gutsBeastOfDarkness:
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsBeastOfDarkness, Id.gutsBerserkerArmor, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, armorKey, 0);
+          break;
+      }
+    }
+    return false;
+  }));
+
+
+  const gutsTimer = CreateTimer();
+  customHero.addTimer(gutsTimer);
+  TimerStart(gutsTimer, 0.03, true, () => {
+    const unitId = GetHandleId(customHero.unit);
+    const player = GetOwningPlayer(customHero.unit);
+    const currentHp = GetUnitState(customHero.unit, UNIT_STATE_LIFE);
+    const reqHpLoss = 0.15 * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE);
+
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, slashKey, Id.gutsHeavySlash, Id.gutsHeavySlam);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, cannonKey, Id.gutsCannonArm, Id.gutsCannonSlash);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, chargeKey, Id.gutsRecklessCharge, Id.gutsRelentlessAssault);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, rageKey, Id.gutsRage, Id.gutsBerserk);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, armorKey, Id.gutsBerserkerArmor, Id.gutsBeastOfDarkness);
+
+    doGutsRagePunish(customHero, unitId, currentHp, rageHpKey, rageTimerKey);
+    doGutsRagePunish(customHero, unitId, currentHp, berserkHpKey, berserkTimerKey);
+  });
+}
+
+function doGutsRage(
+  customHero: CustomHero,
+  unitId: number,
+  basePercentHp: number,
+  levelPercentHp: number,
+  level: number,
+  punishPercent: number,
+  hpKey: number,
+  timerKey: number,
+) {
+  const percentHp = GetUnitLifePercent(customHero.unit);
+  let bonusDmg = Math.min(50, Math.max(1, 100 - percentHp));
+  if (bonusDmg > 0) {
+    BlzSetUnitBaseDamage(customHero.unit, R2I(BlzGetUnitBaseDamage(customHero.unit, 0) + bonusDmg), 0);
+  }
+
+  let heal = basePercentHp + level * levelPercentHp;
+  if (percentHp + heal > 100) {
+    heal = 100 - percentHp;
+  }
+  SetUnitLifePercentBJ(customHero.unit, percentHp + heal);
+  SaveReal(Globals.genericSpellHashtable, unitId, hpKey, heal * punishPercent);
+  SaveReal(Globals.genericSpellHashtable, unitId, timerKey, 20);  
+}
+
+function doGutsRagePunish(customHero: CustomHero, unitId: number, currentHp: number, hpKey: number, timerKey: number) {
+  let timer = LoadReal(Globals.genericSpellHashtable, unitId, timerKey);
+  if (timer <= 0) return;
+  
+  timer = Math.max(0, timer - 0.03);
+  if (currentHp <= 0) timer = 0;
+  SaveReal(Globals.genericSpellHashtable, unitId, timerKey, timer);
+  
+  if (timer < 10) {
+    const heal = LoadReal(Globals.genericSpellHashtable, unitId, hpKey);
+    const percentHp = GetUnitLifePercent(customHero.unit);
+    SetUnitLifePercentBJ(customHero.unit, Math.max(1, percentHp - heal * 0.1 * 0.03));
+  }
+}
+
+function doGutsAbilitySwap(
+  customHero: CustomHero,
+  player: player,
+  unitId: number,
+  unitHp: number,
+  reqHpLoss: number,
+  key: number,
+  srcAbilityId: number,
+  destAbilityId: number,
+) {
+  const hp = LoadReal(Globals.genericSpellHashtable, unitId, key);
+  if (hp <= 0) return;
+
+  const cd = BlzGetUnitAbilityCooldownRemaining(customHero.unit, srcAbilityId);
+  if (cd <= 0) {
+    UnitHelper.abilitySwap(player, customHero.unit, destAbilityId, srcAbilityId);
+    SaveReal(Globals.genericSpellHashtable, unitId, key, 0);
+    return;
+  }
+
+  if (unitHp > hp) {
+    SaveReal(Globals.genericSpellHashtable, unitId, key, unitHp);
+  } else if (unitHp < hp - reqHpLoss) {
+    UnitHelper.abilitySwap(player, customHero.unit, srcAbilityId, destAbilityId);
+    SaveReal(Globals.genericSpellHashtable, unitId, key, 0);
+  }
+}
 
 export function setupSPData(customHero: CustomHero) {
   const spTimer = CreateTimer();

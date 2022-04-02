@@ -968,4 +968,18 @@ export const AOEDebuffComponents = [
     requireBuff: true,
     buffId: Buffs.FROSTBITE,
   },
+  {
+    name: "debuff stun guts heavy slam",
+    repeatInterval: 1,
+    startTick: 6,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.STUN_ONE_SECOND,
+    orderId: OrderIds.THUNDERBOLT,
+    aoe: 500,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

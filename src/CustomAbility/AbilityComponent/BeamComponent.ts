@@ -87,6 +87,7 @@ export class BeamComponent implements
     public explodeOnDeath: boolean = false,
     public explodeOnContact: boolean = false,
     public setAsSpawnedBeam: boolean = false,
+    public isInvul: boolean = false,
     public beamUnitSpawn: number = BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     public beamUnitType: number = Constants.dummyBeamUnitId,
     public beamUnitSkin: number = Constants.dummyBeamUnitId,
@@ -373,6 +374,10 @@ export class BeamComponent implements
     if (this.setAsSpawnedBeam) {
       input.spawnedBeam = this.beamUnit;
     }
+
+    if (this.isInvul) {
+      SetUnitInvulnerable(this.beamUnit, true);
+    }
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -449,6 +454,7 @@ export class BeamComponent implements
       this.explodeOnDeath,
       this.explodeOnContact,
       this.setAsSpawnedBeam,
+      this.isInvul,
       this.beamUnitSpawn,
       this.beamUnitType, this.beamUnitSkin,
       AbilityComponentHelper.clone(this.components),
@@ -484,6 +490,7 @@ export class BeamComponent implements
       explodeOnDeath: boolean;
       explodeOnContact: boolean;
       setAsSpawnedBeam: boolean;
+      isInvul: boolean;
       beamUnitSpawn: number;
       beamUnitType: number;
       beamUnitSkin: number;
@@ -515,6 +522,7 @@ export class BeamComponent implements
     this.explodeOnDeath = input.explodeOnDeath;
     this.explodeOnContact = input.explodeOnContact;
     this.setAsSpawnedBeam = input.setAsSpawnedBeam;
+    this.isInvul = input.isInvul;
     this.beamUnitSpawn = input.beamUnitSpawn;
     this.beamUnitType = input.beamUnitType;
     this.beamUnitSkin = input.beamUnitSkin;

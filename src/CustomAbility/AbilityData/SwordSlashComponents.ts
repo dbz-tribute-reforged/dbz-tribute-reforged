@@ -51,7 +51,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 40,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 0.45,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6, 
       damageType: 4, 

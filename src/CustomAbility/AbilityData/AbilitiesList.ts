@@ -1241,7 +1241,7 @@ export const AbilitiesList = [
         AbilityNames.FutureTrunks.BLAZING_RUSH
     },
     components: [
-      { name: "dash ground point 15dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage blazing rush explosion" },
       { name: "stun blazing rush" },
       { name: "sfx blazing rush" },
@@ -1411,7 +1411,7 @@ export const AbilitiesList = [
         AbilityNames.Piccolo.KYODAIKA
     },
     components: [
-      { name: "dash ground point 5dist" },
+      { name: "dash ground forward max power" },
       { name: "block kyodaika" },
     ],
   },
@@ -7088,7 +7088,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam vacuum wave" },
-      { name: "sfx vacuum wave" },
     ],
   },
   // -------------------------------------------
@@ -8163,6 +8162,231 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Guts.HEAVY_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 6,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi guts heavy slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.HEAVY_SLAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 7,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi guts heavy slam" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.CANNON_ARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam guts cannon arm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.CANNON_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage guts cannon slash explosion" },
+      { name: "damage guts cannon slash dps" },
+      { name: "dash ground forward videl speed boost" },
+      { name: "sfx guts cannon slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.RECKLESS_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage guts reckless charge dps" },
+      { name: "dash ground forward 3dist" },
+      { name: "sfx guts reckless charge" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.RELENTLESS_ASSAULT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage guts reckless charge dps" },
+      { name: "dash ground forward 4dist" },
+      { name: "sfx guts reckless charge" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.BERSERKER_ARMOR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block guts berserker armor" },
+      { name: "dash ground forward 1dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.BEAST_OF_DARKNESS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block guts beast of darkness" },
+      { name: "dash ground forward 2dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -8894,6 +9118,36 @@ export const AbilitiesList = [
     components: [
       { name: "beam gigantic omegastorm" },
       { name: "block broly" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Cell.SUPER_CHARGE,
+    currentCd: 0,
+    maxCd: 30,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellPerfect.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNCellPerfect.blp",
+    },
+    tooltip: {
+      title: "(C) Super Charge",
+      body: 
+        "Boosts your ability damage by 80% and increases movement speed by 132 for 10 seconds." + 
+        "|nCost: 40 SP|nCD: 30"
+    },
+    components: [
+      { name: "spell amp cell super charge" },
+      { name: "dash ground forward max power" },
+      { name: "sfx cell super charge" },
     ],
   },
   // -------------------------------------------
@@ -12106,9 +12360,9 @@ export const AbilitiesList = [
       disabled: "BTNAppule.blp",
     },
     tooltip: {
-      title: AbilityNames.Appule.APPULE_BLASTER,
+      title: "",
       body: 
-        AbilityNames.Appule.APPULE_BLASTER
+        ""
     },
     components: [
       { name: "beam appule blaster" },
