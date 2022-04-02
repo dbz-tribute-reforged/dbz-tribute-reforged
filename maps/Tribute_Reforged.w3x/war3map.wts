@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.72
+DBZ Tribute Reforged 0.73
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 61+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 62+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -2410,6 +2410,12 @@ STRING 391
 // Abilities: A007 (Sword Of Hope), Name (Name)
 {
 Sword Of Hope
+}
+
+STRING 392
+// Units: H0AJ (Black Swordsman), Name (Name)
+{
+Black Swordsman
 }
 
 STRING 393
@@ -9841,12 +9847,6 @@ STRING 1571
 A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
-STRING 1572
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
-{
-Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n60% damage block up to 7 x Str.|nUpgrades Cell Jrs into Cell-X Jrs (50% stats).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
-}
-
 STRING 1573
 // Items: I01Z (Dr Wheelo's Research), Description (Description)
 {
@@ -15921,7 +15921,7 @@ Saitama grabs a piece of the ground and lifts up half the battlefield, dealing m
 }
 
 STRING 2549
-// Items: I000 (Senzu Bean), Hotkey (Hotkey)
+// Units: H0AJ (Black Swordsman), Hotkey (Hotkey)
 {
 Q
 }
@@ -17589,13 +17589,13 @@ STRING 2822
 }
 
 STRING 2823
-// Items: I001 (Roast Ham), Hotkey (Hotkey)
+// Units: H0AK (Black Swordsman), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2824
-// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I000 (Senzu Bean), Hotkey (Hotkey)
 {
 Q
 }
@@ -18248,7 +18248,7 @@ STRING 2927
 }
 
 STRING 2928
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I001 (Roast Ham), Hotkey (Hotkey)
 {
 Q
 }
@@ -18272,7 +18272,7 @@ F
 }
 
 STRING 2932
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -19098,6 +19098,12 @@ After 20 mins: +500 base stats / +20 lvls
 After 30 mins: +500 base stats / +30 lvls
 }
 
+STRING 3066
+// Units: H0AJ (Black Swordsman), Propernames (Proper Names)
+{
+Guts
+}
+
 STRING 3067
 // Abilities: A0PH (Hakai), Ubertip (Tooltip - Normal - Extended)
 {
@@ -19163,7 +19169,7 @@ Donkey Kong slams the ground, revealing a hidden Barrel Cannon. After a brief de
 }
 
 STRING 3075
-// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
+// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -19187,7 +19193,7 @@ Barrel Cannon
 }
 
 STRING 3079
-// Items: I044 (Banana), Hotkey (Hotkey)
+// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -19626,13 +19632,13 @@ Muffin
 }
 
 STRING 3152
-// Items: I045 (Krabby Patty), Hotkey (Hotkey)
+// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3153
-// Items: I047 (Android Bomb), Hotkey (Hotkey)
+// Items: I044 (Banana), Hotkey (Hotkey)
 {
 Q
 }
@@ -19842,13 +19848,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 3188
-// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
+// Items: I045 (Krabby Patty), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3189
-// Items: I04F (Banana Generator), Hotkey (Hotkey)
+// Items: I047 (Android Bomb), Hotkey (Hotkey)
 {
 Q
 }
@@ -20131,7 +20137,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
+// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
 {
 Q
 }
@@ -20347,7 +20353,7 @@ STRING 3271
 }
 
 STRING 3272
-// Items: I04W (Potara Fusion), Hotkey (Hotkey)
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
@@ -20371,7 +20377,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 3276
-// Items: I050 (Wheat), Hotkey (Hotkey)
+// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
 {
 Q
 }
@@ -21356,7 +21362,7 @@ STRING 3437
 }
 
 STRING 3438
-// Items: I051 (Corn), Hotkey (Hotkey)
+// Items: I04W (Potara Fusion), Hotkey (Hotkey)
 {
 Q
 }
@@ -21380,7 +21386,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Items: I052 (Rice), Hotkey (Hotkey)
+// Items: I050 (Wheat), Hotkey (Hotkey)
 {
 Q
 }
@@ -21704,7 +21710,7 @@ STRING 3495
 }
 
 STRING 3496
-// Items: I053 (Snow Rice), Hotkey (Hotkey)
+// Items: I051 (Corn), Hotkey (Hotkey)
 {
 Q
 }
@@ -21728,7 +21734,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 3500
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I052 (Rice), Hotkey (Hotkey)
 {
 Q
 }
@@ -22085,7 +22091,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Items: I053 (Snow Rice), Hotkey (Hotkey)
 {
 Q
 }
@@ -22109,7 +22115,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22211,7 +22217,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3578
-// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22238,7 +22244,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3582
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22504,7 +22510,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22528,7 +22534,7 @@ STRING 3629
 }
 
 STRING 3630
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23669,7 +23675,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23687,7 +23693,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -24323,7 +24329,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24347,7 +24353,7 @@ Dende creates a beam of healing energy connecting him and the target unit. If De
 }
 
 STRING 3931
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -25583,7 +25589,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25607,7 +25613,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26912,7 +26918,7 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 }
 
 STRING 4320
-// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26946,7 +26952,7 @@ Transformations:
 }
 
 STRING 4324
-// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28805,7 +28811,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28829,7 +28835,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29229,7 +29235,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29343,7 +29349,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29648,17 +29654,6 @@ STRING 4761
 E
 }
 
-STRING 4762
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
-{
-A powered up version of Super Saiyan 2 achieved through intense rage.
-|cffffff00+0.6x str mult
-+0.1x agi/int mult
-+165ms and unlocks movement speed cap
-+10% spell power
-25% damage block up to 3 x Str.|n200 AOE ministun aura.|r|n|cff00ff00Duration: <A0KT,Dur1> seconds|n|cff00ffffCooldown: <A0KT,Cool1> seconds
-}
-
 STRING 4763
 // Abilities: A0UW (Madness Slash), Tip (Tooltip - Normal)
 {
@@ -29834,7 +29829,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30380,7 +30375,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30404,7 +30399,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30494,7 +30489,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30518,7 +30513,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31180,7 +31175,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -31198,7 +31193,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32170,7 +32165,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32193,7 +32188,7 @@ You receive +0.04x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32591,7 +32586,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32615,7 +32610,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32705,7 +32700,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32819,7 +32814,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32933,7 +32928,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33047,7 +33042,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33651,7 +33646,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33676,7 +33671,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33797,7 +33792,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33809,7 +33804,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33991,7 +33986,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34015,7 +34010,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34105,7 +34100,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34123,7 +34118,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34255,7 +34250,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34531,7 +34526,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34549,7 +34544,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34963,7 +34958,7 @@ Hirudegarn fires a barrage of flaming energy balls at his enemies that explode t
 }
 
 STRING 5635
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35023,7 +35018,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35041,13 +35036,13 @@ STRING 5647
 }
 
 STRING 5648
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 5649
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35544,7 +35539,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5717
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35640,7 +35635,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35688,7 +35683,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36388,7 +36383,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36406,7 +36401,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36814,7 +36809,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39209,7 +39204,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39484,7 +39479,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 6359
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39508,7 +39503,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39805,7 +39800,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40519,7 +40514,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40837,13 +40832,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42150,13 +42145,13 @@ STRING 6786
 }
 
 STRING 6787
-// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42627,7 +42622,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42781,7 +42776,7 @@ STRING 6882
 }
 
 STRING 6883
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42887,7 +42882,7 @@ R
 }
 
 STRING 6900
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43019,7 +43014,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43391,7 +43386,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43543,7 +43538,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 7006
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44441,7 +44436,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7137
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44465,7 +44460,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44489,7 +44484,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44552,7 +44547,7 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 }
 
 STRING 7153
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44579,7 +44574,7 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 }
 
 STRING 7157
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44726,7 +44721,7 @@ A true-combo hero that relies on sequencing the right attacks together to access
 }
 
 STRING 7176
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44777,7 +44772,7 @@ Final Flash
 }
 
 STRING 7184
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44801,7 +44796,7 @@ Galick Gun
 }
 
 STRING 7188
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44982,7 +44977,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45006,7 +45001,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45033,7 +45028,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45174,7 +45169,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45198,7 +45193,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 7246
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45506,13 +45501,13 @@ E
 }
 
 STRING 7294
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7295
-// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45848,31 +45843,31 @@ Dark Mist
 }
 
 STRING 7346
-// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7347
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7348
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7349
-// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7350
-// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45896,7 +45891,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46243,13 +46238,13 @@ STRING 7406
 }
 
 STRING 7407
-// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46636,6 +46631,12 @@ STRING 7469
 // Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
+}
+
+STRING 7470
+// Units: H0AJ (Black Swordsman), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Q|r] Choose Guts
 }
 
 STRING 7471
@@ -47026,7 +47027,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47050,7 +47051,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47149,7 +47150,7 @@ STRING 7547
 }
 
 STRING 7548
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47173,7 +47174,7 @@ STRING 7551
 }
 
 STRING 7552
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47263,7 +47264,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47287,7 +47288,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47383,7 +47384,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47401,7 +47402,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47533,7 +47534,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47557,7 +47558,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47913,7 +47914,7 @@ STRING 7670
 }
 
 STRING 7671
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47937,7 +47938,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 7675
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48027,7 +48028,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48051,7 +48052,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 7694
-// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48141,7 +48142,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48153,7 +48154,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48228,6 +48229,12 @@ STRING 7723
 // Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
 {
 Item
+}
+
+STRING 7724
+// Units: H0AK (Black Swordsman), Name (Name)
+{
+Black Swordsman
 }
 
 STRING 7725
@@ -48403,13 +48410,13 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7751
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48667,7 +48674,7 @@ STRING 7794
 }
 
 STRING 7795
-// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48691,7 +48698,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Damage: (Int * 
 }
 
 STRING 7799
-// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49637,7 +49644,7 @@ STRING 7953
 }
 
 STRING 7954
-// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49661,13 +49668,13 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7958
-// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49805,7 +49812,7 @@ Learn God Splitter (|cffffcc00Q|r)
 }
 
 STRING 7982
-// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50087,12 +50094,11 @@ Shoto uses his left side to generate a burst of flames to incinerate his enemies
 }
 
 STRING 8027
-// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +20% based on Vegeta's missing HP.
-|cffffff00Passively provides +10 armr.
-|cff00FF00Duration: <A0GM,Dur1> seconds|r
-|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool2> seconds|r
 }
 
 STRING 8028
@@ -50397,7 +50403,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50565,7 +50571,7 @@ F
 }
 
 STRING 8093
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50673,7 +50679,7 @@ STRING 8110
 }
 
 STRING 8111
-// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52236,7 +52242,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52260,7 +52266,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52884,7 +52890,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52908,7 +52914,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8471
-// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52991,7 +52997,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53322,7 +53328,7 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8534
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53352,7 +53358,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54439,7 +54445,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54527,7 +54533,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8724
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54722,7 +54728,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54746,7 +54752,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55445,7 +55451,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56430,7 +56436,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56938,7 +56944,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56965,7 +56971,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57095,7 +57101,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57413,7 +57419,7 @@ F
 }
 
 STRING 9178
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57774,7 +57780,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57929,7 +57935,7 @@ Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9260
-// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60039,301 +60045,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9609
-// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9610
-// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9611
-// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9612
-// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9613
-// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9614
-// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9615
-// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9616
-// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9617
-// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9618
-// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9619
-// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9620
-// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
+// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9621
-// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9622
-// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9623
-// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9624
-// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9625
-// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9626
-// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9627
-// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9628
-// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9629
-// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9630
-// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9631
-// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9632
-// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9633
-// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9634
-// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9635
-// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9636
-// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
+// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9637
-// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9638
-// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9639
-// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9640
-// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9641
-// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9642
-// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9643
-// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9644
-// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9645
-// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9646
-// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9647
-// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9648
-// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9649
-// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9650
-// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9651
-// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9652
-// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9653
-// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9654
-// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
+// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9655
-// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9656
-// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9657
-// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61295,7 +61301,7 @@ F
 }
 
 STRING 9817
-// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -63307,8 +63313,8 @@ Transformations:
 [lvl 15]  1.30x "fp"
 [lvl 35]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
-[lvl 130] 2.25x "ss3"
-[lvl 160] 2.50x "ssg"
+[lvl 120] 2.25x "ss3"
+[lvl 150] 2.50x "ssg"
 [lvl 210] 2.60x "ssb"
 
 |cffffcc00Revenge:|r Spells deal up to +25% bonus damage when on low HP.
@@ -66066,25 +66072,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10598
-// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10599
-// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10600
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67462,7 +67468,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68476,7 +68482,7 @@ STRING 10974
 }
 
 STRING 10975
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68566,7 +68572,7 @@ STRING 10989
 }
 
 STRING 10990
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68614,13 +68620,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68958,7 +68964,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 11055
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69119,7 +69125,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69131,7 +69137,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69516,13 +69522,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70165,13 +70171,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70501,19 +70507,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11309
-// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70984,13 +70990,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71266,7 +71272,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
+// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71327,7 +71333,7 @@ A nutritious bundle of wheat.
 }
 
 STRING 11445
-// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71974,7 +71980,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72145,13 +72151,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72794,19 +72800,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11681
-// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11682
-// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72940,7 +72946,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73453,13 +73459,13 @@ STRING 11784
 }
 
 STRING 11785
-// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11786
-// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
+// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -73894,7 +73900,7 @@ Donate Energy to Moro
 }
 
 STRING 11857
-// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74034,13 +74040,13 @@ STRING 11879
 }
 
 STRING 11880
-// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11881
-// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75021,13 +75027,13 @@ This unit is under the effects of Cosmic Illusion; it is invisible, moves faster
 }
 
 STRING 12041
-// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12042
-// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75147,7 +75153,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -75858,13 +75864,13 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
+// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12176
-// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76590,13 +76596,13 @@ STRING 12292
 }
 
 STRING 12293
-// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12294
-// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
+// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78430,7 +78436,7 @@ First, Gohan fires a Super Kamehameha at the opponent, who struggles against the
 }
 
 STRING 12583
-// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78792,7 +78798,7 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 }
 
 STRING 12643
-// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
+// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -78810,7 +78816,7 @@ Z
 }
 
 STRING 12646
-// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79410,7 +79416,7 @@ Ice Cannon
 }
 
 STRING 12733
-// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -79499,13 +79505,13 @@ Frostbite
 }
 
 STRING 12746
-// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12747
-// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80387,7 +80393,7 @@ R
 }
 
 STRING 12887
-// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -80507,25 +80513,25 @@ Justice Pose
 }
 
 STRING 12907
-// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12908
-// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12909
-// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
+// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12910
-// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -82553,7 +82559,7 @@ E
 }
 
 STRING 13240
-// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -85034,6 +85040,12 @@ An advanced harvester that automatically collects crops with increased efficienc
 Unloads crops at nearby warehouses.|r
 }
 
+STRING 13631
+// Units: H0AJ (Black Swordsman), Tip (Tooltip - Basic)
+{
+[|cffffff00Q|r] Choose Guts
+}
+
 STRING 13632
 // Abilities: A0QB (Last Emperor), Tip (Tooltip - Normal)
 {
@@ -86104,25 +86116,25 @@ STRING 13805
 }
 
 STRING 13806
-// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13807
-// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
+// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13808
-// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13809
-// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -87164,19 +87176,19 @@ STRING 13972
 }
 
 STRING 13973
-// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13974
-// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13975
-// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -87525,7 +87537,7 @@ This unit is under the effects of Envoy of the End; it has increased attack dama
 }
 
 STRING 14032
-// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -88413,13 +88425,13 @@ Justice Pose
 }
 
 STRING 14163
-// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14164
-// Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -89911,25 +89923,25 @@ STRING 14392
 }
 
 STRING 14393
-// Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
+// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14394
-// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14395
-// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14396
-// Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -94300,37 +94312,37 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15032
-// Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15033
-// Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
+// Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15034
-// Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
+// Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15035
-// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15036
-// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15037
-// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -95442,19 +95454,19 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15198
-// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15199
-// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -95685,13 +95697,13 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15233
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15234
-// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -96364,7 +96376,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 15333
-// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96886,13 +96898,13 @@ STRING 15402
 }
 
 STRING 15403
-// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15404
-// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -98433,19 +98445,19 @@ STRING 15617
 }
 
 STRING 15618
-// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15619
-// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
+// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15620
-// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -99711,25 +99723,25 @@ STRING 15800
 }
 
 STRING 15801
-// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
+// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15802
-// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15803
-// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
+// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15804
-// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -100838,13 +100850,13 @@ STRING 15951
 }
 
 STRING 15952
-// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
+// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15953
-// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -101279,13 +101291,13 @@ STRING 16006
 }
 
 STRING 16007
-// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
+// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16008
-// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -101662,13 +101674,13 @@ STRING 16066
 }
 
 STRING 16067
-// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16068
-// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -105427,7 +105439,7 @@ Sword of Hope Aura
 }
 
 STRING 16581
-// Buffs/Effects: B03P (), Bufftip (Tooltip)
+// Abilities: A10K (Sword of Hope), Name (Name)
 {
 Sword of Hope
 }
@@ -106634,25 +106646,25 @@ STRING 16734
 }
 
 STRING 16735
-// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16736
-// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16737
-// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16738
-// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -107080,13 +107092,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16795
-// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16796
-// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -107388,7 +107400,7 @@ W
 }
 
 STRING 16838
-// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107502,7 +107514,7 @@ STRING 16855
 }
 
 STRING 16856
-// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107708,13 +107720,13 @@ STRING 16882
 }
 
 STRING 16883
-// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16884
-// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -108212,7 +108224,7 @@ Bankai True Strike
 }
 
 STRING 16935
-// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -109119,7 +109131,7 @@ STRING 17057
 }
 
 STRING 17058
-// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -109322,25 +109334,25 @@ STRING 17087
 }
 
 STRING 17088
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17089
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17090
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17091
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -110075,13 +110087,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 17200
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17201
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -112874,6 +112886,12 @@ STRING 17596
 [|cff00FF00R|r] Cleave - [|cffffcc00Level 1|r]
 }
 
+STRING 17597
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 17598
 // Abilities: A0VT (Cleave), Name (Name)
 {
@@ -112916,6 +112934,60 @@ STRING 17604
 [|cff00FF00R|r] Cleave - [|cffffcc00Level 7|r]
 }
 
+STRING 17605
+// Abilities: A106 (Heavy Slam), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts swings his massive blade |cffffcc00Dragon Slayer|r cleaving any enemy standing before him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool1> seconds|r
+}
+
+STRING 17606
+// Units: H0AK (Black Swordsman), Propernames (Proper Names)
+{
+Guts
+}
+
+STRING 17607
+// Units: H0AK (Black Swordsman), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Q|r] Choose Guts
+}
+
+STRING 17608
+// Units: H0AJ (Black Swordsman), Ubertip (Tooltip - Extended)
+{
+A tanky close-range hero that punishes enemies who damage him.
+
+|cffffcc00Determination:|r +10% base STR Mult
+|cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 17609
+// Units: H0AK (Black Swordsman), Tip (Tooltip - Basic)
+{
+[|cffffff00Q|r] Choose Guts
+}
+
+STRING 17610
+// Units: H0AK (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+{
+Berserker Armor
+}
+
+STRING 17611
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 2|r]
+}
+
 STRING 17612
 // Abilities: A0VT (Cleave), Researchtip (Tooltip - Learn)
 {
@@ -112940,10 +113012,28 @@ STRING 17615
 [|cff00FF00R|r] Cleave - [|cffffcc00Level 9|r]
 }
 
+STRING 17616
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 17617
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 4|r]
+}
+
 STRING 17618
 // Abilities: A0VT (Cleave), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Cleave - [|cffffcc00Level 10|r]
+}
+
+STRING 17619
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 5|r]
 }
 
 STRING 17620
@@ -113205,7 +113295,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113754,7 +113844,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117566,7 +117656,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117752,7 +117842,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118914,7 +119004,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119017,7 +119107,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123060,7 +123150,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -127725,7 +127815,7 @@ Nutritious grains of snow rice.
 }
 
 STRING 19736
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -128572,7 +128662,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -131069,7 +131159,7 @@ Sonic swerves in midair, curling up into a spinball and launching himself straig
 }
 
 STRING 20232
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A109 (Reckless Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -131109,7 +131199,7 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 }
 
 STRING 20238
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A109 (Reckless Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -131762,7 +131852,7 @@ Plant Rice
 }
 
 STRING 20336
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10A (Relentless Assault), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -131878,7 +131968,7 @@ Drops held items.
 }
 
 STRING 20355
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -132387,7 +132477,7 @@ Q
 }
 
 STRING 20430
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -132465,7 +132555,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20440
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -132517,19 +132607,19 @@ Improved Harvesting
 }
 
 STRING 20447
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 20448
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A108 (Dragon Cannon Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20449
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A108 (Dragon Cannon Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -132655,7 +132745,7 @@ Increases crops stored by +2 and +24% of total stack size.
 }
 
 STRING 20467
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -132845,7 +132935,7 @@ Increases building armor by +5.
 }
 
 STRING 20492
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10A (Relentless Assault), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -132980,13 +133070,13 @@ STRING 20512
 }
 
 STRING 20513
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 20514
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -133010,7 +133100,7 @@ STRING 20517
 }
 
 STRING 20518
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -133477,6 +133567,84 @@ STRING 20591
 (appule)
 }
 
+STRING 20592
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 6|r]
+}
+
+STRING 20593
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 1|r]
+}
+
+STRING 20594
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 7|r]
+}
+
+STRING 20595
+// Abilities: A105 (Heavy Slash), Name (Name)
+{
+Heavy Slash
+}
+
+STRING 20596
+// Abilities: A105 (Heavy Slash), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Heavy Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 20597
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 9|r]
+}
+
+STRING 20598
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 8|r]
+}
+
+STRING 20599
+// Abilities: A105 (Heavy Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 20600
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20601
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 3|r]
+}
+
+STRING 20602
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 1|r]
+}
+
+STRING 20603
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 2|r]
+}
+
+STRING 20604
+// Abilities: A105 (Heavy Slash), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
 STRING 20605
 // Abilities: A104 (Appule Blaster), Name (Name)
 {
@@ -133489,10 +133657,85 @@ STRING 20606
 [|cff00ff00Q|r] Learn Appule Blaster - [|cffffcc00Level %d|r]
 }
 
+STRING 20607
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 4|r]
+}
+
+STRING 20608
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20609
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20610
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20611
+{
+Type "r" to revert.
+Transformations:
+[lvl 25]  1.40x "guts"
+[lvl 60]  1.70x "guts"
+[lvl 100] 2.00x "guts"
+[lvl 150] 2.30x "guts"
+[lvl 200] 2.40x "guts"
+[lvl 250] 2.50x "guts" [unlocks Berserker Armor]
+
+|cffffcc00Determination:|r +10% base STR Mult
+|cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
+}
+
+STRING 20612
+{
+[|cffffcc00Unlock|r] |cffFF2020Berserker Armor|r
+Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage.
+}
+
+STRING 20613
+// Units: H0AK (Black Swordsman), Ubertip (Tooltip - Extended)
+{
+A tanky close-range hero that punishes enemies who damage him.
+
+|cffffcc00Determination:|r +10% base STR Mult
+|cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 20614
 // Abilities: A104 (Appule Blaster), EditorSuffix (Editor Suffix)
 {
 (appule)
+}
+
+STRING 20615
+// Abilities: A10D (Berserker Armor), Ubertip (Tooltip - Normal - Extended)
+{
+Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 10% of Max HP at the end.
+Upgrades to [|cff00ff00D|r] Beast of Darkness.
+|cffffff00+0.1x stat mult
++33ms
++15% base damage
+-0.2 BAT
+10% damage block up to 2x STR|r
+|cff00FF00Duration: <A10D,Dur1> seconds|r
+|cff00FFFFCooldown: <A10D,Cool1> seconds|r
 }
 
 STRING 20616
@@ -133508,7 +133751,7 @@ Q
 }
 
 STRING 20618
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -133775,5 +134018,2113 @@ STRING 20653
 // Abilities: A104 (Appule Blaster), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Appule Blaster - [|cffffcc00Level 10|r]
+}
+
+STRING 20654
+// Abilities: A10E (Beast of Darkness), Ubertip (Tooltip - Normal - Extended)
+{
+Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 20% of Max HP at the end.
+|cffffff00+0.2x stat mult
++66ms
++25% base damage
+-0.2 BAT
+15% damage block up to 3x STR|r
+|cff00FF00Duration: <A10E,Dur1> seconds|r
+|cff00FFFFCooldown: <A10E,Cool1> seconds|r
+}
+
+STRING 20664
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool1> seconds|r
+}
+
+STRING 20665
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool3> seconds|r
+}
+
+STRING 20666
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool4> seconds|r
+}
+
+STRING 20667
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool5> seconds|r
+}
+
+STRING 20668
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool6> seconds|r
+}
+
+STRING 20669
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool7> seconds|r
+}
+
+STRING 20670
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 2|r]
+}
+
+STRING 20671
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 3|r]
+}
+
+STRING 20672
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 4|r]
+}
+
+STRING 20673
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 5|r]
+}
+
+STRING 20674
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 6|r]
+}
+
+STRING 20675
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 1|r]
+}
+
+STRING 20676
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 7|r]
+}
+
+STRING 20677
+// Abilities: A106 (Heavy Slam), Name (Name)
+{
+Heavy Slam
+}
+
+STRING 20678
+// Abilities: A106 (Heavy Slam), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Heavy Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 20679
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 9|r]
+}
+
+STRING 20680
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 8|r]
+}
+
+STRING 20681
+// Abilities: A106 (Heavy Slam), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heavy Slam - [|cffffcc00Level 10|r]
+}
+
+STRING 20682
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool8> seconds|r
+}
+
+STRING 20683
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool9> seconds|r
+}
+
+STRING 20684
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool10> seconds|r
+}
+
+STRING 20685
+// Abilities: A106 (Heavy Slam), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20686
+// Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
+{
+Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in front of him.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A106,Cool2> seconds|r
+}
+
+STRING 20694
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 2|r]
+}
+
+STRING 20695
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 3|r]
+}
+
+STRING 20696
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 4|r]
+}
+
+STRING 20697
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 5|r]
+}
+
+STRING 20698
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 6|r]
+}
+
+STRING 20699
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 1|r]
+}
+
+STRING 20700
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 7|r]
+}
+
+STRING 20701
+// Abilities: A107 (Cannon Arm), Name (Name)
+{
+Cannon Arm
+}
+
+STRING 20702
+// Abilities: A107 (Cannon Arm), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Cannon Arm - [|cffffcc00Level %d|r]
+}
+
+STRING 20703
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 9|r]
+}
+
+STRING 20704
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 8|r]
+}
+
+STRING 20705
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 10|r]
+}
+
+STRING 20710
+// Abilities: A107 (Cannon Arm), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20711
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool1> seconds|r
+}
+
+STRING 20712
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool2> seconds|r
+}
+
+STRING 20713
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool3> seconds|r
+}
+
+STRING 20714
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool4> seconds|r
+}
+
+STRING 20715
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool5> seconds|r
+}
+
+STRING 20716
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool6> seconds|r
+}
+
+STRING 20717
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool7> seconds|r
+}
+
+STRING 20718
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 2|r]
+}
+
+STRING 20719
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 20720
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 4|r]
+}
+
+STRING 20721
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 5|r]
+}
+
+STRING 20722
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 6|r]
+}
+
+STRING 20723
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 1|r]
+}
+
+STRING 20724
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 7|r]
+}
+
+STRING 20725
+// Abilities: A108 (Dragon Cannon Slash), Name (Name)
+{
+Dragon Cannon Slash
+}
+
+STRING 20726
+// Abilities: A108 (Dragon Cannon Slash), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Dragon Cannon Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 20727
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 9|r]
+}
+
+STRING 20728
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 8|r]
+}
+
+STRING 20729
+// Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 20730
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool8> seconds|r
+}
+
+STRING 20731
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool9> seconds|r
+}
+
+STRING 20732
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool10> seconds|r
+}
+
+STRING 20733
+// Abilities: A108 (Dragon Cannon Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool1> - <A108,Cool10> seconds|r
+}
+
+STRING 20734
+// Abilities: A108 (Dragon Cannon Slash), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20735
+// Abilities: A109 (Reckless Charge), Name (Name)
+{
+Reckless Charge
+}
+
+STRING 20736
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 1|r]
+}
+
+STRING 20738
+// Abilities: A109 (Reckless Charge), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Reckless Charge - [|cffffcc00Level %d|r]
+}
+
+STRING 20740
+// Abilities: A109 (Reckless Charge), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20741
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 2|r]
+}
+
+STRING 20742
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 3|r]
+}
+
+STRING 20745
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 4|r]
+}
+
+STRING 20746
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 5|r]
+}
+
+STRING 20747
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 6|r]
+}
+
+STRING 20748
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 7|r]
+}
+
+STRING 20749
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 8|r]
+}
+
+STRING 20750
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 9|r]
+}
+
+STRING 20757
+// Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 10|r]
+}
+
+STRING 20759
+// Abilities: A10A (Relentless Assault), Name (Name)
+{
+Relentless Assault
+}
+
+STRING 20760
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 1|r]
+}
+
+STRING 20761
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool1> seconds|r
+}
+
+STRING 20762
+// Abilities: A10A (Relentless Assault), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Relentless Assault - [|cffffcc00Level %d|r]
+}
+
+STRING 20763
+// Abilities: A10A (Relentless Assault), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool1> - <A10A,Cool10> seconds|r
+}
+
+STRING 20764
+// Abilities: A10A (Relentless Assault), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20765
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 2|r]
+}
+
+STRING 20766
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 3|r]
+}
+
+STRING 20768
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool1> seconds|r
+}
+
+STRING 20769
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 4|r]
+}
+
+STRING 20770
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 5|r]
+}
+
+STRING 20771
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 6|r]
+}
+
+STRING 20772
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 7|r]
+}
+
+STRING 20773
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 8|r]
+}
+
+STRING 20774
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 9|r]
+}
+
+STRING 20775
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool3> seconds|r
+}
+
+STRING 20776
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool4> seconds|r
+}
+
+STRING 20777
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool5> seconds|r
+}
+
+STRING 20778
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool6> seconds|r
+}
+
+STRING 20779
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool7> seconds|r
+}
+
+STRING 20780
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool8> seconds|r
+}
+
+STRING 20781
+// Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 10|r]
+}
+
+STRING 20782
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool9> seconds|r
+}
+
+STRING 20783
+// Abilities: A10B (Rage), Name (Name)
+{
+Rage
+}
+
+STRING 20784
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 1|r]
+}
+
+STRING 20785
+// Abilities: A0GM (Fighting Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta draws upon his lust for battle to drastically increase his damage. Increases spell damage by up to +30% based on Vegeta's missing HP.
+|cffffff00Passively provides +10 armr.
+|cff00FF00Duration: <A0GM,Dur1> seconds|r
+|cff00FFFFCooldown: <A0GM,Cool1> seconds|r
+}
+
+STRING 20786
+// Abilities: A10B (Rage), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Rage - [|cffffcc00Level %d|r]
+}
+
+STRING 20787
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool3> seconds|r
+}
+
+STRING 20788
+// Abilities: A10B (Rage), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20789
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 2|r]
+}
+
+STRING 20790
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 3|r]
+}
+
+STRING 20791
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool4> seconds|r
+}
+
+STRING 20792
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool5> seconds|r
+}
+
+STRING 20793
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 4|r]
+}
+
+STRING 20794
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 5|r]
+}
+
+STRING 20795
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 6|r]
+}
+
+STRING 20796
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 7|r]
+}
+
+STRING 20797
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 8|r]
+}
+
+STRING 20798
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 9|r]
+}
+
+STRING 20799
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool6> seconds|r
+}
+
+STRING 20800
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool7> seconds|r
+}
+
+STRING 20801
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool8> seconds|r
+}
+
+STRING 20802
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool9> seconds|r
+}
+
+STRING 20803
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A10A,Cool10> seconds|r
+}
+
+STRING 20804
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool10> seconds|r
+}
+
+STRING 20805
+// Abilities: A10B (Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Rage - [|cffffcc00Level 10|r]
+}
+
+STRING 20806
+// Abilities: A105 (Heavy Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool1> - <A105,Cool10> seconds|r
+}
+
+STRING 20807
+// Abilities: A10C (Berserk), Name (Name)
+{
+Berserk
+}
+
+STRING 20808
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 1|r]
+}
+
+STRING 20809
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool1> seconds|r
+}
+
+STRING 20810
+// Abilities: A10C (Berserk), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Berserk - [|cffffcc00Level %d|r]
+}
+
+STRING 20811
+// Abilities: A10C (Berserk), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
+}
+
+STRING 20812
+// Abilities: A10C (Berserk), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20813
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 2|r]
+}
+
+STRING 20814
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 3|r]
+}
+
+STRING 20815
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool2> seconds|r
+}
+
+STRING 20816
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool3> seconds|r
+}
+
+STRING 20817
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 4|r]
+}
+
+STRING 20818
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 5|r]
+}
+
+STRING 20819
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 6|r]
+}
+
+STRING 20820
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 7|r]
+}
+
+STRING 20821
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 8|r]
+}
+
+STRING 20822
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 9|r]
+}
+
+STRING 20823
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool4> seconds|r
+}
+
+STRING 20824
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool5> seconds|r
+}
+
+STRING 20825
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool6> seconds|r
+}
+
+STRING 20826
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool7> seconds|r
+}
+
+STRING 20827
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool8> seconds|r
+}
+
+STRING 20828
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool9> seconds|r
+}
+
+STRING 20829
+// Abilities: A10C (Berserk), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Berserk - [|cffffcc00Level 10|r]
+}
+
+STRING 20830
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10C,Cool10> seconds|r
+}
+
+STRING 20831
+// Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 20832
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 5|r]
+}
+
+STRING 20833
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 6|r]
+}
+
+STRING 20834
+// Abilities: A10D (Berserker Armor), Name (Name)
+{
+Berserker Armor
+}
+
+STRING 20835
+// Abilities: A10D (Berserker Armor), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20836
+// Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 20837
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 7|r]
+}
+
+STRING 20838
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 8|r]
+}
+
+STRING 20839
+// Abilities: A10E (Beast of Darkness), Name (Name)
+{
+Beast of Darkness
+}
+
+STRING 20840
+// Abilities: A10E (Beast of Darkness), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20841
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 9|r]
+}
+
+STRING 20842
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 10|r]
+}
+
+STRING 20843
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 11|r]
+}
+
+STRING 20844
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 12|r]
+}
+
+STRING 20845
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 13|r]
+}
+
+STRING 20846
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 14|r]
+}
+
+STRING 20847
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 15|r]
+}
+
+STRING 20848
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Super Saiyan 2 achieved through intense rage.
+|cffffff00+0.6x str mult
++0.1x agi/int mult
++165ms and unlocks movement speed cap
++10% spell power
+30% damage block up to 4 x Str.|n200 AOE ministun aura.
+Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to deal <A10K,DataB2,.> damage.|r
+|cff00ff00Duration: <A0KT,Dur1> seconds
+|cff00ffffCooldown: <A0KT,Cool1> seconds
+}
+
+STRING 20849
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks' swordsmanship allows him to deal critical damage to enemies and evade incoming attacks.
+
+|cffffcc00Evasion|r - <A10K,DataD1,%>% 
+|cffffcc00Critical|r - <A10K,DataA1>% 
+|cffffcc00Damage|r - <A10K,DataB1,.> times
+}
+
+STRING 20850
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks' swordsmanship allows him to deal critical damage to enemies and evade incoming attacks.
+
+|cffffcc00Grants True Strike|r
+|cffffcc00Evasion|r - <A10K,DataD2,%>% 
+|cffffcc00Critical|r - <A10K,DataA2>% 
+|cffffcc00Damage|r - <A10K,DataB2,.> times
+}
+
+STRING 20851
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 20852
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 20853
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 20854
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 20855
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 20856
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 20857
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 20858
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 20859
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 20860
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 20861
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 20862
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 20863
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 20864
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 20865
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Future Trunks' Sword of Hope - [|cffffcc00Level 1|r]
+}
+
+STRING 20866
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Future Trunks' Sword of Light - [|cffffcc00Level 2|r]
+}
+
+STRING 20867
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 20868
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 20869
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 20870
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 20871
+// Abilities: A10F (Dragon Slayer), Name (Name)
+{
+Dragon Slayer
+}
+
+STRING 20872
+// Abilities: A10F (Dragon Slayer), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn |cffffcc00Dragon Slayer|r - [|cffffcc00Level %d|r]
+}
+
+STRING 20873
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 20874
+// Abilities: A10F (Dragon Slayer), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20875
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20876
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 20877
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 20878
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 20879
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 20880
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 20881
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 20882
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 20883
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 20884
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 20885
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 20886
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 20887
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 20888
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 20889
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 20890
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 20891
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 20892
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 20893
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 20894
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 20895
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 20896
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 20897
+// Abilities: A10K (Sword of Hope), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 20898
+// Abilities: A10K (Sword of Hope), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 20899
+// Abilities: A10K (Sword of Hope), EditorSuffix (Editor Suffix)
+{
+passive (ft)
+}
+
+STRING 20900
+// Buffs/Effects: B03P (), Bufftip (Tooltip)
+{
+Sword of Hope
+}
+
+STRING 20901
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 20903
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+{
+Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+3% spell power per second up to +25%.|n60% damage block up to 7 x Str.|nUpgrades Cell Jrs into Cell-X Jrs (50% stats).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+}
+
+STRING 20906
+// Abilities: A10G (Dragon Slayer Cleave), Name (Name)
+{
+Dragon Slayer Cleave
+}
+
+STRING 20907
+// Abilities: A10G (Dragon Slayer Cleave), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20908
+// Abilities: A10H (Book Guts Passives), Name (Name)
+{
+Book Guts Passives
+}
+
+STRING 20909
+// Abilities: A10D (Berserker Armor), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffff2020Berserker Armor|r
+}
+
+STRING 20911
+// Abilities: A10E (Beast of Darkness), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffff2020Beast of Darkness|r
+}
+
+STRING 20912
+// Abilities: A105 (Heavy Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Guts swings |cffffcc00Dragon Slayer|r cleaving apart his enemies.
+Upgrades to [|cff00ff00Q|r] Heavy Slam.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A105,Cool2> seconds|r
+}
+
+STRING 20913
+// Abilities: A10I (Berserker Armor Damage Bonus), Name (Name)
+{
+Berserker Armor Damage Bonus
+}
+
+STRING 20914
+// Abilities: A10I (Berserker Armor Damage Bonus), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20915
+// Abilities: A10J (Beast of Darkness Damage Bonus), Name (Name)
+{
+Beast of Darkness Damage Bonus
+}
+
+STRING 20916
+// Abilities: A10J (Beast of Darkness Damage Bonus), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 20917
+// Buffs/Effects: B05F (), Bufftip (Tooltip)
+{
+|cffff2020Berserker Armor|r
+}
+
+STRING 20918
+// Buffs/Effects: B05F (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Berserker Armor; it has increased attack damage.
+}
+
+STRING 20919
+// Buffs/Effects: B05G (), Bufftip (Tooltip)
+{
+|cffff2020Beast of Darkness|r
+}
+
+STRING 20920
+// Buffs/Effects: B05G (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Beast of Darkness; it has increased attack damage.
+}
+
+STRING 20921
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD1,%>% 
+|cffffcc00Critical:|r <A10F,DataA1>% 
+|cffffcc00Damage:|r <A10F,DataB1,.> times
+}
+
+STRING 20922
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD2,%>% 
+|cffffcc00Critical:|r <A10F,DataA2>% 
+|cffffcc00Damage:|r <A10F,DataB2,.> times
+}
+
+STRING 20923
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD3,%>% 
+|cffffcc00Critical:|r <A10F,DataA3>% 
+|cffffcc00Damage:|r <A10F,DataB3,.> times
+}
+
+STRING 20924
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD4,%>% 
+|cffffcc00Critical:|r <A10F,DataA4>% 
+|cffffcc00Damage:|r <A10F,DataB4,.> times
+}
+
+STRING 20925
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD5,%>% 
+|cffffcc00Critical:|r <A10F,DataA5>% 
+|cffffcc00Damage:|r <A10F,DataB5,.> times
+}
+
+STRING 20926
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD6,%>% 
+|cffffcc00Critical:|r <A10F,DataA6>% 
+|cffffcc00Damage:|r <A10F,DataB6,.> times
+}
+
+STRING 20927
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD7,%>% 
+|cffffcc00Critical:|r <A10F,DataA7>% 
+|cffffcc00Damage:|r <A10F,DataB7,.> times
+}
+
+STRING 20928
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD8,%>% 
+|cffffcc00Critical:|r <A10F,DataA8>% 
+|cffffcc00Damage:|r <A10F,DataB8,.> times
+}
+
+STRING 20929
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD9,%>% 
+|cffffcc00Critical:|r <A10F,DataA9>% 
+|cffffcc00Damage:|r <A10F,DataB9,.> times
+}
+
+STRING 20930
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD10,%>% 
+|cffffcc00Critical:|r <A10F,DataA10>% 
+|cffffcc00Damage:|r <A10F,DataB10,.> times
+}
+
+STRING 20931
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD11,%>% 
+|cffffcc00Critical:|r <A10F,DataA11>% 
+|cffffcc00Damage:|r <A10F,DataB11,.> times
+}
+
+STRING 20932
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD12,%>% 
+|cffffcc00Critical:|r <A10F,DataA12>% 
+|cffffcc00Damage:|r <A10F,DataB12,.> times
+}
+
+STRING 20933
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD13,%>% 
+|cffffcc00Critical:|r <A10F,DataA13>% 
+|cffffcc00Damage:|r <A10F,DataB13,.> times
+}
+
+STRING 20934
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD14,%>% 
+|cffffcc00Critical:|r <A10F,DataA14>% 
+|cffffcc00Damage:|r <A10F,DataB14,.> times
+}
+
+STRING 20935
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD15,%>% 
+|cffffcc00Critical:|r <A10F,DataA15>% 
+|cffffcc00Damage:|r <A10F,DataB15,.> times
+}
+
+STRING 20936
+// Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff2020Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD1,%> - <A10F,DataD15,%>% 
+|cffffcc00Critical:|r <A10F,DataA1> - <A10F,DataA15>% 
+|cffffcc00Damage:|r <A10F,DataB1,.> - <A10F,DataB15,.> times
+}
+
+STRING 20943
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool1> seconds|r
+}
+
+STRING 20944
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool2> seconds|r
+}
+
+STRING 20945
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool3> seconds|r
+}
+
+STRING 20946
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool4> seconds|r
+}
+
+STRING 20947
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool5> seconds|r
+}
+
+STRING 20948
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool6> seconds|r
+}
+
+STRING 20949
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool7> seconds|r
+}
+
+STRING 20950
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool8> seconds|r
+}
+
+STRING 20951
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool9> seconds|r
+}
+
+STRING 20952
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool10> seconds|r
+}
+
+STRING 20953
+// Abilities: A107 (Cannon Arm), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool1> - <A107,Cool10> seconds|r
+}
+
+STRING 20954
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool1> seconds|r
+}
+
+STRING 20955
+// Abilities: A109 (Reckless Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool1> - <A109,Cool10> seconds|r
+}
+
+STRING 20956
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool2> seconds|r
+}
+
+STRING 20957
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool3> seconds|r
+}
+
+STRING 20958
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool4> seconds|r
+}
+
+STRING 20959
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool5> seconds|r
+}
+
+STRING 20960
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool6> seconds|r
+}
+
+STRING 20961
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool7> seconds|r
+}
+
+STRING 20962
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool8> seconds|r
+}
+
+STRING 20963
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool9> seconds|r
+}
+
+STRING 20964
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00ffffCooldown: <A109,Cool10> seconds|r
+}
+
+STRING 20965
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool1> seconds|r
+}
+
+STRING 20966
+// Abilities: A10B (Rage), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
+}
+
+STRING 20967
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool2> seconds|r
+}
+
+STRING 20968
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool3> seconds|r
+}
+
+STRING 20969
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool4> seconds|r
+}
+
+STRING 20970
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool5> seconds|r
+}
+
+STRING 20971
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool6> seconds|r
+}
+
+STRING 20972
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool7> seconds|r
+}
+
+STRING 20973
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool8> seconds|r
+}
+
+STRING 20974
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool9> seconds|r
+}
+
+STRING 20975
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ffffCooldown: <A10B,Cool10> seconds|r
 }
 

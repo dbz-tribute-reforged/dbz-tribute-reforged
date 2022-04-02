@@ -628,6 +628,19 @@ const ichigoData = {
     HeroSelectCategory.CARRY
   )
 }
+const gutsData = {
+  unitCode: Id.guts,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.CARRY
+  )
+}
 const allMightData = {
   unitCode: Id.allMight,
   onlyRandom: false,
@@ -842,15 +855,15 @@ export const HeroSelectUnitList = [
 
   saitamaData,
   ichigoData,
+  gutsData,
   allMightData,
   shotoTodorokiData,
-  lucarioData,
   // 80
+  lucarioData,
   sephirothData,
   dartFeldData,
   marioData,
   sonicData,
-  emptySpace,
   // 85
   emptySpace,
   emptySpace,

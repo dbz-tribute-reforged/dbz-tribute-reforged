@@ -124,4 +124,48 @@ export module UnitHelper {
     }
     return sum;
   }
+
+  export function abilitySwap(
+    player: player,
+    unit: unit,
+    srcAbilityId: number,
+    destAbilityId: number,
+    enableDest: boolean = true,
+    disableSrc: boolean = true,
+    addAbility: boolean = true,
+    makePermanent: boolean = true,
+    equalizeLevels: boolean = true,
+    linkCooldowns: number = 0,
+  ) {
+    if (enableDest) {
+      SetPlayerAbilityAvailable(player, destAbilityId, true);
+    }
+    if (disableSrc) {
+      SetPlayerAbilityAvailable(player, srcAbilityId, false);
+    }
+    if (addAbility) {
+      UnitAddAbility(unit, destAbilityId);
+    }
+    if (makePermanent) {
+      UnitMakeAbilityPermanent(unit, true, destAbilityId);
+    }
+    if (equalizeLevels) {
+      const srcAbilityLevel = GetUnitAbilityLevel(unit, srcAbilityId);
+      const destAbilityLevel = GetUnitAbilityLevel(unit, destAbilityId);
+      if (destAbilityLevel > srcAbilityLevel) {
+        SetUnitAbilityLevel(unit, srcAbilityId, destAbilityLevel);
+      } else if (srcAbilityLevel > destAbilityLevel) {
+        SetUnitAbilityLevel(unit, destAbilityId, srcAbilityLevel);
+      }
+    }
+    if (linkCooldowns > 0) {
+      BlzStartUnitAbilityCooldown(unit, destAbilityId, 
+        linkCooldowns + 
+        Math.max(
+          BlzGetUnitAbilityCooldownRemaining(unit, srcAbilityId),
+          BlzGetUnitAbilityCooldownRemaining(unit, destAbilityId)
+        )
+      );
+    }
+  }
 }

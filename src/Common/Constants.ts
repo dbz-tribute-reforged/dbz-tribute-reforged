@@ -548,6 +548,18 @@ export module Id {
   export const guldoTelekinesis = FourCC("A0SE");
   export const guldoTimeStop = FourCC("A0SF");
   export const ginyuPoseGuldo = FourCC("A0SG");
+  
+  export const guts = FourCC("H0AJ");
+  export const gutsHeavySlash = FourCC("A105");
+  export const gutsHeavySlam = FourCC("A106");
+  export const gutsCannonArm = FourCC("A107");
+  export const gutsCannonSlash = FourCC("A108");
+  export const gutsRecklessCharge = FourCC("A109");
+  export const gutsRelentlessAssault = FourCC("A10A");
+  export const gutsRage = FourCC("A10B");
+  export const gutsBerserk = FourCC("A10C");
+  export const gutsBerserkerArmor = FourCC("A10D");
+  export const gutsBeastOfDarkness = FourCC("A10E");
 
   export const hirudegarn = FourCC("H05U");
   export const hirudegarnFlameBreath = FourCC("A081");

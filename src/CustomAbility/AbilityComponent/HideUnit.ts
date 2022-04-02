@@ -5,6 +5,7 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
 
   protected isHidden: boolean;
+  protected wasInvul: boolean;
 
   constructor(
     public name: string = "HideUnit",
@@ -17,6 +18,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     public forceReselect: boolean = false,
   ) {
     this.isHidden = false;
+    this.wasInvul = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -27,7 +29,10 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
         PauseUnit(source, true);
       }
       if (this.removeNegativeBuffs) UnitRemoveBuffs(source, false, true);
-      SetUnitInvulnerable(source, true);
+      this.wasInvul = BlzIsUnitInvulnerable(source);
+      if (!this.wasInvul) {
+        SetUnitInvulnerable(source, true);
+      }
     }
 
     if (ability.isFinishedUsing(this)) {
@@ -39,7 +44,9 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       if (this.forceReselect && GetPlayerController(input.casterPlayer) == MAP_CONTROL_USER) {
         SelectUnitAddForPlayer(source, input.casterPlayer);
       }
-      SetUnitInvulnerable(source, false);
+      if (!this.wasInvul) {
+        SetUnitInvulnerable(source, false);
+      }
     }
   }
 

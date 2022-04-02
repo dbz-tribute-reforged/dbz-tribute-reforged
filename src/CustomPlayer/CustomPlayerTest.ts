@@ -432,6 +432,7 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
+  addAbilityAction(abil2, AbilityNames.Cell.SUPER_CHARGE);
 
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
@@ -2992,7 +2993,7 @@ export function SetupVegetaFightingSpirit() {
 
       if (customHero) {
         // give spell amp
-        const spellAmp = 0.2 * (
+        const spellAmp = 0.3 * (
           Math.max(
             0, 
             1 - GetUnitState(unit, UNIT_STATE_LIFE) / Math.max(1, GetUnitState(unit, UNIT_STATE_MAX_LIFE))

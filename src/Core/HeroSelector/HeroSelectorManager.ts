@@ -1,4 +1,5 @@
 import { Constants, Globals, Id } from "Common/Constants";
+import { TextTagHelper } from "Common/TextTagHelper";
 import { HeroAbilitiesList } from "CustomHero/HeroData/HeroAbilitiesList";
 import { CustomUI } from "CustomUI/CustomUI";
 import { HeroSelectCategory } from "./HeroSelectCategory";
@@ -25,6 +26,8 @@ export class HeroSelectorManager {
   public setupFinished: boolean;
   public isGameStarted: boolean;
 
+  public timerText: texttag;
+
   public heroSelectUnits: HeroSelectUnit[];
 
 
@@ -49,6 +52,8 @@ export class HeroSelectorManager {
     this.isPicking = false;
     this.setupFinished = false;
     this.isGameStarted = false;
+    
+    this.timerText = CreateTextTag();
 
     this.heroSelectUnits = [];
 
@@ -65,6 +70,12 @@ export class HeroSelectorManager {
     this.setupGameModes();
     HeroSelector.show(true);
     CustomUI.show(false);
+
+    SetTextTagPos(this.timerText, 29676, 21905, 10);
+    SetTextTagText(this.timerText, "AAAA???", 10);
+    SetTextTagColor(this.timerText, 255, 255, 255, 255);
+    SetTextTagVisibility(this.timerText, true);
+    SetTextTagPermanent(this.timerText, true);
 
     TimerStart(CreateTimer(), 1.0, true, () => {
       if (this.setupFinished) {
@@ -289,7 +300,7 @@ export class HeroSelectorManager {
       }
     }
     
-    if (this.time <= 5) {
+    if (this.isPicking && this.time <= 5) {
       PlaySoundBJ(gg_snd_BattleNetTick);
     }
 
@@ -300,6 +311,7 @@ export class HeroSelectorManager {
     }
 
     this.time -= 1;
+    SetTextTagText(this.timerText, I2S(this.time), 10);
   }
 
 

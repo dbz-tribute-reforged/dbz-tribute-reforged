@@ -389,6 +389,36 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.sonicLightSpeedDash, AbilityNames.Sonic.LIGHT_SPEED_DASH],
     [Id.sonicSuper, AbilityNames.Sonic.SUPER_SONIC],
 
+    // guts
+    [Id.gutsHeavySlash, AbilityNames.Guts.HEAVY_SLASH],
+    [Id.gutsHeavySlam, AbilityNames.Guts.HEAVY_SLAM],
+    [Id.gutsCannonArm, AbilityNames.Guts.CANNON_ARM],
+    [Id.gutsCannonSlash, AbilityNames.Guts.CANNON_SLASH],
+    [Id.gutsRecklessCharge, AbilityNames.Guts.RECKLESS_CHARGE],
+    [Id.gutsRelentlessAssault, AbilityNames.Guts.RELENTLESS_ASSAULT],
+    [Id.gutsRage, AbilityNames.Guts.RAGE],
+    [Id.gutsBerserk, AbilityNames.Guts.BERSERK],
+    [Id.gutsBerserkerArmor, AbilityNames.Guts.BERSERKER_ARMOR],
+    [Id.gutsBeastOfDarkness, AbilityNames.Guts.BEAST_OF_DARKNESS],
+
+
+
+
+
+
+
+
+
+
+
+    // androids 13 14 15
+    [FourCC('A00N'), AbilityNames.Android13.ENERGY_BEAM],
+    // change later distortion field -> android barrier
+    [FourCC('A0LC'), AbilityNames.Android13.SS_DEADLY_HAMMER],
+    // new
+    [FourCC('A0LD'), AbilityNames.Android13.SS_DEADLY_BOMBER],
+    [FourCC('A01Y'), AbilityNames.Android13.NUKE],
+    [FourCC('A0K2'), AbilityNames.Android13.OVERCHARGE],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
@@ -408,17 +438,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0ER'), AbilityNames.Buu.ANGRY_EXPLOSION],
     [FourCC('A0C0'), AbilityNames.Buu.VANISHING_BALL],
     [FourCC('A01D'), AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK],
-
-    // androids 13 14 15
-    [FourCC('A00N'), AbilityNames.Android13.ENERGY_BEAM],
-    // change later distortion field -> android barrier
-    [FourCC('A0LC'), AbilityNames.Android13.SS_DEADLY_HAMMER],
-    // new
-    [FourCC('A0LD'), AbilityNames.Android13.SS_DEADLY_BOMBER],
-    [FourCC('A01Y'), AbilityNames.Android13.NUKE],
-    [FourCC('A0K2'), AbilityNames.Android13.OVERCHARGE],
-
-
 
     // broly
     [FourCC('A0G8'), AbilityNames.Broly.ENERGY_PUNCH],

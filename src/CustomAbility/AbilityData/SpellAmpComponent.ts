@@ -128,12 +128,21 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp cell super charge", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.8,
+    rate: 0.8,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp cell-x", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.20,
-    rate: 0.0003,
+    bonus: 0.25,
+    rate: 0.0009,
   },
   // --------------------------------------------
   { 

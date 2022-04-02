@@ -436,9 +436,22 @@ export module AbilityNames {
     export const INSTA_SHIELD: string = "Sonic Insta-Shield";
     export const HOMING_ATTACK: string = "Sonic Homing Attack";
     export const SPIN_DASH: string = "Sonic Spin Dash";
-    export const LIGHT_SPEED_DASH: string = "Sonic :ight Speed Dash";
+    export const LIGHT_SPEED_DASH: string = "Sonic Light Speed Dash";
     export const SPIN: string = "Sonic Toggle Spin";
     export const SUPER_SONIC: string = "Sonic Super Sonic";
+  }
+
+  export module Guts {
+    export const HEAVY_SLASH: string = "Guts Heavy Slam";
+    export const HEAVY_SLAM: string = "Guts Heavy Slash";
+    export const CANNON_ARM: string = "Guts Cannon Arm";
+    export const CANNON_SLASH: string = "Guts Cannon Slash";
+    export const RECKLESS_CHARGE: string = "Guts Reckless Charge";
+    export const RELENTLESS_ASSAULT: string = "Guts Relentless Assault";
+    export const RAGE: string = "Guts Rage";
+    export const BERSERK: string = "Guts Berserk";
+    export const BERSERKER_ARMOR: string = "Guts Berserker Armor";
+    export const BEAST_OF_DARKNESS: string = "Guts Beast of Darkness";
   }
 
 
@@ -486,6 +499,7 @@ export module AbilityNames {
     export const KAMEHAMEHA: string = Goku.KAMEHAMEHA;
     export const MASENKO: string = Gohan.MASENKO;
     export const SPECIAL_BEAM_CANNON: string = Piccolo.SPECIAL_BEAM_CANNON;
+    export const SUPER_CHARGE: string = "Cell Super Charge";
     export const SPAWN_CELL_JUNIORS: string = "Spawn Cell Juniors";
     export const ABSORB: string = "Absorb Cell";
     export const SOLAR_KAMEHAMEHA: string = "Solar Kamehameha";
