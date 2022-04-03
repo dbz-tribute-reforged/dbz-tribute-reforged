@@ -3277,7 +3277,7 @@ export function SetupYamchaCombos() {
             + 0.01 * GetUnitState(unit, UNIT_STATE_MAX_MANA)
           );
 
-          const dmgMult = 0.4 + (GetHeroLevel(unit) * 0.0008);
+          const dmgMult = 0.5 + (GetHeroLevel(unit) * 0.0005);
 
           // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
           // fire a special qwe

@@ -50,7 +50,7 @@ export module Constants {
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
-  export const heavenHellMaxHeroLevel: number = 10;
+  export const heavenHellMaxHeroLevel: number = 11;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -8200, 20000
   );
@@ -560,6 +560,8 @@ export module Id {
   export const gutsBerserk = FourCC("A10C");
   export const gutsBerserkerArmor = FourCC("A10D");
   export const gutsBeastOfDarkness = FourCC("A10E");
+  export const gutsDragonCannonShot = FourCC("A10L");
+  export const gutsBurstingFlame = FourCC("A10M");
 
   export const hirudegarn = FourCC("H05U");
   export const hirudegarnFlameBreath = FourCC("A081");
