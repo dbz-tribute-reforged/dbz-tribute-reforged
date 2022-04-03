@@ -1941,26 +1941,28 @@ export function sonicPassive(customHero: CustomHero) {
 
 
 export function gutsPassive(customHero: CustomHero) {
-  const rageBasePercentHp = 10;
-  const rageLevelPercentHp = 1;
+  const rageBasePercentHp = 8;
+  const rageLevelPercentHp = 0.8;
   const ragePunishPercent = 0.9;
-  const berserkBasePercentHp = 15;
-  const berserkLevelPercentHp = 1.5;
+  const berserkBasePercentHp = 12;
+  const berserkLevelPercentHp = 1.2;
   const berserkPunishPercent = 0.8;
 
   const castTrigger = CreateTrigger();
   customHero.addPassiveTrigger(castTrigger);
 
-  const slashKey = 1;
-  const cannonKey = 2;
-  const chargeKey = 3;
-  const rageKey = 4;
-  const armorKey = 5;
+  let key = 1;
+  const slashKey = key++; // 1
+  const cannonSlashKey = key++; // 2
+  const cannonKey = key++; // 3
+  const chargeKey = key++; // 4
+  const rageKey = key++; // 5
+  const armorKey = key++; // 6
 
-  const rageHpKey = 6;
-  const rageTimerKey = 7;
-  const berserkHpKey = 8;
-  const berserkTimerKey = 9;
+  const rageHpKey = key++; // 7
+  const rageTimerKey = key++; // 8
+  const berserkHpKey = key++; // 9
+  const berserkTimerKey = key++; // 10
 
   const beastTimer = CreateTimer();
   customHero.addTimer(beastTimer);
@@ -1981,9 +1983,9 @@ export function gutsPassive(customHero: CustomHero) {
             GetUnitState(customHero.unit, UNIT_STATE_LIFE)
           );
           break;
-        case Id.gutsCannonArm:
+        case Id.gutsCannonSlash:
           SaveReal(
-            Globals.genericSpellHashtable, unitId, cannonKey, 
+            Globals.genericSpellHashtable, unitId, cannonSlashKey, 
             GetUnitState(customHero.unit, UNIT_STATE_LIFE)
           );
           break;
@@ -1994,10 +1996,6 @@ export function gutsPassive(customHero: CustomHero) {
           );
           break;
         case Id.gutsRage:
-          SaveReal(
-            Globals.genericSpellHashtable, unitId, rageKey, 
-            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
-          );
           doGutsRage(
             customHero, unitId, 
             rageBasePercentHp, rageLevelPercentHp,
@@ -2005,10 +2003,20 @@ export function gutsPassive(customHero: CustomHero) {
             ragePunishPercent,
             rageHpKey, rageTimerKey
           );
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, rageKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
           break;
         case Id.gutsBerserkerArmor:
           SaveReal(
             Globals.genericSpellHashtable, unitId, armorKey, 
+            GetUnitState(customHero.unit, UNIT_STATE_LIFE)
+          );
+          break;
+        case Id.gutsCannonArm:
+          SaveReal(
+            Globals.genericSpellHashtable, unitId, cannonKey, 
             GetUnitState(customHero.unit, UNIT_STATE_LIFE)
           );
           break;
@@ -2019,12 +2027,12 @@ export function gutsPassive(customHero: CustomHero) {
           );
           SaveReal(Globals.genericSpellHashtable, unitId, slashKey, 0);
           break;
-        case Id.gutsCannonSlash:
+        case Id.gutsBurstingFlame:
           UnitHelper.abilitySwap(
-            player, customHero.unit, Id.gutsCannonSlash, Id.gutsCannonArm, 
+            player, customHero.unit, Id.gutsBurstingFlame, Id.gutsCannonSlash, 
             true, true, false, false, false, -1
           );
-          SaveReal(Globals.genericSpellHashtable, unitId, cannonKey, 0);
+          SaveReal(Globals.genericSpellHashtable, unitId, cannonSlashKey, 0);
           break;
         case Id.gutsRelentlessAssault:
           UnitHelper.abilitySwap(
@@ -2054,6 +2062,13 @@ export function gutsPassive(customHero: CustomHero) {
           );
           SaveReal(Globals.genericSpellHashtable, unitId, armorKey, 0);
           break;
+        case Id.gutsDragonCannonShot:
+          UnitHelper.abilitySwap(
+            player, customHero.unit, Id.gutsDragonCannonShot, Id.gutsCannonArm, 
+            true, true, false, false, false, -1
+          );
+          SaveReal(Globals.genericSpellHashtable, unitId, cannonKey, 0);
+          break;
       }
     }
     return false;
@@ -2069,10 +2084,11 @@ export function gutsPassive(customHero: CustomHero) {
     const reqHpLoss = 0.15 * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE);
 
     doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, slashKey, Id.gutsHeavySlash, Id.gutsHeavySlam);
-    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, cannonKey, Id.gutsCannonArm, Id.gutsCannonSlash);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, cannonSlashKey, Id.gutsCannonSlash, Id.gutsBurstingFlame);
     doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, chargeKey, Id.gutsRecklessCharge, Id.gutsRelentlessAssault);
     doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, rageKey, Id.gutsRage, Id.gutsBerserk);
     doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, armorKey, Id.gutsBerserkerArmor, Id.gutsBeastOfDarkness);
+    doGutsAbilitySwap(customHero, player, unitId, currentHp, reqHpLoss, cannonKey, Id.gutsCannonArm, Id.gutsDragonCannonShot);
 
     doGutsRagePunish(customHero, unitId, currentHp, rageHpKey, rageTimerKey);
     doGutsRagePunish(customHero, unitId, currentHp, berserkHpKey, berserkTimerKey);

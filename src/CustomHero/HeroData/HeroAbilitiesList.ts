@@ -500,12 +500,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [Id.guts, [
       AbilityNames.Guts.HEAVY_SLASH,
       AbilityNames.Guts.HEAVY_SLAM,
-      AbilityNames.Guts.CANNON_ARM,
       AbilityNames.Guts.CANNON_SLASH,
+      AbilityNames.Guts.BURSTING_FLAME,
       AbilityNames.Guts.RECKLESS_CHARGE,
       AbilityNames.Guts.RELENTLESS_ASSAULT,
       AbilityNames.Guts.RAGE,
       AbilityNames.Guts.BERSERK,
+      AbilityNames.Guts.CANNON_ARM,
+      AbilityNames.Guts.DRAGON_CANNON_SHOT,
       AbilityNames.Guts.BERSERKER_ARMOR,
       AbilityNames.Guts.BEAST_OF_DARKNESS,
     ]],
@@ -633,6 +635,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00G"), [
       AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Gohan.MASENKO, 
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
       AbilityNames.Cell.SPAWN_CELL_JUNIORS,

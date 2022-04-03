@@ -392,12 +392,14 @@ export const abilityCodesToNames = new Map<number, string>(
     // guts
     [Id.gutsHeavySlash, AbilityNames.Guts.HEAVY_SLASH],
     [Id.gutsHeavySlam, AbilityNames.Guts.HEAVY_SLAM],
-    [Id.gutsCannonArm, AbilityNames.Guts.CANNON_ARM],
     [Id.gutsCannonSlash, AbilityNames.Guts.CANNON_SLASH],
+    [Id.gutsBurstingFlame, AbilityNames.Guts.BURSTING_FLAME],
     [Id.gutsRecklessCharge, AbilityNames.Guts.RECKLESS_CHARGE],
     [Id.gutsRelentlessAssault, AbilityNames.Guts.RELENTLESS_ASSAULT],
     [Id.gutsRage, AbilityNames.Guts.RAGE],
     [Id.gutsBerserk, AbilityNames.Guts.BERSERK],
+    [Id.gutsCannonArm, AbilityNames.Guts.CANNON_ARM],
+    [Id.gutsDragonCannonShot, AbilityNames.Guts.DRAGON_CANNON_SHOT],
     [Id.gutsBerserkerArmor, AbilityNames.Guts.BERSERKER_ARMOR],
     [Id.gutsBeastOfDarkness, AbilityNames.Guts.BEAST_OF_DARKNESS],
 

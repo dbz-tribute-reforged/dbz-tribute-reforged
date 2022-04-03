@@ -8216,33 +8216,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Guts.CANNON_ARM,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 33,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNGuts.blp",
-      disabled: "BTNGuts.blp",
-    },
-    tooltip: {
-      title: "",
-      body: 
-        ""
-    },
-    components: [
-      { name: "beam guts cannon arm" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.Guts.CANNON_SLASH,
     currentCd: 0,
     maxCd: 1,
@@ -8273,12 +8246,12 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Guts.RECKLESS_CHARGE,
+    name: AbilityNames.Guts.BURSTING_FLAME,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 165,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8295,7 +8268,36 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "damage guts reckless charge dps" },
+      { name: "damage guts bursting flame dps" },
+      { name: "damage guts bursting flame explosion" },
+      { name: "sfx guts bursting flame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.RECKLESS_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      // { name: "damage guts reckless charge dps" },
       { name: "dash ground forward 3dist" },
       { name: "sfx guts reckless charge" },
     ],
@@ -8307,7 +8309,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 165,
+    duration: 200,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8324,9 +8326,65 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "damage guts reckless charge dps" },
-      { name: "dash ground forward 4dist" },
-      { name: "sfx guts reckless charge" },
+      // { name: "damage guts reckless charge dps" },
+      { name: "dash ground forward 5dist" },
+      { name: "sfx guts relentless assault" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.CANNON_ARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam guts cannon arm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guts.DRAGON_CANNON_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuts.blp",
+      disabled: "BTNGuts.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage guts dragon cannon shot explosion" },
+      { name: "beam guts dragon cannon shot" },
+      { name: "sfx guts dragon cannon shot" },
     ],
   },
   // -------------------------------------------
@@ -8336,7 +8394,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 1000,
+    duration: 825,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8364,7 +8422,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 1000,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8382,7 +8440,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block guts beast of darkness" },
-      { name: "dash ground forward 2dist" },
+      { name: "dash ground forward 3dist" },
     ],
   },
   // -------------------------------------------
@@ -9124,7 +9182,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Cell.SUPER_CHARGE,
     currentCd: 0,
-    maxCd: 30,
+    maxCd: 21,
     costType: CostType.SP,
     costAmount: 40,
     duration: 333,
@@ -9141,8 +9199,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "Boosts your ability damage by 80% and increases movement speed by 132 for 10 seconds." + 
-        "|nCost: 40 SP|nCD: 30"
+        "Boosts your ability damage by 75% and increases movement speed by 132 for 10 seconds." + 
+        "|nCost: 40 SP|nCD: 21"
     },
     components: [
       { name: "spell amp cell super charge" },

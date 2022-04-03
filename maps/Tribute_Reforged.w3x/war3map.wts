@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.73
+DBZ Tribute Reforged 0.73a
 }
 
 STRING 4
@@ -4068,7 +4068,7 @@ Namekian Frog
 }
 
 STRING 665
-// Abilities: A007 (Sword Of Hope), EditorSuffix (Editor Suffix)
+// Abilities: A03I (Burning Attack), EditorSuffix (Editor Suffix)
 {
 (ft)
 }
@@ -9845,6 +9845,12 @@ STRING 1571
 {
 |cffffff00Drains 1% of nearby enemy's health per second.|r
 A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 1572
+// Abilities: A007 (Sword Of Hope), EditorSuffix (Editor Suffix)
+{
+(ft)
 }
 
 STRING 1573
@@ -29654,6 +29660,15 @@ STRING 4761
 E
 }
 
+STRING 4762
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool1> seconds|r
+}
+
 STRING 4763
 // Abilities: A0UW (Madness Slash), Tip (Tooltip - Normal)
 {
@@ -46757,7 +46772,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7487
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46814,7 +46829,7 @@ STRING 7495
 }
 
 STRING 7496
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46832,7 +46847,7 @@ Hakai Barrage
 }
 
 STRING 7499
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -46875,7 +46890,7 @@ STRING 7505
 }
 
 STRING 7506
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46907,7 +46922,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7510
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47672,7 +47687,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47696,7 +47711,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48262,7 +48277,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48286,7 +48301,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48512,7 +48527,7 @@ STRING 7767
 }
 
 STRING 7768
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48986,7 +49001,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49010,7 +49025,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -52662,7 +52677,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54175,7 +54190,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -56460,7 +56475,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -57179,7 +57194,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63049,7 +63064,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63067,7 +63082,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -63079,7 +63094,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63097,7 +63112,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63109,7 +63124,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -63127,7 +63142,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -65078,7 +65093,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
+// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -66549,7 +66564,8 @@ Transformations:
 [lvl 120] 2.50x "super perfect" [unlocks Solar Kame]
 [lvl 250] 2.70x "cell-x" [unlocks cell-x form]
 
-To reach Cell's higher forms you must absorb 17/18.
+|cff00ff00Type to unlock:|r
+[lvl 200] "|cff00afffgod kame|r"
 }
 
 STRING 10660
@@ -66914,7 +66930,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -67206,7 +67222,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -68374,7 +68390,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -68392,7 +68408,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -72847,9 +72863,11 @@ Namek Tree
 }
 
 STRING 11688
-// Units: n02L (Revive Point), EditorSuffix (Name - Editor Suffix)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-(large, spawn loc)
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool1> seconds|r
 }
 
 STRING 11689
@@ -72901,9 +72919,11 @@ Full of potassium!
 }
 
 STRING 11696
-// Abilities: A0OF (Revive - Original Respawn), Tip (Tooltip - Normal)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00A|r] Revive - Original
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool2> seconds|r
 }
 
 STRING 11697
@@ -73314,16 +73334,6 @@ STRING 11764
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.06x|r|n|cff00FFFFCooldown: <A00J,Cool10> seconds|r
-}
-
-STRING 11765
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan unleashes the full potential of his ultimate form.
-|cffffff00+30% spell amp.
-+33ms and unlocks movement speed cap.
-|cff00ff00Duration: <A0L8,Dur1>s
-|cff00ffffCooldown: <A0L8,Cool1>s
 }
 
 STRING 11766
@@ -74505,7 +74515,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11954
-// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -74535,7 +74545,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11959
-// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -74559,7 +74569,7 @@ STRING 11962
 }
 
 STRING 11963
-// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -75057,7 +75067,7 @@ STRING 12045
 }
 
 STRING 12046
-// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -75380,7 +75390,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
+// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -76656,7 +76666,7 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -76885,6 +76895,7 @@ STRING 12340
 {
 Type "r" to revert.
 Transformations:
+[lvl 10]  1.30x "fp"
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
@@ -77830,7 +77841,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -79920,7 +79931,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -82517,7 +82528,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
+// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -86191,7 +86202,7 @@ STRING 13816
 }
 
 STRING 13817
-// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -87032,7 +87043,7 @@ STRING 13948
 }
 
 STRING 13949
-// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -91539,7 +91550,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -96838,7 +96849,7 @@ STRING 15392
 }
 
 STRING 15393
-// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
+// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -98216,7 +98227,7 @@ STRING 15581
 }
 
 STRING 15582
-// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
+// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -98415,7 +98426,7 @@ Level 10: Zarbon
 }
 
 STRING 15613
-// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
+// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -98467,10 +98478,10 @@ STRING 15621
 Type "r" to revert.
 Transformations:
 [lvl 1]   1.20x "r"
-[lvl 30]  1.50x "might" [unlocks Oklahoma and Carolina Smash]
+[lvl 35]  1.50x "might" [unlocks Oklahoma and Carolina Smash]
 [lvl 50]  1.60x "might" [unlocks California Smash]
 [lvl 90]  2.00x "might" [unlocks New Hampshire Smash]
-[lvl 150] 2.30x "might" [unlocks One for All]
+[lvl 150] 2.40x "might" [unlocks One for All]
 [lvl 200] 2.50x "might" 
 
 Type "-skin" to change into All Might with a Cape
@@ -98879,7 +98890,7 @@ STRING 15679
 }
 
 STRING 15680
-// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -112955,7 +112966,7 @@ STRING 17607
 }
 
 STRING 17608
-// Units: H0AJ (Black Swordsman), Ubertip (Tooltip - Extended)
+// Units: H0AK (Black Swordsman), Ubertip (Tooltip - Extended)
 {
 A tanky close-range hero that punishes enemies who damage him.
 
@@ -120690,7 +120701,7 @@ STRING 18740
 }
 
 STRING 18741
-// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -120747,7 +120758,7 @@ STRING 18749
 }
 
 STRING 18750
-// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -124469,7 +124480,7 @@ bugged out (super 17)
 }
 
 STRING 19275
-// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -124975,7 +124986,7 @@ STRING 19339
 }
 
 STRING 19340
-// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -124993,7 +125004,7 @@ STRING 19342
 }
 
 STRING 19343
-// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125143,7 +125154,7 @@ STRING 19365
 }
 
 STRING 19366
-// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125197,7 +125208,7 @@ STRING 19374
 }
 
 STRING 19375
-// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -126137,7 +126148,7 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 }
 
 STRING 19505
-// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0YQ (Revive - ??? Respawn), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -126371,7 +126382,7 @@ STRING 19532
 }
 
 STRING 19533
-// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -126389,7 +126400,7 @@ STRING 19535
 }
 
 STRING 19536
-// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -128158,7 +128169,7 @@ STRING 19788
 }
 
 STRING 19789
-// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -129646,7 +129657,7 @@ STRING 20007
 }
 
 STRING 20008
-// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
+// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -130153,7 +130164,7 @@ STRING 20084
 }
 
 STRING 20085
-// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
+// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -130643,7 +130654,7 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 }
 
 STRING 20160
-// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -131968,7 +131979,7 @@ Drops held items.
 }
 
 STRING 20355
-// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
+// Abilities: A108 (Dragon Cannon Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -131993,9 +132004,11 @@ STRING 20358
 }
 
 STRING 20359
-// Abilities: A0YQ (Revive - ??? Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-A
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool3> seconds|r
 }
 
 STRING 20360
@@ -132059,7 +132072,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20368
-// Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
+// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -132137,7 +132150,7 @@ R
 }
 
 STRING 20376
-// Abilities: A0ZU (Drop Items), Hotkey (Hotkey - Normal)
+// Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -132607,19 +132620,19 @@ Improved Harvesting
 }
 
 STRING 20447
-// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
+// Abilities: A108 (Dragon Cannon Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 20448
-// Abilities: A108 (Dragon Cannon Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A10M (Bursting Flame), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20449
-// Abilities: A108 (Dragon Cannon Slash), Hotkey (Hotkey - Normal)
+// Abilities: A10M (Bursting Flame), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -133621,24 +133634,6 @@ STRING 20600
 Q
 }
 
-STRING 20601
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 3|r]
-}
-
-STRING 20602
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 1|r]
-}
-
-STRING 20603
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 2|r]
-}
-
 STRING 20604
 // Abilities: A105 (Heavy Slash), EditorSuffix (Editor Suffix)
 {
@@ -133655,12 +133650,6 @@ STRING 20606
 // Abilities: A104 (Appule Blaster), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Appule Blaster - [|cffffcc00Level %d|r]
-}
-
-STRING 20607
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 4|r]
 }
 
 STRING 20608
@@ -133685,8 +133674,8 @@ STRING 20611
 {
 Type "r" to revert.
 Transformations:
-[lvl 25]  1.40x "guts"
-[lvl 60]  1.70x "guts"
+[lvl 25]  1.30x "guts"
+[lvl 60]  1.60x "guts"
 [lvl 100] 2.00x "guts"
 [lvl 150] 2.30x "guts"
 [lvl 200] 2.40x "guts"
@@ -133702,22 +133691,6 @@ STRING 20612
 Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage.
 }
 
-STRING 20613
-// Units: H0AK (Black Swordsman), Ubertip (Tooltip - Extended)
-{
-A tanky close-range hero that punishes enemies who damage him.
-
-|cffffcc00Determination:|r +10% base STR Mult
-|cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 20614
 // Abilities: A104 (Appule Blaster), EditorSuffix (Editor Suffix)
 {
@@ -133725,17 +133698,11 @@ STRING 20614
 }
 
 STRING 20615
-// Abilities: A10D (Berserker Armor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 10% of Max HP at the end.
-Upgrades to [|cff00ff00D|r] Beast of Darkness.
-|cffffff00+0.1x stat mult
-+33ms
-+15% base damage
--0.2 BAT
-10% damage block up to 2x STR|r
-|cff00FF00Duration: <A10D,Dur1> seconds|r
-|cff00FFFFCooldown: <A10D,Cool1> seconds|r
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool4> seconds|r
 }
 
 STRING 20616
@@ -133751,7 +133718,7 @@ Q
 }
 
 STRING 20618
-// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -134021,16 +133988,81 @@ STRING 20653
 }
 
 STRING 20654
-// Abilities: A10E (Beast of Darkness), Ubertip (Tooltip - Normal - Extended)
+// Units: n02L (Revive Point), EditorSuffix (Name - Editor Suffix)
 {
-Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 20% of Max HP at the end.
-|cffffff00+0.2x stat mult
-+66ms
-+25% base damage
--0.2 BAT
-15% damage block up to 3x STR|r
-|cff00FF00Duration: <A10E,Dur1> seconds|r
-|cff00FFFFCooldown: <A10E,Cool1> seconds|r
+(large, spawn loc, in use)
+}
+
+STRING 20655
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool2> seconds|r
+}
+
+STRING 20656
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool3> seconds|r
+}
+
+STRING 20657
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool4> seconds|r
+}
+
+STRING 20658
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool5> seconds|r
+}
+
+STRING 20659
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool6> seconds|r
+}
+
+STRING 20660
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool7> seconds|r
+}
+
+STRING 20661
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 2|r]
+}
+
+STRING 20662
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 3|r]
+}
+
+STRING 20663
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 4|r]
 }
 
 STRING 20664
@@ -134191,46 +134223,84 @@ Guts slams |cffffcc00Dragon Slayer|r into the ground, stunning all enemies in fr
 |cff00ffffCooldown: <A106,Cool2> seconds|r
 }
 
-STRING 20694
+STRING 20687
 // Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 2|r]
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 5|r]
+}
+
+STRING 20688
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 6|r]
+}
+
+STRING 20689
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 1|r]
+}
+
+STRING 20690
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 7|r]
+}
+
+STRING 20691
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 9|r]
+}
+
+STRING 20692
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 8|r]
+}
+
+STRING 20693
+// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Cannon Arm - [|cffffcc00Level 10|r]
+}
+
+STRING 20694
+// Abilities: A0OF (Revive - Original Respawn), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Revive - Original
 }
 
 STRING 20695
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A0ZU (Drop Items), Hotkey (Hotkey - Normal)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 3|r]
+D
 }
 
 STRING 20696
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10N (Revive - Move Original Spawn), Name (Name)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 4|r]
-}
-
-STRING 20697
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 5|r]
+Revive - Move Original Spawn
 }
 
 STRING 20698
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 6|r]
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool5> seconds|r
 }
 
 STRING 20699
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 1|r]
+D
 }
 
 STRING 20700
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10O (Revive - Move Spawn Bonus Vision), Name (Name)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 7|r]
+Revive - Move Spawn Bonus Vision
 }
 
 STRING 20701
@@ -134240,27 +134310,65 @@ Cannon Arm
 }
 
 STRING 20702
-// Abilities: A107 (Cannon Arm), Researchtip (Tooltip - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Cannon Arm - [|cffffcc00Level %d|r]
 }
 
 STRING 20703
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10P (Revive - True Sight), Name (Name)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 9|r]
+Revive - True Sight
 }
 
 STRING 20704
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10P (Revive - True Sight), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 8|r]
+(revive, in use)
 }
 
 STRING 20705
-// Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Cannon Arm - [|cffffcc00Level 10|r]
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A10M,Cool6> seconds|r
+}
+
+STRING 20706
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool8> seconds|r
+}
+
+STRING 20707
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool9> seconds|r
+}
+
+STRING 20708
+// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00F|r] Dragon Cannon Shot.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool10> seconds|r
+}
+
+STRING 20709
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool1> seconds|r
 }
 
 STRING 20710
@@ -134270,59 +134378,47 @@ STRING 20710
 }
 
 STRING 20711
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
 |cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool1> seconds|r
+|cff00ffffCooldown: <A10M,Cool7> seconds|r
 }
 
 STRING 20712
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
 |cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool2> seconds|r
+|cff00ffffCooldown: <A10M,Cool8> seconds|r
 }
 
 STRING 20713
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
 |cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool3> seconds|r
+|cff00ffffCooldown: <A10M,Cool9> seconds|r
 }
 
 STRING 20714
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Guts concentrates the power of Schierke's spirit into his sword to deal massive burning damage to all nearby enemies after a short delay. Deals up to +25% bonus damage when on low life.
 |cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool4> seconds|r
+|cff00ffffCooldown: <A10M,Cool10> seconds|r
 }
 
 STRING 20715
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool5> seconds|r
+[|cffffcc00Talent|r] God Kamehameha
+Pan can now infuse her kamehameha's with godly energy, allowing them to deal even greater damage.
 }
 
 STRING 20716
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool6> seconds|r
-}
-
-STRING 20717
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
-{
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool7> seconds|r
+[|cffffcc00Talent|r] God Kamehameha
+Cell can now infuse his kamehameha's with dark energy akin to Gods, allowing it to deal even greater damage.
 }
 
 STRING 20718
@@ -134397,32 +134493,8 @@ STRING 20729
 [|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 10|r]
 }
 
-STRING 20730
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
-{
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool8> seconds|r
-}
-
-STRING 20731
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
-{
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool9> seconds|r
-}
-
-STRING 20732
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
-{
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-|cff00ff00Damage: Str x Lvl x ?|r
-|cff00ffffCooldown: <A108,Cool10> seconds|r
-}
-
 STRING 20733
-// Abilities: A108 (Dragon Cannon Slash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A10M (Bursting Flame), Researchubertip (Tooltip - Learn - Extended)
 {
 A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
 |cff00ff00Damage: Agi x Lvl x ?|r
@@ -134447,10 +134519,28 @@ STRING 20736
 [|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 1|r]
 }
 
+STRING 20737
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool2> seconds|r
+}
+
 STRING 20738
 // Abilities: A109 (Reckless Charge), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Reckless Charge - [|cffffcc00Level %d|r]
+}
+
+STRING 20739
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool3> seconds|r
 }
 
 STRING 20740
@@ -134469,6 +134559,24 @@ STRING 20742
 // Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 3|r]
+}
+
+STRING 20743
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool4> seconds|r
+}
+
+STRING 20744
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool5> seconds|r
 }
 
 STRING 20745
@@ -134505,6 +134613,60 @@ STRING 20750
 // Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 9|r]
+}
+
+STRING 20751
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool6> seconds|r
+}
+
+STRING 20752
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool7> seconds|r
+}
+
+STRING 20753
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool8> seconds|r
+}
+
+STRING 20754
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool9> seconds|r
+}
+
+STRING 20755
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool10> seconds|r
+}
+
+STRING 20756
+// Abilities: A108 (Dragon Cannon Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A108,Cool1> - <A108,Cool10> seconds|r
 }
 
 STRING 20757
@@ -134563,6 +134725,19 @@ STRING 20766
 // Abilities: A10A (Relentless Assault), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 3|r]
+}
+
+STRING 20767
+// Abilities: A10E (Beast of Darkness), Ubertip (Tooltip - Normal - Extended)
+{
+Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 20% of Max HP at the end.
+|cffffff00+0.2x stat mult
++99ms
++25% base damage
+-0.2 BAT
+15% damage block up to 3x STR|r
+|cff00FF00Duration: <A10E,Dur1> seconds|r
+|cff00FFFFCooldown: <A10E,Cool1> seconds|r
 }
 
 STRING 20768
@@ -134860,16 +135035,6 @@ STRING 20808
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 1|r]
 }
 
-STRING 20809
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool1> seconds|r
-}
-
 STRING 20810
 // Abilities: A10C (Berserk), Researchtip (Tooltip - Learn)
 {
@@ -134902,26 +135067,6 @@ STRING 20814
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 3|r]
-}
-
-STRING 20815
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool2> seconds|r
-}
-
-STRING 20816
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool3> seconds|r
 }
 
 STRING 20817
@@ -134960,98 +135105,16 @@ STRING 20822
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 9|r]
 }
 
-STRING 20823
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool4> seconds|r
-}
-
-STRING 20824
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool5> seconds|r
-}
-
-STRING 20825
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool6> seconds|r
-}
-
-STRING 20826
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool7> seconds|r
-}
-
-STRING 20827
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool8> seconds|r
-}
-
-STRING 20828
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool9> seconds|r
-}
-
 STRING 20829
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 10|r]
 }
 
-STRING 20830
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10C,Cool10> seconds|r
-}
-
 STRING 20831
-// Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
+// Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 20832
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 5|r]
-}
-
-STRING 20833
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 6|r]
 }
 
 STRING 20834
@@ -135066,24 +135129,6 @@ STRING 20835
 (guts)
 }
 
-STRING 20836
-// Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 20837
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 7|r]
-}
-
-STRING 20838
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 8|r]
-}
-
 STRING 20839
 // Abilities: A10E (Beast of Darkness), Name (Name)
 {
@@ -135094,48 +135139,6 @@ STRING 20840
 // Abilities: A10E (Beast of Darkness), EditorSuffix (Editor Suffix)
 {
 (guts)
-}
-
-STRING 20841
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 9|r]
-}
-
-STRING 20842
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 10|r]
-}
-
-STRING 20843
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 11|r]
-}
-
-STRING 20844
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 12|r]
-}
-
-STRING 20845
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 13|r]
-}
-
-STRING 20846
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 14|r]
-}
-
-STRING 20847
-// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffffcc00Dragon Slayer|r - [|cffffcc00Level 15|r]
 }
 
 STRING 20848
@@ -135382,7 +135385,7 @@ Q
 }
 
 STRING 20877
-// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -135530,15 +135533,37 @@ Sword of Hope
 }
 
 STRING 20901
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 F
+}
+
+STRING 20902
+// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
+{
+G
 }
 
 STRING 20903
 // Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
 {
 Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+3% spell power per second up to +25%.|n60% damage block up to 7 x Str.|nUpgrades Cell Jrs into Cell-X Jrs (50% stats).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+}
+
+STRING 20904
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool1> seconds|r
+}
+
+STRING 20905
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool2> seconds|r
 }
 
 STRING 20906
@@ -135563,6 +135588,14 @@ STRING 20909
 // Abilities: A10D (Berserker Armor), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cffff2020Berserker Armor|r
+}
+
+STRING 20910
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool3> seconds|r
 }
 
 STRING 20911
@@ -135628,186 +135661,6 @@ STRING 20920
 This unit is under the effects of Beast of Darkness; it has increased attack damage.
 }
 
-STRING 20921
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD1,%>% 
-|cffffcc00Critical:|r <A10F,DataA1>% 
-|cffffcc00Damage:|r <A10F,DataB1,.> times
-}
-
-STRING 20922
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD2,%>% 
-|cffffcc00Critical:|r <A10F,DataA2>% 
-|cffffcc00Damage:|r <A10F,DataB2,.> times
-}
-
-STRING 20923
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD3,%>% 
-|cffffcc00Critical:|r <A10F,DataA3>% 
-|cffffcc00Damage:|r <A10F,DataB3,.> times
-}
-
-STRING 20924
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD4,%>% 
-|cffffcc00Critical:|r <A10F,DataA4>% 
-|cffffcc00Damage:|r <A10F,DataB4,.> times
-}
-
-STRING 20925
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD5,%>% 
-|cffffcc00Critical:|r <A10F,DataA5>% 
-|cffffcc00Damage:|r <A10F,DataB5,.> times
-}
-
-STRING 20926
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD6,%>% 
-|cffffcc00Critical:|r <A10F,DataA6>% 
-|cffffcc00Damage:|r <A10F,DataB6,.> times
-}
-
-STRING 20927
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD7,%>% 
-|cffffcc00Critical:|r <A10F,DataA7>% 
-|cffffcc00Damage:|r <A10F,DataB7,.> times
-}
-
-STRING 20928
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD8,%>% 
-|cffffcc00Critical:|r <A10F,DataA8>% 
-|cffffcc00Damage:|r <A10F,DataB8,.> times
-}
-
-STRING 20929
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD9,%>% 
-|cffffcc00Critical:|r <A10F,DataA9>% 
-|cffffcc00Damage:|r <A10F,DataB9,.> times
-}
-
-STRING 20930
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD10,%>% 
-|cffffcc00Critical:|r <A10F,DataA10>% 
-|cffffcc00Damage:|r <A10F,DataB10,.> times
-}
-
-STRING 20931
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD11,%>% 
-|cffffcc00Critical:|r <A10F,DataA11>% 
-|cffffcc00Damage:|r <A10F,DataB11,.> times
-}
-
-STRING 20932
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD12,%>% 
-|cffffcc00Critical:|r <A10F,DataA12>% 
-|cffffcc00Damage:|r <A10F,DataB12,.> times
-}
-
-STRING 20933
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD13,%>% 
-|cffffcc00Critical:|r <A10F,DataA13>% 
-|cffffcc00Damage:|r <A10F,DataB13,.> times
-}
-
-STRING 20934
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD14,%>% 
-|cffffcc00Critical:|r <A10F,DataA14>% 
-|cffffcc00Damage:|r <A10F,DataB14,.> times
-}
-
-STRING 20935
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD15,%>% 
-|cffffcc00Critical:|r <A10F,DataA15>% 
-|cffffcc00Damage:|r <A10F,DataB15,.> times
-}
-
 STRING 20936
 // Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -135820,94 +135673,78 @@ Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00
 |cffffcc00Damage:|r <A10F,DataB1,.> - <A10F,DataB15,.> times
 }
 
-STRING 20943
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+STRING 20937
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
 |cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool1> seconds|r
+|cff00ffffCooldown: <A10L,Cool4> seconds|r
 }
 
-STRING 20944
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+STRING 20938
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
 |cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool2> seconds|r
+|cff00ffffCooldown: <A10L,Cool5> seconds|r
 }
 
-STRING 20945
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+STRING 20939
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
 |cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool3> seconds|r
+|cff00ffffCooldown: <A10L,Cool6> seconds|r
 }
 
-STRING 20946
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+STRING 20940
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
 |cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool4> seconds|r
+|cff00ffffCooldown: <A10L,Cool7> seconds|r
 }
 
-STRING 20947
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+STRING 20941
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool5> seconds|r
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 2|r]
+}
+
+STRING 20942
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 3|r]
 }
 
 STRING 20948
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10N (Revive - Move Original Spawn), Tip (Tooltip - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool6> seconds|r
+[|cff00ff00G|r] Move Original Spawn
 }
 
 STRING 20949
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool7> seconds|r
+G
 }
 
 STRING 20950
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool8> seconds|r
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 3|r]
 }
 
 STRING 20951
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool9> seconds|r
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 1|r]
 }
 
 STRING 20952
-// Abilities: A107 (Cannon Arm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
 {
-Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
-Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
-|cff00ff00Damage: Agi x Lvl x ?|r
-|cff00ffffCooldown: <A107,Cool10> seconds|r
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 2|r]
 }
 
 STRING 20953
@@ -136018,113 +135855,702 @@ Upgrades to [|cff00ff00E|r] Relentless Assault.
 |cff00ffffCooldown: <A109,Cool10> seconds|r
 }
 
-STRING 20965
+STRING 20976
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 4|r]
+}
+
+STRING 20977
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 5|r]
+}
+
+STRING 20978
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 6|r]
+}
+
+STRING 20979
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 1|r]
+}
+
+STRING 20980
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 7|r]
+}
+
+STRING 20981
+// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 20982
+// Abilities: A10L (Dragon Cannon Shot), Name (Name)
+{
+Dragon Cannon Shot
+}
+
+STRING 20984
+// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 20985
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 9|r]
+}
+
+STRING 20986
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 8|r]
+}
+
+STRING 20987
+// Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 20988
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool8> seconds|r
+}
+
+STRING 20989
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool9> seconds|r
+}
+
+STRING 20990
+// Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' fires a high-powered second shot with his cannon arm that deals bonus damage to nearby enemies.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A10L,Cool10> seconds|r
+}
+
+STRING 20991
+// Abilities: A10L (Dragon Cannon Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' prostethic arm doubles as a miniature cannon proving an effective secondary weapon to his |cffffcc00Dragon Slayer|r.
+Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A107,Cool1> - <A107,Cool10> seconds|r
+}
+
+STRING 20992
+// Abilities: A10L (Dragon Cannon Shot), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 21000
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 2|r]
+}
+
+STRING 21001
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 3|r]
+}
+
+STRING 21002
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 4|r]
+}
+
+STRING 21003
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 5|r]
+}
+
+STRING 21004
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 6|r]
+}
+
+STRING 21005
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 1|r]
+}
+
+STRING 21006
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 7|r]
+}
+
+STRING 21007
+// Abilities: A10M (Bursting Flame), Name (Name)
+{
+Bursting Flame
+}
+
+STRING 21008
+// Abilities: A10M (Bursting Flame), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Cannon Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 21009
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 9|r]
+}
+
+STRING 21010
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 8|r]
+}
+
+STRING 21011
+// Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 10|r]
+}
+
+STRING 21015
+// Abilities: A10M (Bursting Flame), EditorSuffix (Editor Suffix)
+{
+(guts)
+}
+
+STRING 21016
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 21017
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 4|r]
+}
+
+STRING 21018
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 5|r]
+}
+
+STRING 21019
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 6|r]
+}
+
+STRING 21020
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 7|r]
+}
+
+STRING 21021
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 8|r]
+}
+
+STRING 21022
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 9|r]
+}
+
+STRING 21023
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 10|r]
+}
+
+STRING 21024
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 11|r]
+}
+
+STRING 21025
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 12|r]
+}
+
+STRING 21026
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 13|r]
+}
+
+STRING 21027
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 14|r]
+}
+
+STRING 21028
+// Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
+{
+|cffffcc00Dragon Slayer|r - [|cffffcc00Level 15|r]
+}
+
+STRING 21030
+// Abilities: A10N (Revive - Move Original Spawn), Ubertip (Tooltip - Normal - Extended)
+{
+Moves your revive point to anywhere on the main map (excludes Namek and Future). Must select a valid walkable location that is not out of bounds.
+|cffff2020Can only be used before the 1 minute mark!
+}
+
+STRING 21031
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan unleashes the full potential of his ultimate form.
+|cffffff00+40% spell amp.
++33ms and unlocks movement speed cap.
+|cff00ff00Duration: <A0L8,Dur1>s
+|cff00ffffCooldown: <A0L8,Cool1>s
+}
+
+STRING 21032
+// Abilities: A107 (Cannon Arm), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Cannon Arm - [|cffffcc00Level %d|r]
+}
+
+STRING 21033
+// Abilities: A10D (Berserker Armor), Ubertip (Tooltip - Normal - Extended)
+{
+Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage. While active the armor keeps his body together and attempts to prevent him from dying. Loses 10% of Max HP at the end.
+Upgrades to [|cff00ff00D|r] Beast of Darkness.
+|cffffff00+0.1x stat mult
++33ms
++15% base damage
+-0.2 BAT
+10% damage block up to 2x STR|r
+|cff00FF00Duration: <A10D,Dur1> seconds|r
+|cff00FFFFCooldown: <A10D,Cool1> seconds|r
+}
+
+STRING 21034
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD1,%>% 
+|cffffcc00Critical:|r <A10F,DataA1>% 
+|cffffcc00Damage:|r <A10F,DataB1,.> times
+}
+
+STRING 21035
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD2,%>% 
+|cffffcc00Critical:|r <A10F,DataA2>% 
+|cffffcc00Damage:|r <A10F,DataB2,.> times
+}
+
+STRING 21036
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD3,%>% 
+|cffffcc00Critical:|r <A10F,DataA3>% 
+|cffffcc00Damage:|r <A10F,DataB3,.> times
+}
+
+STRING 21037
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD4,%>% 
+|cffffcc00Critical:|r <A10F,DataA4>% 
+|cffffcc00Damage:|r <A10F,DataB4,.> times
+}
+
+STRING 21038
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD5,%>% 
+|cffffcc00Critical:|r <A10F,DataA5>% 
+|cffffcc00Damage:|r <A10F,DataB5,.> times
+}
+
+STRING 21039
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD6,%>% 
+|cffffcc00Critical:|r <A10F,DataA6>% 
+|cffffcc00Damage:|r <A10F,DataB6,.> times
+}
+
+STRING 21040
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD7,%>% 
+|cffffcc00Critical:|r <A10F,DataA7>% 
+|cffffcc00Damage:|r <A10F,DataB7,.> times
+}
+
+STRING 21041
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD8,%>% 
+|cffffcc00Critical:|r <A10F,DataA8>% 
+|cffffcc00Damage:|r <A10F,DataB8,.> times
+}
+
+STRING 21042
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD9,%>% 
+|cffffcc00Critical:|r <A10F,DataA9>% 
+|cffffcc00Damage:|r <A10F,DataB9,.> times
+}
+
+STRING 21043
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD10,%>% 
+|cffffcc00Critical:|r <A10F,DataA10>% 
+|cffffcc00Damage:|r <A10F,DataB10,.> times
+}
+
+STRING 21044
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD11,%>% 
+|cffffcc00Critical:|r <A10F,DataA11>% 
+|cffffcc00Damage:|r <A10F,DataB11,.> times
+}
+
+STRING 21045
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD12,%>% 
+|cffffcc00Critical:|r <A10F,DataA12>% 
+|cffffcc00Damage:|r <A10F,DataB12,.> times
+}
+
+STRING 21046
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD13,%>% 
+|cffffcc00Critical:|r <A10F,DataA13>% 
+|cffffcc00Damage:|r <A10F,DataB13,.> times
+}
+
+STRING 21047
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD14,%>% 
+|cffffcc00Critical:|r <A10F,DataA14>% 
+|cffffcc00Damage:|r <A10F,DataB14,.> times
+}
+
+STRING 21048
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: -0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD15,%>% 
+|cffffcc00Critical:|r <A10F,DataA15>% 
+|cffffcc00Damage:|r <A10F,DataB15,.> times
+}
+
+STRING 21049
+// Units: H0AJ (Black Swordsman), Ubertip (Tooltip - Extended)
+{
+A tanky close-range hero that punishes enemies who damage him.
+
+|cffffcc00Determination:|r +10% base STR Mult
+|cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 21050
 // Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
 Upgrades to [|cff00ff00R|r] Berserk.
 |cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
 |cff00ffffCooldown: <A10B,Cool1> seconds|r
 }
 
-STRING 20966
+STRING 21051
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool2> seconds|r
+}
+
+STRING 21052
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool3> seconds|r
+}
+
+STRING 21053
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool4> seconds|r
+}
+
+STRING 21054
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool5> seconds|r
+}
+
+STRING 21055
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool6> seconds|r
+}
+
+STRING 21056
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool7> seconds|r
+}
+
+STRING 21057
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool8> seconds|r
+}
+
+STRING 21058
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool9> seconds|r
+}
+
+STRING 21059
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool10> seconds|r
+}
+
+STRING 21060
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool1> seconds|r
+}
+
+STRING 21061
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool2> seconds|r
+}
+
+STRING 21062
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool3> seconds|r
+}
+
+STRING 21063
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool4> seconds|r
+}
+
+STRING 21064
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool5> seconds|r
+}
+
+STRING 21065
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool6> seconds|r
+}
+
+STRING 21066
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool7> seconds|r
+}
+
+STRING 21067
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool8> seconds|r
+}
+
+STRING 21068
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool9> seconds|r
+}
+
+STRING 21069
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool10> seconds|r
+}
+
+STRING 21070
 // Abilities: A10B (Rage), Researchubertip (Tooltip - Learn - Extended)
 {
 Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
 Upgrades to [|cff00ff00R|r] Berserk.
 |cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
 |cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
 }
 
-STRING 20967
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+STRING 21071
 {
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool2> seconds|r
-}
-
-STRING 20968
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool3> seconds|r
-}
-
-STRING 20969
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool4> seconds|r
-}
-
-STRING 20970
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool5> seconds|r
-}
-
-STRING 20971
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool6> seconds|r
-}
-
-STRING 20972
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool7> seconds|r
-}
-
-STRING 20973
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool8> seconds|r
-}
-
-STRING 20974
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool9> seconds|r
-}
-
-STRING 20975
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 10% +1% per lvl
-|cff00ffffCooldown: <A10B,Cool10> seconds|r
+|cffffcc00Press ~ or F8 to select your revive point and move it anywhere on the main map for the 1st minute of the game. |r
 }
 

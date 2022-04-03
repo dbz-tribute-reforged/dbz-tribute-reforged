@@ -7,7 +7,7 @@ export module CameraZoom {
     const PERIOD = 1.0;
 
     const ZOOM_MIN = 1400.0;
-    const ZOOM_MAX = 4000.0;
+    const ZOOM_MAX = 6000.0;
 
     const ANGLE_MIN = 270.0;
     const ANGLE_MAX = 360.0;
@@ -24,7 +24,7 @@ export module CameraZoom {
         public performZoom() {
             if (GetLocalPlayer() == this.p) {
                 SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
-                SetCameraField(CAMERA_FIELD_FARZ, 1.7 * this.zoom, 0.0);
+                SetCameraField(CAMERA_FIELD_FARZ, 10 * this.zoom, 0.0);
                 SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
                 SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
                 SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);
