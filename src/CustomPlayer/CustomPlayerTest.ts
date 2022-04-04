@@ -1279,8 +1279,9 @@ export function SetupBraveSwordAttack() {
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.25;
+  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.3;
   const braveSwordManaBurnMult = 0.01;
+  const maxManaCostMult = 0.2;
 
   TriggerAddAction(Globals.genericSpellTrigger, () => {
     const spellId = GetSpellAbilityId();
@@ -1316,6 +1317,11 @@ export function SetupBraveSwordAttack() {
       });
       
       if (checkCount > 0) {
+        const mpCost = maxManaCostMult * GetUnitState(caster, UNIT_STATE_MAX_MANA);
+        SetUnitState(
+          caster, UNIT_STATE_MANA, 
+          Math.max(0, GetUnitState(caster, UNIT_STATE_MANA) - mpCost)
+        );
         casterPos.setUnit(caster);
         const moveAngle = CoordMath.angleBetweenCoords(casterPos, tmpPos);
         let time = 0;

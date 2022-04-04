@@ -2283,7 +2283,7 @@ export const AbilitiesList = [
         AbilityNames.Tapion.BRAVE_SWORD_ATTACK,
     },
     components: [
-      { name: "dash ground point 15dist" },
+      // { name: "dash ground point 15dist" },
       { name: "sfx brave sword attack" },
     ],
   },
