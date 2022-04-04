@@ -19921,6 +19921,27 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [
+      {
+        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 100,
+          z: 55,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "weapon",
+      },
     ],
   },
   // --------------------------------------------

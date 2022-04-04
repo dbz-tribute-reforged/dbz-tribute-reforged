@@ -7264,7 +7264,7 @@ function Trig_Cell_Juniors_Func005C()
     return true
 end
 
-function Trig_Cell_Juniors_Func011C()
+function Trig_Cell_Juniors_Func010C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), GetSummoningUnit()) > 0)) then
         return false
     end
@@ -7290,10 +7290,11 @@ function Trig_Cell_Juniors_Actions()
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt2)
     ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt3)
     SuspendHeroXPBJ(false, GetSummonedUnit())
-    UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
-    if (Trig_Cell_Juniors_Func011C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), 9)
+    if (Trig_Cell_Juniors_Func010C()) then
+        UnitAddAbilityBJ(FourCC("A0L9"), GetSummonedUnit())
+        SetUnitAbilityLevelSwapped(FourCC("A0L9"), GetSummonedUnit(), 5)
     else
+        UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
         SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
     end
     udg_StatMultUnit = GetSummonedUnit()
@@ -20105,6 +20106,16 @@ function Trig_Setup_Per_Player_Properties_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
+        FogModifierStart(GetLastCreatedFogModifier())
+        FogModifierStop(GetLastCreatedFogModifier())
+        DestroyFogModifier(GetLastCreatedFogModifier())
+        udg_TempInt = udg_TempInt + 1
+    end
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
         udg_OriginalPlayerNames[udg_TempInt] = GetPlayerName(udg_TempPlayer)
         TriggerExecute(gg_trg_Init_Disable_Abilities_For_TempPlayer)
         TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
@@ -31904,6 +31915,8 @@ function Trig_Add_Unit_To_StatMult_Actions()
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func025C()) then
+            UnitAddAbilityBJ(FourCC("A0G0"), udg_StatMultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_StatMultUnit, 1)
             SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.35), 34, udg_ID, udg_StatMultHashtable)
             TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
         else
@@ -43846,7 +43859,7 @@ function Trig_Transformations_Cell_Perfect_Func013C()
     return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func014Func010C()
+function Trig_Transformations_Cell_Perfect_Func014Func011C()
     if (udg_TransformationString == "cell-x") then
         return true
     end
@@ -43863,7 +43876,7 @@ function Trig_Transformations_Cell_Perfect_Func014C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit) == 0)) then
         return false
     end
-    if (not Trig_Transformations_Cell_Perfect_Func014Func010C()) then
+    if (not Trig_Transformations_Cell_Perfect_Func014Func011C()) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
@@ -43882,7 +43895,14 @@ function Trig_Transformations_Cell_Perfect_Func015C()
     return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func017Func001Func003C()
+function Trig_Transformations_Cell_Perfect_Func016C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_StatMultUnit) < 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cell_Perfect_Func018Func001Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -43892,14 +43912,14 @@ function Trig_Transformations_Cell_Perfect_Func017Func001Func003C()
     return false
 end
 
-function Trig_Transformations_Cell_Perfect_Func017Func001C()
-    if (not Trig_Transformations_Cell_Perfect_Func017Func001Func003C()) then
+function Trig_Transformations_Cell_Perfect_Func018Func001C()
+    if (not Trig_Transformations_Cell_Perfect_Func018Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func017C()
+function Trig_Transformations_Cell_Perfect_Func018C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -43948,6 +43968,7 @@ function Trig_Transformations_Cell_Perfect_Actions()
         SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 9)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
         UnitRemoveAbilityBJ(FourCC("A00R"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20716")
@@ -43962,8 +43983,13 @@ function Trig_Transformations_Cell_Perfect_Actions()
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
-    if (Trig_Transformations_Cell_Perfect_Func017C()) then
-        if (Trig_Transformations_Cell_Perfect_Func017Func001C()) then
+    if (Trig_Transformations_Cell_Perfect_Func016C()) then
+        UnitAddAbilityBJ(FourCC("A00Q"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_StatMultUnit, IMinBJ(15, (GetHeroLevel(udg_StatMultUnit) // 10)))
+    else
+    end
+    if (Trig_Transformations_Cell_Perfect_Func018C()) then
+        if (Trig_Transformations_Cell_Perfect_Func018Func001C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H00G')

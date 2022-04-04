@@ -641,7 +641,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 39,
+    distance: 45,
   },
   // ultimate burning warrior
   {

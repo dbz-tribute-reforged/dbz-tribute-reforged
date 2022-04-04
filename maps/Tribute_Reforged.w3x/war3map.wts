@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.73a
+DBZ Tribute Reforged 0.73b
 }
 
 STRING 4
@@ -15642,14 +15642,9 @@ STRING 2503
 }
 
 STRING 2504
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00Q (Celluar Enhancement), Researchtip (Tooltip - Learn)
 {
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> times
+[|cff00FF00G|r] Learn Cellular Enhancement - [|cffffcc00Level %d|r]
 }
 
 STRING 2505
@@ -18792,7 +18787,7 @@ STRING 3016
 }
 
 STRING 3017
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -19896,7 +19891,7 @@ Future Gohan Training
 }
 
 STRING 3195
-// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -21116,7 +21111,7 @@ W
 }
 
 STRING 3396
-// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -21140,7 +21135,7 @@ STRING 3399
 }
 
 STRING 3400
-// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23365,7 +23360,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23377,7 +23372,7 @@ Celluar Enhancement
 }
 
 STRING 3769
-// Abilities: A00Q (Celluar Enhancement), Researchtip (Tooltip - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r]  Learn Cellular Enhancement - [|cffffcc00Level %d|r]
 }
@@ -24191,7 +24186,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24836,7 +24831,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25172,7 +25167,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25415,7 +25410,7 @@ Great Summoning
 }
 
 STRING 4075
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
+// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -25811,7 +25806,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -26345,7 +26340,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27194,7 +27189,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4363
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -27218,7 +27213,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4367
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -28079,7 +28074,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -28421,7 +28416,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -30264,7 +30259,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -32481,7 +32476,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -33387,7 +33382,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35458,7 +35453,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5704
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -35502,7 +35497,7 @@ STRING 5710
 }
 
 STRING 5711
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35770,7 +35765,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -36692,7 +36687,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -37622,7 +37617,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38775,7 +38770,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38992,7 +38987,7 @@ Super Masenko
 }
 
 STRING 6284
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -39196,7 +39191,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -39204,12 +39199,6 @@ F
 STRING 6319
 {
 |cff00ffff[Only host sees this] Catchup Stats Activated|r
-}
-
-STRING 6320
-// Abilities: A0DU (Cellular Enhancement), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00F|r]  Learn Cellular Enhancement - [|cffffcc00Level %d|r]
 }
 
 STRING 6321
@@ -42016,7 +42005,7 @@ R
 }
 
 STRING 6763
-// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42034,7 +42023,7 @@ STRING 6765
 }
 
 STRING 6766
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -43353,7 +43342,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0II (Capsule: Time Ring), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -44033,7 +44022,7 @@ Goten rapidly throws multiple pebbles at his opponent, dealing minor damage and 
 }
 
 STRING 7075
-// Abilities: A0II (Capsule: Time Ring), Hotkey (Hotkey - Normal)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44275,7 +44264,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 7110
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45406,7 +45395,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7276
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45753,7 +45742,7 @@ STRING 7328
 }
 
 STRING 7329
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45783,7 +45772,7 @@ BrolyRevert2
 }
 
 STRING 7334
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45795,7 +45784,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45942,7 +45931,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7359
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -46667,7 +46656,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -46866,7 +46855,7 @@ STRING 7501
 }
 
 STRING 7502
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -47839,7 +47828,7 @@ STRING 7655
 }
 
 STRING 7656
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50316,7 +50305,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50580,7 +50569,7 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 8092
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -51077,63 +51066,9 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8174
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 1% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool1>s|r
-}
-
-STRING 8175
-// Abilities: A0IA (Brave Sword Attack), Researchubertip (Tooltip - Learn - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 1 * lvl% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool1>s|r
-}
-
-STRING 8176
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 2% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool2>s|r
-}
-
-STRING 8177
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 3% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool3>s|r
-}
-
-STRING 8178
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 4% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool4>s|r
-}
-
-STRING 8179
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 5% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool5>s|r
-}
-
-STRING 8180
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 6% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool6>s|r
-}
-
-STRING 8181
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 7% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool7>s|r
-}
-
-STRING 8182
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 8% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool8>s|r
-}
-
-STRING 8183
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 9% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool9>s|r
+G
 }
 
 STRING 8184
@@ -51221,7 +51156,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -51230,12 +51165,6 @@ STRING 8199
 // Abilities: A0ID (Tapion's Style), Name (Name)
 {
 Tapion's Style
-}
-
-STRING 8200
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 10% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool10>s|r
 }
 
 STRING 8201
@@ -53843,7 +53772,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -54322,7 +54251,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55177,7 +55106,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57398,7 +57327,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57422,13 +57351,13 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57650,7 +57579,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57674,7 +57603,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61310,7 +61239,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 9816
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61872,7 +61801,7 @@ STRING 9908
 }
 
 STRING 9909
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61884,7 +61813,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62531,7 +62460,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62549,7 +62478,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63581,13 +63510,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64121,7 +64050,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64139,7 +64068,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64895,7 +64824,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65003,19 +64932,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
-{
-F
-}
-
-STRING 10418
 // Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
-STRING 10419
+STRING 10418
 // Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 10419
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65917,7 +65846,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65935,7 +65864,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66736,7 +66665,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67424,7 +67353,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68546,7 +68475,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68564,7 +68493,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69447,7 +69376,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -69490,7 +69419,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69630,7 +69559,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70115,7 +70044,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70133,7 +70062,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70904,13 +70833,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72077,7 +72006,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72095,7 +72024,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -73336,6 +73265,17 @@ STRING 11764
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.06x|r|n|cff00FFFFCooldown: <A00J,Cool10> seconds|r
 }
 
+STRING 11765
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> times
+}
+
 STRING 11766
 // Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
@@ -74086,7 +74026,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -74104,7 +74044,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -74953,7 +74893,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77095,20 +77035,9 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 12372
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
-|cffffcc00Critical|r - <A0G0,DataA2>% 
-|cffffcc00Damage|r - <A0G0,DataB2,.> times
 }
 
 STRING 12373
@@ -77697,7 +77626,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77721,7 +77650,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77961,7 +77890,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77979,7 +77908,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78033,7 +77962,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78051,7 +77980,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -79839,28 +79768,6 @@ STRING 12797
 Frost Claws Blind
 }
 
-STRING 12798
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
-|cffffcc00Critical|r - <A0G0,DataA3>% 
-|cffffcc00Damage|r - <A0G0,DataB3,.> times
-}
-
-STRING 12799
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
-|cffffcc00Critical|r - <A0G0,DataA4>% 
-|cffffcc00Damage|r - <A0G0,DataB4,.> times
-}
-
 STRING 12800
 // Buffs/Effects: B02V (), Bufftip (Tooltip)
 {
@@ -80066,7 +79973,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80714,7 +80621,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80747,7 +80654,7 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 }
 
 STRING 12942
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81003,7 +80910,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82414,7 +82321,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82450,7 +82357,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83123,13 +83030,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83664,7 +83571,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83700,7 +83607,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84070,7 +83977,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84088,7 +83995,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84382,7 +84289,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84400,7 +84307,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84812,7 +84719,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84856,7 +84763,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -85188,7 +85095,7 @@ Repairs 40% of Max HP and increases Max HP based on Farmer's current level.
 }
 
 STRING 13652
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85215,7 +85122,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -85971,7 +85878,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -88273,7 +88180,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88307,7 +88214,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89112,7 +89019,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89407,7 +89314,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89425,7 +89332,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -91922,7 +91829,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95252,7 +95159,7 @@ A light punch.
 }
 
 STRING 15167
-// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -95294,7 +95201,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -96114,7 +96021,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -96879,7 +96786,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -98238,17 +98145,6 @@ STRING 15583
 [|cff00FF00D|r] Energy Blades
 }
 
-STRING 15584
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
-|cffffcc00Critical|r - <A0G0,DataA5>% 
-|cffffcc00Damage|r - <A0G0,DataB5,.> times
-}
-
 STRING 15585
 // Abilities: A0SV (Energy Blades), Name (Name)
 {
@@ -98773,17 +98669,6 @@ STRING 15664
 [|cff00ff00Q|r] Jump - [|cffffcc00Level 9|r]
 }
 
-STRING 15665
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
-|cffffcc00Critical|r - <A0G0,DataA6>% 
-|cffffcc00Damage|r - <A0G0,DataB6,.> times
-}
-
 STRING 15666
 // Abilities: A0TZ (Sword of Hope), EditorSuffix (Editor Suffix)
 {
@@ -98956,32 +98841,10 @@ STRING 15688
 Lucario can now transform into Mega Lucario.
 }
 
-STRING 15689
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
-|cffffcc00Critical|r - <A0G0,DataA7>% 
-|cffffcc00Damage|r - <A0G0,DataB7,.> times
-}
-
 STRING 15690
 {
 [|cffffcc00Ultimate|r] Gigantamax
 Lucario can now transform into his gigantamax form.
-}
-
-STRING 15691
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
-|cffffcc00Critical|r - <A0G0,DataA8>% 
-|cffffcc00Damage|r - <A0G0,DataB8,.> times
 }
 
 STRING 15692
@@ -100678,7 +100541,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100707,7 +100570,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -102589,7 +102452,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
+// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -102607,7 +102470,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -103774,7 +103637,7 @@ STRING 16359
 }
 
 STRING 16360
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -106927,7 +106790,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -107806,7 +107669,7 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 }
 
 STRING 16890
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108196,7 +108059,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108953,7 +108816,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -109085,7 +108948,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109760,7 +109623,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109864,7 +109727,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -116576,17 +116439,6 @@ Fires a blast in your targets direction. Pan gains a temporary damage aura after
 |cff00FFFFCooldown: <A0LU,Cool1>s|r
 }
 
-STRING 18147
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
-|cffffcc00Critical|r - <A0G0,DataA9>% 
-|cffffcc00Damage|r - <A0G0,DataB9,.> times
-}
-
 STRING 18148
 // Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -117141,7 +116993,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117603,7 +117455,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -118681,17 +118533,6 @@ STRING 18457
 [|cff00ff00D|r] Learn Flare - [|cffffcc00Level %d|r]
 }
 
-STRING 18458
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
-|cffffcc00Critical|r - <A0G0,DataA10>% 
-|cffffcc00Damage|r - <A0G0,DataB10,.> times
-}
-
 STRING 18459
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
@@ -118722,76 +118563,10 @@ STRING 18463
 [|cff00ff00D|r] Flare - [|cffffcc00Level 6|r]
 }
 
-STRING 18464
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
-|cffffcc00Critical|r - <A0G0,DataA11>% 
-|cffffcc00Damage|r - <A0G0,DataB11,.> times
-}
-
-STRING 18465
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
-|cffffcc00Critical|r - <A0G0,DataA12>% 
-|cffffcc00Damage|r - <A0G0,DataB12,.> times
-}
-
-STRING 18466
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
-|cffffcc00Critical|r - <A0G0,DataA13>% 
-|cffffcc00Damage|r - <A0G0,DataB13,.> times
-}
-
-STRING 18467
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
-|cffffcc00Critical|r - <A0G0,DataA14>% 
-|cffffcc00Damage|r - <A0G0,DataB14,.> times
-}
-
-STRING 18468
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB15,.> times
-}
-
 STRING 18469
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Flare - [|cffffcc00Level 7|r]
-}
-
-STRING 18470
-// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
 }
 
 STRING 18471
@@ -119124,7 +118899,7 @@ STRING 18520
 }
 
 STRING 18521
-// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -120884,7 +120659,7 @@ Turns off harvester's engine, enabling abilities and upgrades.
 }
 
 STRING 18769
-// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122410,7 +122185,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122777,7 +122552,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122801,7 +122576,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -124009,7 +123784,7 @@ STRING 19203
 }
 
 STRING 19204
-// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -125172,7 +124947,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125241,7 +125016,7 @@ STRING 19379
 }
 
 STRING 19380
-// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -128203,7 +127978,7 @@ R
 }
 
 STRING 19794
-// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129453,7 +129228,7 @@ STRING 19977
 }
 
 STRING 19978
-// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -129471,7 +129246,7 @@ STRING 19980
 }
 
 STRING 19981
-// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -130128,7 +129903,7 @@ STRING 20078
 }
 
 STRING 20079
-// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -130140,7 +129915,7 @@ STRING 20080
 }
 
 STRING 20081
-// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -130686,7 +130461,7 @@ STRING 20164
 }
 
 STRING 20165
-// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
+// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -131791,7 +131566,7 @@ Farming Book
 }
 
 STRING 20324
-// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
+// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -132989,7 +132764,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -133634,6 +133409,39 @@ STRING 20600
 Q
 }
 
+STRING 20601
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
+|cffffcc00Critical|r - <A0G0,DataA2>% 
+|cffffcc00Damage|r - <A0G0,DataB2,.> times
+}
+
+STRING 20602
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
+|cffffcc00Critical|r - <A0G0,DataA3>% 
+|cffffcc00Damage|r - <A0G0,DataB3,.> times
+}
+
+STRING 20603
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
+|cffffcc00Critical|r - <A0G0,DataA4>% 
+|cffffcc00Damage|r - <A0G0,DataB4,.> times
+}
+
 STRING 20604
 // Abilities: A105 (Heavy Slash), EditorSuffix (Editor Suffix)
 {
@@ -133650,6 +133458,17 @@ STRING 20606
 // Abilities: A104 (Appule Blaster), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Appule Blaster - [|cffffcc00Level %d|r]
+}
+
+STRING 20607
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
+|cffffcc00Critical|r - <A0G0,DataA5>% 
+|cffffcc00Damage|r - <A0G0,DataB5,.> times
 }
 
 STRING 20608
@@ -133691,6 +133510,17 @@ STRING 20612
 Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage.
 }
 
+STRING 20613
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
+|cffffcc00Critical|r - <A0G0,DataA6>% 
+|cffffcc00Damage|r - <A0G0,DataB6,.> times
+}
+
 STRING 20614
 // Abilities: A104 (Appule Blaster), EditorSuffix (Editor Suffix)
 {
@@ -133718,7 +133548,7 @@ Q
 }
 
 STRING 20618
-// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -134283,6 +134113,17 @@ STRING 20696
 Revive - Move Original Spawn
 }
 
+STRING 20697
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
+|cffffcc00Critical|r - <A0G0,DataA7>% 
+|cffffcc00Damage|r - <A0G0,DataB7,.> times
+}
+
 STRING 20698
 // Abilities: A10M (Bursting Flame), Ubertip (Tooltip - Normal - Extended)
 {
@@ -134421,6 +134262,17 @@ STRING 20716
 Cell can now infuse his kamehameha's with dark energy akin to Gods, allowing it to deal even greater damage.
 }
 
+STRING 20717
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
+|cffffcc00Critical|r - <A0G0,DataA8>% 
+|cffffcc00Damage|r - <A0G0,DataB8,.> times
+}
+
 STRING 20718
 // Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
 {
@@ -134491,6 +134343,39 @@ STRING 20729
 // Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 20730
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
+|cffffcc00Critical|r - <A0G0,DataA9>% 
+|cffffcc00Damage|r - <A0G0,DataB9,.> times
+}
+
+STRING 20731
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
+|cffffcc00Critical|r - <A0G0,DataA10>% 
+|cffffcc00Damage|r - <A0G0,DataB10,.> times
+}
+
+STRING 20732
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
+|cffffcc00Critical|r - <A0G0,DataA11>% 
+|cffffcc00Damage|r - <A0G0,DataB11,.> times
 }
 
 STRING 20733
@@ -134673,6 +134558,17 @@ STRING 20757
 // Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 10|r]
+}
+
+STRING 20758
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
+|cffffcc00Critical|r - <A0G0,DataA12>% 
+|cffffcc00Damage|r - <A0G0,DataB12,.> times
 }
 
 STRING 20759
@@ -135035,6 +134931,17 @@ STRING 20808
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 1|r]
 }
 
+STRING 20809
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
+|cffffcc00Critical|r - <A0G0,DataA13>% 
+|cffffcc00Damage|r - <A0G0,DataB13,.> times
+}
+
 STRING 20810
 // Abilities: A10C (Berserk), Researchtip (Tooltip - Learn)
 {
@@ -135067,6 +134974,28 @@ STRING 20814
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 3|r]
+}
+
+STRING 20815
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
+|cffffcc00Critical|r - <A0G0,DataA14>% 
+|cffffcc00Damage|r - <A0G0,DataB14,.> times
+}
+
+STRING 20816
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB15,.> times
 }
 
 STRING 20817
@@ -135105,16 +135034,91 @@ STRING 20822
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 9|r]
 }
 
+STRING 20823
+// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+3% restore rate of time skip charges per level.
++2% restore rate per hero killed.
+|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
+}
+
+STRING 20824
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 1% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool1>s|r
+}
+
+STRING 20825
+// Abilities: A0IA (Brave Sword Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 1 * lvl% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool1>s|r
+}
+
+STRING 20826
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 2% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool2>s|r
+}
+
+STRING 20827
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 3% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool3>s|r
+}
+
+STRING 20828
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 4% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool4>s|r
+}
+
 STRING 20829
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 10|r]
 }
 
+STRING 20830
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 5% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool5>s|r
+}
+
 STRING 20831
 // Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 20832
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 6% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool6>s|r
+}
+
+STRING 20833
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 7% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool7>s|r
 }
 
 STRING 20834
@@ -135127,6 +135131,30 @@ STRING 20835
 // Abilities: A10D (Berserker Armor), EditorSuffix (Editor Suffix)
 {
 (guts)
+}
+
+STRING 20836
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 8% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool8>s|r
+}
+
+STRING 20837
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 9% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool9>s|r
+}
+
+STRING 20838
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ff00Mana Burn: 10% of damage dealt|n|cff00FFFFCooldown: <A0IA,Cool10>s|r
 }
 
 STRING 20839
@@ -135385,7 +135413,7 @@ Q
 }
 
 STRING 20877
-// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -135533,7 +135561,7 @@ Sword of Hope
 }
 
 STRING 20901
-// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -135886,7 +135914,7 @@ STRING 20980
 }
 
 STRING 20981
-// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -135898,7 +135926,7 @@ Dragon Cannon Shot
 }
 
 STRING 20984
-// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -136036,12 +136064,6 @@ STRING 21015
 // Abilities: A10M (Bursting Flame), EditorSuffix (Editor Suffix)
 {
 (guts)
-}
-
-STRING 21016
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
-{
-F
 }
 
 STRING 21017
