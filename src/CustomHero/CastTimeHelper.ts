@@ -7,144 +7,222 @@ import { CustomHero } from "./CustomHero";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SoundHelper } from "Common/SoundHelper";
+import { Constants, Globals, OrderIds } from "Common/Constants";
 
-export module CastTimeHelper {
-  export function addEventRightClick(trigger: trigger, input: CustomAbilityInput) {
-    // replace with better user input system / detect more inputs
-    TriggerRegisterPlayerUnitEvent(
-      trigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit && !UnitHelper.isUnitStunned(input.caster.unit);
-      })
-    );
-    TriggerRegisterPlayerUnitEvent(
-      trigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit && 
-          !UnitHelper.isUnitStunned(input.caster.unit);
-      })
-    );
+export class CastTimeHelper {
+  private static instance: CastTimeHelper;
+
+  protected castTimeTrigger: trigger;
+
+  protected castTimeTimer: timer;
+  protected abilityTimer2: timer;
+  protected abilityTimer3: timer;
+
+  protected castTimeUnits: Map<number, CustomAbility[]>;
+  protected activeAbilities: Map<CustomAbility, CustomAbilityInput>;
+
+  constructor () {
+    this.castTimeTrigger = CreateTrigger();
+    
+    this.castTimeTimer = CreateTimer();
+    this.abilityTimer2 = CreateTimer();
+    this.abilityTimer3 = CreateTimer();
+    
+    this.castTimeUnits = new Map();
+    this.activeAbilities = new Map();
+    this.initialize();
   }
 
-  export function addEventStopCasting(trigger: trigger, input: CustomAbilityInput) {
-    TriggerRegisterPlayerUnitEvent(
-      trigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_ISSUED_ORDER, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit &&
-          (GetUnitCurrentOrder(input.caster.unit) == OrderId("stop") ||
-           UnitHelper.isUnitStunned(input.caster.unit));
-      })
-    );
-
-    // if a stunned unit is damaged
-    // TriggerRegisterPlayerUnitEvent(
-    //   trigger, 
-    //   input.casterPlayer, 
-    //   EVENT_PLAYER_UNIT_DAMAGED, 
-    //   Condition(() => {
-    //     return GetFilterUnit() == input.caster.unit && 
-    //       UnitHelper.isUnitStunned(input.caster.unit);
-    //   })
-    // );
-
-    // if you deslect the casting unit
-    TriggerRegisterPlayerUnitEvent(
-      trigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_DESELECTED, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit;
-      })
-    );
-  }
-
-  export function cleanupCastTime(
-    hero: CustomHero, 
-    ability: CustomAbility,
-    castTimeTimer: timer, 
-    readyTrigger: trigger, 
-    stopCastingTrigger: trigger
-  ) {
-    hero.isCastTimeWaiting = false;
-    hero.isCasting.set(ability, false);
-    DestroyTimer(castTimeTimer);
-    DestroyTrigger(readyTrigger);
-    DestroyTrigger(stopCastingTrigger);
-  }
-
-  export function startCastTimeTimer(
-    castTimeTimer: timer, 
-    hero: CustomHero, 
-    ability: CustomAbility, 
-    input: CustomAbilityInput,
-    readyTrigger: trigger,
-    stopCastingTrigger: trigger,
-  ) {
-    let castTimeCounter = 0;
-    if (ability.animation) {
-      SetUnitAnimation(input.caster.unit, ability.animation);
+  public static getInstance() {
+    if (this.instance == null) {
+      this.instance = new CastTimeHelper();
     }
-    const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-    const angle = CoordMath.angleBetweenCoords(casterCoord, input.targetPoint);
+    return this.instance;
+  }
 
-    TimerStart(castTimeTimer, ability.updateRate, true, () => {
-      if (castTimeCounter == 0) {
-        SetUnitFacingTimed(input.caster.unit, angle, ability.updateRate);
-      }
-      castTimeCounter += ability.updateRate;
-      if (castTimeCounter > ability.castTime) {
-        // then if ready
-        // actually activate the ability
-        ability.activate(input);
-        if (
-          ability.name == AbilityNames.BasicAbility.ZANZO_DASH
-          || ability.name == AbilityNames.BasicAbility.ZANZOKEN
-        ) {
-          SoundHelper.playSoundOnUnit(hero.unit, "Audio/Effects/Zanzo.mp3", 1149);
-        }
-        cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
-      }
+
+  public initialize() {
+    this.setupAbilityTimers();
+    this.setupCastTimeTrigger();
+  }
+
+  public setupAbilityTimers() {
+    TimerStart(this.abilityTimer2, 0.02, true, () => {
+      this.runAbilityTimer(0.02);
+    });
+
+    TimerStart(this.abilityTimer3, 0.03, true, () => {
+      this.runAbilityTimer(0.03);
     });
   }
 
-  export function waitCastTimeThenActivate(
+  public runAbilityTimer(interval: number) {
+    const toBeDeleted: CustomAbility[] = [];
+
+    for (const [abil, input] of this.activeAbilities.entries()) {
+      if (abil.updateRate != interval) continue;
+      if (abil.waitsForNextClick && !abil.isNextRightClick()) continue;
+
+      if (abil.isCasting()) {
+        this.runAbilityCasting(abil, input, interval);
+      } else {
+        this.runAbilityActivation(abil, input, toBeDeleted);
+      }
+    }
+
+    toBeDeleted.forEach((abil: CustomAbility) => {
+      this.activeAbilities.delete(abil);
+    });
+  }
+
+  runAbilityCasting(abil: CustomAbility, input: CustomAbilityInput, interval: number) {
+    if (!abil.isFinishedCasting()) {
+      abil.setCastTimeCounter(abil.getCastTimeCounter() + interval);
+    } else {
+      abil.setCastTimeCounter(0);
+      if (
+        abil.name == AbilityNames.BasicAbility.ZANZO_DASH
+        || abil.name == AbilityNames.BasicAbility.ZANZOKEN
+      ) {
+        SoundHelper.playSoundOnUnit(input.caster.unit, "Audio/Effects/Zanzo.mp3", 1149);
+      }
+      abil.activate(input);
+    }
+  }
+
+  runAbilityActivation(abil: CustomAbility, input: CustomAbilityInput, toBeDeleted: CustomAbility[]) {
+    abil.activateOnTimer(input);
+    
+    if (abil.isFinished()) {
+      print(abil.name, " finished");
+      if (abil.waitsForNextClick) {
+        abil.setNextRightClickFlag(false);
+      }
+      toBeDeleted.push(abil);
+    }
+  }
+
+  public setupCastTimeTrigger() {
+    // register all valid players for right click activations
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerUnitEvent(
+        this.castTimeTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_DESELECTED, 
+        null
+      );
+      TriggerRegisterPlayerUnitEvent(
+        this.castTimeTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_ISSUED_ORDER, 
+        null
+      );
+      TriggerRegisterPlayerUnitEvent(
+        this.castTimeTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
+        null
+      );
+      TriggerRegisterPlayerUnitEvent(
+        this.castTimeTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, 
+        null
+      );
+    }
+
+    TriggerAddCondition(this.castTimeTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      const player = GetTriggerPlayer();
+      if (GetOwningPlayer(unit) != player) return false;
+
+      const abils = this.castTimeUnits.get(unitId);
+      if (!abils || abils.length == 0) return false;
+
+      const orderId = GetIssuedOrderId();
+      const isStunned = UnitHelper.isUnitStunned(unit);
+      const isCancelled = !orderId || (orderId && orderId == OrderIds.STOP) || isStunned;
+
+      const toBeDeleted = [];
+      for (const abil of abils) {
+        print("cast time : ", abil.name);
+        if (isCancelled) {
+          TextTagHelper.showPlayerColorTextOnUnit(
+            abil.name + " cancelled", 
+            GetPlayerId(player), 
+            unit
+          );
+          abil.setCastTimeCounter(0);
+          this.activeAbilities.delete(abil);
+          this.removeCastTimeFromCustomHero(unit, abil);
+          toBeDeleted.push(abil);
+        } else if (abil.waitsForNextClick) {
+          abil.setNextRightClickFlag(true);
+          if (abil.castTime > 0) {
+            abil.setCastTimeCounter(0.01);
+          } else {
+            const input = this.activeAbilities.get(abil);
+            if (input) abil.activate(input);
+          }
+          this.removeCastTimeFromCustomHero(unit, abil);
+          toBeDeleted.push(abil);
+        }
+      }
+      
+      this.castTimeUnits.set(
+        unitId,
+        abils.filter((value: CustomAbility) => {
+          return toBeDeleted.indexOf(value) < 0;
+        })
+      );
+
+      return false;
+    }));
+  }
+
+  removeCastTimeFromCustomHero(unit: unit, ability: CustomAbility) {
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+    if (playerId < 0 || playerId > Globals.customPlayers.length) return;
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+    if (!customHero) return;
+
+    customHero.isCastTimeWaiting = false;
+    customHero.isCasting.set(ability, false);
+  }
+
+
+  waitCastTimeThenActivate(
     hero: CustomHero, 
     ability: CustomAbility, 
     input: CustomAbilityInput
   ) {
-    const readyTrigger = CreateTrigger();
-    const castTimeTimer = CreateTimer();
-    const stopCastingTrigger = CreateTrigger();
-    
-    addEventStopCasting(stopCastingTrigger, input);
-    TriggerAddAction(stopCastingTrigger, ()=> {
-      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
-      TextTagHelper.showPlayerColorTextOnUnit(
-        ability.name + " cancelled", 
-        GetPlayerId(GetOwningPlayer(hero.unit)), 
-        hero.unit
-      );
-      cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
-    })
-    
-    if (ability.waitsForNextClick) {
-      // TODO: make this into UI instead of just print to screen
-      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " on next right click.");
-      addEventRightClick(readyTrigger, input);
-      TriggerAddAction(readyTrigger, () => {
-        startCastTimeTimer(castTimeTimer, hero, ability, input, readyTrigger, stopCastingTrigger);
-      });
+    const activeAbil = this.activeAbilities.get(ability);
+    if (activeAbil) {
+      ability.endAbility();
+      ability.resetCooldown();
     } else {
-      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " instantly.");
-      ability.activate(input);
-      cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
+      this.activeAbilities.set(ability, input);
     }
 
+    if (ability.castTime == 0) {
+      print("insta start cast ", ability.name)
+      ability.activate(input);
+      this.removeCastTimeFromCustomHero(hero.unit, ability);
+    } else {
+      print("delay start cast ", ability.name);
+      const unitId = GetHandleId(hero.unit);
+      const arr = this.castTimeUnits.get(unitId);
+      if (arr) {
+        arr.push(ability);
+      } else {
+        this.castTimeUnits.set(unitId, [ability]);
+      }
+      if (!ability.waitsForNextClick) {
+        ability.setCastTimeCounter(0.01);
+      }
+    }
   }
 }

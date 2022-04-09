@@ -35,6 +35,8 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    print(ability.currentTick, this.isChannelling, this.finishedChannel);
+    
     if (!this.isChannelling) {
       this.isChannelling = true;
       this.finishedChannel = false;
@@ -58,11 +60,13 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
         // }))
   
         TriggerAddAction(this.cancelChannelTrigger, () => {
+          print("channel cancel");
           this.finishedChannel = true;
           DisableTrigger(this.cancelChannelTrigger);
         });
         
         this.triggerHasBeenSetup = true;
+        print("setup done");
       }
     }
 
@@ -75,6 +79,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     }
 
     if (ability.isFinishedUsing(this)) {
+      print("channel finish");
       this.isChannelling = false;
       DisableTrigger(this.cancelChannelTrigger);
     }
@@ -95,6 +100,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   deserialize(
     input: { 
       name: string; 
+
       repeatInterval: number; 
       startTick: number;
       endTick: number;

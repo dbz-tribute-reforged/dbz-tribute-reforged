@@ -22225,7 +22225,7 @@ export const SfxComponents = [
       },
       {
         model: "LaxusSpark.mdl",
-        repeatInterval: 16,
+        repeatInterval: 1,
         group: 0,
         scale: 2.0,
         endScale: -1,

@@ -12,8 +12,10 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   static readonly BASE_DAMAGE = 1500;
   static readonly BASE_AVG_TICKS = 5;
 
+  public nextRightClickFlag: boolean;
+  public castTimeCounter: number;
   public currentTick: number;
-  protected abilityTimer: timer;
+  // protected abilityTimer: timer;
 
   constructor(
     public name: string = "No Ability", 
@@ -32,14 +34,20 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     public tooltip: Tooltip = new Tooltip(),
     public components: AbilityComponent[] = [],
   ) {
+    this.nextRightClickFlag = false;
+    this.castTimeCounter = 0;
     this.currentTick = 0;
-    this.abilityTimer = CreateTimer();
+    // this.abilityTimer = CreateTimer();
   }
 
   activate(input: CustomAbilityInput): void {
     this.takeCosts(input);
 
     // instant activate, bypasses 0.03s delay for ability to start
+    this.activateOnTimer(input);
+  }
+
+  activateOnTimer(input: CustomAbilityInput): void {
     if (this.currentTick <= this.duration) {
       for (const component of this.components) {
         if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
@@ -49,19 +57,34 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       ++this.currentTick;
     }
     this.updateCd();
-    // activate over time every 0.03s
-    TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (this.currentTick <= this.duration) {
-        for (const component of this.components) {
-          if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-            component.performTickAction(this, input, input.caster.unit);
-          }
-        }
-        ++this.currentTick;
-      }
-      this.updateCd();
-    });
   }
+
+  // oldActivate(input: CustomAbilityInput): void {
+  //   this.takeCosts(input);
+
+  //   // instant activate, bypasses 0.03s delay for ability to start
+  //   if (this.currentTick <= this.duration) {
+  //     for (const component of this.components) {
+  //       if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+  //         component.performTickAction(this, input, input.caster.unit);
+  //       }
+  //     }
+  //     ++this.currentTick;
+  //   }
+  //   this.updateCd();
+  //   // activate over time every 0.03s
+  //   TimerStart(this.abilityTimer, this.updateRate, true, () => {
+  //     if (this.currentTick <= this.duration) {
+  //       for (const component of this.components) {
+  //         if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+  //           component.performTickAction(this, input, input.caster.unit);
+  //         }
+  //       }
+  //       ++this.currentTick;
+  //     }
+  //     this.updateCd();
+  //   });
+  // }
 
   canCastAbility(input: CustomAbilityInput): boolean {
     if (this.currentCd > 0) return false;
@@ -126,6 +149,32 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     this.currentCd = this.maxCd;
   }
 
+  isNextRightClick(): boolean {
+    return this.nextRightClickFlag;
+  }
+
+  setNextRightClickFlag(b: boolean): this {
+    this.nextRightClickFlag = b;
+    return this;
+  }
+
+  isCasting(): boolean {
+    return this.castTimeCounter > 0;
+  }
+
+  getCastTimeCounter(): number {
+    return this.castTimeCounter;
+  }
+
+  setCastTimeCounter(n: number) {
+    this.castTimeCounter = n;
+    return this;
+  }
+
+  isFinishedCasting() {
+    return this.castTimeCounter > this.castTime;
+  }
+
   getName(): string {
     return this.name;
   }
@@ -134,11 +183,15 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     return (this.currentTick > 0 && this.currentTick <= this.duration);
   }
 
+  isFinished(): boolean {
+    return (this.currentCd == 0 && this.currentTick == 0);
+  }
+
   updateCd() {
     if (this.currentCd <= 0 && this.currentTick > this.duration) {
       this.currentCd = 0;
       this.currentTick = 0;
-      PauseTimer(this.abilityTimer);
+      // PauseTimer(this.abilityTimer);
     } else {
       this.currentCd -= this.updateRate;
     }

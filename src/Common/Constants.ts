@@ -67,6 +67,10 @@ export module Constants {
   export const invalidTeamValue: number = 0;
   export const team1Value: number = 1;
   export const team2Value: number = 2;
+  export let activePlayers: player[] = [
+    Player(0), Player(1), Player(2), Player(3), Player(4),
+    Player(5), Player(6), Player(7), Player(8), Player(9)
+  ];
   export let defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];
   export let defaultTeam2: player[] = [Player(5), Player(6), Player(7), Player(8), Player(9)];
   export const creepPlayers: player[] = [

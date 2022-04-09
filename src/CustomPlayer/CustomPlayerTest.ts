@@ -1274,10 +1274,11 @@ export function SetupBraveSwordAttack() {
   const tickRate = 0.02;
   const jumpDuration = 40;
   const jumpHeight = 900;
-  const jumpMoveDistance = 30;
-  const jumpSpeedModifier = 0.0015;
-  const jumpSpeedModifierMax = 1.33;
-  const jumpSpeedModifierMin = 0.15;
+  const jumpMoveDistance = 2;
+  // const jumpMoveDistance = 30;
+  // const jumpSpeedModifier = 0.0015;
+  // const jumpSpeedModifierMax = 1.33;
+  // const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
   const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.3;
   const braveSwordManaBurnMult = 0.01;
@@ -1428,6 +1429,10 @@ export function SetupBraveSwordAttack() {
               1 - timeJumpRatio * timeJumpRatio
             );
             SetUnitFlyHeight(caster, height, 0);
+
+            tmpPos.setUnit(caster);
+            tmpPos.polarProjectCoords(tmpPos, GetUnitFacing(caster), jumpMoveDistance);
+            PathingCheck.moveGroundUnitToCoord(caster, tmpPos);
             
             // tmpPos.setPos(
             //   LoadReal(Globals.genericSpellHashtable, casterId, 0),

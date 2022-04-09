@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.73b
+DBZ Tribute Reforged 0.73c
 }
 
 STRING 4
@@ -541,22 +541,6 @@ STRING 89
 Cell
 }
 
-STRING 90
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
-}
-
-STRING 91
-// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
-}
-
 STRING 92
 // Units: H00E (Cell "First Form"), Ubertip (Tooltip - Extended)
 {
@@ -646,14 +630,6 @@ STRING 104
 // Units: H00E (Cell "First Form"), Awakentip (Tooltip - Awaken)
 {
 Choose Cell
-}
-
-STRING 105
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool2,.>s|r
 }
 
 STRING 106
@@ -1840,28 +1816,12 @@ STRING 297
 Android 13
 }
 
-STRING 298
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool3,.>s|r
-}
-
 STRING 299
 // Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
 {
 Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
 |cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
 |cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
-}
-
-STRING 300
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool4,.>s|r
 }
 
 STRING 301
@@ -6707,26 +6667,10 @@ STRING 1072
 Tapion
 }
 
-STRING 1073
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool5,.>s|r
-}
-
 STRING 1074
 // Abilities: A0UW (Madness Slash), Name (Name)
 {
 Madness Slash
-}
-
-STRING 1075
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool6,.>s|r
 }
 
 STRING 1076
@@ -8066,26 +8010,10 @@ STRING 1279
 Future Trunks
 }
 
-STRING 1280
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool7,.>s|r
-}
-
 STRING 1281
 // Units: n02Q (Giant Crocodile), Name (Name)
 {
 Giant Crocodile
-}
-
-STRING 1282
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool8,.>s|r
 }
 
 STRING 1283
@@ -9742,14 +9670,6 @@ STRING 1554
 Senzu Bean
 }
 
-STRING 1555
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool9,.>s|r
-}
-
 STRING 1556
 // Items: I01I (Senzu Bean UNUSED), Tip (Tooltip - Basic)
 {
@@ -10306,14 +10226,6 @@ STRING 1643
 // Items: I02Z (King Kai's food), Description (Description)
 {
 A little undercooked, but it fills you up.
-}
-
-STRING 1644
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool10,.>s|r
 }
 
 STRING 1645
@@ -13499,7 +13411,7 @@ Transformations:
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.40x "rage" [Unlocks Upa's Rage 4]
 [lvl 250] 2.50x "rage" [Unlocks Upa's Rage 5]
-[lvl 300] [Unlocks Upa's Rage 6]
+[lvl 300] 2.60x "rage" [Unlocks Upa's Rage 6]
 }
 
 STRING 2162
@@ -20962,24 +20874,6 @@ STRING 3371
 // Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
 {
 Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1> - <A0MR,Cool10>s|r
-}
-
-STRING 3372
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
-}
-
-STRING 3373
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
-}
-
-STRING 3374
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
 }
 
 STRING 3375
@@ -34454,38 +34348,8 @@ STRING 5551
 [|cff00FF00W|r] Learn Slappy Hand  [|cffffcc00Level %d|r]
 }
 
-STRING 5552
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
-}
-
-STRING 5553
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
-}
-
-STRING 5554
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
-}
-
-STRING 5555
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
-}
-
-STRING 5556
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
-}
-
 STRING 5557
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
@@ -34578,7 +34442,7 @@ D
 }
 
 STRING 5572
-// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
@@ -39199,6 +39063,14 @@ F
 STRING 6319
 {
 |cff00ffff[Only host sees this] Catchup Stats Activated|r
+}
+
+STRING 6320
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
 }
 
 STRING 6321
@@ -43860,13 +43732,6 @@ STRING 7051
 {
 The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0TU,Cool9> seconds|r
-}
-
-STRING 7052
-// Abilities: A0TU (Super Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
-|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0TU,Cool10> seconds|r
 }
 
 STRING 7053
@@ -50097,14 +49962,6 @@ Shoto uses his left side to generate a burst of flames to incinerate his enemies
 |cff00ffffCooldown: <A0YS,Cool4,.> seconds|r
 }
 
-STRING 8027
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool2> seconds|r
-}
-
 STRING 8028
 // Abilities: A0I2 (Passive: Bleed Out), EditorSuffix (Editor Suffix)
 {
@@ -51071,6 +50928,78 @@ STRING 8174
 G
 }
 
+STRING 8175
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
+}
+
+STRING 8176
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool3>s|r
+}
+
+STRING 8177
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool4>s|r
+}
+
+STRING 8178
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool5>s|r
+}
+
+STRING 8179
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
+}
+
+STRING 8180
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool7>s|r
+}
+
+STRING 8181
+// Abilities: A0I9 (Brave Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+}
+
+STRING 8182
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool8>s|r
+}
+
+STRING 8183
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool9>s|r
+}
+
 STRING 8184
 // Abilities: A0ID (Tapion's Style), Tip (Tooltip - Normal)
 {
@@ -51165,6 +51094,14 @@ STRING 8199
 // Abilities: A0ID (Tapion's Style), Name (Name)
 {
 Tapion's Style
+}
+
+STRING 8200
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool10>s|r
 }
 
 STRING 8201
@@ -58058,11 +57995,11 @@ Revive - Original Respawn
 }
 
 STRING 9290
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
 }
 
 STRING 9291
@@ -63335,7 +63272,7 @@ STRING 10161
 Type "r" to revert.
 
 Transformations:
-[lvl 15]  1.20x "ws"
+[lvl 20]  1.20x "ws"
 [lvl 40]  1.60x "ss"
 [lvl 100] 2.00x "lss"
 [lvl 150] 2.40x "uss"
@@ -75420,11 +75357,11 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12114
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool2>s|r
 }
 
 STRING 12115
@@ -76798,11 +76735,11 @@ The user punches in front of them, dealing damage to enemies and deflecting beam
 }
 
 STRING 12335
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool3>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool3>s|r
 }
 
 STRING 12336
@@ -77038,6 +76975,12 @@ STRING 12371
 // Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
+}
+
+STRING 12372
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
 }
 
 STRING 12373
@@ -78223,6 +78166,7 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 120] 2.25x "fp"
 [lvl 150] 2.50x "fp"
+[lvl 250] 2.60x "fp"
 }
 
 STRING 12558
@@ -78730,11 +78674,11 @@ Z
 }
 
 STRING 12642
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool4>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool4>s|r
 }
 
 STRING 12643
@@ -79766,6 +79710,18 @@ STRING 12797
 // Abilities: A0P6 (Frost Claws Blind), Name (Name)
 {
 Frost Claws Blind
+}
+
+STRING 12798
+// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+}
+
+STRING 12799
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
 }
 
 STRING 12800
@@ -83690,14 +83646,6 @@ STRING 13437
 // Abilities: A0FT (Time Skip), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Time Skip - [|cffffcc00Level 1|r]
-}
-
-STRING 13438
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
 }
 
 STRING 13439
@@ -95390,11 +95338,11 @@ Q
 }
 
 STRING 15200
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool5>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool5>s|r
 }
 
 STRING 15201
@@ -98145,6 +98093,12 @@ STRING 15583
 [|cff00FF00D|r] Energy Blades
 }
 
+STRING 15584
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+}
+
 STRING 15585
 // Abilities: A0SV (Energy Blades), Name (Name)
 {
@@ -98669,6 +98623,12 @@ STRING 15664
 [|cff00ff00Q|r] Jump - [|cffffcc00Level 9|r]
 }
 
+STRING 15665
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
+}
+
 STRING 15666
 // Abilities: A0TZ (Sword of Hope), EditorSuffix (Editor Suffix)
 {
@@ -98841,10 +98801,22 @@ STRING 15688
 Lucario can now transform into Mega Lucario.
 }
 
+STRING 15689
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+}
+
 STRING 15690
 {
 [|cffffcc00Ultimate|r] Gigantamax
 Lucario can now transform into his gigantamax form.
+}
+
+STRING 15691
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
 }
 
 STRING 15692
@@ -99442,38 +99414,6 @@ STRING 15776
 [|cff00ff00Q|r] Time Skip - [|cffffcc00Level 9|r]
 }
 
-STRING 15777
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool2>s|r
-}
-
-STRING 15778
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool3>s|r
-}
-
-STRING 15779
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool4>s|r
-}
-
-STRING 15780
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool5>s|r
-}
-
 STRING 15781
 // Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
 {
@@ -99644,14 +99584,6 @@ STRING 15808
 [|cff00ff00Q|r] Learn Octoslash - [|cffffcc00Level %d|r]
 }
 
-STRING 15809
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool6>s|r
-}
-
 STRING 15810
 // Abilities: A0T7 (Octoslash), EditorSuffix (Editor Suffix)
 {
@@ -99674,30 +99606,6 @@ STRING 15813
 // Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Octoslash - [|cffffcc00Level 10|r]
-}
-
-STRING 15814
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool7>s|r
-}
-
-STRING 15815
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool8>s|r
-}
-
-STRING 15816
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool9>s|r
 }
 
 STRING 15817
@@ -100685,14 +100593,6 @@ STRING 15945
 [|cff00FF00Q|r] Learn Time Skip - [|cffffcc00Level %d|r]
 }
 
-STRING 15946
-// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
-}
-
 STRING 15947
 // Abilities: A0FT (Time Skip), Tip (Tooltip - Normal)
 {
@@ -101046,14 +100946,6 @@ Sephiroth holds a defensive stance, preparing himself for any threat that approa
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00ff00Damage Block: 75% up to Agi * Lvl * 3
 |cff00FFFFCooldown: <A0TD,Cool10> seconds|r
-}
-
-STRING 15988
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
-{
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool10>s|r
 }
 
 STRING 15989
@@ -101480,11 +101372,11 @@ STRING 16055
 }
 
 STRING 16056
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool6>s|r
 }
 
 STRING 16057
@@ -101566,11 +101458,11 @@ W
 }
 
 STRING 16070
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool7>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool7>s|r
 }
 
 STRING 16071
@@ -101580,11 +101472,11 @@ Super Cape
 }
 
 STRING 16072
-// Abilities: A0I9 (Brave Slash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool8>s|r
 }
 
 STRING 16073
@@ -101648,19 +101540,19 @@ STRING 16082
 }
 
 STRING 16083
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool8>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool9>s|r
 }
 
 STRING 16084
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool9>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
 }
 
 STRING 16085
@@ -102034,11 +101926,11 @@ Spin Jump
 }
 
 STRING 16130
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool10>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool10>s|r
 }
 
 STRING 16131
@@ -103084,45 +102976,52 @@ STRING 16279
 }
 
 STRING 16280
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
 }
 
 STRING 16281
-// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
 }
 
 STRING 16282
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool2,.>s|r
 }
 
 STRING 16283
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool3,.>s|r
 }
 
 STRING 16284
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool4,.>s|r
 }
 
 STRING 16285
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool5,.>s|r
 }
 
 STRING 16286
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool6,.>s|r
 }
 
 STRING 16287
@@ -103138,21 +103037,24 @@ STRING 16288
 }
 
 STRING 16289
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool7,.>s|r
 }
 
 STRING 16290
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool8,.>s|r
 }
 
 STRING 16291
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool9,.>s|r
 }
 
 STRING 16292
@@ -103162,9 +103064,10 @@ STRING 16292
 }
 
 STRING 16293
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool10,.>s|r
 }
 
 STRING 16294
@@ -108216,11 +108119,11 @@ Transformations:
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
+[lvl 200] 2.60x "fp"
 [lvl 200] [|cff00ffffWeapon Choice|r]
 "|cff808080teraton arm|r" (+50% attack dmg)
 "|cffff2020crisis arm|r" (-50% attack damage on high HP, +20
 0% attack damage on low HP)
-[lvl 200] [Unlocks Atropos Quest] - NYI
 }
 
 STRING 16948
@@ -111396,36 +111299,6 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cff00FFFFCooldown: <A0UU,Cool5,.>s|r
 }
 
-STRING 17407
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
-}
-
-STRING 17408
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
-}
-
-STRING 17409
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
-}
-
-STRING 17410
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
-}
-
-STRING 17411
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
-}
-
 STRING 17412
 // Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
 {
@@ -111743,30 +111616,6 @@ Duration: <A0EU,Dur10>
 |cff00FFFFCooldown: <A0EU,Cool10> seconds|r
 }
 
-STRING 17446
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
-}
-
-STRING 17447
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
-}
-
-STRING 17448
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
-}
-
-STRING 17449
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
-}
-
 STRING 17450
 // Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
 {
@@ -111831,12 +111680,6 @@ STRING 17460
 // Abilities: A0VN (Kamehameha God), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn God Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 17461
-// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
 
 STRING 17462
@@ -116439,6 +116282,12 @@ Fires a blast in your targets direction. Pan gains a temporary damage aura after
 |cff00FFFFCooldown: <A0LU,Cool1>s|r
 }
 
+STRING 18147
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+}
+
 STRING 18148
 // Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -118533,6 +118382,12 @@ STRING 18457
 [|cff00ff00D|r] Learn Flare - [|cffffcc00Level %d|r]
 }
 
+STRING 18458
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
+}
+
 STRING 18459
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
@@ -118563,10 +118418,54 @@ STRING 18463
 [|cff00ff00D|r] Flare - [|cffffcc00Level 6|r]
 }
 
+STRING 18464
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+}
+
+STRING 18465
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
+}
+
+STRING 18466
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool1> seconds|r
+}
+
+STRING 18467
+// Abilities: A109 (Reckless Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool1> - <A109,Cool10> seconds|r
+}
+
+STRING 18468
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool2> seconds|r
+}
+
 STRING 18469
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Flare - [|cffffcc00Level 7|r]
+}
+
+STRING 18470
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool3> seconds|r
 }
 
 STRING 18471
@@ -134583,26 +134482,10 @@ STRING 20760
 [|cff00FF00E|r] Relentless Assault - [|cffffcc00Level 1|r]
 }
 
-STRING 20761
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool1> seconds|r
-}
-
 STRING 20762
 // Abilities: A10A (Relentless Assault), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Relentless Assault - [|cffffcc00Level %d|r]
-}
-
-STRING 20763
-// Abilities: A10A (Relentless Assault), Researchubertip (Tooltip - Learn - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool1> - <A10A,Cool10> seconds|r
 }
 
 STRING 20764
@@ -134777,14 +134660,6 @@ STRING 20786
 [|cff00FF00R|r] Learn Rage - [|cffffcc00Level %d|r]
 }
 
-STRING 20787
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool3> seconds|r
-}
-
 STRING 20788
 // Abilities: A10B (Rage), EditorSuffix (Editor Suffix)
 {
@@ -134801,22 +134676,6 @@ STRING 20790
 // Abilities: A10B (Rage), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Rage - [|cffffcc00Level 3|r]
-}
-
-STRING 20791
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool4> seconds|r
-}
-
-STRING 20792
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool5> seconds|r
 }
 
 STRING 20793
@@ -134853,46 +134712,6 @@ STRING 20798
 // Abilities: A10B (Rage), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Rage - [|cffffcc00Level 9|r]
-}
-
-STRING 20799
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool6> seconds|r
-}
-
-STRING 20800
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool7> seconds|r
-}
-
-STRING 20801
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool8> seconds|r
-}
-
-STRING 20802
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool9> seconds|r
-}
-
-STRING 20803
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
-{
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool10> seconds|r
 }
 
 STRING 20804
@@ -135167,6 +134986,62 @@ STRING 20840
 // Abilities: A10E (Beast of Darkness), EditorSuffix (Editor Suffix)
 {
 (guts)
+}
+
+STRING 20841
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool4> seconds|r
+}
+
+STRING 20842
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool5> seconds|r
+}
+
+STRING 20843
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool6> seconds|r
+}
+
+STRING 20844
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool7> seconds|r
+}
+
+STRING 20845
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool8> seconds|r
+}
+
+STRING 20846
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool9> seconds|r
+}
+
+STRING 20847
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool10> seconds|r
 }
 
 STRING 20848
@@ -135689,6 +135564,107 @@ STRING 20920
 This unit is under the effects of Beast of Darkness; it has increased attack damage.
 }
 
+STRING 20921
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool1> seconds|r
+}
+
+STRING 20922
+// Abilities: A10A (Relentless Assault), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool1> - <A10A,Cool10> seconds|r
+}
+
+STRING 20923
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool2> seconds|r
+}
+
+STRING 20924
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool3> seconds|r
+}
+
+STRING 20925
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool4> seconds|r
+}
+
+STRING 20926
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool5> seconds|r
+}
+
+STRING 20927
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool6> seconds|r
+}
+
+STRING 20928
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool7> seconds|r
+}
+
+STRING 20929
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool8> seconds|r
+}
+
+STRING 20930
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool9> seconds|r
+}
+
+STRING 20931
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool10> seconds|r
+}
+
+STRING 20932
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+}
+
+STRING 20933
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+}
+
+STRING 20934
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+}
+
+STRING 20935
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+}
+
 STRING 20936
 // Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -135745,6 +135721,36 @@ STRING 20942
 [|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 3|r]
 }
 
+STRING 20943
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
+}
+
+STRING 20944
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+}
+
+STRING 20945
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+}
+
+STRING 20946
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+}
+
+STRING 20947
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
 STRING 20948
 // Abilities: A10N (Revive - Move Original Spawn), Tip (Tooltip - Normal)
 {
@@ -135784,103 +135790,65 @@ Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
 |cff00ffffCooldown: <A107,Cool1> - <A107,Cool10> seconds|r
 }
 
-STRING 20954
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20965
+// Abilities: A0TU (Super Masenko), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool1> seconds|r
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned. Fires two masenkos in an arc.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0TU,Cool10> seconds|r
 }
 
-STRING 20955
-// Abilities: A109 (Reckless Charge), Researchubertip (Tooltip - Learn - Extended)
+STRING 20966
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool1> - <A109,Cool10> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool3> seconds)|r
 }
 
-STRING 20956
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20967
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool2> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool2> seconds)|r
 }
 
-STRING 20957
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20968
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool3> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool5> seconds)|r
 }
 
-STRING 20958
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20969
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool4> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool4> seconds)|r
 }
 
-STRING 20959
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20970
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool5> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool6> seconds)|r
 }
 
-STRING 20960
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20971
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool6> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool7> seconds)|r
 }
 
-STRING 20961
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20972
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool7> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool8> seconds)|r
 }
 
-STRING 20962
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20973
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool8> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool9> seconds)|r
 }
 
-STRING 20963
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20974
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool9> seconds|r
-}
-
-STRING 20964
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool10> seconds|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool1> seconds)|r
 }
 
 STRING 20976

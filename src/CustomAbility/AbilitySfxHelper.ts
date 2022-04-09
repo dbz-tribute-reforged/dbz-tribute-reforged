@@ -3,6 +3,7 @@ import { Vector2D } from "Common/Vector2D";
 import { CustomAbility } from "./CustomAbility";
 import { ComponentConstants } from "./AbilityComponent/AbilityComponent";
 import { CoordMath } from "Common/CoordMath";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export module AbilitySfxHelper {
   // probably move sfx stuff to a sfx displaying class

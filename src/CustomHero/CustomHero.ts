@@ -120,7 +120,7 @@ export class CustomHero {
         if (!this.isCasting.get(customAbility)) {
           this.isCastTimeWaiting = true;
           this.isCasting.set(customAbility, true);
-          CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
+          CastTimeHelper.getInstance().waitCastTimeThenActivate(this, customAbility, input);
         }
       }
     }
