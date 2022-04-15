@@ -13,6 +13,7 @@ export class CustomHero {
   public abilities: CustomHeroAbilityManager;
   public isCasting: Map<CustomAbility, boolean>;
 
+  public channelFlag: boolean;
   public isCastTimeWaiting: boolean;
   public spellPower: number;
   public currentSp: number;
@@ -31,7 +32,8 @@ export class CustomHero {
       ]
     );
     this.isCasting = new Map();
-
+    
+    this.channelFlag = false;
     this.isCastTimeWaiting = false;
     this.spellPower = 1.0;
     this.currentSp = Constants.BASE_STAMINA;
@@ -49,6 +51,28 @@ export class CustomHero {
 
     this.passiveTrigger = [];
     this.timers = [];
+
+    const cancelChannelTrigger = CreateTrigger();
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_SPELL_FINISH);
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_ISSUED_ORDER);
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_ISSUED_POINT_ORDER);
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_ISSUED_TARGET_ORDER);
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_DEATH);
+    TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_SPELL_ENDCAST);
+    TriggerAddCondition(cancelChannelTrigger, Condition(() => {
+      this.channelFlag = false;
+      return false;
+    }));
+    this.passiveTrigger.push(cancelChannelTrigger);
+    
+    const startChannelTrigger = CreateTrigger();
+    TriggerRegisterUnitEvent(startChannelTrigger, unit, EVENT_UNIT_SPELL_CHANNEL);
+    TriggerRegisterUnitEvent(startChannelTrigger, unit, EVENT_UNIT_SPELL_EFFECT);
+    TriggerAddCondition(startChannelTrigger, Condition(() => {
+      this.channelFlag = true;
+      return false;
+    }));
+    this.passiveTrigger.push(startChannelTrigger);
 
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
@@ -115,13 +139,15 @@ export class CustomHero {
 
   public useAbility(name: string, input: CustomAbilityInput) {
     let customAbility = this.abilities.getCustomAbilityByName(name);
-    if (customAbility && customAbility.canCastAbility(input)) {
-      if (!this.isCastTimeWaiting || customAbility.canMultiCast) {
-        if (!this.isCasting.get(customAbility)) {
-          this.isCastTimeWaiting = true;
-          this.isCasting.set(customAbility, true);
-          CastTimeHelper.getInstance().waitCastTimeThenActivate(this, customAbility, input);
-        }
+    if (customAbility && customAbility.canCastAbility(input, false, false)) {
+      if (
+        !this.isCastTimeWaiting 
+        || customAbility.canMultiCast
+        || this.isCasting.has(customAbility) // cast yourself again is okay, but not others
+      ) {
+        this.isCastTimeWaiting = true;
+        this.isCasting.set(customAbility, true);
+        CastTimeHelper.getInstance().waitCastTimeThenActivate(this, customAbility, input);
       }
     }
   }
@@ -193,6 +219,15 @@ export class CustomHero {
 
   public setMaxSP(sp: number) {
     this.maxSp = sp;
+  }
+
+  public isChanneling(): boolean {
+    return this.channelFlag;
+  }
+
+  public setIsChanneling(b: boolean): this {
+    this.channelFlag = b;
+    return this;
   }
 
   public cleanup() {

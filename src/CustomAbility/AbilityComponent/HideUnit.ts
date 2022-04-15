@@ -42,7 +42,8 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
         PauseUnit(source, false);
       }
       if (this.forceReselect && GetPlayerController(input.casterPlayer) == MAP_CONTROL_USER) {
-        SelectUnitAddForPlayer(source, input.casterPlayer);
+        // SelectUnitAddForPlayer(source, input.casterPlayer);
+        SelectUnitForPlayerSingle(source, input.casterPlayer);
       }
       if (!this.wasInvul) {
         SetUnitInvulnerable(source, false);

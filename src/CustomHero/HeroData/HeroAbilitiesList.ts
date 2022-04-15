@@ -619,6 +619,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Guldo.PSYCHO_JAVELIN,
       AbilityNames.Zamasu.DIVINE_AUTHORITY, AbilityNames.Zamasu.ENERGY_BLADES,
       AbilityNames.Sephiroth.OCTOSLASH, AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
+      AbilityNames.Hit.TIME_SKIP,
       AbilityNames.Hirudegarn.FLAME_BREATH,
       AbilityNames.Super17.FLASH_BOMBER_2,
 

@@ -10,7 +10,6 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
 
   protected isChannelling: boolean;
   protected finishedChannel: boolean;
-  protected cancelChannelTrigger: trigger;
 
   protected triggerHasBeenSetup: boolean;
 
@@ -23,7 +22,6 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   ) {
     this.isChannelling = false;
     this.finishedChannel = false;
-    this.cancelChannelTrigger = CreateTrigger();
     this.triggerHasBeenSetup = false;
   }
 
@@ -35,43 +33,18 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    print(ability.currentTick, this.isChannelling, this.finishedChannel);
-    
     if (!this.isChannelling) {
       this.isChannelling = true;
       this.finishedChannel = false;
-      if (this.triggerHasBeenSetup) {
-        EnableTrigger(this.cancelChannelTrigger);
-      } else {
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_FINISH);
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_ORDER);
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_POINT_ORDER);
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_TARGET_ORDER);
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_DEATH);
-        // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_CHANNEL);
-        // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_ENDCAST);
-        
-        TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_ENDCAST);
-        // TriggerAddCondition(this.cancelChannelTrigger, Condition(() => {
-        //   if (GetSpellAbilityId() == input.abilityId) {
-        //     this.finishedChannel = true;
-        //   }
-        //   return false;
-        // }))
-  
-        TriggerAddAction(this.cancelChannelTrigger, () => {
-          print("channel cancel");
-          this.finishedChannel = true;
-          DisableTrigger(this.cancelChannelTrigger);
-        });
-        
-        this.triggerHasBeenSetup = true;
-        print("setup done");
-      }
     }
 
-    if (UnitHelper.isUnitStunned(input.caster.unit)) {
+    if (
+      UnitHelper.isUnitStunned(input.caster.unit) 
+      || UnitHelper.isUnitDead(input.caster.unit)
+    ) {
       this.finishedChannel = true;
+    } else {
+      this.finishedChannel = !input.caster.isChanneling();
     }
 
     if (this.isChannelling && this.finishedChannel) {
@@ -79,14 +52,11 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     }
 
     if (ability.isFinishedUsing(this)) {
-      print("channel finish");
       this.isChannelling = false;
-      DisableTrigger(this.cancelChannelTrigger);
     }
   }
 
   cleanup() {
-    DestroyTrigger(this.cancelChannelTrigger);
   }
   
 

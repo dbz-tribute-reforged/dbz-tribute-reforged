@@ -1,5 +1,5 @@
 import { Vector2D } from "./Vector2D";
-import { Constants } from "./Constants";
+import { Buffs, Constants } from "./Constants";
 
 export module UnitHelper {
   export function isUnitStunned(unit: unit): boolean {
@@ -7,7 +7,8 @@ export module UnitHelper {
       IsUnitType(unit, UNIT_TYPE_POLYMORPHED) ||
       IsUnitType(unit, UNIT_TYPE_SNARED) ||
       IsUnitType(unit, UNIT_TYPE_SLEEPING) ||
-      IsUnitType(unit, UNIT_TYPE_STUNNED)
+      IsUnitType(unit, UNIT_TYPE_STUNNED) ||
+      UnitHasBuffBJ(unit, Buffs.STUNNED)
     );
   }
 

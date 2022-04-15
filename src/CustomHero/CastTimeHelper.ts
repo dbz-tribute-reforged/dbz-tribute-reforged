@@ -90,15 +90,14 @@ export class CastTimeHelper {
     }
   }
 
-  runAbilityActivation(abil: CustomAbility, input: CustomAbilityInput, toBeDeleted: CustomAbility[]) {
-    abil.activateOnTimer(input);
-    
-    if (abil.isFinished()) {
-      print(abil.name, " finished");
-      if (abil.waitsForNextClick) {
-        abil.setNextRightClickFlag(false);
+  runAbilityActivation(ability: CustomAbility, input: CustomAbilityInput, toBeDeleted: CustomAbility[]) {
+    if (ability.isFinished()) {
+      if (ability.waitsForNextClick) {
+        ability.setNextRightClickFlag(false);
       }
-      toBeDeleted.push(abil);
+      toBeDeleted.push(ability);
+    } else {
+      ability.activateOnTimer(input);
     }
   }
 
@@ -131,22 +130,23 @@ export class CastTimeHelper {
       );
     }
 
-    TriggerAddCondition(this.castTimeTrigger, Condition(() => {
+    TriggerAddAction(this.castTimeTrigger, () => {
       const unit = GetTriggerUnit();
       const unitId = GetHandleId(unit);
       const player = GetTriggerPlayer();
-      if (GetOwningPlayer(unit) != player) return false;
+      if (GetOwningPlayer(unit) != player) return;
 
       const abils = this.castTimeUnits.get(unitId);
-      if (!abils || abils.length == 0) return false;
+      if (!abils || abils.length == 0) {
+        return;
+      }
 
       const orderId = GetIssuedOrderId();
       const isStunned = UnitHelper.isUnitStunned(unit);
-      const isCancelled = !orderId || (orderId && orderId == OrderIds.STOP) || isStunned;
+      const isCancelled = orderId == 0 || (orderId && orderId == OrderIds.STOP) || isStunned;
 
       const toBeDeleted = [];
       for (const abil of abils) {
-        print("cast time : ", abil.name);
         if (isCancelled) {
           TextTagHelper.showPlayerColorTextOnUnit(
             abil.name + " cancelled", 
@@ -154,10 +154,14 @@ export class CastTimeHelper {
             unit
           );
           abil.setCastTimeCounter(0);
-          this.activeAbilities.delete(abil);
           this.removeCastTimeFromCustomHero(unit, abil);
+          this.activeAbilities.delete(abil);
           toBeDeleted.push(abil);
         } else if (abil.waitsForNextClick) {
+          const x = GetOrderPointX();
+          const y = GetOrderPointY();
+          if (x == 0 && y == 0) continue;
+          
           abil.setNextRightClickFlag(true);
           if (abil.castTime > 0) {
             abil.setCastTimeCounter(0.01);
@@ -177,42 +181,44 @@ export class CastTimeHelper {
         })
       );
 
-      return false;
-    }));
+      return;
+    });
   }
 
+
+  // note: requires undeleted activeAbilities link
   removeCastTimeFromCustomHero(unit: unit, ability: CustomAbility) {
-    const player = GetOwningPlayer(unit);
-    const playerId = GetPlayerId(player);
-    if (playerId < 0 || playerId > Globals.customPlayers.length) return;
-
-    const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
-    if (!customHero) return;
-
-    customHero.isCastTimeWaiting = false;
-    customHero.isCasting.set(ability, false);
+    const input = this.activeAbilities.get(ability);
+    if (!input) return;
+    if (!input.caster) return;
+    input.caster.isCastTimeWaiting = false;
+    input.caster.isCasting.set(ability, false);
   }
 
+  forceEndActivatedAbility(ability: CustomAbility) {
+    const activeAbilInput = this.activeAbilities.get(ability);
+    if (activeAbilInput) {
+      ability.endAbility();
+      ability.resetCooldown();
+      ability.activateOnTimer(activeAbilInput); // force end
+    }
+  }
 
   waitCastTimeThenActivate(
     hero: CustomHero, 
     ability: CustomAbility, 
     input: CustomAbilityInput
   ) {
-    const activeAbil = this.activeAbilities.get(ability);
-    if (activeAbil) {
-      ability.endAbility();
-      ability.resetCooldown();
-    } else {
-      this.activeAbilities.set(ability, input);
+    const activeAbilInput = this.activeAbilities.has(ability);
+    if (activeAbilInput) {
+      this.forceEndActivatedAbility(ability);
     }
+    this.activeAbilities.set(ability, input);
 
     if (ability.castTime == 0) {
-      print("insta start cast ", ability.name)
       ability.activate(input);
       this.removeCastTimeFromCustomHero(hero.unit, ability);
     } else {
-      print("delay start cast ", ability.name);
       const unitId = GetHandleId(hero.unit);
       const arr = this.castTimeUnits.get(unitId);
       if (arr) {

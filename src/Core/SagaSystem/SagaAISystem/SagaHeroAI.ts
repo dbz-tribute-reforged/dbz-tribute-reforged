@@ -2,7 +2,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { SagaAIData } from "./SagaAIData";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
-import { Constants, OrderIds, Globals } from "Common/Constants";
+import { Constants, OrderIds, Globals, Buffs } from "Common/Constants";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { CoordMath } from "Common/CoordMath";
 import { AbilityNames } from "CustomAbility/AbilityNames";
@@ -532,7 +532,9 @@ export class SagaHeroAI {
     if (
       this.sagaCustomHero.canCastAbility(abilityName, abilityInput) && 
       !UnitHelper.isUnitStunned(this.sagaUnit) && 
-      !UnitHasBuffBJ(this.sagaUnit, Constants.silenceBuff)
+      !UnitHasBuffBJ(this.sagaUnit, Constants.silenceBuff) &&
+      !UnitHasBuffBJ(this.sagaUnit, Buffs.MAFUBA_SEALED) &&
+      !UnitHasBuffBJ(this.sagaUnit, Buffs.MAFUBA_SEALING)
     ) {
       if (showText) {
         TextTagHelper.showPlayerColorTextOnUnit(
@@ -675,7 +677,8 @@ export class SagaHeroAI {
 
     let closestUnit = undefined;
     let closestNonSummonUnit = undefined;
-    let closestDistance = acquireRange;
+    let closestUnitDistance = acquireRange;
+    let closestNonSummonDistance = acquireRange;
 
     ForGroup(this.nearbyEnemies, () => {
       const enemyUnit = GetEnumUnit();
@@ -696,19 +699,29 @@ export class SagaHeroAI {
       ) {
         this.tmpPos.setPos(x, y);
         const enemyDistance = CoordMath.distance(this.tmpPos, this.bossPos);
-        if (enemyDistance < closestDistance) {
+        if (enemyDistance < closestUnitDistance) {
           closestUnit = enemyUnit;
-          if (!IsUnitType(enemyUnit, UNIT_TYPE_SUMMONED)) {
-            closestNonSummonUnit = enemyUnit;
-          }
-          closestDistance = enemyDistance;
+          closestUnitDistance = enemyDistance;
+        }
+        if (
+          !IsUnitType(enemyUnit, UNIT_TYPE_SUMMONED)
+          && enemyDistance < closestNonSummonDistance
+        ) {
+          closestNonSummonUnit = enemyUnit;
+          closestNonSummonDistance = enemyDistance;
         }
       }
     });
     GroupClear(this.nearbyEnemies);
-    
-    if (closestNonSummonUnit != undefined) {
-      result = closestNonSummonUnit;
+
+    if (
+      closestNonSummonUnit != undefined
+      && (
+        closestNonSummonDistance < closestUnitDistance
+        || closestNonSummonDistance < acquireRange * 0.15
+      )
+    ) {
+      result = closestNonSummonUnit
     } else if (closestUnit != undefined) {
       result = closestUnit;
     }

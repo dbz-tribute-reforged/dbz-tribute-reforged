@@ -86,9 +86,13 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   //   });
   // }
 
-  canCastAbility(input: CustomAbilityInput): boolean {
-    if (this.currentCd > 0) return false;
-    if (this.currentTick > 0) return false;
+  canCastAbility(
+    input: CustomAbilityInput, 
+    checkCd: boolean = true, 
+    checkTick: boolean = true
+  ): boolean {
+    if (checkCd && this.currentCd > 0) return false;
+    if (checkTick && this.currentTick > 0) return false;
     if (!input || !input.caster || !input.casterPlayer || !input.targetPoint || !input.mouseData) return false;
     if (!this.canUseWhenStunned && UnitHelper.isUnitStunned(input.caster.unit)) {
       return false;

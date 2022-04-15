@@ -231,10 +231,14 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < this.bosses.length - 1; ++i) {
       const frieza = this.bosses[i];
       const nextFrieza = this.bosses[i+1];
+      const isNextForm = i == this.bosses.length - 2 ?
+        SagaHelper.checkUnitHp(frieza, 0.1, false, true, false) :
+        SagaHelper.checkUnitHp(frieza, 0.75, false, false, true)
+      ;
       if (
         frieza && 
         nextFrieza &&
-        SagaHelper.checkUnitHp(frieza, 0.75, false, false, true) &&
+        isNextForm && 
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
@@ -247,6 +251,9 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
           5, 5,
         );
         SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
+        if (i == this.bosses.length) {
+          SetUnitLifePercentBJ(nextFrieza, 66);
+        }
       }
     }
   }

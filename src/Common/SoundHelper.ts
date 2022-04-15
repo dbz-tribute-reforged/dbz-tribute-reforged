@@ -1316,6 +1316,12 @@ export module SoundHelper {
         }
         break;
 
+      case Id.roshiMafuba:
+        if (unitId == Id.roshi) {
+          playSoundOnUnit(unit, "Audio/Voice/RoshiMafuba.mp3", 2040);
+        }
+        break;
+
       case Id.roshiNewTrick:
         if (unitId == Id.roshi) {
           playSoundOnUnit(unit, "Audio/Voice/RoshiUhOh.mp3", 1968);

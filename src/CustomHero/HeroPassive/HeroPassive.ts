@@ -843,9 +843,12 @@ export function lucarioPassive(customHero: CustomHero) {
           if (bonusDamageMult > 0) {
             // 0.0005 * 20000 * 20 = 200 max hp dmg per stack
             // 0.01 * 20000 = 200 int dmg per stack
+
+            // 0.0004 * 20000 * 20 = 160 max hp dmg per stack
+            // 0.008 * 20000 = 160 int dmg per stack
             const bonusDamage = AOEDamage.getIntDamageMult(attacker) * bonusDamageMult * (
-              0.0005 * GetUnitState(target, UNIT_STATE_MAX_LIFE)
-              + 0.01 * GetHeroInt(attacker, true)
+              0.0004 * GetUnitState(target, UNIT_STATE_MAX_LIFE)
+              + 0.008 * GetHeroInt(attacker, true)
             );
             if (bonusDamage > 0) {
               UnitDamageTarget(
@@ -1128,8 +1131,8 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   const heatHeavenPiercingIceWall = -25;
   const heatFlashfireFist = 25;
   const heatLossPerTick = 0.02;
-  const heatHPPenaltyInitial = 6;
-  const heatHPPenaltyPerSecond = 3;
+  const heatHPPenaltyInitial = 4;
+  const heatHPPenaltyPerSecond = 2;
   const heatHPPenaltyTickInterval = 33;
 
   // update stuff
@@ -1478,14 +1481,14 @@ export function sonicPassive(customHero: CustomHero) {
   const homingMagnitudeMaxMult = 1.5;
   const homingForwardsLatestTick = 12;
   const homingReversalDuration = 9;
-  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.2;
+  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.25;
 
   const magnitudeLossSpinDash = 0.9;
 
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.85;
+  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.95;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -1739,6 +1742,8 @@ export function sonicPassive(customHero: CustomHero) {
 
     if (UnitHelper.isUnitDead(customHero.unit)) {
       CoordMath.multiply(moveDir, 0);
+      AddUnitAnimationProperties(customHero.unit, "alternate", false);
+      SaveInteger(Globals.genericSpellHashtable, sonicId, 0, 0);
     } else {
       Globals.tmpVector2.add(moveDir);
       if (isStunned) {
@@ -1855,7 +1860,7 @@ export function sonicPassive(customHero: CustomHero) {
             distTravelled += lightSpeedOffset;
 
             // create sfx
-            if (sfxCounter % 8 == 0) {
+            if (sfxCounter % 16 == 0) {
               const tmpLightSpeedDashSfx = AddSpecialEffect(
                 "LaxusSpark.mdl",
                 Globals.tmpVector3.x,
@@ -1943,10 +1948,10 @@ export function sonicPassive(customHero: CustomHero) {
 export function gutsPassive(customHero: CustomHero) {
   const rageBasePercentHp = 8;
   const rageLevelPercentHp = 0.8;
-  const ragePunishPercent = 0.9;
+  const ragePunishPercent = 0.8;
   const berserkBasePercentHp = 12;
   const berserkLevelPercentHp = 1.2;
-  const berserkPunishPercent = 0.8;
+  const berserkPunishPercent = 0.7;
 
   const castTrigger = CreateTrigger();
   customHero.addPassiveTrigger(castTrigger);
@@ -2181,6 +2186,10 @@ export function setupSPData(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
     }
+    const id = GetUnitTypeId(customHero.unit);
+    if (id == Id.saitama) {
+      incSp *= 1.25;
+    }
     // if (currentSP < 0.2 * maxSP) {
     //   incSp *= 0.5;
     // }
@@ -2196,14 +2205,15 @@ export function setupSPData(customHero: CustomHero) {
       25,
       0.0005 * GetHeroAgi(customHero.unit, true)
     );
-    if (IsUnitType(customHero.unit, UNIT_TYPE_SUMMONED)) {
-      const id = GetUnitTypeId(customHero.unit);
-      if (
-        id != Id.babidiDaburaUnit 
-        && id != Id.babidiYakonUnit
-      ) {
-        maxStamina *= 0.55;
-      }
+    const id = GetUnitTypeId(customHero.unit);
+    if (
+      IsUnitType(customHero.unit, UNIT_TYPE_SUMMONED)
+      && id != Id.babidiDaburaUnit 
+      && id != Id.babidiYakonUnit
+    ) {
+      maxStamina *= 0.55;
+    } else if (id == Id.saitama) {
+      maxStamina *= 1.25;
     }
     customHero.setMaxSP(maxStamina);
   });

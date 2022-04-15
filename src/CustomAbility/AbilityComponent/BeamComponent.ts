@@ -348,9 +348,9 @@ export class BeamComponent implements
     this.previousHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
     BlzSetUnitName(this.beamUnit, this.name);
 
-    // causes bug where the caster will be teleported southwards
+    // causes bug where the barrier caster will be teleported southwards
     // most likely some sort of weird collision issue
-    // SetUnitPathing(this.beamUnit, false);
+    SetUnitPathing(this.beamUnit, false);
     // UnitAddAbility(this.beamUnit, Id.ghostNonVis);
     // UnitAddAbility(this.beamUnit, Id.ghostVisible);
     

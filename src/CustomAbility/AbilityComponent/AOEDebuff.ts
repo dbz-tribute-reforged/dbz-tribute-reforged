@@ -72,8 +72,8 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
       if (
-        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) &&
-        (
+        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) 
+        && (
           !this.onlyAffectHeroes ||
           IsUnitType(target, UNIT_TYPE_HERO)
         )
