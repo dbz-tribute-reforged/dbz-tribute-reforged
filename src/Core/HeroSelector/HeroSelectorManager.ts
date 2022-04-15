@@ -164,6 +164,9 @@ export class HeroSelectorManager {
       HeroSelector.enablePick(false, player)
       HeroSelector.show(false, player);
       CustomUI.show(true, false, player);
+      
+      udg_TempInt = GetConvertedPlayerId(player);
+      TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
 
       // do other stuff
 
