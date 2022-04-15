@@ -25,7 +25,7 @@ export module SagaAIData {
   export let DELAY_TO_INTERVALS = 4;
   export let defaultActionInterval: number = 25;
 
-  export const defaultSpellPowerModifier: number = -0.1;
+  export const defaultSpellPowerModifier: number = -0.15;
   export const defaultConsecutiveAttacksAllowed: number = 9;
   export const defaultBeamsToDodge: number = 4;
   export const defaultDodgeAOE: number = 1600;

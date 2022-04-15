@@ -42,13 +42,22 @@ export module CameraZoom {
             arr.push(new PlayerCam(Player(i), ZOOM_DEFAULT, ANGLE_DEFAULT));
             if (GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) {
                 TriggerRegisterPlayerChatEvent(zoomTrig, Player(i), "-cam ", false);
+                TriggerRegisterPlayerChatEvent(zoomTrig, Player(i), "-zoom ", false);
                 TriggerRegisterPlayerChatEvent(angleTrig, Player(i), "-ang ", false);
             }
         }
 
         TriggerAddCondition(zoomTrig, Condition(() => {
             let cam = arr[GetPlayerId(GetTriggerPlayer())];
-            let newZoom = S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
+            const chatString = GetEventPlayerChatString();
+            const command = SubString(chatString, 0, 5);
+
+            let newZoom = 3000;
+            if (command == "-cam ") {
+                newZoom = S2R(SubString(chatString, 5, StringLength(GetEventPlayerChatString())));
+            } else if (command == "-zoom") {
+                newZoom = S2R(SubString(chatString, 6, StringLength(GetEventPlayerChatString())));
+            } 
 
             if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
             else if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;

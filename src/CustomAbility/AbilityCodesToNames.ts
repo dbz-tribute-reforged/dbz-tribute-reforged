@@ -197,12 +197,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0SB'), AbilityNames.YamchaR.SPARKING],
 
     // roshi
-    [FourCC('A0FG'), AbilityNames.Roshi.KAMEHAMEHA_CHARGE],
-    [FourCC('A0JE'), AbilityNames.Roshi.KAMEHAMEHA_FIRE],
-    [FourCC('A0IE'), AbilityNames.Roshi.LIGHTNING_SURPRISE],
-    [FourCC('A0FH'), AbilityNames.Roshi.MAX_POWER],
-    [FourCC('A0SO'), AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE],
-    [FourCC('A0SP'), AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE],
+    [Id.roshiKameCharge, AbilityNames.Roshi.KAMEHAMEHA_CHARGE],
+    [Id.roshiKameFire, AbilityNames.Roshi.KAMEHAMEHA_FIRE],
+    [Id.roshiLightningSurprise, AbilityNames.Roshi.LIGHTNING_SURPRISE],
+    [Id.roshiMafuba, AbilityNames.Roshi.MAFUBA],
+    [Id.roshiMaxPower, AbilityNames.Roshi.MAX_POWER],
+    [Id.roshiKameCharge2, AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE],
+    [Id.roshiKameFire2, AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE],
 
     // all might
     [FourCC('A0SX'), AbilityNames.AllMight.DETROIT_SMASH],

@@ -706,7 +706,7 @@ export const MultiComponents = [
     sfxList: true,
     components: [
       { name: "damage brave slash" },
-      { name: "debuff brave slash feedback" },
+      // { name: "debuff brave slash feedback" },
       { name: "sfx brave slash" },
     ],
   },

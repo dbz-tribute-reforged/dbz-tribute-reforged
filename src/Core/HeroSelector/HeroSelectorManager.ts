@@ -26,6 +26,8 @@ export class HeroSelectorManager {
   public setupFinished: boolean;
   public isGameStarted: boolean;
 
+  public hideSelectorTrigger: trigger;
+
   public timerText: texttag;
 
   public heroSelectUnits: HeroSelectUnit[];
@@ -52,6 +54,8 @@ export class HeroSelectorManager {
     this.isPicking = false;
     this.setupFinished = false;
     this.isGameStarted = false;
+
+    this.hideSelectorTrigger = CreateTrigger();
     
     this.timerText = CreateTextTag();
 
@@ -66,10 +70,11 @@ export class HeroSelectorManager {
     this.setupPlayerSpawns();
     this.setupUnitCreatedFunction();
     this.setupRepickTrigger();
+    this.setupHideSelectorTrigger();
     this.setupHeroes();
     this.setupGameModes();
     HeroSelector.show(true);
-    CustomUI.show(false);
+    CustomUI.show(false, false);
 
     SetTextTagPos(this.timerText, 29676, 21905, 10);
     SetTextTagText(this.timerText, "AAAA???", 10);
@@ -158,7 +163,7 @@ export class HeroSelectorManager {
       SelectUnitForPlayerSingle(unit, player)
       HeroSelector.enablePick(false, player)
       HeroSelector.show(false, player);
-      CustomUI.show(true, player);
+      CustomUI.show(true, false, player);
 
       // do other stuff
 
@@ -185,7 +190,7 @@ export class HeroSelectorManager {
         } else {
           HeroSelector.show(true, player);
           HeroSelector.enablePick(true, player);
-          CustomUI.show(false, player);
+          CustomUI.show(false, false, player);
         }
 
         udg_TempInt = GetConvertedPlayerId(player);
@@ -211,7 +216,7 @@ export class HeroSelectorManager {
         let isRemoved = false;
         for (const hsUnit of this.heroSelectUnits) {
           if (unitId == hsUnit.unitCode) {
-            HeroSelector.repick(unit);
+            HeroSelector.repick(unit, GetOwningPlayer(unit));
             isRemoved = true;
             break;
           }
@@ -221,6 +226,25 @@ export class HeroSelectorManager {
         }
       }
     });
+  }
+
+  setupHideSelectorTrigger() {
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      TriggerRegisterPlayerChatEvent(this.hideSelectorTrigger, Player(i), "-hide", true);
+      TriggerRegisterPlayerChatEvent(this.hideSelectorTrigger, Player(i), "-show", true);
+    }
+    TriggerAddCondition(this.hideSelectorTrigger, Condition(() => {
+      
+      if (this.allowRepick) {
+        const str = GetEventPlayerChatString();
+        if (str == "-hide") {
+          HeroSelector.show(false, GetTriggerPlayer());
+        } else if (str == "-show") {
+          HeroSelector.show(true, GetTriggerPlayer());
+        }
+      }
+      return false;
+    }));
   }
 
   setupHeroes() {
@@ -277,7 +301,7 @@ export class HeroSelectorManager {
     HeroSelector.enablePick(true);
     HeroSelector.update();
     HeroSelector.show(true);
-    CustomUI.show(false);
+    CustomUI.show(false, false);
     this.isPicking = true;
   }
 
@@ -287,7 +311,7 @@ export class HeroSelectorManager {
     HeroSelector.enableBan(true);
     HeroSelector.update();
     HeroSelector.show(true);
-    CustomUI.show(false);
+    CustomUI.show(false, false);
     this.isPicking = false;
   }
 
@@ -322,7 +346,7 @@ export class HeroSelectorManager {
     PauseTimer(this.selectTimer);
 
     HeroSelector.show(false);
-    CustomUI.show(true);
+    CustomUI.show(true, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
@@ -441,7 +465,7 @@ export class HeroSelectorManager {
 
     }
     HeroSelector.show(false);
-    CustomUI.show(true);
+    CustomUI.show(true, false);
     this.time = 15;
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {

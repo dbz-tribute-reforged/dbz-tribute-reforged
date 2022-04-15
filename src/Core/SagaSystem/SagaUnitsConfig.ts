@@ -27,7 +27,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Raditz", new SagaUnit(FourCC("H08U"), 15, 90, 60, 90, new Vector2D(24000, 6500), 
       [
         SagaAbilities.Raditz.DOUBLE_SUNDAY, 
-        SagaAbilities.Raditz.SATURDAY_CRASH
+        SagaAbilities.Raditz.SATURDAY_CRASH,
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,

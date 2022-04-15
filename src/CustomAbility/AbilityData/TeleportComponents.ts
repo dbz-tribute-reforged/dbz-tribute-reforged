@@ -101,4 +101,14 @@ export const TeleportComponents = [
   //   teleportTarget: Teleport.ORIGINAL_POINT,
   //   maxRange: 400,
   // },
+  {
+    name: "teleport roshi mafuba continuous", 
+    repeatInterval: 1, 
+    startTick: 50,
+    endTick: -1,
+    teleportTick: 50,
+    teleportOnce: false,
+    teleportTarget: Teleport.ORIGINAL_POINT,
+    maxRange: 1200,
+  },
 ];

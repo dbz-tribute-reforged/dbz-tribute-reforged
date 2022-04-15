@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.73b
+DBZ Tribute Reforged 0.73c
 }
 
 STRING 4
@@ -542,19 +542,15 @@ Cell
 }
 
 STRING 90
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Doodads: D01F (BudokaiStands), Name (Name)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
+BudokaiStands
 }
 
 STRING 91
-// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
+// Doodads: D020 (BudokaiStage), Name (Name)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
+BudokaiStage
 }
 
 STRING 92
@@ -649,11 +645,13 @@ Choose Cell
 }
 
 STRING 105
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool2,.>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool1> seconds|r
 }
 
 STRING 106
@@ -1841,11 +1839,12 @@ Android 13
 }
 
 STRING 298
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool3,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool1> seconds|r
 }
 
 STRING 299
@@ -1857,11 +1856,12 @@ Upa's attacks are empowered by his rage to deal devastating damage to his enemie
 }
 
 STRING 300
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool4,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool3> seconds|r
 }
 
 STRING 301
@@ -4104,10 +4104,11 @@ Transformations:
 [lvl 1]   1.25x "r"
 [lvl 35]  1.60x "fp"
 [lvl 85]  2.10x "fp"
-[lvl 150] 2.60x "fp"
-[lvl 250] 2.75x "fp" [Unlocks Serious Series]
+[lvl 150] 2.60x "fp" [Unlocks Serious Series]
+[lvl 250] 2.75x "fp" [Upgrades Serious Series]
 
-|cffff2020ONE PUNCH|r: 100% chance for 1.5x crit
+|cffff2020ONE PUNCH|r: 100% chance for 1.5x crit and 30% dodge
+|cff00ff00Cardio|r: +25% Max Stamina and Regen
 }
 
 STRING 671
@@ -6708,11 +6709,12 @@ Tapion
 }
 
 STRING 1073
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool5,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool4> seconds|r
 }
 
 STRING 1074
@@ -6722,11 +6724,12 @@ Madness Slash
 }
 
 STRING 1075
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool6,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool5> seconds|r
 }
 
 STRING 1076
@@ -7732,9 +7735,13 @@ Someone has picked up the |r|cffff00ffHBTC Training Ticket|r. If they deliver it
 }
 
 STRING 1229
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Researchubertip (Tooltip - Learn - Extended)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
 }
 
 STRING 1230
@@ -8067,11 +8074,12 @@ Future Trunks
 }
 
 STRING 1280
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool7,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool6> seconds|r
 }
 
 STRING 1281
@@ -8081,11 +8089,12 @@ Giant Crocodile
 }
 
 STRING 1282
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool8,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool7> seconds|r
 }
 
 STRING 1283
@@ -9743,11 +9752,12 @@ Senzu Bean
 }
 
 STRING 1555
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool9,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool8> seconds|r
 }
 
 STRING 1556
@@ -10309,11 +10319,12 @@ A little undercooked, but it fills you up.
 }
 
 STRING 1644
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cffffff00Costs 2 time skip charges.|r
-|cff00FFFFCooldown: <A0FU,Cool10,.>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool9> seconds|r
 }
 
 STRING 1645
@@ -12404,9 +12415,13 @@ F
 }
 
 STRING 1985
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool2> seconds|r
 }
 
 STRING 1986
@@ -12482,9 +12497,13 @@ STRING 1997
 }
 
 STRING 1998
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 30%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool3> seconds|r
 }
 
 STRING 1999
@@ -12500,9 +12519,12 @@ Kick
 }
 
 STRING 2001
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/20/30%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 4% of max HP initially and thereafter 2% of max HP per second while overheating. Activate this ability again to disable it.
+|cffffff00Adds +10% fire damage.
+Adds +1% fire damage for each heat above 50.
+|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
 }
 
 STRING 2002
@@ -13499,7 +13521,7 @@ Transformations:
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.40x "rage" [Unlocks Upa's Rage 4]
 [lvl 250] 2.50x "rage" [Unlocks Upa's Rage 5]
-[lvl 300] [Unlocks Upa's Rage 6]
+[lvl 300] 2.60x "rage" [Unlocks Upa's Rage 6]
 }
 
 STRING 2162
@@ -15562,19 +15584,12 @@ STRING 2494
 }
 
 STRING 2495
-// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
 {
-Lucario uses his Lucarionite to temporarily transform into Mega Lucario.
-|cffFFFF00+0.25x stat mult
--0.4 base attack time
-+5% spell amp per second up to +20%
-+33ms and unlocks movement speed cap
-Doubles the effect of |cff00ffffAura|r
-|cffffff00Unlocks Aura Storm ability|r
-
-|cff00ffffCooldown: <A0Y0,Cool1>s
-
-|cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
+Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 4% of max HP initially and thereafter 2% of max HP per second while frostbitten. Activate this ability again to disable it.
+|cffffff00Adds +10% frost damage.
+Adds +1% frost damage for each heat below 50.
+|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
 }
 
 STRING 2496
@@ -20965,21 +20980,30 @@ Moro channels the life energy of the planet to sporadically explode around him.|
 }
 
 STRING 3372
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool10> seconds|r
 }
 
 STRING 3373
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 2.5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool2> seconds|r
 }
 
 STRING 3374
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
 }
 
 STRING 3375
@@ -23450,19 +23474,9 @@ STRING 3781
 }
 
 STRING 3782
-// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
 {
-A strong melee fighter with high auto-attack damage.
-
-|cffff2020One Punch|r: 100% Chance for 1.5x Crit.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-|cff808080ONE PAAAAWNCH!|r
+[|cffffcc00Ultimate Upgrade|r] |cffff2020Serious Series II|r
+Saitama's serious series has been upgraded.
 }
 
 STRING 3783
@@ -25300,20 +25314,13 @@ STRING 4060
 }
 
 STRING 4061
-// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Saitama's face becomes more serious. 
-Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
-Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
-|cffffff00+0.2x stat mult.
-Reduces base attack time.
-Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 2.0x crit.
-Gains true strike.
-+66ms and unlocks movement speed cap.|r
-|cff00FF00Duration: <A02J,Dur1> seconds|r
-|cff00FFFFCooldown: <A02J,Cool1> seconds|r
-
-|cff808080Note: Saitama does not actually consider these moves to be something special.|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool4> seconds|r
 }
 
 STRING 4062
@@ -34455,37 +34462,52 @@ STRING 5551
 }
 
 STRING 5552
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
 }
 
 STRING 5553
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
 }
 
 STRING 5554
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
 }
 
 STRING 5555
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
 }
 
 STRING 5556
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
 }
 
 STRING 5557
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
@@ -34578,7 +34600,7 @@ D
 }
 
 STRING 5572
-// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
@@ -39201,6 +39223,14 @@ STRING 6319
 |cff00ffff[Only host sees this] Catchup Stats Activated|r
 }
 
+STRING 6320
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+}
+
 STRING 6321
 // Abilities: A0DU (Cellular Enhancement), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -42312,7 +42342,7 @@ STRING 6810
 {
 Type "r" to revert.
 Transformations: (base stat multiplier excluding kills)
-[lvl 20]  1.30x "fp"
+[lvl 20]  1.25x "fp"
 [lvl 50]  1.50x "fp"
 [lvl 80]  1.80x "fp"
 [lvl 100] 1.90x "fp"
@@ -43863,10 +43893,12 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7052
-// Abilities: A0TU (Super Masenko), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
-|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0TU,Cool10> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
 }
 
 STRING 7053
@@ -44839,12 +44871,13 @@ STRING 7194
 {
 Type "r" to revert.
 Transformations:
-[lvl 15]  1.25x "fp"
+[lvl 15]  1.25x "sega mega"
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.30x "fp"
 [lvl 200] 2.40x "fp"
+[lvl 250] 2.50x "fp"
 
 Max speed upgrades at level 60 and 125.
 Find Chaos Emeralds by killing players or sagas above level 50.
@@ -45826,12 +45859,13 @@ Transform
 }
 
 STRING 7343
-// Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit delivers a powerful death blow to assassinate his target. Deals +10% Max HP damage if the enemy is below 50% Max HP. Reduces Time Skip charge rate by -1.5% per 1% of enemy's missing HP.
-|cffffff00Costs 2 Time Skip charges.
-|cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
-|cff00ffffCooldown: <A0GP,Cool1>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool5> seconds|r
 }
 
 STRING 7344
@@ -50098,11 +50132,12 @@ Shoto uses his left side to generate a burst of flames to incinerate his enemies
 }
 
 STRING 8027
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool2> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
 }
 
 STRING 8028
@@ -50892,9 +50927,12 @@ STRING 8144
 }
 
 STRING 8145
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
 }
 
 STRING 8146
@@ -50910,9 +50948,12 @@ Z
 }
 
 STRING 8148
-// Abilities: A0IC (Shining Sword), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool2>s|r
 }
 
 STRING 8149
@@ -50970,45 +51011,66 @@ STRING 8157
 }
 
 STRING 8158
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool3>s|r
 }
 
 STRING 8159
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool4>s|r
 }
 
 STRING 8160
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool5>s|r
 }
 
 STRING 8161
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool6>s|r
 }
 
 STRING 8162
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool7>s|r
 }
 
 STRING 8163
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool8>s|r
 }
 
 STRING 8164
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool9>s|r
 }
 
 STRING 8165
@@ -51069,6 +51131,78 @@ STRING 8174
 // Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 G
+}
+
+STRING 8175
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
+}
+
+STRING 8176
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool3>s|r
+}
+
+STRING 8177
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool4>s|r
+}
+
+STRING 8178
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool5>s|r
+}
+
+STRING 8179
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
+}
+
+STRING 8180
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool7>s|r
+}
+
+STRING 8181
+// Abilities: A0I9 (Brave Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+}
+
+STRING 8182
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool8>s|r
+}
+
+STRING 8183
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool9>s|r
 }
 
 STRING 8184
@@ -51165,6 +51299,14 @@ STRING 8199
 // Abilities: A0ID (Tapion's Style), Name (Name)
 {
 Tapion's Style
+}
+
+STRING 8200
+// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
+Mana burns |cff00ffff5%|r of the enemy's max mana.
+|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool10>s|r
 }
 
 STRING 8201
@@ -53586,15 +53728,12 @@ Dummy Stun 1s
 }
 
 STRING 8580
-// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Researchubertip (Tooltip - Learn - Extended)
 {
-Hit develops improved skills and techniques by fighting stronger enemies.
-|cffffff00+0.1x stat mult
-+5% spell amp per second up to +15%
-+12% restore rate of time skip charges (temporary)
-+1 time skip charge (cannot exceed max)|r
-|cff00FF00Duration: <A0TH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
 }
 
 STRING 8581
@@ -56763,11 +56902,9 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 }
 
 STRING 9085
-// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Name (Name)
 {
-Jiren sits with his legs crossed and begins to peacefully meditate.|n|cffFFFF00Empowers the next ability used, causing it to add an additional effect.|r
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
-|cff00FFFFCooldown: <A0KD,Cool1>s|r
+Mafuba
 }
 
 STRING 9086
@@ -56939,11 +57076,9 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 }
 
 STRING 9109
-// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Jiren sits with his legs crossed and begins to peacefully meditate.|n|cffFFFF00Empowers the next ability used, causing it to add an additional effect.|r
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
-|cff00FFFFCooldown: <A0SM,Cool1>s|r
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 1|r]
 }
 
 STRING 9110
@@ -58058,11 +58193,11 @@ Revive - Original Respawn
 }
 
 STRING 9290
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
 }
 
 STRING 9291
@@ -63313,7 +63448,7 @@ Transformations:
 [lvl 15]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 125] 2.00x "fp"
-[lvl 200] 3.00x "fp"
+[lvl 200] 2.50x "fp"
 
 For Super 13 type "super" when all androids lvl greater than 35 and are not in heaven/hell.
 }
@@ -63335,7 +63470,7 @@ STRING 10161
 Type "r" to revert.
 
 Transformations:
-[lvl 15]  1.20x "ws"
+[lvl 20]  1.20x "ws"
 [lvl 40]  1.60x "ss"
 [lvl 100] 2.00x "lss"
 [lvl 150] 2.40x "uss"
@@ -68748,9 +68883,12 @@ STRING 11025
 }
 
 STRING 11026
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.04% of Max HP|r + |cff33ffff0.8% of Int|r per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool10>s|r
 }
 
 STRING 11027
@@ -69226,9 +69364,17 @@ STRING 11107
 }
 
 STRING 11108
-// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+Hirudegarn's upper half is better at dodging but slightly weaker in power.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 8% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
+|cffffcc00Critical|r - <A0GG,DataA1>% 
+|cffffcc00Damage|r - <A0GG,DataB1,.> times
 }
 
 STRING 11109
@@ -72457,12 +72603,20 @@ When activated, the next hero to damage Hirudegarn will be immediately counter-a
 }
 
 STRING 11633
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
+A strong melee fighter with high auto-attack damage.
+
+|cffff2020One Punch|r: 100% Chance for 1.5x Crit and 30% evasion.
+|cff00ff00Cardio|r: +25% Max Stamina and Regen.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080ONE PAAAAWNCH!|r
 }
 
 STRING 11634
@@ -73277,17 +73431,17 @@ Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit'
 }
 
 STRING 11766
-// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
-Lucario becomes huge for a short time. Nearby enemies are stunned for 1s.
-|cffFFFF00+0.4x Str Mult
-+0.2x Agi Mult
-+150 Attack Range
-+10 Armor
-+33ms and unlocks movement speed cap
-Unlocks Giga Sphere|r
+Hirudegarn's lower half has deadlier attacks but is worse at dodging.
 
-|cff00ffffCooldown: <A0Y1,Cool1>s
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 8% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
+|cffffcc00Critical|r - <A0GG,DataA2>% 
+|cffffcc00Damage|r - <A0GG,DataB2,.> times
 }
 
 STRING 11767
@@ -73763,12 +73917,19 @@ Wheelo Vamp 1
 }
 
 STRING 11843
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
+Saitama's face becomes more serious. 
+Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
+Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
+|cffffff00+0.1x stat mult.
+Reduces base attack time to 1.6.
+Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 1.75x crit.
++66ms and unlocks movement speed cap.|r
+|cff00FF00Duration: <A02J,Dur1> seconds|r
+|cff00FFFFCooldown: <A02J,Cool1> seconds|r
+
+|cff808080Note: Saitama does not actually consider these moves to be something special.|r
 }
 
 STRING 11844
@@ -74146,66 +74307,82 @@ STRING 11905
 }
 
 STRING 11906
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02J (Serious Series), Tip (Tooltip - Normal)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
+[|cff00FF00D|r] |cffff2020Serious Series: II|r
 }
 
 STRING 11907
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
+Saitama's face becomes more serious. 
+Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
+Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
+|cffffff00+0.2x stat mult.
+Reduces base attack time to 1.3.
+Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 2.0x crit.
+Gains true strike.
++66ms and unlocks movement speed cap.|r
+|cff00FF00Duration: <A02J,Dur2> seconds|r
+|cff00FFFFCooldown: <A02J,Cool2> seconds|r
+
+|cff808080Note: Saitama does not actually consider these moves to be something special.|r
 }
 
 STRING 11908
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
+Hirudegarn's fully matured form empowers every attack with deadly force.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
+Spells deal increased damage based on remaining mana (up to +100%).
+Spells cost an additional 20% of current mana (excluding Dark Eyes and Flight) (has half cost on Flame Breath).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
+|cffffcc00Critical|r - <A0GG,DataA3>% 
+|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 11909
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
+A powered up version of Super Saiyan 2 achieved through intense rage.
+|cffffff00+0.6x str mult
++0.1x agi/int mult
++165ms and unlocks movement speed cap
+33% damage block up to 4 x Str.|n200 AOE ministun aura.
+Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to deal <A10K,DataB2,.> damage.|r
+|cff00ff00Duration: <A0KT,Dur1> seconds
+|cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
 STRING 11910
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.5% of base stats to a minimum of 5.
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
+|cff00FFFFCooldown: <A0KD,Cool1>s|r
 }
 
 STRING 11911
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
+Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP damage if the enemy is below 50% Max HP. Reduces Time Skip charge rate by -1.5% per 1% of enemy's missing HP.
+|cffffff00Costs 2 Time Skip charges.
+|cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
+|cff00ffffCooldown: <A0GP,Cool1>s|r
 }
 
 STRING 11912
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool6> seconds|r
 }
 
 STRING 11913
@@ -75420,11 +75597,11 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12114
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool2>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool2>s|r
 }
 
 STRING 12115
@@ -76798,11 +76975,11 @@ The user punches in front of them, dealing damage to enemies and deflecting beam
 }
 
 STRING 12335
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool3>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool3>s|r
 }
 
 STRING 12336
@@ -76840,7 +77017,7 @@ Transformations:
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.40x "fp"
-[lvl 200] 2.50x "fp" [Unlocks Sparking!]
+[lvl 200] 2.45x "fp" [Unlocks Sparking!]
 
 |cffffcc00Combo:|r Press the correct combination of Q, W, E to cast a combo spell at your last right click.
 |cff22ff22Speed Demon:|r Cast point reduced to 0s.
@@ -77038,6 +77215,12 @@ STRING 12371
 // Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
+}
+
+STRING 12372
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
 }
 
 STRING 12373
@@ -78223,6 +78406,7 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 120] 2.25x "fp"
 [lvl 150] 2.50x "fp"
+[lvl 250] 2.60x "fp"
 }
 
 STRING 12558
@@ -78604,63 +78788,99 @@ STRING 12620
 }
 
 STRING 12621
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.5% of base stats to a minimum of 5.|r
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
+|cff00FFFFCooldown: <A0SM,Cool1>s|r
 }
 
 STRING 12622
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 2|r]
 }
 
 STRING 12623
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 3|r]
 }
 
 STRING 12624
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 4|r]
 }
 
 STRING 12625
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 5|r]
 }
 
 STRING 12626
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 6|r]
 }
 
 STRING 12627
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Units: E001 (Master Roshi), Ubertip (Tooltip - Extended)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+A hero that has mastered the Kamehameha. Also has access to very powerful crowd-control spells.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080"Kamehame... HAAAAAA!"
 }
 
 STRING 12628
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur1>s|r
+|cff00FFFFCooldown: <A10Q,Cool1>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 12629
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur2>s|r
+|cff00FFFFCooldown: <A10Q,Cool2>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 12630
-// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.|n|cff00FF00Damage: Int * lvl * ?|r|n
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur4>s|r
+|cff00FFFFCooldown: <A10Q,Cool4>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 12631
@@ -78730,11 +78950,11 @@ Z
 }
 
 STRING 12642
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool4>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool4>s|r
 }
 
 STRING 12643
@@ -79766,6 +79986,18 @@ STRING 12797
 // Abilities: A0P6 (Frost Claws Blind), Name (Name)
 {
 Frost Claws Blind
+}
+
+STRING 12798
+// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+}
+
+STRING 12799
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
 }
 
 STRING 12800
@@ -83693,11 +83925,12 @@ STRING 13437
 }
 
 STRING 13438
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
 }
 
 STRING 13439
@@ -90032,20 +90265,6 @@ STRING 14421
 Hit's Assassination Contract
 }
 
-STRING 14422
-// Items: I04X (Hit's Assassination Contract), Description (Description)
-{
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by 100%.|r
-}
-
-STRING 14423
-// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
-{
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by 100%.|r
-}
-
 STRING 14424
 // Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
@@ -95390,11 +95609,11 @@ Q
 }
 
 STRING 15200
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool5>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool5>s|r
 }
 
 STRING 15201
@@ -98145,6 +98364,12 @@ STRING 15583
 [|cff00FF00D|r] Energy Blades
 }
 
+STRING 15584
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+}
+
 STRING 15585
 // Abilities: A0SV (Energy Blades), Name (Name)
 {
@@ -98669,6 +98894,12 @@ STRING 15664
 [|cff00ff00Q|r] Jump - [|cffffcc00Level 9|r]
 }
 
+STRING 15665
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
+}
+
 STRING 15666
 // Abilities: A0TZ (Sword of Hope), EditorSuffix (Editor Suffix)
 {
@@ -98841,10 +99072,22 @@ STRING 15688
 Lucario can now transform into Mega Lucario.
 }
 
+STRING 15689
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+}
+
 STRING 15690
 {
 [|cffffcc00Ultimate|r] Gigantamax
 Lucario can now transform into his gigantamax form.
+}
+
+STRING 15691
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
 }
 
 STRING 15692
@@ -99443,35 +99686,42 @@ STRING 15776
 }
 
 STRING 15777
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool2>s|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
 }
 
 STRING 15778
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool3>s|r
+(5)
 }
 
 STRING 15779
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool4>s|r
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur5>s|r
+|cff00FFFFCooldown: <A10Q,Cool5>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 15780
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool5>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool7> seconds|r
 }
 
 STRING 15781
@@ -99645,11 +99895,13 @@ STRING 15808
 }
 
 STRING 15809
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool6>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool8> seconds|r
 }
 
 STRING 15810
@@ -99677,27 +99929,32 @@ STRING 15813
 }
 
 STRING 15814
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool7>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool9> seconds|r
 }
 
 STRING 15815
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool8>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool10> seconds|r
 }
 
 STRING 15816
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool9>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool1> seconds|r
 }
 
 STRING 15817
@@ -100686,11 +100943,12 @@ STRING 15945
 }
 
 STRING 15946
-// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool2> seconds|r
 }
 
 STRING 15947
@@ -101049,11 +101307,12 @@ Sephiroth holds a defensive stance, preparing himself for any threat that approa
 }
 
 STRING 15988
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FT,Cool10>s|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool3> seconds|r
 }
 
 STRING 15989
@@ -101396,7 +101655,7 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.40x "fp" 
 [lvl 200] 2.50x "fp" [unlocks Pure Progress]
-[lvl 250] 2.60x "fp"
+[lvl 300] 2.60x "fp"
 
 |cffffcc00Legendary Assassin|r: +35% stats from Player Kills.
 }
@@ -101480,11 +101739,11 @@ STRING 16055
 }
 
 STRING 16056
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool6>s|r
 }
 
 STRING 16057
@@ -101566,11 +101825,11 @@ W
 }
 
 STRING 16070
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool7>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool7>s|r
 }
 
 STRING 16071
@@ -101580,11 +101839,11 @@ Super Cape
 }
 
 STRING 16072
-// Abilities: A0I9 (Brave Slash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool1>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool8>s|r
 }
 
 STRING 16073
@@ -101648,19 +101907,19 @@ STRING 16082
 }
 
 STRING 16083
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool8>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool9>s|r
 }
 
 STRING 16084
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool9>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
 }
 
 STRING 16085
@@ -102034,11 +102293,11 @@ Spin Jump
 }
 
 STRING 16130
-// Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.
-Mana burns |cff00ffff3%|r of the enemy's max mana.
-|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool10>s|r
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+|cff00FF00Damage: Int * Lvl * ? + 3% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool10>s|r
 }
 
 STRING 16131
@@ -103084,45 +103343,52 @@ STRING 16279
 }
 
 STRING 16280
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
 }
 
 STRING 16281
-// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
 }
 
 STRING 16282
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool2,.>s|r
 }
 
 STRING 16283
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool3,.>s|r
 }
 
 STRING 16284
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool4,.>s|r
 }
 
 STRING 16285
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool5,.>s|r
 }
 
 STRING 16286
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool6,.>s|r
 }
 
 STRING 16287
@@ -103138,21 +103404,24 @@ STRING 16288
 }
 
 STRING 16289
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool7,.>s|r
 }
 
 STRING 16290
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool8,.>s|r
 }
 
 STRING 16291
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool9,.>s|r
 }
 
 STRING 16292
@@ -103162,9 +103431,10 @@ STRING 16292
 }
 
 STRING 16293
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 70%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
+|cff00FFFFCooldown: <A0FU,Cool10,.>s|r
 }
 
 STRING 16294
@@ -107763,17 +108033,17 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: E001 (Master Roshi), Ubertip (Tooltip - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-A hero that has mastered the Kamehameha. Has less abilities than standard but each one packs more of a punch than usual.
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
 
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur6>s|r
+|cff00FFFFCooldown: <A10Q,Cool6>s|r
 
-|cff808080"Kamehame... HAAAAAA!"
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 16899
@@ -107979,17 +108249,9 @@ STRING 16916
 }
 
 STRING 16917
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Researchtip (Tooltip - Learn)
 {
-Hirudegarn's upper half is better at dodging but slightly weaker in power.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 10% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
-|cffffcc00Critical|r - <A0GG,DataA1>% 
-|cffffcc00Damage|r - <A0GG,DataB1,.> times
+[|cff00ff00E|r] Learn Mafuba - [|cffffcc00Level %d|r]
 }
 
 STRING 16918
@@ -108216,11 +108478,11 @@ Transformations:
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
+[lvl 200] 2.60x "fp"
 [lvl 200] [|cff00ffffWeapon Choice|r]
 "|cff808080teraton arm|r" (+50% attack dmg)
 "|cffff2020crisis arm|r" (-50% attack damage on high HP, +20
 0% attack damage on low HP)
-[lvl 200] [Unlocks Atropos Quest] - NYI
 }
 
 STRING 16948
@@ -111397,33 +111659,48 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17407
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool4> seconds|r
 }
 
 STRING 17408
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool5> seconds|r
 }
 
 STRING 17409
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool6> seconds|r
 }
 
 STRING 17410
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool7> seconds|r
 }
 
 STRING 17411
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool8> seconds|r
 }
 
 STRING 17412
@@ -111744,27 +112021,51 @@ Duration: <A0EU,Dur10>
 }
 
 STRING 17446
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool9> seconds|r
 }
 
 STRING 17447
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool10> seconds|r
 }
 
 STRING 17448
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+Lucario uses his Lucarionite to temporarily transform into Mega Lucario.
+|cffFFFF00+0.2x stat mult
+-0.4 base attack time
++5% spell amp per second up to +20%
++33ms and unlocks movement speed cap
+Doubles the effect of |cff00ffffAura|r
+|cffffff00Unlocks Aura Storm ability|r
+
+|cff00ffffCooldown: <A0Y0,Cool1>s
+
+|cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
 }
 
 STRING 17449
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+Lucario becomes huge for a short time. Nearby enemies are stunned for 1s.
+|cffFFFF00+0.3x Str Mult
++0.15x Agi Mult
++150 Attack Range
++10 Armor
++33ms and unlocks movement speed cap
+Unlocks Giga Sphere|r
+
+|cff00ffffCooldown: <A0Y1,Cool1>s
 }
 
 STRING 17450
@@ -111834,9 +112135,15 @@ STRING 17460
 }
 
 STRING 17461
-// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
 {
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+Hit develops improved skills and techniques by fighting stronger enemies.
+|cffffff00+0.1x stat mult
++5% spell amp per second up to +15%
+x1.12 restore rate of time skip charges (multiplicative)
++1 time skip charge (cannot exceed max)|r
+|cff00FF00Duration: <A0TH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
 }
 
 STRING 17462
@@ -116439,6 +116746,12 @@ Fires a blast in your targets direction. Pan gains a temporary damage aura after
 |cff00FFFFCooldown: <A0LU,Cool1>s|r
 }
 
+STRING 18147
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+}
+
 STRING 18148
 // Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -118533,6 +118846,12 @@ STRING 18457
 [|cff00ff00D|r] Learn Flare - [|cffffcc00Level %d|r]
 }
 
+STRING 18458
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
+}
+
 STRING 18459
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
@@ -118563,10 +118882,54 @@ STRING 18463
 [|cff00ff00D|r] Flare - [|cffffcc00Level 6|r]
 }
 
+STRING 18464
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+}
+
+STRING 18465
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
+}
+
+STRING 18466
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool1> seconds|r
+}
+
+STRING 18467
+// Abilities: A109 (Reckless Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool1> - <A109,Cool10> seconds|r
+}
+
+STRING 18468
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool2> seconds|r
+}
+
 STRING 18469
 // Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Flare - [|cffffcc00Level 7|r]
+}
+
+STRING 18470
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool3> seconds|r
 }
 
 STRING 18471
@@ -119363,17 +119726,17 @@ Ice 2
 }
 
 STRING 18589
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Researchubertip (Tooltip - Learn - Extended)
 {
-Hirudegarn's lower half has deadlier attacks but is worse at dodging.
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
 
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 10% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur1>s|r
+|cff00FFFFCooldown: <A10Q,Cool1> - <A10Q,Cool10>s|r
 
-|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
-|cffffcc00Critical|r - <A0GG,DataA2>% 
-|cffffcc00Damage|r - <A0GG,DataB2,.> times
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 18590
@@ -119694,17 +120057,9 @@ STRING 18636
 }
 
 STRING 18637
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-Hirudegarn's fully matured form empowers every attack with deadly force.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +100%).
-Spells cost an additional 25% of current mana (excluding Dark Eyes and Flight) (has half cost on Flame Breath).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
-|cffffcc00Critical|r - <A0GG,DataA3>% 
-|cffffcc00Damage|r - <A0GG,DataB3,.> times
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 7|r]
 }
 
 STRING 18638
@@ -120978,7 +121333,7 @@ Ayla's auto attacks have a 30% chance to critical hit for 3x.
 }
 
 STRING 18819
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
 {
 Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
 |cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
@@ -120993,102 +121348,89 @@ Marle's ice has been upgraded to Ice 2, an ability that rains ice blocks down on
 }
 
 STRING 18821
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool3> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18822
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool4> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18823
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool5> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18824
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool6> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18825
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool7> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18826
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool8> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18827
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool9> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18828
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool10> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18829
-// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18830
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I8 (Brave Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NY,Cool2> seconds|r
+Tapion fires a sphere of energy in the target direction. The sphere will damage any unit it collides with. Applies |cffffff00Hero's Song|r onto all enemies hit.
+Mana burns up to 15% of enemy's max mana.
+|cff00FF00Damage: Int * lvl * ?|r|n
 }
 
 STRING 18831
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool1>s|r
 }
 
 STRING 18832
@@ -121201,9 +121543,9 @@ STRING 18844
 }
 
 STRING 18845
-// Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
+// Abilities: A0IC (Shining Sword), Researchubertip (Tooltip - Learn - Extended)
 {
-(6)
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: 16s|r
 }
 
 STRING 18846
@@ -121219,9 +121561,9 @@ Janemba's Corruption
 }
 
 STRING 18848
-// Buffs/Effects: B04M (), EditorSuffix (Editor Suffix)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-(3)
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool2>s|r
 }
 
 STRING 18849
@@ -125349,13 +125691,17 @@ Moves your revive point to ???.
 }
 
 STRING 19432
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool1>s
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur7>s|r
+|cff00FFFFCooldown: <A10Q,Cool7>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19433
@@ -125369,23 +125715,31 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 }
 
 STRING 19434
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool2>s
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur8>s|r
+|cff00FFFFCooldown: <A10Q,Cool8>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19435
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool4>s
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur9>s|r
+|cff00FFFFCooldown: <A10Q,Cool9>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19436
@@ -125425,13 +125779,17 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 }
 
 STRING 19440
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool5>s
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur10>s|r
+|cff00FFFFCooldown: <A10Q,Cool10>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19441
@@ -125547,13 +125905,17 @@ A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
 STRING 19457
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool6>s
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 20% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur3>s|r
+|cff00FFFFCooldown: <A10Q,Cool3>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19458
@@ -125567,53 +125929,17 @@ Roshi kicks nearby units into the air, disabling them and dealing damage.
 }
 
 STRING 19459
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Items: I04X (Hit's Assassination Contract), Description (Description)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool7>s
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x2.|r
 }
 
 STRING 19460
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
 {
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool8>s
-}
-
-STRING 19461
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool9>s
-}
-
-STRING 19462
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool10>s
-}
-
-STRING 19463
-// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Mana Drain:|r 10% of Max Mana per second
-|cff00FFFFCD:|r <A0IE,Cool3>s
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x2.|r
 }
 
 STRING 19464
@@ -127098,102 +127424,39 @@ Activating this ability permanently removes Macho Brace and provides +0.2-0.4x s
 }
 
 STRING 19671
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 8|r]
 }
 
 STRING 19672
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool2>s|r
-}
-
-STRING 19673
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool3>s|r
-}
-
-STRING 19674
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool4>s|r
-}
-
-STRING 19675
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool5>s|r
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 9|r]
 }
 
 STRING 19676
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool6>s|r
-}
-
-STRING 19677
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool7>s|r
+[|cff00ff00E|r] Mafuba - [|cffffcc00Level 10|r]
 }
 
 STRING 19678
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10Q (Mafuba), EditorSuffix (Editor Suffix)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool8>s|r
-}
-
-STRING 19679
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool9>s|r
+(roshi)
 }
 
 STRING 19680
-// Abilities: A0XU (Vacuum Wave), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
+E
 }
 
 STRING 19681
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
 {
-|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
-|cffFFFF00Passive: Force|r Lucario applies a stacking -1 armor debuff on attack, up to 10 stacks. Auto attacks deal an additional |cffff33330.05% of Max HP|r + |cff33ffff1% of Int|r per stack.
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0XU,Cool10>s|r
+E
 }
 
 STRING 19682
@@ -127674,7 +127937,7 @@ STRING 19747
 }
 
 STRING 19748
-// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
+// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -127692,7 +127955,7 @@ STRING 19750
 }
 
 STRING 19751
-// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -128484,6 +128747,7 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.30x "fp"
 [lvl 200] 2.40x "fp"
+[lvl 250] 2.50x "fp"
 
 Max speed upgrades at level 60 and 125.
 Find Chaos Emeralds by killing players or sagas above level 50.
@@ -128988,7 +129252,7 @@ STRING 19937
 }
 
 STRING 19938
-// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A109 (Reckless Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -129138,7 +129402,7 @@ STRING 19962
 }
 
 STRING 19963
-// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Reckless Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -130063,21 +130327,23 @@ Skurvy summons a kannon from the depths, disabling his other abilities and enabl
 }
 
 STRING 20102
-// Abilities: A0YV (Heating Up), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per second. At 100 heat, Shoto overheats and loses 6% of max HP plus 3% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% fire damage.
-Adds +1% fire damage for each heat above 50.
-|cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool1>s
 }
 
 STRING 20103
-// Abilities: A0YW (Cooling Down), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Shotoi cools himself down. Decreases heat gauge and reduces a fixed amount of heat per second. At 0 heat, Shoto suffers from frostbite and loses 6% of max HP plus 3% of max HP per second. Activate this ability again to disable it.
-|cffffff00Adds +10% frost damage.
-Adds +1% frost damage for each heat below 50.
-|cffffff00|cff00ffffCooldown: <A0YW,Cool1> seconds
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur2,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool2>s
 }
 
 STRING 20104
@@ -130945,7 +131211,7 @@ Sonic swerves in midair, curling up into a spinball and launching himself straig
 }
 
 STRING 20232
-// Abilities: A109 (Reckless Charge), Hotkey (Hotkey - Normal)
+// Abilities: A10A (Relentless Assault), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -130985,7 +131251,7 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 }
 
 STRING 20238
-// Abilities: A109 (Reckless Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A10A (Relentless Assault), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -131638,7 +131904,7 @@ Plant Rice
 }
 
 STRING 20336
-// Abilities: A10A (Relentless Assault), Hotkey (Hotkey - Normal)
+// Abilities: A10Q (Mafuba), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -132723,7 +132989,7 @@ Increases building armor by +5.
 }
 
 STRING 20492
-// Abilities: A10A (Relentless Assault), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Q (Mafuba), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -133497,8 +133763,8 @@ Transformations:
 [lvl 60]  1.60x "guts"
 [lvl 100] 2.00x "guts"
 [lvl 150] 2.30x "guts"
-[lvl 200] 2.40x "guts"
-[lvl 250] 2.50x "guts" [unlocks Berserker Armor]
+[lvl 200] 2.40x "guts" [unlocks Berserker Armor]
+[lvl 250] 2.50x "guts"
 
 |cffffcc00Determination:|r +10% base STR Mult
 |cffff2020Berserker:|r Abilities on cooldown upgrade after losing 15% max HP.
@@ -133506,7 +133772,7 @@ Transformations:
 
 STRING 20612
 {
-[|cffffcc00Unlock|r] |cffFF2020Berserker Armor|r
+[|cffffcc00Ultimate|r] |cffFF2020Berserker Armor|r
 Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage.
 }
 
@@ -134584,11 +134850,9 @@ STRING 20760
 }
 
 STRING 20761
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool1> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool3>s|r
 }
 
 STRING 20762
@@ -134598,11 +134862,9 @@ STRING 20762
 }
 
 STRING 20763
-// Abilities: A10A (Relentless Assault), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool1> - <A10A,Cool10> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool4>s|r
 }
 
 STRING 20764
@@ -134778,11 +135040,9 @@ STRING 20786
 }
 
 STRING 20787
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool3> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool5>s|r
 }
 
 STRING 20788
@@ -134804,19 +135064,15 @@ STRING 20790
 }
 
 STRING 20791
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool4> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool6>s|r
 }
 
 STRING 20792
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool5> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool7>s|r
 }
 
 STRING 20793
@@ -134856,43 +135112,33 @@ STRING 20798
 }
 
 STRING 20799
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool6> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool8>s|r
 }
 
 STRING 20800
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool7> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool9>s|r
 }
 
 STRING 20801
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IC (Shining Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool8> seconds|r
+Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: Agi x Lvl x ?|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song and mana burns 15% of max mana|n|cff00FFFFCooldown: <A0IC,Cool10>s|r
 }
 
 STRING 20802
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B04M (), EditorSuffix (Editor Suffix)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool9> seconds|r
+(2)
 }
 
 STRING 20803
-// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Guts temporarily increases his speed to superhuman levels and bulldozes nearby enemies.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A10A,Cool10> seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004x|r|n|cff00FFFFCooldown: <A0EI,Cool1> seconds|r
 }
 
 STRING 20804
@@ -135169,18 +135415,70 @@ STRING 20840
 (guts)
 }
 
-STRING 20848
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
+STRING 20841
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
 {
-A powered up version of Super Saiyan 2 achieved through intense rage.
-|cffffff00+0.6x str mult
-+0.1x agi/int mult
-+165ms and unlocks movement speed cap
-+10% spell power
-30% damage block up to 4 x Str.|n200 AOE ministun aura.
-Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to deal <A10K,DataB2,.> damage.|r
-|cff00ff00Duration: <A0KT,Dur1> seconds
-|cff00ffffCooldown: <A0KT,Cool1> seconds
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool4> seconds|r
+}
+
+STRING 20842
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool5> seconds|r
+}
+
+STRING 20843
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool6> seconds|r
+}
+
+STRING 20844
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool7> seconds|r
+}
+
+STRING 20845
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool8> seconds|r
+}
+
+STRING 20846
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool9> seconds|r
+}
+
+STRING 20847
+// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Guts recklessly charges through all obstacles, increasing his speed.
+Upgrades to [|cff00ff00E|r] Relentless Assault.
+|cff00ffffCooldown: <A109,Cool10> seconds|r
+}
+
+STRING 20848
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur4,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool4>s
 }
 
 STRING 20849
@@ -135689,6 +135987,107 @@ STRING 20920
 This unit is under the effects of Beast of Darkness; it has increased attack damage.
 }
 
+STRING 20921
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool1> seconds|r
+}
+
+STRING 20922
+// Abilities: A10A (Relentless Assault), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool1> - <A10A,Cool10> seconds|r
+}
+
+STRING 20923
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool2> seconds|r
+}
+
+STRING 20924
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool3> seconds|r
+}
+
+STRING 20925
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool4> seconds|r
+}
+
+STRING 20926
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool5> seconds|r
+}
+
+STRING 20927
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool6> seconds|r
+}
+
+STRING 20928
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool7> seconds|r
+}
+
+STRING 20929
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool8> seconds|r
+}
+
+STRING 20930
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool9> seconds|r
+}
+
+STRING 20931
+// Abilities: A10A (Relentless Assault), Ubertip (Tooltip - Normal - Extended)
+{
+Guts temporarily increases his speed to superhuman levels.
+|cff00ffffCooldown: <A10A,Cool10> seconds|r
+}
+
+STRING 20932
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+}
+
+STRING 20933
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+}
+
+STRING 20934
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+}
+
+STRING 20935
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+}
+
 STRING 20936
 // Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -135745,6 +136144,36 @@ STRING 20942
 [|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 3|r]
 }
 
+STRING 20943
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
+}
+
+STRING 20944
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+}
+
+STRING 20945
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+}
+
+STRING 20946
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+}
+
+STRING 20947
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
 STRING 20948
 // Abilities: A10N (Revive - Move Original Spawn), Tip (Tooltip - Normal)
 {
@@ -135785,102 +136214,158 @@ Upgrades to [|cff00ff00W|r] Dragon Cannon Slash.
 }
 
 STRING 20954
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool1> seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: <A0E1,Cool2> seconds|r
 }
 
 STRING 20955
-// Abilities: A109 (Reckless Charge), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool1> - <A109,Cool10> seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 30%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.006x|r|n|cff00FFFFCooldown: <A0EI,Cool3> seconds|r
 }
 
 STRING 20956
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool2> seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cffff2020Candied units cannot be candied again for 15s|r|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/20/30%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004/0.005/0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 20957
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool3> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur5,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool5>s
 }
 
 STRING 20958
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool4> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur6,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool6>s
 }
 
 STRING 20959
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool5> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur7,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool7>s
 }
 
 STRING 20960
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool6> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur8,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool8>s
 }
 
 STRING 20961
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool7> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur9,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool9>s
 }
 
 STRING 20962
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool8> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur10,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool10>s
 }
 
 STRING 20963
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IE (Lightning Surprise), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool9> seconds|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur3,.>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Mana Drain:|r 10% of Max Mana per second
+|cff00FFFFCD:|r <A0IE,Cool3>s
 }
 
-STRING 20964
-// Abilities: A109 (Reckless Charge), Ubertip (Tooltip - Normal - Extended)
+STRING 20965
+// Abilities: A0TU (Super Masenko), Ubertip (Tooltip - Normal - Extended)
 {
-Guts recklessly charges through all obstacles, increasing his speed and damaging nearby enemies.
-Upgrades to [|cff00ff00E|r] Relentless Assault.
-|cff00ff00Damage: Agi * Lvl * ?
-|cff00ffffCooldown: <A109,Cool10> seconds|r
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned. Fires two masenkos in an arc.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0TU,Cool10> seconds|r
+}
+
+STRING 20966
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool3> seconds)|r
+}
+
+STRING 20967
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool2> seconds)|r
+}
+
+STRING 20968
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool5> seconds)|r
+}
+
+STRING 20969
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool4> seconds)|r
+}
+
+STRING 20970
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool6> seconds)|r
+}
+
+STRING 20971
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool7> seconds)|r
+}
+
+STRING 20972
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool8> seconds)|r
+}
+
+STRING 20973
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool9> seconds)|r
+}
+
+STRING 20974
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool1> seconds)|r
+}
+
+STRING 20975
+// Abilities: A10R (Mafuba Sealed Debuff), Name (Name)
+{
+Mafuba Sealed Debuff
 }
 
 STRING 20976
@@ -135923,6 +136408,12 @@ STRING 20982
 // Abilities: A10L (Dragon Cannon Shot), Name (Name)
 {
 Dragon Cannon Shot
+}
+
+STRING 20983
+// Abilities: A10R (Mafuba Sealed Debuff), Tip (Tooltip - Normal)
+{
+Mafuba Sealed Debuff
 }
 
 STRING 20984
@@ -135986,6 +136477,48 @@ STRING 20992
 // Abilities: A10L (Dragon Cannon Shot), EditorSuffix (Editor Suffix)
 {
 (guts)
+}
+
+STRING 20993
+// Abilities: A10R (Mafuba Sealed Debuff), EditorSuffix (Editor Suffix)
+{
+(roshi)
+}
+
+STRING 20994
+// Abilities: A10S (Mafuba Channel Silence Debuff), Name (Name)
+{
+Mafuba Channel Silence Debuff
+}
+
+STRING 20995
+// Abilities: A10S (Mafuba Channel Silence Debuff), Tip (Tooltip - Normal)
+{
+Mafuba Channel Silence Debuff
+}
+
+STRING 20996
+// Abilities: A10S (Mafuba Channel Silence Debuff), EditorSuffix (Editor Suffix)
+{
+(roshi)
+}
+
+STRING 20997
+// Buffs/Effects: B05H (), Bufftip (Tooltip)
+{
+Sealed
+}
+
+STRING 20998
+// Buffs/Effects: B05H (), Buffubertip (Tooltip - Extended)
+{
+This unit is sealed; it is silenced.
+}
+
+STRING 20999
+// Buffs/Effects: B05I (), Bufftip (Tooltip)
+{
+Sealing
 }
 
 STRING 21000
@@ -136058,6 +136591,12 @@ STRING 21011
 // Abilities: A10M (Bursting Flame), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Bursting Flame - [|cffffcc00Level 10|r]
+}
+
+STRING 21012
+// Buffs/Effects: B05I (), Buffubertip (Tooltip - Extended)
+{
+This unit is being sealed; it is silenced.
 }
 
 STRING 21015
@@ -136369,206 +136908,6 @@ A tanky close-range hero that punishes enemies who damage him.
 |cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 21050
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool1> seconds|r
-}
-
-STRING 21051
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool2> seconds|r
-}
-
-STRING 21052
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool3> seconds|r
-}
-
-STRING 21053
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool4> seconds|r
-}
-
-STRING 21054
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool5> seconds|r
-}
-
-STRING 21055
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool6> seconds|r
-}
-
-STRING 21056
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool7> seconds|r
-}
-
-STRING 21057
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool8> seconds|r
-}
-
-STRING 21058
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool9> seconds|r
-}
-
-STRING 21059
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool10> seconds|r
-}
-
-STRING 21060
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool1> seconds|r
-}
-
-STRING 21061
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool2> seconds|r
-}
-
-STRING 21062
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool3> seconds|r
-}
-
-STRING 21063
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool4> seconds|r
-}
-
-STRING 21064
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool5> seconds|r
-}
-
-STRING 21065
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool6> seconds|r
-}
-
-STRING 21066
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool7> seconds|r
-}
-
-STRING 21067
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool8> seconds|r
-}
-
-STRING 21068
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool9> seconds|r
-}
-
-STRING 21069
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool10> seconds|r
-}
-
-STRING 21070
-// Abilities: A10B (Rage), Researchubertip (Tooltip - Learn - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
 }
 
 STRING 21071

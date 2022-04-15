@@ -927,6 +927,23 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     isPersistent: false,
   },
+  // mafuba
+  {
+    name: "knockback roshi mafuba",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 35, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
   // divine authority
   {
     name: "knockback divine authority deflect",

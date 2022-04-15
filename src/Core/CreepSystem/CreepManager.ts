@@ -205,9 +205,9 @@ export class CreepManager {
       } else {
         SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep), false);
       }
-      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.07 + 50), false);
-      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.07 + 50), false);
-      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.07 + 50), false);
+      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.07 + 60), false);
+      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.07 + 60), false);
+      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.07 + 60), false);
     } else {
       SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
     }

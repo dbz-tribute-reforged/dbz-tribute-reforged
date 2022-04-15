@@ -254,7 +254,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 41,
   },
   // zanzoken
   {
@@ -267,7 +267,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 700,
+    distance: 800,
   },
   // max power
   {
@@ -452,7 +452,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 19,
+    distance: 25,
   },
   {
     name: "dash ground point saiyan spirit",
@@ -500,7 +500,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 33,
   },
   // energy punch
   {

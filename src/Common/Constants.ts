@@ -6,6 +6,7 @@ export module Globals {
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
   export let isZanzoDash: boolean = false;
+  export let numPVPKills: number = 0;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
@@ -50,7 +51,7 @@ export module Constants {
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
-  export const heavenHellMaxHeroLevel: number = 11;
+  export const heavenHellMaxHeroLevel: number = 10;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -8200, 20000
   );
@@ -67,6 +68,10 @@ export module Constants {
   export const invalidTeamValue: number = 0;
   export const team1Value: number = 1;
   export const team2Value: number = 2;
+  export let activePlayers: player[] = [
+    Player(0), Player(1), Player(2), Player(3), Player(4),
+    Player(5), Player(6), Player(7), Player(8), Player(9)
+  ];
   export let defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];
   export let defaultTeam2: player[] = [Player(5), Player(6), Player(7), Player(8), Player(9)];
   export const creepPlayers: player[] = [
@@ -77,7 +82,7 @@ export module Constants {
   ];
   export const maxHeroLevel: number = 1000;
   export const maxCreepLvl: number = 99;
-  export const creepAggroRange: number = 750;
+  export const creepAggroRange: number = 800;
   export const finalBattleName: string = "Final Battle";
   export const budokaiName: string = "Tournament";
   export const locustAbility: number = FourCC("Aloc")
@@ -169,10 +174,16 @@ export module DebuffAbilities {
 
   // inner fire
   export const LUCARIO_FORCE_DEBUFF = FourCC("A0Y5");
+
+  // soul burn
+  export const MAFUBA_SEALED = FourCC("A10R");
+  export const MAFUBA_SEALING = FourCC("A10S");
 }
 
 export module Buffs {
   // buffs
+  export const STUNNED = FourCC("BPSE");
+
   export const HEROS_SONG = FourCC("B01H");
 
   export const COSMIC_ILLUSION = FourCC("B025");
@@ -194,6 +205,9 @@ export module Buffs {
   export const EXTREME_SPEED = FourCC("B04O");
 
   export const FROSTBITE = FourCC("B02T");
+
+  export const MAFUBA_SEALED = FourCC("B05H");
+  export const MAFUBA_SEALING = FourCC("B05I");
 }
 
 export module OrderIds {
@@ -204,6 +218,7 @@ export module OrderIds {
   export const SLEEP = 852227;
   export const INNER_FIRE = 852066;
   export const HOLY_BOLT = 852092;
+  export const SOUL_BURN = 852668;
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
   export const ATTACK = 851983;
@@ -668,6 +683,7 @@ export module Id {
   export const roshiKameCharge2 = FourCC("A0SO");
   export const roshiKameFire2 = FourCC("A0SP");
   export const roshiLightningSurprise = FourCC("A0IE");
+  export const roshiMafuba = FourCC("A10Q");
   export const roshiNewTrick = FourCC("A0KU");
   export const roshiMaxPower = FourCC("A0FH");
 

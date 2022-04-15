@@ -1,7 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 
 export class Universe6Saga extends AdvancedSaga implements Saga {
   name: string = '[DB Super] Universe 6 Saga';
@@ -34,7 +34,7 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
   }
 
   canStart(): boolean {
-    return true;
+    return Globals.numPVPKills >= 20;
   }
 
   canComplete(): boolean {

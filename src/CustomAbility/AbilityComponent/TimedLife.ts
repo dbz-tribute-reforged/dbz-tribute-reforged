@@ -1,6 +1,7 @@
 import { AbilityComponent } from "./AbilityComponent";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
 

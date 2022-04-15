@@ -215,7 +215,7 @@ export class TournamentManager {
         // )
       }
     } else {
-      print("Could not start " + name + ", as tournament does not exist (anymore)");
+      // print("Could not start " + name + ", as tournament does not exist (anymore)");
     }
   }
 }

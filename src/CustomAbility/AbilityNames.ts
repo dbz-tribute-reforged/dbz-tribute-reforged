@@ -225,7 +225,7 @@ export module AbilityNames {
     export const KAMEHAMEHA_SUPER_CHARGE: string = "Kamehameha Super Roshi Charge";
     export const KAMEHAMEHA_SUPER_FIRE: string = "Kamehameha Super Roshi Fire";
     export const LIGHTNING_SURPRISE: string = "Lightning Surprise";
-    export const MAFUBA: string = "Mafuba";
+    export const MAFUBA: string = "Roshi Mafuba";
     export const MAX_POWER: string = "Max Power Roshi";
     export const NEW_TRICK: string = "New Trick";
     export const ULTIMATE_INSTINCT: string = "Ultimate Instinct";

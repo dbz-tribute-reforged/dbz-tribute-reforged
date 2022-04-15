@@ -54,15 +54,15 @@ export const SpellAmpComponents = [
     bonus: 0.5,
     rate: 0.5,
   },
-  // --------------------------------------------
-  { 
-    name: "spell amp super saiyan rage", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.10,
-    rate: 0.10,
-  },
+  // // --------------------------------------------
+  // { 
+  //   name: "spell amp super saiyan rage", 
+  //   repeatInterval: 1, 
+  //   startTick: 0,
+  //   endTick: -1,
+  //   bonus: 0.10,
+  //   rate: 0.10,
+  // },
   // --------------------------------------------
   { 
     name: "spell amp mastered ultra instinct", 
@@ -132,8 +132,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.75,
-    rate: 0.75,
+    bonus: 0.7,
+    rate: 0.7,
   },
   // --------------------------------------------
   { 

@@ -188,9 +188,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
     GoldenFriezaSaga: [
       [ WhisTrainingSaga, SagaState.Completed ],
     ],
-    Universe6Saga: [
-      [ GoldenFriezaSaga, SagaState.Completed ],
-    ],
     BrolyDBSSaga: [
       [ Universe6Saga, SagaState.Completed ],
       [ BioBrolySaga, SagaState.Completed ],
@@ -208,6 +205,11 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     ShadowDragonSaga2: [
       [ ShadowDragonSaga1, SagaState.Completed ],
+    ],
+    // bonus
+    Universe6Saga: [
+      // [ GoldenFriezaSaga, SagaState.Completed ],
+      [ FriezaSaga, SagaState.Completed ],
     ],
     // secret
     RustTyrannoSaga: [

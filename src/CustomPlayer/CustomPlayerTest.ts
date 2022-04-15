@@ -26,6 +26,7 @@ import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
+import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -89,8 +90,8 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           if (name == AbilityNames.BasicAbility.MAX_POWER) {
             SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
           }
+          customHero.useAbility(name, abilityInput);
         }
-        customHero.useAbility(name, abilityInput);
       }
     }
   });
@@ -716,6 +717,9 @@ export function CustomPlayerTest() {
       // ) &&
       // deadPlayerId != Constants.heavenHellCreepPlayerId
     ) {
+      if (killPlayerId >= 0 && killPlayerId < Constants.maxActivePlayers) {
+        Globals.numPVPKills++;
+      }
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         8,
@@ -1253,6 +1257,7 @@ export function CustomPlayerTest() {
     SetupSkurvyMirror();
 
     SetupSonicAbilities();
+    SetupRoshiMafuba();
     
     SetupTreeOfMightSapling();
 
@@ -1274,11 +1279,12 @@ export function SetupBraveSwordAttack() {
   const tickRate = 0.02;
   const jumpDuration = 40;
   const jumpHeight = 900;
-  const jumpMoveDistance = 30;
-  const jumpSpeedModifier = 0.0015;
-  const jumpSpeedModifierMax = 1.33;
-  const jumpSpeedModifierMin = 0.15;
-  const braveSwordAOE = 400;
+  const jumpMoveDistance = 2;
+  // const jumpMoveDistance = 30;
+  // const jumpSpeedModifier = 0.0015;
+  // const jumpSpeedModifierMax = 1.33;
+  // const jumpSpeedModifierMin = 0.15;
+  const braveSwordAOE = 425;
   const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.3;
   const braveSwordManaBurnMult = 0.01;
   const maxManaCostMult = 0.2;
@@ -1428,6 +1434,10 @@ export function SetupBraveSwordAttack() {
               1 - timeJumpRatio * timeJumpRatio
             );
             SetUnitFlyHeight(caster, height, 0);
+
+            tmpPos.setUnit(caster);
+            tmpPos.polarProjectCoords(tmpPos, GetUnitFacing(caster), jumpMoveDistance);
+            PathingCheck.moveGroundUnitToCoord(caster, tmpPos);
             
             // tmpPos.setPos(
             //   LoadReal(Globals.genericSpellHashtable, casterId, 0),
@@ -3717,6 +3727,62 @@ export function SetupSonicAbilities() {
   
   // if unit picks up dragonball and is sonic, add chaos emerald
   ItemStackingManager.getInstance().addStackableItemType(ItemConstants.chaosEmerald, 7);
+}
+
+
+export function SetupRoshiMafuba() {
+  const mafubaMaxHpMult = 0.2;
+  const mafubaCurrentHpMult = 0.1;
+  const mafubaSagaDmgMult = 0.25;
+
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.roshiMafuba) {
+      // deal damage self
+      const caster = GetTriggerUnit();
+      const currentHp = GetUnitState(caster, UNIT_STATE_LIFE);
+      const selfDmg = (
+        mafubaMaxHpMult * GetUnitState(caster, UNIT_STATE_MAX_LIFE)
+        + mafubaCurrentHpMult * currentHp
+      );
+      SetUnitState(caster, UNIT_STATE_LIFE, Math.max(1, currentHp - selfDmg));
+
+    } else if (spellId == DebuffAbilities.MAFUBA_SEALED) {
+
+      // end cooldowns for target
+      const caster = GetTriggerUnit();
+      const casterPlayer = GetOwningPlayer(caster);
+      const target = GetSpellTargetUnit();
+      const targetPlayer = GetOwningPlayer(target);
+      if (
+        IsUnitType(target, UNIT_TYPE_HERO)
+        && UnitHelper.isUnitTargetableForPlayer(target, casterPlayer, false)
+      ) {
+        UnitRemoveBuffs(target, true, true);
+        const targetPlayerId = GetPlayerId(targetPlayer);
+        if (targetPlayerId == Constants.sagaPlayerId) {
+          SetUnitState(
+            target, UNIT_STATE_LIFE, 
+            Math.max(
+              1, 
+              GetUnitState(target, UNIT_STATE_LIFE) 
+              - mafubaSagaDmgMult * GetUnitState(target, UNIT_STATE_MAX_LIFE)
+            )
+          );
+        }
+        if (targetPlayerId >= 0 && targetPlayerId < Globals.customPlayers.length) {
+          for (const hero of Globals.customPlayers[targetPlayerId].allHeroes) {
+            if (!hero) continue;
+            for (const ability of hero.abilities.getCustomAbilities()) {
+              if (ability.isInUse()) {
+                CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
+              }
+            }
+          }
+        }
+      }
+    }
+  });
 }
 
 export function SetupTreeOfMightSapling() {

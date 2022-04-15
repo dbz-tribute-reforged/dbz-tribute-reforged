@@ -80,7 +80,7 @@ export const AbilitiesList = [
     costAmount: 30,
     duration: 50,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -111,7 +111,7 @@ export const AbilitiesList = [
     costAmount: 40,
     duration: 166,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -143,7 +143,7 @@ export const AbilitiesList = [
     costAmount: 30,
     duration: 19,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -319,7 +319,7 @@ export const AbilitiesList = [
     costAmount: 0,
     duration: 495,
     updateRate: 0.03,
-    castTime: 0.03,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -348,7 +348,7 @@ export const AbilitiesList = [
     costAmount: 0,
     duration: 495,
     updateRate: 0.03,
-    castTime: 0.03,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -1273,7 +1273,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward super saiyan rage" },
       { name: "stun super saiyan rage" },
-      { name: "spell amp super saiyan rage" },
+      // { name: "spell amp super saiyan rage" },
       { name: "block super saiyan rage" },
       { name: "sfx super saiyan rage" },
     ],
@@ -4191,6 +4191,35 @@ export const AbilitiesList = [
     components: [
       { name: "channel caster default" },
       { name: "beam lightning surprise" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.MAFUBA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiMafuba.blp",
+      disabled: "BTNRoshiMafuba.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.MAFUBA,
+      body: 
+        AbilityNames.Roshi.MAFUBA,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam roshi mafuba" },
+      { name: "sfx roshi mafuba" },
     ],
   },
   // -------------------------------------------
@@ -7525,7 +7554,7 @@ export const AbilitiesList = [
     costAmount: 40,
     duration: 1,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: true,
@@ -8298,7 +8327,7 @@ export const AbilitiesList = [
     },
     components: [
       // { name: "damage guts reckless charge dps" },
-      { name: "dash ground forward 3dist" },
+      { name: "dash ground forward 4dist" },
       { name: "sfx guts reckless charge" },
     ],
   },
@@ -8327,7 +8356,7 @@ export const AbilitiesList = [
     },
     components: [
       // { name: "damage guts reckless charge dps" },
-      { name: "dash ground forward 5dist" },
+      { name: "dash ground forward 6dist" },
       { name: "sfx guts relentless assault" },
     ],
   },
@@ -9182,12 +9211,12 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Cell.SUPER_CHARGE,
     currentCd: 0,
-    maxCd: 21,
+    maxCd: 22,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 50,
     duration: 333,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -9199,8 +9228,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "Boosts your ability damage by 75% and increases movement speed by 132 for 10 seconds." + 
-        "|nCost: 40 SP|nCD: 21"
+        "Boosts your ability damage by 70% and increases movement speed by 132 for 10 seconds." + 
+        "|nCost: 50 SP|nCD: 22"
     },
     components: [
       { name: "spell amp cell super charge" },
@@ -12632,7 +12661,7 @@ export const AbilitiesList = [
     costAmount: 100,
     duration: 330,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -12834,7 +12863,7 @@ export const AbilitiesList = [
     costAmount: 120,
     duration: 250,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,

@@ -53,6 +53,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       WEAPON_TYPE_WHOKNOWS
     ), 
     public maxHealthDamagePercent: number = 0,
+    public maxManaBurnPercent: number = 0,
     public maxManaLossPercent: number = 0,
     public applyDamageOverTime: boolean = false,
     public requireBuff: boolean = false,
@@ -75,6 +76,16 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         )
       )
     ));
+  }
+
+  static calculateMaxManaBurnDamageRaw(
+    maxManaBurnPercent: number,
+    target: unit
+  ): number {
+    return (
+      maxManaBurnPercent
+      * GetUnitState(target, UNIT_STATE_MAX_MANA)
+    );
   }
 
   static calculateDamageRaw(
@@ -247,15 +258,28 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   protected performDamage(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
-    let bonusMaxHpDamage = 0;
+    let bonusDmg = 0;
     if (this.maxHealthDamagePercent > 0) {
-      bonusMaxHpDamage = (
+      bonusDmg = (
         GetUnitState(target, UNIT_STATE_MAX_LIFE) * 
         this.maxHealthDamagePercent
       );
       if (this.sourceHPDamageScale != 0) {
-        bonusMaxHpDamage = this.scaleDamageToSourceHP(bonusMaxHpDamage, sourceHPPercent);
+        bonusDmg = this.scaleDamageToSourceHP(bonusDmg, sourceHPPercent);
       }
+    }
+    if (this.maxManaBurnPercent > 0) {
+      const manaBurn = AOEDamage.calculateMaxManaBurnDamageRaw(
+        this.maxManaBurnPercent,
+        target
+      );
+      bonusDmg += manaBurn;
+      SetUnitState(target, UNIT_STATE_MANA, 
+        Math.max(0, 
+          GetUnitState(target, UNIT_STATE_MANA) - 
+          manaBurn
+        )
+      );
     }
     if (this.maxManaLossPercent > 0) {
       SetUnitState(target, UNIT_STATE_MANA, 
@@ -268,7 +292,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     UnitDamageTarget(
       input.caster.unit, 
       target, 
-      damage + bonusMaxHpDamage,
+      damage + bonusDmg,
       true,
       false,
       this.damageData.attackType,
@@ -387,6 +411,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.maxDamageTicks,
       this.damageData,
       this.maxHealthDamagePercent,
+      this.maxManaBurnPercent,
       this.maxManaLossPercent,
       this.applyDamageOverTime,
       this.requireBuff,
@@ -417,6 +442,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         weaponType: number; 
       }; 
       maxHealthDamagePercent: number;
+      maxManaBurnPercent: number;
       maxManaLossPercent: number;
       applyDamageOverTime: boolean;
       requireBuff: boolean;
@@ -438,6 +464,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.maxDamageTicks = input.maxDamageTicks;
     this.damageData = new DamageData().deserialize(input.damageData);
     this.maxHealthDamagePercent = input.maxHealthDamagePercent;
+    this.maxManaBurnPercent = input.maxManaBurnPercent;
     this.maxManaLossPercent = input.maxManaLossPercent;
     this.applyDamageOverTime = input.applyDamageOverTime;
     this.requireBuff = input.requireBuff;
