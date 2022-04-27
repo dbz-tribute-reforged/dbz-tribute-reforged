@@ -9214,7 +9214,7 @@ export const AbilitiesList = [
     maxCd: 22,
     costType: CostType.SP,
     costAmount: 50,
-    duration: 333,
+    duration: 300,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -9228,7 +9228,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "Boosts your ability damage by 70% and increases movement speed by 132 for 10 seconds." + 
+        "Boosts your ability damage by 70% and increases movement speed by 132 for 9 seconds." + 
         "|nCost: 50 SP|nCD: 22"
     },
     components: [

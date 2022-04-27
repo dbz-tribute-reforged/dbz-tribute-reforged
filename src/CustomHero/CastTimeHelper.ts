@@ -200,7 +200,7 @@ export class CastTimeHelper {
     if (activeAbilInput) {
       ability.endAbility();
       ability.resetCooldown();
-      ability.activateOnTimer(activeAbilInput); // force end
+      if (ability.isInUse()) ability.activateOnTimer(activeAbilInput); // force end
     }
   }
 
@@ -211,6 +211,16 @@ export class CastTimeHelper {
   ) {
     const activeAbilInput = this.activeAbilities.has(ability);
     if (activeAbilInput) {
+      // dont cancel some abilities basics
+      if (
+        ability.name == AbilityNames.BasicAbility.ZANZOKEN
+        || ability.name == AbilityNames.BasicAbility.ZANZO_DASH
+        || ability.name == AbilityNames.YamchaR.LIGHT_PUNCH
+        || ability.name == AbilityNames.YamchaR.MEDIUM_PUNCH
+        || ability.name == AbilityNames.YamchaR.HEAVY_PUNCH
+      ) {
+        return;
+      }
       this.forceEndActivatedAbility(ability);
     }
     this.activeAbilities.set(ability, input);
