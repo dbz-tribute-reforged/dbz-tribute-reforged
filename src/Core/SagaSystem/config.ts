@@ -131,6 +131,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ TurlesSaga, SagaState.Completed ],
     ],
     GarlicJrSaga: [
+      [ DeadZoneSaga, SagaState.Completed ],
       [ LordSlugSaga, SagaState.Completed ],
     ],
     CoolerRevengeSaga: [
@@ -189,7 +190,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ WhisTrainingSaga, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
-      [ Universe6Saga, SagaState.Completed ],
+      // [ Universe6Saga, SagaState.Completed ],
       [ BioBrolySaga, SagaState.Completed ],
       [ GoldenFriezaSaga, SagaState.Completed ],
     ],

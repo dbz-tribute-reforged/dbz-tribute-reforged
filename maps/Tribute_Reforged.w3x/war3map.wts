@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.73c
+DBZ Tribute |cffffcc00Reforged 0.73d
 }
 
 STRING 4
@@ -78841,48 +78841,6 @@ A hero that has mastered the Kamehameha. Also has access to very powerful crowd-
 |cff808080"Kamehame... HAAAAAA!"
 }
 
-STRING 12628
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur1>s|r
-|cff00FFFFCooldown: <A10Q,Cool1>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
-STRING 12629
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur2>s|r
-|cff00FFFFCooldown: <A10Q,Cool2>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
-STRING 12630
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur4>s|r
-|cff00FFFFCooldown: <A10Q,Cool4>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
 STRING 12631
 // Units: n03Z (Carries / Late-game), Name (Name)
 {
@@ -90265,6 +90223,20 @@ STRING 14421
 Hit's Assassination Contract
 }
 
+STRING 14423
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur1>s|r
+|cff00FFFFCooldown: <A10Q,Cool1>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
 STRING 14424
 // Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
@@ -99700,20 +99672,6 @@ STRING 15778
 (5)
 }
 
-STRING 15779
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur5>s|r
-|cff00FFFFCooldown: <A10Q,Cool5>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
 STRING 15780
 // Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108030,20 +107988,6 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 16898
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur6>s|r
-|cff00FFFFCooldown: <A10Q,Cool6>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 16899
@@ -119725,20 +119669,6 @@ STRING 18588
 Ice 2
 }
 
-STRING 18589
-// Abilities: A10Q (Mafuba), Researchubertip (Tooltip - Learn - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur1>s|r
-|cff00FFFFCooldown: <A10Q,Cool1> - <A10Q,Cool10>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
 STRING 18590
 // Abilities: A0XD (Ice 2), Researchtip (Tooltip - Learn)
 {
@@ -125690,20 +125620,6 @@ STRING 19431
 Moves your revive point to ???.
 }
 
-STRING 19432
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur7>s|r
-|cff00FFFFCooldown: <A10Q,Cool7>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
 STRING 19433
 // Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
 {
@@ -125712,34 +125628,6 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 |cff2080ffMana Cost: 25% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur10> seconds|r
 |cff00ffffCooldown: <A0YG,Cool10> seconds|r
-}
-
-STRING 19434
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur8>s|r
-|cff00FFFFCooldown: <A10Q,Cool8>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
-STRING 19435
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur9>s|r
-|cff00FFFFCooldown: <A10Q,Cool9>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19436
@@ -125776,20 +125664,6 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff2080ffMana Cost: 20% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur4> seconds|r
 |cff00ffffCooldown: <A0YG,Cool4> seconds|r
-}
-
-STRING 19440
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur10>s|r
-|cff00FFFFCooldown: <A10Q,Cool10>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19441
@@ -125904,20 +125778,6 @@ STRING 19456
 A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
-STRING 19457
-// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
-|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
-|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
-
-|cffff2020Costs 20% of Max HP + 10% of Current HP|r
-|cffff2020Channel Duration: <A10Q,Dur3>s|r
-|cff00FFFFCooldown: <A10Q,Cool3>s|r
-
-|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
-}
-
 STRING 19458
 // Abilities: A0IE (Lightning Surprise), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -125940,6 +125800,48 @@ STRING 19460
 {
 A contract listing all of Hit's assassination targets.
 |cffffff00Increases stat gain from PvP kills by x2.|r
+}
+
+STRING 19461
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur2>s|r
+|cff00FFFFCooldown: <A10Q,Cool2>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
+STRING 19462
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur4>s|r
+|cff00FFFFCooldown: <A10Q,Cool4>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
+STRING 19463
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur5>s|r
+|cff00FFFFCooldown: <A10Q,Cool5>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19464
@@ -127435,16 +127337,86 @@ STRING 19672
 [|cff00ff00E|r] Mafuba - [|cffffcc00Level 9|r]
 }
 
+STRING 19673
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur6>s|r
+|cff00FFFFCooldown: <A10Q,Cool6>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
+STRING 19674
+// Abilities: A10Q (Mafuba), Researchubertip (Tooltip - Learn - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur1>s|r
+|cff00FFFFCooldown: <A10Q,Cool1> - <A10Q,Cool10>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
+STRING 19675
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur7>s|r
+|cff00FFFFCooldown: <A10Q,Cool7>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
 STRING 19676
 // Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Mafuba - [|cffffcc00Level 10|r]
 }
 
+STRING 19677
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur8>s|r
+|cff00FFFFCooldown: <A10Q,Cool8>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
 STRING 19678
 // Abilities: A10Q (Mafuba), EditorSuffix (Editor Suffix)
 {
 (roshi)
+}
+
+STRING 19679
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur9>s|r
+|cff00FFFFCooldown: <A10Q,Cool9>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 19680
@@ -129769,7 +129741,7 @@ Transformations:
 [lvl 85]  1.70x "fp"
 [lvl 125] 2.00x "fp"
 [lvl 150] 2.30x "fp" [Unlock |cffFF2020[F] Pirate's Scorn|r]
-[lvl 150] Spawns the |cff00FFFFCrystal Coconut|r somewhere on the map. (limit 1 per game)
+[lvl 150] Spawns the |cff00FFFFCrystal Coconut|r somewhere. (after it has been found use "cc" to search for it)
 |cffffcc00Booty:|r +0.1x for each rare item held. +0.3x for holding the |cff00FFFFCrystal Coconut|r
 }
 
@@ -136301,6 +136273,20 @@ Roshi kicks nearby units into the air, disabling them and dealing damage.
 |cff00FFFFCD:|r <A0IE,Cool3>s
 }
 
+STRING 20964
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur10>s|r
+|cff00FFFFCooldown: <A10Q,Cool10>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
+}
+
 STRING 20965
 // Abilities: A0TU (Super Masenko), Ubertip (Tooltip - Normal - Extended)
 {
@@ -136597,6 +136583,20 @@ STRING 21012
 // Buffs/Effects: B05I (), Buffubertip (Tooltip - Extended)
 {
 This unit is being sealed; it is silenced.
+}
+
+STRING 21013
+// Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi channels the powerful evil containment wave to seal away enemies of any strength and those that cannot be defeated by conventional means. Enemies caught inside the sealing technique are silenced. At the end of the ability enemies' are |cff00ff00Sealed|r. 
+|cff00ff00Sealed|r enemies are stripped of all current buffs and most temporary transformations. Most active enemy abilities are also cancelled.
+|cff00ff00Sealed|r sagas do not lose their transformations but instead lose 25% of their Max HP.
+
+|cffff2020Costs 5% of Max HP + 10% of Current HP|r
+|cffff2020Channel Duration: <A10Q,Dur3>s|r
+|cff00FFFFCooldown: <A10Q,Cool3>s|r
+
+|cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
 STRING 21015

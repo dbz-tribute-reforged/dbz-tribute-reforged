@@ -3343,6 +3343,9 @@ export function SetupYamchaCombos() {
             );
             customHero.useAbility(abilName, abilityInput);
 
+            
+
+
             // BlzStartUnitAbilityCooldown(unit, Id.yamchaRLightPunch, 0);
             // BlzStartUnitAbilityCooldown(unit, Id.yamchaRMediumPunch, 0);
             // BlzStartUnitAbilityCooldown(unit, Id.yamchaRHeavyPunch, 0);
@@ -3731,7 +3734,7 @@ export function SetupSonicAbilities() {
 
 
 export function SetupRoshiMafuba() {
-  const mafubaMaxHpMult = 0.2;
+  const mafubaMaxHpMult = 0.05;
   const mafubaCurrentHpMult = 0.1;
   const mafubaSagaDmgMult = 0.25;
 

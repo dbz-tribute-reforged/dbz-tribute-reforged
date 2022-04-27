@@ -266,7 +266,7 @@ udg_SchalaChannelGroup = nil
 udg_TempIntDamageMult = 0.0
 udg_SagaCatchupMultiplier = 0.0
 udg_PhoneSkurvyCoconutBool = false
-udg_PhoneSkurvyItem = nil
+udg_PhoneSkurvyCrystalCoconutItem = nil
 udg_PhoneSkurvyRRegistered = __jarray(false)
 udg_PhoneSkurvyRTarget = {}
 udg_PhoneSkurvyItemTimer = {}
@@ -1053,6 +1053,8 @@ gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Scout_Crystal_Coconut_Init = nil
+gg_trg_Scout_Crystal_Coconut_Ping = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -10519,7 +10521,7 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A109"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A10B"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A10D"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A107"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A107"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -17769,11 +17771,13 @@ function Trig_Spawn_Crystal_Coconut_Actions()
         if (Trig_Spawn_Crystal_Coconut_Func002Func002C()) then
             udg_TempLoc = GetUnitLoc(GetTriggerUnit())
             CreateItemLoc(FourCC("I04Y"), udg_TempLoc)
+            udg_PhoneSkurvyCrystalCoconutItem = GetLastCreatedItem()
             SetItemInvulnerableBJ(GetLastCreatedItem(), true)
             PlaySoundBJ(gg_snd_SkurvyCoconutAcquire)
             DisplayTimedTextToForce(GetPlayersAll(), 30.00, "TRIGSTR_20040")
-            PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 3.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
+            PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 10.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
                         RemoveLocation(udg_TempLoc)
+            EnableTrigger(gg_trg_Scout_Crystal_Coconut_Ping)
             DisableTrigger(GetTriggeringTrigger())
         else
             udg_PhoneSkurvyPRNG = (udg_PhoneSkurvyPRNG + 1)
@@ -17788,6 +17792,99 @@ function InitTrig_Spawn_Crystal_Coconut()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Spawn_Crystal_Coconut, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddCondition(gg_trg_Spawn_Crystal_Coconut, Condition(Trig_Spawn_Crystal_Coconut_Conditions))
     TriggerAddAction(gg_trg_Spawn_Crystal_Coconut, Trig_Spawn_Crystal_Coconut_Actions)
+end
+
+function Trig_Scout_Crystal_Coconut_Init_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerRegisterPlayerChatEvent(gg_trg_Scout_Crystal_Coconut_Ping, udg_TempPlayer, "cc", true)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Scout_Crystal_Coconut_Init()
+    gg_trg_Scout_Crystal_Coconut_Init = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Scout_Crystal_Coconut_Init, 5.00)
+    TriggerAddAction(gg_trg_Scout_Crystal_Coconut_Init, Trig_Scout_Crystal_Coconut_Init_Actions)
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003Func004Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H07Y"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003Func004A()
+    if (Trig_Scout_Crystal_Coconut_Ping_Func003Func004Func001C()) then
+        udg_TempBool = true
+    else
+    end
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003Func005Func002Func001Func002C()
+    if (not (UnitHasItem(udg_TempUnit, udg_PhoneSkurvyCrystalCoconutItem) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003Func005Func002Func001A()
+    udg_TempUnit = GetEnumUnit()
+    if (Trig_Scout_Crystal_Coconut_Ping_Func003Func005Func002Func001Func002C()) then
+                RemoveLocation(udg_TempLoc)
+        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    else
+    end
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003Func005C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Func003C()
+    if (not (udg_TempInt4 > 0)) then
+        return false
+    end
+    if (not (udg_TempInt4 <= udg_MaxNumPlayers)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scout_Crystal_Coconut_Ping_Actions()
+    udg_TempPlayer = GetTriggerPlayer()
+    udg_TempInt4 = GetConvertedPlayerId(udg_TempPlayer)
+    if (Trig_Scout_Crystal_Coconut_Ping_Func003C()) then
+        udg_TempBool = false
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt4], Trig_Scout_Crystal_Coconut_Ping_Func003Func004A)
+        if (Trig_Scout_Crystal_Coconut_Ping_Func003Func005C()) then
+            udg_TempLoc = GetItemLoc(udg_PhoneSkurvyCrystalCoconutItem)
+            udg_TempInt3 = 1
+            while (true) do
+                if (udg_TempInt3 > udg_MaxNumPlayers) then break end
+                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scout_Crystal_Coconut_Ping_Func003Func005Func002Func001A)
+                udg_TempInt3 = udg_TempInt3 + 1
+            end
+            udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+            PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 3.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
+                        DestroyForce(udg_TempPlayerGroup)
+                        RemoveLocation(udg_TempLoc)
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Scout_Crystal_Coconut_Ping()
+    gg_trg_Scout_Crystal_Coconut_Ping = CreateTrigger()
+    DisableTrigger(gg_trg_Scout_Crystal_Coconut_Ping)
+    TriggerAddAction(gg_trg_Scout_Crystal_Coconut_Ping, Trig_Scout_Crystal_Coconut_Ping_Actions)
 end
 
 function Trig_Farmer_Eat_Food_Func004C()
@@ -28959,7 +29056,28 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()
     return true
 end
 
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003Func003Func001C()
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I00D")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003Func003C()
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I03Q")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003C()
+    if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0Y9"), udg_TempUnit) > 0)) then
         return false
     end
@@ -28969,21 +29087,7 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()
     return true
 end
 
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001Func001C()
-    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I00D")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001C()
-    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I03Q")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006C()
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()
     if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04Y")) == true)) then
         return false
     end
@@ -28992,9 +29096,6 @@ end
 
 function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()
     if (not (udg_IsAOEFlyingVision == true)) then
-        return false
-    end
-    if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] == 0)) then
         return false
     end
     return true
@@ -29008,22 +29109,26 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
     end
     if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        udg_TempReal = RMinBJ(5000.00, (1400.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
-        if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()) then
-            udg_TempReal = (udg_TempReal + 2000.00)
-        else
-        end
-        if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006C()) then
-            udg_TempReal = (udg_TempReal + 2000.00)
-        else
-            if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001C()) then
+        if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003C()) then
+            udg_TempReal = RMinBJ(5000.00, (1400.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
+            if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003Func003C()) then
                 udg_TempReal = (udg_TempReal + 1000.00)
             else
-                if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006Func001Func001C()) then
+                if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003Func003Func001C()) then
                     udg_TempReal = (udg_TempReal + 500.00)
                 else
                 end
             end
+        else
+            udg_TempReal = 600.00
+        end
+        if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func004C()) then
+            udg_TempReal = (udg_TempReal + 2000.00)
+        else
+        end
+        if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func005C()) then
+            udg_TempReal = (udg_TempReal + 2000.00)
+        else
         end
         CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
         SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
@@ -29511,7 +29616,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
         SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
                 SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
-        udg_TempReal = RMinBJ(140.00, (25.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50)))
+        udg_TempReal = RMinBJ(140.00, (60.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.40)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
         SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
                 udg_TempLoc = Location(GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
@@ -58917,6 +59022,8 @@ function InitCustomTriggers()
     InitTrig_Skurvy_Q1()
     InitTrig_Skurvy_Q2()
     InitTrig_Spawn_Crystal_Coconut()
+    InitTrig_Scout_Crystal_Coconut_Init()
+    InitTrig_Scout_Crystal_Coconut_Ping()
     InitTrig_Farmer_Eat_Food()
     InitTrig_Farmer_Get_Food_Bonus()
     InitTrig_Farmer_Build_Consume_Num_Req_Crops()
