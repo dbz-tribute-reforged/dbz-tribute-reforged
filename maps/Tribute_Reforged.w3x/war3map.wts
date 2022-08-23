@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.73d
+DBZ Tribute |cffffcc00Reforged 0.74
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 62+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 63+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -5936,10 +5936,13 @@ Transformations:
 [lvl 50]  1.50x "frieza"
 [lvl 90]  1.90x "frieza"
 [lvl 150] 2.10x "frieza"
-[lvl 200] 2.30x "golden" [unlocks Golden Frieza]
-[lvl 250] 2.40x "golden" [upgrades Golden Frieza]
+[lvl 200] 2.30x "golden" [Golden Frieza]
+[lvl 250] 2.40x "golden" [Mastered Golden Frieza]
+[lvl 400] 2.60x "black frieza" [No Golden Mana Drain]
 
-Frieza can precisely control his power level by using [|cff00ff00D|r] Transform. Gains Full Power 100% when less than 75% hp in Fourth Form. Gains Mecha Form while dead (heaven/hell).
+Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
+Gains Full Power 100% when less than 75% hp in Fourth Form. 
+Gains Mecha Form while dead (heaven/hell).
 }
 
 STRING 951
@@ -15132,7 +15135,7 @@ STRING 2421
 }
 
 STRING 2422
-// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
+// Units: H0AL (Galactic Patrolman), Hotkey (Hotkey)
 {
 E
 }
@@ -15158,7 +15161,7 @@ A sphere thrown from Broly's hand causing wide area damage.
 }
 
 STRING 2426
-// Items: I04T (|cffffcc00Wish for Resurrection|r), Hotkey (Hotkey)
+// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
 {
 E
 }
@@ -15484,7 +15487,7 @@ STRING 2478
 }
 
 STRING 2479
-// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
+// Items: I04T (|cffffcc00Wish for Resurrection|r), Hotkey (Hotkey)
 {
 E
 }
@@ -15502,7 +15505,7 @@ STRING 2481
 }
 
 STRING 2482
-// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15520,7 +15523,7 @@ STRING 2484
 }
 
 STRING 2485
-// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15548,7 +15551,7 @@ Saitama leaps from one point to another, dealing damage upon landing.
 }
 
 STRING 2489
-// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16099,7 +16102,7 @@ STRING 2575
 }
 
 STRING 2576
-// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -16123,7 +16126,7 @@ Caster Shoots evil energy from its mouth at its enemy.
 }
 
 STRING 2580
-// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16582,7 +16585,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2656
-// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16604,7 +16607,7 @@ You need to absorb android 17!
 }
 
 STRING 2660
-// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17792,7 +17795,7 @@ STRING 2850
 }
 
 STRING 2851
-// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -17816,7 +17819,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 2855
-// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
+// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19582,7 +19585,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
+// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19606,7 +19609,7 @@ Buu fires energy blasts everywhere.
 }
 
 STRING 3145
-// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20116,7 +20119,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 3230
-// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20423,7 +20426,7 @@ STRING 3280
 }
 
 STRING 3281
-// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20459,7 +20462,7 @@ Geti Star Influence
 }
 
 STRING 3287
-// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20489,7 +20492,7 @@ Tsufuru Mcffffcc00e|rdic Training
 }
 
 STRING 3292
-// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20513,7 +20516,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3296
-// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20555,7 +20558,7 @@ STRING 3302
 }
 
 STRING 3303
-// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
+// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20579,7 +20582,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 3307
-// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20801,7 +20804,7 @@ Tsufuru Elite Guacffffcc00r|rd Training
 }
 
 STRING 3344
-// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21243,7 +21246,7 @@ Tsufuru Sciencffffcc00t|rist Training
 }
 
 STRING 3414
-// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -22984,7 +22987,7 @@ STRING 3699
 }
 
 STRING 3700
-// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
+// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -23008,7 +23011,7 @@ Used to turn people into candy. |n[|cffffcc00History|r] - |cff0066CCThis is Buu'
 }
 
 STRING 3704
-// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24857,7 +24860,7 @@ Gigantic Omegastorm
 }
 
 STRING 4003
-// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24881,7 +24884,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 4007
-// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26125,7 +26128,7 @@ STRING 4192
 }
 
 STRING 4193
-// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26149,7 +26152,7 @@ Dende heals nearby heroes for 0.33% of their total HP per second and heals himse
 }
 
 STRING 4197
-// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26521,7 +26524,7 @@ Finger Blit|cffffcc00z|r Barrage
 }
 
 STRING 4259
-// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26545,7 +26548,7 @@ Dende, as Earth's Guardian, has the ability to revive a dead player.|n|cff66ccee
 }
 
 STRING 4263
-// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27346,7 +27349,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 4388
-// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27736,7 +27739,7 @@ STRING 4452
 }
 
 STRING 4453
-// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
+// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27765,7 +27768,7 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 }
 
 STRING 4457
-// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28207,7 +28210,7 @@ STRING 4520
 }
 
 STRING 4521
-// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28231,7 +28234,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 4525
-// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -29102,7 +29105,7 @@ STRING 4668
 }
 
 STRING 4669
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -29127,7 +29130,7 @@ Turles forms a ring of energy between his palms and throws it at the target loca
 }
 
 STRING 4673
-// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -29657,7 +29660,7 @@ STRING 4760
 }
 
 STRING 4761
-// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
+// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30734,7 +30737,7 @@ STRING 4937
 }
 
 STRING 4938
-// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30758,7 +30761,7 @@ Android 18 stuns the target with a quick knee to the torso.|n|cff00FF00Duration:
 }
 
 STRING 4942
-// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
+// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30963,7 +30966,7 @@ STRING 4975
 }
 
 STRING 4976
-// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
+// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30988,7 +30991,7 @@ Android 17 uses his inhuman agility and strength to throw his opponent around li
 }
 
 STRING 4980
-// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32062,7 +32065,7 @@ STRING 5158
 }
 
 STRING 5159
-// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32086,7 +32089,7 @@ Bebi detonates the targeted minion, causing damage in an area.. |n|cff00ff00(Dam
 }
 
 STRING 5163
-// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32259,7 +32262,7 @@ STRING 5191
 }
 
 STRING 5192
-// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32285,7 +32288,7 @@ STRING 5195
 }
 
 STRING 5196
-// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32855,7 +32858,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5291
-// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34378,7 +34381,7 @@ STRING 5539
 }
 
 STRING 5540
-// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34403,7 +34406,7 @@ STRING 5542
 }
 
 STRING 5543
-// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
+// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34867,7 +34870,7 @@ STRING 5615
 }
 
 STRING 5616
-// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34885,7 +34888,7 @@ STRING 5618
 }
 
 STRING 5619
-// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35118,13 +35121,13 @@ STRING 5655
 }
 
 STRING 5656
-// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5657
-// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35286,13 +35289,13 @@ Slappy Hand
 }
 
 STRING 5684
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5685
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35357,6 +35360,7 @@ Transformations:
 [lvl 120] 2.20x "ss"
 [lvl 130] 2.30x "ss2"
 [lvl 140] 2.50x "ult"
+[lvl 400] 2.70x "beast"
 
 |cff00ff00Pick ONE of the following:|r
 [lvl 175] "|cff00afffgod kame|r"
@@ -35402,7 +35406,7 @@ Transformations:
 [lvl 60]  1.75x "kami"
 [lvl 90]  2.00x "super namekian"
 [lvl 150] 2.40x "super namekian"
-[lvl 200] 2.50x "super namekian"
+[lvl 200] 2.60x "orange"
 
 Kyodaika: +0.3-0.6x str 
 |cffff2020Warning: You cannot transform to higher stat multipliers while in Kyodaika|r
@@ -35643,7 +35647,7 @@ Moves your revive point to the upper-left area of the map.|n|cffFF0000Warning: n
 }
 
 STRING 5729
-// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35691,7 +35695,7 @@ Moves your revive point to the wooded area in the south of the map.
 }
 
 STRING 5737
-// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36085,7 +36089,7 @@ STRING 5800
 }
 
 STRING 5801
-// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36109,7 +36113,7 @@ STRING 5804
 }
 
 STRING 5805
-// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
+// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36487,13 +36491,13 @@ Beerus Generic Hakai 2.0
 }
 
 STRING 5866
-// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5867
-// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36817,7 +36821,7 @@ STRING 5920
 }
 
 STRING 5921
-// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36931,7 +36935,7 @@ STRING 5939
 }
 
 STRING 5940
-// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37045,7 +37049,7 @@ STRING 5958
 }
 
 STRING 5959
-// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37069,7 +37073,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5963
-// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37159,7 +37163,7 @@ STRING 5977
 }
 
 STRING 5978
-// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37273,7 +37277,7 @@ STRING 5996
 }
 
 STRING 5997
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37387,7 +37391,7 @@ STRING 6015
 }
 
 STRING 6016
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37501,7 +37505,7 @@ STRING 6034
 }
 
 STRING 6035
-// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37615,7 +37619,7 @@ STRING 6053
 }
 
 STRING 6054
-// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37729,7 +37733,7 @@ STRING 6072
 }
 
 STRING 6073
-// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37843,7 +37847,7 @@ STRING 6091
 }
 
 STRING 6092
-// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38355,7 +38359,7 @@ STRING 6176
 }
 
 STRING 6177
-// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
+// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38373,7 +38377,7 @@ STRING 6179
 }
 
 STRING 6180
-// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -38511,7 +38515,7 @@ STRING 6202
 }
 
 STRING 6203
-// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39304,7 +39308,7 @@ Removes 90 armor from nearby enemies.
 }
 
 STRING 6333
-// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39810,7 +39814,7 @@ STRING 6401
 }
 
 STRING 6402
-// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39924,7 +39928,7 @@ STRING 6420
 }
 
 STRING 6421
-// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40038,7 +40042,7 @@ STRING 6439
 }
 
 STRING 6440
-// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40062,7 +40066,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6444
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40152,7 +40156,7 @@ STRING 6458
 }
 
 STRING 6459
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40266,7 +40270,7 @@ STRING 6477
 }
 
 STRING 6478
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40380,7 +40384,7 @@ STRING 6496
 }
 
 STRING 6497
-// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40530,7 +40534,7 @@ STRING 6521
 }
 
 STRING 6522
-// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41279,7 +41283,7 @@ STRING 6645
 }
 
 STRING 6646
-// Abilities: A0FV (Flash Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41291,7 +41295,7 @@ STRING 6647
 }
 
 STRING 6648
-// Abilities: A0FV (Flash Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42416,7 +42420,7 @@ Removes 150 armor from nearby enemies.
 }
 
 STRING 6821
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42614,7 +42618,7 @@ STRING 6853
 }
 
 STRING 6854
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42638,7 +42642,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 6858
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43096,7 +43100,7 @@ W
 }
 
 STRING 6930
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43132,7 +43136,7 @@ Madara traps the target unit in a time loop, causing it to be moved to its origi
 }
 
 STRING 6936
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43670,7 +43674,7 @@ W
 }
 
 STRING 7020
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43709,7 +43713,7 @@ STRING 7025
 }
 
 STRING 7026
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43736,7 +43740,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 7029
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43902,13 +43906,13 @@ Janemba slices his opponent with a powerful Ki Slash wave infused with the power
 }
 
 STRING 7053
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7054
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44328,13 +44332,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44418,7 +44422,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44448,7 +44452,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7134
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44856,7 +44860,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 7192
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45002,7 +45006,7 @@ Android 17 fires a rapid stream of energy blasts in a straight line, dealing mas
 }
 
 STRING 7210
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45242,7 +45246,7 @@ Yamcha
 }
 
 STRING 7248
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45508,7 +45512,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45532,7 +45536,7 @@ STRING 7292
 }
 
 STRING 7293
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46131,7 +46135,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46145,7 +46149,7 @@ After a short delay, Hirudegarn slams the ground with his foot, stunning nearby 
 }
 
 STRING 7386
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46157,7 +46161,7 @@ STRING 7387
 }
 
 STRING 7388
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46230,7 +46234,7 @@ Hakai
 }
 
 STRING 7400
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46300,7 +46304,7 @@ STRING 7410
 }
 
 STRING 7411
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48562,13 +48566,13 @@ STRING 7769
 }
 
 STRING 7770
-// Abilities: A0JB (Capsule: Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Capsule: Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48850,7 +48854,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48868,7 +48872,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49340,7 +49344,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49358,7 +49362,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49988,7 +49992,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50012,7 +50016,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50848,7 +50852,7 @@ STRING 8131
 }
 
 STRING 8132
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50884,7 +50888,7 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8138
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51606,7 +51610,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51736,7 +51740,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51910,7 +51914,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -52568,7 +52572,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 8399
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52592,7 +52596,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53181,13 +53185,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53265,7 +53269,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53297,7 +53301,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53644,7 +53648,7 @@ STRING 8565
 }
 
 STRING 8566
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53662,7 +53666,7 @@ STRING 8568
 }
 
 STRING 8569
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53686,7 +53690,7 @@ R
 }
 
 STRING 8573
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54721,7 +54725,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54745,7 +54749,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55912,7 +55916,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55936,7 +55940,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56086,7 +56090,7 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8956
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56405,7 +56409,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56705,7 +56709,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56729,7 +56733,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56741,7 +56745,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56839,7 +56843,7 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 }
 
 STRING 9077
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -58309,13 +58313,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61954,7 +61958,7 @@ F
 }
 
 STRING 9912
-// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62050,7 +62054,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9928
-// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62074,7 +62078,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9932
-// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62766,7 +62770,7 @@ STRING 10046
 }
 
 STRING 10047
-// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63116,7 +63120,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63454,7 +63458,7 @@ For Super 13 type "super" when all androids lvl greater than 35 and are not in h
 }
 
 STRING 10159
-// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63486,7 +63490,7 @@ Have Shenron resurrect all your allies. Instantly revives all allied heroes who 
 }
 
 STRING 10163
-// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63717,13 +63721,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64688,7 +64692,7 @@ A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far
 }
 
 STRING 10355
-// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64706,7 +64710,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66554,7 +66558,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66582,7 +66586,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66884,7 +66888,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66902,7 +66906,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67058,7 +67062,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67346,7 +67350,7 @@ STRING 10772
 }
 
 STRING 10773
-// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67364,7 +67368,7 @@ STRING 10775
 }
 
 STRING 10776
-// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68142,7 +68146,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68160,7 +68164,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69450,7 +69454,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69468,7 +69472,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69559,7 +69563,7 @@ STRING 11137
 }
 
 STRING 11138
-// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -70034,7 +70038,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -70070,7 +70074,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70421,7 +70425,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11279
-// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71183,7 +71187,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -71207,7 +71211,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71989,7 +71993,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -74914,7 +74918,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74932,7 +74936,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
+// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -74950,7 +74954,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76453,13 +76457,13 @@ STRING 12247
 }
 
 STRING 12248
-// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
+// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12249
-// Abilities: A0RR (Reverse Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76567,7 +76571,7 @@ STRING 12266
 }
 
 STRING 12267
-// Abilities: A0RU (Neo Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0RR (Reverse Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -78841,6 +78845,24 @@ A hero that has mastered the Kamehameha. Also has access to very powerful crowd-
 |cff808080"Kamehame... HAAAAAA!"
 }
 
+STRING 12628
+// Units: H0AL (Galactic Patrolman), Name (Name)
+{
+Galactic Patrolman
+}
+
+STRING 12629
+// Units: H0AL (Galactic Patrolman), Propernames (Proper Names)
+{
+Jaco
+}
+
+STRING 12630
+// Units: H0AL (Galactic Patrolman), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00E|r] Choose Jaco
+}
+
 STRING 12631
 // Units: n03Z (Carries / Late-game), Name (Name)
 {
@@ -79267,7 +79289,7 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12691
-// Abilities: A0RX (Wolf Fang Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0RU (Neo Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79309,7 +79331,7 @@ Krown Toss Debuff
 }
 
 STRING 12697
-// Abilities: A0RY (Wolf Fang Finisher), Hotkey (Hotkey - Normal)
+// Abilities: A0RX (Wolf Fang Barrage), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80673,7 +80695,7 @@ STRING 12913
 }
 
 STRING 12914
-// Abilities: A0S4 (Play Dead), Hotkey (Hotkey - Normal)
+// Abilities: A0RY (Wolf Fang Finisher), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81287,7 +81309,7 @@ Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lv
 }
 
 STRING 13014
-// Abilities: A0S7 (Batter Up), Hotkey (Hotkey - Normal)
+// Abilities: A0S4 (Play Dead), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81323,7 +81345,7 @@ STRING 13019
 }
 
 STRING 13020
-// Abilities: A0SE (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S7 (Batter Up), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81458,7 +81480,7 @@ STRING 13041
 }
 
 STRING 13042
-// Abilities: A0SE (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0SE (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -82270,7 +82292,7 @@ STRING 13174
 }
 
 STRING 13175
-// Abilities: A0SK (Glare 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SE (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -82288,7 +82310,7 @@ STRING 13177
 }
 
 STRING 13178
-// Abilities: A0SK (Glare 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (Glare 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -82649,7 +82671,7 @@ Frog Tongue
 }
 
 STRING 13237
-// Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (Glare 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -82661,7 +82683,7 @@ STRING 13238
 }
 
 STRING 13239
-// Abilities: A0ST (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83527,7 +83549,7 @@ STRING 13378
 }
 
 STRING 13379
-// Abilities: A0SZ (Right Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -83545,7 +83567,7 @@ STRING 13381
 }
 
 STRING 13382
-// Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SZ (Right Smash), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85016,7 +85038,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 13615
-// Abilities: A0T5 (California Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85267,7 +85289,7 @@ A weak and useless hero that should not be picked by anyone.
 }
 
 STRING 13649
-// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85829,7 +85851,7 @@ STRING 13740
 }
 
 STRING 13741
-// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85847,7 +85869,7 @@ STRING 13743
 }
 
 STRING 13744
-// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86015,19 +86037,19 @@ Improved Farmor
 }
 
 STRING 13771
-// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13772
-// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13773
-// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86895,7 +86917,7 @@ STRING 13907
 }
 
 STRING 13908
-// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86913,7 +86935,7 @@ STRING 13910
 }
 
 STRING 13911
-// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
+// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87213,7 +87235,7 @@ STRING 13960
 }
 
 STRING 13961
-// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87231,7 +87253,7 @@ STRING 13963
 }
 
 STRING 13964
-// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87345,7 +87367,7 @@ W
 }
 
 STRING 13983
-// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87719,7 +87741,7 @@ STRING 14042
 }
 
 STRING 14043
-// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87737,7 +87759,7 @@ STRING 14045
 }
 
 STRING 14046
-// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88875,7 +88897,7 @@ STRING 14213
 }
 
 STRING 14214
-// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
+// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88893,7 +88915,7 @@ STRING 14216
 }
 
 STRING 14217
-// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89234,7 +89256,7 @@ This unit is temporarily blinded.
 }
 
 STRING 14274
-// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
+// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89263,7 +89285,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14278
-// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89751,7 +89773,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14348
-// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89842,7 +89864,7 @@ Wolf Fang Hurricane
 }
 
 STRING 14362
-// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89928,7 +89950,7 @@ STRING 14375
 }
 
 STRING 14376
-// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90012,7 +90034,7 @@ STRING 14389
 }
 
 STRING 14390
-// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -91193,7 +91215,7 @@ STRING 14561
 }
 
 STRING 14562
-// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -91926,7 +91948,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14667
-// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -92390,7 +92412,7 @@ A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals b
 }
 
 STRING 14735
-// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -92772,7 +92794,7 @@ STRING 14791
 }
 
 STRING 14792
-// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -92854,7 +92876,7 @@ A heavy pummelling attack launched from above that briefly stuns the enemy.
 }
 
 STRING 14803
-// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -93334,7 +93356,7 @@ STRING 14870
 }
 
 STRING 14871
-// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -93829,7 +93851,7 @@ Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive da
 }
 
 STRING 14943
-// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -94277,7 +94299,7 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15011
-// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -95077,7 +95099,7 @@ STRING 15126
 }
 
 STRING 15127
-// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -95095,7 +95117,7 @@ STRING 15129
 }
 
 STRING 15130
-// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -96543,7 +96565,7 @@ STRING 15341
 }
 
 STRING 15342
-// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -97205,7 +97227,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15432
-// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97929,7 +97951,7 @@ STRING 15523
 }
 
 STRING 15524
-// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98065,7 +98087,7 @@ STRING 15543
 }
 
 STRING 15544
-// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -98083,7 +98105,7 @@ STRING 15546
 }
 
 STRING 15547
-// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98391,7 +98413,7 @@ SOLDIER 1st Class
 }
 
 STRING 15593
-// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -99626,7 +99648,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15772
-// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -99670,6 +99692,12 @@ STRING 15778
 // Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
 {
 (5)
+}
+
+STRING 15779
+// Units: H0AL (Galactic Patrolman), Tip (Tooltip - Basic)
+{
+[|cffffff00E|r] Choose Jaco
 }
 
 STRING 15780
@@ -100228,7 +100256,7 @@ STRING 15856
 }
 
 STRING 15857
-// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100256,7 +100284,7 @@ Sephiroth's slashes send shockwaves through the air, knocking enemies away from 
 }
 
 STRING 15861
-// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100428,7 +100456,7 @@ STRING 15882
 }
 
 STRING 15883
-// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100456,7 +100484,7 @@ Sephiroth's slashes send shockwaves through the air, knocking enemies away from 
 }
 
 STRING 15887
-// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -104875,7 +104903,7 @@ STRING 16486
 }
 
 STRING 16487
-// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -104893,7 +104921,7 @@ STRING 16489
 }
 
 STRING 16490
-// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106369,7 +106397,7 @@ STRING 16681
 }
 
 STRING 16682
-// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106393,7 +106421,7 @@ STRING 16685
 }
 
 STRING 16686
-// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106615,7 +106643,7 @@ STRING 16716
 }
 
 STRING 16717
-// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106642,7 +106670,7 @@ Duration: <A0UA,Dur1>s
 }
 
 STRING 16721
-// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -107990,6 +108018,12 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 
 }
 
+STRING 16898
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 16899
 // Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108661,7 +108695,7 @@ STRING 16979
 }
 
 STRING 16980
-// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -108705,7 +108739,7 @@ Duration: 10s
 }
 
 STRING 16986
-// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -108929,7 +108963,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 17017
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -108998,7 +109032,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -109438,7 +109472,7 @@ Q
 }
 
 STRING 17092
-// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -109468,7 +109502,7 @@ STRING 17096
 }
 
 STRING 17097
-// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -110329,7 +110363,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -110350,13 +110384,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 17226
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17227
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -111355,7 +111389,7 @@ Rust Tyranno unleashes a deadly wave of fire.
 }
 
 STRING 17374
-// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
+// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -111437,7 +111471,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 17385
-// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -111555,19 +111589,19 @@ STRING 17399
 }
 
 STRING 17400
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17401
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17402
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -112097,7 +112131,7 @@ STRING 17462
 }
 
 STRING 17463
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -112118,7 +112152,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17466
-// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112139,7 +112173,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17469
-// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112297,7 +112331,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -112315,7 +112349,7 @@ W
 }
 
 STRING 17492
-// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112644,7 +112678,7 @@ STRING 17542
 }
 
 STRING 17543
-// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112768,7 +112802,7 @@ STRING 17560
 }
 
 STRING 17561
-// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
+// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112822,7 +112856,7 @@ STRING 17568
 }
 
 STRING 17569
-// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112848,7 +112882,7 @@ Lightning 2
 }
 
 STRING 17573
-// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113012,7 +113046,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113420,7 +113454,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113560,7 +113594,7 @@ Fire 2
 }
 
 STRING 17681
-// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
+// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113805,7 +113839,7 @@ Lightning 2
 }
 
 STRING 17721
-// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -113969,7 +114003,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114543,7 +114577,7 @@ STRING 17834
 }
 
 STRING 17835
-// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
+// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114569,7 +114603,7 @@ Water
 }
 
 STRING 17839
-// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114845,7 +114879,7 @@ Electrocute
 }
 
 STRING 17877
-// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114863,7 +114897,7 @@ STRING 17879
 }
 
 STRING 17880
-// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115360,7 +115394,7 @@ STRING 17954
 }
 
 STRING 17955
-// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115386,7 +115420,7 @@ STRING 17958
 }
 
 STRING 17959
-// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115448,7 +115482,7 @@ STRING 17968
 }
 
 STRING 17969
-// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115528,7 +115562,7 @@ Ice 2
 }
 
 STRING 17982
-// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115938,7 +115972,7 @@ STRING 18044
 }
 
 STRING 18045
-// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115964,7 +115998,7 @@ Frog throws a ball of water at the target area that explodes at its destination,
 }
 
 STRING 18049
-// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -117776,7 +117810,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117962,7 +117996,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119097,7 +119131,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119200,7 +119234,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119667,6 +119701,12 @@ STRING 18588
 // Abilities: A0XD (Ice 2), Name (Name)
 {
 Ice 2
+}
+
+STRING 18589
+// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
+{
+E
 }
 
 STRING 18590
@@ -123208,7 +123248,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -125620,6 +125660,12 @@ STRING 19431
 Moves your revive point to ???.
 }
 
+STRING 19432
+// Abilities: A10T (Elite Beam Charge), Name (Name)
+{
+Elite Beam Charge
+}
+
 STRING 19433
 // Abilities: A0YO (Empowered Magic Seal), Ubertip (Tooltip - Normal - Extended)
 {
@@ -125628,6 +125674,21 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 |cff2080ffMana Cost: 25% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur10> seconds|r
 |cff00ffffCooldown: <A0YG,Cool10> seconds|r
+}
+
+STRING 19434
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 1|r]
+}
+
+STRING 19435
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
 }
 
 STRING 19436
@@ -125664,6 +125725,12 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 |cff2080ffMana Cost: 20% Max Mana per second
 |cffff2020Channel Duration: <A0YG,Dur4> seconds|r
 |cff00ffffCooldown: <A0YG,Cool4> seconds|r
+}
+
+STRING 19440
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 2|r]
 }
 
 STRING 19441
@@ -125776,6 +125843,12 @@ STRING 19456
 |cffffff00Reduces the health of nearby enemies by 2.5% of their current health per second.|r
 
 A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 19457
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 3|r]
 }
 
 STRING 19458
@@ -127836,7 +127909,7 @@ Nutritious grains of snow rice.
 }
 
 STRING 19736
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -128683,7 +128756,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -133156,13 +133229,13 @@ STRING 20522
 }
 
 STRING 20523
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20524
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -133306,25 +133379,25 @@ Increases building armor by +5.
 }
 
 STRING 20547
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10X (Rocket Boots), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20548
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10X (Rocket Boots), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 20549
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10Y (Emergency Boosters), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20550
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10Y (Emergency Boosters), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -133774,13 +133847,13 @@ Guts concentrates the power of Schierke's spirit into his sword to deal massive 
 }
 
 STRING 20616
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 20617
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -135671,13 +135744,13 @@ STRING 20874
 }
 
 STRING 20875
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 20876
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -135689,13 +135762,13 @@ F
 }
 
 STRING 20878
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10W (Extinction Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20879
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A10W (Extinction Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -136403,7 +136476,7 @@ Mafuba Sealed Debuff
 }
 
 STRING 20984
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -136599,10 +136672,22 @@ Roshi channels the powerful evil containment wave to seal away enemies of any st
 |cff808080"Cease fire and surrender Piccolo, or you will face the consequences."|r
 }
 
+STRING 21014
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 4|r]
+}
+
 STRING 21015
 // Abilities: A10M (Bursting Flame), EditorSuffix (Editor Suffix)
 {
 (guts)
+}
+
+STRING 21016
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 5|r]
 }
 
 STRING 21017
@@ -136675,6 +136760,12 @@ STRING 21028
 // Abilities: A10F (Dragon Slayer), Tip (Tooltip - Normal)
 {
 |cffffcc00Dragon Slayer|r - [|cffffcc00Level 15|r]
+}
+
+STRING 21029
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 6|r]
 }
 
 STRING 21030
@@ -136910,8 +137001,1636 @@ A tanky close-range hero that punishes enemies who damage him.
 
 }
 
+STRING 21050
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 7|r]
+}
+
+STRING 21051
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 8|r]
+}
+
+STRING 21052
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 9|r]
+}
+
+STRING 21053
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool2> seconds
+}
+
+STRING 21054
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool3> seconds
+}
+
+STRING 21055
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool4> seconds
+}
+
+STRING 21056
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool5> seconds
+}
+
+STRING 21057
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool6> seconds
+}
+
+STRING 21058
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool7> seconds
+}
+
+STRING 21059
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool8> seconds
+}
+
+STRING 21060
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool9> seconds
+}
+
+STRING 21061
+// Abilities: A10T (Elite Beam Charge), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Elite Beam - [|cffffcc00Level %d|r]
+}
+
+STRING 21062
+// Abilities: A10T (Elite Beam Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
+}
+
+STRING 21063
+// Abilities: A10T (Elite Beam Charge), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21064
+// Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 10|r]
+}
+
+STRING 21065
+// Abilities: A10T (Elite Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool10> seconds
+}
+
+STRING 21066
+// Abilities: A10U (Elite Beam Prime), Name (Name)
+{
+Elite Beam Prime
+}
+
+STRING 21067
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 1|r]
+}
+
+STRING 21068
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
+}
+
+STRING 21069
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 2|r]
+}
+
+STRING 21070
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 3|r]
+}
+
 STRING 21071
 {
 |cffffcc00Press ~ or F8 to select your revive point and move it anywhere on the main map for the 1st minute of the game. |r
+}
+
+STRING 21072
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 4|r]
+}
+
+STRING 21073
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 5|r]
+}
+
+STRING 21074
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 6|r]
+}
+
+STRING 21075
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 7|r]
+}
+
+STRING 21076
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 8|r]
+}
+
+STRING 21077
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 9|r]
+}
+
+STRING 21078
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool2> seconds
+}
+
+STRING 21079
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool3> seconds
+}
+
+STRING 21080
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool4> seconds
+}
+
+STRING 21081
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool5> seconds
+}
+
+STRING 21082
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool6> seconds
+}
+
+STRING 21083
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool7> seconds
+}
+
+STRING 21084
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool8> seconds
+}
+
+STRING 21085
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool9> seconds
+}
+
+STRING 21086
+// Abilities: A10U (Elite Beam Prime), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Elite Beam - [|cffffcc00Level %d|r]
+}
+
+STRING 21087
+// Abilities: A10U (Elite Beam Prime), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
+}
+
+STRING 21088
+// Abilities: A10U (Elite Beam Prime), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21089
+// Abilities: A10U (Elite Beam Prime), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 10|r]
+}
+
+STRING 21090
+// Abilities: A10U (Elite Beam Prime), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool10> seconds
+}
+
+STRING 21091
+// Abilities: A10V (Elite Beam Fire), Name (Name)
+{
+Elite Beam Fire
+}
+
+STRING 21092
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 21093
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
+}
+
+STRING 21094
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 2|r]
+}
+
+STRING 21095
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 3|r]
+}
+
+STRING 21096
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 4|r]
+}
+
+STRING 21097
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 5|r]
+}
+
+STRING 21098
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 6|r]
+}
+
+STRING 21099
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 7|r]
+}
+
+STRING 21100
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 8|r]
+}
+
+STRING 21101
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 9|r]
+}
+
+STRING 21102
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool2> seconds
+}
+
+STRING 21103
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool3> seconds
+}
+
+STRING 21104
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool4> seconds
+}
+
+STRING 21105
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool5> seconds
+}
+
+STRING 21106
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool6> seconds
+}
+
+STRING 21107
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool7> seconds
+}
+
+STRING 21108
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool8> seconds
+}
+
+STRING 21109
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool9> seconds
+}
+
+STRING 21110
+// Abilities: A10V (Elite Beam Fire), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Elite Beam - [|cffffcc00Level %d|r]
+}
+
+STRING 21111
+// Abilities: A10V (Elite Beam Fire), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool1> seconds
+}
+
+STRING 21112
+// Abilities: A10V (Elite Beam Fire), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21113
+// Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 21114
+// Abilities: A10V (Elite Beam Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco draws his standard Galactic Police issue Ray Gun and begins charging a powerful energy beam. 
+Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus damage. Prime the beam at the right time to receive an extra +100% damage boost.
+|cff00FF00Damage: Lvl * Int * 0.12834 + Base (+0-200% dmg)
+|cff00FFFFCooldown: <A10T,Cool10> seconds
+}
+
+STRING 21116
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21117
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21118
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21119
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21120
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21121
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
+}
+
+STRING 21122
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21123
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21124
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21125
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21126
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21127
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Learn Extinction Bomb
+}
+
+STRING 21128
+// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rodon Ray
+}
+
+STRING 21129
+// Abilities: A10W (Extinction Bomb), Name (Name)
+{
+Extinction Bomb
+}
+
+STRING 21130
+// Abilities: A10W (Extinction Bomb), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Extinction Bomb
+}
+
+STRING 21132
+// Abilities: A10W (Extinction Bomb), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21133
+// Abilities: A10X (Rocket Boots), Name (Name)
+{
+Rocket Boots
+}
+
+STRING 21134
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 1|r]
+}
+
+STRING 21135
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool1> seconds
+}
+
+STRING 21136
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 2|r]
+}
+
+STRING 21137
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 3|r]
+}
+
+STRING 21138
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 4|r]
+}
+
+STRING 21139
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 5|r]
+}
+
+STRING 21140
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 6|r]
+}
+
+STRING 21141
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 7|r]
+}
+
+STRING 21142
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 8|r]
+}
+
+STRING 21143
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 9|r]
+}
+
+STRING 21144
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool2> seconds
+}
+
+STRING 21145
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool3> seconds
+}
+
+STRING 21146
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool4> seconds
+}
+
+STRING 21147
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool5> seconds
+}
+
+STRING 21148
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool6> seconds
+}
+
+STRING 21149
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool7> seconds
+}
+
+STRING 21150
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool8> seconds
+}
+
+STRING 21151
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool9> seconds
+}
+
+STRING 21152
+// Abilities: A10X (Rocket Boots), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Rocket Boots - [|cffffcc00Level %d|r]
+}
+
+STRING 21153
+// Abilities: A10X (Rocket Boots), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool1> - <A10X,Cool10> seconds
+}
+
+STRING 21154
+// Abilities: A10X (Rocket Boots), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21155
+// Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 10|r]
+}
+
+STRING 21156
+// Abilities: A10X (Rocket Boots), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances) + Base
+|cff00FFFFCooldown: <A10X,Cool10> seconds
+}
+
+STRING 21157
+// Abilities: A10Y (Emergency Boosters), Name (Name)
+{
+Emergency Boosters
+}
+
+STRING 21158
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 1|r]
+}
+
+STRING 21159
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool1> seconds
+}
+
+STRING 21160
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 2|r]
+}
+
+STRING 21161
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 3|r]
+}
+
+STRING 21162
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 4|r]
+}
+
+STRING 21163
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 5|r]
+}
+
+STRING 21164
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 6|r]
+}
+
+STRING 21165
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 7|r]
+}
+
+STRING 21166
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 8|r]
+}
+
+STRING 21167
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 9|r]
+}
+
+STRING 21168
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool2> seconds
+}
+
+STRING 21169
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool3> seconds
+}
+
+STRING 21170
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool4> seconds
+}
+
+STRING 21171
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool5> seconds
+}
+
+STRING 21172
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool6> seconds
+}
+
+STRING 21173
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool7> seconds
+}
+
+STRING 21174
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool8> seconds
+}
+
+STRING 21175
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool9> seconds
+}
+
+STRING 21176
+// Abilities: A10Y (Emergency Boosters), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Rocket Boots - [|cffffcc00Level %d|r]
+}
+
+STRING 21177
+// Abilities: A10Y (Emergency Boosters), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco activates his high-powered rocket boots to quickly move in and out of combat while leaving a trail of flames behind him that damage nearby enemies.
+Unlocks [|cff00ff00E|r] Emergency Boost for the next 5 seconds.
+|cff00FF00Duration: 5 seconds.
+Damage: Lvl * Agi * 0.0224 (x9 instances)
+|cff00FFFFCooldown: <A10X,Cool1> - <A10X,Cool10> seconds
+}
+
+STRING 21178
+// Abilities: A10Y (Emergency Boosters), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21179
+// Abilities: A10Y (Emergency Boosters), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Emergency Boosters - [|cffffcc00Level 10|r]
+}
+
+STRING 21180
+// Abilities: A10Y (Emergency Boosters), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco activates his emergency boosters, drastically increasing his speed at the cost of reducing his fighting capabilities. Adds 10s of cooldown to all of Jaco's abilities.
+|cff00FF00Duration: 5 seconds.
+|cff00FFFFCooldown: <A10Y,Cool10> seconds
+}
+
+STRING 21181
+// Abilities: A10Z (Super Elite Combo), Name (Name)
+{
+Super Elite Combo
+}
+
+STRING 21182
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 1|r]
+}
+
+STRING 21184
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 2|r]
+}
+
+STRING 21185
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 3|r]
+}
+
+STRING 21186
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 4|r]
+}
+
+STRING 21187
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 5|r]
+}
+
+STRING 21188
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 6|r]
+}
+
+STRING 21189
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 7|r]
+}
+
+STRING 21190
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 8|r]
+}
+
+STRING 21191
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 9|r]
+}
+
+STRING 21200
+// Abilities: A10Z (Super Elite Combo), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Super Elite Combo - [|cffffcc00Level %d|r]
+}
+
+STRING 21202
+// Abilities: A10Z (Super Elite Combo), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21203
+// Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 10|r]
+}
+
+STRING 21205
+// Abilities: A110 (Elite Pose), Name (Name)
+{
+Elite Pose
+}
+
+STRING 21206
+// Abilities: A110 (Elite Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco strikes a daring pose that evades all incoming attacks for 1 second.
+|cffffff00+10% spell amp for 10s.
+|cff00ffffCooldown: <A110,Cool1> seconds
+}
+
+STRING 21207
+// Abilities: A110 (Elite Pose), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 21208
+// Abilities: A110 (Elite Pose), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffffcc00Elite Pose|r
+}
+
+STRING 21209
+// Abilities: A110 (Elite Pose), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21210
+// Abilities: A111 (Macrocosm Cannon), Name (Name)
+{
+Macrocosm Cannon
+}
+
+STRING 21211
+// Abilities: A111 (Macrocosm Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco calls for his ship to charge a high powered energy beam.
+|cff00ff00Duration: 10s
+|cff00ffffCooldown: <A111,Cool1> seconds
+}
+
+STRING 21212
+// Abilities: A111 (Macrocosm Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffbb44aaMacrocosm Cannon|r
+}
+
+STRING 21213
+// Abilities: A111 (Macrocosm Cannon), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21214
+// Abilities: A112 (Super Jaco), Name (Name)
+{
+Super Jaco
+}
+
+STRING 21215
+// Abilities: A112 (Super Jaco), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco opens a portal to the future to call forth his alter-ego Super Jaco, equipped with his own Galactic Ray Gun.
+|cff00ff00Duration: 30s
+|cff00ffffCooldown: <A112,Cool1> seconds
+}
+
+STRING 21216
+// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 21217
+// Abilities: A112 (Super Jaco), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffbb44aaSuper Jaco|r
+}
+
+STRING 21218
+// Abilities: A112 (Super Jaco), EditorSuffix (Editor Suffix)
+{
+(jaco)
+}
+
+STRING 21234
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 3|r]
+}
+
+STRING 21235
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 1|r]
+}
+
+STRING 21236
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 2|r]
+}
+
+STRING 21237
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 4|r]
+}
+
+STRING 21238
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 5|r]
+}
+
+STRING 21239
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 6|r]
+}
+
+STRING 21240
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 7|r]
+}
+
+STRING 21241
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 8|r]
+}
+
+STRING 21242
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 9|r]
+}
+
+STRING 21243
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 10|r]
+}
+
+STRING 21244
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 11|r]
+}
+
+STRING 21245
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 12|r]
+}
+
+STRING 21246
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 13|r]
+}
+
+STRING 21247
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 14|r]
+}
+
+STRING 21248
+// Abilities: A113 (Jaco's Fighting Style), Tip (Tooltip - Normal)
+{
+Jaco's Fighting Style - [|cffffcc00Level 15|r]
+}
+
+STRING 21249
+// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 21250
+// Abilities: A113 (Jaco's Fighting Style), Name (Name)
+{
+Jaco's Fighting Style
+}
+
+STRING 21251
+// Abilities: A113 (Jaco's Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Jaco's Fighting Style - [|cffffcc00Level %d|r]
+}
+
+STRING 21253
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21254
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21255
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21256
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21257
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21258
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21259
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 21260
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21261
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21262
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21263
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21264
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21265
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21266
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21267
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21268
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 100] 2.00x "fp"
+[lvl 125] 2.25x "fp"
+[lvl 175] 2.50x "fp" [-0.2 BAT]
+[lvl 250] 2.60x "fp"
+
+|cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+}
+
+STRING 21270
+// Units: H0AL (Galactic Patrolman), Ubertip (Tooltip - Extended)
+{
+|cffff2020Warning: THIS HERO IS UNFINISHED|r
+
+A versatile ranged hero with high mobility and massive damage output.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+|cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+}
+
+STRING 21271
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 5s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21272
+// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 5s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21273
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool1> seconds
+}
+
+STRING 21274
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool2> seconds
+}
+
+STRING 21275
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool3> seconds
+}
+
+STRING 21276
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool4> seconds
+}
+
+STRING 21277
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool5> seconds
+}
+
+STRING 21278
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool6> seconds
+}
+
+STRING 21279
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool7> seconds
+}
+
+STRING 21280
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool8> seconds
+}
+
+STRING 21281
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool9> seconds
+}
+
+STRING 21282
+// Abilities: A10Z (Super Elite Combo), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool1> seconds
+}
+
+STRING 21283
+// Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco performs a super elite combo. Knockbacks enemies near the landing destination.
+|cff00FF00Damage: Lvl * Agi * 0.125 + Base (x2 if within 100 AOE of center)
+|cff00FFFFCooldown: <A10Z,Cool10> seconds
+}
+
+STRING 21284
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD1,%>% 
+|cffffcc00Critical|r - <A113,DataA1>% 
+|cffffcc00Damage|r - <A113,DataB1,.> times
+}
+
+STRING 21285
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD2,%>% 
+|cffffcc00Critical|r - <A113,DataA2>% 
+|cffffcc00Damage|r - <A113,DataB2,.> times
+}
+
+STRING 21286
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD3,%>% 
+|cffffcc00Critical|r - <A113,DataA3>% 
+|cffffcc00Damage|r - <A113,DataB3,.> times
+}
+
+STRING 21287
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD4,%>% 
+|cffffcc00Critical|r - <A113,DataA4>% 
+|cffffcc00Damage|r - <A113,DataB4,.> times
+}
+
+STRING 21288
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD5,%>% 
+|cffffcc00Critical|r - <A113,DataA5>% 
+|cffffcc00Damage|r - <A113,DataB5,.> times
+}
+
+STRING 21289
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD6,%>% 
+|cffffcc00Critical|r - <A113,DataA6>% 
+|cffffcc00Damage|r - <A113,DataB6,.> times
+}
+
+STRING 21290
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD7,%>% 
+|cffffcc00Critical|r - <A113,DataA7>% 
+|cffffcc00Damage|r - <A113,DataB7,.> times
+}
+
+STRING 21291
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD8,%>% 
+|cffffcc00Critical|r - <A113,DataA8>% 
+|cffffcc00Damage|r - <A113,DataB8,.> times
+}
+
+STRING 21292
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD9,%>% 
+|cffffcc00Critical|r - <A113,DataA9>% 
+|cffffcc00Damage|r - <A113,DataB9,.> times
+}
+
+STRING 21293
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD10,%>% 
+|cffffcc00Critical|r - <A113,DataA10>% 
+|cffffcc00Damage|r - <A113,DataB10,.> times
+}
+
+STRING 21294
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD11,%>% 
+|cffffcc00Critical|r - <A113,DataA11>% 
+|cffffcc00Damage|r - <A113,DataB11,.> times
+}
+
+STRING 21295
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD12,%>% 
+|cffffcc00Critical|r - <A113,DataA12>% 
+|cffffcc00Damage|r - <A113,DataB12,.> times
+}
+
+STRING 21296
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD13,%>% 
+|cffffcc00Critical|r - <A113,DataA13>% 
+|cffffcc00Damage|r - <A113,DataB13,.> times
+}
+
+STRING 21297
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD14,%>% 
+|cffffcc00Critical|r - <A113,DataA14>% 
+|cffffcc00Damage|r - <A113,DataB14,.> times
+}
+
+STRING 21298
+// Abilities: A113 (Jaco's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD15,%>% 
+|cffffcc00Critical|r - <A113,DataA15>% 
+|cffffcc00Damage|r - <A113,DataB15,.> times
+}
+
+STRING 21299
+// Abilities: A113 (Jaco's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoints.
+
+|cff00ff00+2000 vision range.|r
+
+|cffffcc00Evasion|r - <A113,DataD1,%> - <A113,DataD15,%>% 
+|cffffcc00Critical|r - <A113,DataA1> - <A113,DataA15>% 
+|cffffcc00Damage|r - <A113,DataB1,.> - <A113,DataB15,.> times
 }
 

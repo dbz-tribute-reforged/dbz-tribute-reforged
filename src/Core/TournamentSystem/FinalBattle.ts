@@ -123,7 +123,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
 
     StopMusic(false);
     ClearMapMusic();
-    PlayMusic("Audio/Music/KachiDaze.mp3");
+    PlayMusic("Audio\\Music\\KachiDaze.mp3");
     ResumeMusic();
     // TimerStart(CreateTimer(), 250, true, () => {
     //   if (this.winTeam == 0) {

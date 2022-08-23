@@ -20,6 +20,7 @@ HeroName = {
   H09C = "Toppo",
   H09H = "Dyspo",
   E01P = "Jiren",
+  H0AL = "Jaco",
 
   H01V = "Android 13",
   O001 = "Babidi",

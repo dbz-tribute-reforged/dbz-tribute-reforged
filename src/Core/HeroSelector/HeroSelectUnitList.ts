@@ -242,6 +242,18 @@ const jirenData = {
     HeroSelectCategory.CARRY
   )
 }
+const jacoData = {
+  unitCode: Id.jaco,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI +
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.CARRY
+  )
+}
 const android13Data = {
   unitCode: Id.android13,
   onlyRandom: false,
@@ -729,7 +741,7 @@ const sonicData = {
 }
 const rustyData = {
   unitCode: Id.rustTyranno,
-  onlyRandom: true,
+  onlyRandom: false,
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
@@ -771,7 +783,7 @@ export const HeroSelectUnitList = [
   jirenData,
   dyspoData,
   // 20
-  emptySpace,
+  jacoData,
   emptySpace,
   emptySpace,
   emptySpace,

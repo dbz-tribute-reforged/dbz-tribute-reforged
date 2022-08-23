@@ -101,6 +101,10 @@ export class HeroPassiveManager {
         break;
       case Id.guts:
         gutsPassive(customHero);
+        break;
+      case Id.jaco:
+        jacoPassive(customHero);
+        break;
       default:
         break;
     }
@@ -2166,6 +2170,113 @@ function doGutsAbilitySwap(
     UnitHelper.abilitySwap(player, customHero.unit, srcAbilityId, destAbilityId);
     SaveReal(Globals.genericSpellHashtable, unitId, key, 0);
   }
+}
+
+
+export function getJacoEliteBeamChargeString(
+  currentTick: number,
+  bonusTick: number,
+  maxTick: number,
+) {
+  const max = 10;
+  const currentIndex = Math.floor(max * (currentTick) / maxTick);
+  const bonusIndex = Math.floor(max * (bonusTick) / maxTick);
+  
+  let str = "|cff00ffff";
+  for (let i = 0; i < max; ++i) {
+    if (i == bonusIndex + 1 && currentIndex < bonusIndex + 1) {
+      str += "|cff00ff00";
+    } else if (i == bonusIndex + 2 && currentIndex < bonusIndex + 2) {
+      str += "|cff00ff00";
+    } else if (i == currentIndex + 1 || i == bonusIndex + 3) {
+      str += "|cffffffff";
+    }
+    
+    str += "I";
+  }
+  return str;
+}
+
+export function jacoPassive(customHero: CustomHero) {
+  const eliteBeamMaxTicks = 166;
+
+  const eliteBeamTimer = CreateTimer();
+  customHero.addTimer(eliteBeamTimer);
+
+  const jacoId = GetHandleId(customHero.unit);
+
+  const textTag = CreateTextTag();
+  let isTextShown = false;
+  let player = GetOwningPlayer(customHero.unit);
+  let playerId = GetPlayerId(player);
+  SetTextTagPermanent(textTag, true);
+  SetTextTagVisibility(textTag, false);
+  SetTextTagText(textTag, "IIIIIIIIII", 15);
+
+  UnitAddAbility(customHero.unit, Id.jacoEliteBeamPrime);
+  UnitAddAbility(customHero.unit, Id.jacoEliteBeamFire);
+
+  TimerStart(eliteBeamTimer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      DestroyTextTag(textTag);
+      return;
+    }
+
+    if (player != GetOwningPlayer(customHero.unit)) {
+      player = GetOwningPlayer(customHero.unit);
+      playerId = GetPlayerId(player);
+      SetTextTagVisibility(textTag, false);
+    }
+
+    const beamState = LoadInteger(Globals.genericSpellHashtable, jacoId, 0);
+    if (beamState == 0) {
+      if (isTextShown) {
+        SetTextTagVisibility(textTag, false);
+        isTextShown = false;
+      }
+      return;
+    }
+
+    const currentTick = LoadInteger(Globals.genericSpellHashtable, jacoId, 1);
+    const bonusTick = LoadInteger(Globals.genericSpellHashtable, jacoId, 2);
+    const beamStr = getJacoEliteBeamChargeString(currentTick, bonusTick, eliteBeamMaxTicks);
+    // print(
+    //   "tick:", 
+    //   currentTick, 
+    //   bonusTick,
+    //   beamStr, 
+    //   "|r"
+    // );
+    if (beamState == 1) {
+      if (currentTick < eliteBeamMaxTicks) {
+        SaveInteger(Globals.genericSpellHashtable, jacoId, 1, currentTick+1);
+      } else {
+        // primed
+        SaveInteger(Globals.genericSpellHashtable, jacoId, 0, 2);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamCharge, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamPrime, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamFire, true);
+        
+        Globals.tmpVector.setUnit(customHero.unit);
+        DestroyEffect(
+          AddSpecialEffect(
+            "SpiritBomb.mdl", 
+            Globals.tmpVector.x, Globals.tmpVector.y
+          )
+        );
+      }
+    }
+
+    if (!isTextShown) {
+      if (player == GetLocalPlayer()) {
+        SetTextTagVisibility(textTag, true);
+      }
+      isTextShown = true;
+    }
+    SetTextTagPos(textTag, GetUnitX(customHero.unit) - 256, GetUnitY(customHero.unit) - 128, 25);
+    SetTextTagTextBJ(textTag, beamStr, 25);
+  });
+
 }
 
 export function setupSPData(customHero: CustomHero) {

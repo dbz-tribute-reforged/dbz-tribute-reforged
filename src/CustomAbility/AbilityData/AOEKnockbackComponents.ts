@@ -1447,4 +1447,21 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     isPersistent: false,
   },
+  // jaco super elite combo
+  {
+    name: "knockback jaco super elite combo",
+    repeatInterval: 1, 
+    startTick: 22,
+    endTick: -1,
+    knockbackData: {
+      speed: 150, 
+      angle: 0, 
+      aoe: 350,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: true,
+  },
 ];
