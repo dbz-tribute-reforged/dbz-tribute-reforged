@@ -51,7 +51,7 @@ export module Constants {
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
-  export const heavenHellMaxHeroLevel: number = 10;
+  export const heavenHellMaxHeroLevel: number = 9;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -8200, 20000
   );
@@ -619,6 +619,18 @@ export module Id {
   export const blutVene = FourCC("A0VM");
   export const ceroGigante = FourCC("A0VO");
 
+  export const jaco = FourCC("H0AL");
+  export const jacoEliteBeamCharge = FourCC("A10T");
+  export const jacoEliteBeamPrime = FourCC("A10U");
+  export const jacoEliteBeamFire = FourCC("A10V");
+  export const jacoExtinctionBomb = FourCC("A10W");
+  export const jacoRocketBoots = FourCC("A10X");
+  export const jacoEmergencyBoost = FourCC("A10Y");
+  export const jacoSuperEliteCombo = FourCC("A10Z");
+  export const jacoElitePose = FourCC("A110");
+  export const jacoMacroCannon = FourCC("A111");
+  export const jacoSuperJaco = FourCC("A112");
+
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
   export const rakshasaClaw = FourCC("A0NY");
@@ -795,6 +807,8 @@ export module Id {
   export const super17HellStorm = FourCC("A0GU");
   export const super17ShockingDeathBall = FourCC("A0H1");
   export const super17Absorption = FourCC("A0P8");
+
+  export const taoGrenade = FourCC("h04M");
 
   export const tapion = FourCC("E014");
   export const braveSlash = FourCC('A0I9');

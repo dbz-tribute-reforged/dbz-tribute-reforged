@@ -342,9 +342,11 @@ export function CustomPlayerTest() {
         if (abilityId == Id.ftSwordOfHope) {
           damageMult *= getSwordOfHopeMult(player);
         }
-
         if (GetUnitTypeId(caster) == Id.shotoTodoroki) {
           damageMult *= getTodorokiMult(caster, abilityId);
+        }
+        if (abilityId == Id.jacoEliteBeamFire) {
+          damageMult *= getJacoEliteBeamMult(caster);
         }
 
 
@@ -1258,6 +1260,8 @@ export function CustomPlayerTest() {
 
     SetupSonicAbilities();
     SetupRoshiMafuba();
+
+    SetupJacoAbilities();
     
     SetupTreeOfMightSapling();
 
@@ -3787,6 +3791,215 @@ export function SetupRoshiMafuba() {
     }
   });
 }
+
+export function getJacoEliteBeamMult(unit: unit) {
+  const eliteBeamMaxTicks = 166;
+  const unitId = GetHandleId(unit);
+  const isBonus = LoadInteger(Globals.genericSpellHashtable, unitId, 3) == 1;
+  const chargeTicks = isBonus ? eliteBeamMaxTicks : LoadInteger(Globals.genericSpellHashtable, unitId, 1);
+  let mult = 1 + chargeTicks / eliteBeamMaxTicks;
+  if (isBonus) mult += 1;
+  // print("ELITE BEAM MULT: ", mult, " BONUS:", isBonus);
+  return mult;
+}
+
+export function SetupJacoAbilities() {
+  // globals hashtable
+  // 0: charge state (0 = base, 1 = charge, 2 = primed)
+  // 1: charge ticks (0 - 166)
+  // 2: charge bonus start point (prime around this time to receive full bonus)
+  // 3: is charge bonused
+
+  const eliteBeamPrimeStart = 99;
+  const eliteBeamPrimeVariance = 1;
+  const eliteBeamPrimeBonusLeeway = 33;
+
+  const extinctionBombDelay = 5;
+  const extinctionBombMaxDist = 600;
+  const extinctionBombAOE = 500;
+  const extinctionBombStrMult = 2;
+  const extinctionBombHpMult = 0.75;
+
+
+  TriggerAddAction(Globals.genericSpellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+
+    if (
+      spellId == Id.jacoEliteBeamCharge
+      || spellId == Id.jacoEliteBeamPrime
+      || spellId == Id.jacoEliteBeamFire
+      || spellId == Id.jacoExtinctionBomb
+      || spellId == Id.jacoElitePose
+    ) {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      const player = GetOwningPlayer(unit);
+      if (spellId == Id.jacoEliteBeamCharge) {
+        // swap prime
+        SetUnitAbilityLevel(unit, Id.jacoEliteBeamPrime, GetUnitAbilityLevel(unit, GetSpellAbilityId()));
+        SetUnitAbilityLevel(unit, Id.jacoEliteBeamFire, GetUnitAbilityLevel(unit, GetSpellAbilityId()));
+        
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamCharge, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamPrime, true);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamFire, false);
+
+        const bonusTick = R2I(
+          eliteBeamPrimeStart 
+          + eliteBeamPrimeBonusLeeway * Math.round(eliteBeamPrimeVariance * Math.random()) 
+        );
+
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 1);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 1, 0);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 2, bonusTick);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 3, 0);
+
+      } else if (spellId == Id.jacoEliteBeamPrime) {
+        // swap fire
+        Globals.tmpVector.setUnit(unit);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamCharge, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamPrime, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamFire, true);
+
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 2);
+
+        const currentTick = LoadInteger(Globals.genericSpellHashtable, unitId, 1);
+        const bonusTickStart = LoadInteger(Globals.genericSpellHashtable, unitId, 2);
+        if (
+          currentTick > bonusTickStart 
+          && currentTick < bonusTickStart + eliteBeamPrimeBonusLeeway
+        ) {
+          SaveInteger(Globals.genericSpellHashtable, unitId, 3, 1);
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+              Globals.tmpVector.x, Globals.tmpVector.y
+            )
+          );
+        }
+        DestroyEffect(
+          AddSpecialEffect(
+            "SpiritBomb.mdl", 
+            Globals.tmpVector.x, Globals.tmpVector.y
+          )
+        );
+      } else if (spellId == Id.jacoEliteBeamFire) {
+        // swap to charge
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamCharge, true);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamPrime, false);
+        SetPlayerAbilityAvailable(player, Id.jacoEliteBeamFire, false);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
+
+      } else if (spellId == Id.jacoExtinctionBomb) {
+
+        const playerId = GetPlayerId(player);
+
+        Globals.tmpVector.setUnit(unit);
+        Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+
+        const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+        if (dist > extinctionBombMaxDist) {
+          const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+          Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, extinctionBombMaxDist);
+        }
+
+        const bomb = CreateUnit(
+          Player(PLAYER_NEUTRAL_AGGRESSIVE), 
+          Id.taoGrenade, 
+          Globals.tmpVector2.x, Globals.tmpVector2.y, 
+          0
+        );
+        BlzSetUnitName(bomb, "Extinction Bomb");
+        SetUnitMoveSpeed(bomb, 522);
+        
+        // blow it up in 5seconds
+        let delay = extinctionBombDelay;
+        let ttSize = math.max(5, 5 * (extinctionBombDelay + 1 - delay));
+        TextTagHelper.showTempText(
+          Colorizer.getPlayerColorText(playerId) + I2S(delay) + "!",
+          GetUnitX(bomb), GetUnitY(bomb),
+          ttSize, 1.5, 0.5
+        );
+
+        TimerStart(CreateTimer(), 1.0, true, () => {
+          --delay;
+          if (delay <= 0) {
+            // go boom deal str * 2 + HP dmg
+            DestroyTimer(GetExpiredTimer());
+
+            let spellPower = 1.0;
+            const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(unit);
+            if (customHero) spellPower = customHero.spellPower;
+
+            GroupEnumUnitsInRange(
+              Globals.tmpUnitGroup,
+              GetUnitX(bomb),
+              GetUnitY(bomb),
+              extinctionBombAOE,
+              null
+            );
+            
+            const maxHpDamage = spellPower * (
+              GetHeroStr(unit, true) * extinctionBombStrMult
+              + extinctionBombHpMult * (GetUnitState(unit, UNIT_STATE_MAX_LIFE) - GetUnitState(unit, UNIT_STATE_LIFE))
+            );
+            ForGroup(Globals.tmpUnitGroup, () => {
+              const damagedUnit = GetEnumUnit();
+              if (
+                UnitHelper.isUnitTargetableForPlayer(damagedUnit, player)
+                || damagedUnit == unit
+              ) {
+                UnitDamageTarget(
+                  unit, 
+                  damagedUnit, 
+                  maxHpDamage, 
+                  true, 
+                  false, 
+                  ATTACK_TYPE_HERO, 
+                  DAMAGE_TYPE_NORMAL, 
+                  WEAPON_TYPE_WHOKNOWS
+                );
+              }
+            });
+            
+            TextTagHelper.showTempText(
+              Colorizer.getPlayerColorText(playerId) + "KABOOM! " + I2S(R2I(maxHpDamage)) + "!",
+              GetUnitX(bomb), GetUnitY(bomb),
+              ttSize, 3.0, 2.0
+            );
+
+            RemoveUnit(bomb);
+          } else {
+            ttSize = math.max(5, 5 * (extinctionBombDelay + 1 - delay));
+            TextTagHelper.showTempText(
+              Colorizer.getPlayerColorText(playerId) + I2S(delay) + "!",
+              GetUnitX(bomb), GetUnitY(bomb),
+              ttSize, 1.5, 0.5
+            );
+          }
+        });
+      } else if (spellId == Id.jacoElitePose) {
+        PauseUnit(unit, true);
+        SetUnitInvulnerable(unit, true);
+        SetUnitAnimationByIndex(unit, 5);
+
+        TimerStart(CreateTimer(), 1.0, false, () => {
+          DestroyTimer(GetExpiredTimer());
+          ResetUnitAnimation(unit);
+          PauseUnit(unit, false);
+          // hardcode check hero pick region
+          if (!RectContainsUnit(gg_rct_HeroPickRegion, unit)) {
+            SetUnitInvulnerable(unit, false);
+          }
+        });
+      }
+    }
+  });
+
+
+}
+
+
+
 
 export function SetupTreeOfMightSapling() {
   const trigger = CreateTrigger();

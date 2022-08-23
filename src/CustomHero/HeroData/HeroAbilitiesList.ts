@@ -511,6 +511,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Guts.BERSERKER_ARMOR,
       AbilityNames.Guts.BEAST_OF_DARKNESS,
     ]],
+
+    [Id.jaco, [
+      AbilityNames.Jaco.ELITE_BEAM_CHARGE,
+      AbilityNames.Jaco.ELITE_BEAM_PRIME,
+      AbilityNames.Jaco.ELITE_BEAM_FIRE,
+      AbilityNames.Jaco.EXCTINCTION_BOMB,
+      AbilityNames.Jaco.ROCKET_BOOTS,
+      AbilityNames.Jaco.EMERGENCY_BOOST,
+      AbilityNames.Jaco.SUPER_ELITE_COMBO,
+      AbilityNames.Jaco.ELITE_POSE,
+      AbilityNames.Jaco.MACRO_CANNON,
+      AbilityNames.Jaco.SUPER_JACO,
+    ]],
     
 
 

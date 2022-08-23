@@ -1,6 +1,4 @@
 import { Constants, Globals, Id } from "Common/Constants";
-import { TextTagHelper } from "Common/TextTagHelper";
-import { HeroAbilitiesList } from "CustomHero/HeroData/HeroAbilitiesList";
 import { CustomUI } from "CustomUI/CustomUI";
 import { HeroSelectCategory } from "./HeroSelectCategory";
 import { HeroSelectUnit } from "./HeroSelectUnit";
@@ -99,6 +97,7 @@ export class HeroSelectorManager {
     for (const hsUnit of this.heroSelectUnits) {
       hsUnit.setUnitReq(null);
     }
+    this.resetBansAndPicks();
   }
 
   setupPlayerSpawns() {
@@ -275,7 +274,7 @@ export class HeroSelectorManager {
     HeroSelector.update();
     HeroSelector.deselectButtons();
     this.forceAllRepick();
-    // this.resetBansAndPicks();
+    this.resetBansAndPicks();
     if (doBans) {
       this.runBanPhase();
     } else {
@@ -290,11 +289,13 @@ export class HeroSelectorManager {
   }
 
   resetBansAndPicks() {
-    const t1Player = Constants.defaultTeam1[0];
-    const t2Player = Constants.defaultTeam2[0];
-    for (const hsUnit of this.heroSelectUnits) {
-      hsUnit.counterSetUnitCode(0, t1Player);
-      hsUnit.counterSetUnitCode(0, t2Player);
+    // const t1Player = Constants.defaultTeam1[0];
+    // const t2Player = Constants.defaultTeam2[0];
+    for (const p of Globals.customPlayers) {
+      for (const hsUnit of this.heroSelectUnits) {
+        hsUnit.counterSetUnitCode(0, p.player);
+        hsUnit.counterSetUnitCode(0, p.player);
+      }
     }
   }
 

@@ -229,4 +229,14 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump jaco super elite combo",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 22,
+    duration: 22,
+    maxHeight: 600,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]

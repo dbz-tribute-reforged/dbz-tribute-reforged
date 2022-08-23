@@ -403,6 +403,18 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.gutsDragonCannonShot, AbilityNames.Guts.DRAGON_CANNON_SHOT],
     [Id.gutsBerserkerArmor, AbilityNames.Guts.BERSERKER_ARMOR],
     [Id.gutsBeastOfDarkness, AbilityNames.Guts.BEAST_OF_DARKNESS],
+    
+    // jaco
+    [Id.jacoEliteBeamCharge, AbilityNames.Jaco.ELITE_BEAM_CHARGE],
+    [Id.jacoEliteBeamPrime, AbilityNames.Jaco.ELITE_BEAM_PRIME],
+    [Id.jacoEliteBeamFire, AbilityNames.Jaco.ELITE_BEAM_FIRE],
+    [Id.jacoExtinctionBomb, AbilityNames.Jaco.EXCTINCTION_BOMB],
+    [Id.jacoRocketBoots, AbilityNames.Jaco.ROCKET_BOOTS],
+    [Id.jacoEmergencyBoost, AbilityNames.Jaco.EMERGENCY_BOOST],
+    [Id.jacoSuperEliteCombo, AbilityNames.Jaco.SUPER_ELITE_COMBO],
+    [Id.jacoElitePose, AbilityNames.Jaco.ELITE_POSE],
+    [Id.jacoMacroCannon, AbilityNames.Jaco.MACRO_CANNON],
+    [Id.jacoSuperJaco, AbilityNames.Jaco.SUPER_JACO],
 
 
 

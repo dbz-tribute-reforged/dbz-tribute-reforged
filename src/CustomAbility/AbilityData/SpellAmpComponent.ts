@@ -243,4 +243,13 @@ export const SpellAmpComponents = [
     bonus: 0.1,
     rate: 0.1,
   },
+  // --------------------------------------------
+  { 
+    name: "spell amp jaco elite pose", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.1,
+    rate: 0.1,
+  },
 ];

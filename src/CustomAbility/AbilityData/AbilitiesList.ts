@@ -8474,6 +8474,121 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Jaco.ELITE_BEAM_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam jaco elite beam" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jaco.ROCKET_BOOTS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJaco.blp",
+      disabled: "BTNJaco.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jaco.ROCKET_BOOTS,
+      body:
+        AbilityNames.Jaco.ROCKET_BOOTS
+    },
+    components: [
+      { name: "dash ground forward 5dist" },
+      { name: "multi jaco rocket boots" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jaco.SUPER_ELITE_COMBO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJaco.blp",
+      disabled: "BTNJaco.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jaco.SUPER_ELITE_COMBO,
+      body: 
+        AbilityNames.Jaco.SUPER_ELITE_COMBO
+    },
+    components: [
+      { name: "dash ground point 15dist" },
+      { name: "damage jaco super elite combo explosion" },
+      { name: "damage jaco super elite combo explosion inner" },
+      { name: "jump jaco super elite combo" },
+      { name: "knockback jaco super elite combo" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jaco.ELITE_POSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPotentialUnleashed.blp",
+      disabled: "BTNPotentialUnleashed.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jaco.ELITE_POSE,
+      body: 
+        AbilityNames.Jaco.ELITE_POSE
+    },
+    components: [
+      { name: "spell amp jaco elite pose" },
+      { name: "sfx unlock potential" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,

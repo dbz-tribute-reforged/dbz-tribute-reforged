@@ -2836,6 +2836,31 @@ export const MultiComponents = [
     components: [
       { name: "beam guts heavy slam" },
     ],
+  },  // -------------------------------------------
+  {
+    name: "multi jaco rocket boots", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 0,
+    angleMin: 0,
+    angleMax: 0,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 15,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 9,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam jaco rocket boots" },
+    ],
   },
   // -------------------------------------------
   {
