@@ -2,6 +2,7 @@ import { Vector2D } from "./Vector2D";
 import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
+  export let isMainGameStarted: boolean = false;
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;

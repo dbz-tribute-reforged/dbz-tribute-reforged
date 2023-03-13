@@ -16,7 +16,7 @@ import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
 import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
 import { TeamManager } from 'Core/TeamSystem/TeamManager';
-import { Constants } from 'Common/Constants';
+import { Constants, Globals } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
 import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
 import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstants';
@@ -44,12 +44,6 @@ function tsMain() {
   print(`Build: ${BUILD_DATE}`);
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
-
-  // preload (temp) test
-  Preload("DragonHead2.mdl");
-  Preload("DragonSegment2.mdl");
-  Preload("DragonTail.mdl");
-  Preload("Conflagrate.mdl");
   
   // preload custom abilities
   customAbilityManager = CustomAbilityManager.getInstance();
@@ -60,14 +54,15 @@ function tsMain() {
   });
 
   SetCreepCampFilterState(false);
+  
+  CustomUiTest();
+
+  PathingCheck.Init();
 
   // delay init
   TimerStart(CreateTimer(), 0.05, false, () => {
     DestroyTimer(GetExpiredTimer());
     // initialize some systems
-    PathingCheck.Init();
-    
-    CustomUiTest();
     CustomPlayerTest();
   })
 
@@ -99,6 +94,7 @@ function tsMain() {
   TimerStart(CreateTimer(), 1, true, () => {
     if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
       // anything that happens after hero picking is done, should be placed here
+      Globals.isMainGameStarted = true;
       sagaManager = SagaManager.getInstance();
       tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
       dragonBallsManager = DragonBallsManager.getInstance();
@@ -115,6 +111,36 @@ function tsMain() {
     itemCleanupManager = ItemCleanupManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
+
+  TimerStart(CreateTimer(), 6.0, true, () => {
+    if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
+      GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
+      ForGroup(Globals.tmpUnitGroup, tmp_give_exp);
+    }
+  });
+
+  CameraZoom.onInit();
+}
+
+// temporarily give xp until neutral hostile is fixed
+function tmp_give_exp() {
+  const u = GetEnumUnit();
+  if (
+    IsUnitType(u, UNIT_TYPE_HERO)
+    && UnitHelper.isUnitAlive(u)
+    && GetOwningPlayer(u) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
+  ) {
+    const xp = (
+      ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u)+1)
+      - ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u))
+    );
+
+    if (xp > 0) {
+      AddHeroXP(u, xp, false);
+    } else {
+      AddHeroXP(u, 50, false);
+    }
+  }
 }
 
 function playLobbyMusic() {
@@ -123,5 +149,4 @@ function playLobbyMusic() {
 }
 
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsMain);
-addScriptHook(W3TS_HOOK.MAIN_AFTER, CameraZoom.onInit);
 addScriptHook(W3TS_HOOK.CONFIG_AFTER, playLobbyMusic);
