@@ -228,7 +228,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         GroupEnumUnitsInRange(
           Globals.tmpUnitGroup, 
           this.targetCoord.x, this.targetCoord.y, 
-          500, 
+          400, 
           null
         );
         
@@ -238,7 +238,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           const tu = GetEnumUnit();
           if (
             !isNearby
-            && UnitHelper.isUnitTargetableForPlayer(tu, sourcePlayer, false)
+            && IsUnitEnemy(tu, sourcePlayer)
             && UnitHelper.isUnitAlive(tu)
             && UnitHelper.isUnitRealHero(tu)
           ) {

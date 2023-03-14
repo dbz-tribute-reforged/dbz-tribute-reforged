@@ -29,7 +29,7 @@ export const AbilitiesList = [
       body: 
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
-        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" +
+        "SP cost reduced for shorter distances and for moving within 400 range of an enemy hero.|n" +
         "|nCost: 45 SP|nCD: 8 (varies)",
     },
     components: [
@@ -62,7 +62,7 @@ export const AbilitiesList = [
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
-        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
+        "SP cost reduced for shorter distances and for teleporting within 400 range of an enemy hero.|n" + 
         "Cost: 50 SP|n" + 
         "CD: 8 (varies)",
     },
