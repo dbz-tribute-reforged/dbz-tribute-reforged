@@ -63,6 +63,7 @@ export const AbilitiesList = [
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
         "Y is also a valid hotkey if using a QWERTZ keyboard." + 
+        "Refunds 30 SP if target is within 600 units of an enemy hero" +
         "|nCost: 60 SP|nCD: 8",
     },
     components: [

@@ -1,6 +1,31 @@
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { TextTagHelper } from "Common/TextTagHelper";
+import { UnitHelper } from "Common/UnitHelper";
+
+  
+// temporarily give xp until neutral hostile is fixed
+function give_auto_exp() {
+  const u = GetEnumUnit();
+  if (
+    IsUnitType(u, UNIT_TYPE_HERO)
+    && UnitHelper.isUnitAlive(u)
+    && GetOwningPlayer(u) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    && !IsUnitType(u, UNIT_TYPE_SUMMONED)
+    && !IsUnitIllusion(u)
+  ) {
+    const xp = (
+      ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u)+1)
+      - ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u))
+    );
+
+    if (xp > 0) {
+      AddHeroXP(u, xp, false);
+    } else {
+      AddHeroXP(u, 50, false);
+    }
+  }
+}
 
 export module ExperienceConstants {
   // hero req exp
@@ -96,6 +121,14 @@ export class ExperienceManager {
     this.setupUnitXPModifiers();
 
     this.setupRewardXPTrigger(this.rewardXPTrigger);
+
+
+    TimerStart(CreateTimer(), 60.0, true, () => {
+      if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
+        GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
+        ForGroup(Globals.tmpUnitGroup, give_auto_exp);
+      }
+    });
 
     return this;
   }

@@ -6,7 +6,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
-import { OrderIds } from "Common/Constants";
+import { Globals, OrderIds } from "Common/Constants";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -169,6 +169,23 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
             PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
             
             if (ability.currentTick == 0) {
+              GroupEnumUnitsInRange(Globals.tmpUnitGroup, this.targetCoord.x, this.targetCoord.y, 600, null);
+              
+              let isNearby = false;
+              ForGroup(Globals.tmpUnitGroup, () => {
+                const tu = GetEnumUnit();
+                if (
+                  !isNearby
+                  && UnitHelper.isUnitTargetableForPlayer(tu, input.casterPlayer, false)
+                  && UnitHelper.isUnitAlive(tu)
+                  && UnitHelper.isUnitRealHero(tu)
+                ) {
+                  isNearby = true;
+                }
+              });
+              if (isNearby) {
+                input.caster.setCurrentSP(input.caster.getCurrentSP() + ability.costAmount * 0.5);
+              }
               IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
             }
           }

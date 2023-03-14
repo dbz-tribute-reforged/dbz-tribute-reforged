@@ -40,7 +40,9 @@ let customAbilityManager: CustomAbilityManager;
 let farmingManager: FarmingManager;
 let heroSelectorManager: HeroSelectorManager;
 
-function tsMain() {
+
+function tsPostMain() {
+
   print(`Build: ${BUILD_DATE}`);
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
@@ -112,35 +114,7 @@ function tsMain() {
     DestroyTimer(GetExpiredTimer());
   });
 
-  TimerStart(CreateTimer(), 6.0, true, () => {
-    if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
-      GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
-      ForGroup(Globals.tmpUnitGroup, tmp_give_exp);
-    }
-  });
-
   CameraZoom.onInit();
-}
-
-// temporarily give xp until neutral hostile is fixed
-function tmp_give_exp() {
-  const u = GetEnumUnit();
-  if (
-    IsUnitType(u, UNIT_TYPE_HERO)
-    && UnitHelper.isUnitAlive(u)
-    && GetOwningPlayer(u) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
-  ) {
-    const xp = (
-      ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u)+1)
-      - ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u))
-    );
-
-    if (xp > 0) {
-      AddHeroXP(u, xp, false);
-    } else {
-      AddHeroXP(u, 50, false);
-    }
-  }
 }
 
 function playLobbyMusic() {
@@ -148,5 +122,5 @@ function playLobbyMusic() {
   PlayMusic("Audio\\Music\\GatoSong.mp3");
 }
 
-addScriptHook(W3TS_HOOK.MAIN_AFTER, tsMain);
+addScriptHook(W3TS_HOOK.MAIN_AFTER, tsPostMain);
 addScriptHook(W3TS_HOOK.CONFIG_AFTER, playLobbyMusic);
