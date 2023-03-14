@@ -88,6 +88,14 @@ export module UnitHelper {
     );
   }
 
+  export function isUnitRealHero(unit: unit): boolean {
+    return (
+      IsUnitType(unit, UNIT_TYPE_HERO) 
+      && !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+      && !IsUnitIllusion(unit)
+    );
+  }
+
   export function isImmortal(unit: unit): boolean {
     return (
       UnitHasBuffBJ(unit, Constants.buffImmortal)

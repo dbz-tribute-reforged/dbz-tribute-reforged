@@ -1503,39 +1503,39 @@ end
 --     return n
 -- end
 
-do
-    local real = InitBlizzard
-    function InitBlizzard()
-        real()
+-- do
+--     local real = InitBlizzard
+--     function InitBlizzard()
+--         real()
 
-        -- enable the next line as soon blizzard fixed the bug in current version
-        --if GetLocalizedString("REFORGED") ~= "REFORGED" then return end
+--         -- enable the next line as soon blizzard fixed the bug in current version
+--         --if GetLocalizedString("REFORGED") ~= "REFORGED" then return end
 
-        local tim  = CreateTimer()
-        local trig   = CreateTrigger()
-        TriggerRegisterGameEvent(trig, EVENT_GAME_SAVE)
-        TriggerAddAction(trig, function()
-            local backup =  string.pack
-            local backup2 =  string.unpack
-            string.pack = nil
-            string.unpack = nil
+--         local tim  = CreateTimer()
+--         local trig   = CreateTrigger()
+--         TriggerRegisterGameEvent(trig, EVENT_GAME_SAVE)
+--         TriggerAddAction(trig, function()
+--             local backup =  string.pack
+--             local backup2 =  string.unpack
+--             string.pack = nil
+--             string.unpack = nil
 
-            TimerStart(tim, 0, false, function()
-                string.pack = backup
-                string.unpack = backup2
+--             TimerStart(tim, 0, false, function()
+--                 string.pack = backup
+--                 string.unpack = backup2
 
-            end)
-        end)
+--             end)
+--         end)
        
-        local trig2   = CreateTrigger()
-        TriggerRegisterGameEvent(trig2, EVENT_GAME_LOADED)
-        TriggerAddAction(trig2, function()
-            -- prevent restoring the backups when the game is loaded
-            PauseTimer(tim)
-        end)
+--         local trig2   = CreateTrigger()
+--         TriggerRegisterGameEvent(trig2, EVENT_GAME_LOADED)
+--         TriggerAddAction(trig2, function()
+--             -- prevent restoring the backups when the game is loaded
+--             PauseTimer(tim)
+--         end)
 
-    end
-end
+--     end
+-- end
 HeroName = {
   -- unitCode = "name"
   H000 = "Goku",
@@ -6006,8 +6006,8 @@ end
 function CreateAllUnits()
     CreateNeutralPassiveBuildings()
     CreatePlayerBuildings()
-    -- CreateNeutralHostile()
-    -- CreateNeutralPassive()
+    CreateNeutralHostile()
+    CreateNeutralPassive()
     CreatePlayerUnits()
 end
 
@@ -19993,10 +19993,6 @@ function Trig_Final_Battle_Sim_On_Actions()
         TriggerRegisterPlayerChatEvent(gg_trg_Mario_Jump_Min_Bounce_Height_Change, udg_TempPlayer, "-mjh", false)
         udg_TempInt = udg_TempInt + 1
     end
-    DisableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
-    EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
-    EnableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
-    EnableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick)
 end
 
 function InitTrig_Final_Battle_Sim_On()
@@ -36260,6 +36256,7 @@ end
 
 function InitTrig_Transformations_Init_Commands_Non_Auto()
     gg_trg_Transformations_Init_Commands_Non_Auto = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Transformations_Init_Commands_Non_Auto, 0.00)
     TriggerAddAction(gg_trg_Transformations_Init_Commands_Non_Auto, Trig_Transformations_Init_Commands_Non_Auto_Actions)
 end
 
@@ -43752,7 +43749,7 @@ function Trig_Cell_Absorb_Func001Func006Func002Func006Func003Func017C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func002Func006Func003Func021C()
+function Trig_Cell_Absorb_Func001Func006Func002Func006Func003Func022C()
     if (not (GetRandomReal(0, 100.00) < 5.00)) then
         return false
     end
@@ -43848,10 +43845,11 @@ function Trig_Cell_Absorb_Actions()
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
                                                 udg_ID = GetHandleId(udg_TransformationResultUnit)
                         SaveIntegerBJ(1, 13, udg_ID, udg_StatMultHashtable)
-                        if (Trig_Cell_Absorb_Func001Func006Func002Func006Func003Func021C()) then
+                        if (Trig_Cell_Absorb_Func001Func006Func002Func006Func003Func022C()) then
                                                         playGenericSpellSound(udg_TransformationResultUnit, "Audio/Effects/AbsorbAndroids.mp3", 11160)
                         else
                         end
+                        SetUnitAbilityLevelSwapped(FourCC("A0JU"), udg_TransformationResultUnit, 2)
                         TriggerExecute(gg_trg_Transformations_Exit_Point)
                     else
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
@@ -43867,6 +43865,7 @@ function Trig_Cell_Absorb_Actions()
                                                         playGenericSpellSound(udg_TransformationResultUnit, "Audio/Effects/AbsorbAndroids.mp3", 11160)
                         else
                         end
+                        SetUnitAbilityLevelSwapped(FourCC("A0JU"), udg_TransformationResultUnit, 2)
                         TriggerExecute(gg_trg_Transformations_Exit_Point)
                     end
                 else
@@ -44011,6 +44010,7 @@ function Trig_Transformations_Cell_Larval_Actions()
                 udg_TransformationID = FourCC('H00E')
         udg_TransformationStatMult = 1.25
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+        SetUnitAbilityLevelSwapped(FourCC("A029"), udg_TransformationResultUnit, 2)
         udg_StatMultReal = 0.00
     else
     end
@@ -59731,10 +59731,6 @@ function InitCustomTriggers()
     InitTrig_Tree_of_Might_Fruit_Bonus()
 end
 
-function RunInitializationTriggers()
-    ConditionalTriggerExecute(gg_trg_Transformations_Init_Commands_Non_Auto)
-end
-
 function InitCustomPlayerSlots()
     SetPlayerStartLocation(Player(0), 0)
     ForcePlayerStartLocation(Player(0), 0)
@@ -59944,26 +59940,14 @@ function main()
     SetAmbientDaySound("LordaeronSummerDay")
     SetAmbientNightSound("LordaeronSummerNight")
     SetMapMusic("Music", true, 0)
-
     InitSounds()
     CreateRegions()
     CreateCameras()
     CreateAllItems()
+    CreateAllUnits()
     InitBlizzard()
     InitGlobals()
     InitCustomTriggers()
-    CreateAllUnits()
-    
-
-    TimerStart(
-        CreateTimer(), 
-        0.0, 
-        false, 
-        function()
-            RunInitializationTriggers()
-        end
-    )
-
 end
 
 function config()

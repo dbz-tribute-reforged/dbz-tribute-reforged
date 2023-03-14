@@ -6,7 +6,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
-import { OrderIds } from "Common/Constants";
+import { CostType, Globals, OrderIds } from "Common/Constants";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -26,14 +26,15 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DASH_TYPE_FLYING = 1;
   static readonly DASH_TYPE_ZANZO = 2;
 
-  static readonly ZANZO_DYNAMIC_CD = 4;
-  static readonly ZANZO_STATIC_CD = 1;
+  static readonly ZANZO_DYNAMIC_CD = 5;
+  static readonly ZANZO_STATIC_CD = 3;
 
   protected previousCoord: Vector2D;
   protected currentCoord: Vector2D;
   protected dashTargetPoint: Vector2D;
   protected targetCoord: Vector2D;
   protected distanceTravelled: number;
+  protected distanceMult: number;
   protected hasStarted: boolean;
 
   constructor(
@@ -53,6 +54,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.dashTargetPoint = new Vector2D();
     this.targetCoord = new Vector2D();
     this.distanceTravelled = 0;
+    this.distanceMult = 0;
     this.hasStarted = false;
   }
   
@@ -108,7 +110,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
       direction += this.angleOffset;
 
-      let distanceMult = 1;
+      this.distanceMult = 1;
       if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
         const sourceAgi = GetHeroAgi(source, true);
         const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
@@ -120,12 +122,12 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           )
         );
         
-        distanceMult = Math.min(
+        this.distanceMult = Math.min(
           Dash.MAXIMUM_AGI_DISTANCE_MULTIPLIER, 
           bonusAgiSpeed * bonusAgiToStrRatioSpeed
         );
       }
-      const distanceToMove = this.distance * distanceMult;
+      const distanceToMove = this.distance * this.distanceMult;
       const distanceToTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);
 
       if (distanceToTarget > distanceToMove) {
@@ -139,7 +141,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         // repeatedly move the user towards the target until they run out of distance to move
         // then move the user
         if (ability.currentTick == 0) {
-          const distMove = 50 * distanceMult;
+          const distMove = 50 * this.distanceMult;
           let distTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);    
 
           if (distTarget > distMove) {
@@ -149,7 +151,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           }
 
           while (
-            this.distanceTravelled < this.distance * distanceMult
+            this.distanceTravelled < this.distance * this.distanceMult
             && distTarget >= distMove
           ) {
             if (
@@ -168,9 +170,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
             this.distanceTravelled += distMove;
             PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
             
-            if (ability.currentTick == 0) {
-              IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
-            }
+            IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
           }
         }
         this.targetCoord.setUnit(source);
@@ -215,8 +215,53 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
         // readjust unit loc based on closest non-cliff area..
         PathingCheck.unstuckGroundUnitFromCliff(source, this.targetCoord);
-        
       }
+
+      if (
+        this.dashType == Dash.DASH_TYPE_ZANZO
+        && ability.name != AbilityNames.Saga.ZANZO_DASH
+        && ability.costType == CostType.SP
+      ) {
+        this.targetCoord.setUnit(source);
+
+        // calc stam refund
+        GroupEnumUnitsInRange(
+          Globals.tmpUnitGroup, 
+          this.targetCoord.x, this.targetCoord.y, 
+          500, 
+          null
+        );
+        
+        const sourcePlayer = GetOwningPlayer(source);
+        let isNearby = false;
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const tu = GetEnumUnit();
+          if (
+            !isNearby
+            && UnitHelper.isUnitTargetableForPlayer(tu, sourcePlayer, false)
+            && UnitHelper.isUnitAlive(tu)
+            && UnitHelper.isUnitRealHero(tu)
+          ) {
+            isNearby = true;
+          }
+        });
+        
+        const zz_distanceRatio = Math.min(1.0, this.distanceTravelled / (this.distance * this.distanceMult));
+        let stamina_refund_ratio = 1.0-zz_distanceRatio;
+        if (isNearby) {
+          stamina_refund_ratio += 0.4;
+        }
+
+        stamina_refund_ratio = Math.max(
+          0.0,
+          Math.min(0.8, stamina_refund_ratio)
+        );
+
+        if (stamina_refund_ratio > 0) {
+          input.caster.setCurrentSP(input.caster.getCurrentSP() + ability.costAmount * stamina_refund_ratio);
+        }
+      }
+
       this.distanceTravelled = 0;
       this.hasStarted = false;
     }

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.76
+DBZ Tribute |cffffcc00Reforged 0.77
 }
 
 STRING 4
@@ -4108,7 +4108,7 @@ Transformations:
 [lvl 250] 2.75x "fp" [Upgrades Serious Series]
 
 |cffff2020ONE PUNCH|r: 100% chance for 1.5x crit and 30% dodge
-|cff00ff00Cardio|r: +25% Max Stamina and Regen
+|cff00ff00Cardio|r: +15% Max Stamina and Regen
 }
 
 STRING 671
@@ -11223,12 +11223,6 @@ STRING 1789
 Use Item
 }
 
-STRING 1790
-// Destructibles: B000 (Large Summer Tree Wall), Name (Name)
-{
-Large Summer Tree Wall
-}
-
 STRING 1791
 // Destructibles: B003 (Large Ashenvale Canopy Tree), Name (Name)
 {
@@ -11239,12 +11233,6 @@ STRING 1792
 // Destructibles: B004 (Large Ashenvale Tree Wall), Name (Name)
 {
 Large Ashenvale Tree Wall
-}
-
-STRING 1793
-// Destructibles: B005 (Large Fall Tree Wall), Name (Name)
-{
-Large Fall Tree Wall
 }
 
 STRING 1794
@@ -11335,12 +11323,6 @@ STRING 1808
 // Destructibles: B00K (City Building), Name (Name)
 {
 City Building
-}
-
-STRING 1809
-// Destructibles: B00L (Large Pink Summer Tree Wall), Name (Name)
-{
-Large Pink Summer Tree Wall
 }
 
 STRING 1810
@@ -72606,23 +72588,6 @@ When activated, the next hero to damage Hirudegarn will be immediately counter-a
 |cff00FFFFCooldown: <A0E0,Cool6>s
 }
 
-STRING 11633
-// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
-{
-A strong melee fighter with high auto-attack damage.
-
-|cffff2020One Punch|r: 100% Chance for 1.5x Crit and 30% evasion.
-|cff00ff00Cardio|r: +25% Max Stamina and Regen.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-|cff808080ONE PAAAAWNCH!|r
-}
-
 STRING 11634
 // Buffs/Effects: B01J (), Buffubertip (Tooltip - Extended)
 {
@@ -90243,6 +90208,23 @@ STRING 14421
 // Items: I04X (Hit's Assassination Contract), Name (Name)
 {
 Hit's Assassination Contract
+}
+
+STRING 14422
+// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
+{
+A strong melee fighter with high auto-attack damage.
+
+|cffff2020One Punch|r: 100% Chance for 1.5x Crit and 30% evasion.
+|cff00ff00Cardio|r: +15% Max Stamina and Regen.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080ONE PAAAAWNCH!|r
 }
 
 STRING 14423
@@ -137486,6 +137468,12 @@ Press [|cff00ff00Q|r] again to prime the Elite Beam, gaining up to +100% bonus d
 |cff00FFFFCooldown: <A10T,Cool10> seconds
 }
 
+STRING 21115
+// Abilities: A114 (Inner Fire Max Power), Tip (Tooltip - Normal)
+{
+Inner Fire Max Power
+}
+
 STRING 21116
 // Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
 {
@@ -137574,6 +137562,12 @@ STRING 21130
 // Abilities: A10W (Extinction Bomb), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Extinction Bomb
+}
+
+STRING 21131
+// Abilities: A114 (Inner Fire Max Power), Name (Name)
+{
+Inner Fire Max Power
 }
 
 STRING 21132
@@ -137950,6 +137944,12 @@ STRING 21182
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 1|r]
 }
 
+STRING 21183
+// Abilities: A115 (Inner Fire Super Charge), Tip (Tooltip - Normal)
+{
+Inner Fire Super Charge
+}
+
 STRING 21184
 // Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
 {
@@ -137998,10 +137998,52 @@ STRING 21191
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 9|r]
 }
 
+STRING 21192
+// Abilities: A115 (Inner Fire Super Charge), Name (Name)
+{
+Inner Fire Super Charge
+}
+
+STRING 21193
+// Buffs/Effects: B05J (Inner Fire Max Power), Bufftip (Tooltip)
+{
+Max Power
+}
+
+STRING 21195
+// Buffs/Effects: B05J (Inner Fire Max Power), EditorName (Name (Editor Only))
+{
+Inner Fire Max Power
+}
+
+STRING 21196
+// Buffs/Effects: B05K (Inner Fire Super Charge), Bufftip (Tooltip)
+{
+Super Charge
+}
+
+STRING 21198
+// Buffs/Effects: B05K (Inner Fire Super Charge), EditorName (Name (Editor Only))
+{
+Inner Fire Super Charge
+}
+
+STRING 21199
+// Buffs/Effects: B05J (Inner Fire Max Power), Buffubertip (Tooltip - Extended)
+{
+This unit is exerting its max power; it has increased damage and speed.
+}
+
 STRING 21200
 // Abilities: A10Z (Super Elite Combo), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Super Elite Combo - [|cffffcc00Level %d|r]
+}
+
+STRING 21201
+// Buffs/Effects: B05K (Inner Fire Super Charge), Buffubertip (Tooltip - Extended)
+{
+This unit is super charged; it has increased damage and speed.
 }
 
 STRING 21202

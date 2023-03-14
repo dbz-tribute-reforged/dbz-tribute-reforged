@@ -8,9 +8,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 8,
     costType: CostType.SP,
-    costAmount: 55,
+    costAmount: 45,
     duration: 20,
     updateRate: 0.03,
     castTime: 0.03,
@@ -25,12 +25,12 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
-      title: "(Z) Zanzo Dash",
+      title: "(Z) or (Y) Zanzo Dash",
       body: 
-        "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
-        "Can be used to cross cliffs unlike many other dashes. " + 
-        "Y is also a valid hotkey if using a QWERTZ keyboard. " + 
-        "|nCost: 55 SP|nCD: 5 (varies)",
+        "Dashes towards your next right click. " + 
+        "Can be used to cross cliffs. " + 
+        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" +
+        "|nCost: 45 SP|nCD: 8 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -45,7 +45,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 8,
     costType: CostType.SP,
-    costAmount: 60,
+    costAmount: 50,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.03,
@@ -58,12 +58,13 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
-      title: "(Z) Zanzoken",
+      title: "(Z) or (Y) Zanzoken",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
-        "Y is also a valid hotkey if using a QWERTZ keyboard." + 
-        "|nCost: 60 SP|nCD: 8",
+        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
+        "Cost: 50 SP|n" + 
+        "CD: 8 (varies)",
     },
     components: [
       { name: "sfx shunpo start" },
@@ -94,8 +95,9 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 60% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
-        "Cost: 30 SP|nCD: 3"
+        "Basic Guard ability that blocks 70% of incoming damage until more than 4 * AGI damage is blocked.|n" + 
+        "Cost: 30 SP|n" + 
+        "CD: 4"
     },
     components: [
       { name: "block basic guard" },
@@ -108,7 +110,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 5,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 35,
     duration: 166,
     updateRate: 0.03,
     castTime: 0.0,
@@ -125,12 +127,15 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Max Power",
       body: 
-        "Boosts your ability damage by 20% and increases movement speed by 132 for 5 seconds." + 
-        "|nCost: 40 SP|nCD: 5"
+        "+20% ability damage, +50% attack damage, +132 ms.|n" + 
+        "Cost: 35 SP|n" +
+        "Duration: 5s|n" + 
+        "CD: 5s"
     },
     components: [
       { name: "spell amp max power" },
       { name: "dash ground forward max power" },
+      { name: "buff inner fire max power" },
       { name: "sfx max power" },
     ],
   },
@@ -140,7 +145,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 30,
+    costAmount: 25,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -7551,7 +7556,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 5,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 35,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
@@ -7569,7 +7574,7 @@ export const AbilitiesList = [
         "Becomes invulnerable for 0.03s.|n" +
         "Instantly purges all debuffs from Donkey Kong.|n" + 
         "Can be used while stunned.|n" +
-        "Cost: 40 SP|n" +
+        "Cost: 35 SP|n" +
         "CD: 5"
     },
     components: [
@@ -9326,7 +9331,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Cell.SUPER_CHARGE,
     currentCd: 0,
-    maxCd: 22,
+    maxCd: 25,
     costType: CostType.SP,
     costAmount: 50,
     duration: 300,
@@ -9343,12 +9348,15 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "Boosts your ability damage by 70% and increases movement speed by 132 for 9 seconds." + 
-        "|nCost: 50 SP|nCD: 22"
+        "+70% ability damage, +70% auto attack damage, +132ms.|n" + 
+        "Cost: 50 SP|n"+
+        "Duration: 9s|n" +  
+        "CD: 25s"
     },
     components: [
       { name: "spell amp cell super charge" },
       { name: "dash ground forward max power" },
+      { name: "buff inner fire super charge" },
       { name: "sfx cell super charge" },
     ],
   },
@@ -12794,6 +12802,7 @@ export const AbilitiesList = [
     components: [
       { name: "spell amp max power" },
       { name: "dash ground forward max power saga" },
+      { name: "buff inner fire max power" },
       { name: "sfx max power" },
     ],
   },
