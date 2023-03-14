@@ -104,6 +104,8 @@ export module Constants {
 
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
+
+  export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
 }
 
 export enum CostType {
@@ -175,10 +177,13 @@ export module DebuffAbilities {
 
   // inner fire
   export const LUCARIO_FORCE_DEBUFF = FourCC("A0Y5");
+  export const MAX_POWER_DMG_BUFF = FourCC('A114');
+  export const SUPER_CHARGE_DMG_BUFF = FourCC('A115');
 
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
   export const MAFUBA_SEALING = FourCC("A10S");
+
 }
 
 export module Buffs {

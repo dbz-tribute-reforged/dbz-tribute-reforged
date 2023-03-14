@@ -61,36 +61,42 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
       this.alreadyDebuffed.clear();
     }
 
-    GroupEnumUnitsInRange(
-      this.affectedGroup, 
-      this.sourceCoord.x, 
-      this.sourceCoord.y, 
-      this.aoe,
-      null
-    );
+    if (this.aoe == 0) {
+      IssueTargetOrderById(this.castDummy, this.orderId, source);
+    }
 
-    ForGroup(this.affectedGroup, () => {
-      const target = GetEnumUnit();
-      if (
-        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) 
-        && (
-          !this.onlyAffectHeroes ||
-          IsUnitType(target, UNIT_TYPE_HERO)
-        )
-      ) {
-        const targetId = GetHandleId(target);
-        if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
-          if (this.keepCasting) {
-            IssueTargetOrderById(this.castDummy, this.orderId, target);
-          } else if (!this.alreadyDebuffed.get(targetId)) {
-            this.alreadyDebuffed.set(targetId, true);
-            IssueTargetOrderById(this.castDummy, this.orderId, target);
+    if (this.aoe > 0) {
+      GroupEnumUnitsInRange(
+        this.affectedGroup, 
+        this.sourceCoord.x, 
+        this.sourceCoord.y, 
+        this.aoe,
+        null
+      );
+  
+      ForGroup(this.affectedGroup, () => {
+        const target = GetEnumUnit();
+        if (
+          UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) 
+          && (
+            !this.onlyAffectHeroes ||
+            IsUnitType(target, UNIT_TYPE_HERO)
+          )
+        ) {
+          const targetId = GetHandleId(target);
+          if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+            if (this.keepCasting) {
+              IssueTargetOrderById(this.castDummy, this.orderId, target);
+            } else if (!this.alreadyDebuffed.get(targetId)) {
+              this.alreadyDebuffed.set(targetId, true);
+              IssueTargetOrderById(this.castDummy, this.orderId, target);
+            }
           }
         }
-      }
-    });
-
-    GroupClear(this.affectedGroup);
+      });
+  
+      GroupClear(this.affectedGroup);
+    }
 
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick

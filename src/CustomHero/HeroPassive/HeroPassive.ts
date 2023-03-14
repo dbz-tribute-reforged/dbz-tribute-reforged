@@ -2299,7 +2299,7 @@ export function setupSPData(customHero: CustomHero) {
     }
     const id = GetUnitTypeId(customHero.unit);
     if (id == Id.saitama) {
-      incSp *= 1.25;
+      incSp *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     }
     // if (currentSP < 0.2 * maxSP) {
     //   incSp *= 0.5;
@@ -2324,7 +2324,7 @@ export function setupSPData(customHero: CustomHero) {
     ) {
       maxStamina *= 0.55;
     } else if (id == Id.saitama) {
-      maxStamina *= 1.25;
+      maxStamina *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     }
     customHero.setMaxSP(maxStamina);
   });

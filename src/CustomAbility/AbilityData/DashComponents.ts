@@ -254,7 +254,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 41,
+    distance: 51,
   },
   // zanzoken
   {
@@ -267,7 +267,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 800,
+    distance: 1000,
   },
   // max power
   {
