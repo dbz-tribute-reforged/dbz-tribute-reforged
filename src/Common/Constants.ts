@@ -16,7 +16,12 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
+  export const genericEnemyHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
+
+  export const barrelMoveTrigger = CreateTrigger();
+  export const barrelHashtable = InitHashtable(); 
+  export const barrelUnitGroup = CreateGroup();
 
   export const DDSUnitMap = new Map<unit, boolean>();
   export const DDSTrigger = CreateTrigger();
@@ -222,6 +227,8 @@ export module Buffs {
   export const EXTREME_SPEED = FourCC("B04O");
 
   export const FROSTBITE = FourCC("B02T");
+
+  export const MADNESS_CURSE_MISS = FourCC("B03X");
 
   export const MAFUBA_SEALED = FourCC("B05H");
   export const MAFUBA_SEALING = FourCC("B05I");

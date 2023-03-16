@@ -723,6 +723,9 @@ export module AbilityNames {
 
   export module Appule {
     export const APPULE_BLASTER: string = "Appule Blaster";
+    export const APPULE_EMERGENCY_ESCAPE: string = "Appule Emergency Escape";
+    export const APPULE_VENGEANCE: string = "Appule Vengeance";
+    export const APPULE_CLONES: string = "Appule Clones";
   }
 
 

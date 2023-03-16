@@ -29585,7 +29585,7 @@ else
 SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
 udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
         SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
-udg_TempReal = RMinBJ(140.00, (60.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.40)))
+udg_TempReal = RMinBJ(120.00, (60.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.40)))
 SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
 SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
         udg_TempLoc = Location(GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
@@ -57670,77 +57670,77 @@ end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func001C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func001C()
 if (not (udg_TempReal < 100.00)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func002C()
 if (not (udg_TempReal < 180.00)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003Func002Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002Func002C()
 if (not (GetHeroLevel(udg_TempUnit) >= 150)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002C()
 if (not (GetHeroLevel(udg_TempUnit) >= 100)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003C()
 if (not (GetHeroLevel(udg_TempUnit) >= 50)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func005C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func005C()
 if (not (GetHeroLevel(udg_TempUnit) >= 30)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func006Func002Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002Func002C()
 if (not (udg_TempInt2 >= 10)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func006Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002C()
 if (not (udg_TempInt2 >= 8)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019Func006C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020Func006C()
 if (not (udg_TempInt2 >= 6)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func019C()
+function Trig_Saga_Unit_Loop_Func001Func002Func020C()
 if (not (GetHeroLevel(udg_TempUnit) >= 10)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func020C()
+function Trig_Saga_Unit_Loop_Func001Func002Func021C()
 if (not (udg_IsNightmareMode == true)) then
 return false
 end
@@ -57779,25 +57779,26 @@ end
 udg_TempInt = udg_TempInt + 1
 end
 udg_TempInt2 = IMaxBJ(udg_TempInt2, 2)
+udg_TempInt2 = IMinBJ(udg_TempInt2, 8)
 udg_TempInt3 = IMaxBJ(1, udg_TempInt3)
 udg_TempReal = (udg_TempReal / I2R(udg_TempInt3))
 udg_TempReal2 = (udg_TempReal2 / I2R(udg_TempInt3))
 udg_TempReal3 = (udg_TempReal3 / I2R(udg_TempInt3))
-if (Trig_Saga_Unit_Loop_Func001Func002Func019C()) then
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func002C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func002C()) then
 udg_TempReal = 180.00
 udg_TempReal2 = 180.00
 udg_TempReal3 = 180.00
 else
 end
 udg_TempReal4 = (((0.50 + (0.11 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func005C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.10)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.20)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003Func002C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.20)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func005Func003Func002Func002C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002Func002C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.20)
 else
 end
@@ -57807,11 +57808,11 @@ else
 end
 else
 end
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func006C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.40)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func006Func002C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.30)
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func006Func002Func002C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002Func002C()) then
 udg_TempReal4 = (udg_TempReal4 + 0.30)
 else
 end
@@ -57820,7 +57821,7 @@ end
 else
 end
 else
-if (Trig_Saga_Unit_Loop_Func001Func002Func019Func001C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func020Func001C()) then
 udg_TempReal = 120.00
 udg_TempReal2 = 120.00
 udg_TempReal3 = 120.00
@@ -57828,7 +57829,7 @@ else
 end
 udg_TempReal4 = (((0.00 + (0.01 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.07)) * 1)
 end
-if (Trig_Saga_Unit_Loop_Func001Func002Func020C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func021C()) then
 udg_TempReal4 = (udg_TempReal4 + 1.00)
 else
 end

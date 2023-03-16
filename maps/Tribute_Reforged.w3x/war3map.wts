@@ -11338,7 +11338,7 @@ City Building
 }
 
 STRING 1809
-// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (Gallet Gun), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -13292,7 +13292,7 @@ STRING 2123
 }
 
 STRING 2124
-// Abilities: A003 (Gallet Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (Gallet Gun), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -13316,7 +13316,7 @@ Vegeta gathers some energy with both arms behind his shoulder, then he brings th
 }
 
 STRING 2128
-// Abilities: A003 (Gallet Gun), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -18237,7 +18237,7 @@ STRING 2922
 }
 
 STRING 2923
-// Abilities: A05E (Mass Attack Order), Researchhotkey (Hotkey - Learn)
+// Abilities: A00G (Future Gohan Training), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -19403,7 +19403,7 @@ STRING 3110
 }
 
 STRING 3111
-// Abilities: A00G (Future Gohan Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -19909,7 +19909,7 @@ Future Gohan Training
 }
 
 STRING 3195
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -25420,7 +25420,7 @@ Great Summoning
 }
 
 STRING 4075
-// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -27199,7 +27199,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4363
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -27223,7 +27223,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4367
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -51132,7 +51132,7 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8174
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -57475,6 +57475,15 @@ STRING 9173
 // Abilities: A0KE (Jiren's fighting Style), Name (Name)
 {
 Jiren's fighting Style
+}
+
+STRING 9174
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool1,.> seconds|r
 }
 
 STRING 9175
@@ -72601,7 +72610,7 @@ When activated, the next hero to damage Hirudegarn will be immediately counter-a
 }
 
 STRING 11633
-// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -85256,6 +85265,15 @@ STRING 13647
 [|cff00ff00E|r] Build Farming Defence System
 }
 
+STRING 13648
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool2,.> seconds|r
+}
+
 STRING 13649
 // Abilities: A0T5 (California Smash), Hotkey (Hotkey - Normal)
 {
@@ -95185,51 +95203,6 @@ STRING 15142
 +0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
-STRING 15143
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool1> seconds|r
-}
-
-STRING 15144
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool2> seconds|r
-}
-
-STRING 15145
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool3> seconds|r
-}
-
-STRING 15146
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool4> seconds|r
-}
-
-STRING 15147
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool5> seconds|r
-}
-
 STRING 15148
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
@@ -95290,15 +95263,6 @@ STRING 15157
 [|cff00FF00R|r] Learn Time Stop - [|cffffcc00Level %d|r]
 }
 
-STRING 15158
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool6> seconds|r
-}
-
 STRING 15159
 // Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
 {
@@ -95327,33 +95291,6 @@ STRING 15163
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Time Stop - [|cffffcc00Level 10|r]
-}
-
-STRING 15164
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool7> seconds|r
-}
-
-STRING 15165
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool8> seconds|r
-}
-
-STRING 15166
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool9> seconds|r
 }
 
 STRING 15167
@@ -126235,24 +126172,6 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 |cff00FFFFCooldown: <A0SF,Cool10> seconds|r
 }
 
-STRING 19509
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool10> seconds|r
-}
-
-STRING 19510
-// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A medium punch.
-|cffffff00Use this to start an int based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool1> seconds|r
-}
-
 STRING 19511
 // Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
 {
@@ -126344,96 +126263,6 @@ A medium punch.
 |cffffff00Use this to start an int based combo.
 |cff00ff00Damage: Agi|r
 |cff00ffffCooldown: <A0RC,Cool10> seconds|r
-}
-
-STRING 19522
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool1> seconds|r
-}
-
-STRING 19523
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool2> seconds|r
-}
-
-STRING 19524
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool3> seconds|r
-}
-
-STRING 19525
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool4> seconds|r
-}
-
-STRING 19526
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool5> seconds|r
-}
-
-STRING 19527
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool6> seconds|r
-}
-
-STRING 19528
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool7> seconds|r
-}
-
-STRING 19529
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool8> seconds|r
-}
-
-STRING 19530
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool9> seconds|r
-}
-
-STRING 19531
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool10> seconds|r
 }
 
 STRING 19532
@@ -133965,6 +133794,105 @@ Duration: <A007,Dur1> seconds
 |cff808080"I don't give a damn about your so called justice!"|r
 }
 
+STRING 20633
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool3,.> seconds|r
+}
+
+STRING 20634
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool4,.> seconds|r
+}
+
+STRING 20635
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool5,.> seconds|r
+}
+
+STRING 20636
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool6,.> seconds|r
+}
+
+STRING 20637
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool7,.> seconds|r
+}
+
+STRING 20638
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool8,.> seconds|r
+}
+
+STRING 20639
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool9,.> seconds|r
+}
+
+STRING 20640
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool10,.> seconds|r
+}
+
+STRING 20641
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cffffff00Use this to start an int based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool1,.> seconds|r
+}
+
+STRING 20642
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool1,.> seconds|r
+}
+
+STRING 20643
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool2,.> seconds|r
+}
+
 STRING 20644
 // Abilities: A104 (Appule Blaster), Tip (Tooltip - Normal)
 {
@@ -135807,7 +135735,7 @@ F
 }
 
 STRING 20902
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -136123,7 +136051,7 @@ STRING 20948
 }
 
 STRING 20949
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -138067,6 +137995,15 @@ Jaco opens a portal to the future to call forth his alter-ego Super Jaco, equipp
 |cff00ffffCooldown: <A112,Cool1> seconds
 }
 
+STRING 21216
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool3,.> seconds|r
+}
+
 STRING 21217
 // Abilities: A112 (Super Jaco), Tip (Tooltip - Normal)
 {
@@ -138289,6 +138226,15 @@ STRING 21248
 Jaco's Fighting Style - [|cffffcc00Level 15|r]
 }
 
+STRING 21249
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool4,.> seconds|r
+}
+
 STRING 21250
 // Abilities: A113 (Jaco's Fighting Style), Name (Name)
 {
@@ -138341,6 +138287,15 @@ STRING 21258
 // Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 21259
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool5,.> seconds|r
 }
 
 STRING 21260
@@ -139076,6 +139031,51 @@ STRING 21352
 Appule clones himself to reinforce Frieza's army. This clone deals 25% damage and takes 400% damage.
 |cff00ff00Duration: 10s|r
 |cff00ffffCooldown: <A11E,Cool7> seconds|r
+}
+
+STRING 21353
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool6,.> seconds|r
+}
+
+STRING 21354
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool7,.> seconds|r
+}
+
+STRING 21355
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool8,.> seconds|r
+}
+
+STRING 21356
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool9,.> seconds|r
+}
+
+STRING 21357
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool10,.> seconds|r
 }
 
 STRING 21365

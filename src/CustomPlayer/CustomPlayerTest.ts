@@ -1224,7 +1224,9 @@ export function CustomPlayerTest() {
   ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.KRABBY_PATTY, 2);
   ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Consumables.SENZU_BEAN, 2);
 
-  TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  // if unit picks up dragonball and is sonic, add chaos emerald
+  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.chaosEmerald, 7);
+
   TimerStart(CreateTimer(), 3, false, () => {
     SetupTreeOfMightSapling();
 
