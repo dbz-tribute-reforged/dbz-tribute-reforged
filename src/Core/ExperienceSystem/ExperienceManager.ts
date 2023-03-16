@@ -7,10 +7,12 @@ import { UnitHelper } from "Common/UnitHelper";
 // temporarily give xp until neutral hostile is fixed
 function give_auto_exp() {
   const u = GetEnumUnit();
+  const p = GetOwningPlayer(u);
+  const pId = GetPlayerId(p);
   if (
     IsUnitType(u, UNIT_TYPE_HERO)
     && UnitHelper.isUnitAlive(u)
-    && GetOwningPlayer(u) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    && pId < Constants.maxActivePlayers
     && !IsUnitType(u, UNIT_TYPE_SUMMONED)
     && !IsUnitIllusion(u)
   ) {

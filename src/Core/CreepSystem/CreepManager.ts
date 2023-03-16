@@ -67,21 +67,21 @@ export class CreepManager {
     SetHeroInt(x, 100, true);
 
     // annin
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01L"), 2900, 21000, 45);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01L"), 2900, 21200, 45);
     SetHeroLevel(x, 10, false);
     SetHeroStr(x, 400, true);
     SetHeroAgi(x, 400, true);
     SetHeroInt(x, 400, true);
 
     // mez
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01K"), 4500, 21000, 135);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01K"), 4500, 21200, 135);
     SetHeroLevel(x, 3, false);
     SetHeroStr(x, 30, true);
     SetHeroAgi(x, 30, true);
     SetHeroInt(x, 30, true);
 
     // goz
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01J"), 2900, 22700, 225);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01J"), 2900, 22700, 315);
     SetHeroLevel(x, 6, false);
     SetHeroStr(x, 100, true);
     SetHeroAgi(x, 100, true);
