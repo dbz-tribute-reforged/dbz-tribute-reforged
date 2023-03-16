@@ -138889,84 +138889,12 @@ Appule fires a low powered energy shot.
 |cff00ffffCooldown: <A104,Cool1> seconds|r
 }
 
-STRING 21420
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A304,Cool3> seconds|r
-}
-
-STRING 21421
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A404,Cool4> seconds|r
-}
-
-STRING 21422
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A504,Cool5> seconds|r
-}
-
-STRING 21423
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A604,Cool6> seconds|r
-}
-
-STRING 21424
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A704,Cool7> seconds|r
-}
-
-STRING 21425
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A804,Cool8> seconds|r
-}
-
-STRING 21426
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A904,Cool9> seconds|r
-}
-
-STRING 21427
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A1004,Cool10> seconds|r
-}
-
 STRING 21428
 // Abilities: A104 (Appule Blaster), Researchubertip (Tooltip - Learn - Extended)
 {
 Appule fires a low powered energy shot.
 |cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
 |cff00ffffCooldown: <A104,Cool1> - <A104,Cool10> seconds|r
-}
-
-STRING 21429
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
-|cff00ffffCooldown: <A204,Cool2> seconds|r
 }
 
 STRING 21430
@@ -139046,22 +138974,6 @@ Appule teleports to the target destination. Enemies near the source are slowed.
 |cff00ffffCooldown: <A116,Cool2> seconds|r
 }
 
-STRING 21441
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> seconds|r
-}
-
-STRING 21442
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool3> seconds|r
-}
-
 STRING 21443
 // Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
@@ -139118,108 +139030,12 @@ Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks
 |cff00ffffCooldown: <A11B,Cool10> seconds|r
 }
 
-STRING 21450
-// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
-}
-
-STRING 21451
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool2> seconds|r
-}
-
-STRING 21452
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool1> seconds|r
-}
-
-STRING 21453
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool3> seconds|r
-}
-
-STRING 21454
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool4> seconds|r
-}
-
-STRING 21455
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool5> seconds|r
-}
-
-STRING 21456
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool6> seconds|r
-}
-
-STRING 21457
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool7> seconds|r
-}
-
-STRING 21458
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool8> seconds|r
-}
-
-STRING 21459
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool9> seconds|r
-}
-
-STRING 21460
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool10> seconds|r
-}
-
 STRING 21461
 // Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
 {
 Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
 |cff00ff00Duration: 10s|r
 |cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
-}
-
-STRING 21462
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool2> seconds|r
 }
 
 STRING 21463
@@ -139237,5 +139053,189 @@ A weak and useless hero that should not be picked by anyone.
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 21464
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool3> seconds|r
+}
+
+STRING 21465
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool4> seconds|r
+}
+
+STRING 21466
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool5> seconds|r
+}
+
+STRING 21467
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool6> seconds|r
+}
+
+STRING 21468
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool7> seconds|r
+}
+
+STRING 21469
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool8> seconds|r
+}
+
+STRING 21470
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool9> seconds|r
+}
+
+STRING 21471
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool10> seconds|r
+}
+
+STRING 21472
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool2> seconds|r
+}
+
+STRING 21473
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> seconds|r
+}
+
+STRING 21474
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool3> seconds|r
+}
+
+STRING 21475
+// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
+}
+
+STRING 21476
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool2> seconds|r
+}
+
+STRING 21477
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool1> seconds|r
+}
+
+STRING 21478
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool3> seconds|r
+}
+
+STRING 21479
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool4> seconds|r
+}
+
+STRING 21480
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool5> seconds|r
+}
+
+STRING 21481
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool6> seconds|r
+}
+
+STRING 21482
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool7> seconds|r
+}
+
+STRING 21483
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool8> seconds|r
+}
+
+STRING 21484
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool9> seconds|r
+}
+
+STRING 21485
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool10> seconds|r
+}
+
+STRING 21486
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool2> seconds|r
 }
 
