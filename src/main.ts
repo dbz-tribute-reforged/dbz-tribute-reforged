@@ -22,6 +22,7 @@ import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
 import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstants';
 import { FarmingManager } from 'Core/FarmingSystem/FarmingManager';
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -66,6 +67,7 @@ function tsPostMain() {
     DestroyTimer(GetExpiredTimer());
     // initialize some systems
     CustomPlayerTest();
+    SimpleSpellSystem.initialize();
   })
 
   TimerStart(CreateTimer(), 0.1, false, () => {

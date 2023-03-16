@@ -16,6 +16,10 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
+  export const genericSpellMap = new Map<number, ()=>void>();
+
+  export const DDSUnitMap = new Map<unit, boolean>();
+  export const DDSTrigger = CreateTrigger();
 
   // global beam units
   export const beamUnitGroup = CreateGroup();
@@ -27,6 +31,7 @@ export module Globals {
   export const tmpVector = new Vector2D();
   export const tmpVector2 = new Vector2D();
   export const tmpVector3 = new Vector2D();
+
 }
 
 export module Constants {
@@ -145,12 +150,18 @@ export module DebuffAbilities {
   export const STUN_THREE_SECOND = FourCC('A08H');
   export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
 
+  export const SLOW_GENERIC_25_PCT = FourCC('A117');
+  export const SLOW_GENERIC_50_PCT = FourCC('A118');
+  export const SLOW_GENERIC_75_PCT = FourCC('A119');
+  export const SLOW_GENERIC_90_PCT = FourCC('A11A');
+
   // curse
   export const DEMONS_MARK = FourCC("A0O7");
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
   export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
   export const BRAVE_SLASH = FourCC("A0TV");
   export const DARK_MIST = FourCC("A0WS");
+  export const APPULE_VENGEANCE = FourCC("A11D");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -318,6 +329,9 @@ export module Id {
 
   export const appule = FourCC("H0AI");
   export const appuleBlaster = FourCC("A104");
+  export const appuleEscape = FourCC("A116");
+  export const appuleVengeance = FourCC("A11B");
+  export const appuleCloning = FourCC("A11E");
 
   export const babidi = FourCC("O001");
   export const haretsu = FourCC("A02E");
@@ -526,6 +540,7 @@ export module Id {
   export const ginyuPoseUltimate = FourCC("A0PS");
   export const ginyuPoseFighting = FourCC("A0PT");
   export const ginyuChangeNow = FourCC("A0PO");
+  export const ginyuChangeNowConfirm = FourCC("A0PN");
 
   export const gohan = FourCC("H00K");
   export const unlockPotential = FourCC("A0L6");
