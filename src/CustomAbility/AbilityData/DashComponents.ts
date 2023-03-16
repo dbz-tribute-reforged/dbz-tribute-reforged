@@ -1916,6 +1916,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 5,
   },
+  // appule emergency escape
+  {
+    name: "dash appule emergency escape",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 0,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_ZANZO,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1200,
+  },
   // ---
   // saga zanzo
   {

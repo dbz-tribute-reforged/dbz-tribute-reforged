@@ -860,6 +860,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     [Id.appule, [
       AbilityNames.Appule.APPULE_BLASTER,
+      AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE,
+      AbilityNames.Appule.APPULE_VENGEANCE,
+      AbilityNames.Appule.APPULE_CLONES,
     ]],
 
     // rusty

@@ -106,6 +106,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.jacoEliteBeamFire, SimpleSpellSystem.doJacoEliteBeamFire);
     Globals.genericSpellMap.set(Id.jacoExtinctionBomb, SimpleSpellSystem.doJacoExtinctionBomb);
     Globals.genericSpellMap.set(Id.jacoElitePose, SimpleSpellSystem.doJacoElitePose);
+    
+    Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
+    Globals.genericSpellMap.set(DebuffAbilities.APPULE_VENGEANCE, SimpleSpellSystem.appuleVengeanceIllusion);
 
     
     // add DDS stuff
@@ -265,6 +268,45 @@ export module SimpleSpellSystem {
       }
     });
     DisableTrigger(Globals.barrelMoveTrigger);
+
+
+    TriggerRegisterEnterRectSimple(Globals.appuleVengeanceTeleportTrigger, GetPlayableMapRect());
+    TriggerAddCondition(Globals.appuleVengeanceTeleportTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      if (
+        GetUnitTypeId(unit) == Id.appule 
+        && IsUnitIllusion(unit)
+      ) {
+        const player = GetOwningPlayer(unit);
+        const playerId = GetPlayerId(player);
+        const hero = Globals.customPlayers[playerId].firstCustomHero;
+        if (!hero) return false;
+        const heroId = GetHandleId(hero.unit);
+
+        SetUnitMoveSpeed(unit, GetUnitMoveSpeed(hero.unit));
+
+        const is_active = LoadBoolean(
+          Globals.genericSpellHashtable, 
+          GetHandleId(hero.unit),
+          StringHash("appule|illusion|active")
+        );
+        if (!is_active) return;
+
+        const target = LoadUnitHandle(Globals.genericSpellHashtable, heroId, StringHash("appule|illusion|target"));
+
+        Globals.tmpVector.setUnit(hero.unit);
+        Globals.tmpVector2.setUnit(target);
+        
+        // max cap teleportation distance
+        if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > 4000) {
+          return false;
+        }
+
+        SetUnitPosition(unit, GetUnitX(target), GetUnitY(target));
+        IssueTargetOrderById(unit, OrderIds.ATTACK, target);
+      }
+      return false;
+    }));
   }
 
   export function BraveSwordAttack() {
@@ -2703,6 +2745,62 @@ export module SimpleSpellSystem {
         SetUnitInvulnerable(unit, false);
       }
     });
+  }
+
+  export function appuleVengeanceExtra() {
+    const unit = GetTriggerUnit();
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+
+    const hero = Globals.customPlayers[playerId].firstCustomHero;
+    if (!hero) return;
+
+    TimerStart(CreateTimer(), 2.0, false, () => {
+      SaveBoolean(
+        Globals.genericSpellHashtable, 
+        GetHandleId(hero.unit),
+        StringHash("appule|illusion|active"),
+        false
+      );
+
+      DestroyTimer(GetExpiredTimer());
+    });
+  }
+
+  export function appuleVengeanceIllusion() {
+    const unit = GetTriggerUnit();
+    const unitId = GetHandleId(unit);
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+    const target = GetSpellTargetUnit();
+
+    const hero = Globals.customPlayers[playerId].firstCustomHero;
+    if (!hero) return;
+
+    SaveBoolean(
+      Globals.genericSpellHashtable, 
+      GetHandleId(hero.unit),
+      StringHash("appule|illusion|active"),
+      true
+    );
+    SaveUnitHandle(
+      Globals.genericSpellHashtable, 
+      GetHandleId(hero.unit),
+      StringHash("appule|illusion|target"),
+      target
+    );
+
+    const dummy = CreateUnit(
+      player, FourCC("h054"), GetUnitX(hero.unit), GetUnitY(hero.unit), 0
+    );
+    UnitAddAbility(dummy, DebuffAbilities.APPULE_VENGEANCE_CLONE);
+    SetUnitOwner(dummy, player, false);
+    const x = IssueTargetOrderById(
+      dummy, 
+      OrderIds.WAND_OF_ILLUSION, 
+      hero.unit
+    );
+    UnitApplyTimedLife(dummy, FourCC("BTLF"), 1);
   }
 
 

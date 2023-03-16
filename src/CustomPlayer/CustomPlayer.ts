@@ -1,5 +1,6 @@
 import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class CustomPlayer {
   public player: player;
@@ -112,6 +113,19 @@ export class CustomPlayer {
     if (this.getCustomHero(unit) != undefined) {
       this.lastSelectedOwnedHero = unit;;
     }
+  }
+
+  get firstCustomHero() : CustomHero | undefined{
+    for (const hero of this.heroes.values()) {
+      if (
+        UnitHelper.isUnitAlive(hero.unit)
+        && !IsUnitIllusion(hero.unit)
+        && !IsUnitType(hero.unit, UNIT_TYPE_SUMMONED)
+      ) {
+        return hero;
+      }
+    }
+    return undefined;
   }
 
   get allHeroes(): IterableIterator<CustomHero> {

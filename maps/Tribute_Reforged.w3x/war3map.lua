@@ -29954,10 +29954,7 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func021Func002C()
 if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 12) == "Local Player")) then
 return false
 end
-if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 5) == "Phone")) then
-return false
-end
-if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 4) == "Zaro")) then
+if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 11) == "randomkilla")) then
 return false
 end
 return true
@@ -30018,7 +30015,126 @@ end
 return true
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func001C()
+if (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 4) == "Zaro") then
+return true
+end
+return false
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08W"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("N00Q"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09H"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09C"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H06X"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H042"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09Q"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00R"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00A"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("O001"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09K"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0AA"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00M"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E01P"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08S"))) then
+return false
+end
+return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024C()
+if (not Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func025C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
 return false
 end
@@ -30134,6 +30250,69 @@ end
 else
 end
 if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024C()) then
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002C()) then
+BlzSetHeroProperName(udg_TempUnit, "Farmer With Glock")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Der Gross Bruder")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Mariusz Burneika")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Speedy Gonazalez")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Power Man")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Wizard Gasiorowski")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Gotronk")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Devil of Hearth")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Zario")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Heater")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "der Ofen")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Otto von Top")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Disp-o")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Komurczak")
+else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func024Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Janusz")
+else
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+else
+end
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func025C()) then
 TriggerExecute(gg_trg_Temp_Skin_Revert)
 else
 end
@@ -56890,7 +57069,7 @@ end
 return true
 end
 
-function Trig_Transformations_Appule_Func022Func002Func001C()
+function Trig_Transformations_Appule_Func022Func006Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -56900,8 +57079,8 @@ end
 return false
 end
 
-function Trig_Transformations_Appule_Func022Func002C()
-if (not Trig_Transformations_Appule_Func022Func002Func001C()) then
+function Trig_Transformations_Appule_Func022Func006C()
+if (not Trig_Transformations_Appule_Func022Func006Func001C()) then
 return false
 end
 return true
@@ -56977,7 +57156,11 @@ end
 TriggerExecute(gg_trg_Ginyu_Force_Team_Stat_Mult_Bonus)
     udg_ID = GetHandleId(udg_StatMultUnit)
 if (Trig_Transformations_Appule_Func022C()) then
-if (Trig_Transformations_Appule_Func022Func002C()) then
+udg_StatMultStr = udg_StatMultReal
+udg_StatMultAgi = udg_StatMultReal
+udg_StatMultInt = udg_StatMultReal
+udg_StatMultStr = (udg_StatMultStr - 0.10)
+if (Trig_Transformations_Appule_Func022Func006C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H0AI')

@@ -37,6 +37,11 @@ export module Globals {
   export const tmpVector2 = new Vector2D();
   export const tmpVector3 = new Vector2D();
 
+  export const globalDummyCaster = CreateUnit(
+    Player(PLAYER_NEUTRAL_PASSIVE), FourCC("h054"), 0, 0, 0
+  );
+
+  export const appuleVengeanceTeleportTrigger = CreateTrigger();
 }
 
 export module Constants {
@@ -200,6 +205,10 @@ export module DebuffAbilities {
   export const MAFUBA_SEALED = FourCC("A10R");
   export const MAFUBA_SEALING = FourCC("A10S");
 
+  // wand of illusion
+  export const APPULE_VENGEANCE_CLONE = FourCC("A11C");
+  export const APPULE_CLONES = FourCC("A11F");
+
 }
 
 export module Buffs {
@@ -243,6 +252,7 @@ export module OrderIds {
   export const INNER_FIRE = 852066;
   export const HOLY_BOLT = 852092;
   export const SOUL_BURN = 852668;
+  export const WAND_OF_ILLUSION = 852274;
   export const STOP = 851972;
   export const HOLD_POSITION = 851993;
   export const ATTACK = 851983;
@@ -338,7 +348,7 @@ export module Id {
   export const appuleBlaster = FourCC("A104");
   export const appuleEscape = FourCC("A116");
   export const appuleVengeance = FourCC("A11B");
-  export const appuleCloning = FourCC("A11E");
+  export const appuleClones = FourCC("A11E");
 
   export const babidi = FourCC("O001");
   export const haretsu = FourCC("A02E");

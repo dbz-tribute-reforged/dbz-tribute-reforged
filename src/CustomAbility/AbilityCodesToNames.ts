@@ -629,6 +629,9 @@ export const abilityCodesToNames = new Map<number, string>(
 
 
     [Id.appuleBlaster, AbilityNames.Appule.APPULE_BLASTER],
+    [Id.appuleEscape, AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE],
+    [Id.appuleVengeance, AbilityNames.Appule.APPULE_VENGEANCE],
+    [Id.appuleClones, AbilityNames.Appule.APPULE_CLONES],
 
 
     // items
