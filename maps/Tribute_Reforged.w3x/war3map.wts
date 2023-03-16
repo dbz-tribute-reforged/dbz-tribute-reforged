@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.77
+DBZ Tribute |cffffcc00Reforged 0.77a
 }
 
 STRING 4
@@ -194,27 +194,15 @@ Baby Dinosaur
 }
 
 STRING 35
-// Units: Udre (Demon), Name (Name)
+// Units: U007 (Demon), Name (Name)
 {
 Demon
 }
 
-STRING 36
-// Units: Udre (Demon), Propernames (Proper Names)
-{
-Fat Janemba
-}
-
 STRING 37
-// Units: ogru (Tree of Might), Name (Name)
+// Units: H052 (Tree of Might), Name (Name)
 {
 Tree of Might
-}
-
-STRING 38
-// Units: hfoo (Hildegarn Portal), Name (Name)
-{
-Hildegarn Portal
 }
 
 STRING 39
@@ -246,12 +234,6 @@ STRING 43
 // Units: hgtw (Geti Star Defense System), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 44
-// Units: ucrm (Burrowed Cell), Name (Name)
-{
-Burrowed Cell
 }
 
 STRING 45
@@ -1883,7 +1865,7 @@ Ultra Android 13
 }
 
 STRING 304
-// Units: U007 (Demon), Name (Name)
+// Units: H061 (Demon), Name (Name)
 {
 Demon
 }
@@ -4562,12 +4544,6 @@ STRING 738
 Dummy Calamity Blaster Tail
 }
 
-STRING 739
-// Units: H052 (Tree of Might), Name (Name)
-{
-Tree of Might
-}
-
 STRING 740
 // Units: H052 (Tree of Might), Propernames (Proper Names)
 {
@@ -5415,7 +5391,7 @@ NYI
 }
 
 STRING 867
-// Units: H061 (Demon), Name (Name)
+// Units: H062 (Demon), Name (Name)
 {
 Demon
 }
@@ -5458,7 +5434,7 @@ C
 }
 
 STRING 873
-// Units: H062 (Demon), Name (Name)
+// Units: H00C (Demon), Name (Name)
 {
 Demon
 }
@@ -7075,7 +7051,7 @@ big
 }
 
 STRING 1129
-// Units: H00C (Demon), Name (Name)
+// Units: H098 (Demon), Name (Name)
 {
 Demon
 }
@@ -7084,12 +7060,6 @@ STRING 1130
 // Units: H00C (Demon), Tip (Tooltip - Basic)
 {
 Janemba
-}
-
-STRING 1131
-// Units: H098 (Demon), Name (Name)
-{
-Demon
 }
 
 STRING 1132
@@ -11223,6 +11193,12 @@ STRING 1789
 Use Item
 }
 
+STRING 1790
+// Abilities: A0DS (Namekian Fighting Style), EditorSuffix (Editor Suffix)
+{
+(Clones)
+}
+
 STRING 1791
 // Destructibles: B003 (Large Ashenvale Canopy Tree), Name (Name)
 {
@@ -11233,6 +11209,12 @@ STRING 1792
 // Destructibles: B004 (Large Ashenvale Tree Wall), Name (Name)
 {
 Large Ashenvale Tree Wall
+}
+
+STRING 1793
+// Abilities: A0KE (Jiren's fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00G|r] Learn Jiren's Fighting Style
 }
 
 STRING 1794
@@ -11323,6 +11305,12 @@ STRING 1808
 // Destructibles: B00K (City Building), Name (Name)
 {
 City Building
+}
+
+STRING 1809
+// Abilities: A003 (Gallet Gun), Researchhotkey (Hotkey - Learn)
+{
+G
 }
 
 STRING 1810
@@ -13274,7 +13262,7 @@ STRING 2123
 }
 
 STRING 2124
-// Abilities: A003 (Gallet Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (Gallet Gun), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -13298,7 +13286,7 @@ Vegeta gathers some energy with both arms behind his shoulder, then he brings th
 }
 
 STRING 2128
-// Abilities: A003 (Gallet Gun), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -17635,6 +17623,8 @@ Transformations:
 [lvl 200] 2.50x "fp" [-0.4 BAT]
 
 |cff00ff00Honorary Ginyu Member:|r Gains +0.02x for each Ginyu Force member on their team.
+
+|cffff2020Cannon Fodder:|r -0.1x Str Mult
 }
 
 STRING 2829
@@ -18219,7 +18209,7 @@ STRING 2922
 }
 
 STRING 2923
-// Abilities: A05E (Mass Attack Order), Researchhotkey (Hotkey - Learn)
+// Abilities: A00G (Future Gohan Training), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -19385,7 +19375,7 @@ STRING 3110
 }
 
 STRING 3111
-// Abilities: A00G (Future Gohan Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -19891,7 +19881,7 @@ Future Gohan Training
 }
 
 STRING 3195
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -25402,7 +25392,7 @@ Great Summoning
 }
 
 STRING 4075
-// Abilities: A04U (Great Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -27181,7 +27171,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4363
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -27205,7 +27195,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4367
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -45803,7 +45793,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45951,7 +45941,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7359
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -46676,7 +46666,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -46875,7 +46865,7 @@ STRING 7501
 }
 
 STRING 7502
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -47848,7 +47838,7 @@ STRING 7655
 }
 
 STRING 7656
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50326,7 +50316,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50590,7 +50580,7 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 8092
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -51114,7 +51104,7 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8174
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -51276,7 +51266,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -53897,7 +53887,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -54376,7 +54366,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55231,7 +55221,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57448,7 +57438,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57460,9 +57450,12 @@ Jiren's fighting Style
 }
 
 STRING 9174
-// Abilities: A0KE (Jiren's fighting Style), Researchtip (Tooltip - Learn)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00F|r] Learn Jiren's Fighting Style
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool1,.> seconds|r
 }
 
 STRING 9175
@@ -57472,13 +57465,13 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57700,7 +57693,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57724,7 +57717,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61360,7 +61353,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 9816
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61922,7 +61915,7 @@ STRING 9908
 }
 
 STRING 9909
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61934,7 +61927,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62581,7 +62574,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62599,7 +62592,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63631,13 +63624,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64171,7 +64164,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64189,7 +64182,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64945,7 +64938,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65053,19 +65046,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65967,7 +65960,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65985,7 +65978,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66786,7 +66779,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67474,7 +67467,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -68596,7 +68589,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68614,7 +68607,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69508,7 +69501,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69551,7 +69544,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69691,7 +69684,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70176,7 +70169,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70194,7 +70187,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70965,13 +70958,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72138,7 +72131,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72156,7 +72149,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72586,6 +72579,12 @@ When activated, the next hero to damage Hirudegarn will be immediately counter-a
 |cffFFFF00Duration:|r 4s
 |cff00FF00Damage: Str + 25% of the damage
 |cff00FFFFCooldown: <A0E0,Cool6>s
+}
+
+STRING 11633
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+{
+G
 }
 
 STRING 11634
@@ -74156,7 +74155,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -74174,7 +74173,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -75039,7 +75038,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77181,7 +77180,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77778,7 +77777,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77802,7 +77801,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78042,7 +78041,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78060,7 +78059,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78114,7 +78113,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78132,7 +78131,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80150,7 +80149,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80798,7 +80797,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80831,7 +80830,7 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 }
 
 STRING 12942
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81087,7 +81086,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82498,7 +82497,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82534,7 +82533,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83207,13 +83206,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83748,7 +83747,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83784,7 +83783,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84155,7 +84154,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84173,7 +84172,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84467,7 +84466,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84485,7 +84484,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84897,7 +84896,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84941,7 +84940,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85239,18 +85238,12 @@ STRING 13647
 }
 
 STRING 13648
-// Units: H0AI (Frieza Force Soldier), Ubertip (Tooltip - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-A weak and useless hero that should not be picked by anyone.
-
-|cff00ff00Honorary Ginyu Member:|r Gains +0.02x for each Ginyu Force member on their team.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool2,.> seconds|r
 }
 
 STRING 13649
@@ -85273,7 +85266,7 @@ Repairs 40% of Max HP and increases Max HP based on Farmer's current level.
 }
 
 STRING 13652
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -85300,7 +85293,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -86056,7 +86049,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88358,7 +88351,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -88392,7 +88385,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89197,7 +89190,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89492,7 +89485,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89510,7 +89503,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -92024,7 +92017,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95182,49 +95175,28 @@ STRING 15142
 +0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
-STRING 15143
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool1> seconds|r
-}
-
-STRING 15144
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool2> seconds|r
-}
-
 STRING 15145
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool3> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> seconds|r
 }
 
 STRING 15146
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool4> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool3> seconds|r
 }
 
 STRING 15147
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool5> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool4> seconds|r
 }
 
 STRING 15148
@@ -95288,12 +95260,11 @@ STRING 15157
 }
 
 STRING 15158
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool6> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool5> seconds|r
 }
 
 STRING 15159
@@ -95327,34 +95298,31 @@ STRING 15163
 }
 
 STRING 15164
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool7> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool6> seconds|r
 }
 
 STRING 15165
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool8> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool7> seconds|r
 }
 
 STRING 15166
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool9> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool8> seconds|r
 }
 
 STRING 15167
-// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95396,7 +95364,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -96216,7 +96184,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -96981,7 +96949,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
+// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100766,7 +100734,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100795,7 +100763,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -102679,7 +102647,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -102697,7 +102665,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -103875,7 +103843,7 @@ STRING 16359
 }
 
 STRING 16360
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -107028,7 +106996,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -107907,7 +107875,7 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 }
 
 STRING 16890
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108281,7 +108249,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109038,7 +109006,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -109170,7 +109138,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109845,7 +109813,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109949,7 +109917,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -117266,7 +117234,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117728,7 +117696,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -119222,7 +119190,7 @@ STRING 18520
 }
 
 STRING 18521
-// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -120966,7 +120934,7 @@ Turns off harvester's engine, enabling abilities and upgrades.
 }
 
 STRING 18769
-// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122479,7 +122447,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -122846,7 +122814,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122870,7 +122838,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -124078,7 +124046,7 @@ STRING 19203
 }
 
 STRING 19204
-// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125241,7 +125209,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -125310,7 +125278,7 @@ STRING 19379
 }
 
 STRING 19380
-// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -126233,21 +126201,19 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 }
 
 STRING 19509
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A light punch.
-|cffffff00Use this to start an agility based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool10> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool9> seconds|r
 }
 
 STRING 19510
-// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A medium punch.
-|cffffff00Use this to start an int based combo.
-|cff00ff00Damage: Agi|r
-|cff00ffffCooldown: <A0RC,Cool1> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool10> seconds|r
 }
 
 STRING 19511
@@ -126344,93 +126310,19 @@ A medium punch.
 }
 
 STRING 19522
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
 {
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool1> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
 }
 
 STRING 19523
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool2> seconds|r
-}
-
-STRING 19524
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool3> seconds|r
-}
-
-STRING 19525
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool4> seconds|r
-}
-
-STRING 19526
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool5> seconds|r
-}
-
-STRING 19527
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool6> seconds|r
-}
-
-STRING 19528
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool7> seconds|r
-}
-
-STRING 19529
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool8> seconds|r
-}
-
-STRING 19530
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool9> seconds|r
-}
-
-STRING 19531
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cffffff00Use this to start a strength based combo.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RE,Cool10> seconds|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool2> seconds|r
 }
 
 STRING 19532
@@ -128268,7 +128160,7 @@ R
 }
 
 STRING 19794
-// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
+// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129519,7 +129411,7 @@ STRING 19977
 }
 
 STRING 19978
-// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129537,7 +129429,7 @@ STRING 19980
 }
 
 STRING 19981
-// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -130194,7 +130086,7 @@ STRING 20078
 }
 
 STRING 20079
-// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
+// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130206,7 +130098,7 @@ STRING 20080
 }
 
 STRING 20081
-// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130754,7 +130646,7 @@ STRING 20164
 }
 
 STRING 20165
-// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -131859,7 +131751,7 @@ Farming Book
 }
 
 STRING 20324
-// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -133057,7 +132949,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -133223,13 +133115,13 @@ R
 }
 
 STRING 20525
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 20526
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -133385,13 +133277,13 @@ E
 }
 
 STRING 20551
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11B (Appule Vengeance), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 20552
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11B (Appule Vengeance), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -133841,7 +133733,7 @@ Q
 }
 
 STRING 20618
-// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
+// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -133963,91 +133855,102 @@ Duration: <A007,Dur1> seconds
 }
 
 STRING 20633
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool1> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool3,.> seconds|r
 }
 
 STRING 20634
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool3> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool4,.> seconds|r
 }
 
 STRING 20635
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool4> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool5,.> seconds|r
 }
 
 STRING 20636
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool5> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool6,.> seconds|r
 }
 
 STRING 20637
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool6> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool7,.> seconds|r
 }
 
 STRING 20638
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool7> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool8,.> seconds|r
 }
 
 STRING 20639
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool8> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool9,.> seconds|r
 }
 
 STRING 20640
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool9> seconds|r
+A light punch.
+|cffffff00Use this to start an agility based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool10,.> seconds|r
 }
 
 STRING 20641
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool10> seconds|r
+A medium punch.
+|cffffff00Use this to start an int based combo.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool1,.> seconds|r
 }
 
 STRING 20642
-// Abilities: A104 (Appule Blaster), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool1> - <A104,Cool10> seconds|r
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool1,.> seconds|r
 }
 
 STRING 20643
-// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
 {
-Appule fires a low powered energy shot.
-|cff00ff00Damage: Int * lvl * ? + 12% Max HP DPS + 12% Max HP Explosion|r
-|cff00ffffCooldown: <A104,Cool2> seconds|r
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool2,.> seconds|r
 }
 
 STRING 20644
@@ -135738,7 +135641,7 @@ Q
 }
 
 STRING 20877
-// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -135756,13 +135659,13 @@ W
 }
 
 STRING 20880
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A116 (Appule Emergency Escape), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20881
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A116 (Appule Emergency Escape), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -135886,7 +135789,7 @@ Sword of Hope
 }
 
 STRING 20901
-// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -136440,7 +136343,7 @@ STRING 20980
 }
 
 STRING 20981
-// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -136458,7 +136361,7 @@ Mafuba Sealed Debuff
 }
 
 STRING 20984
-// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -138010,6 +137913,12 @@ STRING 21193
 Max Power
 }
 
+STRING 21194
+// Abilities: A0DT (Crane School Teachings), EditorSuffix (Editor Suffix)
+{
+(Clones)
+}
+
 STRING 21195
 // Buffs/Effects: B05J (Inner Fire Max Power), EditorName (Name (Editor Only))
 {
@@ -138131,9 +138040,12 @@ Jaco opens a portal to the future to call forth his alter-ego Super Jaco, equipp
 }
 
 STRING 21216
-// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
 {
-F
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool3,.> seconds|r
 }
 
 STRING 21217
@@ -138239,9 +138151,12 @@ Jaco's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 21249
-// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
 {
-F
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool4,.> seconds|r
 }
 
 STRING 21250
@@ -138254,6 +138169,12 @@ STRING 21251
 // Abilities: A113 (Jaco's Fighting Style), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Jaco's Fighting Style - [|cffffcc00Level %d|r]
+}
+
+STRING 21252
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 2|r]
 }
 
 STRING 21253
@@ -138293,9 +138214,12 @@ Q
 }
 
 STRING 21259
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
 {
-F
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool5,.> seconds|r
 }
 
 STRING 21260
@@ -138358,6 +138282,12 @@ Transformations:
 [lvl 250] 2.60x "fp"
 
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+}
+
+STRING 21269
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 3|r]
 }
 
 STRING 21270
@@ -138674,5 +138604,638 @@ Jaco's fighting style uses his enhanced vision to focus on his enemies' weakpoin
 |cffffcc00Evasion|r - <A113,DataD1,%> - <A113,DataD15,%>% 
 |cffffcc00Critical|r - <A113,DataA1> - <A113,DataA15>% 
 |cffffcc00Damage|r - <A113,DataB1,.> - <A113,DataB15,.> times
+}
+
+STRING 21300
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 4|r]
+}
+
+STRING 21301
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 5|r]
+}
+
+STRING 21302
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 6|r]
+}
+
+STRING 21303
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 1|r]
+}
+
+STRING 21304
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 7|r]
+}
+
+STRING 21305
+// Abilities: A116 (Appule Emergency Escape), Name (Name)
+{
+Appule Emergency Escape
+}
+
+STRING 21306
+// Abilities: A116 (Appule Emergency Escape), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Appule's Emergency Escape - [|cffffcc00Level %d|r]
+}
+
+STRING 21307
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 9|r]
+}
+
+STRING 21308
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 8|r]
+}
+
+STRING 21309
+// Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 10|r]
+}
+
+STRING 21314
+// Abilities: A116 (Appule Emergency Escape), EditorSuffix (Editor Suffix)
+{
+(appule)
+}
+
+STRING 21316
+// Abilities: A117 (Generic Slow 25%), Name (Name)
+{
+Generic Slow 25%
+}
+
+STRING 21317
+// Abilities: A118 (Generic Slow 50%), Name (Name)
+{
+Generic Slow 50%
+}
+
+STRING 21318
+// Abilities: A119 (Generic Slow 75%), Name (Name)
+{
+Generic Slow 75%
+}
+
+STRING 21319
+// Abilities: A11A (Generic Slow 90%), Name (Name)
+{
+Generic Slow 90%
+}
+
+STRING 21333
+// Abilities: A11B (Appule Vengeance), Name (Name)
+{
+Appule Vengeance
+}
+
+STRING 21334
+// Abilities: A11B (Appule Vengeance), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Appule's Vengeance - [|cffffcc00Level %d|r]
+}
+
+STRING 21342
+// Abilities: A11B (Appule Vengeance), EditorSuffix (Editor Suffix)
+{
+(appule)
+}
+
+STRING 21344
+// Abilities: A11C (Appule Vengeance Wand of Illusion), Name (Name)
+{
+Appule Vengeance Wand of Illusion
+}
+
+STRING 21345
+// Abilities: A11C (Appule Vengeance Wand of Illusion), EditorSuffix (Editor Suffix)
+{
+(dummy)
+}
+
+STRING 21346
+// Abilities: A11D (Appule Vengeance Curse 20%), Name (Name)
+{
+Appule Vengeance Curse 20%
+}
+
+STRING 21353
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool6,.> seconds|r
+}
+
+STRING 21354
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool7,.> seconds|r
+}
+
+STRING 21355
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool8,.> seconds|r
+}
+
+STRING 21356
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool9,.> seconds|r
+}
+
+STRING 21357
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cffffff00Use this to start a strength based combo.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool10,.> seconds|r
+}
+
+STRING 21369
+// Abilities: A11E (Appule Clones), EditorSuffix (Editor Suffix)
+{
+(appule)
+}
+
+STRING 21371
+// Buffs/Effects: B05L (), Bufftip (Tooltip)
+{
+Appule's Vengeance
+}
+
+STRING 21372
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21373
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21376
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21377
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21386
+// Abilities: A11E (Appule Clones), Name (Name)
+{
+Appule Clones
+}
+
+STRING 21387
+// Abilities: A11E (Appule Clones), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Appule Clones - [|cffffcc00Level %d|r]
+}
+
+STRING 21391
+// Abilities: A11F (Appule Clones Wand of Illusion), Name (Name)
+{
+Appule Clones Wand of Illusion
+}
+
+STRING 21392
+// Abilities: A11F (Appule Clones Wand of Illusion), EditorSuffix (Editor Suffix)
+{
+(dummy)
+}
+
+STRING 21397
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 2|r]
+}
+
+STRING 21398
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 3|r]
+}
+
+STRING 21399
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 4|r]
+}
+
+STRING 21400
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 5|r]
+}
+
+STRING 21401
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 6|r]
+}
+
+STRING 21402
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 1|r]
+}
+
+STRING 21403
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 7|r]
+}
+
+STRING 21404
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 9|r]
+}
+
+STRING 21405
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 8|r]
+}
+
+STRING 21406
+// Abilities: A11B (Appule Vengeance), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Appule's Vengeance - [|cffffcc00Level 10|r]
+}
+
+STRING 21407
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 2|r]
+}
+
+STRING 21408
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 3|r]
+}
+
+STRING 21409
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 4|r]
+}
+
+STRING 21410
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 5|r]
+}
+
+STRING 21411
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 6|r]
+}
+
+STRING 21412
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 1|r]
+}
+
+STRING 21413
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 7|r]
+}
+
+STRING 21414
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 9|r]
+}
+
+STRING 21415
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 8|r]
+}
+
+STRING 21416
+// Abilities: A11E (Appule Clones), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Appule Clones - [|cffffcc00Level 10|r]
+}
+
+STRING 21417
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21418
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21419
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool1> seconds|r
+}
+
+STRING 21428
+// Abilities: A104 (Appule Blaster), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool1> - <A104,Cool10> seconds|r
+}
+
+STRING 21430
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool1> seconds|r
+}
+
+STRING 21431
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool3> seconds|r
+}
+
+STRING 21432
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool4> seconds|r
+}
+
+STRING 21433
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool5> seconds|r
+}
+
+STRING 21434
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool6> seconds|r
+}
+
+STRING 21435
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool7> seconds|r
+}
+
+STRING 21436
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool8> seconds|r
+}
+
+STRING 21437
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool9> seconds|r
+}
+
+STRING 21438
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool10> seconds|r
+}
+
+STRING 21439
+// Abilities: A116 (Appule Emergency Escape), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool1> - <A116,Cool10> seconds|r
+}
+
+STRING 21440
+// Abilities: A116 (Appule Emergency Escape), Ubertip (Tooltip - Normal - Extended)
+{
+Appule teleports to the target destination. Enemies near the source are slowed.
+|cff00ffffCooldown: <A116,Cool2> seconds|r
+}
+
+STRING 21461
+// Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
+}
+
+STRING 21463
+// Units: H0AI (Frieza Force Soldier), Ubertip (Tooltip - Extended)
+{
+A weak and useless hero that should not be picked by anyone.
+
+|cff00ff00Honorary Ginyu Member:|r Gains +0.02x for each Ginyu Force member on their team.
+
+|cffff2020Cannon Fodder:|r -0.1x Str Mult
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 21464
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool3> seconds|r
+}
+
+STRING 21465
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool4> seconds|r
+}
+
+STRING 21466
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool5> seconds|r
+}
+
+STRING 21467
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool6> seconds|r
+}
+
+STRING 21468
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool7> seconds|r
+}
+
+STRING 21469
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool8> seconds|r
+}
+
+STRING 21470
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool9> seconds|r
+}
+
+STRING 21471
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool10> seconds|r
+}
+
+STRING 21472
+// Abilities: A104 (Appule Blaster), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a low powered energy shot.
+|cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
+|cff00ffffCooldown: <A104,Cool2> seconds|r
+}
+
+STRING 21477
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool1> seconds|r
+}
+
+STRING 21478
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool3> seconds|r
+}
+
+STRING 21479
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool4> seconds|r
+}
+
+STRING 21480
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool5> seconds|r
+}
+
+STRING 21481
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool6> seconds|r
+}
+
+STRING 21482
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool7> seconds|r
+}
+
+STRING 21483
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool8> seconds|r
+}
+
+STRING 21484
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool9> seconds|r
+}
+
+STRING 21485
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool10> seconds|r
+}
+
+STRING 21486
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool2> seconds|r
 }
 

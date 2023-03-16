@@ -228,7 +228,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         GroupEnumUnitsInRange(
           Globals.tmpUnitGroup, 
           this.targetCoord.x, this.targetCoord.y, 
-          400, 
+          500, 
           null
         );
         
@@ -249,7 +249,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         const zz_distanceRatio = Math.min(1.0, this.distanceTravelled / (this.distance * this.distanceMult));
         let stamina_refund_ratio = 1.0-zz_distanceRatio;
         if (isNearby) {
-          stamina_refund_ratio += 0.4;
+          stamina_refund_ratio += 0.5;
         }
 
         stamina_refund_ratio = Math.max(

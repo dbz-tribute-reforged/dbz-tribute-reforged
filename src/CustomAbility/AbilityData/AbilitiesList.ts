@@ -29,7 +29,7 @@ export const AbilitiesList = [
       body: 
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
-        "SP cost reduced for shorter distances and for moving within 400 range of an enemy hero.|n" +
+        "SP cost reduced for shorter distances and for moving within 500 range of an enemy hero.|n" +
         "|nCost: 45 SP|nCD: 8 (varies)",
     },
     components: [
@@ -62,7 +62,7 @@ export const AbilitiesList = [
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
-        "SP cost reduced for shorter distances and for teleporting within 400 range of an enemy hero.|n" + 
+        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
         "Cost: 50 SP|n" + 
         "CD: 8 (varies)",
     },
@@ -145,7 +145,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 25,
+    costAmount: 30,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -12576,6 +12576,90 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam appule blaster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAppule.blp",
+      disabled: "BTNAppule.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE,
+      body: 
+        AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE
+    },
+    components: [
+      { name: "sfx appule emergency escape start" },
+      { name: "debuff slow appule emergency escape" },
+      { name: "dash appule emergency escape" },
+      { name: "sfx appule emergency escape end" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Appule.APPULE_VENGEANCE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAppule.blp",
+      disabled: "BTNAppule.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE,
+      body: 
+        AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE
+    },
+    components: [
+      { name: "beam appule vengeance" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Appule.APPULE_CLONES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAppule.blp",
+      disabled: "BTNAppule.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Appule.APPULE_CLONES,
+      body: 
+        AbilityNames.Appule.APPULE_CLONES
+    },
+    components: [
+      { name: "buff illusion appule clones" },
     ],
   },
   // -------------------------------------------

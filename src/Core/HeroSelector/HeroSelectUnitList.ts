@@ -468,7 +468,8 @@ const appuleData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.MICRO  
   )
 }
 const hitData = {

@@ -45,6 +45,48 @@ export class CreepManager {
   initialize(): this {
     SetCreepCampFilterState(false);
 
+    // pikkon
+    let x = CreateUnit(Constants.sagaPlayer, FourCC("U01N"), -6100, 21300, 135);
+    SetHeroLevel(x, 10, false);
+    SetHeroStr(x, 400, true);
+    SetHeroAgi(x, 400, true);
+    SetHeroInt(x, 400, true);
+
+    // yamcha
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01O"), -7800, 21300, 45);
+    SetHeroLevel(x, 3, false);
+    SetHeroStr(x, 30, true);
+    SetHeroAgi(x, 30, true);
+    SetHeroInt(x, 30, true);
+
+    // olibu
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01M"), -6100, 23000, 225);
+    SetHeroLevel(x, 6, false);
+    SetHeroStr(x, 100, true);
+    SetHeroAgi(x, 100, true);
+    SetHeroInt(x, 100, true);
+
+    // annin
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01L"), 2900, 21000, 45);
+    SetHeroLevel(x, 10, false);
+    SetHeroStr(x, 400, true);
+    SetHeroAgi(x, 400, true);
+    SetHeroInt(x, 400, true);
+
+    // mez
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01K"), 4500, 21000, 135);
+    SetHeroLevel(x, 3, false);
+    SetHeroStr(x, 30, true);
+    SetHeroAgi(x, 30, true);
+    SetHeroInt(x, 30, true);
+
+    // goz
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01J"), 2900, 22700, 225);
+    SetHeroLevel(x, 6, false);
+    SetHeroStr(x, 100, true);
+    SetHeroAgi(x, 100, true);
+    SetHeroInt(x, 100, true);
+
     this.setupCreepPlayers();
     this.setupCustomCreeps().setupCustomCreepRespawn();
 
