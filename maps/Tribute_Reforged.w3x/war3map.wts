@@ -95175,6 +95175,30 @@ STRING 15142
 +0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
+STRING 15145
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> seconds|r
+}
+
+STRING 15146
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool3> seconds|r
+}
+
+STRING 15147
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool4> seconds|r
+}
+
 STRING 15148
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
@@ -95235,6 +95259,14 @@ STRING 15157
 [|cff00FF00R|r] Learn Time Stop - [|cffffcc00Level %d|r]
 }
 
+STRING 15158
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool5> seconds|r
+}
+
 STRING 15159
 // Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
 {
@@ -95263,6 +95295,30 @@ STRING 15163
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Time Stop - [|cffffcc00Level 10|r]
+}
+
+STRING 15164
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool6> seconds|r
+}
+
+STRING 15165
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool7> seconds|r
+}
+
+STRING 15166
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool8> seconds|r
 }
 
 STRING 15167
@@ -126144,6 +126200,22 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 |cff00FFFFCooldown: <A0SF,Cool10> seconds|r
 }
 
+STRING 19509
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool9> seconds|r
+}
+
+STRING 19510
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool10> seconds|r
+}
+
 STRING 19511
 // Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
 {
@@ -126235,6 +126307,22 @@ A medium punch.
 |cffffff00Use this to start an int based combo.
 |cff00ff00Damage: Agi|r
 |cff00ffffCooldown: <A0RC,Cool10> seconds|r
+}
+
+STRING 19522
+// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
+}
+
+STRING 19523
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool2> seconds|r
 }
 
 STRING 19532
@@ -138974,62 +139062,6 @@ Appule teleports to the target destination. Enemies near the source are slowed.
 |cff00ffffCooldown: <A116,Cool2> seconds|r
 }
 
-STRING 21443
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool4> seconds|r
-}
-
-STRING 21444
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool5> seconds|r
-}
-
-STRING 21445
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool6> seconds|r
-}
-
-STRING 21446
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool7> seconds|r
-}
-
-STRING 21447
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool8> seconds|r
-}
-
-STRING 21448
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool9> seconds|r
-}
-
-STRING 21449
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 20% damage and take 500% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool10> seconds|r
-}
-
 STRING 21461
 // Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -139125,38 +139157,6 @@ STRING 21472
 Appule fires a low powered energy shot.
 |cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
 |cff00ffffCooldown: <A104,Cool2> seconds|r
-}
-
-STRING 21473
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> seconds|r
-}
-
-STRING 21474
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool3> seconds|r
-}
-
-STRING 21475
-// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
-}
-
-STRING 21476
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 20% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool2> seconds|r
 }
 
 STRING 21477
