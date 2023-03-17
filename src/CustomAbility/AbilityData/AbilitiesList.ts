@@ -1394,6 +1394,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Piccolo.LIGHT_GRENADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloLightGrenade.blp",
+      disabled: "BTNPiccoloLightGrenade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Piccolo.LIGHT_GRENADE,
+      body: 
+        AbilityNames.Piccolo.LIGHT_GRENADE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi light grenade" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx light grenade caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Piccolo.KYODAIKA,
     currentCd: 0,
     maxCd: 1,
@@ -8556,7 +8586,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.SUPER_ELITE_COMBO
     },
     components: [
-      { name: "dash ground point 15dist" },
+      { name: "dash ground point 20dist" },
       { name: "damage jaco super elite combo explosion" },
       { name: "damage jaco super elite combo explosion inner" },
       { name: "jump jaco super elite combo" },

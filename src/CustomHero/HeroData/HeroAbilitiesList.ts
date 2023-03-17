@@ -97,11 +97,12 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // piccolo
-    [FourCC("H00R"), [
+    [Id.piccolo, [
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
       AbilityNames.Piccolo.SLAPPY_HAND, 
       AbilityNames.Piccolo.HELLZONE_GRENADE, 
       AbilityNames.Piccolo.MULTI_FORM, 
+      AbilityNames.Piccolo.LIGHT_GRENADE, 
       AbilityNames.Piccolo.KYODAIKA
     ]],
     // piccolo clone

@@ -11,8 +11,8 @@ function give_auto_exp() {
   const pId = GetPlayerId(p);
   if (
     IsUnitType(u, UNIT_TYPE_HERO)
-    && UnitHelper.isUnitAlive(u)
     && pId < Constants.maxActivePlayers
+    && UnitHelper.isUnitAlive(u)
     && !IsUnitType(u, UNIT_TYPE_SUMMONED)
     && !IsUnitIllusion(u)
   ) {

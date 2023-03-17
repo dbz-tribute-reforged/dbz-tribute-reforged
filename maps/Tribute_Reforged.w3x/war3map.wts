@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.77b
+DBZ Tribute |cffffcc00Reforged 0.78
 }
 
 STRING 4
@@ -199,10 +199,22 @@ STRING 35
 Demon
 }
 
+STRING 36
+// Units: H00R (Namekian), Name (Name)
+{
+Namekian
+}
+
 STRING 37
 // Units: H052 (Tree of Might), Name (Name)
 {
 Tree of Might
+}
+
+STRING 38
+// Units: H00R (Namekian), Propernames (Proper Names)
+{
+Piccolo
 }
 
 STRING 39
@@ -234,6 +246,12 @@ STRING 43
 // Units: hgtw (Geti Star Defense System), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 44
+// Units: H00R (Namekian), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Piccolo
 }
 
 STRING 45
@@ -765,19 +783,19 @@ R
 }
 
 STRING 125
-// Units: H00R (Namekian), Name (Name)
+// Units: O00L (Namekian), Name (Name)
 {
 Namekian
 }
 
 STRING 126
-// Units: H00R (Namekian), Propernames (Proper Names)
+// Units: H04X (Namekian), Propernames (Proper Names)
 {
 Piccolo
 }
 
 STRING 127
-// Units: H00R (Namekian), Awakentip (Tooltip - Awaken)
+// Units: H00R (Namekian), Tip (Tooltip - Basic)
 {
 [|cffffff00S|r] Choose Piccolo
 }
@@ -791,7 +809,7 @@ Upa's attacks are empowered by his rage to deal devastating damage to his enemie
 }
 
 STRING 129
-// Units: H00R (Namekian), Tip (Tooltip - Basic)
+// Units: H0AM (Namekian), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00S|r] Choose Piccolo
 }
@@ -1095,13 +1113,13 @@ Kami
 }
 
 STRING 177
-// Units: O00L (Namekian), Name (Name)
+// Units: H04D (Namekian), Name (Name)
 {
 Namekian
 }
 
 STRING 178
-// Units: H04X (Namekian), Propernames (Proper Names)
+// Units: H0AM (Namekian), Propernames (Proper Names)
 {
 Piccolo
 }
@@ -1389,7 +1407,7 @@ Buu attack
 }
 
 STRING 226
-// Units: H04D (Namekian), Name (Name)
+// Units: H04X (Namekian), Name (Name)
 {
 Namekian
 }
@@ -3935,7 +3953,7 @@ Dummy Goku
 }
 
 STRING 647
-// Units: H04X (Namekian), Name (Name)
+// Units: H05M (Namekian), Name (Name)
 {
 Namekian
 }
@@ -4420,7 +4438,7 @@ Red Ribbon Punisher Droid
 }
 
 STRING 721
-// Units: H05M (Namekian), Name (Name)
+// Units: H0AM (Namekian), Name (Name)
 {
 Namekian
 }
@@ -4542,6 +4560,19 @@ STRING 738
 // Units: h051 (Dummy Calamity Blaster Tail), Name (Name)
 {
 Dummy Calamity Blaster Tail
+}
+
+STRING 739
+// Units: H00R (Namekian), Ubertip (Tooltip - Extended)
+{
+An extremely bulky, combo-oriented hero who can isolate enemies from their team and deal heavy damage with both melee attacks and abilities.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 740
@@ -7060,6 +7091,12 @@ STRING 1130
 // Units: H00C (Demon), Tip (Tooltip - Basic)
 {
 Janemba
+}
+
+STRING 1131
+// Units: H0AM (Namekian), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Piccolo
 }
 
 STRING 1132
@@ -18428,12 +18465,6 @@ STRING 2958
 Buu creates hundreds of thousands of energy beams to destroy all the earthlings. |n|cff00ff00(Damage: (Int * 3) +100) per hit.|r|n|cff00ffff(Cooldown: 40 seconds)|r
 }
 
-STRING 2959
-// Abilities: A04Y (Kyodaika), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00D|r] Learn Kyodaika
-}
-
 STRING 2960
 // Abilities: A07C (Android Repair), Researchhotkey (Hotkey - Learn)
 {
@@ -21134,7 +21165,7 @@ STRING 3399
 }
 
 STRING 3400
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23359,7 +23390,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24175,7 +24206,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24820,7 +24851,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25156,7 +25187,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25392,7 +25423,7 @@ Great Summoning
 }
 
 STRING 4075
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -25788,7 +25819,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25800,7 +25831,7 @@ Namekian Fighting Style
 }
 
 STRING 4143
-// Abilities: A00V (Namekian Fighting Style), Researchtip (Tooltip - Learn)
+// Abilities: A0DS (Namekian Fighting Style), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Namekian Fighting Style - [|cffffcc00Level %d|r]
 }
@@ -26322,7 +26353,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27171,7 +27202,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4363
-// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -27195,7 +27226,7 @@ Creates a magical ring around the target, trapping him and causing damage.
 }
 
 STRING 4367
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Galatic Donut (or Cosmic Halo)), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -28056,7 +28087,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -28398,7 +28429,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -29601,12 +29632,6 @@ STRING 4755
 W
 }
 
-STRING 4756
-// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo splits into multiple clones. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 25% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
 STRING 4757
 // Abilities: A06X (Dodon Ray), EditorSuffix (Editor Suffix)
 {
@@ -30241,7 +30266,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -32458,7 +32483,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -33364,7 +33389,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -35374,11 +35399,11 @@ STRING 5696
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "nail" [just type "nail" into all chat]
-[lvl 60]  1.75x "kami"
+[lvl 30]  1.50x "nail"
+[lvl 60]  1.75x "kami" [Unlocks Light Grenade]
 [lvl 90]  2.00x "super namekian"
 [lvl 150] 2.40x "super namekian"
-[lvl 200] 2.60x "orange"
+[lvl 250] +0.20x "orange"
 
 Kyodaika: +0.3-0.6x str 
 |cffff2020Warning: You cannot transform to higher stat multipliers while in Kyodaika|r
@@ -35451,7 +35476,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5704
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35495,7 +35520,7 @@ STRING 5710
 }
 
 STRING 5711
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35763,7 +35788,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -36685,7 +36710,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -37615,7 +37640,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38768,7 +38793,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38780,9 +38805,9 @@ Namekian Fighting Style
 }
 
 STRING 6251
-// Abilities: A0DS (Namekian Fighting Style), Researchtip (Tooltip - Learn)
 {
-[|cff00FF00F|r] Learn Namekian Fighting Style - [|cffffcc00Level %d|r]
+[|cffffcc00Unlock|r] Light Grenade
+A charged high power energy sphere that detonates for massive damage.
 }
 
 STRING 6252
@@ -38985,7 +39010,7 @@ Super Masenko
 }
 
 STRING 6284
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -39189,7 +39214,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42011,7 +42036,7 @@ R
 }
 
 STRING 6763
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -42029,7 +42054,7 @@ STRING 6765
 }
 
 STRING 6766
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0II (Capsule: Time Ring), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -43348,7 +43373,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0II (Capsule: Time Ring), Hotkey (Hotkey - Normal)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44030,7 +44055,7 @@ Goten rapidly throws multiple pebbles at his opponent, dealing minor damage and 
 }
 
 STRING 7075
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44272,7 +44297,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 7110
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -44565,9 +44590,9 @@ Q
 }
 
 STRING 7154
-// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
 {
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
+Piccolo splits into 2. The cloned units have 33% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 7155
@@ -45404,7 +45429,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7276
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45751,7 +45776,7 @@ STRING 7328
 }
 
 STRING 7329
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45781,7 +45806,7 @@ BrolyRevert2
 }
 
 STRING 7334
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45793,7 +45818,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45941,7 +45966,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7359
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -46666,7 +46691,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -46865,7 +46890,7 @@ STRING 7501
 }
 
 STRING 7502
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -47838,7 +47863,7 @@ STRING 7655
 }
 
 STRING 7656
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50316,7 +50341,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50580,7 +50605,7 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 8092
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -51104,7 +51129,7 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8174
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -51266,7 +51291,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53887,7 +53912,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -54366,7 +54391,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55221,7 +55246,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57057,28 +57082,10 @@ STRING 9109
 [|cff00ff00E|r] Mafuba - [|cffffcc00Level 1|r]
 }
 
-STRING 9110
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 2. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
 STRING 9111
 // Abilities: A0TX (Rock Throw), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Rock Throw - [|cffffcc00Level 3|r]
-}
-
-STRING 9112
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 3. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
-STRING 9113
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 4. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 9114
@@ -57438,7 +57445,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57465,13 +57472,13 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57693,7 +57700,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57717,7 +57724,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61353,7 +61360,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 9816
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61915,7 +61922,7 @@ STRING 9908
 }
 
 STRING 9909
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61927,7 +61934,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62574,7 +62581,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62592,7 +62599,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63624,13 +63631,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64164,7 +64171,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64182,7 +64189,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64938,7 +64945,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65046,19 +65053,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
-{
-F
-}
-
-STRING 10418
 // Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
-STRING 10419
+STRING 10418
 // Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 10419
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65960,7 +65967,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65978,7 +65985,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66779,7 +66786,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -67467,7 +67474,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68589,7 +68596,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68607,7 +68614,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69501,7 +69508,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69544,7 +69551,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69684,7 +69691,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70169,7 +70176,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70187,7 +70194,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70958,13 +70965,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72131,7 +72138,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72149,7 +72156,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72582,7 +72589,7 @@ When activated, the next hero to damage Hirudegarn will be immediately counter-a
 }
 
 STRING 11633
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -74155,7 +74162,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -74173,7 +74180,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75038,7 +75045,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77180,7 +77187,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77777,7 +77784,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77801,7 +77808,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78041,7 +78048,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78059,7 +78066,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78113,7 +78120,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78131,7 +78138,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80149,7 +80156,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80797,7 +80804,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80830,7 +80837,7 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 }
 
 STRING 12942
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81086,7 +81093,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82497,7 +82504,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82533,7 +82540,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83206,13 +83213,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83747,7 +83754,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83783,7 +83790,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84154,7 +84161,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84172,7 +84179,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84466,7 +84473,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84484,7 +84491,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84896,7 +84903,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84940,7 +84947,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -85266,7 +85273,7 @@ Repairs 40% of Max HP and increases Max HP based on Farmer's current level.
 }
 
 STRING 13652
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85293,7 +85300,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -86049,7 +86056,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -88351,7 +88358,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88385,7 +88392,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89190,7 +89197,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89485,7 +89492,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89503,7 +89510,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -92017,7 +92024,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95175,6 +95182,18 @@ STRING 15142
 +0.3x stat multiplier when carried by Kaptain Skurvy.
 }
 
+STRING 15143
+// Units: H0AM (Namekian), EditorSuffix (Name - Editor Suffix)
+{
+(Orange)
+}
+
+STRING 15144
+// Units: H0A5 (Ioka Chief), Hotkey (Hotkey)
+{
+S
+}
+
 STRING 15145
 // Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
@@ -95322,7 +95341,7 @@ Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks
 }
 
 STRING 15167
-// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95364,7 +95383,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -96184,7 +96203,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
+// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -96949,7 +96968,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -98803,7 +98822,7 @@ STRING 15658
 }
 
 STRING 15659
-// Units: H0A5 (Ioka Chief), Hotkey (Hotkey)
+// Units: H05V (Hell Android), Hotkey (Hotkey)
 {
 S
 }
@@ -98815,7 +98834,7 @@ STRING 15660
 }
 
 STRING 15661
-// Units: H05V (Hell Android), Hotkey (Hotkey)
+// Units: H0AM (Namekian), Hotkey (Hotkey)
 {
 S
 }
@@ -100734,7 +100753,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -100763,7 +100782,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -102647,7 +102666,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -102665,7 +102684,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -103843,7 +103862,7 @@ STRING 16359
 }
 
 STRING 16360
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -106996,7 +107015,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -107875,13 +107894,13 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 }
 
 STRING 16890
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 16891
-// Units: H00R (Namekian), Ubertip (Tooltip - Extended)
+// Units: H0AM (Namekian), Ubertip (Tooltip - Extended)
 {
 An extremely bulky, combo-oriented hero who can isolate enemies from their team and deal heavy damage with both melee attacks and abilities.
 
@@ -108249,7 +108268,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -109006,7 +109025,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109138,7 +109157,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109813,7 +109832,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -109917,7 +109936,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117234,7 +117253,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117696,7 +117715,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -119190,7 +119209,7 @@ STRING 18520
 }
 
 STRING 18521
-// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -120934,7 +120953,7 @@ Turns off harvester's engine, enabling abilities and upgrades.
 }
 
 STRING 18769
-// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -122447,7 +122466,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122814,7 +122833,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -122838,7 +122857,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -123872,9 +123891,9 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 19182
-// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00V (Namekian Fighting Style), Researchtip (Tooltip - Learn)
 {
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.3-0.6x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
+[|cff00FF00G|r] Learn Namekian Fighting Style - [|cffffcc00Level %d|r]
 }
 
 STRING 19183
@@ -124046,7 +124065,7 @@ STRING 19203
 }
 
 STRING 19204
-// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -125209,7 +125228,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125278,7 +125297,7 @@ STRING 19379
 }
 
 STRING 19380
-// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -126323,6 +126342,56 @@ STRING 19523
 Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
 |cff00ff00Damage: Int * lvl * ?
 |cff00ffffCooldown: <A11B,Cool2> seconds|r
+}
+
+STRING 19524
+// Abilities: A11G (Orange Piccolo Cleave), Name (Name)
+{
+Orange Piccolo Cleave
+}
+
+STRING 19525
+// Abilities: A11G (Orange Piccolo Cleave), EditorSuffix (Editor Suffix)
+{
+(piccolo)
+}
+
+STRING 19526
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+{
+G
+}
+
+STRING 19528
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool1> seconds|r
+}
+
+STRING 19529
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool3> seconds|r
+}
+
+STRING 19530
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool4> seconds|r
+}
+
+STRING 19531
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool5> seconds|r
 }
 
 STRING 19532
@@ -128160,7 +128229,7 @@ R
 }
 
 STRING 19794
-// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129411,7 +129480,7 @@ STRING 19977
 }
 
 STRING 19978
-// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
+// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129429,7 +129498,7 @@ STRING 19980
 }
 
 STRING 19981
-// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
+// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130086,7 +130155,7 @@ STRING 20078
 }
 
 STRING 20079
-// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130098,7 +130167,7 @@ STRING 20080
 }
 
 STRING 20081
-// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -130646,7 +130715,7 @@ STRING 20164
 }
 
 STRING 20165
-// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -131751,7 +131820,7 @@ Farming Book
 }
 
 STRING 20324
-// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -132949,7 +133018,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -133733,7 +133802,7 @@ Q
 }
 
 STRING 20618
-// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -135641,7 +135710,7 @@ Q
 }
 
 STRING 20877
-// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -135695,7 +135764,7 @@ R
 }
 
 STRING 20886
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11K (Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -135789,7 +135858,7 @@ Sword of Hope
 }
 
 STRING 20901
-// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
+// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -136343,7 +136412,7 @@ STRING 20980
 }
 
 STRING 20981
-// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A11K (Light Grenade), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -137931,6 +138000,14 @@ STRING 21196
 Super Charge
 }
 
+STRING 21197
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool6> seconds|r
+}
+
 STRING 21198
 // Buffs/Effects: B05K (Inner Fire Super Charge), EditorName (Name (Editor Only))
 {
@@ -137965,6 +138042,14 @@ STRING 21203
 // Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 10|r]
+}
+
+STRING 21204
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool7> seconds|r
 }
 
 STRING 21205
@@ -138058,6 +138143,122 @@ STRING 21218
 // Abilities: A112 (Super Jaco), EditorSuffix (Editor Suffix)
 {
 (jaco)
+}
+
+STRING 21219
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool8> seconds|r
+}
+
+STRING 21220
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool9> seconds|r
+}
+
+STRING 21221
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool10> seconds|r
+}
+
+STRING 21222
+// Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
+}
+
+STRING 21223
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A11E,Cool2> seconds|r
+}
+
+STRING 21224
+// Abilities: A11I (Orange Piccolo Attack Damage), Name (Name)
+{
+Orange Piccolo Attack Damage
+}
+
+STRING 21225
+// Abilities: A11I (Orange Piccolo Attack Damage), EditorSuffix (Editor Suffix)
+{
+(piccolo)
+}
+
+STRING 21226
+// Abilities: A11J (Orange Piccolo Armor Bonus), Name (Name)
+{
+Orange Piccolo Armor Bonus
+}
+
+STRING 21227
+// Abilities: A11J (Orange Piccolo Armor Bonus), EditorSuffix (Editor Suffix)
+{
+(piccolo)
+}
+
+STRING 21228
+// Buffs/Effects: B05M (), Bufftip (Tooltip)
+{
+Orange Piccolo Kyodaika
+}
+
+STRING 21229
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur2> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool2> seconds|r
+}
+
+STRING 21230
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur3> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool3> seconds|r
+}
+
+STRING 21231
+{
+[|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r
+After wishing to unlock his latent potential, Piccolo has discovered a |cffff8822powerful new form|r.
+}
+
+STRING 21232
+// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
+{
+With this technique the user makes his body grow larger and increases his strength. Increases attack range to 500.
+|cff00FF00Strength Multiplier: +0.3-0.6x|r
+|cffFF0000Mana Drain: 1.5% per second|r
+|cff00FFFFCooldown: 20s after revert|r
+
+|cffff7822Orange Piccolo|r enhances the power of Kyodaika.
+|cff00FF00Strength Multiplier: +0.1x (stacking)
+Attack Damage: +<A11I,DataA1,%>%
+Cleave: +<A11G,DataA1,%>%
+Armor: +<A11J,DataA1>
+|cffFF0000Mana Drain: 2.5% per second|r
+}
+
+STRING 21233
+// Buffs/Effects: B05M (), Buffubertip (Tooltip - Extended)
+{
+Orange Piccolo Kyodaika significantly amplifies Piccolo's combat strength.
 }
 
 STRING 21234
@@ -138666,10 +138867,52 @@ STRING 21309
 [|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 10|r]
 }
 
+STRING 21310
+// Abilities: A11H (Book Orange Piccolo Passives), Name (Name)
+{
+Book Orange Piccolo Passives
+}
+
+STRING 21311
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur4> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool4> seconds|r
+}
+
+STRING 21312
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur5> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool5> seconds|r
+}
+
+STRING 21313
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur6> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool6> seconds|r
+}
+
 STRING 21314
 // Abilities: A116 (Appule Emergency Escape), EditorSuffix (Editor Suffix)
 {
 (appule)
+}
+
+STRING 21315
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur7> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool7> seconds|r
 }
 
 STRING 21316
@@ -138696,6 +138939,87 @@ STRING 21319
 Generic Slow 90%
 }
 
+STRING 21320
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 2|r]
+}
+
+STRING 21321
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 21322
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 21323
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 21324
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 6|r]
+}
+
+STRING 21325
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Light Grenade - [|cffffcc00Level 1|r]
+}
+
+STRING 21326
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 21327
+// Abilities: A11K (Light Grenade), Name (Name)
+{
+Light Grenade
+}
+
+STRING 21328
+// Abilities: A11K (Light Grenade), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Water 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 21329
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 9|r]
+}
+
+STRING 21330
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 8|r]
+}
+
+STRING 21331
+// Abilities: A11K (Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 21332
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur8> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool8> seconds|r
+}
+
 STRING 21333
 // Abilities: A11B (Appule Vengeance), Name (Name)
 {
@@ -138708,10 +139032,67 @@ STRING 21334
 [|cff00ff00E|r] Learn Appule's Vengeance - [|cffffcc00Level %d|r]
 }
 
+STRING 21335
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur9> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool9> seconds|r
+}
+
+STRING 21336
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur10> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 21337
+// Abilities: A11K (Light Grenade), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 21338
+// Abilities: A11K (Light Grenade), EditorSuffix (Editor Suffix)
+{
+(piccolo)
+}
+
+STRING 21339
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21340
+// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo splits into multiple clones. The clones have 33% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 25% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 21341
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 3. The cloned units have 33% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
 STRING 21342
 // Abilities: A11B (Appule Vengeance), EditorSuffix (Editor Suffix)
 {
 (appule)
+}
+
+STRING 21343
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 4. The cloned units have 33% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 21344
@@ -138730,6 +139111,15 @@ STRING 21346
 // Abilities: A11D (Appule Vengeance Curse 20%), Name (Name)
 {
 Appule Vengeance Curse 20%
+}
+
+STRING 21347
+// Abilities: A11K (Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a high powered ball of energy that pulls in nearby enemies and slows them by 25%. When the channeling ends, the ball detonates to deal massive damage.
+|cffff2020Channel Duration: <A11K,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A11K,Cool1> seconds|r
 }
 
 STRING 21353
@@ -139062,14 +139452,6 @@ Appule teleports to the target destination. Enemies near the source are slowed.
 |cff00ffffCooldown: <A116,Cool2> seconds|r
 }
 
-STRING 21461
-// Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 20% damage and takes 500% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
-}
-
 STRING 21463
 // Units: H0AI (Frieza Force Soldier), Ubertip (Tooltip - Extended)
 {
@@ -139157,85 +139539,5 @@ STRING 21472
 Appule fires a low powered energy shot.
 |cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
 |cff00ffffCooldown: <A104,Cool2> seconds|r
-}
-
-STRING 21477
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool1> seconds|r
-}
-
-STRING 21478
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool3> seconds|r
-}
-
-STRING 21479
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool4> seconds|r
-}
-
-STRING 21480
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool5> seconds|r
-}
-
-STRING 21481
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool6> seconds|r
-}
-
-STRING 21482
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool7> seconds|r
-}
-
-STRING 21483
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool8> seconds|r
-}
-
-STRING 21484
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool9> seconds|r
-}
-
-STRING 21485
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool10> seconds|r
-}
-
-STRING 21486
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 2s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool2> seconds|r
 }
 

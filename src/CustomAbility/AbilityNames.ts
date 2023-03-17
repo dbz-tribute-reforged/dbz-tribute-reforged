@@ -75,6 +75,7 @@ export module AbilityNames {
     export const SLAPPY_HAND: string = "Slappy Hand";
     export const HELLZONE_GRENADE: string = "Hellzone Grenade";
     export const MULTI_FORM: string = "Multi Form";
+    export const LIGHT_GRENADE: string = "Light Grenade";
     export const KYODAIKA: string = "Kyodaika";
   }
 

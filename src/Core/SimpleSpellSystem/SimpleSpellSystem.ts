@@ -2755,7 +2755,7 @@ export module SimpleSpellSystem {
     const hero = Globals.customPlayers[playerId].firstCustomHero;
     if (!hero) return;
 
-    TimerStart(CreateTimer(), 2.0, false, () => {
+    TimerStart(CreateTimer(), 3.0, false, () => {
       SaveBoolean(
         Globals.genericSpellHashtable, 
         GetHandleId(hero.unit),

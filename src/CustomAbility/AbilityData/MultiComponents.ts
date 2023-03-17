@@ -2864,6 +2864,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi light grenade", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    forceMinDistance: 500,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.LINEAR_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam light grenade" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

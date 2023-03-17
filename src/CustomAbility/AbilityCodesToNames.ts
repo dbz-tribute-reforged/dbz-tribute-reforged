@@ -65,6 +65,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.slappyHand, AbilityNames.Piccolo.SLAPPY_HAND],
     [Id.hellzoneGrenade, AbilityNames.Piccolo.HELLZONE_GRENADE],
     [Id.multiForm, AbilityNames.Piccolo.MULTI_FORM],
+    [Id.lightGrenade, AbilityNames.Piccolo.LIGHT_GRENADE],
     [Id.kyodaika, AbilityNames.Piccolo.KYODAIKA],
     // clones version
     [Id.piccoloCloneSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],

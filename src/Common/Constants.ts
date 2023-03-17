@@ -779,6 +779,7 @@ export module Id {
   export const slappyHand = FourCC("A0C8");
   export const hellzoneGrenade = FourCC("A0LM");
   export const multiForm = FourCC('A088');
+  export const lightGrenade = FourCC("A11K");
   
   export const rustTyranno = FourCC("H09Z");
   export const tyrannoFlame = FourCC("A0VI");

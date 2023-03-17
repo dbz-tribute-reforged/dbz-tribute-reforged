@@ -133,6 +133,23 @@ export const AOEKnockbackComponents = [
   //   },
   //   affectAllies: false,
   // },
+  // light grenade
+  {
+    name: "knockback beam light grenade",
+    repeatInterval: 1, 
+    startTick: 36,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 180, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
   // videl punch
   {
     name: "knockback videl punch",
