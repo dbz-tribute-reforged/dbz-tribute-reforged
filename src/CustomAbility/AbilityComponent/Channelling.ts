@@ -11,7 +11,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   protected isChannelling: boolean;
   protected finishedChannel: boolean;
 
-  protected triggerHasBeenSetup: boolean;
+  protected hasStarted: boolean;
 
   constructor(
     public name: string = "Channelling",
@@ -22,7 +22,6 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   ) {
     this.isChannelling = false;
     this.finishedChannel = false;
-    this.triggerHasBeenSetup = false;
   }
 
   forceTerminateAbility(ability: CustomAbility) {
@@ -33,30 +32,35 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.isChannelling) {
+    if (!this.hasStarted) {
+      this.hasStarted = true;
       this.isChannelling = true;
       this.finishedChannel = false;
     }
 
-    if (
-      UnitHelper.isUnitStunned(input.caster.unit) 
-      || UnitHelper.isUnitDead(input.caster.unit)
-    ) {
-      this.finishedChannel = true;
-    } else {
-      this.finishedChannel = !input.caster.isChanneling();
-    }
-
-    if (this.isChannelling && this.finishedChannel) {
-      this.forceTerminateAbility(ability);
+    if (!ability.isFinishedUsing(this)) {
+      if (
+        UnitHelper.isUnitStunned(input.caster.unit) 
+        || UnitHelper.isUnitDead(input.caster.unit)
+      ) {
+        this.finishedChannel = true;
+      } else {
+        this.finishedChannel = !input.caster.isChanneling();
+      }
+  
+      if (this.isChannelling && this.finishedChannel) {
+        this.forceTerminateAbility(ability);
+      }
     }
 
     if (ability.isFinishedUsing(this)) {
       this.isChannelling = false;
+      this.hasStarted = false;
     }
   }
 
   cleanup() {
+
   }
   
 

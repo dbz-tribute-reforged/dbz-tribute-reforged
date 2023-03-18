@@ -741,6 +741,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Gohan.SPECIAL_BEAST_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGohanBeastSBC.blp",
+      disabled: "BTNGohanBeastSBC.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.SPECIAL_BEAST_CANNON,
+      body: 
+        AbilityNames.Gohan.SPECIAL_BEAST_CANNON
+    },
+    components: [
+      { name: "channel caster 2s" },
+      { name: "multi beam special beast cannon" },
+      { name: "sfx special beast cannon caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Gohan.UNLOCK_POTENTIAL,
     currentCd: 0,
     maxCd: 1,
@@ -820,8 +849,38 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp potential unleashed" },
-      { name: "dash ground forward potential unleashed" },
+      { name: "dash ground forward 1dist" },
       { name: "sfx unlock potential" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gohan.BEAST_GOHAN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBeastGohan.blp",
+      disabled: "BTNBeastGohan.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.BEAST_GOHAN,
+      body: 
+        AbilityNames.Gohan.BEAST_GOHAN
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+      { name: "temp ability special beast cannon" },
+      { name: "block beast gohan" },
+      { name: "sfx beast gohan" },
     ],
   },
   // -------------------------------------------
@@ -1416,9 +1475,8 @@ export const AbilitiesList = [
         AbilityNames.Piccolo.LIGHT_GRENADE
     },
     components: [
-      { name: "channel caster default" },
+      { name: "channel caster 1s" },
       { name: "multi light grenade" },
-      { name: "damage solar kame dps charging" },
       { name: "sfx light grenade caster" },
     ],
   },

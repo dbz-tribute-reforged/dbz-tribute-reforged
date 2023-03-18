@@ -81,12 +81,6 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
           SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, false);
         }
       }
-      if (this.addAbility && this.abilityWasAdded) {
-        UnitRemoveAbility(source, this.newAbility);
-      }
-      if (this.tempPermanence) {
-        UnitMakeAbilityPermanent(source, false, this.newAbility);
-      }
       
       if (this.performSwap && this.linkCooldowns >= 0) {
         BlzStartUnitAbilityCooldown(source, this.oldAbility, 
@@ -98,6 +92,12 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
             )
           )
         );
+      }
+      if (this.addAbility && this.abilityWasAdded) {
+        UnitRemoveAbility(source, this.newAbility);
+      }
+      if (this.tempPermanence) {
+        UnitMakeAbilityPermanent(source, false, this.newAbility);
       }
     }
   }

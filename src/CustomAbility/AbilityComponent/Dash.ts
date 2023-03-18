@@ -268,7 +268,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   }
   
   cleanup() {
-
+    this.hasStarted = false;
   }
 
   clone(): AbilityComponent {

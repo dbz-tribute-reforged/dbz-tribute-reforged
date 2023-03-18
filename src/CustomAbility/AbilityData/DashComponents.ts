@@ -392,19 +392,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 25,
   },
-  // potential unleashed
-  {
-    name: "dash ground forward potential unleashed",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 1,
-  },
   // extraordinary power
   {
     name: "dash ground forward extraordinary power",

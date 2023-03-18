@@ -36,9 +36,11 @@ export module AbilityNames {
     export const TWIN_DRAGON_SHOT: string = "Twin Dragon Shot";
     export const SUPER_DRAGON_FLIGHT: string = "Super Dragon Flight";
     export const FATHER_SON_KAMEHAMEHA: string = "Father-Son Kamehameha";
+    export const SPECIAL_BEAST_CANNON: string = "Special Beast Cannon";
     export const UNLOCK_POTENTIAL: string = "Unlock Potential";
     export const THE_GREAT_SAIYAMAN_HAS_ARRIVED: string = "The Great Saiyaman has arrived!";
     export const POTENTIAL_UNLEASHED: string = "Potential Unleashed";
+    export const BEAST_GOHAN: string = "Beast Gohan";
   }
 
   export module FutureTrunks {

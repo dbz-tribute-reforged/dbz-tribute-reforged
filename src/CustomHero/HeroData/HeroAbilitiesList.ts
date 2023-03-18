@@ -39,9 +39,6 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     
     // gohan
     [Id.gohan, [
-      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
-      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
-      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Gohan.MASENKO, 
@@ -49,6 +46,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Gohan.TWIN_DRAGON_SHOT,
       AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
       AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA, 
+      AbilityNames.Gohan.SPECIAL_BEAST_CANNON, 
+      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
+      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
+      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
+      AbilityNames.Gohan.BEAST_GOHAN,
     ]],
     
     // goten

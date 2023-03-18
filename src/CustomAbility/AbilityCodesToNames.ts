@@ -25,14 +25,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.vegetaHakaiBarrage, AbilityNames.Vegeta.HAKAI_BARRAGE],
 
     // gohan
-    [Id.unlockPotential, AbilityNames.Gohan.UNLOCK_POTENTIAL],
-    [Id.greatSaiyamanHasArrived, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
-    [Id.potentialUnleashed, AbilityNames.Gohan.POTENTIAL_UNLEASHED],
     [Id.masenko, AbilityNames.Gohan.MASENKO],
     [Id.superMasenko, AbilityNames.Gohan.SUPER_MASENKO],
     [Id.twinDragonShot, AbilityNames.Gohan.TWIN_DRAGON_SHOT],
     [Id.superDragonFlight, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
     [Id.fatherSonKame, AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA],
+    [Id.specialBeastCannon, AbilityNames.Gohan.SPECIAL_BEAST_CANNON],
+    [Id.unlockPotential, AbilityNames.Gohan.UNLOCK_POTENTIAL],
+    [Id.greatSaiyamanHasArrived, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
+    [Id.potentialUnleashed, AbilityNames.Gohan.POTENTIAL_UNLEASHED],
+    [Id.beastGohan, AbilityNames.Gohan.BEAST_GOHAN],
 
     // future trunks
     [Id.finishBuster, AbilityNames.FutureTrunks.FINISH_BUSTER],

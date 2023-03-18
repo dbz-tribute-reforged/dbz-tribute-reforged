@@ -5,6 +5,7 @@ import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager
 import { Constants } from "Common/Constants";
 import { Colorizer } from "Common/Colorizer";
 import { UnitHelper } from "Common/UnitHelper";
+import { SoundHelper } from "Common/SoundHelper";
 
 export class DragonBallsManager {
   static instance: DragonBallsManager;
@@ -109,6 +110,8 @@ export class DragonBallsManager {
               SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
               DestroyTimer(GetExpiredTimer())
             })
+
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Piccolo/SummonShenron.mp3", 2040);
           } else {
             // need to collect all 7
           }
