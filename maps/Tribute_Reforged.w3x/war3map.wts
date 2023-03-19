@@ -327,12 +327,6 @@ STRING 55
 Korins Tower
 }
 
-STRING 56
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Debuff Stun Bob-omb 1.5s
-}
-
 STRING 57
 // Units: H01B (Yajirobe), Name (Name)
 {
@@ -1001,12 +995,6 @@ STRING 158
 // Units: n00L (|cffffcc00Tsufuru-jin Elite Guard|r), Hotkey (Hotkey)
 {
 R
-}
-
-STRING 159
-// Abilities: A11S (Jump), EditorSuffix (Editor Suffix)
-{
-(waluigi)
 }
 
 STRING 160
@@ -1986,12 +1974,6 @@ STRING 317
 Goz
 }
 
-STRING 318
-// Abilities: A00B (Spin), EditorSuffix (Editor Suffix)
-{
-(waluigi)
-}
-
 STRING 319
 // Units: U01K (Ogre), Propernames (Proper Names)
 {
@@ -2368,6 +2350,30 @@ STRING 380
 |cffffcc00Tsufuru-jin|r
 }
 
+STRING 381
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool1> seconds|r
+}
+
+STRING 382
+// Abilities: A010 (Bob-omb), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool1> - <A010,Cool10> seconds|r
+}
+
+STRING 383
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool2> seconds|r
+}
+
 STRING 384
 // Units: n02C (Lost Soul), Name (Name)
 {
@@ -2540,6 +2546,70 @@ STRING 412
 // Units: h028 (Dummy Effect), Name (Name)
 {
 Dummy Effect
+}
+
+STRING 413
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool3> seconds|r
+}
+
+STRING 414
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool4> seconds|r
+}
+
+STRING 415
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool5> seconds|r
+}
+
+STRING 416
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool6> seconds|r
+}
+
+STRING 417
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool7> seconds|r
+}
+
+STRING 418
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool8> seconds|r
+}
+
+STRING 419
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool9> seconds|r
+}
+
+STRING 420
+// Abilities: A010 (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A010,Cool10> seconds|r
 }
 
 STRING 444
@@ -127002,13 +127072,13 @@ Increases building armor by +5.
 }
 
 STRING 20547
-// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
+// Abilities: A010 (Bob-omb), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20548
-// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
+// Abilities: A010 (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -133723,67 +133793,67 @@ Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, ne
 }
 
 STRING 21524
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 1|r]
 }
 
 STRING 21526
-// Abilities: A11Q (Bob-omb), Name (Name)
+// Abilities: A010 (Bob-omb), Name (Name)
 {
 Bob-omb
 }
 
 STRING 21527
-// Abilities: A11Q (Bob-omb), Researchtip (Tooltip - Learn)
+// Abilities: A010 (Bob-omb), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Bob-omb - [|cffffcc00Level %d|r]
 }
 
 STRING 21529
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 2|r]
 }
 
 STRING 21530
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 3|r]
 }
 
 STRING 21531
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 4|r]
 }
 
 STRING 21532
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 5|r]
 }
 
 STRING 21533
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 6|r]
 }
 
 STRING 21539
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 7|r]
 }
 
 STRING 21540
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 8|r]
 }
 
 STRING 21541
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 9|r]
 }
@@ -133795,7 +133865,7 @@ STRING 21545
 }
 
 STRING 21546
-// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+// Abilities: A010 (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Bob-omb - [|cffffcc00Level 10|r]
 }
@@ -134141,70 +134211,6 @@ STRING 21618
 (generic)
 }
 
-STRING 21619
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool1> seconds|r
-}
-
-STRING 21620
-// Abilities: A11Q (Bob-omb), Researchubertip (Tooltip - Learn - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool1> - <A11Q,Cool10> seconds|r
-}
-
-STRING 21621
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool2> seconds|r
-}
-
-STRING 21622
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool3> seconds|r
-}
-
-STRING 21623
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool4> seconds|r
-}
-
-STRING 21624
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool5> seconds|r
-}
-
-STRING 21625
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool6> seconds|r
-}
-
-STRING 21626
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned for 1.5s on detonation.
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A11Q,Cool7> seconds|r
-}
-
 STRING 21627
 // Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -134248,7 +134254,7 @@ Debuff Root Piranha Plant
 }
 
 STRING 21633
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), EditorSuffix (Editor Suffix)
 {
 (waluigi)
 }
@@ -134260,7 +134266,7 @@ Debuff Stun Bob-omb 1.5s
 }
 
 STRING 21635
-// Abilities: A11Q (Bob-omb), EditorSuffix (Editor Suffix)
+// Abilities: A00B (Spin), EditorSuffix (Editor Suffix)
 {
 (waluigi)
 }
@@ -134272,7 +134278,7 @@ Debuff Curse Waluigi Spin
 }
 
 STRING 21637
-// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A010 (Bob-omb), EditorSuffix (Editor Suffix)
 {
 (waluigi)
 }
