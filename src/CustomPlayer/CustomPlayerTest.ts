@@ -1114,11 +1114,11 @@ export function CustomPlayerTest() {
     DestroyTimer(GetExpiredTimer());
   });
   TimerStart(CreateTimer(), 60, false, () => {
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 
-      10, 
-      "|cffff2020Zanzo Dash Toggle Disabled|r"
-    );
+    // DisplayTimedTextToForce(
+    //   bj_FORCE_ALL_PLAYERS, 
+    //   10, 
+    //   "|cffff2020Zanzo Dash Toggle Disabled|r"
+    // );
     DisableTrigger(zanzoToggleTrigger);
     DestroyTimer(GetExpiredTimer());
   });

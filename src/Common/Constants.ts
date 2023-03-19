@@ -929,7 +929,7 @@ export module Id {
   export const waluigiFireball = FourCC("A11N");
   export const waluigiSuperFireball = FourCC("A11O");
   export const waluigiPiranhaPlant = FourCC("A11P");
-  export const waluigiBomb = FourCC("A010");
+  export const waluigiBomb = FourCC("A11Q");
   export const waluigiSpin = FourCC("A11U");
   export const waluigiJump = FourCC("A11S");
 

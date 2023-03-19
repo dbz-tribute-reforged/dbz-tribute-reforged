@@ -12921,6 +12921,7 @@ export const AbilitiesList = [
       { name: "dash ground forward 1dist" },
       { name: "damage waluigi jump explosion" },
       { name: "block waluigi jump" },
+      { name: "sfx waluigi jump" },
     ],
   },
   // -------------------------------------------

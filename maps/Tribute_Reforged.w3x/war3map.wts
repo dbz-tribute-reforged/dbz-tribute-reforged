@@ -133236,13 +133236,13 @@ R
 }
 
 STRING 20527
-// Abilities: A11R (Spin), Hotkey (Hotkey - Normal)
+// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20528
-// Abilities: A11R (Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -135816,13 +135816,13 @@ E
 }
 
 STRING 20888
-// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
+// Abilities: A11R (Spin), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20889
-// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
+// Abilities: A11R (Spin), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -140334,22 +140334,10 @@ Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, ne
 |cff00FFFFCooldown: <A11P,Cool7> seconds|r
 }
 
-STRING 21548
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 1|r]
-}
-
 STRING 21550
 // Abilities: A11R (Spin), Name (Name)
 {
 Spin
-}
-
-STRING 21551
-// Abilities: A11R (Spin), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00R|r] Learn Spin - [|cffffcc00Level %d|r]
 }
 
 STRING 21552
@@ -140360,64 +140348,10 @@ Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms
 |cff00FFFFCooldown: <A11R,Cool1> - <A11R,Cool10> seconds|r
 }
 
-STRING 21553
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 2|r]
-}
-
-STRING 21554
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 3|r]
-}
-
-STRING 21555
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 4|r]
-}
-
-STRING 21556
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 5|r]
-}
-
-STRING 21557
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 6|r]
-}
-
-STRING 21563
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 7|r]
-}
-
-STRING 21564
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 8|r]
-}
-
-STRING 21565
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 9|r]
-}
-
 STRING 21569
 // Abilities: A11R (Spin), EditorSuffix (Editor Suffix)
 {
 (waluigi)
-}
-
-STRING 21570
-// Abilities: A11R (Spin), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Spin - [|cffffcc00Level 10|r]
 }
 
 STRING 21572
@@ -141092,5 +141026,71 @@ STRING 21693
 Waluigi winds up a deadly Bob-omb to blow up his enemies and stun them for <A11W,Dur1,.>s on detonation.
 |cff00ff00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A11Q,Cool10> seconds|r
+}
+
+STRING 21694
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 1|r]
+}
+
+STRING 21695
+// Abilities: A11R (Spin), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Spin - [|cffffcc00Level %d|r]
+}
+
+STRING 21696
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 2|r]
+}
+
+STRING 21697
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 3|r]
+}
+
+STRING 21698
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 4|r]
+}
+
+STRING 21699
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 5|r]
+}
+
+STRING 21700
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 6|r]
+}
+
+STRING 21701
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 7|r]
+}
+
+STRING 21702
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 8|r]
+}
+
+STRING 21703
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 9|r]
+}
+
+STRING 21704
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Spin - [|cffffcc00Level 10|r]
 }
 
