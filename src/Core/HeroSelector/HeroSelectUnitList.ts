@@ -729,6 +729,19 @@ const marioData = {
     HeroSelectCategory.BRUISER
   )
 }
+const waluigiData = {
+  unitCode: Id.waluigi,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.SUPPORT
+  )
+}
 const sonicData = {
   unitCode: Id.sonic,
   onlyRandom: false,
@@ -876,9 +889,9 @@ export const HeroSelectUnitList = [
   sephirothData,
   dartFeldData,
   marioData,
-  sonicData,
+  waluigiData,
   // 85
-  emptySpace,
+  sonicData,
   emptySpace,
   emptySpace,
   emptySpace,

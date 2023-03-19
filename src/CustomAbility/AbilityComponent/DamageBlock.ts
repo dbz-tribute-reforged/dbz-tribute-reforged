@@ -12,6 +12,9 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   protected remainingBlock: number;
   protected currentHp: number;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   // may need its own sfx component to indicate when block is dead or not
   constructor(
     public name: string = "DamageBlock",
@@ -41,7 +44,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.currentHp = GetUnitState(source, UNIT_STATE_LIFE);
-    if (ability.currentTick == this.startTick) {
+
+    if (!this.isStarted) {
       this.previousHp = this.currentHp;
       this.remainingBlock = this.calculateMaxBlock(input);
     }
@@ -117,6 +121,9 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     }
 
     if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
+      
       AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
       AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
     }

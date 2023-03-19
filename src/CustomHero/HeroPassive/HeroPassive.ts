@@ -2198,7 +2198,7 @@ export function getJacoEliteBeamChargeString(
 }
 
 export function jacoPassive(customHero: CustomHero) {
-  const eliteBeamMaxTicks = 166;
+  const eliteBeamMaxTicks = 100;
 
   const eliteBeamTimer = CreateTimer();
   customHero.addTimer(eliteBeamTimer);
@@ -2211,7 +2211,7 @@ export function jacoPassive(customHero: CustomHero) {
   let playerId = GetPlayerId(player);
   SetTextTagPermanent(textTag, true);
   SetTextTagVisibility(textTag, false);
-  SetTextTagText(textTag, "IIIIIIIIII", 15);
+  SetTextTagText(textTag, "IIIIIIIIII", 13);
 
   UnitAddAbility(customHero.unit, Id.jacoEliteBeamPrime);
   UnitAddAbility(customHero.unit, Id.jacoEliteBeamFire);

@@ -158,12 +158,9 @@ export module DebuffAbilities {
   export const STUN_ONE_AND_A_HALF_SECOND = FourCC('A0FY');
   export const STUN_TWO_SECOND = FourCC('A0I7');
   export const STUN_THREE_SECOND = FourCC('A08H');
-  export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
 
-  export const SLOW_GENERIC_25_PCT = FourCC('A117');
-  export const SLOW_GENERIC_50_PCT = FourCC('A118');
-  export const SLOW_GENERIC_75_PCT = FourCC('A119');
-  export const SLOW_GENERIC_90_PCT = FourCC('A11A');
+  export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
+  export const STUN_WALUIGI_BOMB = FourCC('A11W');
 
   // curse
   export const DEMONS_MARK = FourCC("A0O7");
@@ -172,6 +169,7 @@ export module DebuffAbilities {
   export const BRAVE_SLASH = FourCC("A0TV");
   export const DARK_MIST = FourCC("A0WS");
   export const APPULE_VENGEANCE = FourCC("A11D");
+  export const CURSE_WALUIGI_SPIN = FourCC("A11X");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -188,10 +186,17 @@ export module DebuffAbilities {
   export const LIGHTNING_3_SLOW = FourCC("A0WN");
   export const TABLE_FLIP = FourCC("A03U");
   export const DK_GROUND_POUND_SLOW = FourCC("A06E");
+  export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
+
+  export const SLOW_GENERIC_25_PCT = FourCC('A117');
+  export const SLOW_GENERIC_50_PCT = FourCC('A118');
+  export const SLOW_GENERIC_75_PCT = FourCC('A119');
+  export const SLOW_GENERIC_90_PCT = FourCC('A11A');
 
   // entangling roots
   export const CIRCLE_FLASH = FourCC("A0R6");
   export const GALACTIC_DONUT = FourCC("A0U6");
+  export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A11V");
 
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
@@ -241,6 +246,11 @@ export module Buffs {
 
   export const MAFUBA_SEALED = FourCC("B05H");
   export const MAFUBA_SEALING = FourCC("B05I");
+
+  export const SLOW_WALUIGI_FIREBALL_1 = FourCC("B05O");
+  export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("B05P");
+  export const STUN_WALUIGI_BOMB = FourCC("B05Q");
+  export const CURSE_WALUIGI_SPIN = FourCC("B05R");
 }
 
 export module OrderIds {
@@ -560,14 +570,16 @@ export module Id {
   export const ginyuChangeNowConfirm = FourCC("A0PN");
 
   export const gohan = FourCC("H00K");
-  export const unlockPotential = FourCC("A0L6");
-  export const greatSaiyamanHasArrived = FourCC("A0L7");
-  export const potentialUnleashed = FourCC("A0L8");
   export const masenko = FourCC("A0H8");
   export const superMasenko = FourCC("A0TU");
   export const twinDragonShot = FourCC("A0IS");
   export const superDragonFlight = FourCC("A0L5");
   export const fatherSonKame = FourCC("A0OY");
+  export const specialBeastCannon = FourCC("A11M");
+  export const unlockPotential = FourCC("A0L6");
+  export const greatSaiyamanHasArrived = FourCC("A0L7");
+  export const potentialUnleashed = FourCC("A0L8");
+  export const beastGohan = FourCC("A11L");
 
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");
@@ -779,6 +791,7 @@ export module Id {
   export const slappyHand = FourCC("A0C8");
   export const hellzoneGrenade = FourCC("A0LM");
   export const multiForm = FourCC('A088');
+  export const lightGrenade = FourCC("A11K");
   
   export const rustTyranno = FourCC("H09Z");
   export const tyrannoFlame = FourCC("A0VI");
@@ -911,6 +924,14 @@ export module Id {
   export const skurvyScorn = FourCC("A0Z6");
   export const skurvyPower = FourCC("A0ZA");
   export const skurvyPlunderBird = FourCC("nalb");
+  
+  export const waluigi = FourCC("H0AO");
+  export const waluigiFireball = FourCC("A11N");
+  export const waluigiSuperFireball = FourCC("A11O");
+  export const waluigiPiranhaPlant = FourCC("A11P");
+  export const waluigiBomb = FourCC("A11Q");
+  export const waluigiSpin = FourCC("A11R");
+  export const waluigiJump = FourCC("A11S");
 
   export const yamchaR = FourCC("E010");
   export const yamchaRLightPunch = FourCC("A0RC");

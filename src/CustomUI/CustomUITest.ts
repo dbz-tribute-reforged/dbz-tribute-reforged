@@ -23,7 +23,7 @@ import { FrameHelper } from 'Common/FrameHelper';
 import { Constants } from 'Common/Constants';
 import { BasicTitledBackdrop } from './BasicTitledBackdrop';
 import { BasicTextFrame } from './BasicTextFrame';
-import { HPBar, MPBar, SPBar, LevelBar } from './MyBars';
+import { HPBar, MPBar, SPBar, LevelBar, SpellPowerBar } from './MyBars';
 
 
 // need to add promise + error catching
@@ -62,6 +62,8 @@ export function CustomUiTest() {
 	const chatButtonHandle = BlzGetFrameByName("UpperButtonBarChatButton", 0);
 	const defaultToolTipPosition = new FramePosition(FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOMRIGHT, 0, 0.1639);
 	
+	BlzEnableUIAutoPosition(false);
+
 	/*
 		constant textaligntype TEXT_JUSTIFY_TOP = ConvertTextAlignType(0)
 		constant textaligntype TEXT_JUSTIFY_MIDDLE = ConvertTextAlignType(1)
@@ -72,215 +74,242 @@ export function CustomUiTest() {
 		0, 1, 2 are for textaligntype vert
 		3, 4, 5 are for textaligntype horz
 	*/
+
+
+
+
+
 	
-	// BJDebugMsg("making main menu");
-	mainMenu = new ButtonMenu(
-		"mainMenu", 
-		"mainMenuTitle",
-		grandpa, 
-		0, 
-		new Vector2D(0.3, 0.45), 
-		new FramePosition(FRAMEPOINT_TOPLEFT, grandpa, FRAMEPOINT_TOPLEFT, 0, -0.035), 
-		Colorizer.Color.White + "Tribute Reforged Menu"
-	).setRenderVisible(false);
+	// // BJDebugMsg("making main menu");
+	// mainMenu = new ButtonMenu(
+	// 	"mainMenu", 
+	// 	"mainMenuTitle",
+	// 	grandpa, 
+	// 	0, 
+	// 	new Vector2D(0.3, 0.45), 
+	// 	new FramePosition(FRAMEPOINT_TOPLEFT, grandpa, FRAMEPOINT_TOPLEFT, 0, -0.035), 
+	// 	Colorizer.Color.White + "Tribute Reforged Menu"
+	// ).setRenderVisible(false);
 
-	// BJDebugMsg("Setting up Main Menu Button");
-	const mainMenuToggleButton = new BasicButton(
-		"mainMenuToggleButton",
-		grandpa,
-		0, 
-		smallButtonSize,
-		new FramePosition(FRAMEPOINT_TOP, questButtonHandle, FRAMEPOINT_BOTTOM, 0, 0),
-		Colorizer.Color.White + "TR Menu"
-	);
+	// // BJDebugMsg("Setting up Main Menu Button");
+	// const mainMenuToggleButton = new BasicButton(
+	// 	"mainMenuToggleButton",
+	// 	grandpa,
+	// 	0, 
+	// 	smallButtonSize,
+	// 	new FramePosition(FRAMEPOINT_TOP, questButtonHandle, FRAMEPOINT_BOTTOM, 0, 0),
+	// 	Colorizer.Color.White + "TR Menu"
+	// );
 
-	const mt = new FrameTrigger();
-	mt.registerFrameEvent(mainMenuToggleButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
-	mt.addAction(() => {
-		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetVisible(mainMenu.frameHandle, !BlzFrameIsVisible(mainMenu.frameHandle));
-			FrameHelper.loseFocusFromTriggeringFrame();
-		}
-	});
+	// const mt = new FrameTrigger();
+	// mt.registerFrameEvent(mainMenuToggleButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
+	// mt.addAction(() => {
+	// 	if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 		BlzFrameSetVisible(mainMenu.frameHandle, !BlzFrameIsVisible(mainMenu.frameHandle));
+	// 		FrameHelper.loseFocusFromTriggeringFrame();
+	// 	}
+	// });
 
-	// BJDebugMsg("Setting up submenus");
-	for (let i = 0; i < 9; ++i) {
-		const subMenuButton = new BasicButton(
-			"subMenuButton" + i, 
-			mainMenu.frameHandle, 
-			0, 
-			smallButtonSize, 
-			new FramePosition(FRAMEPOINT_TOPLEFT, mainMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
-			Colorizer.randomColor() + "Button " + i
-		);
+	// // BJDebugMsg("Setting up submenus");
+	// for (let i = 0; i < 9; ++i) {
+	// 	const subMenuButton = new BasicButton(
+	// 		"subMenuButton" + i, 
+	// 		mainMenu.frameHandle, 
+	// 		0, 
+	// 		smallButtonSize, 
+	// 		new FramePosition(FRAMEPOINT_TOPLEFT, mainMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
+	// 		Colorizer.randomColor() + "Button " + i
+	// 	);
 		
-		const subMenu = new ButtonMenu(
-			"subMenu" + i,
-			"subMenuTitle" + i,
-			mainMenu.frameHandle,
-			0, 
-			new Vector2D(0.3, 0.3),
-			new FramePosition(FRAMEPOINT_BOTTOM, mainMenu.frameHandle, FRAMEPOINT_BOTTOM, 0, 0),
-			"Sub Menu " + i,
-		);
-		/*
-		const subMenu = new ButtonMenu(
-			"subMenu" + i,
-			"subMenuTitle" + i,
-			mainMenu.frameHandle,
-			new Vector2D(0.3, 0.3),
-			new FramePosition(FRAMEPOINT_LEFT, mainMenu.frameHandle, FRAMEPOINT_RIGHT, 0, 0),
-			"Sub Menu " + i,
-		);
-		*/
+	// 	const subMenu = new ButtonMenu(
+	// 		"subMenu" + i,
+	// 		"subMenuTitle" + i,
+	// 		mainMenu.frameHandle,
+	// 		0, 
+	// 		new Vector2D(0.3, 0.3),
+	// 		new FramePosition(FRAMEPOINT_BOTTOM, mainMenu.frameHandle, FRAMEPOINT_BOTTOM, 0, 0),
+	// 		"Sub Menu " + i,
+	// 	);
+	// 	/*
+	// 	const subMenu = new ButtonMenu(
+	// 		"subMenu" + i,
+	// 		"subMenuTitle" + i,
+	// 		mainMenu.frameHandle,
+	// 		new Vector2D(0.3, 0.3),
+	// 		new FramePosition(FRAMEPOINT_LEFT, mainMenu.frameHandle, FRAMEPOINT_RIGHT, 0, 0),
+	// 		"Sub Menu " + i,
+	// 	);
+	// 	*/
 		
-		const subMenuBackButton = new BasicButton(
-			"subMenuBackButton" + i, 
-			subMenu.frameHandle, 
-			0, 
-			smallButtonSize, 
-			new FramePosition(FRAMEPOINT_TOPLEFT, subMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
-			Colorizer.randomColor() + "Back " + i
-		);
-		subMenu.addButton(subMenuBackButton);
-		subMenu.autoAlignButtonPositions();
-		subMenu.setRenderVisible(false);
+	// 	const subMenuBackButton = new BasicButton(
+	// 		"subMenuBackButton" + i, 
+	// 		subMenu.frameHandle, 
+	// 		0, 
+	// 		smallButtonSize, 
+	// 		new FramePosition(FRAMEPOINT_TOPLEFT, subMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
+	// 		Colorizer.randomColor() + "Back " + i
+	// 	);
+	// 	subMenu.addButton(subMenuBackButton);
+	// 	subMenu.autoAlignButtonPositions();
+	// 	subMenu.setRenderVisible(false);
 
-		const st = new FrameTrigger();
-		st.registerFrameEvent(subMenuButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
-		st.addAction(() => {
-			if (GetTriggerPlayer() == GetLocalPlayer()) {
-				BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
-				FrameHelper.loseFocusFromTriggeringFrame();
-			}
-		});
+	// 	const st = new FrameTrigger();
+	// 	st.registerFrameEvent(subMenuButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
+	// 	st.addAction(() => {
+	// 		if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 			BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
+	// 			FrameHelper.loseFocusFromTriggeringFrame();
+	// 		}
+	// 	});
 
-		const rt = new FrameTrigger();
-		rt.registerFrameEvent(subMenuBackButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
-		rt.addAction(() => {
-			if (GetTriggerPlayer() == GetLocalPlayer()) {
-				BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
-				FrameHelper.loseFocusFromTriggeringFrame();
-			}
-		});
+	// 	const rt = new FrameTrigger();
+	// 	rt.registerFrameEvent(subMenuBackButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
+	// 	rt.addAction(() => {
+	// 		if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 			BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
+	// 			FrameHelper.loseFocusFromTriggeringFrame();
+	// 		}
+	// 	});
 
-		mainMenu.addButton(subMenuButton);
-	}
-	mainMenu.autoAlignButtonPositions();
+	// 	mainMenu.addButton(subMenuButton);
+	// }
+	// mainMenu.autoAlignButtonPositions();
 
-	// BJDebugMsg("Setting up sliders");
-	const camDistanceSlider = new BasicTitledSlider(
-		"camDistanceSlider",
-		"camDistanceSliderTitle",
-		BlzGetFrameByName("subMenu1", 0),
-		0, 
-		defaultSliderSize, 
-		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("subMenu1", 0), FRAMEPOINT_TOPLEFT, 0.03, -0.1),
-		new SliderData(1400, 200, 4000, 50),
-		"Distance: " + Colorizer.Color.White + "1400"
-	)
+	// // BJDebugMsg("Setting up sliders");
+	// const camDistanceSlider = new BasicTitledSlider(
+	// 	"camDistanceSlider",
+	// 	"camDistanceSliderTitle",
+	// 	BlzGetFrameByName("subMenu1", 0),
+	// 	0, 
+	// 	defaultSliderSize, 
+	// 	new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("subMenu1", 0), FRAMEPOINT_TOPLEFT, 0.03, -0.1),
+	// 	new SliderData(1400, 200, 4000, 50),
+	// 	"Distance: " + Colorizer.Color.White + "1400"
+	// )
 	
-	const camAngleSlider = new BasicTitledSlider(
-		"camAngleSlider",
-		"camAngleSliderTitle",
-		BlzGetFrameByName("subMenu1", 0),
-		0, 
-		defaultSliderSize, 
-		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camDistanceSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
-		new SliderData(304, 270, 360, 0.5),
-		"Angle: " + Colorizer.Color.White + "34.0"
-	)
+	// const camAngleSlider = new BasicTitledSlider(
+	// 	"camAngleSlider",
+	// 	"camAngleSliderTitle",
+	// 	BlzGetFrameByName("subMenu1", 0),
+	// 	0, 
+	// 	defaultSliderSize, 
+	// 	new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camDistanceSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
+	// 	new SliderData(304, 270, 360, 0.5),
+	// 	"Angle: " + Colorizer.Color.White + "34.0"
+	// )
 	
-	const camRotationSlider = new BasicTitledSlider(
-		"camRotationSlider",
-		"camRotationSliderTitle",
-		BlzGetFrameByName("subMenu1", 0),
-		0, 
-		defaultSliderSize, 
-		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camAngleSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
-		new SliderData(90, 90, 450, 5),
-		"Rotation: " + Colorizer.Color.White + "90.0"
-	)
+	// const camRotationSlider = new BasicTitledSlider(
+	// 	"camRotationSlider",
+	// 	"camRotationSliderTitle",
+	// 	BlzGetFrameByName("subMenu1", 0),
+	// 	0, 
+	// 	defaultSliderSize, 
+	// 	new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camAngleSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
+	// 	new SliderData(90, 90, 450, 5),
+	// 	"Rotation: " + Colorizer.Color.White + "90.0"
+	// )
 
-	const distanceTrigger = new FrameTrigger();
-	distanceTrigger.registerFrameEvent(BlzGetFrameByName("camDistanceSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
-	distanceTrigger.addAction(() => {
-		const value = BlzGetTriggerFrameValue();
-		SetCameraFieldForPlayer(
-			GetTriggerPlayer(),
-			CAMERA_FIELD_TARGET_DISTANCE, 
-			value, 
-			0
-		);
-		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camDistanceSlider.title.frameHandle, "Distance: " + Colorizer.Color.White + value);
-			FrameHelper.loseFocusFromTriggeringFrame();
-		}
-	});
+	// const distanceTrigger = new FrameTrigger();
+	// distanceTrigger.registerFrameEvent(BlzGetFrameByName("camDistanceSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
+	// distanceTrigger.addAction(() => {
+	// 	const value = BlzGetTriggerFrameValue();
+	// 	SetCameraFieldForPlayer(
+	// 		GetTriggerPlayer(),
+	// 		CAMERA_FIELD_TARGET_DISTANCE, 
+	// 		value, 
+	// 		0
+	// 	);
+	// 	if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 		BlzFrameSetText(camDistanceSlider.title.frameHandle, "Distance: " + Colorizer.Color.White + value);
+	// 		FrameHelper.loseFocusFromTriggeringFrame();
+	// 	}
+	// });
 
-	const angleTrigger = new FrameTrigger();
-	angleTrigger.registerFrameEvent(BlzGetFrameByName("camAngleSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
-	angleTrigger.addAction(() => {
-		const value = BlzGetTriggerFrameValue();
-		SetCameraFieldForPlayer(
-			GetTriggerPlayer(),
-			CAMERA_FIELD_ANGLE_OF_ATTACK, 
-			value, 
-			0
-		);
-		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camAngleSlider.title.frameHandle, "Angle: " + Colorizer.Color.White + (value - camAngleSlider.slider.minValue));
-			FrameHelper.loseFocusFromTriggeringFrame();
-		}
-	});
+	// const angleTrigger = new FrameTrigger();
+	// angleTrigger.registerFrameEvent(BlzGetFrameByName("camAngleSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
+	// angleTrigger.addAction(() => {
+	// 	const value = BlzGetTriggerFrameValue();
+	// 	SetCameraFieldForPlayer(
+	// 		GetTriggerPlayer(),
+	// 		CAMERA_FIELD_ANGLE_OF_ATTACK, 
+	// 		value, 
+	// 		0
+	// 	);
+	// 	if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 		BlzFrameSetText(camAngleSlider.title.frameHandle, "Angle: " + Colorizer.Color.White + (value - camAngleSlider.slider.minValue));
+	// 		FrameHelper.loseFocusFromTriggeringFrame();
+	// 	}
+	// });
 
-	const rotationTrigger = new FrameTrigger();
-	rotationTrigger.registerFrameEvent(BlzGetFrameByName("camRotationSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
-	rotationTrigger.addAction(() => {
-		const value = BlzGetTriggerFrameValue();
-		SetCameraFieldForPlayer(
-			GetTriggerPlayer(),
-			CAMERA_FIELD_ROTATION, 
-			value, 
-			0
-		);
-		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camRotationSlider.title.frameHandle, "Rotation: " + Colorizer.Color.White + (value - camRotationSlider.slider.minValue));
-			FrameHelper.loseFocusFromTriggeringFrame();
-		}
-	});
+	// const rotationTrigger = new FrameTrigger();
+	// rotationTrigger.registerFrameEvent(BlzGetFrameByName("camRotationSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
+	// rotationTrigger.addAction(() => {
+	// 	const value = BlzGetTriggerFrameValue();
+	// 	SetCameraFieldForPlayer(
+	// 		GetTriggerPlayer(),
+	// 		CAMERA_FIELD_ROTATION, 
+	// 		value, 
+	// 		0
+	// 	);
+	// 	if (GetTriggerPlayer() == GetLocalPlayer()) {
+	// 		BlzFrameSetText(camRotationSlider.title.frameHandle, "Rotation: " + Colorizer.Color.White + (value - camRotationSlider.slider.minValue));
+	// 		FrameHelper.loseFocusFromTriggeringFrame();
+	// 	}
+	// });
+
+
+
+
+
+
+
+
 
 	// status bars
 	// BJDebugMsg("Setting up status bars");
+	const bar_x_offset = -0.195;
+	const bar_base = 0.13;
+	const bar_width = 0.242;
+	const bar_height = 0.012;
+
 	let hpBar = new HPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.18),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base+bar_height*2),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let mpBar = new MPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base+bar_height),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let spBar = new SPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let levelBar = new LevelBar(
 		grandpa, 
 		0,
-		new Vector2D(0.06, 0.015),
-		new FramePosition(FRAMEPOINT_TOPRIGHT, spBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
+		new Vector2D(0.05, bar_height),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, spBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.01, 0.0),
+		new StatusBarData(0, 0, 100)
+	)
+	levelBar.setRenderVisible(false);
+
+	let spellPowerBar = new SpellPowerBar(
+		grandpa, 
+		0,
+		new Vector2D(0.05, bar_height),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -289,17 +318,19 @@ export function CustomUiTest() {
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MySpellPowerBar", 0), 0);
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), 0 + " / " + 0);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
   BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), 0 + " / " + 0);
 	BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
+	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), "100%");
 	
 	const abilityHotBar = new AbilityButtonHotbar(
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
 		new Vector2D(Constants.uiButtonSize * (Constants.maxSubAbilities) + 0.003, Constants.uiButtonSize),
-		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, spBar.frameHandle, FRAMEPOINT_BOTTOMRIGHT, 0.001, 0.0),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {

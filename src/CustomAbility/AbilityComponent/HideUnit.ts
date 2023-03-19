@@ -4,8 +4,10 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
 
-  protected isHidden: boolean;
   protected wasInvul: boolean;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "HideUnit",
@@ -17,13 +19,13 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     public removeNegativeBuffs: boolean = false,
     public forceReselect: boolean = false,
   ) {
-    this.isHidden = false;
     this.wasInvul = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.isHidden) {
-      this.isHidden = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       if (this.doHide) ShowUnitHide(source);
       if (this.preventMovement) {
         PauseUnit(source, true);
@@ -36,7 +38,8 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.isHidden = false;
+      this.isStarted = false;
+      this.isFinished = true;
       if (this.doHide) ShowUnitShow(source);
       if (this.preventMovement) {
         PauseUnit(source, false);

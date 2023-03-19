@@ -11,6 +11,8 @@ export interface AbilityComponent {
   repeatInterval: number;
   startTick: number;
   endTick: number;
+  isStarted: boolean;
+  isFinished: boolean;
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit): void;
   cleanup(): void;

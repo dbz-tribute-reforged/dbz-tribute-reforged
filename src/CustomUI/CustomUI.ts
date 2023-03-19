@@ -21,7 +21,7 @@ export function show(flag: boolean, ignoreCustomUIFlag: boolean, who?: player) {
   const hpBar = BlzGetFrameByName("MyHPBar", 0);
   const mpBar = BlzGetFrameByName("MyMPBar", 0);
   const spBar = BlzGetFrameByName("MySPBar", 0);
-  const levelBar = BlzGetFrameByName("MyLevelBar", 0);
+  const spellPowerbar = BlzGetFrameByName("MySpellPowerBar", 0);
   const abilityButton0 = BlzGetFrameByName("MyAbilityIconBar", 0);
   const abilityButton1 = BlzGetFrameByName("MyAbilityIconBar", 1);
   const abilityButton2 = BlzGetFrameByName("MyAbilityIconBar", 2);
@@ -32,7 +32,7 @@ export function show(flag: boolean, ignoreCustomUIFlag: boolean, who?: player) {
     BlzFrameSetVisible(hpBar, flag);
     BlzFrameSetVisible(mpBar, flag);
     BlzFrameSetVisible(spBar, flag);
-    BlzFrameSetVisible(levelBar, flag);
+    BlzFrameSetVisible(spellPowerbar, flag);
     BlzFrameSetVisible(abilityButton0, flag);
     BlzFrameSetVisible(abilityButton1, flag);
     BlzFrameSetVisible(abilityButton2, flag);

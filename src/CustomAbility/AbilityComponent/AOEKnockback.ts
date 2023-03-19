@@ -18,6 +18,9 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
 
   protected affectedGroup: group;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "AOEKnockback",
     public repeatInterval: number = 1,
@@ -52,6 +55,12 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
+
     if (this.knockbackSource == AOEKnockback.SOURCE_UNIT) {
       this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
     } else {
@@ -94,6 +103,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     }
 
     if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
       GroupClear(this.affectedGroup);
     }
   }

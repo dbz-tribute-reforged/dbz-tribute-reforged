@@ -109,6 +109,9 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
     Globals.genericSpellMap.set(DebuffAbilities.APPULE_VENGEANCE, SimpleSpellSystem.appuleVengeanceIllusion);
+    
+    Globals.genericSpellMap.set(Id.beastGohan, SimpleSpellSystem.gohanBeastBuff);
+    Globals.genericSpellMap.set(Id.specialBeastCannon, SimpleSpellSystem.specialBeastCannon);
 
     
     // add DDS stuff
@@ -2528,7 +2531,7 @@ export module SimpleSpellSystem {
   }
 
   export function getJacoEliteBeamMult(unit: unit) {
-    const eliteBeamMaxTicks = 166;
+    const eliteBeamMaxTicks = 100;
     const unitId = GetHandleId(unit);
     const isBonus = LoadInteger(Globals.genericSpellHashtable, unitId, 3) == 1;
     const chargeTicks = isBonus ? eliteBeamMaxTicks : LoadInteger(Globals.genericSpellHashtable, unitId, 1);
@@ -2551,7 +2554,7 @@ export module SimpleSpellSystem {
     const unitId = GetHandleId(unit);
     const player = GetOwningPlayer(unit);
 
-    const eliteBeamPrimeStart = 99;
+    const eliteBeamPrimeStart = 33;
     const eliteBeamPrimeVariance = 1;
     const eliteBeamPrimeBonusLeeway = 33;
     
@@ -2624,7 +2627,7 @@ export module SimpleSpellSystem {
   }
 
   export function doJacoExtinctionBomb() {
-    const extinctionBombDelay = 5;
+    const extinctionBombDelay = 3;
     const extinctionBombMaxDist = 600;
     const extinctionBombAOE = 500;
     const extinctionBombStrMult = 2;
@@ -2652,16 +2655,22 @@ export module SimpleSpellSystem {
       0
     );
     BlzSetUnitName(bomb, "Extinction Bomb");
-    SetUnitMoveSpeed(bomb, 522);
+    SetUnitMoveSpeed(bomb, 400);
     
     // blow it up in 5seconds
     let delay = extinctionBombDelay;
     let ttSize = math.max(5, 5 * (extinctionBombDelay + 1 - delay));
+    
+    ForceClear(Globals.tmpForce);
+    ForceAddPlayer(Globals.tmpForce, GetOwningPlayer(unit));
     TextTagHelper.showTempText(
       Colorizer.getPlayerColorText(playerId) + I2S(delay) + "!",
       GetUnitX(bomb), GetUnitY(bomb),
-      ttSize, 1.5, 0.5
+      ttSize, 1.5, 0.5,
+      Globals.tmpForce
     );
+    ForceClear(Globals.tmpForce);
+
 
     TimerStart(CreateTimer(), 1.0, true, () => {
       --delay;
@@ -2755,7 +2764,7 @@ export module SimpleSpellSystem {
     const hero = Globals.customPlayers[playerId].firstCustomHero;
     if (!hero) return;
 
-    TimerStart(CreateTimer(), 2.0, false, () => {
+    TimerStart(CreateTimer(), 3.0, false, () => {
       SaveBoolean(
         Globals.genericSpellHashtable, 
         GetHandleId(hero.unit),
@@ -2801,6 +2810,87 @@ export module SimpleSpellSystem {
       hero.unit
     );
     UnitApplyTimedLife(dummy, FourCC("BTLF"), 1);
+  }
+
+  export function gohanBeastBuff() {
+    const unit = GetTriggerUnit();
+    const unitId = GetHandleId(unit);
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+
+    if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) > 0) return;
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+    if (!customHero) return;
+
+    const aoe = 5000;
+    const spellPowerPerDead = 0.4;
+    const spellPowerPerHPPct = 0.33;
+    const spellPowerMin = 0.3;
+    const spellPowerMax = 1.6;
+    
+    // get nearby allied heroes
+    GroupEnumUnitsInRange(
+      Globals.tmpUnitGroup, 
+      GetUnitX(unit), 
+      GetUnitY(unit),
+      aoe,
+      null
+    );
+
+    let spellPower = 0.0;
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const alliedHero = GetEnumUnit();
+      if (
+        UnitHelper.isUnitRealHero(alliedHero)
+        && IsUnitAlly(alliedHero, player)
+        && alliedHero != unit
+      ) {
+        if (UnitHelper.isUnitDead(alliedHero)) {
+          spellPower += spellPowerPerDead;
+        } else {
+          spellPower += spellPowerPerHPPct * (
+            1 - (
+              GetUnitState(alliedHero, UNIT_STATE_LIFE) 
+              / GetUnitState(alliedHero, UNIT_STATE_MAX_LIFE)
+            )
+          );
+        }
+      }
+    });
+
+    spellPower = Math.max(
+      spellPowerMin, 
+      Math.min(spellPowerMax, spellPower)
+    );
+    customHero.addSpellPower(spellPower);
+
+    TimerStart(CreateTimer(), 0.2, true, () => {
+      if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) == 0) {
+        customHero.removeSpellPower(spellPower);
+        DestroyTimer(GetExpiredTimer());
+      }
+    });
+  }
+
+  export function specialBeastCannon() {
+    const unit = GetTriggerUnit();
+
+    const initTimer = CreateTimer();
+    const secondTimer = CreateTimer();
+
+    const delay = 2.1;
+
+    SetUnitAnimationByIndex(unit, 12);
+
+    TimerStart(initTimer, delay, false, () => {
+      SetUnitAnimationByIndex(unit, 13);
+      DestroyTimer(initTimer);
+    });
+    TimerStart(secondTimer, delay+1, false, () => {
+      ResetUnitAnimation(unit);
+      DestroyTimer(secondTimer);
+    });
   }
 
 

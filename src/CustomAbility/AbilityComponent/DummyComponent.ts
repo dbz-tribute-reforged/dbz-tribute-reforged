@@ -4,6 +4,9 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class DummyComponent implements AbilityComponent, Serializable<DummyComponent> {
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "DummyComponent",
     public repeatInterval: number = 1,
@@ -14,7 +17,16 @@ export class DummyComponent implements AbilityComponent, Serializable<DummyCompo
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
 
+    
+    if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
+    }
   }
 
   cleanup() {

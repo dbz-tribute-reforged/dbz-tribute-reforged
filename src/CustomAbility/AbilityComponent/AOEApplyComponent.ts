@@ -14,6 +14,9 @@ export class AOEApplyComponent implements
 
   protected sourceCoords: Vector2D;
   protected affectedGroup: group;
+  
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "AOEApplyComponent",
@@ -31,6 +34,11 @@ export class AOEApplyComponent implements
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+
     this.sourceCoords.setUnit(source);
 
     GroupEnumUnitsInRange(
@@ -51,7 +59,7 @@ export class AOEApplyComponent implements
         (IsUnitOwnedByPlayer(target, input.casterPlayer) || this.affectsAllies)
       ) {
         for (const component of this.components) {
-          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          if (ability.isReadyToUseComponent(component)) {
             component.performTickAction(ability, input, target);
           }
         }
@@ -59,6 +67,11 @@ export class AOEApplyComponent implements
     })
     
     GroupClear(this.affectedGroup);
+
+    if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
+    }
   }
 
   cleanup() {

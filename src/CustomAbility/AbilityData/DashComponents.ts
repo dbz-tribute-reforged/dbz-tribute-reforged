@@ -392,19 +392,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 25,
   },
-  // potential unleashed
-  {
-    name: "dash ground forward potential unleashed",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 1,
-  },
   // extraordinary power
   {
     name: "dash ground forward extraordinary power",
@@ -591,7 +578,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2.5,
   },
-  // videl flying kick
+  // // videl flying kick
+  // {
+  //   name: "dash ground point videl flying kick",
+  //   repeatInterval: 1, 
+  //   startTick: 0,
+  //   endTick: -1,
+  //   targetDirection: Dash.DIRECTION_TARGET_POINT,
+  //   dashType: Dash.DASH_TYPE_GROUND,
+  //   checkPreviousCoord: false,
+  //   useLastCastPoint: true,
+  //   angleOffset: 0,
+  //   distance: 45,
+  // },
   {
     name: "dash ground point videl flying kick",
     repeatInterval: 1, 
@@ -600,9 +599,9 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_GROUND,
     checkPreviousCoord: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     angleOffset: 0,
-    distance: 45,
+    distance: 35,
   },
   // whirlwind tempest
   {
@@ -1193,32 +1192,6 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 180,
     distance: 30,
-  },
-  // mario jump
-  {
-    name: "dash ground forward mario jump",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: true,
-    angleOffset: 0,
-    distance: 2,
-  },
-  // mario spin jump
-  {
-    name: "dash ground forward spin jump",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: true,
-    angleOffset: 0,
-    distance: 2,
   },
   // mario power up block
   {

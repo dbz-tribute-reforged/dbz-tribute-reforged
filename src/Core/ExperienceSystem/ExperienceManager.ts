@@ -11,8 +11,8 @@ function give_auto_exp() {
   const pId = GetPlayerId(p);
   if (
     IsUnitType(u, UNIT_TYPE_HERO)
-    && UnitHelper.isUnitAlive(u)
     && pId < Constants.maxActivePlayers
+    && UnitHelper.isUnitAlive(u)
     && !IsUnitType(u, UNIT_TYPE_SUMMONED)
     && !IsUnitIllusion(u)
   ) {
@@ -125,12 +125,12 @@ export class ExperienceManager {
     this.setupRewardXPTrigger(this.rewardXPTrigger);
 
 
-    TimerStart(CreateTimer(), 60.0, true, () => {
-      if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
-        GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
-        ForGroup(Globals.tmpUnitGroup, give_auto_exp);
-      }
-    });
+    // TimerStart(CreateTimer(), 60.0, true, () => {
+    //   if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
+    //     GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
+    //     ForGroup(Globals.tmpUnitGroup, give_auto_exp);
+    //   }
+    // });
 
     return this;
   }

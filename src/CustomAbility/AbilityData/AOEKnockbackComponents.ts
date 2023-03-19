@@ -4,30 +4,14 @@ export const AOEKnockbackComponents = [
   // spirit bomb stronger knockback
   // copy from here
   {
-    name: "knockback 1tick 15speed 0angle 300aoe",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    knockbackData: {
-      speed: 15, 
-      angle: 0, 
-      aoe: 300,
-    },
-    knockbackSource: AOEKnockback.SOURCE_UNIT,
-    useLastCastPoint: false,
-    reflectBeams: false,
-    affectAllies: false,
-    isPersistent: false,
-  },
-  {
     name: "knockback spirit bomb",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 9, 
+      speed: 12, 
       angle: 180, 
-      aoe: 350,
+      aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
@@ -38,30 +22,14 @@ export const AOEKnockbackComponents = [
   // to here, and replace with unique name
   // kame light knockback
   {
-    name: "knockback 1tick 10speed 0angle 250aoe",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    knockbackData: {
-      speed: 10, 
-      angle: 0, 
-      aoe: 250,
-    },
-    knockbackSource: AOEKnockback.SOURCE_UNIT,
-    useLastCastPoint: false,
-    reflectBeams: false,
-    affectAllies: false,
-    isPersistent: false,
-  },
-  {
     name: "knockback kame",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 6, 
+      speed: 8, 
       angle: 180, 
-      aoe: 250,
+      aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
@@ -78,7 +46,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 30, 
       angle: 0, 
-      aoe: 500,
+      aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
@@ -133,6 +101,23 @@ export const AOEKnockbackComponents = [
   //   },
   //   affectAllies: false,
   // },
+  // light grenade
+  {
+    name: "knockback beam light grenade",
+    repeatInterval: 1, 
+    startTick: 36,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 180, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    isPersistent: false,
+  },
   // videl punch
   {
     name: "knockback videl punch",
@@ -191,7 +176,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 55, 
+      speed: 60, 
       angle: 180, 
       aoe: 150,
     },
@@ -686,7 +671,7 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     isPersistent: false,
@@ -703,7 +688,7 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     isPersistent: false,
@@ -1463,5 +1448,22 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
     isPersistent: true,
+  },
+  // waluigi spin
+  {
+    name: "knockback waluigi spin",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
+      angle: 0, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: false,
+    isPersistent: false,
   },
 ];

@@ -21,11 +21,13 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
   static readonly UNLIMITED_HEAL_TARGETS = -1;
 
   protected healCoords: Vector2D;
-  protected healStarted: boolean;
 
   protected healTargets: Map<unit, number>;
 
   protected affectedGroup: group;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "AOEHeal",
@@ -49,7 +51,6 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     public buffId: number = 0,
   ) {
     this.healCoords = new Vector2D(0, 0);
-    this.healStarted = false;
     this.healTargets = new Map();
     this.affectedGroup = CreateGroup();
   }
@@ -117,10 +118,11 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (
-      !this.healStarted || 
+      !this.isStarted || 
       ability.currentTick == this.startTick
     ) {
-      this.healStarted = true;
+      this.isStarted = true;
+      this.isFinished = false;
       this.healTargets.clear();
       if (this.healSource == AOEHeal.SOURCE_TARGET_POINT_FIXED) {
         this.setHealSourceToTargettedPoint(input);
@@ -219,7 +221,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
   }
 
   reset() {
-    this.healStarted = false;
+    this.isStarted = false;
+    this.isFinished = true;
     this.healTargets.clear();
   }
 

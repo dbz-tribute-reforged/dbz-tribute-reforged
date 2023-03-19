@@ -133,6 +133,7 @@ export function updateSelectedUnitBars(
   currentSp: string,
   maxSp: string,
   percentSp: number,
+  spellPowerText: string,
   level: string,
   percentXp: number,
 ) {
@@ -144,6 +145,7 @@ export function updateSelectedUnitBars(
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
   BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), currentSp + " / " + maxSp);
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
+	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), spellPowerText);
 }
 
 export function isValidOrderByPlayer(
@@ -521,6 +523,7 @@ export function CustomPlayerTest() {
         const maxHp = I2S(BlzGetUnitMaxHP(unit));
         const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
         const maxMp = I2S(BlzGetUnitMaxMana(unit));
+
         let currentSp = "0";
         let maxSp = "0";
         let percentSp = 0;
@@ -567,12 +570,29 @@ export function CustomPlayerTest() {
         agility += "|r";
         intelligence += "|r";
 
+        let spellPowerText = "100%";
+        const unitOwner = GetOwningPlayer(unit);
+        const unitOwnerId = GetPlayerId(unitOwner);
+        if (unitOwnerId < Constants.maxActivePlayers) {
+          const customHero = Globals.customPlayers[unitOwnerId].getCustomHero(unit);
+          if (customHero) {
+            spellPowerText = I2S(R2I(Math.ceil(100 * customHero.spellPower))) + "%";
+          }
+        }
+
         const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
         const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
         const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
-          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, currentSp, maxSp, percentSp, level, percentXp);
+          updateSelectedUnitBars(
+            unit, 
+            currentHp, maxHp, 
+            currentMp, maxMp, 
+            currentSp, maxSp, percentSp, 
+            spellPowerText,
+            level, percentXp
+          );
           BlzFrameSetText(BlzGetFrameByName("unitNameText", 0), nameString);
           BlzFrameSetText(BlzGetFrameByName("heroArmorText", 0), armrString);
           BlzFrameSetText(BlzGetFrameByName("heroBaseMSText", 0), msString);
@@ -1094,11 +1114,11 @@ export function CustomPlayerTest() {
     DestroyTimer(GetExpiredTimer());
   });
   TimerStart(CreateTimer(), 60, false, () => {
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 
-      10, 
-      "|cffff2020Zanzo Dash Toggle Disabled|r"
-    );
+    // DisplayTimedTextToForce(
+    //   bj_FORCE_ALL_PLAYERS, 
+    //   10, 
+    //   "|cffff2020Zanzo Dash Toggle Disabled|r"
+    // );
     DisableTrigger(zanzoToggleTrigger);
     DestroyTimer(GetExpiredTimer());
   });

@@ -860,6 +860,11 @@ export module SoundHelper {
         }
         break;
       
+      case Id.ultraInstinct:
+      case Id.masteredUltraInstinct:
+        playSoundOnUnit(unit, "Audio/Effects/UltraInstinct.mp3", 9534);
+        break;
+
       // gohan
       case Id.twinDragonShot:
         if (unitId == Id.gohan) {
@@ -891,6 +896,16 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/GohanGreatSaiyaman.mp3", 1896);
         }
         playSoundOnUnit(unit, "Audio/Effects/JusticePose.mp3", 1645);
+        break;
+
+      case Id.beastGohan:
+        playSoundOnUnit(unit, "Audio/Voice/Gohan/Beast.mp3", 5496);
+        break;
+      
+      case Id.specialBeastCannon:
+        if (unitId == Id.gohan) {
+          playSoundOnUnit(unit, "Audio/Voice/Gohan/BeastSBC.mp3", 5952);
+        }
         break;
 
       case Id.superDragonFlight:
@@ -1469,6 +1484,20 @@ export module SoundHelper {
           }
         }
         break;
+      
+      case Id.lightGrenade:
+        if (unitId == Id.piccolo) {
+          playSoundOnUnit(unit, "Audio/Voice/Piccolo/LightGrenade.mp3", 1032);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+        break;
+      
+      case Id.kyodaika:
+        if (unitId == Id.piccolo) {
+          playSoundOnUnit(unit, "Audio/Voice/Piccolo/Waiting.mp3", 1104);
+        }
+        break;
+
       
       // saitama
       case Id.saitamaNormalPunch:

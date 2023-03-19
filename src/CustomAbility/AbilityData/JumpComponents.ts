@@ -239,4 +239,14 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump waluigi jump",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 33,
+    duration: 33,
+    maxHeight: 500,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]

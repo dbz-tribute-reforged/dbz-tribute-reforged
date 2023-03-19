@@ -5,6 +5,9 @@ import { TextTagHelper } from "Common/TextTagHelper";
 
 export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   protected currentTime: number;
 
   constructor(
@@ -18,6 +21,11 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
     if (this.currentTime == 0) {
       // UnitApplyTimedLife(source, FourCC("BTLF"), this.duration);
     }
@@ -29,6 +37,8 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
     }
     if (ability.isFinishedUsing(this)) {
       this.currentTime = 0;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

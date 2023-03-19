@@ -62,8 +62,8 @@ export class SagaMultiboardRow {
 }
 
 export class SagaMultiboard implements CustomMultiboard {
-  static readonly X_OFFSET = 0.26;
-  static readonly Y_OFFSET = -0.04;
+  static readonly X_OFFSET = 0.3;
+  static readonly Y_OFFSET = -0.016;
 
   public multiboard: multiboard;
   public framehandle: framehandle;

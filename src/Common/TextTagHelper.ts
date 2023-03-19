@@ -32,6 +32,7 @@ export module TextTagHelper {
     playerId: number, 
     unit: unit,
     size: number = 10,
+    duration: number = 3
   ) {
     const showForce = CreateForce();
     tmpPos.setUnit(unit);
@@ -49,8 +50,8 @@ export module TextTagHelper {
       tmpPos.x, 
       tmpPos.y,
       size,
-      5,
-      4,
+      duration,
+      1,
       showForce
     );
     DestroyForce(showForce);

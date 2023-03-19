@@ -63,3 +63,18 @@ export class SPBar extends StatusBarSimpleFrame {
     super(SPBar.frameType, owner, createContext, size, position, statusBar, texture);
   }
 }
+
+export class SpellPowerBar extends StatusBarSimpleFrame {
+  static readonly frameType = "MySpellPowerBar";
+
+  constructor(
+    owner: framehandle,
+    createContext: number,
+    size: Vector2D,
+    position: FramePosition,
+    public statusBar: StatusBarData,
+    texture?: TextureData,
+  ) {
+    super(SpellPowerBar.frameType, owner, createContext, size, position, statusBar, texture);
+  }
+}

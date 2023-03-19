@@ -3,8 +3,11 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class TempAbility implements AbilityComponent, Serializable<TempAbility> {
-  protected hasStarted: boolean;
   protected abilityWasAdded: boolean;
+
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "TempAbility",
@@ -21,13 +24,13 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     public equalizeLevels: boolean = false,
     public linkCooldowns: number = -1,
   ) {
-    this.hasStarted = false;
     this.abilityWasAdded = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       if (this.enableAbility) {
         SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, true);
         if (this.performSwap) {
@@ -68,7 +71,8 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
 
       if (this.enableAbility) {
         SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, false);
@@ -81,12 +85,6 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
           SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, false);
         }
       }
-      if (this.addAbility && this.abilityWasAdded) {
-        UnitRemoveAbility(source, this.newAbility);
-      }
-      if (this.tempPermanence) {
-        UnitMakeAbilityPermanent(source, false, this.newAbility);
-      }
       
       if (this.performSwap && this.linkCooldowns >= 0) {
         BlzStartUnitAbilityCooldown(source, this.oldAbility, 
@@ -98,6 +96,12 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
             )
           )
         );
+      }
+      if (this.addAbility && this.abilityWasAdded) {
+        UnitRemoveAbility(source, this.newAbility);
+      }
+      if (this.tempPermanence) {
+        UnitMakeAbilityPermanent(source, false, this.newAbility);
       }
     }
   }

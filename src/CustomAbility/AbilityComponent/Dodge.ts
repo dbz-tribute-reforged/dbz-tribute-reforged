@@ -16,6 +16,9 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
 
   protected affectedGroup: group;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   // dodge is knocking back the caster from enemy units in a given aoe
   constructor(
     public name: string = "Dodge",
@@ -37,6 +40,11 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
     this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
 
     GroupEnumUnitsInRange(
@@ -80,6 +88,12 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       } else {
         PathingCheck.moveFlyingUnitToCoord(source, this.dodgeDirection);
       }
+    }
+
+    
+    if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

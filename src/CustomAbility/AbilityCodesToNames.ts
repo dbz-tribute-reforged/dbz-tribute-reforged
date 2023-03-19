@@ -25,14 +25,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.vegetaHakaiBarrage, AbilityNames.Vegeta.HAKAI_BARRAGE],
 
     // gohan
-    [Id.unlockPotential, AbilityNames.Gohan.UNLOCK_POTENTIAL],
-    [Id.greatSaiyamanHasArrived, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
-    [Id.potentialUnleashed, AbilityNames.Gohan.POTENTIAL_UNLEASHED],
     [Id.masenko, AbilityNames.Gohan.MASENKO],
     [Id.superMasenko, AbilityNames.Gohan.SUPER_MASENKO],
     [Id.twinDragonShot, AbilityNames.Gohan.TWIN_DRAGON_SHOT],
     [Id.superDragonFlight, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
     [Id.fatherSonKame, AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA],
+    [Id.specialBeastCannon, AbilityNames.Gohan.SPECIAL_BEAST_CANNON],
+    [Id.unlockPotential, AbilityNames.Gohan.UNLOCK_POTENTIAL],
+    [Id.greatSaiyamanHasArrived, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
+    [Id.potentialUnleashed, AbilityNames.Gohan.POTENTIAL_UNLEASHED],
+    [Id.beastGohan, AbilityNames.Gohan.BEAST_GOHAN],
 
     // future trunks
     [Id.finishBuster, AbilityNames.FutureTrunks.FINISH_BUSTER],
@@ -65,6 +67,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.slappyHand, AbilityNames.Piccolo.SLAPPY_HAND],
     [Id.hellzoneGrenade, AbilityNames.Piccolo.HELLZONE_GRENADE],
     [Id.multiForm, AbilityNames.Piccolo.MULTI_FORM],
+    [Id.lightGrenade, AbilityNames.Piccolo.LIGHT_GRENADE],
     [Id.kyodaika, AbilityNames.Piccolo.KYODAIKA],
     // clones version
     [Id.piccoloCloneSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],
@@ -632,6 +635,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.appuleEscape, AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE],
     [Id.appuleVengeance, AbilityNames.Appule.APPULE_VENGEANCE],
     [Id.appuleClones, AbilityNames.Appule.APPULE_CLONES],
+
+    [Id.waluigiFireball, AbilityNames.Waluigi.FIREBALL_1],
+    [Id.waluigiSuperFireball, AbilityNames.Waluigi.FIREBALL_2],
+    [Id.waluigiPiranhaPlant, AbilityNames.Waluigi.PIRANHA_PLANT],
+    [Id.waluigiBomb, AbilityNames.Waluigi.BOMB],
+    [Id.waluigiSpin, AbilityNames.Waluigi.SPIN],
+    [Id.waluigiJump, AbilityNames.Waluigi.JUMP],
 
 
     // items

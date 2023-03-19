@@ -110,7 +110,7 @@ Frame "SIMPLESTATUSBAR" "MyHPBar" {
        SetAllPoints, //copy "MyHPBar"
        Layer "ARTWORK" {
            Texture "MyHPBarBorder" {
-               File "SimpleXpBarBorder", //Default Texture for "MyHPBarBorder"
+               File "SimpleXpBarBorder",
            }
            String "MyHPBarText" INHERITS "MyBarTextTemplate" {
                Text "", //Default Text for "MyHPBarText" which takes over Data from "MyBarTextTemplate"
@@ -133,7 +133,7 @@ Frame "SIMPLESTATUSBAR" "MyMPBar" {
        SetAllPoints, //copy "MyMPBar"
        Layer "ARTWORK" {
            Texture "MyMPBarBorder" {
-               File "SimpleXpBarBorder", //Default Texture for "MyMPBarBorder"
+               File "SimpleXpBarBorder",
            }
            String "MyMPBarText" INHERITS "MyBarTextTemplate" {
                Text "", //Default Text for "MyMPBarText" which takes over Data from "MyBarTextTemplate"
@@ -156,10 +156,33 @@ Frame "SIMPLESTATUSBAR" "MySPBar" {
        SetAllPoints, //copy "MySPBar"
        Layer "ARTWORK" {
            Texture "MySPBarBorder" {
-               File "SimpleXpBarBorder", //Default Texture for "MySPBarBorder"
+               File "SimpleXpBarBorder",
            }
            String "MySPBarText" INHERITS "MyBarTextTemplate" {
                Text "", //Default Text for "MySPBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MySpellPowerBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor05.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MySpellPowerBarBackground"{ //the BACKGROUND Texture named "MySpellPowerBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MySpellPowerBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MySpellPowerBarFrame" { //Child of "MySpellPowerBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MySpellPowerBar"
+       Layer "ARTWORK" {
+           Texture "MySpellPowerBarBorder" {
+               File "SimpleXpBarBorder",
+           }
+           String "MySpellPowerBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MySpellPowerBarText" which takes over Data from "MyBarTextTemplate"
            }
        }
    }

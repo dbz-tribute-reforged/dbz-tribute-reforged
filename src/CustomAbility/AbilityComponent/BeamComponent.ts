@@ -60,6 +60,8 @@ export class BeamComponent implements
 
   protected oldIsBeamClash: boolean | undefined;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "BeamComponent",
@@ -240,7 +242,7 @@ export class BeamComponent implements
       ability.currentTick = this.endTick;
     }
     for (const component of this.components) {
-      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+      if (ability.isReadyToUseComponent(component)) {
         component.performTickAction(ability, input, this.beamUnit);
       }
     }
@@ -381,6 +383,11 @@ export class BeamComponent implements
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
     if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
@@ -401,15 +408,18 @@ export class BeamComponent implements
           this.moveBeamUnit(ability, input);
         }
         for (const component of this.components) {
-          // print(ability.currentTick, component.name, ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick));
-          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          if (ability.isReadyToUseComponent(component)) {
             component.performTickAction(ability, input, this.beamUnit);
           }
         }
         input.isBeamClash = this.oldIsBeamClash;
       }
     }
+    
     if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
+
       if (!this.hasExploded){
         if (this.explodeOnDeath) {
           this.fakeExplode(ability, input);

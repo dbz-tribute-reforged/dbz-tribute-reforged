@@ -4,7 +4,9 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class AnimationComponent implements AbilityComponent, Serializable<AnimationComponent> {
 
-  protected hasStarted: boolean;
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   
   constructor(
     public name: string = "AnimationComponent",
@@ -18,12 +20,13 @@ export class AnimationComponent implements AbilityComponent, Serializable<Animat
     public onlyApplyAtStart: boolean = true,
     public resetAnimation: boolean = false,
   ) {
-    this.hasStarted = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted || !this.onlyApplyAtStart) {
-      this.hasStarted = true;
+    if (!this.isStarted || !this.onlyApplyAtStart) {
+      this.isStarted = true;
+      this.isFinished = false;
+
       if (this.animationSpeed > 0) {
         SetUnitTimeScale(source, this.animationSpeed);
       }
@@ -38,7 +41,8 @@ export class AnimationComponent implements AbilityComponent, Serializable<Animat
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
       if (this.animationSpeed > 0) {
         SetUnitTimeScale(source, 1.0);
       }

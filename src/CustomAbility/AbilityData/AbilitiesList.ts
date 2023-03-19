@@ -95,7 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 70% of incoming damage until more than 4 * AGI damage is blocked.|n" + 
+        "Block 70% of incoming damage until more than 4 * AGI damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },
@@ -741,6 +742,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Gohan.SPECIAL_BEAST_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGohanBeastSBC.blp",
+      disabled: "BTNGohanBeastSBC.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.SPECIAL_BEAST_CANNON,
+      body: 
+        AbilityNames.Gohan.SPECIAL_BEAST_CANNON
+    },
+    components: [
+      { name: "channel caster 2s" },
+      { name: "multi beam special beast cannon" },
+      { name: "multi special beast cannon caster aoe" },
+      { name: "sfx special beast cannon caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Gohan.UNLOCK_POTENTIAL,
     currentCd: 0,
     maxCd: 1,
@@ -820,8 +851,38 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp potential unleashed" },
-      { name: "dash ground forward potential unleashed" },
+      { name: "dash ground forward 1dist" },
       { name: "sfx unlock potential" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gohan.BEAST_GOHAN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBeastGohan.blp",
+      disabled: "BTNBeastGohan.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.BEAST_GOHAN,
+      body: 
+        AbilityNames.Gohan.BEAST_GOHAN
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+      { name: "temp ability special beast cannon" },
+      { name: "block beast gohan" },
+      { name: "sfx beast gohan" },
     ],
   },
   // -------------------------------------------
@@ -1390,6 +1451,35 @@ export const AbilitiesList = [
     components: [
       { name: "multi hellzone grenade" },
       { name: "multi hellzone grenade 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Piccolo.LIGHT_GRENADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloLightGrenade.blp",
+      disabled: "BTNPiccoloLightGrenade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Piccolo.LIGHT_GRENADE,
+      body: 
+        AbilityNames.Piccolo.LIGHT_GRENADE
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "multi light grenade" },
+      { name: "sfx light grenade caster" },
     ],
   },
   // -------------------------------------------
@@ -2009,18 +2099,18 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
-      enabled: "BTNVidel.blp",
-      disabled: "BTNVidel.blp",
+      enabled: "",
+      disabled: "",
     },
     tooltip: {
-      title:  AbilityNames.Videl.KICK,
+      title:  "",
       body: 
-        AbilityNames.Videl.KICK,
+        "",
     },
     components: [
-      { name: "channel caster default" },
+      { name: "anim videl flying kick" },
       { name: "dash ground point videl flying kick" },
       { name: "damage videl flying kick dps" },
       { name: "damage videl flying kick explosion" },
@@ -4563,7 +4653,7 @@ export const AbilitiesList = [
         AbilityNames.Mario.JUMP,
     },
     components: [
-      { name: "dash ground forward mario jump" },
+      { name: "dash ground forward 2dist" },
     ],
   },
   // -------------------------------------------
@@ -4617,7 +4707,7 @@ export const AbilitiesList = [
         AbilityNames.Mario.SPIN_JUMP,
     },
     components: [
-      { name: "dash ground forward spin jump" },
+      { name: "dash ground forward 2dist" },
       { name: "damage spin jump dps" },
     ],
   },
@@ -8512,7 +8602,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 150,
-    updateRate: 0.03,
+    updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -8530,6 +8620,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward 5dist" },
       { name: "multi jaco rocket boots" },
+      { name: "sfx jaco rocket boots" },
     ],
   },
   // -------------------------------------------
@@ -8556,7 +8647,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.SUPER_ELITE_COMBO
     },
     components: [
-      { name: "dash ground point 15dist" },
+      { name: "dash ground point 20dist" },
       { name: "damage jaco super elite combo explosion" },
       { name: "damage jaco super elite combo explosion inner" },
       { name: "jump jaco super elite combo" },
@@ -12660,6 +12751,178 @@ export const AbilitiesList = [
     },
     components: [
       { name: "buff illusion appule clones" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.FIREBALL_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi fireball 1" },
+      { name: "temp ability waluigi fireball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.FIREBALL_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi fireball 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.PIRANHA_PLANT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi piranha plant" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 55,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim waluigi spin" },
+      { name: "dash ground forward 1dist" },
+      { name: "debuff curse waluigi spin" },
+      { name: "damage waluigi spin dps" },
+      { name: "knockback waluigi spin"},
+      { name: "sfx waluigi spin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.JUMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "jump waluigi jump" },
+      { name: "dash ground forward 1dist" },
+      { name: "damage waluigi jump explosion" },
+      { name: "block waluigi jump" },
+      { name: "sfx waluigi jump" },
     ],
   },
   // -------------------------------------------
