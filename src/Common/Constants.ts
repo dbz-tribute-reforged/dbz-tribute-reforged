@@ -186,7 +186,7 @@ export module DebuffAbilities {
   export const LIGHTNING_3_SLOW = FourCC("A0WN");
   export const TABLE_FLIP = FourCC("A03U");
   export const DK_GROUND_POUND_SLOW = FourCC("A06E");
-  export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A00P');
+  export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
 
   export const SLOW_GENERIC_25_PCT = FourCC('A117');
   export const SLOW_GENERIC_50_PCT = FourCC('A118');
@@ -930,7 +930,7 @@ export module Id {
   export const waluigiSuperFireball = FourCC("A11O");
   export const waluigiPiranhaPlant = FourCC("A11P");
   export const waluigiBomb = FourCC("A11Q");
-  export const waluigiSpin = FourCC("A11U");
+  export const waluigiSpin = FourCC("A11R");
   export const waluigiJump = FourCC("A11S");
 
   export const yamchaR = FourCC("E010");

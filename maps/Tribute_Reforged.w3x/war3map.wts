@@ -139827,6 +139827,23 @@ STRING 21441
 Z
 }
 
+STRING 21442
+// Units: H0AO (Tennis Player), Ubertip (Tooltip - Extended)
+{
+A powerful trickster hero with access to strong disables.
+
+|cffff00ffLean:|r +1000 vision range, 25% evasion.
+|cffff00ffMean:|r 25% crit for 2x damage.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+|cff808080"I'M-A NUMBER ONE! Heh, hehehehe!"|r
+}
+
 STRING 21448
 // Abilities: A11N (Fireball), Tip (Tooltip - Normal)
 {
@@ -140622,23 +140639,6 @@ A close-ranged melee specialist that can deal devastating amounts of damage if s
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 21610
-// Units: H0AO (Tennis Player), Ubertip (Tooltip - Extended)
-{
-A powerful trickster hero with access to strong disables.
-
-|cffff00ffLean:|r +1000 vision range, 25% evasion.
-|cffff00ffMean:|r 25% crit for 2x damage.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-|cff808080It's a me! Letsa go!|r
 }
 
 STRING 21611

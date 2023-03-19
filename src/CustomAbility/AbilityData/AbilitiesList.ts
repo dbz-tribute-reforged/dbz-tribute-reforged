@@ -95,7 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 70% of incoming damage until more than 4 * AGI damage is blocked.|n" + 
+        "Block 70% of incoming damage until more than 4 * AGI damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },

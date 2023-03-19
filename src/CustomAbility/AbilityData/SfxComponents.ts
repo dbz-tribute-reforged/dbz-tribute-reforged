@@ -31286,7 +31286,7 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
-    name: "sfx crono cleave", 
+    name: "sfx waluigi jump", 
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,

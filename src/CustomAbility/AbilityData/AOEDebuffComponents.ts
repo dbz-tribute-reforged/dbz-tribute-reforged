@@ -1152,7 +1152,7 @@ export const AOEDebuffComponents = [
   },
   {
     name: "debuff stun waluigi piranha plant",
-    repeatInterval: 1,
+    repeatInterval: 3,
     startTick: 33,
     endTick: -1,
     debuffSource: AOEDebuff.SOURCE_UNIT,
