@@ -2869,7 +2869,6 @@ export module SimpleSpellSystem {
     SetUnitAnimationByIndex(unit, 12);
 
     TimerStart(initTimer, delay, false, () => {
-      ResetUnitAnimation(unit);
       SetUnitAnimationByIndex(unit, 13);
       DestroyTimer(initTimer);
     });

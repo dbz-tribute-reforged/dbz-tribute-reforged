@@ -23,7 +23,7 @@ import { FrameHelper } from 'Common/FrameHelper';
 import { Constants } from 'Common/Constants';
 import { BasicTitledBackdrop } from './BasicTitledBackdrop';
 import { BasicTextFrame } from './BasicTextFrame';
-import { HPBar, MPBar, SPBar, LevelBar } from './MyBars';
+import { HPBar, MPBar, SPBar, LevelBar, SpellPowerBar } from './MyBars';
 
 
 // need to add promise + error catching
@@ -252,35 +252,48 @@ export function CustomUiTest() {
 
 	// status bars
 	// BJDebugMsg("Setting up status bars");
+	const bar_x_offset = -0.2;
+	const bar_base = 0.13;
+	const bar_width = 0.26;
+	const bar_height = 0.014;
+
 	let hpBar = new HPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.18),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base+bar_height*2),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let mpBar = new MPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base+bar_height),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let spBar = new SPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
+		new Vector2D(bar_width, bar_height),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOM, bar_x_offset, bar_base),
 		new StatusBarData(0, 0, 100)
 	);
 
 	let levelBar = new LevelBar(
 		grandpa, 
 		0,
-		new Vector2D(0.06, 0.015),
-		new FramePosition(FRAMEPOINT_TOPRIGHT, spBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
+		new Vector2D(0.05, 0.015),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, spBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.01, 0.0),
+		new StatusBarData(0, 0, 100)
+	)
+
+	let spellPowerBar = new SpellPowerBar(
+		grandpa, 
+		0,
+		new Vector2D(0.05, 0.015),
+		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.00, 0.00),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -299,7 +312,7 @@ export function CustomUiTest() {
 		grandpa,
 		0,
 		new Vector2D(Constants.uiButtonSize * (Constants.maxSubAbilities) + 0.003, Constants.uiButtonSize),
-		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
+		new FramePosition(FRAMEPOINT_TOPLEFT, hpBar.frameHandle, FRAMEPOINT_TOPRIGHT, 0.0, 0.0),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {

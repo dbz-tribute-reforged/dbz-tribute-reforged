@@ -138552,26 +138552,6 @@ A versatile ranged hero with high mobility and massive damage output.
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
 }
 
-STRING 21271
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 5s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
-}
-
-STRING 21272
-// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 5s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
-}
-
 STRING 21273
 // Abilities: A10Z (Super Elite Combo), Ubertip (Tooltip - Normal - Extended)
 {
@@ -139251,6 +139231,26 @@ A heavy punch.
 |cffffff00Use this to start a strength based combo.
 |cff00ff00Damage: Str|r
 |cff00ffffCooldown: <A0RE,Cool10,.> seconds|r
+}
+
+STRING 21358
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 4s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21359
+// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 4s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
 }
 
 STRING 21360

@@ -9,6 +9,9 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
 
   protected currentBonus: number;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "SpellAmp",
     public repeatInterval: number = 1,
@@ -21,6 +24,11 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
     if (
       (this.currentBonus >= 0 && this.currentBonus < this.bonus)
       ||
@@ -37,6 +45,8 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
     if (ability.isFinishedUsing(this)) {
       input.caster.removeSpellPower(this.currentBonus);
       this.currentBonus = 0;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

@@ -4,6 +4,9 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class SelfDestruct implements AbilityComponent, Serializable<SelfDestruct> {
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "SelfDestruct",
     public repeatInterval: number = 1,
@@ -14,7 +17,17 @@ export class SelfDestruct implements AbilityComponent, Serializable<SelfDestruct
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
+    }
+    
     KillUnit(source);
+    
+    if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
+    }
   }
 
   cleanup() {

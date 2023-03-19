@@ -9,7 +9,9 @@ import { Constants } from "Common/Constants";
 
 export class Barrier implements AbilityComponent, Serializable<Barrier> {
 
-  protected hasStarted: boolean;
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   protected sourceCoords: Vector2D;
   protected insideUnits: group;
   protected outsideUnits: group;
@@ -29,7 +31,6 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     public affectAllies: boolean = false,
     public canWalkOut: boolean = false,
   ) {
-    this.hasStarted = false;
     this.sourceCoords = new Vector2D();
     this.insideUnits = CreateGroup();
     this.outsideUnits = CreateGroup();
@@ -42,8 +43,9 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
 
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       GroupClear(this.insideUnits);
       this.innerAOE = this.aoe - Constants.beamSpawnOffset;
       this.outerAOE = this.aoe + Constants.beamSpawnOffset + this.repelOutsidersSpeed;
@@ -127,7 +129,8 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   }
 
   reset() {
-    this.hasStarted = false;
+    this.isStarted = false;
+    this.isFinished = true;
     GroupClear(this.insideUnits);
     GroupClear(this.outsideUnits);
   }

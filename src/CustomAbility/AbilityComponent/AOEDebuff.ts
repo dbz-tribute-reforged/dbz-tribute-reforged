@@ -16,6 +16,9 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
 
   protected affectedGroup: group;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "AOEDebuff",
     public repeatInterval: number = 1,
@@ -50,7 +53,9 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.setDebuffSourceToTargettedPoint(input, source);
 
-    if (ability.currentTick == this.startTick) {
+    if (!this.isStarted || ability.currentTick == this.startTick) {
+      this.isStarted = true;
+      this.isFinished = false;
       this.castDummy = CreateUnit(
         input.casterPlayer, 
         Constants.dummyCasterId, 
@@ -101,6 +106,8 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick
     if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
       this.reset();
     }
   }

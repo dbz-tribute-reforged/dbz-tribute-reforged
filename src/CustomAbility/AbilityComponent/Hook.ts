@@ -13,7 +13,6 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   static readonly DIRECTION_FORWARDS = 0;
   static readonly DIRECTION_BACKWARDS = 1;
 
-  protected startedHook: boolean;
   protected currentRange: number;
   protected hookTarget: Vector2D;
   protected hookSource: Vector2D;
@@ -27,6 +26,9 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
 
   protected hookedGroup: group;
   protected pierceGroup: group;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "Hook",
@@ -48,7 +50,6 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     public useLastCastPoint: boolean = true,
     public sfxList: SfxData[] = [],
   ) {
-    this.startedHook = false;
     this.currentRange = 0;
     this.hookTarget = new Vector2D();
     this.hookSource = new Vector2D();
@@ -146,8 +147,9 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   }
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.startedHook) {
-      this.startedHook = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       if (this.useLastCastPoint) {
         this.hookTarget.setVector(input.castPoint);
       } else {
@@ -173,7 +175,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       );
     }
 
-    if (this.startedHook) {
+    if (this.isStarted) {
       if (
         this.currentRange < this.maxRange && 
         !this.hookedUnit && 
@@ -234,7 +236,8 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   reset() {
     GroupClear(this.pierceGroup);
     this.currentRange = 0;
-    this.startedHook = false;
+    this.isStarted = false;
+    this.isFinished = true;
     if (this.hookedUnit) {
       PauseUnit(this.hookedUnit, false);
     }

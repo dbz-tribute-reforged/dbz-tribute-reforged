@@ -28,6 +28,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi special beast cannon caster aoe", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 40,
+    angleMin: 0,
+    angleMax: 360,
+    forceMinDistance: 250,
+    forceMaxDistance: 600,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.RANDOM_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: true,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "sfx special beast cannon caster aoe" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi beam special beast cannon", 
     repeatInterval: 1, 
     startTick: 0,

@@ -16,7 +16,9 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   static readonly YAW_SOURCE_TO_TARGET = 1;
 
   protected sfxCoords: Vector2D;
-  protected sfxStarted: boolean;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "SfxComponent",
@@ -31,7 +33,6 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     public attachedSfxList: SfxData[] = [],
   ) {
     this.sfxCoords = new Vector2D();
-    this.sfxStarted = false;
   }
 
   getActualTargetPoint(input: CustomAbilityInput): Vector2D {
@@ -46,9 +47,10 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.sfxStarted) {
+    if (!this.isStarted) {
       this.cleanup();
-      this.sfxStarted = true;
+      this.isStarted = true;
+      this.isFinished = false;
       if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_FIXED) {
         this.setSfxCoordsToTargettedPoint(input);
       }
@@ -100,7 +102,8 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
 
     if (ability.isFinishedUsing(this)) {
       this.cleanup();
-      this.sfxStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

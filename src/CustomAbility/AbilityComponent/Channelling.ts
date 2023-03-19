@@ -11,7 +11,8 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   protected isChannelling: boolean;
   protected finishedChannel: boolean;
 
-  protected hasStarted: boolean;
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "Channelling",
@@ -32,8 +33,9 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       this.isChannelling = true;
       this.finishedChannel = false;
     }
@@ -54,8 +56,8 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.isChannelling = false;
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

@@ -765,6 +765,7 @@ export const AbilitiesList = [
     components: [
       { name: "channel caster 2s" },
       { name: "multi beam special beast cannon" },
+      { name: "multi special beast cannon caster aoe" },
       { name: "sfx special beast cannon caster" },
     ],
   },

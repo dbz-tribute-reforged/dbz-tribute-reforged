@@ -7,10 +7,12 @@ import { Vector2D } from "Common/Vector2D";
 
 export class Jump implements AbilityComponent, Serializable<Jump> {
 
-  protected hasStarted: boolean;
   protected currentTime: number;
   protected timeRatio: number;
   protected currentHeight: number;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "Jump",
@@ -22,16 +24,16 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
     public useSpeedToCastPoint: boolean = false,
     public speed: number = -1,
   ) {
-    this.hasStarted = false;
     this.currentTime = 0;
     this.timeRatio = 1;
     this.currentHeight = 0;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted) {  
+    if (!this.isStarted) {  
       UnitHelper.giveUnitFlying(source);
-      this.hasStarted = true;
+      this.isStarted = true;
+      this.isFinished = false;
       if (this.useSpeedToCastPoint && this.speed >= 0) {
         this.duration = ability.currentTick + Math.floor(
           CoordMath.distance(
@@ -56,7 +58,8 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
   }
 
   cleanup() {
-    this.hasStarted = false;
+    this.isStarted = false;
+    this.isFinished = true;
     this.currentTime = 0;
   }
   

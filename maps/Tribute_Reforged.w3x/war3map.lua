@@ -895,6 +895,7 @@ gg_trg_Schala_Dream_Devourer_Cast = nil
 gg_trg_Super_Sonic = nil
 gg_trg_Guts_Berserker_Armor = nil
 gg_trg_Guts_Beast_of_Darkness = nil
+gg_trg_Gohan_Beast = nil
 gg_trg_show_me_the_ss = nil
 gg_trg_show_me_the_ss_Copy = nil
 gg_trg_Test_LVL_command = nil
@@ -1066,7 +1067,6 @@ gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Gohan_Beast = nil
 function InitGlobals()
 local i = 0
 

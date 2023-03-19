@@ -13,11 +13,13 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
 
   static readonly INFINITE_RANGE = -1;
 
-  protected hasStarted: boolean;
   protected hasTeleported: boolean;
   protected originalPoint: Vector2D;
   protected sourcePoint: Vector2D;
   protected teleportPoint: Vector2D;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
   
   constructor(
     public name: string = "Teleport",
@@ -29,7 +31,6 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
     public teleportTarget: number = Teleport.TARGET_POINT,
     public maxRange: number = Teleport.INFINITE_RANGE,
   ) {
-    this.hasStarted = false;
     this.hasTeleported = false;
     this.originalPoint = new Vector2D();
     this.sourcePoint = new Vector2D();
@@ -86,8 +87,9 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       this.originalPoint.x = GetUnitX(source);
       this.originalPoint.y = GetUnitY(source);
     }
@@ -97,7 +99,8 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
       this.hasTeleported = false;
     }
   }

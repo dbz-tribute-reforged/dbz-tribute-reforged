@@ -125,12 +125,12 @@ export class ExperienceManager {
     this.setupRewardXPTrigger(this.rewardXPTrigger);
 
 
-    TimerStart(CreateTimer(), 60.0, true, () => {
-      if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
-        GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
-        ForGroup(Globals.tmpUnitGroup, give_auto_exp);
-      }
-    });
+    // TimerStart(CreateTimer(), 60.0, true, () => {
+    //   if (Globals.isMainGameStarted && !Globals.isFBSimTest) {
+    //     GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetPlayableMapRect(), null);
+    //     ForGroup(Globals.tmpUnitGroup, give_auto_exp);
+    //   }
+    // });
 
     return this;
   }

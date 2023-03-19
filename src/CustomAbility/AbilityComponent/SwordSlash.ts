@@ -18,6 +18,9 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
 
   protected affectedGroup: group;
 
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
+
   constructor(
     public name: string = "SwordSlash",
     public repeatInterval: number = 1,
@@ -75,7 +78,10 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (ability.currentTick == this.startTick) {
+    
+    if (!this.isStarted || ability.currentTick == this.startTick) {
+      this.isStarted = true;
+      this.isFinished = false;
       this.previousCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       this.nextDamageTick = 0;
     }
@@ -143,6 +149,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
 
   reset() {
     this.nextDamageTick = 0;
+    this.isStarted = false;
+    this.isFinished = true;
     AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
     AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
   }

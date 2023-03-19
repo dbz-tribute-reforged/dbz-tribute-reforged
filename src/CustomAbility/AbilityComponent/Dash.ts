@@ -35,7 +35,9 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   protected targetCoord: Vector2D;
   protected distanceTravelled: number;
   protected distanceMult: number;
-  protected hasStarted: boolean;
+  
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "Dash",
@@ -55,12 +57,12 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.targetCoord = new Vector2D();
     this.distanceTravelled = 0;
     this.distanceMult = 0;
-    this.hasStarted = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
     }
     
     this.currentCoord.setPos(GetUnitX(source), GetUnitY(source));
@@ -263,12 +265,14 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       }
 
       this.distanceTravelled = 0;
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
   
   cleanup() {
-    this.hasStarted = false;
+    this.isStarted = false;
+    this.isFinished = true;
   }
 
   clone(): AbilityComponent {

@@ -25,7 +25,6 @@ export class MultiComponent implements
   static readonly SOURCE_TARGET_POINT = 2;
   static readonly SOURCE_SPAWNED_BEAM = 3;
 
-  protected hasStarted: boolean;
   protected angleCurrent: number;
   protected angleDirection: number;
   protected angleRange: number;
@@ -42,6 +41,9 @@ export class MultiComponent implements
 
   protected targettedPoint: Vector2D;
   protected newCoord: Vector2D;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = true;
 
   constructor(
     public name: string = "MultiComponent",
@@ -65,7 +67,6 @@ export class MultiComponent implements
     public whichTargetPoint: number = MultiComponent.TARGET_POINT_TARGET,
     public components: AbilityComponent[] = [],
   ) {
-    this.hasStarted = false;
     this.angleCurrent = 0;
     this.angleDirection = 1;
     this.angleRange = 0;
@@ -153,7 +154,7 @@ export class MultiComponent implements
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.fixedSourceCoords || !this.hasStarted) {
+    if (!this.fixedSourceCoords || !this.isStarted) {
       if (this.targetSource == MultiComponent.SOURCE_CASTER) {
         this.sourceCoords.setUnit(source);
       } else if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT) {
@@ -177,8 +178,9 @@ export class MultiComponent implements
       }
     }
 
-    if (!this.hasStarted) {
-      this.hasStarted = true;
+    if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       
       if (this.startAtMax) {
         this.angleCurrent = this.angleMax;
@@ -308,7 +310,8 @@ export class MultiComponent implements
       }
       this.activeComponents.splice(0, this.activeComponents.length);
       this.replacementCoords.clear();
-      this.hasStarted = false;
+      this.isStarted = false;
+      this.isFinished = true;
     }
   }
 

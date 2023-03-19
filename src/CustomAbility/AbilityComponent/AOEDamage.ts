@@ -26,10 +26,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly INT_DAMAGE_MULT_MAX = 1.25;
 
   protected damageCoords: Vector2D;
-  protected damageStarted: boolean;
 
   protected damagedTargets: Map<unit, number>;
   protected damagedGroup: group;
+
+  public isStarted: boolean = false;
+  public isFinished: boolean = false;
 
   constructor(
     public name: string = "AOEDamage",
@@ -60,7 +62,6 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public buffId: number = 0,
   ) {
     this.damageCoords = new Vector2D(0, 0);
-    this.damageStarted = false;
     this.damagedTargets = new Map();
     this.damagedGroup = CreateGroup();
   }
@@ -317,10 +318,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (
-      !this.damageStarted || 
+      !this.isStarted || 
       ability.currentTick == this.startTick
     ) {
-      this.damageStarted = true;
+      this.isStarted = true;
+      this.isFinished = false;
+      
       this.damagedTargets.clear();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
@@ -388,7 +391,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   reset() {
-    this.damageStarted = false;
+    this.isStarted = false;
+    this.isFinished = true;
     this.damagedTargets.clear();
   }
 
