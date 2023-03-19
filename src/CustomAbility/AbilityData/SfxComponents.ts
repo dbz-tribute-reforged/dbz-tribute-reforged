@@ -31093,7 +31093,7 @@ export const SfxComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 0.5,
-        endScale: 2.5,
+        endScale: 3.0,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
