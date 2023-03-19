@@ -570,12 +570,14 @@ export function CustomPlayerTest() {
         agility += "|r";
         intelligence += "|r";
 
+        let spellPowerText = "100%";
         const unitOwner = GetOwningPlayer(unit);
         const unitOwnerId = GetPlayerId(unitOwner);
-        const customHero = Globals.customPlayers[unitOwnerId].getCustomHero(unit);
-        let spellPowerText = "0";
-        if (customHero) {
-          spellPowerText = I2S(R2I(Math.ceil(100 * customHero.spellPower)));
+        if (unitOwnerId < Constants.maxActivePlayers) {
+          const customHero = Globals.customPlayers[unitOwnerId].getCustomHero(unit);
+          if (customHero) {
+            spellPowerText = I2S(R2I(Math.ceil(100 * customHero.spellPower))) + "%";
+          }
         }
 
         const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);

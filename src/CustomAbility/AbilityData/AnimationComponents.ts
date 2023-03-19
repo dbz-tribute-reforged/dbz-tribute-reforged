@@ -1,6 +1,18 @@
 
 export const AnimationComponents = [
   {
+    name: "anim videl flying kick",
+    repeatInterval: 6,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 8,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
+  {
     name: "anim crono cyclone",
     repeatInterval: 1,
     startTick: 0,
@@ -127,6 +139,18 @@ export const AnimationComponents = [
     endTick: -1,
     animationSpeed: 0,
     animationIndex: 11,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
+  {
+    name: "anim waluigi spin",
+    repeatInterval: 3,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 8,
     animationString: "",
     addAnimationProperty: "",
     onlyApplyAtStart: false,

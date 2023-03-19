@@ -2098,18 +2098,18 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
-      enabled: "BTNVidel.blp",
-      disabled: "BTNVidel.blp",
+      enabled: "",
+      disabled: "",
     },
     tooltip: {
-      title:  AbilityNames.Videl.KICK,
+      title:  "",
       body: 
-        AbilityNames.Videl.KICK,
+        "",
     },
     components: [
-      { name: "channel caster default" },
+      { name: "anim videl flying kick" },
       { name: "dash ground point videl flying kick" },
       { name: "damage videl flying kick dps" },
       { name: "damage videl flying kick explosion" },
@@ -4652,7 +4652,7 @@ export const AbilitiesList = [
         AbilityNames.Mario.JUMP,
     },
     components: [
-      { name: "dash ground forward mario jump" },
+      { name: "dash ground forward 2dist" },
     ],
   },
   // -------------------------------------------
@@ -4706,7 +4706,7 @@ export const AbilitiesList = [
         AbilityNames.Mario.SPIN_JUMP,
     },
     components: [
-      { name: "dash ground forward spin jump" },
+      { name: "dash ground forward 2dist" },
       { name: "damage spin jump dps" },
     ],
   },
@@ -12750,6 +12750,177 @@ export const AbilitiesList = [
     },
     components: [
       { name: "buff illusion appule clones" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.FIREBALL_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi fireball 1" },
+      { name: "temp ability waluigi fireball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.FIREBALL_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi fireball 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.PIRANHA_PLANT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi piranha plant" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam waluigi bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 55,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim waluigi spin" },
+      { name: "dash ground forward 1dist" },
+      { name: "debuff curse waluigi spin" },
+      { name: "damage waluigi spin dps" },
+      { name: "knockback waluigi spin"},
+      { name: "sfx waluigi spin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Waluigi.JUMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "jump waluigi jump" },
+      { name: "dash ground forward 1dist" },
+      { name: "damage waluigi jump" },
+      { name: "block waluigi jump" },
     ],
   },
   // -------------------------------------------

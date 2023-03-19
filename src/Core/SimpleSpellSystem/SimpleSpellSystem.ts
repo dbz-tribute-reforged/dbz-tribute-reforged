@@ -2818,6 +2818,8 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(unit);
     const playerId = GetPlayerId(player);
 
+    if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) > 0) return;
+
     const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
     if (!customHero) return;
 

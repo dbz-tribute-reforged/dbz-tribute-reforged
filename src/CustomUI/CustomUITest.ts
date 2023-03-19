@@ -62,6 +62,8 @@ export function CustomUiTest() {
 	const chatButtonHandle = BlzGetFrameByName("UpperButtonBarChatButton", 0);
 	const defaultToolTipPosition = new FramePosition(FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOMRIGHT, 0, 0.1639);
 	
+	BlzEnableUIAutoPosition(false);
+
 	/*
 		constant textaligntype TEXT_JUSTIFY_TOP = ConvertTextAlignType(0)
 		constant textaligntype TEXT_JUSTIFY_MIDDLE = ConvertTextAlignType(1)
@@ -321,7 +323,7 @@ export function CustomUiTest() {
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
   BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), 0 + " / " + 0);
 	BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
-	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), "0");
+	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), "100%");
 	
 	const abilityHotBar = new AbilityButtonHotbar(
 		"abilityButtonHotBar", 

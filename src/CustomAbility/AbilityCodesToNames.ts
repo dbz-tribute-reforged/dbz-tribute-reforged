@@ -637,7 +637,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.appuleClones, AbilityNames.Appule.APPULE_CLONES],
 
     [Id.waluigiFireball, AbilityNames.Waluigi.FIREBALL_1],
-    [Id.marioSuperFireball, AbilityNames.Waluigi.FIREBALL_2],
+    [Id.waluigiSuperFireball, AbilityNames.Waluigi.FIREBALL_2],
     [Id.waluigiPiranhaPlant, AbilityNames.Waluigi.PIRANHA_PLANT],
     [Id.waluigiBomb, AbilityNames.Waluigi.BOMB],
     [Id.waluigiSpin, AbilityNames.Waluigi.SPIN],
