@@ -132,4 +132,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 12,
   },
+  {
+    name: "timed life waluigi fireball", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 44,
+  },
 ];

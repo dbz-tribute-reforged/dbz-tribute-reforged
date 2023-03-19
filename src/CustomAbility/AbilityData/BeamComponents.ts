@@ -9150,7 +9150,7 @@ export const BeamComponents = [
     name: "beam waluigi fireball 1",
     repeatInterval: 1,
     startTick: 0,
-    endTick: 44,
+    endTick: -1,
     beamHpMult: BASE_DMG.KAME_DPS * 0.6,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_FAST,
@@ -9179,6 +9179,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "timed life waluigi fireball" },
       { name: "damage beam waluigi fireball dps" },
       { name: "debuff slow waluigi fireball 1" },
       { name: "jump beam mario fireball 1" },

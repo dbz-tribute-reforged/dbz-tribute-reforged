@@ -578,7 +578,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2.5,
   },
-  // videl flying kick
+  // // videl flying kick
+  // {
+  //   name: "dash ground point videl flying kick",
+  //   repeatInterval: 1, 
+  //   startTick: 0,
+  //   endTick: -1,
+  //   targetDirection: Dash.DIRECTION_TARGET_POINT,
+  //   dashType: Dash.DASH_TYPE_GROUND,
+  //   checkPreviousCoord: false,
+  //   useLastCastPoint: true,
+  //   angleOffset: 0,
+  //   distance: 45,
+  // },
   {
     name: "dash ground point videl flying kick",
     repeatInterval: 1, 
@@ -587,9 +599,9 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_GROUND,
     checkPreviousCoord: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     angleOffset: 0,
-    distance: 45,
+    distance: 35,
   },
   // whirlwind tempest
   {
