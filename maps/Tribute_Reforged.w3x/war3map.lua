@@ -58507,23 +58507,13 @@ function Trig_Transformations_Waluigi_Func018C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func019C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 350)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Waluigi_Func021Func002Func003C()
+function Trig_Transformations_Waluigi_Func020Func002Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -58533,14 +58523,14 @@ end
 return false
 end
 
-function Trig_Transformations_Waluigi_Func021Func002C()
-if (not Trig_Transformations_Waluigi_Func021Func002Func003C()) then
+function Trig_Transformations_Waluigi_Func020Func002C()
+if (not Trig_Transformations_Waluigi_Func020Func002Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func021C()
+function Trig_Transformations_Waluigi_Func020C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -58599,17 +58589,12 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Waluigi_Func018C()) then
-udg_StatMultReal = 2.60
+udg_StatMultReal = 2.75
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Waluigi_Func019C()) then
-udg_StatMultReal = 2.60
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Waluigi_Func021C()) then
-if (Trig_Transformations_Waluigi_Func021Func002C()) then
+if (Trig_Transformations_Waluigi_Func020C()) then
+if (Trig_Transformations_Waluigi_Func020Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H0AO')
