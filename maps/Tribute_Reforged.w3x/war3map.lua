@@ -301,6 +301,7 @@ udg_TransformationSkinTimer = nil
 udg_FriezaBlackTransformLevel = 0
 udg_AnimationResetUnitGroup = nil
 udg_AnimationHashtable = nil
+udg_AutoTransformBool = false
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1481,6 +1482,7 @@ udg_SagaLvlInt = 0
 udg_TransformationSkinTimer = CreateTimer()
 udg_FriezaBlackTransformLevel = 400
 udg_AnimationResetUnitGroup = CreateGroup()
+udg_AutoTransformBool = false
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -6802,7 +6804,7 @@ gg_trg_Kyodaika_Get_Str_Mult = CreateTrigger()
 TriggerAddAction(gg_trg_Kyodaika_Get_Str_Mult, Trig_Kyodaika_Get_Str_Mult_Actions)
 end
 
-function Trig_Kyodaika_Mana_Drain_Func001Func011Func001Func004C()
+function Trig_Kyodaika_Mana_Drain_Func001Func011Func001Func006C()
 if (not (udg_TempBool == true)) then
 return false
 end
@@ -6922,7 +6924,9 @@ else
 if (Trig_Kyodaika_Mana_Drain_Func001Func011Func001C()) then
             udg_TempInt = StringHash("piccolo|orange")
 udg_TempBool = LoadBooleanBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
-if (Trig_Kyodaika_Mana_Drain_Func001Func011Func001Func004C()) then
+            udg_TempInt = StringHash("piccolo|kyo|active")
+SaveBooleanBJ(false, udg_TempInt, udg_ID, udg_SummonsHashtable)
+if (Trig_Kyodaika_Mana_Drain_Func001Func011Func001Func006C()) then
 UnitRemoveAbilityBJ(FourCC("A11H"), udg_StatMultUnit)
 else
 end
@@ -6932,6 +6936,7 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TempPlayer)
 GroupRemoveUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
 udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+TriggerExecute(gg_trg_Auto_Transform_Player_Units)
 TriggerExecute(gg_trg_Auto_Transform_Player_Units)
 else
 end
@@ -33589,7 +33594,7 @@ return true
 end
 
 function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001C()
-if (not (udg_TempBool == true)) then
+if (not (udg_AutoTransformBool == true)) then
 return false
 end
 return true
@@ -33607,7 +33612,7 @@ udg_StatMultUnit = GetEnumUnit()
     udg_ID = GetHandleId(udg_StatMultUnit)
 if (Trig_Auto_Transform_Player_Units_Func002Func003C()) then
 else
-udg_TempBool = true
+udg_AutoTransformBool = true
 udg_LvlUpInt = 0
 while (true) do
 if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
@@ -33615,7 +33620,7 @@ if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001C()) then
 udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
 TriggerExecute(gg_trg_Transformations_Parse_String)
 if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func003C()) then
-udg_TempBool = false
+udg_AutoTransformBool = false
 else
 end
 TriggerExecute(gg_trg_Transformations_Exit_Point)
@@ -40701,7 +40706,7 @@ end
 return true
 end
 
-function Trig_Transformations_Piccolo_Func021Func001Func003Func001Func002C()
+function Trig_Transformations_Piccolo_Func023Func001Func003Func001Func002C()
 if (GetHeroLevel(udg_StatMultUnit) >= 250) then
 return true
 end
@@ -40711,24 +40716,24 @@ end
 return false
 end
 
-function Trig_Transformations_Piccolo_Func021Func001Func003Func001C()
+function Trig_Transformations_Piccolo_Func023Func001Func003Func001C()
 if (not (udg_TransformationString == "orange")) then
 return false
 end
-if (not Trig_Transformations_Piccolo_Func021Func001Func003Func001Func002C()) then
+if (not Trig_Transformations_Piccolo_Func023Func001Func003Func001Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Piccolo_Func021Func001Func003C()
-if (not Trig_Transformations_Piccolo_Func021Func001Func003Func001C()) then
+function Trig_Transformations_Piccolo_Func023Func001Func003C()
+if (not Trig_Transformations_Piccolo_Func023Func001Func003Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Piccolo_Func021Func001Func005C()
+function Trig_Transformations_Piccolo_Func023Func001Func005C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -40738,15 +40743,15 @@ end
 return false
 end
 
-function Trig_Transformations_Piccolo_Func021Func001C()
-if (not Trig_Transformations_Piccolo_Func021Func001Func005C()) then
+function Trig_Transformations_Piccolo_Func023Func001C()
+if (not Trig_Transformations_Piccolo_Func023Func001Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Piccolo_Func021C()
-if (not (IsUnitInGroup(udg_StatMultUnit, udg_KyodaikaGroup) == false)) then
+function Trig_Transformations_Piccolo_Func023C()
+if (not (udg_TempBool == false)) then
 return false
 end
 return true
@@ -40792,7 +40797,7 @@ udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
 else
 end
 if (Trig_Transformations_Piccolo_Func015C()) then
-udg_StatMultReal = 2.40
+udg_StatMultReal = 2.30
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraWhite.mdx"
 udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
@@ -40824,11 +40829,13 @@ else
 end
 else
 end
-if (Trig_Transformations_Piccolo_Func021C()) then
-if (Trig_Transformations_Piccolo_Func021Func001C()) then
+    udg_TempInt = StringHash("piccolo|kyo|active")
+udg_TempBool = LoadBooleanBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+if (Trig_Transformations_Piccolo_Func023C()) then
+if (Trig_Transformations_Piccolo_Func023Func001C()) then
             udg_TempInt = StringHash("piccolo|orange|unlock")
 udg_TempBool = LoadBooleanBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
-if (Trig_Transformations_Piccolo_Func021Func001Func003C()) then
+if (Trig_Transformations_Piccolo_Func023Func001Func003C()) then
                 udg_TempInt = StringHash("piccolo|orange")
 SaveBooleanBJ(true, udg_TempInt, udg_ID, udg_SummonsHashtable)
                 udg_TransformationID = FourCC('H0AM')

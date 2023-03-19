@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.78
+DBZ Tribute |cffffcc00Reforged 0.78a
 }
 
 STRING 4
@@ -35421,7 +35421,7 @@ Transformations:
 [lvl 30]  1.50x "nail"
 [lvl 60]  1.75x "kami" [Unlocks Light Grenade]
 [lvl 90]  2.00x "super namekian"
-[lvl 150] 2.40x "super namekian"
+[lvl 150] 2.30x "super namekian"
 [lvl 250] +0.20x "orange"
 
 Kyodaika: +0.3-0.6x str 
