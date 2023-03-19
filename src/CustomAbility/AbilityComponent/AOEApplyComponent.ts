@@ -59,7 +59,7 @@ export class AOEApplyComponent implements
         (IsUnitOwnedByPlayer(target, input.casterPlayer) || this.affectsAllies)
       ) {
         for (const component of this.components) {
-          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          if (ability.isReadyToUseComponent(component)) {
             component.performTickAction(ability, input, target);
           }
         }

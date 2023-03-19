@@ -580,7 +580,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Buu.ANGRY_EXPLOSION, 
       AbilityNames.Buu.VANISHING_BALL
     ]],
-    [FourCC("O00C"), [
+    [Id.kidBuu, [
       AbilityNames.Tien.DODON_RAY,
       AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL,
       AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT, 
@@ -638,6 +638,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hit.TIME_SKIP,
       AbilityNames.Hirudegarn.FLAME_BREATH,
       AbilityNames.Super17.FLASH_BOMBER_2,
+      AbilityNames.Waluigi.FIREBALL_1,
+      AbilityNames.Waluigi.FIREBALL_2,
 
       AbilityNames.Schala.MAGIC_ORBS,
       AbilityNames.Schala.MAGIC_SEAL,
@@ -866,6 +868,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Appule.APPULE_EMERGENCY_ESCAPE,
       AbilityNames.Appule.APPULE_VENGEANCE,
       AbilityNames.Appule.APPULE_CLONES,
+    ]],
+
+    [Id.waluigi, [
+      AbilityNames.Waluigi.FIREBALL_1,
+      AbilityNames.Waluigi.FIREBALL_2,
+      AbilityNames.Waluigi.PIRANHA_PLANT,
+      AbilityNames.Waluigi.BOMB,
+      AbilityNames.Waluigi.SPIN,
+      AbilityNames.Waluigi.JUMP,
     ]],
 
     // rusty

@@ -746,7 +746,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 166,
+    duration: 133,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8601,7 +8601,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 150,
-    updateRate: 0.03,
+    updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -8619,6 +8619,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward 5dist" },
       { name: "multi jaco rocket boots" },
+      { name: "sfx jaco rocket boots" },
     ],
   },
   // -------------------------------------------

@@ -35345,7 +35345,7 @@ Transformations:
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.65x "ssbkao"
 [lvl 250] 2.70x "ui" [unlocks Ultra Instinct]
-[lvl 400] [unlocks MUI (Permanent)]
+[lvl 400] [unlocks reuseable MUI]
 
 |cff00ff00Pick ONE of the following:|r
 [lvl 150] "|cff00afffgod kame|r"
@@ -78961,7 +78961,7 @@ STRING 12644
 }
 
 STRING 12645
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H0AO (Tennis Player), Hotkey (Hotkey)
 {
 Z
 }
@@ -113407,13 +113407,13 @@ STRING 17649
 }
 
 STRING 17650
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17651
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -114000,7 +114000,7 @@ STRING 17742
 }
 
 STRING 17743
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -120955,7 +120955,7 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 18763
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -129850,7 +129850,7 @@ STRING 20024
 }
 
 STRING 20025
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -129987,7 +129987,7 @@ W
 }
 
 STRING 20047
-// Abilities: A0ZC (Capsule: Tree of Might Sapling), Hotkey (Hotkey - Normal)
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -132344,7 +132344,7 @@ Drop Items
 }
 
 STRING 20395
-// Abilities: A0ZZ (Drop Items), Hotkey (Hotkey - Normal)
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -133242,13 +133242,13 @@ R
 }
 
 STRING 20527
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11R (Spin), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20528
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11R (Spin), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -135822,13 +135822,13 @@ E
 }
 
 STRING 20888
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20889
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -138442,19 +138442,19 @@ Q
 }
 
 STRING 21256
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 21257
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 21258
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -138469,13 +138469,13 @@ A heavy punch.
 }
 
 STRING 21260
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11P (Piranha Plant Trap), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 21261
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11P (Piranha Plant Trap), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -138550,6 +138550,26 @@ A versatile ranged hero with high mobility and massive damage output.
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+}
+
+STRING 21271
+// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21272
+// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
 }
 
 STRING 21273
@@ -139234,23 +139254,18 @@ A heavy punch.
 }
 
 STRING 21358
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 4s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "mario"
+[lvl 30]  1.50x "mario"
+[lvl 90]  2.00x "mario"
+[lvl 120] 2.25x "mario"
+[lvl 150] 2.50x "mario"
+[lvl 250] 2.60x "mario" [+1 Empty Jumps]
 
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
-}
-
-STRING 21359
-// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 4s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
+|cffff00ffLean:|r +1000 vision range, 25% evasion.
+|cffff00ffMean:|r 25% crit for 2x damage.
 }
 
 STRING 21360
@@ -139500,7 +139515,7 @@ Beast Gohan
 }
 
 STRING 21396
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -139646,7 +139661,7 @@ Appule fires a low powered energy shot.
 }
 
 STRING 21420
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A11S (Jump), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -139657,12 +139672,59 @@ STRING 21421
 E
 }
 
+STRING 21423
+// Units: H0AO (Tennis Player), Name (Name)
+{
+Tennis Player
+}
+
+STRING 21424
+// Units: H0AO (Tennis Player), Propernames (Proper Names)
+{
+Waluigi
+}
+
+STRING 21425
+// Units: H0AO (Tennis Player), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Mario
+}
+
+STRING 21426
+// Units: H0AO (Tennis Player), Ubertip (Tooltip - Extended)
+{
+A powerful trickster hero with access to strong disables.
+
+|cffff00ffLean:|r +1000 vision range, 25% evasion.
+|cffff00ffMean:|r 25% crit for 2x damage.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080It's a me! Letsa go!|r
+}
+
+STRING 21427
+// Units: H0AO (Tennis Player), Tip (Tooltip - Basic)
+{
+[|cffffff00Z|r] Choose Mario
+}
+
 STRING 21428
 // Abilities: A104 (Appule Blaster), Researchubertip (Tooltip - Learn - Extended)
 {
 Appule fires a low powered energy shot.
 |cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
 |cff00ffffCooldown: <A104,Cool1> - <A104,Cool10> seconds|r
+}
+
+STRING 21429
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 21430
@@ -139740,6 +139802,165 @@ STRING 21440
 {
 Appule teleports to the target destination. Enemies near the source are slowed.
 |cff00ffffCooldown: <A116,Cool2> seconds|r
+}
+
+STRING 21441
+// Abilities: A0ZZ (Drop Items), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 21442
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool1> seconds|r
+}
+
+STRING 21443
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool3> seconds|r
+}
+
+STRING 21444
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool4> seconds|r
+}
+
+STRING 21445
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool5> seconds|r
+}
+
+STRING 21446
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool6> seconds|r
+}
+
+STRING 21447
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool7> seconds|r
+}
+
+STRING 21448
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 2|r]
+}
+
+STRING 21449
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 3|r]
+}
+
+STRING 21450
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 4|r]
+}
+
+STRING 21451
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 5|r]
+}
+
+STRING 21452
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 6|r]
+}
+
+STRING 21453
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 1|r]
+}
+
+STRING 21454
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 7|r]
+}
+
+STRING 21455
+// Abilities: A11N (Fireball), Name (Name)
+{
+Fireball
+}
+
+STRING 21456
+// Abilities: A11N (Fireball), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Fireball - [|cffffcc00Level %d|r]
+}
+
+STRING 21457
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 9|r]
+}
+
+STRING 21458
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 8|r]
+}
+
+STRING 21459
+// Abilities: A11N (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 10|r]
+}
+
+STRING 21460
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool8> seconds|r
+}
+
+STRING 21461
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool9> seconds|r
+}
+
+STRING 21462
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool10> seconds|r
 }
 
 STRING 21463
@@ -139829,5 +140050,938 @@ STRING 21472
 Appule fires a low powered energy shot.
 |cff00ff00Damage: Int * lvl * ? + 6% Max HP DPS + 6% Max HP Explosion|r
 |cff00ffffCooldown: <A104,Cool2> seconds|r
+}
+
+STRING 21473
+// Abilities: A11N (Fireball), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool1> - <A11N,Cool10> seconds|r
+}
+
+STRING 21474
+// Abilities: A11N (Fireball), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21475
+// Abilities: A11N (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool2> seconds|r
+}
+
+STRING 21476
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool1> seconds|r
+}
+
+STRING 21477
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool3> seconds|r
+}
+
+STRING 21478
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool4> seconds|r
+}
+
+STRING 21479
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool5> seconds|r
+}
+
+STRING 21480
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool6> seconds|r
+}
+
+STRING 21481
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool7> seconds|r
+}
+
+STRING 21482
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 2|r]
+}
+
+STRING 21483
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 3|r]
+}
+
+STRING 21484
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 4|r]
+}
+
+STRING 21485
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 5|r]
+}
+
+STRING 21486
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 6|r]
+}
+
+STRING 21487
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 1|r]
+}
+
+STRING 21488
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 7|r]
+}
+
+STRING 21489
+// Abilities: A11O (Super Fireball), Name (Name)
+{
+Super Fireball
+}
+
+STRING 21490
+// Abilities: A11O (Super Fireball), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Fireball - [|cffffcc00Level %d|r]
+}
+
+STRING 21491
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 9|r]
+}
+
+STRING 21492
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 8|r]
+}
+
+STRING 21493
+// Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Fireball - [|cffffcc00Level 10|r]
+}
+
+STRING 21494
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool8> seconds|r
+}
+
+STRING 21495
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool9> seconds|r
+}
+
+STRING 21496
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool10> seconds|r
+}
+
+STRING 21497
+// Abilities: A11O (Super Fireball), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi launches a fireball that slows enemies hit by 75% for 1s.
+Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11N,Cool1> - <A11N,Cool10> seconds|r
+}
+
+STRING 21498
+// Abilities: A11O (Super Fireball), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21499
+// Abilities: A11O (Super Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A11O,Cool2> seconds|r
+}
+
+STRING 21500
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 1|r]
+}
+
+STRING 21501
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool1> seconds|r
+}
+
+STRING 21502
+// Abilities: A11P (Piranha Plant Trap), Name (Name)
+{
+Piranha Plant Trap
+}
+
+STRING 21503
+// Abilities: A11P (Piranha Plant Trap), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Piranha Plant Trap - [|cffffcc00Level %d|r]
+}
+
+STRING 21504
+// Abilities: A11P (Piranha Plant Trap), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool1> - <A11P,Cool10> seconds|r
+}
+
+STRING 21505
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 2|r]
+}
+
+STRING 21506
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 3|r]
+}
+
+STRING 21507
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 4|r]
+}
+
+STRING 21508
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 5|r]
+}
+
+STRING 21509
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 6|r]
+}
+
+STRING 21510
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool2> seconds|r
+}
+
+STRING 21511
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool3> seconds|r
+}
+
+STRING 21512
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool4> seconds|r
+}
+
+STRING 21513
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool5> seconds|r
+}
+
+STRING 21514
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool6> seconds|r
+}
+
+STRING 21515
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 7|r]
+}
+
+STRING 21516
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 8|r]
+}
+
+STRING 21517
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 9|r]
+}
+
+STRING 21518
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool7> seconds|r
+}
+
+STRING 21519
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool8> seconds|r
+}
+
+STRING 21520
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool9> seconds|r
+}
+
+STRING 21521
+// Abilities: A11P (Piranha Plant Trap), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21522
+// Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 10|r]
+}
+
+STRING 21523
+// Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, nearby enemies will be rooted.
+|cff00FFFFCooldown: <A11P,Cool10> seconds|r
+}
+
+STRING 21524
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 1|r]
+}
+
+STRING 21525
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool1> seconds|r
+}
+
+STRING 21526
+// Abilities: A11Q (Bob-omb), Name (Name)
+{
+Bob-omb
+}
+
+STRING 21527
+// Abilities: A11Q (Bob-omb), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Bob-omb - [|cffffcc00Level %d|r]
+}
+
+STRING 21528
+// Abilities: A11Q (Bob-omb), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool1> - <A11Q,Cool10> seconds|r
+}
+
+STRING 21529
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 2|r]
+}
+
+STRING 21530
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 3|r]
+}
+
+STRING 21531
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 4|r]
+}
+
+STRING 21532
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 5|r]
+}
+
+STRING 21533
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 6|r]
+}
+
+STRING 21534
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool2> seconds|r
+}
+
+STRING 21535
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool3> seconds|r
+}
+
+STRING 21536
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool4> seconds|r
+}
+
+STRING 21537
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool5> seconds|r
+}
+
+STRING 21538
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool6> seconds|r
+}
+
+STRING 21539
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 7|r]
+}
+
+STRING 21540
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 8|r]
+}
+
+STRING 21541
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 9|r]
+}
+
+STRING 21542
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool7> seconds|r
+}
+
+STRING 21543
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool8> seconds|r
+}
+
+STRING 21544
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool9> seconds|r
+}
+
+STRING 21545
+// Abilities: A11Q (Bob-omb), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21546
+// Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Bob-omb - [|cffffcc00Level 10|r]
+}
+
+STRING 21547
+// Abilities: A11Q (Bob-omb), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi winds up a deadly Bob-omb to blow up his enemies. Nearby enemies are stunned on detonation.
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11Q,Cool10> seconds|r
+}
+
+STRING 21548
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 1|r]
+}
+
+STRING 21549
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool1> seconds|r
+}
+
+STRING 21550
+// Abilities: A11R (Spin), Name (Name)
+{
+Spin
+}
+
+STRING 21551
+// Abilities: A11R (Spin), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Spin - [|cffffcc00Level %d|r]
+}
+
+STRING 21552
+// Abilities: A11R (Spin), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool1> - <A11R,Cool10> seconds|r
+}
+
+STRING 21553
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 2|r]
+}
+
+STRING 21554
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 3|r]
+}
+
+STRING 21555
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 4|r]
+}
+
+STRING 21556
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 5|r]
+}
+
+STRING 21557
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 6|r]
+}
+
+STRING 21558
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool2> seconds|r
+}
+
+STRING 21559
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool3> seconds|r
+}
+
+STRING 21560
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool4> seconds|r
+}
+
+STRING 21561
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool5> seconds|r
+}
+
+STRING 21562
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool6> seconds|r
+}
+
+STRING 21563
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 7|r]
+}
+
+STRING 21564
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 8|r]
+}
+
+STRING 21565
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 9|r]
+}
+
+STRING 21566
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool7> seconds|r
+}
+
+STRING 21567
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool8> seconds|r
+}
+
+STRING 21568
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool9> seconds|r
+}
+
+STRING 21569
+// Abilities: A11R (Spin), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21570
+// Abilities: A11R (Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Spin - [|cffffcc00Level 10|r]
+}
+
+STRING 21571
+// Abilities: A11R (Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool10> seconds|r
+}
+
+STRING 21572
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 1|r]
+}
+
+STRING 21573
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> seconds|r
+}
+
+STRING 21574
+// Abilities: A11S (Jump), Name (Name)
+{
+Jump
+}
+
+STRING 21575
+// Abilities: A11S (Jump), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 21576
+// Abilities: A11S (Jump), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Jump - [|cffffcc00Level %d|r]
+}
+
+STRING 21577
+// Abilities: A11S (Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> - <A11S,Cool10> seconds|r
+}
+
+STRING 21578
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 2|r]
+}
+
+STRING 21579
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 3|r]
+}
+
+STRING 21580
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 4|r]
+}
+
+STRING 21581
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 5|r]
+}
+
+STRING 21582
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 6|r]
+}
+
+STRING 21583
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool2> seconds|r
+}
+
+STRING 21584
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool3> seconds|r
+}
+
+STRING 21585
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool4> seconds|r
+}
+
+STRING 21586
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool5> seconds|r
+}
+
+STRING 21587
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool6> seconds|r
+}
+
+STRING 21588
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 7|r]
+}
+
+STRING 21589
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 8|r]
+}
+
+STRING 21590
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 9|r]
+}
+
+STRING 21591
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool7> seconds|r
+}
+
+STRING 21592
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool8> seconds|r
+}
+
+STRING 21593
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool9> seconds|r
+}
+
+STRING 21594
+// Abilities: A11S (Jump), EditorSuffix (Editor Suffix)
+{
+(waluigi)
+}
+
+STRING 21595
+// Abilities: A11S (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Jump - [|cffffcc00Level 10|r]
+}
+
+STRING 21596
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool10> seconds|r
+}
+
+STRING 21597
+// Abilities: A11T (Book Waluigi Passives), Name (Name)
+{
+Book Waluigi Passives
+}
+
+STRING 21598
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21599
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21600
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21601
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 21602
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 21603
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21604
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 21605
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21606
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 21607
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 21608
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+E
 }
 

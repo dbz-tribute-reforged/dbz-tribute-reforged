@@ -1067,6 +1067,7 @@ gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Waluigi = nil
 function InitGlobals()
 local i = 0
 
@@ -1614,6 +1615,7 @@ HeroName = {
   H09M = "Sephiroth",
   H09Y = "Dart Feld",
   H09Q = "Mario",
+  H0AO = "Waluigi",
   H0AA = "Sonic (Sega Mega)",
 
   H09Z = "Rust Tyranno (Secret)"
@@ -5558,6 +5560,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 11152.5, 22892.0, 265.090, FourCC("
 SetUnitColor(u, ConvertPlayerColor(1))
 u = BlzCreateUnitWithSkin(p, FourCC("H0AM"), 11227.5, 21911.0, 281.870, FourCC("H0AM"))
 SetUnitState(u, UNIT_STATE_MANA, 700)
+u = BlzCreateUnitWithSkin(p, FourCC("H0AO"), 10830.7, 22416.1, 304.370, FourCC("H0AO"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
 u = BlzCreateUnitWithSkin(p, FourCC("H000"), 10749.6, 22728.4, 95.869, FourCC("H000"))
 SetHeroLevel(u, 10, false)
 SetUnitState(u, UNIT_STATE_MANA, 560)
@@ -11046,6 +11050,8 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A10U"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A10V"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A10X"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A10Y"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A11N"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A11O"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -20986,6 +20992,7 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0Y7"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0XS"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A10H"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A11H"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A11T"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T4"), udg_TempPlayer)
@@ -27621,6 +27628,13 @@ end
 return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func004C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0AO"))) then
+return false
+end
+return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Actions()
 if (Trig_Scoreboard_Assign_Hero_Icon_Func001C()) then
 udg_TempString = "BTNGoku.blp"
@@ -27885,6 +27899,10 @@ end
 end
 end
 end
+end
+if (Trig_Scoreboard_Assign_Hero_Icon_Func004C()) then
+udg_TempString = "BTNWaluigi.blp"
+else
 end
 end
 
@@ -37835,6 +37853,13 @@ end
 return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AO"))) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AL"))) then
 return false
@@ -38194,6 +38219,10 @@ else
 if (Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
 TriggerExecute(gg_trg_Transformations_Jaco)
 else
+if (Trig_Transformations_Parse_String_Func001Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Waluigi)
+else
+end
 end
 end
 end
@@ -40763,7 +40792,7 @@ UnitAddAbilityBJ(FourCC("A11K"), udg_StatMultUnit)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_6251")
         DestroyForce(udg_TempPlayerGroup)
-        playGenericSpellSound(udg_StatMultUnit, "Audio/Piccolo/Voice/NeitherKami.mp3", 2016)
+        playGenericSpellSound(udg_StatMultUnit, "Audio/Voice/Piccolo/NeitherKami.mp3", 2016)
 else
 end
     udg_TempInt = StringHash("piccolo|orange|unlock")
@@ -40778,7 +40807,7 @@ udg_TransformationSFXString = "AuraSS.mdx"
         udg_TempInt = StringHash("piccolo|orange|used")
 udg_TempBool = LoadBooleanBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
 if (Trig_Transformations_Piccolo_Func019Func006C()) then
-            playGenericSpellSound(udg_StatMultUnit, "Audio/Piccolo/Voice/UnbelievablePower.mp3", 4344)
+            playGenericSpellSound(udg_StatMultUnit, "Audio/Voice/Piccolo/UnbelievablePower.mp3", 4344)
 SaveBooleanBJ(true, udg_TempInt, udg_ID, udg_SummonsHashtable)
 else
 end
@@ -43776,7 +43805,14 @@ end
 return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func063C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func062C()
+if (not (udg_TempUnitType == FourCC("H0AO"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func064C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -44269,7 +44305,14 @@ SetUnitAbilityLevelSwapped(FourCC("A0YG"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0YG'))
 else
 end
-if (Trig_Kid_Buu_Bonus_Ability_Func002Func063C()) then
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func062C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A11N"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A11N"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A11N'))
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func064C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -58375,6 +58418,174 @@ gg_trg_Transformations_Jaco = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Jaco, Trig_Transformations_Jaco_Actions)
 end
 
+function Trig_Transformations_Waluigi_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func012C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func013C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func014C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func015C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func016C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func017C()
+if (not (udg_TransformationString == "mario")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func019Func002Func003C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Waluigi_Func019Func002C()
+if (not Trig_Transformations_Waluigi_Func019Func002Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Func019C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Waluigi_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Waluigi_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_21358")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Waluigi_Func011C()) then
+udg_StatMultReal = 1.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func012C()) then
+udg_StatMultReal = 1.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func013C()) then
+udg_StatMultReal = 1.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func014C()) then
+udg_StatMultReal = 2.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func015C()) then
+udg_StatMultReal = 2.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func016C()) then
+udg_StatMultReal = 2.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func017C()) then
+udg_StatMultReal = 2.60
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Waluigi_Func019C()) then
+if (Trig_Transformations_Waluigi_Func019Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H09Q')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Waluigi()
+gg_trg_Transformations_Waluigi = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Waluigi, Trig_Transformations_Waluigi_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
 if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
 return false
@@ -60705,6 +60916,7 @@ InitTrig_Sonic_Chaos_Emerald_Kill_Hook()
 InitTrig_Transformations_Appule()
 InitTrig_Transformations_Guts()
 InitTrig_Transformations_Jaco()
+InitTrig_Transformations_Waluigi()
 InitTrig_Saga_Unit_Init()
 InitTrig_Saga_Unit_Capsule_Unlock()
 InitTrig_Saga_Unit_Loop()

@@ -914,6 +914,14 @@ export module Id {
   export const skurvyScorn = FourCC("A0Z6");
   export const skurvyPower = FourCC("A0ZA");
   export const skurvyPlunderBird = FourCC("nalb");
+  
+  export const waluigi = FourCC("H0AO");
+  export const waluigiFireball = FourCC("A11N");
+  export const waluigiSuperFireball = FourCC("A11O");
+  export const waluigiPiranhaPlant = FourCC("A11P");
+  export const waluigiBomb = FourCC("A11Q");
+  export const waluigiSpin = FourCC("A11R");
+  export const waluigiJump = FourCC("A11S");
 
   export const yamchaR = FourCC("E010");
   export const yamchaRLightPunch = FourCC("A0RC");

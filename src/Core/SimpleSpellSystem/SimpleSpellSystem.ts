@@ -2531,7 +2531,7 @@ export module SimpleSpellSystem {
   }
 
   export function getJacoEliteBeamMult(unit: unit) {
-    const eliteBeamMaxTicks = 166;
+    const eliteBeamMaxTicks = 100;
     const unitId = GetHandleId(unit);
     const isBonus = LoadInteger(Globals.genericSpellHashtable, unitId, 3) == 1;
     const chargeTicks = isBonus ? eliteBeamMaxTicks : LoadInteger(Globals.genericSpellHashtable, unitId, 1);
@@ -2554,7 +2554,7 @@ export module SimpleSpellSystem {
     const unitId = GetHandleId(unit);
     const player = GetOwningPlayer(unit);
 
-    const eliteBeamPrimeStart = 99;
+    const eliteBeamPrimeStart = 33;
     const eliteBeamPrimeVariance = 1;
     const eliteBeamPrimeBonusLeeway = 33;
     
@@ -2627,7 +2627,7 @@ export module SimpleSpellSystem {
   }
 
   export function doJacoExtinctionBomb() {
-    const extinctionBombDelay = 4;
+    const extinctionBombDelay = 3;
     const extinctionBombMaxDist = 600;
     const extinctionBombAOE = 500;
     const extinctionBombStrMult = 2;
@@ -2660,11 +2660,17 @@ export module SimpleSpellSystem {
     // blow it up in 5seconds
     let delay = extinctionBombDelay;
     let ttSize = math.max(5, 5 * (extinctionBombDelay + 1 - delay));
+    
+    ForceClear(Globals.tmpForce);
+    ForceAddPlayer(Globals.tmpForce, GetOwningPlayer(unit));
     TextTagHelper.showTempText(
       Colorizer.getPlayerColorText(playerId) + I2S(delay) + "!",
       GetUnitX(bomb), GetUnitY(bomb),
-      ttSize, 1.5, 0.5
+      ttSize, 1.5, 0.5,
+      Globals.tmpForce
     );
+    ForceClear(Globals.tmpForce);
+
 
     TimerStart(CreateTimer(), 1.0, true, () => {
       --delay;
@@ -2816,6 +2822,10 @@ export module SimpleSpellSystem {
     if (!customHero) return;
 
     const aoe = 5000;
+    const spellPowerPerDead = 0.4;
+    const spellPowerPerHPPct = 0.33;
+    const spellPowerMin = 0.3;
+    const spellPowerMax = 1.6;
     
     // get nearby allied heroes
     GroupEnumUnitsInRange(
@@ -2835,9 +2845,9 @@ export module SimpleSpellSystem {
         && alliedHero != unit
       ) {
         if (UnitHelper.isUnitDead(alliedHero)) {
-          spellPower += 0.4;
+          spellPower += spellPowerPerDead;
         } else {
-          spellPower += 0.33 * (
+          spellPower += spellPowerPerHPPct * (
             1 - (
               GetUnitState(alliedHero, UNIT_STATE_LIFE) 
               / GetUnitState(alliedHero, UNIT_STATE_MAX_LIFE)
@@ -2847,7 +2857,10 @@ export module SimpleSpellSystem {
       }
     });
 
-    spellPower = Math.max(0.3, Math.min(1.6, spellPower));
+    spellPower = Math.max(
+      spellPowerMin, 
+      Math.min(spellPowerMax, spellPower)
+    );
     customHero.addSpellPower(spellPower);
 
     TimerStart(CreateTimer(), 0.2, true, () => {
@@ -2864,7 +2877,7 @@ export module SimpleSpellSystem {
     const initTimer = CreateTimer();
     const secondTimer = CreateTimer();
 
-    const delay = 2;
+    const delay = 2.1;
 
     SetUnitAnimationByIndex(unit, 12);
 

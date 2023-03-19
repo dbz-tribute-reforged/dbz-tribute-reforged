@@ -731,6 +731,15 @@ export module AbilityNames {
     export const APPULE_CLONES: string = "Appule Clones";
   }
 
+  export module Waluigi {
+    export const FIREBALL_1 = "Waluigi Fireball 1";
+    export const FIREBALL_2 = "Waluigi Fireball 2";
+    export const PIRANHA_PLANT = "Waluigi Piranha Plant";
+    export const BOMB = "Waluigi Bob-omb";
+    export const SPIN = "Waluigi Spin";
+    export const JUMP = "Waluigi Jump";
+  }
+
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

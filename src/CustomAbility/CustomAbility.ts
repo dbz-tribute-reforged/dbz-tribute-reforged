@@ -50,7 +50,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   activateOnTimer(input: CustomAbilityInput): void {
     if (this.currentTick <= this.duration) {
       for (const component of this.components) {
-        if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+        if (this.isReadyToUseComponent(component)) {
           component.performTickAction(this, input, input.caster.unit);
         }
       }
@@ -235,6 +235,17 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     }
   }
 
+  isReadyToUseComponent(ac: AbilityComponent) : boolean {
+    return (
+      this.isReadyToUse(ac.repeatInterval, ac.startTick, ac.endTick)
+      || (
+        ac.isStarted 
+        && !ac.isFinished
+        && this.currentTick == this.duration
+      )  
+    );
+  }
+
   isReadyToUse(repeatInterval: number, startTick: number, endTick: number): boolean {
     return (
       (
@@ -247,7 +258,10 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
           ) 
         )
         && 
-        (this.currentTick <= endTick || endTick == ComponentConstants.MAX_DURATION)
+        (
+          this.currentTick <= endTick 
+          || endTick == ComponentConstants.MAX_DURATION
+        )
       ) 
         && 
       (

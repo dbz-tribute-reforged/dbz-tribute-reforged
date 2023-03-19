@@ -170,19 +170,19 @@ Frame "SIMPLESTATUSBAR" "MySpellPowerBar" {
    Height 0.02, //Default Height
    BarTexture "Replaceabletextures\Teamcolor\Teamcolor05.blp", //Default BarTexture
    Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
-       Texture "MyMySpellPowerBarBackground"{ //the BACKGROUND Texture named "MyMySpellPowerBarBackground" its also a frame and a child
-           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyMySpellPowerBarBackground"
+       Texture "MySpellPowerBarBackground"{ //the BACKGROUND Texture named "MySpellPowerBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MySpellPowerBarBackground"
        }
    }
-   Frame "SIMPLEFRAME" "MyMySpellPowerBarFrame" { //Child of "MyMySpellPowerBar"
+   Frame "SIMPLEFRAME" "MySpellPowerBarFrame" { //Child of "MySpellPowerBar"
        DecorateFileNames, //Lookup FileNames in a StringList
-       SetAllPoints, //copy "MyMySpellPowerBar"
+       SetAllPoints, //copy "MySpellPowerBar"
        Layer "ARTWORK" {
-           Texture "MyMySpellPowerBarBorder" {
+           Texture "MySpellPowerBarBorder" {
                File "SimpleXpBarBorder",
            }
-           String "MyMySpellPowerBarText" INHERITS "MyBarTextTemplate" {
-               Text "", //Default Text for "MyMySpellPowerBarText" which takes over Data from "MyBarTextTemplate"
+           String "MySpellPowerBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MySpellPowerBarText" which takes over Data from "MyBarTextTemplate"
            }
        }
    }

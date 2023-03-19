@@ -2888,7 +2888,8 @@ export const MultiComponents = [
     components: [
       { name: "beam guts heavy slam" },
     ],
-  },  // -------------------------------------------
+  },  
+  // -------------------------------------------
   {
     name: "multi jaco rocket boots", 
     repeatInterval: 1, 
@@ -2899,7 +2900,7 @@ export const MultiComponents = [
     angleMax: 0,
     forceMinDistance: 0,
     forceMaxDistance: 0,
-    delayBetweenComponents: 15,
+    delayBetweenComponents: 22,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 9,
     componentsAddedPerRound: 1,

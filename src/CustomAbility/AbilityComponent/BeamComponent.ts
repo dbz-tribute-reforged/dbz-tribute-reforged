@@ -242,7 +242,7 @@ export class BeamComponent implements
       ability.currentTick = this.endTick;
     }
     for (const component of this.components) {
-      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+      if (ability.isReadyToUseComponent(component)) {
         component.performTickAction(ability, input, this.beamUnit);
       }
     }
@@ -408,8 +408,7 @@ export class BeamComponent implements
           this.moveBeamUnit(ability, input);
         }
         for (const component of this.components) {
-          // print(ability.currentTick, component.name, ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick));
-          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          if (ability.isReadyToUseComponent(component)) {
             component.performTickAction(ability, input, this.beamUnit);
           }
         }

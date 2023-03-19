@@ -145,7 +145,7 @@ export class MultiComponent implements
     input: CustomAbilityInput,
     source: unit
   ) {
-    if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+    if (ability.isReadyToUseComponent(component)) {
       if (this.fixedReplacementCoords) {
         this.manageFixedReplacementCoords(component, input, this.newCoord);
       }

@@ -97,7 +97,11 @@ export module AbilitySfxHelper {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       // NOTE: avoid mod by 0 
-      if (ability.isReadyToUse(sfx.repeatInterval, ComponentConstants.MIN_DURATION, ComponentConstants.MAX_DURATION)) {
+      if (ability.isReadyToUse(
+        sfx.repeatInterval, 
+        ComponentConstants.MIN_DURATION, 
+        ComponentConstants.MAX_DURATION
+      )) {
         AbilitySfxHelper.displaySfxAtCoord(
           sfx, 
           target,
@@ -137,7 +141,11 @@ export module AbilitySfxHelper {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       
-      if (ability.isReadyToUse(sfx.repeatInterval, ComponentConstants.MIN_DURATION, ComponentConstants.MAX_DURATION)) {
+      if (ability.isReadyToUse(
+        sfx.repeatInterval, 
+        ComponentConstants.MIN_DURATION, 
+        ComponentConstants.MAX_DURATION
+      )) {
         AbilitySfxHelper.displaySfxOnUnit(
           sfx,
           unit,
