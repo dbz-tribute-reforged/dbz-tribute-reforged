@@ -1037,7 +1037,6 @@ gg_trg_Sonic_Chaos_Emerald_Kill_Hook = nil
 gg_trg_Transformations_Appule = nil
 gg_trg_Transformations_Guts = nil
 gg_trg_Transformations_Jaco = nil
-gg_trg_Transformations_Waluigi = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -1068,6 +1067,7 @@ gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Waluigi = nil
 function InitGlobals()
 local i = 0
 
@@ -29719,13 +29719,6 @@ return true
 end
 
 function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A11N"), udg_TempUnit) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func007C()
 if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04Y")) == true)) then
 return false
 end
@@ -29748,7 +29741,7 @@ end
 if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
 udg_TempLoc = GetUnitLoc(udg_TempUnit)
 if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003C()) then
-udg_TempReal = RMinBJ(4500.00, (1300.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.40)))
+udg_TempReal = RMinBJ(5000.00, (1400.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
 if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func003Func003C()) then
 udg_TempReal = (udg_TempReal + 1000.00)
 else
@@ -29769,10 +29762,6 @@ udg_TempReal = (udg_TempReal + 2000.00)
 else
 end
 if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func006C()) then
-udg_TempReal = (udg_TempReal + 1000.00)
-else
-end
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003Func007C()) then
 udg_TempReal = (udg_TempReal + 2000.00)
 else
 end
@@ -58444,7 +58433,7 @@ return true
 end
 
 function Trig_Transformations_Waluigi_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString == "mario")) then
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
@@ -58454,47 +58443,37 @@ return true
 end
 
 function Trig_Transformations_Waluigi_Func013C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString == "mario")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
 return false
 end
 return true
 end
 
 function Trig_Transformations_Waluigi_Func014C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString == "mario")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 70)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
 return false
 end
 return true
 end
 
 function Trig_Transformations_Waluigi_Func015C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString == "mario")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
 return false
 end
 return true
 end
 
 function Trig_Transformations_Waluigi_Func016C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Waluigi_Func017C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString == "mario")) then
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
@@ -58503,17 +58482,17 @@ end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func018C()
-if (not (udg_TransformationString == "fp")) then
+function Trig_Transformations_Waluigi_Func017C()
+if (not (udg_TransformationString == "mario")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func020Func002Func003C()
+function Trig_Transformations_Waluigi_Func019Func002Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -58523,14 +58502,14 @@ end
 return false
 end
 
-function Trig_Transformations_Waluigi_Func020Func002C()
-if (not Trig_Transformations_Waluigi_Func020Func002Func003C()) then
+function Trig_Transformations_Waluigi_Func019Func002C()
+if (not Trig_Transformations_Waluigi_Func019Func002Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func020C()
+function Trig_Transformations_Waluigi_Func019C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -58569,35 +58548,30 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Waluigi_Func014C()) then
-udg_StatMultReal = 1.75
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Waluigi_Func015C()) then
 udg_StatMultReal = 2.00
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Waluigi_Func016C()) then
+if (Trig_Transformations_Waluigi_Func015C()) then
 udg_StatMultReal = 2.25
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Waluigi_Func017C()) then
+if (Trig_Transformations_Waluigi_Func016C()) then
 udg_StatMultReal = 2.50
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Waluigi_Func018C()) then
-udg_StatMultReal = 2.75
+if (Trig_Transformations_Waluigi_Func017C()) then
+udg_StatMultReal = 2.60
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Waluigi_Func020C()) then
-if (Trig_Transformations_Waluigi_Func020Func002C()) then
+if (Trig_Transformations_Waluigi_Func019C()) then
+if (Trig_Transformations_Waluigi_Func019Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            udg_TransformationID = FourCC('H0AO')
+            udg_TransformationID = FourCC('H09Q')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 end

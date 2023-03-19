@@ -160,7 +160,7 @@ export module DebuffAbilities {
   export const STUN_THREE_SECOND = FourCC('A08H');
 
   export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
-  export const STUN_WALUIGI_BOMB = FourCC('A00L');
+  export const STUN_WALUIGI_BOMB = FourCC('A11W');
 
   // curse
   export const DEMONS_MARK = FourCC("A0O7");
@@ -169,7 +169,7 @@ export module DebuffAbilities {
   export const BRAVE_SLASH = FourCC("A0TV");
   export const DARK_MIST = FourCC("A0WS");
   export const APPULE_VENGEANCE = FourCC("A11D");
-  export const CURSE_WALUIGI_SPIN = FourCC("A003");
+  export const CURSE_WALUIGI_SPIN = FourCC("A11X");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -196,7 +196,7 @@ export module DebuffAbilities {
   // entangling roots
   export const CIRCLE_FLASH = FourCC("A0R6");
   export const GALACTIC_DONUT = FourCC("A0U6");
-  export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A00X");
+  export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A11V");
 
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
@@ -247,7 +247,7 @@ export module Buffs {
   export const MAFUBA_SEALED = FourCC("B05H");
   export const MAFUBA_SEALING = FourCC("B05I");
 
-  export const SLOW_WALUIGI_FIREBALL_1 = FourCC("B002");
+  export const SLOW_WALUIGI_FIREBALL_1 = FourCC("B05O");
   export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("B05P");
   export const STUN_WALUIGI_BOMB = FourCC("B05Q");
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
@@ -930,7 +930,7 @@ export module Id {
   export const waluigiSuperFireball = FourCC("A11O");
   export const waluigiPiranhaPlant = FourCC("A11P");
   export const waluigiBomb = FourCC("A010");
-  export const waluigiSpin = FourCC("A00B");
+  export const waluigiSpin = FourCC("A11U");
   export const waluigiJump = FourCC("A11S");
 
   export const yamchaR = FourCC("E010");
