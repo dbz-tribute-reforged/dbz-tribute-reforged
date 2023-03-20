@@ -21217,7 +21217,7 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "AuraLightBlue.mdl",
-        repeatInterval: 1,
+        repeatInterval: 2,
         group: 0,
         scale: 1.3,
         endScale: -1,
@@ -21232,7 +21232,7 @@ export const SfxComponents = [
           y: 255,
           z: 255,
         },
-        updateCoordsOnly: true,
+        updateCoordsOnly: false,
         persistent: true,
         attachmentPoint: "",
       },
@@ -31089,11 +31089,11 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "MarioPipeGreen.mdl",
+        model: "PiranhaPlant.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 0.5,
-        endScale: 3.0,
+        scale: 1.0,
+        endScale: 2.5,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
@@ -31124,27 +31124,6 @@ export const SfxComponents = [
     useLastCastPoint: true,
     useHeight: true,
     sfxList: [
-      {
-        model: "PiranhaPlant.mdl",
-        repeatInterval: 1,
-        group: 0,
-        scale: 2.0,
-        endScale: -1,
-        startHeight: 0,
-        endHeight: 0,
-        extraDirectionalYaw: 0,
-        extraPitch: 0,
-        extraRoll: 0,
-        animSpeed: 1.0,
-        color: {
-          x: 255,
-          y: 255,
-          z: 255,
-        },
-        updateCoordsOnly: true,
-        persistent: true,
-        attachmentPoint: "",
-      },
       {
         model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
         repeatInterval: 33,

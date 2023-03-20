@@ -411,7 +411,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.jacoEliteBeamCharge, AbilityNames.Jaco.ELITE_BEAM_CHARGE],
     [Id.jacoEliteBeamPrime, AbilityNames.Jaco.ELITE_BEAM_PRIME],
     [Id.jacoEliteBeamFire, AbilityNames.Jaco.ELITE_BEAM_FIRE],
-    [Id.jacoExtinctionBomb, AbilityNames.Jaco.EXCTINCTION_BOMB],
+    [Id.jacoAnnihilationBomb, AbilityNames.Jaco.ANNIHILATION_BOMB],
     [Id.jacoRocketBoots, AbilityNames.Jaco.ROCKET_BOOTS],
     [Id.jacoEmergencyBoost, AbilityNames.Jaco.EMERGENCY_BOOST],
     [Id.jacoSuperEliteCombo, AbilityNames.Jaco.SUPER_ELITE_COMBO],

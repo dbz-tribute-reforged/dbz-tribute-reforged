@@ -104,7 +104,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.jacoEliteBeamCharge, SimpleSpellSystem.doJacoEliteBeamCharge);
     Globals.genericSpellMap.set(Id.jacoEliteBeamPrime, SimpleSpellSystem.doJacoEliteBeamPrime);
     Globals.genericSpellMap.set(Id.jacoEliteBeamFire, SimpleSpellSystem.doJacoEliteBeamFire);
-    Globals.genericSpellMap.set(Id.jacoExtinctionBomb, SimpleSpellSystem.doJacoExtinctionBomb);
+    Globals.genericSpellMap.set(Id.jacoAnnihilationBomb, SimpleSpellSystem.doJacoAnnihilationBomb);
     Globals.genericSpellMap.set(Id.jacoElitePose, SimpleSpellSystem.doJacoElitePose);
     
     Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
@@ -2626,7 +2626,7 @@ export module SimpleSpellSystem {
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
   }
 
-  export function doJacoExtinctionBomb() {
+  export function doJacoAnnihilationBomb() {
     const extinctionBombDelay = 3;
     const extinctionBombMaxDist = 600;
     const extinctionBombAOE = 500;
@@ -2700,6 +2700,9 @@ export module SimpleSpellSystem {
             UnitHelper.isUnitTargetableForPlayer(damagedUnit, player)
             || damagedUnit == unit
           ) {
+            if (damagedUnit == unit) {
+              SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Jaco/WSelfDMG.mp3", 500);
+            }
             UnitDamageTarget(
               unit, 
               damagedUnit, 

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.78a
+DBZ Tribute |cffffcc00Reforged 0.78b
 }
 
 STRING 4
@@ -135756,13 +135756,13 @@ F
 }
 
 STRING 20878
-// Abilities: A10W (Extinction Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A10W (Annihilation Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20879
-// Abilities: A10W (Extinction Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A10W (Annihilation Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -137493,93 +137493,75 @@ Inner Fire Max Power
 }
 
 STRING 21116
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21117
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21118
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21119
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21120
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21121
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21122
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21123
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21124
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21125
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21126
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
-}
-
-STRING 21127
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Learn Extinction Bomb
 }
 
 STRING 21128
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
-}
-
-STRING 21129
-// Abilities: A10W (Extinction Bomb), Name (Name)
-{
-Extinction Bomb
-}
-
-STRING 21130
-// Abilities: A10W (Extinction Bomb), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00W|r] Learn Extinction Bomb
 }
 
 STRING 21131
@@ -137589,7 +137571,7 @@ Inner Fire Max Power
 }
 
 STRING 21132
-// Abilities: A10W (Extinction Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A10W (Annihilation Bomb), EditorSuffix (Editor Suffix)
 {
 (jaco)
 }
@@ -138544,26 +138526,6 @@ A versatile ranged hero with high mobility and massive damage output.
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
-}
-
-STRING 21271
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
-}
-
-STRING 21272
-// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
 }
 
 STRING 21273
@@ -139842,6 +139804,44 @@ A powerful trickster hero with access to strong disables.
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
 |cff808080"I'M-A NUMBER ONE! Heh, hehehehe!"|r
+}
+
+STRING 21443
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health Jaco is missing. The grenade can be hit away with auto-attacks and other sources of damage.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21444
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Learn Annihilation Bomb
+}
+
+STRING 21445
+// Abilities: A10W (Annihilation Bomb), Name (Name)
+{
+Annihilation Bomb
+}
+
+STRING 21446
+// Abilities: A10W (Annihilation Bomb), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Annihilation Bomb
+}
+
+STRING 21447
+// Abilities: A10W (Annihilation Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health Jaco is missing. The grenade can be hit away with auto-attacks and other sources of damage.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
 }
 
 STRING 21448

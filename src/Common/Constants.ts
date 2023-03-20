@@ -673,7 +673,7 @@ export module Id {
   export const jacoEliteBeamCharge = FourCC("A10T");
   export const jacoEliteBeamPrime = FourCC("A10U");
   export const jacoEliteBeamFire = FourCC("A10V");
-  export const jacoExtinctionBomb = FourCC("A10W");
+  export const jacoAnnihilationBomb = FourCC("A10W");
   export const jacoRocketBoots = FourCC("A10X");
   export const jacoEmergencyBoost = FourCC("A10Y");
   export const jacoSuperEliteCombo = FourCC("A10Z");

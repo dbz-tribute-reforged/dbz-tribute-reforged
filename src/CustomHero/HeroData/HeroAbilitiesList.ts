@@ -519,7 +519,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jaco.ELITE_BEAM_CHARGE,
       AbilityNames.Jaco.ELITE_BEAM_PRIME,
       AbilityNames.Jaco.ELITE_BEAM_FIRE,
-      AbilityNames.Jaco.EXCTINCTION_BOMB,
+      AbilityNames.Jaco.ANNIHILATION_BOMB,
       AbilityNames.Jaco.ROCKET_BOOTS,
       AbilityNames.Jaco.EMERGENCY_BOOST,
       AbilityNames.Jaco.SUPER_ELITE_COMBO,

@@ -463,7 +463,7 @@ export module AbilityNames {
     export const ELITE_BEAM_CHARGE: string = "Jaco Elite Beam Charge";
     export const ELITE_BEAM_PRIME: string = "Jaco Elite Beam Prime";
     export const ELITE_BEAM_FIRE: string = "Jaco Elite Beam Fire";
-    export const EXCTINCTION_BOMB: string = "Jaco Extinction Bomb";
+    export const ANNIHILATION_BOMB: string = "Jaco Annihilation Bomb";
     export const ROCKET_BOOTS: string = "Jaco Rocket Boots";
     export const EMERGENCY_BOOST: string = "Jaco Emergency Boost";
     export const SUPER_ELITE_COMBO: string = "Jaco Super Elite Combo";
