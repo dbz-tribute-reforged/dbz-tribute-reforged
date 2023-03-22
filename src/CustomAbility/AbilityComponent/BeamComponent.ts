@@ -8,7 +8,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { AddableComponent } from "./AddableComponent";
-import { Constants, Id } from "Common/Constants";
+import { Constants, Globals, Id } from "Common/Constants";
 import { TextTagHelper } from "Common/TextTagHelper";
 
 export class BeamComponent implements 
@@ -55,10 +55,12 @@ export class BeamComponent implements
   protected explodePosition: Vector2D;
   protected forcedExplode: boolean;
   protected hasExploded: boolean;
-  protected beamClashGroup: group;
+
+  protected stickyTarget: unit | null;
 
 
   protected oldIsBeamClash: boolean | undefined;
+
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
@@ -83,6 +85,7 @@ export class BeamComponent implements
     public isTracking: boolean = false,
     public isFixedAngle: boolean = true,
     public isGroundPathing: boolean = false,
+    public isSticky: boolean = true,
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
@@ -110,7 +113,7 @@ export class BeamComponent implements
     this.explodePosition = new Vector2D(0, 0);
     this.forcedExplode = false;
     this.hasExploded = false;
-    this.beamClashGroup = CreateGroup();
+    this.stickyTarget = null;
   }
 
   protected checkForBeamClash(input: CustomAbilityInput): this {
@@ -120,16 +123,16 @@ export class BeamComponent implements
       const currentHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
 
       GroupEnumUnitsInRange(
-        this.beamClashGroup, 
+        Globals.tmpUnitGroup, 
         this.beamCoord.x, 
         this.beamCoord.y, 
         this.aoe,
         null
       );
       
-      const numEnemyHeroes = UnitHelper.countEnemyHeroes(this.beamClashGroup, input.casterPlayer, false);
+      const numEnemyHeroes = UnitHelper.countEnemyHeroes(Globals.tmpUnitGroup, input.casterPlayer, false);
       
-      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(this.beamClashGroup) > 0);
+      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(Globals.tmpUnitGroup) > 0);
       
       if (
         this.explodeOnContact && 
@@ -148,14 +151,40 @@ export class BeamComponent implements
           input.isBeamClash = true;
         }
       }
+
+      if (this.isSticky && numEnemyHeroes > 0 && this.stickyTarget == null) {
+        let min_dist = this.aoe;
+        Globals.tmpVector.setUnit(this.beamUnit);
+
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const u = GetEnumUnit();
+          Globals.tmpVector2.setUnit(u);
+          const dist_to_u = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+          if (
+            (this.stickyTarget == null || dist_to_u < min_dist)
+            && UnitHelper.isUnitTargetableForPlayer(u, input.casterPlayer, false)
+            && UnitHelper.isUnitAlive(u)
+          ) {
+            min_dist = dist_to_u;
+            this.stickyTarget = u;
+          }
+        });
+      }
+
       this.previousHp = currentHp;
-      GroupClear(this.beamClashGroup);
+      GroupClear(Globals.tmpUnitGroup);
     }
     return this;
   }
 
   protected moveBeamUnit(ability: CustomAbility, input: CustomAbilityInput): this {
     if (!this.beamUnit) return this;
+
+    if (this.isSticky && this.stickyTarget != null) {
+      Globals.tmpVector.setUnit(this.stickyTarget);
+      PathingCheck.moveFlyingUnitToCoord(this.beamUnit, Globals.tmpVector);
+      return this;
+    }
 
     if (this.delayTicks <= 0) {
       if (ability.currentTick >= this.nextMoveTick) {
@@ -429,6 +458,7 @@ export class BeamComponent implements
       this.hasBeamUnit = false;
       this.forcedExplode = false;
       this.hasExploded = false;
+      this.stickyTarget = null;
     }
   }
 
@@ -447,7 +477,6 @@ export class BeamComponent implements
       component.cleanup();
     }
     this.components.splice(0, this.components.length);
-    DestroyGroup(this.beamClashGroup);
   }
 
   clone(): AbilityComponent {
@@ -460,6 +489,7 @@ export class BeamComponent implements
       this.turnSpeed,
       this.heightVariation, this.isTracking,
       this.isFixedAngle, this.isGroundPathing, 
+      this.isSticky,
       this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
@@ -495,6 +525,7 @@ export class BeamComponent implements
       isTracking: boolean;
       isFixedAngle: boolean;
       isGroundPathing: boolean;
+      isSticky: boolean;
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
@@ -527,6 +558,7 @@ export class BeamComponent implements
     this.isTracking = input.isTracking;
     this.isFixedAngle = input.isFixedAngle;
     this.isGroundPathing = input.isGroundPathing;
+    this.isSticky = input.isSticky;
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;

@@ -519,7 +519,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jaco.ELITE_BEAM_CHARGE,
       AbilityNames.Jaco.ELITE_BEAM_PRIME,
       AbilityNames.Jaco.ELITE_BEAM_FIRE,
-      AbilityNames.Jaco.EXCTINCTION_BOMB,
+      AbilityNames.Jaco.ANNIHILATION_BOMB,
       AbilityNames.Jaco.ROCKET_BOOTS,
       AbilityNames.Jaco.EMERGENCY_BOOST,
       AbilityNames.Jaco.SUPER_ELITE_COMBO,
@@ -640,6 +640,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Super17.FLASH_BOMBER_2,
       AbilityNames.Waluigi.FIREBALL_1,
       AbilityNames.Waluigi.FIREBALL_2,
+      AbilityNames.GokuBlack.KAMEHAMEHA,
 
       AbilityNames.Schala.MAGIC_ORBS,
       AbilityNames.Schala.MAGIC_SEAL,
@@ -877,6 +878,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Waluigi.BOMB,
       AbilityNames.Waluigi.SPIN,
       AbilityNames.Waluigi.JUMP,
+    ]],
+
+    [Id.gokuBlack, [
+      AbilityNames.GokuBlack.KAMEHAMEHA,
+      AbilityNames.GokuBlack.DIVINE_LASSO,
+      AbilityNames.GokuBlack.DIVINE_RETRIBUTION,
+      AbilityNames.GokuBlack.WORK_OF_GODS,
+      AbilityNames.GokuBlack.SORROWFUL_SCYTHE,
     ]],
 
     // rusty

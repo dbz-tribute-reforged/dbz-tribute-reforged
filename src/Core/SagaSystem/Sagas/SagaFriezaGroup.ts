@@ -5,6 +5,7 @@ import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 import { Constants } from "Common/Constants";
 import { AbilityNames } from "CustomAbility/AbilityNames";
+import { SoundHelper } from "Common/SoundHelper";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';
@@ -53,7 +54,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     // if zarbon dead, replace with stornger zarbon
     if (
       this.zarbon && this.zarbon2 &&
-      SagaHelper.checkUnitHp(this.zarbon, 0.6, false, false, true) &&
+      SagaHelper.checkUnitHp(this.zarbon, 0.75, false, false, true) &&
       SagaHelper.isUnitSagaHidden(this.zarbon2)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
@@ -107,16 +108,6 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "|cffffcc00Recoome|r: Recoome!",
-        "|cffffcc00Burter|r: Burter!",
-        "|cffffcc00Jeice|r: Jeice!",
-        "|cffffcc00Guldo|r: Guldo!",
-        "|cffffcc00Ginyu|r: Ginyu!",
-        "|cffffcc00Ginyu Force|r: And together we are...",
-        "|cffffcc00Ginyu Force|r: The Ginyu Force!",
-      ],
-      [
-        "|cffffcc00Ginyu|r: Men, introductions!",
         "|cffffcc00Ginyu|r: Ginyu!",
         "|cffffcc00Jeice|r: Jeice!",
         "|cffffcc00Burter|r: Burter!",
@@ -124,9 +115,8 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
         "|cffffcc00Recoome|r: Recoome!",
         "|cffffcc00Ginyu Force|r: And together we are...",
         "|cffffcc00Ginyu Force|r: Ginyu Tokusentai!",
-        "|cffffcc00BGM|r: Tokusentai! Tokusentai! Tokusentai!",
-        "|cffffcc00Frieza|r: ...",
-      ], 1, 5,
+      ],
+      [], 1, 5,
     );
     // create unit
     // const maxFriezaHenchmen = 5;
@@ -136,8 +126,14 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     //   const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
     // }
 
-    this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
+    this.addHeroListToSaga(["Ginyu", "Guldo", "Recoome", "Burter", "Jeice"], true);
+
     
+    const rng = Math.random();
+    if (rng < 0.02 && this.bosses.length > 0) {
+      SoundHelper.playSoundOnUnit(this.bosses[0], "Audio/Voice/GinyuTokusentai.mp3", 17319);
+    }
+
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
     }

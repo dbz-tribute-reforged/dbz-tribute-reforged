@@ -463,7 +463,7 @@ export module AbilityNames {
     export const ELITE_BEAM_CHARGE: string = "Jaco Elite Beam Charge";
     export const ELITE_BEAM_PRIME: string = "Jaco Elite Beam Prime";
     export const ELITE_BEAM_FIRE: string = "Jaco Elite Beam Fire";
-    export const EXCTINCTION_BOMB: string = "Jaco Extinction Bomb";
+    export const ANNIHILATION_BOMB: string = "Jaco Annihilation Bomb";
     export const ROCKET_BOOTS: string = "Jaco Rocket Boots";
     export const EMERGENCY_BOOST: string = "Jaco Emergency Boost";
     export const SUPER_ELITE_COMBO: string = "Jaco Super Elite Combo";
@@ -740,6 +740,13 @@ export module AbilityNames {
     export const JUMP = "Waluigi Jump";
   }
 
+  export module GokuBlack {
+    export const KAMEHAMEHA: string = "Goku Black Kamehameha";
+    export const DIVINE_LASSO: string = "Goku Black Divine Lasso";
+    export const DIVINE_RETRIBUTION: string = "Goku Black Divine Retribution";
+    export const WORK_OF_GODS: string = "Goku Black The Work Of Gods";
+    export const SORROWFUL_SCYTHE: string = "Goku Black Sorrowful Scythe";
+  }
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

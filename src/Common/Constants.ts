@@ -591,6 +591,13 @@ export module Id {
   export const ultraInstinct = FourCC('A0KR');
   export const masteredUltraInstinct = FourCC('A0MZ');
 
+  export const gokuBlack = FourCC("E019");
+  export const gokuBlackKamehameha = FourCC("A0IL");
+  export const gokuBlackDivineLasso = FourCC("A0IM");
+  export const gokuBlackDivineRetribution = FourCC("A0IN");
+  export const gokuBlackWorkOfGods = FourCC("A0IO");
+  export const gokuBlackSorrowfulScythe = FourCC("A0IP");
+
   export const goten = FourCC("H008");
   export const gotenRockThrow = FourCC("A0TX");
   export const superGotenStrike = FourCC("A0TW");
@@ -673,7 +680,7 @@ export module Id {
   export const jacoEliteBeamCharge = FourCC("A10T");
   export const jacoEliteBeamPrime = FourCC("A10U");
   export const jacoEliteBeamFire = FourCC("A10V");
-  export const jacoExtinctionBomb = FourCC("A10W");
+  export const jacoAnnihilationBomb = FourCC("A10W");
   export const jacoRocketBoots = FourCC("A10X");
   export const jacoEmergencyBoost = FourCC("A10Y");
   export const jacoSuperEliteCombo = FourCC("A10Z");

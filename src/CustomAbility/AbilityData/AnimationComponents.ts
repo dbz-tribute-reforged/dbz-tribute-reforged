@@ -2,7 +2,7 @@
 export const AnimationComponents = [
   {
     name: "anim videl flying kick",
-    repeatInterval: 6,
+    repeatInterval: 1,
     startTick: 0,
     endTick: -1,
     animationSpeed: 0,
@@ -146,14 +146,14 @@ export const AnimationComponents = [
   },
   {
     name: "anim waluigi spin",
-    repeatInterval: 3,
+    repeatInterval: 1,
     startTick: 0,
     endTick: -1,
     animationSpeed: 0,
-    animationIndex: 8,
+    animationIndex: -1,
     animationString: "",
-    addAnimationProperty: "",
-    onlyApplyAtStart: false,
+    addAnimationProperty: "alternate",
+    onlyApplyAtStart: true,
     resetAnimation: true,
   },
 ];

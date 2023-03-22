@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.78a
+DBZ Tribute |cffffcc00Reforged 0.78b
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 64+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 65+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -6839,16 +6839,9 @@ STRING 1091
 }
 
 STRING 1092
-// Units: E019 (Stolen Body), Ubertip (Tooltip - Extended)
+// Abilities: A0WX (GokuBlackSS), Name (Name)
 {
-An offense-oriented hero with high mobility who deals excellent damage when close to the enemy.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
+GokuBlackSS
 }
 
 STRING 1093
@@ -41263,7 +41256,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41287,7 +41280,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41353,7 +41346,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41381,7 +41374,7 @@ Hirudegarn turns into mist, before re-appearing after a brief delay to counter-a
 }
 
 STRING 6659
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41471,7 +41464,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41495,7 +41488,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41608,7 +41601,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41636,7 +41629,7 @@ Donkey Kong rolls a barrel to target location, damaging nearby units along the w
 }
 
 STRING 6697
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41758,7 +41751,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41782,7 +41775,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41878,7 +41871,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41902,7 +41895,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -42049,7 +42042,7 @@ Change Now
 }
 
 STRING 6762
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42308,7 +42301,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 6803
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42341,13 +42334,13 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 6807
-// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42904,7 +42897,7 @@ STRING 6894
 }
 
 STRING 6895
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42930,7 +42923,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 6899
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43158,7 +43151,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43194,7 +43187,7 @@ Madara calls down a gigantic meteor that will crash into the target location, de
 }
 
 STRING 6943
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43796,7 +43789,7 @@ Goten focuses his ki into his fist before charging at his opponent, briefly stun
 }
 
 STRING 7035
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43840,7 +43833,7 @@ Goten rapidly throws multiple pebbles at his opponent, dealing minor damage and 
 }
 
 STRING 7041
-// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -45178,43 +45171,43 @@ STRING 7233
 }
 
 STRING 7234
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
 }
 
 STRING 7235
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
 }
 
 STRING 7236
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
 }
 
 STRING 7237
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
 
 STRING 7238
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
 }
 
 STRING 7239
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
 }
 
 STRING 7240
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
 }
@@ -45280,7 +45273,7 @@ STRING 7250
 }
 
 STRING 7251
-// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45322,49 +45315,49 @@ Hirudegarn charges up a massive blue energy beam from his mouth, before firing i
 }
 
 STRING 7257
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 1|r]
 }
 
 STRING 7258
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
 }
 
 STRING 7259
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
 }
 
 STRING 7260
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
 }
 
 STRING 7261
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
 
 STRING 7262
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
 }
 
 STRING 7263
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
 }
 
 STRING 7264
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
 }
@@ -45379,7 +45372,7 @@ Hirudegarn charges up a massive blue energy beam from his mouth, before firing i
 }
 
 STRING 7266
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45406,7 +45399,7 @@ STRING 7269
 }
 
 STRING 7270
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45454,13 +45447,13 @@ F
 }
 
 STRING 7277
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 7278
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -45516,13 +45509,13 @@ STRING 7286
 }
 
 STRING 7287
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
 }
 
 STRING 7288
-// Abilities: A0IQ (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
@@ -45598,13 +45591,13 @@ Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldow
 }
 
 STRING 7300
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 7301
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -45673,19 +45666,19 @@ STRING 7309
 }
 
 STRING 7310
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
 }
 
 STRING 7311
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
 
 STRING 7312
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45709,7 +45702,7 @@ STRING 7315
 }
 
 STRING 7316
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45783,7 +45776,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45807,7 +45800,7 @@ Death Blow
 }
 
 STRING 7331
-// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45825,7 +45818,7 @@ BrolyRevert2
 }
 
 STRING 7334
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45837,7 +45830,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -45931,7 +45924,7 @@ Q
 }
 
 STRING 7351
-// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45985,7 +45978,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 7359
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -46360,7 +46353,7 @@ STRING 7415
 }
 
 STRING 7416
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46407,7 +46400,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7423
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46434,7 +46427,7 @@ STRING 7426
 }
 
 STRING 7427
-// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46656,7 +46649,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46680,7 +46673,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46710,7 +46703,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -46737,7 +46730,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7477
-// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
+// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -46782,7 +46775,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7483
-// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46815,7 +46808,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7487
-// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46872,7 +46865,7 @@ STRING 7495
 }
 
 STRING 7496
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -46890,7 +46883,7 @@ Hakai Barrage
 }
 
 STRING 7499
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46909,7 +46902,7 @@ STRING 7501
 }
 
 STRING 7502
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -46933,7 +46926,7 @@ STRING 7505
 }
 
 STRING 7506
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46965,7 +46958,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7510
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47730,7 +47723,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47754,13 +47747,13 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 7640
-// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47882,7 +47875,7 @@ STRING 7655
 }
 
 STRING 7656
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -48320,7 +48313,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48344,7 +48337,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48528,7 +48521,7 @@ STRING 7760
 }
 
 STRING 7761
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -48570,7 +48563,7 @@ STRING 7767
 }
 
 STRING 7768
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49044,7 +49037,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49068,7 +49061,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49510,7 +49503,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49528,7 +49521,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -50360,7 +50353,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50624,7 +50617,7 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 8092
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50768,7 +50761,7 @@ STRING 8115
 }
 
 STRING 8116
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50856,7 +50849,7 @@ STRING 8129
 }
 
 STRING 8130
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51310,7 +51303,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -52072,7 +52065,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52354,15 +52347,15 @@ Q
 }
 
 STRING 8360
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Units: E01A (At least 1 living clone), EditorSuffix (Name - Editor Suffix)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+(Clone)
 }
 
 STRING 8361
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+[|cff00FF00R|r] Sorrowful Scythe - [|cffffcc00Level 1|r]
 }
 
 STRING 8362
@@ -52378,129 +52371,181 @@ Q
 }
 
 STRING 8364
-// Abilities: A0IL (Black Kamehameha), Researchtip (Tooltip - Learn)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
-[|cffFFFF00Q|r] Learn Black Kamehameha
+R
 }
 
 STRING 8365
-// Abilities: A0IL (Black Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD1,%>% 
+|cffffcc00Critical|r - <A0KH,DataA1>% 
+|cffffcc00Damage|r - <A0KH,DataB1,.> times
 }
 
 STRING 8366
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD2,%>% 
+|cffffcc00Critical|r - <A0KH,DataA2>% 
+|cffffcc00Damage|r - <A0KH,DataB2,.> times
 }
 
 STRING 8367
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD3,%>% 
+|cffffcc00Critical|r - <A0KH,DataA3>% 
+|cffffcc00Damage|r - <A0KH,DataB3,.> times
 }
 
 STRING 8368
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD4,%>% 
+|cffffcc00Critical|r - <A0KH,DataA4>% 
+|cffffcc00Damage|r - <A0KH,DataB4,.> times
 }
 
 STRING 8369
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD5,%>% 
+|cffffcc00Critical|r - <A0KH,DataA5>% 
+|cffffcc00Damage|r - <A0KH,DataB5,.> times
 }
 
 STRING 8370
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD6,%>% 
+|cffffcc00Critical|r - <A0KH,DataA6>% 
+|cffffcc00Damage|r - <A0KH,DataB6,.> times
 }
 
 STRING 8371
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD7,%>% 
+|cffffcc00Critical|r - <A0KH,DataA7>% 
+|cffffcc00Damage|r - <A0KH,DataB7,.> times
 }
 
 STRING 8372
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD8,%>% 
+|cffffcc00Critical|r - <A0KH,DataA8>% 
+|cffffcc00Damage|r - <A0KH,DataB8,.> times
 }
 
 STRING 8373
-// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00Q|r] Black Kamehameha
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD9,%>% 
+|cffffcc00Critical|r - <A0KH,DataA9>% 
+|cffffcc00Damage|r - <A0KH,DataB9,.> times
 }
 
 STRING 8374
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD10,%>% 
+|cffffcc00Critical|r - <A0KH,DataA10>% 
+|cffffcc00Damage|r - <A0KH,DataB10,.> times
 }
 
 STRING 8375
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD11,%>% 
+|cffffcc00Critical|r - <A0KH,DataA11>% 
+|cffffcc00Damage|r - <A0KH,DataB11,.> times
 }
 
 STRING 8376
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD12,%>% 
+|cffffcc00Critical|r - <A0KH,DataA12>% 
+|cffffcc00Damage|r - <A0KH,DataB12,.> times
 }
 
 STRING 8377
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD13,%>% 
+|cffffcc00Critical|r - <A0KH,DataA13>% 
+|cffffcc00Damage|r - <A0KH,DataB13,.> times
 }
 
 STRING 8378
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD14,%>% 
+|cffffcc00Critical|r - <A0KH,DataA14>% 
+|cffffcc00Damage|r - <A0KH,DataB14,.> times
 }
 
 STRING 8379
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD15,%>% 
+|cffffcc00Critical|r - <A0KH,DataA15>% 
+|cffffcc00Damage|r - <A0KH,DataB15,.> times
 }
 
 STRING 8380
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+Goku Black is capable of dealing powerful critical strikes with his energy blade.
+
+|cffffcc00Evasion|r - <A0KH,DataD1,%> - <A0KH,DataD15,%>% 
+|cffffcc00Critical|r - <A0KH,DataA1> - <A0KH,DataA15>% 
+|cffffcc00Damage|r - <A0KH,DataB1,.> - <A0KH,DataB15,.> times
 }
 
 STRING 8381
-// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IL (Black Kamehameha), EditorSuffix (Editor Suffix)
 {
-Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.|n|cff00FF00Dmg: int*lvl*2+100|r|n|cff00FFFFCooldown: 14.5s|r
+(goku black)
 }
 
 STRING 8382
 // Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 8383
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8384
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
 }
 
 STRING 8385
@@ -52515,94 +52560,10 @@ STRING 8386
 W
 }
 
-STRING 8387
-// Abilities: A0IM (Divine Lasso), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00W|r] Learn Divine Lasso
-}
-
-STRING 8388
-// Abilities: A0IM (Divine Lasso), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8389
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8390
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8391
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8392
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8393
-// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Divine Lasso
-}
-
-STRING 8394
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8395
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8396
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8397
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8398
-// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding.|n|cff00FF00Dmg: (int+agi)*lvl*0.4+50|r|n|cff00FFFFCooldown: 24s|r
-}
-
 STRING 8399
 // Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 8400
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8401
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
 }
 
 STRING 8402
@@ -52617,148 +52578,16 @@ STRING 8403
 E
 }
 
-STRING 8404
-// Abilities: A0IN (Divine Retribution), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8405
-// Abilities: A0IN (Divine Retribution), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8406
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8407
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8408
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8409
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8410
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8411
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8412
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8413
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8414
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8415
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8416
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8417
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8418
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8419
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 8420
-// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Divine Retribution
-}
-
-STRING 8421
-// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black rushes the target area at max move speed,damaging units in his path.|n|cff00FF00Int Dmg: int*lvl*1+50|r|n|cffFFFF00Agi Dmg: agi*lvl*1.5|r|n|cff00FFFFCooldown: 22s|r
-}
-
 STRING 8422
 // Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 8423
-// Abilities: A0IO (The Work of Gods), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] The Work of Gods
-}
-
-STRING 8424
-// Abilities: A0IO (The Work of Gods), Ubertip (Tooltip - Normal - Extended)
-{
-Goku black creates two clones of himself that last for 12 seconds. While clones are active, his ‘God Slicer’ will become 'Sorrowful Scythe' for one cast.|n|cff00FF00Clone Stats: Stats / 3|r|n|cffFFFF00Stats per kill: 50%|r|n|cff00FFFFCooldown: 30s|r
-}
-
 STRING 8425
 // Abilities: A0IO (The Work of Gods), Name (Name)
 {
 The Work of Gods
-}
-
-STRING 8426
-// Abilities: A0IO (The Work of Gods), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00R|r] Learn The Work of Gods
-}
-
-STRING 8427
-// Abilities: A0IO (The Work of Gods), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku black creates two clones of himself that last for 12 seconds. While clones are active, his ‘God Slicer’ will become 'Sorrowful Scythe' for one cast.|n|cff00FF00Clone Stats: Stats / 3|r|n|cffFFFF00Stats per kill: 50%|r|n|cff00FFFFCooldown: 30s|r
 }
 
 STRING 8428
@@ -52768,21 +52597,9 @@ R
 }
 
 STRING 8429
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 8430
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8431
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
 }
 
 STRING 8432
@@ -52791,206 +52608,86 @@ STRING 8432
 Sorrowful Scythe
 }
 
-STRING 8433
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8434
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8435
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8436
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8437
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8438
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8439
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8440
-// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
-{
-]|cffFFFF00D|r] Sorrowful Scythe
-}
-
-STRING 8441
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8442
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8443
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8444
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8445
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8446
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8447
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
-STRING 8448
-// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.|n|cff00FF00Int Dmg: int*lvl*2+50|r|n|cffFFFF00Agi Dmg: Agi*lvl*2|r|n|cff00FFFFReverts to The Work of Gods after use.|r
-}
-
 STRING 8449
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8450
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8451
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8452
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8453
-// Abilities: A0IQ (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8454
-// Abilities: A0IQ (Black Kamehameha), Researchubertip (Tooltip - Learn - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 8455
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 8456
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 8457
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LX (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8458
-// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 1|r]
 }
 
 STRING 8459
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
 }
 
 STRING 8460
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
 }
 
 STRING 8461
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
 }
 
 STRING 8462
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
 
 STRING 8463
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
 }
 
 STRING 8464
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
 }
 
-STRING 8465
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
-}
-
 STRING 8466
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
@@ -53001,22 +52698,10 @@ STRING 8467
 Q
 }
 
-STRING 8468
-// Abilities: A0IQ (Black Kamehameha), Name (Name)
-{
-Black Kamehameha
-}
-
 STRING 8469
-// Abilities: A0IQ (Black Kamehameha), Researchtip (Tooltip - Learn)
+// Abilities: A0IL (Black Kamehameha), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Black Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 8470
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 8471
@@ -53434,7 +53119,7 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8534
-// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53464,7 +53149,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53931,7 +53616,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -54278,7 +53963,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54410,7 +54095,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -54548,7 +54233,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54636,7 +54321,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8724
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54831,7 +54516,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54855,7 +54540,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55265,7 +54950,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55554,7 +55239,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56539,7 +56224,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56563,7 +56248,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -57045,7 +56730,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57072,7 +56757,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57203,7 +56888,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57281,7 +56966,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -57485,7 +57170,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57512,19 +57197,19 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9178
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57551,96 +57236,6 @@ STRING 9182
 // Abilities: A0KG (Feedback Brave Sword), EditorSuffix (Editor Suffix)
 {
 max
-}
-
-STRING 9183
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade.. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |n|cffffcc00Critical|r - <A06Z,DataA1>% |n|cffffcc00Damage|r - <A06Z,DataB1,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9184
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD2,%>% |n|cffffcc00Critical|r - <A06Z,DataA2>% |n|cffffcc00Damage|r - <A06Z,DataB2,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9185
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD3,%>% |n|cffffcc00Critical|r - <A06Z,DataA3>% |n|cffffcc00Damage|r - <A06Z,DataB3,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9186
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD4,%>% |n|cffffcc00Critical|r - <A06Z,DataA4>% |n|cffffcc00Damage|r - <A06Z,DataB4,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9187
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade.|n|cffffcc00Evasion|r - <A06Z,DataD5,%>% |n|cffffcc00Critical|r - <A06Z,DataA5>% |n|cffffcc00Damage|r - <A06Z,DataB5,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9188
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD6,%>% |n|cffffcc00Critical|r - <A06Z,DataA6>% |n|cffffcc00Damage|r - <A06Z,DataB6,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9189
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD7,%>% |n|cffffcc00Critical|r - <A06Z,DataA7>% |n|cffffcc00Damage|r - <A06Z,DataB7,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9190
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD8,%>% |n|cffffcc00Critical|r - <A06Z,DataA8>% |n|cffffcc00Damage|r - <A06Z,DataB8,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9191
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD9,%>% |n|cffffcc00Critical|r - <A06Z,DataA9>% |n|cffffcc00Damage|r - <A06Z,DataB9,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9192
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD10,%>% |n|cffffcc00Critical|r - <A06Z,DataA10>% |n|cffffcc00Damage|r - <A06Z,DataB10,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9193
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD11,%>% |n|cffffcc00Critical|r - <A06Z,DataA11>% |n|cffffcc00Damage|r - <A06Z,DataB11,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9194
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD12,%>% |n|cffffcc00Critical|r - <A06Z,DataA12>% |n|cffffcc00Damage|r - <A06Z,DataB12,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9195
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD13,%>% |n|cffffcc00Critical|r - <A06Z,DataA13>% |n|cffffcc00Damage|r - <A06Z,DataB13,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9196
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD14,%>% |n|cffffcc00Critical|r - <A06Z,DataA14>% |n|cffffcc00Damage|r - <A06Z,DataB14,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
-STRING 9197
-// Abilities: A0KH (Goku Black's Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD15,%>% |n|cffffcc00Critical|r - <A06Z,DataA15>% |n|cffffcc00Damage|r - <A06Z,DataB15,.> times.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
 }
 
 STRING 9198
@@ -57671,12 +57266,6 @@ STRING 9202
 // Abilities: A0KH (Goku Black's Fighting Style), Tip (Tooltip - Normal)
 {
 Goku Black's Fighting Style - [|cffffcc00Level 5|r]
-}
-
-STRING 9203
-// Abilities: A0KH (Goku Black's Fighting Style), Tip (Tooltip - Normal)
-{
-Goku Black's Fighting Style - [|cffffcc00Level 63|r]
 }
 
 STRING 9204
@@ -57733,14 +57322,8 @@ STRING 9212
 Goku Black's Fighting Style - [|cffffcc00Level 15|r]
 }
 
-STRING 9213
-// Abilities: A0KH (Goku Black's Fighting Style), Untip (Tooltip - Turn Off)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |n|cffffcc00Critical|r - <A06Z,DataA1>% |n|cffffcc00Damage|r - <A06Z,DataB1,.> times
-}
-
 STRING 9214
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -57757,14 +57340,8 @@ STRING 9216
 [|cff00FF00F|r] Learn Goku Black's Fighting Style - [|cffffcc00Level %d|r]
 }
 
-STRING 9217
-// Abilities: A0KH (Goku Black's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku Black is capable of dealing powerful critical strikes with his energy blade.|n|cff00FF00Passive:|r Goku Black's spells deal up to |cff00FF0030%|r extra damage based on his missing hp
-}
-
 STRING 9218
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57885,7 +57462,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58040,7 +57617,7 @@ Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9260
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58399,25 +57976,25 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 9319
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
 }
 
 STRING 9320
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
 }
 
 STRING 9321
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
 }
 
 STRING 9322
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
@@ -58429,13 +58006,13 @@ STRING 9323
 }
 
 STRING 9324
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
 }
 
 STRING 9325
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
 }
@@ -58447,7 +58024,7 @@ Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 9327
-// Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
@@ -60150,301 +59727,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 9609
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 9610
 // Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9611
+STRING 9609
 // Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9612
+STRING 9610
 // Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9613
+STRING 9611
 // Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9614
+STRING 9612
 // Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9615
+STRING 9613
 // Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9616
+STRING 9614
 // Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9617
+STRING 9615
 // Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9618
+STRING 9616
 // Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9619
+STRING 9617
 // Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9620
+STRING 9618
 // Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9621
+STRING 9619
 // Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9622
+STRING 9620
 // Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9623
+STRING 9621
 // Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9624
+STRING 9622
 // Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9625
+STRING 9623
 // Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9626
+STRING 9624
 // Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9627
+STRING 9625
 // Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9628
+STRING 9626
 // Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9629
+STRING 9627
 // Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9630
+STRING 9628
 // Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9631
+STRING 9629
 // Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9632
+STRING 9630
 // Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9633
+STRING 9631
 // Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9634
+STRING 9632
 // Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9635
+STRING 9633
 // Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9636
+STRING 9634
 // Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9637
+STRING 9635
 // Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9638
+STRING 9636
 // Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9639
+STRING 9637
 // Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9640
+STRING 9638
 // Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9641
+STRING 9639
 // Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9642
+STRING 9640
 // Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9643
+STRING 9641
 // Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9644
+STRING 9642
 // Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9645
+STRING 9643
 // Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9646
+STRING 9644
 // Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9647
+STRING 9645
 // Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9648
+STRING 9646
 // Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9649
+STRING 9647
 // Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9650
+STRING 9648
 // Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9651
+STRING 9649
 // Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9652
+STRING 9650
 // Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9653
+STRING 9651
 // Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9654
+STRING 9652
 // Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9655
+STRING 9653
 // Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9656
+STRING 9654
 // Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9657
+STRING 9655
 // Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 9656
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 9657
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61400,13 +60977,13 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 9816
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 9817
-// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61962,7 +61539,7 @@ STRING 9908
 }
 
 STRING 9909
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61974,7 +61551,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62621,7 +62198,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62639,7 +62216,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63154,7 +62731,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -63172,7 +62749,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63184,7 +62761,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63202,7 +62779,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -63214,7 +62791,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63232,7 +62809,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
+// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -63671,13 +63248,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64211,7 +63788,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64229,7 +63806,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64985,7 +64562,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65093,19 +64670,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65183,7 +64760,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66007,7 +65584,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -66025,7 +65602,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66177,25 +65754,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 10598
-// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 10599
 // Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 10600
+STRING 10598
 // Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 10599
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 10600
+// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66556,7 +66133,7 @@ Final Battle
 STRING 10646
 {
 Dev:
-phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire
+phone, Xestus, randomkilla, ttay24, Frozenhelfire, GrandMaster
 
 Other:
 micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro, Mango, MrNiab, Yurieeh, GermTheGreat, Tasyen
@@ -66594,7 +66171,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 20 March 2022
+This map is under active development - 23 March 2023
 }
 
 STRING 10653
@@ -66826,7 +66403,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67020,7 +66597,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
+// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -67155,42 +66732,6 @@ STRING 10739
 (pan)
 }
 
-STRING 10740
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10741
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10742
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10743
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10744
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10745
-// Abilities: A0LX (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
 STRING 10746
 // Abilities: A0CQ (Tail Sweep), Ubertip (Tooltip - Normal - Extended)
 {
@@ -67215,60 +66756,12 @@ Hirudegarn swiftly flicks his tail, sending nearby enemies flying. Can be used 2
 |cff00ffffCooldown: <A0CQ,Cool8> seconds|r
 }
 
-STRING 10749
-// Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 1|r]
-}
-
-STRING 10750
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
-}
-
-STRING 10751
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
-}
-
-STRING 10752
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
-}
-
-STRING 10753
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
-}
-
-STRING 10754
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
-}
-
-STRING 10755
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
-}
-
 STRING 10756
 // Abilities: A0CQ (Tail Sweep), Ubertip (Tooltip - Normal - Extended)
 {
 Hirudegarn swiftly flicks his tail, sending nearby enemies flying. Can be used 2 times before going on cooldown.
 |cff00ff00Damage: Str * lvl * ?|r
 |cff00ffffCooldown: <A0CQ,Cool9> seconds|r
-}
-
-STRING 10757
-// Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
 
 STRING 10758
@@ -67312,7 +66805,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -67514,7 +67007,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67574,7 +67067,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68480,7 +67973,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -68498,7 +67991,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -68588,7 +68081,7 @@ STRING 10974
 }
 
 STRING 10975
-// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68636,7 +68129,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68654,7 +68147,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68678,7 +68171,7 @@ STRING 10989
 }
 
 STRING 10990
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68726,13 +68219,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69073,7 +68566,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 11055
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69234,7 +68727,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69246,7 +68739,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69548,7 +69041,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69591,7 +69084,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69639,13 +69132,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69731,7 +69224,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70216,7 +69709,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70234,7 +69727,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70288,13 +69781,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70624,19 +70117,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11309
-// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71005,13 +70498,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -71107,13 +70600,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71389,7 +70882,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71450,7 +70943,7 @@ A nutritious bundle of wheat.
 }
 
 STRING 11445
-// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72097,7 +71590,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72178,7 +71671,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72196,7 +71689,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72268,13 +71761,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72914,19 +72407,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11681
-// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11682
-// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73064,7 +72557,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73578,13 +73071,13 @@ STRING 11784
 }
 
 STRING 11785
-// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
+// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 11786
-// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74026,7 +73519,7 @@ Donate Energy to Moro
 }
 
 STRING 11857
-// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74166,13 +73659,13 @@ STRING 11879
 }
 
 STRING 11880
-// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11881
-// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
+// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74202,7 +73695,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -74220,7 +73713,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -74647,7 +74140,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11954
-// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -74677,7 +74170,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11959
-// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -74701,7 +74194,7 @@ STRING 11962
 }
 
 STRING 11963
-// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -75085,7 +74578,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75169,13 +74662,13 @@ This unit is under the effects of Cosmic Illusion; it is invisible, moves faster
 }
 
 STRING 12041
-// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12042
-// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -75199,7 +74692,7 @@ STRING 12045
 }
 
 STRING 12046
-// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -75295,7 +74788,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75522,7 +75015,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -76006,13 +75499,13 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12176
-// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76738,13 +76231,13 @@ STRING 12292
 }
 
 STRING 12293
-// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12294
-// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
+// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76798,7 +76291,7 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -77227,7 +76720,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77824,7 +77317,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77848,7 +77341,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77968,7 +77461,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -78088,7 +77581,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78106,7 +77599,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78160,7 +77653,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78178,7 +77671,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78575,7 +78068,7 @@ First, Gohan fires a Super Kamehameha at the opponent, who struggles against the
 }
 
 STRING 12583
-// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -78949,7 +78442,7 @@ Hit travels forward in time a fraction of a second, striking the target unit and
 }
 
 STRING 12643
-// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78967,7 +78460,7 @@ Z
 }
 
 STRING 12646
-// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -79567,7 +79060,7 @@ Ice Cannon
 }
 
 STRING 12733
-// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79656,13 +79149,13 @@ Frostbite
 }
 
 STRING 12746
-// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12747
-// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -80061,7 +79554,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -80196,7 +79689,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -80534,7 +80027,7 @@ R
 }
 
 STRING 12887
-// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80654,25 +80147,25 @@ Justice Pose
 }
 
 STRING 12907
-// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 12908
-// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 12909
 // Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 12910
+STRING 12908
 // Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 12909
+// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 12910
+// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80844,7 +80337,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80877,7 +80370,7 @@ Schala channels an almost unbreakable barrier at the target location that lasts 
 }
 
 STRING 12942
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81133,7 +80626,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82544,7 +82037,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82580,7 +82073,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82658,7 +82151,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -82700,7 +82193,7 @@ E
 }
 
 STRING 13240
-// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -83253,13 +82746,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83794,7 +83287,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83830,7 +83323,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84201,7 +83694,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84219,7 +83712,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84513,7 +84006,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84531,7 +84024,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84943,7 +84436,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84987,7 +84480,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -85313,7 +84806,7 @@ Repairs 40% of Max HP and increases Max HP based on Farmer's current level.
 }
 
 STRING 13652
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85340,7 +84833,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -86096,7 +85589,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -86252,25 +85745,25 @@ STRING 13805
 }
 
 STRING 13806
-// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 13807
-// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 13808
 // Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 13809
+STRING 13807
 // Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 13808
+// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 13809
+// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -86327,7 +85820,7 @@ STRING 13816
 }
 
 STRING 13817
-// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
+// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -87168,7 +86661,7 @@ STRING 13948
 }
 
 STRING 13949
-// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -87312,19 +86805,19 @@ STRING 13972
 }
 
 STRING 13973
-// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13974
-// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13975
-// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -87673,7 +87166,7 @@ This unit is under the effects of Envoy of the End; it has increased attack dama
 }
 
 STRING 14032
-// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -88392,7 +87885,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88426,7 +87919,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88555,13 +88048,13 @@ Justice Pose
 }
 
 STRING 14163
-// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
+// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14164
-// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -89231,7 +88724,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89526,7 +89019,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89544,7 +89037,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -90053,25 +89546,25 @@ STRING 14392
 }
 
 STRING 14393
-// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 14394
-// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 14395
 // Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 14396
+STRING 14394
 // Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 14395
+// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 14396
+// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -91686,7 +91179,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -92058,7 +91551,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A005 (Ultimate Burning Warrior 3), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -94459,37 +93952,37 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15032
-// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 15033
-// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15034
 // Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 15035
+STRING 15033
 // Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 15036
+STRING 15034
 // Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 15037
+STRING 15035
 // Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15036
+// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15037
+// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -95228,30 +94721,6 @@ STRING 15144
 S
 }
 
-STRING 15145
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> seconds|r
-}
-
-STRING 15146
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool3> seconds|r
-}
-
-STRING 15147
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool4> seconds|r
-}
-
 STRING 15148
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
@@ -95312,14 +94781,6 @@ STRING 15157
 [|cff00FF00R|r] Learn Time Stop - [|cffffcc00Level %d|r]
 }
 
-STRING 15158
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool5> seconds|r
-}
-
 STRING 15159
 // Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
 {
@@ -95350,32 +94811,8 @@ STRING 15163
 [|cff00FF00R|r] Time Stop - [|cffffcc00Level 10|r]
 }
 
-STRING 15164
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool6> seconds|r
-}
-
-STRING 15165
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool7> seconds|r
-}
-
-STRING 15166
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool8> seconds|r
-}
-
 STRING 15167
-// Abilities: A007 (Sword Of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95417,7 +94854,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A032 (Serious Sideways Jumps), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95588,19 +95025,19 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15198
-// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15199
-// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -95831,13 +95268,13 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15233
-// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15234
-// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96237,7 +95674,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A03H (OK.), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -96510,7 +95947,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 15333
-// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -96972,7 +96409,7 @@ STRING 15392
 }
 
 STRING 15393
-// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97002,7 +96439,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A06B (Jungle Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -97032,13 +96469,13 @@ STRING 15402
 }
 
 STRING 15403
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15404
-// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98350,7 +97787,7 @@ STRING 15581
 }
 
 STRING 15582
-// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
+// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -98544,7 +97981,7 @@ Level 10: Zarbon
 }
 
 STRING 15613
-// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
+// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -98574,19 +98011,19 @@ STRING 15617
 }
 
 STRING 15618
-// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15619
-// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15620
-// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
+// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -99003,7 +98440,7 @@ STRING 15679
 }
 
 STRING 15680
-// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
+// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99836,25 +99273,25 @@ STRING 15800
 }
 
 STRING 15801
-// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 15802
-// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15803
 // Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 15804
+STRING 15802
 // Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15803
+// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 15804
+// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -100787,7 +100224,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A06B (Jungle Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -100816,7 +100253,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A0CQ (Tail Sweep), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -100971,13 +100408,13 @@ STRING 15951
 }
 
 STRING 15952
-// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15953
-// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
+// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -101413,13 +100850,13 @@ STRING 16006
 }
 
 STRING 16007
-// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16008
-// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
+// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -101796,13 +101233,13 @@ STRING 16066
 }
 
 STRING 16067
-// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16068
-// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -102700,7 +102137,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A0EM (Heavy Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -102718,7 +102155,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A0G3 (Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -103896,7 +103333,7 @@ STRING 16359
 }
 
 STRING 16360
-// Abilities: A0G3 (Flight), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -106779,25 +106216,25 @@ STRING 16734
 }
 
 STRING 16735
-// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 16736
-// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 16737
 // Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 16738
+STRING 16736
 // Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 16737
+// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 16738
+// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107049,7 +106486,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A0G6 (Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -107225,13 +106662,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16795
-// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 16796
-// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107533,7 +106970,7 @@ W
 }
 
 STRING 16838
-// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107647,7 +107084,7 @@ STRING 16855
 }
 
 STRING 16856
-// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107853,13 +107290,13 @@ STRING 16882
 }
 
 STRING 16883
-// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 16884
-// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
+// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -107928,7 +107365,7 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 }
 
 STRING 16890
-// Abilities: A0G7 (Deactivate Enrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108302,7 +107739,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A0GG (Hirudegarn Passive), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108341,7 +107778,7 @@ Bankai True Strike
 }
 
 STRING 16935
-// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -109059,7 +108496,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0GL (Hakai Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -109191,7 +108628,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0GP (Death Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109248,7 +108685,7 @@ STRING 17057
 }
 
 STRING 17058
-// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -109451,25 +108888,25 @@ STRING 17087
 }
 
 STRING 17088
-// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 17089
-// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 17090
 // Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 17091
+STRING 17089
 // Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 17090
+// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 17091
+// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -109866,7 +109303,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0GP (Death Blow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109970,7 +109407,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0P8 (Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -110204,13 +109641,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 17200
-// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
+// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17201
-// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
+// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -110387,13 +109824,13 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 17226
-// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
+// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17227
-// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
+// Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -111592,19 +111029,19 @@ STRING 17399
 }
 
 STRING 17400
-// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17401
-// Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
+// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17402
-// Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
+// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -112134,13 +111571,13 @@ STRING 17462
 }
 
 STRING 17463
-// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
+// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17464
-// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -113401,13 +112838,13 @@ STRING 17649
 }
 
 STRING 17650
-// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 17651
-// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -113994,7 +113431,7 @@ STRING 17742
 }
 
 STRING 17743
-// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -117287,7 +116724,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0YH (Pray), Hotkey (Hotkey - Normal)
+// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -117749,7 +117186,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0YI (Dream Devourer), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -117792,12 +117229,6 @@ STRING 18296
 // Buffs/Effects: B04J (), Bufftip (Tooltip)
 {
 Crono's Sword
-}
-
-STRING 18297
-// Abilities: A0WX (GokuBlackRevert), Name (Name)
-{
-GokuBlackRevert
 }
 
 STRING 18298
@@ -119243,7 +118674,7 @@ STRING 18520
 }
 
 STRING 18521
-// Abilities: A0YV (Heating Up), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -120804,7 +120235,7 @@ STRING 18740
 }
 
 STRING 18741
-// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -120861,7 +120292,7 @@ STRING 18749
 }
 
 STRING 18750
-// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -120949,7 +120380,7 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 18763
-// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -120987,7 +120418,7 @@ Turns off harvester's engine, enabling abilities and upgrades.
 }
 
 STRING 18769
-// Abilities: A0YX (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -122500,7 +121931,7 @@ STRING 18984
 }
 
 STRING 18985
-// Abilities: A0YX (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -122867,7 +122298,7 @@ STRING 19037
 }
 
 STRING 19038
-// Abilities: A0Z5 (Walk the Plank!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -122891,7 +122322,7 @@ Giga Sphere
 }
 
 STRING 19042
-// Abilities: A0Z5 (Walk the Plank!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -124099,7 +123530,7 @@ STRING 19203
 }
 
 STRING 19204
-// Abilities: A0Z6 (Pirate's Scorn), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -124570,7 +124001,7 @@ bugged out (super 17)
 }
 
 STRING 19275
-// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125076,7 +124507,7 @@ STRING 19339
 }
 
 STRING 19340
-// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
+// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125094,7 +124525,7 @@ STRING 19342
 }
 
 STRING 19343
-// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125244,7 +124675,7 @@ STRING 19365
 }
 
 STRING 19366
-// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -125262,7 +124693,7 @@ STRING 19368
 }
 
 STRING 19369
-// Abilities: A0Z6 (Pirate's Scorn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125298,7 +124729,7 @@ STRING 19374
 }
 
 STRING 19375
-// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -125331,7 +124762,7 @@ STRING 19379
 }
 
 STRING 19380
-// Abilities: A0ZG (Toggle Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -126253,22 +125684,6 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 |cff00FFFFCooldown: <A0SF,Cool10> seconds|r
 }
 
-STRING 19509
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool9> seconds|r
-}
-
-STRING 19510
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool10> seconds|r
-}
-
 STRING 19511
 // Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
 {
@@ -126362,22 +125777,6 @@ A medium punch.
 |cff00ffffCooldown: <A0RC,Cool10> seconds|r
 }
 
-STRING 19522
-// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
-}
-
-STRING 19523
-// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
-{
-Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal 16% damage and take 600% damage.
-|cff00ff00Damage: Int * lvl * ?
-|cff00ffffCooldown: <A11B,Cool2> seconds|r
-}
-
 STRING 19524
 // Abilities: A11G (Orange Piccolo Cleave), Name (Name)
 {
@@ -126402,38 +125801,6 @@ STRING 19527
 (Beast)
 }
 
-STRING 19528
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool1> seconds|r
-}
-
-STRING 19529
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool3> seconds|r
-}
-
-STRING 19530
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool4> seconds|r
-}
-
-STRING 19531
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool5> seconds|r
-}
-
 STRING 19532
 // Abilities: A0YX (Super Fireball), Tip (Tooltip - Normal)
 {
@@ -126441,7 +125808,7 @@ STRING 19532
 }
 
 STRING 19533
-// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -126459,7 +125826,7 @@ STRING 19535
 }
 
 STRING 19536
-// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -128235,7 +127602,7 @@ STRING 19788
 }
 
 STRING 19789
-// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -128269,7 +127636,7 @@ R
 }
 
 STRING 19794
-// Abilities: A0ZM (Farming Book), Hotkey (Hotkey - Normal)
+// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -129520,7 +128887,7 @@ STRING 19977
 }
 
 STRING 19978
-// Abilities: A0ZS (Self Destruct), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -129538,7 +128905,7 @@ STRING 19980
 }
 
 STRING 19981
-// Abilities: A103 (Appule's Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -129724,7 +129091,7 @@ STRING 20007
 }
 
 STRING 20008
-// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -130195,7 +129562,7 @@ STRING 20078
 }
 
 STRING 20079
-// Abilities: A107 (Cannon Arm), Researchhotkey (Hotkey - Learn)
+// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130207,7 +129574,7 @@ STRING 20080
 }
 
 STRING 20081
-// Abilities: A107 (Cannon Arm), Hotkey (Hotkey - Normal)
+// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -130231,7 +129598,7 @@ STRING 20084
 }
 
 STRING 20085
-// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
+// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -130723,7 +130090,7 @@ Sonic creates a shield around himself that briefly protects him from incoming da
 }
 
 STRING 20160
-// Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
+// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -130755,7 +130122,7 @@ STRING 20164
 }
 
 STRING 20165
-// Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -131860,7 +131227,7 @@ Farming Book
 }
 
 STRING 20324
-// Abilities: A10L (Dragon Cannon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -132141,7 +131508,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20368
-// Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -132219,7 +131586,7 @@ R
 }
 
 STRING 20376
-// Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
+// Abilities: A0ZU (Drop Items), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -133058,7 +132425,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Abilities: A10L (Dragon Cannon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -133842,7 +133209,7 @@ Q
 }
 
 STRING 20618
-// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -134407,7 +133774,7 @@ STRING 20694
 }
 
 STRING 20695
-// Abilities: A0ZU (Drop Items), Hotkey (Hotkey - Normal)
+// Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -134438,7 +133805,7 @@ Guts concentrates the power of Schierke's spirit into his sword to deal massive 
 }
 
 STRING 20699
-// Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
+// Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -135385,7 +134752,7 @@ Tapion jumps above a target affected by |cffffff00Hero’s Song|r. Upon arrival,
 }
 
 STRING 20831
-// Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
+// Abilities: A110 (Elite Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -135750,19 +135117,19 @@ Q
 }
 
 STRING 20877
-// Abilities: A112 (Super Jaco), Hotkey (Hotkey - Normal)
+// Abilities: A11K (Light Grenade), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 20878
-// Abilities: A10W (Extinction Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A10W (Annihilation Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 20879
-// Abilities: A10W (Extinction Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A10W (Annihilation Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -135898,13 +135265,13 @@ Sword of Hope
 }
 
 STRING 20901
-// Abilities: A113 (Jaco's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A11M (Special Beast Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 20902
-// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -136220,7 +135587,7 @@ STRING 20948
 }
 
 STRING 20949
-// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -136452,7 +135819,7 @@ STRING 20980
 }
 
 STRING 20981
-// Abilities: A11K (Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A11S (Jump), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -136470,7 +135837,7 @@ Mafuba Sealed Debuff
 }
 
 STRING 20984
-// Abilities: A11M (Special Beast Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A11S (Jump), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -137493,93 +136860,99 @@ Inner Fire Max Power
 }
 
 STRING 21116
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21117
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21118
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21119
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21120
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21121
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
 STRING 21122
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21123
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21124
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21125
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21126
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21127
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Learn Extinction Bomb
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> seconds|r
 }
 
 STRING 21128
-// Abilities: A10W (Extinction Bomb), Tip (Tooltip - Normal)
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
 {
 |cffffcc00D|rodon Ray
 }
 
 STRING 21129
-// Abilities: A10W (Extinction Bomb), Name (Name)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-Extinction Bomb
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool3> seconds|r
 }
 
 STRING 21130
-// Abilities: A10W (Extinction Bomb), Researchtip (Tooltip - Learn)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Learn Extinction Bomb
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool4> seconds|r
 }
 
 STRING 21131
@@ -137589,7 +136962,7 @@ Inner Fire Max Power
 }
 
 STRING 21132
-// Abilities: A10W (Extinction Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A10W (Annihilation Bomb), EditorSuffix (Editor Suffix)
 {
 (jaco)
 }
@@ -138046,14 +137419,6 @@ STRING 21196
 Super Charge
 }
 
-STRING 21197
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool6> seconds|r
-}
-
 STRING 21198
 // Buffs/Effects: B05K (Inner Fire Super Charge), EditorName (Name (Editor Only))
 {
@@ -138090,14 +137455,6 @@ STRING 21203
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 10|r]
 }
 
-STRING 21204
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool7> seconds|r
-}
-
 STRING 21205
 // Abilities: A110 (Elite Pose), Name (Name)
 {
@@ -138113,7 +137470,7 @@ Jaco strikes a daring pose that evades all incoming attacks for 1 second.
 }
 
 STRING 21207
-// Abilities: A110 (Elite Pose), Hotkey (Hotkey - Normal)
+// Abilities: A11L (Gohan Boost Beast Gohan), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -138189,46 +137546,6 @@ STRING 21218
 // Abilities: A112 (Super Jaco), EditorSuffix (Editor Suffix)
 {
 (jaco)
-}
-
-STRING 21219
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool8> seconds|r
-}
-
-STRING 21220
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool9> seconds|r
-}
-
-STRING 21221
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool10> seconds|r
-}
-
-STRING 21222
-// Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
-}
-
-STRING 21223
-// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
-{
-Appule clones himself to reinforce Frieza's army. This clone deals 16% damage and takes 600% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A11E,Cool2> seconds|r
 }
 
 STRING 21224
@@ -138448,7 +137765,7 @@ Q
 }
 
 STRING 21258
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -138547,23 +137864,19 @@ A versatile ranged hero with high mobility and massive damage output.
 }
 
 STRING 21271
-// Abilities: A10W (Extinction Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool5> seconds|r
 }
 
 STRING 21272
-// Abilities: A10W (Extinction Bomb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
 {
-A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health he is missing. The grenade can be hit away with auto-attacks.
-
-|cff00ff00Damage: Str * 2 + 75% Missing HP|r
-|cff00ffffCooldown: <A10W,Cool1> seconds|r
-|cffFF2020DAMAGE CAN HURT JACO.|r
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool6> seconds|r
 }
 
 STRING 21273
@@ -139158,12 +138471,6 @@ STRING 21345
 (dummy)
 }
 
-STRING 21346
-// Abilities: A11D (Appule Vengeance Curse 20%), Name (Name)
-{
-Appule Vengeance Curse 20%
-}
-
 STRING 21347
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
 {
@@ -139191,7 +138498,7 @@ Armor: +<A11J,DataA1>
 }
 
 STRING 21349
-// Abilities: A11L (Gohan Boost Beast Gohan), Hotkey (Hotkey - Normal)
+// Abilities: A11L (Gohan Boost Beast Gohan), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -139206,12 +138513,6 @@ STRING 21351
 // Abilities: A11L (Gohan Boost Beast Gohan), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cff8822ffBeast Gohan|r
-}
-
-STRING 21352
-// Abilities: A11L (Gohan Boost Beast Gohan), Unhotkey (Hotkey - Turn Off)
-{
-D
 }
 
 STRING 21353
@@ -139531,7 +138832,7 @@ Beast Gohan
 }
 
 STRING 21396
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -139677,7 +138978,7 @@ Appule fires a low powered energy shot.
 }
 
 STRING 21420
-// Abilities: A11S (Jump), Hotkey (Hotkey - Normal)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -139844,6 +139145,44 @@ A powerful trickster hero with access to strong disables.
 |cff808080"I'M-A NUMBER ONE! Heh, hehehehe!"|r
 }
 
+STRING 21443
+// Abilities: A10W (Annihilation Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health Jaco is missing. The grenade can be hit away with auto-attacks and other sources of damage.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
+STRING 21444
+// Abilities: A10W (Annihilation Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Learn Annihilation Bomb
+}
+
+STRING 21445
+// Abilities: A10W (Annihilation Bomb), Name (Name)
+{
+Annihilation Bomb
+}
+
+STRING 21446
+// Abilities: A10W (Annihilation Bomb), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Annihilation Bomb
+}
+
+STRING 21447
+// Abilities: A10W (Annihilation Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+A desperate and shameless attack. Jaco throws a Capsule-sized device that detonates after 3s, dealing massive damage to enemies based on how much health Jaco is missing. The grenade can be hit away with auto-attacks and other sources of damage.
+
+|cff00ff00Damage: Str * 2 + 75% Missing HP|r
+|cff00ffffCooldown: <A10W,Cool1> seconds|r
+|cffFF2020DAMAGE CAN HURT JACO.|r
+}
+
 STRING 21448
 // Abilities: A11N (Fireball), Tip (Tooltip - Normal)
 {
@@ -139914,6 +139253,30 @@ STRING 21459
 // Abilities: A11N (Fireball), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Fireball - [|cffffcc00Level 10|r]
+}
+
+STRING 21460
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool7> seconds|r
+}
+
+STRING 21461
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool8> seconds|r
+}
+
+STRING 21462
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool9> seconds|r
 }
 
 STRING 21463
@@ -140018,6 +139381,14 @@ STRING 21474
 // Abilities: A11N (Fireball), EditorSuffix (Editor Suffix)
 {
 (waluigi)
+}
+
+STRING 21475
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool10> seconds|r
 }
 
 STRING 21476
@@ -140164,6 +139535,14 @@ Waluigi launches a fireball that stuns enemies for 1s if they have been debuffed
 |cff00ffffCooldown: <A11O,Cool10> seconds|r
 }
 
+STRING 21497
+// Abilities: A11B (Appule Vengeance), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool1> - <A11B,Cool10> seconds|r
+}
+
 STRING 21498
 // Abilities: A11O (Super Fireball), EditorSuffix (Editor Suffix)
 {
@@ -140184,6 +139563,14 @@ STRING 21500
 [|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 1|r]
 }
 
+STRING 21501
+// Abilities: A11B (Appule Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks. Affected enemies will be attacked by the spirits of past Appule Rangers. Spirits are illusions of Appule that deal <A11C,DataA1,%>% damage and take <A11C,DataB1,%>% damage.
+|cff00ff00Damage: Int * lvl * ?
+|cff00ffffCooldown: <A11B,Cool2> seconds|r
+}
+
 STRING 21502
 // Abilities: A11P (Piranha Plant Trap), Name (Name)
 {
@@ -140194,6 +139581,12 @@ STRING 21503
 // Abilities: A11P (Piranha Plant Trap), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Piranha Plant Trap - [|cffffcc00Level %d|r]
+}
+
+STRING 21504
+// Abilities: A11D (Appule Vengeance Curse 30%), Name (Name)
+{
+Appule Vengeance Curse 30%
 }
 
 STRING 21505
@@ -140226,6 +139619,46 @@ STRING 21509
 [|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 6|r]
 }
 
+STRING 21510
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool1> seconds|r
+}
+
+STRING 21511
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool3> seconds|r
+}
+
+STRING 21512
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool4> seconds|r
+}
+
+STRING 21513
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool5> seconds|r
+}
+
+STRING 21514
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool6> seconds|r
+}
+
 STRING 21515
 // Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
 {
@@ -140244,6 +139677,30 @@ STRING 21517
 [|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 9|r]
 }
 
+STRING 21518
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool7> seconds|r
+}
+
+STRING 21519
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool8> seconds|r
+}
+
+STRING 21520
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool9> seconds|r
+}
+
 STRING 21521
 // Abilities: A11P (Piranha Plant Trap), EditorSuffix (Editor Suffix)
 {
@@ -140254,6 +139711,22 @@ STRING 21522
 // Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Piranha Plant Trap - [|cffffcc00Level 10|r]
+}
+
+STRING 21523
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool10> seconds|r
+}
+
+STRING 21524
+// Abilities: A11E (Appule Clones), Researchubertip (Tooltip - Learn - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool1> - <A11E,Cool10> seconds|r
 }
 
 STRING 21525
@@ -140271,6 +139744,14 @@ STRING 21526
 Bob-omb
 }
 
+STRING 21527
+// Abilities: A11E (Appule Clones), Ubertip (Tooltip - Normal - Extended)
+{
+Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
+|cff00ff00Duration: <A11F,Dur1>s|r
+|cff00ffffCooldown: <A11E,Cool2> seconds|r
+}
+
 STRING 21528
 // Abilities: A11N (Fireball), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -140278,6 +139759,59 @@ Waluigi launches a fireball that slows enemies hit by <A11U,DataA1,%>% for <A11U
 Unlocks [|cff00ff00Q|r] Super Fireball that stuns enemies for 1s if they have been debuffed by another of Waluigi's abilities.
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A11N,Cool1> - <A11N,Cool10> seconds|r
+}
+
+STRING 21529
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "kao"
+[lvl 30]  1.50x "ss"
+[lvl 85]  2.00x "rose"
+[lvl 125] 2.25x "rose"
+[lvl 150] 2.50x "rose"
+[lvl 200] 2.60x "rose"
+
+|cffff44ccHatred:|r Spells deal up to |cff00FF0025%|r extra damage based on missing hp.
+}
+
+STRING 21530
+// Units: E019 (Stolen Body), Ubertip (Tooltip - Extended)
+{
+|cffff2020Warning: UNFINISHED HERO.|r
+
+An offense-oriented hero with high mobility who deals excellent damage when close to the enemy.
+
+|cffff44ccHatred:|r Spells deal up to |cff00FF0025%|r extra damage based on missing hp.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 21531
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 21532
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool1,.>|r
+}
+
+STRING 21533
+// Abilities: A0IL (Black Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool1,.> - <A0IL,Cool10,.>s|r
 }
 
 STRING 21534
@@ -140317,6 +139851,24 @@ Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, ne
 |cff00FFFFCooldown: <A11P,Cool3> seconds|r
 }
 
+STRING 21539
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 21540
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 21541
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 4|r]
+}
+
 STRING 21542
 // Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
 {
@@ -140344,6 +139896,12 @@ STRING 21545
 (waluigi)
 }
 
+STRING 21546
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 5|r]
+}
+
 STRING 21547
 // Abilities: A11P (Piranha Plant Trap), Ubertip (Tooltip - Normal - Extended)
 {
@@ -140351,10 +139909,28 @@ Waluigi mischeviously sends a piranha plant down a pipe. After a short delay, ne
 |cff00FFFFCooldown: <A11P,Cool7> seconds|r
 }
 
+STRING 21548
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 21549
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 7|r]
+}
+
 STRING 21550
 // Abilities: A11R (Spin), Name (Name)
 {
 Spin
+}
+
+STRING 21551
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 8|r]
 }
 
 STRING 21552
@@ -140365,10 +139941,140 @@ Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms
 |cff00FFFFCooldown: <A11R,Cool1> - <A11R,Cool10> seconds|r
 }
 
+STRING 21553
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 21554
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool2,.>|r
+}
+
+STRING 21555
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool3,.>|r
+}
+
+STRING 21556
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool4,.>|r
+}
+
+STRING 21557
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool5,.>|r
+}
+
+STRING 21558
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool6,.>|r
+}
+
+STRING 21559
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool7,.>|r
+}
+
+STRING 21560
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool8,.>|r
+}
+
+STRING 21561
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool9,.>|r
+}
+
+STRING 21562
+// Abilities: A0IM (Divine Lasso), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
+STRING 21563
+// Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 21564
+// Abilities: A0IL (Black Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires a Kamehameha in the target direction, dealing damage to all units in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0IL,Cool10,.>|r
+}
+
+STRING 21565
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 1|r]
+}
+
+STRING 21566
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool1,.>|r
+}
+
+STRING 21567
+// Abilities: A0IM (Divine Lasso), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Divine Lasso - [|cffffcc00Level %d|r]
+}
+
+STRING 21568
+// Abilities: A0IM (Divine Lasso), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool1,.> - <A0IM,Cool10,.>s|r
+}
+
 STRING 21569
 // Abilities: A11R (Spin), EditorSuffix (Editor Suffix)
 {
 (waluigi)
+}
+
+STRING 21570
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 2|r]
+}
+
+STRING 21571
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 3|r]
 }
 
 STRING 21572
@@ -140390,12 +140096,6 @@ STRING 21574
 // Abilities: A11S (Jump), Name (Name)
 {
 Jump
-}
-
-STRING 21575
-// Abilities: A11S (Jump), Researchhotkey (Hotkey - Learn)
-{
-F
 }
 
 STRING 21576
@@ -140572,24 +140272,6 @@ STRING 21599
 Q
 }
 
-STRING 21600
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 21601
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 21602
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
-{
-F
-}
-
 STRING 21603
 // Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
@@ -140641,6 +140323,12 @@ A close-ranged melee specialist that can deal devastating amounts of damage if s
 
 }
 
+STRING 21610
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 4|r]
+}
+
 STRING 21611
 // Abilities: A117 (Debuff Slow 25%), Name (Name)
 {
@@ -140689,6 +140377,96 @@ STRING 21618
 (generic)
 }
 
+STRING 21619
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 5|r]
+}
+
+STRING 21620
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 6|r]
+}
+
+STRING 21621
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool2,.>|r
+}
+
+STRING 21622
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool3,.>|r
+}
+
+STRING 21623
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool4,.>|r
+}
+
+STRING 21624
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool5,.>|r
+}
+
+STRING 21625
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool6,.>|r
+}
+
+STRING 21626
+// Abilities: A0IN (Divine Retribution), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
+STRING 21627
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool7,.>|r
+}
+
+STRING 21628
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool8,.>|r
+}
+
+STRING 21629
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool9,.>|r
+}
+
+STRING 21630
+// Abilities: A0IM (Divine Lasso), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black fires several arrows from his energy blade, piercing the first target hit and exploding after 1.5 seconds.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IM,Cool10,.>|r
+}
+
 STRING 21631
 // Abilities: A11U (Debuff Slow Waluigi Fireball), EditorSuffix (Editor Suffix)
 {
@@ -140705,6 +140483,12 @@ STRING 21633
 // Abilities: A11V (Debuff Root Piranha Plant), EditorSuffix (Editor Suffix)
 {
 (waluigi)
+}
+
+STRING 21634
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 7|r]
 }
 
 STRING 21635
@@ -140731,6 +140515,12 @@ STRING 21638
 Waluigi Fireball Slow
 }
 
+STRING 21639
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 8|r]
+}
+
 STRING 21640
 // Buffs/Effects: B05P (), Bufftip (Tooltip)
 {
@@ -140747,6 +140537,12 @@ STRING 21642
 // Buffs/Effects: B05Q (), Bufftip (Tooltip)
 {
 Waluigi Bob-omb Stun
+}
+
+STRING 21643
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 9|r]
 }
 
 STRING 21644
@@ -140788,10 +140584,22 @@ STRING 21649
 [|cff00ff00R|r] Bob-omb - [|cffffcc00Level 1|r]
 }
 
+STRING 21650
+// Abilities: A0IM (Divine Lasso), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Divine Lasso - [|cffffcc00Level 10|r]
+}
+
 STRING 21651
 // Abilities: A11Q (Bob-omb), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Bob-omb - [|cffffcc00Level %d|r]
+}
+
+STRING 21652
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 1|r]
 }
 
 STRING 21653
@@ -140824,6 +140632,40 @@ STRING 21657
 [|cff00ff00R|r] Bob-omb - [|cffffcc00Level 6|r]
 }
 
+STRING 21658
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool1,.>s|r
+}
+
+STRING 21659
+// Abilities: A0IN (Divine Retribution), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Divine Retribution - [|cffffcc00Level %d|r]
+}
+
+STRING 21660
+// Abilities: A0IN (Divine Retribution), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool1,.> - <A0IN,Cool10,.>s|r
+}
+
+STRING 21661
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 2|r]
+}
+
+STRING 21662
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 3|r]
+}
+
 STRING 21663
 // Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
 {
@@ -140842,10 +140684,34 @@ STRING 21665
 [|cff00ff00R|r] Bob-omb - [|cffffcc00Level 9|r]
 }
 
+STRING 21666
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 4|r]
+}
+
+STRING 21667
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 5|r]
+}
+
+STRING 21668
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 6|r]
+}
+
 STRING 21669
 // Abilities: A11Q (Bob-omb), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Bob-omb - [|cffffcc00Level 10|r]
+}
+
+STRING 21670
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 7|r]
 }
 
 STRING 21671
@@ -141092,5 +140958,287 @@ STRING 21704
 // Abilities: A11R (Spin), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Spin - [|cffffcc00Level 10|r]
+}
+
+STRING 21705
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 8|r]
+}
+
+STRING 21706
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool2,.>s|r
+}
+
+STRING 21707
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool3,.>s|r
+}
+
+STRING 21708
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool4,.>s|r
+}
+
+STRING 21709
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool5,.>s|r
+}
+
+STRING 21710
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool6,.>s|r
+}
+
+STRING 21711
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool7,.>s|r
+}
+
+STRING 21712
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool8,.>s|r
+}
+
+STRING 21713
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 9|r]
+}
+
+STRING 21714
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool9,.>s|r
+}
+
+STRING 21715
+// Abilities: A0IN (Divine Retribution), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Divine Retribution - [|cffffcc00Level 10|r]
+}
+
+STRING 21716
+// Abilities: A0IN (Divine Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black rushes the target area, damaging units in his path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+|cff00FFFFCooldown: <A0IN,Cool10,.>s|r
+}
+
+STRING 21717
+// Abilities: A0IO (The Work of Gods), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
+STRING 21718
+// Abilities: A0IO (The Work of Gods), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] The Work of Gods - [|cffffcc00Level 1|r]
+}
+
+STRING 21719
+// Abilities: A0IO (The Work of Gods), Ubertip (Tooltip - Normal - Extended)
+{
+Goku black creates two clones of himself that last for 12 seconds.
+Unlocks [|cff00ff00R|r] Sorrowful Scythe, a damaging ability used in combination with his clones.
+|cff00FF00Clone Stats: 33% Stats|r
+|cffFFFF00Stats per kill: 50%|r
+|cff00FFFFCooldown: <A0IO,Cool1>s|r
+}
+
+STRING 21720
+// Abilities: A0IO (The Work of Gods), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn The Work of Gods - [|cffffcc00Level %d|r]
+}
+
+STRING 21721
+// Abilities: A0IO (The Work of Gods), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku black creates two clones of himself that last for 12 seconds.
+Unlocks [|cff00ff00R|r] Sorrowful Scythe, a damaging ability used in combination with his clones.
+|cff00FF00Clone Stats: 33% Stats|r
+|cffFFFF00Stats per kill: 50%|r
+|cff00FFFFCooldown: <A0IO,Cool1>s|r
+}
+
+STRING 21722
+// Abilities: A0IP (Sorrowful Scythe), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
+STRING 21724
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21725
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 2|r]
+}
+
+STRING 21726
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 3|r]
+}
+
+STRING 21727
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 4|r]
+}
+
+STRING 21728
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 5|r]
+}
+
+STRING 21729
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 6|r]
+}
+
+STRING 21730
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 7|r]
+}
+
+STRING 21731
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 8|r]
+}
+
+STRING 21732
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 9|r]
+}
+
+STRING 21733
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21734
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21735
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21736
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21737
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21738
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21739
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21740
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21741
+// Abilities: A0IP (Sorrowful Scythe), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Sorrowful Scythe - [|cffffcc00Level 10|r]
+}
+
+STRING 21742
+// Abilities: A0IP (Sorrowful Scythe), Ubertip (Tooltip - Normal - Extended)
+{
+Goku Black and his clones rush towards the target area, spinning in a circle and damaging all enemies in their path.
+|cff00FF00Damage: (Int + Agi) * Lvl * ?|r
+}
+
+STRING 21758
+// Abilities: A0KH (Goku Black's Fighting Style), Tip (Tooltip - Normal)
+{
+Goku Black's Fighting Style - [|cffffcc00Level 6|r]
+}
+
+STRING 21759
+// Abilities: A0KH (Goku Black's Fighting Style), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
+STRING 21760
+// Abilities: A10F (Dragon Slayer), Researchhotkey (Hotkey - Learn)
+{
+G
+}
+
+STRING 21761
+// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
+{
+G
 }
 

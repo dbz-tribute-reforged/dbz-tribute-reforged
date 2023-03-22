@@ -104,7 +104,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.jacoEliteBeamCharge, SimpleSpellSystem.doJacoEliteBeamCharge);
     Globals.genericSpellMap.set(Id.jacoEliteBeamPrime, SimpleSpellSystem.doJacoEliteBeamPrime);
     Globals.genericSpellMap.set(Id.jacoEliteBeamFire, SimpleSpellSystem.doJacoEliteBeamFire);
-    Globals.genericSpellMap.set(Id.jacoExtinctionBomb, SimpleSpellSystem.doJacoExtinctionBomb);
+    Globals.genericSpellMap.set(Id.jacoAnnihilationBomb, SimpleSpellSystem.doJacoAnnihilationBomb);
     Globals.genericSpellMap.set(Id.jacoElitePose, SimpleSpellSystem.doJacoElitePose);
     
     Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
@@ -112,6 +112,9 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.beastGohan, SimpleSpellSystem.gohanBeastBuff);
     Globals.genericSpellMap.set(Id.specialBeastCannon, SimpleSpellSystem.specialBeastCannon);
+    
+    Globals.genericSpellMap.set(Id.gokuBlackDivineLasso, SimpleSpellSystem.doGokuBlackDivineLasso);
+    Globals.genericSpellMap.set(Id.gokuBlackSorrowfulScythe, SimpleSpellSystem.doGokuBlackSorrowfulScythe);
 
     
     // add DDS stuff
@@ -2626,7 +2629,7 @@ export module SimpleSpellSystem {
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
   }
 
-  export function doJacoExtinctionBomb() {
+  export function doJacoAnnihilationBomb() {
     const extinctionBombDelay = 3;
     const extinctionBombMaxDist = 600;
     const extinctionBombAOE = 500;
@@ -2700,6 +2703,9 @@ export module SimpleSpellSystem {
             UnitHelper.isUnitTargetableForPlayer(damagedUnit, player)
             || damagedUnit == unit
           ) {
+            if (damagedUnit == unit) {
+              SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Jaco/WSelfDMG.mp3", 500);
+            }
             UnitDamageTarget(
               unit, 
               damagedUnit, 
@@ -2891,6 +2897,14 @@ export module SimpleSpellSystem {
       ResetUnitAnimation(unit);
       DestroyTimer(secondTimer);
     });
+  }
+
+  export function doGokuBlackDivineLasso() {
+    
+  }
+
+  export function doGokuBlackSorrowfulScythe() {
+
   }
 
 

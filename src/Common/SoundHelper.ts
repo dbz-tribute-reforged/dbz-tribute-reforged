@@ -865,6 +865,14 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/UltraInstinct.mp3", 9534);
         break;
 
+      // goku black
+      case Id.gokuBlackKamehameha:
+        if (unitId == Id.gokuBlack) {
+          // playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+
       // gohan
       case Id.twinDragonShot:
         if (unitId == Id.gohan) {
@@ -1149,6 +1157,57 @@ export module SoundHelper {
         }
         break;
       
+      // jaco
+      case Id.jacoEliteBeamCharge:
+      case Id.jacoEliteBeamPrime:
+        break;
+      
+      case Id.jacoEliteBeamFire:
+        if (unitId == Id.jaco) {
+          playSoundOnUnit(unit, "Audio/Voice/Jaco/Q1.mp3", 2016);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+
+      case Id.jacoAnnihilationBomb:
+        if (unitId == Id.jaco) {
+          if (rng < 30) {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/W1.mp3", 2016);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/W2.mp3", 1584);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/W3.mp3", 2112);
+          }
+        }
+        break;
+      
+      case Id.jacoRocketBoots:
+        if (unitId == Id.jaco) {
+          if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/E1.mp3", 2352);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/E3.mp3", 5040);
+          }
+        }
+        break;
+      
+      case Id.jacoSuperEliteCombo:
+        if (unitId == Id.jaco) {
+          if (rng < 30) {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/R1.mp3", 3072);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Jaco/R2.mp3", 4368);
+          }
+        }
+        break;
+      
+      case Id.jacoElitePose:
+        if (unitId == Id.jaco) {
+          playSoundOnUnit(unit, "Audio/Voice/Jaco/E2.mp3", 4704);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/JusticePose.mp3", 1645);
+        break;
+
       // jiren
       case Id.powerImpact:
         if (unitId == Id.jiren) {
@@ -1779,6 +1838,65 @@ export module SoundHelper {
             playSoundOnUnit(unit, "Audio/Voice/VidelOutOfMyWay.mp3", 705);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/VidelHyaa.mp3", 679);
+          }
+        }
+        break;
+      
+      // waluigi
+      case Id.waluigiFireball:
+      case Id.waluigiSuperFireball:
+        if (unitId == Id.waluigi) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/Q1.mp3", 1152);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/Q2.mp3", 313);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Mario/Fireball.mp3", 252);
+        break;
+      
+      case Id.waluigiPiranhaPlant:
+        if (unitId == Id.waluigi) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/Waluigi.mp3", 1776);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/W1.mp3", 1828);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerDown.mp3", 900);
+        break;
+      
+      case Id.waluigiSpin:
+        if (unitId == Id.waluigi) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/E1.mp3", 4101);
+          } else if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/E2.mp3", 3816);
+          } else if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/E3.mp3", 4248);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/E4.mp3", 2507);
+          }
+        }
+        break;
+
+      case Id.waluigiBomb:
+        if (unitId == Id.waluigi) {
+          if (rng < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/Kill4.mp3", 2142);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/R1.mp3", 2736);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/R2.mp3", 1358);
+          }
+        }
+        break;
+      
+      case Id.waluigiJump:
+        if (unitId == Id.waluigi) {
+          playSoundOnUnit(unit, "Audio/Voice/Waluigi/F1.mp3", 2455);
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Waluigi/F2.mp3", 1872);
           }
         }
         break;
