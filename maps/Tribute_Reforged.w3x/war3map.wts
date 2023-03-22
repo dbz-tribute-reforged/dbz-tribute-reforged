@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 64+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 65+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -52536,6 +52536,12 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 |cffffcc00Damage|r - <A0KH,DataB1,.> - <A0KH,DataB15,.> times
 }
 
+STRING 8381
+// Abilities: A0IL (Black Kamehameha), EditorSuffix (Editor Suffix)
+{
+(goku black)
+}
+
 STRING 8382
 // Abilities: A0JP (Spirit Bomb), Hotkey (Hotkey - Normal)
 {
@@ -66127,7 +66133,7 @@ Final Battle
 STRING 10646
 {
 Dev:
-phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire
+phone, Xestus, randomkilla, ttay24, Frozenhelfire, GrandMaster
 
 Other:
 micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro, Mango, MrNiab, Yurieeh, GermTheGreat, Tasyen
@@ -66165,7 +66171,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 20 March 2022
+This map is under active development - 23 March 2023
 }
 
 STRING 10653
@@ -140006,7 +140012,7 @@ Goku Black fires a Kamehameha in the target direction, dealing damage to all uni
 }
 
 STRING 21562
-// Abilities: A0IL (Black Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A0IM (Divine Lasso), EditorSuffix (Editor Suffix)
 {
 (goku black)
 }
@@ -140424,7 +140430,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 21626
-// Abilities: A0IM (Divine Lasso), EditorSuffix (Editor Suffix)
+// Abilities: A0IN (Divine Retribution), EditorSuffix (Editor Suffix)
 {
 (goku black)
 }
@@ -141045,7 +141051,7 @@ Goku Black rushes the target area, damaging units in his path.
 }
 
 STRING 21717
-// Abilities: A0IN (Divine Retribution), EditorSuffix (Editor Suffix)
+// Abilities: A0IO (The Work of Gods), EditorSuffix (Editor Suffix)
 {
 (goku black)
 }
@@ -141083,7 +141089,7 @@ Unlocks [|cff00ff00R|r] Sorrowful Scythe, a damaging ability used in combination
 }
 
 STRING 21722
-// Abilities: A0IO (The Work of Gods), EditorSuffix (Editor Suffix)
+// Abilities: A0IP (Sorrowful Scythe), EditorSuffix (Editor Suffix)
 {
 (goku black)
 }

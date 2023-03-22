@@ -865,6 +865,14 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/UltraInstinct.mp3", 9534);
         break;
 
+      // goku black
+      case Id.gokuBlackKamehameha:
+        if (unitId == Id.gokuBlack) {
+          // playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+
       // gohan
       case Id.twinDragonShot:
         if (unitId == Id.gohan) {
