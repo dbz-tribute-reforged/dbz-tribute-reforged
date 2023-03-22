@@ -391,15 +391,16 @@ const zamasuData = {
     HeroSelectCategory.CARRY
   )
 }
-const moroData = {
-  unitCode: Id.moro,
+const gokuBlackData = {
+  unitCode: Id.gokuBlack,
   onlyRandom: false,
   requirement: null,
   category: (
+    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY
   )
 }
 const omegaShenronData = {
@@ -481,6 +482,17 @@ const hitData = {
     HeroSelectCategory.INT +
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN
+  )
+}
+const moroData = {
+  unitCode: Id.moro,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.SUPPORT
   )
 }
 const cronoData = {
@@ -785,8 +797,9 @@ export const HeroSelectUnitList = [
   roshiData,
   krillinData,
   tienData,
-  yamchaRData,
   farmerData,
+  emptySpace,
+  // yamchaRData,
 
   // ====
   // 15
@@ -829,7 +842,7 @@ export const HeroSelectUnitList = [
   omegaShenronData,
   eisShenronData,
   zamasuData,
-  moroData,
+  gokuBlackData,
 
   // ====
   // 45
@@ -841,7 +854,7 @@ export const HeroSelectUnitList = [
   appuleData,
   hitData,
   // 50
-  emptySpace,
+  moroData,
   emptySpace,
   emptySpace,
   emptySpace,

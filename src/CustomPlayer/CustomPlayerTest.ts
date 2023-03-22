@@ -1174,6 +1174,26 @@ export function CustomPlayerTest() {
     }
   });
 
+  // allow player to modify ui as they see fit
+	// prints id of frame given by name
+	const atkrangetest = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(atkrangetest, Player(i), "-range", false);
+	}
+	TriggerAddAction(atkrangetest, () => {
+    if (GetTriggerPlayer() == GetLocalPlayer()) {
+      const str = GetEventPlayerChatString();
+
+      const sub = SubString(str, 7, 15);
+
+      const playerId = GetPlayerId(GetTriggerPlayer());
+
+      const ch = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
+      if (ch) {
+        BlzSetUnitWeaponRealField(ch.unit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, S2R(sub));
+      }
+    }
+	});
 
   
   // allow player to modify ui as they see fit

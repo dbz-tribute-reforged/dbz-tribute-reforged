@@ -2943,6 +2943,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi beam goku black divine lasso", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -50,
+    angleMax: 50,
+    forceMinDistance: 50,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 10,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam goku black divine lasso" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

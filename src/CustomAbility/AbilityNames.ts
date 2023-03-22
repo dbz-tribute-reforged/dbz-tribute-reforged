@@ -740,6 +740,13 @@ export module AbilityNames {
     export const JUMP = "Waluigi Jump";
   }
 
+  export module GokuBlack {
+    export const KAMEHAMEHA: string = "Goku Black Kamehameha";
+    export const DIVINE_LASSO: string = "Goku Black Divine Lasso";
+    export const DIVINE_RETRIBUTION: string = "Goku Black Divine Retribution";
+    export const WORK_OF_GODS: string = "Goku Black The Work Of Gods";
+    export const SORROWFUL_SCYTHE: string = "Goku Black Sorrowful Scythe";
+  }
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

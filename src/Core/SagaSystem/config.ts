@@ -142,7 +142,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ FriezaSaga, SagaState.Completed ]
     ],
     Super13Saga: [
-      [ CoolerReturnSaga, SagaState.Completed ],
+      [ CoolerRevengeSaga, SagaState.Completed ],
     ],
     BojackSaga: [
       [ Super13Saga, SagaState.Completed ],

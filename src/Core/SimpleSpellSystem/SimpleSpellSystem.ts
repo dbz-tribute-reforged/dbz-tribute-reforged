@@ -112,6 +112,9 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.beastGohan, SimpleSpellSystem.gohanBeastBuff);
     Globals.genericSpellMap.set(Id.specialBeastCannon, SimpleSpellSystem.specialBeastCannon);
+    
+    Globals.genericSpellMap.set(Id.gokuBlackDivineLasso, SimpleSpellSystem.doGokuBlackDivineLasso);
+    Globals.genericSpellMap.set(Id.gokuBlackSorrowfulScythe, SimpleSpellSystem.doGokuBlackSorrowfulScythe);
 
     
     // add DDS stuff
@@ -2894,6 +2897,14 @@ export module SimpleSpellSystem {
       ResetUnitAnimation(unit);
       DestroyTimer(secondTimer);
     });
+  }
+
+  export function doGokuBlackDivineLasso() {
+    
+  }
+
+  export function doGokuBlackSorrowfulScythe() {
+
   }
 
 

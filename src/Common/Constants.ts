@@ -591,6 +591,13 @@ export module Id {
   export const ultraInstinct = FourCC('A0KR');
   export const masteredUltraInstinct = FourCC('A0MZ');
 
+  export const gokuBlack = FourCC("E019");
+  export const gokuBlackKamehameha = FourCC("A0IL");
+  export const gokuBlackDivineLasso = FourCC("A0IM");
+  export const gokuBlackDivineRetribution = FourCC("A0IN");
+  export const gokuBlackWorkOfGods = FourCC("A0IO");
+  export const gokuBlackSorrowfulScythe = FourCC("A0IP");
+
   export const goten = FourCC("H008");
   export const gotenRockThrow = FourCC("A0TX");
   export const superGotenStrike = FourCC("A0TW");

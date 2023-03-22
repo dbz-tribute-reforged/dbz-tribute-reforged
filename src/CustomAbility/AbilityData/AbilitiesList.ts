@@ -12927,6 +12927,117 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.GokuBlack.KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam goku black kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.GokuBlack.DIVINE_LASSO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi beam goku black divine lasso" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.GokuBlack.DIVINE_RETRIBUTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "damage goku black divine retribution agi explosion" },
+      { name: "damage goku black divine retribution int explosion" },
+      { name: "sfx goku black divine retribution" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.GokuBlack.WORK_OF_GODS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 400,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability goku black sorrowful scythe" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.RustTyranno.TYRANNO_FLAME,
     currentCd: 0,
     maxCd: 1,

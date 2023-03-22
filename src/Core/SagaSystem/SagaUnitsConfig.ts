@@ -239,7 +239,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(24300, 20100))],
 
     // cooler's revenge
-    ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(19000, 17800),
+    ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(-3000, 10500),
       [
         SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,

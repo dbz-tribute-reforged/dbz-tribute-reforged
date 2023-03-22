@@ -643,6 +643,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.waluigiSpin, AbilityNames.Waluigi.SPIN],
     [Id.waluigiJump, AbilityNames.Waluigi.JUMP],
 
+    [Id.gokuBlackKamehameha, AbilityNames.GokuBlack.KAMEHAMEHA],
+    [Id.gokuBlackDivineLasso, AbilityNames.GokuBlack.DIVINE_LASSO],
+    [Id.gokuBlackDivineRetribution, AbilityNames.GokuBlack.DIVINE_RETRIBUTION],
+    [Id.gokuBlackWorkOfGods, AbilityNames.GokuBlack.WORK_OF_GODS],
+    [Id.gokuBlackSorrowfulScythe, AbilityNames.GokuBlack.SORROWFUL_SCYTHE],
+
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
