@@ -2836,6 +2836,7 @@ export module SimpleSpellSystem {
     const spellPowerMax = 1.6;
     
     // get nearby allied heroes
+    GroupClear(Globals.tmpUnitGroup);
     GroupEnumUnitsInRange(
       Globals.tmpUnitGroup, 
       GetUnitX(unit), 
@@ -2864,6 +2865,7 @@ export module SimpleSpellSystem {
         }
       }
     });
+    GroupClear(Globals.tmpUnitGroup);
 
     spellPower = Math.max(
       spellPowerMin, 

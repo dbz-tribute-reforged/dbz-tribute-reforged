@@ -27,6 +27,7 @@ import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstant
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
+import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -172,6 +173,19 @@ export function CustomPlayerTest() {
   }
 
   // need better way to add heroes of player to their hero list
+  const unitEntryTrigger = CreateTrigger();
+  TriggerRegisterEnterRectSimple(unitEntryTrigger, GetEntireMapRect());
+  TriggerAddCondition(unitEntryTrigger, Condition(() => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      const u = GetTriggerUnit();
+      Globals.customPlayers[playerId].addHero(u);
+      Globals.customPlayers[playerId].addUnit(u);
+    }
+    return false;
+  }));
+
   const addHeroToPlayer = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
@@ -364,20 +378,23 @@ export function CustomPlayerTest() {
             spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || 
             GetUnitTypeId(customHero.unit) != FourCC("H08I")
           ) {
-            customHero.useAbility(
-              spellName,
-              new CustomAbilityInput(
-                customHero,
-                player,
-                abilityLevel,
-                Globals.customPlayers[playerId].orderPoint,
-                Globals.customPlayers[playerId].mouseData,
-                Globals.customPlayers[playerId].lastCastPoint.clone(),
-                spellTargetUnit,
-                GetSpellTargetUnit(),
-                damageMult
-              ),
+            const input = new CustomAbilityInput(
+              customHero,
+              player,
+              abilityLevel,
+              Globals.customPlayers[playerId].orderPoint,
+              Globals.customPlayers[playerId].mouseData,
+              Globals.customPlayers[playerId].lastCastPoint.clone(),
+              spellTargetUnit,
+              GetSpellTargetUnit(),
+              damageMult
             );
+
+            let do_abil = true;
+            if (DualTechManager.getInstance().has(abilityId)) {
+              do_abil = DualTechManager.getInstance().execute(abilityId, input);
+            }
+            if (do_abil) customHero.useAbility(spellName,input);
           }
         }
       }

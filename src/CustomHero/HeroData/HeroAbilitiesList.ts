@@ -887,6 +887,12 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.GokuBlack.WORK_OF_GODS,
       AbilityNames.GokuBlack.SORROWFUL_SCYTHE,
     ]],
+    [Id.gokuBlackClone, [
+      AbilityNames.GokuBlack.KAMEHAMEHA,
+      AbilityNames.GokuBlack.DIVINE_RETRIBUTION,
+      AbilityNames.GokuBlack.SORROWFUL_SCYTHE,
+    ]],
+    
 
     // rusty
     [Id.rustTyranno, [

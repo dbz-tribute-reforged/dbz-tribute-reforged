@@ -11872,7 +11872,7 @@ export const AbilitiesList = [
         AbilityNames.Zamasu.HEAVENLY_RUSH
     },
     components: [
-      { name: "dash ground point 45dist" },
+      { name: "dash ground point 40dist" },
       { name: "damage heavenly rush bonus explosion" },
       { name: "damage heavenly rush explosion" },
       { name: "sfx heavenly rush" },
@@ -13003,7 +13003,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground point 35dist" },
+      { name: "dash ground point 30dist" },
       { name: "damage goku black divine retribution agi explosion" },
       { name: "damage goku black divine retribution int explosion" },
       { name: "sfx goku black divine retribution" },
@@ -13034,6 +13034,36 @@ export const AbilitiesList = [
     },
     components: [
       { name: "temp ability goku black sorrowful scythe" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.GokuBlack.SORROWFUL_SCYTHE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim goku black spin" },
+      { name: "dash ground point 40dist" },
+      { name: "damage goku black sorrowful scythe agi explosion" },
+      { name: "damage goku black sorrowful scythe int explosion" },
     ],
   },
   // -------------------------------------------
