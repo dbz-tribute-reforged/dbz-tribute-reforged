@@ -23,6 +23,7 @@ import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstant
 import { FarmingManager } from 'Core/FarmingSystem/FarmingManager';
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
+import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -40,6 +41,7 @@ let itemCleanupManager: ItemCleanupManager;
 let customAbilityManager: CustomAbilityManager;
 let farmingManager: FarmingManager;
 let heroSelectorManager: HeroSelectorManager;
+let dualTechManager: DualTechManager;
 
 
 function tsPostMain() {
@@ -68,6 +70,7 @@ function tsPostMain() {
     // initialize some systems
     CustomPlayerTest();
     SimpleSpellSystem.initialize();
+    dualTechManager = DualTechManager.getInstance();
   })
 
   TimerStart(CreateTimer(), 0.1, false, () => {

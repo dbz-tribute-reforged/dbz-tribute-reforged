@@ -415,6 +415,7 @@ export class BeamComponent implements
     if (!this.isStarted) {
       this.isStarted = true;
       this.isFinished = false;
+      this.stickyTarget = null;
     }
     
     if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {

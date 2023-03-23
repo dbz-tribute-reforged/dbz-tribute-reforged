@@ -28618,7 +28618,7 @@ function Trig_Teleporter_Action_Actions()
 udg_TempReal = LoadRealBJ(0, udg_ID, udg_TeleporterHashtable)
 if (Trig_Teleporter_Action_Func003C()) then
 SetUnitPositionLoc(udg_TempUnit, udg_TempLoc2)
-PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.10)
+PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.00)
 SaveRealBJ(5.00, 0, udg_ID, udg_TeleporterHashtable)
 GroupAddUnitSimple(udg_TempUnit, udg_TeleporterUnitGroup)
 else
@@ -30479,7 +30479,7 @@ SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 20.00), 0, udg_ID,
 end
 udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
 if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func008C()) then
-PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0.10)
+PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0.00)
 else
 end
     RemoveLocation(udg_TempLoc)
@@ -58919,7 +58919,7 @@ end
 return true
 end
 
-function Trig_Transformations_Waluigi_Func020Func002Func003C()
+function Trig_Transformations_Waluigi_Func020Func006Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -58929,8 +58929,8 @@ end
 return false
 end
 
-function Trig_Transformations_Waluigi_Func020Func002C()
-if (not Trig_Transformations_Waluigi_Func020Func002Func003C()) then
+function Trig_Transformations_Waluigi_Func020Func006C()
+if (not Trig_Transformations_Waluigi_Func020Func006Func003C()) then
 return false
 end
 return true
@@ -59008,7 +59008,11 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Waluigi_Func020C()) then
-if (Trig_Transformations_Waluigi_Func020Func002C()) then
+udg_StatMultStr = udg_StatMultReal
+udg_StatMultAgi = udg_StatMultReal
+udg_StatMultInt = udg_StatMultReal
+udg_StatMultStr = (udg_StatMultStr - 0.20)
+if (Trig_Transformations_Waluigi_Func020Func006C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H0AO')

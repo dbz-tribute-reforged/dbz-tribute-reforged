@@ -156,4 +156,16 @@ export const AnimationComponents = [
     onlyApplyAtStart: true,
     resetAnimation: true,
   },
+  {
+    name: "anim goku black spin",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 11,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
 ];
