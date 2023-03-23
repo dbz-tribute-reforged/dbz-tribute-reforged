@@ -31125,10 +31125,10 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities\\Spells\\NightElf\\EntangleMine\\Roots.mdl",
         repeatInterval: 33,
         group: 0,
-        scale: 2.0,
+        scale: 1.0,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,

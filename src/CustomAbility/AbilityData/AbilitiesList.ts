@@ -13003,7 +13003,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground point 25dist" },
+      { name: "dash ground point 35dist" },
       { name: "damage goku black divine retribution agi explosion" },
       { name: "damage goku black divine retribution int explosion" },
       { name: "sfx goku black divine retribution" },
