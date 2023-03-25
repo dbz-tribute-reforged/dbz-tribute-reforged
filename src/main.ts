@@ -58,6 +58,10 @@ function tsPostMain() {
   Preload("DragonSegment2.mdl");
   Preload("DragonTail.mdl");
   Preload("Conflagrate.mdl");
+  Preload("BladeBeamBlack.mdx");
+  Preload("BladeBeamFinal.mdx");
+  Preload("SpiritBomb.mdx");
+  Preload("SpiritBombShine.mdx");
 
   // preload custom abilities
   customAbilityManager = CustomAbilityManager.getInstance();
