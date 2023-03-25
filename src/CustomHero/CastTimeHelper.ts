@@ -59,10 +59,7 @@ export class CastTimeHelper {
       if (abil.waitsForNextClick && !abil.isNextRightClick()) continue;
 
       if (abil.isCasting()) {
-        this.runAbilityCasting(abil, input, interval);
-      }
-      if (abil.isFinished()) {
-        toBeDeleted.push(abil);
+        this.runAbilityCasting(abil, input, interval, toBeDeleted);
       }
     }
 
@@ -75,6 +72,7 @@ export class CastTimeHelper {
     abil: CustomAbility, 
     input: CustomAbilityInput, 
     interval: number,
+    toBeDeleted: CustomAbility[]
   ) {
     if (!abil.isFinishedCasting()) {
       abil.setCastTimeCounter(abil.getCastTimeCounter() + interval);
@@ -89,6 +87,7 @@ export class CastTimeHelper {
         SoundHelper.playSoundOnUnit(input.caster.unit, "Audio/Effects/Zanzo.mp3", 1149);
       }
       abil.activate(input);
+      toBeDeleted.push(abil);
     }
   }
 
@@ -238,6 +237,9 @@ export class CastTimeHelper {
       }
       if (!ability.waitsForNextClick) {
         ability.setCastTimeCounter(0.01);
+      }
+      if (ability.waitsForNextClick) {
+        ability.setNextRightClickFlag(false);
       }
       this.activeAbilities.set(ability, input);
     }

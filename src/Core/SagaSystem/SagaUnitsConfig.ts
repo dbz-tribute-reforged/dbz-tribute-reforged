@@ -809,14 +809,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // goku black
     ["Goku Black 1", new SagaUnit(FourCC("E019"), 90, 15000, 400, 15000, new Vector2D(-6700, -6700),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.GokuBlack.BLACK_KAMEHAMEHA,
+        SagaAbilities.GokuBlack.DIVINE_RETRIBTION,
+        SagaAbilities.Saga.GENERIC_BOMB,
       ],
     )],
     // gb + zamasu
     ["Goku Black 2", new SagaUnit(FourCC("E019"), 130, 21000, 400, 21000, new Vector2D(12000, 28000),
       [
         SagaAbilities.GokuBlack.GOD_KAMEHAMEHA,
+        SagaAbilities.GokuBlack.BLACK_KAMEHAMEHA,
+        SagaAbilities.GokuBlack.DIVINE_LASSO,
+        SagaAbilities.GokuBlack.DIVINE_RETRIBTION,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
