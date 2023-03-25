@@ -24,6 +24,7 @@ import { FarmingManager } from 'Core/FarmingSystem/FarmingManager';
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -50,6 +51,12 @@ function tsPostMain() {
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
   
+  // preload (temp) test
+  Preload("DragonHead2.mdl");
+  Preload("DragonSegment2.mdl");
+  Preload("DragonTail.mdl");
+  Preload("Conflagrate.mdl");
+
   // preload custom abilities
   customAbilityManager = CustomAbilityManager.getInstance();
 
@@ -63,6 +70,7 @@ function tsPostMain() {
   CustomUiTest();
 
   PathingCheck.Init();
+  TimerManager.getInstance();
 
   // delay init
   TimerStart(CreateTimer(), 0.05, false, () => {

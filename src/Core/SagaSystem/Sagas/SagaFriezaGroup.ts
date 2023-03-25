@@ -6,6 +6,7 @@ import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 import { Constants } from "Common/Constants";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SoundHelper } from "Common/SoundHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';
@@ -226,6 +227,8 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     // if frieza dead, replace with strong frieza
     for (let i = 0; i < this.bosses.length - 1; ++i) {
       const frieza = this.bosses[i];
+      if (UnitHelper.isUnitDead(frieza)) continue;
+      
       const nextFrieza = this.bosses[i+1];
       const isNextForm = i == this.bosses.length - 2 ?
         SagaHelper.checkUnitHp(frieza, 0.1, false, true, false) :

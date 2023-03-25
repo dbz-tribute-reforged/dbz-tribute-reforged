@@ -152,7 +152,7 @@ export class BeamComponent implements
         }
       }
 
-      if (this.isSticky && numEnemyHeroes > 0 && this.stickyTarget == null) {
+      if (this.isSticky && numEnemyHeroes > 0 && !this.stickyTarget) {
         let min_dist = this.aoe;
         Globals.tmpVector.setUnit(this.beamUnit);
 
@@ -161,7 +161,7 @@ export class BeamComponent implements
           Globals.tmpVector2.setUnit(u);
           const dist_to_u = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
           if (
-            (this.stickyTarget == null || dist_to_u < min_dist)
+            (!this.stickyTarget || dist_to_u < min_dist)
             && UnitHelper.isUnitTargetableForPlayer(u, input.casterPlayer, false)
             && UnitHelper.isUnitAlive(u)
           ) {
@@ -180,7 +180,7 @@ export class BeamComponent implements
   protected moveBeamUnit(ability: CustomAbility, input: CustomAbilityInput): this {
     if (!this.beamUnit) return this;
 
-    if (this.isSticky && this.stickyTarget != null) {
+    if (this.isSticky && this.stickyTarget) {
       Globals.tmpVector.setUnit(this.stickyTarget);
       PathingCheck.moveFlyingUnitToCoord(this.beamUnit, Globals.tmpVector);
       return this;

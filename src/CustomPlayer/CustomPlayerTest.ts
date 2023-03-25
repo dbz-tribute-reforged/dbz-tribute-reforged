@@ -174,12 +174,11 @@ export function CustomPlayerTest() {
 
   // need better way to add heroes of player to their hero list
   const unitEntryTrigger = CreateTrigger();
-  TriggerRegisterEnterRectSimple(unitEntryTrigger, GetEntireMapRect());
+  TriggerRegisterEnterRectSimple(unitEntryTrigger, GetPlayableMapRect());
   TriggerAddCondition(unitEntryTrigger, Condition(() => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
+    const u = GetTriggerUnit();
+    const playerId = GetPlayerId(GetOwningPlayer(u));
     if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-      const u = GetTriggerUnit();
       Globals.customPlayers[playerId].addHero(u);
       Globals.customPlayers[playerId].addUnit(u);
     }
@@ -187,7 +186,7 @@ export function CustomPlayerTest() {
   }));
 
   const addHeroToPlayer = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+	for (let i = 0; i < Constants.maxActivePlayers; ++i) {
     TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
   }
 	TriggerAddAction(addHeroToPlayer, () => {

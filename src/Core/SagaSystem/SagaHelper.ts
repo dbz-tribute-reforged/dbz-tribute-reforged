@@ -7,6 +7,7 @@ import { SagaHeroAI } from "./SagaAISystem/SagaHeroAI";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbility } from "./SagaAbility";
 import { Players } from "w3ts/globals";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: unit[]): boolean {
@@ -223,7 +224,8 @@ export module SagaHelper {
       );
       ++counter;
     }
-    TimerStart(CreateTimer(), delay, true, ()=> {
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, delay, true, ()=> {
       if (counter < messages.length) {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, duration, 
@@ -231,7 +233,7 @@ export module SagaHelper {
         );
         ++counter;
       } else {
-        DestroyTimer(GetExpiredTimer());
+        TimerManager.getInstance().recycle(timer);
       }
     })
   }

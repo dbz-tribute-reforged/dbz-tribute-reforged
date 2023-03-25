@@ -101,7 +101,7 @@ export const HookComponents = [
     maxRange: 1500,
     speed: 50,
     aoe: 200,
-    onlyHookHeroes: false,
+    onlyHookHeroes: true,
     enablePierce: true,
     useLastCastPoint: true,
     sfxList: [
@@ -186,7 +186,7 @@ export const HookComponents = [
     maxRange: 1500,
     speed: 50,
     aoe: 200,
-    onlyHookHeroes: false,
+    onlyHookHeroes: true,
     enablePierce: true,
     useLastCastPoint: true,
     sfxList: [

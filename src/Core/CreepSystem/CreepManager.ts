@@ -4,6 +4,7 @@ import { Vector2D } from "Common/Vector2D";
 import { DefaultCreepUpgradeConfig, CreepUpgradeConfig, CreepResearchUpgrade } from "./CreepUpgradeConfig";
 import { RandomCreepTypeHelper } from "./CreepUpgradeTypes";
 import { CoordMath } from "Common/CoordMath";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 // Possible Optimisations: 
 // use custom value of a unit for O(1)
@@ -293,9 +294,10 @@ export class CreepManager {
             customCreep.isUpgrading = false;
             wait = Math.random() + 0.1;
           }
-          TimerStart(CreateTimer(), wait, false, () => {
+          const timer = TimerManager.getInstance().get();
+          TimerStart(timer, wait, false, () => {
             this.doCreepRespawn(creepUnit, customCreep);
-            DestroyTimer(GetExpiredTimer());
+            TimerManager.getInstance().recycle(timer);
           });
         }
       }

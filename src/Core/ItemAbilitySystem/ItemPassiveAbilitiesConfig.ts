@@ -1,6 +1,7 @@
 import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 // on pickup perform actions
 export const itemPassiveAbilityConfig = new Map<number, () => void> (
@@ -16,7 +17,9 @@ function performBraveSword() {
   const position = new Vector2D(GetUnitX(unit), GetUnitY(unit));
   const player = GetOwningPlayer(unit);
 
-  TimerStart(CreateTimer(), 1.0, true, () => {
+  const timer = TimerManager.getInstance().get();
+
+  TimerStart(timer, 1.0, true, () => {
     if (UnitHasItem(unit, braveSword)) {
       position.setUnit(unit);
 
@@ -42,7 +45,7 @@ function performBraveSword() {
       
       DestroyGroup(damagedGroup);
     } else {
-      DestroyTimer(GetExpiredTimer());
+      TimerManager.getInstance().recycle(timer);
     }
   });
 }
