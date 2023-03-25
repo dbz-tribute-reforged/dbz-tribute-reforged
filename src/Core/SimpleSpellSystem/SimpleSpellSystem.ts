@@ -2852,7 +2852,7 @@ export module SimpleSpellSystem {
       if (
         UnitHelper.isUnitRealHero(alliedHero)
         && IsUnitAlly(alliedHero, player)
-        // && alliedHero != unit
+        && alliedHero != unit
       ) {
         if (UnitHelper.isUnitDead(alliedHero)) {
           spellPower += spellPowerPerDead;
