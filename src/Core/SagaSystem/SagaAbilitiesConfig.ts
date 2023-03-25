@@ -273,11 +273,17 @@ export module SagaAbilities {
   }
 
   export module GokuBlack {
-    export const KAMEHAMEHA = new SagaAbility(
-      AbilityNames.Goku.KAMEHAMEHA, 10, 14, 10, SHORT_CAST_TIME
+    export const BLACK_KAMEHAMEHA = new SagaAbility(
+      AbilityNames.GokuBlack.KAMEHAMEHA, 10, 14, 10, SHORT_CAST_TIME
     );
     export const GOD_KAMEHAMEHA = new SagaAbility(
       AbilityNames.Goku.GOD_KAMEHAMEHA, 10, 17, 10, SHORT_CAST_TIME
+    );
+    export const DIVINE_LASSO = new SagaAbility(
+      AbilityNames.GokuBlack.DIVINE_LASSO, 10, 25, 5, MEDIUM_CAST_TIME
+    );
+    export const DIVINE_RETRIBTION = new SagaAbility(
+      AbilityNames.GokuBlack.DIVINE_RETRIBUTION, 10, 20, 5, MEDIUM_CAST_TIME
     );
   }
 
