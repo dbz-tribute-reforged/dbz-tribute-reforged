@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.78d
+DBZ Tribute |cffffcc00Reforged 0.78e
 }
 
 STRING 4
@@ -2562,12 +2562,6 @@ STRING 416
 Dummy Side Nuke Explosion
 }
 
-STRING 417
-// Units: h02A (Dummy Final Flash), Name (Name)
-{
-Dummy Final Flash
-}
-
 STRING 418
 // Units: h02B (Dummy Side Fire), Name (Name)
 {
@@ -2578,12 +2572,6 @@ STRING 419
 // Units: h02C (Dummy Side Explosion), Name (Name)
 {
 Dummy Side Explosion
-}
-
-STRING 420
-// Units: h02D (Dummy Burning Attack), Name (Name)
-{
-Dummy Burning Attack
 }
 
 STRING 421
@@ -2604,12 +2592,6 @@ STRING 423
 Dummy Side Flamestrike
 }
 
-STRING 424
-// Units: h02H (Dummy Future Trunks), Name (Name)
-{
-Dummy Future Trunks
-}
-
 STRING 425
 // Units: h02I (Dummy Lens Flare), Name (Name)
 {
@@ -2628,18 +2610,6 @@ STRING 427
 Dummy Side Dragon
 }
 
-STRING 428
-// Units: h02L (Dummy Flamestrike), Name (Name)
-{
-Dummy Flamestrike
-}
-
-STRING 429
-// Units: h02M (Dummy Dragon Fist), Name (Name)
-{
-Dummy Dragon Fist
-}
-
 STRING 430
 // Units: h02N (Dummy Incinerate), Name (Name)
 {
@@ -2650,24 +2620,6 @@ STRING 431
 // Units: h02O (Dummy Solar Flare), Name (Name)
 {
 Dummy Solar Flare
-}
-
-STRING 432
-// Units: h02P (Dummy Energy Sparkle), Name (Name)
-{
-Dummy Energy Sparkle
-}
-
-STRING 433
-// Units: h02Q (Dummy Big Bang Attack), Name (Name)
-{
-Dummy Big Bang Attack
-}
-
-STRING 434
-// Units: h00J (Dummy Energy Sword), Name (Name)
-{
-Dummy Energy Sword
 }
 
 STRING 435
@@ -2712,12 +2664,6 @@ STRING 441
 Dummy Red Spiral
 }
 
-STRING 442
-// Units: h015 (Dummy Fat Buu Explosion), Name (Name)
-{
-Dummy Fat Buu Explosion
-}
-
 STRING 443
 // Units: h017 (Dummy Nuke Explosion), Name (Name)
 {
@@ -2736,46 +2682,22 @@ STRING 445
 Dummy Starfall
 }
 
-STRING 446
-// Units: h02S (Dummy Flash Charm), Name (Name)
-{
-Dummy Flash Charm
-}
-
 STRING 447
-// Units: h02T (Destruction Sphere), Name (Name)
+// Abilities: A016 (Destruction Sphere), Name (Name)
 {
 Destruction Sphere
 }
 
 STRING 448
-// Units: h02U (Death Ball), Name (Name)
+// Abilities: A00M (Death Ball), Name (Name)
 {
 Death Ball
-}
-
-STRING 449
-// Units: h02V (Dummy Fire Ring), Name (Name)
-{
-Dummy Fire Ring
-}
-
-STRING 450
-// Units: h02W (Dummy Earthquake), Name (Name)
-{
-Dummy Earthquake
 }
 
 STRING 451
 // Units: h02X (Revenge Death Ball), Name (Name)
 {
 Revenge Death Ball
-}
-
-STRING 452
-// Units: h02Y (Dummy Charge), Name (Name)
-{
-Dummy Charge
 }
 
 STRING 453
@@ -2788,24 +2710,6 @@ STRING 454
 // Units: h030 (Dummy Upsidedown Rain), Name (Name)
 {
 Dummy Upsidedown Rain
-}
-
-STRING 455
-// Units: h031 (Dummy Death Beam), Name (Name)
-{
-Dummy Death Beam
-}
-
-STRING 456
-// Units: h032 (Dummy Energy Beam), Name (Name)
-{
-Dummy Energy Beam
-}
-
-STRING 457
-// Units: h033 (Dummy Entangle), Name (Name)
-{
-Dummy Entangle
 }
 
 STRING 458
@@ -3138,12 +3042,6 @@ STRING 512
 Sword
 }
 
-STRING 513
-// Units: h022 (Dummy Evil Impulse), Name (Name)
-{
-Dummy Evil Impulse
-}
-
 STRING 514
 // Units: H03H (Garlic Jr.), Name (Name)
 {
@@ -3190,18 +3088,6 @@ STRING 521
 // Units: N00C (Sansho), Propernames (Proper Names)
 {
 Sansho
-}
-
-STRING 522
-// Units: h03I (Dummy Earthquake Nappa), Name (Name)
-{
-Dummy Earthquake Nappa
-}
-
-STRING 523
-// Units: h03J (Dummy Burning Wheelo), Name (Name)
-{
-Dummy Burning Wheelo
 }
 
 STRING 524
@@ -3579,12 +3465,6 @@ STRING 584
 Q
 }
 
-STRING 585
-// Units: h03Q (Dummy Fire Ring), Name (Name)
-{
-Dummy Fire Ring
-}
-
 STRING 586
 // Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
@@ -3946,12 +3826,6 @@ STRING 645
 Yakon
 }
 
-STRING 646
-// Units: h04C (Dummy Goku), Name (Name)
-{
-Dummy Goku
-}
-
 STRING 647
 // Units: H05M (Namekian), Name (Name)
 {
@@ -4079,18 +3953,6 @@ STRING 666
 Dummy Top Blue Wave
 }
 
-STRING 667
-// Units: h04G (Dummy Finger Blitz Missile), Name (Name)
-{
-Dummy Finger Blitz Missile
-}
-
-STRING 668
-// Units: h04H (Dummy Dende Revive), Name (Name)
-{
-Dummy Dende Revive
-}
-
 STRING 669
 // Units: n02R (Frieza's Henchman), Name (Name)
 {
@@ -4155,18 +4017,6 @@ STRING 676
 D
 }
 
-STRING 677
-// Units: h04J (Dummy Dodon Ray), Name (Name)
-{
-Dummy Dodon Ray
-}
-
-STRING 678
-// Units: h04K (Dummy Dodon Ray), Name (Name)
-{
-Dummy Dodon Ray
-}
-
 STRING 679
 // Units: h04L (Dummy Yellow Ring), Name (Name)
 {
@@ -4177,12 +4027,6 @@ STRING 680
 // Units: h04M (Tao's Grenade), Name (Name)
 {
 Tao's Grenade
-}
-
-STRING 681
-// Units: h04N (Dummy Grenade Explode), Name (Name)
-{
-Dummy Grenade Explode
 }
 
 STRING 682
@@ -4550,18 +4394,6 @@ STRING 736
 Z
 }
 
-STRING 737
-// Units: h050 (Dummy Calamity Blaster), Name (Name)
-{
-Dummy Calamity Blaster
-}
-
-STRING 738
-// Units: h051 (Dummy Calamity Blaster Tail), Name (Name)
-{
-Dummy Calamity Blaster Tail
-}
-
 STRING 739
 // Units: H00R (Namekian), Ubertip (Tooltip - Extended)
 {
@@ -4659,12 +4491,6 @@ STRING 753
 // Units: h057 (Dummy Spirit Bomb), Name (Name)
 {
 Dummy Spirit Bomb
-}
-
-STRING 754
-// Units: h058 (Dummy Cell), Name (Name)
-{
-Dummy Cell
 }
 
 STRING 755
@@ -4807,12 +4633,6 @@ STRING 776
 Dummy Power Blitz
 }
 
-STRING 777
-// Units: h05F (Dummy Accel Rain), Name (Name)
-{
-Dummy Accel Rain
-}
-
 STRING 778
 // Units: H05G (Half Human / Half Saiyan), Name (Name)
 {
@@ -4878,12 +4698,6 @@ STRING 788
 // Units: h05J (Dummy Hells Flash), Name (Name)
 {
 Dummy Hells Flash
-}
-
-STRING 789
-// Units: h05K (Dummy Flash Bomber), Name (Name)
-{
-Dummy Flash Bomber
 }
 
 STRING 790
@@ -5507,12 +5321,6 @@ STRING 879
 Dummy GOD
 }
 
-STRING 880
-// Units: h064 (Dummy Calamity meteor), Name (Name)
-{
-Dummy Calamity meteor
-}
-
 STRING 881
 // Units: n02L (Revive Point), Name (Name)
 {
@@ -5607,12 +5415,6 @@ STRING 896
 // Units: H06H (Tournament official), Propernames (Proper Names)
 {
 ????
-}
-
-STRING 897
-// Units: h06I (Destruction Sphere), Name (Name)
-{
-Destruction Sphere
 }
 
 STRING 898
@@ -5724,12 +5526,6 @@ STRING 914
 Tournament Building
 }
 
-STRING 915
-// Units: h06N (Beer Ball), Name (Name)
-{
-Beer Ball
-}
-
 STRING 916
 // Units: u01H (Hook Part), Name (Name)
 {
@@ -5754,46 +5550,16 @@ STRING 919
 New Kamikaze Ghost
 }
 
-STRING 920
-// Units: h06P (Dummy Donut), Name (Name)
-{
-Dummy Donut
-}
-
-STRING 921
-// Units: h06Q (Dummy Buu), Name (Name)
-{
-Dummy Buu
-}
-
 STRING 922
 // Units: h06R (Not Yet Implemented), Name (Name)
 {
 Not Yet Implemented
 }
 
-STRING 923
-// Units: h06S (Dummy Fart), Name (Name)
-{
-Dummy Fart
-}
-
-STRING 924
-// Units: h06T (Dummy Fart), Name (Name)
-{
-Dummy Fart
-}
-
 STRING 925
 // Units: h06U (Cataclysmic Orb), Name (Name)
 {
 Cataclysmic Orb
-}
-
-STRING 926
-// Units: h06V (Dummy Beerus Spinner), Name (Name)
-{
-Dummy Beerus Spinner
 }
 
 STRING 927
@@ -6020,12 +5786,6 @@ STRING 961
 // Units: n03F (Healing Chamber), Name (Name)
 {
 Healing Chamber
-}
-
-STRING 962
-// Units: h074 (Dummy Frieza Circle), Name (Name)
-{
-Dummy Frieza Circle
 }
 
 STRING 963
@@ -6280,28 +6040,10 @@ STRING 1004
 W
 }
 
-STRING 1005
-// Units: h07F (Dummy Dust Wave), Name (Name)
-{
-Dummy Dust Wave
-}
-
 STRING 1006
 // Units: h07G (Dummy Segment), Name (Name)
 {
 Dummy Segment
-}
-
-STRING 1007
-// Units: h07H (Dummy Explosion), Name (Name)
-{
-Dummy Explosion
-}
-
-STRING 1008
-// Units: h07I (Dummy Explosion Roshi), Name (Name)
-{
-Dummy Explosion Roshi
 }
 
 STRING 1009
@@ -6591,12 +6333,6 @@ STRING 1052
 A
 }
 
-STRING 1053
-// Units: h07L (Dummy Banshee Blast), Name (Name)
-{
-Dummy Banshee Blast
-}
-
 STRING 1054
 // Units: E01O (Desert Bandit), Name (Name)
 {
@@ -6752,12 +6488,6 @@ STRING 1077
 // Units: e015 (Tapion Brave Cannon Dummy), Name (Name)
 {
 Tapion Brave Cannon Dummy
-}
-
-STRING 1078
-// Units: h07O (DivineRage), Name (Name)
-{
-DivineRage
 }
 
 STRING 1079
@@ -7060,18 +6790,6 @@ STRING 1126
 // Units: h07W (SS Deadly Bomb), Name (Name)
 {
 SS Deadly Bomb
-}
-
-STRING 1127
-// Units: h002 (Dummy Charge), Name (Name)
-{
-Dummy Charge
-}
-
-STRING 1128
-// Units: h002 (Dummy Charge), EditorSuffix (Name - Editor Suffix)
-{
-big
 }
 
 STRING 1129
@@ -15140,12 +14858,6 @@ STRING 2422
 E
 }
 
-STRING 2423
-// Abilities: A016 (Destruction Sphere), Name (Name)
-{
-Destruction Sphere
-}
-
 STRING 2424
 // Abilities: A016 (Destruction Sphere), Researchtip (Tooltip - Learn)
 {
@@ -21929,7 +21641,7 @@ STRING 3526
 }
 
 STRING 3527
-// Abilities: A00M (Death Ball), Name (Name)
+// Abilities: A0Q8 (Death Ball), Name (Name)
 {
 Death Ball
 }
@@ -84279,12 +83991,6 @@ STRING 13562
 // Abilities: A0T6 (New Hampshire Smash), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 13563
-// Abilities: A0Q8 (Death Ball), Name (Name)
-{
-Death Ball
 }
 
 STRING 13564

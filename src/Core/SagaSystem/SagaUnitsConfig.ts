@@ -109,7 +109,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // namek saga
-    ["Dodoria", new SagaUnit(FourCC("U015"), 25, 350, 150, 200, new Vector2D(30500, 25500),
+    ["Dodoria", new SagaUnit(FourCC("U015"), 25, 350, 150, 200, new Vector2D(25500, 25200),
       [
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
         SagaAbilities.Nappa.BREAK_CANNON,
@@ -118,13 +118,13 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
-    ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(30700, 25500),
+    ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(25700, 25200),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
       ]
     )],
-    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 45, 700, 300, 500, new Vector2D(30500, 25500),
+    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 45, 700, 300, 500, new Vector2D(25700, 25200),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,

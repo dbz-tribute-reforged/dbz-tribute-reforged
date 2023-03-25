@@ -25,6 +25,7 @@ import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -43,6 +44,7 @@ let customAbilityManager: CustomAbilityManager;
 let farmingManager: FarmingManager;
 let heroSelectorManager: HeroSelectorManager;
 let dualTechManager: DualTechManager;
+let castTimeHelper: CastTimeHelper;
 
 
 function tsPostMain() {
@@ -56,6 +58,10 @@ function tsPostMain() {
   Preload("DragonSegment2.mdl");
   Preload("DragonTail.mdl");
   Preload("Conflagrate.mdl");
+  Preload("BladeBeamBlack.mdx");
+  Preload("BladeBeamFinal.mdx");
+  Preload("SpiritBomb.mdx");
+  Preload("SpiritBombShine.mdx");
 
   // preload custom abilities
   customAbilityManager = CustomAbilityManager.getInstance();
@@ -76,6 +82,7 @@ function tsPostMain() {
   TimerStart(CreateTimer(), 0.05, false, () => {
     DestroyTimer(GetExpiredTimer());
     // initialize some systems
+    castTimeHelper = CastTimeHelper.getInstance();
     CustomPlayerTest();
     SimpleSpellSystem.initialize();
     dualTechManager = DualTechManager.getInstance();
