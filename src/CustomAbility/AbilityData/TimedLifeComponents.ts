@@ -56,7 +56,7 @@ export const TimedLifeComponents = [
     duration: 40,
   },
   {
-    name: "timed 44", 
+    name: "timed life 44", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
