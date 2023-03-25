@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.78c
+DBZ Tribute |cffffcc00Reforged 0.78d
 }
 
 STRING 4
@@ -52599,6 +52599,32 @@ STRING 8387
 [|cff00FF00G|r] Learn Goku Black's Fighting Style - [|cffffcc00Level %d|r]
 }
 
+STRING 8388
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 9|r]
+}
+
+STRING 8389
+// Upgrades: R00G (Long Rifles), Name (Name)
+{
+Increased Attack Range
+}
+
+STRING 8390
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario becomes huge for a short time. Nearby enemies are stunned for 1s.
+|cffFFFF00+0.3x Str Mult
++0.15x Agi Mult
++325 Attack Range
++10 Armor
++33ms and unlocks movement speed cap
+Unlocks Giga Sphere|r
+
+|cff00ffffCooldown: <A0Y1,Cool1>s
+}
+
 STRING 8399
 // Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
@@ -63143,7 +63169,7 @@ Transformations:
 
 |cff00ff00Pick ONE of the following:|r
 [lvl 250] "|cffff2222majin strength|r" [+15 summon armor]
-[lvl 250] "|cffffff00majin hatred|r" [+30% summon damage]
+[lvl 250] "|cffffff00majin hatred|r" [+25% summon damage]
 
 If Babidi is not dead you can type Buu type "release" at lvl 45 to turn into Majin Buu with bonus level 3 candy beam.
 }
@@ -111505,20 +111531,6 @@ Doubles the effect of |cff00ffffAura|r
 |cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
 }
 
-STRING 17449
-// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
-{
-Lucario becomes huge for a short time. Nearby enemies are stunned for 1s.
-|cffFFFF00+0.3x Str Mult
-+0.15x Agi Mult
-+150 Attack Range
-+10 Armor
-+33ms and unlocks movement speed cap
-Unlocks Giga Sphere|r
-
-|cff00ffffCooldown: <A0Y1,Cool1>s
-}
-
 STRING 17450
 // Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
 {
@@ -117391,7 +117403,7 @@ STRING 18318
 }
 
 STRING 18319
-// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+// Abilities: A0WZ (Flamethrower), Researchubertip (Tooltip - Learn - Extended)
 {
 Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -117406,12 +117418,6 @@ STRING 18321
 // Abilities: A0WZ (Flamethrower), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Flamethrower - [|cffffcc00Level %d|r]
-}
-
-STRING 18322
-// Abilities: A0WZ (Flamethrower), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 18323

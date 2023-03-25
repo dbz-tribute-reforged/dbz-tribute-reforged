@@ -7,6 +7,7 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
 import { CostType, stringToCostType, Globals } from "Common/Constants";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export class CustomAbility implements Serializable<CustomAbility>, AddableComponent {
   static readonly BASE_DAMAGE = 1500;
@@ -15,7 +16,9 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   public nextRightClickFlag: boolean;
   public castTimeCounter: number;
   public currentTick: number;
-  // protected abilityTimer: timer;
+  protected abilityTimer: timer | null = null;
+
+  protected lastInput: CustomAbilityInput = null;
 
   constructor(
     public name: string = "No Ability", 
@@ -37,26 +40,44 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     this.nextRightClickFlag = false;
     this.castTimeCounter = 0;
     this.currentTick = 0;
-    // this.abilityTimer = CreateTimer();
+    this.abilityTimer = null;
   }
 
   activate(input: CustomAbilityInput): void {
+    this.lastInput = input;
+
     this.takeCosts(input);
 
     // instant activate, bypasses 0.03s delay for ability to start
     this.activateOnTimer(input);
+
+    if (this.abilityTimer == null) {
+      this.abilityTimer = TimerManager.getInstance().get();
+    }
+
+    TimerStart(this.abilityTimer, this.updateRate, true, () => {
+      this.activateOnTimer(input);
+    });
   }
 
   activateOnTimer(input: CustomAbilityInput): void {
-    if (this.currentTick <= this.duration) {
-      for (const component of this.components) {
-        if (this.isReadyToUseComponent(component)) {
-          component.performTickAction(this, input, input.caster.unit);
-        }
+    if (this.isFinished()) {
+      if (this.waitsForNextClick) {
+        this.setNextRightClickFlag(false);
       }
-      ++this.currentTick;
+      TimerManager.getInstance().recycle(this.abilityTimer);
+      this.abilityTimer = null;
+    } else {
+      if (this.currentTick <= this.duration) {
+        for (const component of this.components) {
+          if (this.isReadyToUseComponent(component)) {
+            component.performTickAction(this, input, input.caster.unit);
+          }
+        }
+        ++this.currentTick;
+      }
+      this.updateCd();
     }
-    this.updateCd();
   }
 
   // oldActivate(input: CustomAbilityInput): void {
@@ -308,10 +329,17 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     return timeRatio;
   }
 
+  getLastInput() {
+    return this.lastInput;
+  }
+
   cleanup() {
     this.currentTick = this.duration + 1;
     for (const component of this.components) {
       component.cleanup();
+    }
+    if (this.abilityTimer) {
+      TimerManager.getInstance().recycle(this.abilityTimer);
     }
   }
 

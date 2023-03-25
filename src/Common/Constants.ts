@@ -43,6 +43,8 @@ export module Globals {
   );
 
   export const appuleVengeanceTeleportTrigger = CreateTrigger();
+
+  export const barrierBlockUnits: Map<unit, number> = new Map();
 }
 
 export module Constants {

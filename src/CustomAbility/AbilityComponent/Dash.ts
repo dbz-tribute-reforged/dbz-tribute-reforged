@@ -64,144 +64,152 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       this.isStarted = true;
       this.isFinished = false;
     }
-    
+
     this.currentCoord.setPos(GetUnitX(source), GetUnitY(source));
+    this.targetCoord.setVector(this.currentCoord);
+
     if (
-      !this.checkPreviousCoord ||
-      CoordMath.distance(this.previousCoord, this.currentCoord) > Dash.MIN_DISTANCE_FROM_PREVIOUS
+      this.dashType != Dash.DASH_TYPE_ZANZO
+      || !Globals.barrierBlockUnits.has(source)
     ) {
-      let direction: number = 0;
-      if (this.useLastCastPoint) {
-        this.dashTargetPoint.setVector(input.castPoint);
-      } else {
-        this.dashTargetPoint.setVector(input.targetPoint);
-      }
-      
-      if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
-        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-        SetUnitFacing(source, direction);
-      } 
-      else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
-        direction = GetUnitFacing(source);
-      } 
-      else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
-        if (input.targetUnit) {
-          if (UnitHelper.isUnitAlive(input.targetUnit)) {
-            this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
-          } else {
-            this.dashTargetPoint.setVector(this.currentCoord);
-          }
-        }
-        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-      } 
-      else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
-        if (input.castUnit) {
-          this.dashTargetPoint.setPos(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
-        }
-        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-      } 
-      else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
-        this.dashTargetPoint.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-      } 
-      else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_POINT) {
-        this.dashTargetPoint.setVector(input.castPoint);
-        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
-        SetUnitFacing(source, direction);
-      }
-
-      direction += this.angleOffset;
-
-      this.distanceMult = 1;
-      if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
-        const sourceAgi = GetHeroAgi(source, true);
-        const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
-        const bonusAgiToStrRatioSpeed = Math.max(
-          Dash.MINIMUM_STR_AGI_RATIO,
-          -0.05 + Math.min(
-            bonusAgiSpeed,
-            sourceAgi / Math.max(1, GetHeroStr(source, true))
-          )
-        );
-        
-        this.distanceMult = Math.min(
-          Dash.MAXIMUM_AGI_DISTANCE_MULTIPLIER, 
-          bonusAgiSpeed * bonusAgiToStrRatioSpeed
-        );
-      }
-      const distanceToMove = this.distance * this.distanceMult;
-      const distanceToTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);
-
-      if (distanceToTarget > distanceToMove) {
-        this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToMove);
-      } else {
-        this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
-      }
-      
-
-      if (ability.name == AbilityNames.BasicAbility.ZANZOKEN) {
-        // repeatedly move the user towards the target until they run out of distance to move
-        // then move the user
-        if (ability.currentTick == 0) {
-          const distMove = 50 * this.distanceMult;
-          let distTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);    
-
-          if (distTarget > distMove) {
-            this.targetCoord.polarProjectCoords(this.currentCoord, direction, distMove * 0.25);
-          } else {
-            this.targetCoord.polarProjectCoords(this.currentCoord, direction, distTarget);
-          }
-
-          while (
-            this.distanceTravelled < this.distance * this.distanceMult
-            && distTarget >= distMove
-          ) {
-            if (
-              !PathingCheck.isFlyingWalkable(this.targetCoord)
-              || PathingCheck.isDeepWater(this.targetCoord)
-            ) {
-              break;
-            }
-
-            distTarget = CoordMath.distance(this.targetCoord, this.dashTargetPoint);   
-            if (distTarget > distMove) {
-              this.targetCoord.polarProjectCoords(this.targetCoord, direction, distMove);
-            } else {
-              this.targetCoord.polarProjectCoords(this.targetCoord, direction, distTarget);
-            }
-            this.distanceTravelled += distMove;
-            PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
-            
-            IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
-          }
-        }
-        this.targetCoord.setUnit(source);
-
-      } else {
-        if (this.dashType == Dash.DASH_TYPE_ZANZO) {
-          if (
-            ability.name == AbilityNames.BasicAbility.ZANZO_DASH 
-            && PathingCheck.isGroundWalkable(this.targetCoord)
-            && GetUnitCurrentOrder(source) == OrderIds.MOVE
-            && ability.currentTick > 0
-            && ability.currentTick % 4 == 0
-          ) {
-            IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
-          }
-  
-          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
-          // SetUnitFacing(source, direction);
-        } else if (this.dashType == Dash.DASH_TYPE_GROUND) {
-          PathingCheck.moveGroundUnitToCoord(source, this.targetCoord);
+      if (
+        !this.checkPreviousCoord ||
+        CoordMath.distance(this.previousCoord, this.currentCoord) > Dash.MIN_DISTANCE_FROM_PREVIOUS
+      ) {
+        let direction: number = 0;
+        if (this.useLastCastPoint) {
+          this.dashTargetPoint.setVector(input.castPoint);
         } else {
-          PathingCheck.moveFlyingUnitToCoord(source, this.targetCoord);
+          this.dashTargetPoint.setVector(input.targetPoint);
         }
-        // target coord = destination
-        this.targetCoord.setPos(GetUnitX(source), GetUnitY(source));
-        // distance = start to destination
-        this.distanceTravelled += CoordMath.distance(this.currentCoord, this.targetCoord);
-        this.previousCoord.setVector(this.targetCoord);
+        
+        if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
+          direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+          SetUnitFacing(source, direction);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
+          direction = GetUnitFacing(source);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
+          if (input.targetUnit) {
+            if (UnitHelper.isUnitAlive(input.targetUnit)) {
+              this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+            } else {
+              this.dashTargetPoint.setVector(this.currentCoord);
+            }
+          }
+          direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
+          if (input.castUnit) {
+            this.dashTargetPoint.setPos(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
+          }
+          direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
+          this.dashTargetPoint.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+          direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_POINT) {
+          this.dashTargetPoint.setVector(input.castPoint);
+          direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+          SetUnitFacing(source, direction);
+        }
+
+        direction += this.angleOffset;
+
+        this.distanceMult = 1;
+        if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
+          const sourceAgi = GetHeroAgi(source, true);
+          const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
+          const bonusAgiToStrRatioSpeed = Math.max(
+            Dash.MINIMUM_STR_AGI_RATIO,
+            -0.05 + Math.min(
+              bonusAgiSpeed,
+              sourceAgi / Math.max(1, GetHeroStr(source, true))
+            )
+          );
+          
+          this.distanceMult = Math.min(
+            Dash.MAXIMUM_AGI_DISTANCE_MULTIPLIER, 
+            bonusAgiSpeed * bonusAgiToStrRatioSpeed
+          );
+        }
+        const distanceToMove = this.distance * this.distanceMult;
+        const distanceToTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);
+
+        if (distanceToTarget > distanceToMove) {
+          this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToMove);
+        } else {
+          this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
+        }
+
+        if (ability.name == AbilityNames.BasicAbility.ZANZOKEN) {
+          // repeatedly move the user towards the target until they run out of distance to move
+          // then move the user
+          if (ability.currentTick == 0) {
+            const distMove = 50 * this.distanceMult;
+            let distTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);    
+
+            if (distTarget > distMove) {
+              this.targetCoord.polarProjectCoords(this.currentCoord, direction, distMove * 0.25);
+            } else {
+              this.targetCoord.polarProjectCoords(this.currentCoord, direction, distTarget);
+            }
+
+            while (
+              this.distanceTravelled < this.distance * this.distanceMult
+              && distTarget >= distMove
+            ) {
+              if (
+                !PathingCheck.isFlyingWalkable(this.targetCoord)
+                || PathingCheck.isDeepWater(this.targetCoord)
+              ) {
+                break;
+              }
+
+              distTarget = CoordMath.distance(this.targetCoord, this.dashTargetPoint);   
+              if (distTarget > distMove) {
+                this.targetCoord.polarProjectCoords(this.targetCoord, direction, distMove);
+              } else {
+                this.targetCoord.polarProjectCoords(this.targetCoord, direction, distTarget);
+              }
+              this.distanceTravelled += distMove;
+              PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
+              
+              IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
+            }
+          }
+          this.targetCoord.setUnit(source);
+
+        } else {
+          if (this.dashType == Dash.DASH_TYPE_ZANZO) {
+            if (
+              ability.name == AbilityNames.BasicAbility.ZANZO_DASH 
+              && PathingCheck.isGroundWalkable(this.targetCoord)
+              && GetUnitCurrentOrder(source) == OrderIds.MOVE
+              && ability.currentTick > 0
+              && ability.currentTick % 4 == 0
+            ) {
+              IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
+            }
+    
+            PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
+            // SetUnitFacing(source, direction);
+          } else if (this.dashType == Dash.DASH_TYPE_GROUND) {
+            PathingCheck.moveGroundUnitToCoord(source, this.targetCoord);
+          } else {
+            PathingCheck.moveFlyingUnitToCoord(source, this.targetCoord);
+          }
+          // target coord = destination
+          this.targetCoord.setPos(GetUnitX(source), GetUnitY(source));
+          // distance = start to destination
+          this.distanceTravelled += CoordMath.distance(this.currentCoord, this.targetCoord);
+          this.previousCoord.setVector(this.targetCoord);
+        }
       }
+
+
     }
 
     if (ability.isFinishedUsing(this)) {

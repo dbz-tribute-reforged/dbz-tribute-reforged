@@ -47,10 +47,6 @@ export class CastTimeHelper {
   }
 
   public setupAbilityTimers() {
-    TimerStart(this.abilityTimer2, 0.02, true, () => {
-      this.runAbilityTimer(0.02);
-    });
-
     TimerStart(this.abilityTimer3, 0.03, true, () => {
       this.runAbilityTimer(0.03);
     });
@@ -60,13 +56,13 @@ export class CastTimeHelper {
     const toBeDeleted: CustomAbility[] = [];
 
     for (const [abil, input] of this.activeAbilities.entries()) {
-      if (abil.updateRate != interval) continue;
       if (abil.waitsForNextClick && !abil.isNextRightClick()) continue;
 
       if (abil.isCasting()) {
         this.runAbilityCasting(abil, input, interval);
-      } else {
-        this.runAbilityActivation(abil, input, toBeDeleted);
+      }
+      if (abil.isFinished()) {
+        toBeDeleted.push(abil);
       }
     }
 
@@ -75,10 +71,16 @@ export class CastTimeHelper {
     });
   }
 
-  runAbilityCasting(abil: CustomAbility, input: CustomAbilityInput, interval: number) {
+  runAbilityCasting(
+    abil: CustomAbility, 
+    input: CustomAbilityInput, 
+    interval: number,
+  ) {
     if (!abil.isFinishedCasting()) {
       abil.setCastTimeCounter(abil.getCastTimeCounter() + interval);
-    } else {
+    } 
+    
+    if (abil.isFinishedCasting) {
       abil.setCastTimeCounter(0);
       if (
         abil.name == AbilityNames.BasicAbility.ZANZO_DASH
@@ -165,9 +167,6 @@ export class CastTimeHelper {
           abil.setNextRightClickFlag(true);
           if (abil.castTime > 0) {
             abil.setCastTimeCounter(0.01);
-          } else {
-            const input = this.activeAbilities.get(abil);
-            if (input) abil.activate(input);
           }
           this.removeCastTimeFromCustomHero(unit, abil);
           toBeDeleted.push(abil);
@@ -190,17 +189,20 @@ export class CastTimeHelper {
   removeCastTimeFromCustomHero(unit: unit, ability: CustomAbility) {
     const input = this.activeAbilities.get(ability);
     if (!input) return;
+    this.resetCastTime(ability, input);
+  }
+
+  resetCastTime(ability: CustomAbility, input: CustomAbilityInput) {
     if (!input.caster) return;
     input.caster.isCastTimeWaiting = false;
     input.caster.isCasting.set(ability, false);
   }
 
   forceEndActivatedAbility(ability: CustomAbility) {
-    const activeAbilInput = this.activeAbilities.get(ability);
-    if (activeAbilInput) {
-      ability.endAbility();
-      ability.resetCooldown();
-      if (ability.isInUse()) ability.activateOnTimer(activeAbilInput); // force end
+    ability.endAbility();
+    ability.resetCooldown();
+    if (ability.isInUse()) {
+      ability.activateOnTimer(ability.getLastInput()); // force end
     }
   }
 
@@ -209,8 +211,7 @@ export class CastTimeHelper {
     ability: CustomAbility, 
     input: CustomAbilityInput
   ) {
-    const activeAbilInput = this.activeAbilities.has(ability);
-    if (activeAbilInput) {
+    if (!ability.isFinished()) {
       // dont cancel some abilities basics
       if (
         ability.name == AbilityNames.BasicAbility.ZANZOKEN
@@ -223,11 +224,10 @@ export class CastTimeHelper {
       }
       this.forceEndActivatedAbility(ability);
     }
-    this.activeAbilities.set(ability, input);
 
     if (ability.castTime == 0) {
+      this.resetCastTime(ability, input);
       ability.activate(input);
-      this.removeCastTimeFromCustomHero(hero.unit, ability);
     } else {
       const unitId = GetHandleId(hero.unit);
       const arr = this.castTimeUnits.get(unitId);
@@ -239,6 +239,7 @@ export class CastTimeHelper {
       if (!ability.waitsForNextClick) {
         ability.setCastTimeCounter(0.01);
       }
+      this.activeAbilities.set(ability, input);
     }
   }
 }
