@@ -11,6 +11,12 @@ import { Constants, Globals, OrderIds } from "Common/Constants";
 
 export class CastTimeHelper {
   private static instance: CastTimeHelper;
+  public static getInstance() {
+    if (this.instance == null) {
+      this.instance = new CastTimeHelper();
+    }
+    return this.instance;
+  }
 
   protected castTimeTrigger: trigger;
 
@@ -31,13 +37,6 @@ export class CastTimeHelper {
     this.castTimeUnits = new Map();
     this.activeAbilities = new Map();
     this.initialize();
-  }
-
-  public static getInstance() {
-    if (this.instance == null) {
-      this.instance = new CastTimeHelper();
-    }
-    return this.instance;
   }
 
 
@@ -159,6 +158,11 @@ export class CastTimeHelper {
           this.activeAbilities.delete(abil);
           toBeDeleted.push(abil);
         } else if (abil.waitsForNextClick) {
+          // TextTagHelper.showPlayerColorTextOnUnit(
+          //   abil.name + " right click", 
+          //   GetPlayerId(player), 
+          //   unit
+          // );
           const x = GetOrderPointX();
           const y = GetOrderPointY();
           if (x == 0 && y == 0) continue;
