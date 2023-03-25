@@ -719,10 +719,15 @@ export function CustomPlayerTest() {
     );
   }));
   TriggerAddAction(killTrig, () => {
-    const deadPlayer = GetOwningPlayer(GetDyingUnit());
+    const deadUnit = GetDyingUnit();
+    const deadPlayer = GetOwningPlayer(deadUnit);
     const deadPlayerId = GetPlayerId(deadPlayer);
     const killPlayer = GetOwningPlayer(GetKillingUnit());
     const killPlayerId = GetPlayerId(killPlayer);
+
+    if (Globals.barrierBlockUnits.has(deadUnit)) {
+      Globals.barrierBlockUnits.delete(deadUnit);
+    }
 
     let killerName = Colorizer.getColoredPlayerName(killPlayer);
     let deadName = Colorizer.getColoredPlayerName(deadPlayer);
@@ -735,9 +740,9 @@ export function CustomPlayerTest() {
 
     if (
       (deadPlayer == Constants.sagaPlayer || deadPlayerId >= Constants.maxActivePlayers) && 
-      IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO)
+      IsUnitType(deadUnit, UNIT_TYPE_HERO)
     ) {
-      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
+      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(deadUnit) + "|r";
     }
 
     if (
@@ -767,8 +772,8 @@ export function CustomPlayerTest() {
       );
       PingMinimapForForceEx(
         bj_FORCE_ALL_PLAYERS, 
-        GetUnitX(GetDyingUnit()), 
-        GetUnitY(GetDyingUnit()), 
+        GetUnitX(deadUnit), 
+        GetUnitY(deadUnit), 
         3, bj_MINIMAPPINGSTYLE_ATTACK, 
         100, 0, 0
       );

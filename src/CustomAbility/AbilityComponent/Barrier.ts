@@ -19,8 +19,10 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   }
 
   static removeUnitBarrierBlock(unit: unit) {
+    if (!Globals.barrierBlockUnits.has(unit)) return;
+    
     const count = Globals.barrierBlockUnits.get(unit);
-    if (!count || count == 1) {
+    if (!count || count <= 1) {
       Globals.barrierBlockUnits.delete(unit);
     } else {
       Globals.barrierBlockUnits.set(unit, count-1);
@@ -129,7 +131,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
           if (targetDistance <= this.innerAOE) {
             // it probably came / spawned from within
             GroupAddUnit(this.insideUnits, target);
-            Barrier.addUnitBarrierBlock(target);
+            this.addBarrierBlockUnit(target, true);
           } else {
             const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
             this.newCoords.polarProjectCoords(
@@ -156,20 +158,23 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     }
   }
 
+  addBarrierBlockUnit(target: unit, isAdd: boolean) {
+    if (
+      !this.canZanzoOut 
+      && IsUnitType(target, UNIT_TYPE_HERO) 
+      // && target != this.casterUnit
+    ) {
+      if (isAdd) {
+        Barrier.addUnitBarrierBlock(target);
+      } else {
+        Barrier.removeUnitBarrierBlock(target);
+      }
+    }
+  }
+
   modifyBarrierBlock(unitGroup: group, isAdd: boolean) {
     ForGroup(unitGroup, () => {
-      const target = GetEnumUnit();
-      if (
-        !this.canZanzoOut 
-        && IsUnitType(target, UNIT_TYPE_HERO) 
-        && target != this.casterUnit
-      ) {
-        if (isAdd) {
-          Barrier.addUnitBarrierBlock(target);
-        } else {
-          Barrier.removeUnitBarrierBlock(target);
-        }
-      }
+      this.addBarrierBlockUnit(GetEnumUnit(), isAdd);
     });
   }
 
