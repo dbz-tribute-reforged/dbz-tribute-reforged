@@ -86,7 +86,6 @@ export class CastTimeHelper {
       ) {
         SoundHelper.playSoundOnUnit(input.caster.unit, "Audio/Effects/Zanzo.mp3", 1149);
       }
-      BJDebugMsg("is casting finish");
       abil.activate(input);
       toBeDeleted.push(abil);
     }
