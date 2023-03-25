@@ -200,12 +200,12 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     );
 
     // create unit
-    // const maxFriezaHenchmen = 8;
-    // for (let i = 0; i < maxFriezaHenchmen; ++i) {
-    //   let offsetX = Math.random() * 2000;
-    //   let offsetY = Math.random() * 2000;
-    //   const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
-    // }
+    const maxFriezaHenchmen = 8;
+    for (let i = 0; i < maxFriezaHenchmen; ++i) {
+      let offsetX = Math.random() * 2000;
+      let offsetY = Math.random() * 2000;
+      CreateUnit(Constants.sagaPlayer, Creep.FriezaAppule, 21500 + offsetX, 26100 + offsetY, Math.random() * 360);
+    }
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
 
@@ -228,14 +228,10 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < this.bosses.length - 1; ++i) {
       const frieza = this.bosses[i];
       const nextFrieza = this.bosses[i+1];
-      const isNextForm = i == this.bosses.length - 2 ?
-        SagaHelper.checkUnitHp(frieza, 0.1, false, true, false) :
-        SagaHelper.checkUnitHp(frieza, 0.75, false, false, true)
-      ;
       if (
         frieza && 
         nextFrieza &&
-        isNextForm && 
+        SagaHelper.checkUnitHp(frieza, 0.8, false, false, true) &&
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
