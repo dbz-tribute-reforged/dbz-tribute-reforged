@@ -3,7 +3,7 @@ import { Id } from "Common/Constants";
 export const DualTechList = [
   {
     sourceAbility: Id.gokuBlackSorrowfulScythe,
-    aoe: 3000,
+    aoe: 2000,
     limit: 2,
     useCasterPoint: true,
     useOriginalAbility: true,

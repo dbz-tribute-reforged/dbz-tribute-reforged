@@ -8,6 +8,7 @@ export const BarrierComponents = [
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: false,
+    canZanzoOut: false,
   },
   {
     name: "barrier barrier wall", 
@@ -18,6 +19,7 @@ export const BarrierComponents = [
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: true,
+    canZanzoOut: true,
   },
   {
     name: "barrier last stand", 
@@ -28,6 +30,7 @@ export const BarrierComponents = [
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: false,
+    canZanzoOut: true,
   },
   {
     name: "barrier cage of light", 
@@ -38,6 +41,7 @@ export const BarrierComponents = [
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: false,
+    canZanzoOut: true,
   },
   {
     name: "barrier schala magic seal", 
@@ -48,5 +52,6 @@ export const BarrierComponents = [
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: false,
+    canZanzoOut: true,
   },
 ];

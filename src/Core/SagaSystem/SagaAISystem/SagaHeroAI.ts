@@ -11,6 +11,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { SagaAbility } from "../SagaAbility";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { doTimeRingSwap } from "Core/ItemAbilitySystem/ItemActiveAbilitiesConfig";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 
 // TODO:
@@ -392,13 +393,14 @@ export class SagaHeroAI {
           }
           this.maxWait = delay * SagaAIData.DELAY_TO_INTERVALS;
           this.performWait();
-
-          TimerStart(CreateTimer(), delay, false, () => {
+          
+          const timer = TimerManager.getInstance().get();
+          TimerStart(timer, delay, false, () => {
             if (UnitHelper.isUnitAlive(this.sagaUnit)) {
               this.useCustomAbility(AbilityNames.Saga.MAX_POWER, true, 1);
               this.useCustomAbilityWithInput(ability.name, abilityInput, false);
             }
-            DestroyTimer(GetExpiredTimer());
+            TimerManager.getInstance().recycle(timer);
           });
           break;
         }
@@ -452,10 +454,11 @@ export class SagaHeroAI {
             doTimeRingSwap(this.sagaUnit, ally);
             hasUsedItem = true;
             this.canUseItem = false;
-
+            
+            const timer = TimerManager.getInstance().get();
             TimerStart(CreateTimer(), 40.0, false, () => {
               this.canUseItem = true;
-              DestroyTimer(GetExpiredTimer());
+              TimerManager.getInstance().recycle(timer);
             });
           }
         });

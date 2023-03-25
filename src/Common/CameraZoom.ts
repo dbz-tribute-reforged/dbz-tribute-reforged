@@ -1,3 +1,5 @@
+import { TimerManager } from "Core/Utility/TimerManager";
+
 export module CameraZoom {
 
     const ZOOM_DEFAULT = 2700.0;
@@ -81,7 +83,8 @@ export module CameraZoom {
             return false;
         }));
 
-        TimerStart(CreateTimer(), 4, false, () => {
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, 4, false, () => {
             TimerStart(CreateTimer(), PERIOD, true, () => {
                 arr.forEach(element => {
                     if (GetLocalPlayer() == element.p) {
@@ -95,7 +98,7 @@ export module CameraZoom {
                     }
                 });
             });
-            DestroyTimer(GetExpiredTimer());
+            TimerManager.getInstance().recycle(timer);
         });
     }
 }

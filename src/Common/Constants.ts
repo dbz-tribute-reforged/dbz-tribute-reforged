@@ -32,6 +32,7 @@ export module Globals {
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();
   export const tmpUnitGroup2 = CreateGroup();
+  export const tmpUnitGroup3 = CreateGroup();
   export const tmpForce = CreateForce();
   export const tmpVector = new Vector2D();
   export const tmpVector2 = new Vector2D();
@@ -42,6 +43,8 @@ export module Globals {
   );
 
   export const appuleVengeanceTeleportTrigger = CreateTrigger();
+
+  export const barrierBlockUnits: Map<unit, number> = new Map();
 }
 
 export module Constants {

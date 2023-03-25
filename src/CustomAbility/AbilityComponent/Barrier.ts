@@ -5,9 +5,30 @@ import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 
 export class Barrier implements AbilityComponent, Serializable<Barrier> {
+
+  static addUnitBarrierBlock(unit: unit) {
+    const count = Globals.barrierBlockUnits.get(unit);
+    if (!count) {
+      Globals.barrierBlockUnits.set(unit, 1);
+    } else {
+      Globals.barrierBlockUnits.set(unit, count+1);
+    }
+  }
+
+  static removeUnitBarrierBlock(unit: unit) {
+    if (!Globals.barrierBlockUnits.has(unit)) return;
+    
+    const count = Globals.barrierBlockUnits.get(unit);
+    if (!count || count <= 1) {
+      Globals.barrierBlockUnits.delete(unit);
+    } else {
+      Globals.barrierBlockUnits.set(unit, count-1);
+    }
+  }
+
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
@@ -21,6 +42,8 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   protected targetCoords: Vector2D;
   protected newCoords: Vector2D;
 
+  protected casterUnit: unit;
+
   constructor(
     public name: string = "Barrier",
     public repeatInterval: number = 1,
@@ -30,6 +53,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     public repelOutsidersSpeed: number = 0,
     public affectAllies: boolean = false,
     public canWalkOut: boolean = false,
+    public canZanzoOut: boolean = false,
   ) {
     this.sourceCoords = new Vector2D();
     this.insideUnits = CreateGroup();
@@ -38,6 +62,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     this.outerAOE = 0;
     this.targetCoords = new Vector2D();
     this.newCoords = new Vector2D();
+    this.casterUnit = null;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -46,7 +71,8 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     if (!this.isStarted) {
       this.isStarted = true;
       this.isFinished = false;
-      GroupClear(this.insideUnits);
+      this.casterUnit = input.caster.unit;
+      this.reset();
       this.innerAOE = this.aoe - Constants.beamSpawnOffset;
       this.outerAOE = this.aoe + Constants.beamSpawnOffset + this.repelOutsidersSpeed;
       GroupEnumUnitsInRange(
@@ -56,6 +82,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         this.innerAOE,
         null
       );
+      this.modifyBarrierBlock(this.insideUnits, true);
     }
 
     if (!this.canWalkOut) {
@@ -104,6 +131,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
           if (targetDistance <= this.innerAOE) {
             // it probably came / spawned from within
             GroupAddUnit(this.insideUnits, target);
+            this.addBarrierBlockUnit(target, true);
           } else {
             const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
             this.newCoords.polarProjectCoords(
@@ -124,13 +152,34 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     }
 
     if (ability.isFinishedUsing(this)) {
+      this.isStarted = false;
+      this.isFinished = true;
       this.reset();
     }
   }
 
+  addBarrierBlockUnit(target: unit, isAdd: boolean) {
+    if (
+      !this.canZanzoOut 
+      && IsUnitType(target, UNIT_TYPE_HERO) 
+      && target != this.casterUnit
+    ) {
+      if (isAdd) {
+        Barrier.addUnitBarrierBlock(target);
+      } else {
+        Barrier.removeUnitBarrierBlock(target);
+      }
+    }
+  }
+
+  modifyBarrierBlock(unitGroup: group, isAdd: boolean) {
+    ForGroup(unitGroup, () => {
+      this.addBarrierBlockUnit(GetEnumUnit(), isAdd);
+    });
+  }
+
   reset() {
-    this.isStarted = false;
-    this.isFinished = true;
+    this.modifyBarrierBlock(this.insideUnits, false);
     GroupClear(this.insideUnits);
     GroupClear(this.outsideUnits);
   }
@@ -150,6 +199,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
       this.repelOutsidersSpeed,
       this.affectAllies,
       this.canWalkOut,
+      this.canZanzoOut,
     );
   }
   
@@ -163,6 +213,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
       repelOutsidersSpeed: number;
       affectAllies: boolean;
       canWalkOut: boolean;
+      canZanzoOut: boolean;
     }
   ) {
     this.name = input.name;
@@ -173,6 +224,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     this.repelOutsidersSpeed = input.repelOutsidersSpeed;
     this.affectAllies = input.affectAllies;
     this.canWalkOut = input.canWalkOut;
+    this.canZanzoOut = input.canZanzoOut;
     return this;
   }
 }

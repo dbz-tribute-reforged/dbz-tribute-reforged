@@ -6767,7 +6767,7 @@ if (Trig_Kyodaika_Init_Func010C()) then
 UnitAddAbilityBJ(FourCC("A11H"), udg_StatMultUnit)
 else
 end
-    BlzSetUnitWeaponRealField(udg_StatMultUnit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, 500)
+SetPlayerTechResearchedSwap(FourCC("R00G"), 1, udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A04Y"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A03S"), udg_TempPlayer)
 GroupAddUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
@@ -6979,7 +6979,7 @@ if (Trig_Kyodaika_Mana_Drain_Func001Func011Func001Func006C()) then
 UnitRemoveAbilityBJ(FourCC("A11H"), udg_StatMultUnit)
 else
 end
-            BlzSetUnitWeaponRealField(udg_StatMultUnit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, -150)
+SetPlayerTechResearchedSwap(FourCC("R00G"), 0, udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TempPlayer)
 GroupRemoveUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
@@ -26759,7 +26759,7 @@ udg_HintMessages[udg_NumHints] = "There are multiple food vendors located around
 udg_NumHints = (udg_NumHints + 1)
 udg_HintMessages[udg_NumHints] = "For each 1000 agility you have, you will receive +1 base armor."
 udg_NumHints = (udg_NumHints + 1)
-udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 38th minute. You will receive warnings at the 36th and 37th minute, so make sure to prepare beforehand."
+udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 38th minute. You will receive warnings at the 36th minute, so make sure to prepare beforehand."
 udg_NumHints = (udg_NumHints + 1)
 udg_HintMessages[udg_NumHints] = "If your agility is greater than your strength, your dash abilities (e.g Zanzo Dash) will have higher speed."
 udg_NumHints = (udg_NumHints + 1)
@@ -28618,7 +28618,7 @@ function Trig_Teleporter_Action_Actions()
 udg_TempReal = LoadRealBJ(0, udg_ID, udg_TeleporterHashtable)
 if (Trig_Teleporter_Action_Func003C()) then
 SetUnitPositionLoc(udg_TempUnit, udg_TempLoc2)
-PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.00)
+PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.10)
 SaveRealBJ(5.00, 0, udg_ID, udg_TeleporterHashtable)
 GroupAddUnitSimple(udg_TempUnit, udg_TeleporterUnitGroup)
 else
@@ -30425,25 +30425,59 @@ end
 return true
 end
 
-function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func006Func001C()
-if (CountPlayersInForceBJ(udg_TeamsPlayerGroup[0]) <= 1) then
-return true
-end
-if (CountPlayersInForceBJ(udg_TeamsPlayerGroup[1]) <= 1) then
-return true
-end
-return false
-end
-
-function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func006C()
-if (not Trig_Move_and_Revive_Hero_To_Dead_Zone_Func006Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func008C()
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func007C()
 if (not (udg_IsFBSimTest == false)) then
+return false
+end
+return true
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func012Func001C()
+if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER)) then
+return false
+end
+return true
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func012A()
+if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func012Func001C()) then
+udg_TempInt3 = (udg_TempInt3 + 1)
+else
+end
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func014Func001C()
+if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER)) then
+return false
+end
+return true
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func014A()
+if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func014Func001C()) then
+udg_TempInt4 = (udg_TempInt4 + 1)
+else
+end
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func015Func001C()
+if (udg_TempInt3 <= 1) then
+return true
+end
+if (udg_TempInt4 <= 1) then
+return true
+end
+return false
+end
+
+function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func015C()
+if (not Trig_Move_and_Revive_Hero_To_Dead_Zone_Func015Func001C()) then
 return false
 end
 return true
@@ -30472,19 +30506,23 @@ end
 udg_TempInt = udg_TempInt + 1
 end
 SaveIntegerBJ(1, 3, udg_ID, udg_HeroRespawnHashtable)
-if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func006C()) then
-SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 10.00), 0, udg_ID, udg_HeroRespawnHashtable)
-else
-SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 20.00), 0, udg_ID, udg_HeroRespawnHashtable)
-end
 udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
-if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func008C()) then
-PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0.00)
+if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func007C()) then
+PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0.10)
 else
 end
     RemoveLocation(udg_TempLoc)
 SetUnitLifePercentBJ(udg_HeroRespawnUnit, 100)
 SetUnitManaPercentBJ(udg_HeroRespawnUnit, 100)
+udg_TempInt3 = 0
+ForForce(udg_TeamsPlayerGroup[0], Trig_Move_and_Revive_Hero_To_Dead_Zone_Func012A)
+udg_TempInt4 = 0
+ForForce(udg_TeamsPlayerGroup[1], Trig_Move_and_Revive_Hero_To_Dead_Zone_Func014A)
+if (Trig_Move_and_Revive_Hero_To_Dead_Zone_Func015C()) then
+SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 10.00), 0, udg_ID, udg_HeroRespawnHashtable)
+else
+SaveRealBJ((LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) + 20.00), 0, udg_ID, udg_HeroRespawnHashtable)
+end
 end
 
 function InitTrig_Move_and_Revive_Hero_To_Dead_Zone()
@@ -34830,7 +34868,7 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0Y3"), udg_TempPlayer)
 else
 if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func016Func001C()) then
 SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
-            BlzSetUnitWeaponRealField(udg_StatMultUnit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, -150)
+SetPlayerTechResearchedSwap(FourCC("R00G"), 0, udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0Y2"), udg_TempPlayer)
 else
 end
@@ -36608,7 +36646,7 @@ udg_StatMultInt = udg_StatMultInt
 udg_TransformationSFXString = "AuraRoyalBlue2.mdx"
 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
 SetUnitScalePercent(udg_StatMultUnit, 500.00, 500.00, 500.00)
-        BlzSetUnitWeaponRealField(udg_StatMultUnit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, 500)
+SetPlayerTechResearchedSwap(FourCC("R00G"), 1, udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0Y2"), udg_TempPlayer)
 else
 end

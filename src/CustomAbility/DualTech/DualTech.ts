@@ -5,7 +5,7 @@ import { DualTechPart } from "./DualTechPart";
 
 
 export class DualTech {
-  protected seenUnits: Set<unit> = new Set();
+  protected seenUnits: Map<unit, boolean> = new Map();
 
   constructor(
     public sourceAbility: number = 0,
@@ -20,10 +20,10 @@ export class DualTech {
 
   execute(input: CustomAbilityInput) {
     // find people that can be included
-    GroupClear(Globals.tmpUnitGroup);
+    GroupClear(Globals.tmpUnitGroup3);
     if (this.useCasterPoint) {
       GroupEnumUnitsInRange(
-        Globals.tmpUnitGroup,
+        Globals.tmpUnitGroup3,
         GetUnitX(input.caster.unit),
         GetUnitY(input.caster.unit),
         this.aoe,
@@ -31,13 +31,14 @@ export class DualTech {
       );
     }
 
-    let executed = false;
+    let execute_count = 0;
     this.seenUnits.clear();
 
-    ForGroup(Globals.tmpUnitGroup, () => {
+    ForGroup(Globals.tmpUnitGroup3, () => {
       const u = GetEnumUnit();
       if (
-        IsUnitType(u, UNIT_TYPE_HERO)
+        execute_count < this.limit
+        && IsUnitType(u, UNIT_TYPE_HERO)
         && UnitHelper.isUnitAlive(u)
         && !UnitHelper.isUnitStunned(u)
         && u != input.caster.unit
@@ -45,9 +46,9 @@ export class DualTech {
         // find source for parts
         for (const p of this.parts) {
           if (p.isValid(input, u) && !this.seenUnits.has(u)) {
-            this.seenUnits.add(u);
+            this.seenUnits.set(u, true);
             if (p.execute(input, u)) {
-              executed = true;
+              execute_count++;
             }
           }
         }
@@ -55,13 +56,13 @@ export class DualTech {
     });
 
     this.seenUnits.clear();
-    GroupClear(Globals.tmpUnitGroup);
+    GroupClear(Globals.tmpUnitGroup3);
     
     for (const p of this.parts) {
       p.reset();
     }
 
-    if (!executed) return false;
+    if (execute_count == 0) return false;
     return this.useOriginalAbility;
   }
 
