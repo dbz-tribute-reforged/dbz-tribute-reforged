@@ -537,7 +537,7 @@ export const AbilitiesList = [
         AbilityNames.Vegeta.ULTRA_EGO
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 1dist" },
       // { name: "temp ability vegeta hakai" },
       // { name: "temp ability vegeta hakai barrage" },
       { name: "temp ability blazing dynamo spell immunity" },
@@ -879,7 +879,7 @@ export const AbilitiesList = [
         AbilityNames.Gohan.BEAST_GOHAN
     },
     components: [
-      { name: "dash ground forward 2dist" },
+      { name: "dash ground forward 1dist" },
       { name: "temp ability special beast cannon" },
       { name: "block beast gohan" },
       { name: "sfx beast gohan" },
@@ -2231,7 +2231,7 @@ export const AbilitiesList = [
         AbilityNames.Upa.LAST_STAND
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 1dist" },
       { name: "beam last stand" },
     ],
   },
@@ -4176,7 +4176,7 @@ export const AbilitiesList = [
         AbilityNames.Roshi.KAMEHAMEHA_CHARGE,
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 1dist" },
     ],
   },
   // -------------------------------------------
@@ -4870,7 +4870,7 @@ export const AbilitiesList = [
         AbilityNames.Tien.TRI_BEAM_CHARGE,
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 1dist" },
     ],
   },
   // -------------------------------------------
@@ -7347,7 +7347,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 2dist" },
       { name: "spell amp lucario mega evolution" },
     ],
   },
@@ -7405,7 +7405,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground forward last stand" },
+      { name: "dash ground forward 1dist" },
       { name: "debuff stun lucario gigantamax" },
     ],
   },

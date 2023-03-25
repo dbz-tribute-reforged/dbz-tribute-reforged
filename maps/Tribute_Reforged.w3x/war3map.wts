@@ -52625,6 +52625,37 @@ Unlocks Giga Sphere|r
 |cff00ffffCooldown: <A0Y1,Cool1>s
 }
 
+STRING 8391
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario uses his Lucarionite to temporarily transform into Mega Lucario.
+|cffFFFF00+0.2x stat mult
+-0.4 base attack time
++5% spell amp per second up to +20%
++66ms and unlocks movement speed cap
+Doubles the effect of |cff00ffffAura|r
+|cffffff00Unlocks Aura Storm ability|r
+
+|cff00ffffCooldown: <A0Y0,Cool1>s
+
+|cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
+}
+
+STRING 8392
+// Abilities: A11L (Gohan Boost Beast Gohan), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan draws out all of his strength from his Potential Unleashed.
+Unlocks [|cff00ff00D|r] Special Beast Cannon (linked CD with Father-Son Kamehameha).
+|cffffff00Gain 30% spell amp +1% for every 10% HP missing from nearby living allies. 
+Recently killed allies add +15%.
+80% damage block up to 3x Agi
++33ms and unlocks movement speed cap.
+|cff00ff00Duration: <A11L,Dur1>s
+|cff00ffffCooldown: <A11L,Cool1>s
+
+|cff888888"Is that all? I guess it's my turn."|r
+}
+
 STRING 8399
 // Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
@@ -111515,22 +111546,6 @@ Guts' determination prevents him from dying and gives him the will to continue f
 |cff00ffffCooldown: <A10C,Cool10> seconds|r
 }
 
-STRING 17448
-// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
-{
-Lucario uses his Lucarionite to temporarily transform into Mega Lucario.
-|cffFFFF00+0.2x stat mult
--0.4 base attack time
-+5% spell amp per second up to +20%
-+33ms and unlocks movement speed cap
-Doubles the effect of |cff00ffffAura|r
-|cffffff00Unlocks Aura Storm ability|r
-
-|cff00ffffCooldown: <A0Y0,Cool1>s
-
-|cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
-}
-
 STRING 17450
 // Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
 {
@@ -136173,22 +136188,6 @@ STRING 21030
 {
 Moves your revive point to anywhere on the main map (excludes Namek and Future). Must select a valid walkable location that is not out of bounds.
 |cffff2020Can only be used before the 1 minute mark!
-}
-
-STRING 21031
-// Abilities: A11L (Gohan Boost Beast Gohan), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan draws out all of his strength from his Potential Unleashed.
-Unlocks [|cff00ff00D|r] Special Beast Cannon (linked CD with Father-Son Kamehameha).
-|cffffff00Gain +1% spell amp for every 3% HP missing from nearby living allies. 
-Recently killed allies add +40%.
-Grants minimum of +30% and up to a max of +160%.
-80% damage block up to 3x Agi
-+66ms and unlocks movement speed cap.
-|cff00ff00Duration: <A11L,Dur1>s
-|cff00ffffCooldown: <A11L,Cool1>s
-
-|cff888888"Is that all? I guess it's my turn."|r
 }
 
 STRING 21032

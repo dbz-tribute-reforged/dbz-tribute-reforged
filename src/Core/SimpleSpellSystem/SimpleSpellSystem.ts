@@ -12,6 +12,7 @@ import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
+import { TimerManager } from "Core/Utility/TimerManager";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { AbilityNames } from "CustomAbility/AbilityNames";
@@ -2824,16 +2825,16 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(unit);
     const playerId = GetPlayerId(player);
 
-    if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) > 0) return;
+    if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) <= 0) return;
 
     const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
     if (!customHero) return;
 
     const aoe = 5000;
-    const spellPowerPerDead = 0.4;
-    const spellPowerPerHPPct = 0.33;
+    const spellPowerPerDead = 0.15;
+    const spellPowerPerHPPct = 0.1;
     const spellPowerMin = 0.3;
-    const spellPowerMax = 1.6;
+    const spellPowerMax = 1.0;
     
     // get nearby allied heroes
     GroupClear(Globals.tmpUnitGroup);
@@ -2845,13 +2846,13 @@ export module SimpleSpellSystem {
       null
     );
 
-    let spellPower = 0.0;
+    let spellPower = spellPowerMin;
     ForGroup(Globals.tmpUnitGroup, () => {
       const alliedHero = GetEnumUnit();
       if (
         UnitHelper.isUnitRealHero(alliedHero)
         && IsUnitAlly(alliedHero, player)
-        && alliedHero != unit
+        // && alliedHero != unit
       ) {
         if (UnitHelper.isUnitDead(alliedHero)) {
           spellPower += spellPowerPerDead;
@@ -2872,11 +2873,12 @@ export module SimpleSpellSystem {
       Math.min(spellPowerMax, spellPower)
     );
     customHero.addSpellPower(spellPower);
-
-    TimerStart(CreateTimer(), 0.2, true, () => {
+    
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.5, true, () => {
       if (GetUnitAbilityLevel(unit, Id.specialBeastCannon) == 0) {
         customHero.removeSpellPower(spellPower);
-        DestroyTimer(GetExpiredTimer());
+        TimerManager.getInstance().recycle(timer);
       }
     });
   }

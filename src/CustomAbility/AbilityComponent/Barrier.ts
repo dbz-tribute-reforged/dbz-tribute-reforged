@@ -162,7 +162,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
       if (
         !this.canZanzoOut 
         && IsUnitType(target, UNIT_TYPE_HERO) 
-        // && target != this.casterUnit
+        && target != this.casterUnit
       ) {
         if (isAdd) {
           Barrier.addUnitBarrierBlock(target);

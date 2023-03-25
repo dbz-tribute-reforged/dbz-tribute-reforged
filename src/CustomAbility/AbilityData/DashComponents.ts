@@ -616,19 +616,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 24,
   },
-  // last stand
-  {
-    name: "dash ground forward last stand",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 1,
-  },
   // shining sword
   {
     name: "dash ground point shining sword",
