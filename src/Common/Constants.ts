@@ -15,6 +15,7 @@ export module Globals {
 
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
+  export const simpleSpellTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
@@ -562,6 +563,9 @@ export module Id {
   export const shiningSwordAttack = FourCC("A0LF");
   export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
+
+  export const getiStar = FourCC("H002");
+  export const metalCoolerClone = FourCC("H01Z");
 
   export const ginyu = FourCC("H09E");
   export const milkyCannon = FourCC("A0PP");

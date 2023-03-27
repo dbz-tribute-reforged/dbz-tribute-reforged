@@ -32,7 +32,9 @@ export module SimpleSpellSystem {
 
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
-    TriggerAddAction(Globals.genericSpellTrigger, () => {
+
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+    TriggerAddAction(Globals.simpleSpellTrigger, () => {
       const spellId = GetSpellAbilityId();
       const func = Globals.genericSpellMap.get(spellId);
       if (func) {
@@ -280,6 +282,14 @@ export module SimpleSpellSystem {
     TriggerRegisterEnterRectSimple(Globals.appuleVengeanceTeleportTrigger, GetPlayableMapRect());
     TriggerAddCondition(Globals.appuleVengeanceTeleportTrigger, Condition(() => {
       const unit = GetTriggerUnit();
+
+      if (IsUnitType(unit, UNIT_TYPE_HERO) && UnitHelper.isUnitAlive(unit)) {
+        const playerId = GetPlayerId(GetOwningPlayer(unit));
+        if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+          Globals.customPlayers[playerId].addHero(unit);
+          Globals.customPlayers[playerId].addUnit(unit);
+        }
+      }
       if (
         GetUnitTypeId(unit) == Id.appule 
         && IsUnitIllusion(unit)
@@ -346,10 +356,8 @@ export module SimpleSpellSystem {
     SaveReal(Globals.genericSpellHashtable, casterId, 0, tmpPos.x);
     SaveReal(Globals.genericSpellHashtable, casterId, 1, tmpPos.y);
 
-    const targetGroup = CreateGroup();
-
     GroupEnumUnitsInRange(
-      targetGroup, 
+      Globals.tmpUnitGroup, 
       tmpPos.x, 
       tmpPos.y, 
       braveSwordAOE,
@@ -357,7 +365,7 @@ export module SimpleSpellSystem {
     );
     
     let checkCount = 0;
-    ForGroup(targetGroup, () => {
+    ForGroup(Globals.tmpUnitGroup, () => {
       const checkUnit = GetEnumUnit();
       if (
         UnitHelper.isUnitTargetableForPlayer(checkUnit, player) && 
@@ -521,8 +529,7 @@ export module SimpleSpellSystem {
       SetUnitAbilityLevel(caster, spellId, abilityLevel);
       UnitMakeAbilityPermanent(caster, true, spellId);
     }
-    
-    DestroyGroup(targetGroup);
+    GroupClear(Globals.tmpUnitGroup);
   }
 
   export function InitDragonFists() {
@@ -858,7 +865,6 @@ export module SimpleSpellSystem {
     const tickRate = 0.03;
     const maxDragonBallsToSteal = 1;
     const maxSizedDragonBallStackToSteal = 7;
-    const targetGroup = CreateGroup();
 
     const caster = GetTriggerUnit();
     const player = GetTriggerPlayer();
@@ -872,7 +878,7 @@ export module SimpleSpellSystem {
         const targetPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
 
         GroupEnumUnitsInRange(
-          targetGroup, 
+          Globals.tmpUnitGroup, 
           targetPos.x, 
           targetPos.y, 
           shadowFistAOE,
@@ -884,7 +890,7 @@ export module SimpleSpellSystem {
         const casterDragonBallIndex = UnitHelper.getInventoryIndexOfItemType(caster, DragonBallsConstants.dragonBallItem);
         const casterInventoryCount = UnitInventoryCount(caster);
 
-        ForGroup(targetGroup, () => {
+        ForGroup(Globals.tmpUnitGroup, () => {
           const targetUnit = GetEnumUnit();
           if (
             UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
@@ -936,7 +942,7 @@ export module SimpleSpellSystem {
         }
 
         ++time;
-        GroupClear(targetGroup);
+        GroupClear(Globals.tmpUnitGroup);
       }
     });
   }
@@ -954,10 +960,10 @@ export module SimpleSpellSystem {
     const caster = GetTriggerUnit();
     const casterPlayer = GetTriggerPlayer();
     // const casterPlayerId = GetPlayerId(casterPlayer);
-    const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-    const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
-    const senzuItem = CreateItem(senzuItemId, casterPos.x, casterPos.y);
-    const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+    const senzuItem = CreateItem(senzuItemId, Globals.tmpVector.x, Globals.tmpVector.y);
+    const direction = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
     SimpleSpellSystem.moveItemAndDoPickup(
       senzuItem,
       senzuThrowSpeed,
@@ -976,32 +982,32 @@ export module SimpleSpellSystem {
     minDuration: number,
     stealAOE: number,
   ) {
-    const newPos = new Vector2D(GetItemX(movedItem), GetItemY(movedItem));
+    Globals.tmpVector3.setPos(GetItemX(movedItem), GetItemY(movedItem));
     let counter: number = 0;
-    TimerStart(CreateTimer(), 0.03, true, () => {
-      if (
-        counter >= duration
-      ) {
-        DestroyTimer(GetExpiredTimer());
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (counter >= duration) {
+        TimerManager.getInstance().recycle(timer);
       } else {
         if (counter < duration) {
-          newPos.polarProjectCoords(
-            newPos,
+          Globals.tmpVector3.polarProjectCoords(
+            Globals.tmpVector3,
             direction,
             itemMS
           );
 
-          if (PathingCheck.isGroundWalkable(newPos)) {
-            SetItemPosition(movedItem, newPos.x, newPos.y);
+          if (PathingCheck.isGroundWalkable(Globals.tmpVector3)) {
+            SetItemPosition(movedItem, Globals.tmpVector3.x, Globals.tmpVector3.y);
           } else {
-            newPos.x = GetItemX(movedItem);
-            newPos.y = GetItemY(movedItem);
+            Globals.tmpVector3.x = GetItemX(movedItem);
+            Globals.tmpVector3.y = GetItemY(movedItem);
           }
         }
         
         if (
           counter > minDuration
-          && SimpleSpellSystem.doAOEItemPickup(movedItem, newPos, stealAOE)
+          && SimpleSpellSystem.doAOEItemPickup(movedItem, Globals.tmpVector3, stealAOE)
         ) {
           counter = duration;
         }

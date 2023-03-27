@@ -172,19 +172,6 @@ export function CustomPlayerTest() {
     ));
   }
 
-  // need better way to add heroes of player to their hero list
-  const unitEntryTrigger = CreateTrigger();
-  TriggerRegisterEnterRectSimple(unitEntryTrigger, GetPlayableMapRect());
-  TriggerAddCondition(unitEntryTrigger, Condition(() => {
-    const u = GetTriggerUnit();
-    const playerId = GetPlayerId(GetOwningPlayer(u));
-    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-      Globals.customPlayers[playerId].addHero(u);
-      Globals.customPlayers[playerId].addUnit(u);
-    }
-    return false;
-  }));
-
   const addHeroToPlayer = CreateTrigger();
 	for (let i = 0; i < Constants.maxActivePlayers; ++i) {
     TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
@@ -233,7 +220,7 @@ export function CustomPlayerTest() {
     }
   });
 
-  TimerStart(CreateTimer(), 1, true, () => {
+  TimerStart(CreateTimer(), 10, true, () => {
     for (const customPlayer of Globals.customPlayers) {
       customPlayer.cleanupRemovedUnits();
     }
@@ -267,7 +254,10 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
-    const unitTypeId = GetUnitTypeId(GetTriggerUnit());
+    const unit = GetTriggerUnit();
+    if (!IsUnitType(unit, UNIT_TYPE_HERO)) return false;
+
+    const unitTypeId = GetUnitTypeId(unit);
     const targetWidget = GetOrderTarget();
     if (
       GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
@@ -728,6 +718,9 @@ export function CustomPlayerTest() {
     if (Globals.barrierBlockUnits.has(deadUnit)) {
       Globals.barrierBlockUnits.delete(deadUnit);
     }
+
+    const deadId = GetUnitTypeId(deadUnit);
+    if (deadId == Id.metalCoolerClone) return;
 
     let killerName = Colorizer.getColoredPlayerName(killPlayer);
     let deadName = Colorizer.getColoredPlayerName(deadPlayer);

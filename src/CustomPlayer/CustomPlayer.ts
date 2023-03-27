@@ -138,10 +138,10 @@ export class CustomPlayer {
 
   cleanupRemovedHeroes() {
     const removed = [];
-    for (const [unit, customHero] of this.heroes) {
-      if (GetUnitTypeId(unit) == 0) {
-        customHero.cleanup();
-        removed.push(unit);
+    for (const ch of this.heroes.values()) {
+      if (GetUnitTypeId(ch.unit) == 0) {
+        ch.cleanup();
+        removed.push(ch.unit);
       }
     }
     removed.map((removedUnit: unit) => {
@@ -151,8 +151,8 @@ export class CustomPlayer {
 
   cleanupRemovedUnits () {
     const removed = [];
-    for (const [k, v] of this.units) {
-      if (GetUnitTypeId(v) == 0 || !IsUnitSelected(v, this.player)) {
+    for (const v of this.units.values()) {
+      if (GetUnitTypeId(v) == 0) {
         removed.push(v);
       }
     }

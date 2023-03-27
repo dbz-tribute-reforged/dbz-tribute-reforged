@@ -667,13 +667,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
 
     // fourth form cooler
-    [FourCC("H042"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.fourthCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // final form cooler
-    [FourCC("H043"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.fifthCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // golden final form
     [FourCC("H05L"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // metal cooler
-    [FourCC("H01A"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.metalCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    
+    [Id.getiStar, [
+      AbilityNames.Cooler.DEATH_BEAM, 
+      AbilityNames.Cooler.SUPERNOVA_COOLER, 
+      AbilityNames.Cooler.NOVA_CHARIOT, 
+      AbilityNames.Cooler.GETI_STAR_REPAIR, 
+      AbilityNames.Cooler.SUPERNOVA_GOLDEN
+    ]],
+
 
     // farmer with shotgun
     [FourCC("H08S"), [

@@ -1,4 +1,4 @@
-import { Constants, Globals } from "Common/Constants";
+import { Constants, Globals, Id } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
@@ -239,7 +239,8 @@ export class ExperienceManager {
             IsUnitAlly(testUnit, killingPlayer) &&
             !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
             !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
-            !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
+            !IsUnitType(testUnit, UNIT_TYPE_SUMMONED) &&
+            GetUnitTypeId(testUnit) != Id.metalCoolerClone
           ) {
             // leave in group
           } else {
