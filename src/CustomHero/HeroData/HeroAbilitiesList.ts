@@ -675,7 +675,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // metal cooler
     [Id.metalCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     
-    [Id.getiStar, [
+    [Id.getiStarHero, [
       AbilityNames.Cooler.DEATH_BEAM, 
       AbilityNames.Cooler.SUPERNOVA_COOLER, 
       AbilityNames.Cooler.NOVA_CHARIOT, 

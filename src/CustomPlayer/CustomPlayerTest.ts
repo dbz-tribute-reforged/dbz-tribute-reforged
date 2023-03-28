@@ -1100,6 +1100,25 @@ export function CustomPlayerTest() {
     }
   });
 
+  const clownTrigger = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(clownTrigger, Player(i), "-clown", false);
+  }
+  TriggerAddAction(clownTrigger, () => {
+    if (GetTriggerPlayer() == Globals.hostPlayer) {
+      let clownStr = SubString(GetEventPlayerChatString(), 7, 9);
+      if (clownStr == "") {
+        clownStr = "75";
+      }
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 
+        15, 
+        "-clown " + clownStr
+      );
+      Globals.clownValue = S2I(clownStr);
+    }
+  });
+
 
   const zanzoToggleTrigger = CreateTrigger();
   for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -1187,28 +1206,6 @@ export function CustomPlayerTest() {
       }
     }
   });
-
-  // allow player to modify ui as they see fit
-	// prints id of frame given by name
-	const atkrangetest = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(atkrangetest, Player(i), "-range", false);
-	}
-	TriggerAddAction(atkrangetest, () => {
-    if (GetTriggerPlayer() == GetLocalPlayer()) {
-      const str = GetEventPlayerChatString();
-
-      const sub = SubString(str, 7, 15);
-
-      const playerId = GetPlayerId(GetTriggerPlayer());
-
-      const ch = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
-      if (ch) {
-        BlzSetUnitWeaponRealField(ch.unit, UNIT_WEAPON_RF_ATTACK_RANGE, 1, S2R(sub));
-      }
-    }
-	});
-
   
   // allow player to modify ui as they see fit
 	// prints id of frame given by name

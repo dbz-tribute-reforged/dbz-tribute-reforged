@@ -323,7 +323,7 @@ const coolerData = {
   )
 }
 const getiStarData = {
-  unitCode: Id.getiStar,
+  unitCode: Id.getiStarHero,
   onlyRandom: false,
   requirement: null,
   category: (

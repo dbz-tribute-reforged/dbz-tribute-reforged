@@ -8,6 +8,7 @@ export module Globals {
   export let isNightmare: boolean = false;
   export let isZanzoDash: boolean = false;
   export let numPVPKills: number = 0;
+  export let clownValue: number = 0;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
@@ -15,7 +16,9 @@ export module Globals {
 
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
-  export const simpleSpellTrigger = CreateTrigger();
+  export const simpleSpellEffectTrigger = CreateTrigger();
+  export const simpleSpellEndCastTrigger = CreateTrigger();
+  export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
@@ -564,8 +567,10 @@ export module Id {
   export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
 
-  export const getiStar = FourCC("H002");
+  export const getiStarHero = FourCC("H002");
   export const metalCoolerClone = FourCC("H01Z");
+  export const getiStarUpgradeCDR = FourCC("R00M");
+  export const getiStarUpgradeSpellPower = FourCC("R00K");
 
   export const ginyu = FourCC("H09E");
   export const milkyCannon = FourCC("A0PP");

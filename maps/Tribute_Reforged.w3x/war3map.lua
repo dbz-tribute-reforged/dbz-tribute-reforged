@@ -314,6 +314,9 @@ udg_GetiStarUpgMax = 0
 udg_GetiStarGold = 0
 udg_GetiStarKillsComeback = 0
 udg_GetiStarKillsComebackReq = 0
+udg_GetiStarAugStr = 0.0
+udg_GetiStarAugAgi = 0.0
+udg_GetiStarAugInt = 0.0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1095,6 +1098,9 @@ gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Geti_Star_Aug_Attribute = nil
+gg_trg_Geti_Star_Get_Augs = nil
+gg_trg_Geti_Star_Aug_CDR_SIMPLE = nil
 function InitGlobals()
 local i = 0
 
@@ -1517,6 +1523,9 @@ udg_GetiStarUpgMax = 50
 udg_GetiStarGold = 0
 udg_GetiStarKillsComeback = 0
 udg_GetiStarKillsComebackReq = 200
+udg_GetiStarAugStr = 0.0
+udg_GetiStarAugAgi = 0.0
+udg_GetiStarAugInt = 0.0
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -19915,6 +19924,7 @@ EnableTrigger(gg_trg_Geti_Star_Base_Build_Finish)
 EnableTrigger(gg_trg_Geti_Star_Base_Killed)
 EnableTrigger(gg_trg_Geti_Star_On_Kill)
 EnableTrigger(gg_trg_Geti_Star_Clone)
+EnableTrigger(gg_trg_Geti_Star_Aug_Attribute)
 end
 
 function InitTrig_Geti_Star_Enable()
@@ -19964,6 +19974,25 @@ end
 function InitTrig_Geti_Star_Get_All_Stats()
 gg_trg_Geti_Star_Get_All_Stats = CreateTrigger()
 TriggerAddAction(gg_trg_Geti_Star_Get_All_Stats, Trig_Geti_Star_Get_All_Stats_Actions)
+end
+
+function Trig_Geti_Star_Get_Augs_Actions()
+TriggerExecute(gg_trg_Geti_Star_Get_Hero)
+    udg_ID = GetHandleId(udg_GetiStarHero)
+udg_TempString = "geti|aug|str"
+    udg_TempInt = StringHash(udg_TempString)
+udg_GetiStarAugStr = LoadRealBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+udg_TempString = "geti|aug|agi"
+    udg_TempInt = StringHash(udg_TempString)
+udg_GetiStarAugAgi = LoadRealBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+udg_TempString = "geti|aug|int"
+    udg_TempInt = StringHash(udg_TempString)
+udg_GetiStarAugInt = LoadRealBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+end
+
+function InitTrig_Geti_Star_Get_Augs()
+gg_trg_Geti_Star_Get_Augs = CreateTrigger()
+TriggerAddAction(gg_trg_Geti_Star_Get_Augs, Trig_Geti_Star_Get_Augs_Actions)
 end
 
 function Trig_Geti_Star_Print_Stats_Func004C()
@@ -20285,6 +20314,92 @@ DisableTrigger(gg_trg_Geti_Star_On_Kill)
 TriggerRegisterAnyUnitEventBJ(gg_trg_Geti_Star_On_Kill, EVENT_PLAYER_UNIT_DEATH)
 TriggerAddCondition(gg_trg_Geti_Star_On_Kill, Condition(Trig_Geti_Star_On_Kill_Conditions))
 TriggerAddAction(gg_trg_Geti_Star_On_Kill, Trig_Geti_Star_On_Kill_Actions)
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func011C()
+if (GetResearched() == FourCC("R00H")) then
+return true
+end
+if (GetResearched() == FourCC("R00I")) then
+return true
+end
+if (GetResearched() == FourCC("R00J")) then
+return true
+end
+return false
+end
+
+function Trig_Geti_Star_Aug_Attribute_Conditions()
+if (not (IsPlayerInForce(GetOwningPlayer(GetResearchingUnit()), udg_GetiStarPlayerGroup) == true)) then
+return false
+end
+if (not Trig_Geti_Star_Aug_Attribute_Func011C()) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func005C()
+if (not (GetResearched() == FourCC("R00H"))) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func006C()
+if (not (GetResearched() == FourCC("R00I"))) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func007C()
+if (not (GetResearched() == FourCC("R00J"))) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func010C()
+if (not (udg_TempReal < 2.00)) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Actions()
+udg_GetiStarPlayer = GetOwningPlayer(GetResearchingUnit())
+TriggerExecute(gg_trg_Geti_Star_Get_Hero)
+    udg_ID = GetHandleId(udg_GetiStarHero)
+if (Trig_Geti_Star_Aug_Attribute_Func005C()) then
+udg_TempString = "geti|aug|str"
+        udg_TempInt = StringHash(udg_TempString)
+else
+end
+if (Trig_Geti_Star_Aug_Attribute_Func006C()) then
+udg_TempString = "geti|aug|agi"
+        udg_TempInt = StringHash(udg_TempString)
+else
+end
+if (Trig_Geti_Star_Aug_Attribute_Func007C()) then
+udg_TempString = "geti|aug|int"
+        udg_TempInt = StringHash(udg_TempString)
+else
+end
+udg_TempReal = (0.05 + LoadRealBJ(udg_TempInt, udg_ID, udg_SummonsHashtable))
+SaveRealBJ(udg_TempReal, udg_TempInt, udg_ID, udg_SummonsHashtable)
+if (Trig_Geti_Star_Aug_Attribute_Func010C()) then
+SetPlayerTechResearchedSwap(GetResearched(), 0, udg_GetiStarPlayer)
+else
+end
+end
+
+function InitTrig_Geti_Star_Aug_Attribute()
+gg_trg_Geti_Star_Aug_Attribute = CreateTrigger()
+DisableTrigger(gg_trg_Geti_Star_Aug_Attribute)
+TriggerRegisterAnyUnitEventBJ(gg_trg_Geti_Star_Aug_Attribute, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+TriggerAddCondition(gg_trg_Geti_Star_Aug_Attribute, Condition(Trig_Geti_Star_Aug_Attribute_Conditions))
+TriggerAddAction(gg_trg_Geti_Star_Aug_Attribute, Trig_Geti_Star_Aug_Attribute_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -60004,7 +60119,7 @@ end
 return true
 end
 
-function Trig_Transformations_Geti_Star_Func013Func002Func003C()
+function Trig_Transformations_Geti_Star_Func013Func007Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -60014,8 +60129,8 @@ end
 return false
 end
 
-function Trig_Transformations_Geti_Star_Func013Func002C()
-if (not Trig_Transformations_Geti_Star_Func013Func002Func003C()) then
+function Trig_Transformations_Geti_Star_Func013Func007C()
+if (not Trig_Transformations_Geti_Star_Func013Func007Func003C()) then
 return false
 end
 return true
@@ -60067,7 +60182,12 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Geti_Star_Func013C()) then
-if (Trig_Transformations_Geti_Star_Func013Func002C()) then
+udg_GetiStarPlayer = udg_TransformationPlayer
+TriggerExecute(gg_trg_Geti_Star_Get_Augs)
+udg_StatMultStr = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugStr))
+udg_StatMultAgi = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugAgi))
+udg_StatMultInt = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugInt))
+if (Trig_Transformations_Geti_Star_Func013Func007C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H002')
@@ -62035,6 +62155,7 @@ InitTrig_Geti_Star_Enable()
 InitTrig_Geti_Star_Get_Hero()
 InitTrig_Geti_Star_Get_Base()
 InitTrig_Geti_Star_Get_All_Stats()
+InitTrig_Geti_Star_Get_Augs()
 InitTrig_Geti_Star_Print_Stats()
 InitTrig_Geti_Star_Print_Full_Stats()
 InitTrig_Geti_Star_Base_Build_Finish()
@@ -62042,6 +62163,7 @@ InitTrig_Geti_Star_Base_Killed()
 InitTrig_Geti_Star_Clone()
 InitTrig_Geti_Star_Clone_Give_Stats()
 InitTrig_Geti_Star_On_Kill()
+InitTrig_Geti_Star_Aug_Attribute()
 InitTrig_Play_Ability_Spell_Audio()
 InitTrig_Play_Ability_Spell_Audio_2()
 InitTrig_Freemode()

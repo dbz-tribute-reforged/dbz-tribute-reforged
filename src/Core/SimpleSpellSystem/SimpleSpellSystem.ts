@@ -33,8 +33,28 @@ export module SimpleSpellSystem {
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
 
-    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
-    TriggerAddAction(Globals.simpleSpellTrigger, () => {
+    setupSpellStartEndCastTrigger();
+
+
+    TriggerRegisterAnyUnitEventBJ(Globals.genericUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH);
+    TriggerAddAction(Globals.genericUpgradeTrigger, () => {
+      const researchId = GetResearched();
+      if (researchId == Id.getiStarUpgradeSpellPower) {
+        // add +1 sp
+        const unit = GetResearchingUnit();
+        const player = GetOwningPlayer(unit);
+        const playerId = GetPlayerId(player);
+        for (const x of Globals.customPlayers[playerId].allHeroes) {
+          if (GetUnitTypeId(x.unit) == Id.getiStarHero) {
+            x.addSpellPower(0.01);
+          }
+        }
+      }
+    });
+    
+    
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellEffectTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+    TriggerAddAction(Globals.simpleSpellEffectTrigger, () => {
       const spellId = GetSpellAbilityId();
       const func = Globals.genericSpellMap.get(spellId);
       if (func) {
@@ -115,10 +135,6 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.beastGohan, SimpleSpellSystem.gohanBeastBuff);
     Globals.genericSpellMap.set(Id.specialBeastCannon, SimpleSpellSystem.specialBeastCannon);
-    
-    Globals.genericSpellMap.set(Id.gokuBlackDivineLasso, SimpleSpellSystem.doGokuBlackDivineLasso);
-    Globals.genericSpellMap.set(Id.gokuBlackSorrowfulScythe, SimpleSpellSystem.doGokuBlackSorrowfulScythe);
-
     
     // add DDS stuff
     TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
@@ -2909,12 +2925,45 @@ export module SimpleSpellSystem {
     });
   }
 
-  export function doGokuBlackDivineLasso() {
-    
-  }
+  export function setupSpellStartEndCastTrigger() {
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellEndCastTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST);
+    TriggerAddAction(Globals.simpleSpellEndCastTrigger, () => {
+      // get custom hero casting it
+      const unit = GetTriggerUnit();
+      const player = GetOwningPlayer(unit);
+      const playerId = GetPlayerId(player);
+      if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+        const abilId = GetSpellAbilityId();
+        
+        if (
+          abilId == Id.aylaTripleKick
+          || abilId == Id.hirudegarnFlameBreath
+          || abilId == Id.hirudegarnFlameBall
+          || abilId == Id.hirudegarnTailSweep
+        ) {
+          return;
+        }
 
-  export function doGokuBlackSorrowfulScythe() {
+        const abilLvl = GetUnitAbilityLevel(unit, abilId)-1;
+        const baseCd = BlzGetUnitAbilityCooldown(unit, abilId, abilLvl);
 
+        let newCd = baseCd;
+
+        if (Globals.clownValue > 0) {
+          newCd = newCd * ((100 - Globals.clownValue) * 0.01)
+        }
+
+        const getiCDR = GetPlayerTechCountSimple(Id.getiStarUpgradeCDR, player);
+        if (getiCDR > 0) {
+          newCd = newCd * (100 - getiCDR) * 0.01;
+        }
+
+        if (newCd != baseCd) {
+          BlzStartUnitAbilityCooldown(unit, abilId, newCd);
+          // BlzSetUnitAbilityCooldown(unit, abilId, abilLvl, newCd);
+        }
+      }
+    });
   }
 
 
