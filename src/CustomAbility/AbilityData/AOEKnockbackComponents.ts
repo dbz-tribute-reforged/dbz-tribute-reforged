@@ -17,6 +17,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // to here, and replace with unique name
@@ -35,6 +36,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // knockback deflect
@@ -52,6 +54,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // super dragon flight
@@ -69,6 +72,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // heat dome attack
@@ -86,6 +90,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // hellzone grenade
@@ -116,6 +121,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // videl punch
@@ -133,6 +139,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // videl kick
@@ -150,6 +157,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // videl flying kick
@@ -167,6 +175,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // javelin throw
@@ -184,6 +193,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // ss deadly hammer reverse knockback
@@ -201,6 +211,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // android barrier knockback
@@ -218,6 +229,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // broly energy punch
@@ -235,6 +247,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -251,6 +264,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // broly power level rising
@@ -268,6 +282,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // big bang attack reverse knockback
@@ -285,6 +300,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -301,6 +317,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // dfist knock-in
@@ -318,6 +335,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // energy blast volley minor knockback
@@ -335,6 +353,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tyrant breaker knockback
@@ -352,6 +371,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // angry shout large aoe knockback
@@ -369,6 +389,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // reliable friend
@@ -386,6 +407,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // babidi barrier knockback
@@ -403,6 +425,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // evil spear knock in
@@ -420,6 +443,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // cooler deafening wave
@@ -437,6 +461,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // solar kame
@@ -454,6 +479,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // raditz behind you
@@ -471,6 +497,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // power blitz
@@ -488,6 +515,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // power blitz barrage
@@ -505,6 +533,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // super electric strike
@@ -522,6 +551,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // belly armor
@@ -539,6 +569,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // hand kannon
@@ -556,6 +587,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -572,6 +604,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // blast-o-matic
@@ -589,6 +622,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // beam power impact
@@ -606,6 +640,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // beam power impact
@@ -623,6 +658,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // beam jiren meditate 2 barrier
@@ -640,6 +676,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // justice tornado
@@ -657,6 +694,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // justice tornado 2
@@ -674,6 +712,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // death storm
@@ -691,6 +730,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -707,6 +747,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -723,6 +764,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // nova star omega
@@ -740,6 +782,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // justice kick 2
@@ -757,6 +800,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // circle flash
@@ -774,6 +818,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // yamcha r super spirit ball
@@ -791,6 +836,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // yamcha r wolf fang hurricane
@@ -808,6 +854,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // yamcha r batter up
@@ -825,6 +872,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: true,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // yamcha r sparking
@@ -842,6 +890,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: true,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // psycho javelin knock in
@@ -859,6 +908,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // telekinesis knock in
@@ -876,6 +926,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // kame super roshi
@@ -893,6 +944,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // lightning surprise
@@ -910,6 +962,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // mafuba
@@ -927,6 +980,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // divine authority
@@ -944,6 +998,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -960,6 +1015,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // detroit smash
@@ -977,6 +1033,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // united states of smash
@@ -994,6 +1051,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1010,6 +1068,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1026,6 +1085,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // oklahoma smash
@@ -1043,6 +1103,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1059,6 +1120,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // new hampshire smash
@@ -1076,6 +1138,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // black materia
@@ -1093,6 +1156,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // mario cape
@@ -1110,6 +1174,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tri beam
@@ -1127,6 +1192,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tien kiai
@@ -1144,6 +1210,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tyranno roar knockback / deflect
@@ -1161,6 +1228,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // water 2
@@ -1178,6 +1246,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // cyclone knock-in
@@ -1195,6 +1264,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tail spin knock-in
@@ -1212,6 +1282,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // aura storm
@@ -1229,6 +1300,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1245,6 +1317,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // saitama serious punch
@@ -1262,6 +1335,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // saitama serious sideways jumps
@@ -1279,6 +1353,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // dk jungle rush
@@ -1296,6 +1371,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // chou makousen
@@ -1313,6 +1389,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // tail sweep
@@ -1330,6 +1407,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // shocking death ball
@@ -1347,6 +1425,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1363,6 +1442,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   {
@@ -1379,6 +1459,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // flashfreeze heatwave
@@ -1396,6 +1477,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: true,
   },
   // skurvy kannon
@@ -1413,6 +1495,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // skurvy pirate scorn cannon
@@ -1430,6 +1513,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
   // jaco super elite combo
@@ -1447,6 +1531,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: true,
   },
   // waluigi spin
@@ -1464,6 +1549,7 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
+    onlyHeroes: false,
     isPersistent: false,
   },
 ];

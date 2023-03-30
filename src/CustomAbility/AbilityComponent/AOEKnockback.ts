@@ -33,6 +33,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     public useLastCastPoint: boolean = false,
     public reflectBeams: boolean = false,
     public affectAllies: boolean = false,
+    public onlyHeroes: boolean = false,
     public isPersistent: boolean = false,
   ) {
     this.sourceCoord = new Vector2D();
@@ -119,6 +120,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.knockbackData, 
       this.knockbackSource, this.useLastCastPoint,
       this.reflectBeams, this.affectAllies,
+      this.onlyHeroes,
       this.isPersistent,
     );
   }
@@ -138,6 +140,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       useLastCastPoint: boolean;
       reflectBeams: boolean;
       affectAllies: boolean; 
+      onlyHeroes: boolean;
       isPersistent: boolean;
     }
   ) {
@@ -150,6 +153,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.useLastCastPoint = input.useLastCastPoint;
     this.reflectBeams = input.reflectBeams;
     this.affectAllies = input.affectAllies;
+    this.onlyHeroes = input.onlyHeroes;
     this.isPersistent = input.isPersistent;
     return this;
   }
