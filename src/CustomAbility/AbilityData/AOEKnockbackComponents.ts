@@ -48,7 +48,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 35, 
       angle: 0, 
-      aoe: 500,
+      aoe: 375,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
@@ -56,6 +56,23 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+  },
+  {
+    name: "knockback deflect hero pushback",
+    repeatInterval: 1, 
+    startTick: 9,
+    endTick: -1,
+    knockbackData: {
+      speed: 120, 
+      angle: 0, 
+      aoe: 375,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: true,
+    isPersistent: true,
   },
   // super dragon flight
   {

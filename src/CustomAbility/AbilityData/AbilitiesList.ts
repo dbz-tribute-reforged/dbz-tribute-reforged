@@ -170,6 +170,7 @@ export const AbilitiesList = [
     components: [
       { name: "block perfect basic guard" },
       { name: "knockback deflect" },
+      { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
     ],
   },
