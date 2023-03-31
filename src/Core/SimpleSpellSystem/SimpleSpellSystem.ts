@@ -1870,6 +1870,7 @@ export module SimpleSpellSystem {
     } else if (spellId == Id.schalaTeleportation2) {
       beamSpeed /= schalaTpMoveDuration2;
     }
+    beamSpeed *= 2;
     const sfxCast = AddSpecialEffect(
       "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
       casterPos.x, casterPos.y

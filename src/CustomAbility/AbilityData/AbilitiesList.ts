@@ -7574,7 +7574,7 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "dash ground forward saitama serious series" },
+      { name: "dash ground forward 1dist" },
     ],
   },
   // -------------------------------------------
@@ -9440,7 +9440,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "+70% ability damage, +70% auto attack damage, +132ms.|n" + 
+        "+60% ability damage, +60% auto attack damage, +132ms.|n" + 
         "Cost: 50 SP|n"+
         "Duration: 9s|n" +  
         "CD: 25s"

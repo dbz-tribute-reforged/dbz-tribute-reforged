@@ -62,7 +62,7 @@ export const AOEHealComponents = [
     maxHealTicks: 1,
     healMult: 0.0,
     healAttribute: bj_HEROSTAT_INT,
-    maxHealthHealPercent: 0.04,
+    maxHealthHealPercent: 0.08,
     requireBuff: false,
     buffId: 0,
   },
