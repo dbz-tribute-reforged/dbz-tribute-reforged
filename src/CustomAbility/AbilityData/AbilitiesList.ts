@@ -9297,6 +9297,7 @@ export const AbilitiesList = [
       { name: "dash ground point energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
+      { name: "knockback energy punch hero" },
       { name: "knockback energy punch reverse" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%

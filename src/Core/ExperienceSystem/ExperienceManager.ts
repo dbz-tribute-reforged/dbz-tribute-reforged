@@ -52,6 +52,7 @@ export module ExperienceConstants {
   export const heroLevelMult = 0.0;
   export const heroConstant = 100;
 
+  export const creepXPModifier = 0.5;
   export const globalXPRateModifier = 1.1;
   export const nearbyPlayerXPMult = 0.15;
   export const bonusXPToNextLevel = 0.05;
@@ -167,7 +168,7 @@ export class ExperienceManager {
 
   getCreepKillXP(level: number): number {
     if (level > 0 && level < this.creepXP.length) {
-      return this.creepXP[level];
+      return this.creepXP[level] * ExperienceConstants.creepXPModifier;
     }
     return 0;
   }

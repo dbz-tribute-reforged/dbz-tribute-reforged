@@ -1839,12 +1839,30 @@ STRING 297
 Android 13
 }
 
+STRING 298
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool2> seconds|r
+}
+
 STRING 299
 // Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
 {
 Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
 |cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
 |cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
+}
+
+STRING 300
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool3> seconds|r
 }
 
 STRING 301
@@ -6689,21 +6707,27 @@ Zamasu
 }
 
 STRING 1066
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
 {
 Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 1067
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool4> seconds|r
 }
 
 STRING 1068
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool1> seconds|r
 }
 
 STRING 1069
@@ -6730,10 +6754,28 @@ STRING 1072
 Tapion
 }
 
+STRING 1073
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool5> seconds|r
+}
+
 STRING 1074
 // Abilities: A0UW (Madness Slash), Name (Name)
 {
 Madness Slash
+}
+
+STRING 1075
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool6> seconds|r
 }
 
 STRING 1076
@@ -8069,10 +8111,28 @@ STRING 1279
 Future Trunks
 }
 
+STRING 1280
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool7> seconds|r
+}
+
 STRING 1281
 // Units: n02Q (Giant Crocodile), Name (Name)
 {
 Giant Crocodile
+}
+
+STRING 1282
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool8> seconds|r
 }
 
 STRING 1283
@@ -9729,6 +9789,15 @@ STRING 1554
 Senzu Bean
 }
 
+STRING 1555
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool9> seconds|r
+}
+
 STRING 1556
 // Items: I01I (Senzu Bean UNUSED), Tip (Tooltip - Basic)
 {
@@ -10267,6 +10336,15 @@ STRING 1643
 // Items: I02Z (King Kai's food), Description (Description)
 {
 A little undercooked, but it fills you up.
+}
+
+STRING 1644
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 10% Max HP
+|cff00ffffCooldown: <A0VH,Cool10> seconds|r
 }
 
 STRING 1645
@@ -10914,6 +10992,15 @@ STRING 1748
 // Items: I03Q (Scouter 2.0), Tip (Tooltip - Basic)
 {
 Scouter 2.0
+}
+
+STRING 1749
+// Abilities: A0YK (Empowered Magic Orbs), Ubertip (Tooltip - Normal - Extended)
+{
+Schala creates 5 magical orbs in a line and fires them at the target area.
+|cffffff00Empowered: Orbs restore HP to allies in range of the explosion. 
+|cff00ff00Damage: Int * lvl * ? + 1% Max HP (each)|r
+|cff00ffffCooldown: <A0YK,Cool10> seconds|r
 }
 
 STRING 1750
@@ -12153,6 +12240,11 @@ STRING 1955
 E
 }
 
+STRING 1956
+{
+|cffffcc00Ultimate Mode|r |cffff4444disabled|r. Progerssion is |cff00ff00normal|r.
+}
+
 STRING 1960
 // Abilities: A00N (Energy Beam), EditorSuffix (Editor Suffix)
 {
@@ -12216,6 +12308,12 @@ STRING 1971
 // Units: H09F (One-Star Shadow Dragon), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 1972
+// Units: H05L (Changling (Golden Final Form)), Propernames (Proper Names)
+{
+Cooler
 }
 
 STRING 1973
@@ -12401,6 +12499,12 @@ Shoto heats himself up. Increases heat gauge and adds a fixed amount of heat per
 |cffffff00Adds +10% fire damage.
 Adds +1% fire damage for each heat above 50.
 |cffffff00|cff00ffffCooldown: <A0YV,Cool1> seconds
+}
+
+STRING 2002
+// Buffs/Effects: B00L (), Buffubertip (Tooltip - Extended)
+{
+Cooler.
 }
 
 STRING 2003
@@ -12637,6 +12741,24 @@ STRING 2041
 [|cff00ff00Q|r] Normal Punch - [|cffffcc00Level 10|r]
 }
 
+STRING 2042
+// Abilities: A0L2 (Supernova Golden), EditorSuffix (Editor Suffix)
+{
+(Cooler)
+}
+
+STRING 2043
+// Buffs/Effects: B05S (), Bufftip (Tooltip)
+{
+Metal Cooler
+}
+
+STRING 2044
+// Buffs/Effects: B05S (), Buffubertip (Tooltip - Extended)
+{
+Metal Cooler.
+}
+
 STRING 2045
 // Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
 {
@@ -12647,6 +12769,12 @@ STRING 2046
 // Abilities: A06C (Death Beam), Name (Name)
 {
 Death Beam
+}
+
+STRING 2047
+// Abilities: A00H (Scan for Powers), EditorSuffix (Editor Suffix)
+{
+(Cooler)
 }
 
 STRING 2048
@@ -12959,6 +13087,12 @@ STRING 2099
 // Abilities: A008 (Normal Punch), EditorSuffix (Editor Suffix)
 {
 (saitama)
+}
+
+STRING 2100
+// Abilities: A01F (CoolerHeadFourth), Name (Name)
+{
+CoolerHeadFourth
 }
 
 STRING 2101
@@ -13770,6 +13904,12 @@ STRING 2228
 // Abilities: A074 (Present Bomb), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Present Bomb
+}
+
+STRING 2229
+// Abilities: A01H (CoolerHeadMetal), Name (Name)
+{
+CoolerHeadMetal
 }
 
 STRING 2236
@@ -18782,15 +18922,6 @@ STRING 3064
 Super 17 has further improved his mechanical body by absorbing Android 18.
 }
 
-STRING 3065
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
-{
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +250 base stats / +10 lvls
-After 20 mins: +500 base stats / +20 lvls
-After 30 mins: +500 base stats / +30 lvls
-}
-
 STRING 3066
 // Units: H0AJ (Black Swordsman), Propernames (Proper Names)
 {
@@ -21391,15 +21522,6 @@ STRING 3505
 FT Current
 }
 
-STRING 3506
-// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
-{
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +250 base stats / +10 lvls
-After 20 mins: +500 base stats / +20 lvls
-After 30 mins: +500 base stats / +30 lvls
-}
-
 STRING 3507
 // Abilities: A04L (Attack Bonus 20%), Name (Name)
 {
@@ -23962,12 +24084,6 @@ STRING 3931
 Q
 }
 
-STRING 3932
-// Abilities: A07S (MC Head), Name (Name)
-{
-MC Head
-}
-
 STRING 3933
 // Abilities: AIDS (State Detection), Name (Name)
 {
@@ -26217,12 +26333,6 @@ STRING 4277
 // Upgrades: R00P (Long Rifles), Name (Name)
 {
 Upgraded Defense Systems
-}
-
-STRING 4278
-// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 4279
@@ -34335,7 +34445,7 @@ Time Ring
 }
 
 STRING 5611
-// Abilities: A07S (MC Head), EditorSuffix (Editor Suffix)
+// Abilities: A0C1 (Supernova), EditorSuffix (Editor Suffix)
 {
 (cooler)
 }
@@ -44191,12 +44301,6 @@ Transformations:
 |cffff25aaZamasu's Immortality|r: +150% HP regen
 }
 
-STRING 7209
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
-}
-
 STRING 7210
 // Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
@@ -45431,18 +45535,6 @@ STRING 7413
 Vegeta fires a powerful Galick Gun infused with the powers of destruction. Deals additional damage when on low HP (max +100%).
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0GJ,Cool1> seconds|r
-}
-
-STRING 7414
-// Abilities: A0ET (Dark Transformation), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn slowly gathers energy into himself as he sheds his outer layer of skin to undergo a dark transformation.
-For the next 3 seconds, incoming damage is reduced.
-For the next 20 seconds, increase health regeneration and unlock [|cff00ff00F|r] Flight.
-
-|cff00ff00Damage Block: Str * Lvl * ? @ 50%
-Heal: Int * ? + 0.3% max HP|r
-|cff00ffffCooldown: <A0ET,Cool1> seconds|r
 }
 
 STRING 7415
@@ -47547,24 +47639,6 @@ STRING 7752
 Q
 }
 
-STRING 7753
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
-}
-
-STRING 7754
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
-}
-
-STRING 7755
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
-}
-
 STRING 7756
 // Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
 {
@@ -49305,7 +49379,7 @@ STRING 8047
 }
 
 STRING 8048
-// Abilities: A0C1 (Supernova), EditorSuffix (Editor Suffix)
+// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (cooler)
 }
@@ -49314,12 +49388,6 @@ STRING 8049
 // Units: H09K (Symbol of Peace), Tip (Tooltip - Basic)
 {
 [|cffffff00A|r] Choose All Might
-}
-
-STRING 8050
-// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
-{
-(cooler)
 }
 
 STRING 8051
@@ -49578,17 +49646,6 @@ STRING 8088
 // Abilities: A0GL (Hakai Barrage), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Ego Galick Gun - [|cffffcc00Level %d|r]
-}
-
-STRING 8089
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. The longer Android 17 launches energy blasts the more powerful they become. Cancelling the channel of the ability will prematurely detonate all power blitzes still in motion.
-|cff2080ffMana Cost: 10k + 30% of Max Mana|r
-|cffff2020Channel Duration: <A0MW,Dur10> seconds|r
-|cff00FF00Damage: Int * lvl * ?
-Spell Amp: +15% per second (up to +50%)|r
-|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
 }
 
 STRING 8090
@@ -51602,72 +51659,6 @@ STRING 8409
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
 |cff00ffffCooldown: <A00R,Cool1> seconds|r
-}
-
-STRING 8410
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
-}
-
-STRING 8411
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool2> seconds|r
-}
-
-STRING 8412
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool3> seconds|r
-}
-
-STRING 8413
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool4> seconds|r
-}
-
-STRING 8414
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool5> seconds|r
-}
-
-STRING 8415
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool6> seconds|r
-}
-
-STRING 8416
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool7> seconds|r
-}
-
-STRING 8417
-// Abilities: A09O (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
-}
-
-STRING 8418
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool8> seconds|r
-}
-
-STRING 8419
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool9> seconds|r
-}
-
-STRING 8420
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
-{
-The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
 }
 
 STRING 8421
@@ -61012,12 +61003,6 @@ STRING 9940
 (actual)
 }
 
-STRING 9941
-// Abilities: A0KZ (Cooler Fourth Form Head), Name (Name)
-{
-Cooler Fourth Form Head
-}
-
 STRING 9942
 // Abilities: A0L0 (Book Cooler Heads), Name (Name)
 {
@@ -61073,7 +61058,7 @@ Cooler has transformed into his final form!
 }
 
 STRING 9951
-// Abilities: A0L2 (Supernova Golden), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B01K (), EditorSuffix (Editor Suffix)
 {
 (Cooler)
 }
@@ -61089,7 +61074,7 @@ Roshi kicks nearby units into the air, disabling them and dealing damage.
 }
 
 STRING 9953
-// Abilities: A00H (Scan for Powers), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B00L (), EditorSuffix (Editor Suffix)
 {
 (Cooler)
 }
@@ -61370,7 +61355,7 @@ STRING 10004
 }
 
 STRING 10005
-// Buffs/Effects: B01K (), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B05S (), EditorSuffix (Editor Suffix)
 {
 (Cooler)
 }
@@ -61542,7 +61527,7 @@ Changling (Golden Final Form)
 }
 
 STRING 10032
-// Units: H05L (Changling (Golden Final Form)), Propernames (Proper Names)
+// Buffs/Effects: B00L (), Bufftip (Tooltip)
 {
 Cooler
 }
@@ -65277,7 +65262,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 23 March 2023
+This map is under active development - 1 April 2023
 }
 
 STRING 10653
@@ -65356,6 +65341,8 @@ STRING 10661
 -antimeme (no memes)
 -classic (good v evil + no memes)
 -original (good v evil + no memes/crono)
+-ultimate
+-clown
 }
 
 STRING 10662
@@ -67134,18 +67121,6 @@ STRING 10971
 // Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 10|r]
-}
-
-STRING 10972
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
-}
-
-STRING 10973
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
 }
 
 STRING 10974
@@ -112901,96 +112876,6 @@ Robo heals all nearby allies within a short range.
 |cff00FFFFCooldown: <A0WI,Cool10>s|r
 }
 
-STRING 18128
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool2> seconds|r
-}
-
-STRING 18129
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool3> seconds|r
-}
-
-STRING 18130
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool4> seconds|r
-}
-
-STRING 18131
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool1> seconds|r
-}
-
-STRING 18132
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool5> seconds|r
-}
-
-STRING 18133
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool6> seconds|r
-}
-
-STRING 18134
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool7> seconds|r
-}
-
-STRING 18135
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool8> seconds|r
-}
-
-STRING 18136
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool9> seconds|r
-}
-
-STRING 18137
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 8% Max HP
-|cff00ffffCooldown: <A0VH,Cool10> seconds|r
-}
-
 STRING 18138
 // Units: H08M (Saiyan Warrior), Ubertip (Tooltip - Extended)
 {
@@ -117235,12 +117120,6 @@ STRING 18760
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool3> seconds|r
-}
-
-STRING 18761
-// Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
-{
-An incomplete version of ultra instinct that automatically dodges all incoming attacks.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff00+0.10x stat multiplier.|n100% damage block up to 12 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0KR,Dur1> seconds|n|cff00ffffGives access to Mastered Ultra Instinct 200 seconds after use.
 }
 
 STRING 18762
@@ -122935,15 +122814,6 @@ STRING 19613
 // Abilities: A0YK (Empowered Magic Orbs), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Magic Orbs - [|cffffcc00Level 10|r]
-}
-
-STRING 19616
-// Abilities: A0YK (Empowered Magic Orbs), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates 5 magical orbs in a line and fires them at the target area.
-|cffffff00Empowered: Orbs restore HP to allies in range of the explosion. 
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0YK,Cool10> seconds|r
 }
 
 STRING 19619
@@ -139674,5 +139544,118 @@ STRING 22156
 Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,%>% damage and takes <A11F,DataB1,%>% damage. Clones will teleport to the last vengeance target if used within 3s of Appule's Vengeance.
 |cff00ff00Duration: <A11F,Dur1>s|r
 |cff00ffffCooldown: <A11E,Cool2,.> seconds|r
+}
+
+STRING 22157
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+{
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +150 base stats / +10 lvls
+After 20 mins: +300 base stats / +20 lvls
+After 30 mins: +450 base stats / +30 lvls
+}
+
+STRING 22158
+// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+{
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +150 base stats / +10 lvls
+After 20 mins: +300 base stats / +20 lvls
+After 30 mins: +450 base stats / +30 lvls
+}
+
+STRING 22159
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
+}
+
+STRING 22160
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool2> seconds|r
+}
+
+STRING 22161
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool3> seconds|r
+}
+
+STRING 22162
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool4> seconds|r
+}
+
+STRING 22163
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool5> seconds|r
+}
+
+STRING 22164
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool6> seconds|r
+}
+
+STRING 22165
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool7> seconds|r
+}
+
+STRING 22166
+// Abilities: A09O (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
+}
+
+STRING 22167
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool8> seconds|r
+}
+
+STRING 22168
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool9> seconds|r
+}
+
+STRING 22169
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
+}
+
+STRING 22170
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. The longer Android 17 launches energy blasts the more powerful they become. Cancelling the channel of the ability will prematurely detonate all power blitzes still in motion.
+|cff2080ffMana Cost: 7k + 30% of Max Mana|r
+|cffff2020Channel Duration: <A0MW,Dur10> seconds|r
+|cff00FF00Damage: Int * lvl * ?
+Spell Amp: +15% per second (up to +50%)|r
+|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
+STRING 22171
+// Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+{
+An incomplete version of ultra instinct that automatically dodges all incoming attacks.|n|cffffff00+0.10x stat multiplier.|n100% damage block up to 12 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0KR,Dur1> seconds|n|cff00ffffGives access to Mastered Ultra Instinct 200 seconds after use.
+}
+
+STRING 22172
+// Abilities: A0ET (Dark Transformation), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn slowly gathers energy into himself as he sheds his outer layer of skin to undergo a dark transformation.
+For the next 3 seconds, incoming damage is reduced.
+For the next 20 seconds, increase health regeneration and unlock [|cff00ff00F|r] Flight.
+
+|cff00ff00Damage Block: Str * Lvl * ? @ 80%
+Heal: Int * ? + 0.3% max HP|r
+|cff00ffffCooldown: <A0ET,Cool1> seconds|r
 }
 
