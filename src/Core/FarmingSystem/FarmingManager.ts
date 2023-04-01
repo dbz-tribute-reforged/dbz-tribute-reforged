@@ -105,7 +105,7 @@ export class FarmingManager {
     }
   }
 
-setupUpdateCrops() {
+  setupUpdateCrops() {
     TimerStart(this.updateCropsTimer, Constants.FARMING_TICK_INTERVAL, true, () => {
       this.updateCropsEffect();
     });

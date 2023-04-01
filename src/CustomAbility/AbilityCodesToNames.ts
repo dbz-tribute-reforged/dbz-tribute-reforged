@@ -419,6 +419,17 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.jacoMacroCannon, AbilityNames.Jaco.MACRO_CANNON],
     [Id.jacoSuperJaco, AbilityNames.Jaco.SUPER_JACO],
 
+    // leon s kennedy
+    [Id.leonPistol, AbilityNames.LeonSKennedy.PISTOL],
+    [Id.leonKnifeSlash, AbilityNames.LeonSKennedy.KNIFE_SLASH],
+    [Id.leonKnifeParry, AbilityNames.LeonSKennedy.KNIFE_PARRY],
+    [Id.leonRoundhouseKick, AbilityNames.LeonSKennedy.ROUNDHOUSE_KICK],
+    [Id.leonShotgun, AbilityNames.LeonSKennedy.SHOTGUN],
+    [Id.leonAssaultRifle, AbilityNames.LeonSKennedy.ASSAULT_RIFLE],
+    [Id.leonSniperRifle, AbilityNames.LeonSKennedy.SNIPER_RIFLE],
+    [Id.leonRocketLauncher, AbilityNames.LeonSKennedy.ROCKET_LAUNCHER],
+    [Id.leonFlashbang, AbilityNames.LeonSKennedy.FLASHBANG],
+    [Id.leonHeavyGrenade, AbilityNames.LeonSKennedy.HEAVY_GRENADE],
 
 
 

@@ -170,6 +170,7 @@ export const AbilitiesList = [
     components: [
       { name: "block perfect basic guard" },
       { name: "knockback deflect" },
+      { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
     ],
   },
@@ -7573,7 +7574,7 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "dash ground forward saitama serious series" },
+      { name: "dash ground forward 1dist" },
     ],
   },
   // -------------------------------------------
@@ -8685,6 +8686,290 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.LeonSKennedy.PISTOL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam leon pistol" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.KNIFE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage leon knife slash" },
+      { name: "damage leon knife slash bonus" },
+      { name: "dash ground forward 1dist" },
+      { name: "sfx videl kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.KNIFE_PARRY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 2s" },
+      { name: "debuff slow leon knife parry" },
+      { name: "block leon knife parry" },
+      { name: "damage leon knife parry" },
+      { name: "sfx leon knife parry" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.ROUNDHOUSE_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow leon kick" },
+      { name: "debuff stun leon kick" },
+      { name: "damage leon kick explosion" },
+      { name: "knockback leon kick" },
+      { name: "knockback leon kick hero" },
+      { name: "dash ground forward 1dist" },
+      { name: "sfx leon kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.SHOTGUN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi beam leon shotgun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.ASSAULT_RIFLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 56,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi beam leon assault rifle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.SNIPER_RIFLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "multi beam leon sniper rifle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.ROCKET_LAUNCHER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam leon rocket launcher" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.FLASHBANG,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam leon flashbang" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.LeonSKennedy.HEAVY_GRENADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam leon heavy grenade" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -9296,6 +9581,7 @@ export const AbilitiesList = [
       { name: "dash ground point energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
+      { name: "knockback energy punch hero" },
       { name: "knockback energy punch reverse" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
@@ -9439,7 +9725,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "+70% ability damage, +70% auto attack damage, +132ms.|n" + 
+        "+60% ability damage, +60% auto attack damage, +132ms.|n" + 
         "Cost: 50 SP|n"+
         "Duration: 9s|n" +  
         "CD: 25s"

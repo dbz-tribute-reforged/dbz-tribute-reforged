@@ -527,6 +527,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jaco.MACRO_CANNON,
       AbilityNames.Jaco.SUPER_JACO,
     ]],
+
+    [Id.leonSKennedy, [
+      AbilityNames.LeonSKennedy.PISTOL,
+      AbilityNames.LeonSKennedy.KNIFE_SLASH,
+      AbilityNames.LeonSKennedy.KNIFE_PARRY,
+      AbilityNames.LeonSKennedy.ROUNDHOUSE_KICK,
+      AbilityNames.LeonSKennedy.SHOTGUN,
+      AbilityNames.LeonSKennedy.ASSAULT_RIFLE,
+      AbilityNames.LeonSKennedy.SNIPER_RIFLE,
+      AbilityNames.LeonSKennedy.ROCKET_LAUNCHER,
+      AbilityNames.LeonSKennedy.FLASHBANG,
+      AbilityNames.LeonSKennedy.HEAVY_GRENADE,
+    ]],
     
 
 
@@ -663,17 +676,29 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Cell.CELL_X_FORM,
     ]],
     // cell junior
-    [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Goku.GOD_KAMEHAMEHA]],
+    [FourCC("H01J"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      // AbilityNames.Goku.GOD_KAMEHAMEHA
+    ]],
 
 
     // fourth form cooler
-    [FourCC("H042"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.fourthCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // final form cooler
-    [FourCC("H043"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.fifthCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // golden final form
     [FourCC("H05L"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // metal cooler
-    [FourCC("H01A"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [Id.metalCooler, [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    
+    [Id.getiStarHero, [
+      AbilityNames.Cooler.DEATH_BEAM, 
+      AbilityNames.Cooler.SUPERNOVA_COOLER, 
+      AbilityNames.Cooler.NOVA_CHARIOT, 
+      AbilityNames.Cooler.GETI_STAR_REPAIR, 
+      AbilityNames.Cooler.SUPERNOVA_GOLDEN
+    ]],
+
 
     // farmer with shotgun
     [FourCC("H08S"), [

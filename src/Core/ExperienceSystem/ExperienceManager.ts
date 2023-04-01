@@ -1,4 +1,4 @@
-import { Constants, Globals } from "Common/Constants";
+import { Constants, Globals, Id } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
@@ -52,6 +52,7 @@ export module ExperienceConstants {
   export const heroLevelMult = 0.0;
   export const heroConstant = 100;
 
+  export const creepXPModifier = 0.5;
   export const globalXPRateModifier = 1.1;
   export const nearbyPlayerXPMult = 0.15;
   export const bonusXPToNextLevel = 0.05;
@@ -167,7 +168,7 @@ export class ExperienceManager {
 
   getCreepKillXP(level: number): number {
     if (level > 0 && level < this.creepXP.length) {
-      return this.creepXP[level];
+      return this.creepXP[level] * ExperienceConstants.creepXPModifier;
     }
     return 0;
   }
@@ -239,7 +240,8 @@ export class ExperienceManager {
             IsUnitAlly(testUnit, killingPlayer) &&
             !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
             !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
-            !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
+            !IsUnitType(testUnit, UNIT_TYPE_SUMMONED) &&
+            GetUnitTypeId(testUnit) != Id.metalCoolerClone
           ) {
             // leave in group
           } else {

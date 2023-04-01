@@ -472,6 +472,43 @@ export module AbilityNames {
     export const SUPER_JACO: string = "Jaco Super Jaco";
   }
 
+  export module LeonSKennedy {
+    export const PISTOL: string = "Leon Pistol";
+    export const KNIFE_SLASH: string = "Leon Knife Slash";
+    export const KNIFE_PARRY: string = "Leon Knife Parry";
+    export const ROUNDHOUSE_KICK: string = "Leon Roundhouse Kick";
+    export const SHOTGUN: string = "Leon Shotgun";
+    export const ASSAULT_RIFLE: string = "Leon Assault Rifle";
+    export const SNIPER_RIFLE: string = "Leon Sniper Rifle";
+    export const ROCKET_LAUNCHER: string = "Leon Rocket Launcher";
+    export const FLASHBANG: string = "Leon Flashbang";
+    export const HEAVY_GRENADE: string = "Leon Heavy Grenade";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   export module Babidi {

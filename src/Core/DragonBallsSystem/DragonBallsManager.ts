@@ -379,6 +379,11 @@ export class DragonBallsManager {
       SetUnitX(this.shenron, x);
       SetUnitY(this.shenron, y);
 
+      if (Constants.IS_APRIL_FOOLS_DAY) {
+        BlzSetUnitSkin(this.dummyShenron, FourCC('nech'));
+        SetUnitScale(this.dummyShenron, 5.0, 5.0, 5.0);
+      }
+
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         15,
@@ -465,6 +470,11 @@ export class DragonBallsManager {
     );
     DisableTrigger(this.wishTrigger);
     ShowUnitHide(this.shenron);
+
+    if (Constants.IS_APRIL_FOOLS_DAY) {
+      BlzSetUnitSkin(this.dummyShenron, DragonBallsConstants.shenronUnitDummy);
+      SetUnitScale(this.dummyShenron, 4.0, 4.0, 4.0);
+    }
 
     return this;
   }

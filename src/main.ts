@@ -45,6 +45,7 @@ let farmingManager: FarmingManager;
 let heroSelectorManager: HeroSelectorManager;
 let dualTechManager: DualTechManager;
 let castTimeHelper: CastTimeHelper;
+let timerManager: TimerManager;
 
 
 function tsPostMain() {
@@ -76,7 +77,7 @@ function tsPostMain() {
   CustomUiTest();
 
   PathingCheck.Init();
-  TimerManager.getInstance();
+  timerManager = TimerManager.getInstance();
 
   // delay init
   TimerStart(CreateTimer(), 0.05, false, () => {

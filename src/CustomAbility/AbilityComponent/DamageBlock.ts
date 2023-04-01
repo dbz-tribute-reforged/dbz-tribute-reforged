@@ -46,6 +46,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     this.currentHp = GetUnitState(source, UNIT_STATE_LIFE);
 
     if (!this.isStarted) {
+      this.isStarted = true;
+      this.isFinished = false;
       this.previousHp = this.currentHp;
       this.remainingBlock = this.calculateMaxBlock(input);
     }

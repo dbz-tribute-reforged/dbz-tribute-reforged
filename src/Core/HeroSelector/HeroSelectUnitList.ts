@@ -322,26 +322,15 @@ const coolerData = {
     HeroSelectCategory.CARRY
   )
 }
-const raditzData = {
-  unitCode: Id.raditz,
+const getiStarData = {
+  unitCode: Id.getiStarHero,
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER
-  )
-}
-const nappaData = {
-  unitCode: Id.nappa,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.CARRY + 
     HeroSelectCategory.MICRO
   )
 }
@@ -471,6 +460,29 @@ const appuleData = {
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.MICRO  
+  )
+}
+const raditzData = {
+  unitCode: Id.raditz,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER
+  )
+}
+const nappaData = {
+  unitCode: Id.nappa,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.MICRO
   )
 }
 const hitData = {
@@ -729,6 +741,19 @@ const dartFeldData = {
     HeroSelectCategory.BRUISER
   )
 }
+const leonSKennedyData = {
+  unitCode: Id.leonSKennedy,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.BEAMER
+  )
+}
 const marioData = {
   unitCode: Id.mario,
   onlyRandom: false,
@@ -833,16 +858,16 @@ export const HeroSelectUnitList = [
   cellData,
   // 35
   coolerData,
-  raditzData,
-  nappaData,
+  getiStarData,
   janembaData,
+  super17Data,
   hirudegarnData,
   // 40
-  super17Data,
   omegaShenronData,
   eisShenronData,
   zamasuData,
   gokuBlackData,
+  emptySpace,
 
   // ====
   // 45
@@ -852,11 +877,11 @@ export const HeroSelectUnitList = [
   ginyuData,
   guldoData,
   appuleData,
-  hitData,
+  raditzData,
   // 50
+  nappaData,
+  hitData,
   moroData,
-  emptySpace,
-  emptySpace,
   emptySpace,
   emptySpace,
   // 55
@@ -901,11 +926,11 @@ export const HeroSelectUnitList = [
   lucarioData,
   sephirothData,
   dartFeldData,
+  leonSKennedyData,
   marioData,
-  waluigiData,
   // 85
+  waluigiData,
   sonicData,
-  emptySpace,
   emptySpace,
   emptySpace,
   emptySpace,
