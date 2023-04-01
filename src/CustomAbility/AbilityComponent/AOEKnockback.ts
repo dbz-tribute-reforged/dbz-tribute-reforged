@@ -45,7 +45,10 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   doKnockback(input: CustomAbilityInput, target: unit) {
     if (this.onlyHeroes && !IsUnitType(target, UNIT_TYPE_HERO)) return;
 
-    if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
+    if (
+      UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)
+      && !IsUnitType(target, UNIT_TYPE_STRUCTURE)
+    ) {
       this.targetCoord.setUnit(target);
       const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
       if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {

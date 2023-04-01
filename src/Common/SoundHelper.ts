@@ -365,7 +365,7 @@ export module SoundHelper {
       case Id.deathBeamCooler:
         if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerGrunt1.mp3", 480);
-        } else if (unitId == Id.metalCooler) {
+        } else if (unitId == Id.metalCooler || unitId == Id.getiStarHero) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerMetalGrunt1.mp3", 864);
         }
         playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
@@ -375,7 +375,7 @@ export module SoundHelper {
       case Id.goldenSupernova:
         if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerSupernova.mp3", 1416);
-        } else if (unitId == Id.metalCooler) {
+        } else if (unitId == Id.metalCooler || unitId == Id.getiStarHero) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerMetalSupernova.mp3", 1944);
         }
         break;
@@ -383,7 +383,7 @@ export module SoundHelper {
       case Id.novaChariot:
         if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerGrunt2.mp3", 552);
-        } else if (unitId == Id.metalCooler) {
+        } else if (unitId == Id.metalCooler || unitId == Id.getiStarHero) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerMetalGrunt2.mp3", 960);
         }
         playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
@@ -396,7 +396,7 @@ export module SoundHelper {
         break;
 
       case Id.getiStarRepair:
-        if (unitId == Id.metalCooler) {
+        if (unitId == Id.metalCooler || unitId == Id.getiStarHero) {
           playSoundOnUnit(unit, "Audio/Voice/CoolerMetalTakeThis.mp3", 960);
         }
         break;

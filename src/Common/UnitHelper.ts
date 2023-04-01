@@ -1,5 +1,5 @@
 import { Vector2D } from "./Vector2D";
-import { Buffs, Constants } from "./Constants";
+import { Buffs, Constants, Id } from "./Constants";
 
 export module UnitHelper {
   export function isUnitStunned(unit: unit): boolean {
@@ -74,17 +74,23 @@ export module UnitHelper {
   ): boolean {
     return (
       (IsUnitEnemy(unit, caster) || affectAllies)
-      &&
-      !BlzIsUnitInvulnerable(unit)
-      &&
-      !UnitHelper.isUnitDead(unit)
+      && !BlzIsUnitInvulnerable(unit)
+      && !UnitHelper.isUnitDead(unit)
+    );
+  }
+
+  export function isUnitMoveable(unit: unit) {
+    return (
+      !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+      && !BlzIsUnitInvulnerable(unit)
+      && !UnitHelper.isUnitDead(unit)
     );
   }
 
   export function isUnitTournamentViable(unit: unit): boolean {
     return (
-      IsUnitType(unit, UNIT_TYPE_HERO) &&
-      !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+      UnitHelper.isUnitRealHero(unit)
+      && GetUnitTypeId(unit) != Id.metalCoolerClone
     );
   }
 

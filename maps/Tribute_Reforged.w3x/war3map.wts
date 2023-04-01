@@ -221,8 +221,9 @@ Piccolo
 STRING 39
 {
 [|cffffcc00Geti Star Assimilation|r]
-+0.03x per Upgrade up to 2.50x
-+0.08x per Kill and +0.04x per Death up to +0.40x.
++0.03x per Upgrade up to 1.75x.
++0.15x per Kill and +0.10x per Death up to +0.40x.
++0.50x at lvl 50 and 150.
 
 Every 100 kills grant 1 Upgrade level. Player and Saga Kills are worth 25 kills. All kills grant bonus gold: creeps are worth lvl+1, heroes are worth 10*lvl + sqrt(10000*lvl).
 }
@@ -2617,18 +2618,6 @@ STRING 424
 [|cff00FF00E|r] Build Geti Star Research Facility
 }
 
-STRING 425
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +1 and HP by 3000 per level.
-}
-
-STRING 426
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +2 and HP by 3000 per level.
-}
-
 STRING 427
 // Units: n02Y (|cffffcc00Tsufuru-jin Elite Guard|r), Hotkey (Hotkey)
 {
@@ -2639,6 +2628,12 @@ STRING 428
 // Units: H05R (Goku's Youngest Son), Hotkey (Hotkey)
 {
 R
+}
+
+STRING 429
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +1 and HP by 5000 per level.
 }
 
 STRING 430
@@ -3766,18 +3761,6 @@ STRING 611
 [|cff00ff00W|r] Upgraded Assembly - [|cffffcc00Level 3|r]
 }
 
-STRING 612
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +3 and HP by 3000 per level.
-}
-
-STRING 613
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +4 and HP by 3000 per level.
-}
-
 STRING 614
 // Units: H042 (Changling), Name (Name)
 {
@@ -3842,12 +3825,6 @@ STRING 624
 // Abilities: A0C1 (Supernova), Name (Name)
 {
 Supernova
-}
-
-STRING 625
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +5 and HP by 3000 per level.
 }
 
 STRING 626
@@ -4096,24 +4073,6 @@ STRING 665
 (ft)
 }
 
-STRING 666
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +6 and HP by 3000 per level.
-}
-
-STRING 667
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +7 and HP by 3000 per level.
-}
-
-STRING 668
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +8 and HP by 3000 per level.
-}
-
 STRING 669
 // Units: n02R (Frieza's Henchman), Name (Name)
 {
@@ -4202,18 +4161,6 @@ STRING 680
 Tao's Grenade
 }
 
-STRING 681
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +9 and HP by 3000 per level.
-}
-
-STRING 682
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +10 and HP by 3000 per level.
-}
-
 STRING 683
 // Units: H04P (World Champion), Name (Name)
 {
@@ -4268,12 +4215,6 @@ STRING 690
 // Units: h04R (Hercule's Flying Machine), Name (Name)
 {
 Hercule's Flying Machine
-}
-
-STRING 691
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +11 and HP by 3000 per level.
 }
 
 STRING 692
@@ -4573,18 +4514,6 @@ STRING 736
 Z
 }
 
-STRING 737
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +12 and HP by 3000 per level.
-}
-
-STRING 738
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +13 and HP by 3000 per level.
-}
-
 STRING 739
 // Units: H00R (Namekian), Ubertip (Tooltip - Extended)
 {
@@ -4602,12 +4531,6 @@ STRING 740
 // Units: H052 (Tree of Might), Propernames (Proper Names)
 {
 Tree of Might, 
-}
-
-STRING 741
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +14 and HP by 3000 per level.
 }
 
 STRING 742
@@ -4670,30 +4593,6 @@ STRING 751
 // Units: O001 (Evil Wizard), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 752
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +15 and HP by 3000 per level.
-}
-
-STRING 753
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +16 and HP by 3000 per level.
-}
-
-STRING 754
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +17 and HP by 3000 per level.
-}
-
-STRING 755
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +18 and HP by 3000 per level.
 }
 
 STRING 756
@@ -4810,18 +4709,6 @@ STRING 773
 // Units: O005 (Fat Buu), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 774
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +19 and HP by 3000 per level.
-}
-
-STRING 775
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +20 and HP by 3000 per level.
 }
 
 STRING 776
@@ -12241,6 +12128,24 @@ STRING 1956
 |cffffcc00Ultimate Mode|r |cffff4444disabled|r. Progerssion is |cff00ff00normal|r.
 }
 
+STRING 1957
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +2 and HP by 5000 per level.
+}
+
+STRING 1958
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +3 and HP by 5000 per level.
+}
+
+STRING 1959
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +4 and HP by 5000 per level.
+}
+
 STRING 1960
 // Abilities: A00N (Energy Beam), EditorSuffix (Editor Suffix)
 {
@@ -12298,6 +12203,12 @@ STRING 1969
 {
 Guldo holds his breath and temporarily freezes time for all nearby enemies, stunning them for 2 seconds. After the time stop wears off, enemies are temporarily slowed and cannot be time stopped for the next 10 seconds. AOE increases slightly each level. Guldo receives significantly increased movement speed and reduced base attack time during time stop.
 |cff00FFFFCooldown: <A0SF,Cool3> seconds|r
+}
+
+STRING 1970
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +5 and HP by 5000 per level.
 }
 
 STRING 1971
@@ -13908,6 +13819,42 @@ STRING 2229
 CoolerHeadMetal
 }
 
+STRING 2230
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +6 and HP by 5000 per level.
+}
+
+STRING 2231
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +7 and HP by 5000 per level.
+}
+
+STRING 2232
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +8 and HP by 5000 per level.
+}
+
+STRING 2233
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +9 and HP by 5000 per level.
+}
+
+STRING 2234
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +10 and HP by 5000 per level.
+}
+
+STRING 2235
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +11 and HP by 5000 per level.
+}
+
 STRING 2236
 // Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
@@ -14503,6 +14450,60 @@ STRING 2331
 // Abilities: A065 (Frog Aura), Name (Name)
 {
 Frog Aura
+}
+
+STRING 2332
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +12 and HP by 5000 per level.
+}
+
+STRING 2333
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +13 and HP by 5000 per level.
+}
+
+STRING 2334
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +14 and HP by 5000 per level.
+}
+
+STRING 2335
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +15 and HP by 5000 per level.
+}
+
+STRING 2336
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +16 and HP by 5000 per level.
+}
+
+STRING 2337
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +17 and HP by 5000 per level.
+}
+
+STRING 2338
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +18 and HP by 5000 per level.
+}
+
+STRING 2339
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +19 and HP by 5000 per level.
+}
+
+STRING 2340
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +20 and HP by 5000 per level.
 }
 
 STRING 2342
@@ -19517,12 +19518,6 @@ STRING 3143
 +0.05x |cff00ffffIntelligence|r multiplier up to 3.00x total.
 }
 
-STRING 3144
-// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase base multiplier from |cffffcc00+0.03x|r to |cffffcc00+0.04x|r per upgrade.
-}
-
 STRING 3145
 // Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
@@ -19583,12 +19578,6 @@ STRING 3154
 (Buu Candy)
 }
 
-STRING 3155
-// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase base multiplier from |cffffcc00+0.04x|r to |cffffcc00+0.05x|r per upgrade.
-}
-
 STRING 3156
 // Abilities: A060 (Unfuse), Hotkey (Hotkey - Normal)
 {
@@ -19605,12 +19594,6 @@ STRING 3158
 // Upgrades: R00L (Cannibalize), Tip (Tooltip)
 {
 [|cff00ff00R|r] Augment: Base Multiplier - [|cffffcc00Level 3|r]
-}
-
-STRING 3159
-// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase base multiplier from |cffffcc00+0.05x|r to |cffffcc00+0.06x|r per upgrade.
 }
 
 STRING 3160
@@ -21898,12 +21881,6 @@ STRING 3527
 [|cff00ff00R|r] Upgraded Combat Assimilation - [|cffffcc00Level 1|r]
 }
 
-STRING 3528
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. Maximum base multiplier |cffffcc002.50x|r.
-}
-
 STRING 3529
 // Upgrades: R00O (Cannibalize), Name (Name)
 {
@@ -22627,12 +22604,6 @@ STRING 3646
 [|cff00ff00R|r] Upgraded Combat Assimilation - [|cffffcc00Level 2|r]
 }
 
-STRING 3647
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. Maximum base multiplier |cffffcc002.50x|r.
-}
-
 STRING 3648
 // Abilities: A09X (Hell's Storm), Hotkey (Hotkey - Normal)
 {
@@ -22649,12 +22620,6 @@ STRING 3650
 // Upgrades: R00O (Cannibalize), Tip (Tooltip)
 {
 [|cff00ff00R|r] Upgraded Combat Assimilation - [|cffffcc00Level 3|r]
-}
-
-STRING 3651
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. Maximum base multiplier |cffffcc002.60x|r.
 }
 
 STRING 3652
@@ -34907,12 +34872,6 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 |cff00FFFFCooldown: <A041,Cool10> seconds|r
 }
 
-STRING 5628
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +50 and their HP by 20000.
-}
-
 STRING 5629
 // Abilities: A0UY (Flame Shot), Researchtip (Tooltip - Learn)
 {
@@ -34935,18 +34894,6 @@ STRING 5632
 // Abilities: A082 (Flame Ball), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Flame Ball - [|cffffcc00Level 9|r]
-}
-
-STRING 5633
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +100 and their HP by 40000.
-}
-
-STRING 5634
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +150 and their HP by 60000.
 }
 
 STRING 5635
@@ -35255,12 +35202,6 @@ STRING 5685
 E
 }
 
-STRING 5686
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +200 and their HP by 80000.
-}
-
 STRING 5687
 // Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
@@ -35269,6 +35210,13 @@ Marle channels a powerful healing spell that rapidly regenerates herself and nea
 |cffff3333Channel Duration: <A0XA,Dur1>s
 |cff00ff00Damage: Int * Lvl * ? + 12% Max HP
 |cff00FFFFCooldown: <A0XA,Cool10>s|r
+}
+
+STRING 5688
+// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase upgrade multiplier from |cffffcc00+0.03x|r to |cffffcc00+0.04x|r.
+Increase max upgrade multiplier from |cffffcc001.75x|r to |cffffcc002.00x|r.
 }
 
 STRING 5689
@@ -35320,10 +35268,24 @@ Transformations:
 [lvl 175] "|cffffcc00super masenko|r"
 }
 
+STRING 5692
+// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase upgrade multiplier from |cffffcc00+0.04x|r to |cffffcc00+0.05x|r.
+Increase max upgrade multiplier from |cffffcc002.00x|r to |cffffcc002.25x|r.
+}
+
 STRING 5693
 // Units: H08N (Saiyan Warrior), Tip (Tooltip - Basic)
 {
 [|cffffff00Q|r] Choose Bardock
+}
+
+STRING 5694
+// Upgrades: R00L (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase upgrade multiplier from |cffffcc00+0.05x|r to |cffffcc00+0.06x|r.
+Increase max upgrade multiplier from |cffffcc002.25x|r to |cffffcc002.50x|r.
 }
 
 STRING 5695
@@ -35351,6 +35313,18 @@ Transformations:
 
 Kyodaika: +0.3-0.6x str 
 |cffff2020Warning: You cannot transform to higher stat multipliers while in Kyodaika|r
+}
+
+STRING 5697
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. Base multiplier cannot exceed 2.50x.
+}
+
+STRING 5698
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. Base multiplier cannot exceed 2.50x.
 }
 
 STRING 5699
@@ -35435,6 +35409,12 @@ STRING 5708
 // Abilities: A06B (Jungle Rush), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Jungle Rush - [|cffffcc00Level %d|r]
+}
+
+STRING 5709
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. Base multiplier cannot exceed 2.50x.
 }
 
 STRING 5710
@@ -35667,6 +35647,18 @@ STRING 5745
 // Items: I04H (HBTC Training Ticket), Name (Name)
 {
 HBTC Training Ticket
+}
+
+STRING 5746
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +100, HP by 20000 and HP regen by 100%.
+}
+
+STRING 5747
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +200, HP by 40000 and HP regen by 200%.
 }
 
 STRING 5748
@@ -39136,6 +39128,12 @@ STRING 6319
 |cff00ffff[Only host sees this] Catchup Stats Activated|r
 }
 
+STRING 6320
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +300, HP by 60000 and HP regen by 300%.
+}
+
 STRING 6321
 // Abilities: A0DU (Cellular Enhancement), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -39324,6 +39322,12 @@ Cannot be used with [|cffDD00EED|r] God of Destruction.
 |cff00ff00Duration: 15s
 Spell Amp: +2% per second up to +10%|r
 |cff00ffffCooldown: <A0PF,Cool10> seconds|r
+}
+
+STRING 6346
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +400, HP by 80000 and HP regen by 400%.
 }
 
 STRING 6347
@@ -39622,6 +39626,12 @@ STRING 6387
 // Abilities: A0E0 (Select Unit 2), Name (Name)
 {
 Select Unit 2
+}
+
+STRING 6388
+// Upgrades: R00P (Long Rifles), effect3 (Effect 3)
+{
+rhpr
 }
 
 STRING 6389

@@ -8038,7 +8038,7 @@ ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_Temp
 SuspendHeroXPBJ(false, GetSummonedUnit())
 if (Trig_Cell_Juniors_Func010C()) then
 UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
+SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), 9)
 else
 UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
@@ -22650,14 +22650,14 @@ return true
 end
 
 function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003Func001C()
-if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_STRUCTURE) == false)) then
+if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
 return false
 end
 return true
 end
 
 function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003C()
-if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
+if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_STRUCTURE) == false)) then
 return false
 end
 return true
@@ -22667,15 +22667,14 @@ function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011A()
 udg_StatMultUnit = GetEnumUnit()
     udg_ID = GetHandleId(udg_StatMultUnit)
 if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003Func001C()) then
 udg_TempInt = IMaxBJ(1, ((GetHeroLevel(udg_StatMultUnit) + 1) + 0))
 else
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003Func001C()) then
 udg_TempInt = IMaxBJ(1, ((GetHeroLevel(udg_StatMultUnit) + 1) // 2))
+end
+        AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 else
-udg_TempInt = 1
 end
-end
-    AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 udg_StatMultReal = (udg_StatMultReal * LoadRealBJ(35, udg_ID, udg_StatMultHashtable))
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
@@ -60640,15 +60639,22 @@ end
 return false
 end
 
-function Trig_Transformations_Geti_Star_Func011Func006Func003C()
-if (not (GetPlayerTechCountSimple(FourCC("R00O"), udg_GetiStarPlayer) >= 3)) then
+function Trig_Transformations_Geti_Star_Func011Func006C()
+if (not Trig_Transformations_Geti_Star_Func011Func006Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Geti_Star_Func011Func006C()
-if (not Trig_Transformations_Geti_Star_Func011Func006Func001C()) then
+function Trig_Transformations_Geti_Star_Func011Func007Func001C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Geti_Star_Func011Func007C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 return true
@@ -60708,17 +60714,21 @@ udg_GetiStarPlayer = udg_TransformationPlayer
 TriggerExecute(gg_trg_Geti_Star_Get_All_Stats)
 udg_StatMultReal = 1.00
 if (Trig_Transformations_Geti_Star_Func011Func005C()) then
-udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + (I2R(udg_GetiStarUpgs) * (0.03 + (0.01 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))))))
+udg_StatMultReal = RMinBJ((1.75 + (0.25 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))), (udg_StatMultReal + (I2R(udg_GetiStarUpgs) * (0.03 + (0.01 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))))))
 else
 end
 if (Trig_Transformations_Geti_Star_Func011Func006C()) then
 udg_StatMultReal = (udg_StatMultReal + RMinBJ((0.40 + (0.40 * I2R(GetPlayerTechCountSimple(FourCC("R00O"), udg_GetiStarPlayer)))), ((0.15 * I2R(udg_PlayerKills[GetConvertedPlayerId(udg_GetiStarPlayer)])) + (0.10 * I2R(udg_PlayerDeaths[GetConvertedPlayerId(udg_GetiStarPlayer)])))))
-if (Trig_Transformations_Geti_Star_Func011Func006Func003C()) then
-udg_StatMultReal = RMinBJ(2.60, udg_StatMultReal)
-else
 udg_StatMultReal = RMinBJ(2.50, udg_StatMultReal)
-end
 else
+end
+if (Trig_Transformations_Geti_Star_Func011Func007C()) then
+udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + 1.00))
+else
+if (Trig_Transformations_Geti_Star_Func011Func007Func001C()) then
+udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + 0.50))
+else
+end
 end
 udg_TransformationAbility = FourCC("AUan")
 else
