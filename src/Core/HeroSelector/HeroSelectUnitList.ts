@@ -741,6 +741,19 @@ const dartFeldData = {
     HeroSelectCategory.BRUISER
   )
 }
+const leonSKennedyData = {
+  unitCode: Id.leonSKennedy,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.BEAMER
+  )
+}
 const marioData = {
   unitCode: Id.mario,
   onlyRandom: false,
@@ -913,11 +926,11 @@ export const HeroSelectUnitList = [
   lucarioData,
   sephirothData,
   dartFeldData,
+  leonSKennedyData,
   marioData,
-  waluigiData,
   // 85
+  waluigiData,
   sonicData,
-  emptySpace,
   emptySpace,
   emptySpace,
   emptySpace,

@@ -34,6 +34,11 @@ export class BeamComponent implements
   static readonly BEAM_SPEED_FAST = 60;
   static readonly BEAM_SPEED_VERY_FAST = 65;
   static readonly BEAM_SPEED_SUPER_FAST = 70;
+  static readonly BEAM_SPEED_ULTRA_FAST = 75;
+  static readonly BEAM_SPEED_INSANE = 80;
+  static readonly BEAM_SPEED_VERY_INSANE = 85;
+  static readonly BEAM_SPEED_SUPER_INSANE = 90;
+  static readonly BEAM_SPEED_ULTRA_INSANE = 95;
 
   static readonly BEAM_STUCK_DELAY_TICKS = 16;
 

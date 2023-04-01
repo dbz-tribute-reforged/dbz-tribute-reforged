@@ -17,7 +17,7 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const simpleSpellEffectTrigger = CreateTrigger();
-  export const simpleSpellEndCastTrigger = CreateTrigger();
+  export const simpleSpellCDTrigger = CreateTrigger();
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
@@ -179,6 +179,7 @@ export module DebuffAbilities {
   export const DARK_MIST = FourCC("A0WS");
   export const APPULE_VENGEANCE = FourCC("A11D");
   export const CURSE_WALUIGI_SPIN = FourCC("A11X");
+  export const CURSE_LEON_FLASHBANG = FourCC("A03F");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -196,6 +197,7 @@ export module DebuffAbilities {
   export const TABLE_FLIP = FourCC("A03U");
   export const DK_GROUND_POUND_SLOW = FourCC("A06E");
   export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
+  export const SLOW_LEON_STAGGER = FourCC("A03C");
 
   export const SLOW_GENERIC_25_PCT = FourCC('A117');
   export const SLOW_GENERIC_50_PCT = FourCC('A118');
@@ -260,6 +262,8 @@ export module Buffs {
   export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("B05P");
   export const STUN_WALUIGI_BOMB = FourCC("B05Q");
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
+
+  export const SLOW_LEON_STAGGER = FourCC("B05T");
 }
 
 export module OrderIds {
@@ -742,6 +746,18 @@ export module Id {
   export const monkeySmasher = FourCC("A0IX");
   export const blasto = FourCC("A0OU");
   export const kingsThrone = FourCC("A0OV");
+
+  export const leonSKennedy = FourCC("H00B");
+  export const leonPistol = FourCC("A00M");
+  export const leonKnifeSlash = FourCC("A01T");
+  export const leonKnifeParry = FourCC("A01Q");
+  export const leonRoundhouseKick = FourCC("A00X");
+  export const leonShotgun = FourCC("A02G");
+  export const leonAssaultRifle = FourCC("A02K");
+  export const leonSniperRifle = FourCC("A02O");
+  export const leonRocketLauncher = FourCC("A037");
+  export const leonFlashbang = FourCC("A038");
+  export const leonHeavyGrenade = FourCC("A03A");
 
   export const lucario = FourCC("H0A7");
   export const vacuumWave = FourCC("A0XU");

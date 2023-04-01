@@ -2927,8 +2927,8 @@ export module SimpleSpellSystem {
   }
 
   export function setupSpellStartEndCastTrigger() {
-    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellEndCastTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST);
-    TriggerAddAction(Globals.simpleSpellEndCastTrigger, () => {
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
+    TriggerAddAction(Globals.simpleSpellCDTrigger, () => {
       // get custom hero casting it
       const unit = GetTriggerUnit();
       const player = GetOwningPlayer(unit);

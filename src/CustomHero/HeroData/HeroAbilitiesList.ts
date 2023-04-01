@@ -527,6 +527,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jaco.MACRO_CANNON,
       AbilityNames.Jaco.SUPER_JACO,
     ]],
+
+    [Id.leonSKennedy, [
+      AbilityNames.LeonSKennedy.PISTOL,
+      AbilityNames.LeonSKennedy.KNIFE_SLASH,
+      AbilityNames.LeonSKennedy.KNIFE_PARRY,
+      AbilityNames.LeonSKennedy.ROUNDHOUSE_KICK,
+      AbilityNames.LeonSKennedy.SHOTGUN,
+      AbilityNames.LeonSKennedy.ASSAULT_RIFLE,
+      AbilityNames.LeonSKennedy.SNIPER_RIFLE,
+      AbilityNames.LeonSKennedy.ROCKET_LAUNCHER,
+      AbilityNames.LeonSKennedy.FLASHBANG,
+      AbilityNames.LeonSKennedy.HEAVY_GRENADE,
+    ]],
     
 
 

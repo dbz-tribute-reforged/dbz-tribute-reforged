@@ -21,6 +21,20 @@ export const TimedLifeComponents = [
     duration: 25,
   },
   {
+    name: "timed life 15", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 15,
+  },
+  {
+    name: "timed life 20", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 20,
+  },
+  {
     name: "timed life 30", 
     repeatInterval: 1, 
     startTick: 0,
