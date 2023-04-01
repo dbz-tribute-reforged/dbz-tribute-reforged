@@ -20,7 +20,7 @@ export module TournamentData {
   export const budokaiSpawn2: Vector2D = new Vector2D(15775, 22690);
   export const finalBattleDetector: Vector2D = new Vector2D(11020, 22858);
   export const finalBattleName: string = "Final Battle";
-  export const finalBattleTime: number = 36 * 60;
+  export const finalBattleTime: number = 32 * 60;
   export const finalBattleInterval: number = 5;
   export const finalBattleDelay: number = 115;
   export const finalBattleLobbyWait: number = 30;

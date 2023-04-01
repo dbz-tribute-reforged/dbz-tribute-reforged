@@ -128,6 +128,8 @@ export module Constants {
   export const FARMING_STANDARD_DURATION = 200;
 
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
+
+  export const IS_APRIL_FOOLS_DAY = true;
 }
 
 export enum CostType {

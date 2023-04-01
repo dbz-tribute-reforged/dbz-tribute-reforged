@@ -663,7 +663,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Cell.CELL_X_FORM,
     ]],
     // cell junior
-    [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Goku.GOD_KAMEHAMEHA]],
+    [FourCC("H01J"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      // AbilityNames.Goku.GOD_KAMEHAMEHA
+    ]],
 
 
     // fourth form cooler

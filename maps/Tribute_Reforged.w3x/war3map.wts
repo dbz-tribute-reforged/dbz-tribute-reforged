@@ -240,9 +240,11 @@ After killing enough enemies, you have attracted the attention of another Geti S
 }
 
 STRING 42
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Units: u001 (Geti Star Fragment), Ubertip (Tooltip - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +50 and their HP by 25000.
+Central production unit of the Geti Star. Required to build all other units and buildings.
+
+|cffffcc00Provides 30 food.|r
 }
 
 STRING 43
@@ -2581,9 +2583,8 @@ Q
 }
 
 STRING 419
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +100 and their HP by 50000.
+|cffff2222Error: Invalid Teleport|r
 }
 
 STRING 420
@@ -2617,15 +2618,15 @@ STRING 424
 }
 
 STRING 425
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +150 and their HP by 75000.
+Increase Metal Cooler's and his clones armor by +1 and HP by 3000 per level.
 }
 
 STRING 426
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +200 and their HP by 100000.
+Increase Metal Cooler's and his clones armor by +2 and HP by 3000 per level.
 }
 
 STRING 427
@@ -2638,14 +2639,6 @@ STRING 428
 // Units: H05R (Goku's Youngest Son), Hotkey (Hotkey)
 {
 R
-}
-
-STRING 429
-// Units: u001 (Geti Star Fragment), Ubertip (Tooltip - Extended)
-{
-Central production unit of the Geti Star. Required to build all other units and buildings.
-
-|cffffcc00Provides 20 food.|r
 }
 
 STRING 430
@@ -3776,13 +3769,13 @@ STRING 611
 STRING 612
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +1 and HP by +10000.
+Increase Metal Cooler's and his clones armor by +3 and HP by 3000 per level.
 }
 
 STRING 613
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +2 and HP by +20000.
+Increase Metal Cooler's and his clones armor by +4 and HP by 3000 per level.
 }
 
 STRING 614
@@ -3854,7 +3847,7 @@ Supernova
 STRING 625
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +3 and HP by +30000.
+Increase Metal Cooler's and his clones armor by +5 and HP by 3000 per level.
 }
 
 STRING 626
@@ -4106,19 +4099,19 @@ STRING 665
 STRING 666
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +4 and HP by +40000.
+Increase Metal Cooler's and his clones armor by +6 and HP by 3000 per level.
 }
 
 STRING 667
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +5 and HP by +50000.
+Increase Metal Cooler's and his clones armor by +7 and HP by 3000 per level.
 }
 
 STRING 668
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +6 and HP by +60000.
+Increase Metal Cooler's and his clones armor by +8 and HP by 3000 per level.
 }
 
 STRING 669
@@ -4212,13 +4205,13 @@ Tao's Grenade
 STRING 681
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +7 and HP by +70000.
+Increase Metal Cooler's and his clones armor by +9 and HP by 3000 per level.
 }
 
 STRING 682
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +8 and HP by +80000.
+Increase Metal Cooler's and his clones armor by +10 and HP by 3000 per level.
 }
 
 STRING 683
@@ -4280,7 +4273,7 @@ Hercule's Flying Machine
 STRING 691
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +9 and HP by +90000.
+Increase Metal Cooler's and his clones armor by +11 and HP by 3000 per level.
 }
 
 STRING 692
@@ -4583,13 +4576,13 @@ Z
 STRING 737
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +10 and HP by +100000.
+Increase Metal Cooler's and his clones armor by +12 and HP by 3000 per level.
 }
 
 STRING 738
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +11 and HP by +110000.
+Increase Metal Cooler's and his clones armor by +13 and HP by 3000 per level.
 }
 
 STRING 739
@@ -4614,7 +4607,7 @@ Tree of Might,
 STRING 741
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +12 and HP by +120000.
+Increase Metal Cooler's and his clones armor by +14 and HP by 3000 per level.
 }
 
 STRING 742
@@ -4682,25 +4675,25 @@ X
 STRING 752
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +13 and HP by +130000.
+Increase Metal Cooler's and his clones armor by +15 and HP by 3000 per level.
 }
 
 STRING 753
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +14 and HP by +140000.
+Increase Metal Cooler's and his clones armor by +16 and HP by 3000 per level.
 }
 
 STRING 754
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +15 and HP by +150000.
+Increase Metal Cooler's and his clones armor by +17 and HP by 3000 per level.
 }
 
 STRING 755
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +16 and HP by +160000.
+Increase Metal Cooler's and his clones armor by +18 and HP by 3000 per level.
 }
 
 STRING 756
@@ -4822,25 +4815,28 @@ X
 STRING 774
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +17 and HP by +170000.
+Increase Metal Cooler's and his clones armor by +19 and HP by 3000 per level.
 }
 
 STRING 775
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +18 and HP by +180000.
+Increase Metal Cooler's and his clones armor by +20 and HP by 3000 per level.
 }
 
 STRING 776
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
 {
-Increase Metal Cooler's and his clones armor by +19 and HP by +190000.
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +100 base stats / +10 lvls
+After 20 mins: +200 base stats / +20 lvls
+After 30 mins: +300 base stats / +30 lvls
 }
 
 STRING 777
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +20 and HP by +200000.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
 }
 
 STRING 778
@@ -7857,9 +7853,9 @@ STRING 1240
 }
 
 STRING 1241
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +100.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
 }
 
 STRING 1242
@@ -10128,9 +10124,9 @@ The owner of this item will convert 9% of the damage they deal into life.
 }
 
 STRING 1610
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +200.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
 }
 
 STRING 1611
@@ -10140,9 +10136,9 @@ R
 }
 
 STRING 1612
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +300.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
 }
 
 STRING 1613
@@ -11460,9 +11456,9 @@ Hostile Takeover
 }
 
 STRING 1826
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +400.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
 }
 
 STRING 1827
@@ -11478,39 +11474,39 @@ K
 }
 
 STRING 1829
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +600.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
 }
 
 STRING 1830
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +500.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
 }
 
 STRING 1831
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +700.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
 }
 
 STRING 1832
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +800.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
 }
 
 STRING 1833
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +900.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
 }
 
 STRING 1834
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1000.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
 }
 
 STRING 1835
@@ -14509,6 +14505,36 @@ STRING 2331
 Frog Aura
 }
 
+STRING 2342
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 2343
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 2344
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 2345
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 2346
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 2347
 // Abilities: A075 (Hercule's Fighting Style), Tip (Tooltip - Normal)
 {
@@ -14599,6 +14625,12 @@ STRING 2361
 Hercule's Fighting Style - [|cffffcc00Level 15|r]
 }
 
+STRING 2362
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 2363
 // Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
@@ -14615,6 +14647,18 @@ STRING 2365
 // Units: H05Q (Alpha Ape), Name (Name)
 {
 Alpha Ape
+}
+
+STRING 2366
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 2367
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 2368
@@ -14756,63 +14800,83 @@ STRING 2390
 }
 
 STRING 2391
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1100.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool1> seconds)|r
 }
 
 STRING 2392
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1200.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool2> seconds)|r
 }
 
 STRING 2393
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1300.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool3> seconds)|r
 }
 
 STRING 2394
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1400.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool4> seconds)|r
 }
 
 STRING 2395
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1500.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool5> seconds)|r
 }
 
 STRING 2396
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1600.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool6> seconds)|r
 }
 
 STRING 2397
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1700.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool7> seconds)|r
 }
 
 STRING 2398
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1800.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool1> seconds)|r
 }
 
 STRING 2399
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +1900.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool8> seconds)|r
 }
 
 STRING 2400
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2000.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool9> seconds)|r
 }
 
 STRING 2401
@@ -14822,21 +14886,23 @@ Q
 }
 
 STRING 2402
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2100.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
+|cff00ff00(Damage: (Int * lvl * ?) + 1.2% Max HP)|r
+|cff00ffff(Cooldown: <A0C9,Cool10> seconds)|r
 }
 
 STRING 2403
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2200.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
 }
 
 STRING 2404
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2300.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
 }
 
 STRING 2405
@@ -14948,9 +15014,9 @@ E
 }
 
 STRING 2423
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2400.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
 }
 
 STRING 2424
@@ -15603,33 +15669,33 @@ A combat style taught to Goku by Master Roshi. When Goku and Krillin were young 
 }
 
 STRING 2526
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2500.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
 }
 
 STRING 2527
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2600.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
 }
 
 STRING 2528
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2700.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
 }
 
 STRING 2529
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2800.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
 }
 
 STRING 2530
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +2900.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
 }
 
 STRING 2531
@@ -15801,39 +15867,39 @@ str125, 10intel,
 }
 
 STRING 2558
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3000.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
 }
 
 STRING 2559
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3100.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
 }
 
 STRING 2560
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3200.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool1>s|r
 }
 
 STRING 2561
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3300.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool2>s|r
 }
 
 STRING 2562
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3400.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool3>s|r
 }
 
 STRING 2563
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3500.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool4>s|r
 }
 
 STRING 2564
@@ -15849,51 +15915,63 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 2566
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3600.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool5>s|r
 }
 
 STRING 2567
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3700.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool6>s|r
 }
 
 STRING 2568
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3800.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool7>s|r
 }
 
 STRING 2569
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +3900.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool8>s|r
 }
 
 STRING 2570
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4000.
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ? + 1% Max HP|r|n|cff00FFFFCooldown: <A0MM,Cool9>s|r
 }
 
 STRING 2571
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4100.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool1>s|r
 }
 
 STRING 2572
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Researchubertip (Tooltip - Learn - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4200.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool1> - <A0XA,Cool10>s|r
 }
 
 STRING 2573
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4300.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool2>s|r
 }
 
 STRING 2574
@@ -15915,21 +15993,33 @@ E
 }
 
 STRING 2577
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4400.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool3>s|r
 }
 
 STRING 2578
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4500.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool4>s|r
 }
 
 STRING 2579
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4600.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool5>s|r
 }
 
 STRING 2580
@@ -15939,27 +16029,43 @@ E
 }
 
 STRING 2581
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4700.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool6>s|r
 }
 
 STRING 2582
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4800.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool7>s|r
 }
 
 STRING 2583
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +4900.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool8>s|r
 }
 
 STRING 2584
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by +5000.
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool9>s|r
 }
 
 STRING 2585
@@ -18922,6 +19028,12 @@ STRING 3064
 Super 17 has further improved his mechanical body by absorbing Android 18.
 }
 
+STRING 3065
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3066
 // Units: H0AJ (Black Swordsman), Propernames (Proper Names)
 {
@@ -19315,6 +19427,12 @@ STRING 3128
 (vegeta)
 }
 
+STRING 3129
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3130
 // Abilities: A09Q (Charm), Hotkey (Hotkey - Normal)
 {
@@ -19566,6 +19684,48 @@ STRING 3170
 Gain 15 damage
 }
 
+STRING 3171
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3172
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3173
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3174
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3175
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3176
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3177
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3178
 // Abilities: A06F (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -19618,6 +19778,12 @@ STRING 3186
 // Abilities: A06F (Special Beam Cannon), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
+}
+
+STRING 3187
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3188
@@ -20690,6 +20856,18 @@ STRING 3356
 Infinite Energy Android
 }
 
+STRING 3357
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3358
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3359
 {
 Max Permanent Stat Mult:
@@ -20737,6 +20915,12 @@ STRING 3364
 W
 }
 
+STRING 3365
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3366
 // Abilities: A0BS (Rapid Energy Cannon), Hotkey (Hotkey - Normal)
 {
@@ -20771,6 +20955,18 @@ STRING 3371
 // Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
 {
 Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1> - <A0MR,Cool10>s|r
+}
+
+STRING 3372
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3373
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3374
@@ -21438,6 +21634,36 @@ STRING 3483
 Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14 seconds)|r
 }
 
+STRING 3484
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3485
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3486
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3487
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3488
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3489
 // Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
 {
@@ -21498,6 +21724,12 @@ STRING 3498
 E
 }
 
+STRING 3499
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3500
 // Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
@@ -21516,10 +21748,28 @@ STRING 3502
 [|cff00FF00Q|r] Finish Buster - [|cffffcc00Level 9|r]
 }
 
+STRING 3503
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 3504
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3505
 // Abilities: A02L (Finish Buster), EditorSuffix (Editor Suffix)
 {
 FT Current
+}
+
+STRING 3506
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3507
@@ -22165,6 +22415,12 @@ STRING 3611
 // Abilities: A02N (Majin influence), Researchubertip (Tooltip - Learn - Extended)
 {
 For every level of this spell your control over this body and power grows.
+}
+
+STRING 3612
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3613
@@ -24084,6 +24340,12 @@ STRING 3931
 Q
 }
 
+STRING 3932
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 3933
 // Abilities: AIDS (State Detection), Name (Name)
 {
@@ -24961,6 +25223,12 @@ STRING 4053
 // Abilities: A082 (Flame Ball), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Flame Ball - [|cffffcc00Level 7|r]
+}
+
+STRING 4054
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4055
@@ -26335,6 +26603,12 @@ STRING 4277
 Upgraded Defense Systems
 }
 
+STRING 4278
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 4279
 // Abilities: A02X (Cyclonic Sword Dash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -26567,6 +26841,30 @@ Super Star: Temporary Invulnerability
 |cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
 }
 
+STRING 4313
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 4314
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 4315
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 4316
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 4317
 // Abilities: A06B (Jungle Rush), EditorSuffix (Editor Suffix)
 {
@@ -26646,6 +26944,12 @@ STRING 4326
 STRING 4327
 {
 |cffffff00Majin Hatred|r activated.
+}
+
+STRING 4328
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4329
@@ -27008,6 +27312,12 @@ STRING 4388
 E
 }
 
+STRING 4389
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 4390
 // Units: H08N (Saiyan Warrior), Awakentip (Tooltip - Awaken)
 {
@@ -27030,6 +27340,12 @@ STRING 4393
 // Units: U012 (Changling Form 2), EditorSuffix (Name - Editor Suffix)
 {
 (form 2)
+}
+
+STRING 4394
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4395
@@ -27401,6 +27717,12 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 |cff00FFFFCooldown: <A041,Cool1> - <A041,Cool10> seconds|r
 
 |cff808080"D...K! D...K! D...K!"|r
+}
+
+STRING 4456
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4457
@@ -29306,6 +29628,12 @@ STRING 4761
 // Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 4762
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4763
@@ -32155,6 +32483,12 @@ STRING 5234
 Book Main Heroes
 }
 
+STRING 5235
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 5236
 // Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
 {
@@ -32263,6 +32597,12 @@ STRING 5253
 Q
 }
 
+STRING 5254
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 5255
 // Abilities: A0BI (Train Agility), Ubertip (Tooltip - Normal - Extended)
 {
@@ -32369,6 +32709,12 @@ STRING 5272
 // Abilities: A0JC (Capsule: Scouter 2.0), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 5273
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 5274
@@ -34132,6 +34478,18 @@ STRING 5557
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
 
+STRING 5558
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
+STRING 5559
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 50 per level.
+}
+
 STRING 5560
 // Abilities: A0ES (Special Beam Cannon), EditorSuffix (Editor Suffix)
 {
@@ -34549,6 +34907,12 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 |cff00FFFFCooldown: <A041,Cool10> seconds|r
 }
 
+STRING 5628
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +50 and their HP by 20000.
+}
+
 STRING 5629
 // Abilities: A0UY (Flame Shot), Researchtip (Tooltip - Learn)
 {
@@ -34571,6 +34935,18 @@ STRING 5632
 // Abilities: A082 (Flame Ball), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Flame Ball - [|cffffcc00Level 9|r]
+}
+
+STRING 5633
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +100 and their HP by 40000.
+}
+
+STRING 5634
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +150 and their HP by 60000.
 }
 
 STRING 5635
@@ -34877,6 +35253,22 @@ STRING 5685
 // Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 5686
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +200 and their HP by 80000.
+}
+
+STRING 5687
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 12% Max HP
+|cff00FFFFCooldown: <A0XA,Cool10>s|r
 }
 
 STRING 5689
@@ -48935,72 +49327,6 @@ Reveals the location of all enemy heroes.
 |cff00ffffCooldown: <A00H,Cool1>s
 }
 
-STRING 7968
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
-}
-
-STRING 7969
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
-}
-
-STRING 7970
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
-}
-
-STRING 7971
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
-}
-
-STRING 7972
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
-}
-
-STRING 7973
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
-}
-
-STRING 7974
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
-}
-
-STRING 7975
-// Abilities: A06F (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
-}
-
-STRING 7976
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
-}
-
-STRING 7977
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
-}
-
-STRING 7978
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
-}
-
 STRING 7979
 // Abilities: A02L (Finish Buster), Ubertip (Tooltip - Normal - Extended)
 {
@@ -51661,56 +51987,16 @@ At first the user cups both of his hands to concentrate the energy, then he char
 |cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
-STRING 8421
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool1> seconds)|r
-}
-
 STRING 8422
 // Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 8423
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool2> seconds)|r
-}
-
-STRING 8424
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool3> seconds)|r
-}
-
 STRING 8425
 // Abilities: A0IO (The Work of Gods), Name (Name)
 {
 The Work of Gods
-}
-
-STRING 8426
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool4> seconds)|r
-}
-
-STRING 8427
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool5> seconds)|r
 }
 
 STRING 8428
@@ -51725,118 +52011,10 @@ STRING 8429
 D
 }
 
-STRING 8430
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool6> seconds)|r
-}
-
-STRING 8431
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool7> seconds)|r
-}
-
 STRING 8432
 // Abilities: A0NV (Sorrowful Scythe), Name (Name)
 {
 Sorrowful Scythe
-}
-
-STRING 8433
-// Abilities: A0C9 (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool1> seconds)|r
-}
-
-STRING 8434
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool8> seconds)|r
-}
-
-STRING 8435
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool9> seconds)|r
-}
-
-STRING 8436
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.
-|cff00ff00(Damage: (Int * lvl * ?) + 2.4% Max HP)|r
-|cff00ffff(Cooldown: <A0C9,Cool10> seconds)|r
-}
-
-STRING 8437
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
-}
-
-STRING 8438
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
-}
-
-STRING 8439
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
-}
-
-STRING 8440
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
-}
-
-STRING 8441
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
-}
-
-STRING 8442
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
-}
-
-STRING 8443
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
-}
-
-STRING 8444
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
-}
-
-STRING 8445
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
-}
-
-STRING 8446
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
 }
 
 STRING 8447
@@ -69219,12 +69397,6 @@ STRING 11322
 [|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 1|r]
 }
 
-STRING 11323
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool1>s|r
-}
-
 STRING 11324
 // Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
 {
@@ -69255,36 +69427,6 @@ STRING 11328
 [|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 6|r]
 }
 
-STRING 11329
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool2>s|r
-}
-
-STRING 11330
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool3>s|r
-}
-
-STRING 11331
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool4>s|r
-}
-
-STRING 11332
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool5>s|r
-}
-
-STRING 11333
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool6>s|r
-}
-
 STRING 11334
 // Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
 {
@@ -69301,24 +69443,6 @@ STRING 11336
 // Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 9|r]
-}
-
-STRING 11337
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool7>s|r
-}
-
-STRING 11338
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool8>s|r
-}
-
-STRING 11339
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool9>s|r
 }
 
 STRING 11340
@@ -116436,16 +116560,6 @@ STRING 18666
 Boulder Toss
 }
 
-STRING 18667
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool1>s|r
-}
-
 STRING 18668
 // Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
 {
@@ -116476,80 +116590,10 @@ STRING 18672
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
 }
 
-STRING 18673
-// Abilities: A0XA (Aura), Researchubertip (Tooltip - Learn - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool1> - <A0XA,Cool10>s|r
-}
-
-STRING 18674
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool2>s|r
-}
-
-STRING 18675
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool3>s|r
-}
-
-STRING 18676
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool4>s|r
-}
-
-STRING 18677
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool5>s|r
-}
-
 STRING 18678
 // Abilities: A0XG (Boulder Toss), Researchubertip (Tooltip - Learn - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
-}
-
-STRING 18679
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool6>s|r
-}
-
-STRING 18680
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool7>s|r
 }
 
 STRING 18681
@@ -116562,26 +116606,6 @@ STRING 18682
 // Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
-}
-
-STRING 18683
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool8>s|r
-}
-
-STRING 18684
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool9>s|r
 }
 
 STRING 18685
@@ -116612,16 +116636,6 @@ STRING 18689
 // Abilities: A0YO (Empowered Magic Seal), EditorSuffix (Editor Suffix)
 {
 (schala)
-}
-
-STRING 18690
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
-|cffffff00Note: Has very low stat scaling.|r
-|cffff3333Channel Duration: <A0XA,Dur1>s
-|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
-|cff00FFFFCooldown: <A0XA,Cool10>s|r
 }
 
 STRING 18691
@@ -139547,15 +139561,6 @@ Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,
 }
 
 STRING 22157
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
-{
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +150 base stats / +10 lvls
-After 20 mins: +300 base stats / +20 lvls
-After 30 mins: +450 base stats / +30 lvls
-}
-
-STRING 22158
 // Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
 {
 Have Shenron increase your hero's power. 
