@@ -281,30 +281,27 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 this.giveTrophy(rewardedUnit);
               }
             }
+            
             // check if contestant has any other units in arena
             // if so chuck em to the pos of first unit contestant
             for (const unitContestant of contestant.units.values()) {
-              const extraUnitsGroup = CreateGroup();
-              GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), null);
-
-              ForGroup(extraUnitsGroup, () => {
+              GroupClear(Globals.tmpUnitGroup2);
+              GroupEnumUnitsInRect(Globals.tmpUnitGroup2, gg_rct_Budokai_Arena, null);
+              ForGroup(Globals.tmpUnitGroup2, () => {
                 const unit = GetEnumUnit();
-                const y = GetUnitY(unit)
-                const x = GetUnitX(unit);
+                const uPlayerId = GetPlayerId(GetOwningPlayer(unit));
                 if (
-                  UnitHelper.isUnitAlive(unit) && 
-                  x > TournamentData.budokaiArenaBottomLeft.x &&
-                  y > TournamentData.budokaiArenaBottomLeft.y && 
-                  x < TournamentData.budokaiArenaTopRight.x &&
-                  y < TournamentData.budokaiArenaTopRight.y
+                  uPlayerId == contestant.id 
+                  && !IsUnitAliveBJ(unit)
+                  // && !contestant.hasUnit(unit)
                 ) {
                   SetUnitX(unit, unitContestant.oldPosition.x);
                   SetUnitY(unit, unitContestant.oldPosition.y);
                   PauseUnit(unit, false);
                   SetUnitInvulnerable(unit, false);
-                }       
+                }
               });
-              DestroyGroup(extraUnitsGroup);
+              GroupClear(Globals.tmpUnitGroup2);
 
               PanCameraToTimedForPlayer(
                 Player(contestant.id), 

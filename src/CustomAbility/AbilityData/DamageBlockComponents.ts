@@ -2266,10 +2266,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 75,
+    blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 0.5,
+    multiplier: 0.6,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
@@ -2323,7 +2323,7 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 60,
+    blockPerDamage: 65,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
     multiplier: 0.5,

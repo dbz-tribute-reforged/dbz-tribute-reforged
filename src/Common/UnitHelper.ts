@@ -99,6 +99,7 @@ export module UnitHelper {
       IsUnitType(unit, UNIT_TYPE_HERO) 
       && !IsUnitType(unit, UNIT_TYPE_SUMMONED)
       && !IsUnitIllusion(unit)
+      && GetUnitTypeId(unit) != 0
     );
   }
 

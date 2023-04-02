@@ -1,11 +1,12 @@
 import { AdvancedTournament } from "./AdvancedTournament";
 import { TournamentState, Tournament } from "./Tournament";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -88,28 +89,34 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
   prepareTeam(players: player[], unitsTeam: unit[], waitRoom: Vector2D): void {
     // get all units put in wait rooms
     for (const player of players) {
-      const playerUnits = CreateGroup();
-      GroupEnumUnitsOfPlayer(playerUnits, player, null);
+      const playerId = GetPlayerId(player);
 
-      ForGroup(playerUnits, () => {
+      ForGroup(udg_StatMultPlayerUnits[playerId], () => {
         const unit = GetEnumUnit();
         if (UnitHelper.isUnitTournamentViable(unit)) {
-          unitsTeam.push(unit);
-          UnitResetCooldown(unit);
           if (UnitHelper.isUnitDead(unit)) {
             ReviveHero(unit, waitRoom.x, waitRoom.y, true);
           }
           SetUnitLifePercentBJ(unit, 100);
           SetUnitManaPercentBJ(unit, 100);
+
+          UnitResetCooldown(unit);
+          const ch = Globals.customPlayers[playerId].getCustomHero(unit);
+          if (ch) {
+            unitsTeam.push(unit);
+            for (const ability of ch.abilities.getCustomAbilities()) {
+              if (ability.isInUse()) {
+                CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
+              }
+            }
+          }
+
           SetUnitX(unit, waitRoom.x);
           SetUnitY(unit, waitRoom.y);
           SetUnitInvulnerable(unit, true);
         }
       })
-      DestroyGroup(playerUnits);
-
       PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0.1);
-
     }
   }
 

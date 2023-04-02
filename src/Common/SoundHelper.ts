@@ -868,9 +868,48 @@ export module SoundHelper {
       // goku black
       case Id.gokuBlackKamehameha:
         if (unitId == Id.gokuBlack) {
-          // playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/Q1.mp3", 2352);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/Q2.mp3", 2352);
+          }
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+      
+      case Id.gokuBlackDivineLasso:
+        if (unitId == Id.gokuBlack) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/W1.mp3", 1344);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/Kill4.mp3", 1200);
+          }
+        }
+        break;
+      
+      case Id.gokuBlackDivineRetribution:
+        if (unitId == Id.gokuBlack) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/E1.mp3", 720);
+          } else if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/E2.mp3", 1080);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuBlack/E3.mp3", 1320);
+          }
+        }
+        break;
+      
+      case Id.gokuBlackWorkOfGods:
+        if (unitId == Id.gokuBlack) {
+          playSoundOnUnit(unit, "Audio/Voice/GokuBlack/R1.mp3", 720);
+        }
+        break;
+
+      case Id.gokuBlackSorrowfulScythe:
+        if (unitId == Id.gokuBlack) {
+          playSoundOnUnit(unit, "Audio/Voice/GokuBlack/R2.mp3", 2088);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);
         break;
 
       // gohan
