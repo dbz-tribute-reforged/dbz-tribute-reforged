@@ -53,17 +53,10 @@ export class TournamentContestant {
 
   setupUnitsOfPlayer(playerId: number) {
     this.units.clear();
-    const playerUnits = CreateGroup();
-    GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), null);
 
-    ForGroup(playerUnits, () => {
+    ForGroup(udg_StatMultPlayerUnits[playerId], () => {
       const unit = GetEnumUnit();
-      if (
-        IsUnitType(unit, UNIT_TYPE_HERO) && 
-        !UnitHelper.isUnitDead(unit) && 
-        !BlzIsUnitInvulnerable(unit) &&
-        !IsUnitType(unit, UNIT_TYPE_SUMMONED)
-      ) {
+      if (UnitHelper.isUnitTournamentViable(unit)) {
         this.units.set(
           unit,
           new UnitContestant(unit, 
@@ -79,14 +72,16 @@ export class TournamentContestant {
         }
       }
     })
-
-    DestroyGroup(playerUnits);
   }
 
   // this leaks, as keys creates a non-dereference-able array or something
   // but isnt called very often, so should be fine
   getUnits(): IterableIterator<unit> {
     return this.units.keys();
+  }
+
+  hasUnit(unit: unit): boolean {
+    return this.units.has(unit);
   }
 
   resetUnitsAlive() {

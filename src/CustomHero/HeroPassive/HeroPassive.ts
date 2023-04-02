@@ -951,7 +951,8 @@ export function hirudegarnPassive(customHero: CustomHero) {
       ) {
         let manaLoss = 25;
         const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA);
-        manaLoss += attackedMana * HeroPassiveData.HIRUDEGARN_MANA_BURN_PERCENT;
+        const attackedMaxMana = GetUnitState(attacked, UNIT_STATE_MAX_MANA);
+        manaLoss += attackedMaxMana * HeroPassiveData.HIRUDEGARN_MANA_BURN_PERCENT;
         
         SetUnitState(
           attacked, 
@@ -962,7 +963,7 @@ export function hirudegarnPassive(customHero: CustomHero) {
         let manaGain = 25;
         const attackerMana = GetUnitState(attacker, UNIT_STATE_MANA);
         const attackerMaxMana = GetUnitState(attacker, UNIT_STATE_MAX_MANA);
-        manaGain += attackerMana * HeroPassiveData.HIRUDEGARN_MANA_HEAL_PERCENT;
+        manaGain += attackerMaxMana * HeroPassiveData.HIRUDEGARN_MANA_HEAL_PERCENT;
         
         SetUnitState(
           attacker,

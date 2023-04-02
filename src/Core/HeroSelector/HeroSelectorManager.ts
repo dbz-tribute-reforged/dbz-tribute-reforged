@@ -228,6 +228,7 @@ export class HeroSelectorManager {
         }
       }
     });
+    GroupClear(Globals.tmpUnitGroup)  
   }
 
   setupHideSelectorTrigger() {

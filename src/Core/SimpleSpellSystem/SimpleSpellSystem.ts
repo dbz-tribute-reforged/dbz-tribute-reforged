@@ -2926,7 +2926,23 @@ export module SimpleSpellSystem {
     });
   }
 
+  export function linkLeonSpellbook(unit: unit, cd: number) {
+    BlzStartUnitAbilityCooldown(unit, Id.leonShotgun, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.leonAssaultRifle, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.leonSniperRifle, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.leonRocketLauncher, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.leonFlashbang, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.leonHeavyGrenade, cd);
+  }
+
   export function setupSpellStartEndCastTrigger() {
+    Globals.linkedSpellsMap.set(Id.leonShotgun, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.leonAssaultRifle, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.leonSniperRifle, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.leonRocketLauncher, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.leonFlashbang, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.leonHeavyGrenade, SimpleSpellSystem.linkLeonSpellbook);
+
     TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
     TriggerAddAction(Globals.simpleSpellCDTrigger, () => {
       // get custom hero casting it
@@ -2962,6 +2978,11 @@ export module SimpleSpellSystem {
         if (newCd != baseCd) {
           BlzStartUnitAbilityCooldown(unit, abilId, newCd);
           // BlzSetUnitAbilityCooldown(unit, abilId, abilLvl, newCd);
+        }
+
+        const callback = Globals.linkedSpellsMap.get(abilId);
+        if (callback) {
+          callback(unit, newCd);
         }
       }
     });

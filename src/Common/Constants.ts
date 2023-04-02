@@ -22,6 +22,7 @@ export module Globals {
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
+  export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
   export const barrelMoveTrigger = CreateTrigger();
   export const barrelHashtable = InitHashtable(); 
@@ -129,7 +130,7 @@ export module Constants {
 
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
 
-  export const IS_APRIL_FOOLS_DAY = true;
+  export const IS_APRIL_FOOLS_DAY = false;
 }
 
 export enum CostType {

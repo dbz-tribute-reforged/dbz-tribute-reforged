@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.80
+DBZ Tribute |cffffcc00Reforged 0.80a
 }
 
 STRING 4
@@ -29,7 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 65+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 66+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -2538,6 +2538,14 @@ STRING 412
 // Units: h028 (Dummy Effect), Name (Name)
 {
 Dummy Effect
+}
+
+STRING 413
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool1> seconds|r
 }
 
 STRING 414
@@ -5980,7 +5988,7 @@ Transformations:
 [lvl 150] 2.10x "frieza"
 [lvl 200] 2.30x "golden" [Golden Frieza]
 [lvl 250] 2.40x "golden" [Mastered Golden Frieza]
-[lvl 400] 2.60x "black frieza" [No Golden Mana Drain]
+[lvl 400] 2.50x "black frieza" [50% Golden Mana Drain]
 
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
 Gains Full Power 100% when less than 75% hp in Fourth Form. 
@@ -10981,16 +10989,10 @@ On each beam, restore 15% of max mana.
 }
 
 STRING 1747
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Items: I026 (Tree of Might Fruit), Ubertip (Tooltip - Extended)
 {
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.5x All|r
-|cffffff00Drains 2.2% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
+|cffffff00Provides 1.0 * level stats.
+Restores 10% of Max HP.|r
 }
 
 STRING 1748
@@ -25385,19 +25387,6 @@ Does not drop on death.
 Reduces max movement speed by 30 when under 30k Str.|r
 }
 
-STRING 4056
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Drains 1.7% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
-}
-
 STRING 4057
 // Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
@@ -35876,13 +35865,11 @@ A powerful close quarters combatant that can rapidly slow and stun his enemies b
 }
 
 STRING 5747
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GL (Hakai Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur3>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool3,.> seconds|r
+Vegeta detonates multiple orbs of destruction near his opponent, dealing massive damage.
+|cff00ff00Damage: Int * Lvl * ? + 0.5% of max HP per orb|r
+|cff00ffffCooldown: <A0GL,Cool1> seconds|r
 }
 
 STRING 5748
@@ -39353,13 +39340,11 @@ STRING 6319
 }
 
 STRING 6320
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11R (Spin), Researchubertip (Tooltip - Learn - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur4>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool4,.> seconds|r
+Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms. Nearby enemies are blinded and have a <A11X,DataA1,%>% chance to miss for <A11X,Dur1,.>s.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11R,Cool1> - <A11R,Cool10> seconds|r
 }
 
 STRING 6321
@@ -39553,13 +39538,12 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 6346
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur5>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool5,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> seconds|r
 }
 
 STRING 6347
@@ -39975,13 +39959,12 @@ Q
 }
 
 STRING 6407
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Researchubertip (Tooltip - Learn - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur6>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool6,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> - <A11S,Cool10> seconds|r
 }
 
 STRING 6408
@@ -40090,6 +40073,14 @@ STRING 6425
 // Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 6426
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool2> seconds|r
 }
 
 STRING 6427
@@ -40925,13 +40916,12 @@ Leon precisely lines up his shot and shoots his sniper rifle. Deals 100% bonus d
 }
 
 STRING 6563
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur7>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool7,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool2> seconds|r
 }
 
 STRING 6564
@@ -40965,13 +40955,12 @@ STRING 6568
 }
 
 STRING 6569
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur8>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool8,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool3> seconds|r
 }
 
 STRING 6570
@@ -40981,13 +40970,12 @@ STRING 6570
 }
 
 STRING 6571
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur9>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool9,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool4> seconds|r
 }
 
 STRING 6572
@@ -41009,13 +40997,12 @@ STRING 6574
 }
 
 STRING 6575
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur10>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool10,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool5> seconds|r
 }
 
 STRING 6576
@@ -41766,16 +41753,56 @@ STRING 6693
 D
 }
 
+STRING 6694
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool3> seconds|r
+}
+
 STRING 6695
 // Abilities: A0PZ (Death Beam), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Death Beam - [|cffffcc00Level %d|r]
 }
 
+STRING 6696
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool4> seconds|r
+}
+
 STRING 6697
 // Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
 {
 D
+}
+
+STRING 6698
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool5> seconds|r
+}
+
+STRING 6699
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool6> seconds|r
+}
+
+STRING 6700
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool7> seconds|r
 }
 
 STRING 6701
@@ -42405,6 +42432,14 @@ STRING 6800
 // Abilities: A0CP (Chou Makousen), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Chou Makousen - [|cffffcc00Level 1|r]
+}
+
+STRING 6801
+// Abilities: A06X (Dodon Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool1> - <A06X,Cool10> seconds|r
 }
 
 STRING 6802
@@ -44847,6 +44882,14 @@ STRING 7171
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
 }
 
+STRING 7172
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool8> seconds|r
+}
+
 STRING 7173
 // Abilities: A01Q (Knife Parry), Tip (Tooltip - Normal)
 {
@@ -45214,10 +45257,86 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 |cff00ffffCooldown: <A06B,Cool10> seconds|r
 }
 
+STRING 7224
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool9> seconds|r
+}
+
+STRING 7225
+// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
+|cff00ff00Damage: Int * lvl * ? + 1.8% Max HP|r
+|cff00ffffCooldown: <A06X,Cool10> seconds|r
+}
+
+STRING 7226
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur1>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool1,.> seconds|r
+}
+
+STRING 7227
+// Abilities: A01Q (Knife Parry), Researchubertip (Tooltip - Learn - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur1>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool1,.> - <A01Q,Cool10,.> seconds|r
+}
+
+STRING 7228
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur2>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool2,.> seconds|r
+}
+
 STRING 7229
 // Abilities: A01Q (Knife Parry), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Knife Parry - [|cffffcc00Level 7|r]
+}
+
+STRING 7230
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur3>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool3,.> seconds|r
+}
+
+STRING 7231
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur4>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool4,.> seconds|r
+}
+
+STRING 7232
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur5>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool5,.> seconds|r
 }
 
 STRING 7233
@@ -45290,6 +45409,16 @@ STRING 7244
 // Abilities: A0LX (Kamehameha), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 7245
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur6>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool6,.> seconds|r
 }
 
 STRING 7246
@@ -49861,13 +49990,12 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 7969
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur1>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool1,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool6> seconds|r
 }
 
 STRING 7970
@@ -49916,13 +50044,12 @@ Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800sta
 }
 
 STRING 7975
-// Abilities: A01Q (Knife Parry), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur1>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool1,.> - <A01Q,Cool10,.> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool7> seconds|r
 }
 
 STRING 7976
@@ -50283,13 +50410,32 @@ Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800sta
 }
 
 STRING 8031
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool8> seconds|r
+}
+
+STRING 8032
 // Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
 {
 Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur2>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 60%
+|cffff2222Channel Duration: <A01Q,Dur7>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
 Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool2,.> seconds|r
+|cff00ffffCooldown: <A01Q,Cool7,.> seconds|r
+}
+
+STRING 8033
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur8>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool8,.> seconds|r
 }
 
 STRING 8034
@@ -50320,6 +50466,16 @@ STRING 8038
 // Abilities: A01V (Leon's Arsenal), Ubertip (Tooltip - Normal - Extended)
 {
 Leon S. Kennedy has access to many high powered weapons, each of them suited to killing different enemies.
+}
+
+STRING 8039
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur9>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool9,.> seconds|r
 }
 
 STRING 8040
@@ -52829,6 +52985,16 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 |cff00ffffCooldown: <A00M,Cool2> seconds|r
 }
 
+STRING 8411
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur10>s
+|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
+Damage: Lvl x Agi x ?
+|cff00ffffCooldown: <A01Q,Cool10,.> seconds|r
+}
+
 STRING 8412
 // Abilities: A02O (Sniper Rifle), Ubertip (Tooltip - Normal - Extended)
 {
@@ -53025,6 +53191,12 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 
 |cff00ff00Damage: Int * lvl * ? + 3% Max HP|r
 |cff00ffffCooldown: <A00M,Cool2> seconds|r
+}
+
+STRING 8440
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +100, HP by 5000 and HP regen by 100%.
 }
 
 STRING 8441
@@ -57178,6 +57350,12 @@ STRING 9083
 Heatwave
 }
 
+STRING 9084
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +200, HP by 10000 and HP regen by 200%.
+}
+
 STRING 9085
 // Abilities: A10Q (Mafuba), Name (Name)
 {
@@ -58755,6 +58933,12 @@ Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks
 |cff00ffffCooldown: <A11B,Cool3> seconds|r
 }
 
+STRING 9328
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +300, HP by 15000 and HP regen by 300%.
+}
+
 STRING 9329
 // Abilities: A03A (Heavy Grenade), Ubertip (Tooltip - Normal - Extended)
 {
@@ -59642,11 +59826,12 @@ Korin's Flag
 }
 
 STRING 9471
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool1> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool9> seconds|r
 }
 
 STRING 9472
@@ -59656,83 +59841,78 @@ rhpx
 }
 
 STRING 9473
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool2> seconds|r
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool10> seconds|r
 }
 
 STRING 9474
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Units: H00J (Emperor of the Universe), Name (Name)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool3> seconds|r
+Emperor of the Universe
 }
 
 STRING 9475
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Units: H00J (Emperor of the Universe), Propernames (Proper Names)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool4> seconds|r
+Frieza
 }
 
 STRING 9476
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Units: H00J (Emperor of the Universe), EditorSuffix (Name - Editor Suffix)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool5> seconds|r
+black
 }
 
 STRING 9477
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool6> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool1> seconds
 }
 
 STRING 9478
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool7> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool2> seconds
 }
 
 STRING 9479
-// Abilities: A06X (Dodon Ray), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool10> - <A06X,Cool10> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool3> seconds
 }
 
 STRING 9480
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool8> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool4> seconds
 }
 
 STRING 9481
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool9> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool5> seconds
 }
 
 STRING 9482
-// Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A06X,Cool10> seconds|r
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool6> seconds
 }
 
 STRING 9483
@@ -59895,78 +60075,6 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 |cffFF0000Cost: 8% Max HP|r
 |cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
 |cff00ffffCooldown: <A08J,Cool1,.> seconds|r
-}
-
-STRING 9505
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool1> seconds
-}
-
-STRING 9506
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool2> seconds
-}
-
-STRING 9507
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool3> seconds
-}
-
-STRING 9508
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool4> seconds
-}
-
-STRING 9509
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool5> seconds
-}
-
-STRING 9510
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool6> seconds
-}
-
-STRING 9511
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool7> seconds
-}
-
-STRING 9512
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool8> seconds
-}
-
-STRING 9513
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool9> seconds
 }
 
 STRING 9514
@@ -60297,22 +60405,6 @@ STRING 9568
 // Upgrades: R008 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
 {
 ratt
-}
-
-STRING 9569
-// Abilities: A0FG (Kamehameha Charge), Researchubertip (Tooltip - Learn - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool1> seconds
-}
-
-STRING 9570
-// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool10> seconds
 }
 
 STRING 9571
@@ -64464,6 +64556,12 @@ Leon throws a heavy grenade at the target location. Nearby enemies are |cffff880
 |cff888888"A larger more powerful hand grenade that explodes with great power."|r
 }
 
+STRING 10243
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +400, HP by 20000 and HP regen by 400%.
+}
+
 STRING 10244
 // Abilities: A01C (Flesh Attack), Tip (Tooltip - Normal)
 {
@@ -64492,6 +64590,14 @@ STRING 10248
 // Abilities: A0LC (S.S. Deadly Hammer), Researchubertip (Tooltip - Learn - Extended)
 {
 Super 13 attacks the opponent with a heavy barrage of punches before punching them away and firing a S.S. Deadly Bomber, inflicting a massive amount of damage.  |n|cff00ff00(Damage:  lvl * int * ? / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 10249
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool7> seconds
 }
 
 STRING 10250
@@ -64824,15 +64930,19 @@ STRING 10303
 }
 
 STRING 10304
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +100, HP by 10000 and HP regen by 100%.
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool8> seconds
 }
 
 STRING 10305
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +200, HP by 20000 and HP regen by 200%.
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool9> seconds
 }
 
 STRING 10306
@@ -67526,9 +67636,11 @@ Pan
 }
 
 STRING 10727
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0FG (Kamehameha Charge), Researchubertip (Tooltip - Learn - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +300, HP by 30000 and HP regen by 300%.
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool1> seconds
 }
 
 STRING 10728
@@ -67656,9 +67768,37 @@ King K Rool throws his crown, dealing damage to all units caught in its path. Af
 }
 
 STRING 10746
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0FG (Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +400, HP by 40000 and HP regen by 400%.
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool10> seconds
+}
+
+STRING 10747
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.5x All|r
+|cffffff00Drains 2.2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 3% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
+|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
+}
+
+STRING 10748
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.6x All|r
+|cffffff00Drains 1.6% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
 }
 
 STRING 10749
@@ -67730,6 +67870,14 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 |cff00FF00Damage: Int + 5% Max HP|r
 |cff00FFFFCooldown: <A0K9,Cool1>s
 |cffFFFF00Empowered:|r +50% damage, increased explosion AoE and deflects beams upon explosion.
+}
+
+STRING 10758
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool1> seconds
 }
 
 STRING 10759
@@ -69511,6 +69659,14 @@ STRING 11053
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
 }
 
+STRING 11054
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool2> seconds
+}
+
 STRING 11055
 // Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
 {
@@ -69828,20 +69984,6 @@ STRING 11107
 (vegeta standard ooz)
 }
 
-STRING 11108
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's upper half is better at dodging but slightly weaker in power.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 8% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
-|cffffcc00Critical|r - <A0GG,DataA1>% 
-|cffffcc00Damage|r - <A0GG,DataB1,.> times
-}
-
 STRING 11109
 // Units: H00S (Daughter of Hercule), Tip (Tooltip - Basic)
 {
@@ -70051,6 +70193,14 @@ STRING 11142
 // Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Double Sundae - [|cffffcc00Level 3|r]
+}
+
+STRING 11143
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool3> seconds
 }
 
 STRING 11144
@@ -71205,6 +71355,30 @@ STRING 11330
 Leon has gained access to the rest of his powerful weaponry.
 }
 
+STRING 11331
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool4> seconds
+}
+
+STRING 11332
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool5> seconds
+}
+
+STRING 11333
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool6> seconds
+}
+
 STRING 11334
 // Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
 {
@@ -71221,6 +71395,30 @@ STRING 11336
 // Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 9|r]
+}
+
+STRING 11337
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool7> seconds
+}
+
+STRING 11338
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool8> seconds
+}
+
+STRING 11339
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool9> seconds
 }
 
 STRING 11340
@@ -71329,6 +71527,14 @@ STRING 11357
 // Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
 {
 The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool9>s|r
+}
+
+STRING 11358
+// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0FG,Cool10> seconds
 }
 
 STRING 11359
@@ -71593,6 +71799,14 @@ STRING 11402
 // Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
 Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool10> seconds|r
+}
+
+STRING 11403
+// Abilities: A0SO (Super Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0SO,Cool1> seconds
 }
 
 STRING 11404
@@ -71929,10 +72143,24 @@ STRING 11456
 (moro)
 }
 
+STRING 11457
+// Abilities: A0SP (Super Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
+|cff00FFFFCooldown: <A0SO,Cool1> seconds
+}
+
 STRING 11458
 // Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 1|r]
+}
+
+STRING 11459
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool2>s
 }
 
 STRING 11460
@@ -71941,10 +72169,22 @@ STRING 11460
 Power Level Sharing
 }
 
+STRING 11461
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool3>s
+}
+
 STRING 11462
 // Abilities: A0MS (Power Level Sharing), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Power Level Sharing - [|cffffcc00Level %d|r]
+}
+
+STRING 11463
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool4>s
 }
 
 STRING 11464
@@ -71981,6 +72221,18 @@ STRING 11469
 // Abilities: A00X (Roundhouse Kick), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Roundhouse Kick - [|cffffcc00Level 1|r]
+}
+
+STRING 11470
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool5>s
+}
+
+STRING 11471
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool6>s
 }
 
 STRING 11472
@@ -73804,20 +74056,6 @@ Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit'
 |cffffcc00Damage|r - <A0G0,DataB1,.> times
 }
 
-STRING 11766
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
-{
-Hirudegarn's lower half has deadlier attacks but is worse at dodging.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +40%).
-Spells cost an additional 8% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
-|cffffcc00Critical|r - <A0GG,DataA2>% 
-|cffffcc00Damage|r - <A0GG,DataB2,.> times
-}
-
 STRING 11767
 // Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73948,10 +74186,52 @@ STRING 11786
 Q
 }
 
+STRING 11787
+// Abilities: A0X3 (Napalm), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool1>s
+}
+
+STRING 11788
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool8>s
+}
+
+STRING 11789
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool7>s
+}
+
+STRING 11790
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool9>s
+}
+
+STRING 11791
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool10>s
+}
+
 STRING 11792
 // Abilities: A00X (Roundhouse Kick), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Roundhouse Kick - [|cffffcc00Level 7|r]
+}
+
+STRING 11793
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X3,Cool1>s
+}
+
+STRING 11794
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool2>s
 }
 
 STRING 11795
@@ -74246,6 +74526,12 @@ STRING 11842
 // Abilities: A0NO (Wheelo Vamp 1), Name (Name)
 {
 Wheelo Vamp 1
+}
+
+STRING 11843
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool3>s
 }
 
 STRING 11844
@@ -74628,18 +74914,10 @@ STRING 11906
 [|cff00FF00D|r] |cffff2020Serious Series: II|r
 }
 
-STRING 11908
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+STRING 11907
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn's fully matured form empowers every attack with deadly force.
-
-|cffffff00Auto attacks against heroes absorb 1.5% of enemy's current mana and restore an additional 1.5% of Hirudegarn's current mana.
-Spells deal increased damage based on remaining mana (up to +100%).
-Spells cost an additional 20% of current mana (excluding Dark Eyes and Flight) (has half cost on Flame Breath).|r
-
-|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
-|cffffcc00Critical|r - <A0GG,DataA3>% 
-|cffffcc00Damage|r - <A0GG,DataB3,.> times
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool4>s
 }
 
 STRING 11909
@@ -77648,6 +77926,12 @@ The shadow dragon enters a fierce rage and begins fighting at incredible speeds 
 |cff00ffffCooldown: <A0QM,Cool6> seconds|r
 }
 
+STRING 12392
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool5>s
+}
+
 STRING 12393
 // Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
 {
@@ -77854,6 +78138,24 @@ STRING 12426
 The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
 |cff00ff00Duration: 10s|r
 |cff00ffffCooldown: <A0QM,Cool7> seconds|r
+}
+
+STRING 12427
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool6>s
+}
+
+STRING 12428
+// Abilities: A0X4 (Mega Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool1>s
+}
+
+STRING 12429
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool8>s
 }
 
 STRING 12430
@@ -80616,6 +80918,12 @@ Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldow
 |cff00ffffCooldown: <A0PS,Cool6> seconds|r
 }
 
+STRING 12857
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool7>s
+}
+
 STRING 12858
 // Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
@@ -80713,6 +81021,12 @@ STRING 12873
 [|cff00ff00Q|r] Learn Justice Flash 2 - [|cffffcc00Level %d|r]
 }
 
+STRING 12874
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool9>s
+}
+
 STRING 12875
 // Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
 {
@@ -80741,6 +81055,12 @@ STRING 12878
 Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool9> seconds|r
 }
 
+STRING 12879
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool10>s
+}
+
 STRING 12880
 // Abilities: A0PE (Justice Hold), EditorSuffix (Editor Suffix)
 {
@@ -80751,6 +81071,26 @@ STRING 12881
 // Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 12882
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool1>s
+}
+
+STRING 12883
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's upper half is better at dodging but slightly weaker in power.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's max mana and restore an additional 1.5% of Hirudegarn's max mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 5% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD1,%>% 
+|cffffcc00Critical|r - <A0GG,DataA1>% 
+|cffffcc00Damage|r - <A0GG,DataB1,.> times
 }
 
 STRING 12884
@@ -80775,6 +81115,34 @@ STRING 12887
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12888
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's lower half has deadlier attacks but is worse at dodging.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's max mana and restore an additional 1.5% of Hirudegarn's max mana.
+Spells deal increased damage based on remaining mana (up to +40%).
+Spells cost an additional 5% of current mana (excluding Dark Mist) (has half cost on Flame Breath, Flame Ball, and Tail Sweep).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD2,%>% 
+|cffffcc00Critical|r - <A0GG,DataA2>% 
+|cffffcc00Damage|r - <A0GG,DataB2,.> times
+}
+
+STRING 12889
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn's fully matured form empowers every attack with deadly force.
+
+|cffffff00Auto attacks against heroes absorb 1.5% of enemy's max mana and restore an additional 1.5% of Hirudegarn's max mana.
+Spells deal increased damage based on remaining mana (up to +100%).
+Spells cost an additional 15% of current mana (excluding Dark Eyes and Flight) (has half cost on Flame Breath).|r
+
+|cffffcc00Evasion|r - <A0GG,DataD3,%>% 
+|cffffcc00Critical|r - <A0GG,DataA3>% 
+|cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
 STRING 12894
@@ -86200,14 +86568,6 @@ Nearby enemies are knocked away from Yamcha.
 Yamcha's abilities generate +1% of max mana.
 |cff2020ffMana Cost: 100% of max mana.|r
 |cff00ffffCooldown: <A0RO,Cool1> seconds|r
-}
-
-STRING 13814
-// Abilities: A0GL (Hakai Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta detonates multiple orbs of destruction near his opponent, dealing massive damage.
-|cff00ff00Damage: Int * Lvl * ? + 1% of max HP per orb|r
-|cff00ffffCooldown: <A0GL,Cool1> seconds|r
 }
 
 STRING 13815
@@ -116931,36 +117291,6 @@ STRING 18406
 [|cffFFFF00R|r] Learn Napalm - [|cffffcc00Level %d|r]
 }
 
-STRING 18407
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18408
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18409
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18410
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18411
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18412
 // Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
 {
@@ -116991,12 +117321,6 @@ STRING 18416
 [|cffFFFF00R|r] Napalm - [|cffffcc00Level 6|r]
 }
 
-STRING 18417
-// Abilities: A0X3 (Napalm), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18418
 // Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
 {
@@ -117009,18 +117333,6 @@ STRING 18419
 [|cffFFFF00R|r] Napalm - [|cffffcc00Level 8|r]
 }
 
-STRING 18420
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18421
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18422
 // Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
 {
@@ -117031,24 +117343,6 @@ STRING 18423
 // Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Napalm - [|cffffcc00Level 10|r]
-}
-
-STRING 18424
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18425
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18426
-// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
 }
 
 STRING 18427
@@ -117081,36 +117375,6 @@ STRING 18431
 [|cffFFFF00R|r] Learn Napalm - [|cffffcc00Level %d|r]
 }
 
-STRING 18432
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18433
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18434
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18435
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18436
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18437
 // Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
 {
@@ -117141,12 +117405,6 @@ STRING 18441
 [|cffFFFF00R|r] Napalm - [|cffffcc00Level 6|r]
 }
 
-STRING 18442
-// Abilities: A0X4 (Mega Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18443
 // Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
 {
@@ -117159,18 +117417,6 @@ STRING 18444
 [|cffFFFF00R|r] Napalm - [|cffffcc00Level 8|r]
 }
 
-STRING 18445
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18446
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
 STRING 18447
 // Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
 {
@@ -117181,24 +117427,6 @@ STRING 18448
 // Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Mega Bomb - [|cffffcc00Level 10|r]
-}
-
-STRING 18449
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
-}
-
-STRING 18450
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W4,Cool1>s
-}
-
-STRING 18451
-// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
 }
 
 STRING 18452
@@ -126582,13 +126810,6 @@ STRING 19889
 // Items: I026 (Tree of Might Fruit), Description (Description)
 {
 Tree of Might Fruit
-}
-
-STRING 19890
-// Items: I026 (Tree of Might Fruit), Ubertip (Tooltip - Extended)
-{
-|cffffff00Provides 1.5 * level stats.
-Restores 10% of Max HP.|r
 }
 
 STRING 19891
@@ -136783,14 +137004,6 @@ STRING 21551
 [|cff00FF00Q|r] Black Kamehameha - [|cffffcc00Level 8|r]
 }
 
-STRING 21552
-// Abilities: A11R (Spin), Researchubertip (Tooltip - Learn - Extended)
-{
-Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11R,Cool1> - <A11R,Cool10> seconds|r
-}
-
 STRING 21553
 // Abilities: A0IL (Black Kamehameha), Tip (Tooltip - Normal)
 {
@@ -136933,15 +137146,6 @@ STRING 21572
 [|cff00ff00F|r] Jump - [|cffffcc00Level 1|r]
 }
 
-STRING 21573
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool1> seconds|r
-}
-
 STRING 21574
 // Abilities: A11S (Jump), Name (Name)
 {
@@ -136958,15 +137162,6 @@ STRING 21576
 // Abilities: A11S (Jump), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Jump - [|cffffcc00Level %d|r]
-}
-
-STRING 21577
-// Abilities: A11S (Jump), Researchubertip (Tooltip - Learn - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool1> - <A11S,Cool10> seconds|r
 }
 
 STRING 21578
@@ -136999,51 +137194,6 @@ STRING 21582
 [|cff00ff00F|r] Jump - [|cffffcc00Level 6|r]
 }
 
-STRING 21583
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool2> seconds|r
-}
-
-STRING 21584
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool3> seconds|r
-}
-
-STRING 21585
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool4> seconds|r
-}
-
-STRING 21586
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool5> seconds|r
-}
-
-STRING 21587
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool6> seconds|r
-}
-
 STRING 21588
 // Abilities: A11S (Jump), Tip (Tooltip - Normal)
 {
@@ -137062,33 +137212,6 @@ STRING 21590
 [|cff00ff00F|r] Jump - [|cffffcc00Level 9|r]
 }
 
-STRING 21591
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool7> seconds|r
-}
-
-STRING 21592
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool8> seconds|r
-}
-
-STRING 21593
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool9> seconds|r
-}
-
 STRING 21594
 // Abilities: A11S (Jump), EditorSuffix (Editor Suffix)
 {
@@ -137099,15 +137222,6 @@ STRING 21595
 // Abilities: A11S (Jump), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Jump - [|cffffcc00Level 10|r]
-}
-
-STRING 21596
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 0.5|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool10> seconds|r
 }
 
 STRING 21597
@@ -138206,22 +138320,6 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 |cffFFFF00Empowered:|r +50% damage, increased explosion AoE and deflects beams upon explosion.
 }
 
-STRING 21756
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool1> seconds
-}
-
-STRING 21757
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool2> seconds
-}
-
 STRING 21758
 // Abilities: A0KH (Goku Black's Fighting Style), Tip (Tooltip - Normal)
 {
@@ -138232,86 +138330,6 @@ STRING 21759
 // Abilities: A0KH (Goku Black's Fighting Style), EditorSuffix (Editor Suffix)
 {
 (goku black)
-}
-
-STRING 21760
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool3> seconds
-}
-
-STRING 21761
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool4> seconds
-}
-
-STRING 21762
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool5> seconds
-}
-
-STRING 21763
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool6> seconds
-}
-
-STRING 21764
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool7> seconds
-}
-
-STRING 21765
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool8> seconds
-}
-
-STRING 21766
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool9> seconds
-}
-
-STRING 21767
-// Abilities: A0JE (Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.8% Max HP
-|cff00FFFFCooldown: <A0FG,Cool10> seconds
-}
-
-STRING 21768
-// Abilities: A0SO (Super Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.4% Max HP
-|cff00FFFFCooldown: <A0SO,Cool1> seconds
-}
-
-STRING 21769
-// Abilities: A0SP (Super Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ? + 4.4% Max HP
-|cff00FFFFCooldown: <A0SO,Cool1> seconds
 }
 
 STRING 21770
