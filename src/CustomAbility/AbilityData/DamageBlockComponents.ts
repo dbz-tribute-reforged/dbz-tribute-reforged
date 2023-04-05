@@ -2376,7 +2376,7 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
-    name: "block united sattes of smash",
+    name: "block united states of smash",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,

@@ -4460,7 +4460,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point united states of smash" },
-      { name: "block united sattes of smash" },
+      { name: "block united states of smash" },
       { name: "damage united states of smash dps" },
       { name: "damage united states of smash explosion inner" },
       { name: "damage united states of smash explosion outer" },
