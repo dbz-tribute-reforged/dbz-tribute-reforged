@@ -12907,7 +12907,7 @@ export const AOEDamageComponents = [
     repeatInterval: 10,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_DYNAMIC,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
     sourceHPDamageScale: 0,
     useInverseDamageScale: true,
