@@ -4148,7 +4148,7 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 30016.0, 20928.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 29952.0, 15168.0, 270.000, FourCC("n02L"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 29184.0, 12224.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -5136,7 +5136,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 26728.2, 9560.4, 312.988, FourCC("n
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27064.0, 13866.7, 301.683, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27505.9, 15910.8, 301.683, FourCC("n02F"))
-u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 29573.1, 11084.4, 47.452, FourCC("n03A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 28474.8, 10706.7, 47.452, FourCC("n03A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 27695.3, 16210.9, 334.673, FourCC("n03A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6660.2, -1963.3, 334.200, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02Q"), 24914.6, 13924.9, 283.764, FourCC("n02Q"))
@@ -5198,7 +5198,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14633.4, 30769.5, 251.935, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 10728.8, 30083.7, 319.976, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 10439.8, 29976.2, 295.420, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11997.8, 27723.1, 118.619, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28064.2, 11225.8, 52.847, FourCC("n02F"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28783.8, 14387.2, 52.847, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 20217.7, 14632.0, 309.483, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 29518.5, 6780.7, 309.483, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 31104.8, 8521.2, 182.415, FourCC("n01E"))
@@ -5279,9 +5279,9 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 7872.8, 17069.0, 235.415, FourCC("n
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29820.1, -8073.6, 53.208, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 29165.5, 12394.0, 89.634, FourCC("n03A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 29537.7, 14028.9, 89.634, FourCC("n03A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 28076.3, 14802.3, 48.316, FourCC("n03A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30774.4, 12078.8, 152.221, FourCC("n02F"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30860.5, 12156.7, 152.221, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 25372.8, 12228.1, 326.336, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29091.2, 406.4, 243.034, FourCC("n01U"))
@@ -5375,7 +5375,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n020"), 2342.0, 18550.7, 266.383, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 1739.0, 18612.1, 248.215, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 28499.6, 13557.1, 4.679, FourCC("n03A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -1413.2, 13477.6, 129.072, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 28481.4, 13058.4, 52.689, FourCC("n03B"))
+u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 28958.0, 13976.7, 52.689, FourCC("n03B"))
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 10113.3, 1400.6, 152.740, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03B"), -3979.1, 15085.8, 41.325, FourCC("n03B"))
@@ -7453,7 +7453,7 @@ return true
 end
 
 function Trig_Android_17_DBS_Power_Blitz_Barrage_Actions()
-udg_TempInt = (10000 + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.30)))
+udg_TempInt = (4000 + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.30)))
 if (Trig_Android_17_DBS_Power_Blitz_Barrage_Func002C()) then
 BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(GetTriggerUnit(), FourCC("A0MW")), ABILITY_ILF_MANA_COST, 9, udg_TempInt)
 else
@@ -7539,7 +7539,7 @@ end
 function Trig_Power_Level_Rising_Actions()
 udg_StatMultUnit = GetTriggerUnit()
 udg_TempInt = 10
-udg_StatMultReal = (I2R(udg_TempInt) * 0.33)
+udg_StatMultReal = (I2R(udg_TempInt) * 0.20)
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
 udg_MoroStatMultReal = (((I2R(udg_TempInt) * 0.50) * 0.01) + 0.01)
@@ -12320,9 +12320,9 @@ if (Trig_Jiren_Meditate_Func010C()) then
 udg_StatMultUnit = GetTriggerUnit()
 TriggerExecute(gg_trg_Get_Base_Stats)
 if (Trig_Jiren_Meditate_Func010Func004C()) then
-udg_StatMultReal = RMaxBJ(5.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.75)))
+udg_StatMultReal = RMaxBJ(4.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.60)))
 else
-udg_StatMultReal = RMaxBJ(5.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.50)))
+udg_StatMultReal = RMaxBJ(4.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.40)))
 end
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
@@ -14106,6 +14106,7 @@ end
 function Trig_Sephiroth_One_Winged_Angel_Cast_Actions()
 udg_TempUnit = GetSpellAbilityUnit()
 PauseUnitBJ(true, udg_TempUnit)
+SetUnitInvulnerable(udg_TempUnit, true)
 SetUnitTimeScalePercent(udg_TempUnit, 200.00)
     SetUnitAnimationByIndex(udg_TempUnit,13)
 GroupAddUnitSimple(udg_TempUnit, udg_SephirothOWAUnitGroup)
@@ -14121,7 +14122,7 @@ TriggerAddCondition(gg_trg_Sephiroth_One_Winged_Angel_Cast, Condition(Trig_Sephi
 TriggerAddAction(gg_trg_Sephiroth_One_Winged_Angel_Cast, Trig_Sephiroth_One_Winged_Angel_Cast_Actions)
 end
 
-function Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func002C()
+function Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func003C()
 if (udg_TempInt >= 42) then
 return true
 end
@@ -14132,7 +14133,7 @@ return false
 end
 
 function Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004C()
-if (not Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func002C()) then
+if (not Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func003C()) then
 return false
 end
 return true
@@ -14143,6 +14144,7 @@ udg_TempUnit = GetEnumUnit()
     udg_ID = GetHandleId(udg_TempUnit)
 udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
 if (Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004C()) then
+SetUnitInvulnerable(udg_TempUnit, false)
 PauseUnitBJ(false, udg_TempUnit)
 ResetUnitAnimation(udg_TempUnit)
 SetUnitTimeScalePercent(udg_TempUnit, 100.00)
@@ -17762,7 +17764,7 @@ SaveIntegerBJ(0, 4, udg_ID, udg_SummonsHashtable)
 SaveIntegerBJ(0, 3, udg_ID, udg_SummonsHashtable)
 else
 SaveIntegerBJ((udg_TempInt + 1), 4, udg_ID, udg_SummonsHashtable)
-SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) - (((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * I2R(udg_TempInt3)) * (2.40 * 0.01)) * 0.03)))
+SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) - (((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * I2R(udg_TempInt3)) * (2.20 * 0.01)) * 0.03)))
 end
 end
 
@@ -17804,7 +17806,7 @@ end
 
 function Trig_Super_17_Shocking_Mana_Actions()
 udg_TempUnit = GetTriggerUnit()
-udg_TempInt = ((200 * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)) + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.30)))
+udg_TempInt = ((200 * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)) + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.20)))
 if (Trig_Super_17_Shocking_Mana_Func003C()) then
 udg_TempInt2 = GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)
 while (true) do
@@ -23124,10 +23126,10 @@ TriggerExecute(gg_trg_Get_Base_Stats)
 udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
 if (Trig_Kill_Hero_PvP_and_Saga_Func002Func001Func005C()) then
 udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + (I2R(GetUnitFoodMade(GetDyingUnit())) - 100.00)) * 0.40)
-udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 80.00)
+udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 90.00)
 else
 udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + (I2R(GetUnitFoodMade(GetDyingUnit())) + 0.00)) * 0.40)
-udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 40.00)
+udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 50.00)
 end
 if (Trig_Kill_Hero_PvP_and_Saga_Func002Func001Func009C()) then
 ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func002Func001Func009Func008A)
@@ -23188,13 +23190,14 @@ end
 TriggerExecute(gg_trg_Get_Base_Stats)
     udg_ID = GetHandleId(udg_StatMultUnit)
 udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+udg_PVPBaseStatReward = (udg_PVPBaseStatReward + RMaxBJ(0.00, (0.10 * (udg_PVPHeroKilledStats - udg_PVPHeroKillerStats))))
 udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(4.00, ((udg_PVPHeroKilledStats * udg_PVPHeroKilledStats) / RMaxBJ(1.00, (udg_PVPHeroKillerStats * udg_PVPHeroKillerStats))))))
 udg_StatMultReal = (udg_StatMultReal * LoadRealBJ(34, udg_ID, udg_StatMultHashtable))
-udg_StatMultReal = (udg_StatMultReal * udg_GlobalStatMultiplier)
 if (Trig_Kill_Hero_Give_PvP_Stats_Func008C()) then
-udg_StatMultReal = (udg_StatMultReal * 2.00)
+udg_StatMultReal = (udg_StatMultReal * 1.50)
 else
 end
+udg_StatMultReal = (udg_StatMultReal * udg_GlobalStatMultiplier)
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_PvP_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -37148,7 +37151,7 @@ end
 
 function Trig_Sephiroth_One_Winged_Angel_Actions()
 udg_StatMultUnit = GetSpellAbilityUnit()
-udg_TempReal = 30.00
+udg_TempReal = 15.00
     udg_TempInt = GetSpellAbilityId()
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Sephiroth_One_Winged_Angel_Func005C()) then
@@ -63733,8 +63736,10 @@ SetStartLocPrio(3, 2, 8, MAP_LOC_PRIO_LOW)
 SetStartLocPrioCount(4, 2)
 SetStartLocPrio(4, 0, 5, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(4, 1, 9, MAP_LOC_PRIO_HIGH)
-SetStartLocPrioCount(5, 1)
+SetStartLocPrioCount(5, 3)
 SetStartLocPrio(5, 0, 4, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(5, 1, 6, MAP_LOC_PRIO_LOW)
+SetStartLocPrio(5, 2, 8, MAP_LOC_PRIO_HIGH)
 SetStartLocPrioCount(6, 2)
 SetStartLocPrio(6, 0, 7, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(6, 1, 8, MAP_LOC_PRIO_HIGH)
@@ -63777,7 +63782,7 @@ DefineStartLocation(1, -6016.0, -6784.0)
 DefineStartLocation(2, -6976.0, 6592.0)
 DefineStartLocation(3, 5184.0, -6528.0)
 DefineStartLocation(4, 30784.0, 25280.0)
-DefineStartLocation(5, 29952.0, 15232.0)
+DefineStartLocation(5, 29184.0, 12288.0)
 DefineStartLocation(6, 13056.0, 15296.0)
 DefineStartLocation(7, 5504.0, 17408.0)
 DefineStartLocation(8, 15232.0, 6784.0)

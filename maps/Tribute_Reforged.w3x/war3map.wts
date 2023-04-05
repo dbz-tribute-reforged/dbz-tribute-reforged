@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.80a
+DBZ Tribute |cffffcc00Reforged 0.80b
 }
 
 STRING 4
@@ -648,16 +648,6 @@ STRING 104
 // Units: H00E (Cell "First Form"), Awakentip (Tooltip - Awaken)
 {
 Choose Cell
-}
-
-STRING 105
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool1> seconds|r
 }
 
 STRING 106
@@ -4144,7 +4134,7 @@ Transformations:
 [lvl 150] 2.60x "fp" [Unlocks Serious Series]
 [lvl 250] 2.75x "fp" [Upgrades Serious Series]
 
-|cffff2020ONE PUNCH|r: 100% chance for 1.5x crit and 30% dodge
+|cffff2020ONE PUNCH|r: 100% chance for 1.4x crit and 30% dodge
 |cff00ff00Cardio|r: +15% Max Stamina and Regen
 }
 
@@ -5993,16 +5983,6 @@ Transformations:
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
 Gains Full Power 100% when less than 75% hp in Fourth Form. 
 Gains Mecha Form while dead (heaven/hell).
-}
-
-STRING 951
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur1> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool1> seconds|r
 }
 
 STRING 952
@@ -12419,16 +12399,6 @@ STRING 1984
 F
 }
 
-STRING 1985
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool2> seconds|r
-}
-
 STRING 1986
 // Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -12499,16 +12469,6 @@ STRING 1997
 // Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 1998
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool3> seconds|r
 }
 
 STRING 1999
@@ -25387,6 +25347,13 @@ Does not drop on death.
 Reduces max movement speed by 30 when under 30k Str.|r
 }
 
+STRING 4056
+// Items: I04X (Hit's Assassination Contract), Description (Description)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x1.5.|r
+}
+
 STRING 4057
 // Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
@@ -25409,16 +25376,6 @@ STRING 4060
 // Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
 {
 (broly)
-}
-
-STRING 4061
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool4> seconds|r
 }
 
 STRING 4062
@@ -45805,16 +45762,6 @@ STRING 7305
 W
 }
 
-STRING 7306
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur2> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool2> seconds|r
-}
-
 STRING 7307
 // Abilities: A0GI (Ultra Ego), Ubertip (Tooltip - Normal - Extended)
 {
@@ -46048,16 +45995,6 @@ STRING 7342
 // Abilities: A0L1 (Transform), Name (Name)
 {
 Transform
-}
-
-STRING 7343
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool5> seconds|r
 }
 
 STRING 7344
@@ -46884,15 +46821,6 @@ STRING 7473
 F
 }
 
-STRING 7474
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool1,.> seconds|r
-}
-
 STRING 7475
 // Abilities: A01T (Knife Slash), Name (Name)
 {
@@ -47014,15 +46942,6 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 
 |cff00ff00Damage: Int * lvl * ? + 1% Max HP|r
 |cff00ffffCooldown: <A00M,Cool8> seconds|r
-}
-
-STRING 7491
-// Abilities: A01T (Knife Slash), Researchubertip (Tooltip - Learn - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool1,.> - <A01T,Cool10,.> seconds|r
 }
 
 STRING 7492
@@ -49998,51 +49917,6 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00FFFFCooldown: <A11S,Cool6> seconds|r
 }
 
-STRING 7970
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool2,.> seconds|r
-}
-
-STRING 7971
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool3,.> seconds|r
-}
-
-STRING 7972
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool4,.> seconds|r
-}
-
-STRING 7973
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool5,.> seconds|r
-}
-
-STRING 7974
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool6,.> seconds|r
-}
-
 STRING 7975
 // Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
@@ -50050,33 +49924,6 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00FFFFCooldown: <A11S,Cool7> seconds|r
-}
-
-STRING 7976
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool7,.> seconds|r
-}
-
-STRING 7977
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool8,.> seconds|r
-}
-
-STRING 7978
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool9,.> seconds|r
 }
 
 STRING 7979
@@ -50398,15 +50245,6 @@ STRING 8029
 // Units: n046 (Ginyu Force / Frieza), Name (Name)
 {
 Ginyu Force / Frieza
-}
-
-STRING 8030
-// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy slashes nearby enemies. Deals 100% bonus damage to |cffff8800staggered|r enemies.
-
-|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
-|cff00ffffCooldown: <A01T,Cool10,.> seconds|r
 }
 
 STRING 8031
@@ -53914,30 +53752,6 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 |cffffff00Target a unit to enable beam tracking.|r
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0U1,Cool1> - <A0U1,Cool10> seconds|r
-}
-
-STRING 8545
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
-|cffffff00+0.20x Agi multiplier.
-+240ms and unlocks movement speed cap.|r
-|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
-}
-
-STRING 8546
-// Abilities: A0TC (One Winged Angel), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth absorbs mako from the lifestream of the planet, powering himself up to new heights, increasing his speed and power.
-|cffffff00+0.1x stat mult.
-+66ms and unlocks movement speed cap.
-+2% spell amp per second up to +20%.
-|cff00FF00Duration: <A0TC,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TC,Cool1> seconds|r
-
-Proudly bankrolled by |cff00ffffCestroq
-
-|cff808080"Veni, veni, venias, Gloriosa"|r.
 }
 
 STRING 8547
@@ -58060,15 +57874,6 @@ Janemba slices his opponent with a powerful Ki Slash wave infused with the power
 |cff00ffffCooldown: <A0NY,Cool2> seconds|r
 }
 
-STRING 9193
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
-{
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
-|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
-|cff00ff00Damage: Agi * Lvl * ? + 1.2% Max HP|r
-|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
-}
-
 STRING 9194
 // Abilities: A0OX (Tyrant Breaker), Ubertip (Tooltip - Normal - Extended)
 {
@@ -60077,6 +59882,80 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 |cff00ffffCooldown: <A08J,Cool1,.> seconds|r
 }
 
+STRING 9505
+// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x1.5.|r
+}
+
+STRING 9506
+// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.4% of base stats to a minimum of 4.
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
+|cff00FFFFCooldown: <A0KD,Cool1>s|r
+}
+
+STRING 9507
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. The longer Android 17 launches energy blasts the more powerful they become. Cancelling the channel of the ability will prematurely detonate all power blitzes still in motion.
+|cff2080ffMana Cost: 4k + 30% of Max Mana|r
+|cffff2020Channel Duration: <A0MW,Dur10> seconds|r
+|cff00FF00Damage: Int * lvl * ?
+Spell Amp: +15% per second (up to +50%)|r
+|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
+STRING 9508
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba rapidly slices his opponent with 4 powerful Ki Slash waves infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 5
+|cff00ff00Damage: Agi * Lvl * ? + 0.4% Max HP (each)|r
+|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
+}
+
+STRING 9509
+// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.6% of base stats to a minimum of 4.|r
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
+|cff00FFFFCooldown: <A0SM,Cool1>s|r
+}
+
+STRING 9511
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool1,.> seconds|r
+}
+
+STRING 9512
+// Abilities: A01T (Knife Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool1,.> - <A01T,Cool10,.> seconds|r
+}
+
+STRING 9513
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool2,.> seconds|r
+}
+
 STRING 9514
 // Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
@@ -60405,6 +60284,24 @@ STRING 9568
 // Upgrades: R008 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
 {
 ratt
+}
+
+STRING 9569
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool3,.> seconds|r
+}
+
+STRING 9570
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool4,.> seconds|r
 }
 
 STRING 9571
@@ -69984,6 +69881,15 @@ STRING 11107
 (vegeta standard ooz)
 }
 
+STRING 11108
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool5,.> seconds|r
+}
+
 STRING 11109
 // Units: H00S (Daughter of Hercule), Tip (Tooltip - Basic)
 {
@@ -74056,6 +73962,15 @@ Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit'
 |cffffcc00Damage|r - <A0G0,DataB1,.> times
 }
 
+STRING 11766
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool6,.> seconds|r
+}
+
 STRING 11767
 // Abilities: A0A1 (Dummy Abil 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -74920,6 +74835,15 @@ STRING 11907
 Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0X4,Cool4>s
 }
 
+STRING 11908
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool7,.> seconds|r
+}
+
 STRING 11909
 // Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -74933,16 +74857,6 @@ Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to 
 |cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
-STRING 11910
-// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
-{
-Jiren sits with his legs crossed and begins to peacefully meditate.
-|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
-Grants bonus stats equal to 0.5% of base stats to a minimum of 5.
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
-|cff00FFFFCooldown: <A0KD,Cool1>s|r
-}
-
 STRING 11911
 // Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
 {
@@ -74950,16 +74864,6 @@ Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP 
 |cffffff00Costs 2 Time Skip charges.
 |cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
 |cff00ffffCooldown: <A0GP,Cool1>s|r
-}
-
-STRING 11912
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool6> seconds|r
 }
 
 STRING 11913
@@ -79348,16 +79252,6 @@ STRING 12620
 10
 }
 
-STRING 12621
-// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
-{
-Jiren sits with his legs crossed and begins to peacefully meditate.
-|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
-Grants bonus stats equal to 0.5% of base stats to a minimum of 5.|r
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
-|cff00FFFFCooldown: <A0SM,Cool1>s|r
-}
-
 STRING 12622
 // Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
@@ -81145,6 +81039,44 @@ Spells cost an additional 15% of current mana (excluding Dark Eyes and Flight) (
 |cffffcc00Damage|r - <A0GG,DataB3,.> times
 }
 
+STRING 12890
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool8,.> seconds|r
+}
+
+STRING 12891
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool9,.> seconds|r
+}
+
+STRING 12892
+// Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100% bonus damage to |cffff8800staggered|r enemies if they were already staggered. 
+
+|cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
+|cff00ffffCooldown: <A01T,Cool10,.> seconds|r
+}
+
+STRING 12893
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool1> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
 STRING 12894
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
@@ -81371,6 +81303,17 @@ STRING 12929
 Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PM,Dur6> seconds |r|n|cff00FFFFCooldown: <A0PM,Cool6> seconds|r
 }
 
+STRING 12930
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool2> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
 STRING 12931
 // Abilities: A0PM (Justice Hold 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -81572,6 +81515,39 @@ STRING 12962
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 5|r]
+}
+
+STRING 12963
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool3> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 12964
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool4> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 12965
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool5> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
 }
 
 STRING 12966
@@ -82771,6 +82747,17 @@ STRING 13161
 Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool2> seconds|r
 }
 
+STRING 13162
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool6> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
 STRING 13163
 // Items: I040 (Dead Zone Fragment), Description (Description)
 {
@@ -83731,46 +83718,6 @@ STRING 13319
 [|cff00FF00F|r] Tail Whip - [|cffffcc00Level 9|r]
 }
 
-STRING 13320
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur3> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool3> seconds|r
-}
-
-STRING 13321
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur4> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool4> seconds|r
-}
-
-STRING 13322
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur5> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool5> seconds|r
-}
-
-STRING 13323
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur6> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool6> seconds|r
-}
-
 STRING 13324
 // Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
@@ -83832,10 +83779,115 @@ STRING 13333
 [|cff00ff00Q|r] Death Beam - [|cffffcc00Level 10|r]
 }
 
+STRING 13334
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool7> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 13335
+// Abilities: A0T7 (Octoslash), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool1> - <A0T7,Cool10> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 13336
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool8> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 13337
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool9> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
 STRING 13338
 // Abilities: A0PZ (Death Beam), EditorSuffix (Editor Suffix)
 {
 (frieza new)
+}
+
+STRING 13339
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull nearby enemies in and deflect incoming beams.
+
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool10> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 13341
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool1> seconds|r
+}
+
+STRING 13342
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool2> seconds|r
+}
+
+STRING 13343
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool3> seconds|r
+}
+
+STRING 13344
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool4> seconds|r
+}
+
+STRING 13345
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool5> seconds|r
 }
 
 STRING 13346
@@ -83922,10 +83974,60 @@ STRING 13359
 [|cff00ff00W|r] Death Cannon - [|cffffcc00Level 10|r]
 }
 
+STRING 13360
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool6> seconds|r
+}
+
+STRING 13361
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool7> seconds|r
+}
+
+STRING 13362
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool8> seconds|r
+}
+
+STRING 13363
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool9> seconds|r
+}
+
 STRING 13364
 // Abilities: A0Q0 (Death Cannon), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13365
+// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
+Upgrades to [|cff00ff00R|r] Berserk.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
+|cff00ffffCooldown: <A10B,Cool10> seconds|r
 }
 
 STRING 13366
@@ -84551,6 +84653,15 @@ STRING 13466
 [|cffffff00Q|r] Choose Syn Shenron
 }
 
+STRING 13467
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool1> seconds|r
+}
+
 STRING 13468
 // Abilities: A0Q4 (Death Storm), Tip (Tooltip - Normal)
 {
@@ -84725,6 +84836,52 @@ STRING 13496
 Frieza fires multiple death beams at a very rapid rate.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q6,Cool1> seconds|r
 }
 
+STRING 13497
+// Abilities: A10C (Berserk), Researchubertip (Tooltip - Learn - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+Prevents HP based speed loss
+|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
+|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
+}
+
+STRING 13498
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool2> seconds|r
+}
+
+STRING 13499
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool3> seconds|r
+}
+
+STRING 13500
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool4> seconds|r
+}
+
+STRING 13501
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool5> seconds|r
+}
+
 STRING 13502
 // Abilities: A0Q6 (Death Beam Barrage), Tip (Tooltip - Normal)
 {
@@ -84809,10 +84966,55 @@ STRING 13515
 [|cff00ff00R|r] Death Beam Barrage - [|cffffcc00Level 10|r]
 }
 
+STRING 13516
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool6> seconds|r
+}
+
+STRING 13517
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool7> seconds|r
+}
+
+STRING 13518
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool8> seconds|r
+}
+
+STRING 13519
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool9> seconds|r
+}
+
 STRING 13520
 // Abilities: A0Q6 (Death Beam Barrage), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13521
+// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
+{
+Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
+|cffffff00Adds +1 permanent base damage for each 2% of max HP that is missing (max +50)
+|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
+|cff00ffffCooldown: <A10C,Cool10> seconds|r
 }
 
 STRING 13522
@@ -85005,16 +85207,6 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cffffff00+3 Spirit Power.
 |cff00FF00Duration: 10s
 |cff00FFFFCooldown: <A0UU,Cool2,.>s|r
-}
-
-STRING 13553
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur7> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool7> seconds|r
 }
 
 STRING 13554
@@ -85867,6 +86059,71 @@ STRING 13678
 Frieza fires a stronger version of his iconic Finger Beam energy attack infused with the might of golden Frieza.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QD,Cool1> seconds|r
 }
 
+STRING 13679
+// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
+{
+A strong melee fighter with high auto-attack damage.
+
+|cffff2020One Punch|r: 100% Chance for 1.4x Crit and 30% evasion.
+|cff00ff00Cardio|r: +15% Max Stamina and Regen.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+|cff808080ONE PAAAAWNCH!|r
+}
+
+STRING 13680
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool1> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13681
+// Abilities: A0T2 (United States of Smash), Researchubertip (Tooltip - Learn - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool1> - <A0T2,Cool10> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13682
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool2> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13683
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool3> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
 STRING 13684
 // Abilities: A0QD (Golden Death Beam), Tip (Tooltip - Normal)
 {
@@ -85939,16 +86196,148 @@ STRING 13695
 [|cff00ff00Q|r] Golden Death Beam - [|cffffcc00Level 10|r]
 }
 
+STRING 13696
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool4> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13697
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool5> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13698
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool6> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13699
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool7> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
 STRING 13700
 // Abilities: A0QD (Golden Death Beam), EditorSuffix (Editor Suffix)
 {
 (frieza golden)
 }
 
+STRING 13701
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool8> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
 STRING 13702
 // Abilities: A0QE (Golden Death Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
 Frieza fires an immensely powerful golden energy wave at the target.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QE,Cool1> seconds|r
+}
+
+STRING 13703
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool9> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13704
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage Block: Str * Lvl * 0.6 @ 80%
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool10> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 13705
+// Abilities: A0TC (One Winged Angel), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth absorbs mako from the lifestream of the planet, powering himself up to new heights, increasing his speed and power. While transforming, Sephiroth is invulnerable to all damage.
+|cffffff00+0.1x stat mult.
++165ms and unlocks movement speed cap.
++5% spell amp per second up to +20%.
+|cff00FF00Duration: <A0TC,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TC,Cool1> seconds|r
+
+Proudly bankrolled by |cff00ffffCestroq
+
+|cff808080"Veni, veni, venias, Gloriosa"|r.
+}
+
+STRING 13706
+// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama's face becomes more serious. 
+Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
+Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
+|cffffff00+0.1x stat mult.
+Reduces base attack time to 1.6.
+Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 1.6x crit.
++33ms and unlocks movement speed cap.|r
+|cff00FF00Duration: <A02J,Dur1> seconds|r
+|cff00FFFFCooldown: <A02J,Cool1> seconds|r
+
+|cff808080Note: Saitama does not actually consider these moves to be something special.|r
+}
+
+STRING 13707
+// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama's face becomes more serious. 
+Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
+Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
+|cffffff00+0.2x stat mult.
+Reduces base attack time to 1.4.
+Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 1.8x crit.
+Gains true strike.
++33ms and unlocks movement speed cap.|r
+|cff00FF00Duration: <A02J,Dur2> seconds|r
+|cff00FFFFCooldown: <A02J,Cool2> seconds|r
+
+|cff808080Note: Saitama does not actually consider these moves to be something special.|r
 }
 
 STRING 13708
@@ -86035,10 +86424,59 @@ STRING 13721
 [|cff00ff00W|r] Golden Death Cannon - [|cffffcc00Level 10|r]
 }
 
+STRING 13722
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
+|cffffff00+0.20x Agi multiplier.
++300ms and unlocks movement speed cap.|r
+|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
+}
+
+STRING 13723
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur1> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool1> seconds|r
+}
+
+STRING 13724
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur2> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool2> seconds|r
+}
+
+STRING 13725
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur3> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool3> seconds|r
+}
+
 STRING 13726
 // Abilities: A0QE (Golden Death Cannon), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13727
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur4> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool4> seconds|r
 }
 
 STRING 13728
@@ -86570,6 +87008,16 @@ Yamcha's abilities generate +1% of max mana.
 |cff00ffffCooldown: <A0RO,Cool1> seconds|r
 }
 
+STRING 13814
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur5> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool5> seconds|r
+}
+
 STRING 13815
 // Abilities: A0IH (Capsule: Dr Wheelo's Research), Name (Name)
 {
@@ -86921,6 +87369,74 @@ STRING 13867
 (omega shenron)
 }
 
+STRING 13868
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur6> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool6> seconds|r
+}
+
+STRING 13869
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur7> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool7> seconds|r
+}
+
+STRING 13870
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur8> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool8> seconds|r
+}
+
+STRING 13871
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur9> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool9> seconds|r
+}
+
+STRING 13872
+// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
+|cff2080ffMana Cost: Lvl * 2.2% Max Mana per second
+|cffff2020Channel Duration: <A0GU,Dur10> seconds|r
+|cff00ff00Damage: Int x Lvl x ?|r
+|cff00ffffCooldown: <A0GU,Cool10> seconds|r
+}
+
+STRING 13873
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool2> seconds|r
+}
+
+STRING 13874
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool4> seconds|r
+}
+
 STRING 13875
 // Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
 {
@@ -87003,6 +87519,33 @@ STRING 13888
 // Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 13889
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool5> seconds|r
+}
+
+STRING 13890
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool6> seconds|r
+}
+
+STRING 13891
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool7> seconds|r
 }
 
 STRING 13892
@@ -87577,6 +88120,51 @@ STRING 13984
 // Abilities: A0R4 (Justice Cannon 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Dyspo dashes next to his opponent before firing a point-blank energy wave for maximum damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QX,Cool1> seconds|r
+}
+
+STRING 13985
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool8> seconds|r
+}
+
+STRING 13986
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool9> seconds|r
+}
+
+STRING 13987
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool10> seconds|r
+}
+
+STRING 13988
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool1> seconds|r
+}
+
+STRING 13989
+// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
+|cff2080ffMana Cost: +20% Max Mana
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0H1,Cool3> seconds|r
 }
 
 STRING 13990
@@ -88772,40 +89360,10 @@ STRING 14190
 [|cff00ff00Q|r] Learn Light Bullet - [|cffffcc00Level %d|r]
 }
 
-STRING 14191
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur8> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool8> seconds|r
-}
-
 STRING 14192
 // Abilities: A0R3 (Justice Kick 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Kick 2 - [|cffffcc00Level 7|r]
-}
-
-STRING 14193
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur9> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool9> seconds|r
-}
-
-STRING 14194
-// Abilities: A0GU (Hell Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 removes his left hand and then fires thousands of bullets at his opponent, inflicting a massive amount of damage.
-|cff2080ffMana Cost: Lvl * 2.4% Max Mana per second
-|cffff2020Channel Duration: <A0GU,Dur10> seconds|r
-|cff00ff00Damage: Int x Lvl x ?|r
-|cff00ffffCooldown: <A0GU,Cool10> seconds|r
 }
 
 STRING 14195
@@ -90193,23 +90751,6 @@ STRING 14421
 // Items: I04X (Hit's Assassination Contract), Name (Name)
 {
 Hit's Assassination Contract
-}
-
-STRING 14422
-// Units: H04Y (One Punch Man), Ubertip (Tooltip - Extended)
-{
-A strong melee fighter with high auto-attack damage.
-
-|cffff2020One Punch|r: 100% Chance for 1.5x Crit and 30% evasion.
-|cff00ff00Cardio|r: +15% Max Stamina and Regen.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-|cff808080ONE PAAAAWNCH!|r
 }
 
 STRING 14423
@@ -99319,16 +99860,6 @@ STRING 15779
 [|cffffff00E|r] Choose Jaco
 }
 
-STRING 15780
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool7> seconds|r
-}
-
 STRING 15781
 // Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
 {
@@ -99499,16 +100030,6 @@ STRING 15808
 [|cff00ff00Q|r] Learn Octoslash - [|cffffcc00Level %d|r]
 }
 
-STRING 15809
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool8> seconds|r
-}
-
 STRING 15810
 // Abilities: A0T7 (Octoslash), EditorSuffix (Editor Suffix)
 {
@@ -99531,35 +100052,6 @@ STRING 15813
 // Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Octoslash - [|cffffcc00Level 10|r]
-}
-
-STRING 15814
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool9> seconds|r
-}
-
-STRING 15815
-// Abilities: A10B (Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 80% of the HP that was restored over the following 10s.
-Upgrades to [|cff00ff00R|r] Berserk.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 8% +0.8% per lvl
-|cff00ffffCooldown: <A10B,Cool10> seconds|r
-}
-
-STRING 15816
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool1> seconds|r
 }
 
 STRING 15817
@@ -100202,61 +100694,6 @@ STRING 15915
 [|cff00ff00R|r] Black Materia - [|cffffcc00Level 10|r]
 }
 
-STRING 15916
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur1,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool1> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15917
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur2,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool2> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15918
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur3,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool3> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15919
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur4,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool4> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15920
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur5,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool5> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
 STRING 15921
 // Abilities: A0JB (Capsule: Dead Zone Fragment), Name (Name)
 {
@@ -100267,17 +100704,6 @@ STRING 15922
 // Abilities: A0TC (One Winged Angel), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] One Winged Angel
-}
-
-STRING 15923
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur6,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool6> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
 }
 
 STRING 15924
@@ -100304,17 +100730,6 @@ STRING 15927
 [|cff00ff00F|r] Parry - [|cffffcc00Level 1|r]
 }
 
-STRING 15928
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur7,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool7> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
 STRING 15929
 // Abilities: A0TD (Parry), Name (Name)
 {
@@ -100331,17 +100746,6 @@ STRING 15931
 // Abilities: A0TD (Parry), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Parry - [|cffffcc00Level %d|r]
-}
-
-STRING 15932
-// Abilities: A0T7 (Octoslash), Researchubertip (Tooltip - Learn - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur1,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool1> - <A0T7,Cool10> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
 }
 
 STRING 15933
@@ -100374,39 +100778,6 @@ STRING 15937
 [|cff00ff00F|r] Parry - [|cffffcc00Level 6|r]
 }
 
-STRING 15938
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur8,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool8> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15939
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur9,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool9> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
-STRING 15940
-// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth delivers a swift sequence of sword slashes.
-|cffff2020Channel Duration: <A0T7,Dur10,.> seconds|r
-|cff00FF00Damage: Agi * lvl * ?
-|cff00FFFFCooldown: <A0T7,Cool10> seconds|r
-
-|cff808080"Traitor... you will pay!"|r
-}
-
 STRING 15941
 // Abilities: A0TF (Book Sephiroth Crit), Name (Name)
 {
@@ -100435,15 +100806,6 @@ STRING 15945
 // Abilities: A0FT (Time Skip), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Time Skip - [|cffffcc00Level %d|r]
-}
-
-STRING 15946
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool2> seconds|r
 }
 
 STRING 15947
@@ -100799,15 +101161,6 @@ Sephiroth holds a defensive stance, preparing himself for any threat that approa
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00ff00Damage Block: 75% up to Agi * Lvl * 3
 |cff00FFFFCooldown: <A0TD,Cool10> seconds|r
-}
-
-STRING 15988
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool3> seconds|r
 }
 
 STRING 15989
@@ -110783,51 +111136,6 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cff00FFFFCooldown: <A0UU,Cool5,.>s|r
 }
 
-STRING 17407
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool4> seconds|r
-}
-
-STRING 17408
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool5> seconds|r
-}
-
-STRING 17409
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool6> seconds|r
-}
-
-STRING 17410
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool7> seconds|r
-}
-
-STRING 17411
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool8> seconds|r
-}
-
 STRING 17412
 // Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
 {
@@ -111143,24 +111451,6 @@ Janemba turns invisible and creates a clone of himself that can attack nearby en
 |cff00ff00Damage: Agi * Lvl * ?
 Duration: <A0EU,Dur10>
 |cff00FFFFCooldown: <A0EU,Cool10> seconds|r
-}
-
-STRING 17446
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool9> seconds|r
-}
-
-STRING 17447
-// Abilities: A10C (Berserk), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. After 10s Guts takes 70% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-|cff00ff00Temporary Heal: Max HP 12% +1.2% per lvl
-|cff00ffffCooldown: <A10C,Cool10> seconds|r
 }
 
 STRING 17448
@@ -121723,127 +122013,6 @@ STRING 19095
 (Tavern)
 }
 
-STRING 19096
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool1> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19097
-// Abilities: A0T2 (United States of Smash), Researchubertip (Tooltip - Learn - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool1> - <A0T2,Cool10> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19098
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool2> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19099
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool3> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19100
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool4> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19101
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool5> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19102
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool6> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19103
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool7> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19104
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool8> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19105
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool9> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
-STRING 19106
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
-
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool10> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
-}
-
 STRING 19107
 // Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
 {
@@ -122990,96 +123159,6 @@ Schala calls down lightning from the sky that bombards the target area.
 |cff00ffffCooldown: <A0YF,Cool3> seconds|r
 }
 
-STRING 19293
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool1> seconds|r
-}
-
-STRING 19294
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool2> seconds|r
-}
-
-STRING 19295
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool3> seconds|r
-}
-
-STRING 19296
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool4> seconds|r
-}
-
-STRING 19297
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool5> seconds|r
-}
-
-STRING 19298
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool6> seconds|r
-}
-
-STRING 19299
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool7> seconds|r
-}
-
-STRING 19300
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool8> seconds|r
-}
-
-STRING 19301
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool9> seconds|r
-}
-
-STRING 19302
-// Abilities: A0H1 (Shocking Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Super 17 places his hands forward and forms a sphere of deep black energy. It is fired at the target location and creates a very large explosion.
-|cff2080ffMana Cost: +30% Max Mana
-|cff00FF00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0H1,Cool10> seconds|r
-}
-
 STRING 19303
 // Abilities: A0YF (Skygate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124126,20 +124205,6 @@ STRING 19457
 // Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 3|r]
-}
-
-STRING 19459
-// Items: I04X (Hit's Assassination Contract), Description (Description)
-{
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by x2.|r
-}
-
-STRING 19460
-// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
-{
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by x2.|r
 }
 
 STRING 19461
@@ -132520,16 +132585,6 @@ STRING 20810
 [|cff00FF00R|r] Learn Berserk - [|cffffcc00Level %d|r]
 }
 
-STRING 20811
-// Abilities: A10C (Berserk), Researchubertip (Tooltip - Learn - Extended)
-{
-Guts' determination prevents him from dying and gives him the will to continue fighting and becoming stronger. The temporary heal wears off after 10s and Guts takes 90% of the HP that was restored over the following 10s.
-|cffffff00Adds +1 permanent base damage for each 1% of max HP that is missing (max +50)
-Prevents HP based speed loss
-|cff00ff00Temporary Heal: Max HP 15% +1.5% per lvl
-|cff00ffffCooldown: <A10B,Cool1> - <A10B,Cool10> seconds|r
-}
-
 STRING 20812
 // Abilities: A10C (Berserk), EditorSuffix (Editor Suffix)
 {
@@ -139558,39 +139613,6 @@ Saitama's normal punch has the power to instantly kill even the strongest of ene
 |cff808080"Today was the special sale day!"|r
 }
 
-STRING 21911
-// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama's face becomes more serious. 
-Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
-Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
-|cffffff00+0.1x stat mult.
-Reduces base attack time to 1.6.
-Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 1.75x crit.
-+33ms and unlocks movement speed cap.|r
-|cff00FF00Duration: <A02J,Dur1> seconds|r
-|cff00FFFFCooldown: <A02J,Cool1> seconds|r
-
-|cff808080Note: Saitama does not actually consider these moves to be something special.|r
-}
-
-STRING 21912
-// Abilities: A02J (Serious Series), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama's face becomes more serious. 
-Unlocks [|cff00ff00D|r] |cffff2020Serious Punch|r
-Unlocks [|cff00ff00F|r] |cffff2020Serious Sideways Jumps|r
-|cffffff00+0.2x stat mult.
-Reduces base attack time to 1.4.
-Upgrades |cffff2020ONE PUNCH|r|cffffff00 to deal 2.0x crit.
-Gains true strike.
-+33ms and unlocks movement speed cap.|r
-|cff00FF00Duration: <A02J,Dur2> seconds|r
-|cff00FFFFCooldown: <A02J,Cool2> seconds|r
-
-|cff808080Note: Saitama does not actually consider these moves to be something special.|r
-}
-
 STRING 21913
 // Abilities: A0YX (Super Fireball), Ubertip (Tooltip - Normal - Extended)
 {
@@ -141691,17 +141713,6 @@ STRING 22169
 // Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
-}
-
-STRING 22170
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. The longer Android 17 launches energy blasts the more powerful they become. Cancelling the channel of the ability will prematurely detonate all power blitzes still in motion.
-|cff2080ffMana Cost: 7k + 30% of Max Mana|r
-|cffff2020Channel Duration: <A0MW,Dur10> seconds|r
-|cff00FF00Damage: Int * lvl * ?
-Spell Amp: +15% per second (up to +50%)|r
-|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
 }
 
 STRING 22171
