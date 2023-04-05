@@ -12344,7 +12344,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 333,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
