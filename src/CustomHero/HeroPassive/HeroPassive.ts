@@ -2116,7 +2116,7 @@ function doGutsRage(
   timerKey: number,
 ) {
   const percentHp = GetUnitLifePercent(customHero.unit);
-  let bonusDmg = Math.min(50, Math.max(1, 100 - percentHp));
+  let bonusDmg = Math.min(50, 0.5 * Math.max(1, 100 - percentHp));
   if (bonusDmg > 0) {
     BlzSetUnitBaseDamage(customHero.unit, R2I(BlzGetUnitBaseDamage(customHero.unit, 0) + bonusDmg), 0);
   }

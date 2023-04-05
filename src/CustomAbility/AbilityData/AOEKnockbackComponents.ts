@@ -1621,4 +1621,22 @@ export const AOEKnockbackComponents = [
     onlyHeroes: true,
     isPersistent: true,
   },
+  // sephiroth octoslash
+  {
+    name: "knockback sephiroth octoslash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 180, 
+      aoe: 475,
+    },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+  },
 ];

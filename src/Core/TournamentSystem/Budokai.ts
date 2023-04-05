@@ -281,7 +281,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 this.giveTrophy(rewardedUnit);
               }
             }
-            
+
             // check if contestant has any other units in arena
             // if so chuck em to the pos of first unit contestant
             for (const unitContestant of contestant.units.values()) {
@@ -292,7 +292,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 const uPlayerId = GetPlayerId(GetOwningPlayer(unit));
                 if (
                   uPlayerId == contestant.id 
-                  && !IsUnitAliveBJ(unit)
+                  && UnitHelper.isUnitAlive
                   // && !contestant.hasUnit(unit)
                 ) {
                   SetUnitX(unit, unitContestant.oldPosition.x);

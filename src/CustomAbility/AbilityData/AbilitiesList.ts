@@ -4460,6 +4460,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point united states of smash" },
+      { name: "block united sattes of smash" },
       { name: "damage united states of smash dps" },
       { name: "damage united states of smash explosion inner" },
       { name: "damage united states of smash explosion outer" },
@@ -8737,6 +8738,7 @@ export const AbilitiesList = [
     components: [
       { name: "damage leon knife slash" },
       { name: "damage leon knife slash bonus" },
+      { name: "debuff slow leon knife slash" },
       { name: "dash ground forward 2dist" },
       { name: "sfx videl kick" },
     ],
@@ -12198,7 +12200,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 80,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -12215,7 +12217,7 @@ export const AbilitiesList = [
         AbilityNames.Sephiroth.OCTOSLASH,
     },
     components: [
-      { name: "channel caster default" },
+      { name: "dash ground point 10dist" },
       { name: "multi octoslash" },
     ],
   },
@@ -12342,7 +12344,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 825,
+    duration: 333,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -12359,7 +12361,7 @@ export const AbilitiesList = [
         AbilityNames.Sephiroth.ONE_WINGED_ANGEL
     },
     components: [
-      { name: "dash ground forward one winged angel" },
+      { name: "dash ground forward 5dist" },
       { name: "spell amp one winged angel" },
       { name: "sfx one winged angel" },
     ],

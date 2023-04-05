@@ -9046,6 +9046,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "timed life 99" },
       { name: "damage fervent blow dps" },
       { name: "debuff fervent wound" },
       { name: "knockback kame" },

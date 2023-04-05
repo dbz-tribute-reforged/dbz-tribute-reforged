@@ -187,7 +187,7 @@ export const SpellAmpComponents = [
     startTick: 0,
     endTick: -1,
     bonus: 0.2,
-    rate: 0.00066,
+    rate: 0.0015,
   },
   // --------------------------------------------
   { 
