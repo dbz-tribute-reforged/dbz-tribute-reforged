@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.80c
+DBZ Tribute |cffffcc00Reforged 0.80d
 }
 
 STRING 4
@@ -648,6 +648,15 @@ STRING 104
 // Units: H00E (Cell "First Form"), Awakentip (Tooltip - Awaken)
 {
 Choose Cell
+}
+
+STRING 105
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool2,.> seconds|r
 }
 
 STRING 106
@@ -5983,6 +5992,15 @@ Transformations:
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
 Gains Full Power 100% when less than 75% hp in Fourth Form. 
 Gains Mecha Form while dead (heaven/hell).
+}
+
+STRING 951
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool3,.> seconds|r
 }
 
 STRING 952
@@ -12399,6 +12417,15 @@ STRING 1984
 F
 }
 
+STRING 1985
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool4,.> seconds|r
+}
+
 STRING 1986
 // Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -12469,6 +12496,15 @@ STRING 1997
 // Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
+}
+
+STRING 1998
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool5,.> seconds|r
 }
 
 STRING 1999
@@ -25376,6 +25412,15 @@ STRING 4060
 // Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
 {
 (broly)
+}
+
+STRING 4061
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool6,.> seconds|r
 }
 
 STRING 4062
@@ -45762,6 +45807,15 @@ STRING 7305
 W
 }
 
+STRING 7306
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool7,.> seconds|r
+}
+
 STRING 7307
 // Abilities: A0GI (Ultra Ego), Ubertip (Tooltip - Normal - Extended)
 {
@@ -45995,6 +46049,15 @@ STRING 7342
 // Abilities: A0L1 (Transform), Name (Name)
 {
 Transform
+}
+
+STRING 7343
+// Abilities: A0TT (Tri Beam Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool1,.> - <A0TT,Cool10,.> seconds|r
 }
 
 STRING 7344
@@ -46821,6 +46884,15 @@ STRING 7473
 F
 }
 
+STRING 7474
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool8,.> seconds|r
+}
+
 STRING 7475
 // Abilities: A01T (Knife Slash), Name (Name)
 {
@@ -46942,6 +47014,15 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 
 |cff00ff00Damage: Int * lvl * ? + 1% Max HP|r
 |cff00ffffCooldown: <A00M,Cool8> seconds|r
+}
+
+STRING 7491
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool9,.> seconds|r
 }
 
 STRING 7492
@@ -49915,6 +49996,24 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00FFFFCooldown: <A11S,Cool6> seconds|r
+}
+
+STRING 7970
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool10,.> seconds|r
+}
+
+STRING 7971
+// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
+|cffFF0000Cost: 8% Max HP|r
+|cff00ff00Damage: Int * Lvl * ? + 14% Enemy Max HP
+|cff00ffffCooldown: <A0TT,Cool1,.> seconds|r
 }
 
 STRING 7975
@@ -138682,105 +138781,6 @@ STRING 21802
 Mario throws a fireball to burn his enemies.
 |cff00ff00Damage: Int * lvl * ? + 2.5% Max HP|r
 |cff00ffffCooldown: <A0TP,Cool2> seconds|r
-}
-
-STRING 21803
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool2,.> seconds|r
-}
-
-STRING 21804
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool3,.> seconds|r
-}
-
-STRING 21805
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool4,.> seconds|r
-}
-
-STRING 21806
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool5,.> seconds|r
-}
-
-STRING 21807
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool6,.> seconds|r
-}
-
-STRING 21808
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool7,.> seconds|r
-}
-
-STRING 21809
-// Abilities: A0TT (Tri Beam Charge), Researchubertip (Tooltip - Learn - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool1,.> - <A0TT,Cool10,.> seconds|r
-}
-
-STRING 21810
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool8,.> seconds|r
-}
-
-STRING 21811
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool9,.> seconds|r
-}
-
-STRING 21812
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool10,.> seconds|r
-}
-
-STRING 21813
-// Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Tien unites his hands at the tips of the fingers and aims a devastatingly powerful energy blast at the enemy behind his hands. Launch the charged beam by using [|cff00ff00W|r] Tri Beam Fire.
-|cffFF0000Cost: 8% Max HP|r
-|cff00ff00Damage: Int * Lvl * ? + 16% Enemy Max HP
-|cff00ffffCooldown: <A0TT,Cool1,.> seconds|r
 }
 
 STRING 21814
