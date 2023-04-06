@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.80d
+DBZ Tribute |cffffcc00Reforged 0.81
 }
 
 STRING 4
@@ -4838,15 +4838,6 @@ STRING 775
 // Abilities: A00M (Pistol), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Pistol - [|cffffcc00Level 8|r]
-}
-
-STRING 776
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
-{
-Have Shenron increase your hero's power. 
-|cffffff00Before 20 mins: +100 base stats / +10 lvls
-After 20 mins: +200 base stats / +20 lvls
-After 30 mins: +300 base stats / +30 lvls
 }
 
 STRING 777
@@ -14177,7 +14168,7 @@ STRING 2265
 }
 
 STRING 2266
-// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
+// Units: H00L (|cffff3333Arch-Wizard|r), Hotkey (Hotkey)
 {
 E
 }
@@ -15135,7 +15126,7 @@ STRING 2421
 }
 
 STRING 2422
-// Items: I04T (|cffffcc00Wish for Resurrection|r), Hotkey (Hotkey)
+// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
 {
 E
 }
@@ -15161,7 +15152,7 @@ A sphere thrown from Broly's hand causing wide area damage.
 }
 
 STRING 2426
-// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
+// Items: I04T (|cffffcc00Wish for Resurrection|r), Hotkey (Hotkey)
 {
 E
 }
@@ -15487,7 +15478,7 @@ STRING 2478
 }
 
 STRING 2479
-// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15505,7 +15496,7 @@ STRING 2481
 }
 
 STRING 2482
-// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15523,7 +15514,7 @@ STRING 2484
 }
 
 STRING 2485
-// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15551,7 +15542,7 @@ Saitama leaps from one point to another, dealing damage upon landing.
 }
 
 STRING 2489
-// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16114,7 +16105,7 @@ STRING 2575
 }
 
 STRING 2576
-// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16150,7 +16141,7 @@ Marle channels a powerful healing spell that rapidly regenerates herself and nea
 }
 
 STRING 2580
-// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16625,7 +16616,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2656
-// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16647,7 +16638,7 @@ You need to absorb android 17!
 }
 
 STRING 2660
-// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17837,7 +17828,7 @@ STRING 2850
 }
 
 STRING 2851
-// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -17861,7 +17852,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 2855
-// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19627,7 +19618,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19654,7 +19645,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 3145
-// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19803,7 +19794,7 @@ Upgraded Gold Assimilation
 }
 
 STRING 3168
-// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
+// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20175,7 +20166,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 3230
-// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20537,7 +20528,7 @@ STRING 3280
 }
 
 STRING 3281
-// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20573,7 +20564,7 @@ Geti Star Influence
 }
 
 STRING 3287
-// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20603,7 +20594,7 @@ Tsufuru Mcffffcc00e|rdic Training
 }
 
 STRING 3292
-// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20627,7 +20618,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3296
-// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20669,7 +20660,7 @@ STRING 3302
 }
 
 STRING 3303
-// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20693,7 +20684,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 3307
-// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20915,7 +20906,7 @@ Tsufuru Elite Guacffffcc00r|rd Training
 }
 
 STRING 3344
-// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -21351,7 +21342,7 @@ Tsufuru Sciencffffcc00t|rist Training
 }
 
 STRING 3414
-// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
+// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21813,25 +21804,25 @@ Gain +20 gold per creep kill. +20% gold per Player or Saga kill.
 }
 
 STRING 3491
-// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3492
-// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3493
-// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3494
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21855,7 +21846,7 @@ STRING 3497
 }
 
 STRING 3498
-// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21945,85 +21936,85 @@ Armor Plating
 }
 
 STRING 3513
-// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
+// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3514
-// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3515
-// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
+// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3516
-// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
+// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3517
-// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3518
-// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3519
-// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3520
-// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3521
-// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3522
-// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3523
-// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3524
-// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3525
-// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3526
-// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -23093,7 +23084,7 @@ STRING 3699
 }
 
 STRING 3700
-// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -23117,7 +23108,7 @@ Used to turn people into candy. |n[|cffffcc00History|r] - |cff0066CCThis is Buu'
 }
 
 STRING 3704
-// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
+// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24966,7 +24957,7 @@ Gigantic Omegastorm
 }
 
 STRING 4003
-// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24990,7 +24981,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 4007
-// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26229,7 +26220,7 @@ STRING 4192
 }
 
 STRING 4193
-// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26253,7 +26244,7 @@ Dende heals nearby heroes for 0.33% of their total HP per second and heals himse
 }
 
 STRING 4197
-// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26625,7 +26616,7 @@ Finger Blit|cffffcc00z|r Barrage
 }
 
 STRING 4259
-// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26649,7 +26640,7 @@ Dende, as Earth's Guardian, has the ability to revive a dead player.|n|cff66ccee
 }
 
 STRING 4263
-// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27442,7 +27433,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 4388
-// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27832,7 +27823,7 @@ STRING 4452
 }
 
 STRING 4453
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27861,7 +27852,7 @@ Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4457
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28303,7 +28294,7 @@ STRING 4520
 }
 
 STRING 4521
-// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28327,7 +28318,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 4525
-// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -29198,7 +29189,7 @@ STRING 4668
 }
 
 STRING 4669
-// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -29223,7 +29214,7 @@ Turles forms a ring of energy between his palms and throws it at the target loca
 }
 
 STRING 4673
-// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -29760,7 +29751,7 @@ STRING 4760
 }
 
 STRING 4761
-// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
+// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30834,7 +30825,7 @@ STRING 4937
 }
 
 STRING 4938
-// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30858,7 +30849,7 @@ Android 18 stuns the target with a quick knee to the torso.|n|cff00FF00Duration:
 }
 
 STRING 4942
-// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31063,7 +31054,7 @@ STRING 4975
 }
 
 STRING 4976
-// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31088,7 +31079,7 @@ Android 17 uses his inhuman agility and strength to throw his opponent around li
 }
 
 STRING 4980
-// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32162,7 +32153,7 @@ STRING 5158
 }
 
 STRING 5159
-// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32186,7 +32177,7 @@ Bebi detonates the targeted minion, causing damage in an area.. |n|cff00ff00(Dam
 }
 
 STRING 5163
-// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32359,7 +32350,7 @@ STRING 5191
 }
 
 STRING 5192
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32385,7 +32376,7 @@ STRING 5195
 }
 
 STRING 5196
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32955,7 +32946,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5291
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34478,7 +34469,7 @@ STRING 5539
 }
 
 STRING 5540
-// Abilities: A0FV (Flash Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34503,7 +34494,7 @@ Increases the stats of Metal Cooler clones by +2%.
 }
 
 STRING 5543
-// Abilities: A0FV (Flash Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34968,7 +34959,7 @@ STRING 5615
 }
 
 STRING 5616
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34986,7 +34977,7 @@ STRING 5618
 }
 
 STRING 5619
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35211,13 +35202,13 @@ Upgraded Cloning
 }
 
 STRING 5656
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5657
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35379,13 +35370,13 @@ Slappy Hand
 }
 
 STRING 5684
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5685
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35749,7 +35740,7 @@ Moves your revive point to the upper-left area of the map.|n|cffFF0000Warning: n
 }
 
 STRING 5729
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35797,7 +35788,7 @@ Moves your revive point to the wooded area in the south of the map.
 }
 
 STRING 5737
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36203,7 +36194,7 @@ STRING 5800
 }
 
 STRING 5801
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36227,7 +36218,7 @@ STRING 5804
 }
 
 STRING 5805
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36605,13 +36596,13 @@ Augment: Cooldown Reduction
 }
 
 STRING 5866
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5867
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36935,7 +36926,7 @@ STRING 5920
 }
 
 STRING 5921
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37049,7 +37040,7 @@ STRING 5939
 }
 
 STRING 5940
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37163,7 +37154,7 @@ STRING 5958
 }
 
 STRING 5959
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37187,7 +37178,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5963
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37277,7 +37268,7 @@ STRING 5977
 }
 
 STRING 5978
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37391,7 +37382,7 @@ STRING 5996
 }
 
 STRING 5997
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37505,7 +37496,7 @@ STRING 6015
 }
 
 STRING 6016
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37619,7 +37610,7 @@ STRING 6034
 }
 
 STRING 6035
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37733,7 +37724,7 @@ STRING 6053
 }
 
 STRING 6054
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37847,7 +37838,7 @@ STRING 6072
 }
 
 STRING 6073
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37961,7 +37952,7 @@ STRING 6091
 }
 
 STRING 6092
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -38473,7 +38464,7 @@ STRING 6176
 }
 
 STRING 6177
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -38491,7 +38482,7 @@ STRING 6179
 }
 
 STRING 6180
-// Abilities: A0JB (Capsule: Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38629,7 +38620,7 @@ STRING 6202
 }
 
 STRING 6203
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Capsule: Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -39422,7 +39413,7 @@ Removes 90 armor from nearby enemies.
 }
 
 STRING 6333
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -39931,7 +39922,7 @@ STRING 6401
 }
 
 STRING 6402
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40048,7 +40039,7 @@ STRING 6420
 }
 
 STRING 6421
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40164,7 +40155,7 @@ STRING 6439
 }
 
 STRING 6440
-// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40188,7 +40179,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6444
-// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40283,7 +40274,7 @@ STRING 6458
 }
 
 STRING 6459
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40402,7 +40393,7 @@ STRING 6477
 }
 
 STRING 6478
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40516,7 +40507,7 @@ STRING 6496
 }
 
 STRING 6497
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40666,7 +40657,7 @@ STRING 6521
 }
 
 STRING 6522
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41441,7 +41432,7 @@ STRING 6645
 }
 
 STRING 6646
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41453,7 +41444,7 @@ STRING 6647
 }
 
 STRING 6648
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42583,7 +42574,7 @@ Removes 150 armor from nearby enemies.
 }
 
 STRING 6821
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42781,7 +42772,7 @@ STRING 6853
 }
 
 STRING 6854
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42805,7 +42796,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 6858
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43259,7 +43250,7 @@ W
 }
 
 STRING 6930
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43295,7 +43286,7 @@ F
 }
 
 STRING 6936
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43833,7 +43824,7 @@ W
 }
 
 STRING 7020
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43872,7 +43863,7 @@ STRING 7025
 }
 
 STRING 7026
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43899,7 +43890,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 7029
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44065,13 +44056,13 @@ Janemba slices his opponent with a powerful Ki Slash wave infused with the power
 }
 
 STRING 7053
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7054
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44491,13 +44482,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44581,7 +44572,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44611,7 +44602,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7134
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45021,7 +45012,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 7192
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45164,7 +45155,7 @@ STRING 7209
 }
 
 STRING 7210
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45436,7 +45427,7 @@ Yamcha
 }
 
 STRING 7248
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45702,7 +45693,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45726,7 +45717,7 @@ STRING 7292
 }
 
 STRING 7293
-// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46323,7 +46314,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46337,7 +46328,7 @@ After a short delay, Hirudegarn slams the ground with his foot, stunning nearby 
 }
 
 STRING 7386
-// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46349,7 +46340,7 @@ STRING 7387
 }
 
 STRING 7388
-// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46422,7 +46413,7 @@ Hakai
 }
 
 STRING 7400
-// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46492,7 +46483,7 @@ STRING 7410
 }
 
 STRING 7411
-// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48769,13 +48760,13 @@ STRING 7769
 }
 
 STRING 7770
-// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49057,7 +49048,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49075,7 +49066,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49547,7 +49538,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49565,7 +49556,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50016,6 +50007,30 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 |cff00ffffCooldown: <A0TT,Cool1,.> seconds|r
 }
 
+STRING 7972
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp" [unlocks Explosion 2]
+[lvl 85]  2.00x "fp" [unlocks Explosion 3]
+[lvl 125] 2.25x "fp" [unlocks Explosion 4]
+[lvl 150] 2.50x "fp" [unlocks Explosion 5]
+
+|cffff2222Explosion:|r Spells deal +25% Max HP damage.
+}
+
+STRING 7973
+{
+[|cffffcc00Unlock|r] |cffFF2222Exploooooosion!!!|r
+Megumin has developed an even more powerful |cffff2222Exploooooosion!!!|r
+}
+
+STRING 7974
+{
+[|cffffcc00Unlock|r] |cffFF2222Nice Explosion!|r
+Megumin has developed a new powerful explosion: |cffff2222Nice Explosion!|r
+}
+
 STRING 7975
 // Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
 {
@@ -50023,6 +50038,18 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00FFFFCooldown: <A11S,Cool7> seconds|r
+}
+
+STRING 7976
+{
+[|cffffcc00Unlock|r] |cffFF2222Nice Bakuretsu!|r
+Megumin has developed a new powerful explosion: |cffff2222Nice Bakuretsu!|r
+}
+
+STRING 7977
+{
+[|cffffcc00Unlock|r] |cffFF2222Explosion!|r
+Megumin has developed an even more powerful |cffff2222Explosion!|r
 }
 
 STRING 7979
@@ -50182,7 +50209,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50206,7 +50233,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50344,6 +50371,12 @@ STRING 8029
 // Units: n046 (Ginyu Force / Frieza), Name (Name)
 {
 Ginyu Force / Frieza
+}
+
+STRING 8030
+// Units: H00L (|cffff3333Arch-Wizard|r), Propernames (Proper Names)
+{
+Megumin
 }
 
 STRING 8031
@@ -51022,7 +51055,7 @@ STRING 8131
 }
 
 STRING 8132
-// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51058,7 +51091,7 @@ Tapion is a skilled sword fighter and can deal good damage with his attacks.|n|c
 }
 
 STRING 8138
-// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51754,7 +51787,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51884,7 +51917,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52058,7 +52091,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -52832,7 +52865,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8399
-// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52860,7 +52893,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53531,13 +53564,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53615,7 +53648,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53647,7 +53680,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -53853,6 +53886,26 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 |cff00ffffCooldown: <A0U1,Cool1> - <A0U1,Cool10> seconds|r
 }
 
+STRING 8545
+// Units: H00L (|cffff3333Arch-Wizard|r), Ubertip (Tooltip - Extended)
+{
+|cffff2020Warning: THIS HERO IS UNFINISHED|r
+
+A hero with one extremely powerful spell: Explosion.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+}
+
+STRING 8546
+// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 8547
 // Abilities: A0OM (Summon Blast-o-Matic), Ubertip (Tooltip - Normal - Extended)
 {
@@ -53970,7 +54023,7 @@ STRING 8565
 }
 
 STRING 8566
-// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53988,7 +54041,7 @@ STRING 8568
 }
 
 STRING 8569
-// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54012,7 +54065,7 @@ R
 }
 
 STRING 8573
-// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54060,7 +54113,7 @@ Sniper Rifle
 }
 
 STRING 8581
-// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
+// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55055,7 +55108,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55079,7 +55132,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55862,7 +55915,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8866
-// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
+// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -56246,7 +56299,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56270,7 +56323,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
+// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56422,7 +56475,7 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8956
-// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56771,7 +56824,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
+// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57083,7 +57136,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 9059
-// Abilities: A0RR (Reverse Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57113,7 +57166,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 9063
-// Abilities: A0RU (Neo Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0RR (Reverse Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57127,7 +57180,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 9065
-// Abilities: A0RX (Wolf Fang Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0RU (Neo Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57213,7 +57266,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 9077
-// Abilities: A0RY (Wolf Fang Finisher), Hotkey (Hotkey - Normal)
+// Abilities: A0RX (Wolf Fang Barrage), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57973,6 +58026,15 @@ Janemba slices his opponent with a powerful Ki Slash wave infused with the power
 |cff00ffffCooldown: <A0NY,Cool2> seconds|r
 }
 
+STRING 9193
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+{
+Have Shenron increase your hero's power. 
+|cffffff00Before 20 mins: +100 base stats / +5 lvls
+After 20 mins: +200 base stats / +10 lvls
+After 30 mins: +300 base stats / +15 lvls
+}
+
 STRING 9194
 // Abilities: A0OX (Tyrant Breaker), Ubertip (Tooltip - Normal - Extended)
 {
@@ -58705,13 +58767,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0S4 (Play Dead), Hotkey (Hotkey - Normal)
+// Abilities: A0RY (Wolf Fang Finisher), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0S7 (Batter Up), Hotkey (Hotkey - Normal)
+// Abilities: A0S4 (Play Dead), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60026,6 +60088,12 @@ Jiren sits with his legs crossed and begins to peacefully meditate.
 Grants bonus stats equal to 0.6% of base stats to a minimum of 4.|r
 |cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
 |cff00FFFFCooldown: <A0SM,Cool1>s|r
+}
+
+STRING 9510
+// Abilities: A03J (Explosion 1), Name (Name)
+{
+Explosion 1
 }
 
 STRING 9511
@@ -62006,7 +62074,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62018,7 +62086,7 @@ Evil
 }
 
 STRING 9832
-// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
+// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62030,7 +62098,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
+// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62042,7 +62110,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62072,85 +62140,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62162,13 +62230,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
+// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
+// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62180,103 +62248,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62502,7 +62570,7 @@ F
 }
 
 STRING 9912
-// Abilities: A0SE (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S7 (Batter Up), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62598,7 +62666,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9928
-// Abilities: A0SE (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0SE (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62622,7 +62690,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9932
-// Abilities: A0SK (Glare 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SE (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63060,7 +63128,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63324,7 +63392,7 @@ STRING 10046
 }
 
 STRING 10047
-// Abilities: A0SK (Glare 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (Glare 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63674,7 +63742,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (Glare 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63939,7 +64007,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64018,7 +64086,7 @@ For Super 13 type "super" when all androids lvl greater than 35 and are not in h
 }
 
 STRING 10159
-// Abilities: A0ST (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64050,7 +64118,7 @@ Have Shenron resurrect all your allies. Instantly revives all allied heroes who 
 }
 
 STRING 10163
-// Abilities: A0SZ (Right Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64290,13 +64358,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SZ (Right Smash), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0T5 (California Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65271,7 +65339,7 @@ A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far
 }
 
 STRING 10355
-// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65289,7 +65357,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
+// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65830,7 +65898,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67061,7 +67129,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67134,7 +67202,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67162,7 +67230,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67466,7 +67534,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67484,7 +67552,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67538,7 +67606,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67640,7 +67708,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 10728
-// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67964,7 +68032,7 @@ STRING 10772
 }
 
 STRING 10773
-// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
+// Abilities: A0TR (Kiai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67982,7 +68050,7 @@ STRING 10775
 }
 
 STRING 10776
-// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TR (Kiai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68760,7 +68828,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68778,7 +68846,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
+// Abilities: A0TW (Super Goten Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69162,13 +69230,13 @@ STRING 10971
 }
 
 STRING 10972
-// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (Sword of Hope), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10973
-// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69377,7 +69445,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69501,7 +69569,7 @@ STRING 11025
 }
 
 STRING 11026
-// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
+// Abilities: A0U2 (Galactic Donut), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69626,7 +69694,7 @@ R
 }
 
 STRING 11049
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -70062,7 +70130,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U2 (Galactic Donut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -70080,7 +70148,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
+// Abilities: A0U3 (Ultra Volleyball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70171,7 +70239,7 @@ STRING 11137
 }
 
 STRING 11138
-// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U3 (Ultra Volleyball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -70403,7 +70471,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 11174
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -70648,7 +70716,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70684,7 +70752,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71035,7 +71103,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11279
-// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -71164,7 +71232,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71821,7 +71889,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71845,7 +71913,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UT (Heart of Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72632,7 +72700,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0UT (Heart of Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -73889,7 +73957,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74965,6 +75033,12 @@ Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP 
 |cff00ffffCooldown: <A0GP,Cool1>s|r
 }
 
+STRING 11912
+// Abilities: A03J (Explosion 1), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] |cffff3322Explosion!|r
+}
+
 STRING 11913
 // Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
 {
@@ -75494,7 +75568,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UZ (Paragon of Flame), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -75512,7 +75586,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -75530,7 +75604,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76397,7 +76471,7 @@ STRING 12145
 }
 
 STRING 12146
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77033,13 +77107,13 @@ STRING 12247
 }
 
 STRING 12248
-// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+// Abilities: A0VJ (Tyranno Roar), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 12249
-// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77147,7 +77221,7 @@ STRING 12266
 }
 
 STRING 12267
-// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -77339,7 +77413,7 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77650,7 +77724,7 @@ STRING 12346
 }
 
 STRING 12347
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79160,7 +79234,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79351,6 +79425,12 @@ STRING 12620
 10
 }
 
+STRING 12621
+// Abilities: A03J (Explosion 1), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
 STRING 12622
 // Abilities: A10Q (Mafuba), Tip (Tooltip - Normal)
 {
@@ -79426,7 +79506,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79438,7 +79518,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79450,7 +79530,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
+// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79512,7 +79592,7 @@ Z
 }
 
 STRING 12646
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A03J (Explosion 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -79845,7 +79925,7 @@ Zamasu's fighting style is based on landing devastating hits with his energy bla
 }
 
 STRING 12691
-// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VR (Lightning), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79887,7 +79967,7 @@ Krown Toss Debuff
 }
 
 STRING 12697
-// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0VR (Lightning), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80040,7 +80120,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -81307,7 +81387,7 @@ STRING 12913
 }
 
 STRING 12914
-// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VS (Lightning 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81944,7 +82024,7 @@ Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lv
 }
 
 STRING 13014
-// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VS (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81980,7 +82060,7 @@ STRING 13019
 }
 
 STRING 13020
-// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -82115,7 +82195,7 @@ STRING 13041
 }
 
 STRING 13042
-// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -82673,7 +82753,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
+// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82932,7 +83012,7 @@ STRING 13174
 }
 
 STRING 13175
-// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -82950,7 +83030,7 @@ STRING 13177
 }
 
 STRING 13178
-// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83311,7 +83391,7 @@ Frog Tongue
 }
 
 STRING 13237
-// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -83323,7 +83403,7 @@ STRING 13238
 }
 
 STRING 13239
-// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83817,6 +83897,24 @@ STRING 13319
 [|cff00FF00F|r] Tail Whip - [|cffffcc00Level 9|r]
 }
 
+STRING 13320
+// Abilities: A042 (Explosion 2), Name (Name)
+{
+Explosion 2
+}
+
+STRING 13322
+// Abilities: A042 (Explosion 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] |cffff3322Exploooooosion!!!|r
+}
+
+STRING 13323
+// Abilities: A042 (Explosion 2), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
 STRING 13324
 // Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
@@ -83937,6 +84035,12 @@ Sephiroth dashes forwards delivering a swift sequence of sword slashes that pull
 |cff00FFFFCooldown: <A0T7,Cool10> seconds|r
 
 |cff808080"Traitor... you will pay!"|r
+}
+
+STRING 13340
+// Abilities: A048 (Explosion 3), Name (Name)
+{
+Explosion 3
 }
 
 STRING 13341
@@ -84208,7 +84312,7 @@ STRING 13378
 }
 
 STRING 13379
-// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84226,7 +84330,7 @@ STRING 13381
 }
 
 STRING 13382
-// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85279,7 +85383,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85724,7 +85828,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 13615
-// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85969,7 +86073,7 @@ A light punch.
 }
 
 STRING 13649
-// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86657,7 +86761,7 @@ STRING 13740
 }
 
 STRING 13741
-// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86675,7 +86779,7 @@ STRING 13743
 }
 
 STRING 13744
-// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86843,25 +86947,25 @@ Improved Farmor
 }
 
 STRING 13771
-// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13772
-// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13773
-// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
 
 STRING 13774
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -87760,7 +87864,7 @@ STRING 13907
 }
 
 STRING 13908
-// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87778,7 +87882,7 @@ STRING 13910
 }
 
 STRING 13911
-// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -88078,7 +88182,7 @@ STRING 13960
 }
 
 STRING 13961
-// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88096,7 +88200,7 @@ STRING 13963
 }
 
 STRING 13964
-// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -88186,7 +88290,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -88198,7 +88302,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -88210,7 +88314,7 @@ W
 }
 
 STRING 13983
-// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
+// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88599,7 +88703,7 @@ STRING 14042
 }
 
 STRING 14043
-// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -88617,7 +88721,7 @@ STRING 14045
 }
 
 STRING 14046
-// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -88640,10 +88744,34 @@ STRING 14049
 [|cff00ff00E|r] Justice Cannon - [|cffffcc00Level 10|r]
 }
 
+STRING 14050
+// Abilities: A048 (Explosion 3), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] |cffff3322Nice Explosion!|r
+}
+
+STRING 14051
+// Abilities: A048 (Explosion 3), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
+STRING 14052
+// Abilities: A04A (Explosion 4), Name (Name)
+{
+Explosion 4
+}
+
 STRING 14054
 // Abilities: A0QX (Justice Cannon), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14055
+// Abilities: A04A (Explosion 4), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] |cffff3322Nice Bakuretsu!|r
 }
 
 STRING 14056
@@ -88802,10 +88930,28 @@ Spell Amp: +2% per second up to +10%|r
 |cff00ffffCooldown: <A0R2,Cool10> seconds|r
 }
 
+STRING 14075
+// Abilities: A04A (Explosion 4), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
+STRING 14076
+// Abilities: A04C (Explosion 5), Name (Name)
+{
+Explosion 5
+}
+
 STRING 14078
 // Abilities: A0QY (Light Bullet), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14079
+// Abilities: A04C (Explosion 5), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffff3322Explosion!|r
 }
 
 STRING 14080
@@ -88878,6 +89024,12 @@ STRING 14091
 // Abilities: A0QZ (Justice Kick), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Kick - [|cffffcc00Level 6|r]
+}
+
+STRING 14092
+// Abilities: A04C (Explosion 5), EditorSuffix (Editor Suffix)
+{
+(megumin)
 }
 
 STRING 14093
@@ -89075,6 +89227,12 @@ STRING 14121
 Circle Flash
 }
 
+STRING 14122
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
 STRING 14123
 // Abilities: A011 (Table Flip), Hotkey (Hotkey - Normal)
 {
@@ -89135,6 +89293,12 @@ STRING 14132
 Super Maximum Light Speed Mode
 }
 
+STRING 14133
+// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
 STRING 14134
 // Abilities: A0RB (Senzu Throw), Ubertip (Tooltip - Normal - Extended)
 {
@@ -89158,7 +89322,7 @@ STRING 14136
 }
 
 STRING 14137
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A04C (Explosion 5), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89169,14 +89333,26 @@ STRING 14138
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 1|r]
 }
 
+STRING 14139
+// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
+{
+E
+}
+
 STRING 14140
 // Abilities: A0R2 (Justice Pose), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Justice Pose - [|cffffcc00Level %d|r]
 }
 
+STRING 14141
+// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
 STRING 14142
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A04G (Explosion Mastery), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -89197,6 +89373,18 @@ STRING 14145
 // Abilities: A0R2 (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 3|r]
+}
+
+STRING 14146
+// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 14147
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+{
+F
 }
 
 STRING 14148
@@ -89361,7 +89549,7 @@ STRING 14174
 }
 
 STRING 14175
-// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89388,7 +89576,7 @@ Justice Kick 2
 }
 
 STRING 14179
-// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89453,16 +89641,66 @@ Unlocks Supernova.|r
 |cff00FF00Cooldown: <A0IF,Cool1> seconds|r
 }
 
+STRING 14188
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+{
+|cffff8800Explosion Mastery|r grants |cff00ffff+1% max mana regeneration|r and |cff00ffff+0.1% max mana regeneration|r per enemy hero kill.
+
+|cffffcc00Evasion|r - <A04G,DataD1,%>% 
+|cffffcc00Critical|r - <A04G,DataA1>% 
+|cffffcc00Damage|r - <A04G,DataB1,.> times
+}
+
+STRING 14189
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
 STRING 14190
 // Abilities: A0QY (Light Bullet), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Light Bullet - [|cffffcc00Level %d|r]
 }
 
+STRING 14191
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
 STRING 14192
 // Abilities: A0R3 (Justice Kick 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Kick 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 14193
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 14194
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
 }
 
 STRING 14195
@@ -89503,6 +89741,66 @@ STRING 14200
 // Abilities: A0R3 (Justice Kick 2), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14201
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 14202
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 14203
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 14204
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 14205
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 14206
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
 }
 
 STRING 14207
@@ -89548,7 +89846,7 @@ STRING 14213
 }
 
 STRING 14214
-// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89566,7 +89864,7 @@ STRING 14216
 }
 
 STRING 14217
-// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89589,10 +89887,56 @@ STRING 14220
 [|cff00ff00E|r] Justice Cannon 2 - [|cffffcc00Level 10|r]
 }
 
+STRING 14221
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 14222
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 14223
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 14224
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
 STRING 14225
 // Abilities: A0R4 (Justice Cannon 2), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14226
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
 }
 
 STRING 14227
@@ -89680,7 +90024,7 @@ STRING 14240
 }
 
 STRING 14241
-// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
+// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89698,7 +90042,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89799,7 +90143,7 @@ STRING 14260
 }
 
 STRING 14261
-// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
+// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89817,7 +90161,7 @@ STRING 14263
 }
 
 STRING 14264
-// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89877,7 +90221,7 @@ This unit is temporarily blinded.
 }
 
 STRING 14274
-// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89906,7 +90250,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14278
-// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90284,7 +90628,7 @@ STRING 14332
 }
 
 STRING 14333
-// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
+// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -90360,7 +90704,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14343
-// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -90394,7 +90738,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14348
-// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90453,7 +90797,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14357
-// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -90485,7 +90829,7 @@ Wolf Fang Hurricane
 }
 
 STRING 14362
-// Abilities: A00Z (Leap), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -90541,7 +90885,7 @@ STRING 14370
 }
 
 STRING 14371
-// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -90571,7 +90915,7 @@ STRING 14375
 }
 
 STRING 14376
-// Abilities: A00Z (Leap), Hotkey (Hotkey - Normal)
+// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90625,7 +90969,7 @@ STRING 14384
 }
 
 STRING 14385
-// Abilities: A00I (Consecutive Normal Punches), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -90655,7 +90999,7 @@ STRING 14389
 }
 
 STRING 14390
-// Abilities: A05Q (Barrel Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -90722,6 +91066,12 @@ STRING 14400
 [|cffffff00W|r] Choose Shoto
 }
 
+STRING 14401
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+|cffff8800Explosion Mastery|r
+}
+
 STRING 14402
 // Units: H05X (Provisional Hero), Tip (Tooltip - Basic)
 {
@@ -90729,7 +91079,7 @@ STRING 14402
 }
 
 STRING 14403
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -90852,6 +91202,12 @@ STRING 14421
 Hit's Assassination Contract
 }
 
+STRING 14422
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
 STRING 14423
 // Abilities: A10Q (Mafuba), Ubertip (Tooltip - Normal - Extended)
 {
@@ -90873,7 +91229,7 @@ STRING 14424
 }
 
 STRING 14425
-// Abilities: A00I (Consecutive Normal Punches), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -90889,6 +91245,24 @@ A very fast hero that relies on moving quickly to deal damage in close range. Ha
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 14427
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 14428
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 14429
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 14430
@@ -90949,6 +91323,48 @@ STRING 14439
 // Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
 {
 [|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 14440
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 14441
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 14442
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 14443
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 14444
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 14445
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 14446
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 14447
@@ -91742,7 +92158,7 @@ STRING 14561
 }
 
 STRING 14562
-// Abilities: A05Q (Barrel Roll), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -92297,7 +92713,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14644
-// Abilities: A05Z (Roll), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -92475,7 +92891,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14667
-// Abilities: A083 (Dark Mist), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -92781,7 +93197,7 @@ Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stu
 }
 
 STRING 14712
-// Abilities: A05Z (Roll), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92939,7 +93355,7 @@ A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals b
 }
 
 STRING 14735
-// Abilities: A083 (Dark Mist), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -93249,7 +93665,7 @@ Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement s
 }
 
 STRING 14780
-// Abilities: A082 (Flame Ball), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -93321,7 +93737,7 @@ STRING 14791
 }
 
 STRING 14792
-// Abilities: A0CP (Chou Makousen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -93335,7 +93751,7 @@ Hirudegarn strikes the closest enemy with his tail, piercing them through their 
 }
 
 STRING 14794
-// Abilities: A082 (Flame Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -93403,7 +93819,7 @@ A heavy pummelling attack launched from above that briefly stuns the enemy.
 }
 
 STRING 14803
-// Abilities: A0EO (Dark Eyes), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -93727,7 +94143,7 @@ Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
 }
 
 STRING 14848
-// Abilities: A0DI (Tail Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -93883,7 +94299,7 @@ STRING 14870
 }
 
 STRING 14871
-// Abilities: A0EO (Dark Eyes), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -94222,7 +94638,7 @@ STRING 14919
 }
 
 STRING 14920
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94378,7 +94794,7 @@ Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive da
 }
 
 STRING 14943
-// Abilities: A0GK (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -94624,7 +95040,7 @@ STRING 14980
 }
 
 STRING 14981
-// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
+// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -94668,7 +95084,7 @@ A wolf fang fist infused pitch!
 }
 
 STRING 14988
-// Abilities: A0GU (Hell Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -94826,7 +95242,7 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15011
-// Abilities: A0H1 (Shocking Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -95363,6 +95779,46 @@ Guldo sharpnes a tree via telekinesis into a deadly skewer before firing it at h
 |cff00ffffCooldown: <A0SC,Cool2> seconds|r
 }
 
+STRING 15089
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 15090
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 15091
+// Abilities: A04G (Explosion Mastery), Name (Name)
+{
+Explosion Mastery
+}
+
+STRING 15092
+// Abilities: A0GG (Hirudegarn Passive), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 15093
+// Abilities: A0WW (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 15094
+// Abilities: A04G (Explosion Mastery), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
 STRING 15095
 // Abilities: A0YS (Wall of Flames), Ubertip (Tooltip - Normal - Extended)
 {
@@ -95426,7 +95882,7 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15102
-// Abilities: A0GU (Hell Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -95444,7 +95900,7 @@ STRING 15104
 }
 
 STRING 15105
-// Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -95474,6 +95930,12 @@ Jiren's strength is overwhelming.
 |cffffcc00Evasion|r - <A0KE,DataD11,%>% 
 |cffffcc00Critical|r - <A0KE,DataA11>% 
 |cffffcc00Damage|r - <A0KE,DataB11,.> times
+}
+
+STRING 15109
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+{
+F
 }
 
 STRING 15113
@@ -95560,7 +96022,7 @@ STRING 15126
 }
 
 STRING 15127
-// Abilities: A0H1 (Shocking Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -95578,7 +96040,7 @@ STRING 15129
 }
 
 STRING 15130
-// Abilities: A0YE (Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YE (Teleportation), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -95734,7 +96196,7 @@ STRING 15154
 }
 
 STRING 15155
-// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -95758,7 +96220,7 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 }
 
 STRING 15159
-// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -96273,6 +96735,20 @@ STRING 15234
 Q
 }
 
+STRING 15236
+// Abilities: A03J (Explosion 1), Ubertip (Tooltip - Normal - Extended)
+{
+Explosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 1s
+|cff00ff00Damage: Int * ? + 25% Max HP
+|cff00ffffCooldown: <A03L,Cool1> seconds
+
+|cff888888"Explosion!"|r
+}
+
 STRING 15237
 // Abilities: A0K6 (Glare), EditorSuffix (Editor Suffix)
 {
@@ -96583,6 +97059,48 @@ A versatile hero with incredible flexibility and high mobility. He can swap betw
 
 }
 
+STRING 15281
+// Abilities: A042 (Explosion 2), Ubertip (Tooltip - Normal - Extended)
+{
+Exploooooosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 2s
+|cff00ff00Damage: Int * ? + 25% Max HP
+|cff00ffffCooldown: <A042,Cool1> seconds
+
+|cff888888"Exploooooosion!"|r
+}
+
+STRING 15282
+// Abilities: A048 (Explosion 3), Ubertip (Tooltip - Normal - Extended)
+{
+Nice Explosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 3s
+|cff00ff00Damage: Int * ? + 25% Max HP
+|cff00ffffCooldown: <A048,Cool1> seconds
+
+|cff888888"Nice Explosion!"|r
+}
+
+STRING 15283
+// Abilities: A04A (Explosion 4), Ubertip (Tooltip - Normal - Extended)
+{
+Nice Bakuretsu!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 4s
+|cff00ff00Damage: Int * ? + 25% Max HP
+|cff00ffffCooldown: <A04A,Cool1> seconds
+
+|cff888888"Nice Bakuretsu!"|r
+}
+
 STRING 15284
 // Abilities: A0K9 (Power Impact), EditorSuffix (Editor Suffix)
 {
@@ -96607,6 +97125,20 @@ STRING 15287
 [|cff00FF00D|r] Meditate
 }
 
+STRING 15288
+// Abilities: A04C (Explosion 5), Ubertip (Tooltip - Normal - Extended)
+{
+Explosion.
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 5s
+|cff00ff00Damage: Int * ? + 25% Max HP
+|cff00ffffCooldown: <A04C,Cool1> seconds
+
+|cff888888"Darkness blacker than black and darker than dark, I beseech thee, combine with my deep crimson. The time of awakening cometh. Justice, fallen upon the infallible boundary, appear now as an intangible distortion! Dance, Dance, Dance! I desire for my torrent of power a destructive force: a destructive force without equal! Return all creation to cinders, and come from the abyss!"|r
+}
+
 STRING 15289
 // Abilities: A0KD (Meditate), Name (Name)
 {
@@ -96625,6 +97157,18 @@ STRING 15291
 F
 }
 
+STRING 15292
+// Abilities: A05X (Explosion Megumin Invul), Name (Name)
+{
+Explosion Megumin Invul
+}
+
+STRING 15293
+// Abilities: A05X (Explosion Megumin Invul), EditorSuffix (Editor Suffix)
+{
+(megumin)
+}
+
 STRING 15294
 // Abilities: A0SI (Power Impact 2), Name (Name)
 {
@@ -96635,6 +97179,12 @@ STRING 15295
 // Abilities: A0SI (Power Impact 2), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Power Impact - [|cffffcc00Level %d|r]
+}
+
+STRING 15296
+// Units: H00L (|cffff3333Arch-Wizard|r), Name (Name)
+{
+|cffff3333Arch-Wizard|r
 }
 
 STRING 15298
@@ -96745,7 +97295,7 @@ STRING 15315
 }
 
 STRING 15316
-// Abilities: A0YD (Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -96887,7 +97437,7 @@ STRING 15341
 }
 
 STRING 15342
-// Abilities: A0YE (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A0YN (Empowered Teleportation), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97493,7 +98043,7 @@ STRING 15430
 }
 
 STRING 15431
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97503,13 +98053,13 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15432
-// Abilities: A0YN (Empowered Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YN (Empowered Teleportation), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 15433
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97519,7 +98069,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15434
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97880,7 +98430,7 @@ STRING 15476
 }
 
 STRING 15477
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97890,7 +98440,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15478
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97900,7 +98450,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15479
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97910,7 +98460,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15480
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97920,7 +98470,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15481
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -97930,7 +98480,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15482
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -98099,7 +98649,7 @@ Zamasu channels his godly energy to deflect the attacks of lesser beings and pun
 }
 
 STRING 15504
-// Abilities: A0YL (Empowered Protect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -98139,7 +98689,7 @@ All Might punches the air behind him while in the air to propel himself backward
 }
 
 STRING 15510
-// Abilities: A0YL (Empowered Protect), Hotkey (Hotkey - Normal)
+// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -98227,7 +98777,7 @@ STRING 15523
 }
 
 STRING 15524
-// Abilities: A0YN (Empowered Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A0YT (Ice Path), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98363,7 +98913,7 @@ STRING 15543
 }
 
 STRING 15544
-// Abilities: A0YT (Ice Path), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -98381,7 +98931,7 @@ STRING 15546
 }
 
 STRING 15547
-// Abilities: A0YT (Ice Path), Hotkey (Hotkey - Normal)
+// Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98543,7 +99093,7 @@ STRING 15569
 }
 
 STRING 15570
-// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -98561,7 +99111,7 @@ STRING 15572
 }
 
 STRING 15573
-// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -98689,7 +99239,7 @@ SOLDIER 1st Class
 }
 
 STRING 15593
-// Abilities: A0Z3 (Plunder), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -98949,7 +99499,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15633
-// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -99079,7 +99629,7 @@ STRING 15651
 }
 
 STRING 15652
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -99460,7 +100010,7 @@ All Might fires a swift left-handed smash.
 }
 
 STRING 15706
-// Abilities: A0YS (Wall of Flames), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -99744,7 +100294,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15747
-// Abilities: A0YS (Wall of Flames), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -99916,7 +100466,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15772
-// Abilities: A0Z3 (Plunder), Hotkey (Hotkey - Normal)
+// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100058,7 +100608,7 @@ All Might fires a powerful downward punch that is powerful enough to create a sh
 }
 
 STRING 15797
-// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -100266,7 +100816,7 @@ STRING 15830
 }
 
 STRING 15831
-// Abilities: A0Z2 (I'll Run Ye Through!), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -100294,7 +100844,7 @@ Sephiroth leaps into the air before slamming into the ground, dealing massive AO
 }
 
 STRING 15835
-// Abilities: A0Z2 (I'll Run Ye Through!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZB (Capsule: Battle Armor 5), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -100396,7 +100946,7 @@ STRING 15856
 }
 
 STRING 15857
-// Abilities: A0ZJ (Spin Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100414,7 +100964,7 @@ STRING 15859
 }
 
 STRING 15861
-// Abilities: A0ZJ (Spin Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100556,7 +101106,7 @@ STRING 15882
 }
 
 STRING 15883
-// Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Reckless Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100584,7 +101134,7 @@ Sephiroth's slashes send shockwaves through the air, knocking enemies away from 
 }
 
 STRING 15887
-// Abilities: A109 (Reckless Charge), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Reckless Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100752,7 +101302,7 @@ STRING 15908
 }
 
 STRING 15909
-// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -101614,7 +102164,7 @@ Dummy Stun 1.5s
 }
 
 STRING 16044
-// Abilities: A0ZB (Capsule: Battle Armor 5), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101638,7 +102188,7 @@ STRING 16047
 }
 
 STRING 16048
-// Abilities: A0ZC (Capsule: Tree of Might Sapling), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZD (Capsule: Potara Earrings), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101674,7 +102224,7 @@ Hammer Time
 }
 
 STRING 16054
-// Abilities: A0ZD (Capsule: Potara Earrings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZI (Homing Attack), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -101766,7 +102316,7 @@ Q
 }
 
 STRING 16069
-// Abilities: A0ZI (Homing Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0ZI (Homing Attack), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -102166,7 +102716,7 @@ STRING 16126
 }
 
 STRING 16127
-// Abilities: A0ZI (Homing Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZO (Plant Corn), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -102358,7 +102908,7 @@ STRING 16156
 }
 
 STRING 16157
-// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -102376,7 +102926,7 @@ Power Up Block
 }
 
 STRING 16160
-// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -104603,7 +105153,7 @@ STRING 16461
 }
 
 STRING 16462
-// Abilities: A0ZO (Plant Corn), Hotkey (Hotkey - Normal)
+// Abilities: A0ZV (Disable Warehousing), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104624,7 +105174,7 @@ Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and rest
 }
 
 STRING 16465
-// Abilities: A0ZV (Disable Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A0ZW (Enable Warehousing), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104768,7 +105318,7 @@ STRING 16486
 }
 
 STRING 16487
-// Abilities: A109 (Reckless Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A10A (Relentless Assault), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -104786,7 +105336,7 @@ STRING 16489
 }
 
 STRING 16490
-// Abilities: A10A (Relentless Assault), Hotkey (Hotkey - Normal)
+// Abilities: A10A (Relentless Assault), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -104810,7 +105360,7 @@ STRING 16493
 }
 
 STRING 16494
-// Abilities: A0ZW (Enable Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A108 (Dragon Cannon Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104839,7 +105389,7 @@ STRING 16498
 }
 
 STRING 16499
-// Abilities: A108 (Dragon Cannon Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A108 (Dragon Cannon Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105138,7 +105688,7 @@ STRING 16539
 }
 
 STRING 16540
-// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -105156,7 +105706,7 @@ STRING 16542
 }
 
 STRING 16543
-// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -105253,7 +105803,7 @@ STRING 16554
 }
 
 STRING 16555
-// Abilities: A108 (Dragon Cannon Slash), Hotkey (Hotkey - Normal)
+// Abilities: A10M (Bursting Flame), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -105278,7 +105828,7 @@ A high damage close-range hero that deals bonus damage on his spells by auto-att
 }
 
 STRING 16558
-// Abilities: A10M (Bursting Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A10M (Bursting Flame), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105328,7 +105878,7 @@ Mario spins in the air, briefly gaining immunity to damage and increasing jump d
 }
 
 STRING 16566
-// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -105470,7 +106020,7 @@ This unit has been hit by Galactic Donut; it cannot move and takes damage over t
 }
 
 STRING 16587
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105480,7 +106030,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16588
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105490,7 +106040,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16589
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105500,7 +106050,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16590
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105510,7 +106060,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16591
-// Abilities: A0WW (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105853,13 +106403,13 @@ STRING 16625
 }
 
 STRING 16626
-// Abilities: A10M (Bursting Flame), Hotkey (Hotkey - Normal)
+// Abilities: A10W (Annihilation Bomb), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 16627
-// Abilities: A10W (Annihilation Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A10W (Annihilation Bomb), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -105871,7 +106421,7 @@ STRING 16628
 }
 
 STRING 16629
-// Abilities: A10W (Annihilation Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A116 (Appule Emergency Escape), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -106078,7 +106628,7 @@ STRING 16655
 }
 
 STRING 16656
-// Abilities: A116 (Appule Emergency Escape), Researchhotkey (Hotkey - Learn)
+// Abilities: A116 (Appule Emergency Escape), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106103,7 +106653,7 @@ Nutritious corn.
 }
 
 STRING 16660
-// Abilities: A116 (Appule Emergency Escape), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Piranha Plant Trap), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106254,7 +106804,7 @@ STRING 16681
 }
 
 STRING 16682
-// Abilities: A10A (Relentless Assault), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Q (Mafuba), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106278,7 +106828,7 @@ STRING 16685
 }
 
 STRING 16686
-// Abilities: A10Q (Mafuba), Hotkey (Hotkey - Normal)
+// Abilities: A10Q (Mafuba), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106341,7 +106891,7 @@ Mugetsu
 }
 
 STRING 16695
-// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -106500,7 +107050,7 @@ STRING 16716
 }
 
 STRING 16717
-// Abilities: A10Q (Mafuba), Researchhotkey (Hotkey - Learn)
+// Abilities: A10X (Rocket Boots), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106527,7 +107077,7 @@ Duration: <A0UA,Dur1>s
 }
 
 STRING 16721
-// Abilities: A10X (Rocket Boots), Hotkey (Hotkey - Normal)
+// Abilities: A10X (Rocket Boots), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106584,7 +107134,7 @@ Duration: <A0UA,Dur10>s
 }
 
 STRING 16729
-// Abilities: A11P (Piranha Plant Trap), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Piranha Plant Trap), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -106615,13 +107165,13 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 16732
-// Abilities: A11P (Piranha Plant Trap), Researchhotkey (Hotkey - Learn)
+// Abilities: A01T (Knife Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 16733
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -107381,7 +107931,7 @@ STRING 16836
 }
 
 STRING 16837
-// Abilities: A01T (Knife Slash), Hotkey (Hotkey - Normal)
+// Abilities: A01T (Knife Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -107495,7 +108045,7 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 16855
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -107876,7 +108426,7 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -108366,7 +108916,7 @@ STRING 16953
 }
 
 STRING 16954
-// Abilities: A01T (Knife Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A02K (Assault Rifle), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -108495,7 +109045,7 @@ STRING 16971
 }
 
 STRING 16972
-// Abilities: A02K (Assault Rifle), Hotkey (Hotkey - Normal)
+// Abilities: A042 (Explosion 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -108552,7 +109102,7 @@ STRING 16979
 }
 
 STRING 16980
-// Abilities: A10X (Rocket Boots), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Y (Emergency Boosters), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -108596,7 +109146,7 @@ Duration: 10s
 }
 
 STRING 16986
-// Abilities: A10Y (Emergency Boosters), Hotkey (Hotkey - Normal)
+// Abilities: A10Y (Emergency Boosters), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -108752,7 +109302,7 @@ STRING 17005
 }
 
 STRING 17006
-// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -108820,7 +109370,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 17017
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -108862,7 +109412,7 @@ STRING 17023
 }
 
 STRING 17024
-// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -108889,7 +109439,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -109249,7 +109799,7 @@ Q
 }
 
 STRING 17092
-// Abilities: A10Y (Emergency Boosters), Researchhotkey (Hotkey - Learn)
+// Abilities: A11B (Appule Vengeance), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -109279,7 +109829,7 @@ STRING 17096
 }
 
 STRING 17097
-// Abilities: A11B (Appule Vengeance), Researchhotkey (Hotkey - Learn)
+// Abilities: A11B (Appule Vengeance), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -109408,7 +109958,7 @@ STRING 17116
 }
 
 STRING 17117
-// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -109525,7 +110075,7 @@ STRING 17133
 }
 
 STRING 17134
-// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -110140,7 +110690,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -110988,7 +111538,7 @@ STRING 17372
 }
 
 STRING 17374
-// Abilities: A11B (Appule Vengeance), Hotkey (Hotkey - Normal)
+// Abilities: A11K (Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -111070,7 +111620,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 17385
-// Abilities: A11K (Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A11M (Special Beast Cannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -111670,7 +112220,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17466
-// Abilities: A11M (Special Beast Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A11R (Spin), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -111691,7 +112241,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17469
-// Abilities: A11R (Spin), Hotkey (Hotkey - Normal)
+// Abilities: A11R (Spin), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -111849,7 +112399,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -111867,7 +112417,7 @@ W
 }
 
 STRING 17492
-// Abilities: A11R (Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A01Q (Knife Parry), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112108,7 +112658,7 @@ STRING 17542
 }
 
 STRING 17543
-// Abilities: A01Q (Knife Parry), Hotkey (Hotkey - Normal)
+// Abilities: A01Q (Knife Parry), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112232,7 +112782,7 @@ STRING 17560
 }
 
 STRING 17561
-// Abilities: A01Q (Knife Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A02O (Sniper Rifle), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112286,7 +112836,7 @@ STRING 17568
 }
 
 STRING 17569
-// Abilities: A02O (Sniper Rifle), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Explosion 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112464,7 +113014,7 @@ STRING 17594
 }
 
 STRING 17595
-// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -112476,7 +113026,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -112584,7 +113134,7 @@ STRING 17612
 }
 
 STRING 17613
-// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -112884,13 +113434,13 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 17659
-// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -113433,7 +113983,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114239,7 +114789,7 @@ STRING 17888
 }
 
 STRING 17889
-// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -114363,7 +114913,7 @@ STRING 17906
 }
 
 STRING 17907
-// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
+// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115424,7 +115974,7 @@ Robo heals all nearby allies within a short range.
 }
 
 STRING 18075
-// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115442,7 +115992,7 @@ STRING 18077
 }
 
 STRING 18078
-// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -116148,7 +116698,7 @@ STRING 18178
 }
 
 STRING 18179
-// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -116214,7 +116764,7 @@ STRING 18187
 }
 
 STRING 18188
-// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
+// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -116382,7 +116932,7 @@ This unit is affected by Dark Mist. It will miss when it attacks.
 }
 
 STRING 18216
-// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -116680,7 +117230,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18261
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116690,7 +117240,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18262
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116700,7 +117250,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18263
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116710,7 +117260,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18264
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116720,7 +117270,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18265
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116730,7 +117280,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18266
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116740,7 +117290,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18267
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116750,7 +117300,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18268
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116760,7 +117310,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18269
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116770,7 +117320,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18270
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116780,7 +117330,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18271
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116790,7 +117340,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18272
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116800,7 +117350,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18273
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116810,7 +117360,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18274
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116820,7 +117370,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18275
-// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -116832,79 +117382,79 @@ Saiyan Blood - [|cffffcc00Level 1|r]
 }
 
 STRING 18277
-// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 18278
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 18279
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 18280
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 18281
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 18282
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
 
 STRING 18283
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 18284
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 18285
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 18286
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 18287
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 18288
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 18289
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -116922,13 +117472,13 @@ Saiyan Blood
 }
 
 STRING 18292
-// Abilities: A0GG (Hirudegarn Passive), Researchtip (Tooltip - Learn)
+// Abilities: A10K (Sword of Hope), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 18293
-// Abilities: A0GG (Hirudegarn Passive), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A10K (Sword of Hope), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -116974,7 +117524,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117160,7 +117710,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117651,7 +118201,7 @@ STRING 18401
 }
 
 STRING 18402
-// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
+// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -118115,7 +118665,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118218,7 +118768,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -122107,7 +122657,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123341,7 +123891,7 @@ STRING 19313
 }
 
 STRING 19314
-// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -123359,7 +123909,7 @@ STRING 19316
 }
 
 STRING 19317
-// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
+// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -124479,7 +125029,7 @@ STRING 19480
 }
 
 STRING 19481
-// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
+// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -124497,7 +125047,7 @@ STRING 19483
 }
 
 STRING 19484
-// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
+// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -125999,7 +126549,7 @@ Nutritious grains of snow rice.
 }
 
 STRING 19736
-// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -126192,7 +126742,7 @@ STRING 19772
 }
 
 STRING 19773
-// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
+// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -126210,7 +126760,7 @@ STRING 19775
 }
 
 STRING 19776
-// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
+// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -126273,7 +126823,7 @@ A bulky hero that specializes in disrupting teams and stealing booty.
 }
 
 STRING 19785
-// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -126325,7 +126875,7 @@ Cooling Down
 }
 
 STRING 19793
-// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
+// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -126756,7 +127306,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -132973,7 +133523,7 @@ Future Trunks' swordsmanship allows him to deal critical damage to enemies and e
 }
 
 STRING 20851
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -132983,7 +133533,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20852
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -132993,7 +133543,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20853
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133003,7 +133553,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20854
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133013,7 +133563,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20855
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133023,7 +133573,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20856
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133033,7 +133583,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20857
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133043,7 +133593,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20858
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133053,7 +133603,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20859
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133063,7 +133613,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20860
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133073,7 +133623,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20861
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133083,7 +133633,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20862
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133093,7 +133643,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20863
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -133103,7 +133653,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20864
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -133121,25 +133671,25 @@ Future Trunks' Sword of Light - [|cffffcc00Level 2|r]
 }
 
 STRING 20867
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 20868
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 20869
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 20870
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
@@ -133157,7 +133707,7 @@ STRING 20872
 }
 
 STRING 20873
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
@@ -133259,55 +133809,55 @@ An attack made up of the heavily condensed Negative Energy of the Dragon Balls a
 }
 
 STRING 20890
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 20891
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 20892
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 20893
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 20894
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 20895
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 20896
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 20897
-// Abilities: A10K (Sword of Hope), Researchtip (Tooltip - Learn)
+// Abilities: A04G (Explosion Mastery), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 20898
-// Abilities: A10K (Sword of Hope), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A04G (Explosion Mastery), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -136602,7 +137152,7 @@ STRING 21427
 }
 
 STRING 21429
-// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff3333Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }

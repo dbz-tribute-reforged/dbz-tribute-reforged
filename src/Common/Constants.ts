@@ -800,6 +800,15 @@ export module Id {
 
   export const moro = FourCC("H08Y");
 
+  export const megumin = FourCC("H00L");
+  export const meguminExplosion1 = FourCC("A03J");
+  export const meguminExplosion2 = FourCC("A042");
+  export const meguminExplosion3 = FourCC("A048");
+  export const meguminExplosion4 = FourCC("A04A");
+  export const meguminExplosion5 = FourCC("A04C");
+  export const meguminPassive = FourCC("A04G");
+  export const meguminInvul = FourCC("A05X");
+
   export const nappa = FourCC("H08W");
   export const giantStorm = FourCC("A0MI");
   export const blazingStorm = FourCC("A0MJ");

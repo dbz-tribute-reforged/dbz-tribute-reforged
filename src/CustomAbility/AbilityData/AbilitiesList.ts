@@ -8972,6 +8972,146 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Megumin.EXPLOSION_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 1" },
+      { name: "sfx megumin explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 233,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 2" },
+      { name: "sfx megumin explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 3" },
+      { name: "sfx megumin explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_4,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 300,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 4" },
+      { name: "sfx megumin explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_5,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 5" },
+      { name: "sfx megumin explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,

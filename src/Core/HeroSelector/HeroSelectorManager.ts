@@ -8,7 +8,7 @@ export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
 
   static readonly BAN_TIME = 10;
-  static readonly PICK_TIME = 50;
+  static readonly PICK_TIME = 80;
   
 
   public selectTimer: timer;
@@ -364,6 +364,14 @@ export class HeroSelectorManager {
       // if (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[i]) == 0) {
       //   HeroSelector.forcePick(udg_TempPlayer);
       // }
+      
+      ForGroup(udg_PlayerPickedHeroesUnitGroup[i], () => {
+        const unit = GetEnumUnit();
+        const customHero = Globals.customPlayers[i].getCustomHero(unit);
+        if (customHero) {
+          customHero.setCurrentSP(customHero.getMaxSP());
+        }
+      })
 
 
       // force pick if not picked

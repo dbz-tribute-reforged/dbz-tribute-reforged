@@ -136,6 +136,12 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.beastGohan, SimpleSpellSystem.gohanBeastBuff);
     Globals.genericSpellMap.set(Id.specialBeastCannon, SimpleSpellSystem.specialBeastCannon);
     
+    Globals.genericSpellMap.set(Id.meguminExplosion1, SimpleSpellSystem.doMeguminExplosion);
+    Globals.genericSpellMap.set(Id.meguminExplosion2, SimpleSpellSystem.doMeguminExplosion);
+    Globals.genericSpellMap.set(Id.meguminExplosion3, SimpleSpellSystem.doMeguminExplosion);
+    Globals.genericSpellMap.set(Id.meguminExplosion4, SimpleSpellSystem.doMeguminExplosion);
+    Globals.genericSpellMap.set(Id.meguminExplosion5, SimpleSpellSystem.doMeguminExplosion);
+    
     // add DDS stuff
     TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
       const unit = BlzGetEventDamageTarget();
@@ -2909,8 +2915,8 @@ export module SimpleSpellSystem {
   export function specialBeastCannon() {
     const unit = GetTriggerUnit();
 
-    const initTimer = CreateTimer();
-    const secondTimer = CreateTimer();
+    const initTimer = TimerManager.getInstance().get();
+    const secondTimer = TimerManager.getInstance().get();
 
     const delay = 2.1;
 
@@ -2918,13 +2924,66 @@ export module SimpleSpellSystem {
 
     TimerStart(initTimer, delay, false, () => {
       SetUnitAnimationByIndex(unit, 13);
-      DestroyTimer(initTimer);
+      TimerManager.getInstance().recycle(initTimer);
     });
     TimerStart(secondTimer, delay+1, false, () => {
       ResetUnitAnimation(unit);
-      DestroyTimer(secondTimer);
+      TimerManager.getInstance().recycle(secondTimer);
     });
   }
+
+  
+  export function doMeguminExplosion() {
+    const unit = GetTriggerUnit();
+    const playerId = GetPlayerId(GetOwningPlayer(unit));
+    const spellId = GetSpellAbilityId();
+
+    let timeout = 1;
+    switch (spellId) {
+      default:
+      case Id.meguminExplosion1:
+        break;
+      case Id.meguminExplosion2:
+        timeout = 2;
+        break;
+      case Id.meguminExplosion3:
+        timeout = 3;
+        break;
+      case Id.meguminExplosion4:
+        timeout = 4;
+        break;
+      case Id.meguminExplosion5:
+        timeout = 5;
+        break;
+    }
+
+    SetUnitState(unit, UNIT_STATE_MANA, 1);
+
+    TextTagHelper.showTempText(
+      Colorizer.getPlayerColorText(playerId) + "Invulnerable!",
+      GetUnitX(unit), GetUnitY(unit),
+      5, timeout, 2
+    );
+
+    const isAdd = UnitAddAbility(unit, Id.meguminInvul);
+
+    PauseUnit(unit, true);
+    SetUnitAnimationByIndex(unit, 8);
+    const invulTimer = TimerManager.getInstance().get();
+    TimerStart(invulTimer, timeout, false, () => {
+      PauseUnit(unit, false);
+      ResetUnitAnimation(unit);
+      if (isAdd) {
+        UnitRemoveAbility(unit, Id.meguminInvul);
+      }
+      TimerManager.getInstance().recycle(invulTimer);
+    });
+    
+    udg_StatMultUnit = unit;
+    TriggerExecute(gg_trg_Base_Armor_Set);
+  }
+
+
 
   export function linkLeonSpellbook(unit: unit, cd: number) {
     BlzStartUnitAbilityCooldown(unit, Id.leonShotgun, cd);

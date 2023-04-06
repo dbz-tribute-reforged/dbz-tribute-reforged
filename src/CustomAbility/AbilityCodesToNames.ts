@@ -431,6 +431,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.leonFlashbang, AbilityNames.LeonSKennedy.FLASHBANG],
     [Id.leonHeavyGrenade, AbilityNames.LeonSKennedy.HEAVY_GRENADE],
 
+    // megumin
+    [Id.meguminExplosion1, AbilityNames.Megumin.EXPLOSION_1],
+    [Id.meguminExplosion2, AbilityNames.Megumin.EXPLOSION_2],
+    [Id.meguminExplosion3, AbilityNames.Megumin.EXPLOSION_3],
+    [Id.meguminExplosion4, AbilityNames.Megumin.EXPLOSION_4],
+    [Id.meguminExplosion5, AbilityNames.Megumin.EXPLOSION_5],
+
 
 
 

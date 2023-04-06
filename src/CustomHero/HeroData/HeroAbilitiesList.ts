@@ -540,6 +540,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.LeonSKennedy.FLASHBANG,
       AbilityNames.LeonSKennedy.HEAVY_GRENADE,
     ]],
+
+    [Id.megumin, [
+      AbilityNames.Megumin.EXPLOSION_1,
+      AbilityNames.Megumin.EXPLOSION_2,
+      AbilityNames.Megumin.EXPLOSION_3,
+      AbilityNames.Megumin.EXPLOSION_4,
+      AbilityNames.Megumin.EXPLOSION_5,
+    ]],
     
 
 
@@ -627,6 +635,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
       AbilityNames.Saitama.SERIOUS_SERIES, AbilityNames.Saitama.SERIOUS_PUNCH, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
       AbilityNames.DonkeyKong.GROUND_POUND, AbilityNames.DonkeyKong.BARREL_CANNON,
+      AbilityNames.LeonSKennedy.PISTOL,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

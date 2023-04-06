@@ -485,6 +485,14 @@ export module AbilityNames {
     export const HEAVY_GRENADE: string = "Leon Heavy Grenade";
   }
 
+  export module Megumin {
+    export const EXPLOSION_1: string = "Megumin Explosion 1";
+    export const EXPLOSION_2: string = "Megumin Explosion 2";
+    export const EXPLOSION_3: string = "Megumin Explosion 3";
+    export const EXPLOSION_4: string = "Megumin Explosion 4";
+    export const EXPLOSION_5: string = "Megumin Explosion 5";
+  }
+
 
 
 
