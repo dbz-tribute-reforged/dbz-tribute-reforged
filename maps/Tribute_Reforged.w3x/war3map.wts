@@ -29,7 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 66+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 67+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -3058,6 +3058,16 @@ STRING 495
 // Items: I000 (Senzu Bean), Ubertip (Tooltip - Extended)
 {
 |cff87ceebNon-Combat Consumable|r|n|cffffff00Restores 5% of max health and mana per second. Doubles the rate of stamina regen.|r|n|cff00ff00Duration: <A01X,Dur1>s|r|n|cff00ffffCooldown: <A01X,Cool1>s|r|n|cff00FF00Type "d" to drop 1 bean on the ground.|r
+}
+
+STRING 496
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+{
+|cffff8800Explosion Mastery|r grants |cff00ffff+0.5% max mana regeneration|r and |cff00ffff+0.1% max mana regeneration|r per enemy hero kill.
+
+|cffffcc00Evasion|r - <A04G,DataD1,%>% 
+|cffffcc00Critical|r - <A04G,DataA1>% 
+|cffffcc00Damage|r - <A04G,DataB1,.> times
 }
 
 STRING 497
@@ -89677,16 +89687,6 @@ Unlocks Supernova.|r
 |cff00FF00Cooldown: <A0IF,Cool1> seconds|r
 }
 
-STRING 14188
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
-{
-|cffff8800Explosion Mastery|r grants |cff00ffff+1% max mana regeneration|r and |cff00ffff+0.1% max mana regeneration|r per enemy hero kill.
-
-|cffffcc00Evasion|r - <A04G,DataD1,%>% 
-|cffffcc00Critical|r - <A04G,DataA1>% 
-|cffffcc00Damage|r - <A04G,DataB1,.> times
-}
-
 STRING 14189
 // Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
 {
@@ -122002,7 +122002,7 @@ Aura Sphere
 
 STRING 18948
 {
-|cffff2020Requires the Absorption skill (level 60+) to search for Android 17.
+|cffff2020Requires the Absorption skill (level 50+) to search for Android 17.
 }
 
 STRING 18949
