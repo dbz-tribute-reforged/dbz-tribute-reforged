@@ -176,6 +176,110 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
   }
 }
 
+// export class FriezaSaga extends AdvancedSaga implements Saga {
+//   name: string = '[DBZ] Frieza Saga';
+
+//   constructor() {
+//     super();
+//     this.delay = 30;
+//     this.stats = 100;
+//     this.spawnSound = gg_snd_DBZSagaTheme;
+//   }
+
+//   spawnSagaUnits(): void {
+//     super.spawnSagaUnits();
+//     SagaHelper.showMessagesChanceOfJoke(
+//       [
+//         "Frieza has arrived looking for the Dragon Balls."
+//       ],
+//       [
+//         "|cffffcc00Frieza|r: Why aren't the Ginyu's showing up?!",
+//         "|cffffcc00Frieza|r: Oh they're dead.",
+//         "|cffffcc00Frieza|r: WHY ARE THEY DEAD?!",
+//       ], 3, 5,
+//     );
+
+//     // create unit
+//     const maxFriezaHenchmen = 8;
+//     for (let i = 0; i < maxFriezaHenchmen; ++i) {
+//       let offsetX = Math.random() * 2000;
+//       let offsetY = Math.random() * 2000;
+//       CreateUnit(Constants.sagaPlayer, Creep.FriezaAppule, 21500 + offsetX, 26100 + offsetY, Math.random() * 360);
+//     }
+
+//     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
+
+//     for (let i = 1; i < this.bosses.length; ++i) {
+//       const frieza = this.bosses[i];
+//       SagaHelper.sagaHideUnit(frieza);
+//     }
+    
+//     for (const boss of this.bosses) {
+//       SetUnitAcquireRange(boss, 5000);
+//     }
+    
+//     this.ping()
+//     this.setupBossDeathActions(this);
+//   }
+
+//   update(t: number): void {
+//     super.update(t);
+//     // if frieza dead, replace with strong frieza
+//     for (let i = 0; i < this.bosses.length - 1; ++i) {
+//       const frieza = this.bosses[i];
+//       const nextFrieza = this.bosses[i+1];
+//       if (
+//         frieza && 
+//         nextFrieza &&
+//         SagaHelper.checkUnitHp(frieza, 0.8, false, false, true) &&
+//         SagaHelper.isUnitSagaHidden(nextFrieza)
+//       ) {
+//         SagaHelper.showMessagesChanceOfJoke(
+//           [
+//             "|cffffcc00Frieza|r: This isn't even my final form!",
+//           ],
+//           [
+//             "|cffffcc00Frieza|r: tHiS IsN't eVEn mY FiNaL fOrM!",
+//           ],
+//           5, 5,
+//         );
+//         SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
+//         if (i == this.bosses.length) {
+//           SetUnitLifePercentBJ(nextFrieza, 66);
+//         }
+//       }
+//     }
+//   }
+
+//   canStart(): boolean {
+//     return true;
+//   }
+
+//   canComplete(): boolean {
+//     return super.canComplete();
+//   }
+
+//   start(): void {
+//     super.start();
+//     this.spawnWhenDelayFinished();
+//   }
+
+//   spawnWhenDelayFinished(): void {
+//     if (this.delay <= 0) {
+//       this.spawnSagaUnits();
+//     } else {
+//       TimerStart(this.delayTimer, this.delay, false, ()=> {
+//         this.spawnSagaUnits();
+//         DestroyTimer(GetExpiredTimer());
+//       });
+//     }
+//   }
+
+//   complete(): void {
+//     super.complete();
+//   }
+// }
+
 export class FriezaSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Frieza Saga';
 
@@ -207,12 +311,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       CreateUnit(Constants.sagaPlayer, Creep.FriezaAppule, 21500 + offsetX, 26100 + offsetY, Math.random() * 360);
     }
 
-    this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
-
-    for (let i = 1; i < this.bosses.length; ++i) {
-      const frieza = this.bosses[i];
-      SagaHelper.sagaHideUnit(frieza);
-    }
+    this.addHeroListToSaga(["Frieza 5"], true);
     
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
@@ -224,31 +323,6 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     super.update(t);
-    // if frieza dead, replace with strong frieza
-    for (let i = 0; i < this.bosses.length - 1; ++i) {
-      const frieza = this.bosses[i];
-      const nextFrieza = this.bosses[i+1];
-      if (
-        frieza && 
-        nextFrieza &&
-        SagaHelper.checkUnitHp(frieza, 0.8, false, false, true) &&
-        SagaHelper.isUnitSagaHidden(nextFrieza)
-      ) {
-        SagaHelper.showMessagesChanceOfJoke(
-          [
-            "|cffffcc00Frieza|r: This isn't even my final form!",
-          ],
-          [
-            "|cffffcc00Frieza|r: tHiS IsN't eVEn mY FiNaL fOrM!",
-          ],
-          5, 5,
-        );
-        SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
-        if (i == this.bosses.length) {
-          SetUnitLifePercentBJ(nextFrieza, 66);
-        }
-      }
-    }
   }
 
   canStart(): boolean {
@@ -371,12 +445,108 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
 // tagoma / frieza force saga
 
+// export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
+//   name: string = '[DB Super] Resurrection \'F\'';
+
+//   protected frieza1: unit | undefined;
+//   protected friezaFinal: unit | undefined;
+//   protected friezaGolden: unit | undefined;
+
+//   constructor() {
+//     super();
+//     this.delay = 45;
+//   }
+
+//   spawnSagaUnits(): void {
+//     super.spawnSagaUnits();
+//     SagaHelper.showMessagesChanceOfJoke(
+//       [
+//         "After undergoing intense training Frieza has returned to Earth seeking his revenge!"
+//       ],
+//     );
+
+//     this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
+
+//     for (const boss of this.bosses) {
+//       SetUnitAcquireRange(boss, 3000);
+//     }
+
+//     this.frieza1 = this.bosses[0];
+//     this.friezaFinal = this.bosses[1];
+//     this.friezaGolden = this.bosses[2];
+
+//     SagaHelper.sagaHideUnit(this.friezaFinal);
+//     SagaHelper.sagaHideUnit(this.friezaGolden);
+
+//     this.ping();
+//     this.setupBossDeathActions(this);
+//   }
+
+//   update(t: number): void {
+//     super.update(t);
+//     if (
+//       this.frieza1 && this.friezaFinal && 
+//       SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, false) &&
+//       SagaHelper.isUnitSagaHidden(this.friezaFinal)
+//     ) {
+//       SagaHelper.showMessagesChanceOfJoke(
+//         [
+//           "|cffffcc00Frieza|r: Enough playing around. Time to get serious.",
+//         ],
+//       );
+//       SagaHelper.genericTransformAndPing(this.friezaFinal, this.frieza1, this);
+//     } else if (
+//       this.friezaFinal && this.friezaGolden &&
+//       SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, false) &&
+//       SagaHelper.isUnitSagaHidden(this.friezaGolden)
+//     ) {
+//       SagaHelper.showMessagesChanceOfJoke(
+//         [
+//           "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
+//         ],
+//       );
+//       SagaHelper.genericTransformAndPing(this.friezaGolden, this.friezaFinal, this);
+//       const goldenSfx = AddSpecialEffect(
+//         "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", 
+//         GetUnitX(this.friezaGolden), 
+//         GetUnitY(this.friezaGolden)
+//       );
+//       BlzSetSpecialEffectScale(goldenSfx, 4.0);
+//       DestroyEffect(goldenSfx);
+//     }
+//   }
+
+//   canStart(): boolean {
+//     return true;
+//   }
+
+//   canComplete(): boolean {
+//     return super.canComplete();
+//   }
+
+//   start(): void {
+//     super.start();
+//     this.spawnWhenDelayFinished();
+//   }
+
+//   spawnWhenDelayFinished(): void {
+//     if (this.delay <= 0) {
+//       this.spawnSagaUnits();
+//     } else {
+//       TimerStart(this.delayTimer, this.delay, false, ()=> {
+//         this.spawnSagaUnits();
+//         DestroyTimer(GetExpiredTimer());
+//       });
+//     }
+//   }
+
+//   complete(): void {
+//     super.complete();
+//   }
+// }
+
 export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
   name: string = '[DB Super] Resurrection \'F\'';
-
-  protected frieza1: unit | undefined;
-  protected friezaFinal: unit | undefined;
-  protected friezaGolden: unit | undefined;
 
   constructor() {
     super();
@@ -387,22 +557,15 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "After undergoing intense training Frieza has returned to Earth seeking his revenge!"
+        "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
       ],
     );
 
-    this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
+    this.addHeroListToSaga(["Resurrection Frieza Golden"], true);
 
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
-
-    this.frieza1 = this.bosses[0];
-    this.friezaFinal = this.bosses[1];
-    this.friezaGolden = this.bosses[2];
-
-    SagaHelper.sagaHideUnit(this.friezaFinal);
-    SagaHelper.sagaHideUnit(this.friezaGolden);
 
     this.ping();
     this.setupBossDeathActions(this);
@@ -410,36 +573,6 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     super.update(t);
-    if (
-      this.frieza1 && this.friezaFinal && 
-      SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, false) &&
-      SagaHelper.isUnitSagaHidden(this.friezaFinal)
-    ) {
-      SagaHelper.showMessagesChanceOfJoke(
-        [
-          "|cffffcc00Frieza|r: Enough playing around. Time to get serious.",
-        ],
-      );
-      SagaHelper.genericTransformAndPing(this.friezaFinal, this.frieza1, this);
-    } else if (
-      this.friezaFinal && this.friezaGolden &&
-      SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, false) &&
-      SagaHelper.isUnitSagaHidden(this.friezaGolden)
-    ) {
-      SagaHelper.showMessagesChanceOfJoke(
-        [
-          "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
-        ],
-      );
-      SagaHelper.genericTransformAndPing(this.friezaGolden, this.friezaFinal, this);
-      const goldenSfx = AddSpecialEffect(
-        "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", 
-        GetUnitX(this.friezaGolden), 
-        GetUnitY(this.friezaGolden)
-      );
-      BlzSetSpecialEffectScale(goldenSfx, 4.0);
-      DestroyEffect(goldenSfx);
-    }
   }
 
   canStart(): boolean {

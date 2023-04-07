@@ -3,6 +3,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 
 export class CustomAbilityInput {
   constructor(
+    public abilityId: number,
     public caster: CustomHero,
     public casterPlayer: player, 
     public level: number,
@@ -19,6 +20,7 @@ export class CustomAbilityInput {
 
   clone(): CustomAbilityInput {
     return new CustomAbilityInput(
+      this.abilityId,
       this.caster,
       this.casterPlayer,
       this.level,

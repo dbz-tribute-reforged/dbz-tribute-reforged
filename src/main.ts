@@ -136,6 +136,7 @@ function tsPostMain() {
   });
 
   CameraZoom.onInit();
+  PlayMusic("Audio\\Music\\ChaLaHeadChaLaIntro.mp3");
 }
 
 function playLobbyMusic() {

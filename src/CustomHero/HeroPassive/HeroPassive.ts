@@ -150,6 +150,7 @@ export function superJanembaPassive(customHero: CustomHero) {
             onHitAbility = HeroPassiveData.DEVIL_CLAW_ABILITY;
           }
           const input = new CustomAbilityInput(
+            onHitAbility,
             customHero, 
             GetOwningPlayer(customHero.unit),
             GetUnitAbilityLevel(customHero.unit, onHitAbility),
@@ -179,6 +180,7 @@ export function superJanembaPassive(customHero: CustomHero) {
           GetUnitAbilityLevel(customHero.unit, Buffs.COSMIC_ILLUSION) > 0
         ) {
           const input = new CustomAbilityInput(
+            Id.cosmicIllusion,
             customHero, 
             GetOwningPlayer(customHero.unit),
             GetUnitAbilityLevel(customHero.unit, Id.cosmicIllusion),
@@ -329,6 +331,7 @@ export function dyspoPassive(customHero: CustomHero) {
           //   onHitAbility = HeroPassiveData.DEVIL_CLAW_ABILITY;
           // }
           const input = new CustomAbilityInput(
+            Id.justiceKick,
             customHero, 
             GetOwningPlayer(customHero.unit),
             GetUnitAbilityLevel(customHero.unit, onHitAbility),
@@ -428,6 +431,7 @@ export function ichigoPassive(customHero: CustomHero) {
           customHero.useAbility(
             getsuga4.getName(),
             new CustomAbilityInput(
+              Id.getsugaGran,
               customHero, 
               GetOwningPlayer(customHero.unit),
               GetUnitAbilityLevel(attacker, Id.getsugaJujisho),
@@ -446,6 +450,7 @@ export function ichigoPassive(customHero: CustomHero) {
           customHero.useAbility(
             getsuga3.getName(),
             new CustomAbilityInput(
+              Id.getsugaJujisho,
               customHero, 
               GetOwningPlayer(customHero.unit),
               GetUnitAbilityLevel(attacker, Id.getsugaJujisho),
@@ -464,6 +469,7 @@ export function ichigoPassive(customHero: CustomHero) {
           customHero.useAbility(
             getsuga2.getName(),
             new CustomAbilityInput(
+              Id.getsugaKuroi,
               customHero, 
               GetOwningPlayer(customHero.unit),
               GetUnitAbilityLevel(attacker, Id.getsugaTensho),
@@ -483,6 +489,7 @@ export function ichigoPassive(customHero: CustomHero) {
           customHero.useAbility(
             getsuga1.getName(),
             new CustomAbilityInput(
+              Id.getsugaTensho,
               customHero, 
               GetOwningPlayer(customHero.unit),
               GetUnitAbilityLevel(attacker, Id.getsugaTensho),
@@ -683,6 +690,7 @@ export function dartFeldPassive(customHero: CustomHero) {
             customHero.useAbility(
               AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
               new CustomAbilityInput(
+                Id.paragonOfFlame,
                 customHero, 
                 GetOwningPlayer(customHero.unit),
                 GetUnitAbilityLevel(customHero.unit, Id.paragonOfFlame),
@@ -734,6 +742,7 @@ export function dartFeldPassive(customHero: CustomHero) {
             customHero.useAbility(
               AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
               new CustomAbilityInput(
+                Id.madnessHero,
                 customHero, 
                 GetOwningPlayer(customHero.unit),
                 1,
@@ -875,6 +884,7 @@ export function lucarioPassive(customHero: CustomHero) {
           GetUnitAbilityLevel(customHero.unit, Buffs.EXTREME_SPEED) > 0
         ) {
           const input = new CustomAbilityInput(
+            Id.extremeSpeed,
             customHero, 
             player,
             GetUnitAbilityLevel(customHero.unit, Id.extremeSpeed),

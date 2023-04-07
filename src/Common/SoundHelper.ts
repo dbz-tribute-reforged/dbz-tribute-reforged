@@ -1,3 +1,4 @@
+import { TimerManager } from "Core/Utility/TimerManager"
 import { Id } from "./Constants"
 
 export module SoundHelper {
@@ -26,6 +27,20 @@ export module SoundHelper {
     }));
   }
 
+  export function playTwoSoundsWithDelay(
+    unit: unit, 
+    s1: string, dur1: number,
+    timerDelay: number,
+    s2: string, dur2: number
+  ) {
+    SoundHelper.playSoundOnUnit(unit, s1, dur1);
+    const tim = TimerManager.getInstance().get();
+    TimerStart(tim, timerDelay, false, () => {
+      SoundHelper.playSoundOnUnit(unit, s2, dur2);
+      TimerManager.getInstance().recycle(tim);
+    });
+  }
+  
   export function playUnitSpellSound(unit: unit, spellId: number) {
     const unitId = GetUnitTypeId(unit);
     let rng = Math.random() * 100;
@@ -188,9 +203,43 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Android17BeatYouLikeARug.mp3", 1608);
         }
         break;
-
+      
+      // appule
       case Id.appuleBlaster:
+        if (unitId == Id.appule) {
+          if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Q1.mp3", 1728);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Q2.mp3", 2784);
+          }
+        }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+        break;
+      
+      case Id.appuleEscape:
+        if (unitId == Id.appule) {
+          playSoundOnUnit(unit, "Audio/Voice/Appule/W1.mp3", 2160);
+        }
+        break;
+      
+      case Id.appuleVengeance:
+        if (unitId == Id.appule) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Kill3.mp3", 6768);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/E1.mp3", 2352);
+          }
+        }
+        break;
+      
+      case Id.appuleClones:
+        if (unitId == Id.appule) {
+          if (rng < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Death.mp3", 1920);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/R1.mp3", 1824);
+          }
+        }
         break;
       
       // babidi
@@ -1052,6 +1101,47 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
         break;
 
+      
+      // hirudegarn
+      case Id.hirudegarnFlameBreath:
+      case Id.hirudegarnTailSweep:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/Q1.mp3", 3600);
+        }
+        break;
+      
+      case Id.hirudegarnFlameBall:
+      case Id.hirudegarnTailAttack:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/W1.mp3", 1248);
+        }
+        break;
+
+      case Id.hirudegarnDarkMist:
+      case Id.hirudegarnDarkEyes:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/E1.mp3", 2208);
+        }
+        break;
+
+      case Id.hirudegarnChouMakousen:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/Q1.mp3", 3600);
+        }
+        break;
+
+      case Id.hirudegarnMolting:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/D1.mp3", 6912);
+        }
+        break;
+
+      case Id.hirudegarnFlight:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/F1.mp3", 1920);
+        }
+        break;
+
       // hit
       case Id.timeSkip:
         if (unitId == Id.hit) {
@@ -1446,6 +1536,99 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/RoshiMaxPower.mp3", 1968);
         }
         playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
+      // megumin
+      case Id.meguminExplosion1:
+        if (unitId == Id.megumin) {
+          playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion1.mp3", 1253);
+        }
+        break;
+      
+      case Id.meguminExplosion2:
+        if (unitId == Id.megumin) {
+          if (rng < 5) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/ChunChunMaru.mp3", 800, 0.8,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion2.mp3", 2544);
+          }
+        }
+        break;
+
+      case Id.meguminExplosion3:
+        if (unitId == Id.megumin) {
+          if (rng < 50) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/WagaNaWa2.mp3", 1123, 1.1,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/WagaNaWa3.mp3", 1436, 1.4,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          }
+        }
+        break;
+
+      case Id.meguminExplosion4:
+        if (unitId == Id.megumin) {
+          if (rng < 25) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit, 
+              "Audio/Voice/Megumin/Explosion4_1.mp3", 2063, 2.0,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else if (rng < 50) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit, 
+              "Audio/Voice/Megumin/Explosion4_2.mp3", 3578, 3.6,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else if (rng < 75) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion4_3.mp3", 1959, 2.0,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion4_4.mp3", 2821, 2.9,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          }
+        }
+        break;
+
+      case Id.meguminExplosion5:
+        if (unitId == Id.megumin) {
+          if (rng < 5) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Chant.mp3", 11598);
+          } else if (rng < 10) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion6.mp3", 5851);
+          } else if (rng < 40) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion5_3.mp3", 7056);
+          } else if (rng < 70) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion5_1.mp3", 3160, 3.1,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion5_2.mp3", 2857, 2.8,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          }
+        }
         break;
 
       // nappa

@@ -8972,6 +8972,156 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Megumin.EXPLOSION_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 1" },
+      { name: "multi megumin explosion aoe 1" },
+      { name: "sfx megumin circle 1" },
+      { name: "sfx megumin explosion 1" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 233,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 2" },
+      { name: "multi megumin explosion aoe 2" },
+      { name: "sfx megumin circle 2" },
+      { name: "sfx megumin explosion 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 3" },
+      { name: "multi megumin explosion aoe 3" },
+      { name: "sfx megumin circle 3" },
+      { name: "sfx megumin explosion 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_4,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 300,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 4" },
+      { name: "multi megumin explosion aoe 4" },
+      { name: "sfx megumin circle 4" },
+      { name: "sfx megumin explosion 4" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Megumin.EXPLOSION_5,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi megumin explosion 5" },
+      { name: "multi megumin explosion aoe 5" },
+      { name: "sfx megumin circle 5" },
+      { name: "sfx megumin explosion 5" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -12217,7 +12367,7 @@ export const AbilitiesList = [
         AbilityNames.Sephiroth.OCTOSLASH,
     },
     components: [
-      { name: "dash ground point 10dist" },
+      { name: "dash ground point 5dist" },
       { name: "multi octoslash" },
     ],
   },
@@ -13349,7 +13499,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim goku black spin" },
-      { name: "dash ground point 40dist" },
+      { name: "dash ground point 45dist" },
       { name: "damage goku black sorrowful scythe agi explosion" },
       { name: "damage goku black sorrowful scythe int explosion" },
     ],
