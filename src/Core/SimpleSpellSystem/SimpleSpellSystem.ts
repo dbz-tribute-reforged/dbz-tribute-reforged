@@ -141,6 +141,13 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.meguminExplosion3, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminExplosion4, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminExplosion5, SimpleSpellSystem.doMeguminExplosion);
+    Globals.genericSpellMap.set(Id.meguminManatite, SimpleSpellSystem.doMeguminManatite);
+
+    Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
+    Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
+    Globals.genericSpellMap.set(Id.schalaMagicSeal2, SimpleSpellSystem.doSchalaLinkChannels);
+    Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
+    Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
     
     // add DDS stuff
     TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
@@ -1847,6 +1854,8 @@ export module SimpleSpellSystem {
   }
 
   export function SchalaTeleportation() {
+    SimpleSpellSystem.doSchalaLinkChannels();
+
     const spellId = GetSpellAbilityId();
     const schalaTpMoveDuration = 66;
     const schalaTpMoveDuration2 = 33;
@@ -2933,10 +2942,24 @@ export module SimpleSpellSystem {
   }
 
   
+  export function doMeguminManatite() {
+    const unit = GetTriggerUnit();
+    SetUnitState(
+      unit, UNIT_STATE_MANA, 
+      GetUnitState(unit, UNIT_STATE_MAX_MANA)
+    );
+    DestroyEffect(
+      AddSpecialEffectTarget(
+        "Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl",
+        unit, "origin"
+      )
+    );
+  }
+
   export function doMeguminExplosion() {
     const unit = GetTriggerUnit();
-    const playerId = GetPlayerId(GetOwningPlayer(unit));
     const spellId = GetSpellAbilityId();
+    SetUnitState(unit, UNIT_STATE_MANA, 1);
 
     let timeout = 1;
     switch (spellId) {
@@ -2957,26 +2980,53 @@ export module SimpleSpellSystem {
         break;
     }
 
-    SetUnitState(unit, UNIT_STATE_MANA, 1);
-
-    TextTagHelper.showTempText(
-      Colorizer.getPlayerColorText(playerId) + "Invulnerable!",
-      GetUnitX(unit), GetUnitY(unit),
-      5, timeout, 2
+    const invulSfx = AddSpecialEffectTarget(
+      "Abilities/Spells/Human/DivineShield/DivineShieldTarget.mdl",
+      unit, "chest"
     );
 
-    const isAdd = UnitAddAbility(unit, Id.meguminInvul);
+    let weaponSfx = null;
+    let weaponSfx2 = null;
+    const sfxTimer = TimerManager.getInstance().get();
+    TimerStart(sfxTimer, Math.max(0, timeout-2), false, () => {
+      weaponSfx = AddSpecialEffectTarget(
+        "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
+        unit, "weapon"
+      );
+      weaponSfx2 = AddSpecialEffectTarget(
+        "StarSFX.mdl",
+        unit, "weapon"
+      );
+      TimerManager.getInstance().recycle(sfxTimer);
+    });
 
+    const isAdd = UnitAddAbility(unit, Id.meguminInvul);
     PauseUnit(unit, true);
     SetUnitAnimationByIndex(unit, 8);
     const invulTimer = TimerManager.getInstance().get();
     TimerStart(invulTimer, timeout, false, () => {
       PauseUnit(unit, false);
       ResetUnitAnimation(unit);
+      SoundHelper.playSoundOnUnit(unit, "Audio/Effects/MeguminExplosion1.mp3", 3160);
+
+      DestroyEffect(invulSfx);
+      if (weaponSfx != null) DestroyEffect(weaponSfx);
+      if (weaponSfx2 != null) DestroyEffect(weaponSfx2);
+      
+      TimerManager.getInstance().recycle(invulTimer);
       if (isAdd) {
         UnitRemoveAbility(unit, Id.meguminInvul);
+        udg_StatMultUnit = unit;
+        TriggerExecute(gg_trg_Base_Armor_Set);
       }
-      TimerManager.getInstance().recycle(invulTimer);
+    });
+
+    const animDelay = 0.2;
+    const animDelay2 = animDelay + 1;
+    const animTimer2 = TimerManager.getInstance().get();
+    TimerStart(animTimer2, Math.max(animDelay, timeout-animDelay2), false, () => {
+      SetUnitAnimationByIndex(unit, 9);
+      TimerManager.getInstance().recycle(animTimer2);
     });
     
     udg_StatMultUnit = unit;
@@ -3045,6 +3095,39 @@ export module SimpleSpellSystem {
         }
       }
     });
+  }
+
+
+  export function doSchalaLinkChannels() {
+    const unit = GetTriggerUnit();
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaPray, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaPray))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaMagicSeal, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaMagicSeal2, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal2))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaTeleportation, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaTeleportation2, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation2))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaSkygate, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate))
+    );
+    BlzStartUnitAbilityCooldown(
+      unit, Id.schalaSkygate2, 
+      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate2))
+    );
   }
 
 

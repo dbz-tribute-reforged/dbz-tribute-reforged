@@ -73,7 +73,7 @@ export class SagaManager {
         ++numActivePlayers;
       }
     }
-    SagaManager.maxNumberConcurrentSagas = 2 + Math.ceil(numActivePlayers / 5);
+    SagaManager.maxNumberConcurrentSagas = 3;
   }
 
   public step(): void {

@@ -1,3 +1,4 @@
+import { TimerManager } from "Core/Utility/TimerManager"
 import { Id } from "./Constants"
 
 export module SoundHelper {
@@ -26,6 +27,20 @@ export module SoundHelper {
     }));
   }
 
+  export function playTwoSoundsWithDelay(
+    unit: unit, 
+    s1: string, dur1: number,
+    timerDelay: number,
+    s2: string, dur2: number
+  ) {
+    SoundHelper.playSoundOnUnit(unit, s1, dur1);
+    const tim = TimerManager.getInstance().get();
+    TimerStart(tim, timerDelay, false, () => {
+      SoundHelper.playSoundOnUnit(unit, s2, dur2);
+      TimerManager.getInstance().recycle(tim);
+    });
+  }
+  
   export function playUnitSpellSound(unit: unit, spellId: number) {
     const unitId = GetUnitTypeId(unit);
     let rng = Math.random() * 100;
@@ -1446,6 +1461,99 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/RoshiMaxPower.mp3", 1968);
         }
         playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
+      // megumin
+      case Id.meguminExplosion1:
+        if (unitId == Id.megumin) {
+          playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion1.mp3", 1253);
+        }
+        break;
+      
+      case Id.meguminExplosion2:
+        if (unitId == Id.megumin) {
+          if (rng < 5) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/ChunChunMaru.mp3", 800, 0.8,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion2.mp3", 2544);
+          }
+        }
+        break;
+
+      case Id.meguminExplosion3:
+        if (unitId == Id.megumin) {
+          if (rng < 50) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/WagaNaWa2.mp3", 1123, 1.1,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/WagaNaWa3.mp3", 1436, 1.4,
+              "Audio/Voice/Megumin/Explosion3.mp3", 2507
+            );
+          }
+        }
+        break;
+
+      case Id.meguminExplosion4:
+        if (unitId == Id.megumin) {
+          if (rng < 25) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit, 
+              "Audio/Voice/Megumin/Explosion4_1.mp3", 2063, 2.0,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else if (rng < 50) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit, 
+              "Audio/Voice/Megumin/Explosion4_2.mp3", 3578, 3.6,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else if (rng < 75) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion4_3.mp3", 1959, 2.0,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion4_4.mp3", 2821, 2.9,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          }
+        }
+        break;
+
+      case Id.meguminExplosion5:
+        if (unitId == Id.megumin) {
+          if (rng < 5) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Chant.mp3", 11598);
+          } else if (rng < 10) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion6.mp3", 5851);
+          } else if (rng < 40) {
+            SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion5_3.mp3", 7056);
+          } else if (rng < 70) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion5_1.mp3", 3160, 3.1,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Megumin/Explosion5_2.mp3", 2857, 2.8,
+              "Audio/Voice/Megumin/Explosion4.mp3", 2690
+            );
+          }
+        }
         break;
 
       // nappa

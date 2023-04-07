@@ -8995,7 +8995,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi megumin explosion 1" },
-      { name: "sfx megumin explosion" },
+      { name: "multi megumin explosion aoe 1" },
+      { name: "sfx megumin circle 1" },
+      { name: "sfx megumin explosion 1" },
     ],
   },
   // -------------------------------------------
@@ -9023,7 +9025,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi megumin explosion 2" },
-      { name: "sfx megumin explosion" },
+      { name: "multi megumin explosion aoe 2" },
+      { name: "sfx megumin circle 2" },
+      { name: "sfx megumin explosion 2" },
     ],
   },
   // -------------------------------------------
@@ -9051,7 +9055,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi megumin explosion 3" },
-      { name: "sfx megumin explosion" },
+      { name: "multi megumin explosion aoe 3" },
+      { name: "sfx megumin circle 3" },
+      { name: "sfx megumin explosion 3" },
     ],
   },
   // -------------------------------------------
@@ -9079,7 +9085,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi megumin explosion 4" },
-      { name: "sfx megumin explosion" },
+      { name: "multi megumin explosion aoe 4" },
+      { name: "sfx megumin circle 4" },
+      { name: "sfx megumin explosion 4" },
     ],
   },
   // -------------------------------------------
@@ -9107,7 +9115,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi megumin explosion 5" },
-      { name: "sfx megumin explosion" },
+      { name: "multi megumin explosion aoe 5" },
+      { name: "sfx megumin circle 5" },
+      { name: "sfx megumin explosion 5" },
     ],
   },
   // -------------------------------------------
@@ -12357,7 +12367,7 @@ export const AbilitiesList = [
         AbilityNames.Sephiroth.OCTOSLASH,
     },
     components: [
-      { name: "dash ground point 10dist" },
+      { name: "dash ground point 5dist" },
       { name: "multi octoslash" },
     ],
   },

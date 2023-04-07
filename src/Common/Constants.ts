@@ -807,6 +807,7 @@ export module Id {
   export const meguminExplosion4 = FourCC("A04A");
   export const meguminExplosion5 = FourCC("A04C");
   export const meguminPassive = FourCC("A04G");
+  export const meguminManatite = FourCC("A05Y");
   export const meguminInvul = FourCC("A05X");
 
   export const nappa = FourCC("H08W");

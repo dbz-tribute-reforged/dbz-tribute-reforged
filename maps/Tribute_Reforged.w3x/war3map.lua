@@ -884,6 +884,7 @@ gg_trg_Test_Stats_Get_Stats_Command = nil
 gg_trg_Test_Stats_Get_Stats_Print = nil
 gg_trg_Test_Stats_Get_Stats_Print_Copy = nil
 gg_trg_Add_Unit_To_StatMult = nil
+gg_trg_Automatic_StatMod = nil
 gg_trg_Remove_Unit_From_StatMult = nil
 gg_trg_Add_To_Base_Stats = nil
 gg_trg_Add_To_Varied_Base_Stats = nil
@@ -5702,7 +5703,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 15936.0, 4352.0, 270.000, FourCC("n
 SetResourceAmount(u, 100000)
 u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 23552.0, 15872.0, 270.000, FourCC("n02M"))
 SetResourceAmount(u, 25000)
-u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 23680.0, 25088.0, 270.000, FourCC("n02M"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 23616.0, 25024.0, 270.000, FourCC("n02M"))
 SetResourceAmount(u, 1000000)
 u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 31232.0, 3200.0, 270.000, FourCC("n02M"))
 SetResourceAmount(u, 25000)
@@ -7510,6 +7511,13 @@ end
 return true
 end
 
+function Trig_Infinite_Energy_Android_Loop_Func001Func004Func003C()
+if (not (BlzGetUnitAbilityManaCost(udg_TempUnit, FourCC("A03J"), 0) >= 50000)) then
+return false
+end
+return true
+end
+
 function Trig_Infinite_Energy_Android_Loop_Func001Func004C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A04G"), udg_TempUnit) > 0)) then
 return false
@@ -7538,7 +7546,11 @@ end
 if (Trig_Infinite_Energy_Android_Loop_Func001Func004C()) then
 udg_TempInt4 = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
 SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * ((0.01 + ((0.01 * 0.10) * I2R(udg_PlayerKills[udg_TempInt4]))) * 0.33))))
-udg_TempInt4 = IMaxBJ(BlzGetUnitAbilityManaCost(udg_TempUnit, FourCC("A03J"), 0), R2I((0.80 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit))))
+if (Trig_Infinite_Energy_Android_Loop_Func001Func004Func003C()) then
+udg_TempInt4 = IMaxBJ(50000, R2I((0.95 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit))))
+else
+udg_TempInt4 = IMaxBJ(BlzGetUnitAbilityManaCost(udg_TempUnit, FourCC("A03J"), 0), R2I((0.90 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit))))
+end
 BlzSetUnitAbilityManaCost(udg_TempUnit, FourCC("A03J"), 0, udg_TempInt4)
 BlzSetUnitAbilityManaCost(udg_TempUnit, FourCC("A042"), 0, udg_TempInt4)
 BlzSetUnitAbilityManaCost(udg_TempUnit, FourCC("A048"), 0, udg_TempInt4)
@@ -20137,7 +20149,7 @@ udg_TempString = (udg_TempString .. udg_TempString2)
 DisplayTimedTextToForce(udg_TempPlayerGroup, udg_TempReal5, udg_TempString)
 udg_TempString = ("[|cffff4444Atk +" .. (I2S((GetPlayerTechCountSimple(FourCC("R001"), udg_GetiStarPlayer) * 50)) .. "|r]"))
 udg_TempString2 = ("[|cff00ff00Def +" .. (I2S((GetPlayerTechCountSimple(FourCC("R000"), udg_GetiStarPlayer) * 1)) .. "|r]"))
-udg_TempString3 = ("[|cffffff00Gold " .. (I2S((GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer) * 1)) .. "|r]"))
+udg_TempString3 = ("[|cffffff00Gold " .. (I2S((GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer) * 3)) .. "|r]"))
 udg_TempString4 = ("[|cffffcc00Combat " .. (I2S((GetPlayerTechCountSimple(FourCC("R00O"), udg_GetiStarPlayer) * 1)) .. "|r]"))
 udg_TempString = ((udg_TempString .. udg_TempString2) .. (udg_TempString3 .. udg_TempString4))
 DisplayTimedTextToForce(udg_TempPlayerGroup, udg_TempReal5, udg_TempString)
@@ -20497,9 +20509,9 @@ function Trig_Geti_Star_Calc_Kill_Gold_Actions()
 if (Trig_Geti_Star_Calc_Kill_Gold_Func001C()) then
 udg_GetiStarGold = GetHeroLevel(udg_GetiStarKilledUnit)
 udg_GetiStarGold = ((10 * udg_GetiStarGold) + R2I(SquareRoot((10000.00 * I2R(udg_GetiStarGold)))))
-udg_GetiStarGold = R2I((I2R(udg_GetiStarGold) * (1 + (0.01 * I2R(GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer))))))
+udg_GetiStarGold = R2I((I2R(udg_GetiStarGold) * (1 + (0.03 * I2R(GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer))))))
 else
-udg_GetiStarGold = (GetUnitLevel(udg_GetiStarKilledUnit) + (1 + GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer)))
+udg_GetiStarGold = (GetUnitLevel(udg_GetiStarKilledUnit) + (1 + (3 * GetPlayerTechCountSimple(FourCC("R00N"), udg_GetiStarPlayer))))
 end
 end
 
@@ -23630,6 +23642,27 @@ end
 return true
 end
 
+function Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001Func001Func001C()
+if (not (udg_TempReal < 75.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001Func001C()
+if (not (udg_TempReal < 60.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
 function Trig_Death_Hero_Voiceline_Dying_Func004Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
@@ -23638,17 +23671,10 @@ return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func004C()
-if (not (udg_TempUnitType == FourCC("H00G"))) then
+if (not (udg_TempUnitType == FourCC("H0AI"))) then
 return false
 end
-if (not (udg_TempReal < 15.00)) then
-return false
-end
-return true
-end
-
-function Trig_Death_Hero_Voiceline_Dying_Func005Func002Func001C()
-if (not (udg_TempReal < 40.00)) then
+if (not (udg_TempReal < 75.00)) then
 return false
 end
 return true
@@ -23662,6 +23688,30 @@ return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func005C()
+if (not (udg_TempUnitType == FourCC("H00G"))) then
+return false
+end
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func006Func002Func001C()
+if (not (udg_TempReal < 40.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func006Func002C()
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func006C()
 if (not (udg_TempUnitType == FourCC("H05Q"))) then
 return false
 end
@@ -23671,35 +23721,18 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func006Func002C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Death_Hero_Voiceline_Dying_Func006C()
-if (not (udg_TempUnitType == FourCC("H09H"))) then
-return false
-end
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
 function Trig_Death_Hero_Voiceline_Dying_Func007Func002C()
-if (not (udg_TempReal < 15.00)) then
+if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func007C()
-if (not (udg_TempUnitType == FourCC("H09E"))) then
+if (not (udg_TempUnitType == FourCC("H09H"))) then
 return false
 end
-if (not (udg_TempReal < 15.00)) then
+if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
@@ -23713,6 +23746,23 @@ return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func008C()
+if (not (udg_TempUnitType == FourCC("H09E"))) then
+return false
+end
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func009Func002C()
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func009C()
 if (not (udg_TempUnitType == FourCC("H00K"))) then
 return false
 end
@@ -23725,32 +23775,8 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func009Func002Func001C()
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Death_Hero_Voiceline_Dying_Func009Func002C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Death_Hero_Voiceline_Dying_Func009C()
-if (not (udg_TempUnitType == FourCC("H00A"))) then
-return false
-end
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
 function Trig_Death_Hero_Voiceline_Dying_Func010Func002Func001C()
-if (not (udg_TempReal < 75.00)) then
+if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
@@ -23764,6 +23790,30 @@ return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func010C()
+if (not (udg_TempUnitType == FourCC("H00A"))) then
+return false
+end
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func011Func002Func001C()
+if (not (udg_TempReal < 75.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func011Func002C()
+if (not (udg_TempReal < 25.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func011C()
 if (not (udg_TempUnitType == FourCC("H09J"))) then
 return false
 end
@@ -23773,28 +23823,45 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func011Func002Func003Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func012Func002C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func012C()
+if (not (udg_TempUnitType == FourCC("H05U"))) then
+return false
+end
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func013Func002Func003Func003C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func011Func002Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func013Func002Func003C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func011Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func013Func002C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func011C()
+function Trig_Death_Hero_Voiceline_Dying_Func013C()
 if (not (udg_TempUnitType == FourCC("H0AL"))) then
 return false
 end
@@ -23804,21 +23871,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func012Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func014Func002Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func012Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func014Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func012C()
+function Trig_Death_Hero_Voiceline_Dying_Func014C()
 if (not (udg_TempUnitType == FourCC("E01P"))) then
 return false
 end
@@ -23828,21 +23895,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func013C()
+function Trig_Death_Hero_Voiceline_Dying_Func015C()
 if (not (udg_TempUnitType == FourCC("H03Y"))) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func014Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func016Func002C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func014C()
+function Trig_Death_Hero_Voiceline_Dying_Func016C()
 if (not (udg_TempUnitType == FourCC("E019"))) then
 return false
 end
@@ -23852,28 +23919,28 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func015Func002Func001Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func017Func002Func001Func001C()
 if (not (udg_TempReal < 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func015Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func017Func002Func001C()
 if (not (udg_TempReal < 65.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func015Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func017Func002C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func015C()
+function Trig_Death_Hero_Voiceline_Dying_Func017C()
 if (not (udg_TempUnitType == FourCC("H09Q"))) then
 return false
 end
@@ -23883,21 +23950,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func016Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func018Func002Func001C()
 if (not (udg_TempReal < 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func016Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func018Func002C()
 if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func016C()
+function Trig_Death_Hero_Voiceline_Dying_Func018C()
 if (not (udg_TempUnitType == FourCC("E001"))) then
 return false
 end
@@ -23907,28 +23974,28 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func017Func002Func003Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003Func003C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func017Func002Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func017Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func019Func002C()
 if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func017C()
+function Trig_Death_Hero_Voiceline_Dying_Func019C()
 if (not (udg_TempUnitType == FourCC("H08W"))) then
 return false
 end
@@ -23938,14 +24005,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func018Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func020Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func018C()
+function Trig_Death_Hero_Voiceline_Dying_Func020C()
 if (not (udg_TempUnitType == FourCC("H00R"))) then
 return false
 end
@@ -23958,21 +24025,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func019Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()
 if (not (udg_TempReal < 100.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func019Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func021Func002C()
 if (not (udg_TempReal < 75.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func019C()
+function Trig_Death_Hero_Voiceline_Dying_Func021C()
 if (not (udg_TempUnitType == FourCC("H04Y"))) then
 return false
 end
@@ -23982,14 +24049,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func020Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func022Func002C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func020C()
+function Trig_Death_Hero_Voiceline_Dying_Func022C()
 if (not (udg_TempUnitType == FourCC("H09M"))) then
 return false
 end
@@ -23999,42 +24066,42 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func023Func002Func001C()
 if (not (udg_TempReal < 66.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func021Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func023Func002C()
 if (not (udg_TempReal < 33.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func021C()
+function Trig_Death_Hero_Voiceline_Dying_Func023C()
 if (not (udg_TempUnitType == FourCC("H07Y"))) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func024Func002Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func024Func002C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022C()
+function Trig_Death_Hero_Voiceline_Dying_Func024C()
 if (not (udg_TempUnitType == FourCC("H05V"))) then
 return false
 end
@@ -24044,14 +24111,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func023Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func025Func002C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func023C()
+function Trig_Death_Hero_Voiceline_Dying_Func025C()
 if (not (udg_TempUnitType == FourCC("H055"))) then
 return false
 end
@@ -24061,11 +24128,11 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func024Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func026Func002C()
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func024C()
+function Trig_Death_Hero_Voiceline_Dying_Func026C()
 if (not (udg_TempUnitType == FourCC("E003"))) then
 return false
 end
@@ -24075,28 +24142,28 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004Func003Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004Func003Func001C()
 if (not (udg_TempReal < 70.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004Func003C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004C()
+function Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func027Func002C()
 if (not (udg_ScoreboardTimeHours == 0)) then
 return false
 end
@@ -24106,7 +24173,7 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025C()
+function Trig_Death_Hero_Voiceline_Dying_Func027C()
 if (not (udg_TempUnitType == FourCC("H0AO"))) then
 return false
 end
@@ -24131,19 +24198,43 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func004C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func004Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/CellPerfectDamnYou.mp3"
-udg_DeathHeroVoicelineDuration = 5064
+udg_DeathHeroVoicelinePath = "Audio/Voice/Appule/Death.mp3"
+udg_DeathHeroVoicelineDuration = 1920
 else
+if (Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Appule/Death2.mp3"
+udg_DeathHeroVoicelineDuration = 1920
+else
+if (Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Appule/Death3.mp3"
+udg_DeathHeroVoicelineDuration = 4032
+else
+if (Trig_Death_Hero_Voiceline_Dying_Func004Func002Func001Func001Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Appule/Death4.mp3"
+udg_DeathHeroVoicelineDuration = 1152
+else
+end
+end
+end
 end
 else
 end
 if (Trig_Death_Hero_Voiceline_Dying_Func005C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func005Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/CellPerfectDamnYou.mp3"
+udg_DeathHeroVoicelineDuration = 5064
+else
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func006C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func006Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/DK/Scream.mp3"
 udg_DeathHeroVoicelineDuration = 2716
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func005Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func006Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/DK/Death.mp3"
 udg_DeathHeroVoicelineDuration = 2194
 else
@@ -24151,20 +24242,11 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func006C()) then
-udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func006Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/DyspoButHowDidYouCatchMe.mp3"
-udg_DeathHeroVoicelineDuration = 1487
-else
-end
-else
-end
 if (Trig_Death_Hero_Voiceline_Dying_Func007C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func007Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/GinyuHowCanThisBe.mp3"
-udg_DeathHeroVoicelineDuration = 1560
+udg_DeathHeroVoicelinePath = "Audio/Voice/DyspoButHowDidYouCatchMe.mp3"
+udg_DeathHeroVoicelineDuration = 1487
 else
 end
 else
@@ -24172,8 +24254,8 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func008C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func008Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/GohanTeenBeatHimUp.mp3"
-udg_DeathHeroVoicelineDuration = 3709
+udg_DeathHeroVoicelinePath = "Audio/Voice/GinyuHowCanThisBe.mp3"
+udg_DeathHeroVoicelineDuration = 1560
 else
 end
 else
@@ -24181,26 +24263,21 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func009C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func009Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Gotenks/BlockedThat.mp3"
-udg_DeathHeroVoicelineDuration = 1824
+udg_DeathHeroVoicelinePath = "Audio/Voice/GohanTeenBeatHimUp.mp3"
+udg_DeathHeroVoicelineDuration = 3709
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func009Func002Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Gotenks/OuchOuch.mp3"
-udg_DeathHeroVoicelineDuration = 1920
-else
-end
 end
 else
 end
 if (Trig_Death_Hero_Voiceline_Dying_Func010C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func010Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/GuldoStrongHuh.mp3"
-udg_DeathHeroVoicelineDuration = 1724
+udg_DeathHeroVoicelinePath = "Audio/Voice/Gotenks/BlockedThat.mp3"
+udg_DeathHeroVoicelineDuration = 1824
 else
 if (Trig_Death_Hero_Voiceline_Dying_Func010Func002Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/GuldoCantFeelMyEverything.mp3"
-udg_DeathHeroVoicelineDuration = 1880
+udg_DeathHeroVoicelinePath = "Audio/Voice/Gotenks/OuchOuch.mp3"
+udg_DeathHeroVoicelineDuration = 1920
 else
 end
 end
@@ -24209,14 +24286,37 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func011C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func011Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/GuldoStrongHuh.mp3"
+udg_DeathHeroVoicelineDuration = 1724
+else
+if (Trig_Death_Hero_Voiceline_Dying_Func011Func002Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/GuldoCantFeelMyEverything.mp3"
+udg_DeathHeroVoicelineDuration = 1880
+else
+end
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func012C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func012Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Hirudegarn/Death1.mp3"
+udg_DeathHeroVoicelineDuration = 1729
+else
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func013C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func013Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Jaco/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 3312
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func011Func002Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func013Func002Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Jaco/Death3.mp3"
 udg_DeathHeroVoicelineDuration = 6288
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func011Func002Func003Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func013Func002Func003Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Jaco/Death2.mp3"
 udg_DeathHeroVoicelineDuration = 2064
 else
@@ -24225,13 +24325,13 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func012C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func014C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func012Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func014Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/JirenDeath.mp3"
 udg_DeathHeroVoicelineDuration = 1880
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func012Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func014Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/JirenDeath2.mp3"
 udg_DeathHeroVoicelineDuration = 3239
 else
@@ -24239,66 +24339,33 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func013C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func015C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 udg_DeathHeroVoicelinePath = "Audio/Voice/KrillinOwnedCount.mp3"
 udg_DeathHeroVoicelineDuration = 792
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func014C()) then
-udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func014Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/GokuBlack/Death1.mp3"
-else
-end
-else
-end
-if (Trig_Death_Hero_Voiceline_Dying_Func015C()) then
-udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func015Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death1.mp3"
-udg_DeathHeroVoicelineDuration = 2844
-else
-if (Trig_Death_Hero_Voiceline_Dying_Func015Func002Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death2.mp3"
-udg_DeathHeroVoicelineDuration = 828
-else
-if (Trig_Death_Hero_Voiceline_Dying_Func015Func002Func001Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death3.mp3"
-udg_DeathHeroVoicelineDuration = 1044
-else
-end
-end
-end
-else
-end
 if (Trig_Death_Hero_Voiceline_Dying_Func016C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func016Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/RoshiDeath.mp3"
-udg_DeathHeroVoicelineDuration = 6720
+udg_DeathHeroVoicelinePath = "Audio/Voice/GokuBlack/Death1.mp3"
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func016Func002Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/RoshiUhOh.mp3"
-udg_DeathHeroVoicelineDuration = 1968
-else
-end
 end
 else
 end
 if (Trig_Death_Hero_Voiceline_Dying_Func017C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func017Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/NappaPreciousModellingCareer.mp3"
-udg_DeathHeroVoicelineDuration = 7536
+udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death1.mp3"
+udg_DeathHeroVoicelineDuration = 2844
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func017Func002Func003C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/NappaFiddlesticks.mp3"
-udg_DeathHeroVoicelineDuration = 3792
+if (Trig_Death_Hero_Voiceline_Dying_Func017Func002Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death2.mp3"
+udg_DeathHeroVoicelineDuration = 828
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func017Func002Func003Func003C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/NappaWhatTheWhat.mp3"
-udg_DeathHeroVoicelineDuration = 1392
+if (Trig_Death_Hero_Voiceline_Dying_Func017Func002Func001Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Mario/Death3.mp3"
+udg_DeathHeroVoicelineDuration = 1044
 else
 end
 end
@@ -24308,22 +24375,32 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func018C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func018Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/KamiGettingRekt.mp3"
-udg_DeathHeroVoicelineDuration = 3912
+udg_DeathHeroVoicelinePath = "Audio/Voice/RoshiDeath.mp3"
+udg_DeathHeroVoicelineDuration = 6720
 else
+if (Trig_Death_Hero_Voiceline_Dying_Func018Func002Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/RoshiUhOh.mp3"
+udg_DeathHeroVoicelineDuration = 1968
+else
+end
 end
 else
 end
 if (Trig_Death_Hero_Voiceline_Dying_Func019C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func019Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay1.mp3"
-udg_DeathHeroVoicelineDuration = 2976
+udg_DeathHeroVoicelinePath = "Audio/Voice/NappaPreciousModellingCareer.mp3"
+udg_DeathHeroVoicelineDuration = 7536
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func019Func002Func001C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay2.mp3"
-udg_DeathHeroVoicelineDuration = 3192
+if (Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/NappaFiddlesticks.mp3"
+udg_DeathHeroVoicelineDuration = 3792
 else
+if (Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003Func003C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/NappaWhatTheWhat.mp3"
+udg_DeathHeroVoicelineDuration = 1392
+else
+end
 end
 end
 else
@@ -24331,8 +24408,8 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func020C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func020Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Sephiroth/Death.mp3"
-udg_DeathHeroVoicelineDuration = 4414
+udg_DeathHeroVoicelinePath = "Audio/Voice/KamiGettingRekt.mp3"
+udg_DeathHeroVoicelineDuration = 3912
 else
 end
 else
@@ -24340,10 +24417,33 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func021C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func021Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay1.mp3"
+udg_DeathHeroVoicelineDuration = 2976
+else
+if (Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay2.mp3"
+udg_DeathHeroVoicelineDuration = 3192
+else
+end
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func022C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func022Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Sephiroth/Death.mp3"
+udg_DeathHeroVoicelineDuration = 4414
+else
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func023C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func023Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath1.mp3"
 udg_DeathHeroVoicelineDuration = 4230
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func023Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath2.mp3"
 udg_DeathHeroVoicelineDuration = 3348
 else
@@ -24353,13 +24453,13 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func022C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func024C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func022Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func024Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Super17/Scream.mp3"
 udg_DeathHeroVoicelineDuration = 1632
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func022Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func024Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Super17/CurseYou.mp3"
 udg_DeathHeroVoicelineDuration = 3216
 else
@@ -24367,39 +24467,39 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func023C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func025C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func023Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func025Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Tien/KiKoFuckYourself.mp3"
 udg_DeathHeroVoicelineDuration = 5472
 else
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func024C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func026C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func024Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func026Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/VegetaSwagger.mp3"
 udg_DeathHeroVoicelineDuration = 2351
 else
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func025C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func027C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func027Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 3657
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 3657
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death3.mp3"
 udg_DeathHeroVoicelineDuration = 10080
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002Func004Func003Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func027Func002Func004Func003Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death2.mp3"
 udg_DeathHeroVoicelineDuration = 1933
 else
@@ -24622,14 +24722,59 @@ end
 return true
 end
 
+function Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001Func001Func001C()
+if (not (udg_TempReal < 80.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001Func001C()
+if (not (udg_TempReal < 60.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001C()
+if (not (udg_TempReal < 40.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001C()
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
 function Trig_Kill_Hero_Voiceline_Killing_Func005Func002C()
-if (not (udg_TempReal < 50.00)) then
+if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func005C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AI"))) then
+return false
+end
+if (not (udg_TempReal < 80.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func006Func002C()
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func006C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("O001"))) then
 return false
 end
@@ -24642,14 +24787,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func006Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func007Func002C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func006C()
+function Trig_Kill_Hero_Voiceline_Killing_Func007C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00M"))) then
 return false
 end
@@ -24659,14 +24804,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func007Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func008Func002C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func007C()
+function Trig_Kill_Hero_Voiceline_Killing_Func008C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00E"))) then
 return false
 end
@@ -24676,21 +24821,21 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func008Func002Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func009Func002Func003C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func008Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func009Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func008C()
+function Trig_Kill_Hero_Voiceline_Killing_Func009C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00G"))) then
 return false
 end
@@ -24700,7 +24845,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func009Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func010Func001C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H043")) then
 return true
 end
@@ -24710,49 +24855,25 @@ end
 return false
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func009Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func010Func003Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func009Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func010Func003C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func009C()
-if (not Trig_Kill_Hero_Voiceline_Killing_Func009Func001C()) then
-return false
-end
-if (not (udg_TempReal < 40.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func010Func002C()
-if (not (udg_TempReal < 40.00)) then
-return false
-end
-return true
-end
-
 function Trig_Kill_Hero_Voiceline_Killing_Func010C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09Y"))) then
+if (not Trig_Kill_Hero_Voiceline_Killing_Func010Func001C()) then
 return false
 end
 if (not (udg_TempReal < 40.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func011Func002Func001C()
-if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
@@ -24766,6 +24887,30 @@ return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func011C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09Y"))) then
+return false
+end
+if (not (udg_TempReal < 40.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func012Func002Func001C()
+if (not (udg_TempReal < 60.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func012Func002C()
+if (not (udg_TempReal < 40.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func012C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H05Q"))) then
 return false
 end
@@ -24775,39 +24920,8 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func012Func002Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func003C()
 if (not (udg_TempReal < 40.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func012Func002C()
-if (not (udg_TempReal < 15.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func012C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09H"))) then
-return false
-end
-if (not (udg_TempReal < 40.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func001Func001C()
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func001C()
-if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
@@ -24821,6 +24935,37 @@ return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func013C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09H"))) then
+return false
+end
+if (not (udg_TempReal < 40.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func014Func002Func001Func001C()
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func014Func002Func001C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func014Func002C()
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func014C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H009"))) then
 return false
 end
@@ -24830,7 +24975,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func014Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
@@ -24840,14 +24985,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func014Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func015Func003C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func014C()
+function Trig_Kill_Hero_Voiceline_Killing_Func015C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09E"))) then
 return false
 end
@@ -24857,28 +25002,28 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001Func001Func001C()
 if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001C()
 if (not (udg_TempReal < 35.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func015Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func016Func003C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
@@ -24888,7 +25033,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func015C()
+function Trig_Kill_Hero_Voiceline_Killing_Func016C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09J"))) then
 return false
 end
@@ -24898,14 +25043,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func016Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func017Func002C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func016C()
+function Trig_Kill_Hero_Voiceline_Killing_Func017C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00K"))) then
 return false
 end
@@ -24921,49 +25066,49 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001Func003Func001C()
 if (not (udg_TempReal < 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001Func003C()
 if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018Func003C()
 if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func017C()
+function Trig_Kill_Hero_Voiceline_Killing_Func018C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00A"))) then
 return false
 end
@@ -24973,28 +25118,28 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func019Func003Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func019Func003Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func018Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func019Func003C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func018C()
+function Trig_Kill_Hero_Voiceline_Killing_Func019C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E01P"))) then
 return false
 end
@@ -25004,14 +25149,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func019Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func020Func003C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func019C()
+function Trig_Kill_Hero_Voiceline_Killing_Func020C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09S"))) then
 return false
 end
@@ -25021,35 +25166,35 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001Func001Func001C()
 if (not (udg_TempReal < 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func020Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func021Func003C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func020C()
+function Trig_Kill_Hero_Voiceline_Killing_Func021C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AL"))) then
 return false
 end
@@ -25059,7 +25204,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func021Func002Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
@@ -25069,7 +25214,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func021Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
@@ -25079,7 +25224,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func021Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func022Func002C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
@@ -25089,7 +25234,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func021C()
+function Trig_Kill_Hero_Voiceline_Killing_Func022C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H03Y"))) then
 return false
 end
@@ -25099,45 +25244,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001Func001Func001C()
-if (not (udg_TempReal < 70.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001Func001C()
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001C()
-if (not (udg_TempReal < 30.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001C()
-if (not (udg_TempReal < 15.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func022Func002C()
-if (not (udg_TempReal < 5.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func022C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E019"))) then
-return false
-end
+function Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001Func001Func001C()
 if (not (udg_TempReal < 70.00)) then
 return false
 end
@@ -25152,6 +25259,61 @@ return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001C()
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func023Func002C()
+if (not (udg_TempReal < 5.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func023C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E019"))) then
+return false
+end
+if (not (udg_TempReal < 70.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func024Func002C()
+if (not (udg_TempReal < 25.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func024C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H05U"))) then
+return false
+end
+if (not (udg_TempReal < 25.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001Func001Func001C()
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001Func001C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
@@ -25161,7 +25323,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
@@ -25171,14 +25333,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func023Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func025Func002C()
 if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func023C()
+function Trig_Kill_Hero_Voiceline_Killing_Func025C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H08W"))) then
 return false
 end
@@ -25188,14 +25350,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func024Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func026Func003C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func024C()
+function Trig_Kill_Hero_Voiceline_Killing_Func026C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09Q"))) then
 return false
 end
@@ -25205,21 +25367,66 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func025Func003Func001Func001C()
-if (not (udg_TempReal < 80.00)) then
+function Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001Func001Func001C()
+if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func025Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001Func001C()
+if (not (udg_TempReal < 45.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func025Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001C()
+if (not (udg_TempReal < 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func027Func003C()
+if (not (udg_TempReal < 5.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func027C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00L"))) then
+return false
+end
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func028Func003Func001Func001C()
+if (not (udg_TempReal < 80.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func028Func003Func001C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func028Func003C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
@@ -25229,7 +25436,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func025C()
+function Trig_Kill_Hero_Voiceline_Killing_Func028C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E001"))) then
 return false
 end
@@ -25239,14 +25446,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func026Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func029Func003C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func026C()
+function Trig_Kill_Hero_Voiceline_Killing_Func029C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00R"))) then
 return false
 end
@@ -25256,28 +25463,28 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func027Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func001C()
 if (not (GetUnitLifePercent(GetKillingUnitBJ()) >= 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func027Func002Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func002C()
 if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func027Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func030Func002C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func027C()
+function Trig_Kill_Hero_Voiceline_Killing_Func030C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H04Y"))) then
 return false
 end
@@ -25287,21 +25494,21 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func028Func002Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func031Func002Func003C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func028Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func031Func002C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func028C()
+function Trig_Kill_Hero_Voiceline_Killing_Func031C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09M"))) then
 return false
 end
@@ -25311,21 +25518,21 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func029Func002Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func032Func002Func003C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func029Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func032Func002C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func029C()
+function Trig_Kill_Hero_Voiceline_Killing_Func032C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H05V"))) then
 return false
 end
@@ -25335,35 +25542,35 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001Func003Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001Func003Func003C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001Func003C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func030Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func033Func001C()
 if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("E003"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func030C()
+function Trig_Kill_Hero_Voiceline_Killing_Func033C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H055"))) then
 return false
 end
@@ -25373,14 +25580,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func031Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func034Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func031C()
+function Trig_Kill_Hero_Voiceline_Killing_Func034C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09C"))) then
 return false
 end
@@ -25390,14 +25597,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func032Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func035Func002Func001C()
 if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func032Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func035Func002C()
 if (not (udg_TempReal < 1.00)) then
 return false
 end
@@ -25407,7 +25614,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func032C()
+function Trig_Kill_Hero_Voiceline_Killing_Func035C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E003"))) then
 return false
 end
@@ -25420,63 +25627,63 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func033Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()
 if (not (udg_TempReal < 66.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func033Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func036Func002C()
 if (not (udg_TempReal < 33.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func033C()
+function Trig_Kill_Hero_Voiceline_Killing_Func036C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H07Y"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003Func003Func001C()
 if (not (udg_TempReal < 100.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003Func003C()
 if (not (udg_TempReal < 90.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003C()
 if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037Func003C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034C()
+function Trig_Kill_Hero_Voiceline_Killing_Func037C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AO"))) then
 return false
 end
@@ -25573,17 +25780,37 @@ end
 if (Trig_Kill_Hero_Voiceline_Killing_Func005C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func005Func002C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/BabidiDontWantToDie.mp3"
-udg_KillHeroVoicelineDuration = 5808
+udg_KillHeroVoicelinePath = "Audio/Voice/Appule/Kill1.mp3"
+udg_KillHeroVoicelineDuration = 3120
 else
+if (Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Appule/Kill2.mp3"
+udg_KillHeroVoicelineDuration = 2832
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Appule/Kill3.mp3"
+udg_KillHeroVoicelineDuration = 6768
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Appule/Kill4.mp3"
+udg_KillHeroVoicelineDuration = 1728
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func005Func002Func001Func001Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Appule/Kill5.mp3"
+udg_KillHeroVoicelineDuration = 3168
+else
+end
+end
+end
+end
 end
 else
 end
 if (Trig_Kill_Hero_Voiceline_Killing_Func006C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func006Func002C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/BrolyRoar3.mp3"
-udg_KillHeroVoicelineDuration = 2016
+udg_KillHeroVoicelinePath = "Audio/Voice/BabidiDontWantToDie.mp3"
+udg_KillHeroVoicelineDuration = 5808
 else
 end
 else
@@ -25591,8 +25818,8 @@ end
 if (Trig_Kill_Hero_Voiceline_Killing_Func007C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func007Func002C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/CellFirstTrulyPurePerfection.mp3"
-udg_KillHeroVoicelineDuration = 5064
+udg_KillHeroVoicelinePath = "Audio/Voice/BrolyRoar3.mp3"
+udg_KillHeroVoicelineDuration = 2016
 else
 end
 else
@@ -25600,10 +25827,19 @@ end
 if (Trig_Kill_Hero_Voiceline_Killing_Func008C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func008Func002C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/CellFirstTrulyPurePerfection.mp3"
+udg_KillHeroVoicelineDuration = 5064
+else
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func009C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func009Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/CellPerfectMosquitoBites.mp3"
 udg_KillHeroVoicelineDuration = 5016
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func008Func002Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func009Func002Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/CellPerfectOverboard.mp3"
 udg_KillHeroVoicelineDuration = 2904
 else
@@ -25611,13 +25847,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func009C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func010C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func009Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func010Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/CoolerPermissionToDie.mp3"
 udg_KillHeroVoicelineDuration = 5041
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func009Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func010Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/CoolerMonkeySoup.mp3"
 udg_KillHeroVoicelineDuration = 2324
 else
@@ -25625,38 +25861,24 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func010C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func011C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func010Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func011Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/VictoryTheme.mp3"
 udg_KillHeroVoicelineDuration = 4440
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func011C()) then
-udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func011Func002C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/DK/BananaSlamma2.mp3"
-udg_KillHeroVoicelineDuration = 3761
-else
-if (Trig_Kill_Hero_Voiceline_Killing_Func011Func002Func001C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/DK/NobodyHero1.mp3"
-udg_KillHeroVoicelineDuration = 3448
-else
-end
-end
-else
-end
 if (Trig_Kill_Hero_Voiceline_Killing_Func012C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func012Func002C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/DyspoGivingUpAlready.mp3"
-udg_KillHeroVoicelineDuration = 1541
+udg_KillHeroVoicelinePath = "Audio/Voice/DK/BananaSlamma2.mp3"
+udg_KillHeroVoicelineDuration = 3761
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func012Func002Func003C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/DyspoYoullNeverHitMe.mp3"
-udg_KillHeroVoicelineDuration = 2690
+if (Trig_Kill_Hero_Voiceline_Killing_Func012Func002Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/DK/NobodyHero1.mp3"
+udg_KillHeroVoicelineDuration = 3448
 else
 end
 end
@@ -25665,14 +25887,28 @@ end
 if (Trig_Kill_Hero_Voiceline_Killing_Func013C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func013Func002C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/DyspoGivingUpAlready.mp3"
+udg_KillHeroVoicelineDuration = 1541
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func003C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/DyspoYoullNeverHitMe.mp3"
+udg_KillHeroVoicelineDuration = 2690
+else
+end
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func014C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func014Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/FTWhatsTheProblem.mp3"
 udg_KillHeroVoicelineDuration = 2544
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func014Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/FTUnderestimatedMe.mp3"
 udg_KillHeroVoicelineDuration = 3600
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func013Func002Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func014Func002Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/FTEndOfTheLine.mp3"
 udg_KillHeroVoicelineDuration = 3264
 else
@@ -25681,13 +25917,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func014C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func015C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func014Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GinyuKindOrWhat.mp3"
 udg_KillHeroVoicelineDuration = 1872
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func014Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GinyuFullPower.mp3"
 udg_KillHeroVoicelineDuration = 1848
 else
@@ -25695,21 +25931,21 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func015C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func016C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func016Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GuldoSeeThisVegeta.mp3"
 udg_KillHeroVoicelineDuration = 3840
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GuldoRollOverAndPlayDead.mp3"
 udg_KillHeroVoicelineDuration = 3500
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GuldoTasteOfMyPower.mp3"
 udg_KillHeroVoicelineDuration = 2481
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func015Func003Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func016Func003Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GuldoWhocanBeatMe.mp3"
 udg_KillHeroVoicelineDuration = 3683
 else
@@ -25719,38 +25955,38 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func016C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func017C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func016Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func017Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GohanUltimate.mp3"
 udg_KillHeroVoicelineDuration = 2640
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func017C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/TauntOverdo.mp3"
 udg_KillHeroVoicelineDuration = 3144
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/TauntScared.mp3"
 udg_KillHeroVoicelineDuration = 2400
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/Cya.mp3"
 udg_KillHeroVoicelineDuration = 1632
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/Entrance.mp3"
 udg_KillHeroVoicelineDuration = 2688
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/Entrance2.mp3"
 udg_KillHeroVoicelineDuration = 2304
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func017Func003Func001Func001Func001Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001Func001Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Gotenks/BringerOfJustice.mp3"
 udg_KillHeroVoicelineDuration = 3936
 else
@@ -25762,17 +25998,17 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func018C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func019C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func019Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/JirenTaunt2.mp3"
 udg_KillHeroVoicelineDuration = 1645
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func019Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/JirenTaunt.mp3"
 udg_KillHeroVoicelineDuration = 1750
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func018Func003Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func019Func003Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/JirenMeditate.mp3"
 udg_KillHeroVoicelineDuration = 1645
 else
@@ -25781,30 +26017,30 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func019C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func020C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func019Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func020Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Ichigo/OwariDa.mp3"
 udg_KillHeroVoicelineDuration = 2821
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func020C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func021C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func020Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func021Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Jaco/Kill1.mp3"
 udg_KillHeroVoicelineDuration = 1248
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Jaco/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 5904
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Jaco/Kill3.mp3"
 udg_KillHeroVoicelineDuration = 2496
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func020Func003Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func021Func003Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Jaco/Kill4.mp3"
 udg_KillHeroVoicelineDuration = 2064
 else
@@ -25814,17 +26050,17 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func021C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func022C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func021Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/KrillinThankYouExMachina.mp3"
 udg_KillHeroVoicelineDuration = 1992
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func021Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/KrillinEnjoyStayInHell.mp3"
 udg_KillHeroVoicelineDuration = 2184
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func021Func002Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/KrillinImmortal.mp3"
 udg_KillHeroVoicelineDuration = 2016
 else
@@ -25833,25 +26069,25 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func022C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GokuBlack/Kill1.mp3"
 udg_KillHeroVoicelineDuration = 792
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GokuBlack/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 1656
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GokuBlack/Kill3.mp3"
 udg_KillHeroVoicelineDuration = 936
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GokuBlack/Kill4.mp3"
 udg_KillHeroVoicelineDuration = 1200
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func022Func002Func001Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/GokuBlack/Kill5.mp3"
 udg_KillHeroVoicelineDuration = 3408
 else
@@ -25862,21 +26098,30 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func023C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func024C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func024Func002C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Hirudegarn/Kill1.mp3"
+udg_KillHeroVoicelineDuration = 3888
+else
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func025C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func025Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/NappaLoveMe.mp3"
 udg_KillHeroVoicelineDuration = 8112
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/NappaTakeAwayMyBaby.mp3"
 udg_KillHeroVoicelineDuration = 3696
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/NappaMad.mp3"
 udg_KillHeroVoicelineDuration = 3696
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func023Func002Func001Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func025Func002Func001Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/NappaCya.mp3"
 udg_KillHeroVoicelineDuration = 1392
 else
@@ -25886,26 +26131,55 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func024C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func026C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func024Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func026Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Mario/Kill.mp3"
 udg_KillHeroVoicelineDuration = 1548
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func025C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func027C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func025Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func027Func003C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Megumin/ChunChunMaru.mp3"
+udg_KillHeroVoicelineDuration = 757
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Megumin/WagaNaWa1.mp3"
+udg_KillHeroVoicelineDuration = 2821
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Megumin/WagaNaWa2.mp3"
+udg_KillHeroVoicelineDuration = 1123
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Megumin/WagaNaWa3.mp3"
+udg_KillHeroVoicelineDuration = 1436
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func027Func003Func001Func001Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Megumin/Bakuretsu.mp3"
+udg_KillHeroVoicelineDuration = 5929
+else
+end
+end
+end
+end
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func028C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func028Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/RoshiKillTauntWeak.mp3"
 udg_KillHeroVoicelineDuration = 10032
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func025Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func028Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/RoshiRuiningMySunday.mp3"
 udg_KillHeroVoicelineDuration = 2560
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func025Func003Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func028Func003Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/RoshiKillTauntMaster.mp3"
 udg_KillHeroVoicelineDuration = 6576
 else
@@ -25914,19 +26188,19 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func026C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func029C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func026Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func029Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Piccolo/Underestimate.mp3"
 udg_KillHeroVoicelineDuration = 4344
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func027C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func030C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func027Func002C()) then
-if (Trig_Kill_Hero_Voiceline_Killing_Func027Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func030Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/YouStupid.mp3"
 udg_KillHeroVoicelineDuration = 936
 else
@@ -25934,7 +26208,7 @@ udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/OK.mp3"
 udg_KillHeroVoicelineDuration = 408
 end
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func027Func002Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func030Func002Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/HeroForFun.mp3"
 udg_KillHeroVoicelineDuration = 2136
 else
@@ -25942,13 +26216,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func028C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func031C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func028Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func031Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Sephiroth/Kill.mp3"
 udg_KillHeroVoicelineDuration = 1500
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func028Func002Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func031Func002Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Sephiroth/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 1332
 else
@@ -25956,13 +26230,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func029C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func032C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func029Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func032Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Super17/SawThrough.mp3"
 udg_KillHeroVoicelineDuration = 2352
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func029Func002Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func032Func002Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Super17/ClothesAreRuined.mp3"
 udg_KillHeroVoicelineDuration = 2928
 else
@@ -25970,19 +26244,19 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func030C()) then
-if (Trig_Kill_Hero_Voiceline_Killing_Func030Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func033C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func033Func001C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/NiceShirt.mp3"
 udg_KillHeroVoicelineDuration = 5376
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/TryAgain.mp3"
 udg_KillHeroVoicelineDuration = 2880
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func030Func001Func001Func003Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func033Func001Func001Func003Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/EscapeThirdEye.mp3"
 udg_KillHeroVoicelineDuration = 4464
 else
@@ -25993,22 +26267,22 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func031C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func034C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func031Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func034Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/ToppoJusticePose.mp3"
 udg_KillHeroVoicelineDuration = 1410
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func032C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func035C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func032Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func035Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/VegetaLookAtThem.mp3"
 udg_KillHeroVoicelineDuration = 3840
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func032Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func035Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/VegetaHype.mp3"
 udg_KillHeroVoicelineDuration = 1384
 else
@@ -26016,13 +26290,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func033C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func036C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func033Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill1.mp3"
 udg_KillHeroVoicelineDuration = 2042
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func033Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill2.mp3"
 udg_KillHeroVoicelineDuration = 4925
 else
@@ -26032,25 +26306,25 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func034C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill1.mp3"
 udg_KillHeroVoicelineDuration = 10135
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill3.mp3"
 udg_KillHeroVoicelineDuration = 7344
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill4.mp3"
 udg_KillHeroVoicelineDuration = 2142
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 6552
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003Func001Func003Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func003Func001Func003Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Waluigi.mp3"
 udg_KillHeroVoicelineDuration = 2142
 else
@@ -27284,45 +27558,45 @@ udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
 else
 end
 if (Trig_Base_Armor_Set_Func009C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 30.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
 else
-udg_BaseArmorTempReal = 27.00
+udg_BaseArmorTempReal = 18.00
 if (Trig_Base_Armor_Set_Func009Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002Func002Func002Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002Func002Func002Func002Func003C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 if (Trig_Base_Armor_Set_Func009Func002Func002Func002Func002Func002Func002Func002Func003Func002C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
 else
-udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 3.00)
+udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
 end
 end
 end
@@ -27638,7 +27912,7 @@ end
 
 function InitTrig_Stat_Mod_Init()
 gg_trg_Stat_Mod_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Stat_Mod_Init, 0.38)
+TriggerRegisterTimerEventSingle(gg_trg_Stat_Mod_Init, 0.30)
 TriggerAddAction(gg_trg_Stat_Mod_Init, Trig_Stat_Mod_Init_Actions)
 end
 
@@ -28508,8 +28782,8 @@ DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11157")
 udg_IsCatchupSettingsAutomatic = false
 else
 if (Trig_Catchup_Automatic_Loop_Func001Func001Func001C()) then
-udg_CatchupThreshold = 0.60
-udg_CatchupIncrement = 0.25
+udg_CatchupThreshold = 0.70
+udg_CatchupIncrement = 0.50
 TriggerExecute(gg_trg_Catchup_Turn_On)
 udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
 PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
@@ -28518,8 +28792,8 @@ DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6227")
 else
 end
 if (Trig_Catchup_Automatic_Loop_Func001Func001Func002C()) then
-udg_CatchupThreshold = 0.66
-udg_CatchupIncrement = 0.35
+udg_CatchupThreshold = 0.73
+udg_CatchupIncrement = 0.50
 TriggerExecute(gg_trg_Catchup_Turn_On)
 udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
 PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
@@ -28528,8 +28802,8 @@ DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6228")
 else
 end
 if (Trig_Catchup_Automatic_Loop_Func001Func001Func003C()) then
-udg_CatchupThreshold = 0.77
-udg_CatchupIncrement = 0.45
+udg_CatchupThreshold = 0.76
+udg_CatchupIncrement = 0.50
 TriggerExecute(gg_trg_Catchup_Turn_On)
 udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
 PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
@@ -28539,7 +28813,7 @@ else
 end
 if (Trig_Catchup_Automatic_Loop_Func001Func001Func004C()) then
 udg_CatchupThreshold = 0.79
-udg_CatchupIncrement = 0.40
+udg_CatchupIncrement = 0.50
 TriggerExecute(gg_trg_Catchup_Turn_On)
 udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
 PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
@@ -34590,7 +34864,7 @@ gg_trg_Test_Stats_Get_Stats_Print = CreateTrigger()
 TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Print, Trig_Test_Stats_Get_Stats_Print_Actions)
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func001Func002Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func002Func001Func002Func001C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001")) then
 return true
 end
@@ -34603,21 +34877,21 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func001Func002C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func001Func001Func002Func001C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func002Func001Func002C()
+if (not Trig_Add_Unit_To_StatMult_Func001Func002Func001Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func002Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05W"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func002Func002C()
+function Trig_Add_Unit_To_StatMult_Func001Func002Func002Func002C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -34630,14 +34904,14 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func002C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func001Func002Func002C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func002Func002C()
+if (not Trig_Add_Unit_To_StatMult_Func001Func002Func002Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func003Func002C()
+function Trig_Add_Unit_To_StatMult_Func001Func002Func003Func002C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
 return true
 end
@@ -34647,14 +34921,14 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func003C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func001Func003Func002C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func002Func003C()
+if (not Trig_Add_Unit_To_StatMult_Func001Func002Func003Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001Func004C()
+function Trig_Add_Unit_To_StatMult_Func001Func002Func004C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -34673,70 +34947,70 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func001C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func001Func004C()) then
-return false
-end
-return true
-end
-
-function Trig_Add_Unit_To_StatMult_Func001Func020C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00R"))) then
+function Trig_Add_Unit_To_StatMult_Func001Func002C()
+if (not Trig_Add_Unit_To_StatMult_Func001Func002Func004C()) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func021C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09K"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00R"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func022C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09S"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09K"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func023C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O001"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09S"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func024C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O005"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O001"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func025C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H085"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O005"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func026C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E00K"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H085"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func027C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E00K"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func028C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A7"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func028Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func029Func001C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
 return true
 end
@@ -34746,35 +35020,35 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func028C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func028Func001C()) then
-return false
-end
-return true
-end
-
 function Trig_Add_Unit_To_StatMult_Func001Func029C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05U"))) then
-return false
-end
-return true
-end
-
-function Trig_Add_Unit_To_StatMult_Func001Func030Func003C()
-if (not (udg_TempUnitType == FourCC("H08Y"))) then
-return false
-end
-return true
-end
-
-function Trig_Add_Unit_To_StatMult_Func001Func030Func004C()
-if (not (udg_TempUnitType == FourCC("E00K"))) then
+if (not Trig_Add_Unit_To_StatMult_Func001Func029Func001C()) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func030C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05U"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func031Func003C()
+if (not (udg_TempUnitType == FourCC("H08Y"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func031Func004C()
+if (not (udg_TempUnitType == FourCC("E00K"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func031C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
 return false
 end
@@ -34784,14 +35058,14 @@ end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func031Func008C()
+function Trig_Add_Unit_To_StatMult_Func001Func032Func008C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func031Func011C()
+function Trig_Add_Unit_To_StatMult_Func001Func032Func011C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08Y")) then
 return true
 end
@@ -34804,14 +35078,14 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func031C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func031Func011C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func032C()
+if (not Trig_Add_Unit_To_StatMult_Func001Func032Func011C()) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func032Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func033Func001C()
 if (GetUnitAbilityLevelSwapped(FourCC("A0MX"), udg_StatMultUnit) > 0) then
 return true
 end
@@ -34827,28 +35101,28 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func032C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func032Func001C()) then
-return false
-end
-return true
-end
-
 function Trig_Add_Unit_To_StatMult_Func001Func033C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+if (not Trig_Add_Unit_To_StatMult_Func001Func033Func001C()) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func034C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func035C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09F"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func035Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func036Func001C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E01P")) then
 return true
 end
@@ -34864,105 +35138,105 @@ end
 return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func035C()
-if (not Trig_Add_Unit_To_StatMult_Func001Func035Func001C()) then
-return false
-end
-return true
-end
-
 function Trig_Add_Unit_To_StatMult_Func001Func036C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001"))) then
+if (not Trig_Add_Unit_To_StatMult_Func001Func036Func001C()) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func037C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func038C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func039C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05V"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func040C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AA"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H05V"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func041C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AA"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func042C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AJ"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func043C()
+function Trig_Add_Unit_To_StatMult_Func001Func044C()
 if (not (udg_IsAOEFlyingVision == true)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func044C()
+function Trig_Add_Unit_To_StatMult_Func001Func045C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func045C()
+function Trig_Add_Unit_To_StatMult_Func001Func046C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08S"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func046Func006C()
+function Trig_Add_Unit_To_StatMult_Func001Func047Func006C()
 if (not (GetPlayerState(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func046C()
+function Trig_Add_Unit_To_StatMult_Func001Func047C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H002"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func047Func012C()
+function Trig_Add_Unit_To_StatMult_Func001Func048Func012C()
 if (not (udg_TempInt2 > 200)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func047C()
+function Trig_Add_Unit_To_StatMult_Func001Func048C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func049C()
+function Trig_Add_Unit_To_StatMult_Func001Func050C()
 if (not (true == false)) then
 return false
 end
@@ -34978,21 +35252,22 @@ end
 
 function Trig_Add_Unit_To_StatMult_Actions()
 if (Trig_Add_Unit_To_StatMult_Func001C()) then
-if (Trig_Add_Unit_To_StatMult_Func001Func001C()) then
-if (Trig_Add_Unit_To_StatMult_Func001Func001Func002C()) then
+TriggerExecute(gg_trg_Automatic_StatMod)
+if (Trig_Add_Unit_To_StatMult_Func001Func002C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func002Func002C()) then
 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 40), 0)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func001Func003C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func002Func003C()) then
 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 60), 0)
 else
 end
 else
-if (Trig_Add_Unit_To_StatMult_Func001Func001Func001C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func002Func001C()) then
 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 110), 0)
 else
 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 130), 0)
-if (Trig_Add_Unit_To_StatMult_Func001Func001Func001Func002C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func002Func001Func002C()) then
 BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 100), 0)
 else
 end
@@ -35016,7 +35291,7 @@ SaveRealBJ(1.00, 34, udg_ID, udg_StatMultHashtable)
 SaveRealBJ(1.00, 35, udg_ID, udg_StatMultHashtable)
 SaveRealBJ(1.00, 36, udg_ID, udg_StatMultHashtable)
 SaveIntegerBJ(0, 45, udg_ID, udg_StatMultHashtable)
-if (Trig_Add_Unit_To_StatMult_Func001Func020C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func021C()) then
             udg_TempInt = StringHash("piccolo|kyo|size")
 SaveRealBJ(200.00, udg_TempInt, udg_ID, udg_SummonsHashtable)
             udg_TempInt = StringHash("piccolo|orange")
@@ -35025,64 +35300,64 @@ SaveBooleanBJ(false, udg_TempInt, udg_ID, udg_SummonsHashtable)
 SaveBooleanBJ(false, udg_TempInt, udg_ID, udg_SummonsHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func021C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func022C()) then
 udg_StatMultReal = 1.20
 TriggerExecute(gg_trg_Set_Stat_Multiplier)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func022C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func023C()) then
 udg_StatMultReal = 1.25
 TriggerExecute(gg_trg_Set_Stat_Multiplier)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func023C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func024C()) then
 SaveIntegerBJ(0, 14, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func024C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func025C()) then
 SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func025C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func026C()) then
 SaveRealBJ((LoadRealBJ(36, udg_ID, udg_StatMultHashtable) + 0.50), 36, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func026C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func027C()) then
 UnitAddAbilityBJ(FourCC("A0G0"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_StatMultUnit, 1)
 SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.35), 34, udg_ID, udg_StatMultHashtable)
 TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func027C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func028C()) then
 SaveRealBJ((LoadRealBJ(35, udg_ID, udg_StatMultHashtable) + 0.25), 35, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func028C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func029C()) then
 SaveRealBJ((LoadRealBJ(35, udg_ID, udg_StatMultHashtable) + 0.05), 35, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func029C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func030C()) then
 AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
 AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "Abilities\\Spells\\Human\\CloudOfFog\\CloudOfFog.mdl")
 udg_TempSpecialEffect = GetLastCreatedEffectBJ()
 SaveEffectHandleBJ(udg_TempSpecialEffect, 48, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func030C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
 udg_TempInt = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
             udg_TempUnitType = udg_TempInt
-if (Trig_Add_Unit_To_StatMult_Func001Func030Func003C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func031Func003C()) then
 udg_TempBool = true
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func030Func004C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func031Func004C()) then
 TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
 else
 end
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func032C()) then
 CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 10.00, 10, 100, 100, 100, 0)
 ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
 udg_TempPlayerGroup2 = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
@@ -35090,7 +35365,7 @@ ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_TempPlayerGroup2)
             DestroyForce(udg_TempPlayerGroup2)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), true)
 SaveTextTagHandleBJ(GetLastCreatedTextTag(), 20, udg_ID, udg_StatMultHashtable)
-if (Trig_Add_Unit_To_StatMult_Func001Func031Func008C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func032Func008C()) then
 else
 GroupAddUnitSimple(udg_StatMultUnit, udg_MoroUnitGroup)
 end
@@ -35098,27 +35373,23 @@ GroupAddUnitSimple(udg_StatMultUnit, udg_MoroTextTagUnitGroup)
 EnableTrigger(gg_trg_Moro_Text_Tag_Update)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func032C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func033C()) then
 EnableTrigger(gg_trg_Infinite_Energy_Android_Loop)
 GroupAddUnitSimple(udg_StatMultUnit, udg_InfiniteEnergyAndroidUnitGroup)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func033C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func034C()) then
 UnitAddItemByIdSwapped(FourCC("I04N"), udg_StatMultUnit)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func034C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func035C()) then
 EnableTrigger(gg_trg_Omega_Shenron_Loop)
 GroupAddUnitSimple(udg_StatMultUnit, udg_OmegaShenronUnitGroup)
 SaveIntegerBJ(0, 32, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func035C()) then
-TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
-else
-end
 if (Trig_Add_Unit_To_StatMult_Func001Func036C()) then
-SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
+TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func037C()) then
@@ -35126,25 +35397,29 @@ SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func038C()) then
+SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
+else
+end
+if (Trig_Add_Unit_To_StatMult_Func001Func039C()) then
 UnitAddAbilityBJ(FourCC("A0ID"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0ID"), udg_StatMultUnit, 1)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func039C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func040C()) then
 BlzSetHeroProperName(udg_StatMultUnit, "Hell Android 17")
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func040C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func041C()) then
 UnitAddItemByIdSwapped(FourCC("I04Z"), udg_StatMultUnit)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func041C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func042C()) then
 UnitAddAbilityBJ(FourCC("A10F"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A10F"), udg_StatMultUnit, 1)
 else
 end
 GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
-if (Trig_Add_Unit_To_StatMult_Func001Func043C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func044C()) then
 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
 udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * 0.66)))
 CreateFogModifierRadiusLocBJ(true, GetOwningPlayer(udg_StatMultUnit), FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -35152,27 +35427,27 @@ SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHas
             RemoveLocation(udg_TempLoc)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func044C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func045C()) then
 TriggerExecute(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func045C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func046C()) then
 TriggerExecute(gg_trg_Farmer_Enable_All)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func046C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func047C()) then
 TriggerExecute(gg_trg_Geti_Star_Enable)
 SetPlayerTechMaxAllowedSwap(FourCC("u001"), 1, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("H01Z"), 20, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("u003"), 30, GetOwningPlayer(udg_StatMultUnit))
 udg_GetiStarHeroArr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = udg_StatMultUnit
-if (Trig_Add_Unit_To_StatMult_Func001Func046Func006C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func047Func006C()) then
 SetPlayerStateBJ(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD, (udg_GetiStarFragmentBaseCost + udg_GetiStarBonuStartingGold))
 else
 end
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func047C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func048C()) then
 SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
 GroupAddUnitSimple(udg_StatMultUnit, udg_FriezaTransformationUnitGroup)
 EnableTrigger(gg_trg_Frieza_Transformation_Loop)
@@ -35184,7 +35459,7 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUn
 SetPlayerAbilityAvailableBJ(true, FourCC("A0QA"), GetOwningPlayer(udg_StatMultUnit))
 UnitAddAbilityBJ(FourCC("A0Q8"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0Q8'))
-if (Trig_Add_Unit_To_StatMult_Func001Func047Func012C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func048Func012C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUnit))
 SetPlayerAbilityAvailableBJ(true, FourCC("A0Q9"), GetOwningPlayer(udg_StatMultUnit))
 UnitAddAbilityBJ(FourCC("A0Q9"), udg_StatMultUnit)
@@ -35195,7 +35470,7 @@ UnitAddAbilityBJ(FourCC("A0QA"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0QA'))
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func049C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func050C()) then
 AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
 SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
 else
@@ -35207,6 +35482,112 @@ end
 function InitTrig_Add_Unit_To_StatMult()
 gg_trg_Add_Unit_To_StatMult = CreateTrigger()
 TriggerAddAction(gg_trg_Add_Unit_To_StatMult, Trig_Add_Unit_To_StatMult_Actions)
+end
+
+function Trig_Automatic_StatMod_Func001Func001C()
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09K")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AI")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A5")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("O001")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08M")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09B")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A1")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E019")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AJ")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E00K")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09S")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H07Y")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E01D")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00B")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Q")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H04Y")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09M")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AA")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H062")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H099")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H085")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E012")) then
+return true
+end
+return false
+end
+
+function Trig_Automatic_StatMod_Func001C()
+if (not Trig_Automatic_StatMod_Func001Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Automatic_StatMod_Actions()
+if (Trig_Automatic_StatMod_Func001C()) then
+udg_PlayerStatModStr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+udg_PlayerStatModAgi[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+udg_PlayerStatModInt[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 0.00
+else
+udg_PlayerStatModStr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+udg_PlayerStatModAgi[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 0.00
+udg_PlayerStatModInt[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+end
+end
+
+function InitTrig_Automatic_StatMod()
+gg_trg_Automatic_StatMod = CreateTrigger()
+TriggerAddAction(gg_trg_Automatic_StatMod, Trig_Automatic_StatMod_Actions)
 end
 
 function Trig_Remove_Unit_From_StatMult_Func001Func002C()
@@ -36636,15 +37017,15 @@ TriggerExecute(gg_trg_Get_Stat_Multiplier)
 udg_StatMultReal = 1.00
 udg_StatMultStr = 2.50
 if (Trig_Oozaru_Vegeta_Skin_Change_Func009C()) then
-udg_StatMultStr = 2.00
+udg_StatMultStr = 1.50
 else
 if (Trig_Oozaru_Vegeta_Skin_Change_Func009Func002C()) then
-udg_StatMultStr = 2.30
+udg_StatMultStr = 2.00
 else
 if (Trig_Oozaru_Vegeta_Skin_Change_Func009Func002Func002C()) then
 udg_StatMultStr = 2.60
 else
-udg_StatMultStr = 2.90
+udg_StatMultStr = 2.80
 end
 end
 end
@@ -52876,6 +53257,9 @@ end
 end
 udg_PlayerStatModTotal[GetConvertedPlayerId(udg_TransformationPlayer)] = (udg_PlayerStatModTotal[GetConvertedPlayerId(udg_TransformationPlayer)] + 1.00)
 SaveIntegerBJ(1, 32, udg_ID, udg_StatMultHashtable)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_3456")
+                DestroyForce(udg_TempPlayerGroup)
 else
 end
 if (Trig_Transformations_Omega_Shenron_Func022Func002Func005C()) then
@@ -58645,7 +59029,7 @@ function Trig_Transformations_Super_17_Func014C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
 return false
 end
 return true
@@ -58662,7 +59046,7 @@ return true
 end
 
 function Trig_Transformations_Super_17_Func016C()
-if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
 return false
 end
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0P8"), udg_StatMultUnit) == 0)) then
@@ -61332,6 +61716,16 @@ return true
 end
 
 function Trig_Transformations_Megumin_Func017C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Megumin_Func018C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A042"), udg_StatMultUnit) == 0)) then
 return false
 end
@@ -61341,7 +61735,7 @@ end
 return true
 end
 
-function Trig_Transformations_Megumin_Func018C()
+function Trig_Transformations_Megumin_Func019C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A048"), udg_StatMultUnit) == 0)) then
 return false
 end
@@ -61351,8 +61745,8 @@ end
 return true
 end
 
-function Trig_Transformations_Megumin_Func019C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04A"), udg_StatMultUnit) == 0)) then
+function Trig_Transformations_Megumin_Func020C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05Y"), udg_StatMultUnit) == 0)) then
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
@@ -61361,8 +61755,8 @@ end
 return true
 end
 
-function Trig_Transformations_Megumin_Func020C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04C"), udg_StatMultUnit) == 0)) then
+function Trig_Transformations_Megumin_Func021C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04A"), udg_StatMultUnit) == 0)) then
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
@@ -61371,7 +61765,17 @@ end
 return true
 end
 
-function Trig_Transformations_Megumin_Func022Func002Func003C()
+function Trig_Transformations_Megumin_Func022C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04C"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Megumin_Func024Func002Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -61381,14 +61785,14 @@ end
 return false
 end
 
-function Trig_Transformations_Megumin_Func022Func002C()
-if (not Trig_Transformations_Megumin_Func022Func002Func003C()) then
+function Trig_Transformations_Megumin_Func024Func002C()
+if (not Trig_Transformations_Megumin_Func024Func002Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Megumin_Func022C()
+function Trig_Transformations_Megumin_Func024C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -61421,7 +61825,7 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Megumin_Func013C()) then
-udg_StatMultReal = 1.50
+udg_StatMultReal = 1.75
 udg_TransformationAbility = FourCC("AUan")
 else
 end
@@ -61441,6 +61845,11 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Megumin_Func017C()) then
+udg_StatMultReal = 2.60
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Megumin_Func018C()) then
 UnitAddAbilityBJ(FourCC("A042"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A042'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -61448,7 +61857,7 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7973")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Megumin_Func018C()) then
+if (Trig_Transformations_Megumin_Func019C()) then
 UnitAddAbilityBJ(FourCC("A048"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A048'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -61456,7 +61865,15 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7974")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Megumin_Func019C()) then
+if (Trig_Transformations_Megumin_Func020C()) then
+UnitAddAbilityBJ(FourCC("A05Y"), udg_StatMultUnit)
+        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A05Y'))
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_429")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Megumin_Func021C()) then
 UnitAddAbilityBJ(FourCC("A04A"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A04A'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -61464,7 +61881,7 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7976")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Megumin_Func020C()) then
+if (Trig_Transformations_Megumin_Func022C()) then
 UnitAddAbilityBJ(FourCC("A04C"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A04C'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -61472,8 +61889,8 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7977")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Megumin_Func022C()) then
-if (Trig_Transformations_Megumin_Func022Func002C()) then
+if (Trig_Transformations_Megumin_Func024C()) then
+if (Trig_Transformations_Megumin_Func024Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H00L')
@@ -63661,6 +64078,7 @@ InitTrig_Test_StatMult_Init()
 InitTrig_Test_Stats_Get_Stats_Command()
 InitTrig_Test_Stats_Get_Stats_Print()
 InitTrig_Add_Unit_To_StatMult()
+InitTrig_Automatic_StatMod()
 InitTrig_Remove_Unit_From_StatMult()
 InitTrig_Add_To_Base_Stats()
 InitTrig_Add_To_Varied_Base_Stats()

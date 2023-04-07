@@ -2637,9 +2637,9 @@ R
 }
 
 STRING 429
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +1 and HP by 5000 per level.
+[|cffffcc00Unlock|r] |cff0099ffManatite|r
+Megumin can use expensive manatite crystals to recover her mana.
 }
 
 STRING 430
@@ -4838,6 +4838,12 @@ STRING 775
 // Abilities: A00M (Pistol), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Pistol - [|cffffcc00Level 8|r]
+}
+
+STRING 776
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +1 and HP by +(5000*1).
 }
 
 STRING 777
@@ -12242,21 +12248,27 @@ STRING 1956
 }
 
 STRING 1957
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Units: H00L (|cffff4422Arch-Wizard|r), Name (Name)
 {
-Increase Metal Cooler's and his clones armor by +2 and HP by 5000 per level.
+|cffff4422Arch-Wizard|r
 }
 
 STRING 1958
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +3 and HP by 5000 per level.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur1> seconds|r
+|cff00ffffCooldown: <A0YD,Cool1> seconds|r
 }
 
 STRING 1959
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +4 and HP by 5000 per level.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur2> seconds|r
+|cff00ffffCooldown: <A0YD,Cool2> seconds|r
 }
 
 STRING 1960
@@ -12319,9 +12331,9 @@ Guldo holds his breath and temporarily freezes time for all nearby enemies, stun
 }
 
 STRING 1970
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A03J (Explosion 1), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +5 and HP by 5000 per level.
+[|cff00FF00Q|r] |cffff4422Explosion!|r
 }
 
 STRING 1971
@@ -13931,39 +13943,58 @@ CoolerHeadMetal
 }
 
 STRING 2230
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A042 (Explosion 2), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +6 and HP by 5000 per level.
+Exploooooosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 2s
+|cff00ff00Damage: Int * 5 + 25% Max HP
+|cff00ffffCooldown: <A042,Cool1> seconds
+
+|cff888888"Exploooooosion!"|r
 }
 
 STRING 2231
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A042 (Explosion 2), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +7 and HP by 5000 per level.
+[|cff00FF00W|r] |cffff4422Exploooooosion!!!|r
 }
 
 STRING 2232
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A048 (Explosion 3), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +8 and HP by 5000 per level.
+Nice Explosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 3s
+|cff00ff00Damage: Int * 7.5 + 25% Max HP
+|cff00ffffCooldown: <A048,Cool1> seconds
+
+|cff888888"Nice Explosion!"|r
 }
 
 STRING 2233
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A048 (Explosion 3), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +9 and HP by 5000 per level.
+[|cff00FF00E|r] |cffff4422Nice Explosion!|r
 }
 
 STRING 2234
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +10 and HP by 5000 per level.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur3> seconds|r
+|cff00ffffCooldown: <A0YD,Cool3> seconds|r
 }
 
 STRING 2235
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A04A (Explosion 4), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +11 and HP by 5000 per level.
+[|cff00FF00R|r] |cffff4422Nice Bakuretsu!|r
 }
 
 STRING 2236
@@ -14168,7 +14199,7 @@ STRING 2265
 }
 
 STRING 2266
-// Units: H00L (|cffff3333Arch-Wizard|r), Hotkey (Hotkey)
+// Units: H00L (|cffff4422Arch-Wizard|r), Hotkey (Hotkey)
 {
 E
 }
@@ -14564,57 +14595,80 @@ Frog Aura
 }
 
 STRING 2332
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +12 and HP by 5000 per level.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur4> seconds|r
+|cff00ffffCooldown: <A0YD,Cool4> seconds|r
 }
 
 STRING 2333
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A04C (Explosion 5), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +13 and HP by 5000 per level.
+[|cff00FF00F|r] |cffff4422Explosion!|r
 }
 
 STRING 2334
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A05Y (Explosion Manatite), Name (Name)
 {
-Increase Metal Cooler's and his clones armor by +14 and HP by 5000 per level.
+Explosion Manatite
 }
 
 STRING 2335
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +15 and HP by 5000 per level.
+A hero with one extremely powerful spell: |cffff4422Explosion|r.
+
+|cffff2222Explosion:|r Spells deal +25% Max HP damage.
+|cffffcc00Anime Protagonist:|r Gain +99999 armor when chanelling spells.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 }
 
 STRING 2336
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A05Y (Explosion Manatite), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +16 and HP by 5000 per level.
+[|cff00FF00D|r] |cff0099ffManatite|r
 }
 
 STRING 2337
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A03J (Explosion 1), EditorSuffix (Editor Suffix)
 {
-Increase Metal Cooler's and his clones armor by +17 and HP by 5000 per level.
+(megumin)
 }
 
 STRING 2338
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
-Increase Metal Cooler's and his clones armor by +18 and HP by 5000 per level.
+D
 }
 
 STRING 2339
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +19 and HP by 5000 per level.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur5> seconds|r
+|cff00ffffCooldown: <A0YD,Cool5> seconds|r
 }
 
 STRING 2340
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A03J (Explosion 1), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +20 and HP by 5000 per level.
+Explosion!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 1s
+|cff00ff00Damage: Int * 2.5 + 25% Max HP
+|cff00ffffCooldown: <A03J,Cool1> seconds
+
+|cff888888"Explosion!"|r
 }
 
 STRING 2341
@@ -14864,7 +14918,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14888,7 +14942,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15286,7 +15340,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15298,7 +15352,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
+// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15973,7 +16027,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
+// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16964,7 +17018,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
+// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -16988,7 +17042,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
+// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17078,7 +17132,7 @@ STRING 2731
 }
 
 STRING 2732
-// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17124,7 +17178,7 @@ Saitama is unimpressed by his enemies, allowing him to avoid all incoming attack
 }
 
 STRING 2739
-// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17154,7 +17208,7 @@ STRING 2743
 }
 
 STRING 2744
-// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17568,7 +17622,7 @@ Advanced Weapons Knowledge
 }
 
 STRING 2813
-// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17712,7 +17766,7 @@ STRING 2831
 }
 
 STRING 2832
-// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17738,7 +17792,7 @@ OK.
 }
 
 STRING 2836
-// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17944,7 +17998,7 @@ STRING 2869
 }
 
 STRING 2870
-// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17956,7 +18010,7 @@ STRING 2871
 }
 
 STRING 2872
-// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19516,7 +19570,7 @@ STRING 3123
 }
 
 STRING 3124
-// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19782,9 +19836,13 @@ W
 }
 
 STRING 3166
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A05Y (Explosion Manatite), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +1 gold per creep kill. +1% gold per Player or Saga kill.
+Restore 100% of max mana.
+
+|cff00ffffCooldown: <A05Y,Cool1> seconds|r
+
+|cff888888"Not even the highly skilled Arch-Wizards in the Crimson Village can cast Explosion magic twice without resting."|r
 }
 
 STRING 3167
@@ -20106,7 +20164,7 @@ STRING 3219
 }
 
 STRING 3220
-// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -20130,7 +20188,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 3224
-// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -20350,7 +20408,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 3253
-// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -20384,7 +20442,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 3257
-// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -21528,7 +21586,7 @@ Upgraded Gold Assimilation
 }
 
 STRING 3445
-// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -21594,87 +21652,125 @@ Armor Plating
 }
 
 STRING 3456
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
 {
-Gain +2 gold per creep kill. +2% gold per Player or Saga kill.
+[|cffffcc00Unlock|r] |cffcc22ccEnvoy of the End|r
+Omega Shenron gains +1 level up stats and gains a special bonus if one of his stats his higher than the rest.
 }
 
 STRING 3457
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A04A (Explosion 4), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +3 gold per creep kill. +3% gold per Player or Saga kill.
+Nice Bakuretsu!
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 4s
+|cff00ff00Damage: Int * 8.75 + 25% Max HP
+|cff00ffffCooldown: <A04A,Cool1> seconds
+
+|cff888888"Nice Bakuretsu!"|r
 }
 
 STRING 3458
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A04C (Explosion 5), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +4 gold per creep kill. +4% gold per Player or Saga kill.
+Explosion.
+
+|cffffff00+99999 armor while channelling.
+|cff2288ffMana Cost: 100% Max Mana.
+|cffff2222Channel Duration: 5s
+|cff00ff00Damage: Int * 10 + 25% Max HP
+|cff00ffffCooldown: <A04C,Cool1> seconds
+
+|cff888888"Darkness blacker than black and darker than dark, I beseech thee, combine with my deep crimson. The time of awakening cometh. Justice, fallen upon the infallible boundary, appear now as an intangible distortion! Dance, Dance, Dance! I desire for my torrent of power a destructive force: a destructive force without equal! Return all creation to cinders, and come from the abyss!"|r
 }
 
 STRING 3459
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +5 gold per creep kill. +5% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool1>s|r
 }
 
 STRING 3460
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +6 gold per creep kill. +6% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool2>s|r
 }
 
 STRING 3461
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +7 gold per creep kill. +7% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool3>s|r
 }
 
 STRING 3462
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +8 gold per creep kill. +8% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool4>s|r
 }
 
 STRING 3463
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +9 gold per creep kill. +9% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool5>s|r
 }
 
 STRING 3464
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Researchubertip (Tooltip - Learn - Extended)
 {
-Gain +10 gold per creep kill. +10% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool1> - <A0WI,Cool10>s|r
 }
 
 STRING 3465
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +11 gold per creep kill. +11% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool6>s|r
 }
 
 STRING 3466
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +12 gold per creep kill. +12% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool7>s|r
 }
 
 STRING 3467
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +13 gold per creep kill. +13% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool8>s|r
 }
 
 STRING 3468
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +14 gold per creep kill. +14% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool9>s|r
 }
 
 STRING 3469
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +15 gold per creep kill. +15% gold per Player or Saga kill.
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+3% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool10>s|r
 }
 
 STRING 3470
@@ -21684,21 +21780,30 @@ W
 }
 
 STRING 3471
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +16 gold per creep kill. +16% gold per Player or Saga kill.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur6> seconds|r
+|cff00ffffCooldown: <A0YD,Cool6> seconds|r
 }
 
 STRING 3472
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +17 gold per creep kill. +17% gold per Player or Saga kill.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur7> seconds|r
+|cff00ffffCooldown: <A0YD,Cool7> seconds|r
 }
 
 STRING 3473
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +18 gold per creep kill. +18% gold per Player or Saga kill.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur8> seconds|r
+|cff00ffffCooldown: <A0YD,Cool8> seconds|r
 }
 
 STRING 3474
@@ -21792,15 +21897,21 @@ Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3489
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +19 gold per creep kill. +19% gold per Player or Saga kill.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur9> seconds|r
+|cff00ffffCooldown: <A0YD,Cool9> seconds|r
 }
 
 STRING 3490
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
 {
-Gain +20 gold per creep kill. +20% gold per Player or Saga kill.
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur10> seconds|r
+|cff00ffffCooldown: <A0YD,Cool10> seconds|r
 }
 
 STRING 3491
@@ -22814,19 +22925,19 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 3655
-// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 3656
 // Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 3657
+STRING 3656
 // Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 3657
+// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -22844,19 +22955,19 @@ W
 }
 
 STRING 3660
-// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
-{
-D
-}
-
-STRING 3661
 // Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 3662
+STRING 3661
 // Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 3662
+// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -23060,7 +23171,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 3696
-// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
+// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -23508,25 +23619,25 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 3771
-// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
-{
-D
-}
-
-STRING 3772
 // Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 3773
+STRING 3772
 // Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
-STRING 3774
+STRING 3773
 // Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 3774
+// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -24090,7 +24201,7 @@ STRING 3867
 }
 
 STRING 3868
-// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -24114,7 +24225,7 @@ Creates Android 19 using spare parts from Gero's other projects.
 }
 
 STRING 3872
-// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -25415,7 +25526,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 4062
-// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -25590,19 +25701,19 @@ Increases the attack range of Geti Star Defense buildings by +100.
 }
 
 STRING 4088
-// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 4089
 // Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
-STRING 4090
+STRING 4089
 // Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 4090
+// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -25932,7 +26043,7 @@ Namekians have developed their own fighting style. Most Namek's are healers, but
 }
 
 STRING 4145
-// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26664,37 +26775,37 @@ Android Energy Drain
 }
 
 STRING 4267
-// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 4268
 // Abilities: A0IJ (Capsule: Brave Sword), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 4269
+STRING 4268
 // Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 4270
+STRING 4269
 // Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 4271
+STRING 4270
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 4272
+STRING 4271
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
+STRING 4272
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27187,7 +27298,7 @@ STRING 4346
 }
 
 STRING 4347
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -27211,7 +27322,7 @@ Buu punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cool
 }
 
 STRING 4351
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27745,7 +27856,7 @@ STRING 4439
 }
 
 STRING 4440
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -27769,7 +27880,7 @@ After Guru unlocked his potential, Dende gained the ability to heal others.
 }
 
 STRING 4444
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28546,7 +28657,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -28570,7 +28681,7 @@ STRING 4566
 }
 
 STRING 4567
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28739,7 +28850,7 @@ STRING 4594
 }
 
 STRING 4595
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28751,7 +28862,7 @@ Detonate
 }
 
 STRING 4597
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -29803,7 +29914,7 @@ Transformations:
 
 |cffffcc00Grim Reaper of Justice|r: +5% stats from creeps
 
-When the combined level of Goten and Trunks is above 120 you can type "fusion ha" to fuse into Gotenks. Goten and Trunks must not be in a restricted area to fuse.
+When the combined level of Goten and Trunks is above 120 you can type "|cffffcc00fusion ha|r" to fuse into Gotenks. Goten and Trunks must not be in a restricted area to fuse.
 }
 
 STRING 4769
@@ -30051,7 +30162,7 @@ STRING 4808
 }
 
 STRING 4809
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -30075,7 +30186,7 @@ Buu swings his arms so fast they appear to be windmills on his shoulder and pumm
 }
 
 STRING 4813
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31685,7 +31796,7 @@ F
 }
 
 STRING 5081
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31709,7 +31820,7 @@ F
 }
 
 STRING 5085
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31931,7 +32042,7 @@ F
 }
 
 STRING 5122
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31955,7 +32066,7 @@ F
 }
 
 STRING 5126
-// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -34662,7 +34773,7 @@ Candy Cane
 }
 
 STRING 5567
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -34674,19 +34785,19 @@ Q
 }
 
 STRING 5569
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 5570
 // Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 5571
+STRING 5570
 // Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 5571
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37634,7 +37745,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6039
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -38000,13 +38111,13 @@ STRING 6099
 }
 
 STRING 6100
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6101
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38645,7 +38756,7 @@ Super Goten Strike
 }
 
 STRING 6206
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38669,7 +38780,7 @@ STRING 6209
 }
 
 STRING 6210
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39607,7 +39718,7 @@ STRING 6355
 }
 
 STRING 6356
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39667,7 +39778,7 @@ STRING 6365
 }
 
 STRING 6366
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39826,7 +39937,7 @@ STRING 6385
 }
 
 STRING 6386
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40525,7 +40636,7 @@ STRING 6499
 }
 
 STRING 6500
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41121,7 +41232,7 @@ Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * l
 }
 
 STRING 6594
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41139,7 +41250,7 @@ Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * l
 }
 
 STRING 6597
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41276,13 +41387,13 @@ STRING 6619
 }
 
 STRING 6620
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6621
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41306,7 +41417,7 @@ STRING 6624
 }
 
 STRING 6625
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41396,7 +41507,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41420,7 +41531,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41486,7 +41597,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41514,7 +41625,7 @@ Hirudegarn turns into mist, before re-appearing after a brief delay to counter-a
 }
 
 STRING 6659
-// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41604,7 +41715,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -41628,7 +41739,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41741,7 +41852,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
+// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41769,7 +41880,7 @@ Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane
 }
 
 STRING 6697
-// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41892,7 +42003,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
+// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41916,7 +42027,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -42012,7 +42123,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -42036,7 +42147,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44982,7 +45093,7 @@ Gain a total of +1% |cffffcc00Spell Power|r.
 }
 
 STRING 7187
-// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44994,13 +45105,13 @@ Q
 }
 
 STRING 7189
-// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 7190
-// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45173,13 +45284,13 @@ Q
 }
 
 STRING 7213
-// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 7214
-// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45544,7 +45655,7 @@ Hirudegarn charges up a massive blue energy beam from his mouth, before firing i
 }
 
 STRING 7266
-// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45571,7 +45682,7 @@ STRING 7269
 }
 
 STRING 7270
-// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45849,7 +45960,7 @@ STRING 7311
 }
 
 STRING 7312
-// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45873,7 +45984,7 @@ STRING 7315
 }
 
 STRING 7316
-// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45895,9 +46006,9 @@ STRING 7319
 Type "r" to revert.
 Transformations:
 [lvl 17]  1.25x "fp"
-[lvl 60]  1.70x "fp" [unlocks Absorption]
-[lvl 60+] 2.00x "fp" (absorb 17) [upgrades D]
-[lvl 60+] 2.25x "fp" (absorb 18) [upgrades D]
+[lvl 50]  1.70x "fp" [unlocks Absorption]
+[lvl 50+] 2.00x "fp" (absorb 17) [upgrades D]
+[lvl 50+] 2.25x "fp" (absorb 18) [upgrades D]
 [lvl 200] 2.50x "fp" [unlocks Super Flash Bomber]
 
 }
@@ -46520,7 +46631,7 @@ STRING 7415
 }
 
 STRING 7416
-// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
+// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46567,7 +46678,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7423
-// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46594,7 +46705,7 @@ STRING 7426
 }
 
 STRING 7427
-// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46816,7 +46927,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46840,7 +46951,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
+// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46945,7 +47056,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7483
-// Abilities: A02J (Serious Series), Hotkey (Hotkey - Normal)
+// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46978,7 +47089,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7487
-// Abilities: A02U (Serious Punch), Hotkey (Hotkey - Normal)
+// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47041,7 +47152,7 @@ STRING 7495
 }
 
 STRING 7496
-// Abilities: A069 (Barrel Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47059,7 +47170,7 @@ Hakai Barrage
 }
 
 STRING 7499
-// Abilities: A0ET (Dark Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47102,7 +47213,7 @@ STRING 7505
 }
 
 STRING 7506
-// Abilities: A0GI (Ultra Ego), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47134,7 +47245,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7510
-// Abilities: A0H7 (Scan for Androids), Hotkey (Hotkey - Normal)
+// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47899,7 +48010,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0KQ (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47923,7 +48034,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0Y9 (Supercharged Sensors), Hotkey (Hotkey - Normal)
+// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -48489,7 +48600,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0YG (Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48513,7 +48624,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0YG (Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -48748,7 +48859,7 @@ STRING 7767
 }
 
 STRING 7768
-// Abilities: A0YH (Pray), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -49222,7 +49333,7 @@ Gain a total of +9% |cff00ffffCooldown Reduction|r.
 }
 
 STRING 7847
-// Abilities: A0YO (Empowered Magic Seal), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49246,7 +49357,7 @@ Gain a total of +12% |cff00ffffCooldown Reduction|r.
 }
 
 STRING 7851
-// Abilities: A0YO (Empowered Magic Seal), Hotkey (Hotkey - Normal)
+// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -49808,73 +49919,73 @@ Gain a total of +25% |cff00ffffCooldown Reduction|r.
 }
 
 STRING 7942
-// Abilities: A0YW (Cooling Down), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 7943
 // Abilities: A0ZA (Extraordinary Power), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7944
+STRING 7943
 // Abilities: A0ZA (Extraordinary Power), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
 
-STRING 7945
+STRING 7944
 // Abilities: A0ZF (Super Sonic), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7946
+STRING 7945
 // Abilities: A0ZU (Drop Items), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7947
+STRING 7946
 // Abilities: A10D (Berserker Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7948
+STRING 7947
 // Abilities: A10E (Beast of Darkness), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7949
+STRING 7948
 // Abilities: A110 (Elite Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7950
+STRING 7949
 // Abilities: A11L (Gohan Boost Beast Gohan), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7951
+STRING 7950
 // Abilities: A11L (Gohan Boost Beast Gohan), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
 
-STRING 7952
+STRING 7951
 // Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7953
+STRING 7952
 // Abilities: A038 (Flashbang), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 7953
+// Abilities: A05Y (Explosion Manatite), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -50011,12 +50122,14 @@ STRING 7972
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "fp" [unlocks Explosion 2]
+[lvl 30]  1.75x "fp" [unlocks Explosion 2]
 [lvl 85]  2.00x "fp" [unlocks Explosion 3]
-[lvl 125] 2.25x "fp" [unlocks Explosion 4]
-[lvl 150] 2.50x "fp" [unlocks Explosion 5]
+[lvl 125] 2.25x "fp" [unlocks Manatite]
+[lvl 150] 2.50x "fp" [unlocks Explosion 4]
+[lvl 200] 2.60x "fp" [unlocks Explosion 5]
 
 |cffff2222Explosion:|r Spells deal +25% Max HP damage.
+|cffffcc00Anime Protagonist:|r Gain +99999 armor when chanelling spells.
 }
 
 STRING 7973
@@ -50050,6 +50163,12 @@ STRING 7977
 {
 [|cffffcc00Unlock|r] |cffFF2222Explosion!|r
 Megumin has developed an even more powerful |cffff2222Explosion!|r
+}
+
+STRING 7978
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +2 and HP by +(5000*2).
 }
 
 STRING 7979
@@ -50374,7 +50493,7 @@ Ginyu Force / Frieza
 }
 
 STRING 8030
-// Units: H00L (|cffff3333Arch-Wizard|r), Propernames (Proper Names)
+// Units: H00L (|cffff4422Arch-Wizard|r), Propernames (Proper Names)
 {
 Megumin
 }
@@ -53887,17 +54006,12 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8545
-// Units: H00L (|cffff3333Arch-Wizard|r), Ubertip (Tooltip - Extended)
+// Abilities: A0YD (Protect), Researchubertip (Tooltip - Learn - Extended)
 {
-|cffff2020Warning: THIS HERO IS UNFINISHED|r
-
-A hero with one extremely powerful spell: Explosion.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+Schala creates a protective aura, increasing the armor of nearby allies.
+|cffFFFF00Bonus Armor: 2 * Level|r
+|cff00FF00Duration: <A0YD,Dur1> seconds|r
+|cff00ffffCooldown: <A0YD,Cool1> - <A0YD,Cool10> seconds|r
 }
 
 STRING 8546
@@ -75024,6 +75138,12 @@ Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to 
 |cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
+STRING 11910
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +3 and HP by +(5000*3).
+}
+
 STRING 11911
 // Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
 {
@@ -75031,12 +75151,6 @@ Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP 
 |cffffff00Costs 2 Time Skip charges.
 |cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
 |cff00ffffCooldown: <A0GP,Cool1>s|r
-}
-
-STRING 11912
-// Abilities: A03J (Explosion 1), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] |cffff3322Explosion!|r
 }
 
 STRING 11913
@@ -79426,7 +79540,7 @@ STRING 12620
 }
 
 STRING 12621
-// Abilities: A03J (Explosion 1), EditorSuffix (Editor Suffix)
+// Abilities: A042 (Explosion 2), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -83903,14 +84017,14 @@ STRING 13320
 Explosion 2
 }
 
-STRING 13322
-// Abilities: A042 (Explosion 2), Tip (Tooltip - Normal)
+STRING 13321
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-[|cff00FF00W|r] |cffff3322Exploooooosion!!!|r
+Increase Metal Cooler's and his clones armor by +4 and HP by +(5000*4).
 }
 
 STRING 13323
-// Abilities: A042 (Explosion 2), EditorSuffix (Editor Suffix)
+// Abilities: A048 (Explosion 3), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -85410,6 +85524,12 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cffffff00+3 Spirit Power.
 |cff00FF00Duration: 10s
 |cff00FFFFCooldown: <A0UU,Cool2,.>s|r
+}
+
+STRING 13553
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +5 and HP by +(5000*5).
 }
 
 STRING 13554
@@ -88744,14 +88864,8 @@ STRING 14049
 [|cff00ff00E|r] Justice Cannon - [|cffffcc00Level 10|r]
 }
 
-STRING 14050
-// Abilities: A048 (Explosion 3), Tip (Tooltip - Normal)
-{
-[|cff00FF00E|r] |cffff3322Nice Explosion!|r
-}
-
 STRING 14051
-// Abilities: A048 (Explosion 3), EditorSuffix (Editor Suffix)
+// Abilities: A04A (Explosion 4), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -88762,16 +88876,16 @@ STRING 14052
 Explosion 4
 }
 
+STRING 14053
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +6 and HP by +(5000*6).
+}
+
 STRING 14054
 // Abilities: A0QX (Justice Cannon), EditorSuffix (Editor Suffix)
 {
 (dyspo)
-}
-
-STRING 14055
-// Abilities: A04A (Explosion 4), Tip (Tooltip - Normal)
-{
-[|cff00FF00R|r] |cffff3322Nice Bakuretsu!|r
 }
 
 STRING 14056
@@ -88931,7 +89045,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 14075
-// Abilities: A04A (Explosion 4), EditorSuffix (Editor Suffix)
+// Abilities: A04C (Explosion 5), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -88942,16 +89056,16 @@ STRING 14076
 Explosion 5
 }
 
+STRING 14077
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +7 and HP by +(5000*7).
+}
+
 STRING 14078
 // Abilities: A0QY (Light Bullet), EditorSuffix (Editor Suffix)
 {
 (dyspo)
-}
-
-STRING 14079
-// Abilities: A04C (Explosion 5), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffff3322Explosion!|r
 }
 
 STRING 14080
@@ -89027,7 +89141,7 @@ STRING 14091
 }
 
 STRING 14092
-// Abilities: A04C (Explosion 5), EditorSuffix (Editor Suffix)
+// Abilities: A04G (Explosion Mastery), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -95814,7 +95928,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15094
-// Abilities: A04G (Explosion Mastery), EditorSuffix (Editor Suffix)
+// Abilities: A05X (Explosion Megumin Invul), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -95938,10 +96052,34 @@ STRING 15109
 F
 }
 
+STRING 15110
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +8 and HP by +(5000*8).
+}
+
+STRING 15111
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +9 and HP by +(5000*9).
+}
+
+STRING 15112
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +10 and HP by +(5000*10).
+}
+
 STRING 15113
 // Abilities: A0SD (Psychic Rock Throw), EditorSuffix (Editor Suffix)
 {
 (guldo)
+}
+
+STRING 15114
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +11 and HP by +(5000*11).
 }
 
 STRING 15115
@@ -96735,18 +96873,10 @@ STRING 15234
 Q
 }
 
-STRING 15236
-// Abilities: A03J (Explosion 1), Ubertip (Tooltip - Normal - Extended)
+STRING 15235
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Explosion!
-
-|cffffff00+99999 armor while channelling.
-|cff2288ffMana Cost: 100% Max Mana.
-|cffff2222Channel Duration: 1s
-|cff00ff00Damage: Int * ? + 25% Max HP
-|cff00ffffCooldown: <A03L,Cool1> seconds
-
-|cff888888"Explosion!"|r
+Increase Metal Cooler's and his clones armor by +12 and HP by +(5000*12).
 }
 
 STRING 15237
@@ -97059,48 +97189,6 @@ A versatile hero with incredible flexibility and high mobility. He can swap betw
 
 }
 
-STRING 15281
-// Abilities: A042 (Explosion 2), Ubertip (Tooltip - Normal - Extended)
-{
-Exploooooosion!
-
-|cffffff00+99999 armor while channelling.
-|cff2288ffMana Cost: 100% Max Mana.
-|cffff2222Channel Duration: 2s
-|cff00ff00Damage: Int * ? + 25% Max HP
-|cff00ffffCooldown: <A042,Cool1> seconds
-
-|cff888888"Exploooooosion!"|r
-}
-
-STRING 15282
-// Abilities: A048 (Explosion 3), Ubertip (Tooltip - Normal - Extended)
-{
-Nice Explosion!
-
-|cffffff00+99999 armor while channelling.
-|cff2288ffMana Cost: 100% Max Mana.
-|cffff2222Channel Duration: 3s
-|cff00ff00Damage: Int * ? + 25% Max HP
-|cff00ffffCooldown: <A048,Cool1> seconds
-
-|cff888888"Nice Explosion!"|r
-}
-
-STRING 15283
-// Abilities: A04A (Explosion 4), Ubertip (Tooltip - Normal - Extended)
-{
-Nice Bakuretsu!
-
-|cffffff00+99999 armor while channelling.
-|cff2288ffMana Cost: 100% Max Mana.
-|cffff2222Channel Duration: 4s
-|cff00ff00Damage: Int * ? + 25% Max HP
-|cff00ffffCooldown: <A04A,Cool1> seconds
-
-|cff888888"Nice Bakuretsu!"|r
-}
-
 STRING 15284
 // Abilities: A0K9 (Power Impact), EditorSuffix (Editor Suffix)
 {
@@ -97123,20 +97211,6 @@ STRING 15287
 // Abilities: A0KD (Meditate), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Meditate
-}
-
-STRING 15288
-// Abilities: A04C (Explosion 5), Ubertip (Tooltip - Normal - Extended)
-{
-Explosion.
-
-|cffffff00+99999 armor while channelling.
-|cff2288ffMana Cost: 100% Max Mana.
-|cffff2222Channel Duration: 5s
-|cff00ff00Damage: Int * ? + 25% Max HP
-|cff00ffffCooldown: <A04C,Cool1> seconds
-
-|cff888888"Darkness blacker than black and darker than dark, I beseech thee, combine with my deep crimson. The time of awakening cometh. Justice, fallen upon the infallible boundary, appear now as an intangible distortion! Dance, Dance, Dance! I desire for my torrent of power a destructive force: a destructive force without equal! Return all creation to cinders, and come from the abyss!"|r
 }
 
 STRING 15289
@@ -97164,7 +97238,7 @@ Explosion Megumin Invul
 }
 
 STRING 15293
-// Abilities: A05X (Explosion Megumin Invul), EditorSuffix (Editor Suffix)
+// Abilities: A05Y (Explosion Manatite), EditorSuffix (Editor Suffix)
 {
 (megumin)
 }
@@ -97181,16 +97255,22 @@ STRING 15295
 [|cff00ff00Q|r] Learn Power Impact - [|cffffcc00Level %d|r]
 }
 
-STRING 15296
-// Units: H00L (|cffff3333Arch-Wizard|r), Name (Name)
+STRING 15297
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-|cffff3333Arch-Wizard|r
+Increase Metal Cooler's and his clones armor by +13 and HP by +(5000*13).
 }
 
 STRING 15298
 // Abilities: A0JE (Kamehameha Fire), Name (Name)
 {
 Kamehameha Fire
+}
+
+STRING 15299
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +14 and HP by +(5000*14).
 }
 
 STRING 15300
@@ -97381,6 +97461,12 @@ STRING 15329
 (roshi)
 }
 
+STRING 15330
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +15 and HP by +(5000*15).
+}
+
 STRING 15331
 // Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
@@ -97398,6 +97484,18 @@ STRING 15333
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 15334
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +16 and HP by +(5000*16).
+}
+
+STRING 15335
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +17 and HP by +(5000*17).
 }
 
 STRING 15336
@@ -97442,10 +97540,40 @@ STRING 15342
 E
 }
 
+STRING 15343
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +18 and HP by +(5000*18).
+}
+
+STRING 15344
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +19 and HP by +(5000*19).
+}
+
 STRING 15345
 // Abilities: A0SK (Glare 2), Name (Name)
 {
 Glare 2
+}
+
+STRING 15346
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones armor by +20 and HP by +(5000*20).
+}
+
+STRING 15347
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(1x3) gold per creep kill. +(1x3)% gold per Player or Saga kill.
+}
+
+STRING 15348
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(2x3) gold per creep kill. +(2x3)% gold per Player or Saga kill.
 }
 
 STRING 15349
@@ -97551,6 +97679,12 @@ STRING 15363
 {
 The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool10> seconds|r
+}
+
+STRING 15364
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(3x3) gold per creep kill. +(3x3)% gold per Player or Saga kill.
 }
 
 STRING 15365
@@ -99837,6 +99971,12 @@ STRING 15681
 [|cff00FF00D|r] |cffffaa00Super Saiyan 3|r
 }
 
+STRING 15682
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(4x3) gold per creep kill. +(4x3)% gold per Player or Saga kill.
+}
+
 STRING 15683
 // Abilities: A0U0 (Super Saiyan 3), Name (Name)
 {
@@ -100497,6 +100637,12 @@ STRING 15776
 [|cff00ff00Q|r] Time Skip - [|cffffcc00Level 9|r]
 }
 
+STRING 15777
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(5x3) gold per creep kill. +(5x3)% gold per Player or Saga kill.
+}
+
 STRING 15778
 // Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
 {
@@ -100507,6 +100653,12 @@ STRING 15779
 // Units: H0AL (Galactic Patrolman), Tip (Tooltip - Basic)
 {
 [|cffffff00E|r] Choose Jaco
+}
+
+STRING 15780
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(6x3) gold per creep kill. +(6x3)% gold per Player or Saga kill.
 }
 
 STRING 15781
@@ -100679,6 +100831,12 @@ STRING 15808
 [|cff00ff00Q|r] Learn Octoslash - [|cffffcc00Level %d|r]
 }
 
+STRING 15809
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(7x3) gold per creep kill. +(7x3)% gold per Player or Saga kill.
+}
+
 STRING 15810
 // Abilities: A0T7 (Octoslash), EditorSuffix (Editor Suffix)
 {
@@ -100701,6 +100859,24 @@ STRING 15813
 // Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Octoslash - [|cffffcc00Level 10|r]
+}
+
+STRING 15814
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(8x3) gold per creep kill. +(8x3)% gold per Player or Saga kill.
+}
+
+STRING 15815
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(9x3) gold per creep kill. +(9x3)% gold per Player or Saga kill.
+}
+
+STRING 15816
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(10x3) gold per creep kill. +(10x3)% gold per Player or Saga kill.
 }
 
 STRING 15817
@@ -100903,6 +101079,48 @@ Sephiroth leaps into the air before slamming into the ground, dealing massive AO
 |cff808080"The 'Promised Land waits for me over the snowy fields."|r
 }
 
+STRING 15843
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(11x3) gold per creep kill. +(11x3)% gold per Player or Saga kill.
+}
+
+STRING 15844
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(12x3) gold per creep kill. +(12x3)% gold per Player or Saga kill.
+}
+
+STRING 15845
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(13x3) gold per creep kill. +(13x3)% gold per Player or Saga kill.
+}
+
+STRING 15846
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(14x3) gold per creep kill. +(14x3)% gold per Player or Saga kill.
+}
+
+STRING 15847
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(15x3) gold per creep kill. +(15x3)% gold per Player or Saga kill.
+}
+
+STRING 15848
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(16x3) gold per creep kill. +(16x3)% gold per Player or Saga kill.
+}
+
+STRING 15849
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(17x3) gold per creep kill. +(17x3)% gold per Player or Saga kill.
+}
+
 STRING 15850
 // Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
 {
@@ -100963,6 +101181,12 @@ STRING 15859
 [|cff00ff00E|r] Learn Fervent Blow - [|cffffcc00Level %d|r]
 }
 
+STRING 15860
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(18x3) gold per creep kill. +(18x3)% gold per Player or Saga kill.
+}
+
 STRING 15861
 // Abilities: A0ZP (Plant Rice), Hotkey (Hotkey - Normal)
 {
@@ -100991,6 +101215,18 @@ STRING 15865
 // Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 10|r]
+}
+
+STRING 15866
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(19x3) gold per creep kill. +(19x3)% gold per Player or Saga kill.
+}
+
+STRING 15867
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Gain +(20x3) gold per creep kill. +(20x3)% gold per Player or Saga kill.
 }
 
 STRING 15869
@@ -114630,22 +114866,6 @@ STRING 17859
 Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
 }
 
-STRING 17860
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool1>s|r
-}
-
-STRING 17861
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool2>s|r
-}
-
 STRING 17862
 // Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
@@ -115949,30 +116169,6 @@ STRING 18071
 [|cff00FF00E|r] Water - [|cffffcc00Level 10|r]
 }
 
-STRING 18072
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool3>s|r
-}
-
-STRING 18073
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool4>s|r
-}
-
-STRING 18074
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool5>s|r
-}
-
 STRING 18075
 // Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
 {
@@ -116301,54 +116497,6 @@ STRING 18121
 // Items: I02S (Pot of Steamed Hams), Description (Description)
 {
 Pot of Steamed Hams
-}
-
-STRING 18122
-// Abilities: A0WI (Heal Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool1> - <A0WI,Cool10>s|r
-}
-
-STRING 18123
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool6>s|r
-}
-
-STRING 18124
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool7>s|r
-}
-
-STRING 18125
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool8>s|r
-}
-
-STRING 18126
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool9>s|r
-}
-
-STRING 18127
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Robo heals all nearby allies within a short range.
-|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
-|cff00FFFFCooldown: <A0WI,Cool10>s|r
 }
 
 STRING 18138
@@ -120129,7 +120277,7 @@ E
 }
 
 STRING 18728
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -120138,7 +120286,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 18729
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -120147,7 +120295,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 18730
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -120162,7 +120310,7 @@ STRING 18731
 }
 
 STRING 18732
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -120177,7 +120325,7 @@ Magic Orbs
 }
 
 STRING 18734
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -120186,7 +120334,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 18735
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -121711,7 +121859,7 @@ STRING 18957
 }
 
 STRING 18958
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -123482,7 +123630,7 @@ STRING 19235
 }
 
 STRING 19236
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -123545,7 +123693,7 @@ STRING 19252
 }
 
 STRING 19254
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -123607,17 +123755,8 @@ STRING 19266
 [|cff00FF00D|r] Super 17 (Absorbed 18)
 }
 
-STRING 19267
-// Abilities: A0YD (Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur10> seconds|r
-|cff00ffffCooldown: <A0YD,Cool10> seconds|r
-}
-
 STRING 19268
-// Abilities: A0YD (Protect), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YL (Empowered Protect), Researchubertip (Tooltip - Learn - Extended)
 {
 Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
@@ -123635,15 +123774,6 @@ STRING 19270
 {
 [|cffffcc00Absorb|r] Android 17
 Super 17 has upgraded into his true form after absorbing Android 17.
-}
-
-STRING 19271
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur1> seconds|r
-|cff00ffffCooldown: <A0YD,Cool1> seconds|r
 }
 
 STRING 19272
@@ -123691,15 +123821,6 @@ STRING 19278
 [|cff00FF00D|r] Super Android 17
 }
 
-STRING 19279
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur2> seconds|r
-|cff00ffffCooldown: <A0YD,Cool2> seconds|r
-}
-
 STRING 19280
 // Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
@@ -123730,24 +123851,6 @@ STRING 19283
 Teleportation
 }
 
-STRING 19284
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur3> seconds|r
-|cff00ffffCooldown: <A0YD,Cool3> seconds|r
-}
-
-STRING 19285
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur4> seconds|r
-|cff00ffffCooldown: <A0YD,Cool4> seconds|r
-}
-
 STRING 19286
 // Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
 {
@@ -123758,24 +123861,6 @@ STRING 19287
 // Abilities: A0YD (Protect), EditorSuffix (Editor Suffix)
 {
 (schala)
-}
-
-STRING 19288
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur5> seconds|r
-|cff00ffffCooldown: <A0YD,Cool5> seconds|r
-}
-
-STRING 19289
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur6> seconds|r
-|cff00ffffCooldown: <A0YD,Cool6> seconds|r
 }
 
 STRING 19290
@@ -124066,15 +124151,6 @@ STRING 19337
 // Abilities: A0YH (Pray), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
-}
-
-STRING 19338
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur7> seconds|r
-|cff00ffffCooldown: <A0YD,Cool7> seconds|r
 }
 
 STRING 19339
@@ -124387,28 +124463,10 @@ STRING 19386
 [|cff00ff00W|r] Protect Empowered - [|cffffcc00Level 10|r]
 }
 
-STRING 19387
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur8> seconds|r
-|cff00ffffCooldown: <A0YD,Cool8> seconds|r
-}
-
 STRING 19388
 {
 [|cffffcc00Unlock|r] Pray
 Schala can now channel the power of Lavos through her pendant, restoring her mana and granting bonus multiplier.
-}
-
-STRING 19389
-// Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur9> seconds|r
-|cff00ffffCooldown: <A0YD,Cool9> seconds|r
 }
 
 STRING 19390
@@ -124612,15 +124670,6 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 30
 |cff00FF00Duration: <A0YD,Dur10> seconds|r
 |cff00ffffCooldown: <A0YD,Cool10> seconds|r
-}
-
-STRING 19423
-// Abilities: A0YL (Empowered Protect), Researchubertip (Tooltip - Learn - Extended)
-{
-Schala creates a protective aura, increasing the armor of nearby allies.
-|cffFFFF00Bonus Armor: 3 * Level|r
-|cff00FF00Duration: <A0YD,Dur1> seconds|r
-|cff00ffffCooldown: <A0YD,Cool1> - <A0YD,Cool10> seconds|r
 }
 
 STRING 19424
@@ -137152,7 +137201,7 @@ STRING 21427
 }
 
 STRING 21429
-// Units: H00L (|cffff3333Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }

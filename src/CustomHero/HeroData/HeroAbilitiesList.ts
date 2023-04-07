@@ -687,7 +687,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // cell junior
     [FourCC("H01J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
-      // AbilityNames.Goku.GOD_KAMEHAMEHA
+      AbilityNames.Goku.GOD_KAMEHAMEHA
     ]],
 
 
