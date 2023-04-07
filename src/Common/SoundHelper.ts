@@ -203,9 +203,43 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Android17BeatYouLikeARug.mp3", 1608);
         }
         break;
-
+      
+      // appule
       case Id.appuleBlaster:
+        if (unitId == Id.appule) {
+          if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Q1.mp3", 1728);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Q2.mp3", 2784);
+          }
+        }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+        break;
+      
+      case Id.appuleEscape:
+        if (unitId == Id.appule) {
+          playSoundOnUnit(unit, "Audio/Voice/Appule/W1.mp3", 2160);
+        }
+        break;
+      
+      case Id.appuleVengeance:
+        if (unitId == Id.appule) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Kill3.mp3", 6768);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/E1.mp3", 2352);
+          }
+        }
+        break;
+      
+      case Id.appuleClones:
+        if (unitId == Id.appule) {
+          if (rng < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/Death.mp3", 1920);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Appule/R1.mp3", 1824);
+          }
+        }
         break;
       
       // babidi
@@ -1065,6 +1099,47 @@ export module SoundHelper {
           }
         }
         playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+        break;
+
+      
+      // hirudegarn
+      case Id.hirudegarnFlameBreath:
+      case Id.hirudegarnTailSweep:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/Q1.mp3", 3600);
+        }
+        break;
+      
+      case Id.hirudegarnFlameBall:
+      case Id.hirudegarnTailAttack:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/W1.mp3", 1248);
+        }
+        break;
+
+      case Id.hirudegarnDarkMist:
+      case Id.hirudegarnDarkEyes:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/E1.mp3", 2208);
+        }
+        break;
+
+      case Id.hirudegarnChouMakousen:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/Q1.mp3", 3600);
+        }
+        break;
+
+      case Id.hirudegarnMolting:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/D1.mp3", 6912);
+        }
+        break;
+
+      case Id.hirudegarnFlight:
+        if (unitId == Id.hirudegarn) {
+          playSoundOnUnit(unit, "Audio/Voice/Hirudegarn/F1.mp3", 1920);
+        }
         break;
 
       // hit

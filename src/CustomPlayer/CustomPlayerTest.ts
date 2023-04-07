@@ -75,6 +75,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
     for (const customHero of Globals.customPlayers[playerId].allHeroes) {
       if (customHero && IsUnitSelected(customHero.unit, player)) {
         const abilityInput = new CustomAbilityInput(
+          0,
           customHero,
           player,
           1,
@@ -368,6 +369,7 @@ export function CustomPlayerTest() {
             GetUnitTypeId(customHero.unit) != FourCC("H08I")
           ) {
             const input = new CustomAbilityInput(
+              abilityId,
               customHero,
               player,
               abilityLevel,

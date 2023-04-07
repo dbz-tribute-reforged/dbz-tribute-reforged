@@ -5,9 +5,12 @@ import { Globals } from "Common/Constants";
 
 
 export class UnitContestant {
+
   constructor(
     public unit: unit,
     public oldPosition: Vector2D,
+    public oldHpPercent: number,
+    public oldMpPercent: number,
   ) {
 
   }
@@ -60,7 +63,9 @@ export class TournamentContestant {
         this.units.set(
           unit,
           new UnitContestant(unit, 
-            new Vector2D(GetUnitX(unit), GetUnitY(unit))
+            new Vector2D(GetUnitX(unit), GetUnitY(unit)),
+            GetUnitLifePercent(unit),
+            GetUnitManaPercent(unit)
           ),
         );
         UnitResetCooldown(unit);
@@ -93,6 +98,8 @@ export class TournamentContestant {
       if (UnitHelper.isUnitDead(unitContestant.unit)) {
         ReviveHero(unitContestant.unit, unitContestant.oldPosition.x, unitContestant.oldPosition.y, false);
       }
+      SetUnitLifePercentBJ(unitContestant.unit, unitContestant.oldHpPercent);
+      SetUnitManaPercentBJ(unitContestant.unit, unitContestant.oldMpPercent);
       SetUnitInvulnerable(unitContestant.unit, false);
       PauseUnit(unitContestant.unit, false);
       SetUnitX(unitContestant.unit, unitContestant.oldPosition.x);

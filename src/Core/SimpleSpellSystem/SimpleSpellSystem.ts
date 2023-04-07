@@ -143,11 +143,11 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.meguminExplosion5, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminManatite, SimpleSpellSystem.doMeguminManatite);
 
-    Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
-    Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
-    Globals.genericSpellMap.set(Id.schalaMagicSeal2, SimpleSpellSystem.doSchalaLinkChannels);
-    Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
-    Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
+    // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
+    // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
+    // Globals.genericSpellMap.set(Id.schalaMagicSeal2, SimpleSpellSystem.doSchalaLinkChannels);
+    // Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
+    // Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
     
     // add DDS stuff
     TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
@@ -1215,6 +1215,7 @@ export module SimpleSpellSystem {
       const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
       if (customHero) {
         const abilityInput = new CustomAbilityInput(
+          Id.ceroFire,
           customHero,
           player,
           abilityLevel,
@@ -1261,6 +1262,7 @@ export module SimpleSpellSystem {
         abil.endAbility();
       }
       const abilityInput = new CustomAbilityInput(
+        spellId,
         customHero,
         player,
         abilityLevel,
@@ -1854,7 +1856,7 @@ export module SimpleSpellSystem {
   }
 
   export function SchalaTeleportation() {
-    SimpleSpellSystem.doSchalaLinkChannels();
+    // SimpleSpellSystem.doSchalaLinkChannels();
 
     const spellId = GetSpellAbilityId();
     const schalaTpMoveDuration = 66;
@@ -2113,6 +2115,7 @@ export module SimpleSpellSystem {
         // BJDebugMsg(R2S(Globals.customPlayers[playerId].orderPoint.x) + "," + R2S(Globals.customPlayers[playerId].orderPoint.y));
         // fire a special qwe
         const abilityInput = new CustomAbilityInput(
+          spellId,
           customHero,
           player,
           GetUnitAbilityLevel(unit, spellId),
@@ -3098,37 +3101,37 @@ export module SimpleSpellSystem {
   }
 
 
-  export function doSchalaLinkChannels() {
-    const unit = GetTriggerUnit();
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaPray, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaPray))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaMagicSeal, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaMagicSeal2, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal2))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaTeleportation, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaTeleportation2, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation2))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaSkygate, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate))
-    );
-    BlzStartUnitAbilityCooldown(
-      unit, Id.schalaSkygate2, 
-      Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate2))
-    );
-  }
+  // export function doSchalaLinkChannels() {
+  //   const unit = GetTriggerUnit();
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaPray, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaPray))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaMagicSeal, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaMagicSeal2, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaMagicSeal2))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaTeleportation, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaTeleportation2, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaTeleportation2))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaSkygate, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate))
+  //   );
+  //   BlzStartUnitAbilityCooldown(
+  //     unit, Id.schalaSkygate2, 
+  //     Math.max(0.5, BlzGetUnitAbilityCooldownRemaining(unit, Id.schalaSkygate2))
+  //   );
+  // }
 
 
 }

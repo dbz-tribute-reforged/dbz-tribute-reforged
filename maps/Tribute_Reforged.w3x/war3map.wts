@@ -3060,12 +3060,6 @@ STRING 495
 |cff87ceebNon-Combat Consumable|r|n|cffffff00Restores 5% of max health and mana per second. Doubles the rate of stamina regen.|r|n|cff00ff00Duration: <A01X,Dur1>s|r|n|cff00ffffCooldown: <A01X,Cool1>s|r|n|cff00FF00Type "d" to drop 1 bean on the ground.|r
 }
 
-STRING 496
-// Items: I001 (Roast Ham), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 2.5% of max health and mana per second. Doubles the rate of stamin regen.|r|cff00ff00|nDuration: <A01G,Dur1>s|r|n|cff00ffffCooldown: <A01G,Cool1>s|r|n|cff808080It's not cooked all the way!|r
-}
-
 STRING 497
 // Units: H05P (Oozaru), Ubertip (Tooltip - Extended)
 {
@@ -3725,22 +3719,10 @@ STRING 604
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 10|r]
 }
 
-STRING 605
-// Items: I044 (Banana), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 1% of max hp and 5% of max mana per second. Doubles the rate of stamina regen.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
-}
-
 STRING 606
 // Units: H03B (Martial Artist), Propernames (Proper Names)
 {
 Krillin
-}
-
-STRING 607
-// Items: I045 (Krabby Patty), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 4% of max health per second. Doubles the rate of stamina regen.|r|cff00ff00|nDuration: <A0N4,Dur1>s|r|n|cff00ffffCooldown: <A0N4,Cool1>s|r|n|cff808080"Can you take the crust off my Krabby Patty."|r
 }
 
 STRING 608
@@ -34868,48 +34850,6 @@ STRING 5582
 A ball of negative energy about the size of a spirit bomb that deals area damage. |n|cff00ff00(Damage: (Int * lvl * 3)|r|n|cff00ffff(Cooldown: 17 seconds)|r
 }
 
-STRING 5583
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5584
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5585
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5586
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5587
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5588
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5589
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
 STRING 5590
 // Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
 {
@@ -34935,24 +34875,6 @@ STRING 5593
 // Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 5594
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5595
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 5596
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5597
@@ -53864,12 +53786,6 @@ STRING 8527
 King K Rool charges forward, dealing damage and stunning all units in his path.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IW,Cool1> - <A0IW,Cool10>s|r
 }
 
-STRING 8528
-// Abilities: A0OT (Belly Armor), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool sticks out his gold-plated stomach armor and deflects any beams in front of him.|n|cff00ff00Duration: 1s|nDamage Block: Str * 2 @ 100%|r|n|cff00ffffCooldown: <A0OT,Cool1>s
-}
-
 STRING 8529
 // Abilities: A0TZ (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
@@ -55882,12 +55798,6 @@ STRING 8846
 // Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 8847
-// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 8848
@@ -74232,17 +74142,6 @@ STRING 11764
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.06x|r|n|cff00FFFFCooldown: <A00J,Cool10> seconds|r
 }
 
-STRING 11765
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> times
-}
-
 STRING 11766
 // Abilities: A01T (Knife Slash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -75144,10 +75043,10 @@ STRING 11910
 Increase Metal Cooler's and his clones armor by +3 and HP by +(5000*3).
 }
 
-STRING 11911
+STRING 11912
 // Abilities: A0GP (Death Blow), Ubertip (Tooltip - Normal - Extended)
 {
-Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP damage if the enemy is below 50% Max HP. Reduces Time Skip charge rate by -1.5% per 1% of enemy's missing HP.
+Hit delivers a powerful death blow to assassinate his target. Deals +15% Max HP damage if the enemy is below 50% Max HP. The next Time Skip charge recovers +1.5% faster per 1% of enemy's missing HP.
 |cffffff00Costs 2 Time Skip charges.
 |cff00ff00Damage: 3 * Agi * ? + 1 * Int * ?
 |cff00ffffCooldown: <A0GP,Cool1>s|r
@@ -84023,6 +83922,12 @@ STRING 13321
 Increase Metal Cooler's and his clones armor by +4 and HP by +(5000*4).
 }
 
+STRING 13322
+// Items: I001 (Roast Ham), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 3% of max health and mana per second. Doubles the rate of stamin regen.|r|cff00ff00|nDuration: <A01G,Dur1>s|r|n|cff00ffffCooldown: <A01G,Cool1>s|r|n|cff808080It's not cooked all the way!|r
+}
+
 STRING 13323
 // Abilities: A048 (Explosion 3), EditorSuffix (Editor Suffix)
 {
@@ -88361,12 +88266,6 @@ STRING 13970
 R
 }
 
-STRING 13971
-// Abilities: A0QR (Dragon Thunder), Ubertip (Tooltip - Normal - Extended)
-{
-Omega Shenron extends his spines behind himself before electrocuting enemies and drastically slowing their movement speed.|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
-}
-
 STRING 13972
 // Abilities: A0QQ (Nova Star), EditorSuffix (Editor Suffix)
 {
@@ -88864,6 +88763,12 @@ STRING 14049
 [|cff00ff00E|r] Justice Cannon - [|cffffcc00Level 10|r]
 }
 
+STRING 14050
+// Items: I044 (Banana), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 1.5% of max hp and 5% of max mana per second. Doubles the rate of stamina regen.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
+}
+
 STRING 14051
 // Abilities: A04A (Explosion 4), EditorSuffix (Editor Suffix)
 {
@@ -88886,6 +88791,12 @@ STRING 14054
 // Abilities: A0QX (Justice Cannon), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14055
+// Items: I045 (Krabby Patty), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 5% of max health per second. Doubles the rate of stamina regen.|r|cff00ff00|nDuration: <A0N4,Dur1>s|r|n|cff00ffffCooldown: <A0N4,Cool1>s|r|n|cff808080"Can you take the crust off my Krabby Patty."|r
 }
 
 STRING 14056
@@ -89066,6 +88977,17 @@ STRING 14078
 // Abilities: A0QY (Light Bullet), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14079
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> times
 }
 
 STRING 14080
@@ -96879,6 +96801,17 @@ STRING 15235
 Increase Metal Cooler's and his clones armor by +12 and HP by +(5000*12).
 }
 
+STRING 15236
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
+|cffffcc00Critical|r - <A0G0,DataA2>% 
+|cffffcc00Damage|r - <A0G0,DataB2,.> times
+}
+
 STRING 15237
 // Abilities: A0K6 (Glare), EditorSuffix (Editor Suffix)
 {
@@ -97189,6 +97122,39 @@ A versatile hero with incredible flexibility and high mobility. He can swap betw
 
 }
 
+STRING 15281
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
+|cffffcc00Critical|r - <A0G0,DataA3>% 
+|cffffcc00Damage|r - <A0G0,DataB3,.> times
+}
+
+STRING 15282
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
+|cffffcc00Critical|r - <A0G0,DataA4>% 
+|cffffcc00Damage|r - <A0G0,DataB4,.> times
+}
+
+STRING 15283
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
+|cffffcc00Critical|r - <A0G0,DataA5>% 
+|cffffcc00Damage|r - <A0G0,DataB5,.> times
+}
+
 STRING 15284
 // Abilities: A0K9 (Power Impact), EditorSuffix (Editor Suffix)
 {
@@ -97211,6 +97177,17 @@ STRING 15287
 // Abilities: A0KD (Meditate), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Meditate
+}
+
+STRING 15288
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
+|cffffcc00Critical|r - <A0G0,DataA6>% 
+|cffffcc00Damage|r - <A0G0,DataB6,.> times
 }
 
 STRING 15289
@@ -97253,6 +97230,17 @@ STRING 15295
 // Abilities: A0SI (Power Impact 2), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Power Impact - [|cffffcc00Level %d|r]
+}
+
+STRING 15296
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
+|cffffcc00Critical|r - <A0G0,DataA7>% 
+|cffffcc00Damage|r - <A0G0,DataB7,.> times
 }
 
 STRING 15297
@@ -101229,6 +101217,17 @@ STRING 15867
 Gain +(20x3) gold per creep kill. +(20x3)% gold per Player or Saga kill.
 }
 
+STRING 15868
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
+|cffffcc00Critical|r - <A0G0,DataA8>% 
+|cffffcc00Damage|r - <A0G0,DataB8,.> times
+}
+
 STRING 15869
 // Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
 {
@@ -101579,6 +101578,61 @@ STRING 15915
 [|cff00ff00R|r] Black Materia - [|cffffcc00Level 10|r]
 }
 
+STRING 15916
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
+|cffffcc00Critical|r - <A0G0,DataA9>% 
+|cffffcc00Damage|r - <A0G0,DataB9,.> times
+}
+
+STRING 15917
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
+|cffffcc00Critical|r - <A0G0,DataA10>% 
+|cffffcc00Damage|r - <A0G0,DataB10,.> times
+}
+
+STRING 15918
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
+|cffffcc00Critical|r - <A0G0,DataA11>% 
+|cffffcc00Damage|r - <A0G0,DataB11,.> times
+}
+
+STRING 15919
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
+|cffffcc00Critical|r - <A0G0,DataA12>% 
+|cffffcc00Damage|r - <A0G0,DataB12,.> times
+}
+
+STRING 15920
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
+|cffffcc00Critical|r - <A0G0,DataA13>% 
+|cffffcc00Damage|r - <A0G0,DataB13,.> times
+}
+
 STRING 15921
 // Abilities: A0JB (Capsule: Dead Zone Fragment), Name (Name)
 {
@@ -101589,6 +101643,17 @@ STRING 15922
 // Abilities: A0TC (One Winged Angel), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] One Winged Angel
+}
+
+STRING 15923
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
+|cffffcc00Critical|r - <A0G0,DataA14>% 
+|cffffcc00Damage|r - <A0G0,DataB14,.> times
 }
 
 STRING 15924
@@ -101615,6 +101680,17 @@ STRING 15927
 [|cff00ff00F|r] Parry - [|cffffcc00Level 1|r]
 }
 
+STRING 15928
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB15,.> times
+}
+
 STRING 15929
 // Abilities: A0TD (Parry), Name (Name)
 {
@@ -101631,6 +101707,17 @@ STRING 15931
 // Abilities: A0TD (Parry), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Parry - [|cffffcc00Level %d|r]
+}
+
+STRING 15932
+// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
+|cff00ff00+2% restore rate of time skip charges per level.
++1.3% restore rate per hero killed (max at 15 kills).
+|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
 }
 
 STRING 15933
@@ -101663,6 +101750,33 @@ STRING 15937
 [|cff00ff00F|r] Parry - [|cffffcc00Level 6|r]
 }
 
+STRING 15938
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool1>s|r
+}
+
+STRING 15939
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool2>s|r
+}
+
+STRING 15940
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool3>s|r
+}
+
 STRING 15941
 // Abilities: A0TF (Book Sephiroth Crit), Name (Name)
 {
@@ -101691,6 +101805,15 @@ STRING 15945
 // Abilities: A0FT (Time Skip), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Time Skip - [|cffffcc00Level %d|r]
+}
+
+STRING 15946
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool4>s|r
 }
 
 STRING 15947
@@ -102046,6 +102169,15 @@ Sephiroth holds a defensive stance, preparing himself for any threat that approa
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00ff00Damage Block: 75% up to Agi * Lvl * 3
 |cff00FFFFCooldown: <A0TD,Cool10> seconds|r
+}
+
+STRING 15988
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool5>s|r
 }
 
 STRING 15989
@@ -102915,10 +103047,70 @@ Buu's fighting style is not a very good one. He leaves himself open for alot of 
 |cffffcc00Damage|r - <A019,DataB1,.> - <A019,DataB15,.> times
 }
 
+STRING 16114
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool6>s|r
+}
+
+STRING 16115
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool7>s|r
+}
+
+STRING 16116
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool8>s|r
+}
+
 STRING 16117
 // Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hammer Time - [|cffffcc00Level 7|r]
+}
+
+STRING 16118
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool9>s|r
+}
+
+STRING 16119
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool10>s|r
+}
+
+STRING 16120
+// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan fires a beam that forces Giru to charge at that target, stunning them for 1s.
+
+|cff00ff00Beam dmg: Int * Lvl * ? + 2% Max HP|r
+|cff00FFFFCooldown: <A0LV,Cool1>s|r
+}
+
+STRING 16121
+// Abilities: A0OT (Belly Armor), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool sticks out his gold-plated stomach armor and deflects any beams in front of him.|n|cff00ff00Duration: 1s|nDamage Block: Str * 4 @ 100%|r|n|cff00ffffCooldown: <A0OT,Cool1>s
 }
 
 STRING 16122
@@ -103514,6 +103706,15 @@ STRING 16216
 // Abilities: A06X (Dodon Ray), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Dodon Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 16217
+// Abilities: A0QR (Dragon Thunder), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron extends his spines behind himself before electrocuting enemies and drastically slowing their movement speed.
+|cffffff00Affected enemies lose 20% of max mana per second.
+|cff00ff00Damage: Lvl x Str x ?|r
+|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
 }
 
 STRING 16218
@@ -110585,9 +110786,9 @@ Type "r" to revert.
 Transformations:
 [lvl 15]  1.4/1.2/1.0x  "dragoon"
 [lvl 35]  1.7/1.5/1.3x  "dragoon" [Unlocks Dragon Transformation]
-[lvl 80]  2.2/1.8/1.6x  "dragoon" [+10 Max Spirit Power]
-[lvl 150] 2.5/2.1/1.9x  "dragoon" [+10 Max Spirit Power]
-[lvl 200] 2.8/2.4/2.2x  "dragoon"
+[lvl 80]  2.1/1.8/1.8x  "dragoon" [+10 Max Spirit Power]
+[lvl 150] 2.4/2.1/2.1x  "dragoon" [+10 Max Spirit Power]
+[lvl 200] 2.8/2.4/2.4x  "dragoon"
 }
 
 STRING 17177
@@ -131898,39 +132099,6 @@ STRING 20600
 Frieza fires multiple death beams at a very rapid rate.|n|cff00ff00Damage: Int * lvl * ? + 0.6% Max HP (each)|r|n|cff00ffffCooldown: <A0Q6,Cool10> seconds|r
 }
 
-STRING 20601
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
-|cffffcc00Critical|r - <A0G0,DataA2>% 
-|cffffcc00Damage|r - <A0G0,DataB2,.> times
-}
-
-STRING 20602
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
-|cffffcc00Critical|r - <A0G0,DataA3>% 
-|cffffcc00Damage|r - <A0G0,DataB3,.> times
-}
-
-STRING 20603
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
-|cffffcc00Critical|r - <A0G0,DataA4>% 
-|cffffcc00Damage|r - <A0G0,DataB4,.> times
-}
-
 STRING 20604
 // Abilities: A105 (Heavy Slash), EditorSuffix (Editor Suffix)
 {
@@ -131947,17 +132115,6 @@ STRING 20606
 // Abilities: A104 (Appule Blaster), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Appule Blaster - [|cffffcc00Level %d|r]
-}
-
-STRING 20607
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
-|cffffcc00Critical|r - <A0G0,DataA5>% 
-|cffffcc00Damage|r - <A0G0,DataB5,.> times
 }
 
 STRING 20608
@@ -131997,17 +132154,6 @@ STRING 20612
 {
 [|cffffcc00Ultimate|r] |cffFF2020Berserker Armor|r
 Guts activates the Berserker Armor which allows him to go beyond his normal human limits and seemingly ignore incoming damage.
-}
-
-STRING 20613
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
-|cffffcc00Critical|r - <A0G0,DataA6>% 
-|cffffcc00Damage|r - <A0G0,DataB6,.> times
 }
 
 STRING 20614
@@ -132551,17 +132697,6 @@ STRING 20696
 Revive - Move Original Spawn
 }
 
-STRING 20697
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
-|cffffcc00Critical|r - <A0G0,DataA7>% 
-|cffffcc00Damage|r - <A0G0,DataB7,.> times
-}
-
 STRING 20699
 // Abilities: A0QD (Golden Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -132623,17 +132758,6 @@ STRING 20716
 {
 [|cffffcc00Talent|r] God Kamehameha
 Cell can now infuse his kamehameha's with dark energy akin to Gods, allowing it to deal even greater damage.
-}
-
-STRING 20717
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
-|cffffcc00Critical|r - <A0G0,DataA8>% 
-|cffffcc00Damage|r - <A0G0,DataB8,.> times
 }
 
 STRING 20718
@@ -132706,39 +132830,6 @@ STRING 20729
 // Abilities: A108 (Dragon Cannon Slash), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Dragon Cannon Slash - [|cffffcc00Level 10|r]
-}
-
-STRING 20730
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
-|cffffcc00Critical|r - <A0G0,DataA9>% 
-|cffffcc00Damage|r - <A0G0,DataB9,.> times
-}
-
-STRING 20731
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
-|cffffcc00Critical|r - <A0G0,DataA10>% 
-|cffffcc00Damage|r - <A0G0,DataB10,.> times
-}
-
-STRING 20732
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
-|cffffcc00Critical|r - <A0G0,DataA11>% 
-|cffffcc00Damage|r - <A0G0,DataB11,.> times
 }
 
 STRING 20734
@@ -132913,17 +133004,6 @@ STRING 20757
 // Abilities: A109 (Reckless Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Reckless Charge - [|cffffcc00Level 10|r]
-}
-
-STRING 20758
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
-|cffffcc00Critical|r - <A0G0,DataA12>% 
-|cffffcc00Damage|r - <A0G0,DataB12,.> times
 }
 
 STRING 20759
@@ -133266,17 +133346,6 @@ STRING 20808
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 1|r]
 }
 
-STRING 20809
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
-|cffffcc00Critical|r - <A0G0,DataA13>% 
-|cffffcc00Damage|r - <A0G0,DataB13,.> times
-}
-
 STRING 20810
 // Abilities: A10C (Berserk), Researchtip (Tooltip - Learn)
 {
@@ -133299,28 +133368,6 @@ STRING 20814
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 3|r]
-}
-
-STRING 20815
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
-|cffffcc00Critical|r - <A0G0,DataA14>% 
-|cffffcc00Damage|r - <A0G0,DataB14,.> times
-}
-
-STRING 20816
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB15,.> times
 }
 
 STRING 20817
@@ -133357,17 +133404,6 @@ STRING 20822
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 9|r]
-}
-
-STRING 20823
-// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat. Hit's abilities do not cost mana but instead consume his time skip charges.
-|cff00ff00+3% restore rate of time skip charges per level.
-+2% restore rate per hero killed.
-|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
 }
 
 STRING 20824

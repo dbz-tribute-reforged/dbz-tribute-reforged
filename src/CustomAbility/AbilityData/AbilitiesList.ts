@@ -13499,7 +13499,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim goku black spin" },
-      { name: "dash ground point 40dist" },
+      { name: "dash ground point 45dist" },
       { name: "damage goku black sorrowful scythe agi explosion" },
       { name: "damage goku black sorrowful scythe int explosion" },
     ],

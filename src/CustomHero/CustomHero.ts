@@ -14,6 +14,7 @@ export class CustomHero {
   public isCasting: Map<CustomAbility, boolean>;
 
   public channelFlag: boolean;
+  public channelAbilityId: number;
   public isCastTimeWaiting: boolean;
   public spellPower: number;
   public currentSp: number;
@@ -34,6 +35,7 @@ export class CustomHero {
     this.isCasting = new Map();
     
     this.channelFlag = false;
+    this.channelAbilityId = Id.goku;
     this.isCastTimeWaiting = false;
     this.spellPower = 1.0;
     this.currentSp = Constants.BASE_STAMINA;
@@ -61,6 +63,7 @@ export class CustomHero {
     TriggerRegisterUnitEvent(cancelChannelTrigger, unit, EVENT_UNIT_SPELL_ENDCAST);
     TriggerAddCondition(cancelChannelTrigger, Condition(() => {
       this.channelFlag = false;
+      this.channelAbilityId = Id.goku;
       return false;
     }));
     this.passiveTrigger.push(cancelChannelTrigger);
@@ -70,6 +73,7 @@ export class CustomHero {
     TriggerRegisterUnitEvent(startChannelTrigger, unit, EVENT_UNIT_SPELL_EFFECT);
     TriggerAddCondition(startChannelTrigger, Condition(() => {
       this.channelFlag = true;
+      this.channelAbilityId = GetSpellAbilityId();
       return false;
     }));
     this.passiveTrigger.push(startChannelTrigger);

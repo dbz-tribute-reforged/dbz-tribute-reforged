@@ -47,7 +47,10 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       ) {
         this.finishedChannel = true;
       } else {
-        this.finishedChannel = !input.caster.isChanneling();
+        this.finishedChannel = (
+          !input.caster.isChanneling() 
+          || input.caster.channelAbilityId != input.abilityId
+        );
       }
   
       if (this.isChannelling && this.finishedChannel) {

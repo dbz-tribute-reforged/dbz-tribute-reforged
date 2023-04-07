@@ -103,6 +103,7 @@ export class SagaHeroAI {
 
     this.aggroPos = new Vector2D();
     this.abilityInput = new CustomAbilityInput(
+      0,
       this.sagaCustomHero, 
       this.owningPlayer,
       1,
@@ -374,6 +375,7 @@ export class SagaHeroAI {
             // abilityInput.targetUnit = this.aggroTarget;
             // abilityInput.castUnit = this.sagaUnit;
             abilityInput = new CustomAbilityInput(
+              0,
               this.sagaCustomHero,
               this.owningPlayer,
               this.getBeamLevel(ability.maxLevel),
