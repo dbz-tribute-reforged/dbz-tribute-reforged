@@ -9,6 +9,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
   static readonly SOURCE_UNIT = 0;
   static readonly SOURCE_TARGET_POINT_LAST_CAST = 1;
   static readonly SOURCE_TARGET_POINT_DYNAMIC = 2;
+  static readonly SOURCE_TARGET_UNIT = 3;
 
   protected alreadyDebuffed: Map<number, boolean>;
   protected castDummy: unit;
@@ -78,6 +79,12 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
         this.aoe,
         null
       );
+      if (
+        input.targetUnit 
+        && this.debuffSource == AOEDebuff.SOURCE_TARGET_UNIT
+      ) {
+        GroupAddUnit(this.affectedGroup, input.targetUnit);
+      }
   
       ForGroup(this.affectedGroup, () => {
         const target = GetEnumUnit();

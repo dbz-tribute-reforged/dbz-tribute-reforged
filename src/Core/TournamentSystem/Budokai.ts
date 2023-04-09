@@ -118,7 +118,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
         new TournamentContestant(playerId)
       );
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
+        bj_FORCE_ALL_PLAYERS, 5, 
         Colorizer.getColoredPlayerName(player) + 
         " has joined " + this.getTournamentName()
       );
@@ -137,18 +137,18 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
   prepareTournament() {
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 20, 
+      bj_FORCE_ALL_PLAYERS, 15, 
       "|cffffff00" + this.getTournamentName() + " will be held in " + 
       this.toStartDelay + " seconds!|r"
     );
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 20, 
+      bj_FORCE_ALL_PLAYERS, 15, 
       "|cffffcc00Type|r |cffff2020" + TournamentData.budokaiEnterCommand + 
       "|r |cffffcc00to register.|r"
     );
     TimerStart(CreateTimer(), 3, false, () => {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 17, 
+        bj_FORCE_ALL_PLAYERS, 15, 
         "|cff80ff80All tournament contestants will receive bonus stats for participating!|r"
       );
       DestroyTimer(GetExpiredTimer());

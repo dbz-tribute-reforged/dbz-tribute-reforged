@@ -190,6 +190,8 @@ export class HeroSelectorManager {
           HeroSelector.show(false, player);
           HeroSelector.forceRandom(player);
         } else {
+          // remove gold
+          SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
           HeroSelector.show(true, player);
           HeroSelector.enablePick(true, player);
           CustomUI.show(false, false, player);

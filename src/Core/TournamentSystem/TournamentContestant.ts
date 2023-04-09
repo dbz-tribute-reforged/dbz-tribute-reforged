@@ -5,6 +5,13 @@ import { Globals } from "Common/Constants";
 
 
 export class UnitContestant {
+  
+  public item1: item;
+  public item2: item;
+  public item3: item;
+  public item4: item;
+  public item5: item;
+  public item6: item;
 
   constructor(
     public unit: unit,
@@ -12,7 +19,34 @@ export class UnitContestant {
     public oldHpPercent: number,
     public oldMpPercent: number,
   ) {
+    
+    BJDebugMsg("start " + GetUnitName(unit));
+    let i = 0;
+    this.item1 = UnitItemInSlot(unit, i++);
+    this.item2 = UnitItemInSlot(unit, i++);
+    this.item3 = UnitItemInSlot(unit, i++);
+    this.item4 = UnitItemInSlot(unit, i++);
+    this.item5 = UnitItemInSlot(unit, i++);
+    this.item6 = UnitItemInSlot(unit, i++);
+    BJDebugMsg("done " + GetUnitName(unit));
+  }
 
+  getItem(index: number): item {
+    switch (index) {
+      case 0:
+        return this.item1;
+      case 1:
+        return this.item2;
+      case 2:
+        return this.item3;
+      case 3:
+        return this.item4;
+      case 4:
+        return this.item5;
+      case 5:
+        return this.item6;
+    }
+    return this.item1;
   }
 }
 
@@ -93,11 +127,52 @@ export class TournamentContestant {
     this.unitsAlive = this.units.size;
   }
 
+
+  returnItemsDoDrop(unitContestant: UnitContestant, index: number) {
+    const it = UnitItemInSlot(unitContestant.unit, index);
+    if (
+      it != null
+      && it != unitContestant.getItem(index)
+      && BlzGetItemBooleanField(it, ITEM_BF_CAN_BE_DROPPED)
+    ) {
+      SetItemPosition(
+        it, 
+        TournamentData.budokaiArenaMidPoint.x, 
+        TournamentData.budokaiArenaMidPoint.y
+      );
+    }
+  }
+
+  returnItemsDoAdd(unitContestant: UnitContestant, index: number) {
+    const it = UnitItemInSlot(unitContestant.unit, index);
+    const swapIt = unitContestant.getItem(index);
+    if (
+      it == null 
+      && swapIt != null
+      && it != swapIt
+    ) {
+      UnitAddItem(unitContestant.unit, swapIt);
+    }
+  }
+
+  returnItems(unitContestant: UnitContestant) {
+    // drop what is not yours
+    for (let i = 0; i < 6; ++i) {
+      this.returnItemsDoDrop(unitContestant, i);
+    }
+    // force add what is yours
+    for (let i = 0; i < 6; ++i) {
+      this.returnItemsDoAdd(unitContestant, i);
+    }
+  }
+
+
   returnAllUnits() {
     for (const unitContestant of this.units.values()) {
       if (UnitHelper.isUnitDead(unitContestant.unit)) {
         ReviveHero(unitContestant.unit, unitContestant.oldPosition.x, unitContestant.oldPosition.y, false);
       }
+      this.returnItems(unitContestant);
       SetUnitLifePercentBJ(unitContestant.unit, unitContestant.oldHpPercent);
       SetUnitManaPercentBJ(unitContestant.unit, unitContestant.oldMpPercent);
       SetUnitInvulnerable(unitContestant.unit, false);

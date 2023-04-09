@@ -535,6 +535,7 @@ export module AbilityNames {
   export module Buu {
     export const BUU_BEAM: string = "Buu Beam";
     export const FLESH_ATTACK: string = "Flesh Attack";
+    export const FLESH_ATTACK_ABSORB_TARGET: string = "Flesh Attack Absorb Target";
     export const INNOCENCE_BREATH: string = "Innocence Breath";
     export const ANGRY_EXPLOSION: string = "Angry Explosion";
     export const VANISHING_BALL: string = "Vanishing Ball";

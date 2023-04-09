@@ -23,7 +23,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.85;
 
   static readonly INT_DAMAGE_MULT_MIN = 0.9;
-  static readonly INT_DAMAGE_MULT_MAX = 1.25;
+  static readonly INT_DAMAGE_MULT_MAX = 1.2;
 
   protected damageCoords: Vector2D;
 

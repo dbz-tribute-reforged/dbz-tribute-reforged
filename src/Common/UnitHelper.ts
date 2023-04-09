@@ -12,6 +12,21 @@ export module UnitHelper {
     );
   }
 
+  export function isUnitRooted(unit: unit): boolean {
+    return (
+      IsUnitType(unit, UNIT_TYPE_SNARED)
+    )
+  }
+
+  export function isUnitHardStunned(unit: unit): boolean {
+    return (
+      IsUnitType(unit, UNIT_TYPE_POLYMORPHED) ||
+      IsUnitType(unit, UNIT_TYPE_SLEEPING) ||
+      IsUnitType(unit, UNIT_TYPE_STUNNED) ||
+      UnitHasBuffBJ(unit, Buffs.STUNNED)
+    );
+  }
+
   export function isUnitDead(unit: unit): boolean {
     return (
       GetUnitTypeId(unit) != 0 &&

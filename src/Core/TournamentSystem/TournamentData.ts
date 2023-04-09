@@ -16,6 +16,7 @@ export module TournamentData {
   );
   export const budokaiArenaBottomLeft: Vector2D = new Vector2D(12930, 19964);
   export const budokaiArenaTopRight: Vector2D = new Vector2D(16737, 23848);
+  export const budokaiArenaMidPoint: Vector2D = new Vector2D(14778, 21687);
   export const budokaiSpawn1: Vector2D = new Vector2D(13778, 20747);
   export const budokaiSpawn2: Vector2D = new Vector2D(15775, 22690);
   export const finalBattleDetector: Vector2D = new Vector2D(11020, 22858);
@@ -33,7 +34,7 @@ export module TournamentData {
   export const budokaiStartTime1: number = 3 * 60;
   export const budokaiStartTime2: number = 13 * 60;
   export const budokaiStartTime3: number = 23 * 60;
-  export const budokaiDelay: number = 45;
+  export const budokaiDelay: number = 25;
   export const budokaiCounter: number = 23;
   export const budokaiMatchDelay: number = 6;
   export const budokaiMatchTimeLimit: number = 2 * 60;

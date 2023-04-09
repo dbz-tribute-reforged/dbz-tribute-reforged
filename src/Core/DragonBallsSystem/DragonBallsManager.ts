@@ -438,12 +438,12 @@ export class DragonBallsManager {
       )
     );
     
-    DestroyEffect(
-      AddSpecialEffect(
-        "PhotonFlash2.mdl",
-        x, y,
-      )
-    );
+    // DestroyEffect(
+    //   AddSpecialEffect(
+    //     "PhotonFlash2.mdl",
+    //     x, y,
+    //   )
+    // );
 
     DestroyEffect(
       AddSpecialEffect(
