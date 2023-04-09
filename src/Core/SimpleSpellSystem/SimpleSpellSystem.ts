@@ -3054,8 +3054,10 @@ export module SimpleSpellSystem {
     // Globals.linkedSpellsMap.set(Id.leonRocketLauncher, SimpleSpellSystem.linkLeonSpellbook);
     // Globals.linkedSpellsMap.set(Id.leonFlashbang, SimpleSpellSystem.linkLeonSpellbook);
     // Globals.linkedSpellsMap.set(Id.leonHeavyGrenade, SimpleSpellSystem.linkLeonSpellbook);
+    Globals.linkedSpellsMap.set(Id.fleshAttack, SimpleSpellSystem.linkBuuFleshCD);
+    Globals.linkedSpellsMap.set(Id.fleshAttackAbsorbTarget, SimpleSpellSystem.linkBuuFleshCD);
 
-    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST);
     TriggerAddAction(Globals.simpleSpellCDTrigger, () => {
       // get custom hero casting it
       const unit = GetTriggerUnit();
@@ -3133,5 +3135,11 @@ export module SimpleSpellSystem {
   //   );
   // }
 
+  export function linkBuuFleshCD(unit: unit, cd: number) {
+    BlzStartUnitAbilityCooldown(unit, Id.fleshAttack, cd);
+    if (GetUnitAbilityLevel(unit, Id.fleshAttackAbsorbTarget) > 0) {
+      BlzStartUnitAbilityCooldown(unit, Id.fleshAttackAbsorbTarget, cd);
+    }
+  }
 
 }

@@ -168,7 +168,7 @@ export class ExperienceManager {
 
   getCreepKillXP(level: number): number {
     if (level > 0 && level < this.creepXP.length) {
-      return this.creepXP[level] * ExperienceConstants.creepXPModifier;
+      return this.creepXP[level];
     }
     return 0;
   }
@@ -200,7 +200,7 @@ export class ExperienceManager {
         if (IsUnitType(dyingUnit, UNIT_TYPE_HERO)) {
           rewardXP = this.heroXP[GetHeroLevel(dyingUnit)];
         } else {
-          rewardXP = this.creepXP[GetUnitLevel(dyingUnit)];
+          rewardXP = this.creepXP[GetUnitLevel(dyingUnit)] * ExperienceConstants.creepXPModifier;
         }
 
         const dyingPlayerId = GetPlayerId(dyingPlayer);

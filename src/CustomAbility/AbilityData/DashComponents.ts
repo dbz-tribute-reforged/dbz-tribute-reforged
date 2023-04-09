@@ -343,18 +343,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 17,
   },
-  {
-    name: "dash ground point super dragon fist",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_TARGET_POINT,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 22,
-  },
   // vegeta hakai barrage delayed dash to target unit
   {
     name: "dash flying point vegeta hakai barrage",
@@ -1528,16 +1516,16 @@ export const DashComponents = [
   },
   // behind you
   {
-    name: "dash ground point behind you pushback",
+    name: "dash ground forward behind you pushback",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 10,    
-    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    endTick: 12,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     dashType: Dash.DASH_TYPE_GROUND,
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 35,
+    distance: 40,
   },
   // saibaman bomb
   {

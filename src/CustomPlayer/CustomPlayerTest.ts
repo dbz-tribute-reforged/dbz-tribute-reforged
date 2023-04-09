@@ -322,18 +322,20 @@ export function CustomPlayerTest() {
       const abilityId = GetSpellAbilityId();
       Globals.customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
 
-      if (
-        IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
-        && abilityId != Id.yamchaRLightPunch
-        && abilityId != Id.yamchaRMediumPunch 
-        && abilityId != Id.yamchaRHeavyPunch
-      ) {
-        // show ability name on activation
-        TextTagHelper.showPlayerColorTextOnUnit(
-          GetAbilityName(abilityId), 
-          playerId, 
-          GetTriggerUnit()
-        );
+      if (Globals.showAbilityFloatingText) {
+        if (
+          IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
+          && abilityId != Id.yamchaRLightPunch
+          && abilityId != Id.yamchaRMediumPunch 
+          && abilityId != Id.yamchaRHeavyPunch
+        ) {
+          // show ability name on activation
+          TextTagHelper.showPlayerColorTextOnUnit(
+            GetAbilityName(abilityId), 
+            playerId, 
+            GetTriggerUnit()
+          );
+        }
       }
       
       if (abilityId == Id.ceroFire) return false;
@@ -1067,6 +1069,30 @@ export function CustomPlayerTest() {
         );
         Globals.isFBSimTest = true;
         HeroSelectorManager.getInstance().enableFBSimTest(true);
+      }
+    }
+  });
+
+  const toggleFloatingTextTrig = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(toggleFloatingTextTrig, Player(i), "-tft", true);
+  }
+  TriggerAddAction(toggleFloatingTextTrig, () => {
+    if (GetTriggerPlayer() == Globals.hostPlayer) {
+      if (Globals.showAbilityFloatingText) {
+        Globals.showAbilityFloatingText = false;
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 
+          5, 
+          "|cffff2222Ability Floating Text Deactivated|r"
+        );
+      } else {
+        Globals.showAbilityFloatingText = true;
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 
+          5, 
+          "|cff00ff00Ability Floating Text Activated|r"
+        );
       }
     }
   });

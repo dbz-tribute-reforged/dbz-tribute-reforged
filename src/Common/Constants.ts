@@ -9,6 +9,7 @@ export module Globals {
   export let isZanzoDash: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
+  export let showAbilityFloatingText: boolean = true;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
@@ -206,6 +207,7 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_90_PCT = FourCC('A11A');
 
   // entangling roots
+  export const FLESH_ATTACK_ABSORB = FourCC("A07E");
   export const CIRCLE_FLASH = FourCC("A0R6");
   export const GALACTIC_DONUT = FourCC("A0U6");
   export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A11V");
@@ -402,6 +404,7 @@ export module Id {
   export const kidBuu = FourCC("O00C");
   export const candyBeam = FourCC("A0EI");
   export const fleshAttack = FourCC("A01C");
+  export const fleshAttackAbsorbTarget = FourCC("A06S");
   export const innocenceBreath = FourCC("A0LH");
   export const angryExplosion = FourCC("A0ER")
   export const vanishingBall = FourCC("A0C0");

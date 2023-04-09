@@ -335,6 +335,8 @@ udg_CatchupNumHeroes = 0
 udg_AutoTransformPlayerInt = 0
 udg_TransformationResultLoc = nil
 udg_CatchupHBTCFlag = false
+udg_CreepKillStatGain = 0.0
+udg_SummonsSelectFlagArray = __jarray(false)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -683,11 +685,12 @@ gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Auto_Zoom = nil
+gg_trg_Commands_Init = nil
 gg_trg_Freemode = nil
 gg_trg_Nightmare_Mode = nil
 gg_trg_Ultimate_Mode = nil
 gg_trg_Lights_toggle = nil
-gg_trg_Cosmetic_Init = nil
+gg_trg_ToggleSummonSelect = nil
 gg_trg_Cosmetic_Clear = nil
 gg_trg_Cosmetic_Helper = nil
 gg_trg_Cosmetic_Santa_Hat = nil
@@ -905,6 +908,7 @@ gg_trg_Add_To_PvP_Stats_Data = nil
 gg_trg_Add_To_Tourney_Stats_Data = nil
 gg_trg_Add_To_Catchup_Stats_Data = nil
 gg_trg_Add_To_Level_Up_Stats_Data = nil
+gg_trg_Add_To_Tower_Stats_Data = nil
 gg_trg_Get_Stat_Sources_Data = nil
 gg_trg_Auto_Transform = nil
 gg_trg_Auto_Transform_Player_Units = nil
@@ -1543,7 +1547,7 @@ udg_TransformationSkinTimer = CreateTimer()
 udg_FriezaBlackTransformLevel = 400
 udg_AnimationResetUnitGroup = CreateGroup()
 udg_AutoTransformBool = false
-udg_GetiStarFragmentBaseCost = 25000
+udg_GetiStarFragmentBaseCost = 35000
 udg_GetiStarPlayerGroup = CreateForce()
 udg_GetiStarKills = 0
 udg_GetiStarUpgs = 0
@@ -1563,11 +1567,18 @@ udg_GlobalStatMultiplier = 0.50
 udg_GlobalXPMultiplier = 1.00
 udg_CatchupInteger = 0
 udg_UltimateModeLevel = 0
-udg_GetiStarBonuStartingGold = 1500
+udg_GetiStarBonuStartingGold = 4000
 udg_GetiStarBaseAlive = false
 udg_CatchupNumHeroes = 0
 udg_AutoTransformPlayerInt = 0
 udg_CatchupHBTCFlag = false
+udg_CreepKillStatGain = 0.00
+i = 0
+while (true) do
+if ((i > 30)) then break end
+udg_SummonsSelectFlagArray[i] = false
+i = i + 1
+end
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -4101,16 +4112,6 @@ u = BlzCreateUnitWithSkin(p, FourCC("n001"), 28992.0, 20928.0, 270.000, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 17920.0, -4352.0, 270.000, FourCC("n02L"))
 end
 
-function CreateUnitsForPlayer0()
-local p = Player(0)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("H00L"), 10946.2, 21731.2, 291.110, FourCC("H00L"))
-end
-
 function CreateBuildingsForPlayer1()
 local p = Player(1)
 local u
@@ -6192,6 +6193,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("H0AJ"), 11352.5, 21713.5, 257.800, FourCC("
 SetUnitState(u, UNIT_STATE_MANA, 650)
 u = BlzCreateUnitWithSkin(p, FourCC("H0AK"), 11261.7, 21706.1, 300.410, FourCC("H0AK"))
 SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H00L"), 10946.2, 21731.2, 291.110, FourCC("H00L"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -6208,7 +6211,6 @@ CreateBuildingsForPlayer9()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer0()
 end
 
 function CreateAllUnits()
@@ -6333,7 +6335,7 @@ CameraSetupSetDestPosition(gg_cam_Camera_004, 28682.2, 15367.9, 0.0)
 end
 
 function Trig_Get_Int_Damage_Multiplier_Actions()
-udg_TempIntDamageMult = RMaxBJ(0.90, RMinBJ(1.25, ((1.05 * I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))) / (0.33 * (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)) + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) + I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))))))))
+udg_TempIntDamageMult = RMaxBJ(0.90, RMinBJ(1.20, ((1.05 * I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))) / (0.33 * (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)) + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) + I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))))))))
 end
 
 function InitTrig_Get_Int_Damage_Multiplier()
@@ -7197,6 +7199,13 @@ return true
 end
 
 function Trig_Piccolo_Multi_Form_Func013Func003C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit2))] == true)) then
+return false
+end
+return true
+end
+
+function Trig_Piccolo_Multi_Form_Func013Func004C()
 if (not (udg_TempBool == true)) then
 return false
 end
@@ -7221,6 +7230,10 @@ if (udg_TempInt > (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)
 CreateNUnitsAtLoc(1, FourCC("H04X"), udg_TempPlayer, udg_TempLoc, GetUnitFacing(udg_TempUnit))
 udg_TempUnit2 = GetLastCreatedUnit()
 if (Trig_Piccolo_Multi_Form_Func013Func003C()) then
+SelectUnitAddForPlayer(udg_TempUnit2, GetOwningPlayer(GetTriggerUnit()))
+else
+end
+if (Trig_Piccolo_Multi_Form_Func013Func004C()) then
             udg_TransformationID = FourCC('H0AM')
 BlzSetUnitSkin(udg_TempUnit2, udg_TransformationID)
 UnitAddAbilityBJ(FourCC("A11H"), udg_TempUnit2)
@@ -7410,6 +7423,13 @@ end
 return true
 end
 
+function Trig_Pan_Summon_Giru_Func011C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(GetSummoningUnit()))] == true)) then
+return false
+end
+return true
+end
+
 function Trig_Pan_Summon_Giru_Actions()
 udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
 SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
@@ -7421,6 +7441,10 @@ ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_
 ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
 ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
 SuspendHeroXPBJ(false, GetSummonedUnit())
+if (Trig_Pan_Summon_Giru_Func011C()) then
+SelectUnitAddForPlayer(GetSummonedUnit(), GetOwningPlayer(GetSummoningUnit()))
+else
+end
 udg_StatMultUnit = GetSummonedUnit()
 TriggerExecute(gg_trg_Base_Armor_Set)
 end
@@ -7545,7 +7569,7 @@ end
 end
 if (Trig_Infinite_Energy_Android_Loop_Func001Func004C()) then
 udg_TempInt4 = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
-SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (((0.01 * 0.50) + ((0.01 * 0.10) * I2R(udg_PlayerKills[udg_TempInt4]))) * 0.03))))
+SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (((0.01 * 0.30) + ((0.01 * 0.10) * RMinBJ(20.00, I2R(udg_PlayerKills[udg_TempInt4])))) * 0.03))))
 if (Trig_Infinite_Energy_Android_Loop_Func001Func004Func003C()) then
 udg_TempInt4 = IMaxBJ(50000, R2I((0.95 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit))))
 else
@@ -7653,14 +7677,21 @@ end
 return true
 end
 
-function Trig_Babidi_Summons_Func016Func001C()
+function Trig_Babidi_Summons_Func011C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(GetSummoningUnit()))] == true)) then
+return false
+end
+return true
+end
+
+function Trig_Babidi_Summons_Func017Func001C()
 if (not (LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Babidi_Summons_Func016C()
+function Trig_Babidi_Summons_Func017C()
 if (not (LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) == 1)) then
 return false
 end
@@ -7698,14 +7729,18 @@ ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_
 ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
 ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
 SuspendHeroXPBJ(false, GetSummonedUnit())
+if (Trig_Babidi_Summons_Func011C()) then
+SelectUnitAddForPlayer(GetSummonedUnit(), GetOwningPlayer(GetSummoningUnit()))
+else
+end
 udg_StatMultUnit = GetSummonedUnit()
 TriggerExecute(gg_trg_Base_Armor_Set)
 udg_StatMultUnit = GetSummoningUnit()
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Babidi_Summons_Func016C()) then
+if (Trig_Babidi_Summons_Func017C()) then
 BlzSetUnitArmor(GetSummonedUnit(), (udg_BaseArmorReal + 15.00))
 else
-if (Trig_Babidi_Summons_Func016Func001C()) then
+if (Trig_Babidi_Summons_Func017Func001C()) then
 SetUnitAbilityLevelSwapped(FourCC("A02N"), GetSummonedUnit(), 4)
 else
 end
@@ -8071,6 +8106,13 @@ end
 return true
 end
 
+function Trig_Cell_Juniors_Func011C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(GetSummoningUnit()))] == true)) then
+return false
+end
+return true
+end
+
 function Trig_Cell_Juniors_Actions()
 udg_StatMultUnit = GetSummoningUnit()
     udg_ID = GetHandleId(udg_StatMultUnit)
@@ -8096,6 +8138,10 @@ SetUnitAbilityLevelSwapped(FourCC("A0L9"), GetSummonedUnit(), 4)
 else
 UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
+end
+if (Trig_Cell_Juniors_Func011C()) then
+SelectUnitAddForPlayer(GetSummonedUnit(), GetOwningPlayer(GetSummoningUnit()))
+else
 end
 udg_StatMultUnit = GetSummonedUnit()
 TriggerExecute(gg_trg_Base_Armor_Set)
@@ -8390,6 +8436,13 @@ end
 return true
 end
 
+function Trig_Saibamen_Loop_Func002Func005Func012C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))] == true)) then
+return false
+end
+return true
+end
+
 function Trig_Saibamen_Loop_Func002Func005Func015Func001Func001Func001Func001C()
 if (not (GetHeroProperName(udg_TempUnit) == "Vegeta Jr.")) then
 return false
@@ -8454,7 +8507,10 @@ ShowUnitShow(udg_TempUnit)
 PauseUnitBJ(false, udg_TempUnit)
 udg_TempReal = LoadRealBJ(1, udg_ID, udg_SummonsSaibamenHashtable)
 UnitApplyTimedLifeBJ(udg_TempReal, FourCC("BTLF"), udg_TempUnit)
+if (Trig_Saibamen_Loop_Func002Func005Func012C()) then
 SelectUnitAddForPlayer(udg_TempUnit, GetOwningPlayer(udg_TempUnit))
+else
+end
 GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
 FlushChildHashtableBJ(udg_ID, udg_SummonsSaibamenHashtable)
 if (Trig_Saibamen_Loop_Func002Func005Func015C()) then
@@ -11489,14 +11545,21 @@ end
 return true
 end
 
-function Trig_Frieza_Emperors_Throne_Func005Func007Func001C()
+function Trig_Frieza_Emperors_Throne_Func005Func007C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] == true)) then
+return false
+end
+return true
+end
+
+function Trig_Frieza_Emperors_Throne_Func005Func008Func001C()
 if (not (udg_TempInt2 >= 5)) then
 return false
 end
 return true
 end
 
-function Trig_Frieza_Emperors_Throne_Func005Func007C()
+function Trig_Frieza_Emperors_Throne_Func005Func008C()
 if (not (udg_TempInt2 == 10)) then
 return false
 end
@@ -11589,9 +11652,13 @@ UnitApplyTimedLifeBJ((45.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbi
 UnitRemoveAbilityBJ(FourCC("A03Z"), udg_TempUnit2)
 UnitAddAbilityBJ(FourCC("A0QI"), udg_TempUnit2)
 if (Trig_Frieza_Emperors_Throne_Func005Func007C()) then
+SelectUnitAddForPlayer(udg_TempUnit2, GetOwningPlayer(GetTriggerUnit()))
+else
+end
+if (Trig_Frieza_Emperors_Throne_Func005Func008C()) then
 SetUnitAbilityLevelSwapped(FourCC("A0QI"), udg_TempUnit2, 3)
 else
-if (Trig_Frieza_Emperors_Throne_Func005Func007Func001C()) then
+if (Trig_Frieza_Emperors_Throne_Func005Func008Func001C()) then
 SetUnitAbilityLevelSwapped(FourCC("A0QI"), udg_TempUnit2, 2)
 else
 end
@@ -14604,6 +14671,16 @@ return true
 end
 
 function Trig_Hit_Cast_Spell_Actual_Func004Func001C()
+if (not (GetSpellAbilityId() == FourCC("A0FW"))) then
+return false
+end
+if (not (udg_TempInt >= 3)) then
+return false
+end
+return true
+end
+
+function Trig_Hit_Cast_Spell_Actual_Func004Func002C()
 if (GetSpellAbilityId() == FourCC("A0GP")) then
 return true
 end
@@ -14611,7 +14688,7 @@ return false
 end
 
 function Trig_Hit_Cast_Spell_Actual_Func004C()
-if (not Trig_Hit_Cast_Spell_Actual_Func004Func001C()) then
+if (not Trig_Hit_Cast_Spell_Actual_Func004Func002C()) then
 return false
 end
 return true
@@ -14645,7 +14722,10 @@ udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
 if (Trig_Hit_Cast_Spell_Actual_Func004C()) then
 udg_TempInt = IMaxBJ(0, (udg_TempInt - 2))
 else
+if (Trig_Hit_Cast_Spell_Actual_Func004Func001C()) then
+else
 udg_TempInt = IMaxBJ(0, (udg_TempInt - 1))
+end
 end
 SaveIntegerBJ(udg_TempInt, 11, udg_ID, udg_StatMultHashtable)
 udg_TempInt2 = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
@@ -14692,7 +14772,7 @@ SaveIntegerBJ(10000, 2, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(5, 3, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(5, 11, udg_ID, udg_StatMultHashtable)
 else
-SaveIntegerBJ(150, 1, udg_ID, udg_HitHashtable)
+SaveIntegerBJ(140, 1, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(10000, 2, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(3, 3, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(3, 11, udg_ID, udg_StatMultHashtable)
@@ -17204,7 +17284,7 @@ TriggerAddAction(gg_trg_Lucario_Iron_Defense_Activate, Trig_Lucario_Iron_Defense
 end
 
 function Trig_Lucario_Iron_Defense_Loop_Func001Func004Func003C()
-if (udg_TempInt >= 99) then
+if (udg_TempInt >= 166) then
 return true
 end
 if (IsUnitDeadBJ(udg_TempUnit) == true) then
@@ -19967,6 +20047,13 @@ end
 return true
 end
 
+function Trig_Goku_Black_Work_Of_Gods_Func011Func003C()
+if (not (udg_SummonsSelectFlagArray[GetConvertedPlayerId(udg_TempPlayer)] == true)) then
+return false
+end
+return true
+end
+
 function Trig_Goku_Black_Work_Of_Gods_Actions()
 udg_TempUnit = GetTriggerUnit()
 udg_StatMultUnit = GetTriggerUnit()
@@ -19982,6 +20069,10 @@ while (true) do
 if (udg_TempInt > (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit) + 1)) then break end
 CreateNUnitsAtLoc(1, FourCC("E01A"), udg_TempPlayer, udg_TempLoc, GetUnitFacing(udg_TempUnit))
 udg_TempUnit2 = GetLastCreatedUnit()
+if (Trig_Goku_Black_Work_Of_Gods_Func011Func003C()) then
+SelectUnitAddForPlayer(udg_TempUnit2, udg_TempPlayer)
+else
+end
 UnitApplyTimedLifeBJ(12.00, FourCC("BTLF"), udg_TempUnit2)
 SetUnitAbilityLevelSwapped(FourCC("A0IP"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A0IO"), udg_TempUnit))
 UnitAddAbilityBJ(FourCC("A0KH"), udg_TempUnit2)
@@ -20517,7 +20608,7 @@ gg_trg_Geti_Star_Calc_Kill_Gold = CreateTrigger()
 TriggerAddAction(gg_trg_Geti_Star_Calc_Kill_Gold, Trig_Geti_Star_Calc_Kill_Gold_Actions)
 end
 
-function Trig_Geti_Star_Aug_Attribute_Func011C()
+function Trig_Geti_Star_Aug_Attribute_Func004C()
 if (GetResearched() == FourCC("R00H")) then
 return true
 end
@@ -20534,35 +20625,35 @@ function Trig_Geti_Star_Aug_Attribute_Conditions()
 if (not (IsPlayerInForce(GetOwningPlayer(GetResearchingUnit()), udg_GetiStarPlayerGroup) == true)) then
 return false
 end
-if (not Trig_Geti_Star_Aug_Attribute_Func011C()) then
-return false
-end
-return true
-end
-
-function Trig_Geti_Star_Aug_Attribute_Func005C()
-if (not (GetResearched() == FourCC("R00H"))) then
+if (not Trig_Geti_Star_Aug_Attribute_Func004C()) then
 return false
 end
 return true
 end
 
 function Trig_Geti_Star_Aug_Attribute_Func006C()
-if (not (GetResearched() == FourCC("R00I"))) then
+if (not (GetResearched() == FourCC("R00H"))) then
 return false
 end
 return true
 end
 
 function Trig_Geti_Star_Aug_Attribute_Func007C()
+if (not (GetResearched() == FourCC("R00I"))) then
+return false
+end
+return true
+end
+
+function Trig_Geti_Star_Aug_Attribute_Func008C()
 if (not (GetResearched() == FourCC("R00J"))) then
 return false
 end
 return true
 end
 
-function Trig_Geti_Star_Aug_Attribute_Func010C()
-if (not (udg_TempReal < 2.00)) then
+function Trig_Geti_Star_Aug_Attribute_Func011C()
+if (not (udg_TempReal < 0.60)) then
 return false
 end
 return true
@@ -20572,24 +20663,24 @@ function Trig_Geti_Star_Aug_Attribute_Actions()
 udg_GetiStarPlayer = GetOwningPlayer(GetResearchingUnit())
 TriggerExecute(gg_trg_Geti_Star_Get_Hero)
     udg_ID = GetHandleId(udg_GetiStarHero)
-if (Trig_Geti_Star_Aug_Attribute_Func005C()) then
+if (Trig_Geti_Star_Aug_Attribute_Func006C()) then
 udg_TempString = "geti|aug|str"
         udg_TempInt = StringHash(udg_TempString)
 else
 end
-if (Trig_Geti_Star_Aug_Attribute_Func006C()) then
+if (Trig_Geti_Star_Aug_Attribute_Func007C()) then
 udg_TempString = "geti|aug|agi"
         udg_TempInt = StringHash(udg_TempString)
 else
 end
-if (Trig_Geti_Star_Aug_Attribute_Func007C()) then
+if (Trig_Geti_Star_Aug_Attribute_Func008C()) then
 udg_TempString = "geti|aug|int"
         udg_TempInt = StringHash(udg_TempString)
 else
 end
 udg_TempReal = (0.05 + LoadRealBJ(udg_TempInt, udg_ID, udg_SummonsHashtable))
 SaveRealBJ(udg_TempReal, udg_TempInt, udg_ID, udg_SummonsHashtable)
-if (Trig_Geti_Star_Aug_Attribute_Func010C()) then
+if (Trig_Geti_Star_Aug_Attribute_Func011C()) then
 SetPlayerTechResearchedSwap(GetResearched(), 0, udg_GetiStarPlayer)
 else
 end
@@ -21345,6 +21436,28 @@ TriggerAddCondition(gg_trg_Play_Ability_Spell_Audio_2, Condition(Trig_Play_Abili
 TriggerAddAction(gg_trg_Play_Ability_Spell_Audio_2, Trig_Play_Ability_Spell_Audio_2_Actions)
 end
 
+function Trig_Commands_Init_Actions()
+udg_TempInt = 1
+while (true) do
+if (udg_TempInt > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Santa_Hat, udg_TempPlayer, "-haton", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Dimension_Sword, udg_TempPlayer, "-swordon", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Aura_Heart, udg_TempPlayer, "-loveisintheair", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_King_K_Rool_Crown, udg_TempPlayer, "-koing", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Short_Axe, udg_TempPlayer, "-shortaxe", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Clear, udg_TempPlayer, "-removehats", true)
+TriggerRegisterPlayerChatEvent(gg_trg_ToggleSummonSelect, udg_TempPlayer, "-tss", true)
+udg_TempInt = udg_TempInt + 1
+end
+end
+
+function InitTrig_Commands_Init()
+gg_trg_Commands_Init = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Commands_Init, 4.00)
+TriggerAddAction(gg_trg_Commands_Init, Trig_Commands_Init_Actions)
+end
+
 function Trig_Freemode_Func001Func004C()
 if (not (udg_IsFreeMode == true)) then
 return false
@@ -21522,25 +21635,30 @@ gg_trg_Lights_toggle = CreateTrigger()
 TriggerAddAction(gg_trg_Lights_toggle, Trig_Lights_toggle_Actions)
 end
 
-function Trig_Cosmetic_Init_Actions()
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Santa_Hat, udg_TempPlayer, "-haton", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Dimension_Sword, udg_TempPlayer, "-swordon", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Aura_Heart, udg_TempPlayer, "-loveisintheair", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_King_K_Rool_Crown, udg_TempPlayer, "-koing", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Short_Axe, udg_TempPlayer, "-shortaxe", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Clear, udg_TempPlayer, "-removehats", true)
-udg_TempInt = udg_TempInt + 1
+function Trig_ToggleSummonSelect_Func004C()
+if (not (udg_SummonsSelectFlagArray[udg_TempInt3] == true)) then
+return false
 end
+return true
 end
 
-function InitTrig_Cosmetic_Init()
-gg_trg_Cosmetic_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Cosmetic_Init, 4.00)
-TriggerAddAction(gg_trg_Cosmetic_Init, Trig_Cosmetic_Init_Actions)
+function Trig_ToggleSummonSelect_Actions()
+udg_TempPlayer = GetTriggerPlayer()
+udg_TempInt3 = GetConvertedPlayerId(udg_TempPlayer)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+if (Trig_ToggleSummonSelect_Func004C()) then
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2544")
+udg_SummonsSelectFlagArray[GetConvertedPlayerId(udg_TempPlayer)] = false
+else
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2543")
+udg_SummonsSelectFlagArray[GetConvertedPlayerId(udg_TempPlayer)] = true
+end
+    DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_ToggleSummonSelect()
+gg_trg_ToggleSummonSelect = CreateTrigger()
+TriggerAddAction(gg_trg_ToggleSummonSelect, Trig_ToggleSummonSelect_Actions)
 end
 
 function Trig_Cosmetic_Clear_Actions()
@@ -22085,7 +22203,7 @@ CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_3710", "TRIGSTR_10646", "Rep
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
 CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNNagaUnBurrow.blp")
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\PassiveButtons\\PASBTNMagicalSentry.blp")
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\CommandButtons\\BTNBookOfTheDead.blp")
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
 CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
@@ -22633,7 +22751,7 @@ function Trig_Kill_Creep_Stats_and_Non_Heroes_Conditions()
 if (not (GetKillingUnitBJ() ~= nil)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == false)) then
+if (not (IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetKillingUnitBJ())) == true)) then
 return false
 end
 if (not (GetUnitTypeId(GetTriggerUnit()) ~= FourCC("h054"))) then
@@ -22642,14 +22760,56 @@ end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func005C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001Func001Func001C()
+if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("h006"))) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001Func001C()
+if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("h088"))) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001C()
+if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("u001"))) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002C()
+if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_STRUCTURE) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005Func001Func001C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h006"))) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005Func001C()
+if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_STRUCTURE) == false)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005C()
 if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func006Func001C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func006Func001C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("U01B")) then
 return true
 end
@@ -22659,14 +22819,14 @@ end
 return false
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func006C()
-if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func006Func001C()) then
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func006C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func006Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func007Func001C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func007Func001C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("O009")) then
 return true
 end
@@ -22676,53 +22836,60 @@ end
 return false
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func007C()
-if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func007Func001C()) then
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func007C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func007Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func008C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func008C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("O000"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func009C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func009C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H08Q"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func010C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func010C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E01A"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003Func001C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func003Func001C()
 if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func003C()
 if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_STRUCTURE) == false)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011A()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func006C()
+if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_STRUCTURE) == false)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011A()
 udg_StatMultUnit = GetEnumUnit()
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003C()) then
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011Func003Func001C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func003C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func003Func001C()) then
 udg_TempInt = IMaxBJ(1, ((GetHeroLevel(udg_StatMultUnit) + 1) + 0))
 else
 udg_TempInt = IMaxBJ(1, ((GetHeroLevel(udg_StatMultUnit) + 1) // 2))
@@ -22732,27 +22899,31 @@ else
 end
 udg_StatMultReal = (udg_StatMultReal * LoadRealBJ(35, udg_ID, udg_StatMultHashtable))
 TriggerExecute(gg_trg_Add_To_Base_Stats)
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011Func006C()) then
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
+else
+TriggerExecute(gg_trg_Add_To_Tower_Stats_Data)
+end
 TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func013C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func013C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01Z"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func003Func002C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func003Func002C()
 if (not (udg_StatMultUnit ~= GetKillingUnitBJ())) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func003A()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func003A()
 udg_StatMultUnit = GetEnumUnit()
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func003Func002C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func003Func002C()) then
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -22760,7 +22931,7 @@ else
 end
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func005C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func005C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
 return true
 end
@@ -22773,23 +22944,23 @@ end
 return false
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017C()
-if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func005C()) then
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func003Func002C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func003Func002C()
 if (not (udg_StatMultUnit ~= GetKillingUnitBJ())) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func003A()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func003A()
 udg_StatMultUnit = GetEnumUnit()
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func003Func002C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func003Func002C()) then
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -22797,7 +22968,7 @@ else
 end
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func005C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func005C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H008")) then
 return true
 end
@@ -22807,49 +22978,49 @@ end
 return false
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018C()
-if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func005C()) then
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019Func002A()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018Func002A()
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019Func003C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018Func003C()
 if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H04X")) then
 return true
 end
 return false
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019C()
-if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019Func003C()) then
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func020C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func019C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01Z"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func021C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func020C()
 if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Creep_Stats_and_Non_Heroes_Func002C()
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003C()
 if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_SUMMONED) == false)) then
 return false
 end
@@ -22859,40 +23030,75 @@ end
 return true
 end
 
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func004C()
+if (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == false) then
+return true
+end
+if (IsUnitType(GetDyingUnit(), UNIT_TYPE_STRUCTURE) == true) then
+return true
+end
+return false
+end
+
+function Trig_Kill_Creep_Stats_and_Non_Heroes_Func001C()
+if (not Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func004C()) then
+return false
+end
+return true
+end
+
 function Trig_Kill_Creep_Stats_and_Non_Heroes_Actions()
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001C()) then
+udg_CreepKillStatGain = 0.00
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001C()) then
+udg_CreepKillStatGain = (udg_GlobalStatMultiplier * 50.00)
+else
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001Func001C()) then
+udg_CreepKillStatGain = (udg_GlobalStatMultiplier * 10.00)
+else
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func002Func001Func001Func001C()) then
+udg_CreepKillStatGain = (udg_GlobalStatMultiplier * 5.00)
+else
+udg_CreepKillStatGain = (udg_GlobalStatMultiplier * 2.00)
+end
+end
+end
+else
+udg_CreepKillStatGain = (udg_GlobalStatMultiplier * I2R(GetUnitFoodMade(GetDyingUnit())))
+end
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003C()) then
 udg_StatMultUnit = GetKillingUnitBJ()
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func013C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func013C()) then
 udg_GetiStarPlayer = GetOwningPlayer(udg_StatMultUnit)
 TriggerExecute(gg_trg_Geti_Star_Get_Hero)
 udg_StatMultUnit = udg_GetiStarHero
 else
 end
-        udg_ID = GetHandleId(udg_StatMultUnit)
-udg_StatMultReal = (LoadRealBJ(35, udg_ID, udg_StatMultHashtable) * I2R(GetUnitFoodMade(GetTriggerUnit())))
-udg_StatMultReal = (udg_StatMultReal * udg_GlobalStatMultiplier)
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017C()) then
+            udg_ID = GetHandleId(udg_StatMultUnit)
+udg_StatMultReal = (LoadRealBJ(35, udg_ID, udg_StatMultHashtable) * udg_CreepKillStatGain)
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016C()) then
 udg_StatMultReal = ((1.00 * 0.34) * udg_StatMultReal)
-ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func017Func003A)
+ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func016Func003A)
 udg_StatMultUnit = GetKillingUnitBJ()
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017C()) then
 udg_StatMultReal = ((0.75 * 0.50) * udg_StatMultReal)
-ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func018Func003A)
+ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func017Func003A)
 udg_StatMultUnit = GetKillingUnitBJ()
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018C()) then
 udg_StatMultReal = (0.50 * udg_StatMultReal)
-ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func019Func002A)
+ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func018Func002A)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func020C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func019C()) then
 udg_StatMultReal = (0.15 * udg_StatMultReal)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func021C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func020C()) then
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -22900,33 +23106,43 @@ else
 end
 else
 udg_TempInt = 0
-udg_StatMultReal = (I2R(GetUnitFoodMade(GetTriggerUnit())) * udg_GlobalStatMultiplier)
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func005C()) then
+udg_StatMultReal = udg_CreepKillStatGain
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005C()) then
 udg_StatMultReal = (0.25 * udg_StatMultReal)
 else
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005Func001C()) then
 udg_StatMultReal = (0.20 * udg_StatMultReal)
+else
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func005Func001Func001C()) then
+udg_StatMultReal = (0.10 * udg_StatMultReal)
+else
+udg_StatMultReal = (0.25 * udg_StatMultReal)
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func006C()) then
+end
+end
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func006C()) then
 udg_StatMultReal = (0.30 * udg_StatMultReal)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func007C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func007C()) then
 udg_StatMultReal = (0.50 * udg_StatMultReal)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func008C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func008C()) then
 udg_StatMultReal = (0.75 * udg_StatMultReal)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func009C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func009C()) then
 udg_StatMultReal = (1.00 * udg_StatMultReal)
 else
 end
-if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func010C()) then
+if (Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func010C()) then
 udg_StatMultReal = (0.50 * udg_StatMultReal)
 else
 end
-ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func002Func011A)
+ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_Stats_and_Non_Heroes_Func001Func003Func011A)
+end
+else
 end
 end
 
@@ -27461,14 +27677,14 @@ return true
 end
 
 function Trig_Base_Armor_Set_Func027C()
-if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05X"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
 end
 
 function Trig_Base_Armor_Set_Func028C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A05X"), udg_StatMultUnit) > 0)) then
+if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
 return false
 end
 return true
@@ -27797,7 +28013,7 @@ udg_BaseArmorReal = (udg_BaseArmorReal + (0.50 * I2R(GetUnitAbilityLevelSwapped(
 else
 end
 if (Trig_Base_Armor_Set_Func016C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 150.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 200.00)
 else
 end
 if (Trig_Base_Armor_Set_Func017C()) then
@@ -27864,7 +28080,7 @@ end
 else
 end
 if (Trig_Base_Armor_Set_Func027C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 600.00)
 else
 end
 if (Trig_Base_Armor_Set_Func028C()) then
@@ -28571,7 +28787,24 @@ gg_trg_Catchup_Calculate_Threshold = CreateTrigger()
 TriggerAddAction(gg_trg_Catchup_Calculate_Threshold, Trig_Catchup_Calculate_Threshold_Actions)
 end
 
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func001Func001C()
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016")) then
+return true
+end
+return false
+end
+
 function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func001C()
+if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func001Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func002C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -28585,13 +28818,13 @@ return false
 end
 
 function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002C()
-if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func001C()) then
+if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func003Func001C()
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func001Func001C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
 return true
 end
@@ -28601,14 +28834,14 @@ end
 return false
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func003C()
-if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func003Func001C()) then
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func001C()
+if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func001Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007Func001C()
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func002C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -28621,38 +28854,21 @@ end
 return false
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007C()
-if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007Func001C()) then
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005C()
+if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func008Func001C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016")) then
-return true
-end
-return false
-end
-
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func008C()
-if (not Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func008Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func009C()
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func006C()
 if (not (udg_StatMultReal > 0.00)) then
 return false
 end
 return true
 end
 
-function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func010C()
+function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007C()
 if (not (udg_CatchupHBTCFlag == false)) then
 return false
 end
@@ -28666,25 +28882,24 @@ udg_StatMultStr = (udg_StatMultStr * 3.00)
 udg_StatMultAgi = (udg_StatMultAgi * 3.00)
 udg_StatMultInt = (udg_StatMultInt * 3.00)
 else
-end
-if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func003C()) then
+if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func002Func001C()) then
 udg_StatMultStr = (udg_StatMultStr * 2.00)
 udg_StatMultAgi = (udg_StatMultAgi * 2.00)
 udg_StatMultInt = (udg_StatMultInt * 2.00)
 else
 end
+end
 udg_StatMultReal = (((udg_TempReal + udg_TempReal2) + udg_TempReal3) - ((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt))
-udg_StatMultReal = (udg_StatMultReal * 0.33)
-udg_StatMultReal = (udg_StatMultReal * udg_CatchupIncrement)
-if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007C()) then
+udg_StatMultReal = ((udg_StatMultReal * 0.33) * udg_CatchupIncrement)
+if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005C()) then
 udg_StatMultReal = (udg_StatMultReal * 0.33)
 else
-end
-if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func008C()) then
+if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func005Func001C()) then
 udg_StatMultReal = (udg_StatMultReal * 0.50)
 else
 end
-if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func009C()) then
+end
+if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func006C()) then
 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
 AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.50)
@@ -28695,7 +28910,7 @@ TriggerExecute(gg_trg_Add_To_Catchup_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
 else
 end
-if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func010C()) then
+if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007C()) then
         AddHeroXP(udg_StatMultUnit, (25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit))) / udg_CatchupNumHeroes, true)
 else
 end
@@ -28710,7 +28925,7 @@ function Trig_Catchup_Automatic_Loop_Func001Func001Func001C()
 if (not (udg_ScoreboardTimeHours == 0)) then
 return false
 end
-if (not (udg_ScoreboardTimeMinutes == 5)) then
+if (not (udg_ScoreboardTimeMinutes == 4)) then
 return false
 end
 if (not (udg_ScoreboardTimeSeconds == 0)) then
@@ -34769,11 +34984,14 @@ end
 return true
 end
 
-function Trig_Test_Stats_Get_Stats_Command_Func003Func001C()
+function Trig_Test_Stats_Get_Stats_Command_Func004Func001C()
 if (udg_IsFBSimTest == true) then
 return true
 end
 if (udg_IsFreeMode == true) then
+return true
+end
+if (udg_IsLeadingToFinalBattle == true) then
 return true
 end
 if (SubStringBJ(udg_TempString, 1, 12) == "Local Player") then
@@ -34788,11 +35006,14 @@ end
 if (SubStringBJ(udg_TempString, 1, 5) == "Yeran") then
 return true
 end
+if (udg_TempInt == GetConvertedPlayerId(udg_TempPlayer)) then
+return true
+end
 return false
 end
 
-function Trig_Test_Stats_Get_Stats_Command_Func003C()
-if (not Trig_Test_Stats_Get_Stats_Command_Func003Func001C()) then
+function Trig_Test_Stats_Get_Stats_Command_Func004C()
+if (not Trig_Test_Stats_Get_Stats_Command_Func004Func001C()) then
 return false
 end
 return true
@@ -34801,8 +35022,8 @@ end
 function Trig_Test_Stats_Get_Stats_Command_Actions()
 udg_TempPlayer = GetTriggerPlayer()
 udg_TempString = udg_OriginalPlayerNames[GetConvertedPlayerId(udg_TempPlayer)]
-if (Trig_Test_Stats_Get_Stats_Command_Func003C()) then
 udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 10, 12))
+if (Trig_Test_Stats_Get_Stats_Command_Func004C()) then
 TriggerExecute(gg_trg_Test_Stats_Get_Stats_Print)
 else
 end
@@ -34834,6 +35055,7 @@ DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Stat Mult:|r |cffff2020" .. 
 TriggerExecute(gg_trg_Get_Stat_Sources_Data)
 DisplayTextToForce(udg_TempPlayerGroup, ("|cffffff00Creep Stats: " .. ((R2S(udg_StatMultStr) .. "|r |cff20ff20Saga Stats: ") .. ((R2S(udg_StatMultAgi) .. "|r |cffff2020PvP Stats: ") .. (R2S(udg_StatMultInt) .. "|r")))))
 DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Tourney stats: " .. ((R2S(udg_StatMultReal) .. "|r |cff00ffffCatchup Stats: ") .. ((R2S(udg_TempReal) .. "|r |cffff00ffLevel Up Stats: ") .. R2S(udg_TempReal2)))))
+DisplayTextToForce(udg_TempPlayerGroup, ("|cffaaaaaaTower stats: " .. (R2S(udg_TempReal3) .. "|r")))
 DisplayTextToForce(udg_TempPlayerGroup, ("Movement speed: " .. R2S(GetUnitMoveSpeed(udg_StatMultUnit))))
 end
 
@@ -35482,6 +35704,25 @@ TriggerAddAction(gg_trg_Add_Unit_To_StatMult, Trig_Add_Unit_To_StatMult_Actions)
 end
 
 function Trig_Automatic_StatMod_Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08M"))) then
+return false
+end
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A0"))) then
+return false
+end
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H"))) then
+return false
+end
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014"))) then
+return false
+end
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E019"))) then
+return false
+end
+return true
+end
+
+function Trig_Automatic_StatMod_Func001Func002C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09K")) then
 return true
 end
@@ -35494,13 +35735,7 @@ end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("O001")) then
 return true
 end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08M")) then
-return true
-end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H")) then
 return true
 end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09B")) then
@@ -35510,9 +35745,6 @@ if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A1")) then
 return true
 end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E019")) then
 return true
 end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AJ")) then
@@ -35548,9 +35780,6 @@ end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H062")) then
 return true
 end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014")) then
-return true
-end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H099")) then
 return true
 end
@@ -35564,7 +35793,7 @@ return false
 end
 
 function Trig_Automatic_StatMod_Func001C()
-if (not Trig_Automatic_StatMod_Func001Func001C()) then
+if (not Trig_Automatic_StatMod_Func001Func002C()) then
 return false
 end
 return true
@@ -35576,9 +35805,15 @@ udg_PlayerStatModStr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 
 udg_PlayerStatModAgi[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
 udg_PlayerStatModInt[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 0.00
 else
+if (Trig_Automatic_StatMod_Func001Func001C()) then
+udg_PlayerStatModStr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 3.00
+udg_PlayerStatModAgi[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+udg_PlayerStatModInt[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 3.00
+else
 udg_PlayerStatModStr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
 udg_PlayerStatModAgi[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 0.00
 udg_PlayerStatModInt[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = 6.00
+end
 end
 end
 
@@ -35907,6 +36142,16 @@ gg_trg_Add_To_Level_Up_Stats_Data = CreateTrigger()
 TriggerAddAction(gg_trg_Add_To_Level_Up_Stats_Data, Trig_Add_To_Level_Up_Stats_Data_Actions)
 end
 
+function Trig_Add_To_Tower_Stats_Data_Actions()
+    udg_ID = GetHandleId(udg_StatMultUnit)
+SaveRealBJ((LoadRealBJ(27, udg_ID, udg_StatMultHashtable) + udg_StatMultReal), 27, udg_ID, udg_StatMultHashtable)
+end
+
+function InitTrig_Add_To_Tower_Stats_Data()
+gg_trg_Add_To_Tower_Stats_Data = CreateTrigger()
+TriggerAddAction(gg_trg_Add_To_Tower_Stats_Data, Trig_Add_To_Tower_Stats_Data_Actions)
+end
+
 function Trig_Get_Stat_Sources_Data_Actions()
     udg_ID = GetHandleId(udg_StatMultUnit)
 udg_StatMultStr = LoadRealBJ(21, udg_ID, udg_StatMultHashtable)
@@ -35915,6 +36160,7 @@ udg_StatMultInt = LoadRealBJ(23, udg_ID, udg_StatMultHashtable)
 udg_StatMultReal = LoadRealBJ(24, udg_ID, udg_StatMultHashtable)
 udg_TempReal = LoadRealBJ(25, udg_ID, udg_StatMultHashtable)
 udg_TempReal2 = LoadRealBJ(26, udg_ID, udg_StatMultHashtable)
+udg_TempReal3 = LoadRealBJ(27, udg_ID, udg_StatMultHashtable)
 end
 
 function InitTrig_Get_Stat_Sources_Data()
@@ -37234,7 +37480,7 @@ TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Jiren_Ultimate_Burning_Warrior_2_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
 udg_TempReal4 = RMaxBJ(0.00, ((I2R(GetHeroLevel(udg_StatMultUnit)) - 400.00) * (0.01 * 0.01)))
-udg_TempReal4 = (udg_TempReal4 + 0.25)
+udg_TempReal4 = (udg_TempReal4 + 0.15)
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -37284,7 +37530,7 @@ TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Jiren_Ultimate_Burning_Warrior_3_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
 udg_TempReal4 = RMaxBJ(0.00, ((I2R(GetHeroLevel(udg_StatMultUnit)) - 400.00) * (0.01 * 0.01)))
-udg_TempReal4 = (udg_TempReal4 + 0.30)
+udg_TempReal4 = (udg_TempReal4 + 0.20)
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -37450,7 +37696,7 @@ return true
 end
 
 function Trig_Roshi_Max_Power_Func007C()
-if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001"))) then
@@ -37740,7 +37986,7 @@ udg_TempReal = 15.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Goku_UI_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.10
+udg_TempReal4 = 0.05
 udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -37802,7 +38048,7 @@ udg_TempReal = 15.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Goku_MUI_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.20
+udg_TempReal4 = 0.15
 udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -38757,7 +39003,7 @@ udg_TempReal = 25.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Vegeta_Ultra_Ego_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = (0.10 + (0.30 * (1.00 - (0.01 * GetUnitLifePercent(udg_StatMultUnit)))))
+udg_TempReal4 = (0.05 + (0.20 * (1.00 - (0.01 * GetUnitLifePercent(udg_StatMultUnit)))))
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -41325,7 +41571,7 @@ udg_TransformationSFXString2 = "AuraKaox10.mdx"
 else
 end
 if (Trig_Transformations_Goku_Func019C()) then
-udg_StatMultReal = 2.70
+udg_StatMultReal = 2.65
 udg_TransformationAbility = FourCC("A0A9")
 udg_TransformationSFXString = "AuraWhite.mdx"
 else
@@ -41703,15 +41949,15 @@ udg_TransformationSFXString = "AuraBlue.mdx"
 else
 end
 if (Trig_Transformations_Vegeta_Func017C()) then
-udg_StatMultReal = 2.70
+udg_StatMultReal = 2.65
 udg_TransformationAbility = FourCC("A0JR")
 udg_TransformationSFXString = "AuraBlue.mdx"
 udg_TransformationSFXString2 = "AuraRoyalBlue2.mdx"
 else
 end
 if (Trig_Transformations_Vegeta_Func018C()) then
-udg_StatMultReal = 2.75
-udg_StatMultStr = (udg_StatMultReal + 0.25)
+udg_StatMultReal = 2.65
+udg_StatMultStr = (udg_StatMultReal + 0.15)
 udg_StatMultAgi = udg_StatMultReal
 udg_StatMultInt = udg_StatMultReal
 udg_TransformationAbility = FourCC("A0JR")
@@ -46831,11 +47077,21 @@ gg_trg_Kid_Buu_Bonus_Ability = CreateTrigger()
 TriggerAddAction(gg_trg_Kid_Buu_Bonus_Ability, Trig_Kid_Buu_Bonus_Ability_Actions)
 end
 
+function Trig_Super_Buu_Absorb_Func003C()
+if (GetSpellAbilityId() == FourCC("A01C")) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A06S")) then
+return true
+end
+return false
+end
+
 function Trig_Super_Buu_Absorb_Conditions()
 if (not (udg_IsLeadingToFinalBattle == false)) then
 return false
 end
-if (not (GetSpellAbilityId() == FourCC("A01C"))) then
+if (not Trig_Super_Buu_Absorb_Func003C()) then
 return false
 end
 if (not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO) == true)) then
@@ -46850,18 +47106,14 @@ end
 if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("O006"))) then
 return false
 end
-return true
-end
-
-function Trig_Super_Buu_Absorb_Func001Func006C()
-if (not (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("H00A"))) then
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H01Z"))) then
 return false
 end
 return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func007Func003C()
-if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == false)) then
+function Trig_Super_Buu_Absorb_Func001Func006C()
+if (not (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("H00A"))) then
 return false
 end
 return true
@@ -46874,7 +47126,45 @@ end
 return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func027C()
+function Trig_Super_Buu_Absorb_Func001Func008Func001C()
+if (LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable) == 0) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A06S")) then
+return true
+end
+return false
+end
+
+function Trig_Super_Buu_Absorb_Func001Func008C()
+if (not Trig_Super_Buu_Absorb_Func001Func008Func001C()) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H0AJ"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H0AI"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H0AL"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H05X"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H07Y"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H0AA"))) then
+return false
+end
+if (not (GetUnitTypeId(GetSpellTargetUnit()) ~= FourCC("H09Z"))) then
+return false
+end
+return true
+end
+
+function Trig_Super_Buu_Absorb_Func001Func028C()
 if (GetUnitLifePercent(GetSpellTargetUnit()) <= 25.00) then
 return true
 end
@@ -46885,7 +47175,7 @@ return false
 end
 
 function Trig_Super_Buu_Absorb_Func001C()
-if (not Trig_Super_Buu_Absorb_Func001Func027C()) then
+if (not Trig_Super_Buu_Absorb_Func001Func028C()) then
 return false
 end
 if (not (RectContainsUnit(gg_rct_HeavenZone, GetSpellTargetUnit()) == false)) then
@@ -46903,7 +47193,7 @@ GroupAddUnitSimple(GetSpellAbilityUnit(), udg_SuperBuuToKidBuuUnitGroup)
 udg_StatMultUnit = GetSpellAbilityUnit()
         udg_ID = GetHandleId(udg_StatMultUnit)
 SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
+udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
 if (Trig_Super_Buu_Absorb_Func001Func006C()) then
 SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
 DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00[Bonus]|r: +0.1x absorb mult for absorbing " .. GetHeroProperName(GetSpellTargetUnit())))
@@ -46913,14 +47203,15 @@ if (Trig_Super_Buu_Absorb_Func001Func007C()) then
 SaveIntegerBJ((LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) + 30), 15, udg_ID, udg_StatMultHashtable)
 else
 SaveIntegerBJ(0, 15, udg_ID, udg_StatMultHashtable)
-if (Trig_Super_Buu_Absorb_Func001Func007Func003C()) then
+end
+if (Trig_Super_Buu_Absorb_Func001Func008C()) then
+DisplayTextToForce(udg_TempPlayerGroup, ("|cffff88ff[Absorb Abilities]|r: " .. GetHeroProperName(GetSpellTargetUnit())))
 udg_TempUnitType = GetUnitTypeId(GetSpellTargetUnit())
-                udg_TempInt = udg_TempUnitType
+            udg_TempInt = udg_TempUnitType
 SaveIntegerBJ(udg_TempInt, 18, udg_ID, udg_StatMultHashtable)
 else
 end
-end
-udg_StatMultReal = (2.30 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
+udg_StatMultReal = (2.40 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
 SaveRealBJ(udg_StatMultReal, 12, udg_ID, udg_StatMultHashtable)
 DisplayTextToForce(udg_TempPlayerGroup, (("|cffff88ff[Absorb Mult]|r: " .. R2S(udg_StatMultReal)) .. "x"))
         DestroyForce(udg_TempPlayerGroup)
@@ -50738,19 +51029,19 @@ udg_TransformationSFXString = "AuraWhite.mdx"
 else
 end
 if (Trig_Transformations_Jiren_Func017C()) then
-udg_StatMultReal = 2.60
+udg_StatMultReal = 2.50
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraWhite.mdx"
 else
 end
 if (Trig_Transformations_Jiren_Func018C()) then
-udg_StatMultReal = 2.70
+udg_StatMultReal = 2.60
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraWhite.mdx"
 else
 end
 if (Trig_Transformations_Jiren_Func019C()) then
-udg_StatMultReal = 2.75
+udg_StatMultReal = 2.65
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraWhite.mdx"
 else
@@ -51177,7 +51468,7 @@ end
 return true
 end
 
-function Trig_Transformations_Dyspo_Func018Func004C()
+function Trig_Transformations_Dyspo_Func018Func007C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0R1"), udg_StatMultUnit) == 0)) then
 return false
 end
@@ -51275,16 +51566,19 @@ udg_TransformationSFXString = "AuraWhite.mdx"
 else
 end
 if (Trig_Transformations_Dyspo_Func017C()) then
-udg_StatMultReal = 2.50
+udg_StatMultReal = 2.40
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
 else
 end
 if (Trig_Transformations_Dyspo_Func018C()) then
-udg_StatMultReal = 2.70
+udg_StatMultReal = 2.50
+udg_StatMultStr = udg_StatMultReal
+udg_StatMultAgi = (udg_StatMultReal + 0.10)
+udg_StatMultInt = udg_StatMultReal
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
-if (Trig_Transformations_Dyspo_Func018Func004C()) then
+if (Trig_Transformations_Dyspo_Func018Func007C()) then
 UnitAddAbilityBJ(FourCC("A0R1"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0R1'))
 else
@@ -54075,7 +54369,7 @@ function Trig_Transformations_Roshi_Func016C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
 return false
 end
 return true
@@ -54790,6 +55084,16 @@ return true
 end
 
 function Trig_Transformations_Sephiroth_Func019C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Sephiroth_Func020C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
@@ -54799,7 +55103,7 @@ end
 return true
 end
 
-function Trig_Transformations_Sephiroth_Func022Func002Func001C()
+function Trig_Transformations_Sephiroth_Func023Func002Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -54809,35 +55113,35 @@ end
 return false
 end
 
-function Trig_Transformations_Sephiroth_Func022Func002Func004Func001Func001C()
+function Trig_Transformations_Sephiroth_Func023Func002Func004Func001Func001C()
 if (not (LoadIntegerBJ(45, udg_ID, udg_StatMultHashtable) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Sephiroth_Func022Func002Func004Func001C()
+function Trig_Transformations_Sephiroth_Func023Func002Func004Func001C()
 if (not (LoadIntegerBJ(45, udg_ID, udg_StatMultHashtable) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Sephiroth_Func022Func002Func004C()
+function Trig_Transformations_Sephiroth_Func023Func002Func004C()
 if (not (LoadIntegerBJ(45, udg_ID, udg_StatMultHashtable) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Sephiroth_Func022Func002C()
-if (not Trig_Transformations_Sephiroth_Func022Func002Func001C()) then
+function Trig_Transformations_Sephiroth_Func023Func002C()
+if (not Trig_Transformations_Sephiroth_Func023Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Sephiroth_Func022C()
+function Trig_Transformations_Sephiroth_Func023C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -54912,12 +55216,18 @@ udg_TransformationSFXString = "AuraSS.mdx"
 else
 end
 if (Trig_Transformations_Sephiroth_Func018C()) then
-udg_StatMultReal = 2.60
+udg_StatMultReal = 2.50
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraSS.mdx"
 else
 end
 if (Trig_Transformations_Sephiroth_Func019C()) then
+udg_StatMultReal = 2.60
+udg_TransformationAbility = FourCC("AUan")
+udg_TransformationSFXString = "AuraSS.mdx"
+else
+end
+if (Trig_Transformations_Sephiroth_Func020C()) then
 UnitAddAbilityBJ(FourCC("A0TC"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0TC'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -54926,17 +55236,17 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_17943")
 else
 end
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Sephiroth_Func022C()) then
-if (Trig_Transformations_Sephiroth_Func022Func002C()) then
+if (Trig_Transformations_Sephiroth_Func023C()) then
+if (Trig_Transformations_Sephiroth_Func023Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-if (Trig_Transformations_Sephiroth_Func022Func002Func004C()) then
+if (Trig_Transformations_Sephiroth_Func023Func002Func004C()) then
                 udg_TransformationID = FourCC('H09M')
 else
-if (Trig_Transformations_Sephiroth_Func022Func002Func004Func001C()) then
+if (Trig_Transformations_Sephiroth_Func023Func002Func004Func001C()) then
                     udg_TransformationID = FourCC('H09N')
 else
-if (Trig_Transformations_Sephiroth_Func022Func002Func004Func001Func001C()) then
+if (Trig_Transformations_Sephiroth_Func023Func002Func004Func001Func001C()) then
                         udg_TransformationID = FourCC('H09O')
 else
                         udg_TransformationID = FourCC('H09P')
@@ -56311,7 +56621,7 @@ end
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0WM"), udg_StatMultUnit) == 0)) then
 return false
 end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0VR"), udg_StatMultUnit) == 9)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0VR"), udg_StatMultUnit) >= 1)) then
 return false
 end
 return true
@@ -58325,23 +58635,13 @@ function Trig_Transformations_Saitama_Func016C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Saitama_Func017C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Saitama_Func018C()
+function Trig_Transformations_Saitama_Func017C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
@@ -58351,7 +58651,7 @@ end
 return true
 end
 
-function Trig_Transformations_Saitama_Func019C()
+function Trig_Transformations_Saitama_Func018C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
 return false
 end
@@ -58361,7 +58661,7 @@ end
 return true
 end
 
-function Trig_Transformations_Saitama_Func022Func003Func001C()
+function Trig_Transformations_Saitama_Func021Func003Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -58371,14 +58671,14 @@ end
 return false
 end
 
-function Trig_Transformations_Saitama_Func022Func003C()
-if (not Trig_Transformations_Saitama_Func022Func003Func001C()) then
+function Trig_Transformations_Saitama_Func021Func003C()
+if (not Trig_Transformations_Saitama_Func021Func003Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Saitama_Func022C()
+function Trig_Transformations_Saitama_Func021C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -58430,7 +58730,7 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Saitama_Func015C()) then
-udg_StatMultReal = 2.60
+udg_StatMultReal = 2.50
 udg_StatMultStr = udg_StatMultReal
 udg_StatMultAgi = udg_StatMultReal
 udg_StatMultInt = udg_StatMultReal
@@ -58438,7 +58738,7 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Saitama_Func016C()) then
-udg_StatMultReal = 2.70
+udg_StatMultReal = 2.60
 udg_StatMultStr = udg_StatMultReal
 udg_StatMultAgi = udg_StatMultReal
 udg_StatMultInt = udg_StatMultReal
@@ -58446,14 +58746,6 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Saitama_Func017C()) then
-udg_StatMultReal = 2.75
-udg_StatMultStr = udg_StatMultReal
-udg_StatMultAgi = udg_StatMultReal
-udg_StatMultInt = udg_StatMultReal
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Saitama_Func018C()) then
 UnitAddAbilityBJ(FourCC("A02J"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A02J'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -58461,7 +58753,7 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_965")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Saitama_Func019C()) then
+if (Trig_Transformations_Saitama_Func018C()) then
 UnitAddAbilityBJ(FourCC("A02J"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A02J"), udg_StatMultUnit, 2)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A02J'))
@@ -58471,8 +58763,8 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_3782")
 else
 end
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Saitama_Func022C()) then
-if (Trig_Transformations_Saitama_Func022Func003C()) then
+if (Trig_Transformations_Saitama_Func021C()) then
+if (Trig_Transformations_Saitama_Func021Func003C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H04Y')
@@ -61438,19 +61730,19 @@ udg_GetiStarPlayer = udg_TransformationPlayer
 TriggerExecute(gg_trg_Geti_Star_Get_All_Stats)
 udg_StatMultReal = 1.00
 if (Trig_Transformations_Geti_Star_Func011Func005C()) then
-udg_StatMultReal = RMinBJ((1.75 + (0.25 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))), (udg_StatMultReal + (I2R(udg_GetiStarUpgs) * (0.03 + (0.01 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))))))
+udg_StatMultReal = RMinBJ((1.50 + (0.25 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))), (udg_StatMultReal + (I2R(udg_GetiStarUpgs) * (0.03 + (0.01 * I2R(GetPlayerTechCountSimple(FourCC("R00L"), udg_GetiStarPlayer)))))))
 else
 end
 if (Trig_Transformations_Geti_Star_Func011Func006C()) then
 udg_StatMultReal = (udg_StatMultReal + RMinBJ((0.40 + (0.40 * I2R(GetPlayerTechCountSimple(FourCC("R00O"), udg_GetiStarPlayer)))), ((0.15 * I2R(udg_PlayerKills[GetConvertedPlayerId(udg_GetiStarPlayer)])) + (0.10 * I2R(udg_PlayerDeaths[GetConvertedPlayerId(udg_GetiStarPlayer)])))))
-udg_StatMultReal = RMinBJ(2.50, udg_StatMultReal)
+udg_StatMultReal = RMinBJ(2.40, udg_StatMultReal)
 else
 end
 if (Trig_Transformations_Geti_Star_Func011Func007C()) then
-udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + 1.00))
+udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + 1.00))
 else
 if (Trig_Transformations_Geti_Star_Func011Func007Func001C()) then
-udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + 0.50))
+udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + 0.50))
 else
 end
 end
@@ -61461,9 +61753,9 @@ if (Trig_Transformations_Geti_Star_Func013C()) then
 if (Trig_Transformations_Geti_Star_Func013Func002C()) then
 udg_GetiStarPlayer = udg_TransformationPlayer
 TriggerExecute(gg_trg_Geti_Star_Get_Augs)
-udg_StatMultStr = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugStr))
-udg_StatMultAgi = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugAgi))
-udg_StatMultInt = RMinBJ(3.00, (udg_StatMultReal + udg_GetiStarAugInt))
+udg_StatMultStr = RMinBJ(2.90, (udg_StatMultReal + udg_GetiStarAugStr))
+udg_StatMultAgi = RMinBJ(2.90, (udg_StatMultReal + udg_GetiStarAugAgi))
+udg_StatMultInt = RMinBJ(2.90, (udg_StatMultReal + udg_GetiStarAugInt))
 udg_StatMultReal = udg_StatMultInt
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
@@ -61678,7 +61970,7 @@ function Trig_Transformations_Megumin_Func013C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
 return false
 end
 return true
@@ -62937,6 +63229,9 @@ end
 if (not (IsUnitHiddenBJ(GetEnumUnit()) == false)) then
 return false
 end
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05X"), udg_TempUnit) == 0)) then
+return false
+end
 return true
 end
 
@@ -63133,7 +63428,7 @@ return true
 end
 
 function Trig_Scouter_Activate_New_Actions()
-SetUnitManaPercentBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitManaPercent(GetTriggerUnit()) - 10.00)))
+SetUnitManaPercentBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitManaPercent(GetTriggerUnit()) - 15.00)))
 TriggerExecute(gg_trg_Metal_Cooler_Scan_For_Powers)
 end
 
@@ -63291,6 +63586,13 @@ return true
 end
 
 function Trig_Sorbets_Ring_Func019Func001C()
+if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_STRUCTURE) == false)) then
+return false
+end
+return true
+end
+
+function Trig_Sorbets_Ring_Func019Func002C()
 if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == false)) then
 return false
 end
@@ -63331,14 +63633,17 @@ end
 else
 end
 if (Trig_Sorbets_Ring_Func019C()) then
-if (Trig_Sorbets_Ring_Func019Func001C()) then
+if (Trig_Sorbets_Ring_Func019Func002C()) then
 UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.08), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 else
 UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.85), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 end
 else
+if (Trig_Sorbets_Ring_Func019Func001C()) then
 SetUnitLifeBJ(udg_StatMultUnit, 1.00)
 UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+else
+end
 end
 end
 
@@ -63361,6 +63666,13 @@ end
 
 function Trig_Babidi_Lamp_Conditions()
 if (not (GetSpellAbilityId() == FourCC("A0GN"))) then
+return false
+end
+return true
+end
+
+function Trig_Babidi_Lamp_Func018Func001C()
+if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_STRUCTURE) == false)) then
 return false
 end
 return true
@@ -63392,12 +63704,15 @@ StartTimerBJ(udg_BabidiLampTimer, false, 0.50)
     RemoveLocation(udg_TempLoc2)
     RemoveLocation(udg_TempLoc)
 if (Trig_Babidi_Lamp_Func018C()) then
-udg_TempReal = (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.25)
+udg_TempReal = (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.33)
 SetUnitManaBJ(udg_StatMultUnit, RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) - udg_TempReal)))
 SetUnitManaBJ(udg_TempUnit, RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + udg_TempReal)))
 else
+if (Trig_Babidi_Lamp_Func018Func001C()) then
 SetUnitLifeBJ(udg_StatMultUnit, 1.00)
 UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+else
+end
 end
 end
 
@@ -63894,11 +64209,12 @@ InitTrig_Geti_Star_Start_TP()
 InitTrig_Geti_Star_Teleportation()
 InitTrig_Play_Ability_Spell_Audio()
 InitTrig_Play_Ability_Spell_Audio_2()
+InitTrig_Commands_Init()
 InitTrig_Freemode()
 InitTrig_Nightmare_Mode()
 InitTrig_Ultimate_Mode()
 InitTrig_Lights_toggle()
-InitTrig_Cosmetic_Init()
+InitTrig_ToggleSummonSelect()
 InitTrig_Cosmetic_Clear()
 InitTrig_Cosmetic_Helper()
 InitTrig_Cosmetic_Santa_Hat()
@@ -64098,6 +64414,7 @@ InitTrig_Add_To_PvP_Stats_Data()
 InitTrig_Add_To_Tourney_Stats_Data()
 InitTrig_Add_To_Catchup_Stats_Data()
 InitTrig_Add_To_Level_Up_Stats_Data()
+InitTrig_Add_To_Tower_Stats_Data()
 InitTrig_Get_Stat_Sources_Data()
 InitTrig_Auto_Transform()
 InitTrig_Auto_Transform_Player_Units()

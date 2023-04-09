@@ -8,6 +8,7 @@ import { Colorizer } from "Common/Colorizer";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
 import { CostType, stringToCostType, Globals } from "Common/Constants";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { AbilityNames } from "./AbilityNames";
 
 export class CustomAbility implements Serializable<CustomAbility>, AddableComponent {
   static readonly BASE_DAMAGE = 1500;
@@ -115,7 +116,16 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     if (checkCd && this.currentCd > 0) return false;
     if (checkTick && this.currentTick > 0) return false;
     if (!input || !input.caster || !input.casterPlayer || !input.targetPoint || !input.mouseData) return false;
-    if (!this.canUseWhenStunned && UnitHelper.isUnitStunned(input.caster.unit)) {
+    if (!this.canUseWhenStunned && UnitHelper.isUnitHardStunned(input.caster.unit)) {
+      return false;
+    }
+    if (
+      UnitHelper.isUnitRooted(input.caster.unit)
+      && (
+        this.name == AbilityNames.BasicAbility.ZANZOKEN
+        || this.name == AbilityNames.BasicAbility.ZANZO_DASH
+      )
+    ) {
       return false;
     }
     if (!this.canTakeCosts(input)) {

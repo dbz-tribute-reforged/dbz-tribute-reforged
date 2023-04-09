@@ -469,7 +469,8 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // buus
     [FourCC('A0EI'), AbilityNames.Buu.BUU_BEAM],
-    [FourCC('A01C'), AbilityNames.Buu.FLESH_ATTACK],
+    [Id.fleshAttack, AbilityNames.Buu.FLESH_ATTACK],
+    [Id.fleshAttackAbsorbTarget, AbilityNames.Buu.FLESH_ATTACK_ABSORB_TARGET],
     [FourCC('A0LH'), AbilityNames.Buu.INNOCENCE_BREATH],
     [FourCC('A0ER'), AbilityNames.Buu.ANGRY_EXPLOSION],
     [FourCC('A0C0'), AbilityNames.Buu.VANISHING_BALL],

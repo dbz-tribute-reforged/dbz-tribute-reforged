@@ -364,6 +364,7 @@ export module SoundHelper {
         break;
 
       case Id.fleshAttack:
+      case Id.fleshAttackAbsorbTarget:
         if (unitId == Id.fatBuu) {
           playSoundOnUnit(unit, "Audio/Voice/BuuYoureInTheWay.mp3", 1008);
         } else if (unitId == Id.superBuu) {
@@ -1539,6 +1540,14 @@ export module SoundHelper {
         break;
       
       // megumin
+      case Id.meguminManatite:
+        if (unitId == Id.megumin) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Megumin/Bakuretsu.mp3", 5929);
+          }
+        }
+        break;
+
       case Id.meguminExplosion1:
         if (unitId == Id.megumin) {
           playSoundOnUnit(unit, "Audio/Voice/Megumin/Explosion1.mp3", 1253);
@@ -1547,7 +1556,7 @@ export module SoundHelper {
       
       case Id.meguminExplosion2:
         if (unitId == Id.megumin) {
-          if (rng < 5) {
+          if (rng < 10) {
             SoundHelper.playTwoSoundsWithDelay(
               unit,
               "Audio/Voice/Megumin/ChunChunMaru.mp3", 800, 0.8,

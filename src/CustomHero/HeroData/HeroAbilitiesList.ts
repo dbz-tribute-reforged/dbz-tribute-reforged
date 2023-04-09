@@ -594,9 +594,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Buu.INNOCENCE_BREATH, 
       AbilityNames.Buu.ANGRY_EXPLOSION
     ]],
-    [FourCC("O006"), [
+    [Id.superBuu, [
       AbilityNames.Buu.BUU_BEAM, 
       AbilityNames.Buu.FLESH_ATTACK, 
+      AbilityNames.Buu.FLESH_ATTACK_ABSORB_TARGET, 
       AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, 
       AbilityNames.Buu.ANGRY_EXPLOSION, 
       AbilityNames.Buu.VANISHING_BALL

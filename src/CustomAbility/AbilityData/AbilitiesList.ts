@@ -310,7 +310,7 @@ export const AbilitiesList = [
         "Dragon Fisto"
     },
     components: [
-      { name: "dash ground point super dragon fist" },
+      { name: "dash ground point 30dist" },
       { name: "damage super dragon fist dps" },
       { name: "damage super dragon fist explosion" },
       { name: "knockback dfist" },
@@ -6128,7 +6128,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage target crono lightning 3 explosion" },
-      { name: "debuff slow target crono lightning 3" },
+      { name: "beam crono lightning 3" },
       { name: "sfx crono lightning 3" },
     ],
   },
@@ -9597,6 +9597,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Buu.FLESH_ATTACK_ABSORB_TARGET,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage target flesh attack absorb target explosion" },
+      { name: "debuff root flesh attack" },
+      { name: "sfx flesh attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Buu.INNOCENCE_BREATH,
     currentCd: 0,
     maxCd: 1,
@@ -10247,7 +10276,7 @@ export const AbilitiesList = [
         AbilityNames.Raditz.BEHIND_YOU
     },
     components: [
-      { name: "dash ground point behind you pushback" },
+      { name: "dash ground forward behind you pushback" },
       { name: "damage behind you dps" },
       { name: "knockback behind you" },
       { name: "stun behind you" },
