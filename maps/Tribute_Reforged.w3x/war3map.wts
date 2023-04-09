@@ -983,12 +983,6 @@ STRING 154
 Kid Buu
 }
 
-STRING 155
-// Units: h00N (Geti Star Maintenance Worker), Ubertip (Tooltip - Extended)
-{
-Geti Star Maintenance workers can harvest resources, build basic structures, and repair Cooler and the Geti Star.
-}
-
 STRING 156
 // Units: h00N (Geti Star Maintenance Worker), Name (Name)
 {
@@ -1089,12 +1083,6 @@ STRING 172
 // Units: u003 (Geti Star Resource Transporter), Name (Name)
 {
 Geti Star Resource Transporter
-}
-
-STRING 173
-// Units: h03O (Geti Star Super Worker), Ubertip (Tooltip - Extended)
-{
-Geti Star Super Workers are used to build advanced structures. They have a larger resource capacity, and can survive much longer than regular workers.
 }
 
 STRING 174
@@ -50035,7 +50023,7 @@ D
 }
 
 STRING 7965
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50162,7 +50150,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 7982
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50742,7 +50730,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50902,7 +50890,7 @@ F
 }
 
 STRING 8093
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51010,7 +50998,7 @@ STRING 8110
 }
 
 STRING 8111
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52594,7 +52582,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52618,7 +52606,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53446,7 +53434,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53474,7 +53462,7 @@ The user fires two beams of energy that will hunt down the enemy and deal massiv
 }
 
 STRING 8471
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53557,7 +53545,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53891,7 +53879,7 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8534
-// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53921,7 +53909,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55004,7 +54992,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55092,7 +55080,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8724
-// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55280,7 +55268,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55304,7 +55292,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56006,7 +55994,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57023,7 +57011,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57533,7 +57521,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57557,7 +57545,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57676,7 +57664,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57997,7 +57985,7 @@ F
 }
 
 STRING 9178
-// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58418,7 +58406,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58565,7 +58553,7 @@ Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9260
-// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60837,301 +60825,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 9609
 // Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9610
+STRING 9609
 // Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9611
+STRING 9610
 // Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
-STRING 9612
+STRING 9611
 // Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9613
+STRING 9612
 // Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9614
+STRING 9613
 // Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9615
+STRING 9614
 // Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9616
+STRING 9615
 // Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9617
+STRING 9616
 // Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9618
+STRING 9617
 // Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9619
+STRING 9618
 // Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9620
+STRING 9619
 // Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9621
+STRING 9620
 // Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9622
+STRING 9621
 // Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9623
+STRING 9622
 // Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9624
+STRING 9623
 // Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9625
+STRING 9624
 // Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9626
+STRING 9625
 // Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9627
+STRING 9626
 // Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9628
+STRING 9627
 // Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9629
+STRING 9628
 // Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9630
+STRING 9629
 // Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9631
+STRING 9630
 // Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9632
+STRING 9631
 // Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9633
+STRING 9632
 // Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9634
+STRING 9633
 // Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9635
+STRING 9634
 // Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9636
+STRING 9635
 // Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9637
+STRING 9636
 // Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9638
+STRING 9637
 // Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9639
+STRING 9638
 // Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9640
+STRING 9639
 // Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9641
+STRING 9640
 // Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9642
+STRING 9641
 // Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9643
+STRING 9642
 // Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9644
+STRING 9643
 // Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9645
+STRING 9644
 // Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9646
+STRING 9645
 // Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9647
+STRING 9646
 // Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9648
+STRING 9647
 // Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9649
+STRING 9648
 // Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9650
+STRING 9649
 // Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9651
+STRING 9650
 // Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9652
+STRING 9651
 // Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9653
+STRING 9652
 // Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9654
+STRING 9653
 // Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9655
+STRING 9654
 // Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 9656
+STRING 9655
 // Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9657
+STRING 9656
 // Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 9657
+// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62093,7 +62081,7 @@ F
 }
 
 STRING 9817
-// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66899,25 +66887,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 10598
 // Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 10599
+STRING 10598
 // Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 10600
+STRING 10599
 // Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 10600
+// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68054,7 +68042,7 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 }
 
 STRING 10760
-// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
+// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68090,13 +68078,13 @@ STRING 10765
 }
 
 STRING 10766
-// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10767
-// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
+// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68334,7 +68322,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68538,31 +68526,31 @@ STRING 10839
 }
 
 STRING 10840
-// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 10841
 // Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 10842
+STRING 10841
 // Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 10843
+STRING 10842
 // Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 10844
+STRING 10843
 // Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 10844
+// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68598,7 +68586,7 @@ W
 }
 
 STRING 10850
-// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69348,7 +69336,7 @@ STRING 10974
 }
 
 STRING 10975
-// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69438,7 +69426,7 @@ STRING 10989
 }
 
 STRING 10990
-// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69486,13 +69474,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69832,7 +69820,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 11055
-// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69993,7 +69981,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70005,7 +69993,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70395,13 +70383,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71047,13 +71035,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -71383,19 +71371,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
-{
-Q
-}
-
-STRING 11309
 // Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 11310
+STRING 11309
 // Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 11310
+// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71888,13 +71876,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72175,7 +72163,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72236,7 +72224,7 @@ A nutritious bundle of wheat.
 }
 
 STRING 11445
-// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
+// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72885,7 +72873,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
+// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73056,13 +73044,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
+// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
+// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73506,10 +73494,22 @@ STRING 11646
 Increases the attack range of Geti Star Defense buildings by +400, HP by 10000 and HP regen by 400%.
 }
 
+STRING 11647
+// Units: h00N (Geti Star Maintenance Worker), Ubertip (Tooltip - Extended)
+{
+Geti Star Maintenance workers can harvest resources (15), build basic structures, and repair Cooler and the Geti Star.
+}
+
 STRING 11648
 // Doodads: D01O (Bench Wood Pathable), Name (Name)
 {
 Bench Wood Pathable
+}
+
+STRING 11649
+// Units: h03O (Geti Star Super Worker), Ubertip (Tooltip - Extended)
+{
+Geti Star Super Workers are used to build advanced structures. They have a larger resource capacity (175), and can survive much longer than regular workers.
 }
 
 STRING 11650
@@ -73693,19 +73693,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 11681
 // Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 11682
+STRING 11681
 // Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 11682
+// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73839,7 +73839,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
+// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74343,13 +74343,13 @@ STRING 11784
 }
 
 STRING 11785
-// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11786
-// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74781,7 +74781,7 @@ Donate Energy to Moro
 }
 
 STRING 11857
-// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74921,13 +74921,13 @@ STRING 11879
 }
 
 STRING 11880
-// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11881
-// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A00M (Pistol), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -75922,13 +75922,13 @@ This unit is under the effects of Cosmic Illusion; it is invisible, moves faster
 }
 
 STRING 12041
-// Abilities: A00M (Pistol), Researchhotkey (Hotkey - Learn)
+// Abilities: A00M (Pistol), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12042
-// Abilities: A00M (Pistol), Hotkey (Hotkey - Normal)
+// Abilities: A02G (Shotgun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76048,7 +76048,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Abilities: A02G (Shotgun), Researchhotkey (Hotkey - Learn)
+// Abilities: A02G (Shotgun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76762,13 +76762,13 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Abilities: A02G (Shotgun), Hotkey (Hotkey - Normal)
+// Abilities: A02K (Assault Rifle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12176
-// Abilities: A02K (Assault Rifle), Researchhotkey (Hotkey - Learn)
+// Abilities: A02O (Sniper Rifle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -77494,13 +77494,13 @@ STRING 12292
 }
 
 STRING 12293
-// Abilities: A02O (Sniper Rifle), Researchhotkey (Hotkey - Learn)
+// Abilities: A037 (Rocket Launcher), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12294
-// Abilities: A037 (Rocket Launcher), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Flashbang), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79320,7 +79320,7 @@ First, Gohan fires a Super Kamehameha at the opponent, who struggles against the
 }
 
 STRING 12583
-// Abilities: A038 (Flashbang), Researchhotkey (Hotkey - Learn)
+// Abilities: A03A (Heavy Grenade), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79694,7 +79694,7 @@ F
 }
 
 STRING 12643
-// Abilities: A03A (Heavy Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A03J (Explosion 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -79712,7 +79712,7 @@ Z
 }
 
 STRING 12646
-// Abilities: A03J (Explosion 1), Hotkey (Hotkey - Normal)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -102838,7 +102838,7 @@ STRING 16066
 }
 
 STRING 16067
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -110300,12 +110300,6 @@ STRING 17064
 [|cff00FF00W|r] Flame Shot - [|cffffcc00Level 1|r]
 }
 
-STRING 17065
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. Base multiplier cannot exceed 2.40x.
-}
-
 STRING 17066
 // Abilities: A0UY (Flame Shot), Name (Name)
 {
@@ -110346,18 +110340,6 @@ STRING 17072
 // Abilities: A0UY (Flame Shot), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Flame Shot - [|cffffcc00Level 7|r]
-}
-
-STRING 17073
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. Base multiplier cannot exceed 2.40x.
-}
-
-STRING 17074
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. Base multiplier cannot exceed 2.40x.
 }
 
 STRING 17075
@@ -112062,6 +112044,22 @@ STRING 17328
 // Abilities: A0QP (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 Omega Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ? + 4.8% Max HP dmg|r|n|cff00ffffCooldown: <A0QP,Cool1> seconds|r
+}
+
+STRING 17329
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.15x. 
+}
+
+STRING 17330
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.30x. 
 }
 
 STRING 17331
@@ -121794,6 +121792,14 @@ STRING 18766
 Inventory Buildings
 }
 
+STRING 18767
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.45x. 
+}
+
 STRING 18768
 // Abilities: A0ZR (Toggle Harvest Engine), Ubertip (Tooltip - Normal - Extended)
 {
@@ -130287,7 +130293,7 @@ Q
 }
 
 STRING 20171
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -130921,7 +130927,7 @@ Q
 }
 
 STRING 20285
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
 {
 Q
 }
