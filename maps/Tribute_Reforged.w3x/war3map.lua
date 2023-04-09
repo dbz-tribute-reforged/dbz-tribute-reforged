@@ -23438,6 +23438,13 @@ end
 return true
 end
 
+function Trig_Kill_Hero_Give_PvP_Stats_Func009C()
+if (not (GetPlayerTechCountSimple(FourCC("R00O"), GetOwningPlayer(udg_StatMultUnit)) > 0)) then
+return false
+end
+return true
+end
+
 function Trig_Kill_Hero_Give_PvP_Stats_Actions()
 if (Trig_Kill_Hero_Give_PvP_Stats_Func001C()) then
 udg_GetiStarPlayer = GetOwningPlayer(udg_StatMultUnit)
@@ -23453,6 +23460,10 @@ udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(4.00, ((udg_PVPH
 udg_StatMultReal = (udg_StatMultReal * LoadRealBJ(34, udg_ID, udg_StatMultHashtable))
 if (Trig_Kill_Hero_Give_PvP_Stats_Func008C()) then
 udg_StatMultReal = (udg_StatMultReal * 1.50)
+else
+end
+if (Trig_Kill_Hero_Give_PvP_Stats_Func009C()) then
+udg_StatMultReal = (udg_StatMultReal * (1.00 + (0.15 * I2R(GetPlayerTechCountSimple(FourCC("R00O"), GetOwningPlayer(udg_StatMultUnit))))))
 else
 end
 udg_StatMultReal = (udg_StatMultReal * udg_GlobalStatMultiplier)
@@ -35703,20 +35714,27 @@ gg_trg_Add_Unit_To_StatMult = CreateTrigger()
 TriggerAddAction(gg_trg_Add_Unit_To_StatMult, Trig_Add_Unit_To_StatMult_Actions)
 end
 
+function Trig_Automatic_StatMod_Func001Func001Func001C()
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08M")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A0")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014")) then
+return true
+end
+if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E019")) then
+return true
+end
+return false
+end
+
 function Trig_Automatic_StatMod_Func001Func001C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08M"))) then
-return false
-end
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A0"))) then
-return false
-end
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H"))) then
-return false
-end
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E014"))) then
-return false
-end
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E019"))) then
+if (not Trig_Automatic_StatMod_Func001Func001Func001C()) then
 return false
 end
 return true

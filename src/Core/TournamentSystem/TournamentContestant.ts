@@ -20,7 +20,6 @@ export class UnitContestant {
     public oldMpPercent: number,
   ) {
     
-    BJDebugMsg("start " + GetUnitName(unit));
     let i = 0;
     this.item1 = UnitItemInSlot(unit, i++);
     this.item2 = UnitItemInSlot(unit, i++);
@@ -28,7 +27,6 @@ export class UnitContestant {
     this.item4 = UnitItemInSlot(unit, i++);
     this.item5 = UnitItemInSlot(unit, i++);
     this.item6 = UnitItemInSlot(unit, i++);
-    BJDebugMsg("done " + GetUnitName(unit));
   }
 
   getItem(index: number): item {
@@ -93,7 +91,7 @@ export class TournamentContestant {
 
     ForGroup(udg_StatMultPlayerUnits[playerId], () => {
       const unit = GetEnumUnit();
-      if (UnitHelper.isUnitTournamentViable(unit)) {
+      if (UnitHelper.isUnitTournamentViable(unit) && UnitHelper.isUnitAlive(unit)) {
         this.units.set(
           unit,
           new UnitContestant(unit, 
