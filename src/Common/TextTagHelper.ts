@@ -1,7 +1,7 @@
 import { Colorizer } from "./Colorizer";
 import { Vector2D } from "./Vector2D";
 import { UnitHelper } from "./UnitHelper";
-import { Constants } from "./Constants";
+import { Constants, Globals } from "./Constants";
 import { ForceHelper } from "./ForceHelper";
 
 export module TextTagHelper {
@@ -37,12 +37,18 @@ export module TextTagHelper {
     const showForce = CreateForce();
     tmpPos.setUnit(unit);
 
-    ForceHelper.addNearbyEnemyAlliedPlayers(
-      showForce,
-      tmpPos,
-      Constants.floatingTextVisionRange,
-      playerId
-    )
+
+    // ForceHelper.addNearbyEnemyAlliedPlayers(
+    //   showForce,
+    //   tmpPos,
+    //   Constants.floatingTextVisionRange,
+    //   playerId
+    // )
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      if (IsVisibleToPlayer(tmpPos.x, tmpPos.y, Constants.activePlayers[i])) {
+        ForceAddPlayer(showForce, Constants.activePlayers[i]);
+      }
+    }
     ForceHelper.addAllies(showForce, playerId);
 
     TextTagHelper.showTempText(
