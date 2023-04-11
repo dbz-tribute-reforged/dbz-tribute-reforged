@@ -1567,7 +1567,7 @@ udg_GlobalStatMultiplier = 0.50
 udg_GlobalXPMultiplier = 1.00
 udg_CatchupInteger = 0
 udg_UltimateModeLevel = 0
-udg_GetiStarBonuStartingGold = 4000
+udg_GetiStarBonuStartingGold = 2500
 udg_GetiStarBaseAlive = false
 udg_CatchupNumHeroes = 0
 udg_AutoTransformPlayerInt = 0
@@ -7569,7 +7569,7 @@ end
 end
 if (Trig_Infinite_Energy_Android_Loop_Func001Func004C()) then
 udg_TempInt4 = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
-SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (((0.01 * 0.30) + ((0.01 * 0.10) * RMinBJ(20.00, I2R(udg_PlayerKills[udg_TempInt4])))) * 0.03))))
+SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * (((0.01 * 0.80) + ((0.01 * 0.10) * RMinBJ(0.00, I2R(udg_PlayerKills[udg_TempInt4])))) * 0.03))))
 if (Trig_Infinite_Energy_Android_Loop_Func001Func004Func003C()) then
 udg_TempInt4 = IMaxBJ(50000, R2I((0.95 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit))))
 else
@@ -28911,11 +28911,6 @@ else
 end
 end
 if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func006C()) then
-udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-        RemoveLocation(udg_TempLoc)
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_Catchup_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -30476,7 +30471,7 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Scoreboard_Timer_Increment, 1.00)
 TriggerAddAction(gg_trg_Scoreboard_Timer_Increment, Trig_Scoreboard_Timer_Increment_Actions)
 end
 
-function Trig_Teleporter_Action_Func003Func008C()
+function Trig_Teleporter_Action_Func003Func010C()
 if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("H01Z"))) then
 return false
 end
@@ -30494,13 +30489,15 @@ function Trig_Teleporter_Action_Actions()
     udg_ID = GetHandleId(udg_TempUnit)
 udg_TempReal = LoadRealBJ(0, udg_ID, udg_TeleporterHashtable)
 if (Trig_Teleporter_Action_Func003C()) then
-SetUnitPositionLoc(udg_TempUnit, udg_TempLoc2)
-if (Trig_Teleporter_Action_Func003Func008C()) then
+        SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc2))
+        SetUnitY(udg_TempUnit, GetLocationY(udg_TempLoc2))
+if (Trig_Teleporter_Action_Func003Func010C()) then
 PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.10)
 else
 end
 SaveRealBJ(5.00, 0, udg_ID, udg_TeleporterHashtable)
 GroupAddUnitSimple(udg_TempUnit, udg_TeleporterUnitGroup)
+EnableTrigger(gg_trg_Teleporter_Loop)
 else
 udg_TempString = ("|cffff00ffTeleport CD: " .. (R2S(udg_TempReal) .. "s|r"))
 udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_TempUnit))
@@ -30535,13 +30532,24 @@ SaveRealBJ((udg_TempReal - 0.50), 0, udg_ID, udg_TeleporterHashtable)
 end
 end
 
+function Trig_Teleporter_Loop_Func002C()
+if (not (CountUnitsInGroup(udg_TeleporterUnitGroup) == 0)) then
+return false
+end
+return true
+end
+
 function Trig_Teleporter_Loop_Actions()
 ForGroupBJ(udg_TeleporterUnitGroup, Trig_Teleporter_Loop_Func001A)
+if (Trig_Teleporter_Loop_Func002C()) then
+DisableTrigger(gg_trg_Teleporter_Loop)
+else
+end
 end
 
 function InitTrig_Teleporter_Loop()
 gg_trg_Teleporter_Loop = CreateTrigger()
-TriggerRegisterTimerEventPeriodic(gg_trg_Teleporter_Loop, 0.50)
+TriggerRegisterTimerEventPeriodic(gg_trg_Teleporter_Loop, 1.00)
 TriggerAddAction(gg_trg_Teleporter_Loop, Trig_Teleporter_Loop_Actions)
 end
 
@@ -30549,10 +30557,7 @@ function Trig_Teleport_Lookout_Enter_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30576,10 +30581,7 @@ function Trig_Teleport_Lookout_Exit_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30603,10 +30605,7 @@ function Trig_Teleport_Popo_Carpet_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30630,10 +30629,7 @@ function Trig_Teleport_Popo_Carpet_2_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30657,10 +30653,7 @@ function Trig_Teleport_Namek_Pod_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30684,10 +30677,7 @@ function Trig_Teleport_Namek_Pod_2_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30711,10 +30701,7 @@ function Trig_Teleport_Namek_Frieza_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30738,10 +30725,7 @@ function Trig_Teleport_Namek_Frieza_2_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30765,10 +30749,7 @@ function Trig_Teleport_Future_Trunks_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30792,10 +30773,7 @@ function Trig_Teleport_Future_Trunks_2_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30819,10 +30797,7 @@ function Trig_Teleport_Future_Cell_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -30846,10 +30821,7 @@ function Trig_Teleport_Future_Cell_2_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
-return false
-end
-if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
 return false
 end
 return true
@@ -35438,7 +35410,7 @@ end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func047Func006C()
+function Trig_Add_Unit_To_StatMult_Func001Func047Func007C()
 if (not (GetPlayerState(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD) == 0)) then
 return false
 end
@@ -35670,8 +35642,9 @@ TriggerExecute(gg_trg_Geti_Star_Enable)
 SetPlayerTechMaxAllowedSwap(FourCC("u001"), 1, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("H01Z"), 20, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("u003"), 30, GetOwningPlayer(udg_StatMultUnit))
+SetPlayerTechMaxAllowedSwap(FourCC("h03O"), 5, GetOwningPlayer(udg_StatMultUnit))
 udg_GetiStarHeroArr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = udg_StatMultUnit
-if (Trig_Add_Unit_To_StatMult_Func001Func047Func006C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func047Func007C()) then
 SetPlayerStateBJ(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD, (udg_GetiStarFragmentBaseCost + udg_GetiStarBonuStartingGold))
 else
 end
@@ -37227,21 +37200,21 @@ end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func009Func002Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func008Func002Func002C()
 if (not (udg_StatMultAgi < 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func009Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func008Func002C()
 if (not (udg_StatMultAgi < 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func009C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func008C()
 if (not (udg_StatMultAgi < 1.50)) then
 return false
 end
@@ -37275,21 +37248,21 @@ udg_TempReal = 30.00
     udg_TempInt = GetSpellAbilityId()
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_StatMultReal = 1.00
 udg_StatMultStr = 2.50
-if (Trig_Oozaru_Vegeta_Skin_Change_Func009C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func008C()) then
 udg_StatMultStr = 1.50
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func009Func002C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func008Func002C()) then
 udg_StatMultStr = 2.00
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func009Func002Func002C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func008Func002Func002C()) then
 udg_StatMultStr = 2.60
 else
 udg_StatMultStr = 2.80
 end
 end
 end
+udg_StatMultReal = udg_SagaStatsStr
 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
 UnitAddAbilityBJ(FourCC("A0LS"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0LS"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0MY"), udg_StatMultUnit))
@@ -58525,17 +58498,17 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Lucario_Func015C()) then
-udg_StatMultReal = 1.80
+udg_StatMultReal = 1.75
 udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Lucario_Func016C()) then
-udg_StatMultReal = 2.00
+udg_StatMultReal = 1.90
 udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Lucario_Func017C()) then
-udg_StatMultReal = 2.10
+udg_StatMultReal = 2.00
 udg_TransformationAbility = FourCC("AUan")
 else
 end
@@ -62038,7 +62011,7 @@ function Trig_Transformations_Megumin_Func018C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A042"), udg_StatMultUnit) == 0)) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
 return false
 end
 return true
@@ -62049,16 +62022,6 @@ if (not (GetUnitAbilityLevelSwapped(FourCC("A048"), udg_StatMultUnit) == 0)) the
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Megumin_Func020C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A05Y"), udg_StatMultUnit) == 0)) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
 return false
 end
 return true
@@ -62171,14 +62134,6 @@ UnitAddAbilityBJ(FourCC("A048"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A048'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7974")
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-if (Trig_Transformations_Megumin_Func020C()) then
-UnitAddAbilityBJ(FourCC("A05Y"), udg_StatMultUnit)
-        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A05Y'))
-udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
-DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_429")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
@@ -62855,253 +62810,6 @@ end
 function InitTrig_Check_Walkability()
 gg_trg_Check_Walkability = CreateTrigger()
 TriggerAddAction(gg_trg_Check_Walkability, Trig_Check_Walkability_Actions)
-end
-
-function Trig_Saitama_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n03S"))) then
-return false
-end
-return true
-end
-
-function Trig_Saitama_Func003C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Saitama_Func004C()
-if (not (udg_TempString ~= "")) then
-return false
-end
-return true
-end
-
-function Trig_Saitama_Actions()
-udg_TempString = ""
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Saitama_Func003C()) then
-udg_TempString = ("|cffffcc00" .. ("Here, have a banana." .. "|r"))
-else
-end
-if (Trig_Saitama_Func004C()) then
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
-udg_TempLoc = GetUnitLoc(GetSellingUnit())
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-end
-
-function InitTrig_Saitama()
-gg_trg_Saitama = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Saitama, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
-TriggerAddCondition(gg_trg_Saitama, Condition(Trig_Saitama_Conditions))
-TriggerAddAction(gg_trg_Saitama, Trig_Saitama_Actions)
-end
-
-function Trig_Ainz_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n03R"))) then
-return false
-end
-return true
-end
-
-function Trig_Ainz_Func003Func001Func001C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Ainz_Func003Func001C()
-if (not (udg_TempReal < 10.00)) then
-return false
-end
-return true
-end
-
-function Trig_Ainz_Func003C()
-if (not (udg_TempReal < 5.00)) then
-return false
-end
-return true
-end
-
-function Trig_Ainz_Func004C()
-if (not (udg_TempString ~= "")) then
-return false
-end
-return true
-end
-
-function Trig_Ainz_Actions()
-udg_TempString = ""
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Ainz_Func003C()) then
-udg_TempString = ("|cffffcc00" .. ("Is that a runecraft?" .. "|r"))
-else
-if (Trig_Ainz_Func003Func001C()) then
-udg_TempString = ("|cffffcc00" .. ("Ainz Ooal Gown does not know defeat." .. "|r"))
-else
-if (Trig_Ainz_Func003Func001Func001C()) then
-udg_TempString = ("|cffffcc00" .. ("Applaud my supreme power!" .. "|r"))
-else
-end
-end
-end
-if (Trig_Ainz_Func004C()) then
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
-udg_TempLoc = GetUnitLoc(GetSellingUnit())
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-end
-
-function InitTrig_Ainz()
-gg_trg_Ainz = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Ainz, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
-TriggerAddCondition(gg_trg_Ainz, Condition(Trig_Ainz_Conditions))
-TriggerAddAction(gg_trg_Ainz, Trig_Ainz_Actions)
-end
-
-function Trig_El_Hermano_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n03U"))) then
-return false
-end
-return true
-end
-
-function Trig_El_Hermano_Func003C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_El_Hermano_Func004C()
-if (not (udg_TempString ~= "")) then
-return false
-end
-return true
-end
-
-function Trig_El_Hermano_Actions()
-udg_TempString = ""
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_El_Hermano_Func003C()) then
-udg_TempString = ("|cffffcc00" .. ((GetHeroProperName(GetBuyingUnit()) .. ", my forehead is bigger than yours.") .. "|r"))
-else
-end
-if (Trig_El_Hermano_Func004C()) then
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
-udg_TempLoc = GetUnitLoc(GetSellingUnit())
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-end
-
-function InitTrig_El_Hermano()
-gg_trg_El_Hermano = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_El_Hermano, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
-TriggerAddCondition(gg_trg_El_Hermano, Condition(Trig_El_Hermano_Conditions))
-TriggerAddAction(gg_trg_El_Hermano, Trig_El_Hermano_Actions)
-end
-
-function Trig_Chef_Satan_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n03T"))) then
-return false
-end
-return true
-end
-
-function Trig_Chef_Satan_Func003C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Chef_Satan_Func004C()
-if (not (udg_TempString ~= "")) then
-return false
-end
-return true
-end
-
-function Trig_Chef_Satan_Actions()
-udg_TempString = ""
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Chef_Satan_Func003C()) then
-udg_TempString = ("|cffffcc00" .. ((GetHeroProperName(GetBuyingUnit()) .. ", have you seen Chef?") .. "|r"))
-else
-end
-if (Trig_Chef_Satan_Func004C()) then
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
-udg_TempLoc = GetUnitLoc(GetSellingUnit())
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-end
-
-function InitTrig_Chef_Satan()
-gg_trg_Chef_Satan = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Chef_Satan, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
-TriggerAddCondition(gg_trg_Chef_Satan, Condition(Trig_Chef_Satan_Conditions))
-TriggerAddAction(gg_trg_Chef_Satan, Trig_Chef_Satan_Actions)
-end
-
-function Trig_Moro_Shop_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n042"))) then
-return false
-end
-return true
-end
-
-function Trig_Moro_Shop_Func003C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Moro_Shop_Func004C()
-if (not (udg_TempString ~= "")) then
-return false
-end
-return true
-end
-
-function Trig_Moro_Shop_Actions()
-udg_TempString = ""
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Moro_Shop_Func003C()) then
-udg_TempString = ("|cffffcc00" .. ("Gulp!" .. "|r"))
-else
-end
-if (Trig_Moro_Shop_Func004C()) then
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
-udg_TempLoc = GetUnitLoc(GetSellingUnit())
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-else
-end
-end
-
-function InitTrig_Moro_Shop()
-gg_trg_Moro_Shop = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Moro_Shop, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
-TriggerAddCondition(gg_trg_Moro_Shop, Condition(Trig_Moro_Shop_Conditions))
-TriggerAddAction(gg_trg_Moro_Shop, Trig_Moro_Shop_Actions)
 end
 
 function Trig_Regen_Items_Use_Func002C()
@@ -64627,11 +64335,6 @@ InitTrig_Saga_Unit_Loop()
 InitTrig_Saga_Unit_Get_Saga_Min_Base()
 InitTrig_Saga_Unit_Spawn_Protection()
 InitTrig_Check_Walkability()
-InitTrig_Saitama()
-InitTrig_Ainz()
-InitTrig_El_Hermano()
-InitTrig_Chef_Satan()
-InitTrig_Moro_Shop()
 InitTrig_Regen_Items_Use()
 InitTrig_Regen_Items_All_Looper()
 InitTrig_Regen_Items_Do_Regen()

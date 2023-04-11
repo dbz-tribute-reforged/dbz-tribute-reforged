@@ -44,6 +44,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public useInverseDamageScale: boolean = false,
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
+    public damageHeroes: boolean = true,
     public onlyDamageCapHeroes: boolean = true,
     public canDamageCaster: boolean = false,
     public maxDamageTicks: number = 20,
@@ -229,8 +230,13 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected dealDamageToUnit(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
     if (
-      UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) ||
       (
+        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer)
+        && (
+          this.damageHeroes || !IsUnitType(target, UNIT_TYPE_HERO)
+        )
+      )
+      || (
         this.canDamageCaster && 
         GetOwningPlayer(target) == input.casterPlayer &&
         IsUnitType(target, UNIT_TYPE_HERO)
@@ -361,6 +367,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       null
     );
 
+    if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
+      if (input.castUnit) {
+        GroupAddUnit(this.damagedGroup, input.castUnit);
+      }
+    }
+
     let sourceHPPercent = 0;
     if (this.scaleSourceHPType == AOEDamage.SCALE_HP_SOURCE_UNIT) {
       sourceHPPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
@@ -410,6 +422,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.useInverseDamageScale,
       this.useLastCastPoint,
       this.aoe, 
+      this.damageHeroes,
       this.onlyDamageCapHeroes,
       this.canDamageCaster,
       this.maxDamageTicks,
@@ -435,6 +448,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       useInverseDamageScale: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
+      damageHeroes: boolean;
       onlyDamageCapHeroes: boolean;
       canDamageCaster: boolean;
       maxDamageTicks: number;
@@ -463,6 +477,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.useInverseDamageScale = input.useInverseDamageScale;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
+    this.damageHeroes = input.damageHeroes;
     this.onlyDamageCapHeroes = input.onlyDamageCapHeroes;
     this.canDamageCaster = input.canDamageCaster;
     this.maxDamageTicks = input.maxDamageTicks;
