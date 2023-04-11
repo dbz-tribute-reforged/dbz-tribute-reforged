@@ -1473,7 +1473,7 @@ export function sonicPassive(customHero: CustomHero) {
   const sonicId = GetHandleId(customHero.unit);
   const upgLevel = 60;
   const upg2Level = 125;
-  const magnitudeMaxBase = 20;
+  const magnitudeMaxBase = 25;
   const magnitudeMaxUpg = 5;
   const magnitudeMaxUpg2 = 5;
   const magnitudeLowHPThreshold = 50;
@@ -1481,14 +1481,14 @@ export function sonicPassive(customHero: CustomHero) {
   const minMagnitudeBonus = 15;
   const magnitudeLossStunned = 0.95;
   const magnitudeLossStuck = 0.8;
-  const dmgAOE = 290;
+  const dmgAOE = 350;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.07;
+  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.08;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
-  const moveDistSpin = 0.5;
-  const moveDistSpinUpg = 0.025;
-  const moveDistSpinUpg2 = 0.025;
+  const moveDistSpin = 0.6;
+  const moveDistSpinUpg = 0.05;
+  const moveDistSpinUpg2 = 0.05;
   const oldPos = new Vector2D(0, 0);
   oldPos.setUnit(customHero.unit);
   const speedResetDist = 6000;

@@ -1939,9 +1939,10 @@ export module SimpleSpellSystem {
             const unit = GetEnumUnit();
             if (
               // TODO: turn this back on
-              IsUnitAlly(unit, player) &&
-              UnitHelper.isUnitTargetableForPlayer(unit, player, true) &&
-              GetUnitTypeId(unit) != Id.schala
+              IsUnitAlly(unit, player)
+              && UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
+              && IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+              && GetUnitTypeId(unit) != Id.schala
               // true
             ) {
               Globals.tmpVector.setPos(GetUnitX(unit), GetUnitY(unit));

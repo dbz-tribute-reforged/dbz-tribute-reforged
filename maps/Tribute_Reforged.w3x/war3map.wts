@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.81b
+DBZ Tribute |cffffcc00Reforged 0.81c
 }
 
 STRING 4
@@ -983,6 +983,12 @@ STRING 154
 Kid Buu
 }
 
+STRING 155
+// Units: h00N (Geti Star Maintenance Worker), Ubertip (Tooltip - Extended)
+{
+Geti Star Maintenance workers can harvest resources (10), build basic structures, and repair Cooler and the Geti Star.
+}
+
 STRING 156
 // Units: h00N (Geti Star Maintenance Worker), Name (Name)
 {
@@ -1083,6 +1089,15 @@ STRING 172
 // Units: u003 (Geti Star Resource Transporter), Name (Name)
 {
 Geti Star Resource Transporter
+}
+
+STRING 173
+// Units: u003 (Geti Star Resource Transporter), Ubertip (Tooltip - Extended)
+{
+Serves as a drop off point for harvested resources. Trains Geti Star Workers and creates Metal Cooler clones.
+Limit 30.
+
+|cffffcc00Provides 10 food.|r
 }
 
 STRING 174
@@ -2647,11 +2662,13 @@ rhpx
 }
 
 STRING 431
-// Units: u003 (Geti Star Resource Transporter), Ubertip (Tooltip - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
-Serves as a drop off point for harvested resources. Trains Geti Star Workers and creates Metal Cooler clones.
+|cffff8800Explosion Mastery|r grants |cff00ffff+0.8% max mana regeneration|r.
 
-|cffffcc00Provides 10 food.|r
+|cffffcc00Evasion|r - <A04G,DataD1,%>% 
+|cffffcc00Critical|r - <A04G,DataA1>% 
+|cffffcc00Damage|r - <A04G,DataB1,.> times
 }
 
 STRING 432
@@ -2751,14 +2768,6 @@ STRING 444
 // Abilities: A0C0 (Vanishing Ball), Name (Name)
 {
 Vanishing Ball
-}
-
-STRING 445
-// Units: H01Z (Half Cyborg / Half Changling), Ubertip (Tooltip - Extended)
-{
-Build a Metal Cooler copy with 15% stats. Kills provide gold and 15% of stats. Limit 20.
-
-|cffff00ffBuild time: 25 seconds|r
 }
 
 STRING 446
@@ -16635,6 +16644,15 @@ STRING 2654
 You need to absorb android 18!
 }
 
+STRING 2655
+// Units: H01Z (Half Cyborg / Half Changling), Ubertip (Tooltip - Extended)
+{
+Build a Metal Cooler copy with 15% stats. Kills provide gold and 15% of stats. 
+Limit 20.
+
+|cffff00ffBuild time: 25 seconds|r
+}
+
 STRING 2656
 // Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
@@ -25032,6 +25050,14 @@ STRING 4005
 // Abilities: A00U (Dragon Fist), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level %d|r]
+}
+
+STRING 4006
+// Units: h03O (Geti Star Super Worker), Ubertip (Tooltip - Extended)
+{
+Geti Star Super Workers are used to build advanced structures. They have a larger resource capacity (125), and can survive much longer than regular workers.
+
+Limit 5.
 }
 
 STRING 4007
@@ -50084,7 +50110,7 @@ Type "r" to revert.
 Transformations:
 [lvl 35]  1.75x "fp" [unlocks Explosion 2]
 [lvl 85]  2.00x "fp" [unlocks Explosion 3]
-[lvl 125] 2.25x "fp" [unlocks Manatite]
+[lvl 125] 2.25x "fp" 
 [lvl 150] 2.50x "fp" [unlocks Explosion 4]
 [lvl 200] 2.60x "fp" [unlocks Explosion 5]
 
@@ -73494,22 +73520,10 @@ STRING 11646
 Increases the attack range of Geti Star Defense buildings by +400, HP by 10000 and HP regen by 400%.
 }
 
-STRING 11647
-// Units: h00N (Geti Star Maintenance Worker), Ubertip (Tooltip - Extended)
-{
-Geti Star Maintenance workers can harvest resources (15), build basic structures, and repair Cooler and the Geti Star.
-}
-
 STRING 11648
 // Doodads: D01O (Bench Wood Pathable), Name (Name)
 {
 Bench Wood Pathable
-}
-
-STRING 11649
-// Units: h03O (Geti Star Super Worker), Ubertip (Tooltip - Extended)
-{
-Geti Star Super Workers are used to build advanced structures. They have a larger resource capacity (175), and can survive much longer than regular workers.
 }
 
 STRING 11650
@@ -112331,16 +112345,6 @@ STRING 17370
 (Buu)
 }
 
-STRING 17371
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
-{
-|cffff8800Explosion Mastery|r grants |cff00ffff+0.3% max mana regeneration|r and |cff00ffff+0.1% max mana regeneration|r per enemy hero kill (max 20 kills).
-
-|cffffcc00Evasion|r - <A04G,DataD1,%>% 
-|cffffcc00Critical|r - <A04G,DataA1>% 
-|cffffcc00Damage|r - <A04G,DataB1,.> times
-}
-
 STRING 17372
 // Abilities: A0VI (Tyranno Flame), EditorSuffix (Editor Suffix)
 {
@@ -118794,9 +118798,9 @@ Transformations:
 [lvl 20]  1.10x "fp"
 [lvl 30]  1.30x "fp"
 [lvl 50]  1.50x "fp"
-[lvl 80]  1.80x "fp" [+0.3x Macho Brace]
-[lvl 120] 2.00x "fp"
-[lvl 150] 2.10x "fp" [+0.4x Macho Brace]
+[lvl 80]  1.75x "fp" [+0.3x Macho Brace]
+[lvl 120] 1.90x "fp"
+[lvl 150] 2.00x "fp" [+0.4x Macho Brace]
 [lvl 200] [|cff00ffffUltimate Choice|r]
 (Requires removed Macho Brace)
 "|cff00ff00mega|r" - Mega Lucario

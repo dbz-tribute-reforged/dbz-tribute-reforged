@@ -317,12 +317,10 @@ export function CustomUiTest() {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), 0);
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MySpellPowerBar", 0), 0);
-  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), 0 + " / " + 0);
-  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), I2S(0) + "%");
+  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), I2S(0) + "%");
   BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), 0 + " / " + 0);
-	BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
 	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), "100%");
 	
 	const abilityHotBar = new AbilityButtonHotbar(
@@ -389,63 +387,63 @@ export function CustomUiTest() {
 	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.04, 0.02), 
 	// ).setRenderVisible(false);
 
-	const heroStatStrengthText = new BasicTextFrame(
-		"heroStatStrengthText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.10, 0.003), 
-		"|cffff2020STR:|n0|r",
-	).setRenderVisible(false);
+	// const heroStatStrengthText = new BasicTextFrame(
+	// 	"heroStatStrengthText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.04, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.10, 0.003), 
+	// 	"|cffff2020STR:|n0|r",
+	// ).setRenderVisible(false);
 	
-	const heroStatAgilityText = new BasicTextFrame(
-		"heroStatAgilityText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.06, 0.003), 
-		"|cff20ff20AGI:|n0|r",
-	).setRenderVisible(false);
+	// const heroStatAgilityText = new BasicTextFrame(
+	// 	"heroStatAgilityText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.04, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.06, 0.003), 
+	// 	"|cff20ff20AGI:|n0|r",
+	// ).setRenderVisible(false);
 	
-	const heroStatIntelligenceText = new BasicTextFrame(
-		"heroStatIntelligenceText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
-		"|cff20ffffINT:|n0|r",
-	).setRenderVisible(false);
+	// const heroStatIntelligenceText = new BasicTextFrame(
+	// 	"heroStatIntelligenceText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.04, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+	// 	"|cff20ffffINT:|n0|r",
+	// ).setRenderVisible(false);
 
-	const heroArmorText = new BasicTextFrame(
-		"heroArmorText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
-		"|cffffff20ARMR:|n0|r",
-	).setRenderVisible(false);
+	// const heroArmorText = new BasicTextFrame(
+	// 	"heroArmorText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.04, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+	// 	"|cffffff20ARMR:|n0|r",
+	// ).setRenderVisible(false);
 
-	const heroMSText = new BasicTextFrame(
-		"heroBaseMSText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
-		"|cffffff20MS:|n0|r",
-	).setRenderVisible(false);
+	// const heroMSText = new BasicTextFrame(
+	// 	"heroBaseMSText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.04, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+	// 	"|cffffff20MS:|n0|r",
+	// ).setRenderVisible(false);
 
-	const unitNameText = new BasicTextFrame(
-		"unitNameText",
-		grandpa,
-		"EscMenuLabelTextTemplate",
-		0,
-		new Vector2D(0.1, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
-		"?",
-	).setRenderVisible(false);
+	// const unitNameText = new BasicTextFrame(
+	// 	"unitNameText",
+	// 	grandpa,
+	// 	"EscMenuLabelTextTemplate",
+	// 	0,
+	// 	new Vector2D(0.1, 0.02), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+	// 	"?",
+	// ).setRenderVisible(false);
 }

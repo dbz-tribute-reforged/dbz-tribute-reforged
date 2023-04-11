@@ -128,25 +128,18 @@ export function updateHeroAbilityCD(heroAbility: CustomAbility, index: number, c
 
 export function updateSelectedUnitBars(
   unit: unit,
-  currentHp: string, 
-  maxHp: string, 
-  currentMp: string,
-  maxMp: string,
-  currentSp: string,
-  maxSp: string,
+  hpPct: string,
+  mpPct: string,
+  spPct: string,
   percentSp: number,
   spellPowerText: string,
-  level: string,
-  percentXp: number,
 ) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), percentSp);
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), percentXp);
-  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
-  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
-  BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), currentSp + " / " + maxSp);
-  BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
+  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), hpPct);
+  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), mpPct);
+  BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), spPct);
 	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), spellPowerText);
 }
 
@@ -529,22 +522,20 @@ export function CustomPlayerTest() {
 
       if (unit) {
         // make sure strings dont desync
-        const currentHp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_LIFE))));
-        const maxHp = I2S(BlzGetUnitMaxHP(unit));
-        const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
-        const maxMp = I2S(BlzGetUnitMaxMana(unit));
+        const hpPctString = I2S(R2I(Math.ceil(GetUnitLifePercent(unit)*100)));
+        const mpPctString = I2S(R2I(Math.ceil(GetUnitManaPercent(unit)*100)));
 
         let currentSp = "0";
         let maxSp = "0";
         let percentSp = 0;
 
-        let percentXp = 0;
+        // let percentXp = 0;
         if (IsUnitType(unit, UNIT_TYPE_HERO)) {
-          const currentLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit));
-          const nextLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
-          const currentXp = GetHeroXP(unit) - currentLevelXp;
-          const maxXp = nextLevelXp - currentLevelXp;
-          percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp));
+          // const currentLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit));
+          // const nextLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
+          // const currentXp = GetHeroXP(unit) - currentLevelXp;
+          // const maxXp = nextLevelXp - currentLevelXp;
+          // percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp));
           const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
           if (customHero) {
             currentSp = I2S(R2I(customHero.getCurrentSP()));
@@ -552,33 +543,33 @@ export function CustomPlayerTest() {
             percentSp = 100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP()));
           }
         }
-        const level = I2S(GetUnitLevel(unit));
+        const spText = currentSp + "/" + maxSp;
 
-        // update stats
-        let nameString = "";
-        const armrString = "|cffffff20ARMR:|n" + R2SW(BlzGetUnitArmor(unit), 2, 2) + "|r";
-        const msString = "|cff808080MS:|n" + R2SW(GetUnitMoveSpeed(unit), 2, 2) + "|r";
-        let strength = "|cffff2020STR:|n";
-        let agility = "|cff20ff20AGI:|n";
-        let intelligence = "|cff20ffffINT:|n";
+        // // update stats
+        // let nameString = "";
+        // const armrString = "|cffffff20ARMR:|n" + R2SW(BlzGetUnitArmor(unit), 2, 2) + "|r";
+        // const msString = "|cff808080MS:|n" + R2SW(GetUnitMoveSpeed(unit), 2, 2) + "|r";
+        // let strength = "|cffff2020STR:|n";
+        // let agility = "|cff20ff20AGI:|n";
+        // let intelligence = "|cff20ffffINT:|n";
 
-        if (IsUnitType(unit, UNIT_TYPE_HERO)) {
-          // strength += I2S(GetHeroStr(unit, true));
-          // agility += I2S(GetHeroAgi(unit, true));
-          // intelligence += I2S(GetHeroInt(unit, true));
-          strength += convertIntToCommaString(GetHeroStr(unit, true));
-          agility += convertIntToCommaString(GetHeroAgi(unit, true));
-          intelligence += convertIntToCommaString(GetHeroInt(unit, true));
-          nameString += GetHeroProperName(unit);
-        } else {
-          strength += "0";
-          agility += "0";
-          intelligence += "0";
-          nameString += GetUnitName(unit);
-        }
-        strength += "|r";
-        agility += "|r";
-        intelligence += "|r";
+        // if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+        //   // strength += I2S(GetHeroStr(unit, true));
+        //   // agility += I2S(GetHeroAgi(unit, true));
+        //   // intelligence += I2S(GetHeroInt(unit, true));
+        //   strength += convertIntToCommaString(GetHeroStr(unit, true));
+        //   agility += convertIntToCommaString(GetHeroAgi(unit, true));
+        //   intelligence += convertIntToCommaString(GetHeroInt(unit, true));
+        //   nameString += GetHeroProperName(unit);
+        // } else {
+        //   strength += "0";
+        //   agility += "0";
+        //   intelligence += "0";
+        //   nameString += GetUnitName(unit);
+        // }
+        // strength += "|r";
+        // agility += "|r";
+        // intelligence += "|r";
 
         let spellPowerText = "100%";
         const unitOwner = GetOwningPlayer(unit);
@@ -597,18 +588,17 @@ export function CustomPlayerTest() {
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
           updateSelectedUnitBars(
             unit, 
-            currentHp, maxHp, 
-            currentMp, maxMp, 
-            currentSp, maxSp, percentSp, 
+            hpPctString,
+            mpPctString,
+            spText, percentSp, 
             spellPowerText,
-            level, percentXp
           );
-          BlzFrameSetText(BlzGetFrameByName("unitNameText", 0), nameString);
-          BlzFrameSetText(BlzGetFrameByName("heroArmorText", 0), armrString);
-          BlzFrameSetText(BlzGetFrameByName("heroBaseMSText", 0), msString);
-          BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
-          BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
-          BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
+          // BlzFrameSetText(BlzGetFrameByName("unitNameText", 0), nameString);
+          // BlzFrameSetText(BlzGetFrameByName("heroArmorText", 0), armrString);
+          // BlzFrameSetText(BlzGetFrameByName("heroBaseMSText", 0), msString);
+          // BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
+          // BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
+          // BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
           if (Globals.customPlayers[playerId].usingCustomUI) {
             BlzFrameSetVisible(unitPanel, false);
             BlzFrameSetVisible(inventoryCover, false);

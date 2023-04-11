@@ -8,6 +8,7 @@ import { Globals, Constants } from "Common/Constants";
 // hides first 5 command buttons
 // sets parent of inventory to parent of bottom right command buttons
 export function setupCustomUI(player: player, mode: number) {
+  return;
 	const playerId = GetPlayerId(player);
 	if (!Globals.canUseCustomUi) {
 		DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, 

@@ -146,7 +146,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 30,
+    costAmount: 29,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -164,8 +164,8 @@ export const AbilitiesList = [
       title: "(V) Deflect",
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
-        "Nearby enemies are repelled and incoming beams are deflected during this period.|n" +
-        "Cost: 30 SP|nCD: 2"
+        "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
+        "Cost: 29 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
