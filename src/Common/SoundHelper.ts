@@ -1542,7 +1542,7 @@ export module SoundHelper {
       // megumin
       case Id.meguminManatite:
         if (unitId == Id.megumin) {
-          if (rng < 25) {
+          if (rng < 5) {
             playSoundOnUnit(unit, "Audio/Voice/Megumin/Bakuretsu.mp3", 5929);
           }
         }

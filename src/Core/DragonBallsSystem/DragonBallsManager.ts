@@ -426,14 +426,14 @@ export class DragonBallsManager {
     const y = GetUnitY(shenron);
     // DestroyEffect(
     //   AddSpecialEffect(
-    //     "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+    //     "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
     //     x, y,
     //   )
     // );
     
     DestroyEffect(
       AddSpecialEffect(
-        "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
+        "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         x, y,
       )
     );

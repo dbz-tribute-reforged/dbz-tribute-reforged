@@ -41,7 +41,7 @@ export class FarmingComponent implements Serializable<FarmingComponent> {
     public duration: number = 1000,
     public sfxSizeStart: number = 0.5,
     public sfxSizeEnd: number = 1.0,
-    public sfxBase: string = "Doodads\\LordaeronSummer\\Plants\\Wheat\\Wheat.mdl",
+    public sfxBase: string = "Doodads/LordaeronSummer/Plants/Wheat/Wheat.mdl",
     public growthFarmland: number = 1.0,
     public growthGrass: number = 1.0,
     public growthDirt: number = 1.0,
