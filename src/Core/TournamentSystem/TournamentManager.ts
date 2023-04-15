@@ -1,7 +1,7 @@
 import { Tournament, TournamentState } from "./Tournament";
 import { FinalBattle } from "./FinalBattle";
 import { TournamentData } from "./TournamentData";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { Budokai } from "./Budokai";
 import { UnitHelper } from "Common/UnitHelper";
 
@@ -179,21 +179,26 @@ export class TournamentManager {
     const tournamentTimerDialog = CreateTimerDialog(tournamentIntervalTimer);
 
     TimerStart(CreateTimer(), initialDelay, false, () => {
-      TimerStart(tournamentIntervalTimer, timerDuration, timerRepeat, () => {
-        TournamentManager.getInstance().startTournament(tournamentName);
-        const currentTournament = TournamentManager.getInstance().currentTournament;
+      if (
+        tournamentName == TournamentData.finalBattleName
+        && !Globals.isFBSimTest
+      ) {
+        TimerStart(tournamentIntervalTimer, timerDuration, timerRepeat, () => {
+          TournamentManager.getInstance().startTournament(tournamentName);
+          const currentTournament = TournamentManager.getInstance().currentTournament;
+  
+          if (currentTournament && currentTournament.name == tournamentName) {
+            DestroyTimer(tournamentIntervalTimer);
+            DestroyTimerDialog(tournamentTimerDialog);
+            DestroyTrigger(tournamentStartTrig);
+          } else {
+            // Logger.LogDebug("Another tournament is active...");
+          }
+        });
 
-        if (currentTournament && currentTournament.name == tournamentName) {
-          DestroyTimer(tournamentIntervalTimer);
-          DestroyTimerDialog(tournamentTimerDialog);
-          DestroyTrigger(tournamentStartTrig);
-        } else {
-          // Logger.LogDebug("Another tournament is active...");
-        }
-      });
-
-      TimerDialogSetTitle(tournamentTimerDialog, tournamentName);
-      TimerDialogDisplay(tournamentTimerDialog, true);
+        TimerDialogSetTitle(tournamentTimerDialog, tournamentName);
+        TimerDialogDisplay(tournamentTimerDialog, true);
+      }
       DestroyTimer(GetExpiredTimer());
     });
   }

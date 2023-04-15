@@ -1137,6 +1137,33 @@ export function CustomPlayerTest() {
     }
   });
 
+  const sagasTrigger = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(sagasTrigger, Player(i), "-saga", true);
+  }
+  TriggerAddAction(sagasTrigger, () => {
+    if (
+      !Globals.isMainGameStarted 
+      && GetTriggerPlayer() == Globals.hostPlayer
+    ) {
+      if (Globals.sagaSystemMode == 0) {
+        Globals.sagaSystemMode = 1;
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 
+          5, 
+          "Old sagas activated"
+        );
+      } else {
+        Globals.sagaSystemMode = 0;
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 
+          5, 
+          "Fast sagas activated"
+        );
+      }
+    }
+  });
+
 
   const zanzoToggleTrigger = CreateTrigger();
   for (let i = 0; i < Constants.maxActivePlayers; ++i) {

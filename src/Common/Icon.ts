@@ -1,6 +1,6 @@
 export class Icon implements Serializable<Icon> {
-  static readonly defaultEnabled = "Replaceabletextures\\CommandButtons\\BTNSelectHeroOn.blp";
-  static readonly defaultDisabled = "Replaceabletextures\\CommandButtonsDisabled\\DISBTNSelectHeroOn.blp";
+  static readonly defaultEnabled = "Replaceabletextures/CommandButtons/BTNSelectHeroOn.blp";
+  static readonly defaultDisabled = "Replaceabletextures/CommandButtonsDisabled/DISBTNSelectHeroOn.blp";
 
   constructor(
     public enabled: string = Icon.defaultEnabled, 

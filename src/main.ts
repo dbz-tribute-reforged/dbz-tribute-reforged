@@ -136,12 +136,12 @@ function tsPostMain() {
   });
 
   CameraZoom.onInit();
-  PlayMusic("Audio\\Music\\ChaLaHeadChaLaIntro.mp3");
+  PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
 }
 
 function playLobbyMusic() {
-  // PlayMusic("Audio\\Music\\DBSuperOp2.mp3");
-  PlayMusic("Audio\\Music\\GatoSong.mp3");
+  // PlayMusic("Audio/Music/DBSuperOp2.mp3");
+  PlayMusic("Audio/Music/GatoSong.mp3");
 }
 
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsPostMain);

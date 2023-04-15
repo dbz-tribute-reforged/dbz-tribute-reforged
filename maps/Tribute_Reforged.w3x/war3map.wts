@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.81c
+DBZ Tribute |cffffcc00Reforged 0.82
 }
 
 STRING 4
@@ -29,7 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 67+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 69+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -2770,6 +2770,17 @@ STRING 444
 Vanishing Ball
 }
 
+STRING 445
+// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
+|cffffff00+1% spin damage per hero level up to +100%.
+x2 spin damage when above 15 speed.
+Maximum speed decreases when below 75% HP.|r
+|cff00FF00Damage: Agi * Sonic Speed
+|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
+}
+
 STRING 446
 // Upgrades: R00M (Cannibalize), Name (Name)
 {
@@ -3071,9 +3082,11 @@ STRING 495
 }
 
 STRING 496
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Units: h0AC (Warehouse), Ubertip (Tooltip - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> seconds|r
+|cff00ffffBuild Requirement: 1 crop|r
+A warehouse to store food. Max 5.
+|cffffff00Every 30s, +1 crop for each stack of crops (up to 5 slots).|r
 }
 
 STRING 497
@@ -3736,18 +3749,11 @@ STRING 604
 }
 
 STRING 605
-// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
+// Units: h0AF (Super Warehouse), Ubertip (Tooltip - Extended)
 {
-A hero with one extremely powerful spell: |cffff4422Explosion|r.
-
-|cffff2222Explosion:|r Spells deal +20% Max HP damage.
-|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+|cff00ffffBuild Requirement: 20 crops of 1 type.|r
+An advanced warehouse that is better at storing food.
+|cffffff00Every 30s, +2 crops for each stack of crops (up to 5 slots). This is +1 more than a normal warehouse.|r
 }
 
 STRING 606
@@ -8304,27 +8310,27 @@ Fat Buu Candy
 }
 
 STRING 1306
-// Items: I00V (Human Candy), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Human Candy
+Every 30s, increases crops stored by +1 per slot.
 }
 
 STRING 1307
-// Items: I00V (Human Candy), Description (Description)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Gives xp and stats
+Every 30s, increases crops stored by +2 per slot.
 }
 
 STRING 1308
-// Items: I00W (Monster Candy), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Monster Candy
+Every 30s, increases crops stored by +3 per slot.
 }
 
 STRING 1309
-// Items: I00W (Monster Candy), Description (Description)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Gives xp and stats
+Every 30s, increases crops stored by +4 per slot.
 }
 
 STRING 1310
@@ -8587,21 +8593,21 @@ Completed Potara Fusion
 }
 
 STRING 1352
-// Items: I021 (Saiyan log), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Saiyan log
+Every 30s, increases crops stored by +5 per slot.
 }
 
 STRING 1353
-// Items: I021 (Saiyan log), Description (Description)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa and Raditz log all of their battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +2 per slot.
 }
 
 STRING 1354
-// Items: I021 (Saiyan log), Ubertip (Tooltip - Extended)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa and Raditz log all of their battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +3 per slot.
 }
 
 STRING 1355
@@ -8948,39 +8954,43 @@ Frozenhelfire
 }
 
 STRING 1410
-// Items: I02C (Frieza's log), Name (Name)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza's log
+Every 30s, increases crops stored by +4 per slot.
 }
 
 STRING 1411
-// Items: I02C (Frieza's log), Description (Description)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza logs all of his battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +5 per slot.
 }
 
 STRING 1412
-// Items: I02C (Frieza's log), Ubertip (Tooltip - Extended)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza logs all of his battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +6 per slot.
 }
 
 STRING 1413
-// Items: I02D (Power of the Makyo Star), Name (Name)
+// Upgrades: R00C (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Power of the Makyo Star
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Unlocks the Crop Circle ability for Super Warehouses, allowing them to teleport their crops.
 }
 
 STRING 1414
-// Items: I02D (Power of the Makyo Star), Description (Description)
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
-Holds the power of the Makyo star.
+|cffffff00+0.10x str mult
++0.05x agi mult
++0.05x int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 1415
-// Items: I02D (Power of the Makyo Star), Ubertip (Tooltip - Extended)
+// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
 {
-Holds the power of the Makyo star.
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10. (Corruption passive is for melee only)
 }
 
 STRING 1416
@@ -9003,63 +9013,63 @@ Schala channels for 1s and then transports nearby allies to the target location.
 }
 
 STRING 1419
-// Items: I02F (Bojack's Power), Name (Name)
+// Items: I03R (Dimension Sword S [1/5]), Description (Description)
 {
-Bojack's Power
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10. (Corruption passive is for melee only)
 }
 
 STRING 1420
-// Items: I02F (Bojack's Power), Description (Description)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-The power of Bojack.
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 1421
-// Items: I02F (Bojack's Power), Ubertip (Tooltip - Extended)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-The power of Bojack.
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
 }
 
 STRING 1422
-// Items: I02G (Demonic Power), Name (Name)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Demonic Power
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
 }
 
 STRING 1423
-// Items: I02G (Demonic Power), Description (Description)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Ancient powers long hidden are awakened within... but will it help?
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
 }
 
 STRING 1424
-// Items: I02G (Demonic Power), Ubertip (Tooltip - Extended)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Ancient powers long hidden are awakened within... but will it help?
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
 }
 
 STRING 1425
-// Items: I02H (Power of a Dragon), Name (Name)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Power of a Dragon
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
 }
 
 STRING 1426
-// Items: I02H (Power of a Dragon), Description (Description)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Calls upon the power of the Eternal Dragon to give you power.
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
 }
 
 STRING 1427
-// Items: I02H (Power of a Dragon), Ubertip (Tooltip - Extended)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Calls upon the power of the Eternal Dragon to give you power.
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
 }
 
 STRING 1428
-// Items: I02I (Ultimate Power of the Omega), Name (Name)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Ultimate Power of the Omega
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
 }
 
 STRING 1429
@@ -9129,63 +9139,80 @@ B
 }
 
 STRING 1440
-// Items: I002 (Namek log), Name (Name)
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-Namek log
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
 }
 
 STRING 1441
-// Items: I002 (Namek log), Description (Description)
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
 {
-Power received from defeating a Namek saga.
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 1442
-// Items: I002 (Namek log), Ubertip (Tooltip - Extended)
 {
-Power received from defeating a Namek saga.
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.50x "fp"
+
+|cff00ff00Pick ONE of the following:|r
+[lvl 150] "|cff00afffprincess valiant|r" [Nuke + Slow]
+[lvl 150] "|cffffcc00princess force|r" [AOE Heal]
+
+|cffff8800Gourmet:|r +25 armor when above 50% HP or while eating.
 }
 
 STRING 1443
-// Items: I005 (Bionic Implant), Name (Name)
+// Abilities: A0B7 (Princess Force), Ubertip (Tooltip - Normal - Extended)
 {
-Bionic Implant
+Pecorine shares her food with all nearby allies, instantly healing their HP.
+|cff00ff00Damage: 3 * Str + 5% Max HP
+|cff00ffffCooldown: <A0B7,Cool1> seconds
 }
 
 STRING 1444
-// Items: I007 (Future Log), Name (Name)
 {
-Future Log
+[|cffffcc00Talent|r] Princess Valiant
+Pecorine can now swing her sword to cripple nearby enemy units, dealing massive damage to them and slowing them.
 }
 
 STRING 1445
-// Items: I007 (Future Log), Description (Description)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-Power ups for killing Future Sagas.
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool1,.> seconds|r
 }
 
 STRING 1446
-// Items: I007 (Future Log), Ubertip (Tooltip - Extended)
 {
-Power ups for killing Future Sagas.
+[|cffffcc00Talent|r] Princess Force
+Pecorine can now instantly burst heal all nearby allies.
 }
 
 STRING 1447
-// Items: I00A (Meat Fruit), Name (Name)
+// Units: H00V (Gourmet Guild Master), Name (Name)
 {
-Meat Fruit
+Gourmet Guild Master
 }
 
 STRING 1448
-// Items: I00A (Meat Fruit), Description (Description)
+// Units: H00V (Gourmet Guild Master), Propernames (Proper Names)
 {
-Meat Fruit
+Pecorine
 }
 
 STRING 1449
-// Items: I00A (Meat Fruit), Ubertip (Tooltip - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-Meat Fruit
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool3,.> seconds|r
 }
 
 STRING 1450
@@ -9772,27 +9799,33 @@ R
 }
 
 STRING 1547
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Name (Name)
+// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
 {
-Travel to ??? |cffffff00(Q)|r
+(Tavern)
 }
 
 STRING 1548
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Travel to the next programmed destination of this pod.
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool1,.> seconds|r
 }
 
 STRING 1549
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Description (Description)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Not yet implemented
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool3,.> seconds|r
 }
 
 STRING 1550
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Tip (Tooltip - Basic)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Travel to ??? |cffffff00(Q)|r
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool4,.> seconds|r
 }
 
 STRING 1551
@@ -10218,25 +10251,31 @@ Q
 }
 
 STRING 1620
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Name (Name)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Travel to ??? |cffffff00(Q)|r
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool5,.> seconds|r
 }
 
 STRING 1621
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Tip (Tooltip - Basic)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Travel to ??? |cffffff00(Q)|r
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool6,.> seconds|r
 }
 
 STRING 1622
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Travel to the next programmed destination of this pod.
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool7,.> seconds|r
 }
 
 STRING 1623
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A06V (Guardian's Devotion), EditorSuffix (Editor Suffix)
 {
 new
 }
@@ -10390,93 +10429,99 @@ Crocodile Mother
 }
 
 STRING 1647
-// Items: I030 (Namek log), Name (Name)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Namek log
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 2|r]
 }
 
 STRING 1648
-// Items: I030 (Namek log), Description (Description)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Power received from defeating a Namek saga.
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 3|r]
 }
 
 STRING 1649
-// Items: I030 (Namek log), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Power received from defeating a Namek saga.
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 4|r]
 }
 
 STRING 1650
-// Items: I031 (+5 Stats), Name (Name)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-+5 Stats
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 5|r]
 }
 
 STRING 1651
-// Items: I031 (+5 Stats), Description (Description)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Grants +5 stats to your hero.
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 6|r]
 }
 
 STRING 1652
-// Items: I031 (+5 Stats), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Grants +5 stats to your hero.
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 1|r]
 }
 
 STRING 1653
-// Items: I032 (+1 Level), Name (Name)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-+1 Level
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 7|r]
 }
 
 STRING 1654
-// Items: I032 (+1 Level), Description (Description)
+// Abilities: A07F (Princess Splash), Name (Name)
 {
-Grants +1 level to your hero.
+Princess Splash
 }
 
 STRING 1655
-// Items: I032 (+1 Level), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Researchtip (Tooltip - Learn)
 {
-Grants +1 level to your hero.
+[|cff00ff00Q|r] Learn Princess Splash - [|cffffcc00Level %d|r]
 }
 
 STRING 1656
-// Items: I033 (+HP), Name (Name)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-+HP
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 9|r]
 }
 
 STRING 1657
-// Items: I033 (+HP), Description (Description)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Grants 1% + 100 health to your hero
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 8|r]
 }
 
 STRING 1658
-// Items: I033 (+HP), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Tip (Tooltip - Normal)
 {
-Grants 1% + 100 health to your hero
+[|cff00ff00Q|r] Princess Splash - [|cffffcc00Level 10|r]
 }
 
 STRING 1659
-// Items: I034 (+Mana), Name (Name)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-+Mana
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool8,.> seconds|r
 }
 
 STRING 1660
-// Items: I034 (+Mana), Description (Description)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Grants 1% + 70 mana to your hero
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool9,.> seconds|r
 }
 
 STRING 1661
-// Items: I034 (+Mana), Ubertip (Tooltip - Extended)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-Grants 1% + 70 mana to your hero
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool10,.> seconds|r
 }
 
 STRING 1662
@@ -10498,9 +10543,11 @@ STRING 1664
 }
 
 STRING 1665
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07F (Princess Splash), Researchubertip (Tooltip - Learn - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool1,.> - <A07F,Cool10,.> seconds|r
 }
 
 STRING 1666
@@ -10649,13 +10696,13 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 85]  2.00x "ss2"
 [lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg"
-[lvl 200] 2.60x "ssb"
-[lvl 225] 2.65x "ssbkao"
-[lvl 250] 2.70x "ui" [unlocks |cff00ffffUltra Instinct|r]
-[lvl 400] [MUI (Permanent)]
+[lvl 150] 2.40x "ssg"
+[lvl 200] 2.45x "ssb"
+[lvl 225] 2.50x "ssbkao"
+[lvl 250] 2.50x "ui" [unlocks |cff00ffffUltra Instinct|r]
+[lvl 400] [MUI (Reuseable]
 
-|cffffcc00Honest Work|r: Consuming crops provides 100% of the experience to the next level (4% after level 150).
+|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
 }
 
 STRING 1690
@@ -12186,7 +12233,7 @@ STRING 1942
 }
 
 STRING 1943
-// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
+// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -13626,7 +13673,7 @@ STRING 2173
 }
 
 STRING 2174
-// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -13965,9 +14012,9 @@ CoolerHeadMetal
 }
 
 STRING 2230
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07F (Princess Splash), EditorSuffix (Editor Suffix)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool2> seconds|r
+(peco)
 }
 
 STRING 2231
@@ -13977,9 +14024,11 @@ STRING 2231
 }
 
 STRING 2232
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07F (Princess Splash), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool3> seconds|r
+Pecorine summons a line of water dealing damage to enemy units in a line, then explodes at the end of the travel destination, dealing damage in an AoE.
+|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A07F,Cool2,.> seconds|r
 }
 
 STRING 2233
@@ -14616,15 +14665,19 @@ STRING 2333
 }
 
 STRING 2334
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool4> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool4,.> seconds|r
 }
 
 STRING 2335
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool5> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool5,.> seconds|r
 }
 
 STRING 2336
@@ -14655,9 +14708,11 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 2340
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool6> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool6,.> seconds|r
 }
 
 STRING 2341
@@ -15636,20 +15691,19 @@ Shoto Todoroki
 }
 
 STRING 2497
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool7> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool7,.> seconds|r
 }
 
 STRING 2498
-// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
-|cffffff00+1% spin damage per hero level up to +100%.
-x2 spin damage when above 15 speed.
-Maximum speed decreases when below 50% HP.|r
-|cff00FF00Damage: Agi * Sonic Speed
-|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool8,.> seconds|r
 }
 
 STRING 2499
@@ -15912,9 +15966,11 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 2540
-// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10.
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool9,.> seconds|r
 }
 
 STRING 2541
@@ -15924,9 +15980,9 @@ An upgraded defense tower. Kills provide gold and 10% of stats. Upgradeable.
 }
 
 STRING 2542
-// Items: I03R (Dimension Sword S [1/5]), Description (Description)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10.
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 2|r]
 }
 
 STRING 2543
@@ -16222,37 +16278,37 @@ Marle channels a powerful healing spell that rapidly regenerates herself and nea
 }
 
 STRING 2585
-// Items: I000 (Senzu Bean), Hotkey (Hotkey)
+// Units: H00V (Gourmet Guild Master), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2586
-// Items: I001 (Roast Ham), Hotkey (Hotkey)
+// Items: I000 (Senzu Bean), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2587
-// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I001 (Roast Ham), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2588
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2589
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2590
-// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
+// Items: I045 (Krabby Patty), Hotkey (Hotkey)
 {
 Q
 }
@@ -16264,19 +16320,19 @@ C
 }
 
 STRING 2592
-// Items: I045 (Krabby Patty), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 2593
 // Items: I047 (Android Bomb), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 2594
+STRING 2593
 // Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 2594
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
@@ -16852,13 +16908,13 @@ STRING 2687
 }
 
 STRING 2688
-// Items: I04F (Banana Generator), Hotkey (Hotkey)
+// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2689
-// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
+// Items: I04W (Potara Fusion), Hotkey (Hotkey)
 {
 Q
 }
@@ -17032,25 +17088,25 @@ D
 }
 
 STRING 2718
-// Items: I04W (Potara Fusion), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 2719
 // Items: I050 (Wheat), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 2720
+STRING 2719
 // Items: I051 (Corn), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 2721
+STRING 2720
 // Items: I052 (Rice), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 2721
+// Items: I053 (Snow Rice), Hotkey (Hotkey)
 {
 Q
 }
@@ -17074,13 +17130,13 @@ Learn Hostile Ta|cffffcc00k|reover
 }
 
 STRING 2725
-// Items: I053 (Snow Rice), Hotkey (Hotkey)
+// Items: I002 (Super Corn), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2726
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I005 (Tegridy Wheat), Hotkey (Hotkey)
 {
 Q
 }
@@ -17677,13 +17733,13 @@ STRING 2822
 }
 
 STRING 2823
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2824
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -17908,7 +17964,7 @@ Spoiled Brat
 }
 
 STRING 2858
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
+// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -18060,85 +18116,85 @@ Cell 75%
 }
 
 STRING 2883
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2884
-// Abilities: A05B (Mass Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2885
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A05B (Mass Teleport), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2886
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2887
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2888
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2889
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2890
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2891
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2892
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2893
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2894
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2895
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2896
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18150,19 +18206,19 @@ W
 }
 
 STRING 2898
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2899
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2900
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18174,37 +18230,37 @@ W
 }
 
 STRING 2902
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2903
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2904
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2905
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2906
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2907
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18216,19 +18272,19 @@ R
 }
 
 STRING 2909
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2910
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2911
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18343,7 +18399,7 @@ STRING 2927
 }
 
 STRING 2928
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18367,7 +18423,7 @@ F
 }
 
 STRING 2932
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18401,7 +18457,7 @@ Donkey Kong winds up for a brief moment before unleashing a mighty punch.
 }
 
 STRING 2937
-// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
+// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -18821,13 +18877,13 @@ Fires a powerful energy blast from the users hands. (|cff66cceeDamage can vary d
 }
 
 STRING 3007
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3008
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19223,9 +19279,9 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 3070
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool8> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 3|r]
 }
 
 STRING 3071
@@ -19235,9 +19291,9 @@ STRING 3071
 }
 
 STRING 3072
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool9> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 4|r]
 }
 
 STRING 3073
@@ -19255,13 +19311,13 @@ Donkey Kong slams the ground, revealing a hidden Barrel Cannon. After a brief de
 }
 
 STRING 3075
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3076
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19279,7 +19335,7 @@ Barrel Cannon
 }
 
 STRING 3079
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19434,19 +19490,19 @@ Mass |cffffcc00A|rttack Order
 }
 
 STRING 3105
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3106
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3107
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19641,7 +19697,7 @@ Potara Fusion
 }
 
 STRING 3139
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19725,13 +19781,13 @@ Muffin
 }
 
 STRING 3152
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3153
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19956,13 +20012,13 @@ Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3188
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3189
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20245,7 +20301,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -20516,7 +20572,7 @@ Upgraded Gold Assimilation
 }
 
 STRING 3272
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20540,7 +20596,7 @@ Upgraded Gold Assimilation
 }
 
 STRING 3276
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21528,7 +21584,7 @@ STRING 3437
 }
 
 STRING 3438
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21552,7 +21608,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21642,15 +21698,15 @@ Omega Shenron gains +1 level up stats and gains a special bonus if one of his st
 }
 
 STRING 3457
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool10> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 5|r]
 }
 
 STRING 3458
-// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 6|r]
 }
 
 STRING 3459
@@ -21912,7 +21968,7 @@ STRING 3495
 }
 
 STRING 3496
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21936,7 +21992,7 @@ Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 3500
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22293,7 +22349,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22317,7 +22373,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22419,7 +22475,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3578
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22446,7 +22502,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3582
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22710,7 +22766,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22734,7 +22790,7 @@ STRING 3629
 }
 
 STRING 3630
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23868,7 +23924,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23886,7 +23942,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24522,7 +24578,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24546,7 +24602,7 @@ STRING 3930
 }
 
 STRING 3931
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -25445,13 +25501,9 @@ Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
 STRING 4055
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.1x Int mult (+0.1x when under 30k Int)
--0.1x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 1|r]
 }
 
 STRING 4056
@@ -25772,7 +25824,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25796,7 +25848,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26330,7 +26382,7 @@ E
 }
 
 STRING 4198
-// Abilities: A06V (Guardian's Devotion), EditorSuffix (Editor Suffix)
+// Abilities: A0JM (Go Down Together!), EditorSuffix (Editor Suffix)
 {
 new
 }
@@ -27093,7 +27145,7 @@ Donkey Kong smashes the ground in front of him, causing shockwaves that damage a
 }
 
 STRING 4320
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27120,14 +27172,14 @@ Type "r" to revert.
 Transformations:
 [lvl 10]  1.25x "fp"
 [lvl 35]  1.50x "fp"
-[lvl 65]  1.75x "fp"
-[lvl 95]  2.00x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 100] 2.00x "fp"
 [lvl 150] 2.40x "fp"
 [lvl 200] 2.50x "fp" [Unlocks Four Fist Technique]
 }
 
 STRING 4324
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27935,6 +27987,18 @@ STRING 4457
 // Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 4458
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 7|r]
+}
+
+STRING 4459
+// Abilities: A07S (Royal Slash), Name (Name)
+{
+Royal Slash
 }
 
 STRING 4460
@@ -28976,7 +29040,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29000,7 +29064,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29400,7 +29464,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29514,7 +29578,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30007,7 +30071,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30553,7 +30617,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30577,7 +30641,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30667,7 +30731,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30691,7 +30755,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -31353,7 +31417,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31371,7 +31435,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32343,7 +32407,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32366,7 +32430,7 @@ You receive +0.04x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32764,7 +32828,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32788,7 +32852,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32878,7 +32942,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32992,7 +33056,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33106,7 +33170,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33220,7 +33284,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33824,7 +33888,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33849,7 +33913,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33970,7 +34034,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33982,7 +34046,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34164,7 +34228,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34188,7 +34252,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34278,7 +34342,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34296,7 +34360,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34428,7 +34492,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34600,9 +34664,9 @@ Transformations:
 [lvl 10]  1.25x "fp"
 [lvl 25]  1.50x "fp" [Unlocks Max Power]
 [lvl 100] 2.00x "fp"
-[lvl 150] 2.30x "fp" [Max Power upgrades Kamehameha]
-[lvl 200] 2.40x "fp"
-[lvl 300] 2.50x "fp"
+[lvl 150] 2.30x "fp"
+[lvl 200] 2.40x "fp" [Max Power upgrades Kamehameha]
+[lvl 250] 2.50x "fp"
 }
 
 STRING 5549
@@ -34720,7 +34784,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34738,7 +34802,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35176,7 +35240,7 @@ Roundhouse Kick
 }
 
 STRING 5635
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35236,7 +35300,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35254,13 +35318,13 @@ STRING 5647
 }
 
 STRING 5648
-// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 5649
-// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35777,7 +35841,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5717
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35873,7 +35937,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35921,7 +35985,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36633,7 +36697,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -36651,7 +36715,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -37059,7 +37123,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39456,7 +39520,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39734,7 +39798,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 6359
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39758,7 +39822,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40055,7 +40119,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40784,7 +40848,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41051,7 +41115,7 @@ STRING 6567
 }
 
 STRING 6568
-// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
+// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -41108,7 +41172,7 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 }
 
 STRING 6576
-// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -41120,13 +41184,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42447,13 +42511,13 @@ STRING 6786
 }
 
 STRING 6787
-// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42923,7 +42987,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43075,7 +43139,7 @@ STRING 6882
 }
 
 STRING 6883
-// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43179,7 +43243,7 @@ R
 }
 
 STRING 6900
-// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43311,7 +43375,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43323,7 +43387,7 @@ W
 }
 
 STRING 6924
-// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43683,7 +43747,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43835,7 +43899,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 7006
-// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44735,7 +44799,7 @@ Donkey Kong rolls in the targeted direction, crushing enemies in his path. Rolli
 }
 
 STRING 7137
-// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44759,7 +44823,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44783,7 +44847,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44846,7 +44910,7 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 }
 
 STRING 7153
-// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44873,7 +44937,7 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 }
 
 STRING 7157
-// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44899,21 +44963,21 @@ Upa's attacks are empowered by his rage to deal devastating damage to his enemie
 }
 
 STRING 7161
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Researchtip (Tooltip - Learn)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+[|cff00ff00W|r] Learn Royal Slash - [|cffffcc00Level %d|r]
 }
 
 STRING 7162
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 9|r]
 }
 
 STRING 7163
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 8|r]
 }
 
 STRING 7164
@@ -44947,15 +45011,17 @@ Armor Aura: 0.5 * lvl|r
 }
 
 STRING 7167
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+[|cff00ff00W|r] Royal Slash - [|cffffcc00Level 10|r]
 }
 
 STRING 7168
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool10,.> seconds|r
 }
 
 STRING 7169
@@ -44979,9 +45045,11 @@ Armor Aura: 0.5 * lvl|r
 }
 
 STRING 7171
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), Researchubertip (Tooltip - Learn - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool1,.> - <A07S,Cool10,.> seconds|r
 }
 
 STRING 7172
@@ -45022,7 +45090,7 @@ A true-combo hero that relies on sequencing the right attacks together to access
 }
 
 STRING 7176
-// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45073,7 +45141,7 @@ STRING 7183
 }
 
 STRING 7184
-// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45097,7 +45165,7 @@ D
 }
 
 STRING 7188
-// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45142,7 +45210,6 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.30x "fp"
 [lvl 200] 2.40x "fp"
-[lvl 250] 2.50x "fp"
 
 Max speed upgrades at level 60 and 125.
 Find Chaos Emeralds by killing players or sagas above level 50.
@@ -45168,7 +45235,7 @@ Donkey Kong jumps towards the target area, trapping anyone caught in range and t
 }
 
 STRING 7197
-// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -45276,7 +45343,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45300,7 +45367,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45327,7 +45394,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45496,7 +45563,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45524,7 +45591,7 @@ Damage: Lvl x Agi x ?
 }
 
 STRING 7246
-// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45832,13 +45899,13 @@ E
 }
 
 STRING 7294
-// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7295
-// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46167,31 +46234,31 @@ Dark Mist
 }
 
 STRING 7346
-// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7347
-// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7348
-// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7349
-// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7350
-// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46215,7 +46282,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
+// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46562,13 +46629,13 @@ STRING 7406
 }
 
 STRING 7407
-// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47357,7 +47424,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47381,7 +47448,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47480,7 +47547,7 @@ STRING 7547
 }
 
 STRING 7548
-// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47504,7 +47571,7 @@ STRING 7551
 }
 
 STRING 7552
-// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47594,7 +47661,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47618,7 +47685,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47714,7 +47781,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47732,7 +47799,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47864,7 +47931,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47888,7 +47955,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48244,7 +48311,7 @@ Augment: Spell Power
 }
 
 STRING 7671
-// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48268,7 +48335,7 @@ Augment: Spell Power
 }
 
 STRING 7675
-// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48358,7 +48425,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48382,7 +48449,7 @@ STRING 7693
 }
 
 STRING 7694
-// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
+// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48472,7 +48539,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48484,7 +48551,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
+// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48740,13 +48807,13 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7751
-// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49013,7 +49080,7 @@ Gain a total of +13% |cffffcc00Spell Power|r.
 }
 
 STRING 7795
-// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49037,7 +49104,7 @@ Gain a total of +16% |cffffcc00Spell Power|r.
 }
 
 STRING 7799
-// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49983,7 +50050,7 @@ D
 }
 
 STRING 7954
-// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
+// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50007,13 +50074,13 @@ D
 }
 
 STRING 7958
-// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50049,7 +50116,7 @@ D
 }
 
 STRING 7965
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50176,7 +50243,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 7982
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50648,7 +50715,7 @@ Freemode Disabled, forced win/loss conditions are enabled.
 }
 
 STRING 8054
-// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
+// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -50756,7 +50823,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50916,7 +50983,7 @@ F
 }
 
 STRING 8093
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51024,7 +51091,7 @@ STRING 8110
 }
 
 STRING 8111
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52608,7 +52675,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52632,7 +52699,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53460,7 +53527,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53488,7 +53555,7 @@ The user fires two beams of energy that will hunt down the enemy and deal massiv
 }
 
 STRING 8471
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53571,7 +53638,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53905,7 +53972,7 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8534
-// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53935,7 +54002,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54004,7 +54071,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 8546
-// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
+// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -54216,7 +54283,7 @@ Sniper Rifle
 }
 
 STRING 8581
-// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
+// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55018,7 +55085,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55106,7 +55173,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8724
-// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55294,7 +55361,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55318,7 +55385,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55800,9 +55867,11 @@ R
 }
 
 STRING 8836
-// Abilities: A0JM (Go Down Together!), EditorSuffix (Editor Suffix)
+// Abilities: A07S (Royal Slash), Ubertip (Tooltip - Normal - Extended)
 {
-new
+Pecorine jumps in the air then towards the target area dealing damage to enemy units in an AoE. Deals double damage to enemies close to the center.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A07S,Cool2,.> seconds|r
 }
 
 STRING 8837
@@ -56014,13 +56083,13 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8866
-// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 8867
-// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57037,7 +57106,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57547,7 +57616,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57571,7 +57640,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57690,7 +57759,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58011,7 +58080,7 @@ F
 }
 
 STRING 9178
-// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58432,7 +58501,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58579,7 +58648,7 @@ Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9260
-// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60851,301 +60920,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9609
-// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9610
-// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9611
-// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 9612
-// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9613
-// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9614
-// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9615
-// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9616
-// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9617
-// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9618
-// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9619
-// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
+// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9620
-// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9621
-// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9622
-// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
+// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9623
-// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9624
-// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9625
-// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9626
-// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9627
-// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9628
-// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9629
-// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9630
-// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9631
-// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9632
-// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9633
-// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9634
-// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9635
-// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9636
-// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
+// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9637
-// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9638
-// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9639
-// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9640
-// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9641
-// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9642
-// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9643
-// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9644
-// Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9645
-// Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
+// Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9646
-// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9647
-// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Normal Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9648
-// Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Normal Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9649
-// Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A041 (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9650
-// Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
+// Abilities: A041 (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9651
-// Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Flame Breath), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9652
-// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Flame Breath), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9653
-// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CQ (Tail Sweep), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9654
-// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DI (Tail Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9655
-// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Ego Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9656
-// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Ego Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9657
-// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Hakai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62107,7 +62176,7 @@ F
 }
 
 STRING 9817
-// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Hakai Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62189,7 +62258,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
+// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62201,7 +62270,7 @@ Evil
 }
 
 STRING 9832
-// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
+// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62213,7 +62282,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62225,7 +62294,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62255,85 +62324,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62345,13 +62414,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
+// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62363,103 +62432,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63243,7 +63312,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64001,9 +64070,13 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 10128
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool5,.> seconds|r
 }
 
 STRING 10129
@@ -64119,12 +64192,13 @@ STRING 10147
 -ang <angle>
 -tss (toggle summon selection)
 -tft (host: toggle ability text)
+-saga (host: change saga line pre-game)
 
 -customui (activates custom UI HUD)
 }
 
 STRING 10148
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65153,21 +65227,29 @@ Cosmic Illusion Caster
 }
 
 STRING 10309
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07S (Royal Slash), EditorSuffix (Editor Suffix)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
+(peco)
 }
 
 STRING 10310
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool6,.> seconds|r
 }
 
 STRING 10311
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool7,.> seconds|r
 }
 
 STRING 10312
@@ -65439,18 +65521,13 @@ STRING 10353
 }
 
 STRING 10354
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far away from his enemies due to his lack of mobility. Has access to a unique farming system to grow highly rewarding crops.
-
-|cffffcc00Honest Work|r: Consuming crops provides 100% of the experience to the next level (4% after level 150).
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool8,.> seconds|r
 }
 
 STRING 10355
@@ -66013,7 +66090,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -66913,25 +66990,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Capsule: Saibamen Seeds), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10598
-// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10599
-// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10600
-// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
+// Abilities: A0XJ (Flash Bomber 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -67243,7 +67320,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67388,7 +67465,7 @@ Transformations:
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 30+] 2.00x (absorb 17/18)
 [lvl 120] 2.50x "super perfect" [unlocks Solar Kame]
-[lvl 250] 2.70x "cell-x" [unlocks cell-x form]
+[lvl 250] 2.55x "cell-x" [unlocks cell-x form]
 
 |cff00ff00Type to unlock:|r
 [lvl 200] "|cff00afffgod kame|r"
@@ -67720,7 +67797,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68068,7 +68145,7 @@ Jiren fires a red-orange blast that starts out small but expands massively upon 
 }
 
 STRING 10760
-// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XJ (Flash Bomber 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68104,13 +68181,13 @@ STRING 10765
 }
 
 STRING 10766
-// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
+// Abilities: A0YC (Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10767
-// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YC (Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68348,7 +68425,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
+// Abilities: A0YK (Empowered Magic Orbs), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68552,31 +68629,31 @@ STRING 10839
 }
 
 STRING 10840
-// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YK (Empowered Magic Orbs), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10841
-// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
+// Abilities: A009 (Dummy Abil), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10842
-// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A009 (Dummy Abil), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10843
-// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
+// Abilities: A0A1 (Dummy Abil 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10844
-// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A1 (Dummy Abil 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68612,7 +68689,7 @@ W
 }
 
 STRING 10850
-// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
+// Abilities: A0YR (Glacier), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69362,7 +69439,7 @@ STRING 10974
 }
 
 STRING 10975
-// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YR (Glacier), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69452,7 +69529,7 @@ STRING 10989
 }
 
 STRING 10990
-// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Big Kannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69500,13 +69577,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (Big Kannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69559,7 +69636,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69760,7 +69837,7 @@ T2
 
 STRING 11040
 {
-|cff00ff00To repick type -repick|r
+|cff00ff00Type "-repick" to repick|r
 }
 
 STRING 11041
@@ -69775,7 +69852,7 @@ K
 
 STRING 11043
 {
-|cffffcc00Type "hs" to see transformations. Most will require typing a command e.g. "ss"|r
+|cffffcc00Type "hs" to see transformations.|r
 }
 
 STRING 11044
@@ -69808,7 +69885,7 @@ R
 }
 
 STRING 11049
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69846,7 +69923,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 11055
-// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z1 (Kannon Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70007,7 +70084,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0ZE (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70019,7 +70096,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZE (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70409,13 +70486,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
+// Abilities: A0ZH (Insta-Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70588,7 +70665,7 @@ Cooldown: 90s|r
 }
 
 STRING 11174
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71061,13 +71138,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
+// Abilities: A0ZN (Plant Wheat), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZR (Toggle Harvest Engine), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71349,7 +71426,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71397,19 +71474,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A0ZR (Toggle Harvest Engine), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 11309
-// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
+// Abilities: A100 (Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A101 (Super Warehousing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71902,13 +71979,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A104 (Appule Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A104 (Appule Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72189,7 +72266,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
+// Abilities: A105 (Heavy Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72243,14 +72320,17 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11444
-// Items: I050 (Wheat), Description (Description)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +3 STR per stack
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool9,.> seconds|r
 }
 
 STRING 11445
-// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
+// Abilities: A105 (Heavy Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72899,7 +72979,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
+// Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73070,13 +73150,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
+// Abilities: A106 (Heavy Slam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A10T (Elite Beam Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73520,10 +73600,27 @@ STRING 11646
 Increases the attack range of Geti Star Defense buildings by +400, HP by 10000 and HP regen by 400%.
 }
 
+STRING 11647
+// Units: h0AG (Farming Research Centre), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 20 crops of 1 type.|r
+A research centre that provides valuable upgrades.
+}
+
 STRING 11648
 // Doodads: D01O (Bench Wood Pathable), Name (Name)
 {
 Bench Wood Pathable
+}
+
+STRING 11649
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool10,.> seconds|r
 }
 
 STRING 11650
@@ -73707,19 +73804,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
+// Abilities: A10T (Elite Beam Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11681
-// Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
+// Abilities: A10U (Elite Beam Prime), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11682
-// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
+// Abilities: A10U (Elite Beam Prime), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73853,7 +73950,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A10V (Elite Beam Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74062,7 +74159,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74357,13 +74454,13 @@ STRING 11784
 }
 
 STRING 11785
-// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A10V (Elite Beam Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11786
-// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A11N (Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74795,7 +74892,7 @@ Donate Energy to Moro
 }
 
 STRING 11857
-// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A11N (Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74935,13 +75032,13 @@ STRING 11879
 }
 
 STRING 11880
-// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A11O (Super Fireball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11881
-// Abilities: A00M (Pistol), Researchhotkey (Hotkey - Learn)
+// Abilities: A11O (Super Fireball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75109,19 +75206,6 @@ Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100
 
 |cff00ff00Damage: Lvl x Agi x ? + 1% Max HP
 |cff00ffffCooldown: <A01T,Cool7,.> seconds|r
-}
-
-STRING 11909
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
-{
-A powered up version of Super Saiyan 2 achieved through intense rage.
-|cffffff00+0.6x str mult
-+0.1x agi/int mult
-+165ms and unlocks movement speed cap
-33% damage block up to 4 x Str.|n200 AOE ministun aura.
-Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to deal <A10K,DataB2,.> damage.|r
-|cff00ff00Duration: <A0KT,Dur1> seconds
-|cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
 STRING 11910
@@ -75365,9 +75449,18 @@ Janemba teleports behind the closest enemy hero cursed with the Demon's Mark and
 }
 
 STRING 11949
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
+// Units: H00V (Gourmet Guild Master), Ubertip (Tooltip - Extended)
 {
-|cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+A perpetually peckish princess who excels in both offense and defense on the front lines. At high HP, she goes on the attack, crushing all that opposes her, and if her HP gets low, she shows incredible tenacity with plenty of self-healing.
+
+|cffff8800Gourmet:|r +25 armor when above 50% HP or while eating.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 11950
@@ -75936,13 +76029,13 @@ This unit is under the effects of Cosmic Illusion; it is invisible, moves faster
 }
 
 STRING 12041
-// Abilities: A00M (Pistol), Hotkey (Hotkey - Normal)
+// Abilities: A00M (Pistol), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12042
-// Abilities: A02G (Shotgun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00M (Pistol), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76062,7 +76155,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Abilities: A02G (Shotgun), Hotkey (Hotkey - Normal)
+// Abilities: A02G (Shotgun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76602,7 +76695,7 @@ STRING 12145
 }
 
 STRING 12146
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76776,13 +76869,13 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Abilities: A02K (Assault Rifle), Researchhotkey (Hotkey - Learn)
+// Abilities: A02G (Shotgun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12176
-// Abilities: A02O (Sniper Rifle), Researchhotkey (Hotkey - Learn)
+// Abilities: A02K (Assault Rifle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -77508,13 +77601,13 @@ STRING 12292
 }
 
 STRING 12293
-// Abilities: A037 (Rocket Launcher), Researchhotkey (Hotkey - Learn)
+// Abilities: A02O (Sniper Rifle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12294
-// Abilities: A038 (Flashbang), Researchhotkey (Hotkey - Learn)
+// Abilities: A037 (Rocket Launcher), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -77544,7 +77637,7 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77860,7 +77953,7 @@ STRING 12346
 }
 
 STRING 12347
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79334,7 +79427,7 @@ First, Gohan fires a Super Kamehameha at the opponent, who struggles against the
 }
 
 STRING 12583
-// Abilities: A03A (Heavy Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Flashbang), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79370,7 +79463,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79642,7 +79735,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79654,7 +79747,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
+// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79666,7 +79759,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79708,7 +79801,7 @@ F
 }
 
 STRING 12643
-// Abilities: A03J (Explosion 1), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Heavy Grenade), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79726,7 +79819,7 @@ Z
 }
 
 STRING 12646
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A03J (Explosion 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80254,7 +80347,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
+// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -80328,7 +80421,7 @@ Ice Cannon
 }
 
 STRING 12733
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A07F (Princess Splash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -80417,7 +80510,7 @@ Frostbite
 }
 
 STRING 12746
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A07F (Princess Splash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -81948,10 +82041,9 @@ STRING 12979
 }
 
 STRING 12980
-// Items: I04L (Whis' Staff), Description (Description)
+// Abilities: A0B9 (Gourmet Guild Master), Tip (Tooltip - Normal)
 {
-The multi-purpose tool of Angels, used to assist Gods of Destruction.
-|cffffff00+0.15x Int mult.|r
+|cffff8800Gourmet Guild Master|r
 }
 
 STRING 12981
@@ -81961,10 +82053,9 @@ STRING 12981
 }
 
 STRING 12982
-// Items: I04L (Whis' Staff), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-The multi-purpose tool of Angels, used to assist Gods of Destruction.
-|cffffff00+0.15x Int mult.|r
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 2|r]
 }
 
 STRING 12983
@@ -82443,10 +82534,9 @@ STRING 13060
 }
 
 STRING 13061
-// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +3 STR per stack
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 3|r]
 }
 
 STRING 13062
@@ -82456,10 +82546,9 @@ STRING 13062
 }
 
 STRING 13063
-// Items: I051 (Corn), Description (Description)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-Nutritious corn.
-|cffffff00Consume for +3 AGI per stack
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 4|r]
 }
 
 STRING 13064
@@ -82887,7 +82976,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85559,7 +85648,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -87147,7 +87236,7 @@ E
 }
 
 STRING 13774
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -88484,7 +88573,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -88496,7 +88585,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -89563,7 +89652,7 @@ E
 }
 
 STRING 14142
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0B4 (Princess Valiant), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -89593,7 +89682,7 @@ R
 }
 
 STRING 14147
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0B7 (Princess Force), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -90412,7 +90501,7 @@ STRING 14269
 }
 
 STRING 14270
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -91294,19 +91383,15 @@ STRING 14402
 }
 
 STRING 14403
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 14404
-// Items: I009 (Z Sword), Description (Description)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.2x Int Mult when under 30k Int else +0.1x
--0.1x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 5|r]
 }
 
 STRING 14405
@@ -97759,15 +97844,9 @@ STRING 15350
 }
 
 STRING 15351
-// Abilities: A0FH (Max Power), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-Roshi beefs up, increasing his power multiplier by 0.4x and causing his spells to do additional pure damage. Cannot be used with [|cff00ff00R|r] New Trick.
-|cffffff00+0.4x stat mult
-+66ms and unlocks movement speed cap
-10% damage block up to 3x Str
-+100% Kamehameha Charge speed|r
-|cff00FF00Duration: <A0FH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0FH,Cool1> seconds|r
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 6|r]
 }
 
 STRING 15352
@@ -102852,13 +102931,13 @@ STRING 16066
 }
 
 STRING 16067
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 16068
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -105247,19 +105326,6 @@ STRING 16398
 [|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 2|r]
 }
 
-STRING 16399
-// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
-Cannot be used with [|cff00ff00F|r] Justice Pose.
-|cffffff00+0.4x stat multiplier.
-+66ms and unlocks movement speed cap.
-+20% Damage Block up to 7.5x Agi
-All basic spells are upgraded for one use each.
-Justice Pose is replaced with Hakai.|r
-|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
-}
-
 STRING 16400
 // Abilities: A0SK (Glare 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -105575,10 +105641,9 @@ STRING 16433
 }
 
 STRING 16434
-// Units: h0AG (Farming Research Centre), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-A research centre that provides valuable upgrades.
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 1|r]
 }
 
 STRING 16435
@@ -107257,10 +107322,9 @@ STRING 16658
 }
 
 STRING 16659
-// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
 {
-Nutritious corn.
-|cffffff00Consume for +3 AGI per stack
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 7|r]
 }
 
 STRING 16660
@@ -107789,7 +107853,7 @@ W
 }
 
 STRING 16733
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -107801,7 +107865,7 @@ STRING 16734
 }
 
 STRING 16735
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -108663,7 +108727,7 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 16855
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -109010,10 +109074,9 @@ A well-rounded hero who gains multiplier slightly quicker than others and can de
 }
 
 STRING 16895
-// Items: I052 (Rice), Description (Description)
+// Abilities: A080 (Onigiri Time), Name (Name)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +3 INT per stack
+Onigiri Time
 }
 
 STRING 16896
@@ -109044,7 +109107,7 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -109176,10 +109239,9 @@ A powerful support hero that excels at saga-sniping and becomes stronger with ea
 }
 
 STRING 16910
-// Items: I052 (Rice), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Researchtip (Tooltip - Learn)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +3 INT per stack
+[|cff00ff00E|r] Learn Onigiri Time - [|cffffcc00Level %d|r]
 }
 
 STRING 16911
@@ -109988,7 +110050,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 17017
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -110057,7 +110119,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -110303,7 +110365,7 @@ STRING 17062
 }
 
 STRING 17063
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A07S (Royal Slash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -110312,6 +110374,12 @@ STRING 17064
 // Abilities: A0UY (Flame Shot), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Flame Shot - [|cffffcc00Level 1|r]
+}
+
+STRING 17065
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 9|r]
 }
 
 STRING 17066
@@ -110356,6 +110424,18 @@ STRING 17072
 [|cff00FF00W|r] Flame Shot - [|cffffcc00Level 7|r]
 }
 
+STRING 17073
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 8|r]
+}
+
+STRING 17074
+// Abilities: A080 (Onigiri Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Onigiri Time - [|cffffcc00Level 10|r]
+}
+
 STRING 17075
 // Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
 {
@@ -110395,7 +110475,7 @@ STRING 17079
 }
 
 STRING 17080
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A07S (Royal Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -111364,7 +111444,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -112238,9 +112318,15 @@ Flesh Attack Absorb Target
 }
 
 STRING 17353
-// Abilities: A06S (Flesh Attack Absorb Target), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore. |cffff88ffThis flesh attack will always absorb the target's abilities.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A06S,Cool1> seconds|r
+A powered up version of Super Saiyan 2 achieved through intense rage.
+|cffffff00+0.5x str mult
++165ms and unlocks movement speed cap
+33% damage block up to 4 x Str.|n200 AOE ministun aura.
+Upgrades Sword of Hope to grant true strike and have a <A10K,DataA2>% chance to deal <A10K,DataB2,.> damage.|r
+|cff00ff00Duration: <A0KT,Dur1> seconds
+|cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
 STRING 17354
@@ -112343,6 +112429,19 @@ STRING 17370
 // Abilities: A07E (Flesh Attack Root Debuff), EditorSuffix (Editor Suffix)
 {
 (Buu)
+}
+
+STRING 17371
+// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
+Cannot be used with [|cff00ff00F|r] Justice Pose.
+|cffffff00+0.3x stat multiplier.
++66ms and unlocks movement speed cap.
++20% Damage Block up to 7.5x Agi
+All basic spells are upgraded for one use each.
+Justice Pose is replaced with Hakai.|r
+|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
 }
 
 STRING 17372
@@ -113269,7 +113368,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113772,7 +113871,7 @@ STRING 17568
 }
 
 STRING 17569
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A080 (Onigiri Time), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113798,7 +113897,7 @@ Lightning 2
 }
 
 STRING 17573
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A080 (Onigiri Time), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -113962,7 +114061,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114370,7 +114469,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114919,7 +115018,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -116358,7 +116457,7 @@ STRING 17968
 }
 
 STRING 17969
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -116438,7 +116537,7 @@ Ice 2
 }
 
 STRING 17982
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -116840,7 +116939,7 @@ STRING 18044
 }
 
 STRING 18045
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -117329,10 +117428,9 @@ Ichigo fires a final getsuga. Enemies are stunned.
 }
 
 STRING 18117
-// Items: I053 (Snow Rice), Description (Description)
+// Items: I002 (Super Corn), Name (Name)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +4.5 INT per stack
+Super Corn
 }
 
 STRING 18118
@@ -118630,7 +118728,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118816,7 +118914,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119951,7 +120049,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -120054,7 +120152,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -122053,7 +122151,7 @@ Transformations:
 [lvl 85]  2.00x "fp" 
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] 2.6x "fp"
+[lvl 200] 2.60x "fp"
 [lvl 250] Unlocks Stone Fist - +40% attack DMG
 [lvl 300] Unlocks Bronze Fist - 3x critical strike damage
 }
@@ -123149,6 +123247,28 @@ STRING 18961
 [|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 7|r]
 }
 
+STRING 18962
+// Abilities: A080 (Onigiri Time), EditorSuffix (Editor Suffix)
+{
+(peco)
+}
+
+STRING 18964
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool1,.> seconds|r
+}
+
+STRING 18965
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool3,.> seconds|r
+}
+
 STRING 18966
 // Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
 {
@@ -123183,6 +123303,14 @@ STRING 18971
 // Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
 {
 (lucario)
+}
+
+STRING 18972
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool4,.> seconds|r
 }
 
 STRING 18973
@@ -123223,6 +123351,14 @@ STRING 18978
 [|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 8|r]
 }
 
+STRING 18979
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool5,.> seconds|r
+}
+
 STRING 18980
 // Units: H0A8 (Fighting / Steel Type), Propernames (Proper Names)
 {
@@ -123258,7 +123394,7 @@ STRING 18984
 }
 
 STRING 18985
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -123439,6 +123575,14 @@ STRING 19011
 (lucario)
 }
 
+STRING 19012
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool6,.> seconds|r
+}
+
 STRING 19013
 // Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
@@ -123517,6 +123661,14 @@ STRING 19023
 [|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
 }
 
+STRING 19024
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool7,.> seconds|r
+}
+
 STRING 19025
 // Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
@@ -123524,9 +123676,15 @@ STRING 19025
 }
 
 STRING 19026
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 19027
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 2|r]
 }
 
 STRING 19028
@@ -123598,7 +123756,7 @@ STRING 19037
 }
 
 STRING 19038
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -123982,9 +124140,76 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 19096
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 3|r]
+}
+
+STRING 19097
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 19098
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 5|r]
+}
+
+STRING 19099
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 6|r]
+}
+
+STRING 19100
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 1|r]
+}
+
+STRING 19101
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 7|r]
+}
+
+STRING 19102
+// Abilities: A0A2 (Princess Strike), Name (Name)
+{
+Princess Strike
+}
+
+STRING 19103
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 80 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +4).
+}
+
+STRING 19104
+// Abilities: A0A2 (Princess Strike), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Princess Strike - [|cffffcc00Level %d|r]
+}
+
+STRING 19105
+// Items: I005 (Tegridy Wheat), Name (Name)
+{
+Tegridy Wheat
+}
+
+STRING 19106
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 9|r]
 }
 
 STRING 19107
@@ -124124,6 +124349,24 @@ Frog summons a giant frog that jumps 3 times on top of his enemies. The third ju
 |cff00FFFFCooldown: <A0WF,Cool1,.> - <A0WF,Cool10,.>s|r
 }
 
+STRING 19124
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 8|r]
+}
+
+STRING 19125
+// Abilities: A0A2 (Princess Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Princess Strike - [|cffffcc00Level 10|r]
+}
+
+STRING 19126
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> seconds|r
+}
+
 STRING 19127
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
@@ -124190,10 +124433,58 @@ STRING 19137
 [|cff00FF00Q|r] Learn Vacuum Wave - [|cffffcc00Level %d|r]
 }
 
+STRING 19138
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool2> seconds|r
+}
+
 STRING 19139
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 10|r]
+}
+
+STRING 19140
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool3> seconds|r
+}
+
+STRING 19141
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool4> seconds|r
+}
+
+STRING 19142
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool5> seconds|r
+}
+
+STRING 19143
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool6> seconds|r
+}
+
+STRING 19144
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool7> seconds|r
+}
+
+STRING 19145
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool8> seconds|r
+}
+
+STRING 19146
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool9> seconds|r
 }
 
 STRING 19147
@@ -124586,7 +124877,7 @@ Duration: <A0XI,Dur10>s
 }
 
 STRING 19200
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -124648,9 +124939,9 @@ STRING 19209
 }
 
 STRING 19210
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Increases crops stored by +1 and +16% of total stack size.
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool10> seconds|r
 }
 
 STRING 19211
@@ -124815,6 +125106,56 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cff00ffffCooldown: <A0YD,Cool8> seconds|r
 }
 
+STRING 19237
+// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
+}
+
+STRING 19238
+// Abilities: A06S (Flesh Attack Absorb Target), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore. |cffff88ffThis flesh attack will always absorb the target's abilities.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A06S,Cool1> seconds|r
+}
+
+STRING 19239
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool8,.> seconds|r
+}
+
+STRING 19240
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool9,.> seconds|r
+}
+
+STRING 19241
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool10,.> seconds|r
+}
+
+STRING 19242
+// Abilities: A0A2 (Princess Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool1,.> - <A0A2,Cool10,.> seconds|r
+}
+
+STRING 19243
+// Abilities: A0A2 (Princess Strike), EditorSuffix (Editor Suffix)
+{
+(peco)
+}
+
 STRING 19244
 // Abilities: A0XJ (Flash Bomber 2), Tip (Tooltip - Normal)
 {
@@ -124869,6 +125210,14 @@ STRING 19252
 [|cff00ff00Q|r] Learn Flash Bomber - [|cffffcc00Level %d|r]
 }
 
+STRING 19253
+// Abilities: A0A2 (Princess Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine leaps into the air then dashes towards the target area dealing to nearby enemy units. Units near the center are stunned for 1s.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0A2,Cool2,.> seconds|r
+}
+
 STRING 19254
 // Abilities: A0YL (Empowered Protect), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124894,6 +125243,28 @@ STRING 19257
 // Abilities: A0XJ (Flash Bomber 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Super Flash Bomber - [|cffffcc00Level 10|r]
+}
+
+STRING 19258
+// Abilities: A0B4 (Princess Valiant), Name (Name)
+{
+Princess Valiant
+}
+
+STRING 19259
+// Abilities: A0B4 (Princess Valiant), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine swings with her sword to deal massive aoe damage, enemy units are 50% slowed for 5s.
+|cffff2020Note: Will be cast at melee range!
+|cff00ff00Damage: Str * ?
+Duration: <A0B4,Dur1> seconds
+|cff00ffffCooldown: <A0B4,Cool1> seconds
+}
+
+STRING 19260
+// Abilities: A0B4 (Princess Valiant), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Princess Valiant
 }
 
 STRING 19261
@@ -124932,6 +125303,12 @@ STRING 19266
 [|cff00FF00D|r] Super 17 (Absorbed 18)
 }
 
+STRING 19267
+// Abilities: A0B4 (Princess Valiant), EditorSuffix (Editor Suffix)
+{
+(peco)
+}
+
 STRING 19268
 // Abilities: A0YL (Empowered Protect), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -124951,6 +125328,12 @@ STRING 19270
 {
 [|cffffcc00Absorb|r] Android 17
 Super 17 has upgraded into his true form after absorbing Android 17.
+}
+
+STRING 19271
+// Abilities: A0B7 (Princess Force), Name (Name)
+{
+Princess Force
 }
 
 STRING 19272
@@ -125028,6 +125411,26 @@ STRING 19283
 Teleportation
 }
 
+STRING 19284
+// Abilities: A0B7 (Princess Force), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Princess Force
+}
+
+STRING 19285
+// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
+{
+Increases STR.
+|cff00ffffSpecial: Wheat planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+2.00x Farmland
+1.00x Grass
+1.00x Dirt
+0.75x Water
+0.50x Snow
+0.25x Blight/Rocky
+}
+
 STRING 19286
 // Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
 {
@@ -125038,6 +125441,34 @@ STRING 19287
 // Abilities: A0YD (Protect), EditorSuffix (Editor Suffix)
 {
 (schala)
+}
+
+STRING 19288
+// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
+{
+Increases AGI.
+|cff00ffffSpecial: Corn planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+1.50x Farmland
+1.50x Grass
+1.50x Dirt
+0.50x Water
+0.50x Snow
+0.25x Blight/Rocky
+}
+
+STRING 19289
+// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
+{
+Increases INT.
+|cff00ffffSpecial: Rice planted in snow is 50% more effective.
+|cffffff00Growth Multipliers:
+0.75x Farmland
+0.25x Grass
+0.50x Dirt
+2.00x Water
+1.50x Snow
+0.20x Blight/Rocky
 }
 
 STRING 19290
@@ -125068,6 +125499,98 @@ Schala calls down lightning from the sky that bombards the target area.
 |cffff2020Channel Duration: <A0YF,Dur3> seconds|r
 |cff00ff00Damage: Int x Lvl x ?|r
 |cff00ffffCooldown: <A0YF,Cool3> seconds|r
+}
+
+STRING 19293
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+{
+A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far away from his enemies due to his lack of mobility. Has access to a unique farming system to grow highly rewarding crops.
+
+|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19294
+// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
+{
+A hero with one extremely powerful spell: |cffff4422Explosion|r.
+
+|cffff2222Explosion:|r Spells deal +20% Max HP damage.
+|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cffFFcc00I|r|cff00FF00IIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+}
+
+STRING 19295
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
+-0.10x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 19296
+// Items: I009 (Z Sword), Description (Description)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
+-0.10x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 19297
+// Items: I04L (Whis' Staff), Description (Description)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.10x Int mult.|r
+}
+
+STRING 19298
+// Items: I04L (Whis' Staff), Ubertip (Tooltip - Extended)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.10x Int mult.|r
+}
+
+STRING 19299
+// Items: I050 (Wheat), Description (Description)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.5 STR each.
+}
+
+STRING 19300
+// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.5 STR each.
+}
+
+STRING 19301
+// Items: I051 (Corn), Description (Description)
+{
+Nutritious corn.
+|cffffff00Consume for +0.5 AGI each.
+}
+
+STRING 19302
+// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+{
+Nutritious corn.
+|cffffff00Consume for +0.5 AGI each.
 }
 
 STRING 19303
@@ -125330,6 +125853,13 @@ STRING 19337
 [|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
 }
 
+STRING 19338
+// Items: I052 (Rice), Description (Description)
+{
+Nutritious grains of rice.
+|cffffff00Consume for +0.5 INT each.
+}
+
 STRING 19339
 // Abilities: A0YH (Pray), Tip (Tooltip - Normal)
 {
@@ -125574,9 +126104,10 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 }
 
 STRING 19377
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Items: I052 (Rice), Ubertip (Tooltip - Extended)
 {
-Increases crops stored by +1 and +18% of total stack size.
+Nutritious grains of rice.
+|cffffff00Consume for +0.5 INT each.
 }
 
 STRING 19378
@@ -125640,10 +126171,24 @@ STRING 19386
 [|cff00ff00W|r] Protect Empowered - [|cffffcc00Level 10|r]
 }
 
+STRING 19387
+// Items: I053 (Snow Rice), Description (Description)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.75 INT each.
+}
+
 STRING 19388
 {
 [|cffffcc00Unlock|r] Pray
 Schala can now channel the power of Lavos through her pendant, restoring her mana and granting bonus multiplier.
+}
+
+STRING 19389
+// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.75 INT each.
 }
 
 STRING 19390
@@ -125849,6 +126394,13 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cff00ffffCooldown: <A0YD,Cool10> seconds|r
 }
 
+STRING 19423
+// Items: I002 (Super Corn), Description (Description)
+{
+Nutritious corn.
+|cffffff00Consume for +0.75 AGI each.
+}
+
 STRING 19424
 // Abilities: A0YL (Empowered Protect), EditorSuffix (Editor Suffix)
 {
@@ -126027,7 +126579,7 @@ Schala channels for 2s and then transports nearby allies to the target location.
 }
 
 STRING 19449
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
@@ -126051,6 +126603,13 @@ STRING 19452
 {
 Schala channels for 2s and then transports nearby allies to the target location. Does not affect Schala.
 |cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
+STRING 19453
+// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
+{
+Nutritious corn.
+|cffffff00Consume for +0.75 AGI each.
 }
 
 STRING 19454
@@ -126080,6 +126639,26 @@ STRING 19457
 // Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 3|r]
+}
+
+STRING 19458
+// Items: I005 (Tegridy Wheat), Description (Description)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.75 STR each.
+}
+
+STRING 19459
+// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.75 STR each.
+}
+
+STRING 19460
+// Abilities: A0B7 (Princess Force), EditorSuffix (Editor Suffix)
+{
+(peco)
 }
 
 STRING 19461
@@ -126314,6 +126893,12 @@ Schala calls down lightning from the sky that bombards the target area.
 |cffff2020Channel Duration: <A0YF,Dur9> seconds|r
 |cff00ff00Damage: Int x Lvl x ?|r
 |cff00ffffCooldown: <A0YF,Cool9> seconds|r
+}
+
+STRING 19490
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
 STRING 19491
@@ -126642,6 +127227,33 @@ STRING 19536
 Toppo gathers five orange ki balls at the tips of his fingers before rapidly firing them at evildoers.|n|cffff2020Channel Duration: <A0PI,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ? + 0.3% Max HP (each)|r|n|cff00FFFFCooldown: <A0PI,Cool5> seconds|r|n|n|cff808080"Justice... Flash!"|r
 }
 
+STRING 19537
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +3).
+}
+
+STRING 19538
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 50 crops of 1 type.|r
+Increases warehousing yield by +1 crops (+2/+3).
+}
+
+STRING 19539
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +3/+4).
+}
+
+STRING 19540
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
 STRING 19541
 // Abilities: A0YS (Wall of Flames), EditorSuffix (Editor Suffix)
 {
@@ -126696,10 +127308,22 @@ STRING 19549
 This unit is weakened; it has reduced attack damage.
 }
 
+STRING 19550
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
 STRING 19551
 {
 [|cffffcc00Unlock|r] |cffFF2020DREAM DEVOURER|r
 When Schala's multiplier is maxed out, she can succumb to the power of Lavos, granting her increased combat capabilities and enhanced abilities.
+}
+
+STRING 19552
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
 STRING 19553
@@ -126760,6 +127384,18 @@ STRING 19562
 // Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Magic Seal - [|cffffcc00Level 10|r]
+}
+
+STRING 19563
+// Abilities: A0FH (Max Power), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi beefs up, increasing his stat multiplier and kamehameha damage. Cannot be used with [|cff00ff00R|r] New Trick.
+|cffffff00+0.3x stat mult
++66ms and unlocks movement speed cap
+15% damage block up to 4x Str
++100% Kamehameha Charge speed|r
+|cff00FF00Duration: <A0FH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0FH,Cool1> seconds|r
 }
 
 STRING 19564
@@ -126952,6 +127588,12 @@ Schala creates 5 magical orbs in a line and fires them at the target area.
 |cff00ffffCooldown: <A0YC,Cool9> seconds|r
 }
 
+STRING 19593
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
 STRING 19594
 // Abilities: A0YK (Empowered Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -126966,6 +127608,42 @@ STRING 19595
 Schala creates 5 magical orbs in a line and fires them at the target area.
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0YC,Cool2> seconds|r
+}
+
+STRING 19596
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 19597
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 19598
+// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19599
+// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19600
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 19601
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
 }
 
 STRING 19602
@@ -127529,6 +128207,16 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 
 }
 
+STRING 19690
+// Abilities: A080 (Onigiri Time), Researchubertip (Tooltip - Learn - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool1,.> - <A080,Cool10,.> seconds|r
+}
+
 STRING 19694
 // Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
 {
@@ -127757,15 +128445,8 @@ Duration: <A0YT,Dur1> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool1> seconds|r
 }
 
-STRING 19735
-// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
-{
-Nutritious grains of snow rice.
-|cffffff00Consume for +4.5 INT per stack
-}
-
 STRING 19736
-// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -127885,6 +128566,24 @@ STRING 19759
 (shoto)
 }
 
+STRING 19760
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 3|r]
+}
+
+STRING 19761
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 1|r]
+}
+
+STRING 19762
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 2|r]
+}
+
 STRING 19763
 // Abilities: A0YY (Heaven Piercing Ice Wall), Tip (Tooltip - Normal)
 {
@@ -127946,7 +128645,7 @@ STRING 19772
 }
 
 STRING 19773
-// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
+// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -127964,7 +128663,7 @@ STRING 19775
 }
 
 STRING 19776
-// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -128027,7 +128726,7 @@ A bulky hero that specializes in disrupting teams and stealing booty.
 }
 
 STRING 19785
-// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Princess Strike), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -128079,7 +128778,7 @@ Cooling Down
 }
 
 STRING 19793
-// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Princess Strike), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -128124,6 +128823,24 @@ STRING 19799
 [|cff00ff00R|r] Heaven Piercing Ice Wall - [|cffffcc00Level 10|r]
 }
 
+STRING 19800
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 4|r]
+}
+
+STRING 19801
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 5|r]
+}
+
+STRING 19802
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 6|r]
+}
+
 STRING 19803
 // Abilities: A0YY (Heaven Piercing Ice Wall), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128139,6 +128856,18 @@ STRING 19804
 // Abilities: A0YY (Heaven Piercing Ice Wall), EditorSuffix (Editor Suffix)
 {
 (shoto)
+}
+
+STRING 19805
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 7|r]
+}
+
+STRING 19806
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 8|r]
 }
 
 STRING 19807
@@ -128510,7 +129239,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -128546,7 +129275,6 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.30x "fp"
 [lvl 200] 2.40x "fp"
-[lvl 250] 2.50x "fp"
 
 Max speed upgrades at level 60 and 125.
 Find Chaos Emeralds by killing players or sagas above level 50.
@@ -128728,6 +129456,12 @@ STRING 19889
 // Items: I026 (Tree of Might Fruit), Description (Description)
 {
 Tree of Might Fruit
+}
+
+STRING 19890
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 9|r]
 }
 
 STRING 19891
@@ -128941,6 +129675,60 @@ STRING 19922
 // Abilities: A0Z6 (Pirate's Scorn), Researchubertip (Tooltip - Learn - Extended)
 {
 Skurvy calls his ship and crew to bombard the target area. The ship deals damage to anything it runs over and fires explosive kannonballs from both sides.|n|cff00FF00Ship Damage: Str * Lvl * ?|nKannonball Damage: Str * Lvl * ?|N|cff00FFFFCooldown: <A0Z6,Cool1>s|r
+}
+
+STRING 19923
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 10|r]
+}
+
+STRING 19924
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 11|r]
+}
+
+STRING 19925
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 12|r]
+}
+
+STRING 19926
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 13|r]
+}
+
+STRING 19927
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 14|r]
+}
+
+STRING 19928
+// Abilities: A0B8 (Pecorine's Princess Sword), Tip (Tooltip - Normal)
+{
+Pecorine's Princess Sword - [|cffffcc00Level 15|r]
+}
+
+STRING 19929
+// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
+{
+G
+}
+
+STRING 19930
+// Abilities: A0B8 (Pecorine's Princess Sword), Name (Name)
+{
+Pecorine's Princess Sword
+}
+
+STRING 19931
+// Abilities: A0B8 (Pecorine's Princess Sword), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00G|r] Learn Pecorine's Princess Sword - [|cffffcc00Level %d|r]
 }
 
 STRING 19933
@@ -129305,6 +130093,18 @@ Schala calls down lightning from the sky that bombards the target area.
 |cffff2020Channel Duration: <A0YF,Dur2> seconds|r
 |cff00ff00Damage: Int x Lvl x ?|r
 |cff00ffffCooldown: <A0YF,Cool2> seconds|r
+}
+
+STRING 19993
+// Abilities: A06S (Flesh Attack Absorb Target), Hotkey (Hotkey - Normal)
+{
+G
+}
+
+STRING 19994
+// Abilities: A0B8 (Pecorine's Princess Sword), EditorSuffix (Editor Suffix)
+{
+(peco)
 }
 
 STRING 19998
@@ -129880,6 +130680,18 @@ Skurvy commands a dastardly bird to steal an item from his enemies. The bird can
 |cff00ffffCooldown: <A0Z3,Cool2> seconds|r
 }
 
+STRING 20101
+// Abilities: A0B9 (Gourmet Guild Master), Name (Name)
+{
+Gourmet Guild Master
+}
+
+STRING 20102
+// Buffs/Effects: B05V (), Bufftip (Tooltip)
+{
+Gourmet Guild Master
+}
+
 STRING 20104
 // Abilities: A0ZD (Capsule: Potara Earrings), Tip (Tooltip - Normal)
 {
@@ -130388,6 +131200,34 @@ Sonic jumps into the air before crashing down on his enemies. Unlocks [|cff00ff0
 |cff00ffffCooldown: <A0ZE,Cool2> seconds|r
 }
 
+STRING 20183
+// Abilities: A0B9 (Gourmet Guild Master), EditorSuffix (Editor Suffix)
+{
+(peco)
+}
+
+STRING 20184
+// Abilities: A0BA (Peco Eating Flag), Name (Name)
+{
+Peco Eating Flag
+}
+
+STRING 20185
+// Abilities: A0BA (Peco Eating Flag), EditorSuffix (Editor Suffix)
+{
+(peco)
+}
+
+STRING 20188
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool1,.> seconds|r
+}
+
 STRING 20189
 // Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
 {
@@ -130460,6 +131300,26 @@ STRING 20200
 [|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 10|r]
 }
 
+STRING 20201
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool3,.> seconds|r
+}
+
+STRING 20202
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool4,.> seconds|r
+}
+
 STRING 20204
 // Abilities: A0ZH (Insta-Shield), EditorSuffix (Editor Suffix)
 {
@@ -130526,6 +131386,40 @@ STRING 20217
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 6|r]
 }
 
+STRING 20220
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 0.4 @ 20%|r
+|cff00ffffCooldown: <A080,Cool2,.> seconds|r
+}
+
+STRING 20221
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD1,%>% 
+|cffffcc00Critical|r - <A0B8,DataA1>% 
+|cffffcc00Damage|r - <A0B8,DataB1,.> times
+}
+
+STRING 20222
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD2,%>% 
+|cffffcc00Critical|r - <A0B8,DataA2>% 
+|cffffcc00Damage|r - <A0B8,DataB2,.> times
+}
+
 STRING 20223
 // Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
 {
@@ -130544,6 +131438,42 @@ STRING 20225
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 9|r]
 }
 
+STRING 20226
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD3,%>% 
+|cffffcc00Critical|r - <A0B8,DataA3>% 
+|cffffcc00Damage|r - <A0B8,DataB3,.> times
+}
+
+STRING 20227
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD4,%>% 
+|cffffcc00Critical|r - <A0B8,DataA4>% 
+|cffffcc00Damage|r - <A0B8,DataB4,.> times
+}
+
+STRING 20228
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD5,%>% 
+|cffffcc00Critical|r - <A0B8,DataA5>% 
+|cffffcc00Damage|r - <A0B8,DataB5,.> times
+}
+
 STRING 20229
 // Abilities: A0ZI (Homing Attack), EditorSuffix (Editor Suffix)
 {
@@ -130554,6 +131484,18 @@ STRING 20230
 // Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 20231
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD6,%>% 
+|cffffcc00Critical|r - <A0B8,DataA6>% 
+|cffffcc00Damage|r - <A0B8,DataB6,.> times
 }
 
 STRING 20232
@@ -130958,6 +131900,78 @@ STRING 20288
 Turn on harvester's engine for mobilised replanting.
 }
 
+STRING 20289
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD7,%>% 
+|cffffcc00Critical|r - <A0B8,DataA7>% 
+|cffffcc00Damage|r - <A0B8,DataB7,.> times
+}
+
+STRING 20290
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD8,%>% 
+|cffffcc00Critical|r - <A0B8,DataA8>% 
+|cffffcc00Damage|r - <A0B8,DataB8,.> times
+}
+
+STRING 20291
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD9,%>% 
+|cffffcc00Critical|r - <A0B8,DataA9>% 
+|cffffcc00Damage|r - <A0B8,DataB9,.> times
+}
+
+STRING 20292
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD10,%>% 
+|cffffcc00Critical|r - <A0B8,DataA10>% 
+|cffffcc00Damage|r - <A0B8,DataB10,.> times
+}
+
+STRING 20293
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD11,%>% 
+|cffffcc00Critical|r - <A0B8,DataA11>% 
+|cffffcc00Damage|r - <A0B8,DataB11,.> times
+}
+
+STRING 20294
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD12,%>% 
+|cffffcc00Critical|r - <A0B8,DataA12>% 
+|cffffcc00Damage|r - <A0B8,DataB12,.> times
+}
+
 STRING 20295
 // Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
@@ -131227,6 +132241,18 @@ STRING 20338
 [|cff00ff00R|r] Self Repair
 }
 
+STRING 20339
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD13,%>% 
+|cffffcc00Critical|r - <A0B8,DataA13>% 
+|cffffcc00Damage|r - <A0B8,DataB13,.> times
+}
+
 STRING 20340
 // Abilities: A0PZ (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -131258,15 +132284,27 @@ Crop Circles
 }
 
 STRING 20345
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Increases crops stored by +2 and +26% of total stack size.
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD14,%>% 
+|cffffcc00Critical|r - <A0B8,DataA14>% 
+|cffffcc00Damage|r - <A0B8,DataB14,.> times
 }
 
 STRING 20346
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Increases crops stored by +2 and +28% of total stack size.
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD15,%>% 
+|cffffcc00Critical|r - <A0B8,DataA15>% 
+|cffffcc00Damage|r - <A0B8,DataB15,.> times
 }
 
 STRING 20347
@@ -131344,6 +132382,18 @@ STRING 20358
 (farmer)
 }
 
+STRING 20359
+// Abilities: A0B8 (Pecorine's Princess Sword), Researchubertip (Tooltip - Learn - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD1,%> - <A0B8,DataD15,%>% 
+|cffffcc00Critical|r - <A0B8,DataA1> - <A0B8,DataA15>% 
+|cffffcc00Damage|r - <A0B8,DataB1,.> - <A0B8,DataB15,.> times
+}
+
 STRING 20360
 // Abilities: A0ZV (Disable Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -131411,43 +132461,17 @@ Frieza fires a powerful and lethal energy beam from the tips of his fingers.|n|c
 }
 
 STRING 20369
-// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0B9 (Gourmet Guild Master), Ubertip (Tooltip - Normal - Extended)
 {
-Increases STR.
-|cffffff00Growth Multipliers:
-2.00x Farmland
-1.00x Grass
-1.00x Dirt
-0.75x Water
-0.50x Snow
-0.25x Blight/Rocky
+Pecorine gains bonus armor while eating or when above 50% HP.
+|cffffff00Bonus Armor: <A0B9,DataA1>|r
+
 }
 
 STRING 20370
-// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B05V (), Buffubertip (Tooltip - Extended)
 {
-Increases AGI.
-|cffffff00Growth Multipliers:
-1.50x Farmland
-1.25x Grass
-1.50x Dirt
-0.50x Water
-0.50x Snow
-0.25x Blight/Rocky
-}
-
-STRING 20371
-// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
-{
-Increases INT.
-|cff00ffffSpecial: Rice planted in snow is 50% more effective.
-|cffffff00Growth Multipliers:
-0.75x Farmland
-0.25x Grass
-0.50x Dirt
-2.00x Water
-1.50x Snow
-0.20x Blight/Rocky
+Pecorine has bonus armor when above 50% hp.
 }
 
 STRING 20372
@@ -131638,12 +132662,6 @@ STRING 20400
 [|cff00ff00Q|r] Warehousing - [|cffffcc00Level 1|r]
 }
 
-STRING 20401
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +10% of total stack size.
-}
-
 STRING 20402
 // Abilities: A101 (Super Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -131668,12 +132686,6 @@ STRING 20405
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool7> seconds|r
-}
-
-STRING 20406
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +12% of total stack size.
 }
 
 STRING 20407
@@ -131702,12 +132714,6 @@ STRING 20410
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 1|r]
 }
 
-STRING 20411
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +20% of total stack size.
-}
-
 STRING 20412
 // Abilities: A102 (Crop Circles), EditorSuffix (Editor Suffix)
 {
@@ -131732,12 +132738,6 @@ STRING 20415
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool9> seconds|r
-}
-
-STRING 20416
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +22% of total stack size.
 }
 
 STRING 20417
@@ -131906,13 +132906,6 @@ STRING 20440
 R
 }
 
-STRING 20441
-// Upgrades: R00C (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Unlocks the Crop Circle ability for Super Warehouses, allowing them to teleport their crops.
-}
-
 STRING 20442
 // Upgrades: R00D (Magic Sentry), Name (Name)
 {
@@ -132066,12 +133059,6 @@ STRING 20462
 Enable Harvester Engine - [|cffffcc00Level 4|r]
 }
 
-STRING 20463
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +14% of total stack size.
-}
-
 STRING 20464
 // Abilities: A100 (Warehousing), Tip (Tooltip - Normal)
 {
@@ -132082,12 +133069,6 @@ STRING 20465
 // Abilities: A101 (Super Warehousing), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 5|r]
-}
-
-STRING 20466
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +24% of total stack size.
 }
 
 STRING 20467
@@ -132769,34 +133750,6 @@ STRING 20570
 Increases defence system attack damage by +200.
 }
 
-STRING 20571
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20572
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20573
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20574
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
 STRING 20575
 // Upgrades: R00D (Magic Sentry), Ubertip (Tooltip - Extended)
 {
@@ -133040,22 +133993,6 @@ STRING 20618
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
-}
-
-STRING 20619
-// Units: h0AC (Warehouse), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 1 crop|r
-A warehouse to store food. Max 5.
-|cffffff00Every minute, increases stored crops by +1 and +10% of total stack size.|r
-}
-
-STRING 20620
-// Units: h0AF (Super Warehouse), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 20 crops of 1 type.|r
-An advanced warehouse that is better at storing food.
-|cffffff00Every minute, increases stored crops by +2 and +20% of total stack size.|r
 }
 
 STRING 20621
@@ -134819,7 +135756,7 @@ F
 }
 
 STRING 20902
-// Abilities: A10N (Revive - Move Original Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0B8 (Pecorine's Princess Sword), Researchhotkey (Hotkey - Learn)
 {
 G
 }
@@ -135073,7 +136010,7 @@ STRING 20948
 }
 
 STRING 20949
-// Abilities: A06S (Flesh Attack Absorb Target), Hotkey (Hotkey - Normal)
+// Abilities: A0B8 (Pecorine's Princess Sword), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -135792,7 +136729,7 @@ STRING 21070
 
 STRING 21071
 {
-|cffffcc00Press ~ or F8 to select your revive point and move it anywhere on the main map for the 1st minute of the game. |r
+|cffffcc00Press F8 to move your revive point during the 1st minute. |r
 }
 
 STRING 21072
@@ -138072,7 +139009,7 @@ STRING 21427
 }
 
 STRING 21429
-// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
+// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }

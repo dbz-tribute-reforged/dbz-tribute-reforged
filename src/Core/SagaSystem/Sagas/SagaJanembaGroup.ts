@@ -12,7 +12,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.delay = 90;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {

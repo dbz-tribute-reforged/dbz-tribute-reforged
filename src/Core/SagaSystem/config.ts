@@ -221,3 +221,169 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
   }
 };
+
+export const fastSagaSystem: SagaSystemConfig = {
+  sagas: [
+    // TestSaga,
+    // TestSagaTwo,
+    // main line
+    
+    // start
+    DeadZoneSaga,
+    RaditzSaga,
+
+    // branch 1
+    VegetaSaga,
+    NamekSaga,
+    GinyuSaga,
+    FriezaSaga,
+    CoolerReturnSaga,
+    TrunksSaga,
+    AndroidsSaga1,
+    AndroidsSaga2,
+    CellSaga,
+    BabidiSaga,
+    BuuSaga,
+    BeerusSaga,
+    WhisTrainingSaga,
+    GoldenFriezaSaga,
+    BrolyDBSSaga,
+
+    // movies
+    WheeloSaga,
+    TurlesSaga,
+    LordSlugSaga,
+    GarlicJrSaga,
+    Super13Saga,
+    BojackSaga,
+    BrolyDBZMovieSaga2,
+    BioBrolySaga,
+    JanembaSaga,
+    HirudegarnSaga,
+    FutureBabidiSaga,
+    FTSuperSaga2,
+    BebiSaga,
+    ShadowDragonSaga1,
+    ShadowDragonSaga2,
+
+    Universe6Saga,
+    // secret
+    RustTyrannoSaga,
+  ],
+
+  sagaDependencies: {
+    // starting sagas
+    DeadZoneSaga: [],
+    RaditzSaga: [],
+    // main branch
+    VegetaSaga: [
+      [ RaditzSaga, SagaState.Completed ],
+    ],
+    NamekSaga: [
+      [ VegetaSaga, SagaState.Completed ],
+    ],
+    GinyuSaga: [
+      [ NamekSaga, SagaState.Completed ],
+    ],
+    FriezaSaga: [
+      [ GinyuSaga, SagaState.Completed ],
+    ],
+    CoolerReturnSaga: [
+      [ FriezaSaga, SagaState.Completed ]
+    ],
+    TrunksSaga: [
+      [ CoolerReturnSaga, SagaState.Completed ],
+    ],
+    AndroidsSaga1: [
+      [ TrunksSaga, SagaState.Completed ],
+    ],
+    AndroidsSaga2: [
+      [ AndroidsSaga1, SagaState.Completed ],
+    ],
+    CellSaga: [
+      [ AndroidsSaga1, SagaState.Completed ],
+    ],
+    BabidiSaga: [
+      [ AndroidsSaga2, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
+    ],
+    BuuSaga: [
+      [ BabidiSaga, SagaState.Completed ],
+    ],
+    BeerusSaga: [
+      [ BuuSaga, SagaState.Completed ],
+    ],
+    WhisTrainingSaga: [
+      [ BeerusSaga, SagaState.Completed ],
+    ],
+    GoldenFriezaSaga: [
+      [ WhisTrainingSaga, SagaState.Completed ],
+    ],
+    BrolyDBSSaga: [
+      // [ Universe6Saga, SagaState.Completed ],
+      // [ FTSuperSaga2, SagaState.Completed ],
+      [ GoldenFriezaSaga, SagaState.Completed ],
+    ],
+
+
+
+    // z movie branch
+    WheeloSaga: [
+      [ DeadZoneSaga, SagaState.Completed ],
+    ],
+    TurlesSaga: [
+      [ DeadZoneSaga, SagaState.Completed ],
+      [ VegetaSaga, SagaState.Completed ],
+    ],
+    LordSlugSaga: [
+      [ TurlesSaga, SagaState.Completed ],
+    ],
+    GarlicJrSaga: [
+      [ LordSlugSaga, SagaState.Completed ],
+    ],
+    Super13Saga: [
+      [ GarlicJrSaga, SagaState.Completed ],
+    ],
+    BojackSaga: [
+      [ Super13Saga, SagaState.Completed ],
+    ],
+    BrolyDBZMovieSaga2: [
+      [ BojackSaga, SagaState.Completed ],
+    ],
+    BioBrolySaga: [
+      [ BrolyDBZMovieSaga2, SagaState.Completed ],
+    ],
+    JanembaSaga: [
+      [ BioBrolySaga, SagaState.Completed ],
+    ],
+    HirudegarnSaga: [
+      [ JanembaSaga, SagaState.Completed ],
+    ],
+    FutureBabidiSaga: [
+      [ HirudegarnSaga, SagaState.Completed ],
+    ],
+    FTSuperSaga2: [
+      [ FutureBabidiSaga, SagaState.Completed ],
+    ],
+    BebiSaga: [
+      [ FTSuperSaga2, SagaState.Completed ],
+    ],
+    ShadowDragonSaga1: [
+      [ BebiSaga, SagaState.Completed ],
+    ],
+    ShadowDragonSaga2: [
+      [ ShadowDragonSaga1, SagaState.Completed ],
+    ],
+
+    // bonus
+    Universe6Saga: [
+      // [ GoldenFriezaSaga, SagaState.Completed ],
+      [ FriezaSaga, SagaState.Completed ],
+    ],
+    // secret
+    RustTyrannoSaga: [
+      [ BrolyDBSSaga, SagaState.Completed ],
+      [ ShadowDragonSaga2, SagaState.Completed ],
+    ],
+  }
+};

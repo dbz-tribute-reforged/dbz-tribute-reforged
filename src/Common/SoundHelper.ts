@@ -1542,7 +1542,7 @@ export module SoundHelper {
       // megumin
       case Id.meguminManatite:
         if (unitId == Id.megumin) {
-          if (rng < 25) {
+          if (rng < 5) {
             playSoundOnUnit(unit, "Audio/Voice/Megumin/Bakuretsu.mp3", 5929);
           }
         }
@@ -1733,6 +1733,65 @@ export module SoundHelper {
         if (unitId == Id.pan) {
           playSoundOnUnit(unit, "Audio/Voice/PanPrepareYourself.mp3", 1344);
         }
+        break;
+      
+      // pecorine
+      case Id.pecorinePrincessSplash:
+        if (unitId == Id.pecorine) {
+          playSoundOnUnit(unit, "Audio/Voice/Pecorine/Q1.mp3", 705);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Peco/Q1.mp3", 1358);
+        break;
+      
+      case Id.pecorineRoyalSlash:
+        if (unitId == Id.pecorine) {
+          playSoundOnUnit(unit, "Audio/Voice/Pecorine/W1.mp3", 705);
+        }
+        SoundHelper.playTwoSoundsWithDelay(
+          unit,
+          "Audio/Effects/Peco/W1.mp3", 835, 0.8,
+          "Audio/Effects/Peco/W2.mp3", 1227
+        );
+        break;
+      
+      case Id.pecorineOnigiriTime:
+        if (unitId == Id.pecorine) {
+          playSoundOnUnit(unit, "Audio/Voice/Pecorine/Eat.mp3", 1724);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Peco/Eat.mp3", 1123);
+        break;
+      
+      case Id.pecorinePrincessStrike:
+        if (unitId == Id.pecorine) {
+          if (rng < 50) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Pecorine/PrincessStrike1_1.mp3", 1488, 1.4,
+              "Audio/Voice/Pecorine/PrincessStrike1_2.mp3", 1593
+            );
+          } else {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Pecorine/PrincessStrike2_1.mp3", 2272, 2.2,
+              "Audio/Voice/Pecorine/PrincessStrike2_2.mp3", 1593
+            );
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Peco/R1.mp3", 809);
+        break;
+
+      case Id.pecorinePrincessValiant:
+        if (unitId == Id.pecorine) {
+          playSoundOnUnit(unit, "Audio/Voice/Pecorine/Q1.mp3", 705);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Peco/Q1.mp3", 1358);
+        break;
+      
+      case Id.pecorinePrincessForce:
+        if (unitId == Id.pecorine) {
+          playSoundOnUnit(unit, "Audio/Voice/Pecorine/Eat.mp3", 1724);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Peco/Eat.mp3", 1123);
         break;
 
       // piccolo

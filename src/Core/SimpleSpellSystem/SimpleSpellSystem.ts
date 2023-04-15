@@ -8,6 +8,7 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
+import { FarmingManager } from "Core/FarmingSystem/FarmingManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
@@ -142,6 +143,11 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.meguminExplosion4, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminExplosion5, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminManatite, SimpleSpellSystem.doMeguminManatite);
+    
+    
+    Globals.genericSpellMap.set(Id.plantWheat, SimpleSpellSystem.farmingPlantCrops);
+    Globals.genericSpellMap.set(Id.plantCorn, SimpleSpellSystem.farmingPlantCrops);
+    Globals.genericSpellMap.set(Id.plantRice, SimpleSpellSystem.farmingPlantCrops);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -1856,12 +1862,10 @@ export module SimpleSpellSystem {
   }
 
   export function SchalaTeleportation() {
-    // SimpleSpellSystem.doSchalaLinkChannels();
-
     const spellId = GetSpellAbilityId();
     const schalaTpMoveDuration = 66;
     const schalaTpMoveDuration2 = 33;
-    const schalaTpEndTick = 100;
+    const schalaTpEndTick = 133;
     const schalaTpAOE = 600;
     const schalaTpMaxDist = 6000;
 
@@ -1881,7 +1885,9 @@ export module SimpleSpellSystem {
     const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
     const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
     const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
-    let beamSpeed = Math.min(4000, Math.max(1500, CoordMath.distance(casterPos, targetPos)));
+    const maxDist =  Math.min(4000, Math.max(1500, CoordMath.distance(casterPos, targetPos)));
+
+    let beamSpeed = maxDist
     if (spellId == Id.schalaTeleportation) {
       beamSpeed /= schalaTpMoveDuration;
     } else if (spellId == Id.schalaTeleportation2) {
@@ -1907,17 +1913,20 @@ export module SimpleSpellSystem {
         DestroyEffect(sfxBeam);
         DestroyTimer(GetExpiredTimer());
       } else {
+        targetPos.setUnit(tpUnit);
         if (
-          (
-            spellId == Id.schalaTeleportation && 
-            tick < schalaTpMoveDuration
-          ) ||
-          (
-            spellId == Id.schalaTeleportation2 &&
-            tick < schalaTpMoveDuration2
+          CoordMath.distance(casterPos, targetPos) < maxDist
+          && (
+            (
+              spellId == Id.schalaTeleportation && 
+              tick < schalaTpMoveDuration
+            ) ||
+            (
+              spellId == Id.schalaTeleportation2 &&
+              tick < schalaTpMoveDuration2
+            )
           )
         ) {
-          targetPos.setPos(GetUnitX(tpUnit), GetUnitY(tpUnit));
           targetPos.polarProjectCoords(targetPos, direction, beamSpeed);
           BlzSetSpecialEffectX(sfxBeam, targetPos.x);
           BlzSetSpecialEffectY(sfxBeam, targetPos.y);
@@ -1941,7 +1950,7 @@ export module SimpleSpellSystem {
               // TODO: turn this back on
               IsUnitAlly(unit, player)
               && UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
-              && IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+              && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
               && GetUnitTypeId(unit) != Id.schala
               // true
             ) {
@@ -3035,6 +3044,15 @@ export module SimpleSpellSystem {
     
     udg_StatMultUnit = unit;
     TriggerExecute(gg_trg_Base_Armor_Set);
+  }
+
+  export function farmingPlantCrops() {
+    const spellId = GetSpellAbilityId();
+    const x = GetUnitX(GetTriggerUnit());
+    const y = GetUnitY(GetTriggerUnit());
+    FarmingManager.getInstance().plantCropFromSpell(spellId, x, y);
+    
+    return false;
   }
 
 

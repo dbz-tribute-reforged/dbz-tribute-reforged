@@ -4,30 +4,30 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 
   
-// temporarily give xp until neutral hostile is fixed
-function give_auto_exp() {
-  const u = GetEnumUnit();
-  const p = GetOwningPlayer(u);
-  const pId = GetPlayerId(p);
-  if (
-    IsUnitType(u, UNIT_TYPE_HERO)
-    && pId < Constants.maxActivePlayers
-    && UnitHelper.isUnitAlive(u)
-    && !IsUnitType(u, UNIT_TYPE_SUMMONED)
-    && !IsUnitIllusion(u)
-  ) {
-    const xp = (
-      ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u)+1)
-      - ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u))
-    );
+// // temporarily give xp until neutral hostile is fixed
+// function give_auto_exp() {
+//   const u = GetEnumUnit();
+//   const p = GetOwningPlayer(u);
+//   const pId = GetPlayerId(p);
+//   if (
+//     IsUnitType(u, UNIT_TYPE_HERO)
+//     && pId < Constants.maxActivePlayers
+//     && UnitHelper.isUnitAlive(u)
+//     && !IsUnitType(u, UNIT_TYPE_SUMMONED)
+//     && !IsUnitIllusion(u)
+//   ) {
+//     const xp = (
+//       ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u)+1)
+//       - ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(u))
+//     );
 
-    if (xp > 0) {
-      AddHeroXP(u, xp, false);
-    } else {
-      AddHeroXP(u, 50, false);
-    }
-  }
-}
+//     if (xp > 0) {
+//       AddHeroXP(u, xp, false);
+//     } else {
+//       AddHeroXP(u, 50, false);
+//     }
+//   }
+// }
 
 export module ExperienceConstants {
   // hero req exp
@@ -52,7 +52,7 @@ export module ExperienceConstants {
   export const heroLevelMult = 0.0;
   export const heroConstant = 100;
 
-  export const creepXPModifier = 0.5;
+  export const creepXPModifier = 0.7;
   export const globalXPRateModifier = 1.1;
   export const nearbyPlayerXPMult = 0.15;
   export const bonusXPToNextLevel = 0.025;

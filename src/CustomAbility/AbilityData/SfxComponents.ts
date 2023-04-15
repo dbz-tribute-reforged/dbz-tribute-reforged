@@ -111,7 +111,7 @@ export const SfxComponents = [
         model: "animeslashfinal.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 2.5,
+        scale: 2.75,
         endScale: -1,
         startHeight: 75,
         endHeight: 75,
@@ -249,7 +249,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.2,
@@ -293,7 +293,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.0,
@@ -390,7 +390,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.3,
@@ -411,7 +411,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 5,
@@ -432,7 +432,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostArmor\\FrostArmorTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostArmor/FrostArmorTarget.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 3,
@@ -476,7 +476,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.0,
@@ -594,7 +594,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl",
+      //   model: "Abilities/Spells/Orc/Purge/PurgeBuffTarget.mdl",
       //   repeatInterval: 5,
       //   group: 0,
       //   scale: 2,
@@ -615,7 +615,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Items\\SpellShieldAmulet\\SpellShieldCaster.mdl",
+        model: "Abilities/Spells/Items/SpellShieldAmulet/SpellShieldCaster.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 1.5,
@@ -636,7 +636,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -701,7 +701,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Drain\\ManaDrainCaster.mdl",
+        model: "Abilities/Spells/Other/Drain/ManaDrainCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -810,7 +810,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 1.5,
@@ -831,7 +831,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -852,7 +852,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl",
+        model: "Abilities/Spells/Other/Incinerate/FireLordDeathExplode.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -873,7 +873,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
+        model: "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -896,7 +896,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\SearingArrow\\SearingArrowMissile.mdl",
+        model: "Abilities/Weapons/SearingArrow/SearingArrowMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -917,7 +917,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -938,7 +938,7 @@ export const SfxComponents = [
         attachmentPoint: "overhead",
       },
       {
-        model: "units\\human\\phoenix\\phoenix.mdl",
+        model: "units/human/phoenix/phoenix.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -959,7 +959,7 @@ export const SfxComponents = [
         attachmentPoint: "overhead",
       },
       {
-        model: "units\\creeps\\BronzeDragon\\BronzeDragon.mdl",
+        model: "units/creeps/BronzeDragon/BronzeDragon.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -1115,7 +1115,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Items\\AIre\\AIreTarget.mdl",
+        model: "Abilities/Spells/Items/AIre/AIreTarget.mdl",
         repeatInterval: 10,
         group: 0,
         scale: 1.5,
@@ -1255,7 +1255,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\AIre\\AIreTarget.mdl",
+        model: "Abilities/Spells/Items/AIre/AIreTarget.mdl",
         repeatInterval: 12,
         group: 0,
         scale: 1.6,
@@ -1332,7 +1332,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl",
+        model: "Abilities/Spells/Orc/Purge/PurgeBuffTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3,
@@ -1397,7 +1397,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaFlare\\ManaFlareMissile.mdl",
+        model: "Abilities/Spells/Human/ManaFlare/ManaFlareMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -1431,7 +1431,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl",
+        model: "Abilities/Spells/Human/Invisibility/InvisibilityTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2.5,
@@ -1742,7 +1742,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\AIhe\\AIheTarget.mdl",
+        model: "Abilities/Spells/Items/AIhe/AIheTarget.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 2.5,
@@ -1807,7 +1807,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
+        model: "Abilities/Weapons/FarseerMissile/FarseerMissile.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.0,
@@ -1906,7 +1906,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\SearingArrow\\SearingArrowMissile.mdl",
+        model: "Abilities/Weapons/SearingArrow/SearingArrowMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2039,7 +2039,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        model: "Doodads/Cinematic/Lightningbolt/Lightningbolt.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 1.5,
@@ -2060,7 +2060,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 1.25,
@@ -2117,7 +2117,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 3,
@@ -2237,7 +2237,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl",
+        model: "Abilities/Spells/Undead/DarkRitual/DarkRitualTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.75,
@@ -2258,7 +2258,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.5,
@@ -2279,7 +2279,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 12,
         group: 0,
         scale: 2.5,
@@ -2336,7 +2336,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 66,
         group: 0,
         scale: 0.75,
@@ -2393,7 +2393,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 66,
         group: 0,
         scale: 0.75,
@@ -2435,7 +2435,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 1.4,
@@ -2471,7 +2471,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Doodads\\Terrain\\RockChunks\\RockChunks1.mdl",
+        model: "Doodads/Terrain/RockChunks/RockChunks1.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.8,
@@ -2513,7 +2513,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 0.3,
@@ -2606,7 +2606,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl",
+        model: "Abilities/Weapons/GreenDragonMissile/GreenDragonMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -2918,7 +2918,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 19,
         group: 0,
         scale: 0.6,
@@ -2975,7 +2975,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\PriestMissile\\PriestMissile.mdl",
+        model: "Abilities/Weapons/PriestMissile/PriestMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2,
@@ -3126,7 +3126,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\PriestMissile\\PriestMissile.mdl",
+        model: "Abilities/Weapons/PriestMissile/PriestMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2,
@@ -3263,7 +3263,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.4,
@@ -3305,7 +3305,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 3.0,
@@ -3362,7 +3362,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 1.5,
@@ -3383,7 +3383,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.5,
@@ -3404,7 +3404,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl",
+        model: "Abilities/Spells/Other/Incinerate/FireLordDeathExplode.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.0,
@@ -3448,7 +3448,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\SearingArrow\\SearingArrowMissile.mdl",
+        model: "Abilities/Weapons/SearingArrow/SearingArrowMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -3469,7 +3469,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -3545,7 +3545,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 19,
         group: 0,
         scale: 0.6,
@@ -3665,7 +3665,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.0,
@@ -3785,7 +3785,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl",
+        model: "Abilities/Spells/Undead/DarkRitual/DarkRitualTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 0.75,
@@ -3901,7 +3901,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.1,
@@ -3978,7 +3978,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.0,
@@ -4119,7 +4119,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.0,
@@ -4140,7 +4140,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -4241,7 +4241,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -4530,7 +4530,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 2,
@@ -4671,7 +4671,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -4827,7 +4827,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl",
+        model: "Abilities/Spells/NightElf/BattleRoar/RoarCaster.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 3,
@@ -4890,7 +4890,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 2,
@@ -4926,7 +4926,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl",
+        model: "Abilities/Spells/Orc/Voodoo/VoodooAura.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -4970,7 +4970,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\Immolation\\ImmolationTarget.mdl",
+        model: "Abilities/Spells/NightElf/Immolation/ImmolationTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -5088,7 +5088,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.2,
@@ -5132,7 +5132,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.0,
@@ -5229,7 +5229,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.3,
@@ -5250,7 +5250,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 5,
@@ -5271,7 +5271,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostArmor\\FrostArmorTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostArmor/FrostArmorTarget.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 3,
@@ -5315,7 +5315,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.0,
@@ -5523,7 +5523,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.5,
@@ -5559,7 +5559,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 6.6,
@@ -5595,7 +5595,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 4,
@@ -5631,7 +5631,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6.6,
@@ -5667,7 +5667,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       // {
-      //   model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
+      //   model: "Abilities/Weapons/FarseerMissile/FarseerMissile.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 2.0,
@@ -5730,7 +5730,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.0,
@@ -5787,7 +5787,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.75,
@@ -5901,7 +5901,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Shockwave\\ShockwaveMissile.mdl",
+        model: "Abilities/Spells/Orc/Shockwave/ShockwaveMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
@@ -5922,7 +5922,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.0,
@@ -5958,7 +5958,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\Banditmissile\\Banditmissile.mdl",
+        model: "Abilities/Weapons/Banditmissile/Banditmissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -6051,7 +6051,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Objects\\InventoryItems\\BattleStandard\\BattleStandard.mdl",
+        model: "Objects/InventoryItems/BattleStandard/BattleStandard.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.0,
@@ -6072,7 +6072,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Tranquility\\Tranquility.mdl",
+        model: "Abilities/Spells/NightElf/Tranquility/Tranquility.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.8,
@@ -6093,7 +6093,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+      //   model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
       //   repeatInterval: 16,
       //   group: 0,
       //   scale: 1.5,
@@ -6147,7 +6147,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 4,
@@ -6168,7 +6168,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Doodads\\Barrens\\Rocks\\Crator\\Crator1.mdl",
+        model: "Doodads/Barrens/Rocks/Crator/Crator1.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 5,
@@ -6225,7 +6225,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -6282,7 +6282,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.3,
@@ -6708,7 +6708,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.25,
@@ -6801,7 +6801,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -7170,7 +7170,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 99,
         group: 0,
         scale: 0.6,
@@ -7594,7 +7594,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl",
+        model: "Abilities/Spells/Orc/Purge/PurgeBuffTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2,
@@ -7636,7 +7636,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl",
+        model: "Abilities/Spells/Orc/LightningShield/LightningShieldTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -7657,7 +7657,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.3,
@@ -7791,7 +7791,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageCaster.mdl",
         repeatInterval: 66,
         group: 0,
         scale: 1.0,
@@ -7890,7 +7890,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 39,
         group: 0,
         scale: 1.0,
@@ -7988,7 +7988,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 0.8,
@@ -8101,7 +8101,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.25,
@@ -8158,7 +8158,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.4,
@@ -8215,7 +8215,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.5,
@@ -8293,7 +8293,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\SpellShieldAmulet\\SpellShieldCaster.mdl",
+        model: "Abilities/Spells/Items/SpellShieldAmulet/SpellShieldCaster.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 0.5,
@@ -8335,7 +8335,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.6,
@@ -8392,7 +8392,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.5,
@@ -8568,7 +8568,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 0.6,
@@ -8703,7 +8703,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.0,
@@ -8874,7 +8874,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+        model: "Abilities/Spells/NightElf/Blink/BlinkTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 7.5,
@@ -9098,7 +9098,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 1.5,
@@ -9217,7 +9217,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 1.5,
@@ -9294,7 +9294,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\SpellShieldAmulet\\SpellShieldCaster.mdl",
+        model: "Abilities/Spells/Items/SpellShieldAmulet/SpellShieldCaster.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 0.5,
@@ -9336,7 +9336,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.1,
@@ -9456,7 +9456,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 0.8,
@@ -9849,7 +9849,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6.6,
@@ -9990,7 +9990,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 0.5,
@@ -10317,7 +10317,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.5,
@@ -10380,7 +10380,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.5,
@@ -10401,7 +10401,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.5,
@@ -10422,7 +10422,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -10521,7 +10521,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.3,
@@ -10542,7 +10542,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 5,
@@ -10656,7 +10656,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -10677,7 +10677,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -10698,7 +10698,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl",
+        model: "Abilities/Spells/Undead/Darksummoning/DarkSummonTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -10734,7 +10734,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -10755,7 +10755,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl",
+        model: "Abilities/Spells/Undead/Darksummoning/DarkSummonTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -10911,7 +10911,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -10932,7 +10932,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -11052,7 +11052,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -11130,7 +11130,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.25,
@@ -11208,7 +11208,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.6,
@@ -11265,7 +11265,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 0.6,
@@ -11442,7 +11442,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 6,
@@ -11463,7 +11463,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Doodads\\Barrens\\Rocks\\Crator\\Crator1.mdl",
+        model: "Doodads/Barrens/Rocks/Crator/Crator1.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 4,
@@ -11541,7 +11541,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -11598,7 +11598,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 2.0,
@@ -12066,7 +12066,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -12378,7 +12378,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -12751,7 +12751,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.5,
@@ -13057,7 +13057,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        model: "Abilities/Spells/Human/Heal/HealTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.8,
@@ -13156,7 +13156,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 3,
@@ -13291,7 +13291,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 24,
         group: 0,
         scale: 2,
@@ -13408,7 +13408,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 24,
         group: 0,
         scale: 2,
@@ -13603,7 +13603,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -13744,7 +13744,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -13894,7 +13894,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
@@ -14149,7 +14149,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 25,
         group: 0,
         scale: 2.25,
@@ -14206,7 +14206,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2.0,
@@ -14284,7 +14284,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 8.0,
@@ -14361,7 +14361,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
@@ -14397,7 +14397,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "units\\creeps\\RedDragon\\RedDragon.mdl",
+        model: "units/creeps/RedDragon/RedDragon.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.0,
@@ -14439,7 +14439,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 8.0,
@@ -14483,7 +14483,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        model: "Abilities/Weapons/PhoenixMissile/Phoenix_Missile_mini.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -14673,7 +14673,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        model: "Doodads/Cinematic/Lightningbolt/Lightningbolt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.0,
@@ -14694,7 +14694,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -14751,7 +14751,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        model: "Doodads/Cinematic/Lightningbolt/Lightningbolt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.0,
@@ -14772,7 +14772,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        model: "Doodads/Cinematic/Lightningbolt/Lightningbolt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.0,
@@ -14793,7 +14793,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -14850,7 +14850,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -14970,7 +14970,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.5,
@@ -15027,7 +15027,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+      //   model: "Abilities/Spells/NightElf/Blink/BlinkTarget.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 20.0,
@@ -15046,7 +15046,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 8.0,
@@ -15202,7 +15202,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -15238,7 +15238,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathMissile.mdl",
+        model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.5,
@@ -15280,7 +15280,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -15337,7 +15337,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.2,
@@ -15373,7 +15373,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathMissile.mdl",
+        model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2.5,
@@ -15394,7 +15394,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathMissile.mdl",
+        model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -15415,7 +15415,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathMissile.mdl",
+        model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 7.0,
@@ -15436,7 +15436,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -15457,7 +15457,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -15499,7 +15499,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -15556,7 +15556,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 2.5,
@@ -15577,7 +15577,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 3.0,
@@ -15634,7 +15634,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl",
+        model: "Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2.0,
@@ -15655,7 +15655,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl",
+        model: "Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 1.5,
@@ -15733,7 +15733,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.0,
@@ -15868,7 +15868,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Tranquility\\Tranquility.mdl",
+        model: "Abilities/Spells/NightElf/Tranquility/Tranquility.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.8,
@@ -15889,7 +15889,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        model: "Abilities/Spells/Human/Heal/HealTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6.0,
@@ -15925,7 +15925,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.6,
@@ -15961,7 +15961,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       // {
-      //   model: "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl",
+      //   model: "Abilities/Spells/Orc/LightningShield/LightningShieldTarget.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 6,
@@ -16024,7 +16024,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -16081,7 +16081,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+      //   model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
       //   repeatInterval: 0,
       //   group: 0,
       //   scale: 1.5,
@@ -16102,7 +16102,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl",
+        model: "Abilities/Spells/Orc/LightningShield/LightningShieldTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3,
@@ -16174,7 +16174,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\AcidBomb\\BottleMissile.mdl",
+        model: "Abilities/Spells/Other/AcidBomb/BottleMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3,
@@ -16231,7 +16231,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\AcidBomb\\BottleMissile.mdl",
+        model: "Abilities/Spells/Other/AcidBomb/BottleMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.5,
@@ -16351,7 +16351,7 @@ export const SfxComponents = [
           attachmentPoint: "",
         },
         {
-          model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeTarget.mdl",
+          model: "Abilities/Spells/Human/FlameStrike/FlameStrikeTarget.mdl",
           repeatInterval: 16,
           group: 0,
           scale: 1.5,
@@ -16408,7 +16408,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+      //   model: "Abilities/Spells/NightElf/Blink/BlinkTarget.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 20.0,
@@ -16427,7 +16427,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 8.0,
@@ -16463,7 +16463,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Doodads\\LordaeronSummer\\Terrain\\LoardaeronRockChunks\\LoardaeronRockChunks1.mdl",
+        model: "Doodads/LordaeronSummer/Terrain/LoardaeronRockChunks/LoardaeronRockChunks1.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -16484,7 +16484,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -16520,7 +16520,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       // {
-      //   model: "UI\\Feedback\\GoldCredit\\GoldCredit.mdl",
+      //   model: "UI/Feedback/GoldCredit/GoldCredit.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 3.0,
@@ -16634,7 +16634,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.0,
@@ -16712,7 +16712,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Tranquility\\Tranquility.mdl",
+        model: "Abilities/Spells/NightElf/Tranquility/Tranquility.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.8,
@@ -16733,7 +16733,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        model: "Abilities/Spells/Human/Heal/HealTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6.0,
@@ -16769,7 +16769,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\FrostBolt\\FrostBoltMissile.mdl",
+        model: "Abilities/Spells/Other/FrostBolt/FrostBoltMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5,
@@ -16790,7 +16790,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\FrostBolt\\FrostBoltMissile.mdl",
+        model: "Abilities/Spells/Other/FrostBolt/FrostBoltMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.5,
@@ -16832,7 +16832,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -16931,7 +16931,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 5.2,
@@ -16988,7 +16988,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\AIvi\\AIviTarget.mdl",
+        model: "Abilities/Spells/Items/AIvi/AIviTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4,
@@ -17024,7 +17024,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl",
+        model: "Abilities/Spells/Human/HolyBolt/HolyBoltSpecialArt.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6,
@@ -17096,7 +17096,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Items\\AIsp\\SpeedTarget.mdl",
+        model: "Abilities/Spells/Items/AIsp/SpeedTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.0,
@@ -17246,7 +17246,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.6,
@@ -17267,7 +17267,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 3.5,
@@ -17288,7 +17288,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 4.0,
@@ -17345,7 +17345,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 4.0,
@@ -17366,7 +17366,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 5,
@@ -17387,7 +17387,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 6.0,
@@ -17486,7 +17486,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 4.5,
@@ -17543,7 +17543,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.5,
@@ -17600,7 +17600,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+      //   model: "Abilities/Spells/NightElf/Blink/BlinkTarget.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 20.0,
@@ -17619,7 +17619,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 8.0,
@@ -17718,7 +17718,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -17762,7 +17762,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Drain\\ManaDrainCaster.mdl",
+        model: "Abilities/Spells/Other/Drain/ManaDrainCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -17895,7 +17895,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -17973,7 +17973,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -18072,7 +18072,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -18228,7 +18228,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -18249,7 +18249,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -18390,7 +18390,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 7.0,
@@ -18411,7 +18411,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5.5,
@@ -18510,7 +18510,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2.0,
@@ -18567,7 +18567,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 0.85,
@@ -18603,7 +18603,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\Shockwave\\ShockwaveMissile.mdl",
+        model: "Abilities/Spells/Orc/Shockwave/ShockwaveMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.2,
@@ -18624,7 +18624,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.2,
@@ -18765,7 +18765,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3.0,
@@ -18837,7 +18837,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl",
+        model: "Abilities/Spells/NightElf/BattleRoar/RoarCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2.5,
@@ -18879,7 +18879,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -18915,7 +18915,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -18951,7 +18951,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.2,
@@ -18987,7 +18987,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl",
+        model: "Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 1.5,
@@ -19008,7 +19008,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl",
+        model: "Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.8,
@@ -19101,7 +19101,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -19179,7 +19179,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -19236,7 +19236,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3.0,
@@ -19278,7 +19278,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3.0,
@@ -19377,7 +19377,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2,
@@ -19476,7 +19476,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2,
@@ -19533,7 +19533,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
+        model: "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 1.0,
@@ -19575,7 +19575,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        model: "Doodads/Cinematic/Lightningbolt/Lightningbolt.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 3.0,
@@ -19596,7 +19596,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.0,
@@ -19653,7 +19653,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
+        model: "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 0.5,
@@ -19674,7 +19674,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\RainOfFire\\RainOfFireTarget.mdl",
+        model: "Abilities/Spells/Demon/RainOfFire/RainOfFireTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 3,
@@ -19695,7 +19695,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.0,
@@ -19908,7 +19908,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 2.0,
@@ -19929,7 +19929,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 2.0,
@@ -19964,7 +19964,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 0.75,
@@ -20084,7 +20084,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.3,
@@ -20105,7 +20105,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -20161,7 +20161,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 5.2,
@@ -20359,7 +20359,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 2.5,
@@ -20380,7 +20380,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 2.5,
@@ -20436,7 +20436,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.0,
@@ -20478,7 +20478,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -20543,7 +20543,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -20655,7 +20655,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.25,
@@ -20756,7 +20756,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        model: "Abilities/Weapons/PhoenixMissile/Phoenix_Missile_mini.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -20811,7 +20811,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.25,
@@ -20910,7 +20910,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Bloodlust\\BloodlustTarget.mdl",
+        model: "Abilities/Spells/Orc/Bloodlust/BloodlustTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -20988,7 +20988,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Bloodlust\\BloodlustTarget.mdl",
+        model: "Abilities/Spells/Orc/Bloodlust/BloodlustTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -21045,7 +21045,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl",
+        model: "Abilities/Spells/Other/BreathOfFire/BreathOfFireDamage.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2,
@@ -21066,7 +21066,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1,
@@ -21180,7 +21180,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1,
@@ -21377,7 +21377,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Weapons\\BristleBackMissile\\BristleBackMissile.mdl",
+        model: "Abilities/Weapons/BristleBackMissile/BristleBackMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.0,
@@ -21547,7 +21547,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\CannonTowerMissile\\CannonTowerMissile.mdl",
+        model: "Abilities/Weapons/CannonTowerMissile/CannonTowerMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.0,
@@ -21603,7 +21603,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\AcidBomb\\BottleMissile.mdl",
+        model: "Abilities/Spells/Other/AcidBomb/BottleMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -21624,7 +21624,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+        model: "Abilities/Spells/NightElf/Blink/BlinkTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 10.0,
@@ -21659,7 +21659,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\AcidBomb\\BottleMissile.mdl",
+        model: "Abilities/Spells/Other/AcidBomb/BottleMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -22549,7 +22549,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 4,
@@ -22669,7 +22669,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 4.8,
@@ -22789,7 +22789,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 5.6,
@@ -22909,7 +22909,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 6.4,
@@ -23029,7 +23029,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 7.2,
@@ -23097,6 +23097,341 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam peco princess splash", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "BladeBeamFinal.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 2.0,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 0.5,
+        color: {
+          x: 125,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBombShine.mdl",
+        repeatInterval: 6,
+        group: 0,
+        scale: 0.6,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 125,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "AncientExplode.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 1.2,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx peco onigiri time", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "Abilities/Spells/Human/Heal/HealTarget.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 3.0,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx peco princess strike", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 0.6,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 175,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.2,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 105,
+          z: 215,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.2,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 105,
+          z: 215,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "PurpleSlam.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 1.6,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "ValkCrack.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 2.25,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx peco princess valiant", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "animeslashfinal.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 4.0,
+        endScale: -1,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 0.6,
+        color: {
+          x: 255,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities/Weapons/PhoenixMissile/Phoenix_Missile_mini.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 125,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "weapon",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx peco princess force", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "DTBlueNoRingWhite.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 4.0,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 192,
+          z: 203,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+
+
+
+
+
+
+
+
+
+  // --------------------------------------------
+  { 
     name: "sfx beam energy beam", 
     repeatInterval: 1,
     startTick: 0,
@@ -23107,7 +23442,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\Cripple\\CrippleTarget.mdl",
+        model: "Abilities/Spells/Undead/Cripple/CrippleTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.5,
@@ -23341,7 +23676,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 1.5,
@@ -23362,7 +23697,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 1.0,
@@ -23383,7 +23718,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.0,
@@ -23482,7 +23817,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.5,
@@ -23539,7 +23874,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -23611,7 +23946,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\Banditmissile\\Banditmissile.mdl",
+        model: "Abilities/Weapons/Banditmissile/Banditmissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -23689,7 +24024,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\WitchDoctorMissile\\WitchDoctorMissile.mdl",
+        model: "Abilities/Weapons/WitchDoctorMissile/WitchDoctorMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -23710,7 +24045,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Environment\\LargeBuildingFire\\LargeBuildingFire2.mdl",
+        model: "Environment/LargeBuildingFire/LargeBuildingFire2.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 1.5,
@@ -23767,7 +24102,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl",
+        model: "Abilities/Spells/Orc/Voodoo/VoodooAura.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -23803,7 +24138,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -23902,7 +24237,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\WitchDoctorMissile\\WitchDoctorMissile.mdl",
+        model: "Abilities/Weapons/WitchDoctorMissile/WitchDoctorMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -23923,7 +24258,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -23944,7 +24279,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -24001,7 +24336,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\AIre\\AIreTarget.mdl",
+        model: "Abilities/Spells/Items/AIre/AIreTarget.mdl",
         repeatInterval: 20,
         group: 0,
         scale: 1.5,
@@ -24022,7 +24357,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
+      //   model: "Abilities/Spells/Undead/OrbOfDeath/AnnihilationMissile.mdl",
       //   repeatInterval: 17,
       //   group: 0,
       //   scale: 2,
@@ -24119,7 +24454,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\ChimaeraAcidMissile\\ChimaeraAcidMissile.mdl",
+        model: "Abilities/Weapons/ChimaeraAcidMissile/ChimaeraAcidMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -24140,7 +24475,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Abilities\\Spells\\Other\\AcidBomb\\BottleImpact.mdl",
+        model: "Abilities/Spells/Other/AcidBomb/BottleImpact.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -24237,7 +24572,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -24336,7 +24671,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl",
+        model: "Abilities/Weapons/DemonHunterMissile/DemonHunterMissile.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 3,
@@ -24357,7 +24692,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DarkSummoning\\DarkSummonMissile.mdl",
+        model: "Abilities/Spells/Undead/DarkSummoning/DarkSummonMissile.mdl",
         repeatInterval: 4,
         group: 0,
         scale: 3,
@@ -24378,7 +24713,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\Unsummon\\UnsummonTarget.mdl",
+        model: "Abilities/Spells/Undead/Unsummon/UnsummonTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4.0,
@@ -24420,7 +24755,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -24441,7 +24776,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Abilities\\Spells\\Undead\\RaiseSkeletonWarrior\\RaiseSkeleton.mdl",
+      //   model: "Abilities/Spells/Undead/RaiseSkeletonWarrior/RaiseSkeleton.mdl",
       //   repeatInterval: -1,
       //   group: 0,
       //   scale: 3.4,
@@ -24462,7 +24797,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl",
+        model: "Abilities/Spells/Items/RitualDagger/RitualDaggerTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -24483,7 +24818,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       // {
-      //   model: "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
+      //   model: "Objects/Spawnmodels/NightElf/NECancelDeath/NECancelDeath.mdl",
       //   repeatInterval: -1,
       //   group: 0,
       //   scale: 4,
@@ -24646,7 +24981,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Banish\\BanishTarget.mdl",
+        model: "Abilities/Spells/Human/Banish/BanishTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2,
@@ -24667,7 +25002,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2,
@@ -24688,7 +25023,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Immolation\\ImmolationTarget.mdl",
+        model: "Abilities/Spells/NightElf/Immolation/ImmolationTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 4,
@@ -24709,7 +25044,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeDamageTarget.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrikeDamageTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2,
@@ -24808,7 +25143,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl",
+        model: "Abilities/Spells/Undead/Darksummoning/DarkSummonTarget.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 3,
@@ -24829,7 +25164,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\ChimaeraAcidMissile\\ChimaeraAcidMissile.mdl",
+        model: "Abilities/Weapons/ChimaeraAcidMissile/ChimaeraAcidMissile.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2.5,
@@ -24850,7 +25185,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl",
+        model: "Abilities/Spells/Undead/DeathCoil/DeathCoilSpecialArt.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2,
@@ -24871,7 +25206,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -24892,7 +25227,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\RaiseSkeletonWarrior\\RaiseSkeleton.mdl",
+        model: "Abilities/Spells/Undead/RaiseSkeletonWarrior/RaiseSkeleton.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3,
@@ -25027,7 +25362,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -25183,7 +25518,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -25204,7 +25539,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -25303,7 +25638,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl",
+        model: "Abilities/Spells/Undead/DeathPact/DeathPactTarget.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 2.0,
@@ -25383,7 +25718,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\SpellSteal\\SpellStealMissile.mdl",
+        model: "Abilities/Spells/Human/SpellSteal/SpellStealMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3,
@@ -25579,7 +25914,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 2,
@@ -25600,7 +25935,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 4,
@@ -25621,7 +25956,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -25642,7 +25977,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2,
@@ -25665,7 +26000,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -25720,7 +26055,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionMissile.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2,
@@ -25743,7 +26078,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
+        model: "Abilities/Spells/Undead/OrbOfDeath/AnnihilationMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -25897,7 +26232,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 2,
@@ -25918,7 +26253,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 4,
@@ -25939,7 +26274,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -26076,7 +26411,7 @@ export const SfxComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -26153,7 +26488,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\BlackArrow\\BlackArrowMissile.mdl",
+        model: "Abilities/Spells/Other/BlackArrow/BlackArrowMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 5.0,
@@ -26209,7 +26544,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.2,
@@ -26244,7 +26579,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.62,
@@ -26265,7 +26600,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
+        model: "Objects/Spawnmodels/NightElf/NECancelDeath/NECancelDeath.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 2.4,
@@ -26286,7 +26621,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
+        model: "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3,
@@ -26442,7 +26777,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 3.5,
@@ -26576,7 +26911,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\WandOfNeutralization\\NeutralizationMissile.mdl",
+        model: "Abilities/Spells/Items/WandOfNeutralization/NeutralizationMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -26668,7 +27003,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainCaster.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 6,
@@ -26767,7 +27102,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1,
@@ -26788,7 +27123,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1,
@@ -26811,7 +27146,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        model: "Abilities/Weapons/PhoenixMissile/Phoenix_Missile_mini.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -26845,45 +27180,24 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "ValkFireExplosion.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
         endScale: -1,
-        startHeight: 50,
-        endHeight: 50,
+        startHeight: 0,
+        endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
         extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
-          y: 55,
-          z: 55,
+          y: 255,
+          z: 255,
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "",
-      },
-      {
-        model: "SpiritBomb.mdl",
-        repeatInterval: 1,
-        group: 0,
-        scale: 1.0,
-        endScale: -1,
-        startHeight: 100,
-        endHeight: 100,
-        extraDirectionalYaw: 0,
-        extraPitch: 0,
-        extraRoll: 0,
-        animSpeed: 1.0,
-        color: {
-          x: 255,
-          y: 55,
-          z: 55,
-        },
-        updateCoordsOnly: false,
-        persistent: false,
         attachmentPoint: "",
       },
     ],
@@ -27280,7 +27594,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl",
+        model: "Abilities/Spells/Undead/DeathCoil/DeathCoilSpecialArt.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2,
@@ -27301,7 +27615,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",
+        model: "Objects/Spawnmodels/NightElf/NECancelDeath/NECancelDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3,
@@ -27379,7 +27693,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
+        model: "Abilities/Weapons/FarseerMissile/FarseerMissile.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 0.5,
@@ -27474,7 +27788,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 75,
         group: 0,
         scale: 1.0,
@@ -27495,7 +27809,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 1.0,
@@ -27529,7 +27843,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Defend\\DefendCaster.mdl",
+        model: "Abilities/Spells/Human/Defend/DefendCaster.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 0.5,
@@ -27766,7 +28080,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\Mortar\\MortarMissile.mdl",
+        model: "Abilities/Weapons/Mortar/MortarMissile.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.5,
@@ -27787,7 +28101,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Human/HCancelDeath/HCancelDeath.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3,
@@ -27907,7 +28221,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -28063,7 +28377,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -28084,7 +28398,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -28183,7 +28497,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.0,
@@ -28276,7 +28590,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\FrostArmor\\FrostArmorTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostArmor/FrostArmorTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
@@ -28297,7 +28611,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.0,
@@ -28318,7 +28632,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.8,
@@ -28417,7 +28731,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+        model: "Abilities/Spells/Undead/FrostNova/FrostNovaTarget.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 2.0,
@@ -28438,7 +28752,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+        model: "Abilities/Weapons/FrostWyrmMissile/FrostWyrmMissile.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 4.0,
@@ -28614,7 +28928,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -29007,7 +29321,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionMissile.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2,
@@ -29028,7 +29342,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -29085,7 +29399,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionMissile.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionMissile.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2,
@@ -29106,7 +29420,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -29163,7 +29477,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.2,
@@ -29220,7 +29534,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -29433,7 +29747,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\WitchDoctorMissile\\WitchDoctorMissile.mdl",
+        model: "Abilities/Weapons/WitchDoctorMissile/WitchDoctorMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 5.0,
@@ -29454,7 +29768,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -29475,7 +29789,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -29625,7 +29939,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: 99,
         group: 0,
         scale: 5.0,
@@ -29646,7 +29960,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 99,
         group: 0,
         scale: 3.0,
@@ -29667,7 +29981,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomDeath.mdl",
         repeatInterval: 99,
         group: 0,
         scale: 1.3,
@@ -29787,7 +30101,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
+        model: "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 0.75,
@@ -29808,7 +30122,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        model: "Abilities/Spells/Human/FlameStrike/FlameStrike1.mdl",
         repeatInterval: 75,
         group: 0,
         scale: 0.75,
@@ -29964,7 +30278,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 5.0,
@@ -29985,7 +30299,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 3,
@@ -30006,7 +30320,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkPortal/DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -30120,7 +30434,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 19,
         group: 0,
         scale: 0.6,
@@ -30141,7 +30455,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 12,
         group: 0,
         scale: 2,
@@ -30219,7 +30533,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.5,
@@ -30240,7 +30554,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -30396,7 +30710,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 3.0,
@@ -30417,7 +30731,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "Abilities/Spells/Other/Charm/CharmTarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.5,
@@ -30438,7 +30752,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.2,
@@ -30516,7 +30830,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       // {
-      //   model: "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl",
+      //   model: "Abilities/Spells/Orc/LightningShield/LightningShieldTarget.mdl",
       //   repeatInterval: 1,
       //   group: 0,
       //   scale: 2,
@@ -30558,7 +30872,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\Bolt\\BoltImpact.mdl",
+        model: "Abilities/Weapons/Bolt/BoltImpact.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 3,
@@ -30579,7 +30893,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Undead\\ThornyShield\\ThornyShieldTargetChestLeft.mdl",
+        model: "Abilities/Spells/Undead/ThornyShield/ThornyShieldTargetChestLeft.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 4.0,
@@ -30672,7 +30986,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Doodads\\Terrain\\RockChunks\\RockChunks1.mdl",
+        model: "Doodads/Terrain/RockChunks/RockChunks1.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.2,
@@ -30714,7 +31028,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.0,
@@ -30750,7 +31064,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
+        model: "Abilities/Spells/Other/Drain/DrainTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
@@ -30771,7 +31085,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Demon\\DarkConversion\\ZombifyTarget.mdl",
+        model: "Abilities/Spells/Demon/DarkConversion/ZombifyTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
@@ -31026,7 +31340,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",
+        model: "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 5,
@@ -31047,7 +31361,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -31238,7 +31552,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -31274,7 +31588,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
+        model: "Abilities/Spells/Other/Tornado/TornadoElemental.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.25,
@@ -31591,7 +31905,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\Tranquility\\Tranquility.mdl",
+        model: "Abilities/Spells/NightElf/Tranquility/Tranquility.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2.0,
@@ -31690,7 +32004,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl",
+        model: "Abilities/Spells/Items/AIma/AImaTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2,
@@ -31804,7 +32118,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
+        model: "Abilities/Spells/Undead/AbsorbMana/AbsorbManaBirthMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 6,
@@ -31882,7 +32196,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 2.5,
@@ -31959,7 +32273,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.0,
@@ -32115,7 +32429,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 2.7,
@@ -32136,7 +32450,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 16,
         group: 0,
         scale: 1.4,
@@ -32178,7 +32492,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3.5,
@@ -32292,7 +32606,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 3.5,
@@ -32562,7 +32876,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 19,
         group: 0,
         scale: 0.6,
@@ -32583,7 +32897,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        model: "Abilities/Spells/Human/Feedback/SpellBreakerAttack.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -32604,7 +32918,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        model: "Abilities/Spells/Other/HowlOfTerror/HowlCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 4,
@@ -32640,7 +32954,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl",
+        model: "Abilities/Weapons/GreenDragonMissile/GreenDragonMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.25,
@@ -32718,7 +33032,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl",
+        model: "Abilities/Spells/Human/MassTeleport/MassTeleportTo.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -32739,7 +33053,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl",
+        model: "Abilities/Spells/Human/MassTeleport/MassTeleportCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -32796,7 +33110,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl",
+        model: "Abilities/Spells/Human/MassTeleport/MassTeleportCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -32946,7 +33260,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\NightElf\\EntangleMine\\Roots.mdl",
+        model: "Abilities/Spells/NightElf/EntangleMine/Roots.mdl",
         repeatInterval: 33,
         group: 0,
         scale: 1.0,
@@ -33003,7 +33317,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 0.5,
@@ -33117,7 +33431,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.0,
@@ -33413,7 +33727,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 0.75,
@@ -33448,7 +33762,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 7.5,
@@ -33490,7 +33804,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Environment\\LargeBuildingFire\\LargeBuildingFire2.mdl",
+        model: "Environment/LargeBuildingFire/LargeBuildingFire2.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 2.0,
@@ -33511,7 +33825,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 3,
         group: 0,
         scale: 5.0,
@@ -33568,7 +33882,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        model: "Abilities/Spells/Human/Heal/HealTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 10.0,
@@ -33589,7 +33903,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 3.0,
@@ -33796,7 +34110,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "doodads\\northrend\\water\\Battleship\\Battleship.mdl",
+        model: "doodads/northrend/water/Battleship/Battleship.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.75,
@@ -33817,7 +34131,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveMissile.mdl",
+        model: "Abilities/Spells/Other/CrushingWave/CrushingWaveMissile.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
@@ -33897,7 +34211,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       // {
-      //   model: "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl",
+      //   model: "Abilities/Spells/NightElf/Starfall/StarfallCaster.mdl",
       //   repeatInterval: 0,
       //   group: 0,
       //   scale: 1.5,
@@ -33947,7 +34261,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageCaster.mdl",
         repeatInterval: 10,
         group: 0,
         scale: 1.0,
@@ -33970,7 +34284,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageCaster.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,

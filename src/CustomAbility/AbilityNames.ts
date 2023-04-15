@@ -493,6 +493,15 @@ export module AbilityNames {
     export const EXPLOSION_5: string = "Megumin Explosion 5";
   }
 
+  export module Peco {
+    export const PRINCESS_SPLASH: string = "Peco Princess Splash";
+    export const ROYAL_SLASH: string = "Peco Royal Slash";
+    export const ONIGIRI_TIME: string = "Peco Onigiri Time";
+    export const PRINCESS_STRIKE: string = "Peco Princess Strike";
+    export const PRINCESS_VALIANT: string = "Peco Princess Valiant";
+    export const PRINCESS_FORCE: string = "Peco Princess Force";
+  }
+
 
 
 

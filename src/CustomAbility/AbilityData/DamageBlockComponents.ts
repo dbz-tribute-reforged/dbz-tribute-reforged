@@ -13,7 +13,7 @@ export const DamageBlockComponents = [
     multiplier: 4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -70,7 +70,7 @@ export const DamageBlockComponents = [
     multiplier: 4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -93,7 +93,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\DivineShield\\DivineShieldTarget.mdl",
+        model: "Abilities/Spells/Human/DivineShield/DivineShieldTarget.mdl",
         repeatInterval: 12,
         group: 0,
         scale: 1.0,
@@ -128,7 +128,7 @@ export const DamageBlockComponents = [
     multiplier: 12,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -151,7 +151,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageDeathCaster.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.0,
@@ -185,7 +185,7 @@ export const DamageBlockComponents = [
     multiplier: 16,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -208,7 +208,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageDeathCaster.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.0,
@@ -278,7 +278,7 @@ export const DamageBlockComponents = [
     multiplier: 2,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -301,7 +301,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageDeathCaster.mdl",
         repeatInterval: 6,
         group: 0,
         scale: 1.0,
@@ -335,7 +335,7 @@ export const DamageBlockComponents = [
     multiplier: 0.2,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -392,7 +392,7 @@ export const DamageBlockComponents = [
     multiplier: 0.15,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -415,7 +415,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -449,7 +449,7 @@ export const DamageBlockComponents = [
     multiplier: 2.0,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -472,7 +472,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -563,7 +563,7 @@ export const DamageBlockComponents = [
     multiplier: 0.5,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -586,7 +586,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -620,7 +620,7 @@ export const DamageBlockComponents = [
     multiplier: 7.0,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 2.0,
@@ -643,7 +643,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\Web\\WebTarget.mdl",
+        model: "Abilities/Spells/Undead/Web/WebTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -677,7 +677,7 @@ export const DamageBlockComponents = [
     multiplier: 0.5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -700,7 +700,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionSpecialArt.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionSpecialArt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -734,7 +734,7 @@ export const DamageBlockComponents = [
     multiplier: 0.6,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -757,7 +757,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\ReinforcedTrollBurrow\\ReinforcedTrollBurrowTarget.mdl",
+        model: "Abilities/Spells/Orc/ReinforcedTrollBurrow/ReinforcedTrollBurrowTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -807,7 +807,7 @@ export const DamageBlockComponents = [
       //   attachmentPoint: "",
       // },
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 2,
@@ -830,7 +830,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 6.0,
@@ -864,7 +864,7 @@ export const DamageBlockComponents = [
     multiplier: 0.8,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -921,7 +921,7 @@ export const DamageBlockComponents = [
     multiplier: 4.0,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -944,7 +944,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -978,7 +978,7 @@ export const DamageBlockComponents = [
     multiplier: 2,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1001,7 +1001,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\Cripple\\CrippleTarget.mdl",
+        model: "Abilities/Spells/Undead/Cripple/CrippleTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -1035,7 +1035,7 @@ export const DamageBlockComponents = [
     multiplier: 0.65,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.25,
@@ -1092,7 +1092,7 @@ export const DamageBlockComponents = [
     multiplier: 6.0,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 2.5,
@@ -1146,7 +1146,7 @@ export const DamageBlockComponents = [
     multiplier: 8.0,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 3.0,
@@ -1200,7 +1200,7 @@ export const DamageBlockComponents = [
     multiplier: 3,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 2.5,
@@ -1236,7 +1236,7 @@ export const DamageBlockComponents = [
     multiplier: 4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 3.0,
@@ -1323,13 +1323,13 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 10,
+    blockPerDamage: 15,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 2.0,
@@ -1458,7 +1458,7 @@ export const DamageBlockComponents = [
     multiplier: 0.2,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1515,7 +1515,7 @@ export const DamageBlockComponents = [
     multiplier: 5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1572,7 +1572,7 @@ export const DamageBlockComponents = [
     multiplier: 3,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1653,7 +1653,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "Abilities/Weapons/FireBallMissile/FireBallMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 2.5,
@@ -1744,7 +1744,7 @@ export const DamageBlockComponents = [
     multiplier: 0.3,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1801,7 +1801,7 @@ export const DamageBlockComponents = [
     multiplier: 5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        model: "Abilities/Spells/Orc/MirrorImage/MirrorImageDeathCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1837,7 +1837,7 @@ export const DamageBlockComponents = [
     multiplier: 3.0,
     sfxList: [
       {
-        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1860,7 +1860,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.5,
@@ -1894,7 +1894,7 @@ export const DamageBlockComponents = [
     multiplier: 7.5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -1951,7 +1951,7 @@ export const DamageBlockComponents = [
     multiplier: 0.4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2044,7 +2044,7 @@ export const DamageBlockComponents = [
     multiplier: 2,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl",
+        model: "Abilities/Spells/Undead/DarkRitual/DarkRitualTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2067,7 +2067,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbDarkness\\OrbDarkness.mdl",
+        model: "Abilities/Spells/Items/OrbDarkness/OrbDarkness.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2101,7 +2101,7 @@ export const DamageBlockComponents = [
     multiplier: 4,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl",
+        model: "Abilities/Spells/Undead/DarkRitual/DarkRitualTarget.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2124,7 +2124,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbDarkness\\OrbDarkness.mdl",
+        model: "Abilities/Spells/Items/OrbDarkness/OrbDarkness.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2158,7 +2158,7 @@ export const DamageBlockComponents = [
     multiplier: 2.5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2181,7 +2181,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\ReinforcedTrollBurrow\\ReinforcedTrollBurrowTarget.mdl",
+        model: "Abilities/Spells/Orc/ReinforcedTrollBurrow/ReinforcedTrollBurrowTarget.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2215,7 +2215,7 @@ export const DamageBlockComponents = [
     multiplier: 3,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2238,7 +2238,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionSpecialArt.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionSpecialArt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2272,7 +2272,7 @@ export const DamageBlockComponents = [
     multiplier: 0.6,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2295,7 +2295,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionSpecialArt.mdl",
+        model: "Abilities/Spells/Items/OrbCorruption/OrbCorruptionSpecialArt.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2329,7 +2329,7 @@ export const DamageBlockComponents = [
     multiplier: 0.5,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,
@@ -2424,6 +2424,63 @@ export const DamageBlockComponents = [
           x: 105,
           y: 255,
           z: 155,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block peco onigiri time",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 20,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 0.4,
+    sfxList: [
+      {
+        model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "WhisShield.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 85,
+          z: 195,
         },
         updateCoordsOnly: false,
         persistent: true,

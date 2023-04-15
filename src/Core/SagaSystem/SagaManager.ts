@@ -1,14 +1,14 @@
 import { SagaSystemConfig } from "./SagaSystemConfig";
 import { Saga, BaseSaga, SagaState } from "./Sagas/BaseSaga";
-import { sagaSystemConfig } from "./config";
-import { Constants } from "Common/Constants";
+import { fastSagaSystem, sagaSystemConfig } from "./config";
+import { Constants, Globals } from "Common/Constants";
 import { CustomMultiboardManager } from "CustomUI/CustomMultiboard";
 
 export class SagaManager {
 
   private static instance: SagaManager;
 
-  public static maxNumberConcurrentSagas: number = 6;
+  public static maxNumberConcurrentSagas: number = 4;
 
   protected inProgressSagas: number;
 
@@ -18,10 +18,10 @@ export class SagaManager {
   protected sagaUpdateTimer: timer;
   protected sagaPingTimer: timer;
 
-  constructor(sagaSystemConfig: SagaSystemConfig) {
+  constructor(sagaConfig: SagaSystemConfig) {
     this.inProgressSagas = 0;
 
-    this.config = sagaSystemConfig;
+    this.config = sagaConfig;
     this.sagaUpdateTimer = CreateTimer();
     this.sagaPingTimer = CreateTimer();
 
@@ -30,7 +30,11 @@ export class SagaManager {
 
   public static getInstance() {
     if (this.instance == null) {
-      this.instance = new SagaManager(sagaSystemConfig);
+      if (Globals.sagaSystemMode == 0) {
+        this.instance = new SagaManager(fastSagaSystem);
+      } else {
+        this.instance = new SagaManager(sagaSystemConfig);
+      }
     }
     return this.instance;
   }
@@ -73,7 +77,7 @@ export class SagaManager {
         ++numActivePlayers;
       }
     }
-    SagaManager.maxNumberConcurrentSagas = 3;
+    SagaManager.maxNumberConcurrentSagas = 4;
   }
 
   public step(): void {

@@ -37,25 +37,25 @@ export module Creep {
   export const DinosaurTeen = FourCC("n02E"); // lvl 4
   export const DinosaurSmall = FourCC("n03A"); // lvl 5
   export const DinosaurLarge = FourCC("n00D"); // lvl 24
-  export const Pterodactyl = FourCC("n03B"); // lvl 9
+  export const Pterodactyl = FourCC("n03B"); // lvl 10
 
-  export const Saibaman = FourCC("n037");
+  export const Saibaman = FourCC("n037"); // lvl 6
   export const WolfNormal = FourCC("n014"); // lvl 5
-  export const WolfAdult = FourCC("n038");
-  export const Bull = FourCC("n039");
-  export const BearThief = FourCC("n03C"); // lvl 11
+  export const WolfAdult = FourCC("n038"); // lvl 8
+  export const Bull = FourCC("n039"); // lvl 8
+  export const BearThief = FourCC("n03C"); // lvl 12
 
   export const FishBaby = FourCC("n01U"); // lvl 4
-  export const FishAdult = FourCC("n02H"); // lvl 18
-  export const SeaSerpent = FourCC("n00A"); // lvl 9
-  export const CrocodileGIant = FourCC("n02Q"); // lvl 12
+  export const FishAdult = FourCC("n02H"); // lvl 20
+  export const SeaSerpent = FourCC("n00A"); // lvl 10
+  export const CrocodileGIant = FourCC("n02Q"); // lvl 13
   export const CrocodileMother = FourCC("n02S"); // lvl 30
 
-  export const SlugGuard = FourCC("z004"); // lvl 12
+  export const SlugGuard = FourCC("z004"); // lvl 13
   export const SlugDefenseDroid = FourCC("n021"); // lvl 16
 
-  export const WolfAlpha = FourCC("n02G"); // lvl 13
-  export const Mummy = FourCC("n00N"); // lvl 18
+  export const WolfAlpha = FourCC("n02G"); // lvl 14
+  export const Mummy = FourCC("n00N"); // lvl 19
   export const BirdHater = FourCC("n03M"); // lvl 32
 
   export const EvilSpirit = FourCC("n023"); // lvl 21
@@ -64,7 +64,7 @@ export module Creep {
   export const DarkSpirit = FourCC("n034"); // lvl 35
 
   export const FriezaScout = FourCC("n028"); // lvl 4
-  export const FriezaHenchmen = FourCC("n02R"); // lvl 16
+  export const FriezaHenchmen = FourCC("n02R"); // lvl 17
   export const FriezaOrlen = FourCC("n00Y"); // lvl 13 orange
   export const FriezaNabana = FourCC("n00Z"); // lvl 13 green
   export const FriezaRobery = FourCC("n010"); // lvl 13 brown (pink)
@@ -73,7 +73,7 @@ export module Creep {
   export const FriezaStrawberry = FourCC("n017") // lvl 30 red
   export const FriezaGreyberry = FourCC("n018") // lvl 32 grey
 
-  export const MetalCoolerClone = FourCC("n03W"); // lvl 17
+  export const MetalCoolerClone = FourCC("n03W"); // lvl 18
 
   // maybe use these for when hell opens up?
   export const YenmaHelper = FourCC("n01X"); // lvl 2
@@ -141,7 +141,7 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.CrocodileGIant, 0.2),
           ]],
           [Creep.FriezaScout, [
-            new RandomCreepType(Creep.FriezaHenchmen, 0.2),
+            new RandomCreepType(Creep.FriezaHenchmen, 0.3),
           ]],
         ]
       )

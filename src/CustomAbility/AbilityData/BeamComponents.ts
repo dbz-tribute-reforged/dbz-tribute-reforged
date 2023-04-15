@@ -4665,7 +4665,6 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
-      { name: "hide unit allow movement" },
       { name: "damage beam robo laser spin dps" },
       { name: "timed life 25" },
       { name: "sfx beam robo laser spin" },
@@ -5294,7 +5293,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE_DMG.KAME_DPS * 1,
+    beamHpMult: BASE_DMG.KAME_DPS * 0.7,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_FAST,
     aoe: 300,
@@ -6651,6 +6650,53 @@ export const BeamComponents = [
       { name: "sfx beam megumin explosion 5" },
     ],
   },
+  // -------------------------------------------
+  { 
+    name: "beam peco princess splash",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    beamHpMult: BASE_DMG.KAME_DPS * 1,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: BeamComponent.BEAM_SPEED_FAST,
+    aoe: 300,
+    clashingDelayTicks: 1,
+    maxDelayTicks: 6,
+    durationIncPerDelay: 12,
+    boundaryRemoveDelay: 2,
+    turnSpeed: 3,
+    heightVariation: {
+      start: 50,
+      finish: 50,
+      scaling: 1,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    isGroundPathing: false,
+    isSticky: false,
+    canClashWithHero: false,
+    useLastCastPoint: true,
+    explodeOnDeath: true,
+    explodeAtCastPoint: true,
+    explodeOnContact: false,
+    setAsSpawnedBeam: false,
+    isInvul: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
+    beamUnitType: Constants.dummyBeamUnitId,
+    beamUnitSkin: Constants.dummyBeamUnitId,
+    components: [
+      { name: "damage beam peco princess splash dps" },
+      { name: "damage beam peco princess splash explosion" },
+      { name: "sfx beam peco princess splash" },
+    ],
+  },
+
+
+
+
+
+
+
   // -------------------------------------------
   { 
     name: "beam energy beam",
