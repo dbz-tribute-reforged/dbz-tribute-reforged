@@ -9018,6 +9018,60 @@ STRING 1419
 Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10. (Corruption passive is for melee only)
 }
 
+STRING 1420
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+}
+
+STRING 1421
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+}
+
+STRING 1422
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+}
+
+STRING 1423
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
+}
+
+STRING 1424
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+}
+
+STRING 1425
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+}
+
+STRING 1426
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
+}
+
+STRING 1427
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
+}
+
+STRING 1428
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
+}
+
 STRING 1429
 // Items: I02K (Halo), Name (Name)
 {
@@ -9082,6 +9136,18 @@ STRING 1439
 // Items: I01J (King Kai's food), Hotkey (Hotkey)
 {
 B
+}
+
+STRING 1440
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+}
+
+STRING 1441
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 1450
@@ -10259,12 +10325,6 @@ STRING 1664
 // Units: H062 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern Super)
-}
-
-STRING 1665
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 1666
@@ -44569,24 +44629,6 @@ Upa's attacks are empowered by his rage to deal devastating damage to his enemie
 |cffffcc00Bonus Attack Damage:|r +<A0OQ,DataA1,%>% 
 }
 
-STRING 7161
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
-}
-
-STRING 7162
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
-}
-
-STRING 7163
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
-}
-
 STRING 7164
 // Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
@@ -44617,18 +44659,6 @@ Armor Aura: 0.5 * lvl|r
 |cff00ffffCooldown: <A0PT,Cool4> seconds|r
 }
 
-STRING 7167
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
-}
-
-STRING 7168
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
-}
-
 STRING 7169
 // Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
@@ -44647,12 +44677,6 @@ Ginyu strikes a powerful fighting pose that increases his combat abilities. Prov
 Spell Amp: +5% per second up to +15%
 Armor Aura: 0.5 * lvl|r
 |cff00ffffCooldown: <A0PT,Cool6> seconds|r
-}
-
-STRING 7171
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
 }
 
 STRING 7172
@@ -63665,12 +63689,6 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 |cff00ffffCooldown: <A00M,Cool9> seconds|r
 }
 
-STRING 10128
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
-}
-
 STRING 10129
 // Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
 {
@@ -64816,24 +64834,6 @@ STRING 10308
 // Items: I04E (Cosmic Illusion Caster), Name (Name)
 {
 Cosmic Illusion Caster
-}
-
-STRING 10309
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
-}
-
-STRING 10310
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
-}
-
-STRING 10311
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
 }
 
 STRING 10312

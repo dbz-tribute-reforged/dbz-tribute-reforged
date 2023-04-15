@@ -10546,7 +10546,7 @@ export const AOEDamageComponents = [
       damageType: 4,
       weaponType: 0,
     },
-    maxHealthDamagePercent: 0,
+    maxHealthDamagePercent: 0.003,
     maxManaBurnPercent: 0,
     maxManaLossPercent: 0,
     applyDamageOverTime: false,
