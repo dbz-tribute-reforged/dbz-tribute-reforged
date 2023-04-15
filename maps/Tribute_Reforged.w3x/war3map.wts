@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.81c
+DBZ Tribute |cffffcc00Reforged 0.82
 }
 
 STRING 4
@@ -2770,6 +2770,17 @@ STRING 444
 Vanishing Ball
 }
 
+STRING 445
+// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
+|cffffff00+1% spin damage per hero level up to +100%.
+x2 spin damage when above 15 speed.
+Maximum speed decreases when below 75% HP.|r
+|cff00FF00Damage: Agi * Sonic Speed
+|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
+}
+
 STRING 446
 // Upgrades: R00M (Cannibalize), Name (Name)
 {
@@ -3071,9 +3082,11 @@ STRING 495
 }
 
 STRING 496
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+// Units: h0AC (Warehouse), Ubertip (Tooltip - Extended)
 {
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> seconds|r
+|cff00ffffBuild Requirement: 1 crop|r
+A warehouse to store food. Max 5.
+|cffffff00Every 30s, +1 crop for each stack of crops (up to 5 slots).|r
 }
 
 STRING 497
@@ -3736,18 +3749,11 @@ STRING 604
 }
 
 STRING 605
-// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
+// Units: h0AF (Super Warehouse), Ubertip (Tooltip - Extended)
 {
-A hero with one extremely powerful spell: |cffff4422Explosion|r.
-
-|cffff2222Explosion:|r Spells deal +20% Max HP damage.
-|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+|cff00ffffBuild Requirement: 20 crops of 1 type.|r
+An advanced warehouse that is better at storing food.
+|cffffff00Every 30s, +2 crops for each stack of crops (up to 5 slots). This is +1 more than a normal warehouse.|r
 }
 
 STRING 606
@@ -8304,27 +8310,27 @@ Fat Buu Candy
 }
 
 STRING 1306
-// Items: I00V (Human Candy), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Human Candy
+Every 30s, increases crops stored by +1 per slot.
 }
 
 STRING 1307
-// Items: I00V (Human Candy), Description (Description)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Gives xp and stats
+Every 30s, increases crops stored by +2 per slot.
 }
 
 STRING 1308
-// Items: I00W (Monster Candy), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Monster Candy
+Every 30s, increases crops stored by +3 per slot.
 }
 
 STRING 1309
-// Items: I00W (Monster Candy), Description (Description)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Gives xp and stats
+Every 30s, increases crops stored by +4 per slot.
 }
 
 STRING 1310
@@ -8587,21 +8593,21 @@ Completed Potara Fusion
 }
 
 STRING 1352
-// Items: I021 (Saiyan log), Name (Name)
+// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Saiyan log
+Every 30s, increases crops stored by +5 per slot.
 }
 
 STRING 1353
-// Items: I021 (Saiyan log), Description (Description)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa and Raditz log all of their battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +2 per slot.
 }
 
 STRING 1354
-// Items: I021 (Saiyan log), Ubertip (Tooltip - Extended)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa and Raditz log all of their battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +3 per slot.
 }
 
 STRING 1355
@@ -8948,39 +8954,43 @@ Frozenhelfire
 }
 
 STRING 1410
-// Items: I02C (Frieza's log), Name (Name)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza's log
+Every 30s, increases crops stored by +4 per slot.
 }
 
 STRING 1411
-// Items: I02C (Frieza's log), Description (Description)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza logs all of his battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +5 per slot.
 }
 
 STRING 1412
-// Items: I02C (Frieza's log), Ubertip (Tooltip - Extended)
+// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza logs all of his battles. If somebody reads this, they could learn a decent amount about combat.
+Every 30s, increases crops stored by +6 per slot.
 }
 
 STRING 1413
-// Items: I02D (Power of the Makyo Star), Name (Name)
+// Upgrades: R00C (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Power of the Makyo Star
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Unlocks the Crop Circle ability for Super Warehouses, allowing them to teleport their crops.
 }
 
 STRING 1414
-// Items: I02D (Power of the Makyo Star), Description (Description)
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
-Holds the power of the Makyo star.
+|cffffff00+0.10x str mult
++0.05x agi mult
++0.05x int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 1415
-// Items: I02D (Power of the Makyo Star), Ubertip (Tooltip - Extended)
+// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
 {
-Holds the power of the Makyo star.
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10. (Corruption passive is for melee only)
 }
 
 STRING 1416
@@ -9003,63 +9013,9 @@ Schala channels for 1s and then transports nearby allies to the target location.
 }
 
 STRING 1419
-// Items: I02F (Bojack's Power), Name (Name)
+// Items: I03R (Dimension Sword S [1/5]), Description (Description)
 {
-Bojack's Power
-}
-
-STRING 1420
-// Items: I02F (Bojack's Power), Description (Description)
-{
-The power of Bojack.
-}
-
-STRING 1421
-// Items: I02F (Bojack's Power), Ubertip (Tooltip - Extended)
-{
-The power of Bojack.
-}
-
-STRING 1422
-// Items: I02G (Demonic Power), Name (Name)
-{
-Demonic Power
-}
-
-STRING 1423
-// Items: I02G (Demonic Power), Description (Description)
-{
-Ancient powers long hidden are awakened within... but will it help?
-}
-
-STRING 1424
-// Items: I02G (Demonic Power), Ubertip (Tooltip - Extended)
-{
-Ancient powers long hidden are awakened within... but will it help?
-}
-
-STRING 1425
-// Items: I02H (Power of a Dragon), Name (Name)
-{
-Power of a Dragon
-}
-
-STRING 1426
-// Items: I02H (Power of a Dragon), Description (Description)
-{
-Calls upon the power of the Eternal Dragon to give you power.
-}
-
-STRING 1427
-// Items: I02H (Power of a Dragon), Ubertip (Tooltip - Extended)
-{
-Calls upon the power of the Eternal Dragon to give you power.
-}
-
-STRING 1428
-// Items: I02I (Ultimate Power of the Omega), Name (Name)
-{
-Ultimate Power of the Omega
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10. (Corruption passive is for melee only)
 }
 
 STRING 1429
@@ -9126,66 +9082,6 @@ STRING 1439
 // Items: I01J (King Kai's food), Hotkey (Hotkey)
 {
 B
-}
-
-STRING 1440
-// Items: I002 (Namek log), Name (Name)
-{
-Namek log
-}
-
-STRING 1441
-// Items: I002 (Namek log), Description (Description)
-{
-Power received from defeating a Namek saga.
-}
-
-STRING 1442
-// Items: I002 (Namek log), Ubertip (Tooltip - Extended)
-{
-Power received from defeating a Namek saga.
-}
-
-STRING 1443
-// Items: I005 (Bionic Implant), Name (Name)
-{
-Bionic Implant
-}
-
-STRING 1444
-// Items: I007 (Future Log), Name (Name)
-{
-Future Log
-}
-
-STRING 1445
-// Items: I007 (Future Log), Description (Description)
-{
-Power ups for killing Future Sagas.
-}
-
-STRING 1446
-// Items: I007 (Future Log), Ubertip (Tooltip - Extended)
-{
-Power ups for killing Future Sagas.
-}
-
-STRING 1447
-// Items: I00A (Meat Fruit), Name (Name)
-{
-Meat Fruit
-}
-
-STRING 1448
-// Items: I00A (Meat Fruit), Description (Description)
-{
-Meat Fruit
-}
-
-STRING 1449
-// Items: I00A (Meat Fruit), Ubertip (Tooltip - Extended)
-{
-Meat Fruit
 }
 
 STRING 1450
@@ -9771,30 +9667,6 @@ STRING 1546
 R
 }
 
-STRING 1547
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Name (Name)
-{
-Travel to ??? |cffffff00(Q)|r
-}
-
-STRING 1548
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Ubertip (Tooltip - Extended)
-{
-Travel to the next programmed destination of this pod.
-}
-
-STRING 1549
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Description (Description)
-{
-Not yet implemented
-}
-
-STRING 1550
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Tip (Tooltip - Basic)
-{
-Travel to ??? |cffffff00(Q)|r
-}
-
 STRING 1551
 // Units: H08Z (Park Ranger), Hotkey (Hotkey)
 {
@@ -10217,26 +10089,8 @@ STRING 1619
 Q
 }
 
-STRING 1620
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Name (Name)
-{
-Travel to ??? |cffffff00(Q)|r
-}
-
-STRING 1621
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Tip (Tooltip - Basic)
-{
-Travel to ??? |cffffff00(Q)|r
-}
-
-STRING 1622
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Ubertip (Tooltip - Extended)
-{
-Travel to the next programmed destination of this pod.
-}
-
 STRING 1623
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A06V (Guardian's Devotion), EditorSuffix (Editor Suffix)
 {
 new
 }
@@ -10387,96 +10241,6 @@ STRING 1646
 // Units: n02S (Crocodile Mother), Name (Name)
 {
 Crocodile Mother
-}
-
-STRING 1647
-// Items: I030 (Namek log), Name (Name)
-{
-Namek log
-}
-
-STRING 1648
-// Items: I030 (Namek log), Description (Description)
-{
-Power received from defeating a Namek saga.
-}
-
-STRING 1649
-// Items: I030 (Namek log), Ubertip (Tooltip - Extended)
-{
-Power received from defeating a Namek saga.
-}
-
-STRING 1650
-// Items: I031 (+5 Stats), Name (Name)
-{
-+5 Stats
-}
-
-STRING 1651
-// Items: I031 (+5 Stats), Description (Description)
-{
-Grants +5 stats to your hero.
-}
-
-STRING 1652
-// Items: I031 (+5 Stats), Ubertip (Tooltip - Extended)
-{
-Grants +5 stats to your hero.
-}
-
-STRING 1653
-// Items: I032 (+1 Level), Name (Name)
-{
-+1 Level
-}
-
-STRING 1654
-// Items: I032 (+1 Level), Description (Description)
-{
-Grants +1 level to your hero.
-}
-
-STRING 1655
-// Items: I032 (+1 Level), Ubertip (Tooltip - Extended)
-{
-Grants +1 level to your hero.
-}
-
-STRING 1656
-// Items: I033 (+HP), Name (Name)
-{
-+HP
-}
-
-STRING 1657
-// Items: I033 (+HP), Description (Description)
-{
-Grants 1% + 100 health to your hero
-}
-
-STRING 1658
-// Items: I033 (+HP), Ubertip (Tooltip - Extended)
-{
-Grants 1% + 100 health to your hero
-}
-
-STRING 1659
-// Items: I034 (+Mana), Name (Name)
-{
-+Mana
-}
-
-STRING 1660
-// Items: I034 (+Mana), Description (Description)
-{
-Grants 1% + 70 mana to your hero
-}
-
-STRING 1661
-// Items: I034 (+Mana), Ubertip (Tooltip - Extended)
-{
-Grants 1% + 70 mana to your hero
 }
 
 STRING 1662
@@ -10649,13 +10413,13 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 85]  2.00x "ss2"
 [lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg"
-[lvl 200] 2.60x "ssb"
-[lvl 225] 2.65x "ssbkao"
-[lvl 250] 2.70x "ui" [unlocks |cff00ffffUltra Instinct|r]
-[lvl 400] [MUI (Permanent)]
+[lvl 150] 2.40x "ssg"
+[lvl 200] 2.45x "ssb"
+[lvl 225] 2.50x "ssbkao"
+[lvl 250] 2.50x "ui" [unlocks |cff00ffffUltra Instinct|r]
+[lvl 400] [MUI (Reuseable]
 
-|cffffcc00Honest Work|r: Consuming crops provides 100% of the experience to the next level (4% after level 150).
+|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
 }
 
 STRING 1690
@@ -13964,22 +13728,10 @@ STRING 2229
 CoolerHeadMetal
 }
 
-STRING 2230
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool2> seconds|r
-}
-
 STRING 2231
 // Abilities: A042 (Explosion 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] |cffff4422Exploooooosion!!!|r
-}
-
-STRING 2232
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool3> seconds|r
 }
 
 STRING 2233
@@ -14615,18 +14367,6 @@ STRING 2333
 [|cff00FF00F|r] |cffff4422Explosion!|r
 }
 
-STRING 2334
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool4> seconds|r
-}
-
-STRING 2335
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool5> seconds|r
-}
-
 STRING 2336
 // Abilities: A05Y (Manatite), Tip (Tooltip - Normal)
 {
@@ -14652,12 +14392,6 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 2 * Level|r
 |cff00FF00Duration: <A0YD,Dur5> seconds|r
 |cff00ffffCooldown: <A0YD,Cool5> seconds|r
-}
-
-STRING 2340
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool6> seconds|r
 }
 
 STRING 2341
@@ -15635,23 +15369,6 @@ STRING 2496
 Shoto Todoroki
 }
 
-STRING 2497
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool7> seconds|r
-}
-
-STRING 2498
-// Abilities: A0ZG (Toggle Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic changes between running and spinning. While spinning he has slower acceleration but increased max speed and constantly deals damage around him based on his speed.
-|cffffff00+1% spin damage per hero level up to +100%.
-x2 spin damage when above 15 speed.
-Maximum speed decreases when below 50% HP.|r
-|cff00FF00Damage: Agi * Sonic Speed
-|cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
-}
-
 STRING 2499
 // Abilities: A0X5 (Flare), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -15911,22 +15628,10 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 |cff999999"Sharp and Shiny!"|r
 }
 
-STRING 2540
-// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
-{
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10.
-}
-
 STRING 2541
 // Units: h006 (Geti Star Defense System), Ubertip (Tooltip - Extended)
 {
 An upgraded defense tower. Kills provide gold and 10% of stats. Upgradeable.
-}
-
-STRING 2542
-// Items: I03R (Dimension Sword S [1/5]), Description (Description)
-{
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 10.
 }
 
 STRING 2543
@@ -16240,19 +15945,19 @@ Q
 }
 
 STRING 2588
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2589
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I045 (Krabby Patty), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2590
-// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
+// Items: I047 (Android Bomb), Hotkey (Hotkey)
 {
 Q
 }
@@ -16264,19 +15969,19 @@ C
 }
 
 STRING 2592
-// Items: I045 (Krabby Patty), Hotkey (Hotkey)
+// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2593
-// Items: I047 (Android Bomb), Hotkey (Hotkey)
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2594
-// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
+// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
 {
 Q
 }
@@ -16852,13 +16557,13 @@ STRING 2687
 }
 
 STRING 2688
-// Items: I04F (Banana Generator), Hotkey (Hotkey)
+// Items: I04W (Potara Fusion), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 2689
-// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
+// Items: I050 (Wheat), Hotkey (Hotkey)
 {
 Q
 }
@@ -17032,25 +16737,25 @@ D
 }
 
 STRING 2718
-// Items: I04W (Potara Fusion), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 2719
-// Items: I050 (Wheat), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 2720
 // Items: I051 (Corn), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 2721
+STRING 2719
 // Items: I052 (Rice), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 2720
+// Items: I053 (Snow Rice), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 2721
+// Items: I002 (Super Corn), Hotkey (Hotkey)
 {
 Q
 }
@@ -17074,7 +16779,7 @@ Learn Hostile Ta|cffffcc00k|reover
 }
 
 STRING 2725
-// Items: I053 (Snow Rice), Hotkey (Hotkey)
+// Items: I005 (Tegridy Wheat), Hotkey (Hotkey)
 {
 Q
 }
@@ -19222,22 +18927,10 @@ STRING 3069
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.06x|r|n|cff00FFFFCooldown: <A00J,Cool3> seconds|r
 }
 
-STRING 3070
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool8> seconds|r
-}
-
 STRING 3071
 // Abilities: A041 (Ground Pound), EditorSuffix (Editor Suffix)
 {
 (donkey kong)
-}
-
-STRING 3072
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool9> seconds|r
 }
 
 STRING 3073
@@ -21639,18 +21332,6 @@ STRING 3456
 {
 [|cffffcc00Unlock|r] |cffcc22ccEnvoy of the End|r
 Omega Shenron gains +1 level up stats and gains a special bonus if one of his stats his higher than the rest.
-}
-
-STRING 3457
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool10> seconds|r
-}
-
-STRING 3458
-// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
 }
 
 STRING 3459
@@ -25444,16 +25125,6 @@ STRING 4054
 Increase Metal Cooler's and his clones attack damage by 50 per level.
 }
 
-STRING 4055
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
-{
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.1x Int mult (+0.1x when under 30k Int)
--0.1x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
-}
-
 STRING 4056
 // Items: I04X (Hit's Assassination Contract), Description (Description)
 {
@@ -26330,7 +26001,7 @@ E
 }
 
 STRING 4198
-// Abilities: A06V (Guardian's Devotion), EditorSuffix (Editor Suffix)
+// Abilities: A0JM (Go Down Together!), EditorSuffix (Editor Suffix)
 {
 new
 }
@@ -27120,8 +26791,8 @@ Type "r" to revert.
 Transformations:
 [lvl 10]  1.25x "fp"
 [lvl 35]  1.50x "fp"
-[lvl 65]  1.75x "fp"
-[lvl 95]  2.00x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 100] 2.00x "fp"
 [lvl 150] 2.40x "fp"
 [lvl 200] 2.50x "fp" [Unlocks Four Fist Technique]
 }
@@ -34600,9 +34271,9 @@ Transformations:
 [lvl 10]  1.25x "fp"
 [lvl 25]  1.50x "fp" [Unlocks Max Power]
 [lvl 100] 2.00x "fp"
-[lvl 150] 2.30x "fp" [Max Power upgrades Kamehameha]
-[lvl 200] 2.40x "fp"
-[lvl 300] 2.50x "fp"
+[lvl 150] 2.30x "fp"
+[lvl 200] 2.40x "fp" [Max Power upgrades Kamehameha]
+[lvl 250] 2.50x "fp"
 }
 
 STRING 5549
@@ -55799,12 +55470,6 @@ STRING 8835
 R
 }
 
-STRING 8836
-// Abilities: A0JM (Go Down Together!), EditorSuffix (Editor Suffix)
-{
-new
-}
-
 STRING 8837
 // Abilities: A0JN (Dende Bloodlust), Name (Name)
 {
@@ -64119,6 +63784,7 @@ STRING 10147
 -ang <angle>
 -tss (toggle summon selection)
 -tft (host: toggle ability text)
+-saga (host: change saga line pre-game)
 
 -customui (activates custom UI HUD)
 }
@@ -65436,21 +65102,6 @@ STRING 10353
 // Units: n03T (Chef Satan), EditorSuffix (Name - Editor Suffix)
 {
 (regen seller)
-}
-
-STRING 10354
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
-{
-A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far away from his enemies due to his lack of mobility. Has access to a unique farming system to grow highly rewarding crops.
-
-|cffffcc00Honest Work|r: Consuming crops provides 100% of the experience to the next level (4% after level 150).
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 10355
@@ -69760,7 +69411,7 @@ T2
 
 STRING 11040
 {
-|cff00ff00To repick type -repick|r
+|cff00ff00Type "-repick" to repick|r
 }
 
 STRING 11041
@@ -69775,7 +69426,7 @@ K
 
 STRING 11043
 {
-|cffffcc00Type "hs" to see transformations. Most will require typing a command e.g. "ss"|r
+|cffffcc00Type "hs" to see transformations.|r
 }
 
 STRING 11044
@@ -72242,13 +71893,6 @@ STRING 11443
 Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy balls that follow the targeted enemy.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool10>s|r
 }
 
-STRING 11444
-// Items: I050 (Wheat), Description (Description)
-{
-A nutritious bundle of wheat.
-|cffffff00Consume for +3 STR per stack
-}
-
 STRING 11445
 // Abilities: A106 (Heavy Slam), Researchhotkey (Hotkey - Learn)
 {
@@ -73518,6 +73162,13 @@ STRING 11646
 // Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
 Increases the attack range of Geti Star Defense buildings by +400, HP by 10000 and HP regen by 400%.
+}
+
+STRING 11647
+// Units: h0AG (Farming Research Centre), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 20 crops of 1 type.|r
+A research centre that provides valuable upgrades.
 }
 
 STRING 11648
@@ -75362,12 +75013,6 @@ STRING 11948
 // Abilities: A0O1 (Demon Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba teleports behind the closest enemy hero cursed with the Demon's Mark and then strikes them with a blow that amplifies the curse to reduce their movement and attack speed.|n|cff00ffffCooldown: <A0O1,Cool1>s|r
-}
-
-STRING 11949
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
-{
-|cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 11950
@@ -81947,24 +81592,10 @@ STRING 12979
 |cff00FF00Level [1/5]|r|n|cffffff00+2 armor.|nDoes not drop on death.|n|r|cff808080"One size fits all!"!|r
 }
 
-STRING 12980
-// Items: I04L (Whis' Staff), Description (Description)
-{
-The multi-purpose tool of Angels, used to assist Gods of Destruction.
-|cffffff00+0.15x Int mult.|r
-}
-
 STRING 12981
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 10|r]
-}
-
-STRING 12982
-// Items: I04L (Whis' Staff), Ubertip (Tooltip - Extended)
-{
-The multi-purpose tool of Angels, used to assist Gods of Destruction.
-|cffffff00+0.15x Int mult.|r
 }
 
 STRING 12983
@@ -82442,24 +82073,10 @@ STRING 13060
 |cffffff00+10 armor.|nDoes not drop on death.|r|n|cff999999"One size fits all!"|r
 }
 
-STRING 13061
-// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
-{
-A nutritious bundle of wheat.
-|cffffff00Consume for +3 STR per stack
-}
-
 STRING 13062
 // Abilities: A0PL (Justice Tornado 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 10|r]
-}
-
-STRING 13063
-// Items: I051 (Corn), Description (Description)
-{
-Nutritious corn.
-|cffffff00Consume for +3 AGI per stack
 }
 
 STRING 13064
@@ -91299,16 +90916,6 @@ STRING 14403
 (Tavern)
 }
 
-STRING 14404
-// Items: I009 (Z Sword), Description (Description)
-{
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.2x Int Mult when under 30k Int else +0.1x
--0.1x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
-}
-
 STRING 14405
 // Abilities: A0K9 (Power Impact), Ubertip (Tooltip - Normal - Extended)
 {
@@ -97756,18 +97363,6 @@ STRING 15350
 // Abilities: A0KU (New Trick), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] New Trick
-}
-
-STRING 15351
-// Abilities: A0FH (Max Power), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi beefs up, increasing his power multiplier by 0.4x and causing his spells to do additional pure damage. Cannot be used with [|cff00ff00R|r] New Trick.
-|cffffff00+0.4x stat mult
-+66ms and unlocks movement speed cap
-10% damage block up to 3x Str
-+100% Kamehameha Charge speed|r
-|cff00FF00Duration: <A0FH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0FH,Cool1> seconds|r
 }
 
 STRING 15352
@@ -105574,13 +105169,6 @@ STRING 16433
 [|cff00ff00F|r] Learn Fireball - [|cffffcc00Level %d|r]
 }
 
-STRING 16434
-// Units: h0AG (Farming Research Centre), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-A research centre that provides valuable upgrades.
-}
-
 STRING 16435
 // Abilities: A0TV (Brave Slash Feedback), Name (Name)
 {
@@ -107254,13 +106842,6 @@ STRING 16658
 // Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Bankai: Tensa Zangetsu - [|cffffcc00Level %d|r]
-}
-
-STRING 16659
-// Items: I051 (Corn), Ubertip (Tooltip - Extended)
-{
-Nutritious corn.
-|cffffff00Consume for +3 AGI per stack
 }
 
 STRING 16660
@@ -109009,13 +108590,6 @@ A well-rounded hero who gains multiplier slightly quicker than others and can de
 
 }
 
-STRING 16895
-// Items: I052 (Rice), Description (Description)
-{
-Nutritious grains of rice.
-|cffffff00Consume for +3 INT per stack
-}
-
 STRING 16896
 // Units: H055 (Three-Eyed Baldy), Ubertip (Tooltip - Extended)
 {
@@ -109173,13 +108747,6 @@ A powerful support hero that excels at saga-sniping and becomes stronger with ea
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 16910
-// Items: I052 (Rice), Ubertip (Tooltip - Extended)
-{
-Nutritious grains of rice.
-|cffffff00Consume for +3 INT per stack
 }
 
 STRING 16911
@@ -112235,12 +111802,6 @@ STRING 17352
 // Abilities: A06S (Flesh Attack Absorb Target), Name (Name)
 {
 Flesh Attack Absorb Target
-}
-
-STRING 17353
-// Abilities: A06S (Flesh Attack Absorb Target), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore. |cffff88ffThis flesh attack will always absorb the target's abilities.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2500 or 25% hp.|r|n|cff00ffffCooldown: <A06S,Cool1> seconds|r
 }
 
 STRING 17354
@@ -117329,10 +116890,9 @@ Ichigo fires a final getsuga. Enemies are stunned.
 }
 
 STRING 18117
-// Items: I053 (Snow Rice), Description (Description)
+// Items: I002 (Super Corn), Name (Name)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +4.5 INT per stack
+Super Corn
 }
 
 STRING 18118
@@ -123987,6 +123547,19 @@ STRING 19095
 (Tavern)
 }
 
+STRING 19103
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 80 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +4).
+}
+
+STRING 19105
+// Items: I005 (Tegridy Wheat), Name (Name)
+{
+Tegridy Wheat
+}
+
 STRING 19107
 // Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124124,6 +123697,12 @@ Frog summons a giant frog that jumps 3 times on top of his enemies. The third ju
 |cff00FFFFCooldown: <A0WF,Cool1,.> - <A0WF,Cool10,.>s|r
 }
 
+STRING 19126
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> seconds|r
+}
+
 STRING 19127
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
@@ -124190,10 +123769,58 @@ STRING 19137
 [|cff00FF00Q|r] Learn Vacuum Wave - [|cffffcc00Level %d|r]
 }
 
+STRING 19138
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool2> seconds|r
+}
+
 STRING 19139
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 10|r]
+}
+
+STRING 19140
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool3> seconds|r
+}
+
+STRING 19141
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool4> seconds|r
+}
+
+STRING 19142
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool5> seconds|r
+}
+
+STRING 19143
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool6> seconds|r
+}
+
+STRING 19144
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool7> seconds|r
+}
+
+STRING 19145
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool8> seconds|r
+}
+
+STRING 19146
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool9> seconds|r
 }
 
 STRING 19147
@@ -124648,9 +124275,9 @@ STRING 19209
 }
 
 STRING 19210
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Increases crops stored by +1 and +16% of total stack size.
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool10> seconds|r
 }
 
 STRING 19211
@@ -124813,6 +124440,18 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 3 * Level|r
 |cff00FF00Duration: <A0YD,Dur8> seconds|r
 |cff00ffffCooldown: <A0YD,Cool8> seconds|r
+}
+
+STRING 19237
+// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
+}
+
+STRING 19238
+// Abilities: A06S (Flesh Attack Absorb Target), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore. |cffff88ffThis flesh attack will always absorb the target's abilities.|n|cff00ff00Damage: Int * Lvl * ?|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r|n|cff00ffffCooldown: <A06S,Cool1> seconds|r
 }
 
 STRING 19244
@@ -125028,6 +124667,20 @@ STRING 19283
 Teleportation
 }
 
+STRING 19285
+// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
+{
+Increases STR.
+|cff00ffffSpecial: Wheat planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+2.00x Farmland
+1.00x Grass
+1.00x Dirt
+0.75x Water
+0.50x Snow
+0.25x Blight/Rocky
+}
+
 STRING 19286
 // Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
 {
@@ -125038,6 +124691,34 @@ STRING 19287
 // Abilities: A0YD (Protect), EditorSuffix (Editor Suffix)
 {
 (schala)
+}
+
+STRING 19288
+// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
+{
+Increases AGI.
+|cff00ffffSpecial: Corn planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+1.50x Farmland
+1.50x Grass
+1.50x Dirt
+0.50x Water
+0.50x Snow
+0.25x Blight/Rocky
+}
+
+STRING 19289
+// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
+{
+Increases INT.
+|cff00ffffSpecial: Rice planted in snow is 50% more effective.
+|cffffff00Growth Multipliers:
+0.75x Farmland
+0.25x Grass
+0.50x Dirt
+2.00x Water
+1.50x Snow
+0.20x Blight/Rocky
 }
 
 STRING 19290
@@ -125068,6 +124749,98 @@ Schala calls down lightning from the sky that bombards the target area.
 |cffff2020Channel Duration: <A0YF,Dur3> seconds|r
 |cff00ff00Damage: Int x Lvl x ?|r
 |cff00ffffCooldown: <A0YF,Cool3> seconds|r
+}
+
+STRING 19293
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+{
+A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far away from his enemies due to his lack of mobility. Has access to a unique farming system to grow highly rewarding crops.
+
+|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19294
+// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
+{
+A hero with one extremely powerful spell: |cffff4422Explosion|r.
+
+|cffff2222Explosion:|r Spells deal +20% Max HP damage.
+|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cffFFcc00I|r|cff00FF00IIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+}
+
+STRING 19295
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
+-0.10x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 19296
+// Items: I009 (Z Sword), Description (Description)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
+-0.10x Agi mult
+Reduces max movement speed by 30 when under 30k Str.|r
+}
+
+STRING 19297
+// Items: I04L (Whis' Staff), Description (Description)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.10x Int mult.|r
+}
+
+STRING 19298
+// Items: I04L (Whis' Staff), Ubertip (Tooltip - Extended)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.10x Int mult.|r
+}
+
+STRING 19299
+// Items: I050 (Wheat), Description (Description)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.5 STR each.
+}
+
+STRING 19300
+// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.5 STR each.
+}
+
+STRING 19301
+// Items: I051 (Corn), Description (Description)
+{
+Nutritious corn.
+|cffffff00Consume for +0.5 AGI each.
+}
+
+STRING 19302
+// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+{
+Nutritious corn.
+|cffffff00Consume for +0.5 AGI each.
 }
 
 STRING 19303
@@ -125330,6 +125103,13 @@ STRING 19337
 [|cff00ff00D|r] Magic Barrier - [|cffffcc00Level 6|r]
 }
 
+STRING 19338
+// Items: I052 (Rice), Description (Description)
+{
+Nutritious grains of rice.
+|cffffff00Consume for +0.5 INT each.
+}
+
 STRING 19339
 // Abilities: A0YH (Pray), Tip (Tooltip - Normal)
 {
@@ -125574,9 +125354,10 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 }
 
 STRING 19377
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
+// Items: I052 (Rice), Ubertip (Tooltip - Extended)
 {
-Increases crops stored by +1 and +18% of total stack size.
+Nutritious grains of rice.
+|cffffff00Consume for +0.5 INT each.
 }
 
 STRING 19378
@@ -125640,10 +125421,24 @@ STRING 19386
 [|cff00ff00W|r] Protect Empowered - [|cffffcc00Level 10|r]
 }
 
+STRING 19387
+// Items: I053 (Snow Rice), Description (Description)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.75 INT each.
+}
+
 STRING 19388
 {
 [|cffffcc00Unlock|r] Pray
 Schala can now channel the power of Lavos through her pendant, restoring her mana and granting bonus multiplier.
+}
+
+STRING 19389
+// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
+{
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.75 INT each.
 }
 
 STRING 19390
@@ -125847,6 +125642,13 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 |cffFFFF00Bonus Armor: 30
 |cff00FF00Duration: <A0YD,Dur10> seconds|r
 |cff00ffffCooldown: <A0YD,Cool10> seconds|r
+}
+
+STRING 19423
+// Items: I002 (Super Corn), Description (Description)
+{
+Nutritious corn.
+|cffffff00Consume for +0.75 AGI each.
 }
 
 STRING 19424
@@ -126053,6 +125855,13 @@ Schala channels for 2s and then transports nearby allies to the target location.
 |cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
 }
 
+STRING 19453
+// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
+{
+Nutritious corn.
+|cffffff00Consume for +0.75 AGI each.
+}
+
 STRING 19454
 // Abilities: A0SF (Time Stop), Ubertip (Tooltip - Normal - Extended)
 {
@@ -126080,6 +125889,20 @@ STRING 19457
 // Abilities: A10T (Elite Beam Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Elite Beam Charge - [|cffffcc00Level 3|r]
+}
+
+STRING 19458
+// Items: I005 (Tegridy Wheat), Description (Description)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.75 STR each.
+}
+
+STRING 19459
+// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.75 STR each.
 }
 
 STRING 19461
@@ -126642,6 +126465,27 @@ STRING 19536
 Toppo gathers five orange ki balls at the tips of his fingers before rapidly firing them at evildoers.|n|cffff2020Channel Duration: <A0PI,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ? + 0.3% Max HP (each)|r|n|cff00FFFFCooldown: <A0PI,Cool5> seconds|r|n|n|cff808080"Justice... Flash!"|r
 }
 
+STRING 19537
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +3).
+}
+
+STRING 19538
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 50 crops of 1 type.|r
+Increases warehousing yield by +1 crops (+2/+3).
+}
+
+STRING 19539
+// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+|cff00ffffBuild Requirement: 150 crops of 1 type.|r
+Increases warehousing yield by +1 crops (total +3/+4).
+}
+
 STRING 19541
 // Abilities: A0YS (Wall of Flames), EditorSuffix (Editor Suffix)
 {
@@ -126760,6 +126604,18 @@ STRING 19562
 // Abilities: A0YG (Magic Seal), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Magic Seal - [|cffffcc00Level 10|r]
+}
+
+STRING 19563
+// Abilities: A0FH (Max Power), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi beefs up, increasing his stat multiplier and kamehameha damage. Cannot be used with [|cff00ff00R|r] New Trick.
+|cffffff00+0.3x stat mult
++66ms and unlocks movement speed cap
+15% damage block up to 4x Str
++100% Kamehameha Charge speed|r
+|cff00FF00Duration: <A0FH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0FH,Cool1> seconds|r
 }
 
 STRING 19564
@@ -127755,13 +127611,6 @@ Shoto freezes the ground around him to create an ice path that accelerates his m
 |cff00ff00Damage: Int * lvl * ?
 Duration: <A0YT,Dur1> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool1> seconds|r
-}
-
-STRING 19735
-// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
-{
-Nutritious grains of snow rice.
-|cffffff00Consume for +4.5 INT per stack
 }
 
 STRING 19736
@@ -131257,18 +131106,6 @@ STRING 20344
 Crop Circles
 }
 
-STRING 20345
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +26% of total stack size.
-}
-
-STRING 20346
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +28% of total stack size.
-}
-
 STRING 20347
 // Units: h0AC (Warehouse), Name (Name)
 {
@@ -131408,46 +131245,6 @@ STRING 20368
 // Abilities: A0PZ (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Frieza fires a powerful and lethal energy beam from the tips of his fingers.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0PZ,Cool2> seconds|r
-}
-
-STRING 20369
-// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
-{
-Increases STR.
-|cffffff00Growth Multipliers:
-2.00x Farmland
-1.00x Grass
-1.00x Dirt
-0.75x Water
-0.50x Snow
-0.25x Blight/Rocky
-}
-
-STRING 20370
-// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
-{
-Increases AGI.
-|cffffff00Growth Multipliers:
-1.50x Farmland
-1.25x Grass
-1.50x Dirt
-0.50x Water
-0.50x Snow
-0.25x Blight/Rocky
-}
-
-STRING 20371
-// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
-{
-Increases INT.
-|cff00ffffSpecial: Rice planted in snow is 50% more effective.
-|cffffff00Growth Multipliers:
-0.75x Farmland
-0.25x Grass
-0.50x Dirt
-2.00x Water
-1.50x Snow
-0.20x Blight/Rocky
 }
 
 STRING 20372
@@ -131638,12 +131435,6 @@ STRING 20400
 [|cff00ff00Q|r] Warehousing - [|cffffcc00Level 1|r]
 }
 
-STRING 20401
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +10% of total stack size.
-}
-
 STRING 20402
 // Abilities: A101 (Super Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -131668,12 +131459,6 @@ STRING 20405
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool7> seconds|r
-}
-
-STRING 20406
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +12% of total stack size.
 }
 
 STRING 20407
@@ -131702,12 +131487,6 @@ STRING 20410
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 1|r]
 }
 
-STRING 20411
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +20% of total stack size.
-}
-
 STRING 20412
 // Abilities: A102 (Crop Circles), EditorSuffix (Editor Suffix)
 {
@@ -131732,12 +131511,6 @@ STRING 20415
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool9> seconds|r
-}
-
-STRING 20416
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +22% of total stack size.
 }
 
 STRING 20417
@@ -131906,13 +131679,6 @@ STRING 20440
 R
 }
 
-STRING 20441
-// Upgrades: R00C (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Unlocks the Crop Circle ability for Super Warehouses, allowing them to teleport their crops.
-}
-
 STRING 20442
 // Upgrades: R00D (Magic Sentry), Name (Name)
 {
@@ -132066,12 +131832,6 @@ STRING 20462
 Enable Harvester Engine - [|cffffcc00Level 4|r]
 }
 
-STRING 20463
-// Abilities: A100 (Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +1 and +14% of total stack size.
-}
-
 STRING 20464
 // Abilities: A100 (Warehousing), Tip (Tooltip - Normal)
 {
@@ -132082,12 +131842,6 @@ STRING 20465
 // Abilities: A101 (Super Warehousing), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 5|r]
-}
-
-STRING 20466
-// Abilities: A101 (Super Warehousing), Ubertip (Tooltip - Normal - Extended)
-{
-Increases crops stored by +2 and +24% of total stack size.
 }
 
 STRING 20467
@@ -132769,34 +132523,6 @@ STRING 20570
 Increases defence system attack damage by +200.
 }
 
-STRING 20571
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20572
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20573
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
-STRING 20574
-// Upgrades: R00B (Magic Sentry), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 10 crops of 1 type.|r
-Increases warehousing yield by +1% of total stack size.
-}
-
 STRING 20575
 // Upgrades: R00D (Magic Sentry), Ubertip (Tooltip - Extended)
 {
@@ -133040,22 +132766,6 @@ STRING 20618
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
-}
-
-STRING 20619
-// Units: h0AC (Warehouse), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 1 crop|r
-A warehouse to store food. Max 5.
-|cffffff00Every minute, increases stored crops by +1 and +10% of total stack size.|r
-}
-
-STRING 20620
-// Units: h0AF (Super Warehouse), Ubertip (Tooltip - Extended)
-{
-|cff00ffffBuild Requirement: 20 crops of 1 type.|r
-An advanced warehouse that is better at storing food.
-|cffffff00Every minute, increases stored crops by +2 and +20% of total stack size.|r
 }
 
 STRING 20621
@@ -135792,7 +135502,7 @@ STRING 21070
 
 STRING 21071
 {
-|cffffcc00Press ~ or F8 to select your revive point and move it anywhere on the main map for the 1st minute of the game. |r
+|cffffcc00Press F8 to move your revive point during the 1st minute. |r
 }
 
 STRING 21072
