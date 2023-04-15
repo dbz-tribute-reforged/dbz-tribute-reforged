@@ -121,7 +121,9 @@ export module ItemConstants {
   
   export module Farming {
     export const WHEAT = FourCC("I050");
+    export const TEGRIDY_WHEAT = FourCC("I005");
     export const CORN = FourCC("I051");
+    export const SUPER_CORN = FourCC("I002");
     export const RICE = FourCC("I052");
     export const RICE_SNOW = FourCC("I053");
   }

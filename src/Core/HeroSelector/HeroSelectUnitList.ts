@@ -458,7 +458,9 @@ const appuleData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY +
     HeroSelectCategory.MICRO  
   )
 }

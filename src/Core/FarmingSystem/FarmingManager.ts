@@ -18,7 +18,6 @@ export class FarmingManager {
   protected farmingComponentMap: Map<number, FarmingComponent>;
   protected cropAbilityMap: Map<number, number>;
   protected plantedCropsMap: Map<number, FarmingComponent>;
-  protected plantTrigger: trigger;
   protected updateCropsTimer: timer;
 
   protected harvesterBuildTrigger: trigger;
@@ -33,7 +32,6 @@ export class FarmingManager {
     this.farmingComponentMap = new Map<number, FarmingComponent>();
     this.cropAbilityMap = new Map<number, number>();
     this.plantedCropsMap = new Map<number, FarmingComponent>();
-    this.plantTrigger = CreateTrigger();
     this.updateCropsTimer = CreateTimer();
     
     this.harvesterBuildTrigger = CreateTrigger();
@@ -54,16 +52,17 @@ export class FarmingManager {
 
   initialize() {
     this.setupFarmingComponentMap();
-    this.setupPlantTrigger();
     this.setupUpdateCrops();
     this.setupHarvester();
   }
 
   setupFarmingComponentMap() {
-    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.WHEAT, 99);
-    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.CORN, 99);
-    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.RICE, 99);
-    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.RICE_SNOW, 99);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.WHEAT, 499);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.TEGRIDY_WHEAT, 499);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.CORN, 499);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.SUPER_CORN, 499);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.RICE, 499);
+    ItemStackingManager.getInstance().addStackableItemType(ItemConstants.Farming.RICE_SNOW, 499);
     for (const fcData of FarmingComponentsList) {
       this.farmingComponentMap.set(fcData.abilityId, new FarmingComponent().deserialize(fcData));
     }
@@ -72,19 +71,6 @@ export class FarmingManager {
         this.cropAbilityMap.set(product.itemId, fc.abilityId);
       });
     });
-  }
-
-  setupPlantTrigger() {
-    TriggerRegisterAnyUnitEventBJ(this.plantTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
-
-    TriggerAddCondition(this.plantTrigger, Condition(() => {
-      const spellId = GetSpellAbilityId();
-      const x = GetUnitX(GetTriggerUnit());
-      const y = GetUnitY(GetTriggerUnit());
-      this.plantCropFromSpell(spellId, x, y);
-      
-      return false;
-    }));
   }
 
   plantCropFromSpell(spellId: number, x: number, y: number) {

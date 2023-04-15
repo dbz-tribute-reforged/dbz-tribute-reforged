@@ -73,7 +73,7 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
     super();
     this.isRose = false;
     this.auraRose = GetLastCreatedEffectBJ();
-    this.delay = 30;
+    this.delay = 15;
   }
 
   spawnSagaUnits(): void {
@@ -155,10 +155,10 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    SagaHelper.showMessagesChanceOfJoke(
-      [
-        "|cffff2020End of DB Super Sagas for now.",
-      ],
-    );
+    // SagaHelper.showMessagesChanceOfJoke(
+    //   [
+    //     "|cffff2020End of DB Super Sagas for now.",
+    //   ],
+    // );
   }
 }

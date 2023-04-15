@@ -207,7 +207,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Frieza.DEATH_BALL,
       ],
     )],
-    ["Frieza 5", new SagaUnit(FourCC("H06Y"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
+    // ["Frieza 5", new SagaUnit(FourCC("H06Y"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
+    ["Frieza 5", new SagaUnit(FourCC("H06X"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Frieza.DEATH_CANNON,

@@ -10,6 +10,7 @@ export module Globals {
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
   export let showAbilityFloatingText: boolean = true;
+  export let sagaSystemMode: number = 0;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);

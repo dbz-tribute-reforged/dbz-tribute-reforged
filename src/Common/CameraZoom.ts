@@ -2,7 +2,7 @@ import { TimerManager } from "Core/Utility/TimerManager";
 
 export module CameraZoom {
 
-    const ZOOM_DEFAULT = 2700.0;
+    const ZOOM_DEFAULT = 3600.0;
     const ANGLE_DEFAULT = 295.0;
     // const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
     const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 50.0; //?? but it works tho, thanks adam

@@ -1473,17 +1473,17 @@ export function sonicPassive(customHero: CustomHero) {
   const sonicId = GetHandleId(customHero.unit);
   const upgLevel = 60;
   const upg2Level = 125;
-  const magnitudeMaxBase = 25;
-  const magnitudeMaxUpg = 5;
-  const magnitudeMaxUpg2 = 5;
-  const magnitudeLowHPThreshold = 50;
+  const magnitudeMaxBase = 22;
+  const magnitudeMaxUpg = 4;
+  const magnitudeMaxUpg2 = 4;
+  const magnitudeLowHPThreshold = 75;
   const bonusSpeedDmgMult = 2;
   const minMagnitudeBonus = 15;
   const magnitudeLossStunned = 0.95;
-  const magnitudeLossStuck = 0.8;
-  const dmgAOE = 350;
+  const magnitudeLossStuck = 0.85;
+  const dmgAOE = 280;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.08;
+  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.06;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.6;
@@ -1493,17 +1493,17 @@ export function sonicPassive(customHero: CustomHero) {
   oldPos.setUnit(customHero.unit);
   const speedResetDist = 6000;
 
-  const homingMagnitudeMaxMult = 1.5;
+  const homingMagnitudeMaxMult = 1.75;
   const homingForwardsLatestTick = 12;
   const homingReversalDuration = 9;
-  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.25;
+  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.22;
 
   const magnitudeLossSpinDash = 0.9;
 
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.95;
+  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.85;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -1577,7 +1577,7 @@ export function sonicPassive(customHero: CustomHero) {
 
     const percentHP = GetUnitStatePercent(customHero.unit, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE);
     if (percentHP < magnitudeLowHPThreshold) {
-      magnitudeMax *= ((percentHP + magnitudeLowHPThreshold) * 0.01);
+      magnitudeMax *= ((percentHP + (100 - magnitudeLowHPThreshold)) * 0.01);
     }
 
 

@@ -6,6 +6,10 @@ export const FarmingComponentsList = [
     abilityId: Id.plantWheat,
     producedItems: [
       {
+        itemId: ItemConstants.Farming.TEGRIDY_WHEAT, 
+        terrainId: Terrain.crops
+      },
+      {
         itemId: ItemConstants.Farming.WHEAT, 
         terrainId: Terrain.any
       }
@@ -26,6 +30,10 @@ export const FarmingComponentsList = [
     abilityId: Id.plantCorn,
     producedItems: [
       {
+        itemId: ItemConstants.Farming.SUPER_CORN, 
+        terrainId: Terrain.crops
+      },
+      {
         itemId: ItemConstants.Farming.CORN, 
         terrainId: Terrain.any
       }
@@ -36,7 +44,7 @@ export const FarmingComponentsList = [
     sfxSizeEnd: 1.5,
     sfxBase: "Doodads/LordaeronSummer/Plants/Corn/Corn.mdl",
     growthFarmland: 1.5,
-    growthGrass: 1.25,
+    growthGrass: 1.5,
     growthDirt: 1.5,
     growthWater: 0.5,
     growthSnow: 0.5,
@@ -61,7 +69,7 @@ export const FarmingComponentsList = [
     sfxBase: "Doodads/Felwood/Plants/FelwoodCatTail/FelwoodCatTail.mdl",
     growthFarmland: 0.75,
     growthGrass: 0.25,
-    growthDirt: 0.5,
+    growthDirt: 0.25,
     growthWater: 2.0,
     growthSnow: 1.5,
     growthBlightRocky: 0.2,
