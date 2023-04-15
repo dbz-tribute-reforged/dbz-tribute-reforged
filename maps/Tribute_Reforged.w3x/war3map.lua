@@ -46295,8 +46295,8 @@ end
 else
 udg_TransformationStatMult = 1.75
 end
-SaveRealBJ(udg_TransformationStatMult, 12, udg_ID, udg_StatMultHashtable)
 TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+SaveRealBJ(udg_TransformationStatMult, 12, udg_ID, udg_StatMultHashtable)
 SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
 SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 3)
 SetUnitAbilityLevelSwapped(FourCC("A0LL"), udg_TransformationResultUnit, 3)
