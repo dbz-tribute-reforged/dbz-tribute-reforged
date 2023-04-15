@@ -715,6 +715,17 @@ const meguminData = {
     HeroSelectCategory.BEAMER
   )
 }
+const pecorineData = {
+  unitCode: Id.pecorine,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
+  )
+}
 const lucarioData = {
   unitCode: Id.lucario,
   onlyRandom: false,
@@ -937,15 +948,15 @@ export const HeroSelectUnitList = [
   shotoTodorokiData,
   // 80
   meguminData,
+  pecorineData,
   lucarioData,
   sephirothData,
   dartFeldData,
-  leonSKennedyData,
   // 85
+  leonSKennedyData,
   marioData,
   waluigiData,
   sonicData,
-  emptySpace,
   emptySpace,
   // 90
   rustyData,

@@ -548,6 +548,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Megumin.EXPLOSION_4,
       AbilityNames.Megumin.EXPLOSION_5,
     ]],
+
+    [Id.pecorine, [
+      AbilityNames.Peco.PRINCESS_SPLASH,
+      AbilityNames.Peco.ROYAL_SLASH,
+      AbilityNames.Peco.ONIGIRI_TIME,
+      AbilityNames.Peco.PRINCESS_STRIKE,
+      AbilityNames.Peco.PRINCESS_VALIANT,
+      AbilityNames.Peco.PRINCESS_FORCE,
+    ]],
     
 
 
@@ -638,6 +647,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.DonkeyKong.GROUND_POUND, AbilityNames.DonkeyKong.BARREL_CANNON,
       AbilityNames.LeonSKennedy.PISTOL,
       AbilityNames.Megumin.EXPLOSION_1,
+      AbilityNames.Peco.PRINCESS_SPLASH,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

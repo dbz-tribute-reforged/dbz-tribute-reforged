@@ -438,6 +438,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.meguminExplosion4, AbilityNames.Megumin.EXPLOSION_4],
     [Id.meguminExplosion5, AbilityNames.Megumin.EXPLOSION_5],
 
+    // pecorine
+    [Id.pecorinePrincessSplash, AbilityNames.Peco.PRINCESS_SPLASH],
+    [Id.pecorineRoyalSlash, AbilityNames.Peco.ROYAL_SLASH],
+    [Id.pecorineOnigiriTime, AbilityNames.Peco.ONIGIRI_TIME],
+    [Id.pecorinePrincessStrike, AbilityNames.Peco.PRINCESS_STRIKE],
+    [Id.pecorinePrincessValiant, AbilityNames.Peco.PRINCESS_VALIANT],
+    [Id.pecorinePrincessForce, AbilityNames.Peco.PRINCESS_FORCE],
+
 
 
 

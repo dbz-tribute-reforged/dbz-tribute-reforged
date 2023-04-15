@@ -304,6 +304,7 @@ export const fastSagaSystem: SagaSystemConfig = {
       [ AndroidsSaga1, SagaState.Completed ],
     ],
     BabidiSaga: [
+      [ AndroidsSaga2, SagaState.Completed ],
       [ CellSaga, SagaState.Completed ],
     ],
     BuuSaga: [
@@ -331,7 +332,7 @@ export const fastSagaSystem: SagaSystemConfig = {
       [ DeadZoneSaga, SagaState.Completed ],
     ],
     TurlesSaga: [
-      [ WheeloSaga, SagaState.Completed ],
+      [ DeadZoneSaga, SagaState.Completed ],
       [ VegetaSaga, SagaState.Completed ],
     ],
     LordSlugSaga: [

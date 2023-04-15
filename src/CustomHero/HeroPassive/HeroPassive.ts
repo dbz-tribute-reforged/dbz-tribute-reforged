@@ -105,6 +105,9 @@ export class HeroPassiveManager {
       case Id.jaco:
         jacoPassive(customHero);
         break;
+      case Id.pecorine:
+        pecoPassive(customHero);
+        break;
       default:
         break;
     }
@@ -2287,7 +2290,78 @@ export function jacoPassive(customHero: CustomHero) {
     SetTextTagPos(textTag, GetUnitX(customHero.unit) - 256, GetUnitY(customHero.unit) - 128, 25);
     SetTextTagTextBJ(textTag, beamStr, 25);
   });
+}
 
+export function pecoPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+
+  const bonusArmrTimer = CreateTimer();
+  customHero.addTimer(bonusArmrTimer);
+
+  TimerStart(bonusArmrTimer, 0.33, true, () => {
+    if (GetUnitLifePercent(customHero.unit) < 50) {
+      if (
+        GetUnitAbilityLevel(customHero.unit, Id.pecorineArmr) > 0
+        && GetUnitAbilityLevel(customHero.unit, Id.pecorineEatFlag) == 0
+      ) {
+        UnitRemoveAbility(customHero.unit, Id.pecorineArmr);
+      }
+    } else {
+      UnitAddAbility(customHero.unit, Id.pecorineArmr);
+    }
+  });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      const attacked = GetAttackedUnitBJ();
+      // const attacker = GetEventDamageSource();
+      // const attacked = BlzGetEventDamageTarget();
+      if (
+        GetUnitTypeId(attacker) == heroId &&
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
+        IsUnitType(attacked, UNIT_TYPE_HERO)
+      ) {
+        const princesSwordLevel = GetUnitAbilityLevel(customHero.unit, Id.pecorinePrincessSword);
+        if (princesSwordLevel > 0) {
+          const dmg = (
+            AOEDamage.getIntDamageMult(attacker) 
+            * customHero.spellPower
+            * princesSwordLevel * 0.0005 
+            * Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE))
+          );
+          UnitDamageTarget(
+            attacker, 
+            attacked, 
+            dmg, 
+            true, 
+            false, 
+            ATTACK_TYPE_HERO, 
+            DAMAGE_TYPE_NORMAL, 
+            WEAPON_TYPE_WHOKNOWS
+          );
+  
+          const attackSfx = AddSpecialEffect(
+            "Abilities/Weapons/VengeanceMissile/VengeanceMissile.mdl",
+            GetUnitX(attacked),
+            GetUnitY(attacked),
+          );
+          BlzSetSpecialEffectScale(attackSfx, 2.0);
+          DestroyEffect(attackSfx);
+        }
+      }
+      return false;
+    })
+  );
 }
 
 export function setupSPData(customHero: CustomHero) {

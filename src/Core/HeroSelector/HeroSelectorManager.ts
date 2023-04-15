@@ -1,4 +1,5 @@
 import { Constants, Globals, Id } from "Common/Constants";
+import { SoundHelper } from "Common/SoundHelper";
 import { CustomUI } from "CustomUI/CustomUI";
 import { HeroSelectCategory } from "./HeroSelectCategory";
 import { HeroSelectUnit } from "./HeroSelectUnit";
@@ -163,6 +164,11 @@ export class HeroSelectorManager {
       HeroSelector.enablePick(false, player)
       HeroSelector.show(false, player);
       CustomUI.show(true, false, player);
+
+      if (Globals.pecorinePickVoiceFlag && GetUnitTypeId(unit) == Id.pecorine) {
+        SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Pecorine/Pick.mp3", 5355);
+        Globals.pecorinePickVoiceFlag = false;
+      }
       
       udg_TempInt = GetConvertedPlayerId(player);
       TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);

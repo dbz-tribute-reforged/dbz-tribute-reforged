@@ -83,7 +83,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // turles
-    ["Turles", new SagaUnit(FourCC("H01H"), 30, 500, 250, 500, new Vector2D(-6200, 10100),
+    ["Turles", new SagaUnit(FourCC("H01H"), 30, 500, 250, 500, new Vector2D(12600, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB

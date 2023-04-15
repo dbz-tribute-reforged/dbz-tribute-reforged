@@ -14,7 +14,10 @@ export module Globals {
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
-  export let canUseCustomUi = true;
+  export let canUseCustomUi: boolean = true;
+
+
+  export let pecorinePickVoiceFlag: boolean = true;
 
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
@@ -836,6 +839,17 @@ export module Id {
   export const maidenBlast = FourCC("A0LU");
   export const reliableFriend = FourCC("A0LV");
   export const summonGiru = FourCC("A0LW");
+
+  export const pecorine = FourCC("H00V");
+  export const pecorinePrincessSplash = FourCC("A07F");
+  export const pecorineRoyalSlash = FourCC("A07S");
+  export const pecorineOnigiriTime = FourCC("A080");
+  export const pecorinePrincessStrike = FourCC("A0A2");
+  export const pecorinePrincessValiant = FourCC("A0B4");
+  export const pecorinePrincessForce = FourCC("A0B7");
+  export const pecorinePrincessSword = FourCC("A0B8");
+  export const pecorineArmr = FourCC("A0B9");
+  export const pecorineEatFlag = FourCC("A0BA");
 
   export const piccolo = FourCC("H00R");
   export const kyodaika = FourCC("A04Y");
