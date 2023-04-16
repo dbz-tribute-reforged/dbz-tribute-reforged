@@ -2336,7 +2336,7 @@ export function pecoPassive(customHero: CustomHero) {
           const dmg = (
             AOEDamage.getIntDamageMult(attacker) 
             * customHero.spellPower
-            * princesSwordLevel * 0.0005 
+            * princesSwordLevel * 0.0015 
             * Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE))
           );
           UnitDamageTarget(

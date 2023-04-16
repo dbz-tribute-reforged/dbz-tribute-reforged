@@ -693,19 +693,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
-  // god of destruction
-  {
-    name: "dash ground forward god of destruction toppo",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 2,
-  },
   // light bullet
   {
     name: "dash ground point light bullet",

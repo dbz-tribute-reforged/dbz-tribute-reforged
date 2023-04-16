@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.82
+DBZ Tribute |cffffcc00Reforged 0.82a
 }
 
 STRING 4
@@ -29,7 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT to DB Super. Features 69+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Features 69+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -9164,7 +9164,7 @@ Transformations:
 [lvl 150] "|cff00afffprincess valiant|r" [Nuke + Slow]
 [lvl 150] "|cffffcc00princess force|r" [AOE Heal]
 
-|cffff8800Gourmet:|r +25 armor when above 50% HP or while eating.
+|cffff8800Gourmet:|r +30 armor when above 50% HP or while eating.
 }
 
 STRING 1443
@@ -42675,10 +42675,9 @@ Transformations: (base stat multiplier excluding kills)
 [lvl 20]  1.25x "fp"
 [lvl 50]  1.50x "fp"
 [lvl 80]  1.80x "fp"
-[lvl 100] 1.90x "fp"
-[lvl 150] 2.20x "xeno janemba" [upgrades Q]
-[lvl 200] 2.30x "xeno janemba"
-[lvl 250] 2.40x "xeno janemba"
+[lvl 100] 2.00x "fp"
+[lvl 150] 2.30x "xeno janemba" [upgrades Q]
+[lvl 200] 2.40x "xeno janemba"
 
 |cffffff00On player kill:|r 
 Permanently gain +0.06x up to +0.5x (cannot exceed 2.5x). 
@@ -64070,13 +64069,19 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 10128
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool5,.> seconds|r
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+
+|cffffcc00Budokai Champion:|r +50% stats from tournaments.
+|cff00ffffCombo Specialist:|r Briefly gain +15% spell amp after casting a melee spell.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 10129
@@ -65233,23 +65238,26 @@ STRING 10309
 }
 
 STRING 10310
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool6,.> seconds|r
+Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
+Cannot be used with [|cff00ff00F|r] Justice Pose.
+|cffffff00+0.25x stat multiplier.
++33ms and unlocks movement speed cap.
++20% Damage Block up to 7.5x Agi
+All basic spells are upgraded for one use each.
+Justice Pose is replaced with Hakai.|r
+|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
 }
 
 STRING 10311
 // Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
 |cff2288ffMana Cost: 10% Max Mana per second
 |cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool7,.> seconds|r
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool1,.> seconds|r
 }
 
 STRING 10312
@@ -65523,11 +65531,11 @@ STRING 10353
 STRING 10354
 // Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
 |cff2288ffMana Cost: 10% Max Mana per second
 |cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool8,.> seconds|r
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool3,.> seconds|r
 }
 
 STRING 10355
@@ -72322,11 +72330,11 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 STRING 11444
 // Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
 |cff2288ffMana Cost: 10% Max Mana per second
 |cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool9,.> seconds|r
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool4,.> seconds|r
 }
 
 STRING 11445
@@ -73616,11 +73624,11 @@ Bench Wood Pathable
 STRING 11649
 // Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
 |cff2288ffMana Cost: 10% Max Mana per second
 |cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool10,.> seconds|r
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool5,.> seconds|r
 }
 
 STRING 11650
@@ -75208,6 +75216,21 @@ Leon S. Kennedy slashes nearby enemies. Applies |cffff8800staggered|r. Deals 100
 |cff00ffffCooldown: <A01T,Cool7,.> seconds|r
 }
 
+STRING 11909
+// Units: H00V (Gourmet Guild Master), Ubertip (Tooltip - Extended)
+{
+A perpetually peckish princess who excels in both offense and defense on the front lines. At high HP, she goes on the attack, crushing all that opposes her, and if her HP gets low, she shows incredible tenacity with plenty of self-healing.
+
+|cffff8800Gourmet:|r +30 armor when above 50% HP or while eating.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 11910
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
@@ -75449,18 +75472,13 @@ Janemba teleports behind the closest enemy hero cursed with the Demon's Mark and
 }
 
 STRING 11949
-// Units: H00V (Gourmet Guild Master), Ubertip (Tooltip - Extended)
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
-A perpetually peckish princess who excels in both offense and defense on the front lines. At high HP, she goes on the attack, crushing all that opposes her, and if her HP gets low, she shows incredible tenacity with plenty of self-healing.
-
-|cffff8800Gourmet:|r +25 armor when above 50% HP or while eating.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool6,.> seconds|r
 }
 
 STRING 11950
@@ -76670,6 +76688,7 @@ Transformations:
 [lvl 250] 2.60x "fp"
 
 |cffffcc00Budokai Champion:|r +50% stats from tournaments.
+|cff00ffffCombo Specialist:|r Briefly gain +15% spell amp after casting a melee spell.
 }
 
 STRING 12143
@@ -112431,19 +112450,6 @@ STRING 17370
 (Buu)
 }
 
-STRING 17371
-// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
-Cannot be used with [|cff00ff00F|r] Justice Pose.
-|cffffff00+0.3x stat multiplier.
-+66ms and unlocks movement speed cap.
-+20% Damage Block up to 7.5x Agi
-All basic spells are upgraded for one use each.
-Justice Pose is replaced with Hakai.|r
-|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
-}
-
 STRING 17372
 // Abilities: A0VI (Tyranno Flame), EditorSuffix (Editor Suffix)
 {
@@ -127876,6 +127882,12 @@ Schala channels for 2s and then transports nearby allies to the target location.
 |cff00ffff(Cooldown: <A0YE,Cool9> seconds)|r
 }
 
+STRING 19645
+// Buffs/Effects: B05V (), Buffubertip (Tooltip - Extended)
+{
+Pecorine has bonus armor while eating or when above 50% hp.
+}
+
 STRING 19646
 // Abilities: A0YN (Empowered Teleportation), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -127888,6 +127900,46 @@ STRING 19647
 {
 Schala channels for 2s and then transports nearby allies to the target location. 
 |cff00ffff(Cooldown: <A0YE,Cool2> seconds)|r
+}
+
+STRING 19648
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool7,.> seconds|r
+}
+
+STRING 19649
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool8,.> seconds|r
+}
+
+STRING 19650
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool9,.> seconds|r
+}
+
+STRING 19651
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool10,.> seconds|r
 }
 
 STRING 19652
@@ -128207,14 +128259,60 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 
 }
 
-STRING 19690
+STRING 19689
 // Abilities: A080 (Onigiri Time), Researchubertip (Tooltip - Learn - Extended)
 {
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
 |cff2288ffMana Cost: 10% Max Mana per second
 |cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
+Damage Block: Str * lvl * 1 @ 25%|r
 |cff00ffffCooldown: <A080,Cool1,.> - <A080,Cool10,.> seconds|r
+}
+
+STRING 19690
+// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine eats a rice ball, restoring HP. While eating, Peco gains damage block and activates her passive.
+|cff2288ffMana Cost: 10% Max Mana per second
+|cff00ff00Heal: 3% Max HP per second 
+Damage Block: Str * lvl * 1 @ 20%|r
+|cff00ffffCooldown: <A080,Cool2,.> seconds|r
+}
+
+STRING 19691
+// Abilities: A0B8 (Pecorine's Princess Sword), Researchubertip (Tooltip - Learn - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD1,%> - <A0B8,DataD15,%>% 
+|cffffcc00Critical|r - <A0B8,DataA1> - <A0B8,DataA15>% 
+|cffffcc00Damage|r - <A0B8,DataB1,.> - <A0B8,DataB15,.> times
+}
+
+STRING 19692
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD1,%>% 
+|cffffcc00Critical|r - <A0B8,DataA1>% 
+|cffffcc00Damage|r - <A0B8,DataB1,.> times
+}
+
+STRING 19693
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD2,%>% 
+|cffffcc00Critical|r - <A0B8,DataA2>% 
+|cffffcc00Damage|r - <A0B8,DataB2,.> times
 }
 
 STRING 19694
@@ -128275,6 +128373,78 @@ STRING 19703
 // Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Glacier - [|cffffcc00Level 10|r]
+}
+
+STRING 19704
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD3,%>% 
+|cffffcc00Critical|r - <A0B8,DataA3>% 
+|cffffcc00Damage|r - <A0B8,DataB3,.> times
+}
+
+STRING 19705
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD4,%>% 
+|cffffcc00Critical|r - <A0B8,DataA4>% 
+|cffffcc00Damage|r - <A0B8,DataB4,.> times
+}
+
+STRING 19706
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD5,%>% 
+|cffffcc00Critical|r - <A0B8,DataA5>% 
+|cffffcc00Damage|r - <A0B8,DataB5,.> times
+}
+
+STRING 19707
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD6,%>% 
+|cffffcc00Critical|r - <A0B8,DataA6>% 
+|cffffcc00Damage|r - <A0B8,DataB6,.> times
+}
+
+STRING 19708
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD7,%>% 
+|cffffcc00Critical|r - <A0B8,DataA7>% 
+|cffffcc00Damage|r - <A0B8,DataB7,.> times
+}
+
+STRING 19709
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD8,%>% 
+|cffffcc00Critical|r - <A0B8,DataA8>% 
+|cffffcc00Damage|r - <A0B8,DataB8,.> times
 }
 
 STRING 19710
@@ -128353,6 +128523,18 @@ STRING 19721
 // Abilities: A0YS (Wall of Flames), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Wall of Flames - [|cffffcc00Level 7|r]
+}
+
+STRING 19722
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD9,%>% 
+|cffffcc00Critical|r - <A0B8,DataA9>% 
+|cffffcc00Damage|r - <A0B8,DataB9,.> times
 }
 
 STRING 19723
@@ -128445,6 +128627,18 @@ Duration: <A0YT,Dur1> seconds.|r
 |cff00ffffCooldown: <A0YT,Cool1> seconds|r
 }
 
+STRING 19735
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD10,%>% 
+|cffffcc00Critical|r - <A0B8,DataA10>% 
+|cffffcc00Damage|r - <A0B8,DataB10,.> times
+}
+
 STRING 19736
 // Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
@@ -128455,6 +128649,30 @@ STRING 19737
 // Abilities: A0PI (Justice Flash 2), Ubertip (Tooltip - Normal - Extended)
 {
 Toppo gathers five orange ki balls at the tips of his fingers before rapidly firing them at evildoers.|n|cffff2020Channel Duration: <A0PI,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ? + 0.3% Max HP (each)|r|n|cff00FFFFCooldown: <A0PI,Cool7> seconds|r|n|n|cff808080"Justice... Flash!"|r
+}
+
+STRING 19738
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD11,%>% 
+|cffffcc00Critical|r - <A0B8,DataA11>% 
+|cffffcc00Damage|r - <A0B8,DataB11,.> times
+}
+
+STRING 19739
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD12,%>% 
+|cffffcc00Critical|r - <A0B8,DataA12>% 
+|cffffcc00Damage|r - <A0B8,DataB12,.> times
 }
 
 STRING 19740
@@ -128558,6 +128776,30 @@ STRING 19756
 // Abilities: A0YW (Cooling Down), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Cooling Down
+}
+
+STRING 19757
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD13,%>% 
+|cffffcc00Critical|r - <A0B8,DataA13>% 
+|cffffcc00Damage|r - <A0B8,DataB13,.> times
+}
+
+STRING 19758
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD14,%>% 
+|cffffcc00Critical|r - <A0B8,DataA14>% 
+|cffffcc00Damage|r - <A0B8,DataB14,.> times
 }
 
 STRING 19759
@@ -129729,6 +129971,18 @@ STRING 19931
 // Abilities: A0B8 (Pecorine's Princess Sword), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00G|r] Learn Pecorine's Princess Sword - [|cffffcc00Level %d|r]
+}
+
+STRING 19932
+// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine's attacks can deal critical damage.
+
+|cffffcc00Princess Sword:|r Deals Passive Level * 0.15% of current HP as bonus damage.
+
+|cffffcc00Evasion|r - <A0B8,DataD15,%>% 
+|cffffcc00Critical|r - <A0B8,DataA15>% 
+|cffffcc00Damage|r - <A0B8,DataB15,.> times
 }
 
 STRING 19933
@@ -131218,16 +131472,6 @@ STRING 20185
 (peco)
 }
 
-STRING 20188
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool1,.> seconds|r
-}
-
 STRING 20189
 // Abilities: A0ZH (Insta-Shield), Tip (Tooltip - Normal)
 {
@@ -131300,26 +131544,6 @@ STRING 20200
 [|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 10|r]
 }
 
-STRING 20201
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool3,.> seconds|r
-}
-
-STRING 20202
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool4,.> seconds|r
-}
-
 STRING 20204
 // Abilities: A0ZH (Insta-Shield), EditorSuffix (Editor Suffix)
 {
@@ -131386,40 +131610,6 @@ STRING 20217
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 6|r]
 }
 
-STRING 20220
-// Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine eats a rice ball, restoring HP. Gains +25 armor and damage block while eating.
-|cff2288ffMana Cost: 10% Max Mana per second
-|cff00ff00Heal: 3% Max HP per second 
-Damage Block: Str * lvl * 0.4 @ 20%|r
-|cff00ffffCooldown: <A080,Cool2,.> seconds|r
-}
-
-STRING 20221
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD1,%>% 
-|cffffcc00Critical|r - <A0B8,DataA1>% 
-|cffffcc00Damage|r - <A0B8,DataB1,.> times
-}
-
-STRING 20222
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD2,%>% 
-|cffffcc00Critical|r - <A0B8,DataA2>% 
-|cffffcc00Damage|r - <A0B8,DataB2,.> times
-}
-
 STRING 20223
 // Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
 {
@@ -131438,42 +131628,6 @@ STRING 20225
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 9|r]
 }
 
-STRING 20226
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD3,%>% 
-|cffffcc00Critical|r - <A0B8,DataA3>% 
-|cffffcc00Damage|r - <A0B8,DataB3,.> times
-}
-
-STRING 20227
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD4,%>% 
-|cffffcc00Critical|r - <A0B8,DataA4>% 
-|cffffcc00Damage|r - <A0B8,DataB4,.> times
-}
-
-STRING 20228
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD5,%>% 
-|cffffcc00Critical|r - <A0B8,DataA5>% 
-|cffffcc00Damage|r - <A0B8,DataB5,.> times
-}
-
 STRING 20229
 // Abilities: A0ZI (Homing Attack), EditorSuffix (Editor Suffix)
 {
@@ -131484,18 +131638,6 @@ STRING 20230
 // Abilities: A0ZI (Homing Attack), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Homing Attack - [|cffffcc00Level 10|r]
-}
-
-STRING 20231
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD6,%>% 
-|cffffcc00Critical|r - <A0B8,DataA6>% 
-|cffffcc00Damage|r - <A0B8,DataB6,.> times
 }
 
 STRING 20232
@@ -131900,78 +132042,6 @@ STRING 20288
 Turn on harvester's engine for mobilised replanting.
 }
 
-STRING 20289
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD7,%>% 
-|cffffcc00Critical|r - <A0B8,DataA7>% 
-|cffffcc00Damage|r - <A0B8,DataB7,.> times
-}
-
-STRING 20290
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD8,%>% 
-|cffffcc00Critical|r - <A0B8,DataA8>% 
-|cffffcc00Damage|r - <A0B8,DataB8,.> times
-}
-
-STRING 20291
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD9,%>% 
-|cffffcc00Critical|r - <A0B8,DataA9>% 
-|cffffcc00Damage|r - <A0B8,DataB9,.> times
-}
-
-STRING 20292
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD10,%>% 
-|cffffcc00Critical|r - <A0B8,DataA10>% 
-|cffffcc00Damage|r - <A0B8,DataB10,.> times
-}
-
-STRING 20293
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD11,%>% 
-|cffffcc00Critical|r - <A0B8,DataA11>% 
-|cffffcc00Damage|r - <A0B8,DataB11,.> times
-}
-
-STRING 20294
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD12,%>% 
-|cffffcc00Critical|r - <A0B8,DataA12>% 
-|cffffcc00Damage|r - <A0B8,DataB12,.> times
-}
-
 STRING 20295
 // Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
@@ -132241,18 +132311,6 @@ STRING 20338
 [|cff00ff00R|r] Self Repair
 }
 
-STRING 20339
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD13,%>% 
-|cffffcc00Critical|r - <A0B8,DataA13>% 
-|cffffcc00Damage|r - <A0B8,DataB13,.> times
-}
-
 STRING 20340
 // Abilities: A0PZ (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -132281,30 +132339,6 @@ STRING 20344
 // Abilities: A102 (Crop Circles), Name (Name)
 {
 Crop Circles
-}
-
-STRING 20345
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD14,%>% 
-|cffffcc00Critical|r - <A0B8,DataA14>% 
-|cffffcc00Damage|r - <A0B8,DataB14,.> times
-}
-
-STRING 20346
-// Abilities: A0B8 (Pecorine's Princess Sword), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD15,%>% 
-|cffffcc00Critical|r - <A0B8,DataA15>% 
-|cffffcc00Damage|r - <A0B8,DataB15,.> times
 }
 
 STRING 20347
@@ -132382,18 +132416,6 @@ STRING 20358
 (farmer)
 }
 
-STRING 20359
-// Abilities: A0B8 (Pecorine's Princess Sword), Researchubertip (Tooltip - Learn - Extended)
-{
-Pecorine's attacks can deal critical damage.
-
-|cffffcc00Princess Sword:|r Deals Passive Level * 0.1% of current HP as bonus damage.
-
-|cffffcc00Evasion|r - <A0B8,DataD1,%> - <A0B8,DataD15,%>% 
-|cffffcc00Critical|r - <A0B8,DataA1> - <A0B8,DataA15>% 
-|cffffcc00Damage|r - <A0B8,DataB1,.> - <A0B8,DataB15,.> times
-}
-
 STRING 20360
 // Abilities: A0ZV (Disable Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -132466,12 +132488,6 @@ STRING 20369
 Pecorine gains bonus armor while eating or when above 50% HP.
 |cffffff00Bonus Armor: <A0B9,DataA1>|r
 
-}
-
-STRING 20370
-// Buffs/Effects: B05V (), Buffubertip (Tooltip - Extended)
-{
-Pecorine has bonus armor when above 50% hp.
 }
 
 STRING 20372
@@ -139855,21 +139871,6 @@ STRING 21608
 // Abilities: A0SD (Psychic Rock Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Guldo uses telekinesis to lift a large boulder from the ground nearby, and then throws it at his opponent.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0SD,Cool8> seconds|r
-}
-
-STRING 21609
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
-{
-A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
-
-|cffffcc00Budokai Champion:|r +50% stats from tournaments.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 21610
