@@ -11274,6 +11274,7 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0PM"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0PE"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0PH"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0PF"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0QY"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0R3"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0QZ"), udg_TempPlayer)
@@ -28384,7 +28385,7 @@ udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
 else
 end
 if (Trig_Base_Armor_Set_Func021C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 25.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 30.00)
 else
 end
 if (Trig_Base_Armor_Set_Func022C()) then
@@ -37972,7 +37973,7 @@ udg_TempReal = 30.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Toppo_GoD_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.30
+udg_TempReal4 = 0.25
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -50418,38 +50419,28 @@ end
 return true
 end
 
-function Trig_Transformations_Super_Janemba_Func019C()
-if (not (udg_TransformationString == "xeno janemba")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Super_Janemba_Func021Func001Func001C()
+function Trig_Transformations_Super_Janemba_Func020Func001Func001C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0NZ"), udg_StatMultUnit) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Janemba_Func021Func001Func002C()
+function Trig_Transformations_Super_Janemba_Func020Func001Func002C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Janemba_Func021Func001Func003C()
+function Trig_Transformations_Super_Janemba_Func020Func001Func003C()
 if (not (udg_TransformationString == "xeno janemba")) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Janemba_Func021Func001Func007C()
+function Trig_Transformations_Super_Janemba_Func020Func001Func007C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -50459,14 +50450,14 @@ end
 return false
 end
 
-function Trig_Transformations_Super_Janemba_Func021Func001C()
-if (not Trig_Transformations_Super_Janemba_Func021Func001Func007C()) then
+function Trig_Transformations_Super_Janemba_Func020Func001C()
+if (not Trig_Transformations_Super_Janemba_Func020Func001Func007C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Janemba_Func021C()
+function Trig_Transformations_Super_Janemba_Func020C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -50518,40 +50509,33 @@ udg_TransformationSFXString = "AuraPink.mdx"
 else
 end
 if (Trig_Transformations_Super_Janemba_Func016C()) then
-udg_StatMultReal = 1.90
+udg_StatMultReal = 2.00
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
 else
 end
 if (Trig_Transformations_Super_Janemba_Func017C()) then
-udg_StatMultReal = 2.20
-udg_TransformationAbility = FourCC("AUan")
-udg_TransformationSFXString = "AuraPink2.mdx"
-udg_TransformationSFXString2 = "AuraWhite.mdx"
-else
-end
-if (Trig_Transformations_Super_Janemba_Func018C()) then
 udg_StatMultReal = 2.30
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
 udg_TransformationSFXString2 = "AuraWhite.mdx"
 else
 end
-if (Trig_Transformations_Super_Janemba_Func019C()) then
+if (Trig_Transformations_Super_Janemba_Func018C()) then
 udg_StatMultReal = 2.40
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
 udg_TransformationSFXString2 = "AuraWhite.mdx"
 else
 end
-if (Trig_Transformations_Super_Janemba_Func021C()) then
-if (Trig_Transformations_Super_Janemba_Func021Func001C()) then
-if (Trig_Transformations_Super_Janemba_Func021Func001Func001C()) then
+if (Trig_Transformations_Super_Janemba_Func020C()) then
+if (Trig_Transformations_Super_Janemba_Func020Func001C()) then
+if (Trig_Transformations_Super_Janemba_Func020Func001Func001C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A0NY"), udg_TransformationPlayer)
 else
 SetPlayerAbilityAvailableBJ(false, FourCC("A0NY"), udg_TransformationPlayer)
 end
-if (Trig_Transformations_Super_Janemba_Func021Func001Func002C()) then
+if (Trig_Transformations_Super_Janemba_Func020Func001Func002C()) then
 UnitAddAbilityBJ(FourCC("A0NZ"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0NZ"), udg_StatMultUnit, 10)
 SetUnitAbilityLevelSwapped(FourCC("A0XP"), udg_StatMultUnit, 2)
@@ -50561,7 +50545,7 @@ UnitRemoveAbilityBJ(FourCC("A0NY"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0NZ"), udg_TransformationPlayer)
 else
 end
-if (Trig_Transformations_Super_Janemba_Func021Func001Func003C()) then
+if (Trig_Transformations_Super_Janemba_Func020Func001Func003C()) then
                 udg_TransformationID = FourCC('H098')
 else
                 udg_TransformationID = FourCC('H062')
@@ -51708,13 +51692,6 @@ end
 return true
 end
 
-function Trig_Transformations_Toppo_Func024Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0PC"), udg_StatMultUnit) == 0)) then
-return false
-end
-return true
-end
-
 function Trig_Transformations_Toppo_Func024Func002C()
 if (not Trig_Transformations_Toppo_Func024Func002Func001C()) then
 return false
@@ -51811,12 +51788,8 @@ SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_Transformation
 if (Trig_Transformations_Toppo_Func024Func002Func004C()) then
 UnitAddAbilityBJ(FourCC("A0PC"), udg_StatMultUnit)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0PC'))
-else
-end
-if (Trig_Transformations_Toppo_Func024Func002Func005C()) then
-SetPlayerAbilityAvailableBJ(false, FourCC("A0PC"), udg_TransformationPlayer)
-else
 SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TransformationPlayer)
+else
 end
             udg_TransformationID = FourCC('H09C')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)

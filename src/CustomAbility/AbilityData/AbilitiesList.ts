@@ -2922,7 +2922,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.GOD_OF_DESTRUCTION
     },
     components: [
-      { name: "dash ground forward god of destruction toppo" },
+      { name: "dash ground forward 1dist" },
       { name: "block god of destruction toppo" },
       { name: "sfx god of destruction toppo" },
     ],
@@ -9234,7 +9234,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim peco princess strike" },
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 35dist" },
       { name: "damage peco princess strike explosion 1" },
       { name: "damage peco princess strike explosion 2" },
       { name: "debuff stun peco princess strike" },

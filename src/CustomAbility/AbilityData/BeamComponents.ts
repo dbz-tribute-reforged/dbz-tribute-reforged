@@ -4665,6 +4665,8 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      // this is to prevent lag
+      { name: "hide unit allow movement" },
       { name: "damage beam robo laser spin dps" },
       { name: "timed life 25" },
       { name: "sfx beam robo laser spin" },
@@ -6656,7 +6658,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE_DMG.KAME_DPS * 1,
+    beamHpMult: BASE_DMG.KAME_DPS * 0.9,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_FAST,
     aoe: 300,

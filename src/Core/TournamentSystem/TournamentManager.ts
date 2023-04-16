@@ -180,8 +180,8 @@ export class TournamentManager {
 
     TimerStart(CreateTimer(), initialDelay, false, () => {
       if (
-        tournamentName == TournamentData.finalBattleName
-        && !Globals.isFBSimTest
+        tournamentName != TournamentData.finalBattleName
+        || !Globals.isFBSimTest
       ) {
         TimerStart(tournamentIntervalTimer, timerDuration, timerRepeat, () => {
           TournamentManager.getInstance().startTournament(tournamentName);
