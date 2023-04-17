@@ -340,6 +340,9 @@ udg_SummonsSelectFlagArray = __jarray(false)
 udg_FarmerCropsStats1 = 0.0
 udg_FarmerCropsStats2 = 0.0
 udg_PecoEatGroup = nil
+udg_CatchupThresholdInteger = 0
+udg_CatchupLevelInteger = 0
+udg_CatchupStatsDelayed = __jarray(0.0)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -775,6 +778,8 @@ gg_trg_Catchup_Timer = nil
 gg_trg_Catchup_Calculate_Threshold = nil
 gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats = nil
 gg_trg_Catchup_Automatic_Loop = nil
+gg_trg_Catchup_Distribute_Stats_Timer = nil
+gg_trg_Catchup_Distribute_Stats = nil
 gg_trg_HBTC_Enter = nil
 gg_trg_Scoreboard_Init = nil
 gg_trg_Scoreboard_Setup_Team = nil
@@ -1591,6 +1596,14 @@ end
 udg_FarmerCropsStats1 = 0.50
 udg_FarmerCropsStats2 = 0.75
 udg_PecoEatGroup = CreateGroup()
+udg_CatchupThresholdInteger = 0
+udg_CatchupLevelInteger = 0
+i = 0
+while (true) do
+if ((i > 30)) then break end
+udg_CatchupStatsDelayed[i] = 0.0
+i = i + 1
+end
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -21047,7 +21060,7 @@ function Trig_Peco_Channel_Loop_Func001Func006Func005C()
 if (IsUnitDeadBJ(udg_TempUnit) == true) then
 return true
 end
-if (udg_TempInt >= 333) then
+if (udg_TempInt >= 166) then
 return true
 end
 if (udg_TempInt2 == 0) then
@@ -21081,7 +21094,7 @@ SaveIntegerBJ(0, 3, udg_ID, udg_SummonsHashtable)
 else
 SaveIntegerBJ((udg_TempInt + 1), 3, udg_ID, udg_SummonsHashtable)
 if (Trig_Peco_Channel_Loop_Func001Func006Func003C()) then
-udg_TempReal = 0.10
+udg_TempReal = 0.20
 else
 end
 SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) - (((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * udg_TempReal) * 1.00) * 0.03)))
@@ -29120,18 +29133,18 @@ function Trig_Catchup_Calculate_Threshold_Actions()
 udg_TempReal = 0.00
 udg_TempReal2 = 0.00
 udg_TempReal3 = 0.00
-udg_TempInt = 1
+udg_CatchupThresholdInteger = 1
 while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
+if (udg_CatchupThresholdInteger > udg_MaxNumPlayers) then break end
 udg_TempReal4 = 0.00
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Catchup_Calculate_Threshold_Func004Func002A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupThresholdInteger], Trig_Catchup_Calculate_Threshold_Func004Func002A)
 if (Trig_Catchup_Calculate_Threshold_Func004Func003C()) then
 udg_TempReal = (udg_TempReal4 * 0.33)
 udg_TempReal2 = (udg_TempReal4 * 0.33)
 udg_TempReal3 = (udg_TempReal4 * 0.33)
 else
 end
-udg_TempInt = udg_TempInt + 1
+udg_CatchupThresholdInteger = udg_CatchupThresholdInteger + 1
 end
 udg_TempReal = (udg_TempReal * udg_CatchupThreshold)
 udg_TempReal2 = (udg_TempReal2 * udg_CatchupThreshold)
@@ -29256,13 +29269,12 @@ else
 end
 end
 if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func006C()) then
-TriggerExecute(gg_trg_Add_To_Base_Stats)
-TriggerExecute(gg_trg_Add_To_Catchup_Stats_Data)
-TriggerExecute(gg_trg_Update_Current_Stats)
+udg_CatchupStatsDelayed[udg_CatchupInteger] = udg_StatMultReal
 else
 end
 if (Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func007C()) then
-        AddHeroXP(udg_StatMultUnit, (25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit))) / udg_CatchupNumHeroes, true)
+udg_CatchupLevelInteger = (((25 * (10 + (4 * GetHeroLevel(udg_StatMultUnit)))) + 0) // udg_CatchupNumHeroes)
+        AddHeroXP(udg_StatMultUnit, udg_CatchupLevelInteger, true)
 else
 end
 end
@@ -29392,6 +29404,113 @@ end
 function InitTrig_Catchup_Automatic_Loop()
 gg_trg_Catchup_Automatic_Loop = CreateTrigger()
 TriggerAddAction(gg_trg_Catchup_Automatic_Loop, Trig_Catchup_Automatic_Loop_Actions)
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001Func001C()
+if (udg_ScoreboardTimeHours > 0) then
+return true
+end
+if (udg_ScoreboardTimeMinutes > 0) then
+return true
+end
+return false
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001Func002Func001A()
+udg_TempPlayer = GetEnumPlayer()
+TriggerExecute(gg_trg_Catchup_Distribute_Stats)
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001Func002Func003A()
+udg_TempPlayer = GetEnumPlayer()
+TriggerExecute(gg_trg_Catchup_Distribute_Stats)
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001Func002C()
+if (not (udg_ScoreboardTimeSeconds == 42)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001Func003C()
+if (udg_ScoreboardTimeSeconds == 42) then
+return true
+end
+if (udg_ScoreboardTimeSeconds == 43) then
+return true
+end
+return false
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Func001C()
+if (not Trig_Catchup_Distribute_Stats_Timer_Func001Func001C()) then
+return false
+end
+if (not Trig_Catchup_Distribute_Stats_Timer_Func001Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Distribute_Stats_Timer_Actions()
+if (Trig_Catchup_Distribute_Stats_Timer_Func001C()) then
+if (Trig_Catchup_Distribute_Stats_Timer_Func001Func002C()) then
+ForForce(udg_TeamsPlayerGroup[0], Trig_Catchup_Distribute_Stats_Timer_Func001Func002Func003A)
+else
+ForForce(udg_TeamsPlayerGroup[1], Trig_Catchup_Distribute_Stats_Timer_Func001Func002Func001A)
+end
+else
+end
+end
+
+function InitTrig_Catchup_Distribute_Stats_Timer()
+gg_trg_Catchup_Distribute_Stats_Timer = CreateTrigger()
+TriggerRegisterTimerEventPeriodic(gg_trg_Catchup_Distribute_Stats_Timer, 1.00)
+TriggerAddAction(gg_trg_Catchup_Distribute_Stats_Timer, Trig_Catchup_Distribute_Stats_Timer_Actions)
+end
+
+function Trig_Catchup_Distribute_Stats_Func001Func003Func003C()
+if (not (udg_StatMultReal > 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Distribute_Stats_Func001Func003A()
+udg_StatMultUnit = GetEnumUnit()
+udg_StatMultReal = udg_CatchupStatsDelayed[udg_CatchupInteger]
+if (Trig_Catchup_Distribute_Stats_Func001Func003Func003C()) then
+TriggerExecute(gg_trg_Add_To_Base_Stats)
+TriggerExecute(gg_trg_Add_To_Catchup_Stats_Data)
+TriggerExecute(gg_trg_Update_Current_Stats)
+else
+end
+end
+
+function Trig_Catchup_Distribute_Stats_Func001C()
+if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+return false
+end
+if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Distribute_Stats_Actions()
+if (Trig_Catchup_Distribute_Stats_Func001C()) then
+udg_CatchupInteger = GetConvertedPlayerId(udg_TempPlayer)
+udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
+ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Distribute_Stats_Func001Func003A)
+udg_CatchupStatsDelayed[udg_CatchupInteger] = 0.00
+else
+end
+end
+
+function InitTrig_Catchup_Distribute_Stats()
+gg_trg_Catchup_Distribute_Stats = CreateTrigger()
+TriggerAddAction(gg_trg_Catchup_Distribute_Stats, Trig_Catchup_Distribute_Stats_Actions)
 end
 
 function Trig_HBTC_Enter_Conditions()
@@ -30563,21 +30682,21 @@ TriggerAddCondition(gg_trg_Scoreboard_Death, Condition(Trig_Scoreboard_Death_Con
 TriggerAddAction(gg_trg_Scoreboard_Death, Trig_Scoreboard_Death_Actions)
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func004Func002C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005Func002C()
 if (not (udg_StatMultReal == udg_StatMultAgi)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func004C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()
 if (not (udg_StatMultReal == udg_StatMultStr)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func007C()
 if (not (udg_StatMultReal > udg_TempReal)) then
 return false
 end
@@ -30615,18 +30734,19 @@ end
 function Trig_Scoreboard_Update_Func001Func002Func004Func008A()
 udg_StatMultUnit = GetEnumUnit()
 if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004C()) then
-TriggerExecute(gg_trg_Get_Multiplied_Stats)
+TriggerExecute(gg_trg_Get_Base_Stats)
 TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func004C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()) then
 udg_TempInt3 = 0
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func004Func002C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005Func002C()) then
 udg_TempInt3 = 1
 else
 udg_TempInt3 = 2
 end
 end
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()) then
+udg_StatMultReal = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func007C()) then
 udg_TempReal = udg_StatMultReal
 else
 end
@@ -64618,6 +64738,8 @@ InitTrig_Catchup_Timer()
 InitTrig_Catchup_Calculate_Threshold()
 InitTrig_Catchup_Give_StatMultUnit_Catchup_Stats()
 InitTrig_Catchup_Automatic_Loop()
+InitTrig_Catchup_Distribute_Stats_Timer()
+InitTrig_Catchup_Distribute_Stats()
 InitTrig_HBTC_Enter()
 InitTrig_Scoreboard_Init()
 InitTrig_Scoreboard_Setup_Team()

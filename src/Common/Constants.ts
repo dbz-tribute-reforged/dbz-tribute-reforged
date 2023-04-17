@@ -205,10 +205,14 @@ export module DebuffAbilities {
   export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
   export const SLOW_LEON_STAGGER = FourCC("A03C");
 
-  export const SLOW_GENERIC_25_PCT = FourCC('A117');
-  export const SLOW_GENERIC_50_PCT = FourCC('A118');
-  export const SLOW_GENERIC_75_PCT = FourCC('A119');
-  export const SLOW_GENERIC_90_PCT = FourCC('A11A');
+  export const SLOW_GENERIC_25_PCT_5S = FourCC('A117');
+  export const SLOW_GENERIC_50_PCT_5S = FourCC('A118');
+  export const SLOW_GENERIC_75_PCT_5S = FourCC('A119');
+  export const SLOW_GENERIC_90_PCT_5S = FourCC('A11A');
+
+  export const SLOW_GENERIC_25_PCT_3S = FourCC('A0BQ');
+  export const SLOW_GENERIC_50_PCT_3S = FourCC('A0C3');
+  export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
 
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
