@@ -9175,6 +9175,7 @@ export const AbilitiesList = [
       { name: "dash ground point 15dist" },
       { name: "damage peco royal slash explosion" },
       { name: "damage peco royal slash explosion inner" },
+      { name: "debuff stun peco royal slash" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
     ],

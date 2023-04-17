@@ -144,6 +144,11 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.meguminExplosion5, SimpleSpellSystem.doMeguminExplosion);
     Globals.genericSpellMap.set(Id.meguminManatite, SimpleSpellSystem.doMeguminManatite);
     
+    Globals.genericSpellMap.set(Id.pecorinePrincessSplash, SimpleSpellSystem.doPecoManaBonus);
+    Globals.genericSpellMap.set(Id.pecorineRoyalSlash, SimpleSpellSystem.doPecoManaBonus);
+    Globals.genericSpellMap.set(Id.pecorinePrincessStrike, SimpleSpellSystem.doPecoManaBonus);
+    Globals.genericSpellMap.set(Id.pecorinePrincessValiant, SimpleSpellSystem.doPecoManaBonus);
+    Globals.genericSpellMap.set(Id.pecorinePrincessForce, SimpleSpellSystem.doPecoManaBonus);
     
     Globals.genericSpellMap.set(Id.plantWheat, SimpleSpellSystem.farmingPlantCrops);
     Globals.genericSpellMap.set(Id.plantCorn, SimpleSpellSystem.farmingPlantCrops);
@@ -3055,7 +3060,30 @@ export module SimpleSpellSystem {
     return false;
   }
 
-
+  export function doPecoManaBonus() {
+    const unit = GetTriggerUnit();
+    let bonus = 0;
+    const spellId: number = GetSpellAbilityId();
+    switch (spellId) {
+      default:
+      case Id.pecorinePrincessSplash:
+        bonus = 10;
+        break;
+      case Id.pecorineRoyalSlash:
+        bonus = 20;
+        break;
+      case Id.pecorinePrincessStrike:
+        bonus = 40;
+        break;
+      case Id.pecorinePrincessValiant:
+        bonus = 30;
+        break;
+      case Id.pecorinePrincessForce:
+        bonus = 40;
+        break;
+    }
+    SetUnitManaPercentBJ(unit, GetUnitManaPercent(unit) + bonus);
+  }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {
     BlzStartUnitAbilityCooldown(unit, Id.leonShotgun, cd);

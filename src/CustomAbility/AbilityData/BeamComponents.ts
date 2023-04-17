@@ -6687,6 +6687,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "debuff slow peco princess splash" },
       { name: "damage beam peco princess splash dps" },
       { name: "damage beam peco princess splash explosion" },
       { name: "sfx beam peco princess splash" },

@@ -1486,7 +1486,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeLossStuck = 0.85;
   const dmgAOE = 280;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.06;
+  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.066;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.6;
@@ -2336,7 +2336,7 @@ export function pecoPassive(customHero: CustomHero) {
           const dmg = (
             AOEDamage.getIntDamageMult(attacker) 
             * customHero.spellPower
-            * princesSwordLevel * 0.0015 
+            * princesSwordLevel * 0.0009 
             * Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE))
           );
           UnitDamageTarget(
@@ -2357,6 +2357,11 @@ export function pecoPassive(customHero: CustomHero) {
           );
           BlzSetSpecialEffectScale(attackSfx, 2.0);
           DestroyEffect(attackSfx);
+
+          SetUnitManaPercentBJ(
+            attacker, 
+            GetUnitManaPercent(attacker) + princesSwordLevel * 0.0009 * 100
+          );
         }
       }
       return false;
