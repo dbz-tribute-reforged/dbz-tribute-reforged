@@ -267,10 +267,11 @@ export function CustomUiTest() {
 
 	// status bars
 	// BJDebugMsg("Setting up status bars");
-	const bar_x_offset = -0.195;
-	const bar_base = 0.13;
-	const bar_width = 0.242;
-	const bar_height = 0.012;
+	// const bar_x_offset = -0.195;
+	const bar_x_offset = -0.0976;
+	const bar_base = 0.131;
+	const bar_width = 0.2924;
+	const bar_height = 0.008;
 
 	let hpBar = new HPBar(
 		grandpa,
@@ -308,8 +309,8 @@ export function CustomUiTest() {
 	let spellPowerBar = new SpellPowerBar(
 		grandpa, 
 		0,
-		new Vector2D(0.05, bar_height),
-		new FramePosition(FRAMEPOINT_TOPRIGHT, hpBar.frameHandle, FRAMEPOINT_TOPLEFT, 0.0, 0.0),
+		new Vector2D(0.03, bar_height),
+		new FramePosition(FRAMEPOINT_TOPLEFT, mpBar.frameHandle, FRAMEPOINT_TOPRIGHT, 0.0, 0.0),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -318,8 +319,8 @@ export function CustomUiTest() {
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MySpellPowerBar", 0), 0);
-  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), I2S(0) + "%");
-  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), I2S(0) + "%");
+  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), I2S(0));
+  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), I2S(0));
   BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), 0 + " / " + 0);
 	BlzFrameSetText(BlzGetFrameByName("MySpellPowerBarText", 0), "100%");
 	
@@ -327,8 +328,15 @@ export function CustomUiTest() {
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(Constants.uiButtonSize * (Constants.maxSubAbilities) + 0.003, Constants.uiButtonSize),
-		new FramePosition(FRAMEPOINT_BOTTOMLEFT, spBar.frameHandle, FRAMEPOINT_BOTTOMRIGHT, 0.001, 0.0),
+		// new Vector2D(
+		// 	Constants.uiButtonSize * (Constants.maxSubAbilities) + 1 * Constants.uiXButtonSpacing, 
+		// 	Constants.uiButtonSize
+		// ),
+		new Vector2D(
+			Constants.uiButtonSize * (Constants.maxSubAbilities), 
+			Constants.uiButtonSize
+		),
+		new FramePosition(FRAMEPOINT_BOTTOMRIGHT, spBar.frameHandle, FRAMEPOINT_BOTTOMLEFT, 0.0, 0.0),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {

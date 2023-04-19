@@ -61,7 +61,7 @@ export class AbilityButton extends Button {
         BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0),
         FRAMEPOINT_BOTTOMRIGHT, 
         0, 
-        0.1639
+        0.162
       ),
       tooltipTitle, 
       tooltipValue,

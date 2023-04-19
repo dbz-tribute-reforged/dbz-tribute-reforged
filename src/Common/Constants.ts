@@ -124,7 +124,7 @@ export module Constants {
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 
-  export const uiButtonSize: number = 0.036;
+  export const uiButtonSize: number = 0.024;
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
