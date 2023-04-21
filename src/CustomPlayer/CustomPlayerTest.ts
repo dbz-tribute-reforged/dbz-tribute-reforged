@@ -156,15 +156,7 @@ export function isValidOrderByPlayer(
 }
 
 export function CustomPlayerTest() {
-  
   // Globals.customPlayers = [];
-  
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    Globals.customPlayers.push(new CustomPlayer(
-      i,
-      GetPlayerName(Player(i)),
-    ));
-  }
 
   const addHeroToPlayer = CreateTrigger();
 	for (let i = 0; i < Constants.maxActivePlayers; ++i) {

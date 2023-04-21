@@ -26,6 +26,9 @@ import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
+import { CustomPlayer } from "CustomPlayer/CustomPlayer";
+import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
+import { SmartPingManager } from "Core/SmartPingSystem/SmartPingManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -46,6 +49,8 @@ let heroSelectorManager: HeroSelectorManager;
 let dualTechManager: DualTechManager;
 let castTimeHelper: CastTimeHelper;
 let timerManager: TimerManager;
+let keyInputManager: KeyInputManager;
+let smartPingManager: SmartPingManager;
 
 
 function tsPostMain() {
@@ -64,6 +69,10 @@ function tsPostMain() {
   Preload("SpiritBomb.mdx");
   Preload("SpiritBombShine.mdx");
 
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    Globals.customPlayers.push(new CustomPlayer(i));
+  }
+  
   // preload custom abilities
   customAbilityManager = CustomAbilityManager.getInstance();
 
@@ -85,6 +94,8 @@ function tsPostMain() {
     // initialize some systems
     castTimeHelper = CastTimeHelper.getInstance();
     CustomPlayerTest();
+    keyInputManager = KeyInputManager.getInstance();
+    smartPingManager = SmartPingManager.getInstance();
     SimpleSpellSystem.initialize();
     dualTechManager = DualTechManager.getInstance();
   })

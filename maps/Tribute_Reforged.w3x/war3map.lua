@@ -22505,6 +22505,8 @@ CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "Repl
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
 CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\CommandButtons\\BTNBookOfTheDead.blp")
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_1414", "TRIGSTR_10352", "ReplaceableTextures\\CommandButtons\\BTNFlare.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
 CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
 QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
 CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_6348", "TRIGSTR_6349", "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
@@ -63245,12 +63247,12 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Dende_Func016C()) then
-udg_StatMultReal = 2.20
+udg_StatMultReal = 2.30
 udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Dende_Func017C()) then
-udg_StatMultReal = 2.30
+udg_StatMultReal = 2.50
 udg_TransformationAbility = FourCC("AUan")
 else
 end

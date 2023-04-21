@@ -8975,6 +8975,11 @@ STRING 1413
 Unlocks the Crop Circle ability for Super Warehouses, allowing them to teleport their crops.
 }
 
+STRING 1414
+{
+Smart Ping
+}
+
 STRING 1415
 // Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
@@ -24941,8 +24946,8 @@ Transformations:
 [lvl 60]  1.75x "fp" [Unlocks |cff00ffffGod's Vision|r]
 [lvl 90]  1.90x "fp"
 [lvl 125] 2.10x "fp"
-[lvl 150] 2.20x "fp"
-[lvl 250] 2.30x "orange" [|cffffaa00Unlocks Orange Dende|r]
+[lvl 150] 2.30x "fp"
+[lvl 250] 2.50x "orange" [|cffffaa00Unlocks Orange Dende|r]
 
 |cff00ff00Pick ONE of the following:|r
 [lvl 150] "|cff00afffsuper water|r" [+50% sacred water]
@@ -65575,6 +65580,13 @@ STRING 10351
 [|cff00ff00E|r] Learn Hellzone Grenade - [|cffffcc00Level %d|r]
 }
 
+STRING 10352
+{
+|cffffff00Alt+Click: Generic Alert|r
+|cffff2222Ctrl+Alt+Click: Retreat|r
+|cff00ff00Shift+Alt+Click: Group|r
+}
+
 STRING 10353
 // Units: n03T (Chef Satan), EditorSuffix (Name - Editor Suffix)
 {
@@ -67433,7 +67445,7 @@ Dev:
 phone, Xestus, randomkilla, ttay24, Frozenhelfire, GrandMaster
 
 Other:
-micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro, Mango, MrNiab, Yurieeh, GermTheGreat, Tasyen
+micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro, Mango, MrNiab, Yurieeh, GermTheGreat, Tasyen, Vinz
 }
 
 STRING 10647
