@@ -502,6 +502,15 @@ export module AbilityNames {
     export const PRINCESS_FORCE: string = "Peco Princess Force";
   }
 
+  export module Dende {
+    export const SACRED_WATER: string = "Dende Sacred Water";
+    export const SACRED_WATER_2: string = "Dende Sacred Water 2";
+    export const GUARDIANS_DEVOTION: string = "Dende Guardians Devotion";
+    export const ORANGE_DENDE: string = "Dende Orange Dende";
+  }
+
+
+
 
 
 
@@ -570,6 +579,7 @@ export module AbilityNames {
 
   export module Cell {
     export const KAMEHAMEHA: string = Goku.KAMEHAMEHA;
+    export const JUNIOR_KAMEHAMEHA: string = Goku.KAMEHAMEHA + " Cell Junior";
     export const MASENKO: string = Gohan.MASENKO;
     export const SPECIAL_BEAM_CANNON: string = Piccolo.SPECIAL_BEAM_CANNON;
     export const SUPER_CHARGE: string = "Cell Super Charge";

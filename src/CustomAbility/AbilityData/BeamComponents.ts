@@ -10254,7 +10254,8 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
-      { name: "damage beam tyranno flame dps" },
+      { name: "damage beam tyranno flame dps 1" },
+      { name: "damage beam tyranno flame dps 2" },
       { name: "knockback kame" },
       { name: "sfx beam tyranno flame" },
     ],

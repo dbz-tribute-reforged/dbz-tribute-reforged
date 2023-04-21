@@ -557,6 +557,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Peco.PRINCESS_VALIANT,
       AbilityNames.Peco.PRINCESS_FORCE,
     ]],
+
+    [Id.dende, [
+      AbilityNames.Dende.SACRED_WATER,
+      AbilityNames.Dende.SACRED_WATER_2,
+      AbilityNames.Dende.GUARDIANS_DEVOTION,
+      AbilityNames.Dende.ORANGE_DENDE,
+    ]],
     
 
 
@@ -648,6 +655,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.LeonSKennedy.PISTOL,
       AbilityNames.Megumin.EXPLOSION_1,
       AbilityNames.Peco.PRINCESS_SPLASH,
+      AbilityNames.Dende.SACRED_WATER_2, AbilityNames.Dende.ORANGE_DENDE,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
@@ -699,7 +707,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // cell junior
     [FourCC("H01J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
-      AbilityNames.Goku.GOD_KAMEHAMEHA
+      AbilityNames.Cell.JUNIOR_KAMEHAMEHA,
     ]],
 
 
