@@ -146,7 +146,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 29,
+    costAmount: 35,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -165,7 +165,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Cost: 29 SP|nCD: 2"
+        "Cost: 35 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -6431,7 +6431,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 16,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -9235,7 +9235,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim peco princess strike" },
-      { name: "dash ground point 35dist" },
+      { name: "dash ground point 30dist" },
       { name: "damage peco princess strike explosion 1" },
       { name: "damage peco princess strike explosion 2" },
       { name: "debuff stun peco princess strike" },
@@ -9298,6 +9298,121 @@ export const AbilitiesList = [
     components: [
       { name: "heal peco princess force" },
       { name: "sfx peco princess force" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dende.SACRED_WATER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage dende sacred water" },
+      { name: "sfx dende sacred water" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dende.SACRED_WATER_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage dende sacred water 2" },
+      { name: "sfx dende sacred water" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dende.GUARDIANS_DEVOTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 1dist" },
+      { name: "heal dende guardian devotion" },
+      { name: "block dende guardian devotion" },
+      { name: "temp ability dende armor aura" },
+      { name: "sfx dende guardian devotion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dende.ORANGE_DENDE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "spell amp dende orange dende" },
+      { name: "sfx max power" },
     ],
   },
   // -------------------------------------------
@@ -10123,6 +10238,33 @@ export const AbilitiesList = [
     },
     components: [
       // { name: "summon spawn cell juniors" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Cell.JUNIOR_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam kamehameha" },
     ],
   },
   // -------------------------------------------

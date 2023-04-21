@@ -16,6 +16,7 @@ import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
+import { AOEHeal } from "CustomAbility/AbilityComponent/AOEHeal";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
@@ -153,6 +154,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.plantWheat, SimpleSpellSystem.farmingPlantCrops);
     Globals.genericSpellMap.set(Id.plantCorn, SimpleSpellSystem.farmingPlantCrops);
     Globals.genericSpellMap.set(Id.plantRice, SimpleSpellSystem.farmingPlantCrops);
+
+    Globals.genericSpellMap.set(Id.dendeHeal, SimpleSpellSystem.doDendeHeal);
+    Globals.genericSpellMap.set(Id.dendeHeal2, SimpleSpellSystem.doDendeHeal);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -384,6 +388,7 @@ export module SimpleSpellSystem {
     const braveSwordAOE = 425;
     const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.3;
     const braveSwordManaBurnMult = 0.01;
+    const debuffDamageMult = 1.5;
     const maxManaCostMult = 0.2;
     
 
@@ -404,16 +409,16 @@ export module SimpleSpellSystem {
       null
     );
     
-    let checkCount = 0;
-    ForGroup(Globals.tmpUnitGroup, () => {
-      const checkUnit = GetEnumUnit();
-      if (
-        UnitHelper.isUnitTargetableForPlayer(checkUnit, player) && 
-        GetUnitAbilityLevel(checkUnit, Buffs.HEROS_SONG) > 0
-      ) {
-        ++checkCount;
-      }
-    });
+    let checkCount = 1;
+    // ForGroup(Globals.tmpUnitGroup, () => {
+    //   const checkUnit = GetEnumUnit();
+    //   if (
+    //     UnitHelper.isUnitTargetableForPlayer(checkUnit, player) && 
+    //     GetUnitAbilityLevel(checkUnit, Buffs.HEROS_SONG) > 0
+    //   ) {
+    //     ++checkCount;
+    //   }
+    // });
     
     if (checkCount > 0) {
       const mpCost = maxManaCostMult * GetUnitState(caster, UNIT_STATE_MAX_MANA);
@@ -427,8 +432,9 @@ export module SimpleSpellSystem {
       // PauseUnit(caster, true);
       // SetUnitInvulnerable(caster, true);
       UnitHelper.giveUnitFlying(caster);
-
-      TimerStart(CreateTimer(), tickRate, true, () => {
+      
+      const jumpTimer = TimerManager.getInstance().get();
+      TimerStart(jumpTimer, tickRate, true, () => {
         casterPos.setUnit(caster);
         if (time > jumpDuration) {
           
@@ -438,7 +444,7 @@ export module SimpleSpellSystem {
             casterPos.x, casterPos.y, 
             0
           );
-          UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
+          UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_AND_A_HALF_SECOND);
 
           // PauseUnit(caster, false);
           // SetUnitInvulnerable(caster, false);
@@ -467,19 +473,28 @@ export module SimpleSpellSystem {
           ForGroup(damageGroup, () => {
             const damagedUnit = GetEnumUnit();
             if (UnitHelper.isUnitTargetableForPlayer(damagedUnit, player)) {
+              const finalDamage = GetUnitAbilityLevel(damagedUnit, Buffs.HEROS_SONG) > 0 ? 
+                damage * debuffDamageMult : 
+                damage
+              ;
+              const finalManaBurn = GetUnitAbilityLevel(damagedUnit, Buffs.HEROS_SONG) > 0 ? 
+                manaBurn * debuffDamageMult : 
+                manaBurn
+              ;
+              
               SetUnitState(
                 damagedUnit, 
                 UNIT_STATE_MANA, 
                 Math.max(
                   0, 
-                  GetUnitState(damagedUnit, UNIT_STATE_MANA) - manaBurn
+                  GetUnitState(damagedUnit, UNIT_STATE_MANA) - finalManaBurn
                 )
               );
 
               UnitDamageTarget(
                 caster, 
                 damagedUnit, 
-                damage, 
+                finalDamage, 
                 true, 
                 false, 
                 ATTACK_TYPE_HERO, 
@@ -520,7 +535,7 @@ export module SimpleSpellSystem {
 
           SetUnitFlyHeight(caster, 0, 0);
 
-          DestroyTimer(GetExpiredTimer());
+          TimerManager.getInstance().recycle(jumpTimer);
         } else {
           const timeJumpRatio = -1 + 2 * time / jumpDuration;
           const height = jumpHeight * (
@@ -555,19 +570,19 @@ export module SimpleSpellSystem {
       });
 
     } else {
-      const playerForce = CreateForce();
-      ForceAddPlayer(playerForce, player);
-      DisplayTimedTextToForce(
-        playerForce, 
-        5, 
-        "|cffff2020Error|r: No unit with |cffffff00Hero's Song|r in target area."
-      );
-      DestroyForce(playerForce);
+      // const playerForce = CreateForce();
+      // ForceAddPlayer(playerForce, player);
+      // DisplayTimedTextToForce(
+      //   playerForce, 
+      //   5, 
+      //   "|cffff2020Error|r: No unit with |cffffff00Hero's Song|r in target area."
+      // );
+      // DestroyForce(playerForce);
 
-      UnitRemoveAbility(caster, spellId);
-      UnitAddAbility(caster, spellId);
-      SetUnitAbilityLevel(caster, spellId, abilityLevel);
-      UnitMakeAbilityPermanent(caster, true, spellId);
+      // UnitRemoveAbility(caster, spellId);
+      // UnitAddAbility(caster, spellId);
+      // SetUnitAbilityLevel(caster, spellId, abilityLevel);
+      // UnitMakeAbilityPermanent(caster, true, spellId);
     }
     GroupClear(Globals.tmpUnitGroup);
   }
@@ -1868,9 +1883,9 @@ export module SimpleSpellSystem {
 
   export function SchalaTeleportation() {
     const spellId = GetSpellAbilityId();
-    const schalaTpMoveDuration = 66;
-    const schalaTpMoveDuration2 = 33;
-    const schalaTpEndTick = 133;
+    const schalaTpMoveDuration = 33;
+    const schalaTpMoveDuration2 = 16;
+    const schalaTpEndTick = 166;
     const schalaTpAOE = 600;
     const schalaTpMaxDist = 6000;
 
@@ -3051,15 +3066,6 @@ export module SimpleSpellSystem {
     TriggerExecute(gg_trg_Base_Armor_Set);
   }
 
-  export function farmingPlantCrops() {
-    const spellId = GetSpellAbilityId();
-    const x = GetUnitX(GetTriggerUnit());
-    const y = GetUnitY(GetTriggerUnit());
-    FarmingManager.getInstance().plantCropFromSpell(spellId, x, y);
-    
-    return false;
-  }
-
   export function doPecoManaBonus() {
     const unit = GetTriggerUnit();
     let bonus = 0;
@@ -3073,16 +3079,163 @@ export module SimpleSpellSystem {
         bonus = 20;
         break;
       case Id.pecorinePrincessStrike:
-        bonus = 40;
+        bonus = 30;
         break;
       case Id.pecorinePrincessValiant:
         bonus = 30;
         break;
       case Id.pecorinePrincessForce:
-        bonus = 40;
+        bonus = 30;
         break;
     }
     SetUnitManaPercentBJ(unit, GetUnitManaPercent(unit) + bonus);
+  }
+
+  export function farmingPlantCrops() {
+    const spellId = GetSpellAbilityId();
+    const x = GetUnitX(GetTriggerUnit());
+    const y = GetUnitY(GetTriggerUnit());
+    FarmingManager.getInstance().plantCropFromSpell(spellId, x, y);
+    
+    return false;
+  }
+
+  export function doDendeHeal() {
+    const spellId = GetSpellAbilityId();
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const target = GetSpellTargetUnit();
+    const standardRange = 600;
+    const maxRange = standardRange + 300;
+    const warningRange = standardRange + 50;
+
+    const updateRate = 0.03;
+    const healDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.24 * updateRate;
+    const healMult = spellId == Id.dendeHeal ? 1.0 : 1.5;
+    const warningInterval = 16;
+
+    if (!target || caster == target) return;
+
+    const playerId = GetPlayerId(GetOwningPlayer(caster));
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!customHero) return;
+
+    const keyIsActive = StringHash("dende|heal|active");
+    const keySpellTimer = StringHash("dende|heal|timer");
+    const keyLightningSfx = StringHash("dende|heal|lightning");
+    const keyCounter = StringHash("dende|heal|counter");
+
+    const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+    let newTimer = null;
+    let lightningSfx = null;
+    let counter = 0;
+    
+    if (isActive) {
+      // linked
+      // break previous link and re-link
+      newTimer = LoadTimerHandle(Globals.genericSpellHashtable, casterId, keySpellTimer);
+      lightningSfx = LoadLightningHandle(Globals.genericSpellHashtable, casterId, keyLightningSfx);
+      counter = LoadInteger(Globals.genericSpellHashtable, casterId, keyCounter);
+
+      MoveLightning(
+        lightningSfx, true, 
+        GetUnitX(target), GetUnitY(target),
+        GetUnitX(caster), GetUnitY(caster) 
+      );
+
+    } else {
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, true);
+      newTimer = TimerManager.getInstance().get();
+      SaveTimerHandle(Globals.genericSpellHashtable, casterId, keySpellTimer, newTimer);
+      
+      lightningSfx = AddLightning(
+        "DRAL", true, 
+        GetUnitX(target), GetUnitY(target),
+        GetUnitX(caster), GetUnitY(caster) 
+      );
+
+      SaveLightningHandle(Globals.genericSpellHashtable, casterId, keyLightningSfx, lightningSfx);
+      SaveInteger(Globals.genericSpellHashtable, casterId, keyCounter, counter);
+    }
+
+    TimerStart(newTimer, updateRate, true, () => {
+      Globals.tmpVector.setUnit(target);
+      Globals.tmpVector2.setUnit(caster);
+      const abilLvl = GetUnitAbilityLevel(caster, spellId);
+      const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+      if (
+        UnitHelper.isUnitHardStunned(caster)
+        || dist > maxRange
+        || GetUnitManaPercent(caster) < 1
+        || UnitHelper.isUnitDead(caster)
+        || UnitHelper.isUnitDead(target)
+        || abilLvl == 0
+      ) {
+        TimerManager.getInstance().recycle(newTimer);
+        SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, false);
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyCounter, 0);
+        DestroyLightning(lightningSfx);
+        
+        DestroyEffect(AddSpecialEffect(
+          "Abilities/Weapons/GreenDragonMissile/GreenDragonMissile.mdl",
+          Globals.tmpVector.x, Globals.tmpVector.y
+        ));
+        DestroyEffect(AddSpecialEffect(
+          "Abilities/Weapons/GreenDragonMissile/GreenDragonMissile.mdl",
+          Globals.tmpVector2.x, Globals.tmpVector2.y
+        ));
+
+        return;
+      } else {
+
+        MoveLightning(
+          lightningSfx, true, 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+          Globals.tmpVector2.x, Globals.tmpVector2.y
+        );
+
+        // check target hp
+        if (
+          UnitHelper.isUnitAlive(target)
+          && UnitHelper.isUnitAlive(caster)
+          && GetUnitLifePercent(target) < 100
+          && GetUnitManaPercent(caster) >= 1
+        ) {
+          const targetHp = GetUnitState(target, UNIT_STATE_LIFE);
+          const healAmount = AOEHeal.calculateHealRaw(
+            abilLvl, customHero.spellPower,
+            healDamageMult, healMult,
+            caster, bj_HEROSTAT_INT
+          );
+          SetUnitState(target, UNIT_STATE_LIFE, targetHp + healAmount);
+
+          if (GetUnitAbilityLevel(caster, Id.dendeOrangeFlag) == 0) {
+            const casterMp = GetUnitState(caster, UNIT_STATE_MANA);
+            SetUnitState(caster, UNIT_STATE_MANA, casterMp - healAmount * 0.5);
+          }
+        }
+
+        if (dist > warningRange) {
+          if (counter == 0) {
+            DestroyEffect(AddSpecialEffect(
+              "Abilities/Weapons/GreenDragonMissile/GreenDragonMissile.mdl",
+              Globals.tmpVector2.x, Globals.tmpVector2.y
+            ));
+          }
+          // const lightningRatio = 1 - (0.5 * (dist - warningRange) / Math.max(1, maxRange - warningRange));
+          // SetLightningColor(lightningSfx, 1, lightningRatio, lightningRatio, 1);
+
+          ++counter;
+          if (counter > warningInterval) counter = 0;
+          SaveInteger(Globals.genericSpellHashtable, casterId, keyCounter, counter);
+        } else {
+          // SetLightningColor(lightningSfx, 1, 1, 1, 1);
+        }
+      }
+    });
+
+    return false;
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {

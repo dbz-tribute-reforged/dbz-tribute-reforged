@@ -2,10 +2,11 @@ import { DragonBallsConstants } from "./DragonBallsConstants";
 import { Vector2D } from "Common/Vector2D";
 import { PathingCheck } from "Common/PathingCheck";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
-import { Constants } from "Common/Constants";
+import { Constants, Globals, Id } from "Common/Constants";
 import { Colorizer } from "Common/Colorizer";
 import { UnitHelper } from "Common/UnitHelper";
 import { SoundHelper } from "Common/SoundHelper";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export class DragonBallsManager {
   static instance: DragonBallsManager;
@@ -258,29 +259,57 @@ export class DragonBallsManager {
             UnitMakeAbilityPermanent(wishingUnit, true, DragonBallsConstants.wishImmortalityAbility);
 
             // remove reinc when detected
-            const reincTimer = CreateTimer();
+            const reincTimer = TimerManager.getInstance().get();
             TimerStart(reincTimer, 0.5, true, () => {
-              if (IsUnitType(wishingUnit, UNIT_TYPE_DEAD)) {
-                const removeReincTimer = CreateTimer();
+              if (UnitHelper.isUnitDead(wishingUnit)) {
+                const removeReincTimer = TimerManager.getInstance().get();
                 TimerStart(removeReincTimer, DragonBallsConstants.immortalDelay, false, () => {
                   UnitRemoveAbility(wishingUnit, DragonBallsConstants.wishImmortalityAbility);
                   UnitMakeAbilityPermanent(wishingUnit, false, DragonBallsConstants.wishImmortalityAbility);
                   SetUnitManaPercentBJ(wishingUnit, 100);
                   // SetUnitLifePercentBJ(wishingUnit, 100);
-                  DestroyTimer(removeReincTimer);
+                  TimerManager.getInstance().recycle(removeReincTimer);
                 });
-                DestroyTimer(reincTimer);
+                TimerManager.getInstance().recycle(reincTimer);
               }
             })
           }
         }
         // power wish done by gui
-        
-        this.grantWish();
-        TimerStart(CreateTimer(), 7, false, () => {
-          this.unsummonShenron(this.summonedAtDayTime);
-          DestroyTimer(GetExpiredTimer());
-        });
+
+
+        let anotherWish = false;
+        if (
+          GetUnitTypeId(wishingUnit) == Id.dende 
+          || GetUnitAbilityLevel(wishingUnit, Id.dendeOrange) > 0
+        ) {
+          const unitId = GetHandleId(wishingUnit);
+          const keyNumWishes = StringHash("dende|wish|count");
+          const wishes = LoadInteger(Globals.genericSpellHashtable, unitId, keyNumWishes);
+          if (wishes == 0) {
+            anotherWish = true;
+            SaveInteger(Globals.genericSpellHashtable, unitId, keyNumWishes, wishes + 1);
+          }
+        }
+
+        if (anotherWish) {
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS,
+            15,
+            "|cffffcc00Shenron|r: Wish granted... And what is your second wish?"
+          );
+        } else {
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS,
+            15,
+            "|cffffcc00Shenron|r: So be it. Your wish has been granted."
+          );
+          this.grantWish();
+          TimerStart(CreateTimer(), 7, false, () => {
+            this.unsummonShenron(this.summonedAtDayTime);
+            DestroyTimer(GetExpiredTimer());
+          });
+        }
 
         return false;
       })
@@ -351,17 +380,18 @@ export class DragonBallsManager {
       "birth"
     );
 
-    const sfxTimer = CreateTimer();
+    const sfxTimer = TimerManager.getInstance().get();
     TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
       this.playShenronSFX(this.dummyShenron);
     })
 
-    TimerStart(CreateTimer(), 4, false, () => {
+    const animTimer = TimerManager.getInstance().get();
+    TimerStart(animTimer, 4, false, () => {
       SetUnitAnimation(
         this.dummyShenron,
         "stand"
       );
-      DestroyTimer(GetExpiredTimer());
+      TimerManager.getInstance().recycle(animTimer);
     });
 
     PingMinimapForForceEx(
@@ -372,7 +402,8 @@ export class DragonBallsManager {
       10, 100, 10,
     )
     
-    TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay, false, () => {
+    const delayTimer = TimerManager.getInstance().get();
+    TimerStart(delayTimer, DragonBallsConstants.shenronDelay, false, () => {
       // SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
       // SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
       
@@ -414,8 +445,8 @@ export class DragonBallsManager {
         this.shenronFogModifiers.push(shenronVision);
       }
 
-      DestroyTimer(GetExpiredTimer());
-      DestroyTimer(sfxTimer);
+      TimerManager.getInstance().recycle(sfxTimer);
+      TimerManager.getInstance().recycle(delayTimer);
     })
 
     return this;
@@ -463,11 +494,7 @@ export class DragonBallsManager {
 
     this.playShenronSFX(this.dummyShenron);
     SetUnitAnimation(this.dummyShenron, "death");
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS,
-      15,
-      "|cffffcc00Shenron|r: So be it. Your wish has been granted."
-    );
+
     DisableTrigger(this.wishTrigger);
     ShowUnitHide(this.shenron);
 

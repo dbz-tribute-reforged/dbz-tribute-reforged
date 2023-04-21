@@ -446,6 +446,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.pecorinePrincessValiant, AbilityNames.Peco.PRINCESS_VALIANT],
     [Id.pecorinePrincessForce, AbilityNames.Peco.PRINCESS_FORCE],
 
+    [Id.dendeSacredWater, AbilityNames.Dende.SACRED_WATER],
+    [Id.dendeSacredWater2, AbilityNames.Dende.SACRED_WATER_2],
+    [Id.dendeGuardianDevotion, AbilityNames.Dende.GUARDIANS_DEVOTION],
+    [Id.dendeOrange, AbilityNames.Dende.ORANGE_DENDE],
+
 
 
 
@@ -495,6 +500,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A029'), AbilityNames.Cell.ABSORB],
     [FourCC('A0JU'), AbilityNames.Cell.ABSORB],
     [FourCC('A0LA'), AbilityNames.Cell.ABSORB],
+    [Id.cellJrKame, AbilityNames.Cell.JUNIOR_KAMEHAMEHA],
     // special beam cannon CELL
     [FourCC('A0C9'), AbilityNames.Cell.SPECIAL_BEAM_CANNON],
     // masenko CELL

@@ -1,8 +1,10 @@
 import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
+import { KeyInput } from "Core/KeyInputSystem/KeyInput";
 
 export class CustomPlayer {
+  public name: string;
   public player: player;
   public heroes: Map<unit, CustomHero>;
   public units: Map<unit, unit>;
@@ -21,11 +23,13 @@ export class CustomPlayer {
 
   public heroPickSpawn: Vector2D;
 
+  public osKeyMap: Map<oskeytype, KeyInput> = new Map();
+
   constructor(
     public id: number, 
-    public name: string,
   ) {
     this.player = Player(id);
+    this.name = GetPlayerName(this.player);
     this.heroes = new Map();
     this.units = new Map();
     this.currentlySelectedUnit = GetEnumUnit();
@@ -159,5 +163,18 @@ export class CustomPlayer {
     removed.map((removedUnit: unit) => {
       this.units.delete(removedUnit);
     }, this);
+  }
+
+  setOsKeyInput(oskey: oskeytype, keyInput: KeyInput) {
+    this.osKeyMap.set(oskey, keyInput);
+  }
+
+  getOsKeyInput(oskey: oskeytype): KeyInput {
+    if (!this.osKeyMap.has(oskey)) {
+      const ki = new KeyInput(oskey);
+      this.osKeyMap.set(oskey, ki);
+      return ki;
+    }
+    return this.osKeyMap.get(oskey);
   }
 }

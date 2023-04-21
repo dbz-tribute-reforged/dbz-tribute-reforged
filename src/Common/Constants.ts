@@ -124,7 +124,7 @@ export module Constants {
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 
-  export const uiButtonSize: number = 0.036;
+  export const uiButtonSize: number = 0.024;
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
@@ -430,6 +430,7 @@ export module Id {
   export const cellJuniors = FourCC("A01Z");
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
+  export const cellJrKame = FourCC("A0CT");
 
   export const crono = FourCC("H0A0");
   export const cronoCyclone = FourCC("A0VP");
@@ -505,6 +506,16 @@ export module Id {
   export const paragonOfFlame = FourCC("A0UZ");
   export const finalBurst = FourCC("A0V0");
   export const redEyedDragonSummoning = FourCC("A0V3");
+
+  export const dende = FourCC("H04D");
+  export const dendeSacredWater = FourCC("A0C5");
+  export const dendeSacredWater2 = FourCC("A06T");
+  export const dendeHeal = FourCC("A0C6");
+  export const dendeHeal2 = FourCC("A0C7");
+  export const dendeGuardianDevotion = FourCC("A0CV");
+  export const dendeArmorAura = FourCC("A0EJ");
+  export const dendeOrange = FourCC("A06V");
+  export const dendeOrangeFlag = FourCC("A0EV");
 
   export const donkeyKong = FourCC("H05Q");
   export const dkGroundPound = FourCC("A041");

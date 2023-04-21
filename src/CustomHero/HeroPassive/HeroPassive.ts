@@ -2314,6 +2314,8 @@ export function pecoPassive(customHero: CustomHero) {
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
 
+  const passiveRatio = 0.001;
+
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
@@ -2336,7 +2338,7 @@ export function pecoPassive(customHero: CustomHero) {
           const dmg = (
             AOEDamage.getIntDamageMult(attacker) 
             * customHero.spellPower
-            * princesSwordLevel * 0.0009 
+            * princesSwordLevel * passiveRatio
             * Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE))
           );
           UnitDamageTarget(
@@ -2360,7 +2362,7 @@ export function pecoPassive(customHero: CustomHero) {
 
           SetUnitManaPercentBJ(
             attacker, 
-            GetUnitManaPercent(attacker) + princesSwordLevel * 0.0009 * 100
+            GetUnitManaPercent(attacker) + princesSwordLevel * passiveRatio * 100
           );
         }
       }

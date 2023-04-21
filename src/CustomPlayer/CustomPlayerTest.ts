@@ -156,15 +156,7 @@ export function isValidOrderByPlayer(
 }
 
 export function CustomPlayerTest() {
-  
   // Globals.customPlayers = [];
-  
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    Globals.customPlayers.push(new CustomPlayer(
-      i,
-      GetPlayerName(Player(i)),
-    ));
-  }
 
   const addHeroToPlayer = CreateTrigger();
 	for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -576,7 +568,7 @@ export function CustomPlayerTest() {
         const unitOwnerId = GetPlayerId(unitOwner);
         if (unitOwnerId < Constants.maxActivePlayers) {
           const customHero = Globals.customPlayers[unitOwnerId].getCustomHero(unit);
-          if (customHero) {
+          if (customHero && customHero.spellPower != 1) {
             spellPowerText = I2S(R2I(Math.ceil(100 * customHero.spellPower))) + "%";
           }
         }
@@ -616,7 +608,7 @@ export function CustomPlayerTest() {
             let cdText = "";
             let abilityCd = heroAbility.currentCd;
             if (abilityCd > 0) {
-              cdText = R2SW(abilityCd,2,2) + "s";
+              cdText = R2SW(abilityCd,2,2);
             }
 
             let overwriteCd = (

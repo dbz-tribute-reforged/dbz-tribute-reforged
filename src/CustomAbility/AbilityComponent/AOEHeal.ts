@@ -5,6 +5,7 @@ import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
+import { AOEDamage } from "./AOEDamage";
 
 export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
   static readonly SOURCE_UNIT = 0;
@@ -55,6 +56,25 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     this.affectedGroup = CreateGroup();
   }
 
+  static calculateHealRaw(
+    level: number,
+    spellPower: number,
+    healDataMultiplier: number,
+    healMult: number,
+    caster: unit,
+    stat: number // bj_HEROSTAT_INT
+  ): number {
+    return (
+      healMult 
+      * AOEDamage.getIntDamageMult(caster) 
+      * level * spellPower * healDataMultiplier * 
+      (
+        CustomAbility.BASE_DAMAGE + 
+        GetHeroStatBJ(stat, caster, true)
+      )
+    );
+  }
+
   protected scaleHealToSourceHP(heal: number, sourceHPPercent: number): number {
     let percentHP = sourceHPPercent;
     if (this.useInverseHealScale) {
@@ -64,7 +84,7 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
   }
 
   protected calculateHeal(input: CustomAbilityInput, source: unit, sourceHPPercent: number): number {
-    let heal = input.level * input.caster.spellPower * this.healMult * 
+    let heal = AOEDamage.getIntDamageMult(input.caster.unit) * input.level * input.caster.spellPower * this.healMult * 
       (
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.healAttribute, input.caster.unit, true)

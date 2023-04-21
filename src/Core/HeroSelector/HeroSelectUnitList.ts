@@ -254,6 +254,17 @@ const jacoData = {
     HeroSelectCategory.CARRY
   )
 }
+const dendeData = {
+  unitCode: Id.dende,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.SUPPORT
+  )
+}
 const android13Data = {
   unitCode: Id.android13,
   onlyRandom: false,
@@ -860,7 +871,7 @@ export const HeroSelectUnitList = [
   dyspoData,
   // 20
   jacoData,
-  emptySpace,
+  dendeData,
   emptySpace,
   emptySpace,
   emptySpace,
