@@ -386,10 +386,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 15,
+    blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.15,
+    multiplier: 0.20,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
@@ -1359,10 +1359,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 25,
+    blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 5,
+    multiplier: 8,
     sfxList: [
       {
         model: "Slam.mdl",
@@ -2494,7 +2494,7 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 40,
+    blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
     multiplier: 0.4,

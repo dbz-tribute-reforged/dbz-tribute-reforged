@@ -386,7 +386,7 @@ export module SimpleSpellSystem {
     // const jumpSpeedModifierMax = 1.33;
     // const jumpSpeedModifierMin = 0.15;
     const braveSwordAOE = 425;
-    const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.3;
+    const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.2;
     const braveSwordManaBurnMult = 0.01;
     const debuffDamageMult = 1.5;
     const maxManaCostMult = 0.2;
@@ -3105,13 +3105,16 @@ export module SimpleSpellSystem {
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
     const target = GetSpellTargetUnit();
-    const standardRange = 600;
-    const maxRange = standardRange + 300;
+    const standardRange = 700;
+    const maxRange = standardRange + 400;
     const warningRange = standardRange + 50;
 
     const updateRate = 0.03;
     const healDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.24 * updateRate;
     const healMult = spellId == Id.dendeHeal ? 1.0 : 1.5;
+    const selfHealRatio = 0.2;
+    const healToManaRatio = 0.4;
+    const selfHealToManaRatio = 0.5;
     const warningInterval = 16;
 
     if (!target || caster == target) return;
@@ -3124,8 +3127,8 @@ export module SimpleSpellSystem {
     const keySpellTimer = StringHash("dende|heal|timer");
     const keyLightningSfx = StringHash("dende|heal|lightning");
     const keyCounter = StringHash("dende|heal|counter");
-
-    const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+    
+    let isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
     let newTimer = null;
     let lightningSfx = null;
     let counter = 0;
@@ -3163,9 +3166,11 @@ export module SimpleSpellSystem {
       Globals.tmpVector2.setUnit(caster);
       const abilLvl = GetUnitAbilityLevel(caster, spellId);
       const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+      isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
 
       if (
-        UnitHelper.isUnitHardStunned(caster)
+        !isActive
+        || UnitHelper.isUnitHardStunned(caster)
         || dist > maxRange
         || GetUnitManaPercent(caster) < 1
         || UnitHelper.isUnitDead(caster)
@@ -3199,20 +3204,29 @@ export module SimpleSpellSystem {
         if (
           UnitHelper.isUnitAlive(target)
           && UnitHelper.isUnitAlive(caster)
-          && GetUnitLifePercent(target) < 100
           && GetUnitManaPercent(caster) >= 1
         ) {
-          const targetHp = GetUnitState(target, UNIT_STATE_LIFE);
           const healAmount = AOEHeal.calculateHealRaw(
             abilLvl, customHero.spellPower,
             healDamageMult, healMult,
             caster, bj_HEROSTAT_INT
           );
-          SetUnitState(target, UNIT_STATE_LIFE, targetHp + healAmount);
 
-          if (GetUnitAbilityLevel(caster, Id.dendeOrangeFlag) == 0) {
-            const casterMp = GetUnitState(caster, UNIT_STATE_MANA);
-            SetUnitState(caster, UNIT_STATE_MANA, casterMp - healAmount * 0.5);
+          if (GetUnitLifePercent(target) < 100) {
+            const targetHp = GetUnitState(target, UNIT_STATE_LIFE);
+            SetUnitState(target, UNIT_STATE_LIFE, targetHp + healAmount);
+
+            if (GetUnitAbilityLevel(caster, Id.dendeOrangeFlag) == 0) {
+              SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) - healAmount * healToManaRatio);
+            }
+          }
+
+          if (GetUnitLifePercent(caster) < 100) {
+            SetUnitState(caster, UNIT_STATE_LIFE, GetUnitState(caster, UNIT_STATE_LIFE) + selfHealRatio * healAmount);
+            
+            if (GetUnitAbilityLevel(caster, Id.dendeOrangeFlag) == 0) {
+              SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) - selfHealRatio * healAmount * selfHealToManaRatio);
+            }
           }
         }
 

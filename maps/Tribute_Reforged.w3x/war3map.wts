@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.83
+DBZ Tribute |cffffcc00Reforged 0.83a
 }
 
 STRING 4
@@ -6003,8 +6003,8 @@ Transformations:
 [lvl 50]  1.50x "frieza"
 [lvl 90]  1.90x "frieza"
 [lvl 150] 2.10x "frieza"
-[lvl 200] 2.30x "golden" [Golden Frieza]
-[lvl 250] 2.40x "golden" [Mastered Golden Frieza]
+[lvl 200] 2.20x "golden" [Golden Frieza]
+[lvl 250] 2.30x "golden" [Mastered Golden Frieza]
 [lvl 400] 2.50x "black frieza" [50% Golden Mana Drain]
 
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
@@ -8531,16 +8531,13 @@ Earrings worn by the Kais
 }
 
 STRING 1344
-// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
-|cffffff00+0.35x stat mult.
-+33ms and unlocks movement speed cap.
-25% damage block up to 5x STR.
-Heals 7% of max HP.
-Deals constant AOE damage around All Might.
-|cff00FF00Duration: <A0T0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool1> seconds|r
 }
 
 STRING 1345
@@ -8844,17 +8841,17 @@ Dende splashes sacred water at the target location, dealing damage to enemies. A
 }
 
 STRING 1394
-// Units: H04D (Namekian), Ubertip (Tooltip - Extended)
+// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
 {
-A support hero who benefits greatly from having control over the Dragon Balls while assisting his allies with heals.
+A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
 
-|cffffcc00Empowered Dragon Balls:|r The first time Dende makes a wish, he can make one more.
+|cff00ff00Unstoppable|r: Briefly gains 20% damage block after casting a spell.
 
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
 }
 
@@ -10538,13 +10535,16 @@ STRING 1664
 }
 
 STRING 1665
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 1% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool1>s|r
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.4x All|r
+|cffffff00Drains 2.2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 3% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
+|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
 }
 
 STRING 1666
@@ -14021,13 +14021,16 @@ STRING 2231
 }
 
 STRING 2232
-// Abilities: A0IA (Brave Sword Attack), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 1 * lvl% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool1> - <A0IA,Cool10>s|r
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.5x All|r
+|cffffff00Drains 1.6% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
 }
 
 STRING 2233
@@ -14664,23 +14667,28 @@ STRING 2333
 }
 
 STRING 2334
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 2% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool2>s|r
+All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
+|cffffff00+0.35x stat mult.
++66ms and unlocks movement speed cap.
+40% damage block up to 8x STR.
+Heals 7% of max HP.
+Deals constant AOE damage around All Might.
+|cff00FF00Duration: <A0T0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
 }
 
 STRING 2335
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 3% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool3>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD1,%>% 
+|cffffcc00Critical:|r <A10F,DataA1>% 
+|cffffcc00Damage:|r <A10F,DataB1,.> times
 }
 
 STRING 2336
@@ -14711,13 +14719,15 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 2340
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 4% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool4>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD2,%>% 
+|cffffcc00Critical:|r <A10F,DataA2>% 
+|cffffcc00Damage:|r <A10F,DataB2,.> times
 }
 
 STRING 2341
@@ -15696,23 +15706,27 @@ Shoto Todoroki
 }
 
 STRING 2497
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 5% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool5>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD3,%>% 
+|cffffcc00Critical:|r <A10F,DataA3>% 
+|cffffcc00Damage:|r <A10F,DataB3,.> times
 }
 
 STRING 2498
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 6% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool6>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD4,%>% 
+|cffffcc00Critical:|r <A10F,DataA4>% 
+|cffffcc00Damage:|r <A10F,DataB4,.> times
 }
 
 STRING 2499
@@ -15975,13 +15989,15 @@ Reduces the mana of nearby enemy units by 2% of current mana per second.|r
 }
 
 STRING 2540
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 7% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool7>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD5,%>% 
+|cffffcc00Critical:|r <A10F,DataA5>% 
+|cffffcc00Damage:|r <A10F,DataB5,.> times
 }
 
 STRING 2541
@@ -24953,7 +24969,7 @@ Transformations:
 [lvl 150] "|cff00afffsuper water|r" [+50% sacred water]
 [lvl 150] "|cff00ff00super healing|r" [+50% healing]
 
-|cffffcc00Empowered Dragon Balls:|r The first time Dende makes a wish, he can make one more.
+|cffffcc00Empowered Dragon Balls:|r Shenron will grant two wishes when summoned by Dende.
 }
 
 STRING 3977
@@ -26369,23 +26385,27 @@ Antibiotics
 }
 
 STRING 4191
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 8% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool8>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD6,%>% 
+|cffffcc00Critical:|r <A10F,DataA6>% 
+|cffffcc00Damage:|r <A10F,DataB6,.> times
 }
 
 STRING 4192
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 9% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool9>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD7,%>% 
+|cffffcc00Critical:|r <A10F,DataA7>% 
+|cffffcc00Damage:|r <A10F,DataB7,.> times
 }
 
 STRING 4193
@@ -26401,13 +26421,15 @@ Guardian's Devotion
 }
 
 STRING 4195
-// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
-|cff00ffffMana Cost: 20% of Max Mana.
-|cff00FF00Damage: 0.325 x Agi x Lvl|r
-|cff00ff00Mana Burn: 10% of damage dealt
-|cff00FFFFCooldown: <A0IA,Cool10>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD8,%>% 
+|cffffcc00Critical:|r <A10F,DataA8>% 
+|cffffcc00Damage:|r <A10F,DataB8,.> times
 }
 
 STRING 4196
@@ -48743,39 +48765,75 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 7735
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool1>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD9,%>% 
+|cffffcc00Critical:|r <A10F,DataA9>% 
+|cffffcc00Damage:|r <A10F,DataB9,.> times
 }
 
 STRING 7736
-// Abilities: A0JW (Flying Kick), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool1>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD10,%>% 
+|cffffcc00Critical:|r <A10F,DataA10>% 
+|cffffcc00Damage:|r <A10F,DataB10,.> times
 }
 
 STRING 7737
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool2>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD11,%>% 
+|cffffcc00Critical:|r <A10F,DataA11>% 
+|cffffcc00Damage:|r <A10F,DataB11,.> times
 }
 
 STRING 7738
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool3>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD12,%>% 
+|cffffcc00Critical:|r <A10F,DataA12>% 
+|cffffcc00Damage:|r <A10F,DataB12,.> times
 }
 
 STRING 7739
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool4>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD13,%>% 
+|cffffcc00Critical:|r <A10F,DataA13>% 
+|cffffcc00Damage:|r <A10F,DataB13,.> times
 }
 
 STRING 7740
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool5>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD14,%>% 
+|cffffcc00Critical:|r <A10F,DataA14>% 
+|cffffcc00Damage:|r <A10F,DataB14,.> times
 }
 
 STRING 7741
@@ -53740,15 +53798,27 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8493
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool6>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
+
+|cffff3030Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD15,%>% 
+|cffffcc00Critical:|r <A10F,DataA15>% 
+|cffffcc00Damage:|r <A10F,DataB15,.> times
 }
 
 STRING 8494
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool7>s|r
+Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
+
+|cffff2020Heavy Hits|r: +0.5 BAT
+|cffffff00Cleave:|r 30%
+|cffffcc00Evasion:|r <A10F,DataD1,%> - <A10F,DataD15,%>% 
+|cffffcc00Critical:|r <A10F,DataA1> - <A10F,DataA15>% 
+|cffffcc00Damage:|r <A10F,DataB1,.> - <A10F,DataB15,.> times
 }
 
 STRING 8495
@@ -56627,15 +56697,23 @@ STRING 8941
 }
 
 STRING 8942
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool8>s|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool2> seconds|r
 }
 
 STRING 8943
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool9>s|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool3> seconds|r
 }
 
 STRING 8944
@@ -56645,9 +56723,13 @@ STRING 8944
 }
 
 STRING 8945
-// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams. Can be cancelled to land the attack earlier.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool10>s|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool4> seconds|r
 }
 
 STRING 8946
@@ -64375,7 +64457,7 @@ Transformations:
 [lvl 150] 2.40x "uss"
 [lvl 200] 2.50x "luss"
 
-|cff00ff00Unstoppable|r: Briefly gains 15% damage block after casting a spell.
+|cff00ff00Unstoppable|r: Briefly gains 20% damage block after casting a spell.
 }
 
 STRING 10162
@@ -65582,9 +65664,9 @@ STRING 10351
 
 STRING 10352
 {
-|cffffff00Alt+Click: Generic Alert|r
-|cffff2222Ctrl+Alt+Click: Retreat|r
-|cff00ff00Shift+Alt+Click: Group|r
+|cffffff00T+Click: Generic|r
+|cff00ff00G+Click: Group|r
+|cffff2222B+Click: Retreat|r
 }
 
 STRING 10353
@@ -67537,7 +67619,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 30+] 2.00x (absorb 17/18)
-[lvl 120] 2.50x "super perfect" [unlocks Solar Kame]
+[lvl 150] 2.50x "super perfect" [unlocks Solar Kame]
 [lvl 250] 2.55x "cell-x" [unlocks cell-x form]
 
 |cff00ff00Type to unlock:|r
@@ -68104,29 +68186,23 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 10747
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.5x All|r
-|cffffff00Drains 2.2% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 3% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: <A0IG,Cool1> seconds|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool5> seconds|r
 }
 
 STRING 10748
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Drains 1.6% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: <A0IG,Cool2> seconds|r
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool6> seconds|r
 }
 
 STRING 10749
@@ -88188,7 +88264,7 @@ Transformations:
 [lvl 85]  2.00x "justice"
 [lvl 100] 2.25x "justice"
 [lvl 150] 2.40x "justice"
-[lvl 225] 2.5/2.6/2.5x "max" [unlocks Super Maximum Mode]
+[lvl 225] 2.4/2.6/2.5x "max" [unlocks Super Maximum Mode]
 
 Gains +0.02x for each pride trooper on his team.
 |cff00ffffLightning Reflexes:|r +33% Evasion.
@@ -96571,6 +96647,31 @@ STRING 15145
 A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
+STRING 15146
+// Units: H04D (Namekian), Ubertip (Tooltip - Extended)
+{
+A support hero who benefits greatly from having control over the Dragon Balls while assisting his allies with heals.
+
+|cffffcc00Empowered Dragon Balls:|r Shenron will grant two wishes when summoned by Dende.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 15147
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 1% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool1>s|r
+}
+
 STRING 15148
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
@@ -96631,6 +96732,16 @@ STRING 15157
 [|cff00FF00R|r] Learn Time Stop - [|cffffcc00Level %d|r]
 }
 
+STRING 15158
+// Abilities: A0IA (Brave Sword Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 1 * lvl% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool1> - <A0IA,Cool10>s|r
+}
+
 STRING 15159
 // Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
 {
@@ -96659,6 +96770,36 @@ STRING 15163
 // Abilities: A0SF (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Time Stop - [|cffffcc00Level 10|r]
+}
+
+STRING 15164
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 2% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool2>s|r
+}
+
+STRING 15165
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 3% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool3>s|r
+}
+
+STRING 15166
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 4% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool4>s|r
 }
 
 STRING 15167
@@ -100358,6 +100499,16 @@ STRING 15691
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
 Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
+}
+
+STRING 15692
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 5% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool5>s|r
 }
 
 STRING 15693
@@ -109288,6 +109439,16 @@ A versatile support hero that erects powerful barriers to deflect incoming beams
 
 }
 
+STRING 16908
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 6% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool6>s|r
+}
+
 STRING 16909
 // Units: H09E (Ginyu Force Captain), Ubertip (Tooltip - Extended)
 {
@@ -113125,6 +113286,26 @@ STRING 17447
 // Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
 {
 First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl + 3% Max HP|r|n|cff00ffffCooldown: <A0O3,Cool7> seconds|r
+}
+
+STRING 17448
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 7% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool7>s|r
+}
+
+STRING 17449
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 8% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool8>s|r
 }
 
 STRING 17450
@@ -117690,6 +117871,16 @@ STRING 18147
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
 Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+}
+
+STRING 18148
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 9% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool9>s|r
 }
 
 STRING 18149
@@ -122640,10 +122831,38 @@ Duration: <A0VP,Dur3>s
 |cff00FFFFCooldown: <A0VP,Cool3>s|r
 }
 
+STRING 18870
+// Abilities: A0IA (Brave Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion strikes the ground with a mighty blow, stunning, mana burning, and dealing massive damage to all enemy units. Units affected by |cffffff00Hero's Song|r take 50% extra damage.
+|cff00ffffMana Cost: 20% of Max Mana.
+|cff00FF00Damage: 0.275 x Agi x Lvl|r
+|cff00ff00Mana Burn: 10% of damage dealt
+|cff00FFFFCooldown: <A0IA,Cool10>s|r
+}
+
+STRING 18871
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool1>s|r
+}
+
 STRING 18872
 // Units: H0A7 (Aura Pokemon), Name (Name)
 {
 Aura Pokemon
+}
+
+STRING 18873
+// Abilities: A0JW (Flying Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool1>s|r
 }
 
 STRING 18874
@@ -122794,6 +123013,60 @@ STRING 18898
 // Buffs/Effects: B053 (), EditorSuffix (Editor Suffix)
 {
 3
+}
+
+STRING 18899
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool2>s|r
+}
+
+STRING 18900
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool3>s|r
+}
+
+STRING 18901
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool4>s|r
+}
+
+STRING 18902
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool5>s|r
+}
+
+STRING 18903
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool6>s|r
+}
+
+STRING 18904
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool7>s|r
 }
 
 STRING 18905
@@ -126516,10 +126789,68 @@ STRING 19445
 An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffffCooldown: <A0QK,Cool1,.> - <A0QK,Cool10,.> seconds|r
 }
 
+STRING 19446
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool8>s|r
+}
+
+STRING 19447
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool9>s|r
+}
+
+STRING 19448
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area. Deals bonus damage upon landing and knocks away any nearby beams.
+
+|cff00FF00Damage: Agi * Lvl * ? |r
+|cff00FFFFCooldown: <A0JW,Cool10>s|r
+}
+
 STRING 19449
 // Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 19450
+// Abilities: A0B4 (Princess Valiant), Ubertip (Tooltip - Normal - Extended)
+{
+Pecorine swings with her sword to deal massive aoe damage, enemy units are 50% slowed for 5s.
+|cffff2020Note: Will be cast at melee range!|r
+|cffffaaaaPeckish: Adds 30% max mana.
+|cff00ff00Damage: 3.75 * Str
+Duration: <A0B4,Dur1> seconds|r
+|cff00ffffCooldown: <A0B4,Cool1> seconds
+}
+
+STRING 19451
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool7> seconds|r
+}
+
+STRING 19452
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool8> seconds|r
 }
 
 STRING 19453
@@ -127505,6 +127836,16 @@ Schala creates 5 magical orbs in a line and fires them at the target area.
 |cff00ffffCooldown: <A0YC,Cool9> seconds|r
 }
 
+STRING 19593
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool9> seconds|r
+}
+
 STRING 19594
 // Abilities: A0YK (Empowered Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -127885,6 +128226,16 @@ Dende splashes sacred water at the target location, dealing damage to enemies. A
 |cff00FFFFCooldown: <A0C5,Cool9> seconds|r
 }
 
+STRING 19651
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool10> seconds|r
+}
+
 STRING 19652
 // Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
 {
@@ -128185,21 +128536,6 @@ Transformations:
 [lvl 150] 2.50x "fp" [unlocks Heaven Piercing Ice Wall at Low Heat] 
 [lvl 200] 2.60x "fp" [unlocks Flashfire Fist at High Heat]
 [lvl 300] 2.65x "fp"
-}
-
-STRING 19688
-// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
-{
-A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
-
-|cff00ff00Unstoppable|r: Briefly gains 15% damage block after casting a spell.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 19689
@@ -131500,6 +131836,30 @@ STRING 20200
 [|cff00ff00Q|r] Insta-Shield - [|cffffcc00Level 10|r]
 }
 
+STRING 20201
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool1> seconds|r
+}
+
+STRING 20202
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool2> seconds|r
+}
+
 STRING 20203
 // Abilities: A0C7 (Namekian Super Healing), Ubertip (Tooltip - Normal - Extended)
 {
@@ -132399,6 +132759,18 @@ STRING 20335
 Plant Rice
 }
 
+STRING 20336
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool3> seconds|r
+}
+
 STRING 20337
 // Abilities: A0ZP (Plant Rice), Tip (Tooltip - Normal)
 {
@@ -132614,6 +132986,30 @@ Pecorine gains bonus armor while eating or when above 50% HP.
 
 }
 
+STRING 20370
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool4> seconds|r
+}
+
+STRING 20371
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool5> seconds|r
+}
+
 STRING 20372
 // Abilities: A0ZR (Toggle Harvest Engine), Name (Name)
 {
@@ -132802,6 +133198,18 @@ STRING 20400
 [|cff00ff00Q|r] Warehousing - [|cffffcc00Level 1|r]
 }
 
+STRING 20401
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool6> seconds|r
+}
+
 STRING 20402
 // Abilities: A101 (Super Warehousing), EditorSuffix (Editor Suffix)
 {
@@ -132826,6 +133234,18 @@ STRING 20405
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool7> seconds|r
+}
+
+STRING 20406
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool7> seconds|r
 }
 
 STRING 20407
@@ -132854,6 +133274,18 @@ STRING 20410
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 1|r]
 }
 
+STRING 20411
+// Abilities: A0CV (Guardian's Devotion), Researchubertip (Tooltip - Learn - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool1> - <A0CV,Cool10> seconds|r
+}
+
 STRING 20412
 // Abilities: A102 (Crop Circles), EditorSuffix (Editor Suffix)
 {
@@ -132878,6 +133310,18 @@ STRING 20415
 Frieza fires a powerful energy wave that uses up any remaining energy he has in a last-ditch attempt for victory.
 |cffffff00Costs 60% of current mana + 20% of current hp.
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QB,Cool9> seconds|r
+}
+
+STRING 20416
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool8> seconds|r
 }
 
 STRING 20417
@@ -133046,6 +133490,18 @@ STRING 20440
 R
 }
 
+STRING 20441
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool9> seconds|r
+}
+
 STRING 20442
 // Upgrades: R00D (Magic Sentry), Name (Name)
 {
@@ -133197,6 +133653,18 @@ STRING 20462
 // Abilities: A0ZR (Toggle Harvest Engine), Untip (Tooltip - Turn Off)
 {
 Enable Harvester Engine - [|cffffcc00Level 4|r]
+}
+
+STRING 20463
+// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
+{
+Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
+
+|cffffff00Armor: +10|r
+|cff00FF00Heal: 1% Max HP per second
+Damage Block: 0.5 x Int x Lvl @ 50%
+Duration: 10s.
+|cff00FFFFCooldown: <A0CV,Cool10> seconds|r
 }
 
 STRING 20464
@@ -135568,6 +136036,16 @@ STRING 20831
 Frieza fires a stronger version of his iconic Finger Beam energy attack infused with the might of golden Frieza.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0QD,Cool8> seconds|r
 }
 
+STRING 20833
+// Abilities: A0C6 (Namekian Healing), Researchubertip (Tooltip - Learn - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second.
+|cff00FFFFCooldown: <A0C6,Cool1> - <A0C6,Cool10> seconds|r
+}
+
 STRING 20834
 // Abilities: A10D (Berserker Armor), Name (Name)
 {
@@ -135955,6 +136433,16 @@ STRING 20888
 Frieza fires an immensely powerful golden energy wave at the target.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0QE,Cool2> seconds|r
 }
 
+STRING 20889
+// Abilities: A0C7 (Namekian Super Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 40% of HP Healed
+|cff00FF00Heal: 0.9 * Int per second
+|cff00FFFFCooldown: <A0C7,Cool10> seconds|r
+}
+
 STRING 20890
 // Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
@@ -136247,18 +136735,6 @@ STRING 20935
 // Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
-}
-
-STRING 20936
-// Abilities: A10F (Dragon Slayer), Researchubertip (Tooltip - Learn - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart.
-
-|cffff2020Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD1,%> - <A10F,DataD15,%>% 
-|cffffcc00Critical:|r <A10F,DataA1> - <A10F,DataA15>% 
-|cffffcc00Damage:|r <A10F,DataB1,.> - <A10F,DataB15,.> times
 }
 
 STRING 20937
@@ -136882,186 +137358,6 @@ Pecorine leaps into the air then dashes towards the target area dealing to nearb
 |cff00ffffCooldown: <A0A2,Cool1,.> - <A0A2,Cool10,.> seconds|r
 }
 
-STRING 21034
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD1,%>% 
-|cffffcc00Critical:|r <A10F,DataA1>% 
-|cffffcc00Damage:|r <A10F,DataB1,.> times
-}
-
-STRING 21035
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD2,%>% 
-|cffffcc00Critical:|r <A10F,DataA2>% 
-|cffffcc00Damage:|r <A10F,DataB2,.> times
-}
-
-STRING 21036
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD3,%>% 
-|cffffcc00Critical:|r <A10F,DataA3>% 
-|cffffcc00Damage:|r <A10F,DataB3,.> times
-}
-
-STRING 21037
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD4,%>% 
-|cffffcc00Critical:|r <A10F,DataA4>% 
-|cffffcc00Damage:|r <A10F,DataB4,.> times
-}
-
-STRING 21038
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD5,%>% 
-|cffffcc00Critical:|r <A10F,DataA5>% 
-|cffffcc00Damage:|r <A10F,DataB5,.> times
-}
-
-STRING 21039
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD6,%>% 
-|cffffcc00Critical:|r <A10F,DataA6>% 
-|cffffcc00Damage:|r <A10F,DataB6,.> times
-}
-
-STRING 21040
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD7,%>% 
-|cffffcc00Critical:|r <A10F,DataA7>% 
-|cffffcc00Damage:|r <A10F,DataB7,.> times
-}
-
-STRING 21041
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD8,%>% 
-|cffffcc00Critical:|r <A10F,DataA8>% 
-|cffffcc00Damage:|r <A10F,DataB8,.> times
-}
-
-STRING 21042
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD9,%>% 
-|cffffcc00Critical:|r <A10F,DataA9>% 
-|cffffcc00Damage:|r <A10F,DataB9,.> times
-}
-
-STRING 21043
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD10,%>% 
-|cffffcc00Critical:|r <A10F,DataA10>% 
-|cffffcc00Damage:|r <A10F,DataB10,.> times
-}
-
-STRING 21044
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD11,%>% 
-|cffffcc00Critical:|r <A10F,DataA11>% 
-|cffffcc00Damage:|r <A10F,DataB11,.> times
-}
-
-STRING 21045
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD12,%>% 
-|cffffcc00Critical:|r <A10F,DataA12>% 
-|cffffcc00Damage:|r <A10F,DataB12,.> times
-}
-
-STRING 21046
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD13,%>% 
-|cffffcc00Critical:|r <A10F,DataA13>% 
-|cffffcc00Damage:|r <A10F,DataB13,.> times
-}
-
-STRING 21047
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD14,%>% 
-|cffffcc00Critical:|r <A10F,DataA14>% 
-|cffffcc00Damage:|r <A10F,DataB14,.> times
-}
-
-STRING 21048
-// Abilities: A10F (Dragon Slayer), Ubertip (Tooltip - Normal - Extended)
-{
-Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00Dragon Slayer|r as it cleave his enemies apart. Automatically levels as Guts grows stronger.
-
-|cffff3030Heavy Hits|r: -0.5 BAT
-|cffffff00Cleave:|r 30%
-|cffffcc00Evasion:|r <A10F,DataD15,%>% 
-|cffffcc00Critical:|r <A10F,DataA15>% 
-|cffffcc00Damage:|r <A10F,DataB15,.> times
-}
-
 STRING 21049
 // Units: H0AJ (Black Swordsman), Ubertip (Tooltip - Extended)
 {
@@ -137103,17 +137399,6 @@ Pecorine leaps into the air then dashes towards the target area dealing to nearb
 |cffffaaaaPeckish: Adds 30% max mana.
 |cff00ff00Damage: Str * lvl * ?|r
 |cff00ffffCooldown: <A0A2,Cool2,.> seconds|r
-}
-
-STRING 21054
-// Abilities: A0B4 (Princess Valiant), Ubertip (Tooltip - Normal - Extended)
-{
-Pecorine swings with her sword to deal massive aoe damage, enemy units are 50% slowed for 5s.
-|cffff2020Note: Will be cast at melee range!|r
-|cffffaaaaPeckish: Adds 30% max mana.
-|cff00ff00Damage: 2.5 * Str
-Duration: <A0B4,Dur1> seconds|r
-|cff00ffffCooldown: <A0B4,Cool1> seconds
 }
 
 STRING 21055
@@ -144320,138 +144605,6 @@ Appule fires a low powered energy shot.
 |cff00ffffCooldown: <A104,Cool2> seconds|r
 }
 
-STRING 22083
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool1> seconds|r
-}
-
-STRING 22084
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool2> seconds|r
-}
-
-STRING 22085
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool3> seconds|r
-}
-
-STRING 22086
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool4> seconds|r
-}
-
-STRING 22087
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool5> seconds|r
-}
-
-STRING 22088
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool6> seconds|r
-}
-
-STRING 22089
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool7> seconds|r
-}
-
-STRING 22090
-// Abilities: A0CV (Guardian's Devotion), Researchubertip (Tooltip - Learn - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool1> - <A0CV,Cool10> seconds|r
-}
-
-STRING 22091
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool8> seconds|r
-}
-
-STRING 22092
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool9> seconds|r
-}
-
-STRING 22093
-// Abilities: A0CV (Guardian's Devotion), Ubertip (Tooltip - Normal - Extended)
-{
-Dende protects his allies with the powers of Earth's Guardian. Heals allies within 1200 range and grants them bonus armor. Increases Dende's movement speed by +33ms and provides him with damage block.
-
-|cffffff00Armor: +10|r
-|cff00FF00Heal: 1% Max HP per second
-Damage Block: 0.5 x Int x Lvl @ 40%
-Duration: 10s.
-|cff00FFFFCooldown: <A0CV,Cool10> seconds|r
-}
-
 STRING 22094
 // Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -144987,16 +145140,6 @@ Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,
 |cff00ffffCooldown: <A11E,Cool2,.> seconds|r
 }
 
-STRING 22158
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool1> seconds|r
-}
-
 STRING 22159
 // Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
@@ -145061,116 +145204,6 @@ STRING 22169
 // Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
-}
-
-STRING 22170
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool2> seconds|r
-}
-
-STRING 22171
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool3> seconds|r
-}
-
-STRING 22172
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool4> seconds|r
-}
-
-STRING 22173
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool5> seconds|r
-}
-
-STRING 22174
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool6> seconds|r
-}
-
-STRING 22175
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool7> seconds|r
-}
-
-STRING 22176
-// Abilities: A0C6 (Namekian Healing), Researchubertip (Tooltip - Learn - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second.
-|cff00FFFFCooldown: <A0C6,Cool1> - <A0C6,Cool10> seconds|r
-}
-
-STRING 22177
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool8> seconds|r
-}
-
-STRING 22178
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool9> seconds|r
-}
-
-STRING 22179
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool10> seconds|r
-}
-
-STRING 22180
-// Abilities: A0C7 (Namekian Super Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. The healing is broken if Dende is stunned.
-
-|cff0088ffMana Cost: 50% of HP Healed.
-|cff00FF00Heal: 0.9 * Int per second
-|cff00FFFFCooldown: <A0C7,Cool10> seconds|r
 }
 
 STRING 22182

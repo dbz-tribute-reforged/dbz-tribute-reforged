@@ -128,7 +128,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         ) {
           this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
           const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
-          if (targetDistance <= this.innerAOE) {
+          if (targetDistance <= this.innerAOE && !IsUnitType(target, UNIT_TYPE_HERO)) {
             // it probably came / spawned from within
             GroupAddUnit(this.insideUnits, target);
             this.addBarrierBlockUnit(target, true);

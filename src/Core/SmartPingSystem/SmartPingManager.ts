@@ -14,6 +14,7 @@ export class SmartPingManager {
   static readonly PING_GATHER: number = 3;
 
   static readonly FADE_PERIOD: number = 3;
+  static readonly TEXT_FADE_PERIOD: number = SmartPingManager.FADE_PERIOD+1;
   static readonly MESSAGE_DELAY_PERIOD: number = 15;
   static readonly MAX_PINGS: number = 10;
 
@@ -24,7 +25,7 @@ export class SmartPingManager {
     return this.instance;
   }
 
-  public timeSinceLastPing: Map<player, number> = new Map();
+  public timeSinceLastMessage: Map<player, number> = new Map();
   public pingsPerPlayer: Map<player, number> = new Map();
   public pingTrigger: trigger = CreateTrigger();
 
@@ -32,37 +33,46 @@ export class SmartPingManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       TriggerRegisterPlayerMouseEventBJ(this.pingTrigger, Player(i), bj_MOUSEEVENTTYPE_DOWN);
     }
+
     TriggerAddCondition(this.pingTrigger, Condition(() => {
       const player = GetTriggerPlayer();
       const playerId = GetPlayerId(player);
 
       const mouseButton = BlzGetTriggerPlayerMouseButton();
 
-      if (mouseButton == MOUSE_BUTTON_TYPE_LEFT) {
+      if (
+        mouseButton == MOUSE_BUTTON_TYPE_LEFT
+        || mouseButton == MOUSE_BUTTON_TYPE_MIDDLE 
+        || mouseButton == MOUSE_BUTTON_TYPE_RIGHT
+      ) {
         const xPos = BlzGetTriggerPlayerMouseX();
         const yPos = BlzGetTriggerPlayerMouseY();
+        const unit = BlzGetMouseFocusUnit();
+
         const ki_alt = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_LALT);
         const ki_shift = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_LSHIFT);
         const ki_ctrl = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_LCONTROL);
 
-        const is_retreat_ping = (
-          (ki_alt && ki_alt.isDown && ki_alt.meta == KeyInput.META_CONTROL + KeyInput.META_ALT)
-          || (ki_ctrl && ki_ctrl.isDown && ki_ctrl.meta == KeyInput.META_CONTROL + KeyInput.META_ALT)
-        );
-        const is_generic_ping = (
-          (ki_alt && ki_alt.isDown && ki_alt.meta == KeyInput.META_NONE + KeyInput.META_ALT)
-        );
-        const is_group_ping = (
-          (ki_alt && ki_alt.isDown && ki_alt.meta == KeyInput.META_SHIFT + KeyInput.META_ALT)
-          || (ki_shift && ki_shift.isDown && ki_shift.meta == KeyInput.META_SHIFT + KeyInput.META_ALT)
-        )
+        const is_retreat_ping = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_B).isDown;
+        // const is_generic_ping = (
+        //   (ki_alt && ki_alt.isDown && ki_alt.meta == KeyInput.META_NONE + KeyInput.META_ALT)
+        // );
+        const is_group_ping = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_G).isDown;
+
+        const is_generic_ping = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_T).isDown;
         
+        if (mouseButton == MOUSE_BUTTON_TYPE_LEFT) {
+          if (GetLocalPlayer() == GetTriggerPlayer() && (is_retreat_ping || is_group_ping || is_generic_ping)) {
+            EnableUserControl(true);
+          }
+        }
+
         if (is_retreat_ping) {
-          this.doPing(player, SmartPingManager.PING_X, xPos, yPos);
+          this.doPing(player, SmartPingManager.PING_X, xPos, yPos, unit);
         } else if (is_group_ping) {
-          this.doPing(player, SmartPingManager.PING_GATHER, xPos, yPos);
+          this.doPing(player, SmartPingManager.PING_GATHER, xPos, yPos, unit);
         } else if (is_generic_ping) {
-          this.doPing(player, SmartPingManager.PING_ALERT, xPos, yPos);
+          this.doPing(player, SmartPingManager.PING_ALERT, xPos, yPos, unit);
         }
       }
       return false;
@@ -70,11 +80,11 @@ export class SmartPingManager {
 
     const lastPingTimer = TimerManager.getInstance().get();
     TimerStart(lastPingTimer, 1, true, () => {
-      const keys = this.timeSinceLastPing.keys();
+      const keys = this.timeSinceLastMessage.keys();
       for (let key of keys) {
-        const val = this.timeSinceLastPing.get(key);
+        const val = this.timeSinceLastMessage.get(key);
         if (val > 0) {
-          this.timeSinceLastPing.set(
+          this.timeSinceLastMessage.set(
             key,
             (val + 1) % SmartPingManager.MESSAGE_DELAY_PERIOD
           );
@@ -84,7 +94,24 @@ export class SmartPingManager {
 
   }
 
-  doPing(player: player, type: number, xPos: number, yPos: number) {
+
+  getPlayerUnitString(unit: unit) {
+    const enemyPlayer = GetOwningPlayer(unit);
+    const enemyId = GetPlayerId(enemyPlayer);
+    const clr = Colorizer.getPlayerColorText(enemyId);
+
+    return clr + (
+      IsUnitType(unit, UNIT_TYPE_HERO) && enemyId >= Constants.maxActivePlayers ? 
+        (
+          enemyId == Constants.sagaPlayerId ?
+            "[SAGA] " + GetHeroProperName(unit) :
+            GetHeroProperName(unit)
+        ) :
+        GetPlayerName(enemyPlayer)
+    );
+  }
+
+  doPing(player: player, type: number, xPos: number, yPos: number, unit: unit) {
     if (
       xPos == 0 
       && yPos == 0
@@ -92,7 +119,6 @@ export class SmartPingManager {
     
     Globals.tmpVector.setPos(xPos, yPos);
     if (!CoordMath.isInsideMapBounds(Globals.tmpVector)) return;
-
 
     const numPings = this.pingsPerPlayer.get(player);
     if (!numPings || numPings == 0) {
@@ -102,34 +128,67 @@ export class SmartPingManager {
       this.pingsPerPlayer.set(player, numPings+1);
     }
 
+    const playerId = GetPlayerId(player);
 
-    const delay = this.timeSinceLastPing.get(player);
+    ForceClear(Globals.tmpForce);
+    ForceHelper.addAllies(Globals.tmpForce, playerId);
+
+
+    const delay = this.timeSinceLastMessage.get(player);
     if (!delay || delay == 0) {
-      this.timeSinceLastPing.set(player, 1);
+      this.timeSinceLastMessage.set(player, 1);
       for (let p of Constants.activePlayers) {
-        if (IsPlayerAlly(p, player)) {
-          let msg = Colorizer.getPlayerColorText(GetPlayerId(player)) + GetPlayerName(player) + " ";
-          if (type == SmartPingManager.PING_ALERT) {
+        if (!IsPlayerAlly(p, player)) continue;
+        let msg = Colorizer.getPlayerColorText(playerId) + GetPlayerName(player) + " ";
+        
+        if (type == SmartPingManager.PING_ALERT) {
+          if (unit != null && IsUnitEnemy(unit, player)) {
+            msg += "wants to attack " + this.getPlayerUnitString(unit);
+          } else {
             msg += "is sending an alert!|r";
-          } else if (type == SmartPingManager.PING_X) {
+          }
+        } else if (type == SmartPingManager.PING_X) {
+          if (unit != null) {
+            const ext = this.getPlayerUnitString(unit);
+
+            if (IsUnitAlly(unit, player)) {
+              msg += "wants " + ext + " to retreat|r";
+            } else {
+              msg += "wants to avoid " + ext + "|r";
+            }
+          } else {
             msg += "wants to retreat!|r";
-          } else if (type == SmartPingManager.PING_GATHER) {
+          }
+        } else if (type == SmartPingManager.PING_GATHER) {
+          if (unit != null) {
+            const ext = this.getPlayerUnitString(unit);
+            
+            if (IsUnitAlly(unit, player)) {
+              msg += "wants to defend " + ext + "|r";
+            } else {
+              msg += "wants to attack " + ext + "|r";
+            }
+          } else {
             msg += "wants to group up!|r";
           }
-          DisplayTimedTextToPlayer(p, 0, 0, SmartPingManager.FADE_PERIOD, msg);
         }
+        DisplayTimedTextToPlayer(p, 0, 0, SmartPingManager.TEXT_FADE_PERIOD, msg);
       }
 
-      const shortMsg = Colorizer.getPlayerColorText(GetPlayerId(player)) + GetPlayerName(player) + "|r";
-      ForceClear(Globals.tmpForce);
-      ForceHelper.addAllies(Globals.tmpForce, GetPlayerId(player));
+      const shortMsg = Colorizer.getPlayerColorText(playerId) + GetPlayerName(player) + "|r";
+
       TextTagHelper.showTempText(
         shortMsg, xPos, yPos, 10,
-        SmartPingManager.FADE_PERIOD, 1,
+        SmartPingManager.TEXT_FADE_PERIOD, 1,
         Globals.tmpForce
       );
-      ForceClear(Globals.tmpForce);
     }
+
+    const rgb = Colorizer.getPlayerRGB(playerId);
+    PingMinimapForForceEx(Globals.tmpForce, xPos, yPos, 3, bj_MINIMAPPINGSTYLE_FLASHY, rgb.r * 0.39, rgb.g * 0.39, rgb.b * 0.39);
+    
+    ForceClear(Globals.tmpForce);
+
 
 
     let sfx1 = "";

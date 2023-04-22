@@ -924,6 +924,7 @@ gg_trg_Add_To_Catchup_Stats_Data = nil
 gg_trg_Add_To_Level_Up_Stats_Data = nil
 gg_trg_Add_To_Tower_Stats_Data = nil
 gg_trg_Add_To_Farming_Stats_Data = nil
+gg_trg_Add_To_Power_Wish_Stats_Data = nil
 gg_trg_Get_Stat_Sources_Data = nil
 gg_trg_Auto_Transform = nil
 gg_trg_Auto_Transform_Player_Units = nil
@@ -30940,6 +30941,13 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Scoreboard_Timer_Increment, 1.00)
 TriggerAddAction(gg_trg_Scoreboard_Timer_Increment, Trig_Scoreboard_Timer_Increment_Actions)
 end
 
+function Trig_Teleporter_Action_Func003Func010C()
+if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("H01Z"))) then
+return false
+end
+return true
+end
+
 function Trig_Teleporter_Action_Func003C()
 if (not (udg_TempReal <= 0.00)) then
 return false
@@ -30952,6 +30960,10 @@ function Trig_Teleporter_Action_Actions()
 udg_TempReal = LoadRealBJ(0, udg_ID, udg_TeleporterHashtable)
 if (Trig_Teleporter_Action_Func003C()) then
 SetUnitPositionLoc(udg_TempUnit, udg_TempLoc2)
+if (Trig_Teleporter_Action_Func003Func010C()) then
+PanCameraToTimedLocForPlayer(GetOwningPlayer(udg_TempUnit), udg_TempLoc2, 0.10)
+else
+end
 SaveRealBJ(5.00, 0, udg_ID, udg_TeleporterHashtable)
 GroupAddUnitSimple(udg_TempUnit, udg_TeleporterUnitGroup)
 EnableTrigger(gg_trg_Teleporter_Loop)
@@ -31470,14 +31482,14 @@ end
 return true
 end
 
-function Trig_Shenron_Wish_for_Power_Func005Func002C()
+function Trig_Shenron_Wish_for_Power_Func006Func002C()
 if (not (udg_ScoreboardTimeMinutes >= 20)) then
 return false
 end
 return true
 end
 
-function Trig_Shenron_Wish_for_Power_Func005Func003C()
+function Trig_Shenron_Wish_for_Power_Func006Func003C()
 if (udg_ScoreboardTimeHours > 0) then
 return true
 end
@@ -31487,8 +31499,8 @@ end
 return false
 end
 
-function Trig_Shenron_Wish_for_Power_Func005C()
-if (not Trig_Shenron_Wish_for_Power_Func005Func003C()) then
+function Trig_Shenron_Wish_for_Power_Func006C()
+if (not Trig_Shenron_Wish_for_Power_Func006Func003C()) then
 return false
 end
 return true
@@ -31506,11 +31518,12 @@ udg_StatMultReal = 100.00
 end
 end
 TriggerExecute(gg_trg_Add_To_Base_Stats)
+TriggerExecute(gg_trg_Add_To_Catchup_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
-if (Trig_Shenron_Wish_for_Power_Func005C()) then
+if (Trig_Shenron_Wish_for_Power_Func006C()) then
 udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 15) + 120))
 else
-if (Trig_Shenron_Wish_for_Power_Func005Func002C()) then
+if (Trig_Shenron_Wish_for_Power_Func006Func002C()) then
 udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 10) + 55))
 else
 udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 5) + 15))
@@ -33463,6 +33476,13 @@ end
 return true
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func020Func002Func001Func001C()
+if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 5) == "Chaos")) then
+return false
+end
+return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func020Func002Func001C()
 if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 5) == "Phone")) then
 return false
@@ -33741,7 +33761,21 @@ end
 return true
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func028Func001C()
+if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 3) == "PAN")) then
+return false
+end
+return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func028C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H04D"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func029C()
 if (not (udg_UltimateModeLevel > 0)) then
 return false
 end
@@ -33838,6 +33872,10 @@ else
 if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func020Func002Func001C()) then
 BlzSetHeroProperName(udg_TempUnit, "S+onic")
 else
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func020Func002Func001Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Sonic Chaos")
+else
+end
 end
 end
 else
@@ -33965,6 +34003,13 @@ end
 else
 end
 if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func028C()) then
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func028Func001C()) then
+BlzSetHeroProperName(udg_TempUnit, "Little Green")
+else
+end
+else
+end
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func029C()) then
 udg_TempInt4 = (udg_UltimateModeLevel // CountUnitsInGroup(udg_StatMultPlayerUnits[udg_TempInt]))
 SetHeroLevelBJ(udg_StatMultUnit, udg_TempInt4, false)
 ModifyHeroSkillPoints(udg_StatMultUnit, bj_MODIFYMETHOD_ADD, (udg_TempInt4 // 3))
@@ -35574,7 +35619,7 @@ DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Stat Mult:|r |cffff2020" .. 
 TriggerExecute(gg_trg_Get_Stat_Sources_Data)
 DisplayTextToForce(udg_TempPlayerGroup, ("|cffffff00Creep Stats: " .. ((R2S(udg_StatMultStr) .. "|r |cff20ff20Saga Stats: ") .. ((R2S(udg_StatMultAgi) .. "|r |cffff2020PvP Stats: ") .. (R2S(udg_StatMultInt) .. "|r")))))
 DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Tourney stats: " .. ((R2S(udg_StatMultReal) .. "|r |cff00ffffCatchup Stats: ") .. ((R2S(udg_TempReal) .. "|r |cffff00ffLevel Up Stats: ") .. R2S(udg_TempReal2)))))
-DisplayTextToForce(udg_TempPlayerGroup, ("|cffaaaaaaTower stats: " .. (R2S(udg_TempReal3) .. ((" |r|cff00ff00Farming Stats: " .. R2S(udg_TempReal4)) .. "|r"))))
+DisplayTextToForce(udg_TempPlayerGroup, ("|cffaaaaaaTower stats: " .. (R2S(udg_TempReal3) .. ((" |r|cff00ff00Farming Stats: " .. R2S(udg_TempReal4)) .. (" |cffffcc00Wish Stats: " .. (R2S(udg_TempReal5) .. "|r"))))))
 DisplayTextToForce(udg_TempPlayerGroup, ("Movement speed: " .. R2S(GetUnitMoveSpeed(udg_StatMultUnit))))
 end
 
@@ -36686,6 +36731,16 @@ gg_trg_Add_To_Farming_Stats_Data = CreateTrigger()
 TriggerAddAction(gg_trg_Add_To_Farming_Stats_Data, Trig_Add_To_Farming_Stats_Data_Actions)
 end
 
+function Trig_Add_To_Power_Wish_Stats_Data_Actions()
+    udg_ID = GetHandleId(udg_StatMultUnit)
+SaveRealBJ((LoadRealBJ(29, udg_ID, udg_StatMultHashtable) + udg_StatMultReal), 29, udg_ID, udg_StatMultHashtable)
+end
+
+function InitTrig_Add_To_Power_Wish_Stats_Data()
+gg_trg_Add_To_Power_Wish_Stats_Data = CreateTrigger()
+TriggerAddAction(gg_trg_Add_To_Power_Wish_Stats_Data, Trig_Add_To_Power_Wish_Stats_Data_Actions)
+end
+
 function Trig_Get_Stat_Sources_Data_Actions()
     udg_ID = GetHandleId(udg_StatMultUnit)
 udg_StatMultStr = LoadRealBJ(21, udg_ID, udg_StatMultHashtable)
@@ -36696,6 +36751,7 @@ udg_TempReal = LoadRealBJ(25, udg_ID, udg_StatMultHashtable)
 udg_TempReal2 = LoadRealBJ(26, udg_ID, udg_StatMultHashtable)
 udg_TempReal3 = LoadRealBJ(27, udg_ID, udg_StatMultHashtable)
 udg_TempReal4 = LoadRealBJ(28, udg_ID, udg_StatMultHashtable)
+udg_TempReal5 = LoadRealBJ(29, udg_ID, udg_StatMultHashtable)
 end
 
 function InitTrig_Get_Stat_Sources_Data()
@@ -48732,7 +48788,7 @@ function Trig_Transformations_Cell_Perfect_Func012C()
 if (not (udg_TransformationString == "super perfect")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 return true
@@ -52254,7 +52310,7 @@ else
 end
 if (Trig_Transformations_Dyspo_Func018C()) then
 udg_StatMultReal = 2.50
-udg_StatMultStr = udg_StatMultReal
+udg_StatMultStr = (udg_StatMultReal - 0.10)
 udg_StatMultAgi = (udg_StatMultReal + 0.10)
 udg_StatMultInt = udg_StatMultReal
 udg_TransformationAbility = FourCC("AUan")
@@ -52764,19 +52820,19 @@ udg_TransformationSFXString = "AuraWhite.mdx"
 else
 end
 if (Trig_Transformations_Frieza_Func017C()) then
-udg_StatMultReal = 2.30
+udg_StatMultReal = 2.20
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraSS.mdx"
 else
 end
 if (Trig_Transformations_Frieza_Func018C()) then
-udg_StatMultReal = 2.40
+udg_StatMultReal = 2.30
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraSS.mdx"
 else
 end
 if (Trig_Transformations_Frieza_Func019C()) then
-udg_StatMultReal = 2.50
+udg_StatMultReal = 2.40
 udg_TransformationAbility = FourCC("AUan")
 udg_TransformationSFXString = "AuraPink2.mdx"
 else
@@ -52918,9 +52974,9 @@ BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 if (Trig_Transformations_Frieza_Stat_Mult_Forms_Func005Func004C()) then
 if (Trig_Transformations_Frieza_Stat_Mult_Forms_Func005Func004Func002C()) then
-udg_StatMultReal = (udg_StatMultReal + 0.50)
+udg_StatMultReal = (udg_StatMultReal + 0.40)
 else
-udg_StatMultReal = (udg_StatMultReal + 0.60)
+udg_StatMultReal = (udg_StatMultReal + 0.50)
 end
 if (Trig_Transformations_Frieza_Stat_Mult_Forms_Func005Func004Func004C()) then
                 udg_TransformationID = FourCC('H00J')
@@ -65443,6 +65499,7 @@ InitTrig_Add_To_Catchup_Stats_Data()
 InitTrig_Add_To_Level_Up_Stats_Data()
 InitTrig_Add_To_Tower_Stats_Data()
 InitTrig_Add_To_Farming_Stats_Data()
+InitTrig_Add_To_Power_Wish_Stats_Data()
 InitTrig_Get_Stat_Sources_Data()
 InitTrig_Auto_Transform()
 InitTrig_Auto_Transform_Player_Units()
