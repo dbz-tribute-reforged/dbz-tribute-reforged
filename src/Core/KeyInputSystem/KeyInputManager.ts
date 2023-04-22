@@ -40,17 +40,21 @@ export class KeyInputManager {
 
     TriggerAddCondition(this.keyInputTrigger, Condition(() => {
       const key = BlzGetTriggerPlayerKey();
+      const isDown = BlzGetTriggerPlayerIsKeyDown();
+      const meta = BlzGetTriggerPlayerMetaKey();
 
-      const playerId = GetPlayerId(GetTriggerPlayer());
-      let ki = Globals.customPlayers[playerId].getOsKeyInput(key);
-      if (!ki) {
-        ki = new KeyInput(key);
-        Globals.customPlayers[playerId].setOsKeyInput(key, ki);
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      const ki = Globals.customPlayers[playerId].getOsKeyInput(key);
+      
+      if (ki.isDown != isDown) {
+        ki.isDown = isDown;
+        ki.meta = meta;
       }
-      ki.isDown = BlzGetTriggerPlayerIsKeyDown();
-      ki.meta = BlzGetTriggerPlayerMetaKey();
 
       return false;
     }));
+
+    // after 30s of key down, automatically unset?
   }
 }

@@ -392,6 +392,9 @@ export function CustomPlayerTest() {
     for (const unit of Globals.customPlayers[playerId].allUnits) {
       if (unit && IsUnitSelected(unit, player)) {
         IssueImmediateOrderById(unit, OrderIds.STOP);
+        if (GetUnitTypeId(unit) == Id.dende) {
+          SaveBoolean(Globals.genericSpellHashtable, GetHandleId(unit), StringHash("dende|heal|active"), false);
+        }
       }
     }
     return false;

@@ -4495,7 +4495,7 @@ export const AbilitiesList = [
         AbilityNames.AllMight.ONE_FOR_ALL
     },
     components: [
-      { name: "dash ground forward one for all" },
+      { name: "dash ground forward 2dist" },
       { name: "block one for all" },
       { name: "multi one for all 1" },
       { name: "multi one for all 2" },
@@ -10992,6 +10992,7 @@ export const AbilitiesList = [
         "."
     },
     components: [
+      { name: "dash ground forward 2dist" },
       { name: "beam rakshasa claw" },
     ],
   },
@@ -11019,6 +11020,7 @@ export const AbilitiesList = [
         "."
     },
     components: [
+      { name: "dash ground forward 2dist" },
       { name: "beam rakshasa claw" },
     ],
   },
@@ -11046,6 +11048,7 @@ export const AbilitiesList = [
         "."
     },
     components: [
+      { name: "dash ground forward 2dist" },
       { name: "multi devil claw" },
     ],
   },
@@ -11073,6 +11076,7 @@ export const AbilitiesList = [
         "."
     },
     components: [
+      { name: "dash ground forward 2dist" },
       { name: "multi devil claw" },
     ],
   },
@@ -12661,7 +12665,7 @@ export const AbilitiesList = [
         AbilityNames.Zamasu.HEAVENLY_RUSH
     },
     components: [
-      { name: "dash ground point 40dist" },
+      { name: "dash ground point 45dist" },
       { name: "damage heavenly rush bonus explosion" },
       { name: "damage heavenly rush explosion" },
       { name: "sfx heavenly rush" },

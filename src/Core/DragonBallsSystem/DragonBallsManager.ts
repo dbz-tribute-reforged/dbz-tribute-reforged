@@ -19,6 +19,7 @@ export class DragonBallsManager {
   protected summonedAtDayTime: boolean;
   protected shenronFogModifiers: fogmodifier[];
   protected radarTrigger: trigger;
+  protected numWishesGranted: number;
 
   constructor (
   ) {
@@ -42,6 +43,7 @@ export class DragonBallsManager {
     this.summonedAtDayTime = false;
     this.shenronFogModifiers = [];
     this.radarTrigger = CreateTrigger();
+    this.numWishesGranted = 1;
     this.initialize();
   }
 
@@ -106,6 +108,18 @@ export class DragonBallsManager {
             const unit = GetTriggerUnit();
             const unitX = GetUnitX(unit);
             const unitY = GetUnitY(unit);
+
+            if (GetUnitTypeId(unit) == Id.dende || GetUnitAbilityLevel(unit, Id.dendeOrange)) {
+              DisplayTimedTextToForce(
+                bj_FORCE_ALL_PLAYERS,
+                15,
+                Colorizer.getColoredPlayerName(player) + " has empowered Shenron to grant one more wish."
+              );
+              this.numWishesGranted = 2;
+            } else {
+              this.numWishesGranted = 1;
+            }
+
             this.summonShenron(unitX, unitY);
             TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay + 1, false, () => {
               SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
@@ -277,27 +291,13 @@ export class DragonBallsManager {
         }
         // power wish done by gui
 
-
-        let anotherWish = false;
-        if (
-          GetUnitTypeId(wishingUnit) == Id.dende 
-          || GetUnitAbilityLevel(wishingUnit, Id.dendeOrange) > 0
-        ) {
-          const unitId = GetHandleId(wishingUnit);
-          const keyNumWishes = StringHash("dende|wish|count");
-          const wishes = LoadInteger(Globals.genericSpellHashtable, unitId, keyNumWishes);
-          if (wishes == 0) {
-            anotherWish = true;
-            SaveInteger(Globals.genericSpellHashtable, unitId, keyNumWishes, wishes + 1);
-          }
-        }
-
-        if (anotherWish) {
+        if (this.numWishesGranted > 1) {
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS,
             15,
             "|cffffcc00Shenron|r: Wish granted... And what is your second wish?"
           );
+          --this.numWishesGranted;
         } else {
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS,

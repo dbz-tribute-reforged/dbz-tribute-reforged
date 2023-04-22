@@ -1090,19 +1090,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 33,
   },
-  // one for all
-  {
-    name: "dash ground forward one for all",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: true,
-    angleOffset: 0,
-    distance: 1,
-  },
   // oklahoma smash
   {
     name: "dash ground forward oklahoma smash",
