@@ -287,7 +287,6 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     super();
     this.delay = 30;
     this.stats = 100;
-    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

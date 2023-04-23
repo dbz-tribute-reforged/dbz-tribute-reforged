@@ -13,7 +13,6 @@ export class CellSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.delay = 45;
-    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

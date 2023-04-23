@@ -53,6 +53,18 @@ let keyInputManager: KeyInputManager;
 let smartPingManager: SmartPingManager;
 
 
+const musicStr = (
+  + "Audio/Music/SecretOfTheForest.mp3;"
+  + "Audio/Music/CorridorsOfTime.mp3;"
+  + "Audio/Music/SchalaTheme.mp3;"
+  + "Audio/Music/TimesScar.mp3;"
+  + "Audio/Music/OnTheBeachOfDreams.mp3"
+);
+const lobbyMusicStr = (
+  "Audio/Music/GatoSong.mp3;" 
+  + musicStr
+);
+
 function tsPostMain() {
 
   print(`Build: ${BUILD_DATE}`);
@@ -147,12 +159,33 @@ function tsPostMain() {
   });
 
   CameraZoom.onInit();
+
+
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
+
+  const musicDelayTimer = TimerManager.getInstance().get();
+  TimerStart(musicDelayTimer, 25, false, () => {
+    for (const cPlayer of Globals.customPlayers) {
+      if (
+        SubString(cPlayer.name, 0, 12) == "Local Player"
+        || SubString(cPlayer.name, 0, 11) == "randomkilla"
+        || SubString(cPlayer.name, 0, 5) == "Phone"
+      ) {
+        if (cPlayer.player == GetLocalPlayer()) {
+          ClearMapMusic();
+          StopMusic(false);
+          PlayMusic(musicStr);
+        }
+      }
+    }
+    TimerManager.getInstance().recycle(musicDelayTimer);
+  });
 }
 
 function playLobbyMusic() {
   // PlayMusic("Audio/Music/DBSuperOp2.mp3");
-  PlayMusic("Audio/Music/GatoSong.mp3");
+  // PlayMusic("Audio/Music/GatoSong.mp3");
+  PlayMusic(lobbyMusicStr);
 }
 
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsPostMain);

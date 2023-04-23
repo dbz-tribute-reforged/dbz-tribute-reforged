@@ -109,7 +109,7 @@ export class DragonBallsManager {
             const unitX = GetUnitX(unit);
             const unitY = GetUnitY(unit);
 
-            if (GetUnitTypeId(unit) == Id.dende || GetUnitAbilityLevel(unit, Id.dendeOrange)) {
+            if (GetUnitTypeId(unit) == Id.dende || GetUnitAbilityLevel(unit, Id.dendeOrange) > 0) {
               DisplayTimedTextToForce(
                 bj_FORCE_ALL_PLAYERS,
                 15,
