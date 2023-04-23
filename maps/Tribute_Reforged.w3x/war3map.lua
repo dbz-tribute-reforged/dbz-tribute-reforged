@@ -47699,14 +47699,18 @@ end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func052C()) then
 udg_TempBool = true
 UnitAddAbilityBJ(FourCC("A0W4"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0W4'))
+SetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_TransformationResultUnit, 10)
 UnitAddAbilityBJ(FourCC("A0W6"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0W6"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0W6'))
 SetPlayerAbilityAvailableBJ(true, FourCC("A0WQ"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0WO"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0WP"), udg_TransformationPlayer)
+SetUnitAbilityLevelSwapped(FourCC("A0W5"), udg_TransformationResultUnit, 10)
+SetUnitAbilityLevelSwapped(FourCC("A0WO"), udg_TransformationResultUnit, 10)
+SetUnitAbilityLevelSwapped(FourCC("A0WP"), udg_TransformationResultUnit, 10)
+SetUnitAbilityLevelSwapped(FourCC("A0WQ"), udg_TransformationResultUnit, 10)
 else
 end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func053C()) then
@@ -62028,42 +62032,49 @@ gg_trg_Transformations_Jaco = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Jaco, Trig_Transformations_Jaco_Actions)
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func003Func002C()
+function Trig_Jaco_Bounty_Update_Func006Func003C()
+if (not (GetPlayerSlotState(ConvertedPlayer(udg_TempInt2)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func004Func002C()
 if (not (IsPlayerInForce(udg_TempPlayer, udg_TeamsPlayerGroup[1]) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func003C()
+function Trig_Jaco_Bounty_Update_Func006Func004C()
 if (not (IsPlayerInForce(udg_TempPlayer, udg_TeamsPlayerGroup[0]) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func001C()
-if (not (udg_TempInt6 == udg_TempInt5)) then
+function Trig_Jaco_Bounty_Update_Func006Func008Func002Func001Func001Func002C()
+if (not (GetConvertedPlayerId(GetEnumPlayer()) > udg_TempInt4)) then
 return false
 end
-if (not (GetPlayerSlotState(GetEnumPlayer()) ~= PLAYER_SLOT_STATE_PLAYING)) then
+if (not (GetRandomReal(0, 1) > 0.50)) then
 return false
 end
 return true
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func002C()
+function Trig_Jaco_Bounty_Update_Func006Func008Func002Func001Func001C()
 if (udg_TempInt2 == 0) then
 return true
 end
-if (udg_TempInt6 == udg_TempInt5) then
+if (Trig_Jaco_Bounty_Update_Func006Func008Func002Func001Func001Func002C()) then
 return true
 end
 return false
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001C()
-if (not Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func002C()) then
+function Trig_Jaco_Bounty_Update_Func006Func008Func002Func001C()
+if (not Trig_Jaco_Bounty_Update_Func006Func008Func002Func001Func001C()) then
 return false
 end
 if (not (IsPlayerEnemy(GetEnumPlayer(), udg_TempPlayer) == true)) then
@@ -62075,25 +62086,21 @@ end
 return true
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func007Func003A()
-if (Trig_Jaco_Bounty_Update_Func006Func007Func003Func001C()) then
+function Trig_Jaco_Bounty_Update_Func006Func008Func002A()
+if (Trig_Jaco_Bounty_Update_Func006Func008Func002Func001C()) then
 udg_TempInt2 = GetConvertedPlayerId(GetEnumPlayer())
 else
-if (Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func001C()) then
-else
 end
-end
-udg_TempInt6 = (udg_TempInt6 + 1)
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func007C()
+function Trig_Jaco_Bounty_Update_Func006Func008C()
 if (not (CountPlayersInForceBJ(udg_TeamsPlayerGroup[udg_TempInt3]) > 0)) then
 return false
 end
 return true
 end
 
-function Trig_Jaco_Bounty_Update_Func006Func008C()
+function Trig_Jaco_Bounty_Update_Func006Func009C()
 if (not (udg_TempInt2 > 0)) then
 return false
 end
@@ -62127,10 +62134,10 @@ udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
 udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
 if (Trig_Jaco_Bounty_Update_Func006C()) then
-if (Trig_Jaco_Bounty_Update_Func006Func003C()) then
+if (Trig_Jaco_Bounty_Update_Func006Func004C()) then
 udg_TempInt3 = 1
 else
-if (Trig_Jaco_Bounty_Update_Func006Func003Func002C()) then
+if (Trig_Jaco_Bounty_Update_Func006Func004Func002C()) then
 udg_TempInt3 = 0
 else
 end
@@ -62138,13 +62145,12 @@ end
         udg_TempInt = StringHash("jaco|bounty|target")
 udg_TempInt4 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
 udg_TempInt2 = 0
-if (Trig_Jaco_Bounty_Update_Func006Func007C()) then
-udg_TempInt6 = 1
+if (Trig_Jaco_Bounty_Update_Func006Func008C()) then
 udg_TempInt5 = GetRandomInt(1, CountPlayersInForceBJ(udg_TeamsPlayerGroup[udg_TempInt3]))
-ForForce(udg_TeamsPlayerGroup[udg_TempInt3], Trig_Jaco_Bounty_Update_Func006Func007Func003A)
+ForForce(udg_TeamsPlayerGroup[udg_TempInt3], Trig_Jaco_Bounty_Update_Func006Func008Func002A)
 else
 end
-if (Trig_Jaco_Bounty_Update_Func006Func008C()) then
+if (Trig_Jaco_Bounty_Update_Func006Func009C()) then
             udg_TempInt = StringHash("jaco|bounty|target")
 SaveIntegerBJ(udg_TempInt2, udg_TempInt, udg_ID, udg_SummonsHashtable)
 DisplayTimedTextToForce(udg_TempPlayerGroup, 10.00, ("|cffffcc00New Bounty Target:|r " .. (udg_PlayerColorString[udg_TempInt2] .. (GetPlayerName(ConvertedPlayer(udg_TempInt2)) .. "|r"))))
@@ -62155,6 +62161,12 @@ end
 else
         udg_TempInt = StringHash("jaco|bounty|target")
 udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+if (Trig_Jaco_Bounty_Update_Func006Func003C()) then
+            udg_TempInt = StringHash("jaco|bounty|refresh")
+udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+SaveIntegerBJ(0, udg_TempInt, udg_ID, udg_SummonsHashtable)
+else
+end
 end
 if (Trig_Jaco_Bounty_Update_Func007C()) then
 ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt2], Trig_Jaco_Bounty_Update_Func007Func001A)
