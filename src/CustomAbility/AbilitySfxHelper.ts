@@ -36,6 +36,7 @@ export module AbilitySfxHelper {
         }
         
         if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
+          // note: BlzSetSpecialEffectX and Y reset the height
           BlzSetSpecialEffectHeight(effect, 
             height + sfxData.startHeight + 
             (sfxData.endHeight - sfxData.startHeight) * timeRatio
@@ -68,6 +69,7 @@ export module AbilitySfxHelper {
     }
 
     if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
+      // note: BlzSetSpecialEffectX and Y reset the height
       BlzSetSpecialEffectHeight(createdSfx, 
         height + sfxData.startHeight + 
         (sfxData.endHeight - sfxData.startHeight) * timeRatio

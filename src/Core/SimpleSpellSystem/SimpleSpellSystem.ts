@@ -131,6 +131,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.jacoEliteBeamFire, SimpleSpellSystem.doJacoEliteBeamFire);
     Globals.genericSpellMap.set(Id.jacoAnnihilationBomb, SimpleSpellSystem.doJacoAnnihilationBomb);
     Globals.genericSpellMap.set(Id.jacoElitePose, SimpleSpellSystem.doJacoElitePose);
+    Globals.genericSpellMap.set(Id.jacoMacroCannon, SimpleSpellSystem.doJacoShip);
     
     Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
     Globals.genericSpellMap.set(DebuffAbilities.APPULE_VENGEANCE, SimpleSpellSystem.appuleVengeanceIllusion);
@@ -2833,6 +2834,132 @@ export module SimpleSpellSystem {
       }
     });
   }
+  
+  export function doJacoShip() {
+    const flySpeed = 40;
+    const macroCannonDmgMult = BASE_DMG.DFIST_EXPLOSION * 0.8;
+    const baseAOE = 400;
+    const maxAOE = 600;
+    const AOEperDistance = 50;
+    const minExpandingDistance = 1000;
+
+    const flyHeightTicks = 20;
+    const flyHeightGainedPerTick = 45;
+    const unit = GetTriggerUnit();
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+    
+    Globals.tmpVector.setUnit(unit);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    const origDistance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+    const descendTick = origDistance / flySpeed;
+
+    const height = GetUnitFlyHeight(unit) + BlzGetUnitZ(unit);
+
+    UnitHelper.giveUnitFlying(unit);
+
+    PauseUnit(unit, true);
+    SetUnitInvulnerable(unit, true);
+    SetUnitAnimationByIndex(unit, 1);
+
+    const sfx = AddSpecialEffect("JacoShip.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    const sfx2 = AddSpecialEffect("PlanetCrusherGeneric.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    const sfx3 = AddSpecialEffect("SpiritBomb.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    BlzSetSpecialEffectHeight(sfx2, height);
+    BlzSetSpecialEffectColor(sfx2, 255, 125, 255);
+    BlzSetSpecialEffectColor(sfx3, 255, 125, 255);
+
+    const flyTimer = TimerManager.getInstance().get();
+    let flyTicks = 0;
+    TimerStart(flyTimer, 0.03, true, () => {
+      Globals.tmpVector.setUnit(unit);
+      Globals.tmpVector2.setPos(targetX, targetY);
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, flySpeed);
+
+
+      const sfxScale = Math.min(4, 1.0 + Math.max(0, (flyTicks * flySpeed - minExpandingDistance) / 1000));
+      BlzSetSpecialEffectScale(sfx2, sfxScale * 0.6);
+      BlzSetSpecialEffectScale(sfx3, sfxScale * 2);
+
+      BlzSetSpecialEffectX(sfx, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(sfx, Globals.tmpVector.y);
+      BlzSetSpecialEffectX(sfx2, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(sfx2, Globals.tmpVector.y);
+      BlzSetSpecialEffectX(sfx3, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(sfx3, Globals.tmpVector.y);
+
+      if (origDistance > 1000) {
+        if (flyTicks < flyHeightTicks) {
+          const newHeight = flyTicks * flyHeightGainedPerTick;
+          BlzSetSpecialEffectHeight(sfx, height + newHeight);
+          BlzSetSpecialEffectHeight(sfx2, height + newHeight);
+          BlzSetSpecialEffectHeight(sfx3, height + newHeight);
+          SetUnitFlyHeight(unit, newHeight, 0);
+        } else if (flyTicks > descendTick - flyHeightTicks) {
+          const newHeight = flyHeightTicks * flyHeightGainedPerTick - (flyTicks - (descendTick - flyHeightTicks)) * flyHeightGainedPerTick;
+          BlzSetSpecialEffectHeight(sfx, height + newHeight);
+          BlzSetSpecialEffectHeight(sfx2, height + newHeight);
+          BlzSetSpecialEffectHeight(sfx3, height + newHeight);
+          SetUnitFlyHeight(unit, newHeight, 0);
+        } else {
+          BlzSetSpecialEffectHeight(sfx, height + flyHeightTicks * flyHeightGainedPerTick);
+          BlzSetSpecialEffectHeight(sfx2, height + flyHeightTicks * flyHeightGainedPerTick);
+          BlzSetSpecialEffectHeight(sfx3, height + flyHeightTicks * flyHeightGainedPerTick);
+        }
+      }
+
+      if (
+        CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) <= flySpeed
+        || !PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector)
+      ) {
+        // finish
+        PauseUnit(unit, false);
+        SetUnitInvulnerable(unit, false);
+        ResetUnitAnimation(unit);
+        SetUnitFlyHeight(unit, 0, 0);
+
+        DestroyEffect(sfx);
+        DestroyEffect(sfx2);
+        DestroyEffect(sfx3);
+        const sfx4 = AddSpecialEffect("PurpleSlam.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+        BlzSetSpecialEffectScale(sfx4, sfxScale * 0.6);
+        DestroyEffect(sfx4);
+        const sfx5 = AddSpecialEffect("PurpleBigExplosion.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+        BlzSetSpecialEffectScale(sfx5, sfxScale * 0.6);
+        DestroyEffect(sfx5);
+        const sfx6 = AddSpecialEffect("AncientExplode.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+        BlzSetSpecialEffectScale(sfx6, sfxScale * 0.6);
+        DestroyEffect(sfx6);
+
+        const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+        if (customHero) {
+          const distanceTravelled = flyTicks * flySpeed;
+          const distanceDmgMult = Math.min(30, 1.0 + Math.max(0, (distanceTravelled - minExpandingDistance) / 1000));
+          const scaledAOE = Math.min(maxAOE, baseAOE + Math.max(0, (distanceTravelled - minExpandingDistance)/AOEperDistance));
+
+          AOEDamage.genericDealAOEDamage(
+            Globals.tmpUnitGroup,
+            unit,
+            Globals.tmpVector.x,
+            Globals.tmpVector.y,
+            scaledAOE,
+            10,
+            customHero.spellPower,
+            macroCannonDmgMult,
+            distanceDmgMult,
+            bj_HEROSTAT_INT
+          );
+          GroupClear(Globals.tmpUnitGroup);
+        }
+
+        TimerManager.getInstance().recycle(flyTimer);
+      }
+      ++flyTicks;
+    });
+  }
 
   export function appuleVengeanceExtra() {
     const unit = GetTriggerUnit();
@@ -3113,7 +3240,7 @@ export module SimpleSpellSystem {
     const healDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.24 * updateRate;
     const healMult = spellId == Id.dendeHeal ? 1.0 : 1.5;
     const selfHealRatio = 0.2;
-    const healToManaRatio = 0.4;
+    const healToManaRatio = 0.55;
     const selfHealToManaRatio = 0.5;
     const warningInterval = 16;
 

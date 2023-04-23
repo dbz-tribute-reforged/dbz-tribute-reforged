@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.83a
+DBZ Tribute |cffffcc00Reforged 0.83b
 }
 
 STRING 4
@@ -8531,13 +8531,12 @@ Earrings worn by the Kais
 }
 
 STRING 1344
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A111 (Jaco Ship), Ubertip (Tooltip - Normal - Extended)
 {
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+Jaco calls forth his ship to fly towards the targetted location while charging his Macrocosm cannon. Jaco is invulnerable while flying. Upon landing the ship fires the high powered energy cannon which deals increased damage for travelling long distances.
 
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool1> seconds|r
+|cff00ff00Damage: Int * 2 (+1% per 10 units travelled greater than 1000 units)
+|cff00ffffCooldown: <A111,Cool1> seconds
 }
 
 STRING 1345
@@ -56696,40 +56695,10 @@ STRING 8941
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
-STRING 8942
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool2> seconds|r
-}
-
-STRING 8943
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool3> seconds|r
-}
-
 STRING 8944
 // Abilities: A0JX (Recharge), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00R|r] Learn Flying Satan Kick
-}
-
-STRING 8945
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool4> seconds|r
 }
 
 STRING 8946
@@ -68185,26 +68154,6 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 |cff00FFFFCooldown: <A0FG,Cool10> seconds
 }
 
-STRING 10747
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool5> seconds|r
-}
-
-STRING 10748
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool6> seconds|r
-}
-
 STRING 10749
 // Abilities: A0IV (Krown Toss), Ubertip (Tooltip - Normal - Extended)
 {
@@ -78258,7 +78207,11 @@ F
 STRING 12372
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +1
+|cff00FFFFCooldown: <A0IB,Cool1>s|r
 }
 
 STRING 12373
@@ -81003,13 +80956,21 @@ Frost Claws Blind
 STRING 12798
 // Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +1 * Lvl
+|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
 }
 
 STRING 12799
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +2
+|cff00FFFFCooldown: <A0IB,Cool2>s|r
 }
 
 STRING 12800
@@ -84972,7 +84933,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A111 (Macrocosm Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A111 (Jaco Ship), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -99780,7 +99741,11 @@ STRING 15583
 STRING 15584
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +3
+|cff00FFFFCooldown: <A0IB,Cool3>s|r
 }
 
 STRING 15585
@@ -100310,7 +100275,11 @@ STRING 15664
 STRING 15665
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +4
+|cff00FFFFCooldown: <A0IB,Cool4>s|r
 }
 
 STRING 15666
@@ -100486,7 +100455,11 @@ Lucario can now transform into Mega Lucario.
 STRING 15689
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +5
+|cff00FFFFCooldown: <A0IB,Cool5>s|r
 }
 
 STRING 15690
@@ -100498,7 +100471,11 @@ Lucario can now transform into his gigantamax form.
 STRING 15691
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +6
+|cff00FFFFCooldown: <A0IB,Cool6>s|r
 }
 
 STRING 15692
@@ -117870,7 +117847,11 @@ Fires a blast in your targets direction. Pan gains a temporary damage aura after
 STRING 18147
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +7
+|cff00FFFFCooldown: <A0IB,Cool7>s|r
 }
 
 STRING 18148
@@ -119970,7 +119951,11 @@ STRING 18457
 STRING 18458
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +8
+|cff00FFFFCooldown: <A0IB,Cool8>s|r
 }
 
 STRING 18459
@@ -120006,13 +119991,21 @@ STRING 18463
 STRING 18464
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +9
+|cff00FFFFCooldown: <A0IB,Cool9>s|r
 }
 
 STRING 18465
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.45 @ 85%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes. Enemies inside his barrier lose 4% of max mana per second.
+
+|cff00ff00Damage Block: Int * Lvl * 0.45 @ 100%
+Armor Aura: +10
+|cff00FFFFCooldown: <A0IB,Cool10>s|r
 }
 
 STRING 18466
@@ -126833,26 +126826,6 @@ Duration: <A0B4,Dur1> seconds|r
 |cff00ffffCooldown: <A0B4,Cool1> seconds
 }
 
-STRING 19451
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool7> seconds|r
-}
-
-STRING 19452
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool8> seconds|r
-}
-
 STRING 19453
 // Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
 {
@@ -127836,16 +127809,6 @@ Schala creates 5 magical orbs in a line and fires them at the target area.
 |cff00ffffCooldown: <A0YC,Cool9> seconds|r
 }
 
-STRING 19593
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool9> seconds|r
-}
-
 STRING 19594
 // Abilities: A0YK (Empowered Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128226,16 +128189,6 @@ Dende splashes sacred water at the target location, dealing damage to enemies. A
 |cff00FFFFCooldown: <A0C5,Cool9> seconds|r
 }
 
-STRING 19651
-// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.06 * Int * Lvl per second
-|cff00FFFFCooldown: <A0C6,Cool10> seconds|r
-}
-
 STRING 19652
 // Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
 {
@@ -128538,6 +128491,16 @@ Transformations:
 [lvl 300] 2.65x "fp"
 }
 
+STRING 19688
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool1> seconds|r
+}
+
 STRING 19689
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -128548,6 +128511,36 @@ STRING 19690
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 19691
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool2> seconds|r
+}
+
+STRING 19692
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool3> seconds|r
+}
+
+STRING 19693
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool4> seconds|r
 }
 
 STRING 19694
@@ -128608,6 +128601,26 @@ STRING 19703
 // Abilities: A0YR (Glacier), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Glacier - [|cffffcc00Level 10|r]
+}
+
+STRING 19704
+{
+|cffffcc00Bounty Completed!|r
+}
+
+STRING 19705
+// Units: H0AL (Galactic Patrolman), Ubertip (Tooltip - Extended)
+{
+A versatile ranged hero with high mobility and the potential for massive damage output.
+
+|cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+|cffffcc00Bounty Hunter:|r Bonus kill stats for killing his bounty target.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 }
 
 STRING 19707
@@ -134516,6 +134529,12 @@ STRING 20600
 Frieza fires multiple death beams at a very rapid rate.|n|cff00ff00Damage: Int * lvl * ? + 0.6% Max HP (each)|r|n|cff00ffffCooldown: <A0Q6,Cool10> seconds|r
 }
 
+STRING 20602
+// Abilities: A111 (Jaco Ship), Name (Name)
+{
+Jaco Ship
+}
+
 STRING 20603
 // Abilities: A0C6 (Namekian Healing), Name (Name)
 {
@@ -136024,16 +136043,66 @@ STRING 20823
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
 
+STRING 20825
+// Abilities: A111 (Jaco Ship), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffbb44aaJaco Ship|r
+}
+
+STRING 20826
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool5> seconds|r
+}
+
+STRING 20827
+{
+[|cffffcc00Unlock|r] |cffbb44aaJaco Ship|r
+Jaco has repaired his ship to help better hunt down his bounties.
+}
+
+STRING 20828
+// Abilities: A0FJ (God's Vision), Ubertip (Tooltip - Normal - Extended)
+{
+From his lookout, Dende can see anywhere on Earth. Reveals a <A0FJ,Area1> aoe area of the map for <A0FJ,Dur1> seconds. Reveals invisible units.
+
+|cff00ffffCooldown: <A0FJ,Cool1>s
+}
+
 STRING 20829
 // Abilities: A10C (Berserk), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Berserk - [|cffffcc00Level 10|r]
 }
 
+STRING 20830
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool6> seconds|r
+}
+
 STRING 20831
 // Abilities: A0QD (Golden Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Frieza fires a stronger version of his iconic Finger Beam energy attack infused with the might of golden Frieza.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0QD,Cool8> seconds|r
+}
+
+STRING 20832
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool7> seconds|r
 }
 
 STRING 20833
@@ -136056,6 +136125,36 @@ STRING 20835
 // Abilities: A10D (Berserker Armor), EditorSuffix (Editor Suffix)
 {
 (guts)
+}
+
+STRING 20836
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool8> seconds|r
+}
+
+STRING 20837
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool9> seconds|r
+}
+
+STRING 20838
+// Abilities: A0C6 (Namekian Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.06 * Int * Lvl per second
+|cff00FFFFCooldown: <A0C6,Cool10> seconds|r
 }
 
 STRING 20839
@@ -136433,16 +136532,6 @@ STRING 20888
 Frieza fires an immensely powerful golden energy wave at the target.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0QE,Cool2> seconds|r
 }
 
-STRING 20889
-// Abilities: A0C7 (Namekian Super Healing), Ubertip (Tooltip - Normal - Extended)
-{
-Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
-
-|cff0088ffMana Cost: 40% of HP Healed
-|cff00FF00Heal: 0.9 * Int per second
-|cff00FFFFCooldown: <A0C7,Cool10> seconds|r
-}
-
 STRING 20890
 // Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
@@ -136735,6 +136824,16 @@ STRING 20935
 // Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
 A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+}
+
+STRING 20936
+// Abilities: A0C7 (Namekian Super Healing), Ubertip (Tooltip - Normal - Extended)
+{
+Dende tethers himself to an ally, continuously healing them. Dende is healed for 20% of the amount he heals. The healing is broken if Dende is stunned. Dende can cancel the ability early by pressing S.
+
+|cff0088ffMana Cost: 55% of HP Healed
+|cff00FF00Heal: 0.9 * Int per second
+|cff00FFFFCooldown: <A0C7,Cool10> seconds|r
 }
 
 STRING 20937
@@ -138374,28 +138473,8 @@ STRING 21209
 (jaco)
 }
 
-STRING 21210
-// Abilities: A111 (Macrocosm Cannon), Name (Name)
-{
-Macrocosm Cannon
-}
-
-STRING 21211
-// Abilities: A111 (Macrocosm Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Jaco calls for his ship to charge a high powered energy beam.
-|cff00ff00Duration: 10s
-|cff00ffffCooldown: <A111,Cool1> seconds
-}
-
-STRING 21212
-// Abilities: A111 (Macrocosm Cannon), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] |cffbb44aaMacrocosm Cannon|r
-}
-
 STRING 21213
-// Abilities: A111 (Macrocosm Cannon), EditorSuffix (Editor Suffix)
+// Abilities: A111 (Jaco Ship), EditorSuffix (Editor Suffix)
 {
 (jaco)
 }
@@ -138710,7 +138789,7 @@ STRING 21268
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "fp"
+[lvl 30]  1.50x "fp" [Unlocks |cffbb44aaJaco Ship|r]
 [lvl 60]  1.75x "fp"
 [lvl 100] 2.00x "fp"
 [lvl 125] 2.25x "fp"
@@ -138718,28 +138797,13 @@ Transformations:
 [lvl 250] 2.60x "fp"
 
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
+|cffffcc00Bounty Hunter:|r Bonus kill stats for killing his bounty target.
 }
 
 STRING 21269
 // Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 3|r]
-}
-
-STRING 21270
-// Units: H0AL (Galactic Patrolman), Ubertip (Tooltip - Extended)
-{
-|cffff2020Warning: THIS HERO IS UNFINISHED|r
-
-A versatile ranged hero with high mobility and massive damage output.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-|cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
 }
 
 STRING 21271
@@ -142456,12 +142520,6 @@ STRING 21811
 // Abilities: A0FJ (God's Vision), EditorSuffix (Editor Suffix)
 {
 (dende)
-}
-
-STRING 21813
-// Abilities: A0FJ (God's Vision), Ubertip (Tooltip - Normal - Extended)
-{
-From his lookout, Dende can see anywhere on Earth. Reveals a <A0FJ,Area1> aoe area of the map for <A0FJ,Dur1> seconds. Reveals invisible units.
 }
 
 STRING 21814

@@ -9,7 +9,6 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.delay = 90;
-    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

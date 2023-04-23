@@ -347,6 +347,10 @@ udg_AutoTransformLoopInt = 0
 udg_MultDBallHistoryCounter = 0
 udg_MultDBallHeldCount = 0
 udg_MultDBallWishCount = 0
+udg_ScoreboardInteger = 0
+udg_JacoBountyBonus = 0.0
+udg_TempInt5 = 0
+udg_TempInt6 = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -778,8 +782,8 @@ gg_trg_Generic_Hint_Show = nil
 gg_trg_Catchup_Input = nil
 gg_trg_Catchup_Turn_On = nil
 gg_trg_Catchup_Turn_Off = nil
-gg_trg_Catchup_Timer_Loop = nil
 gg_trg_Catchup_Settings_Automatic = nil
+gg_trg_Catchup_Timer_Loop = nil
 gg_trg_Catchup_Calculate_Threshold = nil
 gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats = nil
 gg_trg_HBTC_Enter = nil
@@ -1115,6 +1119,7 @@ gg_trg_Sonic_Chaos_Emerald_Kill_Hook = nil
 gg_trg_Transformations_Appule = nil
 gg_trg_Transformations_Guts = nil
 gg_trg_Transformations_Jaco = nil
+gg_trg_Jaco_Bounty_Update = nil
 gg_trg_Transformations_Waluigi = nil
 gg_trg_Transformations_Goku_Black = nil
 gg_trg_Transformations_Geti_Star = nil
@@ -1615,6 +1620,10 @@ udg_AutoTransformLoopInt = 0
 udg_MultDBallHistoryCounter = 0
 udg_MultDBallHeldCount = 0
 udg_MultDBallWishCount = 0
+udg_ScoreboardInteger = 0
+udg_JacoBountyBonus = 80.00
+udg_TempInt5 = 0
+udg_TempInt6 = 0
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -23736,21 +23745,35 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Give_PvP_Stats_Func007C()
+function Trig_Kill_Hero_Give_PvP_Stats_Func008C()
 if (not (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == false)) then
 return false
 end
 return true
 end
 
+function Trig_Kill_Hero_Give_PvP_Stats_Func009Func004C()
+if (not (udg_TempInt2 == GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit())))) then
+return false
+end
+return true
+end
+
 function Trig_Kill_Hero_Give_PvP_Stats_Func009C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AL"))) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Give_PvP_Stats_Func011C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04X")) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Give_PvP_Stats_Func010C()
+function Trig_Kill_Hero_Give_PvP_Stats_Func012C()
 if (not (GetPlayerTechCountSimple(FourCC("R00O"), GetOwningPlayer(udg_StatMultUnit)) > 0)) then
 return false
 end
@@ -23765,22 +23788,35 @@ udg_StatMultUnit = udg_GetiStarHero
 else
 end
 TriggerExecute(gg_trg_Get_Base_Stats)
+udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
     udg_ID = GetHandleId(udg_StatMultUnit)
 udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
 udg_PVPHeroKillerStats = (udg_PVPHeroKilledStats * 0.33)
 udg_PVPHeroKilledStats = (udg_PVPHeroKilledStats * 0.33)
-if (Trig_Kill_Hero_Give_PvP_Stats_Func007C()) then
+if (Trig_Kill_Hero_Give_PvP_Stats_Func008C()) then
 udg_PVPBaseStatReward = (udg_PVPBaseStatReward + RMaxBJ(0.00, (0.10 * (udg_PVPHeroKilledStats - udg_PVPHeroKillerStats))))
 udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(4.00, ((udg_PVPHeroKilledStats * udg_PVPHeroKilledStats) / RMaxBJ(1.00, (udg_PVPHeroKillerStats * udg_PVPHeroKillerStats))))))
-udg_PVPBaseStatReward = (udg_PVPBaseStatReward + RMinBJ(200.00, (0.02 * udg_PVPHeroKilledStats)))
+udg_StatMultReal = (udg_StatMultReal + RMinBJ(200.00, (0.02 * udg_PVPHeroKilledStats)))
+else
+end
+if (Trig_Kill_Hero_Give_PvP_Stats_Func009C()) then
+        udg_TempInt = StringHash("jaco|bounty|target")
+udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+if (Trig_Kill_Hero_Give_PvP_Stats_Func009Func004C()) then
+udg_StatMultReal = (udg_StatMultReal + udg_JacoBountyBonus)
+DisplayTimedTextToForce(udg_TempPlayerGroup, 10.00, "TRIGSTR_19704")
+            udg_TempInt = StringHash("jaco|bounty|refresh")
+SaveIntegerBJ(0, udg_TempInt, udg_ID, udg_SummonsHashtable)
+else
+end
 else
 end
 udg_StatMultReal = (udg_StatMultReal * LoadRealBJ(34, udg_ID, udg_StatMultHashtable))
-if (Trig_Kill_Hero_Give_PvP_Stats_Func009C()) then
+if (Trig_Kill_Hero_Give_PvP_Stats_Func011C()) then
 udg_StatMultReal = (udg_StatMultReal * 1.50)
 else
 end
-if (Trig_Kill_Hero_Give_PvP_Stats_Func010C()) then
+if (Trig_Kill_Hero_Give_PvP_Stats_Func012C()) then
 udg_StatMultReal = (udg_StatMultReal * (1.00 + (0.15 * I2R(GetPlayerTechCountSimple(FourCC("R00O"), GetOwningPlayer(udg_StatMultUnit))))))
 else
 end
@@ -23789,7 +23825,6 @@ TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_PvP_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
 udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
-udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
 TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
     RemoveLocation(udg_TempLoc)
@@ -29119,103 +29154,6 @@ gg_trg_Catchup_Turn_Off = CreateTrigger()
 TriggerAddAction(gg_trg_Catchup_Turn_Off, Trig_Catchup_Turn_Off_Actions)
 end
 
-function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A()
-udg_StatMultUnit = GetEnumUnit()
-udg_CatchupLevelInteger = (((25 * (10 + (4 * GetHeroLevel(udg_StatMultUnit)))) + 0) // IMaxBJ(1, udg_CatchupNumHeroes))
-    AddHeroXP(udg_StatMultUnit, udg_CatchupLevelInteger, true)
-end
-
-function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Timer_Loop_Func002Func001Func001C()
-if (not (udg_ScoreboardTimeSeconds == 55)) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Timer_Loop_Func002Func001Func004Func002Func002A()
-udg_StatMultUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats)
-end
-
-function Trig_Catchup_Timer_Loop_Func002Func001Func004Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Timer_Loop_Func002Func001C()
-if (not (udg_ScoreboardTimeSeconds == 56)) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Timer_Loop_Func002C()
-if (not (udg_IsCatchupStatsActivated == true)) then
-return false
-end
-if (not (udg_HeroPickMode ~= "cm")) then
-return false
-end
-return true
-end
-
-function Trig_Catchup_Timer_Loop_Actions()
-TriggerExecute(gg_trg_Catchup_Settings_Automatic)
-if (Trig_Catchup_Timer_Loop_Func002C()) then
-if (Trig_Catchup_Timer_Loop_Func002Func001C()) then
-TriggerExecute(gg_trg_Catchup_Calculate_Threshold)
-udg_CatchupInteger = 1
-while (true) do
-if (udg_CatchupInteger > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_CatchupInteger)
-if (Trig_Catchup_Timer_Loop_Func002Func001Func004Func002C()) then
-udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
-ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func004Func002Func002A)
-else
-end
-udg_CatchupInteger = udg_CatchupInteger + 1
-end
-else
-if (Trig_Catchup_Timer_Loop_Func002Func001Func001C()) then
-udg_CatchupInteger = 1
-while (true) do
-if (udg_CatchupInteger > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_CatchupInteger)
-if (Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()) then
-udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
-ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A)
-else
-end
-udg_CatchupInteger = udg_CatchupInteger + 1
-end
-else
-end
-end
-else
-end
-end
-
-function InitTrig_Catchup_Timer_Loop()
-gg_trg_Catchup_Timer_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Catchup_Timer_Loop)
-TriggerAddAction(gg_trg_Catchup_Timer_Loop, Trig_Catchup_Timer_Loop_Actions)
-end
-
 function Trig_Catchup_Settings_Automatic_Func001Func001Func001C()
 if (not (udg_ScoreboardTimeHours == 0)) then
 return false
@@ -29338,6 +29276,103 @@ gg_trg_Catchup_Settings_Automatic = CreateTrigger()
 TriggerAddAction(gg_trg_Catchup_Settings_Automatic, Trig_Catchup_Settings_Automatic_Actions)
 end
 
+function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A()
+udg_StatMultUnit = GetEnumUnit()
+udg_CatchupLevelInteger = (((25 * (10 + (4 * GetHeroLevel(udg_StatMultUnit)))) + 0) // IMaxBJ(1, udg_CatchupNumHeroes))
+    AddHeroXP(udg_StatMultUnit, udg_CatchupLevelInteger, true)
+end
+
+function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()
+if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+return false
+end
+if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Timer_Loop_Func002Func001Func001C()
+if (not (udg_ScoreboardTimeSeconds == 55)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Timer_Loop_Func002Func001Func004Func002Func002A()
+udg_StatMultUnit = GetEnumUnit()
+TriggerExecute(gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats)
+end
+
+function Trig_Catchup_Timer_Loop_Func002Func001Func004Func002C()
+if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+return false
+end
+if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Timer_Loop_Func002Func001C()
+if (not (udg_ScoreboardTimeSeconds == 56)) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Timer_Loop_Func002C()
+if (not (udg_IsCatchupStatsActivated == true)) then
+return false
+end
+if (not (udg_HeroPickMode ~= "cm")) then
+return false
+end
+return true
+end
+
+function Trig_Catchup_Timer_Loop_Actions()
+TriggerExecute(gg_trg_Catchup_Settings_Automatic)
+if (Trig_Catchup_Timer_Loop_Func002C()) then
+if (Trig_Catchup_Timer_Loop_Func002Func001C()) then
+TriggerExecute(gg_trg_Catchup_Calculate_Threshold)
+udg_CatchupInteger = 1
+while (true) do
+if (udg_CatchupInteger > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_CatchupInteger)
+if (Trig_Catchup_Timer_Loop_Func002Func001Func004Func002C()) then
+udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
+ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func004Func002Func002A)
+else
+end
+udg_CatchupInteger = udg_CatchupInteger + 1
+end
+else
+if (Trig_Catchup_Timer_Loop_Func002Func001Func001C()) then
+udg_CatchupInteger = 1
+while (true) do
+if (udg_CatchupInteger > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_CatchupInteger)
+if (Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()) then
+udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
+ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A)
+else
+end
+udg_CatchupInteger = udg_CatchupInteger + 1
+end
+else
+end
+end
+else
+end
+end
+
+function InitTrig_Catchup_Timer_Loop()
+gg_trg_Catchup_Timer_Loop = CreateTrigger()
+DisableTrigger(gg_trg_Catchup_Timer_Loop)
+TriggerAddAction(gg_trg_Catchup_Timer_Loop, Trig_Catchup_Timer_Loop_Actions)
+end
+
 function Trig_Catchup_Calculate_Threshold_Func004Func002A()
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Get_Base_Stats)
@@ -29454,6 +29489,9 @@ end
 
 function Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Func006C()
 if (not (udg_StatMultReal > 0.00)) then
+return false
+end
+if (not (udg_StatMultReal < 10000.00)) then
 return false
 end
 return true
@@ -30676,21 +30714,28 @@ TriggerAddCondition(gg_trg_Scoreboard_Death, Condition(Trig_Scoreboard_Death_Con
 TriggerAddAction(gg_trg_Scoreboard_Death, Trig_Scoreboard_Death_Actions)
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005Func002C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AL"))) then
+return false
+end
+return true
+end
+
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func006Func002C()
 if (not (udg_StatMultReal == udg_StatMultAgi)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func006C()
 if (not (udg_StatMultReal == udg_StatMultStr)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func007C()
+function Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func008C()
 if (not (udg_StatMultReal > udg_TempReal)) then
 return false
 end
@@ -30728,19 +30773,23 @@ end
 function Trig_Scoreboard_Update_Func001Func002Func004Func008A()
 udg_StatMultUnit = GetEnumUnit()
 if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func001C()) then
+TriggerExecute(gg_trg_Jaco_Bounty_Update)
+else
+end
 TriggerExecute(gg_trg_Get_Base_Stats)
 TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func006C()) then
 udg_TempInt3 = 0
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func005Func002C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func006Func002C()) then
 udg_TempInt3 = 1
 else
 udg_TempInt3 = 2
 end
 end
 udg_StatMultReal = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func007C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func004Func008C()) then
 udg_TempReal = udg_StatMultReal
 else
 end
@@ -30799,7 +30848,7 @@ return true
 end
 
 function Trig_Scoreboard_Update_Func001Func002Func004C()
-if (not (CountUnitsInGroup(udg_StatMultPlayerUnits[udg_TempInt]) > 0)) then
+if (not (CountUnitsInGroup(udg_StatMultPlayerUnits[udg_ScoreboardInteger]) > 0)) then
 return false
 end
 return true
@@ -30813,12 +30862,12 @@ return true
 end
 
 function Trig_Scoreboard_Update_Actions()
-udg_TempInt = 1
+udg_ScoreboardInteger = 1
 while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+if (udg_ScoreboardInteger > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_ScoreboardInteger)
 if (Trig_Scoreboard_Update_Func001Func002C()) then
-udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_TempInt]
+udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_ScoreboardInteger]
 MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_1964")
 MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, "TRIGSTR_7023")
 else
@@ -30827,8 +30876,8 @@ udg_TempReal = 0.00
 udg_TempReal2 = 0.00
 udg_TempInt3 = 0
 udg_TempInt4 = 0
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scoreboard_Update_Func001Func002Func004Func008A)
-udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_TempInt]
+ForGroupBJ(udg_StatMultPlayerUnits[udg_ScoreboardInteger], Trig_Scoreboard_Update_Func001Func002Func004Func008A)
+udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_ScoreboardInteger]
 if (Trig_Scoreboard_Update_Func001Func002Func004Func011C()) then
 udg_TempString2 = "|cffff2020"
 else
@@ -30855,7 +30904,7 @@ end
 else
 end
 end
-udg_TempInt = udg_TempInt + 1
+udg_ScoreboardInteger = udg_ScoreboardInteger + 1
 end
 end
 
@@ -47471,6 +47520,7 @@ SetUnitAbilityLevelSwapped(FourCC("A0PB"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0PB'))
 UnitAddAbilityBJ(FourCC("A0PC"), udg_TransformationResultUnit)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0PC'))
+SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TransformationPlayer)
 else
 end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func033C()) then
@@ -47654,6 +47704,9 @@ SetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_TransformationResultUnit, 10)
 UnitAddAbilityBJ(FourCC("A0W6"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0W6"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0W6'))
+SetPlayerAbilityAvailableBJ(true, FourCC("A0WQ"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0WO"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0WP"), udg_TransformationPlayer)
 else
 end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func053C()) then
@@ -61853,7 +61906,17 @@ end
 return true
 end
 
-function Trig_Transformations_Jaco_Func022Func002Func001C()
+function Trig_Transformations_Jaco_Func019C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A111"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Jaco_Func023Func002Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -61863,14 +61926,14 @@ end
 return false
 end
 
-function Trig_Transformations_Jaco_Func022Func002C()
-if (not Trig_Transformations_Jaco_Func022Func002Func001C()) then
+function Trig_Transformations_Jaco_Func023Func002C()
+if (not Trig_Transformations_Jaco_Func023Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Jaco_Func022C()
+function Trig_Transformations_Jaco_Func023C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -61890,6 +61953,9 @@ udg_StatMultInt = 0.00
 if (Trig_Transformations_Jaco_Func010C()) then
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_21268")
+        udg_TempInt = StringHash("jaco|bounty|target")
+udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+DisplayTimedTextToForce(udg_TempPlayerGroup, 10.00, ("|cffffcc00Bounty Target:|r " .. (udg_PlayerColorString[udg_TempInt2] .. (GetPlayerName(ConvertedPlayer(udg_TempInt2)) .. "|r"))))
         DestroyForce(udg_TempPlayerGroup)
 else
 end
@@ -61933,10 +61999,18 @@ if (Trig_Transformations_Jaco_Func018C()) then
 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.60, R2I(0.00))
 else
 end
+if (Trig_Transformations_Jaco_Func019C()) then
+UnitAddAbilityBJ(FourCC("A111"), udg_StatMultUnit)
+        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A111'))
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20827")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
 TriggerExecute(gg_trg_Pride_Trooper_Team_Stat_Mult_Bonus)
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Jaco_Func022C()) then
-if (Trig_Transformations_Jaco_Func022Func002C()) then
+if (Trig_Transformations_Jaco_Func023C()) then
+if (Trig_Transformations_Jaco_Func023Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H0AL')
@@ -61952,6 +62026,146 @@ end
 function InitTrig_Transformations_Jaco()
 gg_trg_Transformations_Jaco = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Jaco, Trig_Transformations_Jaco_Actions)
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func003Func002C()
+if (not (IsPlayerInForce(udg_TempPlayer, udg_TeamsPlayerGroup[1]) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func003C()
+if (not (IsPlayerInForce(udg_TempPlayer, udg_TeamsPlayerGroup[0]) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func001C()
+if (not (udg_TempInt6 == udg_TempInt5)) then
+return false
+end
+if (not (GetPlayerSlotState(GetEnumPlayer()) ~= PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func002C()
+if (udg_TempInt2 == 0) then
+return true
+end
+if (udg_TempInt6 == udg_TempInt5) then
+return true
+end
+return false
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func007Func003Func001C()
+if (not Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func002C()) then
+return false
+end
+if (not (IsPlayerEnemy(GetEnumPlayer(), udg_TempPlayer) == true)) then
+return false
+end
+if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func007Func003A()
+if (Trig_Jaco_Bounty_Update_Func006Func007Func003Func001C()) then
+udg_TempInt2 = GetConvertedPlayerId(GetEnumPlayer())
+else
+if (Trig_Jaco_Bounty_Update_Func006Func007Func003Func001Func001C()) then
+else
+end
+end
+udg_TempInt6 = (udg_TempInt6 + 1)
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func007C()
+if (not (CountPlayersInForceBJ(udg_TeamsPlayerGroup[udg_TempInt3]) > 0)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006Func008C()
+if (not (udg_TempInt2 > 0)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func006C()
+if (not (udg_TempInt2 == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Func007Func001A()
+udg_TempLoc = GetUnitLoc(GetEnumUnit())
+PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_SIMPLE, 100, 100, 100)
+    RemoveLocation(udg_TempLoc)
+end
+
+function Trig_Jaco_Bounty_Update_Func007C()
+if (not (udg_TempInt2 > 0)) then
+return false
+end
+return true
+end
+
+function Trig_Jaco_Bounty_Update_Actions()
+udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
+    udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempInt = StringHash("jaco|bounty|refresh")
+udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+if (Trig_Jaco_Bounty_Update_Func006C()) then
+if (Trig_Jaco_Bounty_Update_Func006Func003C()) then
+udg_TempInt3 = 1
+else
+if (Trig_Jaco_Bounty_Update_Func006Func003Func002C()) then
+udg_TempInt3 = 0
+else
+end
+end
+        udg_TempInt = StringHash("jaco|bounty|target")
+udg_TempInt4 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+udg_TempInt2 = 0
+if (Trig_Jaco_Bounty_Update_Func006Func007C()) then
+udg_TempInt6 = 1
+udg_TempInt5 = GetRandomInt(1, CountPlayersInForceBJ(udg_TeamsPlayerGroup[udg_TempInt3]))
+ForForce(udg_TeamsPlayerGroup[udg_TempInt3], Trig_Jaco_Bounty_Update_Func006Func007Func003A)
+else
+end
+if (Trig_Jaco_Bounty_Update_Func006Func008C()) then
+            udg_TempInt = StringHash("jaco|bounty|target")
+SaveIntegerBJ(udg_TempInt2, udg_TempInt, udg_ID, udg_SummonsHashtable)
+DisplayTimedTextToForce(udg_TempPlayerGroup, 10.00, ("|cffffcc00New Bounty Target:|r " .. (udg_PlayerColorString[udg_TempInt2] .. (GetPlayerName(ConvertedPlayer(udg_TempInt2)) .. "|r"))))
+            udg_TempInt = StringHash("jaco|bounty|refresh")
+SaveIntegerBJ(1, udg_TempInt, udg_ID, udg_SummonsHashtable)
+else
+end
+else
+        udg_TempInt = StringHash("jaco|bounty|target")
+udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
+end
+if (Trig_Jaco_Bounty_Update_Func007C()) then
+ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt2], Trig_Jaco_Bounty_Update_Func007Func001A)
+else
+end
+    DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Jaco_Bounty_Update()
+gg_trg_Jaco_Bounty_Update = CreateTrigger()
+TriggerAddAction(gg_trg_Jaco_Bounty_Update, Trig_Jaco_Bounty_Update_Actions)
 end
 
 function Trig_Transformations_Waluigi_Func010C()
@@ -65364,8 +65578,8 @@ InitTrig_Generic_Hint_Show()
 InitTrig_Catchup_Input()
 InitTrig_Catchup_Turn_On()
 InitTrig_Catchup_Turn_Off()
-InitTrig_Catchup_Timer_Loop()
 InitTrig_Catchup_Settings_Automatic()
+InitTrig_Catchup_Timer_Loop()
 InitTrig_Catchup_Calculate_Threshold()
 InitTrig_Catchup_Give_StatMultUnit_Catchup_Stats()
 InitTrig_HBTC_Enter()
@@ -65684,6 +65898,7 @@ InitTrig_Sonic_Chaos_Emerald_Kill_Hook()
 InitTrig_Transformations_Appule()
 InitTrig_Transformations_Guts()
 InitTrig_Transformations_Jaco()
+InitTrig_Jaco_Bounty_Update()
 InitTrig_Transformations_Waluigi()
 InitTrig_Transformations_Goku_Black()
 InitTrig_Transformations_Geti_Star()

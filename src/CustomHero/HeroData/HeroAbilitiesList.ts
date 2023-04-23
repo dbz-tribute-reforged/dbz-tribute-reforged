@@ -649,6 +649,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucca.FLAMETHROWER, AbilityNames.Lucca.FLARE,
       AbilityNames.Ayla.BOULDER_TOSS, AbilityNames.Lucca.HYPNOWAVE,
       AbilityNames.Marle.AURA, AbilityNames.Marle.ALLURE,
+      AbilityNames.Schala.MAGIC_ORBS,
+      AbilityNames.Schala.MAGIC_SEAL,
       AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
       AbilityNames.Saitama.SERIOUS_SERIES, AbilityNames.Saitama.SERIOUS_PUNCH, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
       AbilityNames.DonkeyKong.GROUND_POUND, AbilityNames.DonkeyKong.BARREL_CANNON,
@@ -684,8 +686,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Waluigi.FIREBALL_2,
       AbilityNames.GokuBlack.KAMEHAMEHA,
 
-      AbilityNames.Schala.MAGIC_ORBS,
-      AbilityNames.Schala.MAGIC_SEAL,
+      AbilityNames.Magus.DARK_MATTER
     ]],
 
     // broly
