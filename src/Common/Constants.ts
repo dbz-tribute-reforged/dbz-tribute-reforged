@@ -128,6 +128,7 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const BASE_SP_REGEN = 3;
   export const BASE_HP_REGEN = 0.005;
   export const BASE_MP_REGEN = 0.01;
 
@@ -139,6 +140,8 @@ export module Constants {
   export const FARMING_STANDARD_DURATION = 200;
 
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
+  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
+  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1.5;
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -251,6 +254,10 @@ export module Buffs {
 
   export const COSMIC_ILLUSION = FourCC("B025");
 
+  export const SLOW_KROWN_TOSS = FourCC("B02W");
+  export const SLOW_ZAMASU_BLEED = FourCC("B01G");
+  export const SLOW_FERVENT_WOUND = FourCC("B03M");
+
   export const PARAGON_OF_FLAME = FourCC("B048");
   export const DRAGOON_TRANSFORMATION = FourCC("B049");
 
@@ -280,6 +287,8 @@ export module Buffs {
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
 
   export const SLOW_LEON_STAGGER = FourCC("B05T");
+
+  export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
 }
 
 export module OrderIds {
@@ -416,6 +425,7 @@ export module Id {
   export const superBuu = FourCC("O006");
   export const kidBuu = FourCC("O00C");
   export const candyBeam = FourCC("A0EI");
+  export const candyGobbler = FourCC("A0LL");
   export const fleshAttack = FourCC("A01C");
   export const fleshAttackAbsorbTarget = FourCC("A06S");
   export const innocenceBreath = FourCC("A0LH");
@@ -1036,6 +1046,7 @@ export module Id {
   export const yamchaSparking = FourCC("A0SB");
 
   export const zamasu = FourCC("E012");
+  export const zamasuImmortality = FourCC("A0SWw");
 
 
   export const itemHealingBuff = FourCC("BIrg");

@@ -1473,7 +1473,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 4,
+    distance: 5,
   },
   // nova chariot
   {

@@ -2382,14 +2382,15 @@ export function setupRegenTimer(customHero: CustomHero) {
     const heroInt = GetHeroStr(customHero.unit, true);
     const sumStats = 0.33 *(heroStr + heroAgi + heroInt);
 
-    let agiBonus = Math.max(
+
+    // sp
+    let incSp = 0.03 * Constants.BASE_SP_REGEN * Math.max(
       Constants.STAMINA_REGEN_MULT_MIN_BONUS,
       Math.min(
         Constants.STAMINA_REGEN_MULT_MAX_BONUS,
         heroAgi / sumStats
       )
     );
-    let incSp = 0.03 * 3 * agiBonus;
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
     }
@@ -2397,20 +2398,46 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (id == Id.saitama) {
       incSp *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     } 
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incSp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
     
-    // hp/mp regen
-    SetUnitState(
-      customHero.unit, UNIT_STATE_LIFE, 
-      GetUnitState(customHero.unit, UNIT_STATE_LIFE) + 
+
+
+
+    // hp
+    let incHp = (
       0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
       * Constants.BASE_HP_REGEN * heroAgi / heroStr
     );
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incHp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Id.zamasuImmortality) > 0) {
+      incHp *= Constants.ZAMASU_PASSIVE_HP_REGEN_MULT;
+    }
     SetUnitState(
-      customHero.unit, UNIT_STATE_MANA, 
-      GetUnitState(customHero.unit, UNIT_STATE_MANA) + 
+      customHero.unit, UNIT_STATE_LIFE, 
+      GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp
+    );
+
+
+
+
+
+
+    // mp
+    let incMp = (
       0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
       * Constants.BASE_MP_REGEN * heroAgi / heroInt
+    );
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incMp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    SetUnitState(
+      customHero.unit, UNIT_STATE_MANA, 
+      GetUnitState(customHero.unit, UNIT_STATE_MANA) + incMp
     );
   });
 

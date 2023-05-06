@@ -8187,7 +8187,7 @@ ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_Temp
 SuspendHeroXPBJ(false, GetSummonedUnit())
 if (Trig_Cell_Juniors_Func010C()) then
 UnitAddAbilityBJ(FourCC("A0CT"), GetSummonedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A0CT"), GetSummonedUnit(), 9)
+SetUnitAbilityLevelSwapped(FourCC("A0CT"), GetSummonedUnit(), 10)
 else
 UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
@@ -12104,7 +12104,7 @@ udg_TempReal2 = (1500.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, tru
 else
 udg_TempReal2 = (1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)))
 end
-udg_TempReal2 = (0.45 * (0.25 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
+udg_TempReal2 = ((0.10 * 0.12) * (9.00 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
 TriggerExecute(gg_trg_Get_Int_Damage_Multiplier)
 udg_TempReal2 = (udg_TempReal2 * udg_TempIntDamageMult)
 SaveRealBJ(udg_TempReal2, 5, udg_ID, udg_JirenHashtable)
@@ -14438,7 +14438,7 @@ udg_TempReal2 = (1500.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, tru
 else
 udg_TempReal2 = (1500.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)), 100.00))
 end
-udg_TempReal2 = (1.00 * (0.25 * (udg_TempReal2 * I2R(udg_TempInt2))))
+udg_TempReal2 = (1.00 * (0.24 * (udg_TempReal2 * I2R(udg_TempInt2))))
 udg_TempReal2 = (udg_TempReal2 * udg_TempIntDamageMult)
 UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 end
@@ -37907,42 +37907,42 @@ end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func008Func002Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func007Func002Func002C()
 if (not (udg_StatMultAgi < 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func008Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func007Func002C()
 if (not (udg_StatMultAgi < 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func008C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func007C()
 if (not (udg_StatMultAgi < 1.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func023Func001Func001C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func022Func001Func001C()
 if (not (udg_StatMultAgi < 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func023Func001C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func022Func001C()
 if (not (udg_StatMultAgi < 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func023C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func022C()
 if (not (udg_StatMultAgi < 1.50)) then
 return false
 end
@@ -37955,14 +37955,13 @@ udg_TempReal = 30.00
     udg_TempInt = GetSpellAbilityId()
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_StatMultStr = 2.50
-if (Trig_Oozaru_Vegeta_Skin_Change_Func008C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func007C()) then
 udg_StatMultStr = 1.50
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func008Func002C()) then
-udg_StatMultStr = 2.00
+if (Trig_Oozaru_Vegeta_Skin_Change_Func007Func002C()) then
+udg_StatMultStr = RMinBJ(2.55, RMaxBJ((udg_StatMultStr + 0.25), 2.00))
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func008Func002Func002C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func007Func002Func002C()) then
 udg_StatMultStr = 2.60
 else
 udg_StatMultStr = 2.80
@@ -37982,13 +37981,13 @@ BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
 DestroyEffectBJ(GetLastCreatedEffectBJ())
     RemoveLocation(udg_TempLoc)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-if (Trig_Oozaru_Vegeta_Skin_Change_Func023C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func022C()) then
         udg_TransformationID = FourCC('H090')
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func023Func001C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func022Func001C()) then
             udg_TransformationID = FourCC('H093')
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func023Func001Func001C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func022Func001Func001C()) then
                 udg_TransformationID = FourCC('H094')
 else
                 udg_TransformationID = FourCC('H095')
@@ -42367,7 +42366,7 @@ end
 if (Trig_Transformations_Goku_Func020C()) then
 if (Trig_Transformations_Goku_Func020Func001C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
 UnitRemoveAbilityBJ(FourCC("A00R"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
@@ -42379,7 +42378,7 @@ else
 end
 if (Trig_Transformations_Goku_Func020Func003C()) then
 UnitAddAbilityBJ(FourCC("A0P0"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0P0"), udg_StatMultUnit, 7)
+SetUnitAbilityLevelSwapped(FourCC("A0P0"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0P0'))
 UnitRemoveAbilityBJ(FourCC("A00U"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A00U"), udg_TransformationPlayer)
@@ -42774,7 +42773,7 @@ end
 if (Trig_Transformations_Vegeta_Func020Func002Func013C()) then
 if (Trig_Transformations_Vegeta_Func020Func002Func013Func001C()) then
 UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 7)
+SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 10)
                     UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L4'))
 UnitRemoveAbilityBJ(FourCC("A01B"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
@@ -44678,7 +44677,7 @@ else
 end
 if (Trig_Transformations_Pan_Func018C()) then
 UnitAddAbilityBJ(FourCC("A0VN"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0VN"), udg_StatMultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0VN"), udg_StatMultUnit, 10)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
 UnitRemoveAbilityBJ(FourCC("A0LX"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0LX"), udg_TransformationPlayer)
@@ -47920,7 +47919,7 @@ else
 end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func069C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
 else
@@ -49042,7 +49041,7 @@ else
 end
 if (Trig_Transformations_Cell_Perfect_Func014C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 10)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
 UnitRemoveAbilityBJ(FourCC("A00R"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)

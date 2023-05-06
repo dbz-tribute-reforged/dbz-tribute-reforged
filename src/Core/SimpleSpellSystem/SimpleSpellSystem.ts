@@ -182,8 +182,8 @@ export module SimpleSpellSystem {
         && IsUnitType(source, UNIT_TYPE_HERO)
       ) {
         const maxGlareDistance = 2500;
-        const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.4;
-        const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.6;
+        const glareDamageMult = BASE_DMG.KAME_DPS * 8;
+        const glare2DamageMult = BASE_DMG.KAME_DPS * 12;
         const glare2StrDiffJirenBonus = 1.05;
         const glare2StrDiffMult = 1.1;
         const glarePunishDamageMult = 0.15;
@@ -387,7 +387,7 @@ export module SimpleSpellSystem {
     // const jumpSpeedModifierMax = 1.33;
     // const jumpSpeedModifierMin = 0.15;
     const braveSwordAOE = 425;
-    const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.2;
+    const braveSwordDamageMult = BASE_DMG.KAME_DPS * 24;
     const braveSwordManaBurnMult = 0.01;
     const debuffDamageMult = 1.5;
     const maxManaCostMult = 0.2;
