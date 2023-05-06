@@ -95,8 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Block 70% of incoming damage until more than 4 * AGI damage is blocked for 1.5s.|n" +
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +  
+        "Block 70% of incoming damage until more than 4 * STR damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },
@@ -163,7 +163,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(V) Deflect",
       body: 
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
         "Cost: 35 SP|nCD: 2"
     },
@@ -247,9 +247,9 @@ export const AbilitiesList = [
       disabled: "BTNSpiritbomb.blp",
     },
     tooltip: {
-      title: AbilityNames.Goku.SPIRIT_BOMB,
+      title: "",
       body: 
-        "spirit bomb stuff"
+        ""
     },
     components: [
       { name: "beam spirit bomb" },
@@ -1034,7 +1034,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 80,
+    duration: 74,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1061,7 +1061,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 80,
+    duration: 74,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8067,7 +8067,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 133,
+    duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8649,7 +8649,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.SUPER_ELITE_COMBO
     },
     components: [
-      { name: "dash ground point 20dist" },
+      { name: "dash ground point 15dist" },
       { name: "damage jaco super elite combo explosion" },
       { name: "damage jaco super elite combo explosion inner" },
       { name: "jump jaco super elite combo" },
@@ -10184,7 +10184,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Cell.SUPER_CHARGE,
     currentCd: 0,
-    maxCd: 25,
+    maxCd: 26,
     costType: CostType.SP,
     costAmount: 50,
     duration: 300,
@@ -10201,10 +10201,10 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "+60% ability damage, +60% auto attack damage, +132ms.|n" + 
+        "+50% ability damage, +50% auto attack damage, +132ms.|n" + 
         "Cost: 50 SP|n"+
         "Duration: 9s|n" +  
-        "CD: 25s"
+        "CD: 26s"
     },
     components: [
       { name: "spell amp cell super charge" },

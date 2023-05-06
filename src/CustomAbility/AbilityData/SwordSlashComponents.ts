@@ -3,8 +3,8 @@ import { BASE_DMG } from "Common/Constants";
 /*
 
 // Hero stats
-constant integer   bj_HEROSTAT_STR             = 0
-constant integer   bj_HEROSTAT_AGI             = 1
+constant integer   bj_HEROSTAT_INT             = 0
+constant integer   bj_HEROSTAT_INT             = 1
 constant integer   bj_HEROSTAT_INT             = 2
 
 constant attacktype         ATTACK_TYPE_NORMAL              = ConvertAttackType(0)
@@ -52,7 +52,7 @@ export const SwordSlashComponents = [
     endTick: 40,
     damageData: {
       multiplier: BASE_DMG.KAME_EXPLOSION * 0.6,
-      attribute: bj_HEROSTAT_AGI,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
@@ -117,7 +117,7 @@ export const SwordSlashComponents = [
     endTick: 16,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.27,
-      attribute: bj_HEROSTAT_STR,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
@@ -161,7 +161,7 @@ export const SwordSlashComponents = [
     endTick: 24,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.23,
-      attribute: bj_HEROSTAT_STR,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
@@ -204,7 +204,7 @@ export const SwordSlashComponents = [
     endTick: 24,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.23,
-      attribute: bj_HEROSTAT_STR,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
@@ -247,7 +247,7 @@ export const SwordSlashComponents = [
     endTick: -1,
     damageData: {
       multiplier: 0.5,
-      attribute: bj_HEROSTAT_AGI,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 

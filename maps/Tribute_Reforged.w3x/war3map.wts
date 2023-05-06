@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute |cffffcc00Reforged 0.83b
+DBZ Tribute |cffffcc00Reforged 0.84
 }
 
 STRING 4
@@ -2677,36 +2677,6 @@ STRING 432
 x10
 }
 
-STRING 433
-// Items: I04N (Body Change), Description (Description)
-{
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 51% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 51% hp, summoned units, creeps, sagas, heroes more than 50 lvls above ginyu, geti star, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 10% of Current HP
-Stat mult: -0.2x|r
-|cff00ffffCooldown: 180s (120s if an invalid target)
-
-|cff808080"Change ... NOW!"|r
-}
-
-STRING 434
-// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
-{
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 51% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 51% hp, summoned units, creeps, sagas, heroes more than 50 lvls above ginyu, geti star, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 10% of Current HP
-Stat mult: -0.2x|r
-|cff00ffffCooldown: 180s (120s if an invalid target)
-
-|cff808080"Change ... NOW!"|r
-}
-
 STRING 435
 // Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
 {
@@ -5139,7 +5109,7 @@ STRING 820
 {
 Type "r" to revert.
 Transformations:
-[lvl 1]     2.00x "r"
+[lvl 60]    2.00x "r"
 [lvl 100]  2.25x "ss"
 [lvl 150]  2.50x "ss3" [Unlocks SS3 form]
 
@@ -6004,8 +5974,8 @@ Transformations:
 [lvl 90]  1.90x "frieza"
 [lvl 150] 2.10x "frieza"
 [lvl 200] 2.20x "golden" [Golden Frieza]
-[lvl 250] 2.30x "golden" [Mastered Golden Frieza]
-[lvl 400] 2.50x "black frieza" [50% Golden Mana Drain]
+[lvl 300] 2.30x "golden" [Mastered Golden Frieza]
+[lvl 400] 2.40x "black frieza" [50% Golden Mana Drain]
 
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
 Gains Full Power 100% when less than 75% hp in Fourth Form. 
@@ -8531,12 +8501,8 @@ Earrings worn by the Kais
 }
 
 STRING 1344
-// Abilities: A111 (Jaco Ship), Ubertip (Tooltip - Normal - Extended)
 {
-Jaco calls forth his ship to fly towards the targetted location while charging his Macrocosm cannon. Jaco is invulnerable while flying. Upon landing the ship fires the high powered energy cannon which deals increased damage for travelling long distances.
-
-|cff00ff00Damage: Int * 2 (+1% per 10 units travelled greater than 1000 units)
-|cff00ffffCooldown: <A111,Cool1> seconds
+Endurance
 }
 
 STRING 1345
@@ -16862,9 +16828,7 @@ Stamina
 
 STRING 2677
 {
-|cff00ff00Base max stamina is 100. Base regen is 1.65/s. Each 1k Agi increases max stamina by 0.5 and regen by +1%. Food doubles stamina regen. Having less than 20% max stamina reduces regen by 50%.|r
-
-|cffff2020DETAILS ARE SUBJECT TO CHANGE AT ANY TIME, PLEASE CONSULT THE OFFICIAL CHANGELOG FOR ACCURATE INFORMATION.|r
+|cff00ff00Base max stamina is 100. Regen 3/s, increased when endurance is the highest stat. Regen is doubled when eating.
 }
 
 STRING 2678
@@ -17693,17 +17657,6 @@ STRING 2813
 D
 }
 
-STRING 2814
-// Abilities: A032 (Serious Sideways Jumps), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama rapidly hops side to side, creating a wall of afterimages as he approaches his enemy. Nearby enemies are knocked back.
-|cff00FF00Damage Blocked: 5 * Agi @ 90%
-|cff00FF00Duration: <A032,Dur1,.> seconds|r
-|cff00FFFFCooldown: <A032,Cool1> seconds|r
-
-|cff808080"I just passed by while doing sideways jumps"|r
-}
-
 STRING 2815
 // Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
 {
@@ -17798,10 +17751,10 @@ Type "r" to revert.
 Transformations:
 [lvl 15]  1.10x "fp"
 [lvl 30]  1.40x "fp"
-[lvl 90]  1.90x "fp" [-0.2 BAT]
-[lvl 120] 2.20x "fp"
-[lvl 150] 2.40x "fp"
-[lvl 200] 2.50x "fp" [-0.4 BAT]
+[lvl 90]  1.90x "fp" [1.6 BAT]
+[lvl 120] 2.20x "fp" [1.4 BAT]
+[lvl 150] 2.40x "fp" [1.2 BAT]
+[lvl 200] 2.50x "fp" [1.15 BAT]
 
 |cff00ff00Honorary Ginyu Member:|r Gains +0.02x for each Ginyu Force member on their team.
 
@@ -25551,10 +25504,8 @@ STRING 4055
 }
 
 STRING 4056
-// Items: I04X (Hit's Assassination Contract), Description (Description)
 {
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by x1.5.|r
+|Cff00ff00Endurance|R
 }
 
 STRING 4057
@@ -29999,9 +29950,11 @@ Transformations:
 [lvl 25]  1.50x "ss"
 [lvl 75]  2.00x "ss2"
 
-|cffffcc00Grim Reaper of Justice|r: +5% stats from creeps
+|cffffcc00Grim Reaper of Justice:|r +10% kill stats.
 
-When the combined level of Goten and Trunks is above 120 you can type "|cffffcc00fusion ha|r" to fuse into Gotenks. Goten and Trunks must not be in a restricted area to fuse.
+[|cffffcc00Fusion|r]
+Requires the total level of Goten and Trunks to be above 120.
+Type "|cffffcc00fusion ha|r" to fuse into Gotenks (must not be in restricted area)
 }
 
 STRING 4769
@@ -33105,12 +33058,6 @@ STRING 5279
 Tien swings his arms so fast they appear to be windmills on his shoulder and pummels his opponent uncountable times.|n|cff00ff00(Damage: agi * lvl * .125 + 3 per punch.)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
-STRING 5280
-// Abilities: A0BJ (Train Intellect), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Train Intellect
-}
-
 STRING 5281
 // Abilities: A0BJ (Train Intellect), Tip (Tooltip - Normal)
 {
@@ -34500,12 +34447,6 @@ STRING 5506
 Super 17 removes his left hand and fires hundreds of bullets in a line.|n|cff00FF00Damage: Int * 15 / second|r|n|cff00FFFFCooldown: 30 seconds|r
 }
 
-STRING 5507
-// Abilities: A0BY (Train All), Ubertip (Tooltip - Normal - Extended)
-{
-Gain 4/4/4 str/agi/int per level.
-}
-
 STRING 5508
 // Abilities: A0BY (Train All), Ubertip (Tooltip - Normal - Extended)
 {
@@ -35662,11 +35603,8 @@ Marle channels a powerful healing spell that rapidly regenerates herself and nea
 }
 
 STRING 5688
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
+Fortified armor takes 100% damage from all damage types.
 }
 
 STRING 5689
@@ -35719,11 +35657,8 @@ Transformations:
 }
 
 STRING 5692
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool2>s|r
+Heroes take 100% damage from all damage types.
 }
 
 STRING 5693
@@ -35733,11 +35668,8 @@ STRING 5693
 }
 
 STRING 5694
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool3>s|r
+Heavy armor takes 100% damage from all damage types.
 }
 
 STRING 5695
@@ -35768,19 +35700,13 @@ Kyodaika: +0.3-0.6x str
 }
 
 STRING 5697
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool4>s|r
+Medium armor takes 100% damage from all damage types.
 }
 
 STRING 5698
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool5>s|r
+Medium armor takes 100% damage from all damage types.
 }
 
 STRING 5699
@@ -35868,11 +35794,8 @@ STRING 5708
 }
 
 STRING 5709
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool6>s|r
+Light armor takes 100% damage from all damage types.
 }
 
 STRING 5710
@@ -39799,15 +39722,6 @@ Spell Amp: +2% per second up to +10%|r
 |cff00ffffCooldown: <A0PF,Cool10> seconds|r
 }
 
-STRING 6346
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool1> seconds|r
-}
-
 STRING 6347
 // Units: H09E (Ginyu Force Captain), Propernames (Proper Names)
 {
@@ -40012,17 +39926,6 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
-STRING 6374
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-|cff00ff00Duration: <A0U8,Dur7>s
-|cff00FFFFCooldown: <A0U8,Cool7>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
 STRING 6375
 // Upgrades: R00M (Cannibalize), Name (Name)
 {
@@ -40033,17 +39936,6 @@ STRING 6376
 // Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Super Dynamite Kick
-}
-
-STRING 6377
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-|cff00ff00Duration: <A0U8,Dur8>s
-|cff00FFFFCooldown: <A0U8,Cool8>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 6378
@@ -40218,15 +40110,6 @@ STRING 6406
 // Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
-}
-
-STRING 6407
-// Abilities: A11S (Jump), Researchubertip (Tooltip - Learn - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool1> - <A11S,Cool10> seconds|r
 }
 
 STRING 6408
@@ -41177,15 +41060,6 @@ Leon precisely lines up his shot and shoots his sniper rifle. Deals 100% bonus d
 |cff888888"A bolt-action rifle. When fitted with a scope for sniping, this model is highly praised for accuracy."|r
 }
 
-STRING 6563
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool2> seconds|r
-}
-
 STRING 6564
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
@@ -41216,28 +41090,10 @@ STRING 6568
 (Tavern)
 }
 
-STRING 6569
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool3> seconds|r
-}
-
 STRING 6570
 // Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 4|r]
-}
-
-STRING 6571
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool4> seconds|r
 }
 
 STRING 6572
@@ -41256,15 +41112,6 @@ STRING 6574
 // Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 7|r]
-}
-
-STRING 6575
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool5> seconds|r
 }
 
 STRING 6576
@@ -44500,51 +44347,33 @@ STRING 7078
 }
 
 STRING 7079
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+Divine armor takes 100% damage from all damage types.
 }
 
 STRING 7080
-// Abilities: A0FV (Flash Fist), Researchubertip (Tooltip - Learn - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+Unarmored takes 100% damage from all damage types.
 }
 
 STRING 7081
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool2,.>s|r
+Fortified armor takes 100% damage from all damage types.
 }
 
 STRING 7082
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool3,.>s|r
+Heroes take 100% damage from all damage types.
 }
 
 STRING 7083
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool4,.>s|r
+Heavy armor takes 100% damage from all damage types.
 }
 
 STRING 7084
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool5,.>s|r
+All attacks do 100% damage to Medium armor.
 }
 
 STRING 7085
@@ -45513,70 +45342,10 @@ Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane
 |cff00ffffCooldown: <A06X,Cool10> seconds|r
 }
 
-STRING 7226
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur1>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool1,.> seconds|r
-}
-
-STRING 7227
-// Abilities: A01Q (Knife Parry), Researchubertip (Tooltip - Learn - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur1>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool1,.> - <A01Q,Cool10,.> seconds|r
-}
-
-STRING 7228
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur2>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool2,.> seconds|r
-}
-
 STRING 7229
 // Abilities: A01Q (Knife Parry), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Knife Parry - [|cffffcc00Level 7|r]
-}
-
-STRING 7230
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur3>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool3,.> seconds|r
-}
-
-STRING 7231
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur4>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool4,.> seconds|r
-}
-
-STRING 7232
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur5>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool5,.> seconds|r
 }
 
 STRING 7233
@@ -45649,16 +45418,6 @@ STRING 7244
 // Abilities: A0LX (Kamehameha), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 7245
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur6>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool6,.> seconds|r
 }
 
 STRING 7246
@@ -48210,17 +47969,6 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 |cff00ffffCooldown: <A0LS,Cool6> seconds|r
 }
 
-STRING 7646
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-|cff00ff00Duration: <A0U8,Dur9>s
-|cff00FFFFCooldown: <A0U8,Cool9>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
 STRING 7647
 // Abilities: A0ET (Dark Transformation), Ubertip (Tooltip - Normal - Extended)
 {
@@ -49687,19 +49435,8 @@ Dummy Pocket Dimension Invis
 }
 
 STRING 7878
-// Units: E00K (Legendary Assassin), Ubertip (Tooltip - Extended)
 {
-A hero who specializes in small skirmishes, dealing heavy single-target damage.
-
-|cffffcc00Legendary Assassin|r: +35% stats from Player Kills.
-|cffC03232Consumes |r|cff00FF00Time Skip|r|cffC03232 charges instead of |r|cff00FFFFmana|r.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+All attacks do 100% damage to Medium armor.
 }
 
 STRING 7879
@@ -50247,15 +49984,6 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 |cff00ffffCooldown: <A00M,Cool2> seconds|r
 }
 
-STRING 7969
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool6> seconds|r
-}
-
 STRING 7970
 // Abilities: A0TT (Tri Beam Charge), Ubertip (Tooltip - Normal - Extended)
 {
@@ -50298,15 +50026,6 @@ STRING 7974
 {
 [|cffffcc00Unlock|r] |cffFF2222Nice Explosion!|r
 Megumin has developed a new powerful explosion: |cffff2222Nice Explosion!|r
-}
-
-STRING 7975
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool7> seconds|r
 }
 
 STRING 7976
@@ -50654,35 +50373,6 @@ STRING 8030
 Megumin
 }
 
-STRING 8031
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool8> seconds|r
-}
-
-STRING 8032
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur7>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool7,.> seconds|r
-}
-
-STRING 8033
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur8>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool8,.> seconds|r
-}
-
 STRING 8034
 // Abilities: A01T (Knife Slash), EditorSuffix (Editor Suffix)
 {
@@ -50711,16 +50401,6 @@ STRING 8038
 // Abilities: A01V (Leon's Arsenal), Ubertip (Tooltip - Normal - Extended)
 {
 Leon S. Kennedy has access to many high powered weapons, each of them suited to killing different enemies.
-}
-
-STRING 8039
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur9>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool9,.> seconds|r
 }
 
 STRING 8040
@@ -53078,21 +52758,6 @@ Doubles the effect of |cff00ffffAura|r
 |cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
 }
 
-STRING 8392
-// Abilities: A11L (Gohan Boost Beast Gohan), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan draws out all of his strength from his Potential Unleashed.
-Unlocks [|cff00ff00D|r] Special Beast Cannon (linked CD with Father-Son Kamehameha).
-|cffffff00Gain 30% spell amp +1% for every 10% HP missing from nearby living allies. 
-Recently killed allies add +15%.
-80% damage block up to 3x Agi
-+33ms and unlocks movement speed cap.
-|cff00ff00Duration: <A11L,Dur1>s
-|cff00ffffCooldown: <A11L,Cool1>s
-
-|cff888888"Is that all? I guess it's my turn."|r
-}
-
 STRING 8393
 // Abilities: A0I9 (Brave Slash), EditorSuffix (Editor Suffix)
 {
@@ -53118,7 +52783,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 8397
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53126,7 +52791,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8398
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53140,7 +52805,7 @@ E
 }
 
 STRING 8400
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53148,7 +52813,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8401
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53168,7 +52833,7 @@ E
 }
 
 STRING 8404
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53176,7 +52841,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8405
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53184,7 +52849,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8406
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53192,7 +52857,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8407
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53200,7 +52865,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8408
-// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53208,7 +52873,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8409
-// Abilities: A00R (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0CT (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
 {
 At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
 |cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
@@ -53222,16 +52887,6 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 
 |cff00ff00Damage: Int * lvl * ? + 3% Max HP|r
 |cff00ffffCooldown: <A00M,Cool2> seconds|r
-}
-
-STRING 8411
-// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
-|cffff2222Channel Duration: <A01Q,Dur10>s
-|cff00ff00Damage Block: Lvl x Agi x 0.5 @ 65%
-Damage: Lvl x Agi x ?
-|cff00ffffCooldown: <A01Q,Cool10,.> seconds|r
 }
 
 STRING 8412
@@ -53994,6 +53649,7 @@ Transformations:
 [lvl 150] 2.30x "fp"
 [lvl 200] 2.40x "fp"
 [lvl 250] 2.50x "fp"
+[lvl 300] 2.60x "fp"
 
 Gains +0.02x for each Ginyu Force member on their team.
 }
@@ -54649,12 +54305,6 @@ The user fires two beams of energy that will hunt down the enemy and deal massiv
 |cff00FFFFCooldown: <A0IS,Cool10>s|r
 }
 
-STRING 8616
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 3.6% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
-}
-
 STRING 8617
 // Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
 {
@@ -54709,30 +54359,6 @@ STRING 8625
 A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) + 1% max HP) per 0.5s).|r|n|cff00ffff(Cooldown: <A0LD,Cool1> - <A0LD,Cool10> seconds)|r
 }
 
-STRING 8626
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool3> seconds|r
-}
-
-STRING 8627
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool2> seconds|r
-}
-
-STRING 8628
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool5> seconds|r
-}
-
 STRING 8629
 // Abilities: A0QZ (Justice Kick), Hotkey (Hotkey - Normal)
 {
@@ -54743,30 +54369,6 @@ STRING 8630
 // Abilities: A0QZ (Justice Kick), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 8631
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool4> seconds|r
-}
-
-STRING 8632
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool6> seconds|r
-}
-
-STRING 8633
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool7> seconds|r
 }
 
 STRING 8634
@@ -55265,20 +54867,6 @@ STRING 8715
 Potara Fusion
 }
 
-STRING 8716
-// Abilities: A0YI (Dream Devourer), Ubertip (Tooltip - Normal - Extended)
-{
-Schala succumbs to Lavos' influence temporarily, granting her:
-|cffffff00+0.6x stat multiplier.
-+66ms and unlocks movement speed cap.
-20% Damage Block up to 7.5x Agi.
-Spellcasting restores 25% of Max Mana.
-Unlocks empowered abilities.
-
-|cff00ff00Duration: <A0YI,Dur1> seconds
-|cff00ffffCooldown: <A0YI,Cool1> seconds|n|n|cff808080"It is no doubt but a matter of time before Lavos consumes the whole of my awareness. It was I, after all, who wished it—wished from the depths of my sadness and despair that all that was would be erased."
-}
-
 STRING 8717
 // Items: I01L (Fusion), Name (Name)
 {
@@ -55332,11 +54920,8 @@ Q
 }
 
 STRING 8725
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool7>s|r
+Light armor takes 100% damage from all damage types.
 }
 
 STRING 8726
@@ -56695,10 +56280,38 @@ STRING 8941
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
+STRING 8942
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (reduced to 0.05x when above 20k Int)
+-0.10x Agi mult
+Reduces max movement speed by 50|r
+}
+
+STRING 8943
+// Items: I009 (Z Sword), Description (Description)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.10x Int mult (reduced to 0.05x when above 20k Int)
+-0.10x Agi mult
+Reduces max movement speed by 50|r
+}
+
 STRING 8944
 // Abilities: A0JX (Recharge), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00R|r] Learn Flying Satan Kick
+}
+
+STRING 8945
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
+{
+|cffffff00+0.10x Str mult
++0.05x Int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 8946
@@ -56717,14 +56330,6 @@ STRING 8948
 // Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
-}
-
-STRING 8949
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool8> seconds|r
 }
 
 STRING 8950
@@ -56781,34 +56386,10 @@ STRING 8958
 The user recharges their batteries, restoring 50% mana over 10 seconds.|n|cff00FFFFCooldown: 30s|r
 }
 
-STRING 8959
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool9> seconds|r
-}
-
-STRING 8960
-// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool1> seconds|r
-}
-
 STRING 8961
 // Abilities: A0JX (Recharge), Researchubertip (Tooltip - Learn - Extended)
 {
 Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 8962
-// Abilities: A0LX (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A0LX,Cool1> seconds|r
 }
 
 STRING 8963
@@ -57481,9 +57062,9 @@ Transformations:
 [lvl 25]  1.50x "fp"
 [lvl 75]  2.00x "ult" [Unlocks Ultimate Burning Warrior]
 [lvl 150] 2.30x "ult" 
-[lvl 200] 2.50x "ult" [Upgrades Meditate at 1+ charges]
-[lvl 250] 2.60x "ult" 
-[lvl 300] 2.65x "ult" [Upgrades UBW at 2+ charges]
+[lvl 200] 2.40x "ult" [Upgrades Meditate at 1+ charges]
+[lvl 250] 2.50x "ult" 
+[lvl 300] 2.60x "ult" [Upgrades UBW at 2+ charges]
 
 Gains +0.02x for each pride trooper on his team.
 }
@@ -58518,13 +58099,6 @@ STRING 9220
 Saga Generic Autocast Spell
 }
 
-STRING 9221
-// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
-|cff00ff00Damage Blocked: 5 * Agi @ 70%|r|n|cff00ffffCooldown: <A0VM,Cool1> seconds|r
-}
-
 STRING 9222
 // Abilities: A0KM (Saga Generic Spammed Spell), Name (Name)
 {
@@ -59152,12 +58726,6 @@ The user charges energy into their right hand and rushes forward with with an en
 |cff00ff00Punch Damage: Lvl x Agi x ?
 Beam Damage: Lvl x Int x ? + 2.4% Max HP |r
 |cff00ffffCooldown: <A0OX,Cool1> seconds|r
-}
-
-STRING 9322
-// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ? + 3.6% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool9> seconds)|r
 }
 
 STRING 9323
@@ -60096,28 +59664,10 @@ STRING 9470
 Korin's Flag
 }
 
-STRING 9471
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool9> seconds|r
-}
-
 STRING 9472
 // Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), effect2 (Effect 2)
 {
 rhpx
-}
-
-STRING 9473
-// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Waluigi uses his long legs to jump over his enemies and avoid danger.
-|cff00ff00Damage Block: 80% up to Agi * Lvl * 0.6|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00FFFFCooldown: <A11S,Cool10> seconds|r
 }
 
 STRING 9474
@@ -60349,20 +59899,14 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 9505
-// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
 {
-A contract listing all of Hit's assassination targets.
-|cffffff00Increases stat gain from PvP kills by x1.5.|r
+Divine armor takes 100% damage from all damage types.
 }
 
 STRING 9506
-// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
 {
-Jiren sits with his legs crossed and begins to peacefully meditate.
-|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
-Grants bonus stats equal to 0.4% of base stats to a minimum of 4.
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
-|cff00FFFFCooldown: <A0KD,Cool1>s|r
+Unarmored takes 100% damage from all damage types.
+
 }
 
 STRING 9507
@@ -60386,13 +59930,8 @@ Janemba rapidly slices his opponent with 4 powerful Ki Slash waves infused with 
 }
 
 STRING 9509
-// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
 {
-Jiren sits with his legs crossed and begins to peacefully meditate.
-|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
-Grants bonus stats equal to 0.6% of base stats to a minimum of 4.|r
-|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
-|cff00FFFFCooldown: <A0SM,Cool1>s|r
+Fortified armor takes 100% damage from all damage types.
 }
 
 STRING 9510
@@ -63145,18 +62684,6 @@ STRING 9955
 Broly
 }
 
-STRING 9956
-// Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
-{
-+1 str, -0.5 agi/int per level.
-}
-
-STRING 9957
-// Abilities: A0BI (Train Agility), Ubertip (Tooltip - Normal - Extended)
-{
-+1 agi, -0.5 str/int per level.
-}
-
 STRING 9958
 // Abilities: A0BJ (Train Intellect), Ubertip (Tooltip - Normal - Extended)
 {
@@ -64400,7 +63927,7 @@ Transformations:
 [lvl 125] 2.00x "fp"
 [lvl 200] 2.50x "fp"
 
-For Super 13 type "super" when all androids lvl greater than 35 and are not in heaven/hell.
+For Super 13 type "super" when all androids lvl are greater than 35 and are not in heaven/hell. Dying after level 35 will automatically fuse the androids.
 }
 
 STRING 10159
@@ -65359,19 +64886,6 @@ STRING 10309
 (peco)
 }
 
-STRING 10310
-// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
-Cannot be used with [|cff00ff00F|r] Justice Pose.
-|cffffff00+0.25x stat multiplier.
-+33ms and unlocks movement speed cap.
-+20% Damage Block up to 7.5x Agi
-All basic spells are upgraded for one use each.
-Justice Pose is replaced with Hakai.|r
-|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
-}
-
 STRING 10311
 // Abilities: A080 (Onigiri Time), Ubertip (Tooltip - Normal - Extended)
 {
@@ -65634,8 +65148,8 @@ STRING 10351
 STRING 10352
 {
 |cffffff00T+Click: Generic|r
-|cff00ff00G+Click: Group|r
-|cffff2222B+Click: Retreat|r
+|cff00ff00Shift+T+Click: Group|r
+|cffff2222Ctrl+Shift+Click: Retreat|r
 }
 
 STRING 10353
@@ -68152,6 +67666,20 @@ STRING 10746
 Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
 |cff00FF00Damage: Lvl * Int * ? + 3.6% Max HP
 |cff00FFFFCooldown: <A0FG,Cool10> seconds
+}
+
+STRING 10747
+// Items: I04X (Hit's Assassination Contract), Description (Description)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x1.25.|r
+}
+
+STRING 10748
+// Items: I04X (Hit's Assassination Contract), Ubertip (Tooltip - Extended)
+{
+A contract listing all of Hit's assassination targets.
+|cffffff00Increases stat gain from PvP kills by x1.25.|r
 }
 
 STRING 10749
@@ -75014,11 +74542,11 @@ Stats
 
 STRING 11861
 {
-|cffff2020Strength: Increases HP by 20 and HP regen by 0.4.|r
+|cffff2020Strength: Each point gives +20 hp, +0.001 armor.|r
 
-|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1k AGI. Increases mobility when higher than STR. Increases stamina and stamina regen.|r
+|cff00ff00Endurance: Vision range, MS, dash mobility relative to total stats. Increases HP/MP/SP regen relative to STR/KI/Total.|r
 
-|cff00ffffIntelligence: Increases mana by 10 and mana regen by 0.1. Amplifies spell damage by 90-120%.
+|cff00ffffKi: Each point gives +10 mana, +0.25 attack damage, and beam clash power. Amplifies ability damage by an additional 90-120% relative to total stats.
 }
 
 STRING 11862
@@ -78087,13 +77615,33 @@ STRING 12351
 }
 
 STRING 12352
+// Items: I04N (Body Change), Description (Description)
 {
- - Every 1000 points increase armor by 1
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 51% hp. Ginyu receives most of the target's transformations and abilities.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 51% hp, summoned units, creeps, sagas, heroes more than 50 lvls above ginyu, geti star, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 10% of Current HP
+Stat mult: -0.2x|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
 }
 
 STRING 12353
+// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
 {
- - Every 1000 points increase armor by 1
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 51% hp. Ginyu receives most of the target's transformations and abilities.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 51% hp, summoned units, creeps, sagas, heroes more than 50 lvls above ginyu, geti star, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 10% of Current HP
+Stat mult: -0.2x|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
 }
 
 STRING 12354
@@ -83116,35 +82664,23 @@ STRING 13135
 }
 
 STRING 13136
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool8>s|r
+Heroes take 100% damage from all damage types.
 }
 
 STRING 13137
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool9>s|r
+Heavy armor takes 100% damage from all damage types.
 }
 
 STRING 13138
-// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool1>s|r
+Medium armor takes 100% damage from all damage types.
 }
 
 STRING 13139
-// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
-Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
-|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
-|cff00FFFFCooldown: <A0FT,Cool10>s|r
+Normal armor takes 100% damage from all damage types.
 }
 
 STRING 13140
@@ -83158,13 +82694,8 @@ Hit traps an opponent in a time cage, stunning them for 1.5 seconds.
 }
 
 STRING 13141
-// Abilities: A0FW (Time Cage), Researchubertip (Tooltip - Learn - Extended)
 {
-Hit traps an opponent in a time cage, stunning them for 1.5 seconds. 
-
-|cffffff00Costs 0 charges when above 3 charges.|r
-|cff00ff00Damage: Int * Lvl * ?|r
-|cff00FFFFCooldown: <A0FW,Cool1,.> - <A0FW,Cool10>s|r
+Light armor takes 100% damage from all damage types.
 }
 
 STRING 13142
@@ -84933,7 +84464,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A111 (Jaco Ship), Hotkey (Hotkey - Normal)
+// Abilities: A111 (Jaco's Ship), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -87018,15 +86549,6 @@ STRING 13721
 // Abilities: A0QE (Golden Death Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Golden Death Cannon - [|cffffcc00Level 10|r]
-}
-
-STRING 13722
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
-|cffffff00+0.20x Agi multiplier.
-+300ms and unlocks movement speed cap.|r
-|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
 }
 
 STRING 13723
@@ -96600,12 +96122,8 @@ S
 }
 
 STRING 15145
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
-|cffffff00+0.10x Str mult
-+0.05x Agi mult
-+0.05x Int mult|r
-A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+Divine armor takes 100% damage from all damage types.
 }
 
 STRING 15146
@@ -98291,43 +97809,13 @@ Marle Attack Passive
 }
 
 STRING 15385
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool6,.>s|r
-}
-
-STRING 15386
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool7,.>s|r
-}
-
-STRING 15387
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool8,.>s|r
-}
-
-STRING 15388
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool9,.>s|r
+Unarmored takes 100% damage from all damage types.
 }
 
 STRING 15389
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck.
-|cff00FF00Damage: Int * Lvl * ? + 6% Max HP|r
-|cff00FFFFCooldown: <A0FV,Cool10,.>s|r
+Endurance:
 }
 
 STRING 15390
@@ -102499,127 +101987,6 @@ STRING 15976
 |cffff2020Error: Cannot target there.
 }
 
-STRING 15977
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA1>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool1> seconds|r
-}
-
-STRING 15978
-// Abilities: A0TD (Parry), Researchubertip (Tooltip - Learn - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA1>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool1> - <A0TD,Cool10> seconds|r
-}
-
-STRING 15979
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA2>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool2> seconds|r
-}
-
-STRING 15980
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA3>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool3> seconds|r
-}
-
-STRING 15981
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA4>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool4> seconds|r
-}
-
-STRING 15982
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA5>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool5> seconds|r
-}
-
-STRING 15983
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA6>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool6> seconds|r
-}
-
-STRING 15984
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA7>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool7> seconds|r
-}
-
-STRING 15985
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA8>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool8> seconds|r
-}
-
-STRING 15986
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA9>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool9> seconds|r
-}
-
-STRING 15987
-// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
-{
-Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
-|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
-|cff00ff00Duration: <A0TD,DataA10>s|r
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
-|cff00FFFFCooldown: <A0TD,Cool10> seconds|r
-}
-
 STRING 15988
 // Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
@@ -102971,7 +102338,7 @@ Transformations:
 [lvl 200] 2.50x "fp" [unlocks Pure Progress]
 [lvl 250] 2.60x "fp"
 
-|cffffcc00Legendary Assassin|r: +35% stats from Player Kills.
+|cffffcc00Legendary Assassin|r: +25% stats from Player Kills.
 }
 
 STRING 16043
@@ -104630,10 +103997,8 @@ Hit enters an alternate dimension, causing him to pass through units and be immu
 }
 
 STRING 16281
-// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
 {
-Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds.
-|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
+Ki:
 }
 
 STRING 16282
@@ -108025,20 +107390,6 @@ STRING 16729
 W
 }
 
-STRING 16730
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff001-3: Bankai, +50% damage
-4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
-7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-10: Final Bankai, upgrades abilities, bonus ms
-|cff00ff00Duration: <A0U8,Dur1>s
-|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
 STRING 16731
 // Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -109161,19 +108512,8 @@ STRING 16885
 }
 
 STRING 16886
-// Units: H008 (Goku's Youngest Son), Ubertip (Tooltip - Extended)
 {
-A split hero who controls two weaker heroes at once, allowing for quick farming if left untouched.
-They can fuse into Gotenks, a hero who deals heavy damage up close while controlling the battlefield with a long duration disable.
-
-|cffffcc00Grim Reaper of Justice|r: +5% stats from creeps
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Hero attacks deal 100% damage to all armor types.
 }
 
 STRING 16887
@@ -112342,19 +111682,13 @@ Omega Shenron turns his left hand into a cannon that fires an immensely powerful
 }
 
 STRING 17329
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
 {
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. 
-Base multiplier cannot exceed 2.40x.
-Increases PvP kill stats by 1.15x. 
+Normal attacks deal 100% damage against all armor types.
 }
 
 STRING 17330
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
 {
-Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. 
-Base multiplier cannot exceed 2.40x.
-Increases PvP kill stats by 1.30x. 
+Normal attacks deal 100% damage against all armor types.
 }
 
 STRING 17331
@@ -122064,18 +121398,8 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 18761
-// Abilities: A0SN (Ultimate Burning Warrior 2), Ubertip (Tooltip - Normal - Extended)
 {
-Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
-Cannot be used with [|cff00ff00D|r] Meditate.
-|cffffff00+0.15x stat multiplier.
-+99ms and unlocks movement speed cap.
-+15% Damage Block up to 4x Str
-+4 upgraded spell charges.|r
-|cff00ff00Duration: <A0SN,Dur1> seconds
-|cff00ffffCooldown: <A0SN,Cool1> seconds
-
-|cff808080"I cannot lose... I WILL NOT!"
+Magic attacks deal 100% damage against all armor types.
 }
 
 STRING 18762
@@ -122113,11 +121437,9 @@ Inventory Buildings
 }
 
 STRING 18767
-// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
 {
-Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. 
-Base multiplier cannot exceed 2.40x.
-Increases PvP kill stats by 1.45x. 
+Piercing attacks deal 100% damage to all armor types.
+
 }
 
 STRING 18768
@@ -122446,18 +121768,8 @@ Ayla's auto attacks have a 30% chance to critical hit for 3x.
 }
 
 STRING 18819
-// Abilities: A005 (Ultimate Burning Warrior 3), Ubertip (Tooltip - Normal - Extended)
 {
-Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
-Cannot be used with [|cff00ff00D|r] Meditate.
-|cffffff00+0.20x stat multiplier.
-+99ms and unlocks movement speed cap.
-+15% Damage Block up to 4x Str
-+5 upgraded spell charges.|r
-|cff00ff00Duration: <A005,Dur1> seconds
-|cff00ffffCooldown: <A005,Cool1> seconds
-
-|cff808080"I cannot lose... I WILL NOT!"
+Chaos attacks do 100% damage to all armor types.
 }
 
 STRING 18820
@@ -124982,17 +124294,6 @@ STRING 19185
 |cffff22ffNightmare Mode|r enabled. Sagas are |cffff1010harder|r.
 }
 
-STRING 19186
-// Abilities: A0SV (Energy Blades), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu infuses his hand with godly ki.
-|cffffff00+0.5x agi mult
--0.25x int mult
-+33ms and unlocks movement speed cap
-|cff00FF00Duration: <A0SV,Dur1> seconds|r
-|cff00FFFFCooldown: <A0SV,Cool1> seconds|r
-}
-
 STRING 19187
 // Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -125762,23 +125063,13 @@ A hero with one extremely powerful spell: |cffff4422Explosion|r.
 }
 
 STRING 19295
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
 {
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
--0.10x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
+Siege attacks deal 100% damage to all armor types.
 }
 
 STRING 19296
-// Items: I009 (Z Sword), Description (Description)
 {
-Holy sword of the kais.
-Does not drop on death.
-|cffffff00+0.10x Int mult (+0.05x when above 30k Int)
--0.10x Agi mult
-Reduces max movement speed by 30 when under 30k Str.|r
+Hero attacks deal 100% damage to all armor types.
 }
 
 STRING 19297
@@ -126826,6 +126117,26 @@ Duration: <A0B4,Dur1> seconds|r
 |cff00ffffCooldown: <A0B4,Cool1> seconds
 }
 
+STRING 19451
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
+}
+
+STRING 19452
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool2>s|r
+}
+
 STRING 19453
 // Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
 {
@@ -127809,6 +127120,16 @@ Schala creates 5 magical orbs in a line and fires them at the target area.
 |cff00ffffCooldown: <A0YC,Cool9> seconds|r
 }
 
+STRING 19593
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool3>s|r
+}
+
 STRING 19594
 // Abilities: A0YK (Empowered Magic Orbs), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -128189,6 +127510,16 @@ Dende splashes sacred water at the target location, dealing damage to enemies. A
 |cff00FFFFCooldown: <A0C5,Cool9> seconds|r
 }
 
+STRING 19651
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool4>s|r
+}
+
 STRING 19652
 // Abilities: A0TR (Kiai), Ubertip (Tooltip - Normal - Extended)
 {
@@ -128319,10 +127650,8 @@ Tien releases a powerful air shockwave from his hands that deflects and nullifie
 }
 
 STRING 19670
-// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
 {
-While holding Macho Brace, Lucario gains +25% creep stats and +2 to all stats each level. 
-Activating this ability permanently removes Macho Brace and provides +0.2-0.4x stat mult depending on Lucario's current level. Also unlocks the ability to select Lucario's Ultimate Form.
+Normal attacks deal 100% damage against all armor types.
 }
 
 STRING 19671
@@ -128623,6 +127952,16 @@ A versatile ranged hero with high mobility and the potential for massive damage 
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 }
 
+STRING 19706
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool5>s|r
+}
+
 STRING 19707
 // Abilities: A06T (Super Sacred Water), Tip (Tooltip - Normal)
 {
@@ -128806,13 +128145,8 @@ STRING 19733
 }
 
 STRING 19734
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur1> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool1> seconds|r
+Normal attacks deal 100% damage against all armor types.
 }
 
 STRING 19735
@@ -129156,13 +128490,8 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 19790
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur3> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool3> seconds|r
+Magic attacks deal 100% damage against all armor types.
 }
 
 STRING 19791
@@ -129190,13 +128519,8 @@ F
 }
 
 STRING 19795
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur4> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool4> seconds|r
+Piercing attacks deal 100% damage to all armor types.
 }
 
 STRING 19796
@@ -129280,83 +128604,44 @@ Endeavour's signature technique that was passed down to Shoto. The user rushes t
 }
 
 STRING 19808
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur5> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool5> seconds|r
+Chaos attacks do 100% damage to Divine beings.
 }
 
 STRING 19809
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur6> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool6> seconds|r
+Siege attacks deal 100% damage to all armor types.
 }
 
 STRING 19810
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur7> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool7> seconds|r
+Hero attacks deal 100% damage to all armor types.
 }
 
 STRING 19811
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur8> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool8> seconds|r
+Normal attacks deal 100% damage against all armor types.
 }
 
 STRING 19812
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur9> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool9> seconds|r
+Normal attacks deal 100% damage against all armor types.
+
 }
 
 STRING 19813
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur10> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool10> seconds|r
+Magic attacks deal 100% damage against all armor types.
 }
 
 STRING 19814
-// Abilities: A0YT (Ice Path), Researchubertip (Tooltip - Learn - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur1> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool1> - <A0YT,Cool10> seconds|r
+Piercing attacks deal 100% damage to all armor types.
 }
 
 STRING 19815
-// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
 {
-Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-|cffffff00Increases movement speed by 165ms.
-|cff00ff00Damage: Int * lvl * ?
-Duration: <A0YT,Dur2> seconds.|r
-|cff00ffffCooldown: <A0YT,Cool2> seconds|r
+Chaos attacks do 100% damage to Divine beings.
 }
 
 STRING 19816
@@ -130129,6 +129414,16 @@ STRING 19931
 // Abilities: A0B8 (Pecorine's Princess Sword), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00G|r] Learn Pecorine's Princess Sword - [|cffffcc00Level %d|r]
+}
+
+STRING 19932
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool6>s|r
 }
 
 STRING 19933
@@ -131541,50 +130836,10 @@ STRING 20153
 [|cff00ff00Q|r] Jump - [|cffffcc00Level 10|r]
 }
 
-STRING 20154
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool1> seconds|r
-}
-
-STRING 20155
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool3> seconds|r
-}
-
-STRING 20156
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool4> seconds|r
-}
-
-STRING 20157
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool5> seconds|r
-}
-
 STRING 20158
 // Abilities: A0ZE (Jump), EditorSuffix (Editor Suffix)
 {
 (sonic)
-}
-
-STRING 20159
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool6> seconds|r
 }
 
 STRING 20160
@@ -131775,6 +131030,16 @@ STRING 20187
 // Abilities: A06T (Super Sacred Water), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Super Sacred Water - [|cffffcc00Level 10|r]
+}
+
+STRING 20188
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool7>s|r
 }
 
 STRING 20189
@@ -132097,26 +131362,10 @@ STRING 20234
 [|cff00FF00E|r] Spin Dash - [|cffffcc00Level 1|r]
 }
 
-STRING 20235
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool7> seconds|r
-}
-
 STRING 20236
 // Abilities: A0ZJ (Spin Dash), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Spin Dash - [|cffffcc00Level %d|r]
-}
-
-STRING 20237
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool8> seconds|r
 }
 
 STRING 20238
@@ -132141,22 +131390,6 @@ STRING 20241
 // Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Spin Dash - [|cffffcc00Level 3|r]
-}
-
-STRING 20242
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool9> seconds|r
-}
-
-STRING 20243
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool10> seconds|r
 }
 
 STRING 20244
@@ -132193,14 +131426,6 @@ STRING 20249
 // Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Spin Dash - [|cffffcc00Level 9|r]
-}
-
-STRING 20250
-// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
-|cff00ff00Damage Block: 0.4 * Agi * lvl @ 50%|r
-|cff00ffffCooldown: <A0ZH,Cool2> seconds|r
 }
 
 STRING 20251
@@ -132479,22 +131704,6 @@ STRING 20288
 // Abilities: A0ZR (Toggle Harvest Engine), Unubertip (Tooltip - Turn Off - Extended)
 {
 Turn on harvester's engine for mobilised replanting.
-}
-
-STRING 20289
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool3> seconds|r
-}
-
-STRING 20290
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool2> seconds|r
 }
 
 STRING 20291
@@ -133692,6 +132901,16 @@ STRING 20465
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 5|r]
 }
 
+STRING 20466
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool8>s|r
+}
+
 STRING 20467
 // Abilities: A0Q0 (Death Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -133880,6 +133099,16 @@ STRING 20491
 {
 |cff00ffffBuild Requirement: 10 crops of 1 type.|r
 Increases building armor by +5.
+}
+
+STRING 20492
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool9>s|r
 }
 
 STRING 20493
@@ -134221,6 +133450,16 @@ STRING 20546
 Increases building armor by +5.
 }
 
+STRING 20547
+// Abilities: A0FT (Time Skip), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool1>s|r
+}
+
 STRING 20548
 // Abilities: A0Q6 (Death Beam Barrage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -134363,6 +133602,44 @@ STRING 20570
 {
 |cff00ffffBuild Requirement: 10 crops of 1 type.|r
 Increases defence system attack damage by +200.
+}
+
+STRING 20571
+// Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
+{
+Hit travels forward in time a fraction of a second, striking the target unit and damaging it.
+
+|cffffff00Costs 1 charge.|r
+|cff00FF00Damage: Int * Lvl * ? + 2.5% Max HP|r
+|cff00FFFFCooldown: <A0FT,Cool10>s|r
+}
+
+STRING 20572
+// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit enters an alternate dimension, causing him to pass through units and be immune to damage for 2.5 seconds. Costs 1 time skip charge.
+
+|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
+}
+
+STRING 20573
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+}
+
+STRING 20574
+// Abilities: A0FV (Flash Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
 }
 
 STRING 20575
@@ -134529,10 +133806,19 @@ STRING 20600
 Frieza fires multiple death beams at a very rapid rate.|n|cff00ff00Damage: Int * lvl * ? + 0.6% Max HP (each)|r|n|cff00ffffCooldown: <A0Q6,Cool10> seconds|r
 }
 
-STRING 20602
-// Abilities: A111 (Jaco Ship), Name (Name)
+STRING 20601
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Jaco Ship
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool2,.>s|r
+}
+
+STRING 20602
+{
+Siege attacks deal 100% damage to all armor types.
 }
 
 STRING 20603
@@ -134947,30 +134233,6 @@ Dende tethers himself to an ally, continuously healing them. The healing is brok
 |cff00FFFFCooldown: <A0C6,Cool9> seconds|r
 }
 
-STRING 20658
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool5> seconds|r
-}
-
-STRING 20659
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool4> seconds|r
-}
-
-STRING 20660
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool6> seconds|r
-}
-
 STRING 20661
 // Abilities: A107 (Cannon Arm), Tip (Tooltip - Normal)
 {
@@ -135207,22 +134469,6 @@ STRING 20696
 Revive - Move Original Spawn
 }
 
-STRING 20697
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool7> seconds|r
-}
-
-STRING 20698
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool8> seconds|r
-}
-
 STRING 20699
 // Abilities: A0QD (Golden Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -135257,22 +134503,6 @@ STRING 20704
 // Abilities: A10P (Revive - True Sight), EditorSuffix (Editor Suffix)
 {
 (revive, in use)
-}
-
-STRING 20705
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool9> seconds|r
-}
-
-STRING 20706
-// Abilities: A0CT (Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
 STRING 20707
@@ -136043,10 +135273,19 @@ STRING 20823
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
 }
 
-STRING 20825
-// Abilities: A111 (Jaco Ship), Tip (Tooltip - Normal)
+STRING 20824
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00F|r] |cffbb44aaJaco Ship|r
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool3,.>s|r
+}
+
+STRING 20825
+{
+Ki
 }
 
 STRING 20826
@@ -136532,6 +135771,16 @@ STRING 20888
 Frieza fires an immensely powerful golden energy wave at the target.|n|cff00ff00Damage: Int * lvl * ? + 1.2% Max HP|r|n|cff00ffffCooldown: <A0QE,Cool2> seconds|r
 }
 
+STRING 20889
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool4,.>s|r
+}
+
 STRING 20890
 // Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
@@ -136969,6 +136218,16 @@ STRING 20958
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
 Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 2000|r|n|cff00FFFFCooldown: <A0LL,Cool2> seconds|r
+}
+
+STRING 20959
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool5,.>s|r
 }
 
 STRING 20960
@@ -137442,6 +136701,16 @@ Moves your revive point to anywhere on the main map (excludes Namek and Future).
 |cffff2020Can only be used before the 1 minute mark!
 }
 
+STRING 21031
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool6,.>s|r
+}
+
 STRING 21032
 // Abilities: A107 (Cannon Arm), Researchtip (Tooltip - Learn)
 {
@@ -137455,6 +136724,166 @@ Pecorine leaps into the air then dashes towards the target area dealing to nearb
 |cffffaaaaPeckish: Adds 30% max mana.
 |cff00ff00Damage: Str * lvl * ?|r
 |cff00ffffCooldown: <A0A2,Cool1,.> - <A0A2,Cool10,.> seconds|r
+}
+
+STRING 21034
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool7,.>s|r
+}
+
+STRING 21035
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool8,.>s|r
+}
+
+STRING 21036
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool9,.>s|r
+}
+
+STRING 21037
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: 0.084 * Int * Lvl + 4.5% Max HP|r
+|cff00FFFFCooldown: <A0FV,Cool10,.>s|r
+}
+
+STRING 21038
+// Abilities: A0FW (Time Cage), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit traps an opponent in a time cage, stunning them for 1.5 seconds. 
+
+|cffffff00Costs 0 charges when above 3 charges, else 1.|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0FW,Cool1,.> - <A0FW,Cool10>s|r
+}
+
+STRING 21039
+// Abilities: A0KD (Meditate), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.2% of base stats to a minimum of 4.
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 30% of his health has been blocked.
+|cff00FFFFCooldown: <A0KD,Cool1>s|r
+}
+
+STRING 21040
+// Abilities: A0SM (Meditate: Enlightened), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren sits with his legs crossed and begins to peacefully meditate.
+|cffFFFF00Empowers the next ability used, causing it to add an additional effect.
+Grants bonus stats equal to 0.3% of base stats to a minimum of 4.|r
+|cff00FF00Energy Barrier:|r Jiren's Ki is so powerful that he is able to use it to shield himself from all incoming damage until 40% of his health has been blocked. Incoming beams are also deflected.
+|cff00FFFFCooldown: <A0SM,Cool1>s|r
+}
+
+STRING 21041
+// Abilities: A0SN (Ultimate Burning Warrior 2), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
+Cannot be used with [|cff00ff00D|r] Meditate.
+|cffffff00+0.20x stat multiplier.
++99ms and unlocks movement speed cap.
++15% Damage Block up to 4x Str
++4 upgraded spell charges.|r
+|cff00ff00Duration: <A0SN,Dur1> seconds
+|cff00ffffCooldown: <A0SN,Cool1> seconds
+
+|cff808080"I cannot lose... I WILL NOT!"
+}
+
+STRING 21042
+// Abilities: A005 (Ultimate Burning Warrior 3), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
+Cannot be used with [|cff00ff00D|r] Meditate.
+|cffffff00+0.25x stat multiplier.
++99ms and unlocks movement speed cap.
++15% Damage Block up to 4x Str
++5 upgraded spell charges.|r
+|cff00ff00Duration: <A005,Dur1> seconds
+|cff00ffffCooldown: <A005,Cool1> seconds
+
+|cff808080"I cannot lose... I WILL NOT!"
+}
+
+STRING 21043
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool1> seconds|r
+}
+
+STRING 21044
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool3> seconds|r
+}
+
+STRING 21045
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool4> seconds|r
+}
+
+STRING 21046
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool5> seconds|r
+}
+
+STRING 21047
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool6> seconds|r
+}
+
+STRING 21048
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool7> seconds|r
 }
 
 STRING 21049
@@ -137498,6 +136927,16 @@ Pecorine leaps into the air then dashes towards the target area dealing to nearb
 |cffffaaaaPeckish: Adds 30% max mana.
 |cff00ff00Damage: Str * lvl * ?|r
 |cff00ffffCooldown: <A0A2,Cool2,.> seconds|r
+}
+
+STRING 21054
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool8> seconds|r
 }
 
 STRING 21055
@@ -137741,10 +137180,30 @@ Namekians have developed their own fighting style. Most Namekians are healers, b
 |cffffcc00Damage|r - <A0BD,DataB15,.> times
 }
 
+STRING 21085
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool9> seconds|r
+}
+
 STRING 21086
 // Abilities: A10U (Elite Beam Prime), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Elite Beam - [|cffffcc00Level %d|r]
+}
+
+STRING 21087
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool10> seconds|r
 }
 
 STRING 21088
@@ -137759,6 +137218,16 @@ STRING 21089
 [|cff00FF00Q|r] Elite Beam Prime - [|cffffcc00Level 10|r]
 }
 
+STRING 21090
+// Abilities: A0YT (Ice Path), Researchubertip (Tooltip - Learn - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool1> - <A0YT,Cool10> seconds|r
+}
+
 STRING 21091
 // Abilities: A10V (Elite Beam Fire), Name (Name)
 {
@@ -137769,6 +137238,16 @@ STRING 21092
 // Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 21093
+// Abilities: A0YT (Ice Path), Ubertip (Tooltip - Normal - Extended)
+{
+Shoto freezes the ground around him to create an ice path that accelerates his movement. Enemies that step in the path are damaged and afflicted with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cffffff00Increases movement speed by 133ms.
+|cff00ff00Damage: Int * lvl * ?
+Duration: <A0YT,Dur1> seconds.|r
+|cff00ffffCooldown: <A0YT,Cool2> seconds|r
 }
 
 STRING 21094
@@ -137817,6 +137296,84 @@ STRING 21101
 // Abilities: A10V (Elite Beam Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Elite Beam Fire - [|cffffcc00Level 9|r]
+}
+
+STRING 21102
+// Abilities: A111 (Jaco's Ship), Ubertip (Tooltip - Normal - Extended)
+{
+Jaco flies towards the targetted location inside his Galactic Patrol Ship while charging its Macrocosm cannon. Jaco is vulnerable to damage while flying. Upon reaching his destination, Jaco fires the high powered energy cannon dealing increased damage for travelling further distances.
+
+|cff00ff00Damage: 1 * Int (+1% per 10 units travelled greater than 1000 units)
+|cff00ffffCooldown: <A111,Cool1> seconds
+}
+
+STRING 21103
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.40x|r to |cffffcc00+0.80x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.1x. 
+}
+
+STRING 21104
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+0.80x|r to |cffffcc00+1.20x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.2x. 
+}
+
+STRING 21105
+// Upgrades: R00O (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Increase max combat multiplier (kills and deaths) from |cffffcc00+1.20x|r to |cffffcc00+1.60x|r. 
+Base multiplier cannot exceed 2.40x.
+Increases PvP kill stats by 1.3x. 
+}
+
+STRING 21106
+// Units: H008 (Goku's Youngest Son), Ubertip (Tooltip - Extended)
+{
+A split hero who controls two weaker heroes at once, allowing for quick farming if left untouched.
+They can fuse into Gotenks, a hero who deals heavy damage up close while controlling the battlefield with a long duration disable.
+
+|cffffcc00Grim Reaper of Justice:|r +10% kill stats.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 21107
+// Units: E00K (Legendary Assassin), Ubertip (Tooltip - Extended)
+{
+A hero who specializes in small skirmishes, dealing heavy single-target damage.
+
+|cffffcc00Legendary Assassin|r: +25% stats from Player Kills.
+|cffC03232Consumes |r|cff00FF00Time Skip|r|cffC03232 charges instead of |r|cff00FFFFmana|r.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 21108
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+While holding Macho Brace, Lucario gains +20% creep stats and +2 to all stats each level. 
+Activating this ability permanently removes Macho Brace and provides +0.2-0.4x stat mult depending on Lucario's current level. Also unlocks the ability to select Lucario's Ultimate Form.
+}
+
+STRING 21109
+// Abilities: A111 (Jaco's Ship), Name (Name)
+{
+Jaco's Ship
 }
 
 STRING 21110
@@ -137937,14 +137494,6 @@ STRING 21129
 // Abilities: A0CT (Kamehameha), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 21130
-// Abilities: A0CT (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
-{
-At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
-|cff00ff00Damage: Int * lvl * ? + 2.4% Max HP|r
-|cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
 STRING 21131
@@ -138411,6 +137960,12 @@ STRING 21196
 Super Charge
 }
 
+STRING 21197
+// Abilities: A111 (Jaco's Ship), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] |cffbb44aaJaco's Ship|r
+}
+
 STRING 21198
 // Buffs/Effects: B05K (Inner Fire Super Charge), EditorName (Name (Editor Only))
 {
@@ -138447,6 +138002,11 @@ STRING 21203
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 10|r]
 }
 
+STRING 21204
+{
+|Cff00ffffKi|R
+}
+
 STRING 21205
 // Abilities: A110 (Elite Pose), Name (Name)
 {
@@ -138461,6 +138021,11 @@ Jaco strikes a daring pose that evades all incoming attacks for 1 second.
 |cff00ffffCooldown: <A110,Cool1> seconds
 }
 
+STRING 21207
+{
+Ki
+}
+
 STRING 21208
 // Abilities: A110 (Elite Pose), Tip (Tooltip - Normal)
 {
@@ -138473,8 +138038,23 @@ STRING 21209
 (jaco)
 }
 
+STRING 21210
+{
+|Cffff2222Strength|R
+}
+
+STRING 21211
+{
+ - Each point increases vision and movement speed.
+}
+
+STRING 21212
+{
+ - Each point increases damage by 0.25
+}
+
 STRING 21213
-// Abilities: A111 (Jaco Ship), EditorSuffix (Editor Suffix)
+// Abilities: A111 (Jaco's Ship), EditorSuffix (Editor Suffix)
 {
 (jaco)
 }
@@ -138512,6 +138092,34 @@ STRING 21218
 // Abilities: A112 (Super Jaco), EditorSuffix (Editor Suffix)
 {
 (jaco)
+}
+
+STRING 21219
+{
+ - Each point increases HP/MP/SP regen (scaled)
+}
+
+STRING 21220
+{
+ - Each point increases HP/MP/SP regen (scaled)
+}
+
+STRING 21221
+{
+ - Every 1000 STR increases armor by 1.
+}
+
+STRING 21222
+{
+ - Each point increases ability damage.
+}
+
+STRING 21223
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
 STRING 21224
@@ -138560,6 +138168,14 @@ The user charges a spell for one second and then unleashes a relentless wave of 
 |cffff2020Channel Duration: <A0WD,Dur3> seconds|r
 |cff00ff00Damage: Lvl x Int x ?|r
 |cff00ffffCooldown: <A0WD,Cool3> seconds|r
+}
+
+STRING 21231
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
 STRING 21232
@@ -138694,6 +138310,14 @@ STRING 21252
 [|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 2|r]
 }
 
+STRING 21253
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
 STRING 21254
 // Abilities: A0QX (Justice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -138789,11 +138413,11 @@ STRING 21268
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "fp" [Unlocks |cffbb44aaJaco Ship|r]
+[lvl 30]  1.50x "fp" [Unlocks |cffbb44aaJaco's Ship|r]
 [lvl 60]  1.75x "fp"
 [lvl 100] 2.00x "fp"
 [lvl 125] 2.25x "fp"
-[lvl 175] 2.50x "fp" [-0.2 BAT]
+[lvl 175] 2.50x "fp" [1.6 BAT]
 [lvl 250] 2.60x "fp"
 
 |cffff2222Honorary Pride Trooper:|r Gains +0.02x for each Pride Trooper on their team.
@@ -138804,6 +138428,14 @@ STRING 21269
 // Abilities: A116 (Appule Emergency Escape), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Appule's Emergency Escape - [|cffffcc00Level 3|r]
+}
+
+STRING 21270
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
 }
 
 STRING 21271
@@ -140245,6 +139877,14 @@ Armor Aura: 10|r
 |cff00ffffCooldown: <A0PT,Cool10> seconds|r
 }
 
+STRING 21462
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
 STRING 21463
 // Units: H0AI (Frieza Force Soldier), Ubertip (Tooltip - Extended)
 {
@@ -140262,6 +139902,76 @@ A weak and useless hero that should not be picked by anyone.
 
 }
 
+STRING 21464
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 21465
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 21466
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 21467
+// Abilities: A00R (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl  + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 21468
+// Abilities: A00R (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 21469
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: 1.8 * Int * lvl + 3.6% Max HP|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+}
+
+STRING 21470
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 3 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool3> seconds|r
+}
+
+STRING 21471
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 2 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool2> seconds|r
+}
+
+STRING 21472
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 5 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool5> seconds|r
+}
+
 STRING 21473
 // Abilities: A11O (Super Fireball), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -140275,6 +139985,62 @@ STRING 21474
 // Abilities: A11N (Fireball), EditorSuffix (Editor Suffix)
 {
 (waluigi)
+}
+
+STRING 21475
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 4 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool4> seconds|r
+}
+
+STRING 21476
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 6 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool6> seconds|r
+}
+
+STRING 21477
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 7 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool7> seconds|r
+}
+
+STRING 21478
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 8 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool8> seconds|r
+}
+
+STRING 21479
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 9 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool9> seconds|r
+}
+
+STRING 21480
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl * ? + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool1> seconds|r
+}
+
+STRING 21481
+// Abilities: A0LX (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+|cff00ff00Damage: 1 * Int * Lvl + 2.4% Max HP|r
+|cff00ffffCooldown: <A0LX,Cool1> seconds|r
 }
 
 STRING 21482
@@ -140347,6 +140113,25 @@ STRING 21493
 // Abilities: A11O (Super Fireball), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Fireball - [|cffffcc00Level 10|r]
+}
+
+STRING 21494
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: 1.8 * Int * lvl + 3.6% Max HP|r|n|cff00ffff(Cooldown: <A0VN,Cool9> seconds)|r
+}
+
+STRING 21495
+// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo abandons his ideals of justice and embraces the full power of a God of Destruction. 
+Cannot be used with [|cff00ff00F|r] Justice Pose.
+|cffffff00+0.25x stat multiplier.
++33ms and unlocks movement speed cap.
++20% Damage Block up to 7.5x Str
+All basic spells are upgraded for one use each.
+Justice Pose is replaced with Hakai.|r
+|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
 }
 
 STRING 21496
@@ -140457,6 +140242,17 @@ STRING 21513
 [|cff00ff00E|r] Learn Guardian's Devotion - [|cffffcc00Level %d|r]
 }
 
+STRING 21514
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA1>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool1> seconds|r
+}
+
 STRING 21515
 // Abilities: A11P (Piranha Plant Trap), Tip (Tooltip - Normal)
 {
@@ -140511,10 +140307,43 @@ STRING 21523
 [|cff00ff00E|r] Guardian's Devotion - [|cffffcc00Level 10|r]
 }
 
+STRING 21524
+// Abilities: A0TD (Parry), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA1>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool1> - <A0TD,Cool10> seconds|r
+}
+
+STRING 21525
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA2>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool2> seconds|r
+}
+
 STRING 21526
 // Abilities: A11Q (Bob-omb), Name (Name)
 {
 Bob-omb
+}
+
+STRING 21527
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA3>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool3> seconds|r
 }
 
 STRING 21528
@@ -142522,6 +142351,28 @@ STRING 21811
 (dende)
 }
 
+STRING 21812
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA4>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool4> seconds|r
+}
+
+STRING 21813
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA5>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool5> seconds|r
+}
+
 STRING 21814
 // Abilities: A0UY (Flame Shot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -142956,6 +142807,126 @@ Magus throws a Dark Bomb at the target area, causing it to explode and deal dama
 |cff00FFFFCooldown: <A0W3,Cool10,.>s|r
 }
 
+STRING 21867
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA6>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool6> seconds|r
+}
+
+STRING 21868
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA7>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool7> seconds|r
+}
+
+STRING 21869
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA8>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool8> seconds|r
+}
+
+STRING 21870
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA9>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool9> seconds|r
+}
+
+STRING 21871
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA10>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Str * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool10> seconds|r
+}
+
+STRING 21872
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * STR @ 75%
+|cff00ff00Duration: <A0U8,Dur7>s
+|cff00FFFFCooldown: <A0U8,Cool7>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 21873
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff001-3: Bankai, +50% damage
+4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+7-9: Blut Vene Bankai, damage block 15 * STR @ 75%
+10: Final Bankai, upgrades abilities, bonus ms
+|cff00ff00Duration: <A0U8,Dur1>s
+|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 21874
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * STR @ 75%
+|cff00ff00Duration: <A0U8,Dur8>s
+|cff00FFFFCooldown: <A0U8,Cool8>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 21875
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * STR @ 75%
+|cff00ff00Duration: <A0U8,Dur9>s
+|cff00FFFFCooldown: <A0U8,Cool9>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 21876
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
+|cff00ff00Damage Blocked: 5 * Str @ 70%|r|n|cff00ffffCooldown: <A0VM,Cool1> seconds|r
+}
+
+STRING 21877
+// Abilities: A032 (Serious Sideways Jumps), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama rapidly hops side to side, creating a wall of afterimages as he approaches his enemy. Nearby enemies are knocked back.
+|cff00FF00Damage Blocked: 5 * Str @ 90%
+|cff00FF00Duration: <A032,Dur1,.> seconds|r
+|cff00FFFFCooldown: <A032,Cool1> seconds|r
+
+|cff808080"I just passed by while doing sideways jumps"|r
+}
+
 STRING 21878
 // Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
@@ -143268,6 +143239,20 @@ STRING 21911
 // Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
 {
 D
+}
+
+STRING 21912
+// Abilities: A0YI (Dream Devourer), Ubertip (Tooltip - Normal - Extended)
+{
+Schala succumbs to Lavos' influence temporarily, granting her:
+|cffffff00+0.6x stat multiplier.
++66ms and unlocks movement speed cap.
+20% Damage Block up to 7.5x Int.
+Spellcasting restores 25% of Max Mana.
+Unlocks empowered abilities.
+
+|cff00ff00Duration: <A0YI,Dur1> seconds
+|cff00ffffCooldown: <A0YI,Cool1> seconds|n|n|cff808080"It is no doubt but a matter of time before Lavos consumes the whole of my awareness. It was I, after all, who wished it—wished from the depths of my sadness and despair that all that was would be erased."
 }
 
 STRING 21913
@@ -144663,6 +144648,101 @@ Appule fires a low powered energy shot.
 |cff00ffffCooldown: <A104,Cool2> seconds|r
 }
 
+STRING 22083
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool1> seconds|r
+}
+
+STRING 22084
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool3> seconds|r
+}
+
+STRING 22085
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool4> seconds|r
+}
+
+STRING 22086
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool5> seconds|r
+}
+
+STRING 22087
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool6> seconds|r
+}
+
+STRING 22088
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool7> seconds|r
+}
+
+STRING 22089
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool8> seconds|r
+}
+
+STRING 22090
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool9> seconds|r
+}
+
+STRING 22091
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool10> seconds|r
+}
+
+STRING 22092
+// Abilities: A0ZH (Insta-Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Sonic creates a shield around himself that briefly protects him from incoming damage and debuffs.
+|cff00ff00Damage Block: 0.5 * Str * lvl @ 50%|r
+|cff00ffffCooldown: <A0ZH,Cool2> seconds|r
+}
+
+STRING 22093
+// Abilities: A11L (Gohan Boost Beast Gohan), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan draws out all of his strength from his Potential Unleashed.
+Unlocks [|cff00ff00D|r] Special Beast Cannon (linked CD with Father-Son Kamehameha).
+|cffffff00Gain 30% spell amp +1% for every 10% HP missing from nearby living allies. 
+Recently killed allies add +15%.
+80% damage block up to 3x Str
++33ms and unlocks movement speed cap.
+|cff00ff00Duration: <A11L,Dur1>s
+|cff00ffffCooldown: <A11L,Cool1>s
+
+|cff888888"Is that all? I guess it's my turn."|r
+}
+
 STRING 22094
 // Abilities: A10L (Dragon Cannon Shot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -145198,6 +145278,24 @@ Appule clones himself to reinforce Frieza's army. This clone deals <A11F,DataA1,
 |cff00ffffCooldown: <A11E,Cool2,.> seconds|r
 }
 
+STRING 22157
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> seconds|r
+}
+
+STRING 22158
+// Abilities: A11S (Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool1> - <A11S,Cool10> seconds|r
+}
+
 STRING 22159
 // Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
@@ -145264,16 +145362,252 @@ STRING 22169
 The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ? + 4.8% Max HP|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
 }
 
+STRING 22170
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool2> seconds|r
+}
+
+STRING 22171
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool3> seconds|r
+}
+
+STRING 22172
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool4> seconds|r
+}
+
+STRING 22173
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool5> seconds|r
+}
+
+STRING 22174
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool6> seconds|r
+}
+
+STRING 22175
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool7> seconds|r
+}
+
+STRING 22176
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool8> seconds|r
+}
+
+STRING 22177
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool9> seconds|r
+}
+
+STRING 22178
+// Abilities: A11S (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Waluigi uses his long legs to jump over his enemies and avoid danger.
+|cff00ff00Damage Block: 80% up to Int * Lvl * 0.6|r
+|cff00ff00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A11S,Cool10> seconds|r
+}
+
+STRING 22179
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur1>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool1,.> seconds|r
+}
+
+STRING 22180
+// Abilities: A01Q (Knife Parry), Researchubertip (Tooltip - Learn - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur1>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool1,.> - <A01Q,Cool10,.> seconds|r
+}
+
+STRING 22181
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff2222Channel Duration: <A01Q,Dur2>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool2,.> seconds|r
+}
+
 STRING 22182
 {
 [|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r
 After wishing to unlock his latent potential, Dende has discovered a |cffff8822powerful new form|r.
 }
 
+STRING 22183
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff3333Channel Duration: <A01Q,Dur3>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool3,.> seconds|r
+}
+
 STRING 22184
 // Buffs/Effects: B01U (), Buffubertip (Tooltip - Extended)
 {
 This unit will revive once upon death.
+}
+
+STRING 22185
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff4444Channel Duration: <A01Q,Dur4>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool4,.> seconds|r
+}
+
+STRING 22186
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff5555Channel Duration: <A01Q,Dur5>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool5,.> seconds|r
+}
+
+STRING 22187
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff6666Channel Duration: <A01Q,Dur6>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool6,.> seconds|r
+}
+
+STRING 22188
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff7777Channel Duration: <A01Q,Dur7>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool7,.> seconds|r
+}
+
+STRING 22189
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff8888Channel Duration: <A01Q,Dur8>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool8,.> seconds|r
+}
+
+STRING 22190
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff9999Channel Duration: <A01Q,Dur9>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool9,.> seconds|r
+}
+
+STRING 22191
+// Abilities: A01Q (Knife Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Leon S. Kennedy prepares to parry the next person to attack him within melee AOE. Nearby enemies are |cffff8800staggered|r. Reduces incoming damage while parrying.
+|cffff10101010Channel Duration: <A01Q,Dur10>s
+|cff00ff00Damage Block: Lvl x Str x 0.5 @ 65%
+Damage: Lvl x Int x ?
+|cff00ffffCooldown: <A01Q,Cool10,.> seconds|r
+}
+
+STRING 22192
+// Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
+{
++1 str, -0.5 endurance/ki per level.
+}
+
+STRING 22193
+// Abilities: A0BI (Train Agility), Ubertip (Tooltip - Normal - Extended)
+{
++1 agi, -0.5 str/ki per level.
+}
+
+STRING 22194
+// Abilities: A0BJ (Train Intellect), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Train Ki
+}
+
+STRING 22195
+// Abilities: A0BY (Train All), Ubertip (Tooltip - Normal - Extended)
+{
+Gain 4/4/4 str/endurance/ki per level.
+}
+
+STRING 22196
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
+|cffffff00+0.20x endurance mult.
++0.10x ki mult.
++300ms and unlocks movement speed cap.|r
+|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
+}
+
+STRING 22197
+// Abilities: A0SV (Energy Blades), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu infuses his hand with godly ki.
+|cffffff00+0.3x endurance mult
++0.2x ki mult
++33ms and unlocks movement speed cap
+|cff00FF00Duration: <A0SV,Dur1> seconds|r
+|cff00FFFFCooldown: <A0SV,Cool1> seconds|r
 }
 
 STRING 22201

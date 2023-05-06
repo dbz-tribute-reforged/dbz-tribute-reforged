@@ -9,7 +9,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 70,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 4,
     sfxList: [
       {
@@ -66,7 +66,7 @@ export const DamageBlockComponents = [
     endTick: 18,
     blockPerDamage: 95,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 4,
     sfxList: [
       {
@@ -673,7 +673,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 50,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 0.5,
     sfxList: [
       {
@@ -1268,7 +1268,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 20,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 7.5,
     sfxList: [
       {
@@ -1397,7 +1397,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 75,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 0.3,
     sfxList: [
       {
@@ -1511,7 +1511,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 70,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 5,
     sfxList: [
       {
@@ -1568,7 +1568,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 80,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 3,
     sfxList: [
       {
@@ -1797,7 +1797,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 91,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 5,
     sfxList: [
       {
@@ -1890,7 +1890,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 20,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_INT,
     multiplier: 7.5,
     sfxList: [
       {
@@ -1947,8 +1947,8 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 50,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
-    multiplier: 0.4,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 0.5,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -2211,7 +2211,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 80,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 3,
     sfxList: [
       {
@@ -2268,7 +2268,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 80,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_INT,
     multiplier: 0.6,
     sfxList: [
       {
@@ -2325,7 +2325,7 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 65,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_AGI,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 0.5,
     sfxList: [
       {

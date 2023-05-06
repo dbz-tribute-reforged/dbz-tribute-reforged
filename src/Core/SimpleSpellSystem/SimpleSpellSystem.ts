@@ -25,7 +25,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 
 export module SimpleSpellSystem {
   const darkMatterDamage: DamageData = new DamageData(
-    BASE_DMG.SPIRIT_BOMB_DPS * 0.08,
+    BASE_DMG.KAME_DPS * 0.06,
     bj_HEROSTAT_INT,
     ATTACK_TYPE_HERO,
     DAMAGE_TYPE_NORMAL, 
@@ -182,8 +182,8 @@ export module SimpleSpellSystem {
         && IsUnitType(source, UNIT_TYPE_HERO)
       ) {
         const maxGlareDistance = 2500;
-        const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.5;
-        const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.7;
+        const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.4;
+        const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.6;
         const glare2StrDiffJirenBonus = 1.05;
         const glare2StrDiffMult = 1.1;
         const glarePunishDamageMult = 0.15;
@@ -223,7 +223,7 @@ export module SimpleSpellSystem {
             damageMult = glare2DamageMult;
           }
 
-          let damageBase = CustomAbility.BASE_DAMAGE + GetHeroStr(unit, true);
+          let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(unit, true);
           if (spellId == Id.glare2) {
             damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(unit, true) - GetHeroStr(source, true)));
           }
@@ -467,7 +467,7 @@ export module SimpleSpellSystem {
           }
           const damage = AOEDamage.getIntDamageMult(caster) * abilityLevel * spellPower * braveSwordDamageMult * (
             CustomAbility.BASE_DAMAGE + 
-            GetHeroAgi(caster, true)
+            GetHeroInt(caster, true)
           );
           const manaBurn = damage * braveSwordManaBurnMult * abilityLevel;
 
@@ -2767,7 +2767,7 @@ export module SimpleSpellSystem {
         );
         
         const maxHpDamage = spellPower * (
-          GetHeroStr(unit, true) * extinctionBombStrMult
+          GetHeroInt(unit, true) * extinctionBombStrMult
           + extinctionBombHpMult * (GetUnitState(unit, UNIT_STATE_MAX_LIFE) - GetUnitState(unit, UNIT_STATE_LIFE))
         );
         ForGroup(Globals.tmpUnitGroup, () => {
@@ -2837,7 +2837,7 @@ export module SimpleSpellSystem {
   
   export function doJacoShip() {
     const flySpeed = 40;
-    const macroCannonDmgMult = BASE_DMG.DFIST_EXPLOSION * 0.8;
+    const macroCannonDmgMult = BASE_DMG.DFIST_EXPLOSION * 0.4;
     const baseAOE = 400;
     const maxAOE = 600;
     const AOEperDistance = 50;
@@ -2845,6 +2845,7 @@ export module SimpleSpellSystem {
 
     const flyHeightTicks = 20;
     const flyHeightGainedPerTick = 45;
+    const maxStuckTicks = 33;
     const unit = GetTriggerUnit();
     const player = GetOwningPlayer(unit);
     const playerId = GetPlayerId(player);
@@ -2862,7 +2863,6 @@ export module SimpleSpellSystem {
     UnitHelper.giveUnitFlying(unit);
 
     PauseUnit(unit, true);
-    SetUnitInvulnerable(unit, true);
     SetUnitAnimationByIndex(unit, 1);
 
     const sfx = AddSpecialEffect("JacoShip.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
@@ -2874,11 +2874,13 @@ export module SimpleSpellSystem {
 
     const flyTimer = TimerManager.getInstance().get();
     let flyTicks = 0;
+    let stuckTicks = 0;
+    let prevX = GetUnitX(unit);
+    let prevY = GetUnitY(unit);
     TimerStart(flyTimer, 0.03, true, () => {
-      Globals.tmpVector.setUnit(unit);
+      Globals.tmpVector.setUnit(unit); // new pos
       Globals.tmpVector2.setPos(targetX, targetY);
       Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, flySpeed);
-
 
       const sfxScale = Math.min(4, 1.0 + Math.max(0, (flyTicks * flySpeed - minExpandingDistance) / 1000));
       BlzSetSpecialEffectScale(sfx2, sfxScale * 0.6);
@@ -2914,10 +2916,12 @@ export module SimpleSpellSystem {
       if (
         CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) <= flySpeed
         || !PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector)
+        || UnitHelper.isUnitDead(unit)
+        || stuckTicks > maxStuckTicks
+        || flyTicks > descendTick
       ) {
         // finish
         PauseUnit(unit, false);
-        SetUnitInvulnerable(unit, false);
         ResetUnitAnimation(unit);
         SetUnitFlyHeight(unit, 0, 0);
 
@@ -2957,6 +2961,17 @@ export module SimpleSpellSystem {
 
         TimerManager.getInstance().recycle(flyTimer);
       }
+
+      // check if stuck
+      Globals.tmpVector.setUnit(unit); // current pos
+      Globals.tmpVector3.setPos(prevX, prevY); // old pos
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector3) < flySpeed * 0.4) {
+        // likely stuck
+        ++stuckTicks;
+      }
+      prevX = GetUnitX(unit);
+      prevY = GetUnitY(unit);
+
       ++flyTicks;
     });
   }

@@ -128,7 +128,12 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const BASE_HP_REGEN = 0.005;
+  export const BASE_MP_REGEN = 0.01;
+
   export const BASE_STAMINA = 100.0;
+  export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
+  export const STAMINA_REGEN_MULT_MIN_BONUS = 0.5;
 
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
@@ -157,12 +162,12 @@ export function stringToCostType(costType: string): CostType {
 }
   
 export module BASE_DMG {
-  export const KAME_DPS = 0.0112;
-  export const KAME_EXPLOSION = 0.053;
-  export const SPIRIT_BOMB_DPS = 0.008;
-  export const SPIRIT_BOMB_EXPLOSION = 0.25;
-  export const DFIST_DPS = 0.013;
-  export const DFIST_EXPLOSION = 0.25;
+  export const KAME_DPS = 0.012;
+  export const KAME_EXPLOSION = 5 * KAME_DPS;
+  // export const SPIRIT_BOMB_DPS = 0.008;
+  // export const SPIRIT_BOMB_EXPLOSION = 0.25;
+  // export const DFIST_DPS = 0.013;
+  export const DFIST_EXPLOSION = 20 * KAME_DPS;
 }
 
 export module DebuffAbilities {

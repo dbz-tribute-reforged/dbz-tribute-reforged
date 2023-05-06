@@ -7,8 +7,8 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.9,  
-      attribute: bj_HEROSTAT_STR, 
+      multiplier: BASE_DMG.KAME_DPS * 18,  
+      attribute: bj_HEROSTAT_INT, 
       attackType: 6,
       damageType: 4, 
       weaponType: 0, 
@@ -93,7 +93,7 @@ export const HookComponents = [
     endTick: -1,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.9,  
-      attribute: bj_HEROSTAT_STR, 
+      attribute: bj_HEROSTAT_INT, 
       attackType: 6,
       damageType: 4, 
       weaponType: 0, 
@@ -178,7 +178,7 @@ export const HookComponents = [
     endTick: -1,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.45,
-      attribute: bj_HEROSTAT_AGI, 
+      attribute: bj_HEROSTAT_INT, 
       attackType: 6,
       damageType: 4, 
       weaponType: 0, 
@@ -263,7 +263,7 @@ export const HookComponents = [
     endTick: -1,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.6,  
-      attribute: bj_HEROSTAT_STR, 
+      attribute: bj_HEROSTAT_INT, 
       attackType: 6,
       damageType: 4, 
       weaponType: 0, 
@@ -348,7 +348,7 @@ export const HookComponents = [
     endTick: -1,
     damageData: {
       multiplier: BASE_DMG.DFIST_EXPLOSION * 0.7,
-      attribute: bj_HEROSTAT_STR, 
+      attribute: bj_HEROSTAT_INT, 
       attackType: 6,
       damageType: 4, 
       weaponType: 0, 

@@ -1810,7 +1810,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 5,
+    distance: 4,
   },
   // appule emergency escape
   {
