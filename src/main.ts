@@ -80,6 +80,7 @@ function tsPostMain() {
   Preload("BladeBeamFinal.mdx");
   Preload("SpiritBomb.mdx");
   Preload("SpiritBombShine.mdx");
+  Preload("Link.mdl");
 
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));

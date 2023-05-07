@@ -3334,6 +3334,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi link boomerang", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 72,
+    angleMin: -90,
+    angleMax: 360,
+    forceMinDistance: 100,
+    forceMaxDistance: 100,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: true,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: true,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: false,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam link boomerang" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

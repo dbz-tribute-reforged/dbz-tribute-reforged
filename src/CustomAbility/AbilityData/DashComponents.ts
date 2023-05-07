@@ -1825,6 +1825,43 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1200,
   },
+  // link boomerang
+  {
+    name: "dash flying point link boomerang",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 30,
+  },
+  {
+    name: "dash flying sideways boomerang return",
+    repeatInterval: 1, 
+    startTick: 25,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 90,
+    distance: 30,
+  },
+  {
+    name: "dash flying caster link boomerang return",
+    repeatInterval: 1, 
+    startTick: 25,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 90,
+  },
   // ---
   // saga zanzo
   {

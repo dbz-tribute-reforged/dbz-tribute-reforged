@@ -166,7 +166,7 @@ export function stringToCostType(costType: string): CostType {
   
 export module BASE_DMG {
   export const KAME_DPS = 0.012;
-  export const KAME_EXPLOSION = 5 * KAME_DPS;
+  // export const KAME_EXPLOSION = 5 * KAME_DPS;
   // export const SPIRIT_BOMB_DPS = 0.008;
   // export const SPIRIT_BOMB_EXPLOSION = 0.25;
   // export const DFIST_DPS = 0.013;
@@ -796,6 +796,17 @@ export module Id {
   export const leonRocketLauncher = FourCC("A037");
   export const leonFlashbang = FourCC("A038");
   export const leonHeavyGrenade = FourCC("A03A");
+
+  export const linkTwilight = FourCC("H00X");
+  export const linkSideSlash = FourCC("A0FK");
+  export const linkBoomerang = FourCC("A0FL");
+  export const linkBombCharge = FourCC("A0FM");
+  export const linkBombThrow = FourCC("A0FN");
+  export const linkBow = FourCC("A0FX");
+  export const linkHookshot = FourCC("A0G4");
+  export const linkHookshotPullTowards = FourCC("A0G5");
+  export const linkHookshotPullIn = FourCC("A0G9");
+  export const linkInventoryBook = FourCC("A0GA");
 
   export const lucario = FourCC("H0A7");
   export const vacuumWave = FourCC("A0XU");
