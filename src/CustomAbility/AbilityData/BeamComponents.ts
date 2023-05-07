@@ -5947,6 +5947,7 @@ export const BeamComponents = [
     components: [
       { name: "teleport original point continuous" },
       { name: "damage guts heavy slash" },
+      { name: "debuff stun guts heavy slash" },
       { name: "hide unit prevent movement" },
       { name: "sfx guts heavy slash" },
     ],
@@ -10215,7 +10216,7 @@ export const BeamComponents = [
     components: [
       { name: "damage goku black divine lasso int dps" },
       { name: "damage goku black divine lasso int explosion" },
-      { name: "damage goku black divine lasso agi explosion" },
+      // { name: "damage goku black divine lasso agi explosion" },
       { name: "timed life 50" },
       { name: "sfx beam goku black divine lasso" },
     ],

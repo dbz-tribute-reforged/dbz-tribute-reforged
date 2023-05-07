@@ -170,7 +170,7 @@ export module BASE_DMG {
   // export const SPIRIT_BOMB_DPS = 0.008;
   // export const SPIRIT_BOMB_EXPLOSION = 0.25;
   // export const DFIST_DPS = 0.013;
-  export const DFIST_EXPLOSION = 20 * KAME_DPS;
+  // export const DFIST_EXPLOSION = 20 * KAME_DPS;
 }
 
 export module DebuffAbilities {

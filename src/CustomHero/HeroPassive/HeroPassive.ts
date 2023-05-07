@@ -1499,14 +1499,14 @@ export function sonicPassive(customHero: CustomHero) {
   const homingMagnitudeMaxMult = 1.75;
   const homingForwardsLatestTick = 12;
   const homingReversalDuration = 9;
-  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.22;
+  const dmgHomingAttack = BASE_DMG.KAME_DPS * 4.4;
 
   const magnitudeLossSpinDash = 0.9;
 
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.85;
+  const dmgLightSpeed = BASE_DMG.KAME_DPS * 17;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;

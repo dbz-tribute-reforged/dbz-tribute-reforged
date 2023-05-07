@@ -7145,7 +7145,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-  animation: "spell",
+    animation: "spell",
     icon: {
       enabled: "BTNMagusDarkMist.blp",
       disabled: "BTNMagusDarkMist.blp",
@@ -13824,8 +13824,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point 30dist" },
-      { name: "damage goku black divine retribution agi explosion" },
       { name: "damage goku black divine retribution int explosion" },
+      // { name: "damage goku black divine retribution agi explosion" },
       { name: "sfx goku black divine retribution" },
     ],
   },
@@ -13882,7 +13882,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim goku black spin" },
       { name: "dash ground point 45dist" },
-      { name: "damage goku black sorrowful scythe agi explosion" },
+      // { name: "damage goku black sorrowful scythe agi explosion" },
       { name: "damage goku black sorrowful scythe int explosion" },
     ],
   },

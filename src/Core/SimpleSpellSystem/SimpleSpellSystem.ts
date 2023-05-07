@@ -2243,7 +2243,7 @@ export module SimpleSpellSystem {
     const plunderDuration = 80; // RTT 
     const plunderSendOutDuration = 40;
     const plunderSpeed = 40;
-    const plunderDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.7;
+    const plunderDamageMult = BASE_DMG.KAME_DPS * 14;
     const plunderDamageMultPerItem = 0.2;
     const maxPlunderItems = 1;
 
@@ -2837,7 +2837,7 @@ export module SimpleSpellSystem {
   
   export function doJacoShip() {
     const flySpeed = 40;
-    const macroCannonDmgMult = BASE_DMG.DFIST_EXPLOSION * 0.4;
+    const macroCannonDmgMult = BASE_DMG.KAME_DPS * 8;
     const baseAOE = 400;
     const maxAOE = 600;
     const AOEperDistance = 50;
@@ -3252,7 +3252,7 @@ export module SimpleSpellSystem {
     const warningRange = standardRange + 50;
 
     const updateRate = 0.03;
-    const healDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.24 * updateRate;
+    const healDamageMult = BASE_DMG.KAME_DPS * 4.8 * updateRate;
     const healMult = spellId == Id.dendeHeal ? 1.0 : 1.5;
     const selfHealRatio = 0.2;
     const healToManaRatio = 0.55;
