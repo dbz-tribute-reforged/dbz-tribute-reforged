@@ -3402,17 +3402,175 @@ export module SimpleSpellSystem {
   }
 
   export function doLinkBombCharge() {
+    const bombMaxDelay = 99;
     
+    const keyIsActive = StringHash("link|bomb|active");
+    const keyTimerSpell = StringHash("link|bomb|timer");
+    const keyBombSfx = StringHash("link|bomb|sfx");
+    const keyBombCounter = StringHash("link|bomb|counter");
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!customHero) return;
+
+    let newTimer: timer = null;
+    let bombSfx: effect = null;
+
+    const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+    if (isActive) {
+      // unhook any previous target
+      newTimer = LoadTimerHandle(Globals.genericSpellHashtable, casterId, keyTimerSpell);
+      bombSfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, keyBombSfx);
+
+    } else {
+      newTimer = TimerManager.getInstance().get();
+      bombSfx = AddSpecialEffect("LinkBomb.mdl", GetUnitX(caster), GetUnitY(caster));
+      BlzSetSpecialEffectScale(bombSfx, 2.5);
+      BlzSetSpecialEffectTimeScale(bombSfx, 10);
+
+      if (GetUnitAbilityLevel(caster, Id.linkBombThrow) == 0) {
+        UnitAddAbility(caster, Id.linkBombThrow);
+      }
+      SetUnitAbilityLevel(caster, Id.linkBombThrow, GetUnitAbilityLevel(caster, Id.linkBombCharge));
+      SetPlayerAbilityAvailable(player, Id.linkBombCharge, false);
+      SetPlayerAbilityAvailable(player, Id.linkBombThrow, true);
+      
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, true);
+      SaveEffectHandle(Globals.genericSpellHashtable, casterId, keyBombSfx, bombSfx);
+      SaveInteger(Globals.genericSpellHashtable, casterId, keyBombCounter, 0);
+    }
+
+    TimerStart(newTimer, 0.03, true, () => {
+      // save stuff and countdown
+      const counter = LoadInteger(Globals.genericSpellHashtable, casterId, keyBombCounter);
+      const stillActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+      
+      if (counter < bombMaxDelay && stillActive) {
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyBombCounter, counter+1);
+        
+        BlzSetSpecialEffectX(bombSfx, GetUnitX(caster));
+        BlzSetSpecialEffectY(bombSfx, GetUnitY(caster));
+
+        let floatingText = "";
+        if (counter == 0) {
+          floatingText = "3.0";
+        } else if (counter == 16) {
+          floatingText = "2.5";
+          BlzSetSpecialEffectColor(bombSfx, 255, 25, 25);
+        } else if (counter == 33) {
+          floatingText = "2.0";
+          BlzSetSpecialEffectColor(bombSfx, 255, 255, 255);
+        } else if (counter == 50) {
+          floatingText = "1.5";
+          BlzSetSpecialEffectColor(bombSfx, 255, 25, 25);
+        } else if (counter == 66) {
+          floatingText = "1.0";
+          BlzSetSpecialEffectColor(bombSfx, 255, 255, 255);
+        } else if (counter == 83) {
+          floatingText = "0.5";
+          BlzSetSpecialEffectColor(bombSfx, 255, 25, 25);
+        } else if (counter == 98) {
+          floatingText = "!";
+          BlzSetSpecialEffectColor(bombSfx, 255, 255, 255);
+        }
+
+        if (floatingText != "") {
+          ForceClear(Globals.tmpForce);
+          ForceAddPlayer(Globals.tmpForce, player);
+          TextTagHelper.showTempText(
+            Colorizer.getPlayerColorText(playerId) + floatingText + "!",
+            GetUnitX(caster), GetUnitY(caster),
+            8, 0.5, 0.25,
+            Globals.tmpForce
+          );
+          ForceClear(Globals.tmpForce);
+        }
+
+      } else {
+        if (stillActive) {
+          // detonate on self
+          const abilityInput = new CustomAbilityInput(
+            Id.linkBombThrow,
+            customHero,
+            player,
+            GetUnitAbilityLevel(caster, Id.linkBombCharge),
+            Globals.customPlayers[playerId].orderPoint,
+            Globals.customPlayers[playerId].mouseData,
+            Globals.customPlayers[playerId].lastCastPoint.clone(),
+          );
+          customHero.useAbility(AbilityNames.Link.BOMB_THROW_7, abilityInput);
+        }
+
+        SetPlayerAbilityAvailable(player, Id.linkBombCharge, true);
+        SetPlayerAbilityAvailable(player, Id.linkBombThrow, false);
+
+        SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, false);
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyBombCounter, 0);
+        
+        BlzSetSpecialEffectScale(bombSfx, 0.01);
+        DestroyEffect(bombSfx);
+        TimerManager.getInstance().recycle(newTimer);
+      }
+    });
   }
-  
+
   export function doLinkBombThrow() {
+    const keyIsActive = StringHash("link|bomb|active");
+    const keyBombCounter = StringHash("link|bomb|counter");
 
+    const spellId = GetSpellAbilityId();
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!customHero) return;
+
+    const counter = LoadInteger(Globals.genericSpellHashtable, casterId, keyBombCounter);
+
+    let abilityName = "";
+    if (counter < 16) {
+      abilityName = AbilityNames.Link.BOMB_THROW_1; // 3s
+    } else if (counter < 33) {
+      abilityName = AbilityNames.Link.BOMB_THROW_2; // 2.5s
+    } else if (counter < 50) {
+      abilityName = AbilityNames.Link.BOMB_THROW_3; // 2s
+    } else if (counter < 66) {
+      abilityName = AbilityNames.Link.BOMB_THROW_4; // 1.5s
+    } else if (counter < 83) {
+      abilityName = AbilityNames.Link.BOMB_THROW_5; // 1.0s
+    } else {
+      abilityName = AbilityNames.Link.BOMB_THROW_6; // 0.5s
+    }
+
+    SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, false);
+    SetPlayerAbilityAvailable(player, Id.linkBombCharge, true);
+    SetPlayerAbilityAvailable(player, Id.linkBombThrow, false);
+
+    const abilityInput = new CustomAbilityInput(
+      spellId,
+      customHero,
+      player,
+      GetUnitAbilityLevel(caster, Id.linkBombCharge),
+      Globals.customPlayers[playerId].orderPoint,
+      Globals.customPlayers[playerId].mouseData,
+      Globals.customPlayers[playerId].lastCastPoint.clone(),
+    );
+    customHero.useAbility(abilityName, abilityInput);
   }
 
-  export function doLinkHookshotSwap(player: player, val: boolean, isMobile: boolean) {
+  export function doLinkHookshotSwap(unit: unit, player: player, val: boolean, isMobile: boolean) {
     SetPlayerAbilityAvailable(player, Id.linkHookshot, !val);
     SetPlayerAbilityAvailable(player, Id.linkHookshotPullTowards, val);
     if (isMobile) {
+      if (GetUnitTypeId(unit) == Id.kidBuu) {
+        SetPlayerAbilityAvailable(player, Id.vanishingBall, !val);
+      }
       SetPlayerAbilityAvailable(player, Id.linkInventoryBook, !val);
       SetPlayerAbilityAvailable(player, Id.linkHookshotPullIn, val);
     }
@@ -3428,25 +3586,20 @@ export module SimpleSpellSystem {
       const keyHookPullTowards = StringHash("link|hookshot|pull|towards");
       const keyHookMobileTarget = StringHash("link|hookshot|mobile");
       // disable pull towards and pull in
-      doLinkHookshotSwap(player, false, LoadBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget));
+      doLinkHookshotSwap(caster, player, false, LoadBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget));
       // pull link towards the target
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards, true);
 
     } else if (spellId == Id.linkHookshotPullIn) {
       const keyHookPullIn = StringHash("link|hookshot|pull|in");
       // disable pull towards and pull in
-      doLinkHookshotSwap(player, false, true);
+      doLinkHookshotSwap(caster, player, false, true);
       // pull the target towards link
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullIn, true);
     }
   }
 
   export function doLinkHookshot() {
-    const spellId = GetSpellAbilityId();
-    const caster = GetTriggerUnit();
-    const casterId = GetHandleId(caster);
-    const player = GetOwningPlayer(caster);
-
     const hookTravelSpeed = 60;
     const hookPullSpeed = 60;
     const hookMaxStuckTicks = 16;
@@ -3454,10 +3607,6 @@ export module SimpleSpellSystem {
     const hookMaxDist = 1200;
     const hookBreakDist = hookMaxDist * 1.5;
     const hookUnitRadius = 150;
-    
-    let newTimer = null;
-    let lightningSfx: lightning = null;
-    let hookHeadSfx: effect = null;
 
     const keyIsActive = StringHash("link|hookshot|active");
     const keyLightningSfx = StringHash("link|hookshot|lightning");
@@ -3467,6 +3616,14 @@ export module SimpleSpellSystem {
     const keyHookPullTowards = StringHash("link|hookshot|pull|towards");
     const keyHookPullIn = StringHash("link|hookshot|pull|in");
     const keyHookHeadSfx = StringHash("link|hookshot|sfx|head");
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    
+    let newTimer: timer = null;
+    let lightningSfx: lightning = null;
+    let hookHeadSfx: effect = null;
 
     SaveUnitHandle(Globals.genericSpellHashtable, casterId, keyHookCaster, caster);
     
@@ -3492,7 +3649,9 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectYaw(hookHeadSfx, angle * CoordMath.degreesToRadians);
       BlzSetSpecialEffectRoll(hookHeadSfx, 90 * CoordMath.degreesToRadians);
 
+      SaveTimerHandle(Globals.genericSpellHashtable, casterId, keyTimerSpell, newTimer);
       SaveLightningHandle(Globals.genericSpellHashtable, casterId, keyLightningSfx, lightningSfx);
+      SaveEffectHandle(Globals.genericSpellHashtable, casterId, keyHookHeadSfx, hookHeadSfx);
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, true);
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget, false);
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards, false);
@@ -3501,6 +3660,9 @@ export module SimpleSpellSystem {
       // disable inventory 
       // (to prevent accidentally pressing when wanting to pull in)
       SetPlayerAbilityAvailable(player, Id.linkInventoryBook, false);
+      if (GetUnitTypeId(caster) == Id.kidBuu) {
+        SetPlayerAbilityAvailable(player, Id.vanishingBall, false);
+      }
     }
     
     let distance = 0;
@@ -3601,7 +3763,7 @@ export module SimpleSpellSystem {
           );
 
         } else {
-          doLinkHookshotSwap(player, false, true);
+          doLinkHookshotSwap(caster, player, false, true);
           BlzStartUnitAbilityCooldown(caster, Id.linkHookshot, BlzGetUnitAbilityCooldown(caster, Id.linkHookshot, 0));
           // snap link
           DestroyEffect(hookHeadSfx);
@@ -3672,7 +3834,7 @@ export module SimpleSpellSystem {
             SetPlayerAbilityAvailable(player, Id.linkHookshotPullIn, false);
           }
           SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget, isMobileTarget);
-          doLinkHookshotSwap(player, true, isMobileTarget);
+          doLinkHookshotSwap(caster, player, true, isMobileTarget);
         }
       }
 

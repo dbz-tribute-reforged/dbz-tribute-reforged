@@ -1862,6 +1862,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 75,
   },
+  // link bomb
+  {
+    name: "dash flying point link bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 50,
+  },
   // ---
   // saga zanzo
   {
