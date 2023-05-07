@@ -23577,7 +23577,7 @@ export const SfxComponents = [
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
-        extraRoll: 0,
+        extraRoll: 90,
         animSpeed: 5.0,
         color: {
           x: 255,

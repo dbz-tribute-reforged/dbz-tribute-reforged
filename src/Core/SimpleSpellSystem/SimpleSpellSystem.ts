@@ -158,6 +158,10 @@ export module SimpleSpellSystem {
 
     Globals.genericSpellMap.set(Id.dendeHeal, SimpleSpellSystem.doDendeHeal);
     Globals.genericSpellMap.set(Id.dendeHeal2, SimpleSpellSystem.doDendeHeal);
+    
+    Globals.genericSpellMap.set(Id.linkHookshot, SimpleSpellSystem.doLinkHookshot);
+    Globals.genericSpellMap.set(Id.linkHookshotPullTowards, SimpleSpellSystem.doLinkHookshotPull);
+    Globals.genericSpellMap.set(Id.linkHookshotPullIn, SimpleSpellSystem.doLinkHookshotPull);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -3392,6 +3396,263 @@ export module SimpleSpellSystem {
     });
 
     return false;
+  }
+
+  export function doLinkHookshotSwap(player: player, val: boolean, isMobile: boolean) {
+    SetPlayerAbilityAvailable(player, Id.linkHookshot, !val);
+    SetPlayerAbilityAvailable(player, Id.linkHookshotPullTowards, val);
+    if (isMobile) {
+      SetPlayerAbilityAvailable(player, Id.linkInventoryBook, !val);
+      SetPlayerAbilityAvailable(player, Id.linkHookshotPullIn, val);
+    }
+  }
+  
+  export function doLinkHookshotPull() {
+    const spellId = GetSpellAbilityId();
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    
+    if (spellId == Id.linkHookshotPullTowards) {
+      const keyHookPullTowards = StringHash("link|hookshot|pull|towards");
+      const keyHookMobileTarget = StringHash("link|hookshot|mobile");
+      // disable pull towards and pull in
+      doLinkHookshotSwap(player, false, LoadBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget));
+      // pull link towards the target
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards, true);
+
+    } else if (spellId == Id.linkHookshotPullIn) {
+      const keyHookPullIn = StringHash("link|hookshot|pull|in");
+      // disable pull towards and pull in
+      doLinkHookshotSwap(player, false, true);
+      // pull the target towards link
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullIn, true);
+    }
+  }
+
+  export function doLinkHookshot() {
+    const spellId = GetSpellAbilityId();
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+
+    const hookTravelSpeed = 60;
+    const hookPullSpeed = 60;
+    const hookMaxStuckTicks = 33;
+    const hookStuckPercent = 0.4;
+    const hookMaxDist = 1400;
+    const hookBreakDist = hookMaxDist * 1.5;
+    const hookUnitRadius = 150;
+    
+    let newTimer = null;
+    let lightningSfx: lightning = null;
+    let hookHeadSfx: effect = null;
+
+    const keyIsActive = StringHash("link|hookshot|active");
+    const keyLightningSfx = StringHash("link|hookshot|lightning");
+    const keyTimerSpell = StringHash("link|hookshot|timer");
+    const keyHookCaster = StringHash("link|hookshot|caster");
+    const keyHookMobileTarget = StringHash("link|hookshot|mobile");
+    const keyHookPullTowards = StringHash("link|hookshot|pull|towards");
+    const keyHookPullIn = StringHash("link|hookshot|pull|in");
+    const keyHookHeadSfx = StringHash("link|hookshot|sfx|head");
+
+    SaveUnitHandle(Globals.genericSpellHashtable, casterId, keyHookCaster, caster);
+    
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+    const angle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+
+    const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+    if (isActive) {
+      // unhook any previous target
+      newTimer = LoadTimerHandle(Globals.genericSpellHashtable, casterId, keyTimerSpell);
+      lightningSfx = LoadLightningHandle(Globals.genericSpellHashtable, casterId, keyLightningSfx);
+      hookHeadSfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, keyHookHeadSfx);
+    } else {
+      newTimer = TimerManager.getInstance().get();
+      lightningSfx = AddLightning(
+        "WHCA", true, 
+        Globals.tmpVector.x, Globals.tmpVector.y,
+        Globals.tmpVector.x + 10, Globals.tmpVector.y + 10,
+      );
+      hookHeadSfx = AddSpecialEffect("LinkBoomerang.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+      BlzSetSpecialEffectYaw(hookHeadSfx, angle * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectRoll(hookHeadSfx, 90 * CoordMath.degreesToRadians);
+
+      SaveLightningHandle(Globals.genericSpellHashtable, casterId, keyLightningSfx, lightningSfx);
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, true);
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget, false);
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards, false);
+      SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullIn, false);
+    }
+    
+    let distance = 0;
+    let prevX = 0;
+    let prevY = 0;
+    let hookX = Globals.tmpVector.x;
+    let hookY = Globals.tmpVector.y;
+    let isBroken = false;
+    let isMobileTarget = false;
+    let isStuck = false;
+    let stuckTicks = 0;
+    let unitTarget = caster;
+
+    TimerStart(newTimer, 0.03, true, () => {
+      Globals.tmpVector.setUnit(caster);
+      BlzSetSpecialEffectX(hookHeadSfx, hookX);
+      BlzSetSpecialEffectY(hookHeadSfx, hookY);
+
+      if (isStuck) {
+        // stuck the hook
+        // if mobile target, update end point
+        // update caster hook side
+        // broken if stuck, or is too close or is too far
+        // if pull towards, move caster towards
+        // if pull in, move target into caster
+        const isTowards = LoadBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards);
+        const isIn = LoadBoolean(Globals.genericSpellHashtable, casterId, keyHookPullIn);
+        
+        // update hook location
+        if (isMobileTarget) {
+          if (unitTarget != caster) {
+            Globals.tmpVector2.setUnit(unitTarget);
+          }
+
+          hookX = Globals.tmpVector2.x;
+          hookY = Globals.tmpVector2.y;
+        } else {
+          Globals.tmpVector2.setPos(hookX, hookY);
+        }
+
+        distance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+        // check for breakage
+        isBroken = (
+          stuckTicks > hookMaxStuckTicks
+          || distance <= hookPullSpeed
+          || distance > hookBreakDist
+        );
+        
+        if (!isBroken) {
+
+          // move caster towards target
+          if (isTowards) {
+            const pullAngle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+            CoordMath.polarProjectCoords(Globals.tmpVector, Globals.tmpVector, pullAngle, hookPullSpeed);
+            PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector);
+
+            if (prevX != 0 && prevY != 0) {
+              Globals.tmpVector3.setPos(prevX, prevY);
+              if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector3) < hookStuckPercent * hookPullSpeed) {
+                ++stuckTicks;
+              }
+            }
+            prevX = Globals.tmpVector.x;
+            prevY = Globals.tmpVector.y;
+          }
+
+          // move target towards self
+          if (isIn) {
+            const pullAngle = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
+            CoordMath.polarProjectCoords(Globals.tmpVector2, Globals.tmpVector2, pullAngle, hookPullSpeed);
+            if (unitTarget != caster) {
+              PathingCheck.moveGroundUnitToCoord(unitTarget, Globals.tmpVector2);
+            }
+
+            if (prevX != 0 && prevY != 0) {
+              Globals.tmpVector3.setPos(prevX, prevY);
+              if (CoordMath.distance(Globals.tmpVector2, Globals.tmpVector3) < hookStuckPercent * hookPullSpeed) {
+                ++stuckTicks;
+              }
+            }
+            prevX = Globals.tmpVector2.x;
+            prevY = Globals.tmpVector2.y;
+          }
+
+          // tie together
+          MoveLightning(
+            lightningSfx, true, 
+            Globals.tmpVector.x, Globals.tmpVector.y, 
+            Globals.tmpVector2.x, Globals.tmpVector2.y,
+          );
+
+        } else {
+
+          // snap link
+          DestroyEffect(hookHeadSfx);
+          DestroyLightning(lightningSfx);
+          SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, false);
+          TimerManager.getInstance().recycle(newTimer);
+        }
+
+      } else {
+        // move the hook
+        // hit valid target or exeed max range
+        // stuck the hook and register target if any
+        Globals.tmpVector2.setPos(hookX, hookY);
+        CoordMath.polarProjectCoords(Globals.tmpVector2, Globals.tmpVector2, angle, hookTravelSpeed);
+        distance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+        // unit collision check
+        GroupClear(Globals.tmpUnitGroup);
+        GroupEnumUnitsInRange(
+          Globals.tmpUnitGroup,
+          Globals.tmpVector2.x, Globals.tmpVector2.y,
+          hookUnitRadius,
+          null
+        );
+        
+        let closestDist = hookBreakDist;
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const target = GetEnumUnit();
+          if (
+            UnitHelper.isUnitTargetableForPlayer(target, player, true)
+            && target != caster
+          ) {
+            Globals.tmpVector3.setUnit(target);
+            if (CoordMath.distance(Globals.tmpVector2, Globals.tmpVector3) < closestDist) {
+              unitTarget = target;
+            }
+          }
+        });
+        GroupClear(Globals.tmpUnitGroup);
+
+        isStuck = (
+          distance >= hookMaxDist
+          || !PathingCheck.isGroundWalkable(Globals.tmpVector2)
+          || unitTarget != caster
+        );
+
+        MoveLightning(
+          lightningSfx, true, 
+          Globals.tmpVector.x, Globals.tmpVector.y, 
+          Globals.tmpVector2.x, Globals.tmpVector2.y,
+        );
+        
+        if (!isStuck) {
+          // keep moving the hook
+          hookX = Globals.tmpVector2.x;
+          hookY = Globals.tmpVector2.y;
+
+        } else {
+          isMobileTarget = (
+            unitTarget != caster
+            && !IsUnitType(unitTarget, UNIT_TYPE_STRUCTURE)
+          );
+
+          // save linked target
+          if (GetUnitAbilityLevel(caster, Id.linkHookshotPullIn) == 0) {
+            UnitAddAbility(caster, Id.linkHookshotPullTowards);
+            UnitAddAbility(caster, Id.linkHookshotPullIn);
+            SetPlayerAbilityAvailable(player, Id.linkHookshotPullIn, false);
+          }
+          SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget, isMobileTarget);
+          doLinkHookshotSwap(player, true, isMobileTarget);
+        }
+      }
+
+    });
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {

@@ -1130,6 +1130,7 @@ gg_trg_Transformations_Peco = nil
 gg_trg_Transformations_Dende = nil
 gg_trg_Dende_Sacred_Water = nil
 gg_trg_Dende_Unlock_Potential = nil
+gg_trg_Transformations_Link = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -1160,7 +1161,6 @@ gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Link = nil
 function InitGlobals()
 local i = 0
 
