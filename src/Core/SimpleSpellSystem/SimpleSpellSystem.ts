@@ -3473,7 +3473,7 @@ export module SimpleSpellSystem {
         } else if (counter == 83) {
           floatingText = "0.5";
           BlzSetSpecialEffectColor(bombSfx, 255, 25, 25);
-        } else if (counter == 98) {
+        } else if (counter == 92) {
           floatingText = "!";
           BlzSetSpecialEffectColor(bombSfx, 255, 255, 255);
         }
@@ -3508,9 +3508,11 @@ export module SimpleSpellSystem {
         SetPlayerAbilityAvailable(player, Id.linkBombCharge, true);
         SetPlayerAbilityAvailable(player, Id.linkBombThrow, false);
 
+        BlzStartUnitAbilityCooldown(caster, Id.linkBombThrow, 5);
+
         SaveBoolean(Globals.genericSpellHashtable, casterId, keyIsActive, false);
         SaveInteger(Globals.genericSpellHashtable, casterId, keyBombCounter, 0);
-        
+
         BlzSetSpecialEffectScale(bombSfx, 0.01);
         DestroyEffect(bombSfx);
         TimerManager.getInstance().recycle(newTimer);
@@ -3527,6 +3529,9 @@ export module SimpleSpellSystem {
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
+
+    const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyIsActive);
+    if (!isActive) return;
 
     const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     if (!customHero) return;

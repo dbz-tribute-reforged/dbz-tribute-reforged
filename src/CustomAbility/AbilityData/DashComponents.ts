@@ -1867,7 +1867,7 @@ export const DashComponents = [
     name: "dash flying point link bomb",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: -1,
+    endTick: 36,
     targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
     dashType: Dash.DASH_TYPE_FLYING,
     checkPreviousCoord: false,
