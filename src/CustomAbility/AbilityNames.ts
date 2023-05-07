@@ -516,6 +516,8 @@ export module AbilityNames {
     export const BOMB_THROW_2: string = "Link Bomb Throw 2";
     export const BOMB_THROW_3: string = "Link Bomb Throw 3";
     export const BOMB_THROW_4: string = "Link Bomb Throw 4";
+    export const BOMB_THROW_5: string = "Link Bomb Throw 5";
+    export const BOMB_THROW_6: string = "Link Bomb Throw 6";
     export const BOW_ARROW_NORMAL: string = "Link Bow Arrow Normal";
   }
 

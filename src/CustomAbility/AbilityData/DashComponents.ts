@@ -1848,7 +1848,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 90,
-    distance: 30,
+    distance: 15,
   },
   {
     name: "dash flying caster link boomerang return",
@@ -1860,7 +1860,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 90,
+    distance: 75,
   },
   // ---
   // saga zanzo

@@ -8528,14 +8528,6 @@ STRING 1343
 Earrings worn by the Kais
 }
 
-STRING 1344
-// Abilities: A0G4 (Hookshot), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires out a hook with a chain attached to it. The hook can come into contact with enemy units, items, and cliffs. On contact he can [|cff00ff00D|r] pull himself towards the target or [|cff00ff00F|r] pull the target into him.
-
-|cff00ffffCooldown: <A0G4,Cool1>s
-}
-
 STRING 1345
 // Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
 {
@@ -39877,15 +39869,6 @@ STRING 6319
 |cff00ffff[Only host sees this] Catchup Stats Activated|r
 }
 
-STRING 6320
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
-}
-
 STRING 6321
 // Abilities: A0DU (Cellular Enhancement), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -40744,15 +40727,6 @@ STRING 6444
 E
 }
 
-STRING 6445
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
-}
-
 STRING 6446
 // Abilities: A0E4 (Transform - Fourth), Ubertip (Tooltip - Normal - Extended)
 {
@@ -40859,15 +40833,6 @@ STRING 6463
 // Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
-}
-
-STRING 6464
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
 }
 
 STRING 6465
@@ -41455,15 +41420,6 @@ STRING 6561
 // Items: I04N (Body Change), Name (Name)
 {
 Body Change
-}
-
-STRING 6562
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
 }
 
 STRING 6563
@@ -42129,15 +42085,6 @@ STRING 6656
 // Abilities: A083 (Dark Mist), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Dark Mist - [|cffffcc00Level 10|r]
-}
-
-STRING 6657
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 6658
@@ -42972,24 +42919,6 @@ STRING 6789
 [|cff00ff00E|r] Barrel Roll - [|cffffcc00Level 10|r]
 }
 
-STRING 6790
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
-}
-
-STRING 6791
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
-}
-
 STRING 6792
 // Abilities: A00X (Roundhouse Kick), EditorSuffix (Editor Suffix)
 {
@@ -43057,15 +42986,6 @@ Magus calls down a bolt of lightning on every unit in range.
 |cff00FFFFCooldown: <A0W5,Cool3>s|r
 }
 
-STRING 6802
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
-}
-
 STRING 6803
 // Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
@@ -43073,7 +42993,7 @@ R
 }
 
 STRING 6804
-// Abilities: A0FM (Bomb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -43085,15 +43005,6 @@ STRING 6805
 // Abilities: A0FM (Bomb), EditorSuffix (Editor Suffix)
 {
 (link)
-}
-
-STRING 6806
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
 }
 
 STRING 6807
@@ -44471,15 +44382,6 @@ STRING 7023
 |cff666666Game
 }
 
-STRING 7024
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
-}
-
 STRING 7025
 // Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
 {
@@ -45187,52 +45089,16 @@ STRING 7130
 E
 }
 
-STRING 7131
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
-}
-
 STRING 7132
 // Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
-STRING 7133
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
-}
-
 STRING 7134
 // Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 7135
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
-}
-
-STRING 7136
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
 }
 
 STRING 7137
@@ -45287,15 +45153,6 @@ STRING 7145
 // Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 7146
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 7147
@@ -45822,15 +45679,6 @@ STRING 7222
 [|cff00ff00E|r] Throw Bomb - [|cffffcc00Level 10|r]
 }
 
-STRING 7223
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
-}
-
 STRING 7224
 // Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -46035,24 +45883,6 @@ STRING 7254
 [|cff00ff00R|r] Chou Makousen - [|cffffcc00Level 10|r]
 }
 
-STRING 7255
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
-}
-
-STRING 7256
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
-}
-
 STRING 7257
 // Abilities: A0JE (Kamehameha Fire), Tip (Tooltip - Normal)
 {
@@ -46099,15 +45929,6 @@ STRING 7264
 // Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
-}
-
-STRING 7265
-// Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool1,.> - <A0FM,Cool10,.> seconds|r
 }
 
 STRING 7266
@@ -46684,15 +46505,6 @@ STRING 7355
 [|cff00FF00R|r] Heavy Stomp - [|cffffcc00Level 1|r]
 }
 
-STRING 7356
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
-}
-
 STRING 7357
 // Abilities: A0CQ (Tail Sweep), Researchtip (Tooltip - Learn)
 {
@@ -46785,24 +46597,6 @@ STRING 7368
 [|cff00FF00W|r] Learn Final Flash - [|cffffcc00Level %d|r]
 }
 
-STRING 7369
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cff00ff00Damage: [Int] 2000u
-|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
-}
-
-STRING 7370
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
-}
-
 STRING 7371
 // Abilities: A0EM (Heavy Stomp), Tip (Tooltip - Normal)
 {
@@ -46837,42 +46631,6 @@ STRING 7376
 // Abilities: A0EM (Heavy Stomp), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Heavy Stomp - [|cffffcc00Level 9|r]
-}
-
-STRING 7377
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
-}
-
-STRING 7378
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
-}
-
-STRING 7379
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
-}
-
-STRING 7380
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 7381
@@ -50551,13 +50309,13 @@ Q
 }
 
 STRING 7960
-// Abilities: A0G5 (Hookshot Pull Towards), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (Hookshot Pull To), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 7961
-// Abilities: A0G5 (Hookshot Pull Towards), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0G5 (Hookshot Pull To), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -56612,15 +56370,6 @@ STRING 8846
 W
 }
 
-STRING 8847
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
-}
-
 STRING 8848
 // Abilities: A0E1 (Transform - First), Ubertip (Tooltip - Normal - Extended)
 {
@@ -58242,15 +57991,6 @@ STRING 9083
 Heatwave
 }
 
-STRING 9084
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
-}
-
 STRING 9085
 // Abilities: A10Q (Mafuba), Name (Name)
 {
@@ -59837,28 +59577,10 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 |cff00ffffCooldown: <A06S,Cool1> seconds|r
 }
 
-STRING 9325
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
-}
-
 STRING 9326
 // Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
-}
-
-STRING 9327
-// Abilities: A0FX (Bow), Researchubertip (Tooltip - Learn - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool1,.> - <A0FM,Cool10,.> seconds|r
 }
 
 STRING 9328
@@ -60232,24 +59954,6 @@ STRING 9386
 Using the almost limitless knowledge of the tsufuru they are able to enhance the output of damage from any type of weapon.
 }
 
-STRING 9387
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
-}
-
-STRING 9388
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties with [|cff00ff00F|r] Inventory.
-
-|cff00ff00Damage: [Int] 1200u
-|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
-}
-
 STRING 9389
 // Abilities: A0G4 (Hookshot), Name (Name)
 {
@@ -60398,12 +60102,6 @@ STRING 9414
 // Buffs/Effects: B00P (), Bufftip (Tooltip)
 {
 Energy Generation
-}
-
-STRING 9415
-// Abilities: A0G5 (Hookshot Pull Towards), Name (Name)
-{
-Hookshot Pull Towards
 }
 
 STRING 9416
@@ -60604,14 +60302,8 @@ STRING 9448
 This unit is moving 50% faster.
 }
 
-STRING 9449
-// Abilities: A0G5 (Hookshot Pull Towards), Tip (Tooltip - Normal)
-{
-[|cff00FF00D|r] Hookshot Pull Towards
-}
-
 STRING 9450
-// Abilities: A0G5 (Hookshot Pull Towards), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0G5 (Hookshot Pull To), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls himself towards the hooked target.
 
@@ -61039,7 +60731,7 @@ Explosion 1
 }
 
 STRING 9511
-// Abilities: A0G5 (Hookshot Pull Towards), EditorSuffix (Editor Suffix)
+// Abilities: A0G5 (Hookshot Pull To), EditorSuffix (Editor Suffix)
 {
 (link)
 }
@@ -61048,6 +60740,16 @@ STRING 9512
 // Abilities: A0G9 (Hookshot Pull In), Name (Name)
 {
 Hookshot Pull In
+}
+
+STRING 9513
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
 }
 
 STRING 9514
@@ -75259,6 +74961,16 @@ STRING 11631
 [|cff00FF00D|r] Mastered Ultra Instinct
 }
 
+STRING 11632
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
+}
+
 STRING 11633
 // Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
@@ -75311,6 +75023,16 @@ STRING 11641
 // Abilities: A01X (Senzu Bean), EditorSuffix (Editor Suffix)
 {
 (actual?)
+}
+
+STRING 11642
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
 }
 
 STRING 11643
@@ -77106,6 +76828,16 @@ STRING 11910
 Increase Metal Cooler's and his clones armor by +3 and HP by +(5000*3).
 }
 
+STRING 11911
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
+}
+
 STRING 11912
 // Abilities: A06X (Dodon Ray), Ubertip (Tooltip - Normal - Extended)
 {
@@ -77333,6 +77065,16 @@ STRING 11948
 // Abilities: A0O1 (Demon Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba teleports behind the closest enemy hero cursed with the Demon's Mark and then strikes them with a blow that amplifies the curse to reduce their movement and attack speed.|n|cff00ffffCooldown: <A0O1,Cool1>s|r
+}
+
+STRING 11949
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 11950
@@ -80673,33 +80415,6 @@ STRING 12434
 Champion of Hyrule
 }
 
-STRING 12435
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool3,.> seconds|r
-}
-
-STRING 12436
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool4,.> seconds|r
-}
-
-STRING 12437
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool5,.> seconds|r
-}
-
 STRING 12438
 {
 Type "r" to revert.
@@ -82631,15 +82346,6 @@ STRING 12708
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 9|r]
 }
 
-STRING 12709
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool6,.> seconds|r
-}
-
 STRING 12710
 // Abilities: A0QX (Justice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -82904,33 +82610,6 @@ STRING 12747
 Q
 }
 
-STRING 12748
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool7,.> seconds|r
-}
-
-STRING 12749
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool8,.> seconds|r
-}
-
-STRING 12750
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool9,.> seconds|r
-}
-
 STRING 12751
 // Abilities: A0VF (Use Item), Name (Name)
 {
@@ -83047,15 +82726,6 @@ Dyspo dashes in a single direction, a thousand times faster than usual.
 |cff00ffffCooldown: <A0QY,Cool2> seconds|r
 }
 
-STRING 12763
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool10,.> seconds|r
-}
-
 STRING 12764
 // Abilities: A0PB (Justice Flash), Tip (Tooltip - Normal)
 {
@@ -83102,24 +82772,6 @@ STRING 12771
 // Abilities: A0PB (Justice Flash), Name (Name)
 {
 Justice Flash
-}
-
-STRING 12772
-// Abilities: A0FL (Boomerang), Researchubertip (Tooltip - Learn - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool1,.> - <A0FL,Cool10,.> seconds|r
-}
-
-STRING 12773
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
-{
-Link throws an arcing boomerang that deals damage on the way forward and back.
-
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool2,.> seconds|r
 }
 
 STRING 12774
@@ -83321,13 +82973,24 @@ STRING 12804
 [|cff00ff00Q|r] Justice Flash - [|cffffcc00Level 10|r]
 }
 
-STRING 12805
-// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+STRING 12806
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Link throws an arcing boomerang that deals damage on the way forward and back.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00ff00Damage: [Int] 900u
-|cff00ffffCooldown: <A0FL,Cool1,.> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
+}
+
+STRING 12807
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
 }
 
 STRING 12808
@@ -83501,6 +83164,26 @@ STRING 12835
 W
 }
 
+STRING 12836
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
+}
+
+STRING 12837
+// Abilities: A0FM (Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool1,.> - <A0FM,Cool10,.> seconds|r
+}
+
 STRING 12838
 // Abilities: A0PD (Justice Punch), Tip (Tooltip - Normal)
 {
@@ -83529,6 +83212,16 @@ STRING 12842
 // Abilities: A0PD (Justice Punch), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Punch - [|cffffcc00Level 6|r]
+}
+
+STRING 12843
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
 }
 
 STRING 12844
@@ -83891,6 +83584,36 @@ Spells cost an additional 15% of current mana (excluding Dark Eyes and Flight) (
 |cffffcc00Evasion|r - <A0GG,DataD3,%>% 
 |cffffcc00Critical|r - <A0GG,DataA3>% 
 |cffffcc00Damage|r - <A0GG,DataB3,.> times
+}
+
+STRING 12890
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
+}
+
+STRING 12891
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
+}
+
+STRING 12892
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
 }
 
 STRING 12893
@@ -84277,6 +84000,16 @@ STRING 12940
 [|cff00FF00F|r] Learn Justice Pose - [|cffffcc00Level %d|r]
 }
 
+STRING 12941
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
+}
+
 STRING 12942
 // Abilities: A10K (Sword of Hope), Researchhotkey (Hotkey - Learn)
 {
@@ -84293,6 +84026,26 @@ STRING 12944
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 3|r]
+}
+
+STRING 12945
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
+}
+
+STRING 12946
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 12947
@@ -84314,6 +84067,16 @@ STRING 12949
 // Items: I04I (Vegeta's Tail), Name (Name)
 {
 Vegeta's Tail
+}
+
+STRING 12950
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
 }
 
 STRING 12951
@@ -84812,6 +84575,16 @@ STRING 13024
 // Items: I03C (Battle Armor [|cffFFFF003/5|r]), Ubertip (Tooltip - Extended)
 {
 |cff00FF00Level [3/5]|r|n|cffFFFF00+6 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 13025
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
 }
 
 STRING 13026
@@ -85588,6 +85361,16 @@ STRING 13130
 [|cffffff00W|r] Choose Guldo
 }
 
+STRING 13131
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
+}
+
 STRING 13132
 // Units: H09J (Ginyu Force Member), Tip (Tooltip - Basic)
 {
@@ -85630,6 +85413,16 @@ Medium armor takes 100% damage from all damage types.
 STRING 13139
 {
 Normal armor takes 100% damage from all damage types.
+}
+
+STRING 13140
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
 }
 
 STRING 13141
@@ -85719,6 +85512,16 @@ STRING 13155
 // Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 10|r]
+}
+
+STRING 13156
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
+
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2400u
+|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
 }
 
 STRING 13160
@@ -89686,10 +89489,24 @@ Android 17 forms a barrier at the target location, preventing units inside from 
 |cff00ffffCooldown: <A0MT,Cool10> seconds|r
 }
 
+STRING 13725
+// Abilities: A0G4 (Hookshot), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires out a hook with a chain attached to it. The hook can come into contact with enemy units and cliffs. On contact he can [|cff00ff00D|r] pull himself towards the target or [|cff00ff00F|r] pull the target into him.
+
+|cff00ffffCooldown: <A0G4,Cool1>s
+}
+
 STRING 13726
 // Abilities: A0QE (Golden Death Cannon), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13727
+// Abilities: A0G5 (Hookshot Pull To), Name (Name)
+{
+Hookshot Pull To
 }
 
 STRING 13728
@@ -90397,6 +90214,12 @@ Yamcha's abilities generate +1% of max mana.
 |cff00ffffCooldown: <A0RO,Cool1> seconds|r
 }
 
+STRING 13814
+// Abilities: A0G5 (Hookshot Pull To), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Hookshot Pull To
+}
+
 STRING 13815
 // Abilities: A0IH (Capsule: Dr Wheelo's Research), Name (Name)
 {
@@ -90816,6 +90639,69 @@ STRING 13867
 (omega shenron)
 }
 
+STRING 13868
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool3,.> seconds|r
+}
+
+STRING 13869
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool4,.> seconds|r
+}
+
+STRING 13870
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool5,.> seconds|r
+}
+
+STRING 13871
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool6,.> seconds|r
+}
+
+STRING 13872
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool7,.> seconds|r
+}
+
+STRING 13873
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool8,.> seconds|r
+}
+
+STRING 13874
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool9,.> seconds|r
+}
+
 STRING 13875
 // Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
 {
@@ -90898,6 +90784,33 @@ STRING 13888
 // Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 13889
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool10,.> seconds|r
+}
+
+STRING 13890
+// Abilities: A0FL (Boomerang), Researchubertip (Tooltip - Learn - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool1,.> - <A0FL,Cool10,.> seconds|r
+}
+
+STRING 13891
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool2,.> seconds|r
 }
 
 STRING 13892
@@ -91456,6 +91369,15 @@ STRING 13970
 R
 }
 
+STRING 13971
+// Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
+{
+Link throws an arcing boomerang that deals damage on the way forward and back. Deals bonus damage on the way back. Slows enemies by 50% for 3s.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A0FL,Cool1,.> seconds|r
+}
+
 STRING 13972
 // Abilities: A0QQ (Nova Star), EditorSuffix (Editor Suffix)
 {
@@ -91532,6 +91454,51 @@ STRING 13984
 // Abilities: A0R4 (Justice Cannon 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Dyspo dashes next to his opponent before firing a point-blank energy wave for maximum damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QX,Cool1> seconds|r
+}
+
+STRING 13985
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool3,.> seconds|r
+}
+
+STRING 13986
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool4,.> seconds|r
+}
+
+STRING 13987
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool5,.> seconds|r
+}
+
+STRING 13988
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool6,.> seconds|r
+}
+
+STRING 13989
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool7,.> seconds|r
 }
 
 STRING 13990
@@ -92873,6 +92840,15 @@ Unlocks Supernova.|r
 |cff00FF00Cooldown: <A0IF,Cool1> seconds|r
 }
 
+STRING 14188
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool8,.> seconds|r
+}
+
 STRING 14189
 // Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
 {
@@ -92923,6 +92899,15 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 |cffffcc00Evasion|r - <A00S,DataD5,%>% 
 |cffffcc00Critical|r - <A00S,DataA5>% 
 |cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 14195
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool9,.> seconds|r
 }
 
 STRING 14196
@@ -93490,6 +93475,15 @@ Android 17 forms a barrier at the target location, preventing units inside from 
 
 |cff00ff00Damage: [Int] 4u/150t.
 |cff00ffffCooldown: <A0MT,Cool1> - <A0MT,Cool10> seconds|r
+}
+
+STRING 14277
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool10,.> seconds|r
 }
 
 STRING 14278
@@ -97033,6 +97027,15 @@ STRING 14792
 E
 }
 
+STRING 14793
+// Abilities: A0FX (Bow), Researchubertip (Tooltip - Learn - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool1,.> - <A0FX,Cool10,.> seconds|r
+}
+
 STRING 14794
 // Abilities: A0YD (Protect), Researchhotkey (Hotkey - Learn)
 {
@@ -98008,6 +98011,24 @@ STRING 14931
 // Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
 {
 [|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 14932
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool2,.> seconds|r
+}
+
+STRING 14933
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
+{
+Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
+
+|cff00ff00Damage: [Int] 1600u
+|cff00ffffCooldown: <A0FX,Cool1,.> seconds|r
 }
 
 STRING 14940

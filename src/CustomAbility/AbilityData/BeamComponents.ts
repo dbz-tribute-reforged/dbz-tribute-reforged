@@ -6734,6 +6734,8 @@ export const BeamComponents = [
       { name: "dash flying sideways boomerang return" },
       { name: "dash flying caster link boomerang return" },
       { name: "damage beam link boomerang dps" },
+      { name: "damage beam link boomerang return dps" },
+      { name: "debuff slow link boomerang" },
       { name: "sfx beam link boomerang" },
     ],
   },

@@ -162,6 +162,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.linkHookshot, SimpleSpellSystem.doLinkHookshot);
     Globals.genericSpellMap.set(Id.linkHookshotPullTowards, SimpleSpellSystem.doLinkHookshotPull);
     Globals.genericSpellMap.set(Id.linkHookshotPullIn, SimpleSpellSystem.doLinkHookshotPull);
+    
+    Globals.genericSpellMap.set(Id.linkBombCharge, SimpleSpellSystem.doLinkBombCharge);
+    Globals.genericSpellMap.set(Id.linkBombThrow, SimpleSpellSystem.doLinkBombThrow);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -3398,6 +3401,14 @@ export module SimpleSpellSystem {
     return false;
   }
 
+  export function doLinkBombCharge() {
+    
+  }
+  
+  export function doLinkBombThrow() {
+
+  }
+
   export function doLinkHookshotSwap(player: player, val: boolean, isMobile: boolean) {
     SetPlayerAbilityAvailable(player, Id.linkHookshot, !val);
     SetPlayerAbilityAvailable(player, Id.linkHookshotPullTowards, val);
@@ -3438,9 +3449,9 @@ export module SimpleSpellSystem {
 
     const hookTravelSpeed = 60;
     const hookPullSpeed = 60;
-    const hookMaxStuckTicks = 33;
+    const hookMaxStuckTicks = 16;
     const hookStuckPercent = 0.4;
-    const hookMaxDist = 1400;
+    const hookMaxDist = 1200;
     const hookBreakDist = hookMaxDist * 1.5;
     const hookUnitRadius = 150;
     
@@ -3472,10 +3483,11 @@ export module SimpleSpellSystem {
     } else {
       newTimer = TimerManager.getInstance().get();
       lightningSfx = AddLightning(
-        "WHCA", true, 
+        "WHCH", true, 
         Globals.tmpVector.x, Globals.tmpVector.y,
-        Globals.tmpVector.x + 10, Globals.tmpVector.y + 10,
+        Globals.tmpVector.x, Globals.tmpVector.y,
       );
+
       hookHeadSfx = AddSpecialEffect("LinkBoomerang.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
       BlzSetSpecialEffectYaw(hookHeadSfx, angle * CoordMath.degreesToRadians);
       BlzSetSpecialEffectRoll(hookHeadSfx, 90 * CoordMath.degreesToRadians);
@@ -3485,6 +3497,10 @@ export module SimpleSpellSystem {
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookMobileTarget, false);
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullTowards, false);
       SaveBoolean(Globals.genericSpellHashtable, casterId, keyHookPullIn, false);
+      
+      // disable inventory 
+      // (to prevent accidentally pressing when wanting to pull in)
+      SetPlayerAbilityAvailable(player, Id.linkInventoryBook, false);
     }
     
     let distance = 0;
@@ -3497,6 +3513,7 @@ export module SimpleSpellSystem {
     let isStuck = false;
     let stuckTicks = 0;
     let unitTarget = caster;
+
 
     TimerStart(newTimer, 0.03, true, () => {
       Globals.tmpVector.setUnit(caster);
@@ -3533,6 +3550,12 @@ export module SimpleSpellSystem {
           || distance <= hookPullSpeed
           || distance > hookBreakDist
         );
+
+        if (isMobileTarget) {
+          if (unitTarget != caster && UnitHelper.isUnitDead(unitTarget)) {
+            isBroken = true;
+          }
+        }
         
         if (!isBroken) {
 
@@ -3578,7 +3601,8 @@ export module SimpleSpellSystem {
           );
 
         } else {
-
+          doLinkHookshotSwap(player, false, true);
+          BlzStartUnitAbilityCooldown(caster, Id.linkHookshot, BlzGetUnitAbilityCooldown(caster, Id.linkHookshot, 0));
           // snap link
           DestroyEffect(hookHeadSfx);
           DestroyLightning(lightningSfx);
