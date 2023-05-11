@@ -95,8 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Block 70% of incoming damage until more than 4 * AGI damage is blocked for 1.5s.|n" +
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +  
+        "Block 70% of incoming damage until more than 4 * STR damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },
@@ -163,7 +163,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(V) Deflect",
       body: 
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * AGI for the next 0.3s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
         "Cost: 35 SP|nCD: 2"
     },
@@ -247,9 +247,9 @@ export const AbilitiesList = [
       disabled: "BTNSpiritbomb.blp",
     },
     tooltip: {
-      title: AbilityNames.Goku.SPIRIT_BOMB,
+      title: "",
       body: 
-        "spirit bomb stuff"
+        ""
     },
     components: [
       { name: "beam spirit bomb" },
@@ -1034,7 +1034,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 80,
+    duration: 74,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1061,7 +1061,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 80,
+    duration: 74,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -7145,7 +7145,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-  animation: "spell",
+    animation: "spell",
     icon: {
       enabled: "BTNMagusDarkMist.blp",
       disabled: "BTNMagusDarkMist.blp",
@@ -8067,7 +8067,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 133,
+    duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8188,12 +8188,12 @@ export const AbilitiesList = [
       disabled: "BTNTodoroki.blp",
     },
     tooltip: {
-      title: AbilityNames.ShotoTodoroki.GLACIER,
+      title: "",
       body:
-        AbilityNames.ShotoTodoroki.GLACIER
+        ""
     },
     components: [
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 20dist" },
       { name: "damage shoto flashfire fist dps" },
       { name: "damage shoto flashfire fist explosion" },
       { name: "sfx shoto flashfire fist" },
@@ -8649,7 +8649,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.SUPER_ELITE_COMBO
     },
     components: [
-      { name: "dash ground point 20dist" },
+      { name: "dash ground point 15dist" },
       { name: "damage jaco super elite combo explosion" },
       { name: "damage jaco super elite combo explosion inner" },
       { name: "jump jaco super elite combo" },
@@ -9417,6 +9417,391 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Link.SIDE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 30dist" },
+      { name: "damage link side slash" },
+      { name: "sfx whirlwind tempest" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOOMERANG,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi link boomerang" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_NORMAL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow normal" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow fire" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_ICE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow ice" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_LIGHTNING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow lightning" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow bomb" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 1" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 83,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_4,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 4" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_5,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 5" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_6,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 6" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOMB_THROW_7,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 3,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link bomb 6" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -9864,6 +10249,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Buu.BUU_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability candy gobbler" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Buu.FLESH_ATTACK,
     currentCd: 0,
     maxCd: 1,
@@ -10184,7 +10596,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Cell.SUPER_CHARGE,
     currentCd: 0,
-    maxCd: 25,
+    maxCd: 26,
     costType: CostType.SP,
     costAmount: 50,
     duration: 300,
@@ -10201,10 +10613,10 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Super Charge",
       body: 
-        "+60% ability damage, +60% auto attack damage, +132ms.|n" + 
+        "+50% ability damage, +50% auto attack damage, +132ms.|n" + 
         "Cost: 50 SP|n"+
         "Duration: 9s|n" +  
-        "CD: 25s"
+        "CD: 26s"
     },
     components: [
       { name: "spell amp cell super charge" },
@@ -13797,8 +14209,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point 30dist" },
-      { name: "damage goku black divine retribution agi explosion" },
       { name: "damage goku black divine retribution int explosion" },
+      // { name: "damage goku black divine retribution agi explosion" },
       { name: "sfx goku black divine retribution" },
     ],
   },
@@ -13855,7 +14267,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim goku black spin" },
       { name: "dash ground point 45dist" },
-      { name: "damage goku black sorrowful scythe agi explosion" },
+      // { name: "damage goku black sorrowful scythe agi explosion" },
       { name: "damage goku black sorrowful scythe int explosion" },
     ],
   },

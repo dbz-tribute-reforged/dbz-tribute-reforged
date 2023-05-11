@@ -23,7 +23,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.85;
 
   static readonly INT_DAMAGE_MULT_MIN = 0.9;
-  static readonly INT_DAMAGE_MULT_MAX = 1.2;
+  static readonly INT_DAMAGE_MULT_MAX = 1.15;
 
   protected damageCoords: Vector2D;
 
@@ -70,7 +70,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static getIntDamageMult(unit: unit): number {
     const hInt = GetHeroInt(unit, true);
     return Math.max(AOEDamage.INT_DAMAGE_MULT_MIN, Math.min(AOEDamage.INT_DAMAGE_MULT_MAX, 
-      1.05 * hInt / (
+      1.0 * hInt / (
         0.333 * (
           GetHeroStr(unit, true) + 
           GetHeroAgi(unit, true) + 

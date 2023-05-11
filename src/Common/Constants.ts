@@ -128,12 +128,20 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const BASE_SP_REGEN = 3;
+  export const BASE_HP_REGEN = 0.005;
+  export const BASE_MP_REGEN = 0.01;
+
   export const BASE_STAMINA = 100.0;
+  export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
+  export const STAMINA_REGEN_MULT_MIN_BONUS = 0.5;
 
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
+  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
+  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1.5;
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -157,12 +165,12 @@ export function stringToCostType(costType: string): CostType {
 }
   
 export module BASE_DMG {
-  export const KAME_DPS = 0.0112;
-  export const KAME_EXPLOSION = 0.053;
-  export const SPIRIT_BOMB_DPS = 0.008;
-  export const SPIRIT_BOMB_EXPLOSION = 0.25;
-  export const DFIST_DPS = 0.013;
-  export const DFIST_EXPLOSION = 0.25;
+  export const KAME_DPS = 0.012;
+  // export const KAME_EXPLOSION = 5 * KAME_DPS;
+  // export const SPIRIT_BOMB_DPS = 0.008;
+  // export const SPIRIT_BOMB_EXPLOSION = 0.25;
+  // export const DFIST_DPS = 0.013;
+  // export const DFIST_EXPLOSION = 20 * KAME_DPS;
 }
 
 export module DebuffAbilities {
@@ -204,6 +212,7 @@ export module DebuffAbilities {
   export const DK_GROUND_POUND_SLOW = FourCC("A06E");
   export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
   export const SLOW_LEON_STAGGER = FourCC("A03C");
+  export const SLOW_LINK_FIRE_ARROW = FourCC("A0H3");
 
   export const SLOW_GENERIC_25_PCT_5S = FourCC('A117');
   export const SLOW_GENERIC_50_PCT_5S = FourCC('A118');
@@ -246,6 +255,10 @@ export module Buffs {
 
   export const COSMIC_ILLUSION = FourCC("B025");
 
+  export const SLOW_KROWN_TOSS = FourCC("B02W");
+  export const SLOW_ZAMASU_BLEED = FourCC("B01G");
+  export const SLOW_FERVENT_WOUND = FourCC("B03M");
+
   export const PARAGON_OF_FLAME = FourCC("B048");
   export const DRAGOON_TRANSFORMATION = FourCC("B049");
 
@@ -275,6 +288,10 @@ export module Buffs {
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
 
   export const SLOW_LEON_STAGGER = FourCC("B05T");
+
+  export const SLOW_LINK_FIRE_ARROW = FourCC("B05X");
+
+  export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
 }
 
 export module OrderIds {
@@ -411,6 +428,7 @@ export module Id {
   export const superBuu = FourCC("O006");
   export const kidBuu = FourCC("O00C");
   export const candyBeam = FourCC("A0EI");
+  export const candyGobbler = FourCC("A0LL");
   export const fleshAttack = FourCC("A01C");
   export const fleshAttackAbsorbTarget = FourCC("A06S");
   export const innocenceBreath = FourCC("A0LH");
@@ -782,6 +800,22 @@ export module Id {
   export const leonFlashbang = FourCC("A038");
   export const leonHeavyGrenade = FourCC("A03A");
 
+  export const linkTwilight = FourCC("H00X");
+  export const linkSideSlash = FourCC("A0FK");
+  export const linkBoomerang = FourCC("A0FL");
+  export const linkBombCharge = FourCC("A0FM");
+  export const linkBombThrow = FourCC("A0FN");
+  export const linkBow = FourCC("A0FX");
+  export const linkHookshot = FourCC("A0G4");
+  export const linkHookshotPullTowards = FourCC("A0G5");
+  export const linkHookshotPullIn = FourCC("A0G9");
+  export const linkInventoryBook = FourCC("A0GA");
+  export const linkArrowNormal = FourCC("A0GB");
+  export const linkArrowFire = FourCC("A0GC");
+  export const linkArrowIce = FourCC("A0GE");
+  export const linkArrowLightning = FourCC("A0GF");
+  export const linkArrowBomb = FourCC("A0H2");
+
   export const lucario = FourCC("H0A7");
   export const vacuumWave = FourCC("A0XU");
   export const ironDefense = FourCC("A0XV");
@@ -1031,6 +1065,7 @@ export module Id {
   export const yamchaSparking = FourCC("A0SB");
 
   export const zamasu = FourCC("E012");
+  export const zamasuImmortality = FourCC("A0SWw");
 
 
   export const itemHealingBuff = FourCC("BIrg");

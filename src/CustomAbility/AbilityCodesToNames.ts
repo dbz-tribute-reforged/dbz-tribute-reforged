@@ -445,11 +445,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.pecorinePrincessStrike, AbilityNames.Peco.PRINCESS_STRIKE],
     [Id.pecorinePrincessValiant, AbilityNames.Peco.PRINCESS_VALIANT],
     [Id.pecorinePrincessForce, AbilityNames.Peco.PRINCESS_FORCE],
-
+    
+    // dende
     [Id.dendeSacredWater, AbilityNames.Dende.SACRED_WATER],
     [Id.dendeSacredWater2, AbilityNames.Dende.SACRED_WATER_2],
     [Id.dendeGuardianDevotion, AbilityNames.Dende.GUARDIANS_DEVOTION],
     [Id.dendeOrange, AbilityNames.Dende.ORANGE_DENDE],
+    
+    // link twilight
+    [Id.linkSideSlash, AbilityNames.Link.SIDE_SLASH],
+    [Id.linkBoomerang, AbilityNames.Link.BOOMERANG],
 
 
 

@@ -47,69 +47,69 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 // note: ground vortex comes with its own
 // knock-in and progressive damage components
 export const GroundVortexComponents = [
-  // copy from here
-  {
-    name: "ground vortex blue hurricane",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: -1,
-    damageData: {
-      multiplier: 0.02,
-      attribute: bj_HEROSTAT_AGI,
-      attackType: 6, 
-      damageType: 4, 
-      weaponType: 0, 
-    },
-    angle: 70,
-    distance: 40,
-    aoe: 650,
-    // angle adjustment when closer
-    closenessAngle: 90 + 12,
-    // distance adjustment when closer
-    closenessDistanceMult: -0.25,
-    closenessDamageMult: 1.0,
-    durationDamageMult: 1.0,
-  },
-  // to here, and replace with unique name
-  {
-    name: "ground vortex fast spin",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: -1,
-    damageData: {
-      multiplier: 0.06,
-      attribute: bj_HEROSTAT_AGI,
-      attackType: 6, 
-      damageType: 4, 
-      weaponType: 0, 
-    },
-    angle: 60,
-    distance: 45,
-    aoe: 350,
-    closenessAngle: 90 + 30,
-    closenessDistanceMult: -0.4,
-    closenessDamageMult: 2.0,
-    durationDamageMult: 1.0,
-  },
-  // dark matter
-  {
-    name: "ground vortex dark matter",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: -1,
-    damageData: {
-      multiplier: BASE_DMG.SPIRIT_BOMB_DPS * 0.06,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6, 
-      damageType: 4, 
-      weaponType: 0, 
-    },
-    angle: 70,
-    distance: 40,
-    aoe: 1200,
-    closenessAngle: 90 + 12,
-    closenessDistanceMult: -0.25,
-    closenessDamageMult: 1.0,
-    durationDamageMult: 1.0,
-  },
+  // // copy from here
+  // {
+  //   name: "ground vortex blue hurricane",
+  //   repeatInterval: 1,
+  //   startTick: 0,
+  //   endTick: -1,
+  //   damageData: {
+  //     multiplier: 0.02,
+  //     attribute: bj_HEROSTAT_AGI,
+  //     attackType: 6, 
+  //     damageType: 4, 
+  //     weaponType: 0, 
+  //   },
+  //   angle: 70,
+  //   distance: 40,
+  //   aoe: 650,
+  //   // angle adjustment when closer
+  //   closenessAngle: 90 + 12,
+  //   // distance adjustment when closer
+  //   closenessDistanceMult: -0.25,
+  //   closenessDamageMult: 1.0,
+  //   durationDamageMult: 1.0,
+  // },
+  // // to here, and replace with unique name
+  // {
+  //   name: "ground vortex fast spin",
+  //   repeatInterval: 1,
+  //   startTick: 0,
+  //   endTick: -1,
+  //   damageData: {
+  //     multiplier: 0.06,
+  //     attribute: bj_HEROSTAT_AGI,
+  //     attackType: 6, 
+  //     damageType: 4, 
+  //     weaponType: 0, 
+  //   },
+  //   angle: 60,
+  //   distance: 45,
+  //   aoe: 350,
+  //   closenessAngle: 90 + 30,
+  //   closenessDistanceMult: -0.4,
+  //   closenessDamageMult: 2.0,
+  //   durationDamageMult: 1.0,
+  // },
+  // // dark matter
+  // {
+  //   name: "ground vortex dark matter",
+  //   repeatInterval: 1,
+  //   startTick: 0,
+  //   endTick: -1,
+  //   damageData: {
+  //     multiplier: BASE_DMG.KAME_DPS * 0.06,
+  //     attribute: bj_HEROSTAT_INT,
+  //     attackType: 6, 
+  //     damageType: 4, 
+  //     weaponType: 0, 
+  //   },
+  //   angle: 70,
+  //   distance: 40,
+  //   aoe: 1200,
+  //   closenessAngle: 90 + 12,
+  //   closenessDistanceMult: -0.25,
+  //   closenessDamageMult: 1.0,
+  //   durationDamageMult: 1.0,
+  // },
 ];

@@ -2,6 +2,21 @@ import { Id } from "Common/Constants";
 
 export const TempAbilityComponents = [
   {
+    name: "temp ability candy gobbler", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: Id.candyGobbler,
+    oldAbility: Id.candyBeam,
+    performSwap: true,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: false,
+    equalizeLevels: true,
+    linkCooldowns: -1,
+  },
+  {
     name: "temp ability tyrant lancer", 
     repeatInterval: 1, 
     startTick: 0,

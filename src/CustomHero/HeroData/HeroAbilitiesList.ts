@@ -564,7 +564,28 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Dende.GUARDIANS_DEVOTION,
       AbilityNames.Dende.ORANGE_DENDE,
     ]],
+
+    [Id.linkTwilight, [
+      AbilityNames.Link.SIDE_SLASH,
+      AbilityNames.Link.BOOMERANG,
+      AbilityNames.Link.BOMB_THROW_1,
+      AbilityNames.Link.BOMB_THROW_2,
+      AbilityNames.Link.BOMB_THROW_3,
+      AbilityNames.Link.BOMB_THROW_4,
+      AbilityNames.Link.BOMB_THROW_5,
+      AbilityNames.Link.BOMB_THROW_6,
+      AbilityNames.Link.BOMB_THROW_7,
+      AbilityNames.Link.BOW_ARROW_NORMAL,
+      AbilityNames.Link.BOW_ARROW_FIRE,
+      AbilityNames.Link.BOW_ARROW_ICE,
+      AbilityNames.Link.BOW_ARROW_LIGHTNING,
+      AbilityNames.Link.BOW_ARROW_BOMB,
+    ]],
     
+
+
+
+
 
 
 
@@ -658,6 +679,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Megumin.EXPLOSION_1,
       AbilityNames.Peco.PRINCESS_SPLASH,
       AbilityNames.Dende.SACRED_WATER_2, AbilityNames.Dende.ORANGE_DENDE,
+      AbilityNames.Link.SIDE_SLASH,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

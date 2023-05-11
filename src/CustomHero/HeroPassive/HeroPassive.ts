@@ -63,7 +63,7 @@ export class HeroPassiveManager {
   }
 
   public setupHero(customHero: CustomHero) {
-    setupSPData(customHero);
+    setupRegenTimer(customHero);
     const unitId = GetUnitTypeId(customHero.unit);
     switch (unitId) {
       case HeroPassiveData.KID_BUU:
@@ -1486,7 +1486,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeLossStuck = 0.85;
   const dmgAOE = 280;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.DFIST_DPS * 0.066;
+  const spinDmgDataMult = BASE_DMG.KAME_DPS * 0.066;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.6;
@@ -1499,14 +1499,14 @@ export function sonicPassive(customHero: CustomHero) {
   const homingMagnitudeMaxMult = 1.75;
   const homingForwardsLatestTick = 12;
   const homingReversalDuration = 9;
-  const dmgHomingAttack = BASE_DMG.DFIST_EXPLOSION * 0.22;
+  const dmgHomingAttack = BASE_DMG.KAME_DPS * 4.4;
 
   const magnitudeLossSpinDash = 0.9;
 
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.DFIST_EXPLOSION * 0.85;
+  const dmgLightSpeed = BASE_DMG.KAME_DPS * 17;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -1681,7 +1681,7 @@ export function sonicPassive(customHero: CustomHero) {
             customHero.spellPower,
             dmgHomingAttack,
             1.0,
-            bj_HEROSTAT_AGI
+            bj_HEROSTAT_INT
           );
         } else {
           // rush homing
@@ -1842,7 +1842,7 @@ export function sonicPassive(customHero: CustomHero) {
               customHero.spellPower,
               spinDmgDataMult,
               speedToMult,
-              bj_HEROSTAT_AGI
+              bj_HEROSTAT_INT
             );
           }
         }
@@ -1921,7 +1921,7 @@ export function sonicPassive(customHero: CustomHero) {
             customHero.spellPower,
             dmgLightSpeed,
             1.0,
-            bj_HEROSTAT_AGI
+            bj_HEROSTAT_INT
           );
 
           
@@ -2371,43 +2371,80 @@ export function pecoPassive(customHero: CustomHero) {
   );
 }
 
-export function setupSPData(customHero: CustomHero) {
-  const spTimer = CreateTimer();
-  customHero.addTimer(spTimer);
+export function setupRegenTimer(customHero: CustomHero) {
+  const regenTimer = CreateTimer();
+  customHero.addTimer(regenTimer);
 
-  TimerStart(spTimer, 0.03, true, () => {
-    // regen: 1 stam per 6 second base
-    // +1% per 1k AGI
-    let currentSP = customHero.getCurrentSP();
-    let maxSP = customHero.getMaxSP();
+  TimerStart(regenTimer, 0.03, true, () => {
+    // regen: 3 stam per 1 second
+    const heroStr = GetHeroStr(customHero.unit, true);
+    const heroAgi = GetHeroStr(customHero.unit, true);
+    const heroInt = GetHeroStr(customHero.unit, true);
+    const sumStats = 0.33 *(heroStr + heroAgi + heroInt);
 
-    let agiBonus = Math.min(
-      1.5,
-      (1 + 0.00001 * GetHeroAgi(customHero.unit, true))
-    )
-    let incSp = 0.05 * agiBonus;
+
+    // sp
+    let incSp = 0.03 * Constants.BASE_SP_REGEN * Math.max(
+      Constants.STAMINA_REGEN_MULT_MIN_BONUS,
+      Math.min(
+        Constants.STAMINA_REGEN_MULT_MAX_BONUS,
+        heroAgi / sumStats
+      )
+    );
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       incSp *= 2;
     }
     const id = GetUnitTypeId(customHero.unit);
     if (id == Id.saitama) {
       incSp *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
+    } 
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incSp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
-    // if (currentSP < 0.2 * maxSP) {
-    //   incSp *= 0.5;
-    // }
-    const spRatio = Math.max(0, currentSP/maxSP);
-    incSp *= (0.55+spRatio);    
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
+    
+
+
+
+    // hp
+    let incHp = (
+      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
+      * Constants.BASE_HP_REGEN * heroAgi / heroStr
+    );
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incHp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Id.zamasuImmortality) > 0) {
+      incHp *= Constants.ZAMASU_PASSIVE_HP_REGEN_MULT;
+    }
+    SetUnitState(
+      customHero.unit, UNIT_STATE_LIFE, 
+      Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp)
+    );
+
+
+
+
+
+
+    // mp
+    let incMp = (
+      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
+      * Constants.BASE_MP_REGEN * heroAgi / heroInt
+    );
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
+      incMp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    SetUnitState(
+      customHero.unit, UNIT_STATE_MANA, 
+      GetUnitState(customHero.unit, UNIT_STATE_MANA) + incMp
+    );
   });
 
   const maxSpUpdateTimer = CreateTimer();
   customHero.addTimer(maxSpUpdateTimer);
   TimerStart(maxSpUpdateTimer, 5.0, true, () => {
-    let maxStamina = Constants.BASE_STAMINA + Math.min(
-      25,
-      0.0005 * GetHeroAgi(customHero.unit, true)
-    );
+    let maxStamina = Constants.BASE_STAMINA;
     const id = GetUnitTypeId(customHero.unit);
     if (
       IsUnitType(customHero.unit, UNIT_TYPE_SUMMONED)

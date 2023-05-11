@@ -509,6 +509,23 @@ export module AbilityNames {
     export const ORANGE_DENDE: string = "Dende Orange Dende";
   }
 
+  export module Link {
+    export const SIDE_SLASH: string = "Link Side Slash";
+    export const BOOMERANG: string = "Link Boomerang";
+    export const BOMB_THROW_1: string = "Link Bomb Throw 1";
+    export const BOMB_THROW_2: string = "Link Bomb Throw 2";
+    export const BOMB_THROW_3: string = "Link Bomb Throw 3";
+    export const BOMB_THROW_4: string = "Link Bomb Throw 4";
+    export const BOMB_THROW_5: string = "Link Bomb Throw 5";
+    export const BOMB_THROW_6: string = "Link Bomb Throw 6";
+    export const BOMB_THROW_7: string = "Link Bomb Throw 7";
+    export const BOW_ARROW_NORMAL: string = "Link Bow Arrow Normal";
+    export const BOW_ARROW_FIRE: string = "Link Bow Arrow Fire";
+    export const BOW_ARROW_ICE: string = "Link Bow Arrow Ice";
+    export const BOW_ARROW_LIGHTNING: string = "Link Bow Arrow Lightning";
+    export const BOW_ARROW_BOMB: string = "Link Bow Arrow Bomb";
+  }
+
 
 
 

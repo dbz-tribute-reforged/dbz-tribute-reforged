@@ -825,6 +825,17 @@ const sonicData = {
     HeroSelectCategory.ASSASSIN
   )
 }
+const linkTwilightData = {
+  unitCode: Id.linkTwilight,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BEAMER
+  )
+}
 const rustyData = {
   unitCode: Id.rustTyranno,
   onlyRandom: false,
@@ -968,7 +979,7 @@ export const HeroSelectUnitList = [
   marioData,
   waluigiData,
   sonicData,
-  emptySpace,
+  linkTwilightData,
   // 90
   rustyData,
 ];

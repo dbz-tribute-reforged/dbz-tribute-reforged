@@ -1473,7 +1473,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 4,
+    distance: 5,
   },
   // nova chariot
   {
@@ -1810,7 +1810,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 5,
+    distance: 4,
   },
   // appule emergency escape
   {
@@ -1824,6 +1824,56 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 1200,
+  },
+  // link boomerang
+  {
+    name: "dash flying point link boomerang",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 30,
+  },
+  {
+    name: "dash flying sideways boomerang return",
+    repeatInterval: 1, 
+    startTick: 25,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 90,
+    distance: 15,
+  },
+  {
+    name: "dash flying caster link boomerang return",
+    repeatInterval: 1, 
+    startTick: 25,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 75,
+  },
+  // link bomb
+  {
+    name: "dash flying point link bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 36,
+    targetDirection: Dash.DIRECTION_LAST_CAST_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 50,
   },
   // ---
   // saga zanzo

@@ -51,8 +51,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.5,
-    rate: 0.5,
+    bonus: 0.3,
+    rate: 0.3,
   },
   // // --------------------------------------------
   // { 
@@ -132,8 +132,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.6,
-    rate: 0.6,
+    bonus: 0.5,
+    rate: 0.5,
   },
   // --------------------------------------------
   { 
