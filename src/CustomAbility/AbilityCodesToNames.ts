@@ -455,7 +455,6 @@ export const abilityCodesToNames = new Map<number, string>(
     // link twilight
     [Id.linkSideSlash, AbilityNames.Link.SIDE_SLASH],
     [Id.linkBoomerang, AbilityNames.Link.BOOMERANG],
-    [Id.linkBow, AbilityNames.Link.BOW_ARROW_NORMAL],
 
 
 

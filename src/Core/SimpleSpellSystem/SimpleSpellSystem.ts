@@ -165,6 +165,15 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.linkBombCharge, SimpleSpellSystem.doLinkBombCharge);
     Globals.genericSpellMap.set(Id.linkBombThrow, SimpleSpellSystem.doLinkBombThrow);
+    
+    Globals.genericSpellMap.set(Id.linkBow, SimpleSpellSystem.doLinkBowShoot);
+    Globals.genericSpellMap.set(Id.linkArrowNormal, SimpleSpellSystem.doLinkArrowSelect);
+    Globals.genericSpellMap.set(Id.linkArrowFire, SimpleSpellSystem.doLinkArrowSelect);
+    Globals.genericSpellMap.set(Id.linkArrowIce, SimpleSpellSystem.doLinkArrowSelect);
+    Globals.genericSpellMap.set(Id.linkArrowLightning, SimpleSpellSystem.doLinkArrowSelect);
+    Globals.genericSpellMap.set(Id.linkArrowBomb, SimpleSpellSystem.doLinkArrowSelect);
+    
+    Globals.genericSpellMap.set(DebuffAbilities.SLOW_LINK_FIRE_ARROW, SimpleSpellSystem.doLinkFireArrowBurn);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -3612,6 +3621,7 @@ export module SimpleSpellSystem {
     const hookMaxDist = 1200;
     const hookBreakDist = hookMaxDist * 1.5;
     const hookUnitRadius = 150;
+    const hookMaxActiveTicks = 166;
 
     const keyIsActive = StringHash("link|hookshot|active");
     const keyLightningSfx = StringHash("link|hookshot|lightning");
@@ -3679,6 +3689,7 @@ export module SimpleSpellSystem {
     let isMobileTarget = false;
     let isStuck = false;
     let stuckTicks = 0;
+    let activeTicks = 0;
     let unitTarget = caster;
 
 
@@ -3716,6 +3727,7 @@ export module SimpleSpellSystem {
           stuckTicks > hookMaxStuckTicks
           || distance <= hookPullSpeed
           || distance > hookBreakDist
+          || activeTicks > hookMaxActiveTicks
         );
 
         if (isMobileTarget) {
@@ -3766,6 +3778,7 @@ export module SimpleSpellSystem {
             Globals.tmpVector.x, Globals.tmpVector.y, 
             Globals.tmpVector2.x, Globals.tmpVector2.y,
           );
+          ++activeTicks;
 
         } else {
           doLinkHookshotSwap(caster, player, false, true);
@@ -3843,6 +3856,101 @@ export module SimpleSpellSystem {
         }
       }
 
+    });
+  }
+
+  export function doLinkBowShoot() {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const keyArrowSelected = StringHash("link|arrow|selection");
+    const arrowSelected = LoadInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected);
+
+    let abilityName = AbilityNames.Link.BOW_ARROW_NORMAL;
+    switch (arrowSelected) {
+      default:
+      case 0:
+        abilityName = AbilityNames.Link.BOW_ARROW_NORMAL;
+        break;
+      case 1:
+        abilityName = AbilityNames.Link.BOW_ARROW_FIRE;
+        break;
+      case 2:
+        abilityName = AbilityNames.Link.BOW_ARROW_ICE;
+        break;
+      case 3:
+        abilityName = AbilityNames.Link.BOW_ARROW_LIGHTNING;
+        break;
+      case 4:
+        abilityName = AbilityNames.Link.BOW_ARROW_BOMB;
+        break;
+    }
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (customHero) {
+      const abilityInput = new CustomAbilityInput(
+        GetSpellAbilityId(),
+        customHero,
+        player,
+        GetUnitAbilityLevel(customHero.unit, Id.linkBow),
+        Globals.customPlayers[playerId].orderPoint,
+        Globals.customPlayers[playerId].mouseData,
+        Globals.customPlayers[playerId].lastCastPoint.clone()
+      );
+      customHero.useAbility(abilityName, abilityInput);
+    }
+  }
+
+  export function doLinkArrowSelect() {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const spellId = GetSpellAbilityId();
+
+    const keyArrowSelected = StringHash("link|arrow|selection");
+    switch (spellId) {
+      default:
+      case Id.linkArrowNormal:
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected, 0);
+        break;
+      case Id.linkArrowFire:
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected, 1);
+        break;
+      case Id.linkArrowIce:
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected, 2);
+        break;
+      case Id.linkArrowLightning:
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected, 3);
+        break;
+      case Id.linkArrowBomb:
+        SaveInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected, 4);
+        break;
+    }
+  }
+
+  export function doLinkFireArrowBurn() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const target = GetSpellTargetUnit();
+
+    const ch = Globals.customPlayers[playerId].firstCustomHero;
+    if (!ch) return;
+
+    const maxDmgTicks = 166;
+    const dmgPctSecond = 0.03;
+
+    let dmgTicks = 0;
+    const dmgTimer = TimerManager.getInstance().get();
+    TimerStart(dmgTimer, 0.03, true, () => {
+      if (dmgTicks >= maxDmgTicks) {
+        TimerManager.getInstance().recycle(dmgTimer);
+      } else {
+        const dmg = 0.03 * dmgPctSecond * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+        UnitDamageTarget(ch.unit, target, dmg, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS);
+        ++dmgTicks;
+      }
     });
   }
 

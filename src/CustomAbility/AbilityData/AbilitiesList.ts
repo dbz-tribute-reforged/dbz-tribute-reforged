@@ -8188,12 +8188,12 @@ export const AbilitiesList = [
       disabled: "BTNTodoroki.blp",
     },
     tooltip: {
-      title: AbilityNames.ShotoTodoroki.GLACIER,
+      title: "",
       body:
-        AbilityNames.ShotoTodoroki.GLACIER
+        ""
     },
     components: [
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 20dist" },
       { name: "damage shoto flashfire fist dps" },
       { name: "damage shoto flashfire fist explosion" },
       { name: "sfx shoto flashfire fist" },
@@ -9496,6 +9496,118 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam link arrow normal" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow fire" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_ICE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow ice" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_LIGHTNING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow lightning" },
+      { name: "sfx link bow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Link.BOW_ARROW_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link arrow bomb" },
       { name: "sfx link bow" },
     ],
   },

@@ -2419,7 +2419,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     SetUnitState(
       customHero.unit, UNIT_STATE_LIFE, 
-      GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp
+      Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp)
     );
 
 

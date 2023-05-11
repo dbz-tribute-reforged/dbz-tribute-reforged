@@ -212,6 +212,7 @@ export module DebuffAbilities {
   export const DK_GROUND_POUND_SLOW = FourCC("A06E");
   export const SLOW_WALUIGI_FIREBALL_1 = FourCC('A11U');
   export const SLOW_LEON_STAGGER = FourCC("A03C");
+  export const SLOW_LINK_FIRE_ARROW = FourCC("A0H3");
 
   export const SLOW_GENERIC_25_PCT_5S = FourCC('A117');
   export const SLOW_GENERIC_50_PCT_5S = FourCC('A118');
@@ -287,6 +288,8 @@ export module Buffs {
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
 
   export const SLOW_LEON_STAGGER = FourCC("B05T");
+
+  export const SLOW_LINK_FIRE_ARROW = FourCC("B05X");
 
   export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
 }
@@ -807,6 +810,11 @@ export module Id {
   export const linkHookshotPullTowards = FourCC("A0G5");
   export const linkHookshotPullIn = FourCC("A0G9");
   export const linkInventoryBook = FourCC("A0GA");
+  export const linkArrowNormal = FourCC("A0GB");
+  export const linkArrowFire = FourCC("A0GC");
+  export const linkArrowIce = FourCC("A0GE");
+  export const linkArrowLightning = FourCC("A0GF");
+  export const linkArrowBomb = FourCC("A0H2");
 
   export const lucario = FourCC("H0A7");
   export const vacuumWave = FourCC("A0XU");

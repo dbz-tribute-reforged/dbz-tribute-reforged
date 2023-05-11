@@ -576,6 +576,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Link.BOMB_THROW_6,
       AbilityNames.Link.BOMB_THROW_7,
       AbilityNames.Link.BOW_ARROW_NORMAL,
+      AbilityNames.Link.BOW_ARROW_FIRE,
+      AbilityNames.Link.BOW_ARROW_ICE,
+      AbilityNames.Link.BOW_ARROW_LIGHTNING,
+      AbilityNames.Link.BOW_ARROW_BOMB,
     ]],
     
 
