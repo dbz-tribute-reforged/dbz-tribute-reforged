@@ -95,8 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Block 70% of incoming damage until more than 4 * STR damage is blocked for 1.5s.|n" +
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +  
+        "Block 70% of incoming damage until more than 3 * STR damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 3 * STR for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },

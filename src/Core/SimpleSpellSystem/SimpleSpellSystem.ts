@@ -3618,8 +3618,8 @@ export module SimpleSpellSystem {
     const hookPullSpeed = 60;
     const hookMaxStuckTicks = 16;
     const hookStuckPercent = 0.4;
-    const hookMaxDist = 1200;
-    const hookBreakDist = hookMaxDist * 1.5;
+    const hookMaxDist = 1600;
+    const hookBreakDist = hookMaxDist * 1.25;
     const hookUnitRadius = 150;
     const hookMaxActiveTicks = 166;
 

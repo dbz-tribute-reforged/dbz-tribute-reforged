@@ -1161,6 +1161,7 @@ gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Cell_Max = nil
 function InitGlobals()
 local i = 0
 
@@ -7024,15 +7025,15 @@ end
 
 function Trig_Kyodaika_Get_Str_Mult_Actions()
 if (Trig_Kyodaika_Get_Str_Mult_Func001C()) then
-udg_TempReal = 0.30
+udg_TempReal = 0.20
 else
 if (Trig_Kyodaika_Get_Str_Mult_Func001Func002C()) then
-udg_TempReal = 0.40
+udg_TempReal = 0.30
 else
 if (Trig_Kyodaika_Get_Str_Mult_Func001Func002Func001C()) then
-udg_TempReal = 0.50
+udg_TempReal = 0.40
 else
-udg_TempReal = 0.60
+udg_TempReal = 0.50
 end
 end
 end
@@ -8911,7 +8912,7 @@ udg_TempLoc2 = GetSpellTargetLoc()
 udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
 CreateNUnitsAtLoc(1, FourCC("hpea"), udg_TempPlayer, udg_TempLoc, udg_TempReal)
 udg_TempUnit2 = GetLastCreatedUnit()
-udg_TempReal2 = RMaxBJ(50.00, (50.00 * I2R(R2I((I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)) * ((0.11 * 0.04) * I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))))))))
+udg_TempReal2 = RMaxBJ(50.00, (50.00 * I2R(R2I((I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)) * ((udg_DMG_KAME_DPS * (0.04 * 0.30)) * I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true))))))))
 BlzSetUnitMaxHP(udg_TempUnit2, R2I(udg_TempReal2))
 SetUnitLifePercentBJ(udg_TempUnit2, 100)
 BlzSetUnitName(udg_TempUnit2, "beam javelin throw 2")
@@ -19859,15 +19860,15 @@ ForGroupBJ(udg_StatMultPlayerUnits[udg_FarmerBuildTempInt2], Trig_Farmer_Update_
 else
 end
 if (Trig_Farmer_Update_Building_Max_HP_Func003C()) then
-udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 200))
+udg_FarmerBuildTempInt2 = (2000 + (udg_FarmerBuildTempInt * 100))
 else
 if (Trig_Farmer_Update_Building_Max_HP_Func003Func001C()) then
-udg_FarmerBuildTempInt2 = (5000 + (udg_FarmerBuildTempInt * 250))
+udg_FarmerBuildTempInt2 = (2500 + (udg_FarmerBuildTempInt * 150))
 else
 if (Trig_Farmer_Update_Building_Max_HP_Func003Func001Func002C()) then
-udg_FarmerBuildTempInt2 = (8000 + (udg_FarmerBuildTempInt * 600))
+udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 300))
 else
-udg_FarmerBuildTempInt2 = (4000 + (udg_FarmerBuildTempInt * 200))
+udg_FarmerBuildTempInt2 = (2000 + (udg_FarmerBuildTempInt * 100))
 end
 end
 end
@@ -36170,20 +36171,20 @@ if (Trig_Add_Unit_To_StatMult_Func001C()) then
 TriggerExecute(gg_trg_Automatic_StatMod)
 if (Trig_Add_Unit_To_StatMult_Func001Func002C()) then
 if (Trig_Add_Unit_To_StatMult_Func001Func002Func002C()) then
-BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 40), 0)
+BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 20), 0)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func002Func003C()) then
-BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 60), 0)
+BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 30), 0)
 else
 end
 else
 if (Trig_Add_Unit_To_StatMult_Func001Func002Func001C()) then
-BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 110), 0)
+BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 50), 0)
 else
-BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 130), 0)
+BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 60), 0)
 if (Trig_Add_Unit_To_StatMult_Func001Func002Func001Func002C()) then
-BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 100), 0)
+BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 50), 0)
 else
 end
 end
@@ -37887,7 +37888,7 @@ else
 if (Trig_Oozaru_Vegeta_Skin_Change_Func007Func002Func002C()) then
 udg_StatMultStr = 2.60
 else
-udg_StatMultStr = 2.80
+udg_StatMultStr = 2.75
 end
 end
 end
@@ -37958,7 +37959,7 @@ udg_TempReal = 20.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Future_Trunks_SS_Rage_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.50
+udg_TempReal4 = 0.40
 udg_StatMultReal = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + 0.00)
@@ -38007,7 +38008,7 @@ udg_TempReal = 30.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Cell_X_Form_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.30
+udg_TempReal4 = 0.20
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -38217,7 +38218,7 @@ udg_TempReal = 30.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Toppo_GoD_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.25
+udg_TempReal4 = 0.15
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -38670,7 +38671,7 @@ udg_TempReal = 15.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Goku_MUI_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = 0.15
+udg_TempReal4 = 0.10
 udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -39625,7 +39626,7 @@ udg_TempReal = 25.00
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 if (Trig_Vegeta_Ultra_Ego_Func005C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-udg_TempReal4 = (0.05 + (0.20 * (1.00 - (0.01 * GetUnitLifePercent(udg_StatMultUnit)))))
+udg_TempReal4 = (0.10 + (0.10 * (1.00 - (0.01 * GetUnitLifePercent(udg_StatMultUnit)))))
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
 udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
 udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
@@ -40517,6 +40518,10 @@ udg_TransformationCommandsNonAuto[udg_TempInt] = "super water"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommandsNonAuto[udg_TempInt] = "super healing"
 udg_TempInt = (udg_TempInt + 1)
+udg_TransformationCommandsNonAuto[udg_TempInt] = "cell-x"
+udg_TempInt = (udg_TempInt + 1)
+udg_TransformationCommandsNonAuto[udg_TempInt] = "cell max"
+udg_TempInt = (udg_TempInt + 1)
 udg_TempInt2 = 1
 while (true) do
 if (udg_TempInt2 > udg_MaxNumPlayers) then break end
@@ -40635,8 +40640,6 @@ udg_TransformationCommands[udg_TempInt] = "ultra ego"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "ui"
 udg_TempInt = (udg_TempInt + 1)
-udg_TransformationCommands[udg_TempInt] = "cell-x"
-udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "final shikai"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "orange"
@@ -40696,6 +40699,13 @@ end
 function InitTrig_Transformations_Entry_Point()
 gg_trg_Transformations_Entry_Point = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Entry_Point, Trig_Transformations_Entry_Point_Actions)
+end
+
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00Y"))) then
+return false
+end
+return true
 end
 
 function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
@@ -41336,6 +41346,10 @@ else
 if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
 TriggerExecute(gg_trg_Transformations_Cell_Perfect)
 else
+if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Cell_Max)
+else
+end
 end
 end
 end
@@ -43871,7 +43885,7 @@ else
 end
 if (Trig_Transformations_Future_Trunks_Func014C()) then
 udg_StatMultReal = 1.50
-udg_StatMultStr = 3.00
+udg_StatMultStr = 2.75
 udg_StatMultAgi = 1.50
 udg_StatMultInt = 1.50
 udg_TransformationAbility = FourCC("A0AV")
@@ -48597,6 +48611,9 @@ end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
 return false
 end
+if (not (udg_IsLeadingToFinalBattle == false)) then
+return false
+end
 if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
 return false
 end
@@ -48928,7 +48945,26 @@ end
 return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func018Func001Func003C()
+function Trig_Transformations_Cell_Perfect_Func017C()
+if (not (udg_TransformationString == "cell max")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+return false
+end
+if (not (udg_IsLeadingToFinalBattle == false)) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_StatMultUnit) == false)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Perfect_Func019Func001Func003C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -48938,14 +48974,14 @@ end
 return false
 end
 
-function Trig_Transformations_Cell_Perfect_Func018Func001C()
-if (not Trig_Transformations_Cell_Perfect_Func018Func001Func003C()) then
+function Trig_Transformations_Cell_Perfect_Func019Func001C()
+if (not Trig_Transformations_Cell_Perfect_Func019Func001Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func018C()
+function Trig_Transformations_Cell_Perfect_Func019C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -49014,8 +49050,16 @@ UnitAddAbilityBJ(FourCC("A00Q"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_StatMultUnit, IMinBJ(15, (GetHeroLevel(udg_StatMultUnit) // 10)))
 else
 end
-if (Trig_Transformations_Cell_Perfect_Func018C()) then
-if (Trig_Transformations_Cell_Perfect_Func018Func001C()) then
+if (Trig_Transformations_Cell_Perfect_Func017C()) then
+GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
+        udg_TransformationID = FourCC('H00Y')
+udg_TransformationStatMult = 2.60
+TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+udg_StatMultReal = 0.00
+else
+end
+if (Trig_Transformations_Cell_Perfect_Func019C()) then
+if (Trig_Transformations_Cell_Perfect_Func019Func001C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H00G')
@@ -49031,6 +49075,99 @@ end
 function InitTrig_Transformations_Cell_Perfect()
 gg_trg_Transformations_Cell_Perfect = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Cell_Perfect, Trig_Transformations_Cell_Perfect_Actions)
+end
+
+function Trig_Transformations_Cell_Max_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Max_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Max_Func012C()
+if (not (udg_TransformationString == "cell max")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Max_Func014Func002Func001C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Cell_Max_Func014Func002C()
+if (not Trig_Transformations_Cell_Max_Func014Func002Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Max_Func014C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cell_Max_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Cell_Max_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_20825")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Cell_Max_Func011C()) then
+udg_StatMultReal = 2.60
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Cell_Max_Func012C()) then
+udg_StatMultReal = 2.60
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Cell_Max_Func014C()) then
+if (Trig_Transformations_Cell_Max_Func014Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H00Y')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Cell_Max()
+gg_trg_Transformations_Cell_Max = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Cell_Max, Trig_Transformations_Cell_Max_Actions)
 end
 
 function Trig_Cooler_Give_Transform_Conditions()
@@ -66004,6 +66141,7 @@ InitTrig_Transformations_Cell_Larval()
 InitTrig_Transformations_Cell_First()
 InitTrig_Transformations_Cell_Second()
 InitTrig_Transformations_Cell_Perfect()
+InitTrig_Transformations_Cell_Max()
 InitTrig_Cooler_Give_Transform()
 InitTrig_Cooler_Transform_Into_Final_Form()
 InitTrig_Metal_Cooler_Add_Stat_Mult()

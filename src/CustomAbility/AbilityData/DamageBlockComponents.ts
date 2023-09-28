@@ -10,7 +10,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 70,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -67,7 +67,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 95,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -125,7 +125,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 12,
+    multiplier: 6,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -182,7 +182,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 16,
+    multiplier: 8,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -239,7 +239,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 33,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 2,
     sfxList: [
       {
         model: "IceNova.mdl",
@@ -275,7 +275,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 75,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 2,
+    multiplier: 1,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -617,7 +617,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 60,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 7.0,
+    multiplier: 3.5,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
@@ -674,7 +674,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.5,
+    multiplier: 0.25,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -731,7 +731,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 200,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.6,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -788,7 +788,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.6,
+    multiplier: 0.3,
     sfxList: [
       // {
       //   model: "IceNova.mdl",
@@ -861,7 +861,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.8,
+    multiplier: 0.4,
     sfxList: [
       {
         model: "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl",
@@ -918,7 +918,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4.0,
+    multiplier: 2.0,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
@@ -1032,7 +1032,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 65,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.65,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Naga/NagaDeath/NagaDeath.mdl",
@@ -1089,7 +1089,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 6.0,
+    multiplier: 3.0,
     sfxList: [
       {
         model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
@@ -1143,7 +1143,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 8.0,
+    multiplier: 4.0,
     sfxList: [
       {
         model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
@@ -1197,7 +1197,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 15,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 1.5,
     sfxList: [
       {
         model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
@@ -1233,7 +1233,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 2,
     sfxList: [
       {
         model: "Abilities/Spells/Other/Doom/DoomTarget.mdl",
@@ -1269,7 +1269,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 7.5,
+    multiplier: 3.5,
     sfxList: [
       {
         model: "PurpleSlam.mdl",
@@ -1326,7 +1326,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 15,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 2,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -1362,7 +1362,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 8,
+    multiplier: 4,
     sfxList: [
       {
         model: "Slam.mdl",
@@ -1398,7 +1398,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 75,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.3,
+    multiplier: 0.15,
     sfxList: [
       {
         model: "PurpleSlam.mdl",
@@ -1455,7 +1455,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.2,
+    multiplier: 0.1,
     sfxList: [
       {
         model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
@@ -1569,7 +1569,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 2,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -1684,7 +1684,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 25,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.5,
+    multiplier: 0.25,
     sfxList: [
       {
         model: "Firaga.mdl",
@@ -1798,7 +1798,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 91,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 5,
+    multiplier: 2.5,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/MirrorImage/MirrorImageDeathCaster.mdl",
@@ -1891,7 +1891,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 7.5,
+    multiplier: 2.5,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -1948,7 +1948,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.5,
+    multiplier: 0.25,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -2005,7 +2005,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 2,
     sfxList: [
       {
         model: "Slam.mdl",
@@ -2155,7 +2155,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 200,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 2.5,
+    multiplier: 1.25,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -2212,7 +2212,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 2,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -2269,7 +2269,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.6,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -2323,10 +2323,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 65,
+    blockPerDamage: 75,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.5,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -2383,7 +2383,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.6,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "IceNova.mdl",
@@ -2440,7 +2440,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 1.2,
+    multiplier: 0.6,
     sfxList: [
       {
         model: "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
@@ -2497,7 +2497,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.4,
+    multiplier: 0.2,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",

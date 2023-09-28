@@ -259,12 +259,12 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         const zz_distanceRatio = Math.min(1.0, this.distanceTravelled / (this.distance * this.distanceMult));
         let stamina_refund_ratio = 1.0-zz_distanceRatio;
         if (isNearby) {
-          stamina_refund_ratio += 0.5;
+          stamina_refund_ratio += 0.4;
         }
 
         stamina_refund_ratio = Math.max(
           0.0,
-          Math.min(0.8, stamina_refund_ratio)
+          Math.min(0.75, stamina_refund_ratio)
         );
 
         if (stamina_refund_ratio > 0) {

@@ -22,7 +22,7 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
   static readonly BEAM_UNIT_SPAWN_BEAM = 4;
 
-  static readonly BEAM_HP_MODIFIER = 0.75;
+  static readonly BEAM_HP_MODIFIER = 0.3;
 
   static readonly BEAM_SPEED_ULTRA_SLOW = 25;
   static readonly BEAM_SPEED_SUPER_SLOW = 30;

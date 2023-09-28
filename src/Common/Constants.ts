@@ -165,7 +165,7 @@ export function stringToCostType(costType: string): CostType {
 }
   
 export module BASE_DMG {
-  export const KAME_DPS = 0.012;
+  export const KAME_DPS = 0.01;
   // export const KAME_EXPLOSION = 5 * KAME_DPS;
   // export const SPIRIT_BOMB_DPS = 0.008;
   // export const SPIRIT_BOMB_EXPLOSION = 0.25;
