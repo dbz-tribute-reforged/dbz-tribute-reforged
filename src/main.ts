@@ -169,8 +169,8 @@ function tsPostMain() {
     for (const cPlayer of Globals.customPlayers) {
       if (
         SubString(cPlayer.name, 0, 12) == "Local Player"
-        || SubString(cPlayer.name, 0, 11) == "randomkilla"
-        || SubString(cPlayer.name, 0, 5) == "Phone"
+        // || SubString(cPlayer.name, 0, 11) == "randomkilla"
+        // || SubString(cPlayer.name, 0, 5) == "Phone"
       ) {
         if (cPlayer.player == GetLocalPlayer()) {
           ClearMapMusic();

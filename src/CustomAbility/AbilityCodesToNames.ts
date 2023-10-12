@@ -416,7 +416,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.jacoEmergencyBoost, AbilityNames.Jaco.EMERGENCY_BOOST],
     [Id.jacoSuperEliteCombo, AbilityNames.Jaco.SUPER_ELITE_COMBO],
     [Id.jacoElitePose, AbilityNames.Jaco.ELITE_POSE],
-    [Id.jacoMacroCannon, AbilityNames.Jaco.MACRO_CANNON],
+    [Id.jacoShip, AbilityNames.Jaco.JACO_SHIP],
     [Id.jacoSuperJaco, AbilityNames.Jaco.SUPER_JACO],
 
     // leon s kennedy
@@ -513,6 +513,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A01Z'), AbilityNames.Cell.SPAWN_CELL_JUNIORS],
     [FourCC('A0O9'), AbilityNames.Cell.SOLAR_KAMEHAMEHA],
     [FourCC('A0OD'), AbilityNames.Cell.CELL_X_FORM],
+
+    // cell max
+    [Id.cellMaxTailWhip, AbilityNames.CellMax.TAIL_WHIP],
+    [Id.cellMaxScream, AbilityNames.CellMax.EXPLOSIVE_SCREAM],
+    [Id.cellMaxBlock, AbilityNames.CellMax.MAX_BLOCK],
+    [Id.cellMaxBarrier, AbilityNames.CellMax.MAX_BARRIER],
+    [Id.cellMaxBarrier2, AbilityNames.CellMax.MAX_BARRIER_BURST],
+    [Id.cellMaxDisaster, AbilityNames.CellMax.DISASTER_RAY],
 
     // cooler
     [FourCC('A06C'), AbilityNames.Cooler.DEATH_BEAM],
@@ -687,6 +695,24 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.gokuBlackWorkOfGods, AbilityNames.GokuBlack.WORK_OF_GODS],
     [Id.gokuBlackSorrowfulScythe, AbilityNames.GokuBlack.SORROWFUL_SCYTHE],
 
+    [Id.ainzRealitySlash, AbilityNames.Ainz.REALITY_SLASH],
+    [Id.ainzBlackHole, AbilityNames.Ainz.BLACK_HOLE],
+    [Id.ainzGreaterThunder, AbilityNames.Ainz.GREATER_THUNDER],
+    [Id.ainzExplodeMine, AbilityNames.Ainz.EXPLODE_MINE],
+    [Id.ainzGraspHeart, AbilityNames.Ainz.GRASP_HEART],
+    [Id.ainzBodyOfEffulgentBeryl, AbilityNames.Ainz.BODY_OF_EFFULGENT_BERYL],
+    [Id.ainzGreaterHardening, AbilityNames.Ainz.GREATER_HARDENING],
+    [Id.ainzGreaterFullPotential, AbilityNames.Ainz.GREATER_FULL_POTENTIAL],
+    [Id.ainzGreaterMagicShield, AbilityNames.Ainz.GREATER_MAGIC_SHIELD],
+    [Id.ainzMagicBoost, AbilityNames.Ainz.MAGIC_BOOST],
+    [Id.ainzPenetrateUp, AbilityNames.Ainz.PENETRATE_UP],
+    [Id.ainzHoldOfRibs, AbilityNames.Ainz.HOLD_OF_RIBS],
+    [Id.ainzWallOfSkeleton, AbilityNames.Ainz.WALL_OF_SKELETON],
+    [Id.ainzGreaterTeleportation, AbilityNames.Ainz.GREATER_TELEPORTATION],
+    [Id.ainzTGOALID, AbilityNames.Ainz.THE_GOAL_OF_ALL_LIFE_IS_DEATH],
+    [Id.ainzFallenDown, AbilityNames.Ainz.FALLEN_DOWN],
+    [Id.ainzLaShubNiggurath, AbilityNames.Ainz.LA_SHUB_NIGGURATH],
+    [Id.ainzTimeStop, AbilityNames.Ainz.TIME_STOP],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

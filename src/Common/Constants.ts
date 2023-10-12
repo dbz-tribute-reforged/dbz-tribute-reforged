@@ -11,6 +11,7 @@ export module Globals {
   export let clownValue: number = 0;
   export let showAbilityFloatingText: boolean = true;
   export let sagaSystemMode: number = 0;
+  export let ddsTimeoutSeconds: number = 5;
   
   export const customPlayers: CustomPlayer[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
@@ -26,6 +27,8 @@ export module Globals {
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
+  export const genericDDSHashtable = InitHashtable();
+  export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
   export const genericSpellMap = new Map<number, ()=>void>();
   export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
@@ -35,6 +38,7 @@ export module Globals {
 
   export const DDSUnitMap = new Map<unit, boolean>();
   export const DDSTrigger = CreateTrigger();
+  export const DDSEntryTrigger = CreateTrigger();
 
   // global beam units
   export const beamUnitGroup = CreateGroup();
@@ -142,6 +146,7 @@ export module Constants {
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
   export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
   export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1.5;
+  export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 1.25;
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -197,6 +202,7 @@ export module DebuffAbilities {
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
+  export const SLOW_TIME_STOP = FourCC("A0SH");
   export const EIS_FROSTBITE = FourCC("A0P5");
   export const KROWN_TOSS = FourCC("A0P9");
   export const MILKY_CANNON = FourCC("A0PU");
@@ -228,14 +234,19 @@ export module DebuffAbilities {
   export const CIRCLE_FLASH = FourCC("A0R6");
   export const GALACTIC_DONUT = FourCC("A0U6");
   export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A11V");
+  export const ROOT_AINZ_HOLD_OF_RIBS = FourCC("A12O");
 
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
+  export const AINZ_TIME_STOP_SLEEP = FourCC("A12R");
 
   // inner fire
   export const LUCARIO_FORCE_DEBUFF = FourCC("A0Y5");
   export const MAX_POWER_DMG_BUFF = FourCC('A114');
   export const SUPER_CHARGE_DMG_BUFF = FourCC('A115');
+  export const AINZ_GREATER_HARDENING = FourCC('A12L');
+  export const AINZ_GREATER_MAGIC_SHIELD = FourCC('A12M');
+  export const AINZ_MAGIC_BOOST = FourCC('A12N');
 
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
@@ -245,15 +256,22 @@ export module DebuffAbilities {
   export const APPULE_VENGEANCE_CLONE = FourCC("A11C");
   export const APPULE_CLONES = FourCC("A11F");
 
+  // invisibility
+  export const AINZ_INVISIBILITY = FourCC('A12P');
+
 }
 
 export module Buffs {
   // buffs
+  export const TIMED_LIFE = FourCC("BTLF");
   export const STUNNED = FourCC("BPSE");
 
   export const HEROS_SONG = FourCC("B01H");
 
   export const COSMIC_ILLUSION = FourCC("B025");
+
+  export const INNER_FIRE_AINZ_GREATER_MAGIC_SHIELD = FourCC("B05Z");
+  export const INNER_FIRE_AINZ_MAGIC_BOOST = FourCC("B060");
 
   export const SLOW_KROWN_TOSS = FourCC("B02W");
   export const SLOW_ZAMASU_BLEED = FourCC("B01G");
@@ -288,7 +306,6 @@ export module Buffs {
   export const CURSE_WALUIGI_SPIN = FourCC("B05R");
 
   export const SLOW_LEON_STAGGER = FourCC("B05T");
-
   export const SLOW_LINK_FIRE_ARROW = FourCC("B05X");
 
   export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
@@ -301,6 +318,7 @@ export module OrderIds {
   export const ENTANGLING_ROOTS = 852171;
   export const SLEEP = 852227;
   export const INNER_FIRE = 852066;
+  export const INVISIBILITY = 852069
   export const HOLY_BOLT = 852092;
   export const SOUL_BURN = 852668;
   export const WAND_OF_ILLUSION = 852274;
@@ -365,6 +383,40 @@ export module Id {
   export const heroSelectorUnit = FourCC("n001");
 
   export const summonShenron = FourCC("I01V");
+
+  export const ainzOoalGown = FourCC("H00Z");
+  export const ainzRealitySlash = FourCC("A0I0");
+  export const ainzBlackHole = FourCC("A0IQ");
+  export const ainzGreaterThunder = FourCC("A0IT");
+  export const ainzExplodeMine = FourCC("A0J0");
+  export const ainzEnergyDrain = FourCC("A0K5");
+  export const ainzGraspHeart = FourCC("A0JY");
+  
+  export const ainzBodyOfEffulgentBeryl = FourCC("A0KN");
+  export const ainzGreaterHardening = FourCC("A0KZ");
+  export const ainzGreaterFullPotential = FourCC("A11Z");
+  export const ainzGreaterMagicShield = FourCC("A11Y");
+  export const ainzMagicBoost = FourCC("A120");
+  export const ainzPenetrateUp = FourCC("A121");
+  
+  export const ainzHoldOfRibs = FourCC("A122");
+  export const ainzWallOfSkeleton = FourCC("A123");
+  export const ainzPerfectUnknowable = FourCC("A124");
+  export const ainzRemoteViewing = FourCC("A125");
+  export const ainzGreaterTeleportation = FourCC("A126");
+  export const ainzGate = FourCC("A127");
+  
+  export const ainzSummonAlbedo = FourCC("A128");
+  export const ainzSummonShalltear = FourCC("A129");
+  export const ainzSummonDemiurge = FourCC("A12A");
+  export const ainzSummonPandora = FourCC("A12B");
+
+  export const ainzTGOALID = FourCC("A12G");
+  export const ainzFallenDown = FourCC("A12H");
+  export const ainzLaShubNiggurath = FourCC("A12I");
+  export const ainzTimeStop = FourCC("A12Q");
+  export const ainzResistance = FourCC("A12S");
+  export const ainzWish = FourCC("A12J");
 
   export const allMight = FourCC("H09K");
   export const detroitSmash = FourCC("A0SX");
@@ -449,6 +501,14 @@ export module Id {
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
   export const cellJrKame = FourCC("A0CT");
+
+  export const cellMax = FourCC("H00Y");
+  export const cellMaxTailWhip = FourCC("A0HD");
+  export const cellMaxScream = FourCC("A0HF");
+  export const cellMaxBlock = FourCC("A0HG");
+  export const cellMaxBarrier = FourCC("A0HM");
+  export const cellMaxBarrier2 = FourCC("A0HY");
+  export const cellMaxDisaster = FourCC("A0HZ");
 
   export const crono = FourCC("H0A0");
   export const cronoCyclone = FourCC("A0VP");
@@ -745,7 +805,7 @@ export module Id {
   export const jacoEmergencyBoost = FourCC("A10Y");
   export const jacoSuperEliteCombo = FourCC("A10Z");
   export const jacoElitePose = FourCC("A110");
-  export const jacoMacroCannon = FourCC("A111");
+  export const jacoShip = FourCC("A111");
   export const jacoSuperJaco = FourCC("A112");
 
   export const janemba = FourCC("H062");

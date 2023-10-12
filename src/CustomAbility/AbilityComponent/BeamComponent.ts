@@ -448,6 +448,10 @@ export class BeamComponent implements
           }
         }
         input.isBeamClash = this.oldIsBeamClash;
+        if (ability.isFinishedUsing(this)) {
+          this.hasExploded = true;
+          this.removeBeamUnit();
+        }
       }
     }
     
@@ -455,7 +459,7 @@ export class BeamComponent implements
       this.isStarted = false;
       this.isFinished = true;
 
-      if (!this.hasExploded){
+      if (!this.hasExploded) {
         if (this.explodeOnDeath) {
           this.fakeExplode(ability, input);
         }

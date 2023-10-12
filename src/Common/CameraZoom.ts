@@ -96,22 +96,22 @@ export module CameraZoom {
             }
         });
 
-        // const timer = TimerManager.getInstance().get();
-        // TimerStart(timer, 4, false, () => {
-        //     TimerStart(CreateTimer(), PERIOD, true, () => {
-        //         arr.forEach(element => {
-        //             if (GetLocalPlayer() == element.p) {
-        //                 // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
-        //                 // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
-        //                 // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
-        //                 // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
-        //                 if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
-        //                     element.performZoom();
-        //                 }
-        //             }
-        //         });
-        //     });
-        //     TimerManager.getInstance().recycle(timer);
-        // });
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, 1, false, () => {
+            TimerStart(CreateTimer(), PERIOD, true, () => {
+                arr.forEach(element => {
+                    if (GetLocalPlayer() == element.p) {
+                        // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
+                        // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
+                        // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
+                        // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
+                        if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
+                            element.performZoom();
+                        }
+                    }
+                });
+            });
+            TimerManager.getInstance().recycle(timer);
+        });
     }
 }

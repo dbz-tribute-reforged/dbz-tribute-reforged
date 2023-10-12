@@ -20,6 +20,7 @@ export class DragonBallsManager {
   protected shenronFogModifiers: fogmodifier[];
   protected radarTrigger: trigger;
   protected numWishesGranted: number;
+  protected summonFlag: boolean;
 
   constructor (
   ) {
@@ -44,6 +45,7 @@ export class DragonBallsManager {
     this.shenronFogModifiers = [];
     this.radarTrigger = CreateTrigger();
     this.numWishesGranted = 1;
+    this.summonFlag = false;
     this.initialize();
   }
 
@@ -97,7 +99,10 @@ export class DragonBallsManager {
         if (itemId == DragonBallsConstants.dragonBallItem) {
           const player = GetTriggerPlayer();
           SetItemCharges(item, GetItemCharges(item) + 1);
-          if (GetItemCharges(item) >= DragonBallsConstants.numDragonBalls) {
+          if (
+            GetItemCharges(item) >= DragonBallsConstants.numDragonBalls
+            && !this.isSummoned()
+          ) {
             DisplayTimedTextToForce(
               bj_FORCE_ALL_PLAYERS,
               15,
@@ -282,6 +287,10 @@ export class DragonBallsManager {
                   UnitMakeAbilityPermanent(wishingUnit, false, DragonBallsConstants.wishImmortalityAbility);
                   SetUnitManaPercentBJ(wishingUnit, 100);
                   // SetUnitLifePercentBJ(wishingUnit, 100);
+                  // reset stamina
+                  const playerId = GetPlayerId(GetOwningPlayer(wishingUnit));
+                  const customHero = Globals.customPlayers[playerId].getCustomHero(wishingUnit);
+                  if (customHero) customHero.setCurrentSP(customHero.getMaxSP());
                   TimerManager.getInstance().recycle(removeReincTimer);
                 });
                 TimerManager.getInstance().recycle(reincTimer);
@@ -366,6 +375,7 @@ export class DragonBallsManager {
 
   summonShenron(x: number, y: number): this {
     PlaySoundBJ(gg_snd_ShenronSummon);
+    this.summonFlag = true;
 
     this.summonedAtDayTime = GetTimeOfDay() < 18;
     if (this.summonedAtDayTime) {
@@ -507,6 +517,7 @@ export class DragonBallsManager {
   }
 
   unsummonShenron(resetToDay: boolean): this {
+    this.summonFlag = false;
     SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
     SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
     if (resetToDay) {
@@ -535,5 +546,9 @@ export class DragonBallsManager {
     );
 
     return this;
+  }
+
+  isSummoned(): boolean {
+    return this.summonFlag;
   }
 }

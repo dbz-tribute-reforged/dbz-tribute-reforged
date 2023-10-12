@@ -1875,6 +1875,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 50,
   },
+  // ainz greater teleporation
+  {
+    name: "dash zanzo point ainz greater teleportation",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_ZANZO,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 1300,
+  },
   // ---
   // saga zanzo
   {

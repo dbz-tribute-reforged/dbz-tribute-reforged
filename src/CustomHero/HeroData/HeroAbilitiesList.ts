@@ -524,7 +524,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jaco.EMERGENCY_BOOST,
       AbilityNames.Jaco.SUPER_ELITE_COMBO,
       AbilityNames.Jaco.ELITE_POSE,
-      AbilityNames.Jaco.MACRO_CANNON,
+      AbilityNames.Jaco.JACO_SHIP,
       AbilityNames.Jaco.SUPER_JACO,
     ]],
 
@@ -731,6 +731,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H01J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Cell.JUNIOR_KAMEHAMEHA,
+    ]],
+    [Id.cellMax, [
+      AbilityNames.CellMax.TAIL_WHIP,
+      AbilityNames.CellMax.EXPLOSIVE_SCREAM,
+      AbilityNames.CellMax.MAX_BLOCK,
+      AbilityNames.CellMax.MAX_BARRIER,
+      AbilityNames.CellMax.MAX_BARRIER_BURST,
+      AbilityNames.CellMax.DISASTER_RAY,
     ]],
 
 
@@ -968,6 +976,30 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.GokuBlack.KAMEHAMEHA,
       AbilityNames.GokuBlack.DIVINE_RETRIBUTION,
       AbilityNames.GokuBlack.SORROWFUL_SCYTHE,
+    ]],
+
+    [Id.ainzOoalGown, [
+      AbilityNames.Ainz.REALITY_SLASH,
+      AbilityNames.Ainz.BLACK_HOLE,
+      AbilityNames.Ainz.GREATER_THUNDER,
+      AbilityNames.Ainz.EXPLODE_MINE,
+      AbilityNames.Ainz.GRASP_HEART,
+
+      AbilityNames.Ainz.BODY_OF_EFFULGENT_BERYL,
+      AbilityNames.Ainz.GREATER_HARDENING,
+      AbilityNames.Ainz.GREATER_FULL_POTENTIAL,
+      AbilityNames.Ainz.GREATER_MAGIC_SHIELD,
+      AbilityNames.Ainz.MAGIC_BOOST,
+      AbilityNames.Ainz.PENETRATE_UP,
+
+      AbilityNames.Ainz.HOLD_OF_RIBS,
+      AbilityNames.Ainz.WALL_OF_SKELETON,
+      AbilityNames.Ainz.GREATER_TELEPORTATION,
+
+      AbilityNames.Ainz.THE_GOAL_OF_ALL_LIFE_IS_DEATH,
+      AbilityNames.Ainz.FALLEN_DOWN,
+      AbilityNames.Ainz.LA_SHUB_NIGGURATH,
+      AbilityNames.Ainz.TIME_STOP,
     ]],
     
 

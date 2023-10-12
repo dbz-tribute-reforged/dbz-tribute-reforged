@@ -8,6 +8,7 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
+import { DragonBallsManager } from "Core/DragonBallsSystem/DragonBallsManager";
 import { FarmingManager } from "Core/FarmingSystem/FarmingManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
@@ -129,9 +130,10 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.jacoEliteBeamCharge, SimpleSpellSystem.doJacoEliteBeamCharge);
     Globals.genericSpellMap.set(Id.jacoEliteBeamPrime, SimpleSpellSystem.doJacoEliteBeamPrime);
     Globals.genericSpellMap.set(Id.jacoEliteBeamFire, SimpleSpellSystem.doJacoEliteBeamFire);
+    Globals.genericSpellMap.set(Id.jacoEmergencyBoost, SimpleSpellSystem.doJacoEmergencyBoost);
     Globals.genericSpellMap.set(Id.jacoAnnihilationBomb, SimpleSpellSystem.doJacoAnnihilationBomb);
     Globals.genericSpellMap.set(Id.jacoElitePose, SimpleSpellSystem.doJacoElitePose);
-    Globals.genericSpellMap.set(Id.jacoMacroCannon, SimpleSpellSystem.doJacoShip);
+    Globals.genericSpellMap.set(Id.jacoShip, SimpleSpellSystem.doJacoShip);
     
     Globals.genericSpellMap.set(Id.appuleVengeance, SimpleSpellSystem.appuleVengeanceExtra);
     Globals.genericSpellMap.set(DebuffAbilities.APPULE_VENGEANCE, SimpleSpellSystem.appuleVengeanceIllusion);
@@ -173,6 +175,18 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.linkArrowLightning, SimpleSpellSystem.doLinkArrowSelect);
     Globals.genericSpellMap.set(Id.linkArrowBomb, SimpleSpellSystem.doLinkArrowSelect);
     
+    Globals.genericSpellMap.set(Id.cellMaxDisaster, SimpleSpellSystem.doCellMaxDisasterRay);
+    
+    Globals.genericSpellMap.set(Id.ainzEnergyDrain, SimpleSpellSystem.doLightningSFX);
+    Globals.genericSpellMap.set(Id.ainzGraspHeart, SimpleSpellSystem.doLightningSFX);
+    Globals.genericSpellMap.set(Id.ainzGreaterHardening, SimpleSpellSystem.doAinzGreaterHardening);
+    Globals.genericSpellMap.set(Id.ainzGreaterMagicShield, SimpleSpellSystem.doAinzGreaterMagicShield);
+    Globals.genericSpellMap.set(Id.ainzGreaterHardening, SimpleSpellSystem.doAinzMagicBoost);
+    Globals.genericSpellMap.set(Id.ainzPerfectUnknowable, SimpleSpellSystem.doAinzPerfectUnknowable);
+    Globals.genericSpellMap.set(Id.ainzGate, SimpleSpellSystem.doAinzGate);
+    Globals.genericSpellMap.set(Id.ainzResistance, SimpleSpellSystem.doAinzResistance);
+    Globals.genericSpellMap.set(Id.ainzWish, SimpleSpellSystem.doAinzWish);
+
     Globals.genericSpellMap.set(DebuffAbilities.SLOW_LINK_FIRE_ARROW, SimpleSpellSystem.doLinkFireArrowBurn);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
@@ -181,106 +195,28 @@ export module SimpleSpellSystem {
     // Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
     
+    // add units to dds
+    TriggerRegisterEnterRectSimple(Globals.DDSEntryTrigger, GetEntireMapRect());
+    TriggerAddCondition(Globals.DDSEntryTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      if (
+        !Globals.DDSUnitMap.has(unit)
+        && IsUnitType(unit, UNIT_TYPE_HERO)
+        && GetHeroProperName(unit) == "Test Dummy"
+      ) {
+        Globals.DDSUnitMap.set(unit, true);
+        TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
+      }
+      return false;
+    }));
+
     // add DDS stuff
     TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
-      const unit = BlzGetEventDamageTarget();
-      const unitId = GetHandleId(unit);
-      const spellId = LoadInteger(Globals.genericSpellHashtable, unitId, 0);
+      const target = BlzGetEventDamageTarget();
+      const dmg = GetEventDamage();
       const source = GetEventDamageSource();
-      if (
-        UnitHelper.isUnitAlive(unit) 
-        && spellId != 0 
-        && (
-          spellId == Id.glare
-          || spellId == Id.glare2
-          || spellId == Id.hirudegarnDarkEyes
-        )
-        && IsUnitType(source, UNIT_TYPE_HERO)
-      ) {
-        const maxGlareDistance = 2500;
-        const glareDamageMult = BASE_DMG.KAME_DPS * 8;
-        const glare2DamageMult = BASE_DMG.KAME_DPS * 12;
-        const glare2StrDiffJirenBonus = 1.05;
-        const glare2StrDiffMult = 1.1;
-        const glarePunishDamageMult = 0.15;
-        const darkEyesPunishDamageMult = 0.25;
-
-        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
-
-        const player = GetOwningPlayer(unit);
-        Globals.tmpVector.setPos(GetUnitX(unit), GetUnitY(unit));
-        Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
-
-        if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) < maxGlareDistance) {
-          SetUnitX(unit, Globals.tmpVector2.x);
-          SetUnitY(unit, Globals.tmpVector2.y);
-              
-          const castDummy = CreateUnit(
-            player, 
-            Constants.dummyCasterId, 
-            Globals.tmpVector2.x, Globals.tmpVector2.y, 
-            0
-          );
-          UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
-
-          const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(unit);
-          let spellPower = 1.0;
-          if (customHero) {
-            spellPower = customHero.spellPower;
-          }
-
-          let punishMult = glarePunishDamageMult;
-          if (spellId == Id.hirudegarnDarkEyes) {
-            punishMult = darkEyesPunishDamageMult;
-          }
-
-          let damageMult = glareDamageMult;
-          if (spellId == Id.glare2) {
-            damageMult = glare2DamageMult;
-          }
-
-          let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(unit, true);
-          if (spellId == Id.glare2) {
-            damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(unit, true) - GetHeroStr(source, true)));
-          }
-
-          const abilityLevel = LoadInteger(Globals.genericSpellHashtable, unitId, 2);
-          const damage = (
-            (AOEDamage.getIntDamageMult(unit) * abilityLevel * spellPower * damageMult * damageBase) +
-            GetEventDamage() * punishMult
-          );
-
-          UnitDamageTarget(
-            unit,
-            source,
-            damage,
-            true,
-            false,
-            ATTACK_TYPE_HERO, 
-            DAMAGE_TYPE_NORMAL, 
-            WEAPON_TYPE_WHOKNOWS
-          );
-
-          IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
-          RemoveUnit(castDummy);
-          
-          DestroyEffect(
-            AddSpecialEffect(
-              "Slam.mdl",
-              Globals.tmpVector2.x, Globals.tmpVector2.y
-            )
-          );
-          
-          if (GetUnitTypeId(unit) == Id.jiren) {
-            if (Math.random() * 100 < 5) {
-              SoundHelper.playSoundOnUnit(unit, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
-            } else {
-              SoundHelper.playSoundOnUnit(unit, "Audio/Voice/JirenGlare2.mp3", 1018);
-            }
-          }
-          SoundHelper.playSoundOnUnit(unit, "Audio/Effects/Zanzo.mp3", 1149);
-        }
-      }
+      DDSRunJirenGlare(target, source, dmg);
+      DDSRunDPSCheck(target, source, dmg);
       return false;
     }));
 
@@ -403,7 +339,7 @@ export module SimpleSpellSystem {
     // const jumpSpeedModifierMax = 1.33;
     // const jumpSpeedModifierMin = 0.15;
     const braveSwordAOE = 425;
-    const braveSwordDamageMult = BASE_DMG.KAME_DPS * 24;
+    const braveSwordDamageMult = BASE_DMG.KAME_DPS * 12;
     const braveSwordManaBurnMult = 0.01;
     const debuffDamageMult = 1.5;
     const maxManaCostMult = 0.2;
@@ -1126,7 +1062,6 @@ export module SimpleSpellSystem {
     return result;
   }
 
-
   export function InitJirenGlare() {
     /**
      * hashtable
@@ -1170,6 +1105,235 @@ export module SimpleSpellSystem {
       SaveInteger(Globals.genericSpellHashtable, unitId, 2, 0);
       DestroyEffect(LoadEffectHandle(Globals.genericSpellHashtable, unitId, 1));
     });
+  }
+
+  export function DDSRunJirenGlare(
+    target: unit,
+    source: unit,
+    dmg: number,
+  ) {
+    if (
+      UnitHelper.isUnitDead(target)
+      || !IsUnitType(source, UNIT_TYPE_HERO)
+      || dmg <= 2
+    ) return;
+
+    const targetId = GetHandleId(target);
+    const spellId = LoadInteger(Globals.genericSpellHashtable, targetId, 0);
+    if (
+      spellId == 0 
+      || (
+        spellId != Id.glare
+        && spellId != Id.glare2
+        && spellId != Id.hirudegarnDarkEyes
+      )
+    ) return;
+
+    const maxGlareDistance = 2500;
+    const glareDamageMult = BASE_DMG.KAME_DPS * 5;
+    const glare2DamageMult = BASE_DMG.KAME_DPS * 7.5;
+    const glare2StrDiffJirenBonus = 1.05;
+    const glare2StrDiffMult = 1.1;
+    const glarePunishDamageMult = 0.15;
+    const darkEyesPunishDamageMult = 0.25;
+
+    SaveInteger(Globals.genericSpellHashtable, targetId, 0, 0);
+
+    const player = GetOwningPlayer(target);
+    Globals.tmpVector.setPos(GetUnitX(target), GetUnitY(target));
+    Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
+
+    if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) < maxGlareDistance) {
+      SetUnitX(target, Globals.tmpVector2.x);
+      SetUnitY(target, Globals.tmpVector2.y);
+          
+      const castDummy = CreateUnit(
+        player, 
+        Constants.dummyCasterId, 
+        Globals.tmpVector2.x, Globals.tmpVector2.y, 
+        0
+      );
+      UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
+
+      const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(target);
+      let spellPower = 1.0;
+      if (customHero) {
+        spellPower = customHero.spellPower;
+      }
+
+      let punishMult = glarePunishDamageMult;
+      if (spellId == Id.hirudegarnDarkEyes) {
+        punishMult = darkEyesPunishDamageMult;
+      }
+
+      let damageMult = glareDamageMult;
+      if (spellId == Id.glare2) {
+        damageMult = glare2DamageMult;
+      }
+
+      let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(target, true);
+      if (spellId == Id.glare2) {
+        damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(target, true) - GetHeroStr(source, true)));
+      }
+
+      const abilityLevel = LoadInteger(Globals.genericSpellHashtable, targetId, 2);
+      const damage = (
+        (AOEDamage.getIntDamageMult(target) * abilityLevel * spellPower * damageMult * damageBase) +
+        GetEventDamage() * punishMult
+      );
+
+      UnitDamageTarget(
+        target,
+        source,
+        damage,
+        true,
+        false,
+        ATTACK_TYPE_HERO, 
+        DAMAGE_TYPE_NORMAL, 
+        WEAPON_TYPE_WHOKNOWS
+      );
+
+      IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
+      RemoveUnit(castDummy);
+      
+      DestroyEffect(
+        AddSpecialEffect(
+          "Slam.mdl",
+          Globals.tmpVector2.x, Globals.tmpVector2.y
+        )
+      );
+      
+      if (GetUnitTypeId(target) == Id.jiren) {
+        if (Math.random() * 100 < 5) {
+          SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
+        } else {
+          SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenGlare2.mp3", 1018);
+        }
+      }
+      SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
+    }
+  }
+  
+  export function DDSRunDPSCheck(
+    target: unit,
+    source: unit,
+    dmg: number,
+  ) {
+    if (
+      UnitHelper.isUnitDead(target)
+      || !IsUnitType(source, UNIT_TYPE_HERO)
+      || !IsUnitType(target, UNIT_TYPE_HERO)
+      || dmg <= 0
+    ) return;
+
+    if (GetHeroProperName(target) != "Test Dummy") return;
+
+    const targetId = GetHandleId(target);
+
+
+    if (!HaveSavedHandle(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_texttag"))) {
+      const texttag = CreateTextTag();
+      SaveTextTagHandle(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_texttag"), texttag);
+      SetTextTagPermanent(texttag, true);
+      SetTextTagColor(texttag, 255, 25, 25, 100);
+      SetTextTagVisibility(texttag, true);
+    }
+
+    const texttag = LoadTextTagHandle(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_texttag"));
+
+    // if no dps timer add one
+    if (!HaveSavedHandle(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timer"))) {
+      const timer = TimerManager.getInstance().get();
+      SaveTimerHandle(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timer"), timer);
+
+      TimerStart(timer, 0.03, true, () => {
+        SetTextTagPos(texttag, GetUnitX(target), GetUnitY(target), 10);
+        if (GetHandleId(target) == 0) {
+          if (texttag) DestroyTextTag(texttag);
+          TimerManager.getInstance().recycle(GetExpiredTimer());
+          FlushChildHashtable(Globals.genericDDSHashtable, targetId);
+          return;
+        }
+        
+        const dmgTotal = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total"));
+        if (dmgTotal > 0) {
+          // make dmg requirement for incrementing prev dmg time counter nbefore reset
+          const prevDmgTotal = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total_prev"))
+          const dmgTimeout = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"))
+          const dmgTime = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time"));
+
+          if (dmgTotal > prevDmgTotal) {
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total_prev"), dmgTotal);
+          } else {
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"), dmgTimeout + 0.03);
+          }
+
+          let stunSoftTime = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_soft"));
+          let stunHardTime = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_hard"));
+          // track stun time
+          if (UnitHelper.isUnitStunned(target)) {
+            stunSoftTime += 0.03;
+            if (UnitHelper.isUnitHardStunned(target)) {
+              stunHardTime += 0.03;
+            }
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_soft"), stunSoftTime);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_hard"), stunHardTime);
+          }
+
+          if (dmgTimeout < Globals.ddsTimeoutSeconds) {
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time"), dmgTime+0.03);
+          } else {
+            const adjDmgTime = Math.max(1, dmgTime - Globals.ddsTimeoutSeconds);
+            const pctDmg = dmgTotal / Math.max(1, GetUnitState(target, UNIT_STATE_MAX_LIFE));
+            const actualDps = dmgTotal / adjDmgTime;
+            const pctDps = actualDps / Math.max(1, GetUnitState(target, UNIT_STATE_MAX_LIFE));
+            const pctStunSoft = stunSoftTime / adjDmgTime;
+            const pctStunHard = stunHardTime / adjDmgTime;
+            // show final dps stats
+            print("SEC: " + R2S(adjDmgTime));
+            print("DMG: " + R2S(dmgTotal) + " (" + I2S(R2I(pctDmg * 100)) + "%)");
+            print("DPS: " + R2S(actualDps) + " (" + I2S(R2I(pctDps * 100)) + "%)");
+            print("CCS: " + R2S(stunSoftTime) + "(" + I2S(R2I(pctStunSoft * 100)) + "%)");
+            print("CCH: " + R2S(stunHardTime) + "(" + I2S(R2I(pctStunHard * 100)) + "%)");
+
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total_prev"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_soft"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time_stun_hard"), 0);
+            SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"), 0);
+            SetTextTagTextBJ(texttag, "", 0);
+          }
+        }
+        
+        // revive if dead
+        if (UnitHelper.isUnitDead(target)) {
+          const revTimer = TimerManager.getInstance().get();
+          ReviveHero(target, GetUnitX(target), GetUnitY(target), false);
+          ShowUnit(target, false);
+          PauseUnit(target, true);
+
+          const dmgTimeout = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"))
+          const dmgTime = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time"));
+          SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_timeout"), Globals.ddsTimeoutSeconds);
+          SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_time"), dmgTime + Globals.ddsTimeoutSeconds - dmgTimeout);
+
+          TimerStart(revTimer, Globals.ddsTimeoutSeconds * 0.5, false, () => {
+            ShowUnit(target, true);
+            PauseUnit(target, false);
+            SetUnitManaPercentBJ(target, 100);
+            TimerManager.getInstance().recycle(revTimer);
+          });
+        }
+      });
+    }
+
+    const dmgTotal = LoadReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total"));
+    const newDmg = dmgTotal + dmg;
+    SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total"), newDmg);
+    SaveReal(Globals.genericDDSHashtable, targetId, StringHash("dds_dps_total_prev"), dmgTotal);
+    SetTextTagTextBJ(texttag, R2S(newDmg), 10);
   }
 
   export function InitCero() {
@@ -1429,9 +1593,9 @@ export module SimpleSpellSystem {
     const spellId = GetSpellAbilityId();
 
     const charmDuration = 10.0;
-    const maxHPReduction = 0.13;
+    const maxHPReduction = 0.18;
     const allyHPModifier = 0.5;
-    const stealThreshold = 0.5;
+    const stealThreshold = 0.8;
 
     const caster = GetTriggerUnit();
     const casterPlayer = GetOwningPlayer(caster);
@@ -1943,12 +2107,13 @@ export module SimpleSpellSystem {
     BlzSetSpecialEffectScale(sfxBeam, 3.0);
 
     let tick = 0;
-    TimerStart(CreateTimer(), 0.03, true, () => {
+    const tpTimer = TimerManager.getInstance().get();
+    TimerStart(tpTimer, 0.03, true, () => {
       if (tick > schalaTpEndTick) {
         RemoveUnit(tpUnit);
         DestroyEffect(sfxCast);
         DestroyEffect(sfxBeam);
-        DestroyTimer(GetExpiredTimer());
+        TimerManager.getInstance().recycle(tpTimer);
       } else {
         targetPos.setUnit(tpUnit);
         if (
@@ -2259,7 +2424,7 @@ export module SimpleSpellSystem {
     const plunderDuration = 80; // RTT 
     const plunderSendOutDuration = 40;
     const plunderSpeed = 40;
-    const plunderDamageMult = BASE_DMG.KAME_DPS * 14;
+    const plunderDamageMult = BASE_DMG.KAME_DPS * 8;
     const plunderDamageMultPerItem = 0.2;
     const maxPlunderItems = 1;
 
@@ -2718,11 +2883,24 @@ export module SimpleSpellSystem {
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
   }
 
+  export function doJacoEmergencyBoost() {
+    const unit = GetTriggerUnit();
+
+    const cdMod = 10;
+    BlzStartUnitAbilityCooldown(unit, Id.jacoEliteBeamCharge, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoEliteBeamCharge) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoEliteBeamFire, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoEliteBeamFire) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoAnnihilationBomb, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoAnnihilationBomb) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoRocketBoots, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoRocketBoots) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoSuperEliteCombo, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoSuperEliteCombo) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoElitePose, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoElitePose) + cdMod);
+    BlzStartUnitAbilityCooldown(unit, Id.jacoShip, BlzGetUnitAbilityCooldownRemaining(unit, Id.jacoShip) + cdMod);
+  }
+
   export function doJacoAnnihilationBomb() {
     const extinctionBombDelay = 3;
     const extinctionBombMaxDist = 600;
     const extinctionBombAOE = 500;
-    const extinctionBombStrMult = 2;
+    const extinctionBombStrMult = 1;
     const extinctionBombHpMult = 0.75;
 
     const unit = GetTriggerUnit();
@@ -2853,7 +3031,7 @@ export module SimpleSpellSystem {
   
   export function doJacoShip() {
     const flySpeed = 40;
-    const macroCannonDmgMult = BASE_DMG.KAME_DPS * 8;
+    const macroCannonDmgMult = BASE_DMG.KAME_DPS * 5;
     const baseAOE = 400;
     const maxAOE = 600;
     const AOEperDistance = 50;
@@ -3062,7 +3240,7 @@ export module SimpleSpellSystem {
     const aoe = 5000;
     const spellPowerPerDead = 0.15;
     const spellPowerPerHPPct = 0.1;
-    const spellPowerMin = 0.3;
+    const spellPowerMin = 0.2;
     const spellPowerMax = 1.0;
     
     // get nearby allied heroes
@@ -3952,6 +4130,506 @@ export module SimpleSpellSystem {
         ++dmgTicks;
       }
     });
+  }
+
+  export function doCellMaxDisasterRay() {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+
+    const delayTimer = TimerManager.getInstance().get();
+    const maxDelay = 200;
+    const maxIndex = 12;
+    let highestIndex = 0;
+    let counter = 0;
+    let beamUnit = caster;
+
+    TimerStart(delayTimer, 0.03, true, () => {
+      if (counter > maxDelay) {
+        // stop and clear up
+        TimerManager.getInstance().recycle(delayTimer);
+        for (let i = 0; i < highestIndex; ++i) {
+          modDisasterRaySfx(caster, "delete", i, counter);
+        }
+        return;
+      }
+
+      if (counter >= 16 && beamUnit == caster) {
+        beamUnit = null;
+      }
+
+      // if (counter >= 33 && beamUnit == caster) {
+      //   // find beam
+      //   const ux = GetUnitX(caster);
+      //   const uy = GetUnitY(caster);
+      //   GroupClear(Globals.tmpUnitGroup);
+      //   GroupEnumUnitsInRange(Globals.tmpUnitGroup, ux, uy, 600, null);
+      //   ForGroup(Globals.tmpUnitGroup, () => {
+      //     const unit = GetEnumUnit();
+      //     if (
+      //       beamUnit == caster
+      //       && GetUnitTypeId(unit) == Constants.dummyBeamUnitId
+      //       && GetOwningPlayer(unit) == player
+      //       && GetUnitName(unit) == "beam cell max disaster ray"
+      //     ) {
+      //       beamUnit = unit;
+      //     }
+      //   });
+      //   GroupClear(Globals.tmpUnitGroup);
+      // }
+
+      if (beamUnit != caster) {
+        // beam was found, run sfx logic
+        for (let i = highestIndex; i < maxIndex; ++i) {
+          modDisasterRaySfx(caster, "add", i, counter);
+          highestIndex++;
+        }
+        for (let i = 0; i < highestIndex; ++i) {
+          modDisasterRaySfx(caster, "update", i, counter);
+        }
+      }
+
+      counter += 1;
+    });
+  }
+
+  export function modDisasterRaySfx(
+    caster: unit, 
+    action: string,
+    index: number, 
+    counter: number,
+  ) {
+    const casterId = GetHandleId(caster);
+    const ux = GetUnitX(caster);
+    const uy = GetUnitY(caster);
+    const angOffset = index * 30;
+    const yaw = (GetUnitFacing(caster) + angOffset) * CoordMath.degreesToRadians;
+    const yawOpposite = (GetUnitFacing(caster) + angOffset + 180) * CoordMath.degreesToRadians;
+    
+    const keySfx1 = StringHash("disaster_sfx_1_" + I2S(index));
+    const keySfx2 = StringHash("disaster_sfx_2_" + I2S(index));
+    const minPitch = -15;
+    const maxPitch = 165;
+
+    let sfx1 = null;
+    let sfx2 = null;
+
+    if (action == "add") {
+      sfx1 = AddSpecialEffect("GodzillaLaser1.mdl", ux, uy);
+      sfx2 = AddSpecialEffect("GodzillaLaser2.mdl", ux, uy);
+      SaveEffectHandle(Globals.genericSpellHashtable, casterId, keySfx1, sfx1);
+      SaveEffectHandle(Globals.genericSpellHashtable, casterId, keySfx2, sfx2);
+      
+      BlzSetSpecialEffectScale(sfx1, 2.5);
+      BlzSetSpecialEffectScale(sfx2, 2.5);
+      BlzSetSpecialEffectTimeScale(sfx1, 0.5);
+      BlzSetSpecialEffectTimeScale(sfx2, 0.5);
+      
+      const pitch = Math.min(
+        maxPitch, 
+        Math.max(
+          minPitch,
+          Math.random() * 180 - 90
+        )
+      );
+      BlzSetSpecialEffectPitch(sfx1, pitch * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectPitch(sfx2, pitch * CoordMath.degreesToRadians);
+
+      BlzSetSpecialEffectColor(sfx1, 200, 225, 255)
+    } else {
+      sfx1 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, keySfx1);
+      sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, keySfx2);
+    }
+
+    if (sfx1 == null || sfx2 == null) return;
+    
+    if (action == "update") {
+      let heightMod = 300;
+      const height = heightMod + GetUnitFlyHeight(caster) + BlzGetUnitZ(caster);
+      BlzSetSpecialEffectX(sfx1, ux);
+      BlzSetSpecialEffectY(sfx1, uy);
+      BlzSetSpecialEffectX(sfx2, ux);
+      BlzSetSpecialEffectY(sfx2, uy);
+      BlzSetSpecialEffectScale(sfx1, 2.5 + 7.5 * Math.min(1, (counter - 16) * 0.04));
+
+      BlzSetSpecialEffectHeight(sfx1, height);
+      BlzSetSpecialEffectHeight(sfx2, height);
+      BlzSetSpecialEffectYaw(sfx1, yawOpposite);
+      BlzSetSpecialEffectYaw(sfx2, yaw);
+    }
+
+    if (action == "delete") {
+      DestroyEffect(sfx1);
+      DestroyEffect(sfx2);
+    }
+  }
+
+  export function doLightningSFX() {
+    const caster = GetTriggerUnit();
+    const target = GetSpellTargetUnit();
+    const abilId = GetSpellAbilityId();
+    
+    let str = "";
+    if (abilId == Id.ainzEnergyDrain) {
+      str = "DRAL";
+    } else if (abilId == Id.ainzGraspHeart) {
+      str = "AFOD";
+    }
+
+    let lightningSfx = AddLightning(
+      str, true, 
+      GetUnitX(caster), GetUnitY(caster),
+      GetUnitX(target), GetUnitY(target),
+    );
+
+    str = "";
+    if (abilId == Id.ainzEnergyDrain) {
+      str = "Abilities/Spells/Other/Drain/DrainTarget.mdl";
+    } else if (abilId == Id.ainzGraspHeart) {
+      str = "Objects/Spawnmodels/Human/HumanBlood/HumanBloodFootman.mdl";
+    }
+    let sfx = AddSpecialEffect(str, GetUnitX(target), GetUnitY(target));
+    BlzSetSpecialEffectScale(sfx, 5.0);
+    DestroyEffect(sfx);
+    
+    str = "";
+    if (abilId == Id.ainzEnergyDrain) {
+      str = "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl";
+    } else if (abilId == Id.ainzGraspHeart) {
+      str = "Objects/Spawnmodels/Human/HumanLargeDeathExplode/HumanLargeDeathExplode.mdl";
+    }
+    sfx = AddSpecialEffect(str, GetUnitX(target), GetUnitY(target));
+    BlzSetSpecialEffectScale(sfx, 3.0);
+    DestroyEffect(sfx);
+    
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.25, false, () => {
+      DestroyLightning(lightningSfx);
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
+  export function doAinzGreaterHardening() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    
+    const dummy = CreateUnit(
+      player,
+      Constants.dummyCasterId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      0
+    );
+    UnitAddAbility(dummy, DebuffAbilities.AINZ_GREATER_HARDENING);
+    SetUnitOwner(dummy, player, false);
+    IssueTargetOrderById(
+      dummy, 
+      OrderIds.INNER_FIRE, 
+      caster
+    );
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1);
+  }
+
+  export function doAinzGreaterMagicShield() {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const numCharges = 2;
+    const hashKey = StringHash("ainz_greater_magic_shield_flag");
+
+    const dummy = CreateUnit(
+      player,
+      Constants.dummyCasterId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      0
+    );
+    UnitAddAbility(dummy, DebuffAbilities.AINZ_GREATER_MAGIC_SHIELD);
+    SetUnitOwner(dummy, player, false);
+    IssueTargetOrderById(
+      dummy, 
+      OrderIds.INNER_FIRE, 
+      caster
+    );
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1);
+
+    let counter = numCharges;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (GetUnitAbilityLevel(caster, Buffs.INNER_FIRE_AINZ_GREATER_MAGIC_SHIELD) == 0) {
+        TimerManager.getInstance().recycle(timer);
+        SaveInteger(Globals.genericSpellHashtable, casterId, hashKey, 0);
+        return;
+      }
+      if (UnitHelper.isUnitStunned(caster)) {
+        UnitRemoveBuffs(caster, false, true);
+        if (LoadInteger(Globals.genericSpellHashtable, casterId, hashKey) == 0 && counter > 0) {
+          const tmpTimer = TimerManager.getInstance().get();
+          SaveInteger(Globals.genericSpellHashtable, casterId, hashKey, 1);
+          const wasInvul = BlzIsUnitInvulnerable(caster);
+          if (!wasInvul) SetUnitInvulnerable(caster, true);
+          const sfx = AddSpecialEffectTarget(
+            "Abilities/Spells/Human/DivineShield/DivineShieldTarget.mdl",
+            caster,
+            "origin"
+          );
+          TimerStart(tmpTimer, 1, false, () => {
+            TimerManager.getInstance().recycle(tmpTimer);
+            if (!wasInvul) SetUnitInvulnerable(caster, false);
+            DestroyEffect(sfx);
+            SaveInteger(Globals.genericSpellHashtable, casterId, hashKey, 0);
+            counter--;
+            if (counter <= 0) UnitRemoveAbility(caster, Buffs.INNER_FIRE_AINZ_GREATER_MAGIC_SHIELD);
+          });
+        }
+      }
+    });
+  }
+
+  export function doAinzMagicBoost() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    
+    const dummy = CreateUnit(
+      player,
+      Constants.dummyCasterId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      0
+    );
+    UnitAddAbility(dummy, DebuffAbilities.AINZ_MAGIC_BOOST);
+    SetUnitOwner(dummy, player, false);
+    IssueTargetOrderById(
+      dummy, 
+      OrderIds.INNER_FIRE, 
+      caster
+    );
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1);
+  }
+
+  export function doAinzPerfectUnknowable() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const target = GetSpellTargetUnit();
+
+    const dummy = CreateUnit(
+      player,
+      Constants.dummyCasterId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      0
+    );  
+    UnitAddAbility(dummy, DebuffAbilities.AINZ_INVISIBILITY);
+    SetUnitOwner(dummy, player, false);
+    IssueTargetOrderById(
+      dummy, 
+      OrderIds.INVISIBILITY, 
+      target
+    );
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1);
+  }
+
+  export function doAinzGate() {
+    const moveDurationTicks = 16;
+    const schalaTpEndTick = 333;
+    const tpAOE = 400;
+    const tpMaxDist = 6000;
+    const excludeTicks = 100;
+    const tpRegisterKey = StringHash("gate_tp_count");
+    const tpTimeKey = StringHash("gate_tp_exclude_time");
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+
+    const tpUnit = CreateUnit(
+      player, 
+      Constants.dummyBeamUnitId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      0
+    );
+    ShowUnit(tpUnit, false);
+    SetUnitInvulnerable(tpUnit, true);
+    
+    const srcPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+    const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+    const direction = CoordMath.angleBetweenCoords(srcPos, targetPos);
+    const maxDist =  Math.min(4000, Math.max(1500, CoordMath.distance(srcPos, targetPos)));
+    const excludeGroup = CreateGroup();
+
+    let beamSpeed = maxDist / moveDurationTicks;
+    const sfxCast = AddSpecialEffect(
+      "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
+      srcPos.x, srcPos.y
+    );
+    BlzSetSpecialEffectScale(sfxCast, 2.2);
+    const sfxBeam = AddSpecialEffect(
+      "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
+      srcPos.x, srcPos.y
+    );
+    BlzSetSpecialEffectScale(sfxBeam, 2.2);
+
+    let tick = 0;
+    const tpTimer = TimerManager.getInstance().get();
+    TimerStart(tpTimer, 0.03, true, () => {
+      if (tick > schalaTpEndTick) {
+        RemoveUnit(tpUnit);
+        DestroyEffect(sfxCast);
+        DestroyEffect(sfxBeam);
+        DestroyGroup(excludeGroup);
+        TimerManager.getInstance().recycle(tpTimer);
+        
+        ForGroup(excludeGroup, () => {
+          const tmpUnit = GetEnumUnit();
+          const tmpUnitId = GetHandleId(tmpUnit);
+          
+          const numRegisters = LoadInteger(Globals.genericGateTPHashtable, tmpUnitId, tpRegisterKey);
+
+          if (UnitHelper.isUnitDead(tmpUnit) || numRegisters == 1) {
+            FlushChildHashtable(Globals.genericGateTPHashtable, tmpUnitId);
+          } else if (numRegisters > 0) {
+            SaveInteger(Globals.genericGateTPHashtable, tmpUnitId, tpRegisterKey, numRegisters-1);
+          }
+        });
+      } else {
+        targetPos.setUnit(tpUnit);
+        if (
+          CoordMath.distance(srcPos, targetPos) < maxDist
+          && tick < moveDurationTicks
+        ) {
+          targetPos.polarProjectCoords(targetPos, direction, beamSpeed);
+          BlzSetSpecialEffectX(sfxBeam, targetPos.x);
+          BlzSetSpecialEffectY(sfxBeam, targetPos.y);
+          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, targetPos);
+        }
+
+        if (tick >= moveDurationTicks) {
+          genericGateTP(caster, srcPos, targetPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
+          genericGateTP(caster, targetPos, srcPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
+        }
+
+        // every x ticks, clear the exclude group
+        if (CountUnitsInGroup(excludeGroup) > 0) {
+          ForGroup(excludeGroup, () => {
+            const tmpUnit = GetEnumUnit();
+            const tmpUnitId = GetHandleId(tmpUnit);
+            const tpTime = LoadInteger(Globals.genericGateTPHashtable, tmpUnitId, tpTimeKey);
+            if (tpTime == 0) {
+              FlushChildHashtable(Globals.genericGateTPHashtable, tmpUnitId);
+              GroupRemoveUnit(excludeGroup, tmpUnit);
+              DestroyEffect(
+                AddSpecialEffect(
+                  "Abilities/Spells/Human/DispelMagic/DispelMagicTarget.mdl", 
+                  GetUnitX(tmpUnit), GetUnitY(tmpUnit)
+                )
+              );
+            } else {
+              SaveInteger(Globals.genericGateTPHashtable, tmpUnitId, tpTimeKey, tpTime - 1);
+            }
+          });
+        }
+
+        ++tick;
+      }
+    });
+  }
+
+  export function genericGateTP(
+    caster: unit,
+    pos1: Vector2D,
+    pos2: Vector2D,
+    aoe: number,
+    maxTpDist: number,
+    excludeGroup: group,
+    excludeTicks: number,
+  ) {
+    const player = GetOwningPlayer(caster);
+
+    GroupClear(Globals.tmpUnitGroup);
+    GroupEnumUnitsInRange(Globals.tmpUnitGroup, pos1.x, pos1.y, aoe, null);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      if (
+        UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
+        && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+        && !IsUnitInGroup(unit, excludeGroup)
+      ) {
+        Globals.tmpVector.setPos(GetUnitX(unit), GetUnitY(unit));
+        const distance = CoordMath.distance(Globals.tmpVector, pos1);
+        if (CoordMath.distance(Globals.tmpVector, pos2) < maxTpDist) {       
+          GroupAddUnit(excludeGroup, unit);
+          
+          const unitId = GetHandleId(unit);
+          const tpRegisterKey = StringHash("gate_tp_count");
+          const tpTimeKey = StringHash("gate_tp_exclude_time");
+          SaveInteger(Globals.genericGateTPHashtable, unitId, tpRegisterKey, 
+            LoadInteger(Globals.genericGateTPHashtable, unitId, tpRegisterKey) + 1
+          );
+          SaveInteger(Globals.genericGateTPHashtable, unitId, tpTimeKey, excludeTicks);
+          
+          Globals.tmpVector.polarProjectCoords(
+            pos2, 
+            CoordMath.angleBetweenCoords(pos1, Globals.tmpVector), 
+            distance
+          );
+          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector);
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities/Spells/Human/MassTeleport/MassTeleportCaster.mdl", 
+              Globals.tmpVector.x, Globals.tmpVector.y
+            )
+          );
+
+          if (
+            IsUnitType(unit, UNIT_TYPE_HERO)
+            && !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+            && GetPlayerController(GetOwningPlayer(unit)) == MAP_CONTROL_USER
+          ) {
+            SetCameraPositionForPlayer(
+              GetOwningPlayer(unit), 
+              Globals.tmpVector.x, Globals.tmpVector.y
+            );
+          }
+        }
+      }
+    });
+    GroupClear(Globals.tmpUnitGroup);
+  }
+
+  export function doAinzResistance() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const target = GetSpellTargetUnit();
+    if (UnitHelper.isUnitTargetableForPlayer(target, player, true)) {
+      UnitRemoveBuffs(target, false, true);
+      DestroyEffect(
+        AddSpecialEffect(
+          "Abilities/Spells/Human/DispelMagic/DispelMagicTarget.mdl",
+          GetUnitX(target), GetUnitY(target)
+        )
+      );
+    }
+  }
+
+  export function doAinzWish() {
+    const caster = GetTriggerUnit();
+
+    if (!DragonBallsManager.getInstance().isSummoned()) {
+      let sfx = AddSpecialEffect(
+        "MCBlue2.mdl", GetUnitX(caster), GetUnitY(caster)
+      );
+      BlzSetSpecialEffectScale(sfx, 5.0);
+      DestroyEffect(sfx);
+
+      sfx = AddSpecialEffect(
+        "MCBlue2.mdl", GetUnitX(caster), GetUnitY(caster)
+      );
+      BlzSetSpecialEffectScale(sfx, 8.0);
+      DestroyEffect(sfx);
+
+      DragonBallsManager.getInstance().summonShenron(GetUnitX(caster), GetUnitY(caster));
+      UnitRemoveAbility(caster, GetSpellAbilityId());
+    }
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {

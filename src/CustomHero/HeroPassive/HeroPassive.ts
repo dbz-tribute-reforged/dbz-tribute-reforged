@@ -860,11 +860,11 @@ export function lucarioPassive(customHero: CustomHero) {
             // 0.0005 * 20000 * 20 = 200 max hp dmg per stack
             // 0.01 * 20000 = 200 int dmg per stack
 
-            // 0.0004 * 20000 * 20 = 160 max hp dmg per stack
-            // 0.008 * 20000 = 160 int dmg per stack
+            // 0.0004 * 10000 * 10 = 40 max hp dmg per stack
+            // 0.004 * 10000 = 40 int dmg per stack
             const bonusDamage = AOEDamage.getIntDamageMult(attacker) * bonusDamageMult * (
               0.0004 * GetUnitState(target, UNIT_STATE_MAX_LIFE)
-              + 0.008 * GetHeroInt(attacker, true)
+              + 0.004 * GetHeroInt(attacker, true)
             );
             if (bonusDamage > 0) {
               UnitDamageTarget(
@@ -1486,7 +1486,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeLossStuck = 0.85;
   const dmgAOE = 280;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.KAME_DPS * 0.066;
+  const spinDmgDataMult = BASE_DMG.KAME_DPS * 0.05;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.6;
@@ -1506,7 +1506,7 @@ export function sonicPassive(customHero: CustomHero) {
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.KAME_DPS * 17;
+  const dmgLightSpeed = BASE_DMG.KAME_DPS * 10;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -2378,8 +2378,8 @@ export function setupRegenTimer(customHero: CustomHero) {
   TimerStart(regenTimer, 0.03, true, () => {
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
-    const heroAgi = GetHeroStr(customHero.unit, true);
-    const heroInt = GetHeroStr(customHero.unit, true);
+    const heroAgi = GetHeroAgi(customHero.unit, true);
+    const heroInt = GetHeroInt(customHero.unit, true);
     const sumStats = 0.33 *(heroStr + heroAgi + heroInt);
 
 
@@ -2434,6 +2434,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     );
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       incMp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.INNER_FIRE_AINZ_MAGIC_BOOST)) {
+      incMp *= Constants.AINZ_MAGIC_BOOST_MP_REGEN_MULT;
     }
     SetUnitState(
       customHero.unit, UNIT_STATE_MANA, 

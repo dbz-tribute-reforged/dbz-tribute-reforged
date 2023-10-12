@@ -353,7 +353,7 @@ export class HeroSelectorManager {
 
 
   finishHeroPick() {
-    this.allowRepick = false;
+    this.allowRepick = Globals.isFBSimTest;
     this.isGameStarted = true;
     DisableTrigger(this.gameModeTrigger);
     PauseTimer(this.selectTimer);

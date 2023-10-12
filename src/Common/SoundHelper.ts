@@ -1321,6 +1321,12 @@ export module SoundHelper {
         }
         break;
       
+      case Id.jacoEmergencyBoost:
+        if (unitId == Id.jaco) {
+          playSoundOnUnit(unit, "Audio/Voice/Jaco/E1.mp3", 2352);
+        }
+        break;
+      
       case Id.jacoSuperEliteCombo:
         if (unitId == Id.jaco) {
           if (rng < 30) {

@@ -329,17 +329,20 @@ export function CustomPlayerTest() {
  
       if (spellName) { 
         const caster = GetTriggerUnit();
-        const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+        let abilityLevel = GetUnitAbilityLevel(caster, abilityId);
         Globals.customPlayers[playerId].selectedUnit = caster;
         let damageMult = 1.0;
         if (abilityId == Id.ftSwordOfHope) {
           damageMult *= getSwordOfHopeMult(player);
         }
+        if (abilityId == Id.jacoEliteBeamFire) {
+          damageMult *= getJacoEliteBeamMult(caster);
+        }
         if (GetUnitTypeId(caster) == Id.shotoTodoroki) {
           damageMult *= getTodorokiMult(caster, abilityId);
         }
-        if (abilityId == Id.jacoEliteBeamFire) {
-          damageMult *= getJacoEliteBeamMult(caster);
+        if (GetUnitTypeId(caster) == Id.ainzOoalGown) {
+          abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
         }
 
 
@@ -841,6 +844,7 @@ export function CustomPlayerTest() {
 
     Globals.isFBSimTest = true;
     Globals.isFreemode = true;
+    HeroSelectorManager.getInstance().enableFBSimTest(true);
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
@@ -1155,6 +1159,20 @@ export function CustomPlayerTest() {
           5, 
           "Fast sagas activated"
         );
+      }
+    }
+  });
+
+  const changeDDSTimeoutTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(changeDDSTimeoutTrig, Player(i), "-dt", false);
+  }
+  TriggerAddAction(changeDDSTimeoutTrig, () => {
+    if (Globals.isFBSimTest) {
+      const value = S2R(SubString(GetEventPlayerChatString(), 4, 9));
+      if (value > 0) {
+        Globals.ddsTimeoutSeconds = value;
+        print("DT: " + R2S(Globals.ddsTimeoutSeconds));
       }
     }
   });
