@@ -83,6 +83,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.glare, SimpleSpellSystem.InitJirenGlare);
     Globals.genericSpellMap.set(Id.glare2, SimpleSpellSystem.InitJirenGlare);
     Globals.genericSpellMap.set(Id.hirudegarnDarkEyes, SimpleSpellSystem.InitJirenGlare);
+    Globals.genericSpellMap.set(Id.shalltearNegativeImpactShield, SimpleSpellSystem.InitJirenGlare);
 
     Globals.genericSpellMap.set(Id.ceroCharge, SimpleSpellSystem.InitCero);
     Globals.genericSpellMap.set(Id.ceroFire, SimpleSpellSystem.InitCero);
@@ -175,19 +176,28 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.linkArrowLightning, SimpleSpellSystem.doLinkArrowSelect);
     Globals.genericSpellMap.set(Id.linkArrowBomb, SimpleSpellSystem.doLinkArrowSelect);
     
+    Globals.genericSpellMap.set(DebuffAbilities.SLOW_LINK_FIRE_ARROW, SimpleSpellSystem.doLinkFireArrowBurn);
+
     Globals.genericSpellMap.set(Id.cellMaxDisaster, SimpleSpellSystem.doCellMaxDisasterRay);
     
-    Globals.genericSpellMap.set(Id.ainzEnergyDrain, SimpleSpellSystem.doLightningSFX);
-    Globals.genericSpellMap.set(Id.ainzGraspHeart, SimpleSpellSystem.doLightningSFX);
+    Globals.genericSpellMap.set(Id.ainzEnergyDrain, SimpleSpellSystem.doAinzLightningSFX);
+    Globals.genericSpellMap.set(Id.ainzGraspHeart, SimpleSpellSystem.doAinzLightningSFX);
     Globals.genericSpellMap.set(Id.ainzGreaterHardening, SimpleSpellSystem.doAinzGreaterHardening);
     Globals.genericSpellMap.set(Id.ainzGreaterMagicShield, SimpleSpellSystem.doAinzGreaterMagicShield);
-    Globals.genericSpellMap.set(Id.ainzGreaterHardening, SimpleSpellSystem.doAinzMagicBoost);
+    Globals.genericSpellMap.set(Id.ainzMagicBoost, SimpleSpellSystem.doAinzMagicBoost);
     Globals.genericSpellMap.set(Id.ainzPerfectUnknowable, SimpleSpellSystem.doAinzPerfectUnknowable);
     Globals.genericSpellMap.set(Id.ainzGate, SimpleSpellSystem.doAinzGate);
+    // Globals.genericSpellMap.set(Id.ainzSummonPandora, SimpleSpellSystem.doAinzPandorasActor);
     Globals.genericSpellMap.set(Id.ainzResistance, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.ainzWish, SimpleSpellSystem.doAinzWish);
 
-    Globals.genericSpellMap.set(DebuffAbilities.SLOW_LINK_FIRE_ARROW, SimpleSpellSystem.doLinkFireArrowBurn);
+    Globals.genericSpellMap.set(Id.albedoFormSwap, SimpleSpellSystem.doAlbedoFormSwap);
+    Globals.genericSpellMap.set(Id.albedoAegis, SimpleSpellSystem.doAlbedoAegis);
+    Globals.genericSpellMap.set(Id.albedoSkillBoost, SimpleSpellSystem.doAlbedoSkillBoost);
+
+    Globals.genericSpellMap.set(Id.shalltearValhalla, SimpleSpellSystem.doShalltearValhalla);
+
+    Globals.genericSpellMap.set(Id.demiurgeHellfireMantle, SimpleSpellSystem.doDemiurgeHellfireMantle);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -1072,6 +1082,7 @@ export module SimpleSpellSystem {
 
     const glareDuration = 2.5;
     const darkEyesDuration = 4.0;
+    const negativeImpactShieldDuration = 3.0;
 
     const spellId = GetSpellAbilityId();
     const unit = GetTriggerUnit();
@@ -1082,9 +1093,11 @@ export module SimpleSpellSystem {
     if (spellId == Id.glare || spellId == Id.glare2) {
       effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
       // BlzSetSpecialEffectScale(effect, 1.5);
-    } else {
+    } else if (spellId == Id.hirudegarnDarkEyes) {
       effect = AddSpecialEffectTarget("MagusDarkMist.mdl", unit, "head");
       // BlzSetSpecialEffectScale(effect, 2.0);
+    } else if (spellId == Id.shalltearNegativeImpactShield) {
+      effect = AddSpecialEffectTarget("AuraKaox10.mdl", unit, "origin");
     }
     SaveEffectHandle(Globals.genericSpellHashtable, unitId, 1, effect);
     SaveInteger(Globals.genericSpellHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
@@ -1097,6 +1110,8 @@ export module SimpleSpellSystem {
     let timerDuration = glareDuration;
     if (spellId == Id.hirudegarnDarkEyes) {
       timerDuration = darkEyesDuration;
+    } else if (spellId == Id.shalltearNegativeImpactShield) {
+      timerDuration = negativeImpactShieldDuration;
     }
 
     TimerStart(CreateTimer(), timerDuration, false, () => {
@@ -1126,12 +1141,15 @@ export module SimpleSpellSystem {
         spellId != Id.glare
         && spellId != Id.glare2
         && spellId != Id.hirudegarnDarkEyes
+        && spellId != Id.shalltearNegativeImpactShield
       )
     ) return;
 
     const maxGlareDistance = 2500;
+    const maxNegativeImpactShieldDistance = 600;
     const glareDamageMult = BASE_DMG.KAME_DPS * 5;
     const glare2DamageMult = BASE_DMG.KAME_DPS * 7.5;
+    const negativeImpactShieldDamageMult = BASE_DMG.KAME_DPS * 10;
     const glare2StrDiffJirenBonus = 1.05;
     const glare2StrDiffMult = 1.1;
     const glarePunishDamageMult = 0.15;
@@ -1143,75 +1161,94 @@ export module SimpleSpellSystem {
     Globals.tmpVector.setPos(GetUnitX(target), GetUnitY(target));
     Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
 
-    if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) < maxGlareDistance) {
-      SetUnitX(target, Globals.tmpVector2.x);
-      SetUnitY(target, Globals.tmpVector2.y);
-          
-      const castDummy = CreateUnit(
-        player, 
-        Constants.dummyCasterId, 
-        Globals.tmpVector2.x, Globals.tmpVector2.y, 
-        0
+    if (spellId == Id.shalltearNegativeImpactShield) {
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxNegativeImpactShieldDistance) {
+        return;
+      }
+    } else {
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxGlareDistance) {
+        return;
+      }
+    }
+
+    SetUnitX(target, Globals.tmpVector2.x);
+    SetUnitY(target, Globals.tmpVector2.y);
+        
+    const castDummy = CreateUnit(
+      player, 
+      Constants.dummyCasterId, 
+      Globals.tmpVector2.x, Globals.tmpVector2.y, 
+      0
+    );
+    UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
+
+    const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(target);
+    let spellPower = 1.0;
+    if (customHero) {
+      spellPower = customHero.spellPower;
+    }
+
+    let punishMult = glarePunishDamageMult;
+    if (spellId == Id.hirudegarnDarkEyes || spellId == Id.shalltearNegativeImpactShield) {
+      punishMult = darkEyesPunishDamageMult;
+    }
+
+    let damageMult = glareDamageMult;
+    if (spellId == Id.glare2) {
+      damageMult = glare2DamageMult;
+    } else if (spellId == Id.shalltearNegativeImpactShield) {
+      damageMult = negativeImpactShieldDamageMult;
+    }
+
+    let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(target, true);
+    if (spellId == Id.glare2) {
+      damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(target, true) - GetHeroStr(source, true)));
+    }
+
+    const abilityLevel = LoadInteger(Globals.genericSpellHashtable, targetId, 2);
+    const damage = (
+      (AOEDamage.getIntDamageMult(target) * abilityLevel * spellPower * damageMult * damageBase) +
+      GetEventDamage() * punishMult
+    );
+
+    UnitDamageTarget(
+      target,
+      source,
+      damage,
+      true,
+      false,
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL, 
+      WEAPON_TYPE_WHOKNOWS
+    );
+
+    IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
+    RemoveUnit(castDummy);
+    
+    if (spellId == Id.shalltearNegativeImpactShield) {
+      DestroyEffect(
+        AddSpecialEffect(
+          "PurpleBigExplosion.mdl",
+          Globals.tmpVector2.x, Globals.tmpVector2.y
+        )
       );
-      UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
-
-      const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(target);
-      let spellPower = 1.0;
-      if (customHero) {
-        spellPower = customHero.spellPower;
-      }
-
-      let punishMult = glarePunishDamageMult;
-      if (spellId == Id.hirudegarnDarkEyes) {
-        punishMult = darkEyesPunishDamageMult;
-      }
-
-      let damageMult = glareDamageMult;
-      if (spellId == Id.glare2) {
-        damageMult = glare2DamageMult;
-      }
-
-      let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(target, true);
-      if (spellId == Id.glare2) {
-        damageBase += Math.max(0, glare2StrDiffMult * (glare2StrDiffJirenBonus * GetHeroStr(target, true) - GetHeroStr(source, true)));
-      }
-
-      const abilityLevel = LoadInteger(Globals.genericSpellHashtable, targetId, 2);
-      const damage = (
-        (AOEDamage.getIntDamageMult(target) * abilityLevel * spellPower * damageMult * damageBase) +
-        GetEventDamage() * punishMult
-      );
-
-      UnitDamageTarget(
-        target,
-        source,
-        damage,
-        true,
-        false,
-        ATTACK_TYPE_HERO, 
-        DAMAGE_TYPE_NORMAL, 
-        WEAPON_TYPE_WHOKNOWS
-      );
-
-      IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
-      RemoveUnit(castDummy);
-      
+    } else {
       DestroyEffect(
         AddSpecialEffect(
           "Slam.mdl",
           Globals.tmpVector2.x, Globals.tmpVector2.y
         )
       );
-      
-      if (GetUnitTypeId(target) == Id.jiren) {
-        if (Math.random() * 100 < 5) {
-          SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
-        } else {
-          SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenGlare2.mp3", 1018);
-        }
-      }
-      SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
     }
+    
+    if (GetUnitTypeId(target) == Id.jiren) {
+      if (Math.random() * 100 < 5) {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
+      } else {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenGlare2.mp3", 1018);
+      }
+    }
+    SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
   }
   
   export function DDSRunDPSCheck(
@@ -3214,7 +3251,7 @@ export module SimpleSpellSystem {
     );
 
     const dummy = CreateUnit(
-      player, FourCC("h054"), GetUnitX(hero.unit), GetUnitY(hero.unit), 0
+      player, Constants.dummyCasterId, GetUnitX(hero.unit), GetUnitY(hero.unit), 0
     );
     UnitAddAbility(dummy, DebuffAbilities.APPULE_VENGEANCE_CLONE);
     SetUnitOwner(dummy, player, false);
@@ -4264,7 +4301,7 @@ export module SimpleSpellSystem {
     }
   }
 
-  export function doLightningSFX() {
+  export function doAinzLightningSFX() {
     const caster = GetTriggerUnit();
     const target = GetSpellTargetUnit();
     const abilId = GetSpellAbilityId();
@@ -4596,6 +4633,18 @@ export module SimpleSpellSystem {
     GroupClear(Globals.tmpUnitGroup);
   }
 
+  // export function doAinzPandorasActor() {
+  //   const caster = GetTriggerUnit();
+  //   const player = GetOwningPlayer(caster);
+  //   const timer = TimerManager.getInstance().get();
+  //   SetPlayerAbilityAvailable(player, Id.ainzSummonPandora, false);
+
+  //   TimerStart(timer, 45, false, () => {
+  //     SetPlayerAbilityAvailable(player, Id.ainzSummonPandora, true);
+  //     TimerManager.getInstance().recycle(timer);
+  //   });
+  // }
+
   export function doAinzResistance() {
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -4629,6 +4678,224 @@ export module SimpleSpellSystem {
 
       DragonBallsManager.getInstance().summonShenron(GetUnitX(caster), GetUnitY(caster));
       UnitRemoveAbility(caster, GetSpellAbilityId());
+    }
+  }
+
+  export function doAlbedoFormSwap() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    let avail = true;
+
+    if (GetUnitAbilityLevel(caster, Id.albedoFormSwap) == 1) {
+      SetUnitAbilityLevel(caster, Id.albedoFormSwap, 2);
+
+      avail = true;
+      SetPlayerAbilityAvailable(player, Id.albedoGinnungagap, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoGuardianAura, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoVoracityAura, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoFearAura, avail);
+
+      avail = false;
+      SetPlayerAbilityAvailable(player, Id.albedoDecapitate, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoDefensiveSlash, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoChargeAttack, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoAegis, avail);
+
+      BlzSetUnitSkin(caster, Id.albedoDress);
+    } else {
+      // 2
+      SetUnitAbilityLevel(caster, Id.albedoFormSwap, 1);
+
+      avail = false;
+      SetPlayerAbilityAvailable(player, Id.albedoGinnungagap, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoGuardianAura, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoVoracityAura, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoFearAura, avail);
+
+      avail = true;
+      SetPlayerAbilityAvailable(player, Id.albedoDecapitate, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoDefensiveSlash, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoChargeAttack, avail);
+      SetPlayerAbilityAvailable(player, Id.albedoAegis, avail);
+
+      BlzSetUnitSkin(caster, Id.albedo);
+    }
+  }
+
+  export function doAlbedoAegis() {
+    const caster = GetTriggerUnit();
+    const target = GetSpellTargetUnit();
+    const maxTick = 1000;
+    const absorbRatio = 0.5;
+    const minHpDiff = 3;
+
+    const sfx1 = AddSpecialEffectTarget(
+      "Abilities/Spells/Orc/Voodoo/VoodooAura.mdl",
+      caster,
+      "origin"
+    );
+    const sfx2 = AddSpecialEffectTarget(
+      "Abilities/Spells/Orc/Voodoo/VoodooAuraTarget.mdl",
+      target,
+      "origin"
+    );
+
+    let oldHp = GetUnitState(target, UNIT_STATE_LIFE);
+    let tick = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (tick > maxTick) {
+        DestroyEffect(sfx1);
+        DestroyEffect(sfx2);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      
+      const currentHp = GetUnitState(target, UNIT_STATE_LIFE);
+      if (currentHp > oldHp) {
+        oldHp = currentHp;
+      } else if (oldHp > currentHp + minHpDiff) {
+        const hpDiff = oldHp - currentHp;
+        const hpAbsorb = hpDiff * absorbRatio;
+        const casterHp = GetUnitState(caster, UNIT_STATE_LIFE);
+        if (casterHp > hpAbsorb + minHpDiff) {
+          SetUnitState(target, UNIT_STATE_LIFE, currentHp + hpAbsorb);
+          SetUnitState(caster, UNIT_STATE_LIFE, casterHp - hpAbsorb);
+          oldHp = currentHp + hpAbsorb;
+        }
+      }
+
+      if (UnitHelper.isUnitDead(caster) || UnitHelper.isUnitDead(target)) {
+        tick += maxTick;
+      }
+      ++tick;
+    });
+  }
+
+  export function doAlbedoSkillBoost() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const boostGroup = CreateGroup();
+    const maxTick = 666;
+    const boostAOE = 1800;
+    const boostSpellPower = 0.1;
+
+    let tick = 0;
+    const boostTimer = TimerManager.getInstance().get();
+    TimerStart(boostTimer, 0.03, true, () => {
+      if (tick > maxTick) {
+        ForGroup(boostGroup, () => {
+          const unit = GetEnumUnit();
+          const targetPlayer = GetOwningPlayer(unit);
+          const targetPlayerId = GetPlayerId(targetPlayer);
+          const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+          if (ch) ch.removeSpellPower(boostSpellPower);
+        });
+        DestroyGroup(boostGroup);
+        TimerManager.getInstance().recycle(boostTimer);
+        return;
+      }
+
+      GroupClear(Globals.tmpUnitGroup);
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), boostAOE, null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          !IsUnitInGroup(unit, boostGroup)
+          && IsUnitAlly(unit, player)
+          && IsUnitType(unit, UNIT_TYPE_HERO) 
+          && UnitHelper.isUnitAlive(unit)
+        ) {
+          const targetPlayer = GetOwningPlayer(unit);
+          const targetPlayerId = GetPlayerId(targetPlayer);
+          const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+          if (ch) {
+            ch.addSpellPower(boostSpellPower);
+            GroupAddUnit(boostGroup, unit);
+          }
+        }
+      });
+      GroupClear(Globals.tmpUnitGroup);
+      
+      if (
+        UnitHelper.isUnitDead(caster)
+        || GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF
+      ) {
+        tick += maxTick;
+      }
+      ++tick;
+    });
+  }
+
+  export function doShalltearValhalla() {
+    const caster = GetTriggerUnit();
+    const valhallaAOE = 1800;
+    const valhallaHeal = 0.25;
+
+    let healMult = 0;
+    
+    GroupClear(Globals.tmpUnitGroup);
+    GroupEnumUnitsInRange(
+      Globals.tmpUnitGroup, 
+      GetUnitX(caster), GetUnitY(caster),
+      valhallaAOE, null
+    );
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      if (
+        UnitHelper.isUnitAlive(unit)
+        && GetUnitTypeId(unit) == GetUnitTypeId(caster)
+        && IsUnitIllusion(unit)
+      ) {
+        healMult = Math.max(
+          healMult,
+          valhallaHeal * GetUnitLifePercent(unit) * 0.01
+        );
+
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Human/Resurrect/ResurrectCaster.mdl",
+            GetUnitX(unit), GetUnitY(unit)
+          )
+        );
+
+        SetUnitState(unit, UNIT_STATE_LIFE, 1);
+        UnitDamageTarget(
+          caster, unit, 
+          1000, 
+          true, false, 
+          ATTACK_TYPE_HERO, 
+          DAMAGE_TYPE_NORMAL, 
+          WEAPON_TYPE_WHOKNOWS
+        );
+      }
+    });
+
+    if (healMult > 0) {
+      DestroyEffect(
+        AddSpecialEffect(
+          "Abilities/Spells/Human/HolyBolt/HolyBoltSpecialArt.mdl",
+          GetUnitX(caster), GetUnitY(caster)
+        )
+      );
+
+      SetUnitState(
+        caster, 
+        UNIT_STATE_LIFE, 
+        GetUnitState(caster, UNIT_STATE_LIFE) 
+        + healMult * GetUnitState(caster, UNIT_STATE_MAX_LIFE)
+      );
+    }
+  }
+
+  export function doDemiurgeHellfireMantle() {
+    const caster = GetTriggerUnit();
+    const lvl = GetUnitAbilityLevel(caster, Id.demiurgeHellfireMantle);
+
+    if (lvl == 1) {
+      SetUnitAbilityLevel(caster, Id.demiurgeHellfireMantle, 2);
+    } else {
+      SetUnitAbilityLevel(caster, Id.demiurgeHellfireMantle, 1);
     }
   }
 

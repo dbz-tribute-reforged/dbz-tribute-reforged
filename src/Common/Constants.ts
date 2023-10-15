@@ -143,10 +143,12 @@ export module Constants {
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
+  export const FOUNTAIN_REGEN_MULT = 1.25;
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
   export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
   export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1.5;
   export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 1.25;
+  export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 1.25;
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -251,20 +253,26 @@ export module DebuffAbilities {
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
   export const MAFUBA_SEALING = FourCC("A10S");
+  export const DEMIURGE_COMMAND_SILENCE = FourCC("A13M");
 
   // wand of illusion
   export const APPULE_VENGEANCE_CLONE = FourCC("A11C");
   export const APPULE_CLONES = FourCC("A11F");
+  export const SHALLTEAR_EINHERJAR = FourCC("A13B");
 
   // invisibility
   export const AINZ_INVISIBILITY = FourCC('A12P');
 
+  // faerie fire
+  export const DEMIURGE_HELLFIRE_1 = FourCC("A13K");
+  export const DEMIURGE_HELLFIRE_2 = FourCC("A13L");
 }
 
 export module Buffs {
   // buffs
   export const TIMED_LIFE = FourCC("BTLF");
   export const STUNNED = FourCC("BPSE");
+  export const LIFE_REGENERATION_AURA = FourCC("B068"); // fountain
 
   export const HEROS_SONG = FourCC("B01H");
 
@@ -309,6 +317,11 @@ export module Buffs {
   export const SLOW_LINK_FIRE_ARROW = FourCC("B05X");
 
   export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
+
+  export const ALBEDO_GUARDIAN_AURA = FourCC("B065");
+
+  export const DEMIURGE_HELLFIRE_1 = FourCC("B06A");
+  export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
 }
 
 export module OrderIds {
@@ -320,6 +333,7 @@ export module OrderIds {
   export const INNER_FIRE = 852066;
   export const INVISIBILITY = 852069
   export const HOLY_BOLT = 852092;
+  export const FAERIE_FIRE = 852149;
   export const SOUL_BURN = 852668;
   export const WAND_OF_ILLUSION = 852274;
   export const STOP = 851972;
@@ -417,6 +431,19 @@ export module Id {
   export const ainzTimeStop = FourCC("A12Q");
   export const ainzResistance = FourCC("A12S");
   export const ainzWish = FourCC("A12J");
+
+  export const albedo = FourCC("H013");
+  export const albedoDress = FourCC("H010");
+  export const albedoDecapitate = FourCC("A12T");
+  export const albedoDefensiveSlash = FourCC("A12U");
+  export const albedoChargeAttack = FourCC("A12V");
+  export const albedoAegis = FourCC("A12W");
+  export const albedoFormSwap = FourCC("A12Y");
+  export const albedoSkillBoost = FourCC("A12X");
+  export const albedoGinnungagap = FourCC("A12Z");
+  export const albedoGuardianAura = FourCC("A130");
+  export const albedoVoracityAura = FourCC("A131");
+  export const albedoFearAura = FourCC("A132");
 
   export const allMight = FourCC("H09K");
   export const detroitSmash = FourCC("A0SX");
@@ -518,6 +545,15 @@ export module Id {
   export const cronoLightning3 = FourCC("A0WM");
   export const cronoCleave = FourCC("A0VT");
   export const cronoLuminaire = FourCC("A0VU");
+
+  export const demiurge = FourCC("H017");
+  export const demiurgeHellflame = FourCC("A13C");
+  export const demiurgeGiantArm = FourCC("A13D");
+  export const demiurgeCommand = FourCC("A13E");
+  export const demiurgeMeteorFall = FourCC("A13F");
+  export const demiurgeJaldabaoth = FourCC("A13G");
+  export const demiurgeHellfireMantle = FourCC("A13H");
+  export const demiurgePermaInvis = FourCC("A13J");
 
   export const frog = FourCC("H0A1");
   export const frogSlurpCut = FourCC("A0WA");
@@ -1008,6 +1044,15 @@ export module Id {
   export const sephirothOneWingedAngel = FourCC("A0TC");
   export const sephirothParry = FourCC("A0TD");
 
+  export const shalltearBloodfallen = FourCC("H015");
+  export const shalltearPurifyingJavelin = FourCC("A133");
+  export const shalltearVermilionNova = FourCC("A134");
+  export const shalltearMistForm = FourCC("A135");
+  export const shalltearNegativeImpactShield = FourCC("A136");
+  export const shalltearEinherjar = FourCC("A137");
+  export const shalltearValhalla = FourCC("A138");
+  export const shalltearTimeReverse = FourCC("A139");
+
   export const shotoTodoroki = FourCC("H05X");
   export const shotoTodorokiGlacier = FourCC("A0YR");
   export const shotoTodorokiWallOfFlames = FourCC("A0YS");
@@ -1125,7 +1170,7 @@ export module Id {
   export const yamchaSparking = FourCC("A0SB");
 
   export const zamasu = FourCC("E012");
-  export const zamasuImmortality = FourCC("A0SWw");
+  export const zamasuImmortality = FourCC("A0SW");
 
 
   export const itemHealingBuff = FourCC("BIrg");

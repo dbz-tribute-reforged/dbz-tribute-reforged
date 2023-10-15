@@ -1781,4 +1781,21 @@ export const AOEKnockbackComponents = [
     onlyHeroes: false,
     isPersistent: false,
   },
+  {
+    name: "knockback hell flame",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 8, 
+      angle: 180, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+  },
 ];

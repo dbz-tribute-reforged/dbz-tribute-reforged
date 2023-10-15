@@ -129,7 +129,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "+20% ability damage, +50% attack damage, +132 ms.|n" + 
-        "Cost: 35 SP|n" +
+        "Cost: 40 SP|n" +
         "Duration: 5s|n" + 
         "CD: 5s"
     },
@@ -13756,7 +13756,7 @@ export const AbilitiesList = [
         AbilityNames.Hirudegarn.DARK_MIST
     },
     components: [
-      { name: "hide unit hirudegarn dark mist" },
+      { name: "hide unit prevent movement reselect" },
       { name: "dash ground point 40dist" },
       { name: "damage hirudegarn dark mist dps" },
       { name: "sfx beam dark mist" },
@@ -14513,7 +14513,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14540,7 +14540,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14568,7 +14568,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14596,7 +14596,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14624,7 +14624,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14651,7 +14651,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14709,7 +14709,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14765,7 +14765,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14796,7 +14796,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14826,7 +14826,7 @@ export const AbilitiesList = [
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
-    animation: "spell",
+    animation: "",
     icon: {
       enabled: "",
       disabled: "",
@@ -14839,6 +14839,459 @@ export const AbilitiesList = [
     components: [
       { name: "debuff sleep ainz time stop" },
       { name: "sfx ainz time stop" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.DECAPITATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 3,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi albedo decapitate" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.DEFENSIVE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow albedo defensive slash" },
+      { name: "damage albedo defensive slash" },
+      { name: "block albedo defensisve slash" },
+      { name: "sfx albedo defensive slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.CHARGE_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "debuff slow albedo charge attack" },
+      { name: "damage albedo charge attack explosion" },
+      { name: "sfx fervent rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.SKILL_BOOST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "sfx albedo skill boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.GINNUNGAGEP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 67,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage albedo ginnungagap explosion" },
+      { name: "sfx albedo ginnungagap 1" },
+      { name: "sfx albedo ginnungagap 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.PURIFYING_JAVELIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam shalltear purifying javelin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.VERMILION_NOVA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam shalltear vermilion nova" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.MIST_FORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "hide unit prevent movement reselect" },
+      { name: "dash ground point 30dist" },
+      { name: "damage hirudegarn dark mist dps" },
+      { name: "sfx shalltear mist form" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.NEGATIVE_IMPACT_SHIELD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "block shalltear negative impact shield" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.EINHERJAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 2000,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "buff illusion shalltear einherjar" },
+      { name: "temp ability shalltear valhalla" },
+      { name: "sfx shalltear einherjar" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.TIME_REVERSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "block shalltear time reverse" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.HELL_FLAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam demiurge hell flame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.GIANT_ARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim demiurge giant arm" },
+      { name: "multi demiurge giant arm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.COMMAND,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam demiurge command" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.METEOR_FALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 22,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage demiurge meteor fall" },
+      { name: "beam demiurge meteor fall" },
+      { name: "sfx demiurge meteor fall" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.JALDABAOTH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim demiurge jaldabaoth" },
+      { name: "temp ability demiurge jaldabaoth invis" },
+      { name: "dash ground forward 2dist" },
+      { name: "sfx demiurge jaldabaoth" },
     ],
   },
   // -------------------------------------------

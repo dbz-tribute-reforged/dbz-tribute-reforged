@@ -389,30 +389,6 @@ const super17Data = {
     HeroSelectCategory.BEAMER
   )
 }
-const zamasuData = {
-  unitCode: Id.zamasu,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
-  )
-}
-const gokuBlackData = {
-  unitCode: Id.gokuBlack,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
-  )
-}
 const omegaShenronData = {
   unitCode: Id.omegaShenron,
   onlyRandom: false,
@@ -506,6 +482,30 @@ const nappaData = {
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.MICRO
+  )
+}
+const zamasuData = {
+  unitCode: Id.zamasu,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY
+  )
+}
+const gokuBlackData = {
+  unitCode: Id.gokuBlack,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY
   )
 }
 const hitData = {
@@ -627,6 +627,19 @@ const schalaData = {
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.CARRY +
     HeroSelectCategory.SUPPORT
+  )
+}
+const rustyData = {
+  unitCode: Id.rustTyranno,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.CRONO + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
   )
 }
 const donkeyKongData = {
@@ -859,17 +872,40 @@ const ainzData = {
     HeroSelectCategory.BEAMER
   )
 }
-const rustyData = {
-  unitCode: Id.rustTyranno,
+const albedoData = {
+  unitCode: Id.albedo,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
+  )
+}
+const shalltearData = {
+  unitCode: Id.shalltearBloodfallen,
   onlyRandom: false,
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.MEME + 
     HeroSelectCategory.BRUISER
+  )
+}
+const demiurgeData = {
+  unitCode: Id.demiurge,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN
   )
 }
 
@@ -1006,9 +1042,9 @@ export const HeroSelectUnitList = [
 
   // 90
   ainzData,
-  emptySpace,
-  emptySpace,
-  emptySpace,
+  albedoData,
+  shalltearData,
+  demiurgeData,
   emptySpace,
   // 95
   emptySpace,

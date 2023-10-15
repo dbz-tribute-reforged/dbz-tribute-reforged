@@ -707,6 +707,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Waluigi.FIREBALL_1,
       AbilityNames.Waluigi.FIREBALL_2,
       AbilityNames.GokuBlack.KAMEHAMEHA,
+      AbilityNames.CellMax.TAIL_WHIP,
+      AbilityNames.Ainz.REALITY_SLASH,
+      AbilityNames.Albedo.DECAPITATE,
+      AbilityNames.Shalltear.PURIFYING_JAVELIN,
+      AbilityNames.Demiurge.HELL_FLAME,
 
       AbilityNames.Magus.DARK_MATTER
     ]],
@@ -1000,6 +1005,31 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ainz.FALLEN_DOWN,
       AbilityNames.Ainz.LA_SHUB_NIGGURATH,
       AbilityNames.Ainz.TIME_STOP,
+    ]],
+    
+    [Id.albedo, [
+      AbilityNames.Albedo.DECAPITATE,
+      AbilityNames.Albedo.DEFENSIVE_SLASH,
+      AbilityNames.Albedo.CHARGE_ATTACK,
+      AbilityNames.Albedo.SKILL_BOOST,
+      AbilityNames.Albedo.GINNUNGAGEP,
+    ]],
+    
+    [Id.shalltearBloodfallen, [
+      AbilityNames.Shalltear.PURIFYING_JAVELIN,
+      AbilityNames.Shalltear.VERMILION_NOVA,
+      AbilityNames.Shalltear.MIST_FORM,
+      AbilityNames.Shalltear.NEGATIVE_IMPACT_SHIELD,
+      AbilityNames.Shalltear.EINHERJAR,
+      AbilityNames.Shalltear.TIME_REVERSE,
+    ]],
+
+    [Id.demiurge, [
+      AbilityNames.Demiurge.HELL_FLAME,
+      AbilityNames.Demiurge.GIANT_ARM,
+      AbilityNames.Demiurge.COMMAND,
+      AbilityNames.Demiurge.METEOR_FALL,
+      AbilityNames.Demiurge.JALDABAOTH,
     ]],
     
 

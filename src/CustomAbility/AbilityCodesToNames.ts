@@ -714,6 +714,25 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.ainzLaShubNiggurath, AbilityNames.Ainz.LA_SHUB_NIGGURATH],
     [Id.ainzTimeStop, AbilityNames.Ainz.TIME_STOP],
 
+    [Id.albedoDecapitate, AbilityNames.Albedo.DECAPITATE],
+    [Id.albedoDefensiveSlash, AbilityNames.Albedo.DEFENSIVE_SLASH],
+    [Id.albedoChargeAttack, AbilityNames.Albedo.CHARGE_ATTACK],
+    [Id.albedoSkillBoost, AbilityNames.Albedo.SKILL_BOOST],
+    [Id.albedoGinnungagap, AbilityNames.Albedo.GINNUNGAGEP],
+
+    [Id.shalltearPurifyingJavelin, AbilityNames.Shalltear.PURIFYING_JAVELIN],
+    [Id.shalltearVermilionNova, AbilityNames.Shalltear.VERMILION_NOVA],
+    [Id.shalltearMistForm, AbilityNames.Shalltear.MIST_FORM],
+    [Id.shalltearNegativeImpactShield, AbilityNames.Shalltear.NEGATIVE_IMPACT_SHIELD],
+    [Id.shalltearEinherjar, AbilityNames.Shalltear.EINHERJAR],
+    [Id.shalltearTimeReverse, AbilityNames.Shalltear.TIME_REVERSE],
+    
+    [Id.demiurgeHellflame, AbilityNames.Demiurge.HELL_FLAME],
+    [Id.demiurgeGiantArm, AbilityNames.Demiurge.GIANT_ARM],
+    [Id.demiurgeCommand, AbilityNames.Demiurge.COMMAND],
+    [Id.demiurgeMeteorFall, AbilityNames.Demiurge.METEOR_FALL],
+    [Id.demiurgeJaldabaoth, AbilityNames.Demiurge.JALDABAOTH],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

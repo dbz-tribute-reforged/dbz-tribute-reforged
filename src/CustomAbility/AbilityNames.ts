@@ -873,6 +873,31 @@ export module AbilityNames {
     export const TIME_STOP = "Ainz Time Stop";
   }
 
+  export module Albedo {
+    export const DECAPITATE = "Albedo Decapitate";
+    export const DEFENSIVE_SLASH = "Albedo Defensive Slash";
+    export const CHARGE_ATTACK = "Albedo Charge Attack";
+    export const SKILL_BOOST = "Albedo Skill Boost";
+    export const GINNUNGAGEP = "Albedo Ginnungagap";
+  }
+
+  export module Shalltear {
+    export const PURIFYING_JAVELIN = "Shalltear Purifying Javelin";
+    export const VERMILION_NOVA = "Shalltear Vermilion Nova";
+    export const MIST_FORM = "Shalltear Mist Form";
+    export const NEGATIVE_IMPACT_SHIELD = "Shalltear Negative Impact Shield";
+    export const EINHERJAR = "Shalltear Einherjar";
+    export const TIME_REVERSE = "Shalltear Time Reverse";
+  }
+
+  export module Demiurge {
+    export const HELL_FLAME = "Demiurge Hell Flame";
+    export const GIANT_ARM = "Demiurge Giant Arm";
+    export const COMMAND = "Demiurge Command";
+    export const METEOR_FALL = "Demiurge Meteor Fall";
+    export const JALDABAOTH = "Demiurge Jaldabaoth";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

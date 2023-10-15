@@ -21,6 +21,7 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
   static readonly BEAM_UNIT_SPAWN_BEAM = 4;
+  static readonly BEAM_UNIT_SPAWN_TARGET_TO_CASTER = 5;
 
   static readonly BEAM_HP_MODIFIER = 0.3;
 
@@ -319,6 +320,10 @@ export class BeamComponent implements
         this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
       }
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_TO_CASTER) {
+      this.beamCoord.setVector(this.beamTargetPoint);
+      this.beamTargetPoint.setUnit(input.caster.unit);
+      this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
     }
 
     this.beamUnit = CreateUnit(

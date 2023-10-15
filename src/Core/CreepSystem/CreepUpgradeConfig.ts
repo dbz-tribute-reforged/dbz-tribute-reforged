@@ -24,31 +24,32 @@ export module Creep {
   export const WolfBaby = FourCC("n020");
   export const NamekianFrog = FourCC("n02P");
 
-  export const RRSoldier1 = FourCC("n01D"); 
-  export const RRSoldierGun2 = FourCC("n01E");
-  export const RRSoldier3 = FourCC("n03G");
+  export const RRSoldier1 = FourCC("n01D");  // lvl 2
+  export const RRSoldierGun2 = FourCC("n01E"); // lvl 5
+  export const RRSoldier3 = FourCC("n03G"); // lvl 9
 
-  export const RRDefenseDroid = FourCC("n015");
-  export const RRBattleDroid = FourCC("n019");
-  export const RREnforcerDroid = FourCC("n01A");
+  export const RRDefenseDroid = FourCC("n015"); // lvl 2
+  export const RRBattleDroid = FourCC("n019"); // lvl 4
+  export const RREnforcerDroid = FourCC("n01A"); // lvl 7
   export const RRPunisherDroid = FourCC("n031"); // lvl 14
 
   export const DinosaurBaby = FourCC("n02F"); // lvl 2
   export const DinosaurTeen = FourCC("n02E"); // lvl 4
   export const DinosaurSmall = FourCC("n03A"); // lvl 5
-  export const DinosaurLarge = FourCC("n00D"); // lvl 24
+  export const DinosaurLarge = FourCC("n00D"); // lvl 25
   export const Pterodactyl = FourCC("n03B"); // lvl 10
-
-  export const Saibaman = FourCC("n037"); // lvl 6
+    
   export const WolfNormal = FourCC("n014"); // lvl 5
   export const WolfAdult = FourCC("n038"); // lvl 8
+
+  export const Saibaman = FourCC("n037"); // lvl 6
   export const Bull = FourCC("n039"); // lvl 8
   export const BearThief = FourCC("n03C"); // lvl 12
 
   export const FishBaby = FourCC("n01U"); // lvl 4
   export const FishAdult = FourCC("n02H"); // lvl 20
   export const SeaSerpent = FourCC("n00A"); // lvl 10
-  export const CrocodileGIant = FourCC("n02Q"); // lvl 13
+  export const CrocodileGiant = FourCC("n02Q"); // lvl 13
   export const CrocodileMother = FourCC("n02S"); // lvl 30
 
   export const SlugGuard = FourCC("z004"); // lvl 13
@@ -134,11 +135,11 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DinosaurSmall, 0.9),
             new RandomCreepType(Creep.Pterodactyl, 0.1)
           ]],
-          [Creep.CrocodileGIant, [
+          [Creep.CrocodileGiant, [
             new RandomCreepType(Creep.CrocodileMother, 1.0),
           ]],
           [Creep.NamekianFrog, [
-            new RandomCreepType(Creep.CrocodileGIant, 0.2),
+            new RandomCreepType(Creep.CrocodileGiant, 0.2),
           ]],
           [Creep.FriezaScout, [
             new RandomCreepType(Creep.FriezaHenchmen, 0.3),
@@ -199,7 +200,7 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DinosaurTeen, 0.1),
           ]],
           [Creep.NamekianFrog, [
-            new RandomCreepType(Creep.CrocodileGIant, 1.0),
+            new RandomCreepType(Creep.CrocodileGiant, 1.0),
           ]],
           [Creep.FriezaScout, [
             new RandomCreepType(Creep.FriezaHenchmen, 1.0)
