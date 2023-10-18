@@ -10,6 +10,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { PathingCheck } from "Common/PathingCheck";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { SoundHelper } from "Common/SoundHelper";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -2380,6 +2381,7 @@ export function pecoPassive(customHero: CustomHero) {
 export function ainzPassive(customHero: CustomHero) {
   const mpCostPct = 0.22;
   const mpCostTickRate = 0.2;
+  const mpCostDefensiveRatio = 0.5;
   
   const mpCostTimer = CreateTimer();
   customHero.addTimer(mpCostTimer);
@@ -2416,7 +2418,10 @@ export function ainzPassive(customHero: CustomHero) {
       const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
       const lifePct = GetUnitLifePercent(customHero.unit) * 0.01;
       const offensiveManaCost = R2I(maxMana * mpCostPct);
-      const defensiveManaCost = Math.max(0, R2I(offensiveManaCost * (1 - lifePct)));
+      const defensiveManaCost = Math.max(
+        0, 
+        R2I(mpCostDefensiveRatio * offensiveManaCost * (1 - lifePct))
+      );
 
       for (const abil of offensiveSpells) {
         BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, offensiveManaCost);
@@ -2483,6 +2488,7 @@ export function demiurgePassive(customHero: CustomHero) {
         );
         UnitAddAbility(dummyUnit, DebuffAbilities.DEMIURGE_HELLFIRE_1);
 
+        SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Demiurge/HellfireMantle.mp3", 2300);
         DestroyEffect(
           AddSpecialEffect(
             "Abilities/Spells/Other/Doom/DoomTarget.mdl", 
@@ -2549,6 +2555,7 @@ export function demiurgePassive(customHero: CustomHero) {
       DestroyEffect(hellfireSfx);
       RemoveUnit(dummyUnit);
       SetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle, 1);
+      SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Demiurge/HellfireMantle2.mp3", 1500);
     }
   });
 

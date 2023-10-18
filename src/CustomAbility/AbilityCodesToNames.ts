@@ -727,7 +727,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.shalltearEinherjar, AbilityNames.Shalltear.EINHERJAR],
     [Id.shalltearTimeReverse, AbilityNames.Shalltear.TIME_REVERSE],
     
-    [Id.demiurgeHellflame, AbilityNames.Demiurge.HELL_FLAME],
+    [Id.demiurgeHellfireWall, AbilityNames.Demiurge.HELLFIRE_WALL],
     [Id.demiurgeGiantArm, AbilityNames.Demiurge.GIANT_ARM],
     [Id.demiurgeCommand, AbilityNames.Demiurge.COMMAND],
     [Id.demiurgeMeteorFall, AbilityNames.Demiurge.METEOR_FALL],

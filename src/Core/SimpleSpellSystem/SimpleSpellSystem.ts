@@ -2814,11 +2814,7 @@ export module SimpleSpellSystem {
       if (targetPlayerId >= 0 && targetPlayerId < Globals.customPlayers.length) {
         for (const hero of Globals.customPlayers[targetPlayerId].allHeroes) {
           if (!hero) continue;
-          for (const ability of hero.abilities.getCustomAbilities()) {
-            if (ability.isInUse()) {
-              CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
-            }
-          }
+          hero.forceEndAllAbilities();
         }
       }
     }
@@ -4878,6 +4874,8 @@ export module SimpleSpellSystem {
           GetUnitX(caster), GetUnitY(caster)
         )
       );
+      
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Shalltear/Subarashi.mp3", 1500);
 
       SetUnitState(
         caster, 

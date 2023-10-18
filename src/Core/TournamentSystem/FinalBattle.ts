@@ -7,12 +7,17 @@ import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
+import { TournamentManager } from "./TournamentManager";
+import { VisionHelper } from "Common/VisionHelper";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
   protected unitsTeam2: unit[];
   protected winTrigger: trigger;
   protected winTeam: number;
+
+  protected tournamentReviveTrig: trigger;
 
   constructor(
     public name: string = TournamentData.finalBattleName,
@@ -24,6 +29,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     this.unitsTeam2 = [];
     this.winTrigger = CreateTrigger();
     this.winTeam = Constants.invalidTeamValue;
+    this.tournamentReviveTrig = CreateTrigger();
   }
 
   start(): void {
@@ -72,16 +78,16 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
   // setup the tournament by
   // moving units into it as needed
   setupTournament() {
+    this.setupReviveTrigger();
+    
     this.prepareTeam(Constants.defaultTeam1, this.unitsTeam1, TournamentData.tournamentWaitRoom1);
     this.prepareTeam(Constants.defaultTeam2, this.unitsTeam2, TournamentData.tournamentWaitRoom2);
 
     CreateItem(ItemConstants.Consumables.SENZU_BEAN, TournamentData.tournamentWaitRoom1.x, TournamentData.tournamentWaitRoom1.y - 500);
     CreateItem(ItemConstants.Consumables.SENZU_BEAN, TournamentData.tournamentWaitRoom2.x, TournamentData.tournamentWaitRoom2.y + 500);
     
-    // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    //   FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
-    // }
-    
+    VisionHelper.showFbArenaVision();
+
     this.state = TournamentState.InProgress;
     this.lobbyWaitForTournament();
   }
@@ -104,11 +110,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
           const ch = Globals.customPlayers[playerId].getCustomHero(unit);
           if (ch) {
             unitsTeam.push(unit);
-            for (const ability of ch.abilities.getCustomAbilities()) {
-              if (ability.isInUse()) {
-                CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
-              }
-            }
+            ch.forceEndAllAbilities();
           }
 
           SetUnitX(unit, waitRoom.x);
@@ -150,9 +152,17 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       );
       this.moveTeamsToSpawn(this.unitsTeam1, TournamentData.tournamentSpawn1);
       this.moveTeamsToSpawn(this.unitsTeam2, TournamentData.tournamentSpawn2);
+      this.moveCamToSpawn(Constants.defaultTeam1, TournamentData.tournamentSpawn1);
+      this.moveCamToSpawn(Constants.defaultTeam2, TournamentData.tournamentSpawn2);
 
       this.setupWinTriggerActions();
     })
+  }
+
+  moveCamToSpawn(players: player[], waitRoom: Vector2D): void {
+    for (const player of players) {
+      PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0.1);
+    }
   }
 
   moveTeamsToSpawn(unitsTeam: unit[], spawnPoint: Vector2D) {
@@ -194,6 +204,61 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       if (teamNumber != Constants.invalidTeamValue && dyingUnitTeam.length == 0) {
         this.winTeam = teamNumber % 2 + 1;
         this.complete();
+      }
+    });
+  }
+
+  
+
+  protected setupReviveTrigger() {
+    // tournament revive trigger
+    // if you die in tournament, revive & move to lobby
+    TriggerRegisterAnyUnitEventBJ(this.tournamentReviveTrig, EVENT_PLAYER_UNIT_DEATH);
+    TriggerAddAction(this.tournamentReviveTrig, () => {
+      const deadHero = GetDyingUnit();
+      const x = GetUnitX(deadHero);
+      const y = GetUnitY(deadHero);
+      if ( 
+        (
+          (
+            x > TournamentData.tournamentBottomLeft.x &&
+            y > TournamentData.tournamentBottomLeft.y && 
+            x < TournamentData.tournamentTopRight.x &&
+            y < TournamentData.tournamentTopRight.y
+          ) || 
+          (
+            x > TournamentData.budokaiArenaBottomLeft.x &&
+            y > TournamentData.budokaiArenaBottomLeft.y && 
+            x < TournamentData.budokaiArenaTopRight.x &&
+            y < TournamentData.budokaiArenaTopRight.y
+          )
+        )
+        && 
+        UnitHelper.isUnitTournamentViable(deadHero)
+        &&
+        GetOwningPlayer(deadHero) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
+      ) {
+        // Logger.LogDebug("Reviving Dead Tournament Hero");
+
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, Constants.reviveDelay, false, () => {
+          if (UnitHelper.isUnitDead(deadHero)) {
+            ReviveHero(
+              deadHero, 
+              TournamentData.tournamentWaitRoom1.x,
+              TournamentData.tournamentWaitRoom1.y,
+              false
+            );
+
+            SetUnitLifePercentBJ(deadHero, 100);
+            SetUnitManaPercentBJ(deadHero, 100);
+
+            SetUnitInvulnerable(deadHero, true);
+            PauseUnit(deadHero, true);
+          }
+
+          TimerManager.getInstance().recycle(timer);
+        });
       }
     });
   }

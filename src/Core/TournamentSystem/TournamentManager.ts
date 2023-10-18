@@ -4,6 +4,8 @@ import { TournamentData } from "./TournamentData";
 import { Constants, Globals } from "Common/Constants";
 import { Budokai } from "./Budokai";
 import { UnitHelper } from "Common/UnitHelper";
+import { KOTHTournament } from "./KOTHTournament";
+import { AdvancedTournament } from "./AdvancedTournament";
 
 
 export class TournamentManager {
@@ -13,13 +15,12 @@ export class TournamentManager {
   protected tournaments: Map<string, Tournament>;
   protected currentTournament: Tournament | null;
 
-  protected tournamentReviveTrig: trigger;
+  protected isFbArenaVision: boolean = false;
 
   constructor (
   ) {
     this.tournaments = new Map();
     this.currentTournament = null;
-    this.tournamentReviveTrig = CreateTrigger();
     this.initialize();
   }
 
@@ -31,7 +32,6 @@ export class TournamentManager {
   }
 
   public initialize(): this {
-    this.setupReviveTrigger();
 
     /*
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -68,38 +68,51 @@ export class TournamentManager {
     const budokai = new Budokai();
     this.tournaments.set(budokai.name, budokai);
 
-    this.startPreTournamentTimer(
-      TournamentData.finalBattleName,
-      TournamentData.finalBattleTime,
-      TournamentData.finalBattleInterval,
-      true,
-    );
+    if (!this.tournaments.has(Constants.KOTHName)) {
+      this.startPreTournamentTimer(
+        TournamentData.finalBattleName,
+        TournamentData.finalBattleTime,
+        TournamentData.finalBattleInterval,
+        true,
+      );
 
-    this.startPreTournamentTimer(
-      TournamentData.budokaiName,
-      TournamentData.budokaiStartTime1,
-      3,
-      false,
-    );
-    this.startPreTournamentTimer(
-      TournamentData.budokaiName,
-      TournamentData.budokaiStartTime2,
-      3,
-      false,
-    );
-    this.startPreTournamentTimer(
-      TournamentData.budokaiName,
-      TournamentData.budokaiStartTime3,
-      3,
-      false,
-    );
+      this.startPreTournamentTimer(
+        TournamentData.budokaiName,
+        TournamentData.budokaiStartTime1,
+        3,
+        false,
+      );
+      this.startPreTournamentTimer(
+        TournamentData.budokaiName,
+        TournamentData.budokaiStartTime2,
+        3,
+        false,
+      );
+      this.startPreTournamentTimer(
+        TournamentData.budokaiName,
+        TournamentData.budokaiStartTime3,
+        3,
+        false,
+      );
+    }
 
     return this;
   }
 
-  public addFinalBattle() {
+  public addFinalBattle(toStartDelay?: number) {
     const finalBattle = new FinalBattle();
-    this.tournaments.set(finalBattle.name, finalBattle);
+    if (toStartDelay) finalBattle.toStartDelay = toStartDelay;
+    this.addTournament(finalBattle);
+  }
+
+  public addKOTH(p: number = TournamentData.kothPointsToWin) {
+    const koth = new KOTHTournament();
+    koth.setPointsToWin(p);
+    this.addTournament(koth);
+  }
+
+  public addTournament(tournament: Tournament) {
+    this.tournaments.set(tournament.name, tournament);
   }
 
   public removeTournament(name: string): boolean {
@@ -114,57 +127,6 @@ export class TournamentManager {
       return this.currentTournament.name == name;
     }
     return false;
-  }
-
-  protected setupReviveTrigger() {
-    // tournament revive trigger
-    // if you die in tournament, revive & move to lobby
-    TriggerRegisterAnyUnitEventBJ(this.tournamentReviveTrig, EVENT_PLAYER_UNIT_DEATH);
-    TriggerAddAction(this.tournamentReviveTrig, () => {
-      const deadHero = GetDyingUnit();
-      const x = GetUnitX(deadHero);
-      const y = GetUnitY(deadHero);
-      if ( 
-        (
-          (
-            x > TournamentData.tournamentBottomLeft.x &&
-            y > TournamentData.tournamentBottomLeft.y && 
-            x < TournamentData.tournamentTopRight.x &&
-            y < TournamentData.tournamentTopRight.y
-          ) || 
-          (
-            x > TournamentData.budokaiArenaBottomLeft.x &&
-            y > TournamentData.budokaiArenaBottomLeft.y && 
-            x < TournamentData.budokaiArenaTopRight.x &&
-            y < TournamentData.budokaiArenaTopRight.y
-          )
-        )
-        && 
-        UnitHelper.isUnitTournamentViable(deadHero)
-        &&
-        GetOwningPlayer(deadHero) != Player(PLAYER_NEUTRAL_AGGRESSIVE)
-      ) {
-        // Logger.LogDebug("Reviving Dead Tournament Hero");
-        TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
-          if (UnitHelper.isUnitDead(deadHero)) {
-            ReviveHero(
-              deadHero, 
-              TournamentData.tournamentWaitRoom1.x,
-              TournamentData.tournamentWaitRoom1.y,
-              false
-            );
-
-            SetUnitLifePercentBJ(deadHero, 100);
-            SetUnitManaPercentBJ(deadHero, 100);
-
-            SetUnitInvulnerable(deadHero, true);
-            PauseUnit(deadHero, true);
-          }
-
-          DestroyTimer(GetExpiredTimer());
-        });
-      }
-    });
   }
   
   // timer to show how long before a given tournament starts()

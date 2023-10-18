@@ -15155,7 +15155,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Demiurge.HELL_FLAME,
+    name: AbilityNames.Demiurge.HELLFIRE_WALL,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,

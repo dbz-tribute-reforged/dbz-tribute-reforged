@@ -891,7 +891,7 @@ export module AbilityNames {
   }
 
   export module Demiurge {
-    export const HELL_FLAME = "Demiurge Hell Flame";
+    export const HELLFIRE_WALL = "Demiurge Hellfire Wall";
     export const GIANT_ARM = "Demiurge Giant Arm";
     export const COMMAND = "Demiurge Command";
     export const METEOR_FALL = "Demiurge Meteor Fall";

@@ -4,6 +4,8 @@ import { CustomUI } from "CustomUI/CustomUI";
 import { HeroSelectCategory } from "./HeroSelectCategory";
 import { HeroSelectUnit } from "./HeroSelectUnit";
 import { HeroSelectUnitList } from "./HeroSelectUnitList";
+import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
+import { TournamentData } from "Core/TournamentSystem/TournamentData";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -24,6 +26,8 @@ export class HeroSelectorManager {
   public isPicking: boolean;
   public setupFinished: boolean;
   public isGameStarted: boolean;
+
+  public kothFlag: boolean;
 
   public hideSelectorTrigger: trigger;
 
@@ -54,6 +58,8 @@ export class HeroSelectorManager {
     this.setupFinished = false;
     this.isGameStarted = false;
 
+    this.kothFlag = false;
+
     this.hideSelectorTrigger = CreateTrigger();
     
     this.timerText = CreateTextTag();
@@ -76,10 +82,10 @@ export class HeroSelectorManager {
     CustomUI.show(false, false);
 
     SetTextTagPos(this.timerText, 29676, 21905, 10);
-    SetTextTagText(this.timerText, "AAAA???", 10);
     SetTextTagColor(this.timerText, 255, 255, 255, 255);
     SetTextTagVisibility(this.timerText, true);
     SetTextTagPermanent(this.timerText, true);
+    SetTextTagTextBJ(this.timerText, "", 10);
 
     TimerStart(CreateTimer(), 1.0, true, () => {
       if (this.setupFinished) {
@@ -348,7 +354,7 @@ export class HeroSelectorManager {
     }
 
     this.time -= 1;
-    SetTextTagText(this.timerText, I2S(this.time), 10);
+    SetTextTagTextBJ(this.timerText, I2S(this.time), 10);
   }
 
 
@@ -364,7 +370,8 @@ export class HeroSelectorManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
 
-      if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
+      // if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
+      if (true) {
         if (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[i]) == 0) {
           HeroSelector.forcePick(udg_TempPlayer);
         }
@@ -389,6 +396,14 @@ export class HeroSelectorManager {
       TriggerExecute(gg_trg_Hero_Pick_Setup_Selected_Heroes);
     }
     TriggerExecute(gg_trg_Hero_Pick_Completion);
+
+    if (this.kothFlag) {
+      let points = TournamentData.kothPointsToWin;
+      const pStr = SubString(this.gameModeString, 5, 7);
+      if (pStr) points = S2I(pStr);
+      TournamentManager.getInstance().addKOTH(points);
+      TournamentManager.getInstance().startTournament(Constants.KOTHName);
+    }
   }
 
 
@@ -404,7 +419,9 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-antimeme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-original", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-koth", false);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "rush", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "rrr", true);
     }
     TriggerAddCondition(this.gameModeTrigger, Condition(() => {
       const player = GetTriggerPlayer();
@@ -412,16 +429,19 @@ export class HeroSelectorManager {
 
       
       const str = GetEventPlayerChatString();
-      if (str == "rush") {
+      if (str == "rush" || str == "rrr") {
         this.time = 1;
         return;
       }
 
-
-
       print("Game Mode: " + str);
       this.gameModeString = str;
       this.allowRepick = true;
+
+      if (SubString(this.gameModeString, 0, 5) == "-koth") {
+        this.modeKOTH();
+        return;
+      }
 
       switch (str) {
         case "-original":
@@ -563,6 +583,14 @@ export class HeroSelectorManager {
       }
     }
     this.startHeroSelection();
+  }
+
+  modeKOTH() {
+    this.kothFlag = !this.kothFlag;
+    const str = this.kothFlag ? "|cff00ff00ON" : "|cffff0000OFF";
+    const pStr = SubString(this.gameModeString, 5, 7);
+    print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
+    this.startHeroSelection(true);
   }
 
 };

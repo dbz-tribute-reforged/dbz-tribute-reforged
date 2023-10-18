@@ -711,7 +711,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ainz.REALITY_SLASH,
       AbilityNames.Albedo.DECAPITATE,
       AbilityNames.Shalltear.PURIFYING_JAVELIN,
-      AbilityNames.Demiurge.HELL_FLAME,
+      AbilityNames.Demiurge.HELLFIRE_WALL,
 
       AbilityNames.Magus.DARK_MATTER
     ]],
@@ -1025,7 +1025,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     [Id.demiurge, [
-      AbilityNames.Demiurge.HELL_FLAME,
+      AbilityNames.Demiurge.HELLFIRE_WALL,
       AbilityNames.Demiurge.GIANT_ARM,
       AbilityNames.Demiurge.COMMAND,
       AbilityNames.Demiurge.METEOR_FALL,

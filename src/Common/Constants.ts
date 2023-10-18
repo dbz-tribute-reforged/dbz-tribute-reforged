@@ -19,6 +19,7 @@ export module Globals {
 
 
   export let pecorinePickVoiceFlag: boolean = true;
+  export let isFBArenaVision: boolean = false;
 
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
@@ -82,6 +83,7 @@ export module Constants {
   export const creepHeavenHellHeroRespawnDelay: number = 15;
   export const sagaPlayerId = PLAYER_NEUTRAL_AGGRESSIVE;
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
+  export const neutralPassivePlayer: player = Player(PLAYER_NEUTRAL_PASSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 9;
@@ -117,6 +119,7 @@ export module Constants {
   export const maxCreepLvl: number = 99;
   export const creepAggroRange: number = 800;
   export const finalBattleName: string = "Final Battle";
+  export const KOTHName: string = "King of the Hill";
   export const budokaiName: string = "Tournament";
   export const locustAbility: number = FourCC("Aloc")
   export const shopSellItemAbility: number = FourCC("Asit");
@@ -341,6 +344,7 @@ export module OrderIds {
   export const ATTACK = 851983;
   export const MOVE = 851986;
   export const SMART = 851971;
+  export const PATROL = 851990;
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
   export const MOVE_SLOT_1 = 852002;
@@ -397,6 +401,12 @@ export module Id {
   export const heroSelectorUnit = FourCC("n001");
 
   export const summonShenron = FourCC("I01V");
+
+  export const neutralAndroid17 = FourCC("n01M");
+  export const neutralAndroid18 = FourCC("n008");
+  export const vendorElHermano = FourCC("n03U");
+  export const vendorChefSatan = FourCC("n03T");
+  export const vendorKorin = FourCC("n01P");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");
@@ -547,7 +557,7 @@ export module Id {
   export const cronoLuminaire = FourCC("A0VU");
 
   export const demiurge = FourCC("H017");
-  export const demiurgeHellflame = FourCC("A13C");
+  export const demiurgeHellfireWall = FourCC("A13C");
   export const demiurgeGiantArm = FourCC("A13D");
   export const demiurgeCommand = FourCC("A13E");
   export const demiurgeMeteorFall = FourCC("A13F");

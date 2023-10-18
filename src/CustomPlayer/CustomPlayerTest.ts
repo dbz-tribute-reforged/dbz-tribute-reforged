@@ -28,6 +28,7 @@ import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
+import { FBSimTestManager } from "Common/FBSimTestManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -842,9 +843,7 @@ export function CustomPlayerTest() {
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
-    Globals.isFBSimTest = true;
-    Globals.isFreemode = true;
-    HeroSelectorManager.getInstance().enableFBSimTest(true);
+    FBSimTestManager.getInstance().activate();
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
@@ -854,7 +853,7 @@ export function CustomPlayerTest() {
       ForGroup(group, () => {
         const megaUnit = GetEnumUnit();
         if (IsUnitType(megaUnit, UNIT_TYPE_HERO)) {
-          SetHeroLevel(megaUnit, 900, false);
+          SetHeroLevel(megaUnit, 992, false);
           ModifyHeroSkillPoints(megaUnit, bj_MODIFYMETHOD_ADD, 500);
         }
       });
@@ -920,19 +919,6 @@ export function CustomPlayerTest() {
       BJDebugMsg("XP Rate: " + GetPlayerHandicapXPBJ(GetTriggerPlayer()));
     });
 
-    const tpTrig = CreateTrigger();
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerUnitEventSimple(tpTrig, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
-    };
-    TriggerAddCondition(tpTrig, Condition(()=>{
-      return GetIssuedOrderId() == String2OrderIdBJ("patrol");
-    }));
-    TriggerAddAction(tpTrig, () => {
-      const unit = GetTriggerUnit();
-      SetUnitX(unit, GetOrderPointX());
-      SetUnitY(unit, GetOrderPointY());
-    });
-
     // reveal map
     /*
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -952,20 +938,6 @@ export function CustomPlayerTest() {
       ForGroup(group, () => {
         const target = GetEnumUnit();
         BlzSetUnitSkin(target, value);
-      });
-      DestroyGroup(group);
-    });
-
-    const makeItem = CreateTrigger();
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(makeItem, Player(i), "-item", false);
-    };
-    TriggerAddAction(makeItem, () => {
-      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
-      const group = GetUnitsSelectedAll(GetTriggerPlayer());
-      ForGroup(group, () => {
-        const target = GetEnumUnit();
-        CreateItem(value, GetUnitX(target), GetUnitY(target));
       });
       DestroyGroup(group);
     });
@@ -1033,31 +1005,6 @@ export function CustomPlayerTest() {
       const newName = SubString(GetEventPlayerChatString(), 6, 20);
       if (newName.length > 1) {
         SetPlayerName(player, newName);
-      }
-    }
-  });
-
-  // freemode
-  const freeModeTrig = CreateTrigger();
-  // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-  //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
-  // }
-  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-    TriggerRegisterPlayerChatEvent(freeModeTrig, Player(i), "-freemode", true);
-    TriggerRegisterPlayerChatEvent(freeModeTrig, Player(i), "-fbsimtest", true);
-  }
-  TriggerAddAction(freeModeTrig, () => {
-    if (GetTriggerPlayer() == Globals.hostPlayer) {
-      Globals.isFreemode = true;
-      if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
-
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 
-          15, 
-          "-fbsimtest activated (ts)"
-        );
-        Globals.isFBSimTest = true;
-        HeroSelectorManager.getInstance().enableFBSimTest(true);
       }
     }
   });
@@ -1221,9 +1168,21 @@ export function CustomPlayerTest() {
   TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
   TriggerAddAction(forceFinalBattleTrig, () => {
     if (Globals.isFBSimTest && Globals.isFreemode) {
-      TournamentManager.getInstance().addFinalBattle();
-      TimerStart(CreateTimer(), 5.0, false, () => {
+      TournamentManager.getInstance().addFinalBattle(5.0);
+      TimerStart(CreateTimer(), 1.0, false, () => {
         TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  });
+
+  const forceKOTHTrig = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(forceKOTHTrig, Player(0), "-forcekothtest", true);
+  TriggerAddAction(forceKOTHTrig, () => {
+    if (Globals.isFBSimTest && Globals.isFreemode) {
+      TournamentManager.getInstance().addKOTH();
+      TimerStart(CreateTimer(), 1.0, false, () => {
+        TournamentManager.getInstance().startTournament(Constants.KOTHName);
         DestroyTimer(GetExpiredTimer());
       });
     }

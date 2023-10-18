@@ -7587,9 +7587,9 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "timed life 50" },
       { name: "damage mankind destruction attack dps" },
       { name: "damage mankind destruction attack explosion" },
-      { name: "timed life 50" },
       { name: "sfx beam mankind destruction attack" },
     ],
   },

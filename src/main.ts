@@ -29,6 +29,7 @@ import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
 import { SmartPingManager } from "Core/SmartPingSystem/SmartPingManager";
+import { FBSimTestManager } from "Common/FBSimTestManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -110,7 +111,8 @@ function tsPostMain() {
     keyInputManager = KeyInputManager.getInstance();
     smartPingManager = SmartPingManager.getInstance();
     SimpleSpellSystem.initialize();
-    dualTechManager = DualTechManager.getInstance();
+    dualTechManager = DualTechManager.getInstance();  
+    FBSimTestManager.getInstance().initialize();
   })
 
   TimerStart(CreateTimer(), 0.1, false, () => {
