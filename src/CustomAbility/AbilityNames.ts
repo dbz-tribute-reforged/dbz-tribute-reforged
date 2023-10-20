@@ -468,7 +468,7 @@ export module AbilityNames {
     export const EMERGENCY_BOOST: string = "Jaco Emergency Boost";
     export const SUPER_ELITE_COMBO: string = "Jaco Super Elite Combo";
     export const ELITE_POSE: string = "Jaco Elite Pose";
-    export const MACRO_CANNON: string = "Jaco Macro Cannon";
+    export const JACO_SHIP: string = "Jaco Ship";
     export const SUPER_JACO: string = "Jaco Super Jaco";
   }
 
@@ -604,6 +604,15 @@ export module AbilityNames {
     export const ABSORB: string = "Absorb Cell";
     export const SOLAR_KAMEHAMEHA: string = "Solar Kamehameha";
     export const CELL_X_FORM: string = "Cell-X";
+  }
+
+  export module CellMax {
+    export const TAIL_WHIP: string = "Cell Max Tail Whip";
+    export const EXPLOSIVE_SCREAM: string = "Cell Max Explosive Scream";
+    export const MAX_BLOCK: string = "Cell Max Max Block";
+    export const MAX_BARRIER: string = "Cell Max Max Barrier";
+    export const MAX_BARRIER_BURST: string = "Cell Max Max Barrier Burst";
+    export const DISASTER_RAY: string = "Cell Max Disaster Ray";
   }
 
   export module Cooler {
@@ -828,6 +837,74 @@ export module AbilityNames {
     export const DIVINE_RETRIBUTION: string = "Goku Black Divine Retribution";
     export const WORK_OF_GODS: string = "Goku Black The Work Of Gods";
     export const SORROWFUL_SCYTHE: string = "Goku Black Sorrowful Scythe";
+  }
+
+  export module Ainz {
+    export const REALITY_SLASH: string = "Ainz Reality Slash";
+    export const BLACK_HOLE: string = "Ainz Black Hole";
+    export const GREATER_THUNDER: string = "Ainz Greater Thunder";
+    export const EXPLODE_MINE: string = "Ainz Explode Mine";
+    // export const ENERGY_DRAIN: string = "Ainz Energy Drain";
+    export const GRASP_HEART: string = "Ainz Grasp Heart";
+    
+    export const BODY_OF_EFFULGENT_BERYL: string = "Ainz Body of Effulgent Beryl";
+    export const GREATER_HARDENING: string = "Ainz Greater Hardening";
+    export const GREATER_FULL_POTENTIAL: string = "Ainz Greater Full Potential";
+    export const GREATER_MAGIC_SHIELD: string = "Ainz Greater Magic Shield";
+    export const MAGIC_BOOST: string = "Ainz Magic Boost";
+    export const PENETRATE_UP: string = "Ainz Penetrate Up";
+
+    export const HOLD_OF_RIBS: string = "Ainz Hold Of Ribs";
+    export const WALL_OF_SKELETON: string = "Ainz Wall Of Skeleton";
+    // export const PERFECT_UNKNOWABLE: string = "Ainz Perfect Unknowable";
+    // export const REMOTE_VIEWING: string = "Ainz Remote Viewing";
+    export const GREATER_TELEPORTATION: string = "Ainz Greater Teleporation";
+    // export const GATE: string = "Ainz Gate";
+
+    // export const SUMMON_ALBEDO: string = "Ainz Summon Albedo";
+    // export const SUMMON_SHALLTEAR: string = "Ainz Summon Shalltear";
+    // export const SUMMON_DEMIUGE: string = "Ainz Summon Demiurge";
+    // export const SUMMON_PANDORA: string = "Ainz Summon Pandora";
+
+    export const THE_GOAL_OF_ALL_LIFE_IS_DEATH = "Ainz TGOALID";
+    export const FALLEN_DOWN = "Ainz Fallen Down";
+    export const LA_SHUB_NIGGURATH = "Ainz la Shub-Niggurath";
+    // export const WISH_UPON_A_STAR = "Ainz Wish Upon a Star";
+    export const TIME_STOP = "Ainz Time Stop";
+  }
+
+  export module Albedo {
+    export const DECAPITATE = "Albedo Decapitate";
+    export const DEFENSIVE_SLASH = "Albedo Defensive Slash";
+    export const CHARGE_ATTACK = "Albedo Charge Attack";
+    export const SKILL_BOOST = "Albedo Skill Boost";
+    export const GINNUNGAGEP = "Albedo Ginnungagap";
+  }
+
+  export module Shalltear {
+    export const PURIFYING_JAVELIN = "Shalltear Purifying Javelin";
+    export const VERMILION_NOVA = "Shalltear Vermilion Nova";
+    export const MIST_FORM = "Shalltear Mist Form";
+    export const NEGATIVE_IMPACT_SHIELD = "Shalltear Negative Impact Shield";
+    export const EINHERJAR = "Shalltear Einherjar";
+    export const TIME_REVERSE = "Shalltear Time Reverse";
+  }
+
+  export module Demiurge {
+    export const HELLFIRE_WALL = "Demiurge Hellfire Wall";
+    export const GIANT_ARM = "Demiurge Giant Arm";
+    export const COMMAND = "Demiurge Command";
+    export const METEOR_FALL = "Demiurge Meteor Fall";
+    export const JALDABAOTH = "Demiurge Jaldabaoth";
+  }
+
+  export module MajinVegeta {
+    export const GALICK_GUN = "Majin Vegeta Galick Gun";
+    export const GALAXY_BREAKER = "Majin Vegeta Galaxy Breaker";
+    export const BIG_BANG_ATTACK_2 = "Majin Vegeta Big Bang Attack 2";
+    export const FINAL_FLASH = "Majin Vegeta Final Flash";
+    export const GALAXY_DONUT = "Majin Vegeta Galaxy Donut";
+    export const FINAL_EXPLOSION = "Majin Vegeta Final Explosion";
   }
 
   export module Saga {

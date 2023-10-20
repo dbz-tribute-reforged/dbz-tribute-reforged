@@ -136,6 +136,14 @@ export class ExperienceManager {
     return this;
   }
 
+  enableXPTrigger() {
+    EnableTrigger(this.rewardXPTrigger);
+  }
+
+  disableXPTrigger() {
+    DisableTrigger(this.rewardXPTrigger);
+  }
+
   setupXPTables(
     table: number[], 
     base: number, 
@@ -144,12 +152,24 @@ export class ExperienceManager {
     constant: number,
     maxLevel: number,
   ) {
-    table.push(base);
+    table.push(0);
     table.push(base);
     for (let i = table.length; i <= maxLevel; ++i) {
       const value = table[i-1] * prevMult + i * levelMult + constant;
       table.push(value);
     }
+  }
+
+  getHeroReqLevelXPFrom(from: number, to: number) : number {
+    if (
+      from > 0 
+      && from < this.levelReqXP.length
+      && to > 0 
+      && to < this.levelReqXP.length
+    ) {
+      return this.levelReqXP[to] - this.levelReqXP[from];
+    }
+    return 0;
   }
 
   getHeroReqLevelXP(level: number) : number {

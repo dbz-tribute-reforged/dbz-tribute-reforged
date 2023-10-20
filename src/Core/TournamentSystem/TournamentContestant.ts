@@ -106,6 +106,7 @@ export class TournamentContestant {
         const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
         if (customHero) {
           customHero.setCurrentSP(customHero.getMaxSP());
+          customHero.forceEndAllAbilities();
         }
       }
     })

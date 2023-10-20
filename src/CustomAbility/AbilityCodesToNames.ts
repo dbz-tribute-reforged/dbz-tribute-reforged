@@ -416,7 +416,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.jacoEmergencyBoost, AbilityNames.Jaco.EMERGENCY_BOOST],
     [Id.jacoSuperEliteCombo, AbilityNames.Jaco.SUPER_ELITE_COMBO],
     [Id.jacoElitePose, AbilityNames.Jaco.ELITE_POSE],
-    [Id.jacoMacroCannon, AbilityNames.Jaco.MACRO_CANNON],
+    [Id.jacoShip, AbilityNames.Jaco.JACO_SHIP],
     [Id.jacoSuperJaco, AbilityNames.Jaco.SUPER_JACO],
 
     // leon s kennedy
@@ -513,6 +513,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A01Z'), AbilityNames.Cell.SPAWN_CELL_JUNIORS],
     [FourCC('A0O9'), AbilityNames.Cell.SOLAR_KAMEHAMEHA],
     [FourCC('A0OD'), AbilityNames.Cell.CELL_X_FORM],
+
+    // cell max
+    [Id.cellMaxTailWhip, AbilityNames.CellMax.TAIL_WHIP],
+    [Id.cellMaxScream, AbilityNames.CellMax.EXPLOSIVE_SCREAM],
+    [Id.cellMaxBlock, AbilityNames.CellMax.MAX_BLOCK],
+    [Id.cellMaxBarrier, AbilityNames.CellMax.MAX_BARRIER],
+    [Id.cellMaxBarrier2, AbilityNames.CellMax.MAX_BARRIER_BURST],
+    [Id.cellMaxDisaster, AbilityNames.CellMax.DISASTER_RAY],
 
     // cooler
     [FourCC('A06C'), AbilityNames.Cooler.DEATH_BEAM],
@@ -687,6 +695,50 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.gokuBlackWorkOfGods, AbilityNames.GokuBlack.WORK_OF_GODS],
     [Id.gokuBlackSorrowfulScythe, AbilityNames.GokuBlack.SORROWFUL_SCYTHE],
 
+    [Id.ainzRealitySlash, AbilityNames.Ainz.REALITY_SLASH],
+    [Id.ainzBlackHole, AbilityNames.Ainz.BLACK_HOLE],
+    [Id.ainzGreaterThunder, AbilityNames.Ainz.GREATER_THUNDER],
+    [Id.ainzExplodeMine, AbilityNames.Ainz.EXPLODE_MINE],
+    [Id.ainzGraspHeart, AbilityNames.Ainz.GRASP_HEART],
+    [Id.ainzBodyOfEffulgentBeryl, AbilityNames.Ainz.BODY_OF_EFFULGENT_BERYL],
+    [Id.ainzGreaterHardening, AbilityNames.Ainz.GREATER_HARDENING],
+    [Id.ainzGreaterFullPotential, AbilityNames.Ainz.GREATER_FULL_POTENTIAL],
+    [Id.ainzGreaterMagicShield, AbilityNames.Ainz.GREATER_MAGIC_SHIELD],
+    [Id.ainzMagicBoost, AbilityNames.Ainz.MAGIC_BOOST],
+    [Id.ainzPenetrateUp, AbilityNames.Ainz.PENETRATE_UP],
+    [Id.ainzHoldOfRibs, AbilityNames.Ainz.HOLD_OF_RIBS],
+    [Id.ainzWallOfSkeleton, AbilityNames.Ainz.WALL_OF_SKELETON],
+    [Id.ainzGreaterTeleportation, AbilityNames.Ainz.GREATER_TELEPORTATION],
+    [Id.ainzTGOALID, AbilityNames.Ainz.THE_GOAL_OF_ALL_LIFE_IS_DEATH],
+    [Id.ainzFallenDown, AbilityNames.Ainz.FALLEN_DOWN],
+    [Id.ainzLaShubNiggurath, AbilityNames.Ainz.LA_SHUB_NIGGURATH],
+    [Id.ainzTimeStop, AbilityNames.Ainz.TIME_STOP],
+
+    [Id.albedoDecapitate, AbilityNames.Albedo.DECAPITATE],
+    [Id.albedoDefensiveSlash, AbilityNames.Albedo.DEFENSIVE_SLASH],
+    [Id.albedoChargeAttack, AbilityNames.Albedo.CHARGE_ATTACK],
+    [Id.albedoSkillBoost, AbilityNames.Albedo.SKILL_BOOST],
+    [Id.albedoGinnungagap, AbilityNames.Albedo.GINNUNGAGEP],
+
+    [Id.shalltearPurifyingJavelin, AbilityNames.Shalltear.PURIFYING_JAVELIN],
+    [Id.shalltearVermilionNova, AbilityNames.Shalltear.VERMILION_NOVA],
+    [Id.shalltearMistForm, AbilityNames.Shalltear.MIST_FORM],
+    [Id.shalltearNegativeImpactShield, AbilityNames.Shalltear.NEGATIVE_IMPACT_SHIELD],
+    [Id.shalltearEinherjar, AbilityNames.Shalltear.EINHERJAR],
+    [Id.shalltearTimeReverse, AbilityNames.Shalltear.TIME_REVERSE],
+    
+    [Id.demiurgeHellfireWall, AbilityNames.Demiurge.HELLFIRE_WALL],
+    [Id.demiurgeGiantArm, AbilityNames.Demiurge.GIANT_ARM],
+    [Id.demiurgeCommand, AbilityNames.Demiurge.COMMAND],
+    [Id.demiurgeMeteorFall, AbilityNames.Demiurge.METEOR_FALL],
+    [Id.demiurgeJaldabaoth, AbilityNames.Demiurge.JALDABAOTH],
+
+    [Id.vegetaMajinGalickGun, AbilityNames.MajinVegeta.GALICK_GUN],
+    [Id.vegetaMajinGalaxyBreaker, AbilityNames.MajinVegeta.GALAXY_BREAKER],
+    [Id.vegetaMajinBigBangAttack2, AbilityNames.MajinVegeta.BIG_BANG_ATTACK_2],
+    [Id.vegetaMajinFinalFlash, AbilityNames.MajinVegeta.FINAL_FLASH],
+    [Id.vegetaMajinGalaxyDonut, AbilityNames.MajinVegeta.GALAXY_DONUT],
+    [Id.vegetaMajinFinalExplosion, AbilityNames.MajinVegeta.FINAL_EXPLOSION],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

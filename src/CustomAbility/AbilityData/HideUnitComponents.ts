@@ -30,6 +30,16 @@ export const HideUnitComponents = [
     forceReselect: false,
   },
   {
+    name: "hide unit prevent movement reselect", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    doHide: true,
+    preventMovement: false,
+    removeNegativeBuffs: false,
+    forceReselect: true,
+  },
+  {
     name: "hide unit scattering bullet start", 
     repeatInterval: 1, 
     startTick: 20,
@@ -58,15 +68,5 @@ export const HideUnitComponents = [
     preventMovement: true,
     removeNegativeBuffs: true,
     forceReselect: false,
-  },
-  {
-    name: "hide unit hirudegarn dark mist", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    doHide: true,
-    preventMovement: false,
-    removeNegativeBuffs: false,
-    forceReselect: true,
   },
 ];

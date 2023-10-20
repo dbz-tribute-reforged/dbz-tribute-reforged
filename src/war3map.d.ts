@@ -749,6 +749,9 @@ declare var gg_unit_n01H_1159: unit;
 declare var udg_TempInt: number;
 declare var udg_TempSound: sound;
 declare var udg_TempPlayer: player;
+
+declare var udg_StatMultHashtable: hashtable;
+declare var udg_StatMultReal: number;
 declare var udg_StatMultUnit: unit;
 declare var udg_StatMultPlayerUnits: group[];
 // array is 0-indexed in TS side by 1-indexed on GUI, conversion is automatic

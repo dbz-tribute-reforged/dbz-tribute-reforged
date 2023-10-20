@@ -95,8 +95,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Block 70% of incoming damage until more than 4 * STR damage is blocked for 1.5s.|n" +
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +  
+        "Block 70% of incoming damage until more than 3 * STR damage is blocked for 1.5s.|n" +
+        "After a 0.3s delay, damage is reduced by 95% up to 3 * STR for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
         "CD: 4"
     },
@@ -111,7 +111,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 5,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 40,
     duration: 166,
     updateRate: 0.03,
     castTime: 0.0,
@@ -129,7 +129,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "+20% ability damage, +50% attack damage, +132 ms.|n" + 
-        "Cost: 35 SP|n" +
+        "Cost: 40 SP|n" +
         "Duration: 5s|n" + 
         "CD: 5s"
     },
@@ -457,7 +457,6 @@ export const AbilitiesList = [
     components: [
       { name: "sfx final flash 2 caster" },
       { name: "multi final flash 2" },
-      { name: "knockback power level rising" },
     ],
   },
   // -------------------------------------------
@@ -8621,7 +8620,36 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward 5dist" },
+      { name: "temp ability jaco emergency boost" },
       { name: "multi jaco rocket boots" },
+      { name: "sfx jaco rocket boots" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jaco.EMERGENCY_BOOST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJaco.blp",
+      disabled: "BTNJaco.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jaco.ROCKET_BOOTS,
+      body:
+        AbilityNames.Jaco.ROCKET_BOOTS
+    },
+    components: [
+      { name: "dash ground forward 10dist" },
       { name: "sfx jaco rocket boots" },
     ],
   },
@@ -8649,7 +8677,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.SUPER_ELITE_COMBO
     },
     components: [
-      { name: "dash ground point 15dist" },
+      { name: "dash ground point 10dist" },
       { name: "damage jaco super elite combo explosion" },
       { name: "damage jaco super elite combo explosion inner" },
       { name: "jump jaco super elite combo" },
@@ -10764,6 +10792,177 @@ export const AbilitiesList = [
       { name: "spell amp cell-x" },
       { name: "block cell-x" },
       { name: "sfx cell-x" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.TAIL_WHIP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage cell max tail whip explosion" },
+      { name: "debuff stun cell max tail whip" },
+      { name: "sfx cell max tail whip" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.EXPLOSIVE_SCREAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cell max explosive scream" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.MAX_BLOCK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "block cell max max block" },
+      { name: "sfx cell max max block" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.MAX_BARRIER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "block cell max max barrier" },
+      { name: "temp ability cell max max barrier burst" },
+      { name: "beam cell max max barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.MAX_BARRIER_BURST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 3,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage cell max max barrier burst explosion" },
+      { name: "sfx cell max max barrier burst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CellMax.DISASTER_RAY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block cell max disaster ray" },
+      { name: "multi cell max disaster ray" },
+      // { name: "sfx cell max disaster ray caster" },
     ],
   },
   // -------------------------------------------
@@ -12935,7 +13134,10 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward guldo time stop" },
+      { name: "debuff stun guldo time stop" },
+      { name: "debuff slow guldo time stop" },
       { name: "sfx zanzo dash" },
+      { name: "sfx guldo time stop" },
     ],
   },
   // -------------------------------------------
@@ -13554,7 +13756,7 @@ export const AbilitiesList = [
         AbilityNames.Hirudegarn.DARK_MIST
     },
     components: [
-      { name: "hide unit hirudegarn dark mist" },
+      { name: "hide unit prevent movement reselect" },
       { name: "dash ground point 40dist" },
       { name: "damage hirudegarn dark mist dps" },
       { name: "sfx beam dark mist" },
@@ -14269,6 +14471,1002 @@ export const AbilitiesList = [
       { name: "dash ground point 45dist" },
       // { name: "damage goku black sorrowful scythe agi explosion" },
       { name: "damage goku black sorrowful scythe int explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.REALITY_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 31,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam ainz reality slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.BLACK_HOLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam ainz black hole" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.GREATER_THUNDER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam ainz greater thunder" },
+      { name: "sfx ainz greater thunder" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.EXPLODE_MINE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 400,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi ainz explode mine" },
+      // { name: "sfx ainz explode mine" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.GRASP_HEART,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage target ainz grasp heart explosion" },
+      { name: "sfx ainz grasp heart" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.BODY_OF_EFFULGENT_BERYL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block ainz body of effulgent" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.PENETRATE_UP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "spell amp ainz penetrate up" },
+      { name: "sfx ainz penetrate up" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.HOLD_OF_RIBS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam ainz hold of ribs" },
+      { name: "multi ainz hold of ribs 1" },
+      { name: "multi ainz hold of ribs 2" },
+      { name: "multi ainz hold of ribs 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.WALL_OF_SKELETON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi ainz wall of skeleton" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.GREATER_TELEPORTATION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "sfx ainz greater teleportation start" },
+      { name: "dash zanzo point ainz greater teleportation" },
+      { name: "sfx ainz greater teleportation end" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.THE_GOAL_OF_ALL_LIFE_IS_DEATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage ainz tgoalid explosion" },
+      { name: "damage ainz tgoalid explosion bonus" },
+      { name: "sfx ainz tgoalid 1" },
+      { name: "sfx ainz tgoalid 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.FALLEN_DOWN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage ainz fallen down explosion" },
+      { name: "sfx ainz fallen down 1" },
+      { name: "sfx ainz fallen down 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.TIME_STOP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff sleep ainz time stop" },
+      { name: "sfx ainz time stop" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.DECAPITATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 3,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi albedo decapitate" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.DEFENSIVE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow albedo defensive slash" },
+      { name: "damage albedo defensive slash" },
+      { name: "block albedo defensisve slash" },
+      { name: "sfx albedo defensive slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.CHARGE_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "debuff slow albedo charge attack" },
+      { name: "damage albedo charge attack explosion" },
+      { name: "sfx fervent rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.SKILL_BOOST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "sfx albedo skill boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Albedo.GINNUNGAGEP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 67,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage albedo ginnungagap explosion" },
+      { name: "sfx albedo ginnungagap 1" },
+      { name: "sfx albedo ginnungagap 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.PURIFYING_JAVELIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam shalltear purifying javelin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.VERMILION_NOVA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam shalltear vermilion nova" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.MIST_FORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "hide unit prevent movement reselect" },
+      { name: "dash ground point 30dist" },
+      { name: "damage hirudegarn dark mist dps" },
+      { name: "sfx shalltear mist form" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.NEGATIVE_IMPACT_SHIELD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "block shalltear negative impact shield" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.EINHERJAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 2000,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "buff illusion shalltear einherjar" },
+      { name: "temp ability shalltear valhalla" },
+      { name: "sfx shalltear einherjar" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Shalltear.TIME_REVERSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "block shalltear time reverse" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.HELLFIRE_WALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam demiurge hell flame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.GIANT_ARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim demiurge giant arm" },
+      { name: "multi demiurge giant arm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.COMMAND,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam demiurge command" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.METEOR_FALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 22,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage demiurge meteor fall" },
+      { name: "beam demiurge meteor fall" },
+      { name: "sfx demiurge meteor fall" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Demiurge.JALDABAOTH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim demiurge jaldabaoth" },
+      { name: "temp ability demiurge jaldabaoth invis" },
+      { name: "dash ground forward 2dist" },
+      { name: "sfx demiurge jaldabaoth" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALICK_GUN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALAXY_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 40dist" },
+      { name: "damage majin vegeta galaxy breaker dps" },
+      { name: "sfx majin vegeta galaxy breaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.BIG_BANG_ATTACK_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta big bang attack 1" },
+      { name: "beam majin vegeta big bang attack 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALAXY_DONUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta galaxy donut" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.FINAL_FLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "jump majin vegeta final flash" },
+      { name: "block majin vegeta final flash" },
+      { name: "multi beam majin vegeta final flash" },
+      { name: "multi majin vegeta final flash caster aoe" },
+      { name: "sfx majin vegeta final flash caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.FINAL_EXPLOSION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage majin vegeta final explosion explosion" },
+      { name: "knockback majin vegeta final explosion" },
+      { name: "multi majin vegeta final explosion caster aoe" },
+      { name: "sfx majin vegeta final explosion 1" },
+      { name: "sfx majin vegeta final explosion 2" },
     ],
   },
   // -------------------------------------------

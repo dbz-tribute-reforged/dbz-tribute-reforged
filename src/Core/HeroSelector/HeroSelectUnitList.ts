@@ -30,6 +30,19 @@ const vegetaData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER +
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.CARRY
+  )
+}
+const vegetaMajinData = {
+  unitCode: Id.vegetaMajin,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER +
     HeroSelectCategory.CARRY
   )
 }
@@ -190,10 +203,9 @@ const upaData = {
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.BRUISER
   )
 }
 const tapionData = {
@@ -250,7 +262,7 @@ const jacoData = {
     HeroSelectCategory.AGI +
     HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.ASSASSIN +
     HeroSelectCategory.CARRY
   )
 }
@@ -321,6 +333,16 @@ const cellData = {
     HeroSelectCategory.MICRO
   )
 }
+const cellMaxData = {
+  unitCode: Id.cellMax,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BRUISER
+  )
+}
 const coolerData = {
   unitCode: Id.fourthCooler,
   onlyRandom: false,
@@ -377,30 +399,6 @@ const super17Data = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER
-  )
-}
-const zamasuData = {
-  unitCode: Id.zamasu,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
-  )
-}
-const gokuBlackData = {
-  unitCode: Id.gokuBlack,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
   )
 }
 const omegaShenronData = {
@@ -496,6 +494,30 @@ const nappaData = {
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.MICRO
+  )
+}
+const zamasuData = {
+  unitCode: Id.zamasu,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY
+  )
+}
+const gokuBlackData = {
+  unitCode: Id.gokuBlack,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CARRY
   )
 }
 const hitData = {
@@ -615,7 +637,21 @@ const schalaData = {
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
+    HeroSelectCategory.CARRY +
     HeroSelectCategory.SUPPORT
+  )
+}
+const rustyData = {
+  unitCode: Id.rustTyranno,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.CRONO + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
   )
 }
 const donkeyKongData = {
@@ -836,17 +872,52 @@ const linkTwilightData = {
     HeroSelectCategory.BEAMER
   )
 }
-const rustyData = {
-  unitCode: Id.rustTyranno,
+const ainzData = {
+  unitCode: Id.ainzOoalGown,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BEAMER
+  )
+}
+const albedoData = {
+  unitCode: Id.albedo,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
+  )
+}
+const shalltearData = {
+  unitCode: Id.shalltearBloodfallen,
   onlyRandom: false,
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.MEME + 
     HeroSelectCategory.BRUISER
+  )
+}
+const demiurgeData = {
+  unitCode: Id.demiurge,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN
   )
 }
 
@@ -855,21 +926,21 @@ const rustyData = {
 export const HeroSelectUnitList = [
   gokuData,
   vegetaData,
+  vegetaMajinData,
   gohanData,
   gotenksData,
-  futureTrunksData,
   // 5,
+  futureTrunksData,
   piccoloData,
   bardockData,
   panData,
   videlData,
-  android17DbsData,
   // 10
+  android17DbsData,
   roshiData,
   krillinData,
   tienData,
   farmerData,
-  emptySpace,
   // yamchaRData,
 
   // ====
@@ -903,16 +974,16 @@ export const HeroSelectUnitList = [
   brolyData,
   cellData,
   // 35
+  cellMaxData,
   coolerData,
   getiStarData,
   janembaData,
   super17Data,
-  hirudegarnData,
   // 40
+  hirudegarnData,
   omegaShenronData,
   eisShenronData,
-  zamasuData,
-  gokuBlackData,
+  emptySpace,
   emptySpace,
 
   // ====
@@ -926,10 +997,10 @@ export const HeroSelectUnitList = [
   raditzData,
   // 50
   nappaData,
+  zamasuData,
+  gokuBlackData,
   hitData,
   moroData,
-  emptySpace,
-  emptySpace,
   // 55
   emptySpace,
   emptySpace,
@@ -950,7 +1021,7 @@ export const HeroSelectUnitList = [
   aylaData,
   marleData,
   schalaData,
-  emptySpace,
+  rustyData,
   emptySpace,
   // 70
   emptySpace,
@@ -980,6 +1051,23 @@ export const HeroSelectUnitList = [
   waluigiData,
   sonicData,
   linkTwilightData,
+
   // 90
-  rustyData,
+  ainzData,
+  albedoData,
+  shalltearData,
+  demiurgeData,
+  emptySpace,
+  // 95
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  // 100
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
 ];

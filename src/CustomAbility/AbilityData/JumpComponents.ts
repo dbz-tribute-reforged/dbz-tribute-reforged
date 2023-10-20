@@ -269,4 +269,14 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump majin vegeta final flash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 60,
+    maxHeight: 600,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]

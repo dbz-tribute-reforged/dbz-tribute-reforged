@@ -4,8 +4,8 @@ import { Vector2D } from "Common/Vector2D";
 export module TournamentData {
   export const tournamentSpawn1: Vector2D = new Vector2D(1600, 27500);
   export const tournamentSpawn2: Vector2D = new Vector2D(-4900, 27500);
-  export const tournamentWaitRoom1: Vector2D = new Vector2D(3639, 30584);
-  export const tournamentWaitRoom2: Vector2D = new Vector2D(3639, 25734);
+  export const tournamentWaitRoom1: Vector2D = new Vector2D(3648, 30584);
+  export const tournamentWaitRoom2: Vector2D = new Vector2D(3648, 25734);
   export const tournamentBottomLeft: Vector2D = new Vector2D(-5610, 23068);
   export const tournamentTopRight: Vector2D = new Vector2D(2100, 31300);
   export const tournamentRect: rect = Rect(
@@ -27,6 +27,9 @@ export module TournamentData {
   export const finalBattleLobbyWait: number = 30;
   export const finalBattleSpell: number = FourCC("A0LT");
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
+  export const finalBattleBottomLeft: Vector2D = new Vector2D(-5664, 23392);
+  export const finalBattleTopRight: Vector2D = new Vector2D(2336, 31392);
+  export const finalBattleCenter: Vector2D = new Vector2D(-1664, 27392);
   export const budokaiName: string = "Tournament";
   export const budokaiEnterCommand: string = "-enter";
   export const budokaiEnterCommandShortcut: string = "-e";
@@ -44,4 +47,39 @@ export module TournamentData {
   export const seedingNone: number = 0;
   export const seedingRandom: number = 1;
   export const trophyItem: number = FourCC("I01H");
+
+
+  export const kothStatePreStart: number = 0;
+  export const kothStateLobby: number = 1;
+  export const kothStateArena: number = 2;
+  export const kothStateArenaEnd: number = 3;
+  export const kothStateFinished: number = 4;
+  export const kothLobbyWaitFirst: number = 30;
+  export const kothLobbyWait: number = 10;
+  export const kothArenaTimeout: number = 240;
+  export const kothArenaCamDelay1: number = 0.5;
+  export const kothArenaCamDelay2: number = 1.0;
+  export const kothCaptureUnlockTime = 15;
+  export const kothCaptureRadius = 1408; // 11 squares
+  export const kothCaptureExpBonusRatio = 0.1;
+  export const kothCaptureWinCount = 25;
+  export const kothPointsToWin = 12;
+  export const kothPointsForAdv1 = 3;
+  export const kothPointsForAdv2 = 5;
+  export const kothLastUpgRound = 8;
+  export const kothLvlsPerRound = 50;
+  export const kothStatsPerRound = 15 * kothLvlsPerRound;
+
+  // export const kothNamekCenter: Vector2D = new Vector2D(28928, 26496);
+  export const kothNamekCenter: Vector2D = new Vector2D(24576, 29568);
+  export const kothNamekSpawn1: Vector2D = new Vector2D(29184, 30720); // losing side
+  export const kothNamekSpawn2: Vector2D = new Vector2D(19712, 25600); // winning side
+  export const kothNamekBottomLeft: Vector2D = new Vector2D(19072, 24320);
+  export const kothNamekTopRight: Vector2D = new Vector2D(32000, 31744);
+
+  export const kothFutureCenter: Vector2D = new Vector2D(14208, 29824);
+  export const kothFutureSpawn1: Vector2D = new Vector2D(16208, 29824); // losing side
+  export const kothFutureSpawn2: Vector2D = new Vector2D(6400, 25600); // winning side
+  export const kothFutureBottomLeft: Vector2D = new Vector2D(4992, 24320);
+  export const kothFutureTopRight: Vector2D = new Vector2D(18688  , 31744);
 }

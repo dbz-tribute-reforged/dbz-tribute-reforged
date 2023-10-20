@@ -1,5 +1,5 @@
 import { TimerManager } from "Core/Utility/TimerManager"
-import { Id } from "./Constants"
+import { Buffs, Id } from "./Constants"
 
 export module SoundHelper {
   export function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
@@ -80,6 +80,254 @@ export module SoundHelper {
         }
         break;
       
+      // ainz ooal gown
+      case Id.ainzRealitySlash:
+        if (unitId == Id.ainzOoalGown) {
+          SoundHelper.playTwoSoundsWithDelay(
+            unit,
+            "Audio/Voice/Ainz/RealitySlash.mp3", 2000, 1.5,
+            "Audio/Effects/Ainz/RealitySlash.mp3", 2000
+          );
+        }
+        break;
+      
+      case Id.ainzBlackHole:
+        if (unitId == Id.ainzOoalGown) {
+          SoundHelper.playTwoSoundsWithDelay(
+            unit,
+            "Audio/Voice/Ainz/BlackHole.mp3", 1200, 1.1,
+            "Audio/Effects/Ainz/BlackHole.mp3", 2200
+          );
+        }
+        break;
+      
+      case Id.ainzGreaterThunder:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/CallGreaterThunder.mp3", 1500);
+        }
+        break;
+      
+      case Id.ainzExplodeMine:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/ExplodeMine.mp3", 3000);
+        }
+        break;
+      
+      case Id.ainzEnergyDrain:
+        if (unitId == Id.ainzOoalGown) {
+          if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Ainz/NegativeBurst.mp3", 1300);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Ainz/EnergyDrain.mp3", 2000);
+          }
+        }
+        break;
+      
+      case Id.ainzGraspHeart:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GraspHeart.mp3", 1500);
+        }
+        break;
+      
+      case Id.ainzWallOfSkeleton:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/WallOfSkeleton.mp3", 1500);
+        }
+        break;
+      
+      case Id.ainzHoldOfRibs:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/HoldOfRib.mp3", 1000);
+        }
+        break;
+      
+      case Id.ainzPerfectUnknowable:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/Genjutsu.mp3", 600);
+        }
+        break;
+      
+      case Id.ainzRemoteViewing:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/SeeThrough.mp3", 600);
+        }
+        break;
+      
+      case Id.ainzGreaterTeleportation:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GreaterTeleportation.mp3", 1500);
+        }
+        break;
+      
+      case Id.ainzGate:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/Gate.mp3", 600);
+        }
+        break;
+      
+      case Id.ainzBodyOfEffulgentBeryl:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/BodyOfEffulgentBeryl.mp3", 2000);
+        }
+        break;
+      
+      case Id.ainzGreaterHardening:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GreaterHardening.mp3", 1000);
+        }
+        break;
+      
+      case Id.ainzGreaterFullPotential:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GreaterFullPotential.mp3", 1200);
+        }
+        break;
+      
+      case Id.ainzGreaterMagicShield:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GreaterMagicShield.mp3", 1200);
+        }
+        break;
+      
+      case Id.ainzMagicBoost:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/MagicBoost.mp3", 1200);
+        }
+        break;
+      
+      case Id.ainzPenetrateUp:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/PenetrateUp.mp3", 1200);
+        }
+        break;
+      
+      case Id.ainzSummonAlbedo:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/Albedo.mp3", 1000);
+        }
+        break;
+      
+      case Id.ainzSummonShalltear:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/Shalltear.mp3", 1000);
+        }
+        break;
+      
+      case Id.ainzSummonDemiurge:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/Demiurge.mp3", 1000);
+        }
+        break;
+
+      case Id.ainzSummonPandora:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/PandorasActor.mp3", 1000);
+        }
+        break;
+      
+      case Id.ainzTGOALID:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/TGOALID.mp3", 4000);
+        }
+        break;
+      
+      case Id.ainzFallenDown:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/FallenDown.mp3", 4000);
+        }
+        break;
+      
+      case Id.ainzLaShubNiggurath:
+        if (unitId == Id.ainzOoalGown) {
+          if (rng < 25) {
+            SoundHelper.playTwoSoundsWithDelay(
+              unit,
+              "Audio/Voice/Ainz/LaShubNiggurath.mp3", 5000, 6,
+              "Audio/Voice/Ainz/Applaud.mp3", 5000
+            );
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Ainz/LaShubNiggurath.mp3", 5000);
+          }
+        }
+        break;
+      
+      case Id.ainzTimeStop:
+        if (unitId == Id.ainzOoalGown) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Ainz/ZaWarudo.mp3", 4500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Ainz/TimeStop.mp3", 1000);
+          }
+        }
+        break;
+      
+      case Id.ainzResistance:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/GreaterResistance.mp3", 1200);
+        }
+        break;
+      
+      case Id.ainzWish:
+        if (unitId == Id.ainzOoalGown) {
+          playSoundOnUnit(unit, "Audio/Voice/Ainz/WishUponAStar.mp3", 3000);
+        }
+        break;
+      
+      // albedo
+      case Id.albedoDecapitate:
+        if (unitId == Id.albedo) {
+          if (rng < 80) {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/Slash.mp3", 250);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/Decapitate.mp3", 2000);
+          }
+        }
+        break;
+      
+      case Id.albedoDefensiveSlash:
+        if (unitId == Id.albedo) {
+          playSoundOnUnit(unit, "Audio/Voice/Albedo/Slash2.mp3", 250);
+        }
+        break;
+      
+      case Id.albedoChargeAttack:
+        if (unitId == Id.albedo) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/Unforgivable.mp3", 2000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/YouDare.mp3", 1000);
+          }
+        }
+        break;
+      
+      case Id.albedoAegis:
+        if (unitId == Id.albedo) {
+          playSoundOnUnit(unit, "Audio/Voice/Albedo/Aegis.mp3", 3000);
+        }
+        break;
+      
+      case Id.albedoFormSwap:
+        if (unitId == Id.albedo) {
+          if (GetUnitAbilityLevel(unit, Buffs.ALBEDO_GUARDIAN_AURA) > 0) {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/Keikaku.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Albedo/AinzSama.mp3", 1000);
+          }
+        }
+        break;
+      
+      case Id.albedoSkillBoost:
+        if (unitId == Id.albedo) {
+          playSoundOnUnit(unit, "Audio/Voice/Albedo/SkillBoost.mp3", 1200);
+        }
+        break;
+      
+      case Id.albedoGinnungagap:
+        if (unitId == Id.albedo) {
+          playSoundOnUnit(unit, "Audio/Voice/Albedo/Worm.mp3", 3100);
+        }
+        break;
+
       // all might
       case Id.detroitSmash:
         if (unitId == Id.allMight) {
@@ -410,6 +658,41 @@ export module SoundHelper {
           }
         }
         break;
+      
+      // cell max
+      case Id.cellMaxTailWhip:
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+        break;
+
+      case Id.cellMaxScream:
+        if (unitId == Id.cellMax) {
+          playSoundOnUnit(unit, "Audio/Voice/Cell/MaxScream.mp3", 3200);
+        }
+        break;
+
+      case Id.cellMaxBlock:
+        if (unitId == Id.cellMax) {
+          playSoundOnUnit(unit, "Audio/Voice/Cell/MaxBlock.mp3", 5000);
+        }
+        break;
+
+      case Id.cellMaxBarrier:
+        if (unitId == Id.cellMax) {
+          playSoundOnUnit(unit, "Audio/Voice/Cell/MaxRoar.mp3", 5500);
+        }
+        break;
+
+      case Id.cellMaxBarrier2:
+        if (unitId == Id.cellMax) {
+          playSoundOnUnit(unit, "Audio/Voice/Cell/MaxRoar2.mp3", 4000);
+        }
+        break;
+
+      case Id.cellMaxDisaster:
+        if (unitId == Id.cellMax) {
+          playSoundOnUnit(unit, "Audio/Voice/Cell/MaxDisaster.mp3", 3000);
+        }
+        break;
 
       // cooler 
       case Id.deathBeamCooler:
@@ -520,8 +803,66 @@ export module SoundHelper {
         }
         break;
 
-      // skurvy
+      // demiurge
+      case Id.demiurgeHellfireWall:
+        if (unitId == Id.demiurge) {
+          playSoundOnUnit(unit, "Audio/Voice/Demiurge/HellfireWall.mp3", 1500);
+        }
+        break;
+      
+      case Id.demiurgeGiantArm:
+        if (unitId == Id.demiurge) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Claws.mp3", 2500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/GiantArm.mp3", 2500);
+          }
+        }
+        break;
+      
+      case Id.demiurgeCommand:
+        if (unitId == Id.demiurge) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Command.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Command2.mp3", 1000);
+          }
+        }
+        break;
+      
+      case Id.demiurgeMeteorFall:
+        if (unitId == Id.demiurge) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Gehenna.mp3", 750);
+          } else if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Foolish.mp3", 750);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Why.mp3", 500);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Why4.mp3", 600);
+          } else if (rng < 80) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Why3.mp3", 500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Why2.mp3", 600);
+          }
+        }
+        break;
 
+      case Id.demiurgeJaldabaoth:
+        if (unitId == Id.demiurge) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Jaldabaoth.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Demiurge/Jaldabaoth2.mp3", 1000);
+          }
+        }
+        break;
+      
+      // done inside HeroPasssive for HellfireMantle logic
+      // case Id.demiurgeHellfireMantle:
+      //   break;
+
+      // skurvy
       case Id.skurvyBigKannon:
         if (rng<20) {
           playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyQ2.mp3", 5004);
@@ -551,15 +892,15 @@ export module SoundHelper {
         break;
 
       case Id.skurvyMirrorNeverLies:
-      if (rng<25) {
-        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR1.mp3", 3540);
-      } else if (rng<50)  {
-        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR2.mp3", 6079);
-      } else if (rng<75) {
-        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR3.mp3", 5050);
-      } else {
-        playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR4.mp3", 5515);
-      }        
+        if (rng<25) {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR1.mp3", 3540);
+        } else if (rng<50)  {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR2.mp3", 6079);
+        } else if (rng<75) {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR3.mp3", 5050);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Skurvy/SkurvyR4.mp3", 5515);
+        }        
       break;
 
       case Id.skurvyPlank:
@@ -779,7 +1120,8 @@ export module SoundHelper {
         break;
 
       case Id.bigBangAttack:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinBigBangAttack2:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
         } else if (unitId == Id.ft) {
           playSoundOnUnit(unit, "Audio/Voice/FTTakeThis.mp3", 744);
@@ -1067,12 +1409,16 @@ export module SoundHelper {
       
       case Id.galacticDonut:
       case Id.ultraVolleyball:
+      case Id.vegetaMajinGalaxyDonut:
         if (unitId == Id.gotenks) {
           if (rng < 20) {
             playSoundOnUnit(unit, "Audio/Voice/Gotenks/TooSlow.mp3", 2496);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/Gotenks/IGotcha.mp3", 2304);
           }
+        }
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaGalaxyDonut.mp3", 1000);
         }
         playSoundOnUnit(unit, "Audio/Effects/Gotenks/GalacticDonuts.mp3", 2351);
         break;
@@ -1313,11 +1659,13 @@ export module SoundHelper {
       
       case Id.jacoRocketBoots:
         if (unitId == Id.jaco) {
-          if (rng < 40) {
-            playSoundOnUnit(unit, "Audio/Voice/Jaco/E1.mp3", 2352);
-          } else {
-            playSoundOnUnit(unit, "Audio/Voice/Jaco/E3.mp3", 5040);
-          }
+          playSoundOnUnit(unit, "Audio/Voice/Jaco/E1.mp3", 2352);
+        }
+        break;
+      
+      case Id.jacoEmergencyBoost:
+        if (unitId == Id.jaco) {
+          playSoundOnUnit(unit, "Audio/Voice/Jaco/E3.mp3", 5040);
         }
         break;
       
@@ -1950,6 +2298,52 @@ export module SoundHelper {
         }
         break;
       
+      // shalltear bloodfallen
+      case Id.shalltearPurifyingJavelin:
+        if (unitId == Id.shalltearBloodfallen) {
+          playSoundOnUnit(unit, "Audio/Voice/Shalltear/PurifyingLance.mp3", 1500);
+        }
+        break;
+      
+      case Id.shalltearVermilionNova:
+        if (unitId == Id.shalltearBloodfallen) {
+          playSoundOnUnit(unit, "Audio/Voice/Shalltear/VermilionNova.mp3", 1500);
+        }
+        break;
+      
+      case Id.shalltearMistForm:
+        if (unitId == Id.shalltearBloodfallen) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Shalltear/Laugh.mp3", 2500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Shalltear/Laugh2.mp3", 2500);
+          }
+        }
+        break;
+      
+      case Id.shalltearNegativeImpactShield:
+        if (unitId == Id.shalltearBloodfallen) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Shalltear/Shield.mp3", 2000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Shalltear/Shield2.mp3", 2500);
+          }
+        }
+        break;
+      
+      case Id.shalltearEinherjar:
+        playSoundOnUnit(unit, "Audio/Voice/Shalltear/Einherjar.mp3", 1200);
+        playSoundOnUnit(unit, "Audio/Voice/Shalltear/Einherjar2.mp3", 2500);
+        break;
+      
+      // Valhalla covered by SimpleSpellSystem
+
+      case Id.shalltearTimeReverse:
+        if (unitId == Id.shalltearBloodfallen) {
+          playSoundOnUnit(unit, "Audio/Voice/Shalltear/TimeReverse.mp3", 2000);
+        }
+        break;
+
       // super 17
       case Id.super17FlashBomber:
       case Id.super17FlashBomber2:
@@ -2087,20 +2481,35 @@ export module SoundHelper {
       // vegeta
       case Id.galickGun:
       case Id.egoGalickGun:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinGalickGun:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
+      
+      case Id.vegetaMajinGalaxyBreaker:
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaGalaxyBreaker.mp3", 1000);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+        break;
 
       case Id.finalFlash:
       case Id.finalFlash2:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinFinalFlash:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);
         } else if (unitId == Id.farmerWithShotgun) {
           playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
         }
         playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
+        break;
+
+      case Id.vegetaMajinFinalExplosion:
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaFinalExplosion.mp3", 5000);
+        }
         break;
 
       case Id.energyBlastVolley:

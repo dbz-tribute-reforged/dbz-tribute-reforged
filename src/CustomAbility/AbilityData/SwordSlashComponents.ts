@@ -51,7 +51,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 40,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 3,
+      multiplier: BASE_DMG.KAME_DPS * 1.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
@@ -116,7 +116,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 16,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 5.4,
+      multiplier: BASE_DMG.KAME_DPS * 3.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
@@ -160,7 +160,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 24,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 4.6,
+      multiplier: BASE_DMG.KAME_DPS * 3.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
@@ -203,7 +203,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 24,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 4.6,
+      multiplier: BASE_DMG.KAME_DPS * 3.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 

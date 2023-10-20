@@ -234,6 +234,18 @@ export class CustomHero {
     return this;
   }
 
+  public forceEndAllAbilities() {
+    for (const ability of this.abilities.getCustomAbilities()) {
+      if (ability.isInUse()) {
+        CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
+      }
+    }
+    // end stat mult transforms as well
+    const unitId = GetHandleId(this.unit);
+    const tmp = LoadReal(udg_StatMultHashtable, unitId, 9);
+    if (tmp > 0) SaveReal(udg_StatMultHashtable, unitId, 9, 1);
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();

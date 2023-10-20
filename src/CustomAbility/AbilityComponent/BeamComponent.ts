@@ -21,8 +21,9 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
   static readonly BEAM_UNIT_SPAWN_BEAM = 4;
+  static readonly BEAM_UNIT_SPAWN_TARGET_TO_CASTER = 5;
 
-  static readonly BEAM_HP_MODIFIER = 0.75;
+  static readonly BEAM_HP_MODIFIER = 0.3;
 
   static readonly BEAM_SPEED_ULTRA_SLOW = 25;
   static readonly BEAM_SPEED_SUPER_SLOW = 30;
@@ -39,6 +40,10 @@ export class BeamComponent implements
   static readonly BEAM_SPEED_VERY_INSANE = 85;
   static readonly BEAM_SPEED_SUPER_INSANE = 90;
   static readonly BEAM_SPEED_ULTRA_INSANE = 95;
+  static readonly BEAM_SPEED_HYPER = 100;
+  static readonly BEAM_SPEED_VERY_HYPER = 105;
+  static readonly BEAM_SPEED_SUPER_HYPER = 110;
+  static readonly BEAM_SPEED_ULTRA_HYPER = 115;
 
   static readonly BEAM_STUCK_DELAY_TICKS = 16;
 
@@ -319,6 +324,10 @@ export class BeamComponent implements
         this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
       }
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_TO_CASTER) {
+      this.beamCoord.setVector(this.beamTargetPoint);
+      this.beamTargetPoint.setUnit(input.caster.unit);
+      this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
     }
 
     this.beamUnit = CreateUnit(
@@ -448,6 +457,10 @@ export class BeamComponent implements
           }
         }
         input.isBeamClash = this.oldIsBeamClash;
+        if (ability.isFinishedUsing(this)) {
+          this.hasExploded = true;
+          this.removeBeamUnit();
+        }
       }
     }
     
@@ -455,7 +468,7 @@ export class BeamComponent implements
       this.isStarted = false;
       this.isFinished = true;
 
-      if (!this.hasExploded){
+      if (!this.hasExploded) {
         if (this.explodeOnDeath) {
           this.fakeExplode(ability, input);
         }

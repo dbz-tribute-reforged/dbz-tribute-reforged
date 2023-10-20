@@ -10,6 +10,8 @@ import { UnitHelper } from "Common/UnitHelper";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { PathingCheck } from "Common/PathingCheck";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { SoundHelper } from "Common/SoundHelper";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -107,6 +109,15 @@ export class HeroPassiveManager {
         break;
       case Id.pecorine:
         pecoPassive(customHero);
+        break;
+      case Id.ainzOoalGown:
+        ainzPassive(customHero);
+        break;
+      case Id.demiurge:
+        demiurgePassive(customHero);
+        break;
+      case Id.vegetaMajin:
+        vegetaMajinPassive(customHero);
         break;
       default:
         break;
@@ -860,11 +871,11 @@ export function lucarioPassive(customHero: CustomHero) {
             // 0.0005 * 20000 * 20 = 200 max hp dmg per stack
             // 0.01 * 20000 = 200 int dmg per stack
 
-            // 0.0004 * 20000 * 20 = 160 max hp dmg per stack
-            // 0.008 * 20000 = 160 int dmg per stack
+            // 0.0004 * 10000 * 10 = 40 max hp dmg per stack
+            // 0.004 * 10000 = 40 int dmg per stack
             const bonusDamage = AOEDamage.getIntDamageMult(attacker) * bonusDamageMult * (
               0.0004 * GetUnitState(target, UNIT_STATE_MAX_LIFE)
-              + 0.008 * GetHeroInt(attacker, true)
+              + 0.004 * GetHeroInt(attacker, true)
             );
             if (bonusDamage > 0) {
               UnitDamageTarget(
@@ -1486,7 +1497,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeLossStuck = 0.85;
   const dmgAOE = 280;
   const dmgMagnitudeMult = 0.1;
-  const spinDmgDataMult = BASE_DMG.KAME_DPS * 0.066;
+  const spinDmgDataMult = BASE_DMG.KAME_DPS * 0.05;
   const moveDir = new Vector2D(0, 0);
   const moveDist = 1.0;
   const moveDistSpin = 0.6;
@@ -1506,7 +1517,7 @@ export function sonicPassive(customHero: CustomHero) {
   const lightSpeedMult = 1.5;
   const lightSpeedOffset = 60;
   const lightSpeedMaxDistTravelled = 6000;
-  const dmgLightSpeed = BASE_DMG.KAME_DPS * 17;
+  const dmgLightSpeed = BASE_DMG.KAME_DPS * 10;
 
   const superSonicDistMult = 1.5;
   const superSonicMagnitudeMult = 1.5;
@@ -2371,6 +2382,278 @@ export function pecoPassive(customHero: CustomHero) {
   );
 }
 
+export function ainzPassive(customHero: CustomHero) {
+  const mpCostPct = 0.22;
+  const mpCostTickRate = 0.2;
+  const mpCostDefensiveRatio = 0.5;
+  
+  const mpCostTimer = CreateTimer();
+  customHero.addTimer(mpCostTimer);
+
+  const offensiveSpells = [
+    BlzGetUnitAbility(customHero.unit, Id.ainzRealitySlash),
+    BlzGetUnitAbility(customHero.unit, Id.ainzBlackHole),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGreaterThunder),
+    BlzGetUnitAbility(customHero.unit, Id.ainzExplodeMine),
+    BlzGetUnitAbility(customHero.unit, Id.ainzEnergyDrain),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGraspHeart),
+    BlzGetUnitAbility(customHero.unit, Id.ainzWallOfSkeleton),
+    BlzGetUnitAbility(customHero.unit, Id.ainzHoldOfRibs),
+  ];
+
+  const defensiveSpells = [
+    BlzGetUnitAbility(customHero.unit, Id.ainzPerfectUnknowable),
+    BlzGetUnitAbility(customHero.unit, Id.ainzRemoteViewing),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGreaterTeleportation),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGate),
+    BlzGetUnitAbility(customHero.unit, Id.ainzBodyOfEffulgentBeryl),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGreaterHardening),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGreaterFullPotential),
+    BlzGetUnitAbility(customHero.unit, Id.ainzGreaterMagicShield),
+    BlzGetUnitAbility(customHero.unit, Id.ainzMagicBoost),
+    BlzGetUnitAbility(customHero.unit, Id.ainzPenetrateUp),
+  ];
+
+  let isAddSummon = false;
+  let isAddSpecial = false;
+
+  TimerStart(mpCostTimer, mpCostTickRate, true, () => {
+    if (UnitHelper.isUnitAlive(customHero.unit)) {
+      const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+      const lifePct = GetUnitLifePercent(customHero.unit) * 0.01;
+      const offensiveManaCost = R2I(maxMana * mpCostPct);
+      const defensiveManaCost = Math.max(
+        0, 
+        R2I(mpCostDefensiveRatio * offensiveManaCost * (1 - lifePct))
+      );
+
+      for (const abil of offensiveSpells) {
+        BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, offensiveManaCost);
+      }
+
+      for (const abil of defensiveSpells) {
+        BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, defensiveManaCost);
+      }
+
+      if (!isAddSummon && GetUnitAbilityLevel(customHero.unit, Id.ainzSummonAlbedo) > 0) {
+        isAddSummon = true;
+        offensiveSpells.push(
+          BlzGetUnitAbility(customHero.unit, Id.ainzSummonAlbedo),
+          BlzGetUnitAbility(customHero.unit, Id.ainzSummonShalltear),
+          BlzGetUnitAbility(customHero.unit, Id.ainzSummonDemiurge),
+          BlzGetUnitAbility(customHero.unit, Id.ainzSummonPandora),
+        );
+      }
+      if (!isAddSpecial && GetUnitAbilityLevel(customHero.unit, Id.ainzTGOALID) > 0) {
+        isAddSpecial = true;
+        offensiveSpells.push(
+          BlzGetUnitAbility(customHero.unit, Id.ainzTGOALID),
+          BlzGetUnitAbility(customHero.unit, Id.ainzFallenDown),
+          BlzGetUnitAbility(customHero.unit, Id.ainzLaShubNiggurath),
+          BlzGetUnitAbility(customHero.unit, Id.ainzTimeStop),
+        );
+      }
+    }
+  });
+}
+
+export function demiurgePassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+  const hellfireMantleSP = 0.15;
+  const hellfireMantleManaDrain = 0.015;
+  const hellfireMantleDmgBlockPct = 0.25;
+  const hellfireMantleTickRate = 0.03;
+  const hellfireMantleDmgAOE = 300;
+  const hellfireMantleDmgDataMult = BASE_DMG.KAME_DPS * 1.5 * hellfireMantleTickRate;
+
+  const hellfireMantleTimer = CreateTimer();
+  customHero.addTimer(hellfireMantleTimer);
+
+  let mantleState = 0;
+  let oldHp = 0;
+  let hellfireSfx = null;
+  let dummyUnit = null;
+  TimerStart(hellfireMantleTimer, hellfireMantleTickRate, true, () => {
+    if (mantleState == 0) {
+      if (GetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle) == 2) {
+        // do hellfire
+        mantleState = 1;
+        oldHp = GetUnitState(customHero.unit, UNIT_STATE_LIFE);
+        customHero.addSpellPower(hellfireMantleSP);
+        hellfireSfx = AddSpecialEffectTarget(
+          "Abilities/Spells/Other/ImmolationRed/ImmolationRedTarget.mdl", 
+          customHero.unit, "origin"
+        );
+        dummyUnit = CreateUnit(
+          GetOwningPlayer(customHero.unit), 
+          Constants.dummyCasterId, 
+          GetUnitX(customHero.unit), GetUnitY(customHero.unit), 
+          0
+        );
+        UnitAddAbility(dummyUnit, DebuffAbilities.DEMIURGE_HELLFIRE_1);
+
+        SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Demiurge/HellfireMantle.mp3", 2300);
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Other/Doom/DoomTarget.mdl", 
+            GetUnitX(customHero.unit), GetUnitY(customHero.unit)
+          )
+        );
+      }
+    }
+
+    if (mantleState == 1) {
+      if (
+        UnitHelper.isUnitDead(customHero.unit)
+        || GetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle) == 1
+        || GetUnitManaPercent(customHero.unit) < hellfireMantleManaDrain
+      ) {
+        mantleState = 2;
+      } else {
+        const currentMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
+        const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+        let mpDrain = maxMana * hellfireMantleManaDrain * hellfireMantleTickRate;
+
+        const newHp = GetUnitState(customHero.unit, UNIT_STATE_LIFE);
+        const hpDiff = oldHp - newHp;
+        if (hpDiff < 0) {
+          oldHp = newHp;
+        } else {
+          const hpToHeal = Math.min(
+            GetUnitState(customHero.unit, UNIT_STATE_MANA) - mpDrain,
+            hpDiff * hellfireMantleDmgBlockPct
+          );
+          mpDrain += hpToHeal;
+          SetUnitState(customHero.unit, UNIT_STATE_LIFE, newHp + hpToHeal);
+          oldHp = newHp + hpToHeal;
+        }
+        SetUnitState(customHero.unit, UNIT_STATE_MANA, currentMana - mpDrain);
+
+        AOEDamage.genericDealAOEDamage(
+          Globals.tmpUnitGroup,
+          customHero.unit,
+          GetUnitX(customHero.unit),
+          GetUnitY(customHero.unit),
+          hellfireMantleDmgAOE,
+          10,
+          customHero.spellPower,
+          hellfireMantleDmgDataMult,
+          1.0,
+          bj_HEROSTAT_INT
+        );
+
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const target = GetEnumUnit();
+          if (UnitHelper.isUnitTargetableForPlayer(target, GetOwningPlayer(customHero.unit), false)) {
+            IssueTargetOrderById(dummyUnit, OrderIds.FAERIE_FIRE, target);
+          }
+        });
+        GroupClear(Globals.tmpUnitGroup);
+      }
+    }
+
+    if (mantleState == 2) {
+      mantleState = 0;
+      oldHp = 0;
+      customHero.removeSpellPower(hellfireMantleSP);
+      DestroyEffect(hellfireSfx);
+      RemoveUnit(dummyUnit);
+      SetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle, 1);
+      SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Demiurge/HellfireMantle2.mp3", 1500);
+    }
+  });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      const attacked = GetAttackedUnitBJ();
+      // const attacker = GetEventDamageSource();
+      // const attacked = BlzGetEventDamageTarget();
+      if (
+        GetUnitTypeId(attacker) == heroId &&
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
+        IsUnitType(attacked, UNIT_TYPE_HERO)
+      ) {
+        if (GetUnitAbilityLevel(attacked, Buffs.DEMIURGE_HELLFIRE_1) > 0) {
+          const castDummy = CreateUnit(
+            GetOwningPlayer(customHero.unit), 
+            Constants.dummyCasterId, 
+            GetUnitX(attacked), GetUnitY(attacked), 
+            0
+          );
+          UnitAddAbility(castDummy, DebuffAbilities.DEMIURGE_HELLFIRE_2);
+          IssueTargetOrderById(castDummy, OrderIds.FAERIE_FIRE, attacked);
+          RemoveUnit(castDummy);
+        }
+      }
+      return false;
+    })
+  );
+}
+
+export function vegetaMajinPassive(customHero: CustomHero) {
+  const mpCostTickRate = 0.1;
+  
+  const mpCostTimer = CreateTimer();
+  customHero.addTimer(mpCostTimer);
+
+  const data = [
+    { 
+      id: Id.vegetaMajinGalickGun,
+      manaCost: 10
+    },
+    { 
+      id: Id.vegetaMajinGalaxyBreaker,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinBigBangAttack2,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinFinalFlash,
+      manaCost: 30
+    },
+    { 
+      id: Id.vegetaMajinGalaxyDonut,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinFinalExplosion,
+      manaCost: 30
+    },
+  ];
+
+  TimerStart(mpCostTimer, mpCostTickRate, true, () => {
+    if (UnitHelper.isUnitAlive(customHero.unit)) {
+      const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+      const manaCostPct = R2I(maxMana * 0.01);
+
+      for (const x of data) {
+        const lvl = GetUnitAbilityLevel(customHero.unit, x.id);
+        if (lvl > 0) {
+          BlzSetAbilityIntegerLevelField(
+            BlzGetUnitAbility(customHero.unit, x.id), 
+            ABILITY_ILF_MANA_COST, 
+            lvl-1, 
+            R2I(x.manaCost * manaCostPct * lvl * 0.1)
+          );
+        }
+      }
+    }
+  });
+
+}
+
 export function setupRegenTimer(customHero: CustomHero) {
   const regenTimer = CreateTimer();
   customHero.addTimer(regenTimer);
@@ -2378,8 +2661,8 @@ export function setupRegenTimer(customHero: CustomHero) {
   TimerStart(regenTimer, 0.03, true, () => {
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
-    const heroAgi = GetHeroStr(customHero.unit, true);
-    const heroInt = GetHeroStr(customHero.unit, true);
+    const heroAgi = GetHeroAgi(customHero.unit, true);
+    const heroInt = GetHeroInt(customHero.unit, true);
     const sumStats = 0.33 *(heroStr + heroAgi + heroInt);
 
 
@@ -2417,6 +2700,12 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.zamasuImmortality) > 0) {
       incHp *= Constants.ZAMASU_PASSIVE_HP_REGEN_MULT;
     }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.ALBEDO_GUARDIAN_AURA) > 0) {
+      incHp *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
+      incHp *= Constants.FOUNTAIN_REGEN_MULT;
+    }
     SetUnitState(
       customHero.unit, UNIT_STATE_LIFE, 
       Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp)
@@ -2434,6 +2723,15 @@ export function setupRegenTimer(customHero: CustomHero) {
     );
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       incMp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.INNER_FIRE_AINZ_MAGIC_BOOST) > 0) {
+      incMp *= Constants.AINZ_MAGIC_BOOST_MP_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.ALBEDO_GUARDIAN_AURA) > 0) {
+      incMp *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
+      incMp *= Constants.FOUNTAIN_REGEN_MULT;
     }
     SetUnitState(
       customHero.unit, UNIT_STATE_MANA, 
