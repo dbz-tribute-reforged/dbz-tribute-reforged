@@ -706,6 +706,9 @@ gg_trg_Ainz_Energy_Drain = nil
 gg_trg_Ainz_Summon_Guardians = nil
 gg_trg_Ainz_Summon_Pandoras_Actor = nil
 gg_trg_Ainz_La_Shub_Niggurath = nil
+gg_trg_Ainz_Albedo_Ability_Reset = nil
+gg_trg_Ainz_Shalltear_Ability_Reset = nil
+gg_trg_Ainz_Demiurge_Ability_Reset = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -1174,9 +1177,6 @@ gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Ainz_Albedo_Ability_Reset = nil
-gg_trg_Ainz_Shalltear_Ability_Reset = nil
-gg_trg_Ainz_Demiurge_Ability_Reset = nil
 function InitGlobals()
 local i = 0
 
@@ -40711,18 +40711,34 @@ end
 return true
 end
 
-function Trig_Ainz_Greater_Full_Potential_Func006C()
+function Trig_Ainz_Greater_Full_Potential_Func002Func007C()
 if (not (udg_TempBool == true)) then
 return false
 end
 return true
 end
 
+function Trig_Ainz_Greater_Full_Potential_Func002C()
+if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
+return false
+end
+if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == false)) then
+return false
+end
+return true
+end
+
 function Trig_Ainz_Greater_Full_Potential_Actions()
+udg_StatMultUnit = GetSpellAbilityUnit()
+if (Trig_Ainz_Greater_Full_Potential_Func002C()) then
+ModifyHeroStat(bj_HEROSTAT_STR, udg_StatMultUnit, bj_MODIFYMETHOD_ADD, R2I((0.10 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_StatMultUnit, true)))))
+ModifyHeroStat(bj_HEROSTAT_AGI, udg_StatMultUnit, bj_MODIFYMETHOD_ADD, R2I((0.10 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)))))
+ModifyHeroStat(bj_HEROSTAT_INT, udg_StatMultUnit, bj_MODIFYMETHOD_ADD, R2I((0.10 * I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true)))))
+else
 udg_TempReal = 45.00
-    udg_TempInt = GetSpellAbilityId()
+        udg_TempInt = GetSpellAbilityId()
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
-if (Trig_Ainz_Greater_Full_Potential_Func006C()) then
+if (Trig_Ainz_Greater_Full_Potential_Func002Func007C()) then
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
 udg_TempReal4 = 0.10
 udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
@@ -40733,8 +40749,9 @@ udg_TransformationSFXString = "AuraWhite.mdx"
 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
 else
 end
-    udg_TransformationID = FourCC('H00Z')
+        udg_TransformationID = FourCC('H00Z')
 TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+end
 end
 
 function InitTrig_Ainz_Greater_Full_Potential()

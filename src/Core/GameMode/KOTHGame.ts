@@ -1,4 +1,4 @@
-import { Constants, Globals, Id } from "Common/Constants";
+import { Constants, Globals, Id, OrderIds } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
@@ -8,6 +8,7 @@ import { KOTHStage } from "./KOTHStage";
 import { SoundHelper } from "Common/SoundHelper";
 import { VisionHelper } from "Common/VisionHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class KOTHGame {
   protected gameTimer: timer;
@@ -275,6 +276,7 @@ export class KOTHGame {
 
     this.gameState = TournamentData.kothStateLobby;
     this.setupLobbyNeutrals();
+    this.giveBodyArmorToPlayers(Constants.activePlayers);
   }
 
   setupLobbyNeutrals() {
@@ -352,7 +354,26 @@ export class KOTHGame {
       270
     );
     SetUnitInvulnerable(x, true);
+  }
 
+  giveBodyArmorToPlayers(players: player[]) {
+    for (const player of players) {
+      const playerId = GetPlayerId(player);
+      ForGroup(udg_StatMultPlayerUnits[playerId], () => {
+        const unit = GetEnumUnit();
+        if (
+          UnitHelper.isUnitTournamentViable(unit)
+          && UnitHelper.isUnitAlive(unit)
+          && !UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.BATTLE_ARMOR_5)
+        ) {
+          const it = CreateItem(
+            ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+            GetUnitX(unit), GetUnitY(unit),
+          );
+          UnitAddItem(unit, it);
+        }
+      });
+    }
   }
 
   resetRoundStats() {
@@ -625,6 +646,9 @@ export class KOTHGame {
     if (ch) {
       ch.forceEndAllAbilities();
     }
+
+    UnitRemoveBuffs(unit, true, true);
+    IssueImmediateOrderById(unit, OrderIds.STOP);
 
     SetUnitX(unit, pos.x);
     SetUnitY(unit, pos.y);

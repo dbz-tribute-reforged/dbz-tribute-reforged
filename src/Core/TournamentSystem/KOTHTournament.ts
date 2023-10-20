@@ -10,6 +10,7 @@ import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { KOTHGame } from "Core/GameMode/KOTHGame";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
+import { VisionHelper } from "Common/VisionHelper";
 
 export class KOTHTournament extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -78,6 +79,8 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     DisableTrigger(gg_trg_Teleport_Future_Cell);
     DisableTrigger(gg_trg_Teleport_Future_Cell_2);
 
+    VisionHelper.showFbArenaVision();
+    
     const completeTimer = TimerManager.getInstance().get();
     TimerStart(completeTimer, 1.0, true, () => {
       if (this.kothGame.isFinished()) {
