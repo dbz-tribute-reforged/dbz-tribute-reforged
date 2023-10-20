@@ -8032,7 +8032,6 @@ export const BeamComponents = [
     components: [
       { name: "damage double sunday dps" },
       { name: "damage double sunday explosion" },
-      { name: "stun masenko" },
       { name: "knockback kame" },
       { name: "sfx beam double sunday" },
     ],
@@ -8072,7 +8071,6 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
-      { name: "stun masenko" },
       { name: "damage beam saturday crash dps" },
       { name: "damage beam saturday crash explosion" },
       { name: "knockback kame" },
