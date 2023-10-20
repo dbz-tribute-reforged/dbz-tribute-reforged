@@ -733,6 +733,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.demiurgeMeteorFall, AbilityNames.Demiurge.METEOR_FALL],
     [Id.demiurgeJaldabaoth, AbilityNames.Demiurge.JALDABAOTH],
 
+    [Id.vegetaMajinGalickGun, AbilityNames.MajinVegeta.GALICK_GUN],
+    [Id.vegetaMajinGalaxyBreaker, AbilityNames.MajinVegeta.GALAXY_BREAKER],
+    [Id.vegetaMajinBigBangAttack2, AbilityNames.MajinVegeta.BIG_BANG_ATTACK_2],
+    [Id.vegetaMajinFinalFlash, AbilityNames.MajinVegeta.FINAL_FLASH],
+    [Id.vegetaMajinGalaxyDonut, AbilityNames.MajinVegeta.GALAXY_DONUT],
+    [Id.vegetaMajinFinalExplosion, AbilityNames.MajinVegeta.FINAL_EXPLOSION],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

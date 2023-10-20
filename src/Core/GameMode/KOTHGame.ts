@@ -38,6 +38,8 @@ export class KOTHGame {
 
   protected fogs: fogmodifier[];
 
+  protected rushTrigger: trigger;
+
   constructor(
     public showTimer: timer = null,
     public showDialog: timerdialog = null,
@@ -120,6 +122,26 @@ export class KOTHGame {
     SetTextTagPermanent(this.captureTextTag, true);
     SetTextTagColor(this.captureTextTag, 255, 255, 255, 255);
     this.updateCaptureDisplay();
+    
+
+    this.rushTrigger = CreateTrigger();
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerChatEvent(this.rushTrigger, player, "rrr", true);
+    }
+    TriggerAddAction(this.rushTrigger, () => {
+      const player = GetTriggerPlayer();
+      if (player == Globals.hostPlayer) {
+        if (
+          this.gameCounter > 0 
+          && this.gameState == TournamentData.kothStateLobby
+        ) {
+          this.gameState = TournamentData.kothStateArena;
+          this.gameCounter = 0;
+          this.doArena();
+          this.gameCounter = 1;
+        }
+      }
+    });
   }
 
   setPointsToWin(p: number) {
@@ -339,10 +361,11 @@ export class KOTHGame {
     this.captureCount = 0;
     TimerDialogSetTitle(
       this.showDialog, 
-      "Points " 
+      "Points |cff00ffff" 
       + this.pointsTeam1 
       + " : " + this.pointsTeam2
       + " (" + this.pointsToWin + ")"
+      + "|r"
     );
   }
 
@@ -378,23 +401,27 @@ export class KOTHGame {
 
     this.updateCapture();
 
-    // check if either team has lost -> other team has won
-    if (
-      this.checkTeamUnitsDead(Constants.defaultTeam1)
-    ) {
+    const isTeam1Dead = this.checkTeamUnitsDead(Constants.defaultTeam1);
+    const isTeam2Dead = this.checkTeamUnitsDead(Constants.defaultTeam2);
+
+    if (isTeam1Dead && isTeam2Dead) {
+      print("|cffffff00The round is a draw!");
+      this.roundWinner = Constants.invalidTeamValue;
+      this.gameState = TournamentData.kothStateArenaEnd;
+      return;
+    }
+    
+    if (isTeam2Dead && !isTeam1Dead) {
+      this.roundWinner = Constants.team1Value;
+    }
+
+    if (isTeam1Dead && !isTeam2Dead) {
       this.roundWinner = Constants.team2Value;
     }
 
     if (
-      this.checkTeamUnitsDead(Constants.defaultTeam2)
-    ) {
-      this.roundWinner = Constants.team1Value;
-    }
-    
-
-    if (
       this.roundWinner != 0 
-      || this.gameCounter == TournamentData.kothArenaTimeout
+      || TimerGetRemaining(this.showTimer) == 0
     ) {
       if (this.roundWinner == 0 && this.captureCount > 0) {
         this.roundWinner = this.captureTeam;
@@ -421,6 +448,7 @@ export class KOTHGame {
   }
 
   doFinished() {
+    DisableTrigger(this.rushTrigger);
     PauseTimer(this.gameTimer);
 
     for (const fm of this.fogs) {
@@ -449,7 +477,12 @@ export class KOTHGame {
     this.removeArenaSummons();
 
     // update displays
-    print("|cffffcc00Points " + this.pointsTeam1 + " : " + this.pointsTeam2 + " (" + this.pointsToWin + ")");
+    print(
+      "|cffffcc00Points |cff00ffff" 
+      + this.pointsTeam1 + " : " 
+      + this.pointsTeam2 
+      + " (" + this.pointsToWin + ")"
+    );
     this.numRounds++;
   }
 
@@ -614,18 +647,19 @@ export class KOTHGame {
         SetUnitInvulnerable(unit, true);
 
         // give lvls / stats as necessary
-        if (this.numRounds <= this.lastUpgRound) {
+        if (this.numRounds < this.lastUpgRound) {
           if (this.baseLvlsPerRound > 0) {
             const lvl = GetHeroLevel(unit);
-            const exp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(
-              lvl, R2I(lvl + this.baseLvlsPerRound * numUnitsMult)
+            let exp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(
+              lvl, R2I(lvl + this.baseLvlsPerRound / numUnits)
             );
+            // if (numUnits > 0) exp = R2I(exp / numUnits);
             AddHeroXP(unit, exp, false);
           }
   
           if (this.baseStatsPerRound > 0) {
             udg_StatMultUnit = unit;
-            udg_StatMultReal = I2R(R2I(this.baseStatsPerRound * numUnitsMult));
+            udg_StatMultReal = I2R(R2I(this.baseStatsPerRound / numUnits));
             TriggerExecute(gg_trg_Add_To_Base_Stats);
             TriggerExecute(gg_trg_Add_To_Tourney_Stats_Data);
             TriggerExecute(gg_trg_Update_Current_Stats);

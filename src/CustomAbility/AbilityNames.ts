@@ -898,6 +898,15 @@ export module AbilityNames {
     export const JALDABAOTH = "Demiurge Jaldabaoth";
   }
 
+  export module MajinVegeta {
+    export const GALICK_GUN = "Majin Vegeta Galick Gun";
+    export const GALAXY_BREAKER = "Majin Vegeta Galaxy Breaker";
+    export const BIG_BANG_ATTACK_2 = "Majin Vegeta Big Bang Attack 2";
+    export const FINAL_FLASH = "Majin Vegeta Final Flash";
+    export const GALAXY_DONUT = "Majin Vegeta Galaxy Donut";
+    export const FINAL_EXPLOSION = "Majin Vegeta Final Explosion";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

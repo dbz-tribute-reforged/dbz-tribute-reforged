@@ -370,8 +370,8 @@ export class HeroSelectorManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
 
-      // if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
-      if (true) {
+      // if (true) {
+      if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
         if (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[i]) == 0) {
           HeroSelector.forcePick(udg_TempPlayer);
         }
@@ -399,8 +399,10 @@ export class HeroSelectorManager {
 
     if (this.kothFlag) {
       let points = TournamentData.kothPointsToWin;
-      const pStr = SubString(this.gameModeString, 5, 7);
-      if (pStr) points = S2I(pStr);
+      if (StringLength(this.gameModeString) > 5) {
+        const pStr = SubString(this.gameModeString, 5, 7);
+        if (pStr) points = S2I(pStr);
+      }
       TournamentManager.getInstance().addKOTH(points);
       TournamentManager.getInstance().startTournament(Constants.KOTHName);
     }

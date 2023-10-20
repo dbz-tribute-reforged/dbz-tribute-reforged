@@ -11,6 +11,7 @@ import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { PathingCheck } from "Common/PathingCheck";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SoundHelper } from "Common/SoundHelper";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -114,6 +115,9 @@ export class HeroPassiveManager {
         break;
       case Id.demiurge:
         demiurgePassive(customHero);
+        break;
+      case Id.vegetaMajin:
+        vegetaMajinPassive(customHero);
         break;
       default:
         break;
@@ -2594,6 +2598,60 @@ export function demiurgePassive(customHero: CustomHero) {
       return false;
     })
   );
+}
+
+export function vegetaMajinPassive(customHero: CustomHero) {
+  const mpCostTickRate = 0.1;
+  
+  const mpCostTimer = CreateTimer();
+  customHero.addTimer(mpCostTimer);
+
+  const data = [
+    { 
+      id: Id.vegetaMajinGalickGun,
+      manaCost: 10
+    },
+    { 
+      id: Id.vegetaMajinGalaxyBreaker,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinBigBangAttack2,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinFinalFlash,
+      manaCost: 30
+    },
+    { 
+      id: Id.vegetaMajinGalaxyDonut,
+      manaCost: 15
+    },
+    { 
+      id: Id.vegetaMajinFinalExplosion,
+      manaCost: 30
+    },
+  ];
+
+  TimerStart(mpCostTimer, mpCostTickRate, true, () => {
+    if (UnitHelper.isUnitAlive(customHero.unit)) {
+      const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+      const manaCostPct = R2I(maxMana * 0.01);
+
+      for (const x of data) {
+        const lvl = GetUnitAbilityLevel(customHero.unit, x.id);
+        if (lvl > 0) {
+          BlzSetAbilityIntegerLevelField(
+            BlzGetUnitAbility(customHero.unit, x.id), 
+            ABILITY_ILF_MANA_COST, 
+            lvl-1, 
+            R2I(x.manaCost * manaCostPct * lvl * 0.1)
+          );
+        }
+      }
+    }
+  });
+
 }
 
 export function setupRegenTimer(customHero: CustomHero) {

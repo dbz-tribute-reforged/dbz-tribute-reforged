@@ -853,7 +853,7 @@ export function CustomPlayerTest() {
       ForGroup(group, () => {
         const megaUnit = GetEnumUnit();
         if (IsUnitType(megaUnit, UNIT_TYPE_HERO)) {
-          SetHeroLevel(megaUnit, 992, false);
+          SetHeroLevel(megaUnit, 994, false);
           ModifyHeroSkillPoints(megaUnit, bj_MODIFYMETHOD_ADD, 500);
         }
       });

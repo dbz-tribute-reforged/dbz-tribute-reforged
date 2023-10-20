@@ -1120,7 +1120,8 @@ export module SoundHelper {
         break;
 
       case Id.bigBangAttack:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinBigBangAttack2:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
         } else if (unitId == Id.ft) {
           playSoundOnUnit(unit, "Audio/Voice/FTTakeThis.mp3", 744);
@@ -1408,12 +1409,16 @@ export module SoundHelper {
       
       case Id.galacticDonut:
       case Id.ultraVolleyball:
+      case Id.vegetaMajinGalaxyDonut:
         if (unitId == Id.gotenks) {
           if (rng < 20) {
             playSoundOnUnit(unit, "Audio/Voice/Gotenks/TooSlow.mp3", 2496);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/Gotenks/IGotcha.mp3", 2304);
           }
+        }
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaGalaxyDonut.mp3", 1000);
         }
         playSoundOnUnit(unit, "Audio/Effects/Gotenks/GalacticDonuts.mp3", 2351);
         break;
@@ -2476,20 +2481,35 @@ export module SoundHelper {
       // vegeta
       case Id.galickGun:
       case Id.egoGalickGun:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinGalickGun:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
+      
+      case Id.vegetaMajinGalaxyBreaker:
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaGalaxyBreaker.mp3", 1000);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+        break;
 
       case Id.finalFlash:
       case Id.finalFlash2:
-        if (unitId == Id.vegeta) {
+      case Id.vegetaMajinFinalFlash:
+        if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);
         } else if (unitId == Id.farmerWithShotgun) {
           playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
         }
         playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
+        break;
+
+      case Id.vegetaMajinFinalExplosion:
+        if (unitId == Id.vegetaMajin) {
+          playSoundOnUnit(unit, "Audio/Voice/VegetaFinalExplosion.mp3", 5000);
+        }
         break;
 
       case Id.energyBlastVolley:

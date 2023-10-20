@@ -15,7 +15,7 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
   static readonly SOURCE_LAST_CAST_UNIT = 4;
 
   static readonly UNLIMITED_HEAL_TICKS = -1;
-  static readonly DEFAULT_HEAK_TICKS = 12;
+  static readonly DEFAULT_HEAL_TICKS = 8;
 
   static readonly BEAM_CLASH_HEAL_MULTIPLIER = 0.5;
 

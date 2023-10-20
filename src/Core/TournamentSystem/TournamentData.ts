@@ -23,7 +23,7 @@ export module TournamentData {
   export const finalBattleName: string = "Final Battle";
   export const finalBattleTime: number = 32 * 60;
   export const finalBattleInterval: number = 5;
-  export const finalBattleDelay: number = 5;
+  export const finalBattleDelay: number = 115;
   export const finalBattleLobbyWait: number = 30;
   export const finalBattleSpell: number = FourCC("A0LT");
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
@@ -57,8 +57,8 @@ export module TournamentData {
   export const kothLobbyWaitFirst: number = 30;
   export const kothLobbyWait: number = 10;
   export const kothArenaTimeout: number = 240;
-  export const kothArenaCamDelay1: number = 0.25;
-  export const kothArenaCamDelay2: number = 0.75;
+  export const kothArenaCamDelay1: number = 0.5;
+  export const kothArenaCamDelay2: number = 1.0;
   export const kothCaptureUnlockTime = 15;
   export const kothCaptureRadius = 1408; // 11 squares
   export const kothCaptureExpBonusRatio = 0.1;

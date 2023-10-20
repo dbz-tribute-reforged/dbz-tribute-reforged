@@ -146,7 +146,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 30,
+    costAmount: 35,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -165,7 +165,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Cost: 30 SP|nCD: 2"
+        "Cost: 35 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -15292,6 +15292,181 @@ export const AbilitiesList = [
       { name: "temp ability demiurge jaldabaoth invis" },
       { name: "dash ground forward 2dist" },
       { name: "sfx demiurge jaldabaoth" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALICK_GUN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALAXY_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 40dist" },
+      { name: "damage majin vegeta galaxy breaker dps" },
+      { name: "sfx majin vegeta galaxy breaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.BIG_BANG_ATTACK_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta big bang attack 1" },
+      { name: "beam majin vegeta big bang attack 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.GALAXY_DONUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam majin vegeta galaxy donut" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.FINAL_FLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "jump majin vegeta final flash" },
+      { name: "block majin vegeta final flash" },
+      { name: "multi beam majin vegeta final flash" },
+      { name: "multi majin vegeta final flash caster aoe" },
+      { name: "sfx majin vegeta final flash caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MajinVegeta.FINAL_EXPLOSION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage majin vegeta final explosion explosion" },
+      { name: "knockback majin vegeta final explosion" },
+      { name: "multi majin vegeta final explosion caster aoe" },
+      { name: "sfx majin vegeta final explosion 1" },
+      { name: "sfx majin vegeta final explosion 2" },
     ],
   },
   // -------------------------------------------

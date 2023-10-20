@@ -111,6 +111,7 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.schalaTeleportation, SimpleSpellSystem.SchalaTeleportation);
     Globals.genericSpellMap.set(Id.schalaTeleportation2, SimpleSpellSystem.SchalaTeleportation);
+    Globals.genericSpellMap.set(Id.schalaProtect2, SimpleSpellSystem.schalaEmpoweredProtectDebuff);
     
     Globals.genericSpellMap.set(Id.yamchaRLightPunch, SimpleSpellSystem.YamchaCombos);
     Globals.genericSpellMap.set(Id.yamchaRMediumPunch, SimpleSpellSystem.YamchaCombos);
@@ -198,6 +199,8 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.shalltearValhalla, SimpleSpellSystem.doShalltearValhalla);
 
     Globals.genericSpellMap.set(Id.demiurgeHellfireMantle, SimpleSpellSystem.doDemiurgeHellfireMantle);
+
+    Globals.genericSpellMap.set(Id.ultimateCharge, SimpleSpellSystem.doUltimateCharge);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -2099,6 +2102,48 @@ export module SimpleSpellSystem {
     }
   }
 
+  export function schalaEmpoweredProtectDebuff() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const boostGroup = CreateGroup();
+    const debuffDuration = 10;
+    const debuffAOE = 1000;
+    const debuffSpellAmp = 0.05;
+
+    GroupClear(Globals.tmpUnitGroup);
+    GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), debuffAOE, null);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      if (
+        !IsUnitInGroup(unit, boostGroup)
+        && IsUnitType(unit, UNIT_TYPE_HERO) 
+        && UnitHelper.isUnitTargetableForPlayer(unit, player)
+      ) {
+        const targetPlayer = GetOwningPlayer(unit);
+        const targetPlayerId = GetPlayerId(targetPlayer);
+        const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+        if (ch) {
+          ch.removeSpellPower(debuffSpellAmp);
+          GroupAddUnit(boostGroup, unit);
+        }
+      }
+    });
+    GroupClear(Globals.tmpUnitGroup);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, debuffDuration, false, () => {
+      ForGroup(boostGroup, () => {
+        const unit = GetEnumUnit();
+        const targetPlayer = GetOwningPlayer(unit);
+        const targetPlayerId = GetPlayerId(targetPlayer);
+        const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+        if (ch) ch.addSpellPower(debuffSpellAmp);
+      });
+      DestroyGroup(boostGroup);
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
   export function SchalaTeleportation() {
     const spellId = GetSpellAbilityId();
     const schalaTpMoveDuration = 33;
@@ -2235,7 +2280,6 @@ export module SimpleSpellSystem {
         ++tick;
       }
     });
-
   }
 
   export function YamchaCombos() {
@@ -3064,10 +3108,11 @@ export module SimpleSpellSystem {
   
   export function doJacoShip() {
     const flySpeed = 40;
-    const macroCannonDmgMult = BASE_DMG.KAME_DPS * 5;
+    const macroCannonDmgMult = BASE_DMG.KAME_DPS * 10;
     const baseAOE = 400;
     const maxAOE = 600;
     const AOEperDistance = 50;
+    const dmgMultPerDistance = 0.75;
     const minExpandingDistance = 1000;
 
     const flyHeightTicks = 20;
@@ -3168,7 +3213,7 @@ export module SimpleSpellSystem {
         const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
         if (customHero) {
           const distanceTravelled = flyTicks * flySpeed;
-          const distanceDmgMult = Math.min(30, 1.0 + Math.max(0, (distanceTravelled - minExpandingDistance) / 1000));
+          const distanceDmgMult = dmgMultPerDistance * Math.min(30, 1.0 + Math.max(0, (distanceTravelled - minExpandingDistance) / 1000));
           const scaledAOE = Math.min(maxAOE, baseAOE + Math.max(0, (distanceTravelled - minExpandingDistance)/AOEperDistance));
 
           AOEDamage.genericDealAOEDamage(
@@ -4746,23 +4791,23 @@ export module SimpleSpellSystem {
         TimerManager.getInstance().recycle(timer);
         return;
       }
-      
-      const currentHp = GetUnitState(target, UNIT_STATE_LIFE);
-      if (currentHp > oldHp) {
-        oldHp = currentHp;
-      } else if (oldHp > currentHp + minHpDiff) {
-        const hpDiff = oldHp - currentHp;
-        const hpAbsorb = hpDiff * absorbRatio;
-        const casterHp = GetUnitState(caster, UNIT_STATE_LIFE);
-        if (casterHp > hpAbsorb + minHpDiff) {
-          SetUnitState(target, UNIT_STATE_LIFE, currentHp + hpAbsorb);
-          SetUnitState(caster, UNIT_STATE_LIFE, casterHp - hpAbsorb);
-          oldHp = currentHp + hpAbsorb;
-        }
-      }
 
       if (UnitHelper.isUnitDead(caster) || UnitHelper.isUnitDead(target)) {
         tick += maxTick;
+      } else {
+        const currentHp = GetUnitState(target, UNIT_STATE_LIFE);
+        if (currentHp > oldHp) {
+          oldHp = currentHp;
+        } else if (oldHp > currentHp + minHpDiff) {
+          const hpDiff = oldHp - currentHp;
+          const hpAbsorb = hpDiff * absorbRatio;
+          const casterHp = GetUnitState(caster, UNIT_STATE_LIFE);
+          if (casterHp > hpAbsorb + minHpDiff) {
+            SetUnitState(target, UNIT_STATE_LIFE, currentHp + hpAbsorb);
+            SetUnitState(caster, UNIT_STATE_LIFE, casterHp - hpAbsorb);
+            oldHp = currentHp + hpAbsorb;
+          }
+        }
       }
       ++tick;
     });
@@ -4895,6 +4940,79 @@ export module SimpleSpellSystem {
     } else {
       SetUnitAbilityLevel(caster, Id.demiurgeHellfireMantle, 1);
     }
+  }
+
+  export function doUltimateCharge() {
+    const spellId = GetSpellAbilityId();
+    const tickRate = 0.03;
+    const endTick = 2000;
+    const minHPTick = 7 * 33;
+    const mpPct = 0.03;
+    const hpPct = 0.01;
+
+    const caster = GetTriggerUnit();
+
+    let sfx1 = null;
+    let sfx2 = null;
+    let tick = 0;
+    const tpTimer = TimerManager.getInstance().get();
+    TimerStart(tpTimer, tickRate, true, () => {
+      if (tick > endTick || UnitHelper.isUnitDead(caster)) {
+        if (sfx1 != null) DestroyEffect(sfx1); 
+        if (sfx2 != null) DestroyEffect(sfx2);
+        TimerManager.getInstance().recycle(tpTimer);
+        return;
+      }
+
+      const maxMp = GetUnitState(caster, UNIT_STATE_MAX_MANA);
+      const currentMp = GetUnitState(caster, UNIT_STATE_MANA);
+      const agi = GetHeroAgi(caster, true);
+      const int = GetHeroInt(caster, true);
+      const mpRegen = (agi / Math.max(1, int)) * mpPct * maxMp * tickRate;
+      SetUnitState(caster, UNIT_STATE_MANA, Math.min(maxMp, currentMp + mpRegen));
+
+      if (tick % 33 == 0) {
+        let sfx = AddSpecialEffect(
+          "DustWave.mdl", 
+          GetUnitX(caster), GetUnitY(caster)
+        );
+        BlzSetSpecialEffectScale(sfx, 1.5);
+        DestroyEffect(sfx);
+        
+        sfx = AddSpecialEffect(
+          "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl", 
+          GetUnitX(caster), GetUnitY(caster)
+        );
+        BlzSetSpecialEffectScale(sfx, 0.5);
+        DestroyEffect(sfx);
+      }
+
+      if (tick > minHPTick) {
+        const maxHp = GetUnitState(caster, UNIT_STATE_MAX_LIFE);
+        const currentHp = GetUnitState(caster, UNIT_STATE_LIFE);
+        const str = GetHeroInt(caster, true);
+        const hpRegen = (agi / Math.max(1, str)) * hpPct * maxHp * tickRate;
+        SetUnitState(caster, UNIT_STATE_LIFE, Math.min(maxHp, currentHp + hpRegen));
+        if (sfx1 == null) {
+          sfx1 = AddSpecialEffectTarget(
+            "Abilities/Spells/Other/TalkToMe/TalkToMe.mdl",
+            caster, "overhead"
+          );
+        }
+        if (sfx2 == null) {
+          sfx2 = AddSpecialEffect(
+            "Abilities/Spells/NightElf/Tranquility/Tranquility.mdl", 
+            GetUnitX(caster), GetUnitY(caster)
+          );
+        }
+      }
+        
+      // hack to check channel
+      if (GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF) {
+        tick += endTick;
+      }
+      ++tick;
+    });
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {

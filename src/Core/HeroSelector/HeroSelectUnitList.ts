@@ -34,6 +34,18 @@ const vegetaData = {
     HeroSelectCategory.CARRY
   )
 }
+const vegetaMajinData = {
+  unitCode: Id.vegetaMajin,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.CARRY
+  )
+}
 const gohanData = {
   unitCode: Id.gohan,
   onlyRandom: false,
@@ -914,21 +926,21 @@ const demiurgeData = {
 export const HeroSelectUnitList = [
   gokuData,
   vegetaData,
+  vegetaMajinData,
   gohanData,
   gotenksData,
-  futureTrunksData,
   // 5,
+  futureTrunksData,
   piccoloData,
   bardockData,
   panData,
   videlData,
-  android17DbsData,
   // 10
+  android17DbsData,
   roshiData,
   krillinData,
   tienData,
   farmerData,
-  emptySpace,
   // yamchaRData,
 
   // ====

@@ -1032,6 +1032,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Demiurge.JALDABAOTH,
     ]],
     
+    [Id.vegetaMajin, [
+      AbilityNames.MajinVegeta.GALICK_GUN,
+      AbilityNames.MajinVegeta.GALAXY_BREAKER,
+      AbilityNames.MajinVegeta.BIG_BANG_ATTACK_2,
+      AbilityNames.MajinVegeta.FINAL_FLASH,
+      AbilityNames.MajinVegeta.GALAXY_DONUT,
+      AbilityNames.MajinVegeta.FINAL_EXPLOSION,
+    ]],
 
     // rusty
     [Id.rustTyranno, [

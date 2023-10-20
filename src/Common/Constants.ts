@@ -149,7 +149,7 @@ export module Constants {
   export const FOUNTAIN_REGEN_MULT = 1.25;
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
   export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
-  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1.5;
+  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 2.5;
   export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 1.25;
   export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 1.25;
 
@@ -240,6 +240,7 @@ export module DebuffAbilities {
   export const GALACTIC_DONUT = FourCC("A0U6");
   export const ROOT_WALUIGI_PIRANHA_PLANT = FourCC("A11V");
   export const ROOT_AINZ_HOLD_OF_RIBS = FourCC("A12O");
+  export const ROOT_GALAXY_DONUT = FourCC("A13T");
 
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
@@ -399,6 +400,7 @@ export module Id {
 
   export const useItem = FourCC("A0VF");
   export const heroSelectorUnit = FourCC("n001");
+  export const ultimateCharge = FourCC("A13U");
 
   export const summonShenron = FourCC("I01V");
 
@@ -1139,6 +1141,14 @@ export module Id {
   export const vegetaHakai = FourCC("A0GK");
   export const vegetaHakaiBarrage = FourCC("A0GL");
   export const vegetaFightingSpirit = FourCC("A0GM");
+
+  export const vegetaMajin = FourCC("H019");
+  export const vegetaMajinGalickGun = FourCC("A13N");
+  export const vegetaMajinGalaxyBreaker = FourCC("A13O");
+  export const vegetaMajinBigBangAttack2 = FourCC("A13P");
+  export const vegetaMajinFinalFlash = FourCC("A13Q");
+  export const vegetaMajinGalaxyDonut = FourCC("A13R");
+  export const vegetaMajinFinalExplosion = FourCC("A13S");
 
   export const videl = FourCC("H085");
   export const punch = FourCC("A073");

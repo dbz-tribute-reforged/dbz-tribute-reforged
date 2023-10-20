@@ -56,15 +56,15 @@ export module AbilitySfxHelper {
       BlzSetSpecialEffectScale(createdSfx, sfxData.scale);
     }
     const newYaw = yaw + sfxData.extraDirectionalYaw * CoordMath.degreesToRadians;
-    if (newYaw > 0) {
+    if (newYaw != 0) {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);
     }
 
-    if (sfxData.extraPitch > 0) {
+    if (sfxData.extraPitch != 0) {
       BlzSetSpecialEffectPitch(createdSfx, sfxData.extraPitch * CoordMath.degreesToRadians);
     }
 
-    if (sfxData.extraRoll > 0) {
+    if (sfxData.extraRoll != 0) {
       BlzSetSpecialEffectRoll(createdSfx, sfxData.extraRoll * CoordMath.degreesToRadians);
     }
 
