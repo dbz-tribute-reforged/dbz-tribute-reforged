@@ -74,6 +74,40 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Minato.HIRAISHIN_ZANZO,
+    currentCd: 0,
+    maxCd: 8,
+    costType: CostType.SP,
+    costAmount: 50,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.03,
+    canMultiCast: true,
+    waitsForNextClick: true,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNMinatoZanzo.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMinatoZanzo.blp",
+    },
+    tooltip: {
+      title: "(Z) or (Y) Zanzoken",
+      body: 
+        "Teleports to your next right click. " + 
+        "Can be used to cross cliffs. " + 
+        "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
+        "Drops a Kunai at the start of the ability.|n" + 
+        "Cost: 50 SP|n" + 
+        "CD: 8 (varies)",
+    },
+    components: [
+      { name: "sfx shunpo start" },
+      { name: "dash zanzoken" },
+      { name: "sfx shunpo end" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
     maxCd: 4,
@@ -315,6 +349,35 @@ export const AbilitiesList = [
       { name: "damage super dragon fist explosion" },
       { name: "knockback dfist" },
       { name: "sfx dragon fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.SOLAR_FLARE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff stun solar flare" },
+      { name: "debuff curse solar flare" },
+      { name: "sfx solar flare"}
     ],
   },
   // -------------------------------------------
@@ -737,6 +800,7 @@ export const AbilitiesList = [
       { name: "multi father-son kame" },
       { name: "multi father-son kame goku" },
       { name: "damage solar kame dps charging" },
+      { name: "debuff blind solar flare" },
       { name: "sfx solar kame caster" },
     ],
   },
@@ -4934,6 +4998,34 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff blind solar flare" },
+      { name: "sfx solar flare" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ichigo.GETSUGA_TENSHO,
     currentCd: 0,
     maxCd: 1,
@@ -6448,6 +6540,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "heal robo heal beam" },
+      { name: "debuff slow robo heal beam" },
       { name: "sfx robo heal beam"}
     ],
   },
@@ -10530,6 +10623,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage power level rising explosion" },
+      { name: "debuff slow broly power level rising" },
       { name: "knockback power level rising" },
       { name: "block broly" },
       { name: "sfx power level rising" },
@@ -10762,6 +10856,7 @@ export const AbilitiesList = [
       { name: "multi solar kame" },
       { name: "damage solar kame dps charging" },
       { name: "sfx solar kame caster" },
+      { name: "sfx solar flare" },
     ],
   },
   // -------------------------------------------

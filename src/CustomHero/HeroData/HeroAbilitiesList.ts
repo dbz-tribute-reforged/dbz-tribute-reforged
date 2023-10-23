@@ -6,19 +6,21 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // goku and xeno
     [Id.goku, [
       AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
-      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
     [FourCC("H08J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
-      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
@@ -580,6 +582,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Link.BOW_ARROW_ICE,
       AbilityNames.Link.BOW_ARROW_LIGHTNING,
       AbilityNames.Link.BOW_ARROW_BOMB,
+    ]],
+
+    [Id.minato, [
+      AbilityNames.Minato.KUNAI,
+      AbilityNames.Minato.FIRST_FLASH,
+      AbilityNames.Minato.SECOND_STEP,
+      AbilityNames.Minato.THIRD_STAGE,
+      AbilityNames.Minato.KURAMA_MODE,
     ]],
     
 

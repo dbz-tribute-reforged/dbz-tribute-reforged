@@ -144,7 +144,10 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
         }
 
-        if (ability.name == AbilityNames.BasicAbility.ZANZOKEN) {
+        if (
+          ability.name == AbilityNames.BasicAbility.ZANZOKEN
+          || ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO
+        ) {
           // repeatedly move the user towards the target until they run out of distance to move
           // then move the user
           if (ability.currentTick == 0) {

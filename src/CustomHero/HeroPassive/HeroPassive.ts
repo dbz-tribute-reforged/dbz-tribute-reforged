@@ -2629,7 +2629,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
     },
     { 
       id: Id.vegetaMajinFinalExplosion,
-      manaCost: 30
+      manaCost: 200
     },
   ];
 

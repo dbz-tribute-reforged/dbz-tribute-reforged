@@ -429,6 +429,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil0, OSKEY_Y, 0, true);
   addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
   addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
+  addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
 
   const abil1 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
@@ -539,7 +540,7 @@ export function CustomPlayerTest() {
           if (customHero) {
             currentSp = I2S(R2I(customHero.getCurrentSP()));
             maxSp = I2S(R2I(customHero.getMaxSP()));
-            percentSp = 100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP()));
+            percentSp = R2I(100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP())));
           }
         }
         const spText = currentSp + "/" + maxSp;

@@ -82,14 +82,18 @@ export class CustomHero {
     // then read some data and apply special abilities for
     // relevant heroes
     const playerId = GetPlayerId(GetOwningPlayer(unit));
-    if (
-      playerId >= 0 
-      && playerId < Constants.maxActivePlayers 
-      && Globals.customPlayers[playerId].useZanzoDash
-    ) {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    if (id == Id.minato) {
+      this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
     } else {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+      if (
+        playerId >= 0 
+        && playerId < Constants.maxActivePlayers 
+        && Globals.customPlayers[playerId].useZanzoDash
+      ) {
+        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+      } else {
+        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+      }
     }
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
 

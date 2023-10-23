@@ -54,7 +54,7 @@ export module TournamentData {
   export const kothStateArena: number = 2;
   export const kothStateArenaEnd: number = 3;
   export const kothStateFinished: number = 4;
-  export const kothLobbyWaitFirst: number = 30;
+  export const kothLobbyWaitFirst: number = 15;
   export const kothLobbyWait: number = 10;
   export const kothArenaTimeout: number = 240;
   export const kothArenaCamDelay1: number = 0.5;

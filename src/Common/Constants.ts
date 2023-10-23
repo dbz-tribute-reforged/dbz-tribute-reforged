@@ -9,7 +9,7 @@ export module Globals {
   export let isZanzoDash: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
-  export let showAbilityFloatingText: boolean = true;
+  export let showAbilityFloatingText: boolean = false;
   export let sagaSystemMode: number = 0;
   export let ddsTimeoutSeconds: number = 5;
   
@@ -196,6 +196,7 @@ export module DebuffAbilities {
   export const STUN_WALUIGI_BOMB = FourCC('A11W');
 
   // curse
+  export const CURSE_SOLAR_FLARE = FourCC("A045");
   export const DEMONS_MARK = FourCC("A0O7");
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
   export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
@@ -270,6 +271,7 @@ export module DebuffAbilities {
   // faerie fire
   export const DEMIURGE_HELLFIRE_1 = FourCC("A13K");
   export const DEMIURGE_HELLFIRE_2 = FourCC("A13L");
+  export const FAERIE_FIRE_MINATO_KUNAI = FourCC("A00C");
 }
 
 export module Buffs {
@@ -935,6 +937,14 @@ export module Id {
   export const lucarioGigantomax = FourCC("A0Y1");
   export const gigaSphere = FourCC("A0Y2");
 
+  export const minato = FourCC("H001");
+  export const minatoKunai = FourCC("A000");
+  export const minatoFirstFlash = FourCC("A001");
+  export const minatoSecondStep = FourCC("A002");
+  export const minatoThirdStage = FourCC("A003");
+  export const minatoHiraishin = FourCC("A004");
+  export const minatoKuramaMode = FourCC("A009");
+  export const minatoKuramaModeFlag = FourCC("A00A");
 
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");

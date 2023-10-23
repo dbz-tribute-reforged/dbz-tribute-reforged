@@ -276,7 +276,13 @@ export class KOTHGame {
 
     this.gameState = TournamentData.kothStateLobby;
     this.setupLobbyNeutrals();
-    this.giveBodyArmorToPlayers(Constants.activePlayers);
+    this.giveBasicItemsToPlayers(Constants.activePlayers);
+
+    this.removeArenaCreeps(this.namekStage);
+    const removeTimer = TimerManager.getInstance().get();
+    TimerStart(removeTimer, 5.0, false, () => {
+      this.removeArenaCreeps(this.futureStage);
+    });
   }
 
   setupLobbyNeutrals() {
@@ -298,27 +304,6 @@ export class KOTHGame {
     );
     SetUnitMoveSpeed(x, 0);
 
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorKorin,
-      TournamentData.tournamentWaitRoom1.x + 512,
-      TournamentData.tournamentWaitRoom1.y - 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorElHermano,
-      TournamentData.tournamentWaitRoom1.x + 256,
-      TournamentData.tournamentWaitRoom1.y - 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
-
-
-
-
-
 
 
     x = CreateUnit(
@@ -337,26 +322,9 @@ export class KOTHGame {
       0
     );
     SetUnitMoveSpeed(x, 0);
-
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorKorin,
-      TournamentData.tournamentWaitRoom2.x + 512,
-      TournamentData.tournamentWaitRoom2.y + 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorElHermano,
-      TournamentData.tournamentWaitRoom2.x + 256,
-      TournamentData.tournamentWaitRoom2.y + 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
   }
 
-  giveBodyArmorToPlayers(players: player[]) {
+  giveBasicItemsToPlayers(players: player[]) {
     for (const player of players) {
       const playerId = GetPlayerId(player);
       ForGroup(udg_StatMultPlayerUnits[playerId], () => {
@@ -366,14 +334,46 @@ export class KOTHGame {
           && UnitHelper.isUnitAlive(unit)
           && !UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.BATTLE_ARMOR_5)
         ) {
-          const it = CreateItem(
+          let it = CreateItem(
             ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+            GetUnitX(unit), GetUnitY(unit),
+          );
+          UnitAddItem(unit, it);
+          it = CreateItem(
+            ItemConstants.KOTH.senzuGenerator,
+            GetUnitX(unit), GetUnitY(unit),
+          );
+          UnitAddItem(unit, it);
+          it = CreateItem(
+            ItemConstants.KOTH.hamGenerator,
+            GetUnitX(unit), GetUnitY(unit),
+          );
+          UnitAddItem(unit, it);
+          it = CreateItem(
+            ItemConstants.KOTH.bananaGenerator,
             GetUnitX(unit), GetUnitY(unit),
           );
           UnitAddItem(unit, it);
         }
       });
     }
+  }
+  
+  removeArenaCreeps(stage: KOTHStage) {
+    GroupEnumUnitsInRect(Globals.tmpUnitGroup, stage.arenaRect, null);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      const player = GetOwningPlayer(unit);
+      const playerId = GetPlayerId(player);
+      if (
+        !IsUnitType(unit, UNIT_TYPE_HERO) 
+        && playerId >= Constants.maxActivePlayers
+        && playerId != PLAYER_NEUTRAL_PASSIVE
+      ) {
+        RemoveUnit(unit);
+      }
+    });
+    GroupClear(Globals.tmpUnitGroup);
   }
 
   resetRoundStats() {
@@ -691,16 +691,21 @@ export class KOTHGame {
         }
         
         // mark items to not drop on death
-        if (this.protectItems) {
-          for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
-            const it = UnitItemInSlot(unit, i);
-            if (it != null && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)) {
-              BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
-            }
-          }
-        }
       });
       PanCameraToTimedForPlayer(player, pos.x, pos.y, 0);
+    }
+  }
+
+  protectUnitItems(unit: unit) {
+    if (!this.protectItems) return;
+    for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+      const it = UnitItemInSlot(unit, i);
+      if (
+        it != null 
+        && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
+      ) {
+        BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
+      }
     }
   }
 

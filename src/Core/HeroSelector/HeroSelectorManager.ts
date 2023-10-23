@@ -430,7 +430,7 @@ export class HeroSelectorManager {
       if (player != Globals.hostPlayer) return false;
 
       
-      const str = GetEventPlayerChatString();
+      const str = GetEventPlayerChatString().toLowerCase();
       if (str == "rush" || str == "rrr") {
         this.time = 1;
         return;

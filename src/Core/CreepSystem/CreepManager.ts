@@ -292,7 +292,7 @@ export class CreepManager {
           }
           if (customCreep.isUpgrading) {
             customCreep.isUpgrading = false;
-            wait = Math.random() + 0.1;
+            wait = 1.5;
           }
           const timer = TimerManager.getInstance().get();
           TimerStart(timer, wait, false, () => {
@@ -315,6 +315,7 @@ export class CreepManager {
     const config = this.creepUpgradeConfigs.upgradeGroups[configName];
     if (config) {
       // Logger.LogDebug("Performing upgrade: " + configName);
+      let delay = 0;
       for (const [unit, customCreep] of this.customCreeps) {
         const newType = config.map.get(customCreep.unitTypeId);
         if (newType) {
@@ -334,8 +335,9 @@ export class CreepManager {
             UnitApplyTimedLife(
               unit, 
               Constants.creepUpgradeBuff, 
-              1 + Math.random() * Constants.creepUpgradeDeathDelay,
-            )
+              1 + (delay + 1) % Constants.creepUpgradeDeathDelay,
+            );
+            delay++;
           }
         }
       }

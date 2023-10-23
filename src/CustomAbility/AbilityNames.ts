@@ -13,6 +13,7 @@ export module AbilityNames {
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
     export const SUPER_DRAGON_FIST: string = "Super Dragon Fist";
+    export const SOLAR_FLARE: string = "Goku Solar Flare";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
     export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
   }
@@ -524,6 +525,15 @@ export module AbilityNames {
     export const BOW_ARROW_ICE: string = "Link Bow Arrow Ice";
     export const BOW_ARROW_LIGHTNING: string = "Link Bow Arrow Lightning";
     export const BOW_ARROW_BOMB: string = "Link Bow Arrow Bomb";
+  }
+
+  export module Minato {
+    export const HIRAISHIN_ZANZO: string = "Hiraishin no Jutsu";
+    export const KUNAI: string = "Minato Kunai";
+    export const FIRST_FLASH: string = "Minato First Flash";
+    export const SECOND_STEP: string = "Minato Second Step";
+    export const THIRD_STAGE: string = "Minato Third Stage";
+    export const KURAMA_MODE: string = "Minato Kurama Mode";
   }
 
 

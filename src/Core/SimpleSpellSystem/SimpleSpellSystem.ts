@@ -36,7 +36,7 @@ export module SimpleSpellSystem {
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
 
-    setupSpellStartEndCastTrigger();
+    setupSpellFinishCastTrigger();
 
 
     TriggerRegisterAnyUnitEventBJ(Globals.genericUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH);
@@ -4768,6 +4768,7 @@ export module SimpleSpellSystem {
     const target = GetSpellTargetUnit();
     const maxTick = 1000;
     const absorbRatio = 0.5;
+    const absorbReductionRatio = 0.8;
     const minHpDiff = 3;
 
     const sfx1 = AddSpecialEffectTarget(
@@ -4804,7 +4805,7 @@ export module SimpleSpellSystem {
           const casterHp = GetUnitState(caster, UNIT_STATE_LIFE);
           if (casterHp > hpAbsorb + minHpDiff) {
             SetUnitState(target, UNIT_STATE_LIFE, currentHp + hpAbsorb);
-            SetUnitState(caster, UNIT_STATE_LIFE, casterHp - hpAbsorb);
+            SetUnitState(caster, UNIT_STATE_LIFE, casterHp - hpAbsorb * absorbReductionRatio);
             oldHp = currentHp + hpAbsorb;
           }
         }
@@ -4872,6 +4873,7 @@ export module SimpleSpellSystem {
     const caster = GetTriggerUnit();
     const valhallaAOE = 1800;
     const valhallaHeal = 0.25;
+    const valhallaHealMin = 0.1;
 
     let healMult = 0;
     
@@ -4888,9 +4890,12 @@ export module SimpleSpellSystem {
         && GetUnitTypeId(unit) == GetUnitTypeId(caster)
         && IsUnitIllusion(unit)
       ) {
-        healMult = Math.max(
-          healMult,
-          valhallaHeal * GetUnitLifePercent(unit) * 0.01
+        healMult += (
+          valhallaHealMin 
+          + (
+            (valhallaHeal - valhallaHealMin) 
+            * GetUnitLifePercent(unit) * 0.01
+          )
         );
 
         DestroyEffect(
@@ -4947,7 +4952,7 @@ export module SimpleSpellSystem {
     const tickRate = 0.03;
     const endTick = 2000;
     const minHPTick = 7 * 33;
-    const mpPct = 0.03;
+    const mpPct = 0.04;
     const hpPct = 0.01;
 
     const caster = GetTriggerUnit();
@@ -5024,7 +5029,7 @@ export module SimpleSpellSystem {
     BlzStartUnitAbilityCooldown(unit, Id.leonHeavyGrenade, cd);
   }
 
-  export function setupSpellStartEndCastTrigger() {
+  export function setupSpellFinishCastTrigger() {
     // Globals.linkedSpellsMap.set(Id.leonShotgun, SimpleSpellSystem.linkLeonSpellbook);
     // Globals.linkedSpellsMap.set(Id.leonAssaultRifle, SimpleSpellSystem.linkLeonSpellbook);
     // Globals.linkedSpellsMap.set(Id.leonSniperRifle, SimpleSpellSystem.linkLeonSpellbook);
@@ -5034,7 +5039,7 @@ export module SimpleSpellSystem {
     Globals.linkedSpellsMap.set(Id.fleshAttack, SimpleSpellSystem.linkBuuFleshCD);
     Globals.linkedSpellsMap.set(Id.fleshAttackAbsorbTarget, SimpleSpellSystem.linkBuuFleshCD);
 
-    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST);
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
     TriggerAddAction(Globals.simpleSpellCDTrigger, () => {
       // get custom hero casting it
       const unit = GetTriggerUnit();
@@ -5064,6 +5069,10 @@ export module SimpleSpellSystem {
         const getiCDR = GetPlayerTechCountSimple(Id.getiStarUpgradeCDR, player);
         if (getiCDR > 0) {
           newCd = newCd * (100 - getiCDR) * 0.01;
+        }
+
+        if (GetUnitAbilityLevel(unit, Id.minatoKuramaModeFlag) > 0) {
+          newCd *= 0.5;
         }
 
         if (newCd != baseCd) {

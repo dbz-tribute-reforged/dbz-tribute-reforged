@@ -128,6 +128,12 @@ export module ItemConstants {
     export const RICE_SNOW = FourCC("I053");
   }
 
+  export module KOTH {
+    export const hamGenerator = FourCC("I007");
+    export const bananaGenerator = FourCC("I00A");
+    export const senzuGenerator = FourCC("I00V");
+  }
+
   export module SagaDrops {
     export const BATTLE_ARMOR_1 = battleArmor[0];
     export const BATTLE_ARMOR_2 = battleArmor[1];

@@ -9,6 +9,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.spiritBomb, AbilityNames.Goku.SPIRIT_BOMB],
     [Id.dragonFist, AbilityNames.Goku.DRAGON_FIST],
     [Id.superDragonFist, AbilityNames.Goku.SUPER_DRAGON_FIST],
+    [Id.solarFlare, AbilityNames.Goku.SOLAR_FLARE],
     [Id.ultraInstinct, AbilityNames.Goku.ULTRA_INSTINCT],
     [Id.masteredUltraInstinct, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
 
@@ -455,6 +456,13 @@ export const abilityCodesToNames = new Map<number, string>(
     // link twilight
     [Id.linkSideSlash, AbilityNames.Link.SIDE_SLASH],
     [Id.linkBoomerang, AbilityNames.Link.BOOMERANG],
+
+    // minato
+    [Id.minatoKunai, AbilityNames.Minato.KUNAI],
+    [Id.minatoFirstFlash, AbilityNames.Minato.FIRST_FLASH],
+    [Id.minatoSecondStep, AbilityNames.Minato.SECOND_STEP],
+    [Id.minatoThirdStage, AbilityNames.Minato.THIRD_STAGE],
+    [Id.minatoKuramaMode, AbilityNames.Minato.KURAMA_MODE],
 
 
 

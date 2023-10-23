@@ -48,6 +48,8 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     EnableTrigger(gg_trg_Teleport_Future_Trunks_2);
     EnableTrigger(gg_trg_Teleport_Future_Cell);
     EnableTrigger(gg_trg_Teleport_Future_Cell_2);
+
+    EnableTrigger(gg_trg_Auto_Transform);
     
 
     Globals.tmpVector.setPos(0, 0);
@@ -78,6 +80,8 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     DisableTrigger(gg_trg_Teleport_Future_Trunks_2);
     DisableTrigger(gg_trg_Teleport_Future_Cell);
     DisableTrigger(gg_trg_Teleport_Future_Cell_2);
+    DisableTrigger(gg_trg_Auto_Transform);
+    DisableTrigger(gg_trg_Auto_Transform_Turn_On);
 
     VisionHelper.showFbArenaVision();
     
