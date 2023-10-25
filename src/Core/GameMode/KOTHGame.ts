@@ -1,4 +1,4 @@
-import { Constants, Globals, Id, OrderIds } from "Common/Constants";
+import { Capsules, Constants, Globals, Id, OrderIds } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
@@ -25,6 +25,7 @@ export class KOTHGame {
   protected baseStatsPerRound: number;
 
   protected protectItems: boolean;
+  protected captureXp: number
 
   protected captureTeam: number;
   protected captureCount: number;
@@ -59,6 +60,7 @@ export class KOTHGame {
     this.baseStatsPerRound = TournamentData.kothStatsPerRound;
 
     this.protectItems = true;
+    this.captureXp = TournamentData.kothCaptureXp;
     
     this.captureTeam = Constants.invalidTeamValue;
     this.captureCount = 0;
@@ -276,7 +278,7 @@ export class KOTHGame {
 
     this.gameState = TournamentData.kothStateLobby;
     this.setupLobbyNeutrals();
-    this.giveBasicItemsToPlayers(Constants.activePlayers);
+    this.preparePlayerHeroes(Constants.activePlayers);
 
     this.removeArenaCreeps(this.namekStage);
     const removeTimer = TimerManager.getInstance().get();
@@ -324,9 +326,24 @@ export class KOTHGame {
     SetUnitMoveSpeed(x, 0);
   }
 
-  giveBasicItemsToPlayers(players: player[]) {
+  unlockWishAbilities(player: player) {
+    SetPlayerAbilityAvailable(player, Capsules.saibamenSeeds, true);
+    SetPlayerAbilityAvailable(player, Capsules.wheeloResearch, true);
+    SetPlayerAbilityAvailable(player, Capsules.deadZone, true);
+    SetPlayerAbilityAvailable(player, Capsules.scouter2, true);
+    SetPlayerAbilityAvailable(player, Capsules.getiStarFragment, true);
+    SetPlayerAbilityAvailable(player, Capsules.dimensionSword, true);
+    SetPlayerAbilityAvailable(player, Capsules.braveSword, true);
+    SetPlayerAbilityAvailable(player, Capsules.timeRing, true);
+    SetPlayerAbilityAvailable(player, Capsules.battleArmor5, true);
+    SetPlayerAbilityAvailable(player, Capsules.treeOfMightSapling, true);
+    // SetPlayerAbilityAvailable(player, Capsules.potaraEarring, true);
+  }
+
+  preparePlayerHeroes(players: player[]) {
     for (const player of players) {
       const playerId = GetPlayerId(player);
+      this.unlockWishAbilities(player);
       ForGroup(udg_StatMultPlayerUnits[playerId], () => {
         const unit = GetEnumUnit();
         if (
@@ -339,21 +356,37 @@ export class KOTHGame {
             GetUnitX(unit), GetUnitY(unit),
           );
           UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.senzuGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.hamGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.bananaGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
           it = CreateItem(
-            ItemConstants.KOTH.senzuGenerator,
+            ItemConstants.KOTH.miniSenzuGenerator,
             GetUnitX(unit), GetUnitY(unit),
           );
           UnitAddItem(unit, it);
-          it = CreateItem(
-            ItemConstants.KOTH.hamGenerator,
-            GetUnitX(unit), GetUnitY(unit),
-          );
-          UnitAddItem(unit, it);
-          it = CreateItem(
-            ItemConstants.KOTH.bananaGenerator,
-            GetUnitX(unit), GetUnitY(unit),
-          );
-          UnitAddItem(unit, it);
+
+          if (GetUnitTypeId(unit) == Id.sonic) {
+            UnitAddAbility(unit, Id.sonicSuper);
+          }
+          if (GetUnitTypeId(unit) == Id.skurvy) {
+            it = CreateItem(
+              ItemConstants.crystalCoconut,
+              GetUnitX(unit), GetUnitY(unit),
+            );
+            UnitAddItem(unit, it);
+          }
         }
       });
     }
@@ -549,10 +582,13 @@ export class KOTHGame {
       ) {
         // is unit in team 1
         // is unit in team 2
-        const lvl = GetHeroLevel(unit);
-        const reqXp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(lvl, lvl+1);
-        const giveXp = R2I(reqXp * TournamentData.kothCaptureExpBonusRatio);
-        AddHeroXP(unit, giveXp, true);
+
+        if (this.captureXp > 0) {
+          const lvl = GetHeroLevel(unit);
+          const reqXp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(lvl, lvl+1);
+          const giveXp = R2I(reqXp * TournamentData.kothCaptureExpBonusRatio);
+          AddHeroXP(unit, giveXp, true);
+        }
 
         const player = GetOwningPlayer(unit);
         if (!isCenter1) {

@@ -119,6 +119,9 @@ export class HeroPassiveManager {
       case Id.vegetaMajin:
         vegetaMajinPassive(customHero);
         break;
+      case Id.minato:
+        minatoPassive(customHero);
+        break;
       default:
         break;
     }
@@ -2651,7 +2654,86 @@ export function vegetaMajinPassive(customHero: CustomHero) {
       }
     }
   });
+}
 
+export function minatoPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const onHitAbility = customHero.getAbility(AbilityNames.Minato.RASENGAN_ON_HIT);
+  
+  const rasenganReadyKey = StringHash("rasengan_ready");
+  const rasenganSfxKey = StringHash("rasengan_sfx");
+  SaveBoolean(Globals.genericSpellHashtable, heroId, rasenganReadyKey, false);
+
+  TimerStart(timer, 0.25, true, () => {
+    const isReady = LoadBoolean(Globals.genericSpellHashtable, heroId, rasenganReadyKey);
+    if (
+      !isReady
+      && onHitAbility.currentCd == 0
+      && onHitAbility.currentTick == 0
+      && GetUnitState(customHero.unit, UNIT_STATE_MANA) > onHitAbility.costAmount
+    ) {
+      const sfx = AddSpecialEffectTarget(
+        "Rasengan4.mdl", customHero.unit, "right hand"
+      );
+      SaveBoolean(Globals.genericSpellHashtable, heroId, rasenganReadyKey, true);
+      SaveEffectHandle(Globals.genericSpellHashtable, heroId, rasenganSfxKey, sfx);
+    }
+  });
+
+  
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  const targetPos = new Vector2D();
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      const isReady = LoadBoolean(Globals.genericSpellHashtable, heroId, rasenganReadyKey);
+      if (!isReady) return false;
+
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, heroId, rasenganSfxKey);
+      if (sfx) DestroyEffect(sfx);
+      SaveBoolean(Globals.genericSpellHashtable, heroId, rasenganReadyKey, false);
+      SaveEffectHandle(Globals.genericSpellHashtable, heroId, rasenganSfxKey, null);
+      
+      const target = GetTriggerUnit();
+      targetPos.setUnit(target);
+
+      const input = new CustomAbilityInput(
+        Id.minatoKunai,
+        customHero, 
+        GetOwningPlayer(customHero.unit),
+        Math.min(10, Math.max(1, GetHeroLevel(customHero.unit) * 0.03)),
+        targetPos,
+        targetPos,
+        targetPos,
+        target,
+        target,
+      );
+
+      if (customHero.canCastAbility(onHitAbility.name, input)) {
+        // if (Globals.showAbilityFloatingText) {
+        //   TextTagHelper.showPlayerColorTextOnUnit(
+        //     onHitAbility.name, 
+        //     GetPlayerId(GetOwningPlayer(customHero.unit)), 
+        //     customHero.unit
+        //   );
+        // }
+        customHero.useAbility(onHitAbility.name, input);
+      }
+      
+      return false;
+    })
+  );
 }
 
 export function setupRegenTimer(customHero: CustomHero) {
@@ -2663,11 +2745,12 @@ export function setupRegenTimer(customHero: CustomHero) {
     const heroStr = GetHeroStr(customHero.unit, true);
     const heroAgi = GetHeroAgi(customHero.unit, true);
     const heroInt = GetHeroInt(customHero.unit, true);
-    const sumStats = 0.33 *(heroStr + heroAgi + heroInt);
+    const sumStats = 0.33 * (heroStr + heroAgi + heroInt);
 
+    const unitId = GetUnitTypeId(customHero.unit);
 
     // sp
-    let incSp = 0.03 * Constants.BASE_SP_REGEN * Math.max(
+    let spMult = Math.max(
       Constants.STAMINA_REGEN_MULT_MIN_BONUS,
       Math.min(
         Constants.STAMINA_REGEN_MULT_MAX_BONUS,
@@ -2675,37 +2758,39 @@ export function setupRegenTimer(customHero: CustomHero) {
       )
     );
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
-      incSp *= 2;
+      spMult *= 2;
     }
-    const id = GetUnitTypeId(customHero.unit);
-    if (id == Id.saitama) {
-      incSp *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
+    if (unitId == Id.saitama) {
+      spMult *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     } 
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
-      incSp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+      spMult *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
+    const incSp = 0.03 * Constants.BASE_SP_REGEN * spMult * spMult;
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
     
 
 
 
-    // hp
-    let incHp = (
-      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
-      * Constants.BASE_HP_REGEN * heroAgi / heroStr
-    );
+    // hp, 1 agi gives 0.05 hp regen
+    let hpMult = heroAgi / heroStr;
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
-      incHp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+      hpMult *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Id.zamasuImmortality) > 0) {
-      incHp *= Constants.ZAMASU_PASSIVE_HP_REGEN_MULT;
+      hpMult *= Constants.ZAMASU_PASSIVE_HP_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.ALBEDO_GUARDIAN_AURA) > 0) {
-      incHp *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
+      hpMult *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
-      incHp *= Constants.FOUNTAIN_REGEN_MULT;
+      hpMult *= Constants.FOUNTAIN_REGEN_MULT;
     }
+    const incHp = (
+      0.03 
+      * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) * Constants.BASE_HP_REGEN_PCT
+      * hpMult * hpMult
+    );
     SetUnitState(
       customHero.unit, UNIT_STATE_LIFE, 
       Math.max(1, GetUnitState(customHero.unit, UNIT_STATE_LIFE) + incHp)
@@ -2713,26 +2798,26 @@ export function setupRegenTimer(customHero: CustomHero) {
 
 
 
-
-
-
+    // 1 agi gives 0.1 mp regen
     // mp
-    let incMp = (
-      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
-      * Constants.BASE_MP_REGEN * heroAgi / heroInt
-    );
+    let mpMult = heroAgi / heroInt;
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
-      incMp *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
+      mpMult *= Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.INNER_FIRE_AINZ_MAGIC_BOOST) > 0) {
-      incMp *= Constants.AINZ_MAGIC_BOOST_MP_REGEN_MULT;
+      mpMult *= Constants.AINZ_MAGIC_BOOST_MP_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.ALBEDO_GUARDIAN_AURA) > 0) {
-      incMp *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
+      mpMult *= Constants.ALBEDO_GUARDIAN_AURA_REGEN_MULT;
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
-      incMp *= Constants.FOUNTAIN_REGEN_MULT;
+      mpMult *= Constants.FOUNTAIN_REGEN_MULT;
     }
+    let incMp = (
+      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
+      * Constants.BASE_MP_REGEN_PCT
+      * mpMult * mpMult
+    );
     SetUnitState(
       customHero.unit, UNIT_STATE_MANA, 
       GetUnitState(customHero.unit, UNIT_STATE_MANA) + incMp

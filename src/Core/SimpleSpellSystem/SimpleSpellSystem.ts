@@ -18,6 +18,7 @@ import { TimerManager } from "Core/Utility/TimerManager";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { AOEHeal } from "CustomAbility/AbilityComponent/AOEHeal";
+import { BeamComponent } from "CustomAbility/AbilityComponent/BeamComponent";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
@@ -201,6 +202,14 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.demiurgeHellfireMantle, SimpleSpellSystem.doDemiurgeHellfireMantle);
 
     Globals.genericSpellMap.set(Id.ultimateCharge, SimpleSpellSystem.doUltimateCharge);
+
+    Globals.genericSpellMap.set(Id.minatoHiraishin, SimpleSpellSystem.doMinatoHiraishinNoJutsu);
+    Globals.genericSpellMap.set(Id.minatoKunai, SimpleSpellSystem.doMinatoKunaiThrow);
+    Globals.genericSpellMap.set(Id.minatoFirstFlash, SimpleSpellSystem.doMinatoFirstFlash);
+    Globals.genericSpellMap.set(Id.minatoSecondStep, SimpleSpellSystem.InitJirenGlare);
+    Globals.genericSpellMap.set(Id.minatoThirdStage, SimpleSpellSystem.doMinatoThirdStage);
+    Globals.genericSpellMap.set(Id.minatoSpiralFlash, SimpleSpellSystem.doMinatoSpiralFlash);
+
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -1086,6 +1095,7 @@ export module SimpleSpellSystem {
     const glareDuration = 2.5;
     const darkEyesDuration = 4.0;
     const negativeImpactShieldDuration = 3.0;
+    const minatoSecondStepDuration = 1.5;
 
     const spellId = GetSpellAbilityId();
     const unit = GetTriggerUnit();
@@ -1101,6 +1111,8 @@ export module SimpleSpellSystem {
       // BlzSetSpecialEffectScale(effect, 2.0);
     } else if (spellId == Id.shalltearNegativeImpactShield) {
       effect = AddSpecialEffectTarget("AuraKaox10.mdl", unit, "origin");
+    } else if (spellId == Id.minatoSecondStep) {
+      effect = AddSpecialEffectTarget("Rasengan4.mdl", unit, "right hand");
     }
     SaveEffectHandle(Globals.genericSpellHashtable, unitId, 1, effect);
     SaveInteger(Globals.genericSpellHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
@@ -1115,13 +1127,17 @@ export module SimpleSpellSystem {
       timerDuration = darkEyesDuration;
     } else if (spellId == Id.shalltearNegativeImpactShield) {
       timerDuration = negativeImpactShieldDuration;
+    } else if (spellId == Id.minatoSecondStep) {
+      timerDuration = minatoSecondStepDuration;
     }
 
-    TimerStart(CreateTimer(), timerDuration, false, () => {
-      DestroyTimer(GetExpiredTimer());
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, timerDuration, false, () => {
       SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
       SaveInteger(Globals.genericSpellHashtable, unitId, 2, 0);
-      DestroyEffect(LoadEffectHandle(Globals.genericSpellHashtable, unitId, 1));
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, unitId, 1);
+      if (sfx) DestroyEffect(sfx);
+      TimerManager.getInstance().recycle(timer);
     });
   }
 
@@ -1145,18 +1161,22 @@ export module SimpleSpellSystem {
         && spellId != Id.glare2
         && spellId != Id.hirudegarnDarkEyes
         && spellId != Id.shalltearNegativeImpactShield
+        && spellId != Id.minatoSecondStep
       )
     ) return;
 
     const maxGlareDistance = 2500;
     const maxNegativeImpactShieldDistance = 600;
+    const maxMinatoSecondStepDistance = 1500;
     const glareDamageMult = BASE_DMG.KAME_DPS * 5;
     const glare2DamageMult = BASE_DMG.KAME_DPS * 7.5;
     const negativeImpactShieldDamageMult = BASE_DMG.KAME_DPS * 10;
+    const minatoSecondStepDamageMult = BASE_DMG.KAME_DPS * 10;
     const glare2StrDiffJirenBonus = 1.05;
     const glare2StrDiffMult = 1.1;
     const glarePunishDamageMult = 0.15;
     const darkEyesPunishDamageMult = 0.25;
+    const minatoPunishDamageMult = 0.1;
 
     SaveInteger(Globals.genericSpellHashtable, targetId, 0, 0);
 
@@ -1165,13 +1185,11 @@ export module SimpleSpellSystem {
     Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
 
     if (spellId == Id.shalltearNegativeImpactShield) {
-      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxNegativeImpactShieldDistance) {
-        return;
-      }
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxNegativeImpactShieldDistance) return;
+    } else if (spellId == Id.minatoSecondStep) {
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxMinatoSecondStepDistance) return;
     } else {
-      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxGlareDistance) {
-        return;
-      }
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxGlareDistance) return;
     }
 
     SetUnitX(target, Globals.tmpVector2.x);
@@ -1194,6 +1212,8 @@ export module SimpleSpellSystem {
     let punishMult = glarePunishDamageMult;
     if (spellId == Id.hirudegarnDarkEyes || spellId == Id.shalltearNegativeImpactShield) {
       punishMult = darkEyesPunishDamageMult;
+    } else if (spellId == Id.minatoSecondStep) {
+      punishMult = minatoPunishDamageMult;
     }
 
     let damageMult = glareDamageMult;
@@ -1201,6 +1221,8 @@ export module SimpleSpellSystem {
       damageMult = glare2DamageMult;
     } else if (spellId == Id.shalltearNegativeImpactShield) {
       damageMult = negativeImpactShieldDamageMult;
+    } else if (spellId == Id.minatoSecondStep) {
+      damageMult = minatoSecondStepDamageMult;
     }
 
     let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(target, true);
@@ -1213,18 +1235,70 @@ export module SimpleSpellSystem {
       (AOEDamage.getIntDamageMult(target) * abilityLevel * spellPower * damageMult * damageBase) +
       GetEventDamage() * punishMult
     );
+    
+    if (spellId == Id.minatoSecondStep) {
+      const animDelay = 0.9;
+      const dmgDelay = 0.43 / animDelay;
+      const animResetDelay = 0.66 - dmgDelay;
 
-    UnitDamageTarget(
-      target,
-      source,
-      damage,
-      true,
-      false,
-      ATTACK_TYPE_HERO, 
-      DAMAGE_TYPE_NORMAL, 
-      WEAPON_TYPE_WHOKNOWS
-    );
+      minatoKunaiCreateVec(target, Globals.tmpVector2);
+      
+      SetUnitInvulnerable(target, true);
+      PauseUnit(target, true);
+      SetUnitTimeScalePercent(target, animDelay * 100);
+      SetUnitAnimation(target, "spell slam");
+      // UnitHelper.giveUnitFlying(target);
+      // SetUnitFlyHeight(target, 250, 250);
 
+      const dmgTimer = TimerManager.getInstance().get();
+      TimerStart(dmgTimer, dmgDelay, false, () => {
+
+        Globals.tmpVector2.setUnit(target);
+        AOEDamage.genericDealAOEDamage(
+          Globals.tmpUnitGroup, 
+          target,
+          Globals.tmpVector2.x, Globals.tmpVector2.y,
+          300,
+          abilityLevel,
+          spellPower,
+          damageMult,
+          1.0,
+          bj_HEROSTAT_INT
+        );
+        const sfx1 = AddSpecialEffect("RasenganBomb2.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
+        const sfx2 = AddSpecialEffect("RasenganEffect4.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
+        const sfx3 = AddSpecialEffect("RasenganBlast.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
+        
+        const animResetTimer = TimerManager.getInstance().get();
+        TimerStart(animResetTimer, animResetDelay, false, () => {
+          const sfx = LoadEffectHandle(Globals.genericSpellHashtable, targetId, 1);
+          if (sfx) DestroyEffect(sfx);
+          DestroyEffect(sfx1);
+          DestroyEffect(sfx2);
+          DestroyEffect(sfx3);
+          SetUnitInvulnerable(target, false);
+          PauseUnit(target, false);
+          SetUnitTimeScalePercent(target, 100);
+          ResetUnitAnimation(target);
+          // SetUnitFlyHeight(target, GetUnitDefaultFlyHeight(target), 0);
+          SelectUnitForPlayerSingle(target, player);
+          TimerManager.getInstance().recycle(animResetTimer);
+        });
+
+        TimerManager.getInstance().recycle(dmgTimer);
+      });
+    } else {
+      UnitDamageTarget(
+        target,
+        source,
+        damage,
+        true,
+        false,
+        ATTACK_TYPE_HERO, 
+        DAMAGE_TYPE_NORMAL, 
+        WEAPON_TYPE_WHOKNOWS
+      );
+    }
     IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
     RemoveUnit(castDummy);
     
@@ -1235,12 +1309,11 @@ export module SimpleSpellSystem {
           Globals.tmpVector2.x, Globals.tmpVector2.y
         )
       );
+    } else if (spellId == Id.minatoSecondStep) {
+      DestroyEffect(AddSpecialEffect("RasenganWhiteShockwave.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y));
     } else {
       DestroyEffect(
-        AddSpecialEffect(
-          "Slam.mdl",
-          Globals.tmpVector2.x, Globals.tmpVector2.y
-        )
+        AddSpecialEffect("Slam.mdl", Globals.tmpVector2.x, Globals.tmpVector2.y)
       );
     }
     
@@ -1252,6 +1325,11 @@ export module SimpleSpellSystem {
       }
     }
     SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
+
+    if (spellId != Id.minatoSecondStep) {
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, targetId, 1);
+      if (sfx) DestroyEffect(sfx);
+    }
   }
   
   export function DDSRunDPSCheck(
@@ -2603,11 +2681,11 @@ export module SimpleSpellSystem {
                 && itemId != DragonBallsConstants.dragonBallItem
               ) {
                 AOEDamage.dealDamageRaw(
+                  caster,
                   GetUnitAbilityLevel(caster, spellId),
                   customHero.spellPower,
                   plunderDamageMult,
                   1.0 + plunderDamageMultPerItem * UnitHelper.countInventory(targetUnit),
-                  caster,
                   bj_HEROSTAT_AGI,
                   targetUnit
                 );
@@ -2987,13 +3065,9 @@ export module SimpleSpellSystem {
     const playerId = GetPlayerId(player);
 
     Globals.tmpVector.setUnit(unit);
-    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY())
 
-    const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-    if (dist > extinctionBombMaxDist) {
-      const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, extinctionBombMaxDist);
-    }
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, extinctionBombMaxDist);
 
     const bomb = CreateUnit(
       Player(PLAYER_NEUTRAL_AGGRESSIVE), 
@@ -3301,7 +3375,7 @@ export module SimpleSpellSystem {
       OrderIds.WAND_OF_ILLUSION, 
       hero.unit
     );
-    UnitApplyTimedLife(dummy, FourCC("BTLF"), 1);
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1);
   }
 
   export function gohanBeastBuff() {
@@ -4956,15 +5030,30 @@ export module SimpleSpellSystem {
     const hpPct = 0.01;
 
     const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const chargeKey = StringHash("ultimate_charge_flag");
 
     let sfx1 = null;
     let sfx2 = null;
     let tick = 0;
+
+    const isCharging = LoadBoolean(Globals.genericSpellHashtable, casterId, chargeKey);
+    if (isCharging) return;
+    SaveBoolean(Globals.genericSpellHashtable, casterId, chargeKey, true);
+
+    const dustWaveSfx = AddSpecialEffect(
+      "DustWave1.mdl", 
+      GetUnitX(caster), GetUnitY(caster)
+    );
+    BlzSetSpecialEffectScale(dustWaveSfx, 1.5);
+
     const tpTimer = TimerManager.getInstance().get();
     TimerStart(tpTimer, tickRate, true, () => {
       if (tick > endTick || UnitHelper.isUnitDead(caster)) {
         if (sfx1 != null) DestroyEffect(sfx1); 
         if (sfx2 != null) DestroyEffect(sfx2);
+        DestroyEffect(dustWaveSfx);
+        SaveBoolean(Globals.genericSpellHashtable, casterId, chargeKey, false);
         TimerManager.getInstance().recycle(tpTimer);
         return;
       }
@@ -4975,22 +5064,6 @@ export module SimpleSpellSystem {
       const int = GetHeroInt(caster, true);
       const mpRegen = (agi / Math.max(1, int)) * mpPct * maxMp * tickRate;
       SetUnitState(caster, UNIT_STATE_MANA, Math.min(maxMp, currentMp + mpRegen));
-
-      if (tick % 33 == 0) {
-        let sfx = AddSpecialEffect(
-          "DustWave.mdl", 
-          GetUnitX(caster), GetUnitY(caster)
-        );
-        BlzSetSpecialEffectScale(sfx, 1.5);
-        DestroyEffect(sfx);
-        
-        sfx = AddSpecialEffect(
-          "Abilities/Spells/Orc/EarthQuake/EarthQuakeTarget.mdl", 
-          GetUnitX(caster), GetUnitY(caster)
-        );
-        BlzSetSpecialEffectScale(sfx, 0.5);
-        DestroyEffect(sfx);
-      }
 
       if (tick > minHPTick) {
         const maxHp = GetUnitState(caster, UNIT_STATE_MAX_LIFE);
@@ -5018,6 +5091,715 @@ export module SimpleSpellSystem {
       }
       ++tick;
     });
+  }
+
+  export function doMinatoHiraishinNoJutsu() {
+    const maxCastDistance = 1400;
+    const maxTravelDistance = 1500;
+    let searchAOE = maxTravelDistance;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, maxCastDistance);
+
+    let closestUnit = caster;
+    let minDistance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+    if (!Globals.barrierBlockUnits.has(caster)) {
+      GroupClear(Globals.tmpUnitGroup);
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, Globals.tmpVector2.x, Globals.tmpVector2.y, searchAOE, null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+
+        if (
+          IsUnitAlly(unit, player)
+          && UnitHelper.isUnitAlive(unit)
+          && (
+            IsUnitType(unit, UNIT_TYPE_HERO)
+            || (
+              GetUnitTypeId(unit) == Constants.dummyBeamUnitId
+              && GetUnitName(unit) == "Hiraishin Kunai"
+            )
+          )
+          && unit != caster
+        ) {
+          Globals.tmpVector3.setUnit(unit);
+          if (!PathingCheck.isGroundWalkable(Globals.tmpVector3)) return;
+          const targetDist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector3);
+          if (targetDist > maxTravelDistance) return;
+          const newDist = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector2);
+          if (
+            newDist < minDistance 
+            || closestUnit == caster
+          ) {
+            closestUnit = unit;
+            minDistance = newDist;
+          }
+        }
+      });
+    }
+
+    Globals.tmpVector3.setUnit(closestUnit);
+    doMinatoTeleportEffect(Globals.tmpVector);
+    doMinatoTeleportEffect(Globals.tmpVector3);
+    minatoIllusionSFXLogic(
+      caster, 
+      Globals.tmpVector, 
+      Globals.tmpVector3, 
+      AbilityNames.Minato.HIRAISHIN_ZANZO
+    );
+    if (closestUnit != caster) {
+      PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector3);
+    } else {
+      const errorSfx = AddSpecialEffect(
+        "Spell_Marker_Red.mdl", 
+        Globals.tmpVector2.x, Globals.tmpVector2.y
+      );
+      if (player == GetLocalPlayer()) {
+        BlzSetSpecialEffectScale(errorSfx, 1.0);
+      } else {
+        BlzSetSpecialEffectScale(errorSfx, 0.0);
+      }
+      DestroyEffect(errorSfx);
+    }
+  }
+
+  export function doMinatoKunaiThrow() {
+    const caster = GetTriggerUnit();
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+
+    doMinatoKunaiBeam(caster, GetSpellTargetX(), GetSpellTargetY(), abilLvl);
+  }
+
+  export function doMinatoKunaiBeam(
+    caster: unit,
+    targetX: number,
+    targetY: number,
+    abilLvl: number,
+  ) {
+    const tickRate = 0.03;
+    const moveSpeed = BeamComponent.BEAM_SPEED_INSANE;
+    const maxDistance = 1200;
+    const dmgAOE = 150;
+    const dmgMult = BASE_DMG.KAME_DPS * 2;
+    const beamHeight = 150;
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, maxDistance);
+
+    const damagedGroup = CreateGroup();
+    const beam = minatoKunaiCreateVec(caster, Globals.tmpVector);
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    const distance = Math.max(100, CoordMath.distance(Globals.tmpVector, Globals.tmpVector2));
+    const maxTicks = Math.max(1, distance / moveSpeed);
+
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+    
+    SetUnitScale(beam, 0.0, 0.0, 0.0);
+
+    const sfx = AddSpecialEffect("MinatoKunai.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    BlzSetSpecialEffectScale(sfx, 3.0);
+    BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+    BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
+
+    const castDummy = CreateUnit(
+      player, 
+      Constants.dummyCasterId, 
+      Globals.tmpVector.x, Globals.tmpVector.y, 
+      0
+    );
+    UnitAddAbility(castDummy, DebuffAbilities.FAERIE_FIRE_MINATO_KUNAI);
+
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster,
+      abilLvl,
+      spellPower,
+      dmgMult,
+      1.0,
+      bj_HEROSTAT_INT,
+    );
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, tickRate, true, () => {
+      if (ticks >= maxTicks) {
+        RemoveUnit(castDummy);
+        DestroyGroup(damagedGroup);
+        DestroyEffect(sfx);
+        BlzSetSpecialEffectScale(sfx, 0.0);
+        SetUnitScale(beam, 1.0, 1.0, 1.0);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      Globals.tmpVector.setUnit(beam);
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, moveSpeed);
+
+      const isMoved = PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      if (isMoved) {
+        BlzSetSpecialEffectPosition(
+          sfx, 
+          Globals.tmpVector.x, 
+          Globals.tmpVector.y, 
+          BlzGetUnitZ(beam) + GetUnitFlyHeight(beam) + beamHeight
+        );
+        
+        GroupClear(Globals.tmpUnitGroup);
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(beam), GetUnitY(beam), dmgAOE, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (
+            UnitHelper.isUnitTargetableForPlayer(unit, player)
+            && !IsUnitInGroup(unit, damagedGroup)
+          ) {
+            UnitDamageTarget(
+              caster, 
+              unit, 
+              dmg, 
+              false, false, 
+              ATTACK_TYPE_HERO, 
+              DAMAGE_TYPE_NORMAL, 
+              WEAPON_TYPE_WHOKNOWS
+            );
+            IssueTargetOrderById(castDummy, OrderIds.FAERIE_FIRE, unit);
+            GroupAddUnit(damagedGroup, unit);
+          }
+        });
+        GroupClear(Globals.tmpUnitGroup);
+      }
+
+      if (
+        UnitHelper.isUnitDead(beam) 
+        || !isMoved
+      ) {
+        ticks = maxTicks;
+      }
+      ticks++;
+    });
+  }
+
+  export function doMinatoFirstFlash() {
+    const pathingCheckSpeed = 32;
+    const maxDistance = 1000;
+    const dmgAOE = 300;
+    const dmgSpeed = 100;
+    const dmgMult = BASE_DMG.KAME_DPS * 6;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+    Globals.tmpVector3.setVector(Globals.tmpVector);
+
+    if (Globals.barrierBlockUnits.has(caster)) {
+      Globals.tmpVector2.setVector(Globals.tmpVector);
+    }
+
+    const originX = Globals.tmpVector.x;
+    const originY = Globals.tmpVector.y;
+
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+
+    // minatoEnableAttachSfx(caster, 3);
+    minatoKunaiCreateVec(caster, Globals.tmpVector);
+    doMinatoTeleportEffect(Globals.tmpVector);
+
+    PathingCheck.extendVectorUntilGroundUnwalkable(
+      Globals.tmpVector,
+      Globals.tmpVector2,
+      Globals.tmpVector3,
+      pathingCheckSpeed,
+      maxDistance
+    );
+    PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector3, pathingCheckSpeed);
+
+    minatoIllusionSFXLogic(
+      caster, 
+      Globals.tmpVector, 
+      Globals.tmpVector3, 
+      AbilityNames.Minato.FIRST_FLASH
+    );
+    doMinatoTeleportEffect(Globals.tmpVector3);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    GroupClear(Globals.tmpUnitGroup2);
+    // deal damage in a line from tmpVector to tmpVector3
+    Globals.tmpVector.setPos(originX, originY);
+    for (let i = 0; i < maxDistance; i += dmgSpeed) {
+      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector3) < dmgSpeed) {
+        Globals.tmpVector.setVector(Globals.tmpVector3);
+        i = maxDistance;
+      }
+
+      GroupClear(Globals.tmpUnitGroup);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y,
+        dmgAOE, 
+        null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          UnitHelper.isUnitTargetableForPlayer(unit, player)
+          && !IsUnitInGroup(unit, Globals.tmpUnitGroup2)
+        ) {
+          GroupAddUnit(Globals.tmpUnitGroup2, unit);
+        }
+      });
+
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, dmgSpeed);
+    }
+
+    AOEDamage.genericDealDamageToGroup(
+      Globals.tmpUnitGroup2,
+      caster,
+      abilLvl,
+      spellPower,
+      dmgMult,
+      1.0,
+      bj_HEROSTAT_INT
+    );
+    GroupClear(Globals.tmpUnitGroup2);
+  }
+
+  export function doMinatoThirdStage() {
+    const maxRadius = 600;
+    const numKunai = 6;
+
+    const caster = GetTriggerUnit();
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+
+    Globals.tmpVector.setUnit(caster);
+
+    const ang = GetUnitFacing(caster);
+
+    for (let i = 0; i < numKunai; ++i) {
+      Globals.tmpVector2.polarProjectCoords(
+        Globals.tmpVector, 
+        ang + i * 360/numKunai, 
+        maxRadius
+      );
+      doMinatoKunaiBeam(caster, Globals.tmpVector2.x, Globals.tmpVector2.y, abilLvl);
+    }
+  }
+
+  export function collectKunaisInAOE(
+    kunaiArray: unit[],
+    tmpGroup: group,
+    player: player,
+    x: number,
+    y: number,
+    radius: number,
+  ) {
+    GroupEnumUnitsInRange(
+      tmpGroup, 
+      x, y, 
+      radius, 
+      null
+    );
+    ForGroup(tmpGroup, () => {
+      const unit = GetEnumUnit();
+      if (
+        UnitHelper.isUnitAlive(unit)
+        && GetUnitTypeId(unit) == Constants.dummyBeamUnitId
+        && GetUnitName(unit) == "Hiraishin Kunai"
+        && GetOwningPlayer(unit) == player
+      ) {
+        kunaiArray.push(unit);
+      }
+    });
+    GroupClear(tmpGroup);
+    return kunaiArray;
+  }
+
+  export function doMinatoSpiralFlash() {
+    const tickRate = 0.02;
+    const maxTicks = 50;
+    const searchAOE = 700;
+    const dmgMult = BASE_DMG.KAME_DPS * 3 * tickRate;
+    const minKunai = 2;
+    const maxKunaiSfxLength = 10;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    Globals.tmpVector.setUnit(caster);
+    const originX = Globals.tmpVector.x;
+    const originY = Globals.tmpVector.y;
+
+    const sfx = AddSpecialEffect("Spell_Marker_Gray.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    BlzSetSpecialEffectAlpha(sfx, 155);
+    BlzSetSpecialEffectColor(sfx, 255, 255, 55);
+    BlzSetSpecialEffectScale(sfx, 7.0);
+
+    let wasInvul = false;
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, tickRate, true, () => {
+      if (ticks > maxTicks) {
+        if (wasInvul) {
+          ShowUnit(caster, true);
+          SetUnitInvulnerable(caster, false);
+          PauseUnit(caster, false);
+        }
+        DestroyEffect(sfx);
+        SelectUnitForPlayerSingle(caster, player);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      const kunais = [];
+      collectKunaisInAOE(kunais, Globals.tmpUnitGroup, player, originX, originY, searchAOE);
+      if (kunais.length >= minKunai) {
+        GroupClear(Globals.tmpUnitGroup);
+        AOEDamage.genericDealAOEDamage(
+          Globals.tmpUnitGroup,
+          caster,
+          originX, originY,
+          searchAOE,
+          abilLvl,
+          spellPower,
+          dmgMult,
+          kunais.length,
+          bj_HEROSTAT_INT
+        );
+
+        if (ticks == 0) {
+          wasInvul = true;
+          ShowUnit(caster, false);
+          SetUnitInvulnerable(caster, true);
+          PauseUnit(caster, true);
+        }
+
+        if (ticks == 0) {
+          for (const kunai of kunais) {
+            Globals.tmpVector.setUnit(kunai);
+            doMinatoTeleportEffect(Globals.tmpVector);
+          }
+        }
+
+        if (ticks % 5 == 0) {
+          let currentIndex = -1;
+          let nextIndex = -1;
+          const startIndex = 1 + Math.floor(Math.random() * kunais.length);
+          const halfIndex = Math.floor(kunais.length * 0.5);
+          for (let i = 0; i < kunais.length && i < maxKunaiSfxLength; ++i) {
+            if (currentIndex < 0) {
+              currentIndex = (startIndex+i) % kunais.length;
+            }
+            const randomIndex = Math.floor(Math.random() * halfIndex - 1);
+            nextIndex = (currentIndex + halfIndex + randomIndex) % kunais.length;
+  
+            Globals.tmpVector.setUnit(kunais[currentIndex]);
+            Globals.tmpVector2.setUnit(kunais[nextIndex]);
+            minatoIllusionSFXLogic(
+              caster,
+              Globals.tmpVector,
+              Globals.tmpVector2,
+              AbilityNames.Minato.SPIRAL_FLASH
+            );
+  
+            currentIndex = nextIndex;
+          }
+        }
+      }
+
+      if (
+        !UnitHelper.isUnitAlive(caster)
+        || kunais.length < minKunai
+      ) {
+        ticks = maxTicks;
+        if (kunais.length < minKunai) {
+          const errorSfx = AddSpecialEffect(
+            "Spell_Marker_Red.mdl", 
+            Globals.tmpVector.x, Globals.tmpVector.y
+          );
+          if (player == GetLocalPlayer()) {
+            BlzSetSpecialEffectScale(errorSfx, 7.0);
+          } else {
+            BlzSetSpecialEffectScale(errorSfx, 0.0);
+          }
+          DestroyEffect(errorSfx);
+        }
+      }
+      ticks++;
+    });
+  }
+
+  // export function minatoEnableAttachSfx(caster: unit, ticks: number) {
+  //   const unitId = GetHandleId(caster);
+  //   const sfxTimeKey = StringHash("sfx_time");
+  //   const time = LoadInteger(Globals.minatoHashtable, unitId, sfxTimeKey);
+  //   if (time == 0) {
+  //     const sfx1 = LoadEffectHandle(Globals.minatoHashtable, unitId, StringHash("sfx1"));
+  //     const sfx2 = LoadEffectHandle(Globals.minatoHashtable, unitId, StringHash("sfx2"));
+  //     const sfx3 = LoadEffectHandle(Globals.minatoHashtable, unitId, StringHash("sfx3"));
+  //     BlzSetSpecialEffectScale(sfx1, 1.0);
+  //     BlzSetSpecialEffectScale(sfx2, 1.0);
+  //     BlzSetSpecialEffectScale(sfx3, 1.0);
+  //   }
+  //   SaveInteger(Globals.minatoHashtable, unitId, sfxTimeKey, Math.max(time, ticks));
+  // }
+
+  export function doMinatoTeleportEffect(v: Vector2D) {
+    const sfx1 = AddSpecialEffect("MinatoYellowSFX.mdl", v.x, v.y);
+    BlzSetSpecialEffectScale(sfx1, 0.6);
+    const sfx2 = AddSpecialEffect("Abilities/Spells/NightElf/Blink/BlinkCaster.mdl", v.x, v.y);
+    BlzSetSpecialEffectScale(sfx2, 0.6);
+    const sfx3 = AddSpecialEffect("JumpDustF.mdl", v.x, v.y);
+    BlzSetSpecialEffectScale(sfx3, 4.0);
+    DestroyEffect(sfx1);
+    DestroyEffect(sfx2);
+    DestroyEffect(sfx3);
+  }
+
+  export function createMinatoYellowLinesSFX(vec: Vector2D, count: number) {
+    const yellowLinesSfx = [];
+    for (let i = 0; i < 3; ++i) {
+      const sfx = AddSpecialEffect(
+        "Abilities/Spells/Items/ScrollOfRegeneration/Scroll_Regen_Target.mdl", 
+        vec.x, vec.y
+      );
+      BlzSetSpecialEffectScale(sfx, 1.0 + i * 0.3);
+      BlzSetSpecialEffectTimeScale(sfx, 1.0 + i * 0.3);
+      yellowLinesSfx.push(sfx);
+    }
+    return yellowLinesSfx;
+  }
+
+  export function minatoIllusionSFXLogic(
+    caster: unit, 
+    start: Vector2D, 
+    end: Vector2D,
+    mode: string
+  ) {
+    switch (mode) {
+      default:
+      case AbilityNames.Minato.HIRAISHIN_ZANZO:
+        minatoIllusionSFXPathRepeat(
+          1,
+          start, end, 
+          GetUnitAbilityLevel(caster, Id.minatoKuramaModeFlag) > 0,
+          mode,
+        );
+        break;
+      case AbilityNames.Minato.FIRST_FLASH:
+        minatoIllusionSFXPathRepeat(
+          4,
+          start, end, 
+          GetUnitAbilityLevel(caster, Id.minatoKuramaModeFlag) > 0,
+          mode,
+        );
+        break;
+    }
+  }
+
+  export function minatoIllusionSFXPathRepeat(
+    repeat: number,
+    start: Vector2D,
+    end: Vector2D,
+    isKurama: boolean,
+    mode: string,
+  ) {
+    const startX = start.x;
+    const startY = start.y;
+    const endX = end.x;
+    const endY = end.y;
+
+    let count = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.02, true, () => {
+      if (count >= repeat) {
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      Globals.tmpVector.setPos(startX, startY);
+      Globals.tmpVector2.setPos(endX, endY);
+      minatoIllusionSFXPath(count, Globals.tmpVector, Globals.tmpVector2, isKurama, mode);
+      count++;
+    });
+  }
+
+  export function minatoIllusionSFXPath(
+    repeatNum: number,
+    start: Vector2D,
+    end: Vector2D,
+    isKurama: boolean,
+    mode: string,
+  ) {
+    const tickRate = 0.02;
+    const moveSpeed = 90;
+    const firstSideSpeed = 150;
+
+    const yellowLinesSfx = createMinatoYellowLinesSFX(start, 3);
+
+    const ang = CoordMath.angleBetweenCoords(start, end);
+
+    const minatoModel = isKurama ? "Minato_KM_squished.mdl" : "Minato_squished.mdl";
+    const sfxMinato = AddSpecialEffect(minatoModel, start.x, start.y);
+    BlzSetSpecialEffectYaw(sfxMinato, ang * CoordMath.degreesToRadians);
+    BlzSetSpecialEffectScale(sfxMinato, 1.8);
+    BlzPlaySpecialEffectWithTimeScale(sfxMinato, ANIM_TYPE_WALK, 3.0);
+
+    let prevX = start.x;
+    let prevY = start.y;
+    const distance = CoordMath.distance(start, end);
+    let maxTicks = (1 + Math.floor(distance / moveSpeed));
+    // let duration = tickRate * maxTicks;
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, tickRate, true, () => {
+      if (ticks >= maxTicks) {
+        BlzSetSpecialEffectScale(sfxMinato, 0);
+        for (const sfx of yellowLinesSfx) {
+          DestroyEffect(sfx);
+        }
+        DestroyEffect(sfxMinato);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      
+      Globals.tmpVector3.setPos(prevX, prevY);
+      Globals.tmpVector3.polarProjectCoords(Globals.tmpVector3, ang, moveSpeed);
+      prevX = Globals.tmpVector3.x;
+      prevY = Globals.tmpVector3.y;
+      if (mode == AbilityNames.Minato.FIRST_FLASH) {
+        let angDelta = 90;
+        if (ticks % 3 == 1) {
+          angDelta = 0;
+        } else if (ticks % 3 == 2) {
+          angDelta = -90;
+        }
+        Globals.tmpVector3.polarProjectCoords(Globals.tmpVector3, ang + angDelta, firstSideSpeed);
+        if (repeatNum == 0 && angDelta != 0) doMinatoTeleportEffect(Globals.tmpVector3);
+      }
+      BlzSetSpecialEffectPosition(
+        sfxMinato, 
+        Globals.tmpVector3.x, Globals.tmpVector3.y, 
+        BlzGetLocalSpecialEffectZ(sfxMinato)
+      );
+      for (const sfx of yellowLinesSfx) {
+        BlzSetSpecialEffectPosition(
+          sfx, 
+          Globals.tmpVector3.x, Globals.tmpVector3.y, 
+          BlzGetLocalSpecialEffectZ(sfx)
+        );
+      }
+
+      const ratio = (1 - ticks / Math.max(1, maxTicks));
+      // alpha has to be integer
+      BlzSetSpecialEffectAlpha(sfxMinato, R2I(255 * ratio));
+
+      ticks++;
+    });
+  }
+
+  export function minatoIllusionSFXPath2(
+    repeatNum: number,
+    start: Vector2D,
+    end: Vector2D,
+    isKurama: boolean,
+    mode: string,
+  ) {
+
+  }
+
+  export function minatoIllusionSFXSingle(
+    vec: Vector2D,
+    ang: number, 
+    duration: number,
+    isKurama: boolean
+  ) {
+    const tickRate = 0.02;
+
+    const minatoModel = isKurama ? "Minato_KM_squished.mdl" : "Minato_squished.mdl";
+    const sfxMinato = AddSpecialEffect(minatoModel, vec.x, vec.y);
+    BlzSetSpecialEffectYaw(sfxMinato, ang * CoordMath.degreesToRadians);
+    BlzSetSpecialEffectScale(sfxMinato, 1.8);
+    BlzPlaySpecialEffectWithTimeScale(sfxMinato, ANIM_TYPE_WALK, 2.0);
+
+    let counter = 0;
+    const fadeTimer = TimerManager.getInstance().get();
+    TimerStart(fadeTimer, tickRate, true, () => {
+      counter += tickRate;
+      if (counter > duration) {
+        BlzSetSpecialEffectScale(sfxMinato, 0);
+        DestroyEffect(sfxMinato);
+        TimerManager.getInstance().recycle(fadeTimer);
+        return;
+      } else {
+        const ratio = (1 - (counter / Math.max(tickRate, duration)));
+        BlzSetSpecialEffectAlpha(sfxMinato, 255 * ratio);
+      }
+    });
+  }
+
+  export function minatoKunaiCreateVec(caster: unit, v: Vector2D) {
+    return minatoKunaiCreateXY(caster, v.x, v.y);
+  }
+
+  export function minatoKunaiCreateXY(caster: unit, x: number, y: number) {
+    const player = GetOwningPlayer(caster);
+    const kunaiDuration = 30;
+    const kunaiHpMult = 0.4;
+
+    // const casterId = GetHandleId(caster);
+    // const kunaiGroupKey = StringHash("kunai_group");
+
+    // let kunaiGroup = null;
+    // if (HaveSavedHandle(Globals.minatoHashtable, casterId, kunaiGroupKey)) {
+    //   kunaiGroup = LoadGroupHandle(Globals.minatoHashtable, casterId, kunaiGroupKey);
+    // } else {
+    //   kunaiGroup = CreateGroup();
+    //   SaveGroupHandle(Globals.minatoHashtable, casterId, kunaiGroupKey, kunaiGroup);
+    // }
+
+    const beam = CreateUnit(
+      player, 
+      Constants.dummyBeamUnitId, 
+      x, y, 0,
+    );
+    BlzSetUnitName(beam, "Hiraishin Kunai");
+    
+    const maxHp = BeamComponent.calculateBeamHp(
+      10, BASE_DMG.KAME_DPS * kunaiHpMult, caster, bj_HEROSTAT_INT
+    );
+
+    BlzSetUnitMaxHP(beam, maxHp);
+    SetUnitLifePercentBJ(beam, 100);
+    SetUnitMoveSpeed(beam, 0);
+    UnitRemoveAbility(beam, Id.attack);
+
+    const sfx = AddSpecialEffectTarget("MinatoKunai.mdl", beam, "origin");
+    BlzSetSpecialEffectScale(sfx, 3.0);
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, kunaiDuration);
+
+    const beamTimer = TimerManager.getInstance().get();
+    TimerStart(beamTimer, kunaiDuration, false, () => {
+      if (sfx) DestroyEffect(sfx);
+      TimerManager.getInstance().recycle(beamTimer);
+      return;
+    });
+
+    return beam;
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {

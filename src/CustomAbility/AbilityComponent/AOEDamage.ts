@@ -91,17 +91,17 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   static calculateDamageRaw(
-    level: number,
+    caster: unit,
+    spellLevel: number,
     spellPower: number,
     damageDataMultiplier: number,
     damageMult: number,
-    caster: unit,
     stat: number // bj_HEROSTAT_INT
   ): number {
     return (
       damageMult 
       * AOEDamage.getIntDamageMult(caster) 
-      * level * spellPower * damageDataMultiplier * 
+      * spellLevel * spellPower * damageDataMultiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(stat, caster, true)
@@ -110,17 +110,24 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   static dealDamageRaw(
-    level: number,
+    caster: unit,
+    spellLevel: number,
     spellPower: number,
     damageDataMultiplier: number,
     damageMult: number,
-    caster: unit,
     stat: number,
     target: widget
   ): boolean {
     return UnitDamageTarget(
       caster, target, 
-      AOEDamage.calculateDamageRaw(level, spellPower, damageDataMultiplier, damageMult, caster, stat),
+      AOEDamage.calculateDamageRaw(
+        caster, 
+        spellLevel, 
+        spellPower, 
+        damageDataMultiplier, 
+        damageMult, 
+        stat
+      ),
       true, false,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL, 
@@ -138,17 +145,17 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     damageStat: number,
   ) {
     const player = GetOwningPlayer(caster);
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat
+    );
     ForGroup(targetGroup, () => {
       const target = GetEnumUnit();
       if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
-        const dmg = AOEDamage.calculateDamageRaw(
-          spellLevel,
-          spellPower,
-          damageDataMultiplier,
-          damageMult,
-          caster,
-          damageStat
-        );
         UnitDamageTarget(
           caster, 
           target,

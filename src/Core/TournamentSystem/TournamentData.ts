@@ -59,6 +59,7 @@ export module TournamentData {
   export const kothArenaTimeout: number = 240;
   export const kothArenaCamDelay1: number = 0.5;
   export const kothArenaCamDelay2: number = 1.0;
+  export const kothCaptureXp = 0;
   export const kothCaptureUnlockTime = 15;
   export const kothCaptureRadius = 1408; // 11 squares
   export const kothCaptureExpBonusRatio = 0.1;

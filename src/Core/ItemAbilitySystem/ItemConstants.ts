@@ -110,6 +110,7 @@ export module ItemConstants {
   export const potaraEarrings = FourCC("I00L");
 
   export const chaosEmerald = FourCC("I04Z");
+  export const crystalCoconut = FourCC("I04Y");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -132,6 +133,7 @@ export module ItemConstants {
     export const hamGenerator = FourCC("I007");
     export const bananaGenerator = FourCC("I00A");
     export const senzuGenerator = FourCC("I00V");
+    export const miniSenzuGenerator = FourCC("I003");
   }
 
   export module SagaDrops {

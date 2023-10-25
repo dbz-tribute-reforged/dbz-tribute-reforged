@@ -49,4 +49,19 @@ export module CoordMath {
     )
   }
 
+  export function extendToMaxDist(
+    src: Vector2D, 
+    target: Vector2D, 
+    maxDist: number
+  ) {
+    if (CoordMath.distance(src, target) > maxDist) {
+      target.polarProjectCoords(
+        src, 
+        CoordMath.angleBetweenCoords(src, target),
+        maxDist
+      );
+    }
+    return target;
+  }
+
 }

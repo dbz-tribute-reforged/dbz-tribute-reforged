@@ -79,7 +79,7 @@ export const AbilitiesList = [
     maxCd: 8,
     costType: CostType.SP,
     costAmount: 50,
-    duration: 1,
+    duration: 2,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: true,
@@ -91,7 +91,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMinatoZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Zanzoken",
+      title: "(Z) or (Y) Hiraishin Zanzo",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -101,9 +101,10 @@ export const AbilitiesList = [
         "CD: 8 (varies)",
     },
     components: [
-      { name: "sfx shunpo start" },
+      // { name: "sfx minato hiraishin attach" },
+      { name: "sfx minato hiraishin start" },
       { name: "dash zanzoken" },
-      { name: "sfx shunpo end" },
+      { name: "sfx minato hiraishin end" },
     ],
   },
   // -------------------------------------------
@@ -1443,6 +1444,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 40,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -2016,6 +2018,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 150,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -2278,7 +2281,8 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 200 ,
+    duration: 200,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -8044,6 +8048,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 333,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -8072,6 +8077,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 333,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -11908,6 +11914,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 100,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -12165,6 +12172,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 6,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -12644,6 +12652,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 66,
+    // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
@@ -15173,7 +15182,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 100,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -15200,7 +15209,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 2000,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -15229,7 +15238,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 100,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -15562,6 +15571,90 @@ export const AbilitiesList = [
       { name: "multi majin vegeta final explosion caster aoe" },
       { name: "sfx majin vegeta final explosion 1" },
       { name: "sfx majin vegeta final explosion 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Minato.THIRD_STAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability minato spiral flash" },
+    ],
+  },
+  // // -------------------------------------------
+  // {
+  //   name: AbilityNames.Minato.SPIRAL_FLASH,
+  //   currentCd: 0,
+  //   maxCd: 1,
+  //   costType: CostType.MP,
+  //   costAmount: 0,
+  //   duration: 33,
+  //   updateRate: 0.03,
+  //   castTime: 0.0,
+  //   canMultiCast: true,
+  //   waitsForNextClick: false,
+  //   canUseWhenStunned: false,
+  //   animation: "",
+  //   icon: {
+  //     enabled: "",
+  //     disabled: "",
+  //   },
+  //   tooltip: {
+  //     title: "",
+  //     body: 
+  //       ""
+  //   },
+  //   components: [
+  //     { name: "hide unit prevent movement reselect" },
+  //   ],
+  // },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Minato.RASENGAN_ON_HIT,
+    currentCd: 0,
+    maxCd: 4,
+    costType: CostType.MP,
+    costAmount: 100,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage target minato rasengan explosion" },
+      { name: "knockback target minato rasengan" },
+      { name: "debuff stun minato rasengan" },
+      { name: "sfx minato rasengan" },
     ],
   },
   // -------------------------------------------

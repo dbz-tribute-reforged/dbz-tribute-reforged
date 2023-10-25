@@ -7,6 +7,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CostType, Globals, OrderIds } from "Common/Constants";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -151,6 +152,12 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           // repeatedly move the user towards the target until they run out of distance to move
           // then move the user
           if (ability.currentTick == 0) {
+            if (ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO) {
+              SimpleSpellSystem.minatoKunaiCreateVec(
+                input.caster.unit,
+                this.currentCoord
+              );
+            }
             const distMove = 50 * this.distanceMult;
             let distTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);    
 
@@ -179,8 +186,17 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
               }
               this.distanceTravelled += distMove;
               PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
-              
+
               IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
+            }
+
+            if (ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO) {
+              SimpleSpellSystem.minatoIllusionSFXLogic(
+                input.caster.unit, 
+                this.currentCoord, 
+                this.targetCoord, 
+                ability.name
+              );
             }
           }
           this.targetCoord.setUnit(source);

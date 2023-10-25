@@ -528,12 +528,15 @@ export module AbilityNames {
   }
 
   export module Minato {
-    export const HIRAISHIN_ZANZO: string = "Hiraishin no Jutsu";
+    export const HIRAISHIN_ZANZO: string = "Hiraishin Zanzo";
     export const KUNAI: string = "Minato Kunai";
     export const FIRST_FLASH: string = "Minato First Flash";
     export const SECOND_STEP: string = "Minato Second Step";
     export const THIRD_STAGE: string = "Minato Third Stage";
+    export const SPIRAL_FLASH: string = "Minato Spiral Flash";
     export const KURAMA_MODE: string = "Minato Kurama Mode";
+    export const HIRAISHIN_NO_JUTSU: string = "Hiraishin No Jutsu";
+    export const RASENGAN_ON_HIT = "Minato's Rasengan!";
   }
 
 

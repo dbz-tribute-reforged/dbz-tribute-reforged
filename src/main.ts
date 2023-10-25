@@ -63,7 +63,7 @@ const musicStr = (
 );
 const lobbyMusicStr = (
   "Audio/Music/GatoSong.mp3;" 
-  + musicStr
+  + "Audio/Music/SecretOfTheForest.mp3;"
 );
 
 function tsPostMain() {

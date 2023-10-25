@@ -589,7 +589,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Minato.FIRST_FLASH,
       AbilityNames.Minato.SECOND_STEP,
       AbilityNames.Minato.THIRD_STAGE,
+      AbilityNames.Minato.SPIRAL_FLASH,
       AbilityNames.Minato.KURAMA_MODE,
+      AbilityNames.Minato.RASENGAN_ON_HIT,
     ]],
     
 
@@ -690,6 +692,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Peco.PRINCESS_SPLASH,
       AbilityNames.Dende.SACRED_WATER_2, AbilityNames.Dende.ORANGE_DENDE,
       AbilityNames.Link.SIDE_SLASH,
+      AbilityNames.Minato.KUNAI, AbilityNames.Minato.KURAMA_MODE,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

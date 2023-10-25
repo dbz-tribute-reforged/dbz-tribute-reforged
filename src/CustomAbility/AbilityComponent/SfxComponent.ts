@@ -74,8 +74,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
     } else {
       yaw = (
-        CoordMath.angleBetweenCoords(this.sfxCoords, this.getActualTargetPoint(input))
-        + 360
+        CoordMath.angleBetweenCoords(this.sfxCoords, this.getActualTargetPoint(input)) + 360
       ) * CoordMath.degreesToRadians;
     }
     const height = (this.useHeight) ? GetUnitFlyHeight(source) + BlzGetUnitZ(source) : 0;

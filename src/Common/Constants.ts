@@ -9,7 +9,7 @@ export module Globals {
   export let isZanzoDash: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
-  export let showAbilityFloatingText: boolean = false;
+  export let showAbilityFloatingText: boolean = true;
   export let sagaSystemMode: number = 0;
   export let ddsTimeoutSeconds: number = 5;
   
@@ -30,6 +30,7 @@ export module Globals {
   export const genericEnemyHashtable = InitHashtable();
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
+  export const minatoHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
   export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
@@ -136,8 +137,8 @@ export module Constants {
   export const uiYButtonSpacing: number = 0.001;
 
   export const BASE_SP_REGEN = 3;
-  export const BASE_HP_REGEN = 0.005;
-  export const BASE_MP_REGEN = 0.01;
+  export const BASE_HP_REGEN_PCT = 0.005;
+  export const BASE_MP_REGEN_PCT = 0.01;
 
   export const BASE_STAMINA = 100.0;
   export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
@@ -395,6 +396,7 @@ export module Terrain {
 }
 
 export module Id {
+  export const attack = FourCC("Aatk");
   export const inventoryHero = FourCC("AInv");
   export const ghostNonVis = FourCC("Agho");
   export const ghostVisible = FourCC("Aeth");
@@ -942,6 +944,7 @@ export module Id {
   export const minatoFirstFlash = FourCC("A001");
   export const minatoSecondStep = FourCC("A002");
   export const minatoThirdStage = FourCC("A003");
+  export const minatoSpiralFlash = FourCC("A00D");
   export const minatoHiraishin = FourCC("A004");
   export const minatoKuramaMode = FourCC("A009");
   export const minatoKuramaModeFlag = FourCC("A00A");

@@ -462,6 +462,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.minatoFirstFlash, AbilityNames.Minato.FIRST_FLASH],
     [Id.minatoSecondStep, AbilityNames.Minato.SECOND_STEP],
     [Id.minatoThirdStage, AbilityNames.Minato.THIRD_STAGE],
+    [Id.minatoSpiralFlash, AbilityNames.Minato.SPIRAL_FLASH],
     [Id.minatoKuramaMode, AbilityNames.Minato.KURAMA_MODE],
 
 
