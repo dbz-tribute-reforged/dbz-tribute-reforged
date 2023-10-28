@@ -465,6 +465,21 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.minatoSpiralFlash, AbilityNames.Minato.SPIRAL_FLASH],
     [Id.minatoKuramaMode, AbilityNames.Minato.KURAMA_MODE],
 
+    // might guy
+    [Id.mightGuyDynamicEntry, AbilityNames.MightGuy.DYNAMIC_ENTRY],
+    [Id.mightGuyLeafHurricane, AbilityNames.MightGuy.LEAF_HURRICANE],
+    [Id.mightGuyFrontLotus, AbilityNames.MightGuy.FRONT_LOTUS],
+    [Id.mightGuyReverseLotus, AbilityNames.MightGuy.REVERSE_LOTUS],
+    [Id.mightGuySunsetOfYouth, AbilityNames.MightGuy.SUNSET_OF_YOUTH],
+    [Id.mightGuyGate5, AbilityNames.MightGuy.FIFTH_GATE],
+    [Id.mightGuyGate6, AbilityNames.MightGuy.SIXTH_GATE],
+    [Id.mightGuyGate7, AbilityNames.MightGuy.SEVENTH_GATE],
+    [Id.mightGuyGate8, AbilityNames.MightGuy.EIGHTH_GATE],
+    [Id.mightGuyAsaKujaku, AbilityNames.MightGuy.ASA_KUJAKU],
+    [Id.mightGuyHirudora, AbilityNames.MightGuy.HIRUDORA],
+    [Id.mightGuySekizo, AbilityNames.MightGuy.SEKIZO],
+    [Id.mightGuyYagai, AbilityNames.MightGuy.YAGAI],
+
 
 
 

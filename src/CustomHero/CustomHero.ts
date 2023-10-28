@@ -250,6 +250,21 @@ export class CustomHero {
     if (tmp > 0) SaveReal(udg_StatMultHashtable, unitId, 9, 1);
   }
 
+  public forceEndAbility(name: string) {
+    const ability = this.abilities.getCustomAbilityByName(name);
+    if (ability && ability.isInUse()) {
+      CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
+    }
+  }
+
+  public isAbilityInUse(name: string) {
+    const ability = this.abilities.getCustomAbilityByName(name);
+    if (ability) {
+      return ability.isInUse();
+    }
+    return false;
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();
@@ -259,5 +274,6 @@ export class CustomHero {
     for (const timer of this.timers) {
       DestroyTimer(timer);
     }
+    FlushChildHashtable(Globals.genericSpellHashtable, GetHandleId(this.unit));
   }
 }

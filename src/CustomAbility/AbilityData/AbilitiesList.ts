@@ -200,10 +200,12 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
+        "Knockbacked enemies are slowed 50% for 3s|n" +
         "Cost: 35 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
+      { name: "debuff slow deflect" },
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
@@ -15449,7 +15451,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground point 40dist" },
+      { name: "dash ground point 35dist" },
       { name: "damage majin vegeta galaxy breaker dps" },
       { name: "sfx majin vegeta galaxy breaker" },
     ],
@@ -15633,7 +15635,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 4,
     costType: CostType.MP,
-    costAmount: 100,
+    costAmount: 0,
     duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
@@ -15655,6 +15657,353 @@ export const AbilitiesList = [
       { name: "knockback target minato rasengan" },
       { name: "debuff stun minato rasengan" },
       { name: "sfx minato rasengan" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.DYNAMIC_ENTRY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim might guy dynamic entry" },
+      { name: "dash ground point 30dist" },
+      { name: "damage might guy dynamic entry explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.LEAF_HURRICANE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim might guy leaf hurricane" },
+      { name: "damage crono cyclone dps" },
+      { name: "dash ground forward crono cyclone" },
+      { name: "knockback cyclone"},
+      { name: "sfx might guy leaf hurricane" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.SUNSET_OF_YOUTH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability might guy sunset of youth" },
+      { name: "sfx might guy sunset of youth" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.ASA_KUJAKU,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi might guy asa kujaku" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.HIRUDORA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "beam might guy hirudora" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.SEKIZO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam might guy sekizo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.YAGAI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim might guy yagai" },
+      { name: "dash ground forward might guy yagai" },
+      { name: "debuff slow might guy yagai" },
+      { name: "damage might guy yagai dps" },
+      { name: "block might guy yagai" },
+      { name: "sfx might guy yagai 1" },
+      { name: "sfx might guy yagai 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.FIFTH_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 1dist" },
+      { name: "sfx might guy gate 5" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.SIXTH_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+      { name: "sfx might guy gate 6" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.SEVENTH_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 3dist" },
+      { name: "sfx might guy gate 7" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.EIGHTH_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 5dist" },
+      { name: "sfx might guy gate 8" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.MightGuy.STRONG_FIST,
+    currentCd: 0,
+    maxCd: 4,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage target might guy strong fist explosion" },
+      { name: "block might guy strong fist" },
+      { name: "sfx might guy strong fist" },
     ],
   },
   // -------------------------------------------

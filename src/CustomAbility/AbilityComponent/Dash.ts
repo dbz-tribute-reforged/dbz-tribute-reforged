@@ -17,7 +17,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_CASTER_POINT = 4;
   static readonly DIRECTION_LAST_CAST_POINT = 5;
 
-  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.00125 * 0.01;
+  // 20% per 10k stats
+  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0020 * 0.01;
   static readonly MINIMUM_STR_AGI_RATIO = 0.8;
   static readonly MAXIMUM_AGI_DISTANCE_MULTIPLIER = 3.0;
 
@@ -121,13 +122,15 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
         this.distanceMult = 1;
         if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
+          const sourceStr = GetHeroStr(source, true);
           const sourceAgi = GetHeroAgi(source, true);
-          const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
+          // const sourceInt = GetHeroInt(source, true);
+          const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT
           const bonusAgiToStrRatioSpeed = Math.max(
             Dash.MINIMUM_STR_AGI_RATIO,
             -0.05 + Math.min(
               bonusAgiSpeed,
-              sourceAgi / Math.max(1, GetHeroStr(source, true))
+              sourceAgi / Math.max(1, sourceStr)
             )
           );
           

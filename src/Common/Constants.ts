@@ -147,12 +147,18 @@ export module Constants {
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
-  export const FOUNTAIN_REGEN_MULT = 1.25;
-  export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
-  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
-  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 2.5;
-  export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 1.25;
-  export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 1.25;
+  export const AGILITY_REGEN_EXPONENT = 3;
+  export const FOUNTAIN_REGEN_MULT = 0.25;
+  export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 0.15;
+  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 0.15;
+  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1;
+  export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 0.25;
+  export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
+  export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
+
+  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 50, 25];
+  export const MIGHT_GUY_GATE_HP_MULTS = [0, 1, 3, 5, 9];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.1, 0.2, 0.3, 0.4];
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -235,6 +241,7 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_25_PCT_3S = FourCC('A0BQ');
   export const SLOW_GENERIC_50_PCT_3S = FourCC('A0C3');
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
+  export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
@@ -326,6 +333,8 @@ export module Buffs {
   export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
 
   export const ALBEDO_GUARDIAN_AURA = FourCC("B065");
+
+  export const MIGHT_GUY_SUNSET_OF_YOUTH_AURA = FourCC("B06E");
 
   export const DEMIURGE_HELLFIRE_1 = FourCC("B06A");
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
@@ -938,6 +947,23 @@ export module Id {
   export const auraStorm = FourCC("A0Y3");
   export const lucarioGigantomax = FourCC("A0Y1");
   export const gigaSphere = FourCC("A0Y2");
+
+  export const mightGuy = FourCC("H005");
+  export const mightGuyDynamicEntry = FourCC("A00O");
+  export const mightGuyLeafHurricane = FourCC("A00Y");
+  export const mightGuyFrontLotus = FourCC("A012");
+  export const mightGuyReverseLotus = FourCC("A015");
+  export const mightGuySunsetOfYouth = FourCC("A016");
+  export const mightGuySunsetOfYouthAura = FourCC("A028");
+  export const mightGuyGate5 = FourCC("A01I");
+  export const mightGuyGate6 = FourCC("A01M");
+  export const mightGuyGate7 = FourCC("A01O");
+  export const mightGuyGate8 = FourCC("A01R");
+  export const mightGuyGateArmor = FourCC("A02I");
+  export const mightGuyAsaKujaku = FourCC("A020");
+  export const mightGuyHirudora = FourCC("A021");
+  export const mightGuySekizo = FourCC("A023");
+  export const mightGuyYagai = FourCC("A024");
 
   export const minato = FourCC("H001");
   export const minatoKunai = FourCC("A000");

@@ -30,6 +30,7 @@ import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
 import { SmartPingManager } from "Core/SmartPingSystem/SmartPingManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
+import { PauseManager } from "Core/PauseSystem/PauseManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -52,7 +53,7 @@ let castTimeHelper: CastTimeHelper;
 let timerManager: TimerManager;
 let keyInputManager: KeyInputManager;
 let smartPingManager: SmartPingManager;
-
+let pauseManager: PauseManager;
 
 const musicStr = (
   + "Audio/Music/SecretOfTheForest.mp3;"
@@ -113,6 +114,7 @@ function tsPostMain() {
     SimpleSpellSystem.initialize();
     dualTechManager = DualTechManager.getInstance();  
     FBSimTestManager.getInstance().initialize();
+    pauseManager = PauseManager.getInstance();
   })
 
   TimerStart(CreateTimer(), 0.1, false, () => {

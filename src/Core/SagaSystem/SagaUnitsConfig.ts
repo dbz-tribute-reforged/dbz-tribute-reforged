@@ -335,12 +335,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
         SagaAbilities.Android17DBS.SUPER_ELECTRIC_STRIKE,
       ],
+      [
+        ItemConstants.SagaDrops.ANDROID_BOMB,
+      ]
     )],
     ["Android 18", new SagaUnit(FourCC("H05D"), 50, 3000, 350, 3500, new Vector2D(15000, 6000),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
       ],
+      [
+        ItemConstants.SagaDrops.ANDROID_BOMB,
+      ]
     )],
 
     // super android 13
@@ -456,6 +462,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.PLANET_CRUSHER,
         SagaAbilities.Broly.GIGANTIC_ROAR,
       ],
+      [
+        ItemConstants.SagaDrops.BROLY_COLLAR,
+      ]
     )],
     
     // bio billy
@@ -491,6 +500,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.ENERGY_PUNCH, 
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        ItemConstants.SagaDrops.BOJACK_HEADBAND,
+      ]
     )],
     ["Bido", new SagaUnit(FourCC("U00M"), 9, 2500, 400, 2500, new Vector2D(-4600, 2500))],
     ["Gokua", new SagaUnit(FourCC("U00N"), 20, 4000, 400, 3500, new Vector2D(-4700, 2100),

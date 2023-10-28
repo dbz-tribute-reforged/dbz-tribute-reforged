@@ -1888,6 +1888,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1300,
   },
+  // yagai
+  {
+    name: "dash ground forward might guy yagai",
+    repeatInterval: 1, 
+    startTick: 100,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
+  },
   // ---
   // saga zanzo
   {

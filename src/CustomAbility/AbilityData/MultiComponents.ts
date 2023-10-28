@@ -3646,6 +3646,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi might guy asa kujaku", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 4,
+    angleMin: -20,
+    angleMax: 20,
+    forceMinDistance: 200,
+    forceMaxDistance: 200,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 2,
+    alwaysUpdateAngle: true,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "damage might guy asa kujaku explosion" },
+      { name: "sfx might guy asa kujaku" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

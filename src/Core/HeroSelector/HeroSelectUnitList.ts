@@ -932,6 +932,17 @@ const minatoData = {
     HeroSelectCategory.ASSASSIN
   )
 }
+const mightGuyData = {
+  unitCode: Id.mightGuy,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
+  )
+}
 
 
 // order matters
@@ -1071,7 +1082,7 @@ export const HeroSelectUnitList = [
   demiurgeData,
   minatoData,
   // 95
-  emptySpace,
+  mightGuyData,
   emptySpace,
   emptySpace,
   emptySpace,

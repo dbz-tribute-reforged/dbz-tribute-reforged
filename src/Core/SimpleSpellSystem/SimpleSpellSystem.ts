@@ -12,6 +12,7 @@ import { DragonBallsManager } from "Core/DragonBallsSystem/DragonBallsManager";
 import { FarmingManager } from "Core/FarmingSystem/FarmingManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
+import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TimerManager } from "Core/Utility/TimerManager";
@@ -209,6 +210,18 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.minatoSecondStep, SimpleSpellSystem.InitJirenGlare);
     Globals.genericSpellMap.set(Id.minatoThirdStage, SimpleSpellSystem.doMinatoThirdStage);
     Globals.genericSpellMap.set(Id.minatoSpiralFlash, SimpleSpellSystem.doMinatoSpiralFlash);
+
+    Globals.genericSpellMap.set(Id.mightGuyFrontLotus, SimpleSpellSystem.doMightGuyFrontLotus);
+    Globals.genericSpellMap.set(Id.mightGuyReverseLotus, SimpleSpellSystem.doMightGuyReverseLotus);
+    Globals.genericSpellMap.set(Id.mightGuyAsaKujaku, SimpleSpellSystem.doMightGuyAsaKujaku);
+    Globals.genericSpellMap.set(Id.mightGuyHirudora, SimpleSpellSystem.doMightGuyHirudora);
+    Globals.genericSpellMap.set(Id.mightGuySekizo, SimpleSpellSystem.doMightGuySekizo);
+    Globals.genericSpellMap.set(Id.mightGuyYagai, SimpleSpellSystem.doMightGuyYagai);
+
+    Globals.genericSpellMap.set(Id.mightGuyGate5, SimpleSpellSystem.doMightGuyGate);
+    Globals.genericSpellMap.set(Id.mightGuyGate6, SimpleSpellSystem.doMightGuyGate);
+    Globals.genericSpellMap.set(Id.mightGuyGate7, SimpleSpellSystem.doMightGuyGate);
+    Globals.genericSpellMap.set(Id.mightGuyGate8, SimpleSpellSystem.doMightGuyGate);
 
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
@@ -1180,6 +1193,7 @@ export module SimpleSpellSystem {
 
     SaveInteger(Globals.genericSpellHashtable, targetId, 0, 0);
 
+    const unitId = GetUnitTypeId(target);
     const player = GetOwningPlayer(target);
     Globals.tmpVector.setPos(GetUnitX(target), GetUnitY(target));
     Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
@@ -1243,13 +1257,19 @@ export module SimpleSpellSystem {
 
       minatoKunaiCreateVec(target, Globals.tmpVector2);
       
-      SetUnitInvulnerable(target, true);
-      PauseUnit(target, true);
+      PauseManager.getInstance().pause(target, true);
       SetUnitTimeScalePercent(target, animDelay * 100);
       SetUnitAnimation(target, "spell slam");
       // UnitHelper.giveUnitFlying(target);
       // SetUnitFlyHeight(target, 250, 250);
 
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/Minato/SecondStep2.mp3", 1700);
+      } else {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/Minato/SecondStep3.mp3", 1700);
+      }
+      SoundHelper.playSoundOnUnit(target, "Audio/Effects/Minato/Hiraishin1.mp3", 1000);
+      
       const dmgTimer = TimerManager.getInstance().get();
       TimerStart(dmgTimer, dmgDelay, false, () => {
 
@@ -1276,8 +1296,7 @@ export module SimpleSpellSystem {
           DestroyEffect(sfx1);
           DestroyEffect(sfx2);
           DestroyEffect(sfx3);
-          SetUnitInvulnerable(target, false);
-          PauseUnit(target, false);
+          PauseManager.getInstance().unpause(target, true);
           SetUnitTimeScalePercent(target, 100);
           ResetUnitAnimation(target);
           // SetUnitFlyHeight(target, GetUnitDefaultFlyHeight(target), 0);
@@ -1317,16 +1336,16 @@ export module SimpleSpellSystem {
       );
     }
     
-    if (GetUnitTypeId(target) == Id.jiren) {
+    if (targetId == Id.jiren) {
       if (Math.random() * 100 < 5) {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
       } else {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenGlare2.mp3", 1018);
       }
     }
-    SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
 
     if (spellId != Id.minatoSecondStep) {
+      SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
       const sfx = LoadEffectHandle(Globals.genericSpellHashtable, targetId, 1);
       if (sfx) DestroyEffect(sfx);
     }
@@ -5456,8 +5475,7 @@ export module SimpleSpellSystem {
       if (ticks > maxTicks) {
         if (wasInvul) {
           ShowUnit(caster, true);
-          SetUnitInvulnerable(caster, false);
-          PauseUnit(caster, false);
+          PauseManager.getInstance().unpause(caster, true);
         }
         DestroyEffect(sfx);
         SelectUnitForPlayerSingle(caster, player);
@@ -5484,8 +5502,7 @@ export module SimpleSpellSystem {
         if (ticks == 0) {
           wasInvul = true;
           ShowUnit(caster, false);
-          SetUnitInvulnerable(caster, true);
-          PauseUnit(caster, true);
+          PauseManager.getInstance().pause(caster, true);
         }
 
         if (ticks == 0) {
@@ -5557,6 +5574,392 @@ export module SimpleSpellSystem {
   //   }
   //   SaveInteger(Globals.minatoHashtable, unitId, sfxTimeKey, Math.max(time, ticks));
   // }
+
+  export function doMightGuyFrontLotus() {
+    const minDistance = 60;
+    const maxDistance = 700;
+    const maxHeight = 600;
+    const heightRate = 1800;
+    const moveUpTick = 16;
+    const moveDownTick = 16;
+    const maxTick = 33;
+    const dmgMult = BASE_DMG.KAME_DPS * 8;
+    const lifePctCost = 0.05;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const target = GetSpellTargetUnit();
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+
+    if (!target || !UnitHelper.isUnitTargetableForPlayer(target, player)) return;
+
+    UnitHelper.payHPPercentCost(
+      caster, lifePctCost, 
+      UNIT_STATE_MAX_LIFE
+    );
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setUnit(target);
+
+    const castDummy = CreateUnit(
+      player, 
+      Constants.dummyCasterId, 
+      Globals.tmpVector.x, Globals.tmpVector.y, 
+      0
+    );
+    UnitApplyTimedLife(castDummy, Buffs.TIMED_LIFE, 0.5);
+    UnitAddAbility(castDummy, DebuffAbilities.STUN_MICRO);
+    IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, target);
+
+    PauseManager.getInstance().pause(caster, false);
+    SetUnitTimeScalePercent(caster, 200);
+    SetUnitAnimation(caster, "spell channel");
+
+    PauseManager.getInstance().pause(target, false);
+    UnitHelper.giveUnitFlying(target);
+    SetUnitFlyHeight(target, maxHeight, heightRate);
+    SetUnitAnimation(target, "death");
+
+    const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+    if (dist > minDistance && dist < maxDistance) {
+      const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, dist - minDistance);
+      PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector);
+    }
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > maxTick) {
+        PauseManager.getInstance().unpause(caster);
+        SetUnitTimeScalePercent(caster, 100);
+        ResetUnitAnimation(caster);
+
+        PauseManager.getInstance().unpause(target);
+        ResetUnitAnimation(target);
+        
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+            GetUnitX(caster), GetUnitY(caster)
+          )
+        );
+        
+        if (UnitHelper.isUnitAlive(caster)) {
+          AOEDamage.dealDamageRaw(
+            caster,
+            abilLvl,
+            spellPower,
+            dmgMult,
+            1.0,
+            bj_HEROSTAT_INT,
+            target
+          );
+        }
+        
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      // if (ticks == moveUpTick) {
+      // }
+
+      if (ticks == moveDownTick) {
+        RemoveUnit(castDummy);
+        SetUnitFlyHeight(target, 0, heightRate);
+      }
+      ++ticks;
+    });
+  }
+
+  export function doMightGuyReverseLotus() {
+    const reverseLotusAOE = 400;
+    const maxHeight = 600;
+    const heightUpRate = 1800;
+    const heightDownRate = 6000;
+    const moveUpTick = 11;
+    const moveDownTick = 32;
+    const teleportTicksFrequencyMod = 2;
+    const maxTick = 33;
+    const dmgMult = BASE_DMG.KAME_DPS * 10;
+    const lifePctCost = 0.05;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
+
+    UnitHelper.payHPPercentCost(
+      caster, lifePctCost, 
+      UNIT_STATE_MAX_LIFE
+    );
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    const originX = GetUnitX(caster);
+    const originY = GetUnitY(caster);
+
+    const targetGroup = CreateGroup();
+
+    const castDummy = CreateUnit(
+      player, 
+      Constants.dummyCasterId, 
+      Globals.tmpVector.x, Globals.tmpVector.y, 
+      0
+    );
+    UnitApplyTimedLife(castDummy, Buffs.TIMED_LIFE, 0.5);
+    UnitAddAbility(castDummy, DebuffAbilities.STUN_MICRO);
+    
+    PauseManager.getInstance().pause(caster, false);
+    SetUnitTimeScalePercent(caster, 300);
+    SetUnitAnimation(caster, "spell one");
+
+    GroupClear(Globals.tmpUnitGroup);
+    GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), reverseLotusAOE, null);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+        PauseManager.getInstance().pause(unit, false);
+        SetUnitAnimation(unit, "death");
+
+        UnitHelper.giveUnitFlying(unit);
+        SetUnitFlyHeight(unit, maxHeight, heightUpRate);
+        GroupAddUnit(targetGroup, unit);
+
+        IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, unit);
+      }
+    });
+
+    const numTargets = CountUnitsInGroup(targetGroup);
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > maxTick) {
+        PauseManager.getInstance().unpause(caster);
+        SetUnitTimeScalePercent(caster, 100);
+        ResetUnitAnimation(caster);
+
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+            GetUnitX(caster), GetUnitY(caster)
+          )
+        );
+
+        ForGroup(targetGroup, () => {
+          const unit = GetEnumUnit();
+          PauseManager.getInstance().unpause(unit);
+          ResetUnitAnimation(unit);
+        });
+        
+        if (UnitHelper.isUnitAlive(caster)) {
+          AOEDamage.genericDealDamageToGroup(
+            targetGroup,
+            caster,
+            abilLvl,
+            spellPower,
+            dmgMult,
+            1.0,
+            bj_HEROSTAT_INT
+          );
+
+          Globals.tmpVector.setPos(originX, originY);
+          PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector);
+        }
+
+        DestroyGroup(targetGroup);
+        RemoveUnit(castDummy);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      if (ticks == moveUpTick) {
+        SetUnitTimeScalePercent(caster, 100);
+      }
+
+      if (
+        ticks >= moveUpTick 
+        && ticks % teleportTicksFrequencyMod == 0
+        && ticks <= moveDownTick
+      ) {
+        let groupCounter = 0;
+        const tpIndex = Math.floor(Math.random() * numTargets);
+        ForGroup(targetGroup, () => {
+          const unit = GetEnumUnit();
+          if (tpIndex == groupCounter) {
+            const sfx = AddSpecialEffect("BlackBlink.mdl", GetUnitX(unit), GetUnitY(unit));
+            BlzSetSpecialEffectZ(sfx, maxHeight);
+            DestroyEffect(sfx);
+            Globals.tmpVector.setUnit(unit);
+            PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector);
+          }
+          groupCounter++;
+        });
+      }
+
+      if (ticks == moveDownTick) {
+        ForGroup(targetGroup, () => {
+          const unit = GetEnumUnit();
+          SetUnitFlyHeight(unit, 0, heightDownRate);
+        });
+      }
+      ++ticks;
+    });
+  }
+
+  export function doMightGuyAsaKujaku() {
+    const caster = GetTriggerUnit();
+    const lifePctCost = 0.1;
+    UnitHelper.payHPPercentCost(
+      caster, lifePctCost, 
+      UNIT_STATE_MAX_LIFE
+    );
+  }
+
+  export function doMightGuyHirudora() {
+    const caster = GetTriggerUnit();
+    const lifePctCost = 0.15;
+    UnitHelper.payHPPercentCost(
+      caster, lifePctCost, 
+      UNIT_STATE_MAX_LIFE
+    );
+
+    const guyGateLevel = GetUnitAbilityLevel(caster, Id.mightGuyGateArmor);
+    if (guyGateLevel < 5) {
+      SetUnitAnimationByIndex(caster, 9);
+      SetUnitTimeScalePercent(caster, 200);
+    } else {
+      SetUnitAnimationByIndex(caster, 13);
+      SetUnitTimeScalePercent(caster, 50);
+    }
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 1.0, false, () => {
+      SetUnitTimeScalePercent(caster, 100);
+      ResetUnitAnimation(caster);
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
+  export function doMightGuySekizo() {
+    const caster = GetTriggerUnit();
+    const lifePctCost = 0.1;
+    UnitHelper.payHPPercentCost(
+      caster, lifePctCost, 
+      UNIT_STATE_MAX_LIFE
+    );
+  }
+
+  export function doMightGuyYagai() {
+    const birthTick = 50;
+    const launchTick = 100;
+    const deathTick = 316;
+    const maxTicks = 333;
+    const sfxMaxScale = 1.5;
+    const sfxHeight = 100;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    SoundHelper.playTwoSoundsWithDelay(
+      caster,
+      "Audio/Voice/MightGuy/Yagai1.mp3", 2300, 2.3,
+      "Audio/Voice/MightGuy/Yagai2.mp3", 650
+    );
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+
+    PauseManager.getInstance().pause(caster, false);
+    SetUnitAnimationByIndex(caster, 9);
+
+    let sfx = null;
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > maxTicks) {
+        if (sfx) {
+          BlzSetSpecialEffectScale(sfx, 0.0);
+          DestroyEffect(sfx);
+        }
+        
+        PauseManager.getInstance().unpause(caster, true);
+        ResetUnitAnimation(caster);
+        SetUnitTimeScalePercent(caster, 100);
+
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      if (ticks == birthTick) {
+        sfx = AddSpecialEffect(
+          "MightGuyYagai.mdl", 
+          Globals.tmpVector.x,
+          Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfx, sfxMaxScale);
+        BlzPlaySpecialEffectWithTimeScale(sfx, ANIM_TYPE_BIRTH, 1.5);
+      }
+      if (ticks >= birthTick) {
+        BlzSetSpecialEffectYaw(sfx, GetUnitFacing(caster) * CoordMath.degreesToRadians);
+        BlzSetSpecialEffectX(sfx, GetUnitX(caster));
+        BlzSetSpecialEffectY(sfx, GetUnitY(caster));
+        BlzSetSpecialEffectZ(sfx, GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + sfxHeight);
+      }
+      if (ticks == launchTick) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/MightGuy/YagaiLaunch.mp3", 7500);
+        PauseManager.getInstance().unpause(caster, true);
+      }
+      if (ticks == deathTick) {
+        BlzPlaySpecialEffectWithTimeScale(sfx, ANIM_TYPE_DEATH, 1.819);
+      }
+      if (UnitHelper.isUnitDead(caster)) {
+        if (ch && ch.isAbilityInUse(AbilityNames.MightGuy.YAGAI)) {
+          ch.forceEndAbility(AbilityNames.MightGuy.YAGAI);
+        }
+        ticks = maxTicks;
+      }
+      ++ticks;
+    });
+  }
+
+  export function doMightGuyGate() {
+    const spellId = GetSpellAbilityId();
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    let index = 0;
+    switch (spellId) {
+      case Id.mightGuyGate6:
+        index = 1;
+        break;
+      case Id.mightGuyGate7:
+        index = 2;
+        break;
+      case Id.mightGuyGate8:
+        index = 3;
+        break;
+    }
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    if (index >= 1) {
+      ch.forceEndAbility(AbilityNames.MightGuy.FIFTH_GATE);
+      if (index >= 2) {
+        ch.forceEndAbility(AbilityNames.MightGuy.SIXTH_GATE);
+        if (index >= 3) {
+          ch.forceEndAbility(AbilityNames.MightGuy.SEVENTH_GATE);
+        }
+      }
+    }
+  }
 
   export function doMinatoTeleportEffect(v: Vector2D) {
     const sfx1 = AddSpecialEffect("MinatoYellowSFX.mdl", v.x, v.y);

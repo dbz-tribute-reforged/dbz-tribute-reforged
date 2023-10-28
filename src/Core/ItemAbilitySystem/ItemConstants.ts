@@ -104,6 +104,9 @@ export module ItemConstants {
   export const babidiEnergyAbsorber = FourCC("I04S");
   export const hitContract = FourCC("I04X");
 
+  export const bojackHeadband = FourCC("I004");
+  export const brolyCollar = FourCC("I006");
+
   export const treeOfMightSapling = FourCC("I025");
   export const treeOfMightFruit = FourCC("I026");
 
@@ -174,5 +177,7 @@ export module ItemConstants {
     export const HIT_CONTRACT = hitContract;
     export const TREE_OF_MIGHT_SAPLING = treeOfMightSapling;
     export const TREE_OF_MIGHT_FRUIT = treeOfMightFruit;
+    export const BOJACK_HEADBAND = bojackHeadband;
+    export const BROLY_COLLAR = brolyCollar;
   }
 }

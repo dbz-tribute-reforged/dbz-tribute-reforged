@@ -539,6 +539,23 @@ export module AbilityNames {
     export const RASENGAN_ON_HIT = "Minato's Rasengan!";
   }
 
+  export module MightGuy {
+    export const DYNAMIC_ENTRY: string = "Might Guy Dynamic Entry";
+    export const LEAF_HURRICANE: string = "Might Guy Leaf Hurricane";
+    export const FRONT_LOTUS: string = "Might Guy Front Lotus";
+    export const REVERSE_LOTUS: string = "Might Guy Reverse Lotus";
+    export const SUNSET_OF_YOUTH: string = "Might Guy Sunset Of Youth";
+    export const FIFTH_GATE: string = "Might Guy Fifth Gate";
+    export const SIXTH_GATE: string = "Might Guy Sixth Gate";
+    export const SEVENTH_GATE: string = "Might Guy Seventh Gate";
+    export const EIGHTH_GATE: string = "Might Guy Eighth Gate";
+    export const ASA_KUJAKU: string = "Might Guy Asa Kujaku";
+    export const HIRUDORA: string = "Might Guy Hirudora";
+    export const SEKIZO: string = "Might Guy Sekizo";
+    export const YAGAI: string = "Might Guy Yagai";
+    export const STRONG_FIST: string = "Might Guy Strong Fist";
+  }
+
 
 
 

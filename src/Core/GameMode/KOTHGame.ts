@@ -377,9 +377,6 @@ export class KOTHGame {
           );
           UnitAddItem(unit, it);
 
-          if (GetUnitTypeId(unit) == Id.sonic) {
-            UnitAddAbility(unit, Id.sonicSuper);
-          }
           if (GetUnitTypeId(unit) == Id.skurvy) {
             it = CreateItem(
               ItemConstants.crystalCoconut,
@@ -681,6 +678,7 @@ export class KOTHGame {
     const ch = Globals.customPlayers[playerId].getCustomHero(unit);
     if (ch) {
       ch.forceEndAllAbilities();
+      ch.setCurrentSP(ch.getMaxSP());
     }
 
     UnitRemoveBuffs(unit, true, true);

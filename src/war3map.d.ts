@@ -750,6 +750,8 @@ declare var udg_TempInt: number;
 declare var udg_TempSound: sound;
 declare var udg_TempPlayer: player;
 
+declare var udg_GlobalStatMultiplier: number;
+
 declare var udg_StatMultHashtable: hashtable;
 declare var udg_StatMultReal: number;
 declare var udg_StatMultUnit: unit;

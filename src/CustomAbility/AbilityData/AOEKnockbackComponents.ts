@@ -1928,7 +1928,7 @@ export const AOEKnockbackComponents = [
     startTick: 66,
     endTick: -1,
     knockbackData: {
-      speed: 8, 
+      speed: 9, 
       angle: 180, 
       aoe: 300,
     },
@@ -1966,7 +1966,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 6, 
+      speed: 5, 
       angle: 180, 
       aoe: 800,
     },
@@ -2057,5 +2057,25 @@ export const AOEKnockbackComponents = [
     onlyHeroes: false,
     isPersistent: true,
     isFixedAngle: true,
+  },
+  // might guy hirudora
+  {
+    name: "knockback might guy hirudora",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 90, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
   },
 ];

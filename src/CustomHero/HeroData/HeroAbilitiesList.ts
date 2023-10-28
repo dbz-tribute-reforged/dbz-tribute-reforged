@@ -593,6 +593,23 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Minato.KURAMA_MODE,
       AbilityNames.Minato.RASENGAN_ON_HIT,
     ]],
+
+    [Id.mightGuy, [
+      AbilityNames.MightGuy.DYNAMIC_ENTRY,
+      AbilityNames.MightGuy.LEAF_HURRICANE,
+      AbilityNames.MightGuy.FRONT_LOTUS,
+      AbilityNames.MightGuy.REVERSE_LOTUS,
+      AbilityNames.MightGuy.SUNSET_OF_YOUTH,
+      AbilityNames.MightGuy.FIFTH_GATE,
+      AbilityNames.MightGuy.SIXTH_GATE,
+      AbilityNames.MightGuy.SEVENTH_GATE,
+      AbilityNames.MightGuy.EIGHTH_GATE,
+      AbilityNames.MightGuy.ASA_KUJAKU,
+      AbilityNames.MightGuy.HIRUDORA,
+      AbilityNames.MightGuy.SEKIZO,
+      AbilityNames.MightGuy.YAGAI,
+      AbilityNames.MightGuy.STRONG_FIST,
+    ]],
     
 
 

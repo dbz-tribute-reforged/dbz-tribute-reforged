@@ -1,3 +1,4 @@
+import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { AbilityComponent } from "./AbilityComponent";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
@@ -15,6 +16,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     public startTick: number = 0,
     public endTick: number = -1,
     public doHide: boolean = true,
+    public doInvul: boolean = true,
     public preventMovement: boolean = true,
     public removeNegativeBuffs: boolean = false,
     public forceReselect: boolean = false,
@@ -28,11 +30,11 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       this.isFinished = false;
       if (this.doHide) ShowUnitHide(source);
       if (this.preventMovement) {
-        PauseUnit(source, true);
+        PauseManager.getInstance().pause(source, false);
       }
       if (this.removeNegativeBuffs) UnitRemoveBuffs(source, false, true);
       this.wasInvul = BlzIsUnitInvulnerable(source);
-      if (!this.wasInvul) {
+      if (this.doInvul && !this.wasInvul) {
         SetUnitInvulnerable(source, true);
       }
     }
@@ -42,13 +44,13 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       this.isFinished = true;
       if (this.doHide) ShowUnitShow(source);
       if (this.preventMovement) {
-        PauseUnit(source, false);
+        PauseManager.getInstance().unpause(source, false);
       }
       if (this.forceReselect && GetPlayerController(input.casterPlayer) == MAP_CONTROL_USER) {
         // SelectUnitAddForPlayer(source, input.casterPlayer);
         SelectUnitForPlayerSingle(source, input.casterPlayer);
       }
-      if (!this.wasInvul) {
+      if (this.doInvul && !this.wasInvul) {
         SetUnitInvulnerable(source, false);
       }
     }
@@ -63,6 +65,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     return new HideUnit(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.doHide,
+      this.doInvul,
       this.preventMovement,
       this.removeNegativeBuffs,
       this.forceReselect,
@@ -76,6 +79,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       startTick: number;
       endTick: number;
       doHide: boolean;
+      doInvul: boolean;
       preventMovement: boolean;
       removeNegativeBuffs: boolean;
       forceReselect: boolean;
@@ -86,6 +90,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.doHide = input.doHide;
+    this.doInvul = input.doInvul;
     this.preventMovement = input.preventMovement;
     this.removeNegativeBuffs = input.removeNegativeBuffs;
     this.forceReselect = input.forceReselect;

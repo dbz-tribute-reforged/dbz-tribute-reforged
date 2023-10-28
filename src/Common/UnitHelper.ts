@@ -8,6 +8,7 @@ export module UnitHelper {
       IsUnitType(unit, UNIT_TYPE_SNARED) ||
       IsUnitType(unit, UNIT_TYPE_SLEEPING) ||
       IsUnitType(unit, UNIT_TYPE_STUNNED) ||
+      IsUnitPaused(unit) || 
       UnitHasBuffBJ(unit, Buffs.STUNNED)
     );
   }
@@ -198,5 +199,21 @@ export module UnitHelper {
         )
       );
     }
+  }
+
+  export function payHPPercentCost(
+    unit: unit, 
+    hpCostPct: number, 
+    unitState: unitstate
+  ) {
+    SetUnitState(
+      unit, 
+      UNIT_STATE_LIFE, 
+      Math.max(
+        1, 
+        GetUnitState(unit, UNIT_STATE_LIFE) 
+        - hpCostPct * GetUnitState(unit, unitState)
+      )
+    );
   }
 }
