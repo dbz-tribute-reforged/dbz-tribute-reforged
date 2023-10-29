@@ -22,9 +22,7 @@ export module ItemConstants {
     FourCC("I03A"),
     FourCC("I03B"),
   ];
-  export const zSword = [
-    FourCC("I009"),
-  ];
+  export const zSword = FourCC("I009");
   export const powerPole = [
     FourCC("I04J"),
   ];
@@ -97,6 +95,9 @@ export module ItemConstants {
   export const sandbags = [
     FourCC("I04M"),
   ];
+  export const spareParts = [
+    FourCC("I008"),
+  ];
 
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
   export const rainbowShell = FourCC("I04P");
@@ -114,6 +115,8 @@ export module ItemConstants {
 
   export const chaosEmerald = FourCC("I04Z");
   export const crystalCoconut = FourCC("I04Y");
+
+  export const dragonBallItem = FourCC("I01V");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -159,6 +162,7 @@ export module ItemConstants {
     export const GERO_BOOTS = geroBoots[0];
     export const ANDROID_BOMB = androidBomb[0];
     export const BANANA_GENERATOR = bananaGenerator[0];
+    export const SPARE_PARTS = spareParts[0];
     export const GETI_STAR_FRAGMENT = getiStarFragment[0];
     export const HBTC_TRAINING_TICKET = trainingTicket[0];
     export const BIO_LAB_RESEARCH = bioLabResearch[0];

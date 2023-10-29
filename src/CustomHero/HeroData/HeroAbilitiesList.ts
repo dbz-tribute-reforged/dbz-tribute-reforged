@@ -710,6 +710,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Dende.SACRED_WATER_2, AbilityNames.Dende.ORANGE_DENDE,
       AbilityNames.Link.SIDE_SLASH,
       AbilityNames.Minato.KUNAI, AbilityNames.Minato.KURAMA_MODE,
+      AbilityNames.MightGuy.DYNAMIC_ENTRY, AbilityNames.MightGuy.ASA_KUJAKU,
+      AbilityNames.MightGuy.FIFTH_GATE, AbilityNames.MightGuy.SIXTH_GATE,
+      AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

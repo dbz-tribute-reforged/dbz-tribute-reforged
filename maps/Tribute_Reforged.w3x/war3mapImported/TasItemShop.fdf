@@ -1,0 +1,110 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+Frame "GLUETEXTBUTTON" "TasItemShopRefButton" {
+    Width 0.02,
+	Height 0.02,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    ButtonText "TasItemShopRefButtonText",
+	Frame "TEXT" "TasItemShopRefButtonText" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.0000001, "",
+	}
+
+    ControlBackdrop "TasItemShopRefButtonBackdrop",
+    Frame "BACKDROP" "TasItemShopRefButtonBackdrop" {
+        
+    }
+    
+    ControlPushedBackdrop "TasItemShopRefButtonBackdropPushed",
+    Frame "BACKDROP" "TasItemShopRefButtonBackdropPushed" {
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+    }
+
+	ControlMouseOverHighlight "TasItemShopRefButtonHighLight",
+	Frame "HIGHLIGHT" "TasItemShopRefButtonHighLight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+
+    Frame "BACKDROP" "TasItemShopRefButtonBackdropBackdrop" {
+        SetAllPoints,        
+        BackdropBackground "ui\widgets\escmenu\human\checkbox-check",
+        BackdropBlendAll,
+    }
+    Frame "BACKDROP" "TasItemShopRefButtonBackdropBackdrop2" {
+        UseActiveContext,
+        SetPoint TOPRIGHT, "TasItemShopRefButton", TOPRIGHT, 0,0,
+        Width 0.015,
+	    Height 0.015,
+        BackdropBackground "ui\widgets\battlenet\chaticons\bnet-squelch",
+        BackdropBlendAll,
+    }
+}
+
+Frame "GLUETEXTBUTTON" "TasItemShopCatButton" {
+    Width 0.019,
+	Height 0.019,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    ButtonText "TasItemShopCatButtonCatText",
+	Frame "TEXT" "TasItemShopCatButtonCatText" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.0000001, "",
+	}
+
+    ControlBackdrop "TasItemShopCatButtonBackdrop",
+    Frame "BACKDROP" "TasItemShopCatButtonBackdrop" {
+    }
+    
+    ControlDisabledBackdrop "TasItemShopCatButtonBackdropDisabled",
+    Frame "BACKDROP" "TasItemShopCatButtonBackdropDisabled" {
+    }
+
+    ControlPushedBackdrop "TasItemShopCatButtonBackdropPushed",
+    Frame "BACKDROP" "TasItemShopCatButtonBackdropPushed" {
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+    }
+
+	ControlMouseOverHighlight "TasItemShopCatButtonHighLight",
+	Frame "HIGHLIGHT" "TasItemShopCatButtonHighLight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+    
+}
+
+Frame "GLUETEXTBUTTON" "TasItemShopUndoButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+    Width 0.039,
+    Height 0.028,
+    ButtonText "TasItemShopUndoButtonText",
+	Frame "TEXT" "TasItemShopUndoButtonText" INHERITS "EscMenuButtonTextTemplate" {
+        DecorateFileNames,
+        FrameFont "EscMenuTextFont", 0.010, "",
+        FontJustificationOffset 0.0 -0.000,
+		Text "Undo",
+	}
+}
+
+Frame "BACKDROP" "TasItemShopRaceBackdrop" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackground  "EscMenuBackground",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.008,
+    BackdropBackgroundSize  0.256,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "EscMenuBorder",
+    BackdropBlendAll,
+}
+
+Frame "HIGHLIGHT" "TasItemShopSelectedHighlight" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-Button-KeyboardHighlight",
+    //HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse",    
+    //HighlightAlphaFile "ui\widgets\console\human\commandbutton\human-multipleselection-border",
+    //HighlightAlphaFile "ui\widgets\escmenu\human\quest-button-highlight",
+    HighlightAlphaMode "ADD",
+}

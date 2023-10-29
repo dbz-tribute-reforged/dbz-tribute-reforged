@@ -2828,7 +2828,7 @@ export function setupRegenTimer(customHero: CustomHero) {
   const regenTimer = CreateTimer();
   customHero.addTimer(regenTimer);
 
-  TimerStart(regenTimer, 0.03, true, () => {
+  TimerStart(regenTimer, Constants.REGEN_TICK_RATE, true, () => {
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
     const heroAgi = GetHeroAgi(customHero.unit, true);
@@ -2866,7 +2866,7 @@ export function setupRegenTimer(customHero: CustomHero) {
       spMult += Constants.MIGHT_GUY_GATE_SP_MULTS[guyGateLvl-1]
     }
     const incSp = (
-      0.03 
+      Constants.REGEN_TICK_RATE
       * Constants.BASE_SP_REGEN 
       * spAgi * spMult
     );
@@ -2899,7 +2899,7 @@ export function setupRegenTimer(customHero: CustomHero) {
           guyGateLvl : guyGateLvl - 1
         );
         incHp -= (
-          0.03 
+          Constants.REGEN_TICK_RATE
           * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
           * drainPct
         );
@@ -2909,7 +2909,7 @@ export function setupRegenTimer(customHero: CustomHero) {
       }
     }
     incHp += (
-      0.03 
+      Constants.REGEN_TICK_RATE
       * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
       * Constants.BASE_HP_REGEN_PCT
       * hpAgi * hpMult
@@ -2936,7 +2936,8 @@ export function setupRegenTimer(customHero: CustomHero) {
       mpMult += Constants.FOUNTAIN_REGEN_MULT;
     }
     const incMp = (
-      0.03 * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
+      Constants.REGEN_TICK_RATE
+      * GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA) 
       * Constants.BASE_MP_REGEN_PCT
       * mpAgi * mpMult
     );

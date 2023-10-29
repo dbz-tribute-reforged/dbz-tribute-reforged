@@ -6,7 +6,7 @@ export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
-  export let isZanzoDash: boolean = false;
+  export let isKOTH: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
   export let showAbilityFloatingText: boolean = true;
@@ -24,7 +24,8 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const simpleSpellEffectTrigger = CreateTrigger();
-  export const simpleSpellCDTrigger = CreateTrigger();
+  export const simpleSpellCDFinishTrigger = CreateTrigger();
+  export const simpleSpellCDHashtable = InitHashtable();
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
@@ -136,6 +137,7 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const REGEN_TICK_RATE = 0.03;
   export const BASE_SP_REGEN = 3;
   export const BASE_HP_REGEN_PCT = 0.005;
   export const BASE_MP_REGEN_PCT = 0.01;
@@ -422,6 +424,7 @@ export module Id {
   export const vendorElHermano = FourCC("n03U");
   export const vendorChefSatan = FourCC("n03T");
   export const vendorKorin = FourCC("n01P");
+  export const vendorWhis = FourCC("n01G");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");

@@ -31,6 +31,7 @@ import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
 import { SmartPingManager } from "Core/SmartPingSystem/SmartPingManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
 import { PauseManager } from "Core/PauseSystem/PauseManager";
+import { ItemShopManager } from "Core/ItemShop/ItemShopManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -48,6 +49,7 @@ let itemCleanupManager: ItemCleanupManager;
 let customAbilityManager: CustomAbilityManager;
 let farmingManager: FarmingManager;
 let heroSelectorManager: HeroSelectorManager;
+let itemShopManager: ItemShopManager;
 let dualTechManager: DualTechManager;
 let castTimeHelper: CastTimeHelper;
 let timerManager: TimerManager;
@@ -63,8 +65,7 @@ const musicStr = (
   + "Audio/Music/OnTheBeachOfDreams.mp3"
 );
 const lobbyMusicStr = (
-  "Audio/Music/GatoSong.mp3;" 
-  + "Audio/Music/SecretOfTheForest.mp3;"
+  "Audio/Music/GatoSong.mp3;"
 );
 
 function tsPostMain() {
@@ -120,6 +121,7 @@ function tsPostMain() {
   TimerStart(CreateTimer(), 0.1, false, () => {
     DestroyTimer(GetExpiredTimer());
     heroSelectorManager = HeroSelectorManager.getInstance();
+    itemShopManager = ItemShopManager.getInstance();
   });
 
 

@@ -85,6 +85,8 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     DisableTrigger(gg_trg_Auto_Transform);
     DisableTrigger(gg_trg_Auto_Transform_Turn_On);
 
+    TriggerExecute(gg_trg_Catchup_Turn_Off);
+
     udg_GlobalStatMultiplier = 0.0;
 
     VisionHelper.showFbArenaVision();

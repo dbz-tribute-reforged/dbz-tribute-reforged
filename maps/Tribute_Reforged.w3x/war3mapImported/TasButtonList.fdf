@@ -1,0 +1,276 @@
+//TasButtonList V10 CreateContext based
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+Frame "GLUETEXTBUTTON" "TasButtonTemplate" {
+    ButtonText "TasButtonTemplateText",
+	Frame "TEXT" "TasButtonTemplateText" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.0000001, "",
+	}
+
+    ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+    ControlMouseOverHighlight "TasButtonTemplateHighLightMouse",
+    Frame "HIGHLIGHT" "TasButtonTemplateHighLightMouse" {
+        HighlightType "FILETEXTURE",
+        //HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse.blp",    
+        //HighlightAlphaFile "ui\widgets\console\human\commandbutton\human-multipleselection-border",
+        HighlightAlphaFile "ui\widgets\escmenu\human\quest-button-highlight",
+        HighlightAlphaMode "ADD",
+    }
+
+    ControlBackdrop "TasButtonBackdrop",
+    Frame "BACKDROP" "TasButtonBackdrop" {
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackgroundSize 0.1,
+        //BackdropBackground          "EscMenuBackground",
+        //BackdropBackground "EscMenuButtonBackground",
+        BackdropBackground "QuestDialogNormalBackground",
+        //BackdropBackground          "ui\widgets\escmenu\orc\orc-options-menu-background",
+
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.005,
+        BackdropBackgroundInsets    0.0005 0.0005 0.0005 0.0005,
+        //BackdropEdgeFile            "ConsoleButtonBorder",
+        //BackdropEdgeFile            "UI\Widgets\Console\Human\human-console-button-up",
+        //BackdropEdgeFile            "UI\Widgets\EscMenu\Human\human-options-button-border-down",
+        BackdropEdgeFile "QuestDialogNormalBorder",
+	    BackdropBlendAll,
+    }
+
+    ControlPushedBackdrop "TasButtonBackdropPushed",
+    Frame "BACKDROP" "TasButtonBackdropPushed" {
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackgroundSize 0.1,
+        BackdropBackground          "QuestDialogCompletedBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.005,
+        BackdropBackgroundInsets    0.0005 0.0005 0.0005 0.0005,
+        //BackdropEdgeFile            "ConsoleButtonPushedBorder",
+        BackdropEdgeFile            "QuestDialogCompletedBorder",
+
+	    BackdropBlendAll,
+    }
+
+}
+
+Frame "TEXT" "TasButtonTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.0095,"",
+    LayerStyle "IGNORETRACKEVENTS", 
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,
+}
+
+Frame "TEXT" "TasButtonSecTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.0075,"",
+    LayerStyle "IGNORETRACKEVENTS", 
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,
+}
+
+Frame "BACKDROP" "TasButtonSecIconTemplate" {
+    Width 0.0105,
+    Height 0.0105,
+}
+
+Frame "TEXT" "TasButtonListTextTemplate" {
+    FrameFont "InfoPanelTextFont", 0.010, "",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontShadowColor 0.0 0.0 0.0 0.9,
+    FontShadowOffset 0.001 -0.001,
+    LayerStyle "IGNORETRACKEVENTS",
+}
+
+
+Frame "GLUETEXTBUTTON" "TasButton" INHERITS WITHCHILDREN "TasButtonTemplate" {
+    Width 0.2,
+    Height 0.0265,
+
+    Frame "BACKDROP" "TasButtonIcon" {
+        UseActiveContext,
+        Width 0.02,
+        Height 0.021,
+        SetPoint LEFT, "TasButton", LEFT, 0.002, 0,
+        BackdropBackground "replaceabletextures\commandbuttons\btntemp",
+    }
+
+    Frame "TEXT" "TasButtonText" INHERITS "TasButtonTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TasButtonIcon", RIGHT, 0.003, 0,
+        Width 0.12,
+        Height 0.021,
+        Text "Test Text",
+    }
+
+    Frame "BACKDROP" "TasButtonIconGold" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint TOPLEFT, "TasButtonText", TOPRIGHT, 0.005, -0.0005,
+        BackdropBackground "ToolTipGoldIcon",
+    }
+    Frame "BACKDROP" "TasButtonIconLumber" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint TOP, "TasButtonIconGold", BOTTOM, 0, -0.001,
+        BackdropBackground "ToolTipLumberIcon",
+    }
+    
+    Frame "TEXT" "TasButtonTextGold" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TasButtonIconGold", RIGHT, 0.0025, 0,
+        Text "Test Text",
+    }
+
+    Frame "TEXT" "TasButtonTextLumber" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TasButtonIconLumber", RIGHT, 0.0025, 0,
+        Text "Test Text",
+    }
+
+}
+
+
+Frame "FRAME" "TasButtonListTooltipBoxFrame"{
+    Frame "BACKDROP" "TasButtonListTooltipBox" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "ToolTipBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.01,
+        BackdropBackgroundSize  0.256,
+        BackdropBackgroundInsets 0.0003 0.0003 0.0003 0.0003,
+        BackdropEdgeFile  "ToolTipBorder",
+        BackdropBlendAll,
+        Frame "TEXT" "TasButtonListTooltipText" INHERITS "TasButtonListTextTemplate" {
+            Width 0.2,
+            DecorateFileNames,
+        }
+        Frame "BACKDROP" "TasButtonListTooltipSeperator" {
+            Height 0.001,
+            UseActiveContext,
+            SetPoint BOTTOMLEFT, "TasButtonListTooltipText", TOPLEFT, 0, 0.005,
+            SetPoint BOTTOMRIGHT, "TasButtonListTooltipText", TOPRIGHT, 0, 0.005,
+            
+            BackdropBackground "replaceabletextures\teamcolor\teamcolor08",
+        }
+        Frame "BACKDROP" "TasButtonListTooltipIcon" {
+            Width 0.035,
+            Height 0.035,
+            UseActiveContext,
+            SetPoint BOTTOMLEFT, "TasButtonListTooltipSeperator", TOPLEFT, 0, 0.005,
+        }
+        Frame "TEXT" "TasButtonListTooltipName" INHERITS "TasButtonListTextTemplate" {
+            UseActiveContext,
+            SetPoint TOPLEFT, "TasButtonListTooltipIcon", TOPRIGHT, 0.005, -0.002,
+            SetPoint BOTTOMRIGHT, "TasButtonListTooltipSeperator", TOPRIGHT, -0.005, 0.005,
+            DecorateFileNames,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYMIDDLE,
+            FrameFont "InfoPanelTextFont", 0.013, "",
+        }
+    }
+}
+
+Frame "EDITBOX" "TasEditBox" INHERITS WITHCHILDREN "EscMenuEditBoxTemplate" {
+    Width 0.15,
+    Height 0.027,
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.009, "",
+  
+    EditTextFrame "TasEditBoxText",
+    Frame "TEXT" "TasEditBoxText" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.009, "",
+        FontColor 1.0 1.0 1.0,
+        FontFlags "FIXEDSIZE",
+    }
+}
+
+Frame "GLUETEXTBUTTON" "TasButtonSmall" INHERITS WITHCHILDREN "TasButtonTemplate" {
+    Width 0.1,
+    Height 0.0325,
+
+    Frame "BACKDROP" "TasButtonIcon" {
+        UseActiveContext,
+        Width 0.026,
+        Height 0.027,
+        SetPoint LEFT, "TasButtonSmall", LEFT, 0.002, 0,
+        BackdropBackground "replaceabletextures\commandbuttons\btntemp",
+    }
+
+    Frame "TEXT" "TasButtonText" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "TasButtonIcon", TOPRIGHT, 0.001, 0,
+        Width 0.065,
+        Height 0.018,
+        Text "Test Text",
+    }
+
+
+    
+    Frame "TEXT" "TasButtonTextLumber" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint BOTTOMRIGHT, "TasButtonSmall", BOTTOMRIGHT, -0.003, 0.003,        
+        Text "Test Text",
+    }
+    Frame "BACKDROP" "TasButtonIconLumber" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint RIGHT, "TasButtonTextLumber", LEFT, -0.001, 0,
+        BackdropBackground "ToolTipLumberIcon",
+    }
+
+    Frame "TEXT" "TasButtonTextGold" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint RIGHT, "TasButtonIconLumber", LEFT, -0.002, 0,
+        Text "Test Text",
+    }
+    Frame "BACKDROP" "TasButtonIconGold" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint RIGHT, "TasButtonTextGold", LEFT, -0.001, 0,
+        BackdropBackground "ToolTipGoldIcon",
+    }
+}
+
+
+Frame "GLUETEXTBUTTON" "TasButtonGrid" INHERITS WITHCHILDREN "TasButtonTemplate" {
+    Width 0.064,
+    Height 0.0265,
+
+    Frame "BACKDROP" "TasButtonIcon" {
+        UseActiveContext,
+        Width 0.02,
+        Height 0.021,
+        SetPoint LEFT, "TasButtonGrid", LEFT, 0.002, 0,
+        BackdropBackground "replaceabletextures\commandbuttons\btntemp",
+    }
+    
+    Frame "BACKDROP" "TasButtonIconGold" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint TOPLEFT, "TasButtonIcon", TOPRIGHT, 0.0015, -0.0005,
+        BackdropBackground "ToolTipGoldIcon",
+    }
+    Frame "BACKDROP" "TasButtonIconLumber" INHERITS "TasButtonSecIconTemplate" {
+        DecorateFileNames,
+        UseActiveContext,
+        SetPoint TOP, "TasButtonIconGold", BOTTOM, 0, -0.001,
+        BackdropBackground "ToolTipLumberIcon",
+    }
+    
+    Frame "TEXT" "TasButtonTextGold" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TasButtonIconGold", RIGHT, 0.001, 0,
+        Text "Test Text",
+    }
+
+    Frame "TEXT" "TasButtonTextLumber" INHERITS "TasButtonSecTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TasButtonIconLumber", RIGHT, 0.001, 0,
+        Text "Test Text",
+    }
+}

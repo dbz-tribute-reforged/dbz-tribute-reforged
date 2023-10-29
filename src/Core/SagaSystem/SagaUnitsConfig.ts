@@ -291,6 +291,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
       ],
+      [
+        ItemConstants.SagaDrops.SPARE_PARTS,
+      ]
     )],
     ["King Cold", new SagaUnit(FourCC("U00K"), 50, 2500, 410, 2000, new Vector2D(24400, 6500),
       [

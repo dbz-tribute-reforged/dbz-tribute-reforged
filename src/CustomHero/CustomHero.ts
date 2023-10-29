@@ -274,6 +274,8 @@ export class CustomHero {
     for (const timer of this.timers) {
       DestroyTimer(timer);
     }
-    FlushChildHashtable(Globals.genericSpellHashtable, GetHandleId(this.unit));
+    const unitId = GetHandleId(this.unit);
+    FlushChildHashtable(Globals.genericSpellHashtable, unitId);
+    FlushChildHashtable(Globals.simpleSpellCDHashtable, unitId);
   }
 }

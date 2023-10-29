@@ -65,6 +65,7 @@ export module SimpleSpellSystem {
       if (func) {
         func();
       }
+      spellCDEffectLogic();
     });
     
 
@@ -6214,6 +6215,25 @@ export module SimpleSpellSystem {
     BlzStartUnitAbilityCooldown(unit, Id.leonHeavyGrenade, cd);
   }
 
+  export function spellCDEffectLogic() {
+    const unit = GetTriggerUnit();
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      const abilId = GetSpellAbilityId();
+      if (
+        abilId == Id.aylaTripleKick
+        || abilId == Id.hirudegarnFlameBreath
+        || abilId == Id.hirudegarnFlameBall
+        || abilId == Id.hirudegarnTailSweep
+      ) {
+        return;
+      }
+      const unitId = GetHandleId(unit);
+      SaveBoolean(Globals.simpleSpellCDHashtable, unitId, abilId, true);
+    }
+  }
+
   export function setupSpellFinishCastTrigger() {
     // Globals.linkedSpellsMap.set(Id.leonShotgun, SimpleSpellSystem.linkLeonSpellbook);
     // Globals.linkedSpellsMap.set(Id.leonAssaultRifle, SimpleSpellSystem.linkLeonSpellbook);
@@ -6224,8 +6244,10 @@ export module SimpleSpellSystem {
     Globals.linkedSpellsMap.set(Id.fleshAttack, SimpleSpellSystem.linkBuuFleshCD);
     Globals.linkedSpellsMap.set(Id.fleshAttackAbsorbTarget, SimpleSpellSystem.linkBuuFleshCD);
 
-    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
-    TriggerAddAction(Globals.simpleSpellCDTrigger, () => {
+    // TODOL: fix channel abiliteis nto getting spare parts bonus
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDFinishTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH);
+    TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellCDFinishTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST);
+    TriggerAddAction(Globals.simpleSpellCDFinishTrigger, () => {
       // get custom hero casting it
       const unit = GetTriggerUnit();
       const player = GetOwningPlayer(unit);
@@ -6242,8 +6264,16 @@ export module SimpleSpellSystem {
           return;
         }
 
-        const abilLvl = GetUnitAbilityLevel(unit, abilId)-1;
-        const baseCd = BlzGetUnitAbilityCooldown(unit, abilId, abilLvl);
+        const baseCd = BlzGetUnitAbilityCooldownRemaining(unit, abilId);
+        if (baseCd <= 0) return;
+
+        const unitId = GetHandleId(unit);
+        const wasCasted = LoadBoolean(Globals.simpleSpellCDHashtable, unitId, abilId);
+        if (!wasCasted) return;
+        SaveBoolean(Globals.simpleSpellCDHashtable, unitId, abilId, false);
+
+        // const abilLvl = GetUnitAbilityLevel(unit, abilId)-1;
+        // const baseCd = BlzGetUnitAbilityCooldown(unit, abilId, abilLvl);
 
         let newCd = baseCd;
 
@@ -6258,6 +6288,10 @@ export module SimpleSpellSystem {
 
         if (GetUnitAbilityLevel(unit, Id.minatoKuramaModeFlag) > 0) {
           newCd *= 0.5;
+        }
+
+        if (UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.SPARE_PARTS)) {
+          newCd *= 0.9;
         }
 
         if (newCd != baseCd) {
