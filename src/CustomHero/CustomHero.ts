@@ -82,14 +82,18 @@ export class CustomHero {
     // then read some data and apply special abilities for
     // relevant heroes
     const playerId = GetPlayerId(GetOwningPlayer(unit));
-    if (
-      playerId >= 0 
-      && playerId < Constants.maxActivePlayers 
-      && Globals.customPlayers[playerId].useZanzoDash
-    ) {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    if (id == Id.minato) {
+      this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
     } else {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+      if (
+        playerId >= 0 
+        && playerId < Constants.maxActivePlayers 
+        && Globals.customPlayers[playerId].useZanzoDash
+      ) {
+        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+      } else {
+        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+      }
     }
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
 
@@ -246,6 +250,21 @@ export class CustomHero {
     if (tmp > 0) SaveReal(udg_StatMultHashtable, unitId, 9, 1);
   }
 
+  public forceEndAbility(name: string) {
+    const ability = this.abilities.getCustomAbilityByName(name);
+    if (ability && ability.isInUse()) {
+      CastTimeHelper.getInstance().forceEndActivatedAbility(ability);
+    }
+  }
+
+  public isAbilityInUse(name: string) {
+    const ability = this.abilities.getCustomAbilityByName(name);
+    if (ability) {
+      return ability.isInUse();
+    }
+    return false;
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();
@@ -255,5 +274,8 @@ export class CustomHero {
     for (const timer of this.timers) {
       DestroyTimer(timer);
     }
+    const unitId = GetHandleId(this.unit);
+    FlushChildHashtable(Globals.genericSpellHashtable, unitId);
+    FlushChildHashtable(Globals.simpleSpellCDHashtable, unitId);
   }
 }

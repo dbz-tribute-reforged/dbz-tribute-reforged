@@ -7,6 +7,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CostType, Globals, OrderIds } from "Common/Constants";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -16,7 +17,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_CASTER_POINT = 4;
   static readonly DIRECTION_LAST_CAST_POINT = 5;
 
-  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.00125 * 0.01;
+  // 20% per 10k stats
+  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0020 * 0.01;
   static readonly MINIMUM_STR_AGI_RATIO = 0.8;
   static readonly MAXIMUM_AGI_DISTANCE_MULTIPLIER = 3.0;
 
@@ -120,13 +122,15 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
         this.distanceMult = 1;
         if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
+          const sourceStr = GetHeroStr(source, true);
           const sourceAgi = GetHeroAgi(source, true);
-          const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
+          // const sourceInt = GetHeroInt(source, true);
+          const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT
           const bonusAgiToStrRatioSpeed = Math.max(
             Dash.MINIMUM_STR_AGI_RATIO,
             -0.05 + Math.min(
               bonusAgiSpeed,
-              sourceAgi / Math.max(1, GetHeroStr(source, true))
+              sourceAgi / Math.max(1, sourceStr)
             )
           );
           
@@ -144,10 +148,19 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
         }
 
-        if (ability.name == AbilityNames.BasicAbility.ZANZOKEN) {
+        if (
+          ability.name == AbilityNames.BasicAbility.ZANZOKEN
+          || ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO
+        ) {
           // repeatedly move the user towards the target until they run out of distance to move
           // then move the user
           if (ability.currentTick == 0) {
+            if (ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO) {
+              SimpleSpellSystem.minatoKunaiCreateVec(
+                input.caster.unit,
+                this.currentCoord
+              );
+            }
             const distMove = 50 * this.distanceMult;
             let distTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);    
 
@@ -176,8 +189,17 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
               }
               this.distanceTravelled += distMove;
               PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
-              
+
               IssuePointOrderById(source, OrderIds.MOVE, this.dashTargetPoint.x, this.dashTargetPoint.y);
+            }
+
+            if (ability.name == AbilityNames.Minato.HIRAISHIN_ZANZO) {
+              SimpleSpellSystem.minatoIllusionSFXLogic(
+                input.caster.unit, 
+                this.currentCoord, 
+                this.targetCoord, 
+                ability.name
+              );
             }
           }
           this.targetCoord.setUnit(source);

@@ -9,6 +9,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.spiritBomb, AbilityNames.Goku.SPIRIT_BOMB],
     [Id.dragonFist, AbilityNames.Goku.DRAGON_FIST],
     [Id.superDragonFist, AbilityNames.Goku.SUPER_DRAGON_FIST],
+    [Id.solarFlare, AbilityNames.Goku.SOLAR_FLARE],
     [Id.ultraInstinct, AbilityNames.Goku.ULTRA_INSTINCT],
     [Id.masteredUltraInstinct, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
 
@@ -455,6 +456,29 @@ export const abilityCodesToNames = new Map<number, string>(
     // link twilight
     [Id.linkSideSlash, AbilityNames.Link.SIDE_SLASH],
     [Id.linkBoomerang, AbilityNames.Link.BOOMERANG],
+
+    // minato
+    [Id.minatoKunai, AbilityNames.Minato.KUNAI],
+    [Id.minatoFirstFlash, AbilityNames.Minato.FIRST_FLASH],
+    [Id.minatoSecondStep, AbilityNames.Minato.SECOND_STEP],
+    [Id.minatoThirdStage, AbilityNames.Minato.THIRD_STAGE],
+    [Id.minatoSpiralFlash, AbilityNames.Minato.SPIRAL_FLASH],
+    [Id.minatoKuramaMode, AbilityNames.Minato.KURAMA_MODE],
+
+    // might guy
+    [Id.mightGuyDynamicEntry, AbilityNames.MightGuy.DYNAMIC_ENTRY],
+    [Id.mightGuyLeafHurricane, AbilityNames.MightGuy.LEAF_HURRICANE],
+    [Id.mightGuyFrontLotus, AbilityNames.MightGuy.FRONT_LOTUS],
+    [Id.mightGuyReverseLotus, AbilityNames.MightGuy.REVERSE_LOTUS],
+    [Id.mightGuySunsetOfYouth, AbilityNames.MightGuy.SUNSET_OF_YOUTH],
+    [Id.mightGuyGate5, AbilityNames.MightGuy.FIFTH_GATE],
+    [Id.mightGuyGate6, AbilityNames.MightGuy.SIXTH_GATE],
+    [Id.mightGuyGate7, AbilityNames.MightGuy.SEVENTH_GATE],
+    [Id.mightGuyGate8, AbilityNames.MightGuy.EIGHTH_GATE],
+    [Id.mightGuyAsaKujaku, AbilityNames.MightGuy.ASA_KUJAKU],
+    [Id.mightGuyHirudora, AbilityNames.MightGuy.HIRUDORA],
+    [Id.mightGuySekizo, AbilityNames.MightGuy.SEKIZO],
+    [Id.mightGuyYagai, AbilityNames.MightGuy.YAGAI],
 
 
 

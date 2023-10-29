@@ -6,19 +6,21 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // goku and xeno
     [Id.goku, [
       AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
-      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
     [FourCC("H08J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
-      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
@@ -581,6 +583,33 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Link.BOW_ARROW_LIGHTNING,
       AbilityNames.Link.BOW_ARROW_BOMB,
     ]],
+
+    [Id.minato, [
+      AbilityNames.Minato.KUNAI,
+      AbilityNames.Minato.FIRST_FLASH,
+      AbilityNames.Minato.SECOND_STEP,
+      AbilityNames.Minato.THIRD_STAGE,
+      AbilityNames.Minato.SPIRAL_FLASH,
+      AbilityNames.Minato.KURAMA_MODE,
+      AbilityNames.Minato.RASENGAN_ON_HIT,
+    ]],
+
+    [Id.mightGuy, [
+      AbilityNames.MightGuy.DYNAMIC_ENTRY,
+      AbilityNames.MightGuy.LEAF_HURRICANE,
+      AbilityNames.MightGuy.FRONT_LOTUS,
+      AbilityNames.MightGuy.REVERSE_LOTUS,
+      AbilityNames.MightGuy.SUNSET_OF_YOUTH,
+      AbilityNames.MightGuy.FIFTH_GATE,
+      AbilityNames.MightGuy.SIXTH_GATE,
+      AbilityNames.MightGuy.SEVENTH_GATE,
+      AbilityNames.MightGuy.EIGHTH_GATE,
+      AbilityNames.MightGuy.ASA_KUJAKU,
+      AbilityNames.MightGuy.HIRUDORA,
+      AbilityNames.MightGuy.SEKIZO,
+      AbilityNames.MightGuy.YAGAI,
+      AbilityNames.MightGuy.STRONG_FIST,
+    ]],
     
 
 
@@ -680,6 +709,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Peco.PRINCESS_SPLASH,
       AbilityNames.Dende.SACRED_WATER_2, AbilityNames.Dende.ORANGE_DENDE,
       AbilityNames.Link.SIDE_SLASH,
+      AbilityNames.Minato.KUNAI, AbilityNames.Minato.KURAMA_MODE,
+      AbilityNames.MightGuy.DYNAMIC_ENTRY, AbilityNames.MightGuy.ASA_KUJAKU,
+      AbilityNames.MightGuy.FIFTH_GATE, AbilityNames.MightGuy.SIXTH_GATE,
+      AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
       
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

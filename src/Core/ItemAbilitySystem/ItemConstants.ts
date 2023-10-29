@@ -22,9 +22,7 @@ export module ItemConstants {
     FourCC("I03A"),
     FourCC("I03B"),
   ];
-  export const zSword = [
-    FourCC("I009"),
-  ];
+  export const zSword = FourCC("I009");
   export const powerPole = [
     FourCC("I04J"),
   ];
@@ -97,6 +95,9 @@ export module ItemConstants {
   export const sandbags = [
     FourCC("I04M"),
   ];
+  export const spareParts = [
+    FourCC("I008"),
+  ];
 
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
   export const rainbowShell = FourCC("I04P");
@@ -104,12 +105,18 @@ export module ItemConstants {
   export const babidiEnergyAbsorber = FourCC("I04S");
   export const hitContract = FourCC("I04X");
 
+  export const bojackHeadband = FourCC("I004");
+  export const brolyCollar = FourCC("I006");
+
   export const treeOfMightSapling = FourCC("I025");
   export const treeOfMightFruit = FourCC("I026");
 
   export const potaraEarrings = FourCC("I00L");
 
   export const chaosEmerald = FourCC("I04Z");
+  export const crystalCoconut = FourCC("I04Y");
+
+  export const dragonBallItem = FourCC("I01V");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -126,6 +133,13 @@ export module ItemConstants {
     export const SUPER_CORN = FourCC("I002");
     export const RICE = FourCC("I052");
     export const RICE_SNOW = FourCC("I053");
+  }
+
+  export module KOTH {
+    export const hamGenerator = FourCC("I007");
+    export const bananaGenerator = FourCC("I00A");
+    export const senzuGenerator = FourCC("I00V");
+    export const miniSenzuGenerator = FourCC("I003");
   }
 
   export module SagaDrops {
@@ -148,6 +162,7 @@ export module ItemConstants {
     export const GERO_BOOTS = geroBoots[0];
     export const ANDROID_BOMB = androidBomb[0];
     export const BANANA_GENERATOR = bananaGenerator[0];
+    export const SPARE_PARTS = spareParts[0];
     export const GETI_STAR_FRAGMENT = getiStarFragment[0];
     export const HBTC_TRAINING_TICKET = trainingTicket[0];
     export const BIO_LAB_RESEARCH = bioLabResearch[0];
@@ -166,5 +181,7 @@ export module ItemConstants {
     export const HIT_CONTRACT = hitContract;
     export const TREE_OF_MIGHT_SAPLING = treeOfMightSapling;
     export const TREE_OF_MIGHT_FRUIT = treeOfMightFruit;
+    export const BOJACK_HEADBAND = bojackHeadband;
+    export const BROLY_COLLAR = brolyCollar;
   }
 }

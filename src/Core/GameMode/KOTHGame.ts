@@ -1,4 +1,4 @@
-import { Constants, Globals, Id, OrderIds } from "Common/Constants";
+import { Capsules, Constants, Globals, Id, OrderIds } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
@@ -25,6 +25,7 @@ export class KOTHGame {
   protected baseStatsPerRound: number;
 
   protected protectItems: boolean;
+  protected captureXp: number
 
   protected captureTeam: number;
   protected captureCount: number;
@@ -59,6 +60,7 @@ export class KOTHGame {
     this.baseStatsPerRound = TournamentData.kothStatsPerRound;
 
     this.protectItems = true;
+    this.captureXp = TournamentData.kothCaptureXp;
     
     this.captureTeam = Constants.invalidTeamValue;
     this.captureCount = 0;
@@ -138,8 +140,7 @@ export class KOTHGame {
         ) {
           this.gameState = TournamentData.kothStateArena;
           this.gameCounter = 0;
-          this.doArena();
-          this.gameCounter = 1;
+          this.runGame();
         }
       }
     });
@@ -276,7 +277,13 @@ export class KOTHGame {
 
     this.gameState = TournamentData.kothStateLobby;
     this.setupLobbyNeutrals();
-    this.giveBodyArmorToPlayers(Constants.activePlayers);
+    this.preparePlayers(Constants.activePlayers);
+
+    this.removeArenaCreeps(this.namekStage);
+    const removeTimer = TimerManager.getInstance().get();
+    TimerStart(removeTimer, 5.0, false, () => {
+      this.removeArenaCreeps(this.futureStage);
+    });
   }
 
   setupLobbyNeutrals() {
@@ -298,27 +305,6 @@ export class KOTHGame {
     );
     SetUnitMoveSpeed(x, 0);
 
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorKorin,
-      TournamentData.tournamentWaitRoom1.x + 512,
-      TournamentData.tournamentWaitRoom1.y - 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
-    x = CreateUnit(
-      Constants.neutralPassivePlayer, 
-      Id.vendorElHermano,
-      TournamentData.tournamentWaitRoom1.x + 256,
-      TournamentData.tournamentWaitRoom1.y - 1280,
-      270
-    );
-    SetUnitInvulnerable(x, true);
-
-
-
-
-
 
 
     x = CreateUnit(
@@ -338,42 +324,111 @@ export class KOTHGame {
     );
     SetUnitMoveSpeed(x, 0);
 
+
+    // shops
     x = CreateUnit(
       Constants.neutralPassivePlayer, 
-      Id.vendorKorin,
-      TournamentData.tournamentWaitRoom2.x + 512,
-      TournamentData.tournamentWaitRoom2.y + 1280,
+      Id.vendorWhis,
+      TournamentData.tournamentWaitRoom1.x + 0,
+      TournamentData.tournamentWaitRoom1.y + 512,
       270
     );
-    SetUnitInvulnerable(x, true);
+    // x = CreateUnit(
+    //   Constants.neutralPassivePlayer, 
+    //   Id.vendorKorin,
+    //   TournamentData.tournamentWaitRoom1.x - 64,
+    //   TournamentData.tournamentWaitRoom1.y + 512,
+    //   270
+    // );
+
+
     x = CreateUnit(
       Constants.neutralPassivePlayer, 
-      Id.vendorElHermano,
-      TournamentData.tournamentWaitRoom2.x + 256,
-      TournamentData.tournamentWaitRoom2.y + 1280,
+      Id.vendorWhis,
+      TournamentData.tournamentWaitRoom2.x + 0,
+      TournamentData.tournamentWaitRoom2.y - 512,
       270
     );
-    SetUnitInvulnerable(x, true);
+    // x = CreateUnit(
+    //   Constants.neutralPassivePlayer, 
+    //   Id.vendorKorin,
+    //   TournamentData.tournamentWaitRoom2.x - 64,
+    //   TournamentData.tournamentWaitRoom2.y - 512,
+    //   270
+    // );
   }
 
-  giveBodyArmorToPlayers(players: player[]) {
+  unlockWishAbilities(player: player) {
+    SetPlayerAbilityAvailable(player, Capsules.saibamenSeeds, true);
+    SetPlayerAbilityAvailable(player, Capsules.wheeloResearch, true);
+    SetPlayerAbilityAvailable(player, Capsules.deadZone, true);
+    SetPlayerAbilityAvailable(player, Capsules.scouter2, true);
+    SetPlayerAbilityAvailable(player, Capsules.getiStarFragment, true);
+    SetPlayerAbilityAvailable(player, Capsules.dimensionSword, true);
+    SetPlayerAbilityAvailable(player, Capsules.braveSword, true);
+    SetPlayerAbilityAvailable(player, Capsules.timeRing, true);
+    SetPlayerAbilityAvailable(player, Capsules.battleArmor5, true);
+    SetPlayerAbilityAvailable(player, Capsules.treeOfMightSapling, true);
+    // SetPlayerAbilityAvailable(player, Capsules.potaraEarring, true);
+  }
+
+  preparePlayers(players: player[]) {
     for (const player of players) {
       const playerId = GetPlayerId(player);
+      this.unlockWishAbilities(player);
+      SetPlayerStateBJ(player, PLAYER_STATE_RESOURCE_LUMBER, TournamentData.kothLumberStart);
       ForGroup(udg_StatMultPlayerUnits[playerId], () => {
         const unit = GetEnumUnit();
         if (
           UnitHelper.isUnitTournamentViable(unit)
           && UnitHelper.isUnitAlive(unit)
-          && !UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.BATTLE_ARMOR_5)
         ) {
-          const it = CreateItem(
-            ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+          let it = null;
+          // let it = CreateItem(
+          //   ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.senzuGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.hamGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          // it = CreateItem(
+          //   ItemConstants.KOTH.bananaGenerator,
+          //   GetUnitX(unit), GetUnitY(unit),
+          // );
+          // UnitAddItem(unit, it);
+          it = CreateItem(
+            ItemConstants.KOTH.miniSenzuGenerator,
             GetUnitX(unit), GetUnitY(unit),
           );
           UnitAddItem(unit, it);
         }
       });
     }
+  }
+  
+  removeArenaCreeps(stage: KOTHStage) {
+    GroupEnumUnitsInRect(Globals.tmpUnitGroup, stage.arenaRect, null);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      const player = GetOwningPlayer(unit);
+      const playerId = GetPlayerId(player);
+      if (
+        !IsUnitType(unit, UNIT_TYPE_HERO) 
+        && playerId >= Constants.maxActivePlayers
+        && playerId != PLAYER_NEUTRAL_PASSIVE
+      ) {
+        RemoveUnit(unit);
+      }
+    });
+    GroupClear(Globals.tmpUnitGroup);
   }
 
   resetRoundStats() {
@@ -495,6 +550,15 @@ export class KOTHGame {
         break;
     }
 
+    for (const player of Constants.activePlayers) {
+      SetPlayerStateBJ(
+        player, 
+        PLAYER_STATE_RESOURCE_LUMBER, 
+        GetPlayerState(player, PLAYER_STATE_RESOURCE_LUMBER) 
+        + TournamentData.kothLumberPerRound
+      );
+    }
+
     this.removeArenaSummons();
 
     // update displays
@@ -549,10 +613,13 @@ export class KOTHGame {
       ) {
         // is unit in team 1
         // is unit in team 2
-        const lvl = GetHeroLevel(unit);
-        const reqXp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(lvl, lvl+1);
-        const giveXp = R2I(reqXp * TournamentData.kothCaptureExpBonusRatio);
-        AddHeroXP(unit, giveXp, true);
+
+        if (this.captureXp > 0) {
+          const lvl = GetHeroLevel(unit);
+          const reqXp = ExperienceManager.getInstance().getHeroReqLevelXPFrom(lvl, lvl+1);
+          const giveXp = R2I(reqXp * TournamentData.kothCaptureExpBonusRatio);
+          AddHeroXP(unit, giveXp, true);
+        }
 
         const player = GetOwningPlayer(unit);
         if (!isCenter1) {
@@ -645,10 +712,13 @@ export class KOTHGame {
     const ch = Globals.customPlayers[playerId].getCustomHero(unit);
     if (ch) {
       ch.forceEndAllAbilities();
+      ch.setCurrentSP(ch.getMaxSP());
     }
 
     UnitRemoveBuffs(unit, true, true);
     IssueImmediateOrderById(unit, OrderIds.STOP);
+
+    this.protectUnitItems(unit);
 
     SetUnitX(unit, pos.x);
     SetUnitY(unit, pos.y);
@@ -691,16 +761,25 @@ export class KOTHGame {
         }
         
         // mark items to not drop on death
-        if (this.protectItems) {
-          for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
-            const it = UnitItemInSlot(unit, i);
-            if (it != null && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)) {
-              BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
-            }
-          }
-        }
       });
       PanCameraToTimedForPlayer(player, pos.x, pos.y, 0);
+    }
+  }
+
+  protectUnitItems(unit: unit) {
+    if (!this.protectItems) return;
+    for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+      const it = UnitItemInSlot(unit, i);
+      if (
+        it != null 
+        && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
+      ) {
+        // for some reason secretly changes ITEM_BF_PERISHABLE to false
+        BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
+        if (GetItemCharges(it) > 0) {
+          BlzSetItemBooleanField(it, ITEM_BF_PERISHABLE, true);
+        }
+      }
     }
   }
 

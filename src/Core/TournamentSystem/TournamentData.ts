@@ -48,17 +48,17 @@ export module TournamentData {
   export const seedingRandom: number = 1;
   export const trophyItem: number = FourCC("I01H");
 
-
   export const kothStatePreStart: number = 0;
   export const kothStateLobby: number = 1;
   export const kothStateArena: number = 2;
   export const kothStateArenaEnd: number = 3;
   export const kothStateFinished: number = 4;
   export const kothLobbyWaitFirst: number = 30;
-  export const kothLobbyWait: number = 10;
+  export let kothLobbyWait: number = 20;
   export const kothArenaTimeout: number = 240;
   export const kothArenaCamDelay1: number = 0.5;
   export const kothArenaCamDelay2: number = 1.0;
+  export const kothCaptureXp = 0;
   export const kothCaptureUnlockTime = 15;
   export const kothCaptureRadius = 1408; // 11 squares
   export const kothCaptureExpBonusRatio = 0.1;
@@ -69,6 +69,8 @@ export module TournamentData {
   export const kothLastUpgRound = 8;
   export const kothLvlsPerRound = 50;
   export const kothStatsPerRound = 15 * kothLvlsPerRound;
+  export const kothLumberPerRound = 100;
+  export const kothLumberStart = 200;
 
   // export const kothNamekCenter: Vector2D = new Vector2D(28928, 26496);
   export const kothNamekCenter: Vector2D = new Vector2D(24576, 29568);

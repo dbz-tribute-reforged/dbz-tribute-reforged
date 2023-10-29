@@ -56,6 +56,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
       const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
       // show group 0 of sfx while remainingBlock > 0
       const yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
+      const height = GetUnitFlyHeight(source) + BlzGetUnitZ(source);
 
       AbilitySfxHelper.displaySfxListOnUnit(
         ability,
@@ -63,7 +64,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         source, 
         0,
         yaw, 
-        BlzGetUnitZ(source),
+        height,
         timeRatio,
       );
       AbilitySfxHelper.displaySfxListAtCoord(
@@ -72,7 +73,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         new Vector2D(GetUnitX(source), GetUnitY(source)), 
         0,
         yaw, 
-        BlzGetUnitZ(source),
+        height,
         timeRatio,
       );
 
@@ -96,7 +97,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
             source, 
             1,
             yaw, 
-            BlzGetUnitZ(source),
+            height,
             timeRatio,
           );
           AbilitySfxHelper.displaySfxListAtCoord(
@@ -105,7 +106,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
             new Vector2D(GetUnitX(source), GetUnitY(source)), 
             1,
             yaw, 
-            BlzGetUnitZ(source),
+            height,
             timeRatio,
           );
         }

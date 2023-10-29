@@ -27,8 +27,6 @@ export class HeroSelectorManager {
   public setupFinished: boolean;
   public isGameStarted: boolean;
 
-  public kothFlag: boolean;
-
   public hideSelectorTrigger: trigger;
 
   public timerText: texttag;
@@ -57,8 +55,6 @@ export class HeroSelectorManager {
     this.isPicking = false;
     this.setupFinished = false;
     this.isGameStarted = false;
-
-    this.kothFlag = false;
 
     this.hideSelectorTrigger = CreateTrigger();
     
@@ -226,6 +222,14 @@ export class HeroSelectorManager {
         udg_StatMultUnit = unit;
         TriggerExecute(gg_trg_Remove_Unit_From_StatMult);
         GroupRemoveUnit(udg_PlayerPickedHeroesUnitGroup[playerId], unit);
+
+        // drop items
+        for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+          const item = UnitItemInSlot(unit, i);
+          if (BlzGetItemBooleanField(item, ITEM_BF_CAN_BE_DROPPED)) {
+            SetItemPosition(item, GetUnitX(unit), GetUnitY(unit));
+          }
+        }
 
         const unitId = GetUnitTypeId(unit);
 
@@ -397,7 +401,7 @@ export class HeroSelectorManager {
     }
     TriggerExecute(gg_trg_Hero_Pick_Completion);
 
-    if (this.kothFlag) {
+    if (Globals.isKOTH) {
       let points = TournamentData.kothPointsToWin;
       if (StringLength(this.gameModeString) > 5) {
         const pStr = SubString(this.gameModeString, 5, 7);
@@ -430,7 +434,7 @@ export class HeroSelectorManager {
       if (player != Globals.hostPlayer) return false;
 
       
-      const str = GetEventPlayerChatString();
+      const str = GetEventPlayerChatString().toLowerCase();
       if (str == "rush" || str == "rrr") {
         this.time = 1;
         return;
@@ -588,8 +592,8 @@ export class HeroSelectorManager {
   }
 
   modeKOTH() {
-    this.kothFlag = !this.kothFlag;
-    const str = this.kothFlag ? "|cff00ff00ON" : "|cffff0000OFF";
+    Globals.isKOTH = !Globals.isKOTH;
+    const str = Globals.isKOTH ? "|cff00ff00ON" : "|cffff0000OFF";
     const pStr = SubString(this.gameModeString, 5, 7);
     print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
     this.startHeroSelection(true);

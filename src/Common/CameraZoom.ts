@@ -26,7 +26,7 @@ export module CameraZoom {
         public performZoom() {
             if (GetLocalPlayer() == this.p) {
                 SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
-                SetCameraField(CAMERA_FIELD_FARZ, 10 * this.zoom, 0.0);
+                SetCameraField(CAMERA_FIELD_FARZ, 10000, 0.0);
                 SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
                 SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
                 SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);
@@ -85,14 +85,11 @@ export module CameraZoom {
 
         
         arr.forEach(element => {
-            if (GetLocalPlayer() == element.p) {
-                // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
-                // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
-                // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
-                // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
-                if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
-                    element.performZoom();
-                }
+            if (
+                GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom
+                && GetLocalPlayer() == element.p
+            ) {
+                element.performZoom();
             }
         });
 
@@ -100,14 +97,11 @@ export module CameraZoom {
         TimerStart(timer, 1, false, () => {
             TimerStart(CreateTimer(), PERIOD, true, () => {
                 arr.forEach(element => {
-                    if (GetLocalPlayer() == element.p) {
-                        // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
-                        // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
-                        // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
-                        // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
-                        if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
-                            element.performZoom();
-                        }
+                    if (
+                        GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom
+                        && GetLocalPlayer() == element.p
+                    ) {
+                        element.performZoom();
                     }
                 });
             });

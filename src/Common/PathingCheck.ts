@@ -11,6 +11,7 @@ export module PathingCheck {
   let target: Vector2D;
   let unstuckPos: Vector2D;
   let smoothPos: Vector2D;
+  let tmpVec: Vector2D;
   const unstuckOffsets = [
     [-1, 1], [0, 1], [1, 1],
     [-1, 0], [0, 0], [1, 0],
@@ -28,6 +29,7 @@ export module PathingCheck {
     target = new Vector2D();
     unstuckPos = new Vector2D();
     smoothPos = new Vector2D();
+    tmpVec = new Vector2D();
   }
 
   export function IsWalkable(
@@ -147,5 +149,36 @@ export module PathingCheck {
         }
       }
     }
+  }
+
+  // result is modified
+  export function extendVectorUntilGroundUnwalkable(
+    start: Vector2D,
+    end: Vector2D,
+    result: Vector2D,
+    moveSpeed: number,
+    maxDistance: number = 0,
+  ) {
+    result.setVector(start);
+    tmpVec.setVector(result);
+
+    const angle = CoordMath.angleBetweenCoords(start, end);
+    const distance = CoordMath.distance(start, end);
+    const intervals = 1 + Math.floor(Math.min(Math.max(0, maxDistance), distance) / moveSpeed);
+
+    for (let i = 0; i < intervals; ++i) {
+      if (CoordMath.distance(result, end) < moveSpeed) {
+        result.setVector(end);
+        i = intervals;
+      } else {
+        tmpVec.setVector(result);
+        result.polarProjectCoords(result, angle, moveSpeed);
+      }
+      if (!PathingCheck.isGroundWalkable(result, moveSpeed)) {
+        result.setVector(tmpVec);
+        break;
+      }
+    }
+    return result;
   }
 }

@@ -1,5 +1,5 @@
 import { TimerManager } from "Core/Utility/TimerManager"
-import { Buffs, Id } from "./Constants"
+import { Buffs, Globals, Id } from "./Constants"
 
 export module SoundHelper {
   export function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
@@ -1447,7 +1447,6 @@ export module SoundHelper {
         }
         playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
         break;
-
       
       // hirudegarn
       case Id.hirudegarnFlameBreath:
@@ -1887,6 +1886,183 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
         break;
       
+      // might guy
+      case Id.mightGuyDynamicEntry:
+        if (unitId == Id.mightGuy) {
+          if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/DynamicEntry1.mp3", 3300);
+          } else if (rng < 85) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/DynamicEntry2.mp3", 1200);
+          } else if (rng < 95) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/DynamicEntryMeme2.mp3", 1350);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/DynamicEntryMeme.mp3", 3900);
+          }
+        }
+        break;
+      
+      case Id.mightGuyLeafHurricane:
+        if (unitId == Id.mightGuy) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/LeafHurricane2.mp3", 1600);
+          } else if (rng < 66) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/LeafHurricane3.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/LeafHurricane1.mp3", 1500);
+          }
+        }
+        break;
+      
+      case Id.mightGuyFrontLotus:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/FrontLotus.mp3", 1200);
+        }
+        break;
+
+      case Id.mightGuyReverseLotus:
+        if (unitId == Id.mightGuy) {
+          if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/ReverseLotus1.mp3", 1300);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/ReverseLotus2.mp3", 1400);
+          }
+        }
+        break;
+
+      case Id.mightGuySunsetOfYouth:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/SunsetOfYouth.mp3", 2600);
+        }
+        break;
+      
+      case Id.mightGuyGate5:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/Gate5.mp3", 2100);
+        }
+        break;
+      
+      case Id.mightGuyGate6:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/Gate6.mp3", 4600);
+        }
+        break;
+      
+      case Id.mightGuyGate7:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/Gate7.mp3", 6300);
+        }
+        break;
+      
+      case Id.mightGuyGate8:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/Gate8.mp3", 3700);
+        }
+        break;
+      
+      case Id.mightGuyAsaKujaku:
+        if (unitId == Id.mightGuy) {
+          playSoundOnUnit(unit, "Audio/Voice/MightGuy/AsaKujaku.mp3", 1400);
+        }
+        break;
+      
+      case Id.mightGuyHirudora:
+        if (unitId == Id.mightGuy) {
+          if (rng < 66) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Hirudora1.mp3", 1000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Hirudora2.mp3", 1300);
+          }
+        }
+        break;
+      
+      case Id.mightGuySekizo:
+        if (unitId == Id.mightGuy) {
+          const sekizoKey = StringHash("sekizo_count");
+          const handleId = GetHandleId(unit);
+          const val = LoadInteger(Globals.genericSpellHashtable, handleId, sekizoKey);
+          if (val == 0) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Sekizo1.mp3", 1000);
+          } else if (val == 1) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Sekizo2.mp3", 1000);
+          } else if (val == 2) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Sekizo3.mp3", 600);
+          } else if (val == 3) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Sekizo4.mp3", 1000);
+          } else if (val == 4) {
+            playSoundOnUnit(unit, "Audio/Voice/MightGuy/Sekizo5.mp3", 1000);
+          }
+          SaveInteger(Globals.genericSpellHashtable, handleId, sekizoKey, (val+1)%5);
+        }
+        break;
+      
+      // yagai is done in SimpleSpellSystem
+
+      // minato
+      case Id.minatoKunai:
+        playSoundOnUnit(unit, "Audio/Effects/Minato/Kunai.mp3", 200);
+        break;
+      
+      case Id.minatoFirstFlash:
+        if (unitId == Id.minato) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Minato/HiraishinNoJutsu.mp3", 1000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Minato/HiraishinNoJutsu2.mp3", 1000);
+          }
+        }
+        if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin1.mp3", 1000);
+        } else if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin2.mp3", 1100);
+        } else if (rng < 75) {
+          playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin3.mp3", 1000);
+        } else {
+          playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin4.mp3", 1000);
+        }
+        break;
+      
+      case Id.minatoSecondStep:
+        if (unitId == Id.minato) {
+          playSoundOnUnit(unit, "Audio/Voice/Minato/SecondStep1.mp3", 600);
+        }
+        break;
+      
+      case Id.minatoThirdStage:
+        if (unitId == Id.minato) {
+          playSoundOnUnit(unit, "Audio/Voice/Minato/ThirdStage.mp3", 800);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Minato/Kunai.mp3", 200);
+        break;
+      
+      case Id.minatoSpiralFlash:
+        if (unitId == Id.minato) {
+          playSoundOnUnit(unit, "Audio/Voice/Minato/SpiralFlash.mp3", 1300);
+        }
+        break;
+
+      case Id.minatoHiraishin:
+        if (unitId == Id.minato && rng < 25) {
+          if (rng < 12) {
+            playSoundOnUnit(unit, "Audio/Voice/Minato/HiraishinNoJutsu.mp3", 1000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Minato/HiraishinNoJutsu2.mp3", 1000);
+          }
+        }
+        if (GetUnitAbilityLevel(unit, Id.minatoKuramaModeFlag) > 0) {
+          playSoundOnUnit(unit, "Audio/Effects/Minato/HiraishinKurama.mp3", 700);
+        } else {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin1.mp3", 1000);
+          } else if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin2.mp3", 1100);
+          } else if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin3.mp3", 1000);
+          } else {
+            playSoundOnUnit(unit, "Audio/Effects/Minato/Hiraishin4.mp3", 1000);
+          }
+        }
+        break;
+
       // megumin
       case Id.meguminManatite:
         if (unitId == Id.megumin) {

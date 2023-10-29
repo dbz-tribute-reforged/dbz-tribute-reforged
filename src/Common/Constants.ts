@@ -6,7 +6,7 @@ export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
-  export let isZanzoDash: boolean = false;
+  export let isKOTH: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
   export let showAbilityFloatingText: boolean = true;
@@ -24,12 +24,14 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const simpleSpellEffectTrigger = CreateTrigger();
-  export const simpleSpellCDTrigger = CreateTrigger();
+  export const simpleSpellCDFinishTrigger = CreateTrigger();
+  export const simpleSpellCDHashtable = InitHashtable();
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
   export const genericEnemyHashtable = InitHashtable();
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
+  export const minatoHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, ()=>void>();
   export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
@@ -135,9 +137,10 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const REGEN_TICK_RATE = 0.03;
   export const BASE_SP_REGEN = 3;
-  export const BASE_HP_REGEN = 0.005;
-  export const BASE_MP_REGEN = 0.01;
+  export const BASE_HP_REGEN_PCT = 0.005;
+  export const BASE_MP_REGEN_PCT = 0.01;
 
   export const BASE_STAMINA = 100.0;
   export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
@@ -146,12 +149,18 @@ export module Constants {
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
-  export const FOUNTAIN_REGEN_MULT = 1.25;
-  export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 1.15;
-  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 1.15;
-  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 2.5;
-  export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 1.25;
-  export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 1.25;
+  export const AGILITY_REGEN_EXPONENT = 3;
+  export const FOUNTAIN_REGEN_MULT = 0.25;
+  export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 0.15;
+  export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 0.15;
+  export const ZAMASU_PASSIVE_HP_REGEN_MULT = 1;
+  export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 0.25;
+  export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
+  export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
+
+  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 50, 25];
+  export const MIGHT_GUY_GATE_HP_MULTS = [0, 1, 3, 5, 9];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.1, 0.2, 0.3, 0.4];
 
   export const IS_APRIL_FOOLS_DAY = false;
 }
@@ -196,6 +205,7 @@ export module DebuffAbilities {
   export const STUN_WALUIGI_BOMB = FourCC('A11W');
 
   // curse
+  export const CURSE_SOLAR_FLARE = FourCC("A045");
   export const DEMONS_MARK = FourCC("A0O7");
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
   export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
@@ -233,6 +243,7 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_25_PCT_3S = FourCC('A0BQ');
   export const SLOW_GENERIC_50_PCT_3S = FourCC('A0C3');
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
+  export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
@@ -270,6 +281,7 @@ export module DebuffAbilities {
   // faerie fire
   export const DEMIURGE_HELLFIRE_1 = FourCC("A13K");
   export const DEMIURGE_HELLFIRE_2 = FourCC("A13L");
+  export const FAERIE_FIRE_MINATO_KUNAI = FourCC("A00C");
 }
 
 export module Buffs {
@@ -323,6 +335,8 @@ export module Buffs {
   export const OMEGA_SHENRON_ENVOY_AGI_PASSIVE = FourCC("B03E");
 
   export const ALBEDO_GUARDIAN_AURA = FourCC("B065");
+
+  export const MIGHT_GUY_SUNSET_OF_YOUTH_AURA = FourCC("B06E");
 
   export const DEMIURGE_HELLFIRE_1 = FourCC("B06A");
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
@@ -393,6 +407,7 @@ export module Terrain {
 }
 
 export module Id {
+  export const attack = FourCC("Aatk");
   export const inventoryHero = FourCC("AInv");
   export const ghostNonVis = FourCC("Agho");
   export const ghostVisible = FourCC("Aeth");
@@ -409,6 +424,7 @@ export module Id {
   export const vendorElHermano = FourCC("n03U");
   export const vendorChefSatan = FourCC("n03T");
   export const vendorKorin = FourCC("n01P");
+  export const vendorWhis = FourCC("n01G");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");
@@ -935,6 +951,32 @@ export module Id {
   export const lucarioGigantomax = FourCC("A0Y1");
   export const gigaSphere = FourCC("A0Y2");
 
+  export const mightGuy = FourCC("H005");
+  export const mightGuyDynamicEntry = FourCC("A00O");
+  export const mightGuyLeafHurricane = FourCC("A00Y");
+  export const mightGuyFrontLotus = FourCC("A012");
+  export const mightGuyReverseLotus = FourCC("A015");
+  export const mightGuySunsetOfYouth = FourCC("A016");
+  export const mightGuySunsetOfYouthAura = FourCC("A028");
+  export const mightGuyGate5 = FourCC("A01I");
+  export const mightGuyGate6 = FourCC("A01M");
+  export const mightGuyGate7 = FourCC("A01O");
+  export const mightGuyGate8 = FourCC("A01R");
+  export const mightGuyGateArmor = FourCC("A02I");
+  export const mightGuyAsaKujaku = FourCC("A020");
+  export const mightGuyHirudora = FourCC("A021");
+  export const mightGuySekizo = FourCC("A023");
+  export const mightGuyYagai = FourCC("A024");
+
+  export const minato = FourCC("H001");
+  export const minatoKunai = FourCC("A000");
+  export const minatoFirstFlash = FourCC("A001");
+  export const minatoSecondStep = FourCC("A002");
+  export const minatoThirdStage = FourCC("A003");
+  export const minatoSpiralFlash = FourCC("A00D");
+  export const minatoHiraishin = FourCC("A004");
+  export const minatoKuramaMode = FourCC("A009");
+  export const minatoKuramaModeFlag = FourCC("A00A");
 
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");

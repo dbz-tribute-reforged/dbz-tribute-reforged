@@ -13,6 +13,7 @@ export module AbilityNames {
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
     export const SUPER_DRAGON_FIST: string = "Super Dragon Fist";
+    export const SOLAR_FLARE: string = "Goku Solar Flare";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
     export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
   }
@@ -524,6 +525,35 @@ export module AbilityNames {
     export const BOW_ARROW_ICE: string = "Link Bow Arrow Ice";
     export const BOW_ARROW_LIGHTNING: string = "Link Bow Arrow Lightning";
     export const BOW_ARROW_BOMB: string = "Link Bow Arrow Bomb";
+  }
+
+  export module Minato {
+    export const HIRAISHIN_ZANZO: string = "Hiraishin Zanzo";
+    export const KUNAI: string = "Minato Kunai";
+    export const FIRST_FLASH: string = "Minato First Flash";
+    export const SECOND_STEP: string = "Minato Second Step";
+    export const THIRD_STAGE: string = "Minato Third Stage";
+    export const SPIRAL_FLASH: string = "Minato Spiral Flash";
+    export const KURAMA_MODE: string = "Minato Kurama Mode";
+    export const HIRAISHIN_NO_JUTSU: string = "Hiraishin No Jutsu";
+    export const RASENGAN_ON_HIT = "Minato's Rasengan!";
+  }
+
+  export module MightGuy {
+    export const DYNAMIC_ENTRY: string = "Might Guy Dynamic Entry";
+    export const LEAF_HURRICANE: string = "Might Guy Leaf Hurricane";
+    export const FRONT_LOTUS: string = "Might Guy Front Lotus";
+    export const REVERSE_LOTUS: string = "Might Guy Reverse Lotus";
+    export const SUNSET_OF_YOUTH: string = "Might Guy Sunset Of Youth";
+    export const FIFTH_GATE: string = "Might Guy Fifth Gate";
+    export const SIXTH_GATE: string = "Might Guy Sixth Gate";
+    export const SEVENTH_GATE: string = "Might Guy Seventh Gate";
+    export const EIGHTH_GATE: string = "Might Guy Eighth Gate";
+    export const ASA_KUJAKU: string = "Might Guy Asa Kujaku";
+    export const HIRUDORA: string = "Might Guy Hirudora";
+    export const SEKIZO: string = "Might Guy Sekizo";
+    export const YAGAI: string = "Might Guy Yagai";
+    export const STRONG_FIST: string = "Might Guy Strong Fist";
   }
 
 

@@ -23,7 +23,7 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_BEAM = 4;
   static readonly BEAM_UNIT_SPAWN_TARGET_TO_CASTER = 5;
 
-  static readonly BEAM_HP_MODIFIER = 0.3;
+  static readonly BEAM_HP_MODIFIER = 0.4;
 
   static readonly BEAM_SPEED_ULTRA_SLOW = 25;
   static readonly BEAM_SPEED_SUPER_SLOW = 30;
@@ -126,6 +126,24 @@ export class BeamComponent implements
     this.stickyTarget = null;
   }
 
+  static calculateBeamHp(
+    level: number,
+    beamHpMult: number,
+    caster: unit,
+    stat: number // bj_HEROSTAT_INT
+  ): number {
+    return Math.max(
+      50, 
+      50 * 
+      Math.floor(
+        BeamComponent.BEAM_HP_MODIFIER * 
+        level * 
+        beamHpMult * 
+        GetHeroStatBJ(stat, caster, true)
+      )
+    );
+  }
+  
   protected checkForBeamClash(input: CustomAbilityInput): this {
     if (!this.beamUnit) return this;
 
@@ -376,15 +394,11 @@ export class BeamComponent implements
     // and prevents the rest of the beam code from firing
     let maxHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
 
-    maxHp = Math.max(
-      50, 
-      50 * 
-      Math.floor(
-        BeamComponent.BEAM_HP_MODIFIER * 
-        input.level * 
-        this.beamHpMult * 
-        GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true)
-      )
+    maxHp = BeamComponent.calculateBeamHp(
+      input.level, 
+      this.beamHpMult, 
+      input.caster.unit,
+      this.beamHpAttribute
     );
 
     BlzSetUnitMaxHP(this.beamUnit, maxHp);

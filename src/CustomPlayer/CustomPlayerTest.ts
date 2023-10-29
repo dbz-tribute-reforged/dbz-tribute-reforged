@@ -429,6 +429,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil0, OSKEY_Y, 0, true);
   addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
   addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
+  addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
 
   const abil1 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
@@ -539,7 +540,7 @@ export function CustomPlayerTest() {
           if (customHero) {
             currentSp = I2S(R2I(customHero.getCurrentSP()));
             maxSp = I2S(R2I(customHero.getMaxSP()));
-            percentSp = 100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP()));
+            percentSp = R2I(100 * (customHero.getCurrentSP() / Math.max(1.0, customHero.getMaxSP())));
           }
         }
         const spText = currentSp + "/" + maxSp;
@@ -941,6 +942,69 @@ export function CustomPlayerTest() {
       });
       DestroyGroup(group);
     });
+
+    
+    // allow player to modify ui as they see fit
+    // prints id of frame given by name
+    const customUIPlayerSelectFrame = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(customUIPlayerSelectFrame, Player(i), "uipr", false);
+    }
+    TriggerAddAction(customUIPlayerSelectFrame, () => {
+      FrameHelper.getFrameFromString(GetEventPlayerChatString(), 5, true);
+    });
+
+    // toggle ui on/off
+    const customUIPlayerToggleFrame = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uion", false);
+      TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uiof", false);
+    }
+    TriggerAddAction(customUIPlayerToggleFrame, () => {
+      const player = GetTriggerPlayer();
+      const input = GetEventPlayerChatString();
+      const frame = FrameHelper.getFrameFromString(input, 5, true);
+      if (GetLocalPlayer() == player && frame) {
+        if (input[3] == 'n') {
+          BlzFrameSetEnable(frame, true);
+        } else {
+          BlzFrameSetEnable(frame, false);
+        }
+      }
+    });
+
+    // uimv x.xxx y.yyy cc name
+    const customUIPlayerMoveFrame = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(customUIPlayerMoveFrame, Player(i), "uimv", false);
+    }
+    TriggerAddAction(customUIPlayerMoveFrame, () => {
+      const player = GetTriggerPlayer();
+      const input = GetEventPlayerChatString();
+      const x = S2R(input.substring(5, 10));
+      const y = S2R(input.substring(11, 16));
+      const frame = FrameHelper.getFrameFromString(input, 17, true);
+      if (GetLocalPlayer() == player && frame) {
+        BlzFrameClearAllPoints(frame);
+        BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, x, y);
+      }
+    });
+
+    // uirs x.xxx y.yyy cc name
+    const customUIPlayerResizeFrame = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(customUIPlayerResizeFrame, Player(i), "uirs", false);
+    }
+    TriggerAddAction(customUIPlayerResizeFrame, () => {
+      const player = GetTriggerPlayer();
+      const input = GetEventPlayerChatString();
+      const x = S2R(input.substring(5, 10));
+      const y = S2R(input.substring(11, 16));
+      const frame = FrameHelper.getFrameFromString(input, 17, true);
+      if (GetLocalPlayer() == player && frame) {
+        BlzFrameSetSize(frame, x, y);
+      }
+    });
   }
 
   // ally/unally as necessary
@@ -1222,68 +1286,6 @@ export function CustomPlayerTest() {
         Constants.jokeProbability = 0.03;
       }
     }
-  });
-  
-  // allow player to modify ui as they see fit
-	// prints id of frame given by name
-	const customUIPlayerSelectFrame = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(customUIPlayerSelectFrame, Player(i), "uipr", false);
-	}
-	TriggerAddAction(customUIPlayerSelectFrame, () => {
-		FrameHelper.getFrameFromString(GetEventPlayerChatString(), 5, true);
-	});
-
-	// toggle ui on/off
-	const customUIPlayerToggleFrame = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uion", false);
-		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uiof", false);
-	}
-	TriggerAddAction(customUIPlayerToggleFrame, () => {
-    const player = GetTriggerPlayer();
-    const input = GetEventPlayerChatString();
-		const frame = FrameHelper.getFrameFromString(input, 5, true);
-		if (GetLocalPlayer() == player && frame) {
-      if (input[3] == 'n') {
-        BlzFrameSetEnable(frame, true);
-      } else {
-        BlzFrameSetEnable(frame, false);
-      }
-		}
-	});
-
-	// uimv x.xxx y.yyy cc name
-	const customUIPlayerMoveFrame = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(customUIPlayerMoveFrame, Player(i), "uimv", false);
-	}
-	TriggerAddAction(customUIPlayerMoveFrame, () => {
-		const player = GetTriggerPlayer();
-		const input = GetEventPlayerChatString();
-		const x = S2R(input.substring(5, 10));
-		const y = S2R(input.substring(11, 16));
-		const frame = FrameHelper.getFrameFromString(input, 17, true);
-		if (GetLocalPlayer() == player && frame) {
-      BlzFrameClearAllPoints(frame);
-			BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, x, y);
-		}
-  });
-
-	// uirs x.xxx y.yyy cc name
-	const customUIPlayerResizeFrame = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(customUIPlayerResizeFrame, Player(i), "uirs", false);
-	}
-	TriggerAddAction(customUIPlayerResizeFrame, () => {
-		const player = GetTriggerPlayer();
-		const input = GetEventPlayerChatString();
-		const x = S2R(input.substring(5, 10));
-		const y = S2R(input.substring(11, 16));
-		const frame = FrameHelper.getFrameFromString(input, 17, true);
-		if (GetLocalPlayer() == player && frame) {
-      BlzFrameSetSize(frame, x, y);
-		}
   });
 
 

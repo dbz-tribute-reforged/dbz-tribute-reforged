@@ -67,8 +67,8 @@ export class FBSimTestManager {
   }
 
   activate() {
+    HeroSelectorManager.getInstance().enableFBSimTest(true);
     if (Globals.isFBSimTest) return;
-    
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 
       15, 
@@ -77,6 +77,5 @@ export class FBSimTestManager {
     Globals.isFBSimTest = true;
     Globals.isFreemode = true;
     VisionHelper.showFbArenaVision();
-    HeroSelectorManager.getInstance().enableFBSimTest(true);
   }
 }

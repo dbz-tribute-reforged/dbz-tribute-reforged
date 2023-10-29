@@ -355,6 +355,9 @@ udg_DMG_KAME_DPS = 0.0
 udg_LaShubInt = 0
 udg_LaShubInt2 = 0
 udg_LvlUpInt2 = 0
+udg_MiniBeanGroup = nil
+udg_ConnectedPlayers = nil
+udg_DisconnectedPlayers = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -744,14 +747,12 @@ gg_trg_Setup_Quests = nil
 gg_trg_Init_Disable_Abilities_For_TempPlayer = nil
 gg_trg_Disable_Abilities_for_TempPlayer = nil
 gg_trg_Prevent_Invalid_Buildings = nil
-gg_trg_Setup_Spawns = nil
 gg_trg_Setup_Spawns_Other = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Hero_Pick_Floating_Text_Help = nil
 gg_trg_Misc_Area_Labels = nil
 gg_trg_Force_Remove_T2_Buggy_Vision = nil
 gg_trg_Remove_Preload_Units = nil
-gg_trg_soundtrig = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
@@ -989,6 +990,8 @@ gg_trg_Guts_Beast_of_Darkness = nil
 gg_trg_Gohan_Beast = nil
 gg_trg_Orange_Dende = nil
 gg_trg_Ainz_Greater_Full_Potential = nil
+gg_trg_Minato_Kurama_Mode = nil
+gg_trg_Might_Guy_Eight_Gates = nil
 gg_trg_show_me_the_ss = nil
 gg_trg_show_me_the_ss_Copy = nil
 gg_trg_Test_LVL_command = nil
@@ -1147,6 +1150,8 @@ gg_trg_Transformations_Albedo = nil
 gg_trg_Transformations_Shalltear = nil
 gg_trg_Transformations_Demiurge = nil
 gg_trg_Transformations_Majin_Vegeta = nil
+gg_trg_Transformations_Minato = nil
+gg_trg_Transformations_Might_Guy = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -1646,6 +1651,9 @@ udg_DMG_KAME_DPS = 0.01
 udg_LaShubInt = 0
 udg_LaShubInt2 = 0
 udg_LvlUpInt2 = 0
+udg_MiniBeanGroup = CreateGroup()
+udg_ConnectedPlayers = CreateForce()
+udg_DisconnectedPlayers = CreateForce()
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -1796,6 +1804,8 @@ HeroName = {
   H013 = "Albedo",
   H015 = "Shalltear Bloodfallen",
   H017 = "Demiurge",
+  H001 = "Minato Namikaze",
+  H005 = "Might Guy",
 
   H09Z = "Rust Tyranno"
 }
@@ -3917,6 +3927,3379 @@ function HeroSelector.buttonSelected(player, unitCode)
         dummyUnit = nil
     end
 end
+--  function IsRightClick(player)
+-- is that currently a right click. Was created for the useage in Frames MOUSE_UP
+-- does not work during Paused Game
+do
+    local real = InitBlizzard
+    local data = __jarray(false)
+    local frameTrigger
+    function IsRightClick(player)
+        return data[player]
+    end
+    local realPause = PauseGame
+    local function frameInit()
+        BlzTriggerRegisterFrameEvent(frameTrigger, BlzGetFrameByName("PauseButton", 0), FRAMEEVENT_CONTROL_CLICK)
+    end
+    local function PauseGame(flag)
+        realPause()
+        -- when the game is paused reset the lastClick Flag. This has to be done because EVENT_PLAYER_MOUSE_UP does not trigger during Pause
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do data[Player(i)] = false end
+    end
+    function InitBlizzard()
+        real()
+        frameTrigger = CreateTrigger()
+        local trigger = CreateTrigger()
+        for i = 0, bj_MAX_PLAYERS - 1 do
+            local player = Player(i)
+            TriggerRegisterPlayerEvent(trigger, player, EVENT_PLAYER_MOUSE_UP)
+        end
+        
+        TriggerAddAction(trigger, function()
+            data[GetTriggerPlayer()] = GetHandleId(BlzGetTriggerPlayerMouseButton()) == GetHandleId(MOUSE_BUTTON_TYPE_RIGHT)
+        end)
+        TriggerAddAction(frameTrigger, function()
+            -- when the game is paused reset the lastClick Flag. This has to be done because EVENT_PLAYER_MOUSE_UP does not trigger during Pause
+            for i = 0, bj_MAX_PLAYER_SLOTS - 1 do data[Player(i)] = false end
+        end)
+        if FrameLoaderAdd then FrameLoaderAdd(frameInit) end
+    end
+
+end
+do
+    local realFunc = InitBlizzard
+    function InitBlizzard()
+        realFunc()
+        SoundNoLumber = {}
+        SoundNoGold = {}
+        SoundNoGold[RACE_HUMAN] = CreateSound("Sound\\Interface\\Warning\\Human\\KnightNoGold1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoGold[RACE_HUMAN], "NoGoldHuman")
+        SetSoundDuration(SoundNoGold[RACE_HUMAN], 1618)
+        SoundNoLumber[RACE_HUMAN] = CreateSound("Sound\\Interface\\Warning\\Human\\KnightNoLumber1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoLumber[RACE_HUMAN], "NoLumberHuman")
+        SetSoundDuration(SoundNoLumber[RACE_HUMAN], 1903)
+        local raceNaga = ConvertRace(11)
+        SoundNoGold[raceNaga] = CreateSound("Sound\\Interface\\Warning\\Naga\\NagaNoGold1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoGold[raceNaga], "NoGoldNaga")
+        SetSoundDuration(SoundNoGold[raceNaga], 2690)
+        SoundNoLumber[raceNaga] = CreateSound("Sound\\Interface\\Warning\\Naga\\NagaNoLumber1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoLumber[raceNaga], "NoLumberNaga")
+        SetSoundDuration(SoundNoLumber[raceNaga], 2011)
+        SoundNoGold[RACE_ORC] = CreateSound("Sound\\Interface\\Warning\\Orc\\GruntNoGold1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoGold[RACE_ORC], "NoGoldOrc")
+        SetSoundDuration(SoundNoGold[RACE_ORC], 1450)
+        SoundNoLumber[RACE_ORC] = CreateSound("Sound\\Interface\\Warning\\Orc\\GruntNoLumber1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoLumber[RACE_ORC], "NoLumberOrc")
+        SetSoundDuration(SoundNoLumber[RACE_ORC], 1219)
+        SoundNoGold[RACE_NIGHTELF] = CreateSound("Sound\\Interface\\Warning\\NightElf\\SentinelNoGold1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoGold[RACE_NIGHTELF], "NoGoldNightElf")
+        SetSoundDuration(SoundNoGold[RACE_NIGHTELF], 1229)
+        SoundNoLumber[RACE_NIGHTELF] = CreateSound("Sound\\Interface\\Warning\\NightElf\\SentinelNoLumber1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoLumber[RACE_NIGHTELF], "NoLumberNightElf")
+        SetSoundDuration(SoundNoLumber[RACE_NIGHTELF], 1454)
+        SoundNoGold[RACE_UNDEAD] = CreateSound("Sound\\Interface\\Warning\\Undead\\NecromancerNoGold1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoGold[RACE_UNDEAD], "NoGoldUndead")
+        SetSoundDuration(SoundNoGold[RACE_UNDEAD], 2005)
+        SoundNoLumber[RACE_UNDEAD] = CreateSound("Sound\\Interface\\Warning\\Undead\\NecromancerNoLumber1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(SoundNoLumber[RACE_UNDEAD], "NoLumberUndead")
+        SetSoundDuration(SoundNoLumber[RACE_UNDEAD], 2005)
+    end
+end
+function CreateSimpleTooltip(frame, text)
+    -- this FRAME is important when the Box is outside of 4:3 it can be limited to 4:3.
+    local toolTipParent = BlzCreateFrameByType("FRAME", "", frame, "", 0)
+    local toolTipBox = BlzCreateFrame("EscMenuControlBackdropTemplate", toolTipParent, 0, 0)
+    local toolTip = BlzCreateFrame("TasButtonTextTemplate", toolTipBox, 0, 0)
+    BlzFrameSetPoint(toolTip, FRAMEPOINT_BOTTOM, frame, FRAMEPOINT_TOP, 0, 0.008)
+    BlzFrameSetPoint(toolTipBox, FRAMEPOINT_TOPLEFT, toolTip, FRAMEPOINT_TOPLEFT, -0.008, 0.008)
+    BlzFrameSetPoint(toolTipBox, FRAMEPOINT_BOTTOMRIGHT, toolTip, FRAMEPOINT_BOTTOMRIGHT, 0.008, -0.008)
+    BlzFrameSetText(toolTip, text)
+    BlzFrameSetTooltip(frame, toolTipParent)
+    return toolTip
+end
+-- a small snipet that allows to get the last data of the item stacking event.
+-- function GetItemStackingEventData()
+-- returns Trigger exeCount, item gaining charges, charges gained, item providing charges
+-- the Trigger exeCount allows to know, if an event happened at all.
+-- Before adding the item get the current count, add the item and request again, if the count differs a stacking happened
+do
+    local realFunc = InitBlizzard
+    local trigger, itemSource, itemTarget, charges
+
+    function GetItemStackingEventData()
+        return GetTriggerExecCount(trigger), itemTarget, charges, itemSource
+    end
+    UsesReforgedItemStacking = false
+    function InitBlizzard()
+        realFunc()
+        if GetLocalizedString("REFORGED") ~= "REFORGED" then
+            trigger = CreateTrigger()
+            TriggerAddAction(trigger, function()
+                itemTarget = BlzGetStackingItemTarget()
+                itemSource = BlzGetStackingItemSource()
+                charges = GetItemCharges(BlzGetStackingItemTarget()) - BlzGetStackingItemTargetPreviousCharges()
+            end)
+            TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_STACK_ITEM)
+            
+            -- try to evoke it now!
+            local unit = CreateUnit(Player(bj_ALLIANCE_NEUTRAL), FourCC("Hpal"), 0, 0, 0)
+            UnitAddAbility(unit, FourCC("AInv"))
+            local i1 = UnitAddItemById(unit, FourCC("pghe"))
+            local i2 = UnitAddItemById(unit, FourCC("pghe"))
+
+            RemoveUnit(unit)
+            RemoveItem(i2)
+            RemoveItem(i1)
+            unit = nil
+            i1 = nil
+            i2 = nil
+
+            -- remember the result
+            UsesReforgedItemStacking = GetTriggerExecCount(trigger) > 0
+            -- if it was not evoked destroy the trigger
+            if not UsesReforgedItemStacking then
+                DestroyTrigger(trigger)
+            end
+        end
+    end
+end
+-- Simple version, does not allow to create one fusionItem by multiple ways.
+TasItemFusion = {
+    Fusions = {Count = 0}, -- possible fusions that can be done
+    UsedIn = {}, -- allows to find Fusions from a Mat
+    BuiltWay = {}, -- find Fusions from the result
+    Player = {}
+}
+for index = 0, GetBJMaxPlayerSlots() - 1 do TasItemFusion.Player[Player(index)] = {UseAble = {Count = 0, ByType = {}}} end
+function TasItemFusionAdd(result, ...)
+    if type(result) == "string" then result = FourCC(result) end
+    local object = {Result = result, Mats = {}}
+    TasItemFusion.Fusions.Count = TasItemFusion.Fusions.Count + 1
+    TasItemFusion.Fusions[TasItemFusion.Fusions.Count] = object
+    TasItemFusion.BuiltWay[result] = object    
+
+    for index, value in ipairs({...}) do
+        if type(value) == "string" then value = FourCC(value) end
+        table.insert(object.Mats, value)
+        if not TasItemFusion.UsedIn[value] then 
+            TasItemFusion.UsedIn[value] = {}
+        end
+        if not TasItemFusion.UsedIn[value][object] then
+            TasItemFusion.UsedIn[value][object] = true
+            table.insert(TasItemFusion.UsedIn[value], object)
+        end
+        TasItemGetCost(value)
+    end
+    TasItemGetCost(result)
+end
+
+function TasItemFusionGetUseableItems(player, units, checkOwner)
+    -- give the units which inventory is useable
+    local useable = TasItemFusion.Player[player].UseAble
+    local unit, item
+    useable.ByType = __jarray(0)
+    useable.Count = 0
+    ForGroup(units, function()
+        unit = GetEnumUnit()
+        for index = 0, 5 do
+            item = UnitItemInSlot(unit, index)
+            if item and (not checkOwner or (GetItemPlayer(item) == player or GetItemPlayer(item) == Player(PLAYER_NEUTRAL_PASSIVE))) then
+                useable.Count = useable.Count + 1
+                useable[useable.Count] = item
+                useable.ByType[GetItemTypeId(item)] = useable.ByType[GetItemTypeId(item)] + 1
+            end
+        end
+    end)
+    return useable
+end
+
+-- returns a list of material that can be used for result.
+function TasItemFusionGetUseableMaterial(useAble, result, list, quick)
+    if not list then list = {Count = 0} end
+    if type(result) == "string" then result = FourCC(result) end
+    local found, item
+    for index, value in ipairs(TasItemFusion.BuiltWay[result].Mats) do
+        --print(index, GetObjectName(value))
+        found = false
+        -- in quick mode the items itself do not matter, only the itemCodes. Mostly used for displaying things without removing the items.
+        if quick then
+            if useable.ByType[value] > list[value] then
+                list[value] = list[value] + 1
+                list.Count = list.Count + 1
+                list[list.Count] = value
+                found = true
+            end
+        else
+            for i = 1, useAble.Count do 
+                item = useAble[i]
+                if GetItemTypeId(item) == value and not list[item] then
+                    list[item] = true
+                    list.Count = list.Count + 1
+                    list[list.Count] = item
+                    found = true
+                    break
+                end
+            end
+        end
+        if not found and TasItemFusion.BuiltWay[value] then
+            TasItemFusionGetUseableMaterial(useAble, value, list, quick)
+        end
+    end
+    return list
+end
+
+-- returns the total gold cost and the used material from useAble
+function TasItemFusionCalc(useAble, result, quick)
+    if type(result) == "string" then result = FourCC(result) end
+    -- find all useable fusion material
+    local list = TasItemFusionGetUseableMaterial(useAble, result, quick)
+    local gold, lumber = TasItemGetCost(result)
+    local gold2, lumber2
+    -- reduce total gold cost by the useables
+    for _, item in ipairs(list) do
+        -- in quick mode the items itself do not matter, only the itemCodes
+        if quick then
+            gold2, lumber2 = TasItemGetCost(item)
+        else
+            gold2, lumber2 = TasItemGetCost(GetItemTypeId(item))
+        end
+        gold = gold - gold2
+        lumber = lumber - lumber2
+    end
+    return gold, lumber, list
+end
+
+
+-- returns a table of the material missing
+-- call it that way TasItemFusionGetMissingMaterial(useAble, result)
+function TasItemFusionGetMissingMaterial(useAble, result, used, missing)
+    if not used then used = {Count = 0} end
+    if not missing then missing = {Count = 0} end
+    if type(result) == "string" then result = FourCC(result) end
+    local found, item
+    for index, value in ipairs(TasItemFusion.BuiltWay[result].Mats) do
+        --print(index, GetObjectName(value))
+        found = false
+        for i = 1, useAble.Count do 
+            item = useAble[i]
+            if GetItemTypeId(item) == value and not used[item] then
+                used[item] = true
+                used.Count = used.Count + 1
+                used[used.Count] = item
+                found = true
+                break
+            end
+        end
+        if not found and not missing[value] then
+            missing.Count = missing.Count + 1
+            missing[missing.Count] = value
+            missing[value] = true
+            if TasItemFusion.BuiltWay[value] then
+                TasItemFusionGetMissingMaterial(useAble, value, used, missing)
+            end
+        end
+    end
+    return missing
+end
+-- function TasItemCaclCost(...)
+-- calculates the gold and lumbercost of given itemCodes, also accpets strings and a bunch of strings.
+-- this will created the items, trigger buy item events + no target order events
+
+-- function TasItemGetCost(itemCode)
+-- returns the gold and lumber cost of that item
+-- gold, lumber = TasItemGetCost(itemCode)
+
+TasItemData = {
+    --Counter = 0,
+    Test = {Counter = 0}
+}
+-- function TasItemCalcDestroy()
+do
+    local realFunc = InitBlizzard
+    function InitBlizzard()
+        realFunc()
+        local shopOwner = Player(bj_PLAYER_NEUTRAL_EXTRA)
+        local shop = CreateUnit(shopOwner, FourCC('nmrk'), 700, -2000, 0)
+        local shopRect = Rect(0 , 0, 1000, 1000)
+        --print(GetHandleId(shop))
+        MoveRectTo(shopRect, GetUnitX(shop), GetUnitY(shop))
+        UnitAddAbility(shop, FourCC('AInv'))
+        ShowUnit(shop, false)
+        IssueNeutralTargetOrder(shopOwner, shop, "smart", shop)
+
+       function TasItemCalcDestroy()
+            EnumItemsInRect(shopRect, nil, function()
+                RemoveItem(GetEnumItem())
+            end)
+            ShowUnit(shop, true)
+            RemoveUnit(shop)
+            RemoveRect(shopRect)
+            TasItemData.Test = nil
+        end
+       local function Start()
+          --print("Start", GetObjectName(TasItemData.Test[1]))
+            local itemCode = TasItemData.Test[1]
+            AddItemToStock(shop, itemCode, 1, 1)
+            SetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_GOLD, 99999999)
+            SetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_LUMBER, 99999999)
+            local gold = GetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_GOLD)
+            local lumber = GetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_LUMBER)
+            IssueNeutralImmediateOrderById(shopOwner, shop, itemCode)
+            local item = CreateItem(itemCode, 0, 0)
+            TasItemData[itemCode] = {
+                Gold = gold - GetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_GOLD),
+                Lumber = lumber - GetPlayerState(shopOwner, PLAYER_STATE_RESOURCE_LUMBER),
+                Charge = GetItemCharges(item)
+            }
+            RemoveItem(item)
+            item = nil
+            RemoveItemFromStock(shop, itemCode)
+            -- testing order does not matter much, simple reindex
+            TasItemData.Test[1] = TasItemData.Test[TasItemData.Test.Counter]
+            TasItemData.Test.Counter = TasItemData.Test.Counter - 1
+            
+            if TasItemData.Test.Counter > 0 then
+                Start()
+            end
+            EnumItemsInRect(shopRect, nil, function()
+                RemoveItem(GetEnumItem())
+            end)
+       end
+       
+        function TasItemCaclCost(...)
+            local item
+            for index, itemCode in ipairs({...}) do
+                if type(itemCode) == "string" then itemCode = FourCC(itemCode) end
+                -- if there is already data for that itemcode, skip it
+                if not TasItemData[itemCode] then
+                    -- is this a valid itemCode? Create it, if that fails skip testing it
+                    item = CreateItem(itemCode, 0, 0)
+                    if GetHandleId(item) > 0 then
+                        RemoveItem(item)
+                        TasItemData.Test.Counter = TasItemData.Test.Counter + 1
+                        TasItemData.Test[TasItemData.Test.Counter] = itemCode
+                    end
+                end
+            end
+            if TasItemData.Test.Counter > 0 then Start() end
+            item = nil
+        end
+        
+        function TasItemGetCost(itemCode)
+            if type(itemCode) == "string" then itemCode = FourCC(itemCode) end
+            if not TasItemData[itemCode] then TasItemCaclCost(itemCode) end
+            if TasItemData[itemCode] then 
+                return TasItemData[itemCode].Gold, TasItemData[itemCode].Lumber, TasItemData[itemCode].Charge
+            else
+                return 0, 0, 0
+            end
+        end
+    end
+end
+
+--[[
+    ToggleIconButton 1.3 (TIS) by Tasyen
+
+function CreateToggleIconButton(parent, valueOn, text, textureOn[, mode, textureOff, textOff])
+ create an IconButton that swaps between 2 states. (0 and valueOn, visualy shown by textureOff/textureOn)
+ the IconButton starts with 0 & textureOff
+ textureOff is automatically calced when it is nil
+ mode should be 0, 1 or - 1 when not set it is 0. see ToggleIconButton.MODE_DEFAULT
+ You can add an Action function with object.Action = function(object, player, enabled)
+ If you use Textures with Transparency one has to object.Blend = true, otherwise it is displayed wrongly
+ when the mode is -1 then the function will only run for the clicking Player. object is the active ToggleIconButtonTable and player the clicking player.
+ returns the table, returnValue.Button is the ButtonFrame
+
+function ToggleIconButtonSetValue(object, player[, enable])
+ can be used to set the current value to x (true, false) or to toggle the current value(nil)
+ will not call the object's Action.
+
+function ToggleIconButtonGetValue(object, player)
+--]]
+
+ToggleIconButton = {
+    DefaultSizeX = 0.024,
+    DefaultSizeY = 0.024,
+}
+ToggleIconButton.MODE_DEFAULT = 0 -- the visual is local only.
+ToggleIconButton.MODE_SHARED = 1 -- is the same for all players.
+ToggleIconButton.MODE_LOCAL = -1 -- Visual and Action are for the clicking player only
+
+
+function ToggleIconButton.GetKey(object, player)
+    if object.Mode == ToggleIconButton.MODE_SHARED then
+        return 0
+    else
+        return player
+    end
+end
+
+function ToggleIconButtonSetValue(object, player, enable)
+    local key = ToggleIconButton.GetKey(object, player)
+    -- wana toggle?
+    if enable == nil then
+        --currently off?
+        object.Value[key] = not object.Value[key]
+    -- specific state
+    else
+        object.Value[key] = enable
+    end
+
+    -- update visual
+    if object.Mode == ToggleIconButton.MODE_SHARED or GetLocalPlayer() == player then
+        if not object.Value[key] then
+            BlzFrameSetTexture(object.Icon, object.TextureOff, 0, object.Blend)
+            BlzFrameSetTexture(object.IconPushed, object.TextureOff, 0, object.Blend)
+            BlzFrameSetText(object.ToolTip, object.TextOff)
+        else
+            BlzFrameSetTexture(object.Icon, object.Texture, 0, object.Blend)
+            BlzFrameSetTexture(object.IconPushed, object.Texture, 0, object.Blend)
+            BlzFrameSetText(object.ToolTip, object.Text)
+        end
+    end
+end
+
+function ToggleIconButtonGetValue(object, player)
+    if object.Value[ToggleIconButton.GetKey(object, player)] then
+        return object.ValueOn
+    else
+        return 0
+    end
+end
+
+function getDisabledIcon(icon)
+    --ReplaceableTextures\CommandButtons\BTNHeroPaladin.tga -> ReplaceableTextures\CommandButtonsDisabled\DISBTNHeroPaladin.tga
+    return string.gsub(icon , "CommandButtons\\BTN", "CommandButtonsDisabled\\DISBTN")
+end
+
+
+function CreateToggleIconButton(parent, valueOn, text, textureOn, mode, textureOff, textOff)
+    if not textureOff then textureOff = getDisabledIcon(textureOn) end
+    if not textOff then textOff = text end
+    if not mode then mode = ToggleIconButton.MODE_DEFAULT end
+
+    if not ToggleIconButton.Trigger then
+        ToggleIconButton.Sound = CreateSound("Sound\\Interface\\MouseClick1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(ToggleIconButton.Sound, "InterfaceClick")
+        SetSoundDuration(ToggleIconButton.Sound, 239)
+        BlzLoadTOCFile("war3mapImported\\Templates.toc")
+        ToggleIconButton.Trigger = CreateTrigger()
+        ToggleIconButton.TriggerAction = TriggerAddAction(ToggleIconButton.Trigger, function()
+            xpcall(function()
+            local frame = BlzGetTriggerFrame()
+            local object = ToggleIconButton[frame]
+            local player = GetTriggerPlayer()
+            --StartSoundForPlayerBJ(player, ToggleIconButton.Sound)
+            --ToggleIconButtonSetValue(object, GetTriggerPlayer(), object.Value ~= object.ValueOn)
+            ToggleIconButtonSetValue(object, player)
+            if object.Action and (object.Mode ~= ToggleIconButton.MODE_LOCAL or GetLocalPlayer() == player) then object.Action(object, player, ToggleIconButtonGetValue(object, player) == object.ValueOn) end
+            -- remove focus
+            BlzFrameSetEnable(frame, false)
+            BlzFrameSetEnable(frame, true)
+            end, print)
+        end)
+    end
+    
+    local frame = BlzCreateFrame("TasItemShopCatButton", parent, 0, 0)
+    local backdrop = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+    local backdropPush = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+    BlzFrameSetSize(frame, ToggleIconButton.DefaultSizeX, ToggleIconButton.DefaultSizeY)
+    BlzFrameSetTexture(backdrop, textureOff, 0, false)
+    BlzFrameSetTexture(backdropPush, textureOff, 0, false)
+    
+    BlzTriggerRegisterFrameEvent(ToggleIconButton.Trigger, frame, FRAMEEVENT_CONTROL_CLICK)
+
+    local object = {
+        Button = frame,
+        Icon = backdrop,
+        IconPushed = backdropPush,
+        Mode = mode,
+        Value = __jarray(false),
+        ValueOn = valueOn,
+        Texture = textureOn,
+        TextureOff = textureOff,
+        Text = text,
+        TextOff = textOff,
+        ToolTip = CreateSimpleTooltip(frame, textOff)
+    }
+
+    ToggleIconButton[frame] = object
+    
+    return object
+end
+
+--[[
+    ToggleIconButtonGroup 1.4 (TIS) by Tasyen
+uses ToggleIconButton by Tasyen
+
+ToggleIconButtonGroup is a addon for ToggleIconButton. It combines multiple ones into a shared entity, the values for Buttons used in ToggleIconButtonGroup should be unique power2.
+
+function CreateToggleIconButtonGroup(multiSelection, action, ...)
+    create a Group with action happening when any button is toggled considering the sharedRules set by the individual buttons.
+    multiSelection(false) unselect others before setting x, can also be changed later with groupObject.MultiSelection[player] = true/false.
+    A ToggleIconButton inside a ToggleIconButtonGroup can not have a custom Action, because it is used by the ToggleIconButtonGroup, but the Group also supports an Action.
+    afer action you can give any amount of ToggleIconButtonTables
+    The actionfunction provides this args function(groupObject, buttonObject, player, groupValue)
+
+function ToggleIconButtonGroupGetValue(groupObject, player)
+function ToggleIconButtonGroupAddButton(groupObject, buttonObject)
+function ToggleIconButtonGroupSetModeButton(groupObject[, buttonObject])
+    define a ToggleIconButton as multiSelection mode toggle, this uses the Buttons ToggleIconButton Action.
+function ToggleIconButtonGroupModeButton(groupObject, parent)
+    Creates a default ModeButton for groupObject
+    Returns the buttonObject of the new ModeButton
+    The new Button still has to be placed
+function ToggleIconButtonGroupClearButton(groupObject[, parent, iconPath])
+    When the group does not have a Clear Button, then this creates a BUTTON that clears selection when clicked.
+    Returns the clear Button-Frame of the group.
+    The Button has to be placed after it is created.
+function ToggleIconButtonGroupClear(groupObject, player)
+
+--]]
+
+ToggleIconButtonGroup = {}
+ToggleIconButtonGroup.Action = function(object, player, enabled)
+    local groupObject = object.Group
+    if not groupObject.MultiSelection[player] then
+        
+        local oldValue = ToggleIconButtonGroupGetValue(groupObject, player)
+        ToggleIconButtonGroupClear(groupObject, player)
+        if enabled or oldValue ~= 0 then
+            ToggleIconButtonSetValue(object, player, true)
+        end
+    end
+    groupObject.Action(groupObject, object, player, ToggleIconButtonGroupGetValue(groupObject, player))
+end
+
+
+ToggleIconButtonGroup.ActionMode = function(object, player, enabled)
+    object.Group.MultiSelection[player] = enabled
+end
+
+function ToggleIconButtonGroupClear(groupObject, player)
+    for index, value in ipairs(groupObject) do
+        ToggleIconButtonSetValue(value, player, false)
+    end
+end
+
+function ToggleIconButtonGroupGetValue(groupObject, player)
+    local returnValue = 0
+    for index, value in ipairs(groupObject) do
+        returnValue = returnValue + ToggleIconButtonGetValue(value, player)
+    end
+    return returnValue
+end
+
+function ToggleIconButtonGroupAddButton(groupObject, buttonObject)
+    table.insert(groupObject, buttonObject)
+    buttonObject.Action = ToggleIconButtonGroup.Action
+    buttonObject.Group = groupObject
+    BlzTriggerRegisterFrameEvent(ToggleIconButtonGroup.RightClick, buttonObject.Button, FRAMEEVENT_MOUSE_UP)
+end
+
+function ToggleIconButtonGroupSetModeButton(groupObject, buttonObject)
+    groupObject.ModeButton = buttonObject
+    buttonObject.Action = ToggleIconButtonGroup.ActionMode
+    buttonObject.Group = groupObject
+    return buttonObject    
+end
+
+function ToggleIconButtonGroupModeButton(groupObject, parent)
+    if groupObject.ModeButton then return groupObject.ModeButton end
+    if not parent then parent = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0) end
+    local buttonObject = ToggleIconButtonGroupSetModeButton(groupObject, CreateToggleIconButton(parent, 1, "MultiSelection", "ui\\widgets\\battlenet\\bnet-mainmenu-customteam-up", nil, "UI\\Widgets\\Glues\\GlueScreen-ROC-EditionButton-up", "SingleSelection"))
+    -- start with multiselection mode enabled?
+    for index = 0, bj_MAX_PLAYERS - 1 do ToggleIconButtonSetValue(groupObject.ModeButton, Player(index), groupObject.MultiSelection[Player(index)]) end
+    return buttonObject
+end
+
+
+function ToggleIconButtonGroupClearButton(groupObject, parent, iconPath)
+    -- only one clearButton
+    if not groupObject.ClearButton then
+        -- default optional values
+        if not parent then parent = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0) end
+        if not iconPath then iconPath = "ReplaceableTextures\\CommandButtons\\BTNCancel" end
+
+        local button = BlzCreateFrame("TasItemShopCatButton", parent, 0, 0)
+        local buttonIcon = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        local buttonIconPushed = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        BlzFrameSetSize(button, ToggleIconButton.DefaultSizeX, ToggleIconButton.DefaultSizeY)
+        BlzFrameSetTexture(buttonIcon, "ReplaceableTextures\\CommandButtons\\BTNCancel", 0, false)
+        BlzFrameSetTexture(buttonIconPushed, "ReplaceableTextures\\CommandButtons\\BTNCancel", 0, false)
+        CreateSimpleTooltip(button, "Clear")
+        ToggleIconButtonGroup[button] = groupObject
+        groupObject.ClearButton = button
+        groupObject.ClearButtonIcon = buttonIcon
+        if not ToggleIconButtonGroup.ClearTrigger then
+            ToggleIconButtonGroup.ClearTrigger = CreateTrigger()
+            ToggleIconButtonGroup.ClearTriggerAction = TriggerAddAction(ToggleIconButtonGroup.ClearTrigger, function()
+                local button = BlzGetTriggerFrame()
+                local groupObject = ToggleIconButtonGroup[button]
+                local player = GetTriggerPlayer()
+                ToggleIconButtonGroupClear(groupObject, player)
+                -- remove focus
+                BlzFrameSetEnable(button, false)
+                BlzFrameSetEnable(button, true)
+                groupObject.Action(groupObject, nil, player, ToggleIconButtonGroupGetValue(groupObject, player))
+            end)
+        end
+        BlzTriggerRegisterFrameEvent(ToggleIconButtonGroup.ClearTrigger, button, FRAMEEVENT_CONTROL_CLICK)
+        return button
+    else
+        return groupObject.ClearButton
+    end
+end
+
+function CreateToggleIconButtonGroup(multiSelection, action, ...)
+    if not ToggleIconButtonGroup.RightClick then
+        ToggleIconButtonGroup.RightClick = CreateTrigger()
+        TriggerAddAction(ToggleIconButtonGroup.RightClick, function()
+            local player = GetTriggerPlayer()
+            local frame = BlzGetTriggerFrame()
+            if IsRightClick(player) then
+                local buttonObject = ToggleIconButton[frame]
+                local groupObject = buttonObject.Group
+                StartSoundForPlayerBJ(player, ToggleIconButton.Sound)
+                ToggleIconButtonGroupClear(groupObject, player)
+                ToggleIconButtonSetValue(buttonObject, player, true)
+                groupObject.Action(groupObject, buttonObject, player, ToggleIconButtonGroupGetValue(groupObject, player))
+            end
+        end)
+    end
+    local object = {MultiSelection = __jarray(multiSelection), Action = action}
+    for index, value in ipairs({...})  do ToggleIconButtonGroupAddButton(object, value) end
+    return object
+end
+
+--[[
+TasButtonList10b by Tasyen
+
+function CreateTasButtonListEx(buttonName, cols, rows, parent, buttonAction[, rightClickAction, updateAction, searchAction, filterAction, asyncButtonAction, asyncRightClickAction, colGap, rowGap])
+ create a new List
+ parent is the container of this Frame it will attach itself to its TOP.
+ buttonAction is the function that executes when an option is clicked. args: (clickedData, buttonListObject, dataIndex)
+ rightClickAction is the function that executes when an option is rightClicked. args: (clickedData, buttonListObject, dataIndex)
+ when your data are object Editor object-RawCodes (but not buffs) then updateAction & searchAction use a default one handling them.
+ updateAction runs for each Button and is used to set the diplayed content. args:(frameObject, data)
+    frameObject.Button
+    frameObject.ToolTipFrame
+    frameObject.ToolTipFrameIcon
+    frameObject.ToolTipFrameName
+    frameObject.ToolTipFrameSeperator
+    frameObject.ToolTipFrameText
+
+    frameObject.Icon
+    frameObject.Text
+    frameObject.IconGold
+    frameObject.TextGold
+    frameObject.IconLumber
+    frameObject.TextLumber
+    TasButtonList[frameObject] => buttonListObject
+
+    data is one entry of the TasButtonLists Data-Array.
+
+ searchAction is a function that returns true if the current data matches the searchText. Args: (data, searchedText, buttonListObject)
+ filterAction is meant to be used when one wants an addtional non text based filtering, with returning true allowing data or false rejecting it. Args: (data, buttonListObject, isTextSearching)
+ searchAction , udateAction & filterAction are async this functions should not do anything that alters the game state/flow.
+function CreateTasButtonList(buttonCount, parent, buttonAction[, updateAction, searchAction, filterAction])
+    wrapper for CreateTasButtonListEx, 1 col, buttonCount rows.
+function CreateTasButtonListV2(rowCount, parent, buttonAction[, updateAction, searchAction, filterAction])
+    wrapper for CreateTasButtonListEx, 2 Buttons each Row, takes more Height then the other Versions
+function CreateTasButtonListV3(rowCount, parent, buttonAction[, updateAction, searchAction, filterAction])
+    wrapper for CreateTasButtonListEx, 3 Buttons each Row, only Icon, and Costs
+
+function TasButtonListClearData(buttonListObject[, player])
+    remove all data
+function TasButtonListRemoveData(buttonListObject, data[, player])
+    search for data and remove it
+function TasButtonListAddData(buttonListObject, data[, player])
+    add data for one Button
+function TasButtonListCopyData(writeObject, readObject[, player])
+    writeObject uses the same data as readObject and calls UpdateButtonList.
+    The copier writeObject still has an own filtering and searching.
+function UpdateTasButtonList(buttonListObject)
+    update the displayed Content should be done after Data was added or removed was used.
+TasButtonListSearch(buttonListObject[, text])
+    The buttonList will search it's data for the given text, if nil is given as text it will search for what the user currently has in its box.
+    This will also update the buttonList
+--]]
+
+TasButtonList = {}
+
+do
+    local function reload()
+        BlzLoadTOCFile("war3mapimported\\TasButtonList.toc")
+    end
+    local realFunc = InitBlizzard
+    function InitBlizzard()
+        realFunc()
+        reload()
+        if FrameLoaderAdd then FrameLoaderAdd(reload) end
+
+        TasButtonList.SyncTrigger = CreateTrigger()
+        TasButtonList.SyncTriggerAction = TriggerAddAction(TasButtonList.SyncTrigger, function()
+            xpcall(function()
+            local buttonListObject = TasButtonList[BlzGetTriggerFrame()]
+            local dataIndex = math.tointeger(BlzGetTriggerFrameValue())
+
+            if buttonListObject.ButtonAction then
+                -- call the wanted action, 1 the current Data
+                buttonListObject.ButtonAction(buttonListObject.Data[GetTriggerPlayer()][dataIndex], buttonListObject, dataIndex)
+            end
+            UpdateTasButtonList(buttonListObject)
+            end,print)
+        end)
+
+        TasButtonList.SyncTriggerRightClick = CreateTrigger()
+        TasButtonList.SyncTriggerRightClickAction = TriggerAddAction(TasButtonList.SyncTriggerRightClick, function()
+            xpcall(function()
+            local buttonListObject = TasButtonList[BlzGetTriggerFrame()]
+            local dataIndex = math.tointeger(BlzGetTriggerFrameValue())
+
+            if buttonListObject.RightClickAction then
+                -- call the wanted action, 1 the current Data
+                buttonListObject.RightClickAction(buttonListObject.Data[GetTriggerPlayer()][dataIndex], buttonListObject, dataIndex)
+            end
+            UpdateTasButtonList(buttonListObject)
+            end,print)
+        end)
+
+        TasButtonList.RightClickSound = CreateSound("Sound\\Interface\\MouseClick1.wav", false, false, false, 10, 10, "")
+        SetSoundParamsFromLabel(TasButtonList.RightClickSound, "InterfaceClick")
+        SetSoundDuration(TasButtonList.RightClickSound, 239)
+
+        -- handles the clicking
+        TasButtonList.ButtonTrigger = CreateTrigger()
+        TasButtonList.ButtonTriggerAction = TriggerAddAction(TasButtonList.ButtonTrigger, function()
+            local frame = BlzGetTriggerFrame()
+            local buttonIndex = TasButtonList[frame].Index
+            local buttonListObject = TasButtonList[TasButtonList[frame]]
+            local dataIndex = buttonListObject.DataFiltered[buttonListObject.ViewPoint + buttonIndex]
+            BlzFrameSetEnable(frame, false)
+            BlzFrameSetEnable(frame, true)
+            if GetLocalPlayer() == GetTriggerPlayer() then
+                if buttonListObject.AsyncButtonAction then
+                    buttonListObject.AsyncButtonAction(buttonListObject, buttonListObject.Data[GetLocalPlayer()][R2I(dataIndex)], frame)
+                end
+                BlzFrameSetValue(buttonListObject.SyncFrame, dataIndex)
+            end
+        end)
+
+        -- handles the clicking
+        TasButtonList.ButtonTriggerRightClick = CreateTrigger()
+        TasButtonList.ButtonTriggerRightClickAction = TriggerAddAction(TasButtonList.ButtonTriggerRightClick, function()
+            local frame = BlzGetTriggerFrame()
+            local buttonIndex = TasButtonList[frame].Index
+            local buttonListObject = TasButtonList[TasButtonList[frame]]
+            local dataIndex = buttonListObject.DataFiltered[buttonListObject.ViewPoint + buttonIndex]
+            if IsRightClick(GetTriggerPlayer()) and GetLocalPlayer() == GetTriggerPlayer() then
+                if buttonListObject.AsyncRightClickAction then
+                    buttonListObject.AsyncRightClickAction(buttonListObject, buttonListObject.Data[GetLocalPlayer()][R2I(dataIndex)], frame)
+                end
+                StartSound(TasButtonList.RightClickSound)
+                BlzFrameSetValue(buttonListObject.SyncFrameRightClick, dataIndex)
+            end
+        end)
+
+        TasButtonList.SearchTrigger = CreateTrigger()
+        TasButtonList.SearchTriggerAction = TriggerAddAction(TasButtonList.SearchTrigger, function()
+            TasButtonListSearch(TasButtonList[BlzGetTriggerFrame()], BlzFrameGetText(BlzGetTriggerFrame()))
+        end)
+
+        -- scrolling while pointing on Buttons
+        TasButtonList.ButtonScrollTrigger = CreateTrigger()
+        TasButtonList.ButtonScrollTriggerAction = TriggerAddAction(TasButtonList.ButtonScrollTrigger, function()
+            local buttonListObject = TasButtonList[TasButtonList[BlzGetTriggerFrame()]]
+            local frame = buttonListObject.Slider
+            if GetLocalPlayer() == GetTriggerPlayer() then
+                if BlzGetTriggerFrameValue() > 0 then
+                    BlzFrameSetValue(frame, BlzFrameGetValue(frame) + buttonListObject.SliderStep)
+                else
+                    BlzFrameSetValue(frame, BlzFrameGetValue(frame) - buttonListObject.SliderStep)
+                end
+            end
+        end)
+
+        -- scrolling while pointing on slider aswell as calling
+        TasButtonList.SliderTrigger = CreateTrigger()
+        TasButtonList.SliderTriggerAction = TriggerAddAction(TasButtonList.SliderTrigger, function()
+            local buttonListObject = TasButtonList[BlzGetTriggerFrame()]
+            local frame = BlzGetTriggerFrame()
+            if GetLocalPlayer() == GetTriggerPlayer() then
+                if BlzGetTriggerFrameEvent() == FRAMEEVENT_MOUSE_WHEEL then
+                    if BlzGetTriggerFrameValue() > 0 then
+                        BlzFrameSetValue(frame, BlzFrameGetValue(frame) + buttonListObject.SliderStep)
+                    else
+                        BlzFrameSetValue(frame, BlzFrameGetValue(frame) - buttonListObject.SliderStep)
+                    end
+                else
+                    -- when there is enough data use viewPoint. the Viewpoint is reduced from the data to make top being top.
+                    if buttonListObject.DataFiltered.Count > buttonListObject.Frames.Count then
+                        buttonListObject.ViewPoint = buttonListObject.DataFiltered.Count - math.tointeger(BlzGetTriggerFrameValue())
+                    else
+                        buttonListObject.ViewPoint = 0
+                    end
+                    UpdateTasButtonList(buttonListObject)
+                end
+                if buttonListObject.SliderText then
+                    local min = math.tointeger(buttonListObject.DataFiltered.Count - BlzFrameGetValue(frame))
+                    local max = math.tointeger(buttonListObject.DataFiltered.Count - buttonListObject.Frames.Count)
+                    BlzFrameSetText(buttonListObject.SliderText, min .. "/" .. max )
+                end
+            end
+        end)
+    end
+end
+--runs once for each button shown
+function UpdateTasButtonListDefaultObject(frameObject, data)
+    BlzFrameSetTexture(frameObject.Icon, BlzGetAbilityIcon(data), 0, false)
+    BlzFrameSetText(frameObject.Text, GetObjectName(data))
+
+    BlzFrameSetTexture(frameObject.ToolTipFrameIcon, BlzGetAbilityIcon(data), 0, false)
+    BlzFrameSetText(frameObject.ToolTipFrameName, GetObjectName(data))      
+--        frameObject.ToolTipFrameSeperator
+    BlzFrameSetText(frameObject.ToolTipFrameText, BlzGetAbilityExtendedTooltip(data, 0))
+
+    if not IsUnitIdType(data, UNIT_TYPE_HERO) then
+        local lumber = GetUnitWoodCost(data)
+        local gold = GetUnitGoldCost(data)
+        if GetPlayerState(GetLocalPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= gold then
+            BlzFrameSetText(frameObject.TextGold, GetUnitGoldCost(data))
+        else
+            BlzFrameSetText(frameObject.TextGold, "|cffff2010"..GetUnitGoldCost(data))
+        end    
+        
+        if GetPlayerState(GetLocalPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= lumber then
+            BlzFrameSetText(frameObject.TextLumber, GetUnitWoodCost(data))
+        else
+            BlzFrameSetText(frameObject.TextLumber, "|cffff2010"..GetUnitWoodCost(data))
+        end
+    else
+        BlzFrameSetText(frameObject.TextLumber, 0)
+        BlzFrameSetText(frameObject.TextGold, 0)
+    end
+end
+
+function SearchTasButtonListDefaultObject(data, searchedText, buttonListObject)
+    --return BlzGetAbilityTooltip(data, 0)
+    --return GetObjectName(data, 0)
+    --return string.find(GetObjectName(data), searchedText)
+    return string.find(string.lower(GetObjectName(data)), string.lower(searchedText))
+end
+
+-- update the shown content
+function UpdateTasButtonList(buttonListObject)
+    xpcall(function()
+    local data = buttonListObject.Data[GetLocalPlayer()]
+    BlzFrameSetVisible(buttonListObject.Slider, buttonListObject.DataFiltered.Count > buttonListObject.Frames.Count)
+    for int = 1, buttonListObject.Frames.Count do
+        local frameObject = buttonListObject.Frames[int]
+        if buttonListObject.DataFiltered.Count >= int  then
+            buttonListObject.UpdateAction(frameObject, data[buttonListObject.DataFiltered[int + buttonListObject.ViewPoint]])
+            BlzFrameSetVisible(frameObject.Button, true)
+        else
+            BlzFrameSetVisible(frameObject.Button, false)
+        end
+    end
+end, print)
+end
+
+-- for backwards compatibility rightClickAction is the last argument
+function InitTasButtonListObject(parent, buttonAction, updateAction, searchAction, filterAction, rightClickAction, asyncButtonAction, asyncRightClickAction)
+    local object = {
+        Data = {}, --an array each slot is the user data
+        DataFiltered = {Count = 0}, -- indexes of Data fitting the current search
+        ViewPoint = 0,
+        Frames = {},
+        Parent = parent
+    }
+    for index = 0, bj_MAX_PLAYER_SLOTS - 1 do
+        object.Data[Player(index)] = {Count = 0}
+    end
+    object.ButtonAction = buttonAction --call this inside the SyncAction after a button is clicked
+    object.RightClickAction = rightClickAction -- this inside a SyncAction when the button is right clicked.
+    object.UpdateAction = updateAction --function defining how to display stuff (async)
+    object.SearchAction = searchAction --function to return the searched Text (async)
+    object.FilterAction = filterAction --
+    object.AsyncButtonAction = asyncButtonAction -- happens in the clicking event inside a LocalPlayer Block
+    object.AsyncRightClickAction = asyncRightClickAction -- happens in the clicking event inside a LocalPlayer Block
+    if not updateAction then object.UpdateAction = UpdateTasButtonListDefaultObject end
+    if not searchAction then object.SearchAction = SearchTasButtonListDefaultObject end
+    table.insert(TasButtonList, object) --index to TasButtonList
+    TasButtonList[object] = #TasButtonList -- TasButtonList to Index
+
+    object.SyncFrame = BlzCreateFrameByType("SLIDER", "", parent, "", 0)
+    BlzFrameSetMinMaxValue(object.SyncFrame, 0, 9999999)
+    BlzFrameSetStepSize(object.SyncFrame, 1.0)
+    BlzTriggerRegisterFrameEvent(TasButtonList.SyncTrigger, object.SyncFrame, FRAMEEVENT_SLIDER_VALUE_CHANGED)
+    BlzFrameSetVisible(object.SyncFrame, false)
+    TasButtonList[object.SyncFrame] = object
+
+    object.SyncFrameRightClick = BlzCreateFrameByType("SLIDER", "", parent, "", 0)
+    BlzFrameSetMinMaxValue(object.SyncFrameRightClick, 0, 9999999)
+    BlzFrameSetStepSize(object.SyncFrameRightClick, 1.0)
+    BlzTriggerRegisterFrameEvent(TasButtonList.SyncTriggerRightClick, object.SyncFrameRightClick, FRAMEEVENT_SLIDER_VALUE_CHANGED)
+    BlzFrameSetVisible(object.SyncFrameRightClick, false)
+    TasButtonList[object.SyncFrameRightClick] = object
+
+    object.InputFrame = BlzCreateFrame("TasEditBox", parent, 0, 0)
+    BlzTriggerRegisterFrameEvent(TasButtonList.SearchTrigger, object.InputFrame, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
+    BlzFrameSetPoint(object.InputFrame, FRAMEPOINT_TOPRIGHT, parent, FRAMEPOINT_TOPRIGHT, 0, 0)
+    TasButtonList[object.InputFrame] = object
+
+    return object
+end
+
+function InitTasButtonListSlider(object, stepSize, rowCount, colGap, rowGap)
+    object.Slider = BlzCreateFrameByType("SLIDER", "FrameListSlider", object.Parent, "QuestMainListScrollBar", 0)
+    TasButtonList[object.Slider] = object -- the slider nows the TasButtonListobject
+    object.SliderStep = stepSize
+    BlzFrameSetStepSize(object.Slider, stepSize)
+    BlzFrameClearAllPoints(object.Slider)
+    BlzFrameSetVisible(object.Slider, true)
+    BlzFrameSetMinMaxValue(object.Slider, 0, 0)
+    BlzFrameSetPoint(object.Slider, FRAMEPOINT_TOPLEFT, object.Frames[stepSize].Button, FRAMEPOINT_TOPRIGHT, 0, 0)
+    BlzFrameSetSize(object.Slider, 0.012, BlzFrameGetHeight(object.Frames[1].Button) * rowCount +  rowGap * (rowCount - 1))
+    BlzTriggerRegisterFrameEvent(TasButtonList.SliderTrigger, object.Slider , FRAMEEVENT_SLIDER_VALUE_CHANGED)
+    BlzTriggerRegisterFrameEvent(TasButtonList.SliderTrigger, object.Slider , FRAMEEVENT_MOUSE_WHEEL)
+
+    
+    if CreateSimpleTooltip then
+        object.SliderText = CreateSimpleTooltip(object.Slider, "1000/1000")
+        BlzFrameClearAllPoints(object.SliderText)
+        BlzFrameSetPoint(object.SliderText, FRAMEPOINT_BOTTOMRIGHT, object.Slider, FRAMEPOINT_TOPLEFT, 0, 0)
+    end 
+end
+
+function TasButtonListAddDataEx(buttonListObject, data, player)
+    local oData = buttonListObject.Data[player]
+    local oDataFil = buttonListObject.DataFiltered
+    
+    oData.Count = oData.Count + 1
+    oData[oData.Count] = data
+    if GetLocalPlayer() == player then
+        -- filterData is a local thing
+        oDataFil.Count = oDataFil.Count + 1
+        oDataFil[oDataFil.Count] = oData.Count
+        BlzFrameSetMinMaxValue(buttonListObject.Slider, buttonListObject.Frames.Count, oDataFil.Count)
+    end
+end
+
+function TasButtonListAddData(buttonListObject, data, player)
+    if player and type(player) == "userdata" then
+        TasButtonListAddDataEx(buttonListObject, data, player)
+    else
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+            TasButtonListAddDataEx(buttonListObject, data, Player(i))
+        end
+    end
+end
+
+function TasButtonListRemoveDataEx(buttonListObject, data, player)
+    local oData = buttonListObject.Data[player]
+    for index = 1, oData.Count do 
+        value = oData[index]
+        if value == data then
+            oData[index] = oData[oData.Count]
+            oData.Count = oData.Count - 1
+            break
+        end
+    end
+    if GetLocalPlayer() == player then
+        BlzFrameSetMinMaxValue(buttonListObject.Slider, buttonListObject.Frames.Count, oData.Count)
+    end
+end
+
+function TasButtonListRemoveData(buttonListObject, data, player)
+    if player and type(player) == "userdata" then
+        TasButtonListRemoveDataEx(buttonListObject, data, player)
+    else
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+            TasButtonListRemoveDataEx(buttonListObject, data, Player(i))
+        end
+    end
+end
+
+function TasButtonListClearDataEx(buttonListObject, player)
+    buttonListObject.Data[player].Count = 0
+    if GetLocalPlayer() == player then
+        buttonListObject.DataFiltered.Count = 0
+        BlzFrameSetMinMaxValue(buttonListObject.Slider, 0, 0)
+    end
+end
+
+function TasButtonListClearData(buttonListObject, player)
+    if player and type(player) == "userdata" then
+        TasButtonListClearDataEx(buttonListObject, player)
+    else
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+            TasButtonListClearDataEx(buttonListObject, Player(i))
+        end
+    end
+end
+
+function TasButtonListCopyDataEx(writeObject, readObject, player)
+    writeObject.Data[player] = readObject.Data[player]
+    for index = 1, readObject.DataFiltered.Count do writeObject.DataFiltered[index] = readObject.DataFiltered[index] end
+    writeObject.DataFiltered.Count = readObject.DataFiltered.Count
+    if GetLocalPlayer() == player then
+        BlzFrameSetMinMaxValue(writeObject.Slider, writeObject.Frames.Count, writeObject.Data[player].Count)
+        BlzFrameSetValue(writeObject.Slider,999999)
+    end
+    
+end
+
+function TasButtonListCopyData(writeObject, readObject, player)
+    if player and type(player) == "userdata" then
+        TasButtonListCopyDataEx(writeObject, readObject, player)
+    else
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+            TasButtonListCopyDataEx(writeObject, readObject, Player(i))
+        end
+    end
+end
+
+function TasButtonListSearch(buttonListObject, text)
+    if not text then text = BlzFrameGetText(buttonListObject.InputFrame) end
+    local filteredData = buttonListObject.DataFiltered
+    local oData = buttonListObject.Data[GetLocalPlayer()]
+    local value
+    if GetLocalPlayer() == GetTriggerPlayer() then
+        filteredData.Count = 0
+        if text ~= "" then
+            for index = 1, oData.Count do 
+                value = oData[index]
+                if buttonListObject.SearchAction(value, text, buttonListObject) and (not buttonListObject.FilterAction or buttonListObject.FilterAction(value, buttonListObject, true)) then
+                    filteredData.Count = filteredData.Count + 1
+                    filteredData[filteredData.Count] = index
+                end
+            end
+            
+        else
+            for index = 1, oData.Count do 
+                value = oData[index]
+                if not buttonListObject.FilterAction or buttonListObject.FilterAction(value, buttonListObject, false) then
+                    filteredData.Count = filteredData.Count + 1
+                    filteredData[filteredData.Count] = index
+                end
+            end
+        end
+        --table.sort(filteredData, function(a, b) return GetObjectName(buttonListObject.Data[a]) < GetObjectName(buttonListObject.Data[b]) end  )
+        --update Slider, with that also update
+        BlzFrameSetMinMaxValue(buttonListObject.Slider, buttonListObject.Frames.Count, math.max(filteredData.Count,0))
+        BlzFrameSetValue(buttonListObject.Slider, 999999)
+        
+    end
+end
+
+-- demo Creators
+function CreateTasButtonTooltip(frameObject, parent)       
+    -- create an empty FRAME parent for the box BACKDROP, otherwise it can happen that it gets limited to the 4:3 Screen.
+    frameObject.ToolTipFrameFrame = BlzCreateFrame("TasButtonListTooltipBoxFrame", frameObject.Button, 0, 0)
+    frameObject.ToolTipFrame = BlzGetFrameByName("TasButtonListTooltipBox", 0)
+    frameObject.ToolTipFrameIcon = BlzGetFrameByName("TasButtonListTooltipIcon", 0)
+    frameObject.ToolTipFrameName = BlzGetFrameByName("TasButtonListTooltipName", 0)
+    frameObject.ToolTipFrameSeperator = BlzGetFrameByName("TasButtonListTooltipSeperator", 0)
+    frameObject.ToolTipFrameText = BlzGetFrameByName("TasButtonListTooltipText", 0)    
+    BlzFrameSetPoint(frameObject.ToolTipFrameText, FRAMEPOINT_TOPRIGHT, parent, FRAMEPOINT_TOPLEFT, -0.001, -0.052)
+    BlzFrameSetPoint(frameObject.ToolTipFrame, FRAMEPOINT_TOPLEFT, frameObject.ToolTipFrameIcon, FRAMEPOINT_TOPLEFT, -0.005, 0.005)
+    BlzFrameSetPoint(frameObject.ToolTipFrame, FRAMEPOINT_BOTTOMRIGHT, frameObject.ToolTipFrameText, FRAMEPOINT_BOTTOMRIGHT, 0.005, -0.005)
+    BlzFrameSetTooltip(frameObject.Button, frameObject.ToolTipFrameFrame)
+end
+
+function CreateTasButtonListEx(buttonName, cols, rows, parent, buttonAction, rightClickAction, updateAction, searchAction, filterAction, asyncButtonAction, asyncRightClickAction, colGap, rowGap)
+    if not rowGap then rowGap = 0.0 end
+    if not colGap then colGap = 0.0 end
+    local buttonCount = rows*cols
+    local object = InitTasButtonListObject(parent, buttonAction, updateAction, searchAction, filterAction, rightClickAction, asyncButtonAction, asyncRightClickAction)
+    object.Frames.Count = buttonCount
+    local rowRemain = cols
+    for int = 1, buttonCount do
+        local frameObject = {}
+        frameObject.Index = int
+        frameObject.Button = BlzCreateFrame(buttonName, parent, 0, 0)
+        if GetHandleId(frameObject.Button) == 0 then print("TasButtonList - Error - can't create Button:", buttonName) end
+        CreateTasButtonTooltip(frameObject, parent)
+
+        frameObject.Icon = BlzGetFrameByName("TasButtonIcon", 0)
+        frameObject.Text = BlzGetFrameByName("TasButtonText", 0)
+        frameObject.IconGold = BlzGetFrameByName("TasButtonIconGold", 0)
+        frameObject.TextGold = BlzGetFrameByName("TasButtonTextGold", 0)
+        frameObject.IconLumber = BlzGetFrameByName("TasButtonIconLumber", 0)
+        frameObject.TextLumber = BlzGetFrameByName("TasButtonTextLumber", 0)
+        TasButtonList[frameObject.Button] = frameObject
+        TasButtonList[frameObject] = object
+        object.Frames[int] = frameObject
+        BlzTriggerRegisterFrameEvent(TasButtonList.ButtonTrigger, frameObject.Button, FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(TasButtonList.ButtonTriggerRightClick, frameObject.Button, FRAMEEVENT_MOUSE_UP)
+        BlzTriggerRegisterFrameEvent(TasButtonList.ButtonScrollTrigger, frameObject.Button, FRAMEEVENT_MOUSE_WHEEL)
+        
+        if int > 1 then 
+            if rowRemain == 0 then
+                BlzFrameSetPoint(frameObject.Button, FRAMEPOINT_TOP, object.Frames[int - cols].Button, FRAMEPOINT_BOTTOM, 0, -rowGap)
+                rowRemain = cols
+            else
+                BlzFrameSetPoint(frameObject.Button, FRAMEPOINT_LEFT, object.Frames[int - 1].Button, FRAMEPOINT_RIGHT, colGap, 0)
+            end
+        else
+            --print(-BlzFrameGetWidth(frameObject.Button)*cols - colGap*(cols-1))
+            BlzFrameSetPoint(frameObject.Button, FRAMEPOINT_TOPRIGHT, object.InputFrame, FRAMEPOINT_BOTTOMRIGHT, -BlzFrameGetWidth(frameObject.Button)*cols - colGap*(cols-1), 0)
+        end
+        rowRemain = rowRemain - 1
+    end
+    InitTasButtonListSlider(object, cols, rows, colGap, rowGap)
+
+    return object
+end
+
+function CreateTasButtonList(buttonCount, parent, buttonAction, updateAction, searchAction, filterAction)
+    return CreateTasButtonListEx("TasButton", 1, buttonCount, parent, buttonAction, nil, updateAction, searchAction, filterAction)
+end
+
+function CreateTasButtonListV2(rowCount, parent, buttonAction, updateAction, searchAction, filterAction)
+    return CreateTasButtonListEx("TasButtonSmall", 2, rowCount, parent, buttonAction, nil, updateAction, searchAction, filterAction)
+end
+
+function CreateTasButtonListV3(rowCount, parent, buttonAction, updateAction, searchAction, filterAction)
+    return CreateTasButtonListEx("TasButtonGrid", 3, rowCount, parent, buttonAction, nil, updateAction, searchAction, filterAction)
+end
+--[[ TasItemShopV4g by Tasyen
+TasItemSetCategory(itemCode, category)
+TasItemShopAdd(itemCode, category)
+TasItemShopAddCategory(icon, text)
+ define a new Category, should be done before the UI is created.
+ Returns the value of the new category
+TasItemShopUIShow(player, shop, shopperGroup[, mainShoper])
+    TasItemShopUIShow(player) hides the shop for player
+    shopperGroup are all units providing items, if you use nil the current shoppergroup remains intact. When giving something else the group contains only mainShoper.
+    mainShoper is the unit consider for haggel and gains the items. If you gave a group then you can skip mainShoper then a random is taken.
+    with player and shop the shoppers are kept but the shop updates.
+    Beaware that this System does only update on user input it will not check distance/live or anything.
+TasItemShopUIShowSimple(player, shop, mainShoper)
+TasItemShopCreateShop(unitCode, whiteList, goldFactor, lumberFactor, goldFunction, lumberFunction)
+TasItemShopAddShop(unitCode, ...)
+ adds data for that specific shop
+TasItemShopGoldFactor(unitCode, factor, ...)
+    sets the goldFactor for that shop to the given data
+TasItemShopLumberFactor(unitCode, factor, ...)
+    lumberFactor ^^
+TasItemShopAddHaggleSkill(skill, goldBase[, lumberBase, goldAdd, lumberAdd])
+    adds a new Skill which will affect the costs in TasItemShop.
+TasItemShopUI.SetQuickLink(player, itemCode)
+    add/remove itemCode from quickLink for player
+TasItemShopUI.ClearQuickLink(player)
+--]]
+TasItemShopUI = {
+    TempTable =  {},
+    QuickLinkKeyActive = __jarray(false),
+    Undo = {},
+    Shops = {},
+    Frames = {},
+    Selected = __jarray(0),
+    SelectedCategory = 0,
+    SelectedItem = {},
+    MarkedItemCodes = {},
+    QuickLink = {},
+    Categories = {
+        Value = __jarray(0),
+        -- should only have 31 or less
+        -- it is more practically to use function TasItemShopAddCategory(icon, text) inside UserInit()
+        -- Icon path, tooltip Text (tries to localize)
+    }
+}
+
+do
+    -- A list of items buyable, you could just smack in all your buyAble TasItems here.
+    -- Or use TasItemShopAdd(itemCode, category) inside local function UserInit()
+    -- This List is used by shops without custom data or by BlackList Shops
+    local BUY_ABLE_ITEMS = {}
+    
+    local Haggle_Skills = {
+        -- skill, GoldBase, Lumberbase, GoldAdd, LumberAdd
+        -- add is added per Level of that skill to Base. The current Cost is than multiplied by that Factor.
+        --{FourCC('A000'), 0.8, 0.8, 0.0, 0.0}
+    }
+    
+    -- position of the custom UI
+    -- it can leave the 4:3 Screen but you should checkout the start of function TasItemShopUI.Create
+    local xPos = -0.2
+    local yPos = -0.02
+    local posPoint = FRAMEPOINT_TOPRIGHT
+    local posScreenRelative = true --(true) repos to the screenSize, when the resolution mode changes the box will move further in/out when using a right or Left point.
+    -- It is advised to posScreenRelative = false when posPoint does not include Left or Right
+    -- with posScreenRelative = false xPos and yPos are abs coords, to which posPoint of the Shop UI is placed to.
+
+    -- position of Item toolTips, this does not affect the tooltips for Categories or Users.
+    -- comment out toolTipPosPointParent, if you want a specific position on screen.
+    -- with toolTipPosPoint & toolTipPosPointParent are toolTipPosX & toolTipPosY relative offsets.
+    -- The position is a bit wierd, the position is not the box but the Extended Tooltip Text, the Header has a height of ~0.052.
+
+    local toolTipPosX = 0.0
+    local toolTipPosY = -0.052
+    local toolTipPosPoint = FRAMEPOINT_TOPRIGHT
+    local toolTipPosPointParent = FRAMEPOINT_BOTTOMRIGHT
+    local toolTipSizeX = 0.2 -- only content
+    local toolTipSizeXBig = 0.3 -- only content
+    local toolTipLimitBig = 300 -- When a TooltipText Contains this amount or more of Chars it will use toolTipSizeXBig
+    
+    -- this can be used to change the visual ("EscMenuControlBackdropTemplate") ("TasItemShopRaceBackdrop")
+    local boxFrameName = "TasItemShopRaceBackdrop"
+    local boxButtonListFrameName = "EscMenuControlBackdropTemplate"
+    local boxRefFrameName = "EscMenuControlBackdropTemplate"
+    local boxCatFrameName = "EscMenuControlBackdropTemplate"
+    local boxUndoFrameName = "TasItemShopRaceBackdrop"
+    local boxDefuseFrameName = "TasItemShopRaceBackdrop"
+    local buttonListHighLightFrameName = "TasItemShopSelectedHighlight"
+    local boxFrameBorderGap = 0.0065
+    local boxButtonListBorderGap = 0.0065 -- does nothing right now
+    local boxRefBorderGap = 0.0065
+    local boxCatBorderGap = 0.0055
+    local boxUndoBorderGap = 0.0045
+    local boxDefuseBorderGap = 0.0045
+    local boxSellBorderGap = 0.0045
+    local buttonListButtonGapCol = 0.001
+    local buttonListButtonGapRow = 0.005
+    -- material control
+    local flexibleShop = false -- (true) can sell items not added to the shop. This includes items reached over RefButtons and material for autocompletion. I don't know that item, but your description is enough. I craft it, no problem.
+    local sharedItems = false -- (false) can only fuse material owned by neutral passive (default) or oneself. The code handling that is in TasItemFusion.
+    local canProviderGetItem = true -- (true) when the mainShopper's inventory is full, try to give the other matieral provider the item
+    local canUndo = true -- (true) There is an Undo Button which allows to Revert BuyActions done in this shopping. A shopping ends when the UI is closed, changing current shop counts as closed.
+    local canDefuse = true -- (true) There is a Defuse Button which allows to defuse FusionItems hold.
+    local DefuseButtonIcon = "ReplaceableTextures\\CommandButtons\\BTNdemolish"
+    local DefuseButtonIconDisabled = getDisabledIcon(DefuseButtonIcon)
+    local canSellItems = true -- (true)
+    local SellFactor = 1.0
+    local SellUsesCostModifier = true
+    local SellButtonIcon = "ReplaceableTextures\\CommandButtons\\BTNReturnGoods"
+    local SellButtonIconDisabled = getDisabledIcon(SellButtonIcon)
+
+    local MainUserTexture = "ui\\widgets\\console\\human\\commandbutton\\human-multipleselection-border" 
+    local MainItemTexture = "ui\\widgets\\console\\human\\commandbutton\\human-multipleselection-border" 
+
+    local shopRange = 1600 -- the max distance between shop and Shoper, this can be overwritten by shopObject.Range.
+    local updateTime = 0.4 -- how many seconds pass before a new update is applied. update: search new shopers, validat current shopers and update UI.
+    -- Titel-text in the reference Boxes
+    local textUpgrades = "COLON_UPGRADE" --tries to localize on creation
+    local textMats = "SCORESCREEN_TAB3"
+    local textInventory = "INVENTORY"
+    local textUser = "USER"
+    local textCanNotBuyPrefix = "Can not buy: "
+    local textCanNotBuySufix = "OUTOFSTOCKTOOLTIP"
+    local textNoValidShopper = "No valid Shoper"
+    local textUndo = "Undo: "
+    local textUnBuyable = "xxxxxxx"
+    local textDefuse = "Defuse:"
+    local textSell = "Sell:"
+    local textQuickLink = "ShortCuts:"
+    local categoryModeTextAnd = "ui\\widgets\\battlenet\\bnet-mainmenu-friends-disabled"
+    local categoryModeTextOr = "Or"
+    local categoryModeIconOr = "ui\\widgets\\battlenet\\bnet-mainmenu-friends-up"
+    local categoryModeIconAnd = "And"
+
+    local quickLinkKey = OSKEY_LSHIFT  -- nil will prevent the user from changing shortcuts. can also be commented out
+    -- how many refButtons, refButtons have pages, if needed.
+    -- A feature is disabled with a counter smaller than 1.
+    local refButtonCountMats = 4 -- materialRefs.
+    local refButtonCountUp = 4 -- possible upgrades of the current Selected
+    local refButtonCountInv = 6 -- inventory items, this system allows an unitgroup to provide items, if you don't use that feature only upto 6 makes sense.
+    local refButtonCountUser = 6 -- References to the shopping Units/material provider.
+    local refButtonCountQuickLink = 4 -- User SelectAble Shortcuts
+    local refButtonSize = 0.02
+    local refButtonGap = 0.003
+    local refButtonPageSize = 0.012
+    local refButtonPageRotate = true --(true) swap to first page when going above last page, and swap to last page when going down first Page
+    local refButtonPageUp = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp"
+    local refButtonPageDown = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown"
+    local refButtonBoxSizeY = 0.047
+
+    -- LayoutType alters the position of buttons
+    -- (0) the buy button is at the bottom between buttonList and buybutton the refBoxes are placed  
+    -- (1) the buy button is below the buttonList below it are the refButtons
+    -- (2) the buy button is below the buttonList, the RefButtons are at the bottom outside of the Box
+    -- (3) the buy button is below the buttonList, the RefButtons are left outside of the Box they are also from top to bottom
+    local LayoutType = 0
+    
+
+    -- (true) right clicking an refInventoryButton in the UI will sell the item
+    -- (false) right clicking it will buy it again.
+    local inventoryRightClickSell = true
+    local inventoryShowMainOnly = true --(false) show all items currently useable
+
+    local userButtonOrder = false -- (true) Creates any UnitTargetOrder Event enables right clicking Units in the world to swap main shoppers.
+    local doubleClickTimeOut = 2.0 -- amount of seconds a doppleclick inside the Buttonlist counts as Buying    
+
+    -- model displayed when buy request was started.
+    --local spriteModel = "UI\\Feedback\\GoldCredit\\GoldCredit.mdl" -- in 1.31 the coins are black only.
+    --local spriteModel = "Abilities\\Weapons\\RockBoltMissile\\RockBoltMissile.mdl"
+    --local spriteModel = "Abilities\\Weapons\\BansheeMissile\\BansheeMissile.mdl"
+    --local spriteModel = "Abilities\\Spells\\Other\\GeneralAuraTarget\\GeneralAuraTarget.mdl"
+    local spriteModel = "war3mapImported\\BansheeMissile.mdx" --by abfal, (no sound).
+    local spriteScale = 0.0006 -- The scale has to fit the used model. if you use non-UI models use a low scale, 0.001 or below.
+    local spriteAnimationIndex = 1 -- 1 = death animation
+
+    local buttonListRows = 5
+    -- buttonListCols has a strong impact on the xSize of this UI. make sure that refButtons of one type fit into this.
+    local buttonListCols = 3
+
+    -- this will not change the size of the Buttons, nor the space the text can take
+    -- true = Show
+    -- false = hide
+    local buttonListShowGold = true
+    local buttonListShowLumber = true
+    local buyButtonShowGold = true
+    local buyButtonShowLumber = true
+
+    -- which button is used inside the ButtonList? Enable one block and disable the other one
+
+    local buttonListButtonName = "TasButtonSmall"
+    local buttonListButtonSizeX = 0.1
+    local buttonListButtonSizeY = 0.0325
+
+    -- "TasButtonGrid" are smaller, they don't show the names in the list
+    --local buttonListButtonName = "TasButtonGrid"
+    --local buttonListButtonSizeX = 0.064
+    --local buttonListButtonSizeY = 0.0265
+
+    --local buttonListButtonName = "TasButton"
+    --local buttonListButtonSizeX = 0.2
+    --local buttonListButtonSizeY = 0.0265
+    
+    local categoryButtonSize = 0.019
+    
+    -- This runs right before the actually UI is created.
+    -- this is a good place to add items, categories, fusions shops etc.
+    local function UserInit()
+        -- this can all be done in GUI aswell, enable the next Line or remove all Text of this function if you only want to use GUI
+        --if true then return end
+
+        -- define Categories: Icon, Text
+        -- the Categories are displayed in the order added.
+        -- it is a good idea to save the returned Value in a local to make the category setup later much easier to understand.
+        -- you can only have 31 categories
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNStaffOfSilence", "Active")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNCommand", "Passive")
+
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNGauntletsOfOgrePower", "STRENGTH")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSlippersOfAgility", "AGILITY")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNMantleOfIntelligence", "INTELLIGENCE")
+        
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSteelMelee", "Attack")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne", "COLON_ARMOR")
+
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNWallOfFire", "Offensive")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNDefend", "Defensive")
+
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNStun", "Crowd Control")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSentryWard", "Utility")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNBootsOfSpeed", "COLON_MOVE_SPEED")
+
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNRegenerate", "LifeRegeneration")
+        TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNManaStone", "ManaRegeneration")
+        -- local catDmg = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSteelMelee", "COLON_DAMAGE")
+        -- local catArmor = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne", "COLON_ARMOR")
+        -- local catStr = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNGauntletsOfOgrePower", "STRENGTH")
+        -- local catAgi = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSlippersOfAgility", "AGILITY")
+        -- local catInt = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNMantleOfIntelligence", "INTELLECT")
+        -- local catLife = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNPeriapt", "Life")
+        -- local catLifeReg = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNRegenerate", "LifeRegeneration")
+        -- local catMana = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNPendantOfMana", "Mana")
+        -- local catManaReg = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNSobiMask", "ManaRegeneration")
+        -- local catOrb = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNOrbOfDarkness", "Orb")
+        -- local catAura = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNLionHorn", "Aura")
+        -- local catActive = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNStaffOfSilence", "Active")
+        -- local catPower = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNControlMagic", "SpellPower")
+        -- local catCooldown = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne", "Cooldown")
+        -- local catAtkSpeed = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne", "Attackspeed")
+        -- local catMress = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNRunedBracers", "Magic-Resistence")
+        -- local catConsum = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNPotionGreenSmall", "ConsumAble")
+        -- local catMoveSpeed = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNBootsOfSpeed", "COLON_MOVE_SPEED")
+        -- local catCrit = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNCriticalStrike", "Crit")
+        -- local catLifeSteal = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNVampiricAura", "Lifesteal")
+        -- local catEvade = TasItemShopAddCategory("ReplaceableTextures\\CommandButtons\\BTNEvasion", "Evasion")
+        
+        -- setup custom shops
+        -- custom Shops are optional.
+        -- They can have a White or Blacklist of items they can(n't) sell and have a fixed cost modifier for Gold, Lumber aswell as a function for more dynamic things for Gold and Lumber.
+        -- local shopObject
+        -- -- 'n000' can only sell this items (this items don't have to be in the pool of items)
+        -- shopObject = TasItemShopAddShop('n01P', 'hlst', 'mnst', 'pghe', 'pgma', 'pnvu', 'pres', 'ankh', 'stwp', 'shas', 'I004', 'I006')
+        -- -- enable WhiteListMode
+        -- shopObject.Mode = true
+        -- -- 'n001' can't sell this items (from the default pool of items)
+        -- shopObject = TasItemShopAddShop('n001', 'hlst', 'mnst', 'pghe', 'pgma', 'pnvu', 'pres', 'ankh', 'stwp', 'shas')
+        -- -- enable BlackListMode
+        -- shopObject.Mode = false
+        -- -- create an shopObject for 'ngme', has to pay 20more than normal, beaware that this can be overwritten by GUI Example
+        -- shopObject = TasItemShopCreateShop('ngme', false, 1.2, 1.2
+        -- -- custom gold Cost function
+        --     ,function(itemCode, cost, client, shop) return cost end
+        -- -- custom lumber Cost function
+        --     ,function(itemCode, cost, client, shop) return cost end
+        -- )
+        -- --'I002' crown +100 was never added to the database but this shop can craft/sell it.
+        -- shopObject = TasItemShopAddShop('n002', 'ckng', 'I001', 'I002', 'arsh')
+        -- shopObject.Mode = true
+        
+
+        -- Define skills/Buffs that change the costs in the shop
+        -- cursed Units have to pay +25
+        -- TasItemShopAddHaggleSkill(FourCC('Bcrs'), 1.25, 1.25)
+
+        -- define Fusions
+        -- result created by 'xxx', 'xx' , 'x'...
+        -- item can only be crafted by one way
+        -- can add any amount of material in the Lua version
+        -- TasItemFusionAdd('bgst', 'rst1', 'rst1')
+        -- TasItemFusionAdd('ciri', 'rin1', 'rin1')
+        -- TasItemFusionAdd('belv', 'rag1', 'rag1')
+        -- TasItemFusionAdd('hval', 'rag1', 'rst1')
+        -- TasItemFusionAdd('hcun', 'rag1', 'rin1')
+        -- TasItemFusionAdd('mcou', 'rst1', 'rin1')
+        -- TasItemFusionAdd('ckng', 'cnob', 'cnob')
+        -- TasItemFusionAdd('rat9', 'rat6', 'rat6')
+        -- TasItemFusionAdd('ratf', 'rat9', 'rat9')
+        -- TasItemFusionAdd('rde4', 'rde3')
+        -- TasItemFusionAdd('rde3', 'rde2')
+        -- TasItemFusionAdd('rhth', 'prvt')
+        -- TasItemFusionAdd('pmna', 'penr')
+        -- TasItemFusionAdd('arsh', 'rde3', 'rde2')
+
+        -- TasItemFusionAdd('lhst', 'sfog')
+
+        -- -- crown of Kings + 50
+        -- TasItemFusionAdd('I001', 'ckng', 'ckng', 'ckng', 'ckng', 'ckng', 'ckng', 'bgst', 'bgst', 'ciri', 'ciri', 'belv', 'belv', 'cnob', 'cnob')
+        -- -- crown of Kings + 100, this is a joke you can not craft it because it was not added to buyAble Items
+        -- TasItemFusionAdd('I002', 'I001', 'I001')
+
+        -- -- define item Categories
+        -- -- uses the locals from earlier.
+        -- -- An item can have multiple categories just add them together like this: catStr + catAgi + catInt
+        
+        -- TasItemSetCategory('rst1', catStr)
+        -- TasItemSetCategory('bgst', catStr)
+        -- TasItemSetCategory('rin1', catInt)
+        -- TasItemSetCategory('ciri', catInt)
+        -- TasItemSetCategory('rag1', catAgi)
+        -- TasItemSetCategory('belv', catAgi)
+
+        -- TasItemSetCategory('I001', catStr + catAgi + catInt)
+
+        -- TasItemSetCategory('ckng', catStr + catAgi + catInt)
+        -- TasItemSetCategory('mcou', catStr + catInt)
+        -- TasItemSetCategory('hval', catStr + catAgi)
+        -- TasItemSetCategory('hcun', catAgi + catInt)
+        -- TasItemSetCategory('cnob', catStr + catAgi + catInt)
+
+        -- TasItemSetCategory('rat9', catDmg)
+        -- TasItemSetCategory('rat6', catDmg)
+        -- TasItemSetCategory('ratf', catDmg)
+        
+        -- TasItemSetCategory('rlif', catLifeReg)
+
+        -- TasItemSetCategory('ajen', catAura + catAtkSpeed + catMoveSpeed)
+        -- TasItemSetCategory('clfm', catAura + catDmg)
+        -- TasItemSetCategory('ward', catAura + catDmg)
+        -- TasItemSetCategory('kpin', catAura + catManaReg)
+        -- TasItemSetCategory('lgdh', catAura + catMoveSpeed + catLifeReg)
+        -- TasItemSetCategory('rde4', catArmor)
+        -- TasItemSetCategory('pmna', catMana)
+        -- TasItemSetCategory('rhth', catLife)
+        -- TasItemSetCategory('ssil', catActive)
+        -- TasItemSetCategory('lhst', catAura + catArmor)
+        -- TasItemSetCategory('afac', catAura + catDmg)
+        -- TasItemSetCategory('sbch', catAura + catDmg)
+        -- TasItemSetCategory('sbch', catAura + catLifeSteal)
+        -- TasItemSetCategory('brac', catMress)
+        -- TasItemSetCategory('spsh', catMress + catActive)
+        -- TasItemSetCategory('rwiz', catManaReg)
+        -- TasItemSetCategory('crys', catActive)
+        -- TasItemSetCategory('evtl', catEvade)
+        -- TasItemSetCategory('penr', catMana)
+        -- TasItemSetCategory('prvt', catLife)
+        -- TasItemSetCategory('rde3', catArmor)
+        -- TasItemSetCategory('bspd', catMoveSpeed)
+        -- TasItemSetCategory('gcel', catAtkSpeed)
+        -- TasItemSetCategory('rde2', catArmor)
+        -- TasItemSetCategory('clsd', catActive)
+        -- TasItemSetCategory('dsum', catActive + catMoveSpeed)
+        -- TasItemSetCategory('stel', catActive + catMoveSpeed)
+        -- TasItemSetCategory('desc', catActive + catMoveSpeed)
+        -- TasItemSetCategory('ofro', catDmg + catOrb)
+        -- TasItemSetCategory('modt', catLifeSteal + catOrb)
+        -- TasItemSetCategory('thdm', catActive)
+        -- TasItemSetCategory('hlst', catActive + catConsum + catLifeReg)
+        -- TasItemSetCategory('mnst', catActive + catConsum + catManaReg)
+        -- TasItemSetCategory('pghe', catActive + catConsum)
+        -- TasItemSetCategory('pgma', catActive + catConsum)
+        -- TasItemSetCategory('pnvu', catActive + catConsum)
+        -- TasItemSetCategory('pres', catActive + catConsum)
+        -- TasItemSetCategory('ankh', catConsum)
+        -- TasItemSetCategory('stwp', catActive + catConsum + catMoveSpeed)
+        -- TasItemSetCategory('shas', catActive + catConsum + catMoveSpeed)
+        -- TasItemSetCategory('ofir', catOrb + catDmg)
+        -- TasItemSetCategory('oli2', catOrb + catDmg)
+        -- TasItemSetCategory('odef', catOrb + catDmg)
+        -- TasItemSetCategory('oven', catOrb + catDmg)
+        -- TasItemSetCategory('oslo', catOrb + catDmg)
+        -- TasItemSetCategory('ocor', catOrb + catDmg)
+        -- TasItemSetCategory('shtm', catActive)
+        -- TasItemSetCategory('I004', catActive)
+        -- TasItemSetCategory('I006', catActive)
+    end
+    local function GetParent()
+        local parent
+        -- if TasItemShopUI.IsReforged then
+        if false then
+            parent = BlzGetFrameByName("ConsoleUIBackdrop", 0)
+        else
+            CreateLeaderboardBJ(bj_FORCE_ALL_PLAYERS, "title")
+            parent = BlzGetFrameByName("Leaderboard", 0)
+            BlzFrameSetSize(parent, 0, 0)
+            BlzFrameSetVisible(BlzGetFrameByName("LeaderboardBackdrop", 0), false)
+            BlzFrameSetVisible(BlzGetFrameByName("LeaderboardTitle", 0), false)
+        end
+        return parent
+    end
+    local function IsValidShopper(player, shop, unit, range)
+        if not IsUnitOwnedByPlayer(unit, player) then
+            --print("IsUnitOwnedByPlayer")
+            return false
+        end
+        if UnitInventorySize(unit) < 1 then
+            --print("UnitInventorySize")
+            return false
+        end
+        if IsUnitType(unit, UNIT_TYPE_DEAD) then
+            --print("UNIT_TYPE_DEAD")
+            return false
+        end
+        if IsUnitPaused(unit) then
+            --print("IsUnitPaused")
+            return false
+        end
+        if IsUnitHidden(unit) then
+            --print("IsUnitHidden")
+            return false
+        end
+        if IsUnitIllusion(unit) then
+            --print("IsUnitIllusion")
+            return false
+        end
+        if not IsUnitInRange(shop, unit, range) then
+            --print("not IsUnitInRange")
+            return false
+        end
+        return true
+    end
+    local function CostModifier(gold, lumber, itemCode, buyer, shop, shopObject)
+        -- this function is called for each Button that shows costs in the shop UI and right before buying the item.
+        -- Beaware that this function is also called in a async manner -> no sideeffects or state changes.
+        -- buyer got the Haggling skill?
+        local level, skill
+        for i, v in ipairs(Haggle_Skills) do
+            skill = v[1]
+            level = GetUnitAbilityLevel(buyer, skill)
+            if level > 0 then
+                gold = gold * (v[2] + v[4]*level)
+                lumber = lumber * (v[3] + v[5]*level)
+            end
+        end
+
+        if shopObject then
+            gold = gold * shopObject.GoldFactor[itemCode]
+            lumber = lumber * shopObject.LumberFactor[itemCode]
+            if shopObject.Gold then
+                gold = shopObject.Gold(itemCode, gold, buyer, shop)
+            end
+            if shopObject.Lumber then
+                lumber = shopObject.Lumber(itemCode, lumber, buyer, shop)
+            end
+            
+        end
+        return math.floor(gold), math.floor(lumber)
+    end
+    local function GetItemSellCosts(unit, shop, item)
+        local itemCode = GetItemTypeId(item)
+        local gold, lumber, charges = TasItemGetCost(itemCode)
+        gold = gold * SellFactor
+        lumber = lumber * SellFactor
+        if SellUsesCostModifier then
+            gold, lumber = CostModifier(gold, lumber, itemCode, unit, shop, TasItemShopUI.Shops[GetUnitTypeId(shop)])
+        end
+        if charges > 0 then
+            gold = GetItemCharges(item)*gold/charges
+            lumber = GetItemCharges(item)*lumber/charges
+        end
+        return math.floor(gold), math.floor(lumber), charges
+    end
+    --
+    -- system start, touch on your own concern
+    --
+    -- the unique power2 Values used for categories, shifted by 1
+    local CategoryValue = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728,268435456,536870912,1073741824}
+    local function ShowSprite(frame, player)
+        if player and GetLocalPlayer() ~= player then return end
+        BlzFrameSetVisible(TasItemShopUI.Frames.SpriteParent, true)
+        BlzFrameSetModel(TasItemShopUI.Frames.Sprite, spriteModel, 0)
+        BlzFrameSetSpriteAnimate(TasItemShopUI.Frames.Sprite, spriteAnimationIndex, 0)
+        BlzFrameSetPoint(TasItemShopUI.Frames.Sprite, FRAMEPOINT_CENTER, frame, FRAMEPOINT_CENTER, 0, 0)
+    end
+    local TasItemCategory = __jarray(0)
+    function TasItemSetCategory(itemCode, category)
+        if type(itemCode) == "string" then itemCode = FourCC(itemCode) end
+        TasItemCategory[itemCode] = category
+    end
+    function TasItemShopAdd(itemCode, category)
+        if type(itemCode) == "string" then itemCode = FourCC(itemCode) end
+        TasItemSetCategory(itemCode, category)
+        table.insert(BUY_ABLE_ITEMS, itemCode)
+        TasItemCaclCost(itemCode)
+        if bj_gameStarted then
+            
+        end
+    end
+    function TasItemShopAddHaggleSkill(skill, goldBase, lumberBase, goldAdd, lumberAdd)
+        if not goldAdd then goldAdd = 0 end
+        if not lumberAdd then lumberAdd = 0 end
+        if not lumberBase then lumberBase = 1 end
+        table.insert(Haggle_Skills, {skill, goldBase, lumberBase, goldAdd, lumberAdd})
+    end
+    function TasItemShopAddCategory(icon, text)
+        if #TasItemShopUI.Categories >= #CategoryValue then print("To many Categories!! new category", text, icon) end
+        table.insert(TasItemShopUI.Categories, {icon, text})
+        return CategoryValue[#TasItemShopUI.Categories]
+    end
+    function TasItemShopCreateShop(unitCode, whiteList, goldFactor, lumberFactor, goldFunction, lumberFunction)
+        if type(unitCode) == "string" then unitCode = FourCC(unitCode) end
+        local shopObject = TasItemShopUI.Shops[unitCode]
+        if not shopObject then
+            if not goldFactor then goldFactor = 1.0 end
+            if not lumberFactor then lumberFactor = 1.0 end
+            shopObject = {Mode = whiteList, GoldFactor = __jarray(goldFactor), LumberFactor = __jarray(lumberFactor), Gold = goldFunction, Lumber = lumberFunction}
+            TasItemShopUI.Shops[unitCode] = shopObject
+        end
+        
+        return shopObject
+    end
+    TasItemShopCreateShopSimple = TasItemShopCreateShop
+    function TasItemShopAddShop(unitCode, ...)
+        local shopObject = TasItemShopCreateShop(unitCode)
+        for i, v in ipairs({...}) do
+            if type(v) == "string" then v = FourCC(v) end
+            TasItemCaclCost(v)
+            shopObject[v] = true
+            --print(GetObjectName(v))
+            table.insert(shopObject, v) 
+        end
+        return shopObject
+    end
+    function TasItemShopGoldFactor(unitCode, factor, ...)
+        local shopObject = TasItemShopCreateShop(unitCode)
+        for i, v in ipairs({...}) do
+            if type(v) == "string" then v = FourCC(v) end
+            shopObject.GoldFactor[v] = factor
+            --print(GetObjectName(v))
+        end
+        return shopObject
+    end
+    function TasItemShopLumberFactor(unitCode, factor, ...)
+        local shopObject = TasItemShopCreateShop(unitCode)
+        for i, v in ipairs({...}) do
+            if type(v) == "string" then v = FourCC(v) end
+            shopObject.LumberFactor[v] = factor
+            --print(GetObjectName(v))
+        end
+        return shopObject
+    end
+    
+    
+
+    local real = MarkGameStarted
+    local Shoper = {}
+    local DoubleClickStamp = 0
+    local ShoperMain = {}
+    local CurrentShop = {}
+    local LocalShopObject
+    local CurrentOffSetInventory = __jarray(0)
+    local CurrentOffSetMaterial = __jarray(0)
+    local CurrentOffSetUpgrade = __jarray(0)
+    local CurrentOffSetUser = __jarray(0)
+    local CurrentOffSetQuickLink = __jarray(0)
+    local xSize -- Size of the total Box
+    local ySize -- this is autocalced
+
+    function TasItemShopUI.ClearQuickLink(player)
+        -- have that data already?
+        for i = #TasItemShopUI.QuickLink[player], 1, -1 do
+            TasItemShopUI.QuickLink[player][TasItemShopUI.QuickLink[player][i]] = nil
+            TasItemShopUI.QuickLink[player][i] = nil
+        end
+    end
+
+    function TasItemShopUI.SetQuickLink(player, itemCode)
+        -- request to calc the itemCode costs, this is done in case it was not added to the shop
+        TasItemCaclCost(itemCode) 
+        -- have that data already?
+        if TasItemShopUI.QuickLink[player][itemCode] then
+            for i, v in ipairs(TasItemShopUI.QuickLink[player]) do
+                if v == itemCode then
+                    table.remove(TasItemShopUI.QuickLink[player], i)
+                    TasItemShopUI.QuickLink[player][itemCode] = false
+                    -- reset offset when falling out of Page 2
+                    if #TasItemShopUI.QuickLink[player] <= refButtonCountQuickLink then
+                        CurrentOffSetQuickLink[player] = 0
+                    end
+                    break
+                end
+            end
+        else
+            -- no, add it
+            table.insert(TasItemShopUI.QuickLink[player], itemCode)
+            TasItemShopUI.QuickLink[player][itemCode] = true
+        end
+    end
+
+    local function CanBuyItem(itemCode, shopObject, player)
+        if shopObject then
+            -- do not allow this itemCode or do exclude this itemCode => disallow
+            if (not shopObject[itemCode] and shopObject.Mode) or (shopObject[itemCode] and not shopObject.Mode)  then
+                return false
+            end
+            -- allow this for this shop?
+            if shopObject[itemCode] and shopObject.Mode then
+                return true
+            end
+        end
+        return BUY_ABLE_ITEMS.Marker[player][itemCode]
+    end
+    local function AllMatsProvided(player, itemCode, shopObject)
+        local missing = {}
+        local count = 0
+        for i, v in ipairs(TasItemFusionGetMissingMaterial(TasItemFusion.Player[player].UseAble, itemCode)) do
+            if not CanBuyItem(v, shopObject, player) then
+                count = count + 1
+                missing[count] = v
+            end
+        end
+        return missing
+    end
+    
+
+    local function updateItemFrame(frameObject, data, showGold, showLumber)
+        
+        if frameObject.HighLight ~= nil then
+            BlzFrameSetVisible(frameObject.HighLight, TasItemShopUI.MarkedItemCodes[data])
+        end
+        if showGold == nil then
+            showGold = buttonListShowGold
+            showLumber = buttonListShowLumber
+        end
+        BlzFrameSetTexture(frameObject.Icon, BlzGetAbilityIcon(data), 0, false)
+        BlzFrameSetText(frameObject.Text, GetObjectName(data))
+    
+        BlzFrameSetTexture(frameObject.ToolTipFrameIcon, BlzGetAbilityIcon(data), 0, false)
+        BlzFrameSetText(frameObject.ToolTipFrameName, GetObjectName(data))      
+    --        frameObject.ToolTipFrameSeperator
+        BlzFrameSetText(frameObject.ToolTipFrameText, BlzGetAbilityExtendedTooltip(data, 0))
+
+        if string.len(BlzGetAbilityExtendedTooltip(data, 0)) >= toolTipLimitBig then
+            BlzFrameSetSize(frameObject.ToolTipFrameText, toolTipSizeXBig, 0)
+        else
+            BlzFrameSetSize(frameObject.ToolTipFrameText, toolTipSizeX, 0)
+        end
+  
+
+        if showGold or showLumber then
+            local gold, lumber
+            if TasItemFusion.BuiltWay[data] then
+                gold, lumber = TasItemFusionCalc(TasItemFusion.Player[GetLocalPlayer()].UseAble, data, nil, true)
+            else
+                gold, lumber = TasItemGetCost(data)
+            end
+            gold, lumber = CostModifier(gold, lumber, data, ShoperMain[GetLocalPlayer()], CurrentShop[GetLocalPlayer()], LocalShopObject)
+            BlzFrameSetVisible(frameObject.TextGold, showGold)
+            BlzFrameSetVisible(frameObject.IconGold, showGold)
+            if showGold then
+                if GetPlayerState(GetLocalPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= gold then
+                    BlzFrameSetText(frameObject.TextGold, string.format( "%.0f", gold))
+                else
+                    BlzFrameSetText(frameObject.TextGold, "|cffff2010"..string.format( "%.0f", gold))
+                end
+            else
+                -- this is done to reduce the taken size
+                BlzFrameSetText(frameObject.TextGold, "0")
+            end
+
+            BlzFrameSetVisible(frameObject.TextLumber, showLumber)
+            BlzFrameSetVisible(frameObject.IconLumber, showLumber)
+            if showLumber then
+                if GetPlayerState(GetLocalPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= lumber then
+                    BlzFrameSetText(frameObject.TextLumber, string.format( "%.0f", lumber))
+                else
+                    BlzFrameSetText(frameObject.TextLumber, "|cffff2010"..string.format( "%.0f", lumber))
+                end
+            else
+                BlzFrameSetText(frameObject.TextLumber, "0")
+            end
+        else
+            BlzFrameSetVisible(frameObject.TextLumber, false)
+            BlzFrameSetVisible(frameObject.IconLumber, false)
+            BlzFrameSetVisible(frameObject.TextGold, false)
+            BlzFrameSetVisible(frameObject.IconGold, false)
+        end
+        
+    end
+    local function updateUndoButton(data, actionName)
+        BlzFrameSetTexture(TasItemShopUI.Frames.UndoButtonIcon, BlzGetAbilityIcon(data), 0, false)
+        BlzFrameSetTexture(TasItemShopUI.Frames.UndoButtonIconPushed, BlzGetAbilityIcon(data), 0, false)
+        BlzFrameSetText(TasItemShopUI.Frames.UndoText, GetLocalizedString(textUndo).. actionName .. "\n" .. GetObjectName(data))
+    end
+    
+    local function GiveItem(unit, item, undo)
+        local itemCode = GetItemTypeId(item)
+        local oldCharges = GetItemCharges(item)
+        -- when there are no charges, just give the item
+        if oldCharges <= 0 then
+            UnitAddItem(unit, item)
+        else
+            -- the item could be stacked.
+            -- request triggerCount of the Itemstacking trigger, then give the item.
+            local oldDataCount = GetItemStackingEventData()
+            UnitAddItem(unit, item)                
+            if undo then
+                -- with undo, request the data again. If the counter is different -> a reforged item stacking event happend
+                local newDataCount, stackedItem, chargeChange = GetItemStackingEventData()
+
+                if newDataCount ~= oldDataCount then
+                    undo.StackChargesGainer = stackedItem
+                    undo.StackCharges = chargeChange
+                -- no built in stacking event, but the user might have a custom stacking.
+                elseif GetItemCharges(item) < oldCharges then
+                    for i = 0, bj_MAX_INVENTORY - 1 do
+                        if GetItemTypeId(UnitItemInSlot(unit, i)) == itemCode then
+                            undo.StackChargesGainer = UnitItemInSlot(unit, i)
+                            undo.StackCharges = oldCharges - GetItemCharges(item)
+                        end
+                    end
+                end
+            end
+        end
+    end
+    local function GiveItemGroup(player, item, undo)
+        SetItemPlayer(item, player)
+        GiveItem(ShoperMain[player], item, undo)
+        -- other units can get the item when the mainShopper can not hold it?
+        -- Check if item still exists and mainshopper does not have it.
+        if canProviderGetItem and GetHandleId(item) > 0 and not UnitHasItem(ShoperMain[player], item)  then
+            -- loop all mat provider try to give it to each, when that succeds finished.
+            local found = false
+            for i = 0, BlzGroupGetSize(Shoper[player]) - 1, 1 do
+                local unit = BlzGroupUnitAt(Shoper[player], i)
+                GiveItem(unit, item, undo)
+                if GetHandleId(item) == 0 or UnitHasItem(unit, item) then
+                    found = true
+                    if canUndo then
+                       table.insert(undo.ResultItem, {item, unit})
+                    end
+                    break
+                end
+            end
+            if not found and canUndo then
+                table.insert(undo.ResultItem, {item})
+            end
+        else
+            if canUndo then
+                table.insert(undo.ResultItem, {item, ShoperMain[player]})
+            end
+        end
+
+    end
+    local function BuyItem(player, itemCode)
+        
+        xpcall( function()
+        --print(GetPlayerName(player), "Wana Buy", GetObjectName(itemCode), "with", GetUnitName(ShoperMain[player]))
+        if BlzGroupGetSize(Shoper[player]) == 0 then
+            if GetLocalPlayer() == player then
+                print(GetLocalizedString(textNoValidShopper))
+            end
+            return
+        end
+        local gold, lumber, items
+        local shopObject = TasItemShopUI.Shops[GetUnitTypeId(CurrentShop[player])]
+        -- can not buy this?
+        if not flexibleShop and not CanBuyItem(itemCode, shopObject, player) then
+            if GetLocalPlayer() == player then print(GetObjectName(itemCode), GetLocalizedString(textCanNotBuySufix)) end
+            return
+        end
+
+        if TasItemFusion.BuiltWay[itemCode] then
+            gold, lumber, items = TasItemFusionCalc(TasItemFusion.Player[player].UseAble, itemCode)
+        else
+            gold, lumber = TasItemGetCost(itemCode)
+        end
+
+        gold, lumber = CostModifier(gold, lumber, itemCode,  ShoperMain[player], CurrentShop[player], shopObject)
+
+        -- only items buyable in the shop can be replaced by Gold? Also ignore non fusion items.
+        if not flexibleShop and TasItemFusion.BuiltWay[itemCode] then
+            local missingItemCode = AllMatsProvided(player, itemCode, shopObject)
+            if #missingItemCode > 0 then
+                if GetLocalPlayer() == player then print(GetLocalizedString(textCanNotBuyPrefix), GetObjectName(itemCode)) for i, v in ipairs(missingItemCode) do print(GetObjectName(v), GetLocalizedString(textCanNotBuySufix)) end end
+                return
+            end
+        end
+
+        if GetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD) >= gold then
+            if GetPlayerState(player, PLAYER_STATE_RESOURCE_LUMBER) >= lumber then
+                local undo
+                if canUndo then
+                    local units = {}
+                    undo = {ResultItem = {}, Result = itemCode, Gold = gold, Lumber = lumber, Items = {}, ActionName = "Buy"}
+                    table.insert(TasItemShopUI.Undo[player], undo)
+                    for i = 0, BlzGroupGetSize(Shoper[player]) - 1, 1 do
+                        units[i + 1] = BlzGroupUnitAt(Shoper[player], i)
+                    end
+                    local owner
+                    if items then
+                        for _,v in ipairs(items) do
+                            for _,u in ipairs(units) do
+                                if UnitHasItem(u, v) then
+                                    owner = u
+                                    break
+                                end
+                            end 
+                            --table.insert(undo.Items, {GetItemTypeId(v), owner})
+                            --RemoveItem(v)
+                            table.insert(undo.Items, {v, owner})
+                            --print(GetItemName(v), GetHandleId(v))
+                            UnitRemoveItem(owner, v)
+                            SetItemVisible(v, false)
+                        end
+                    end
+                    if GetLocalPlayer() == player then
+                        BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, true)
+                        updateUndoButton(undo.Result, undo.ActionName)
+                    end
+                else
+                    if items then
+                        for _,v in ipairs(items) do
+                            RemoveItem(v)
+                        end
+                    end
+                end
+                AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_GOLD, -gold)
+                AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_LUMBER, -lumber)
+                local newItem = CreateItem(itemCode, GetUnitX(ShoperMain[player]), GetUnitY(ShoperMain[player]))
+                GiveItemGroup(player, newItem, undo)
+                
+                --CreateItem(itemCode, GetPlayerStartLocationX(player), GetPlayerStartLocationY(player))
+                TasItemShopUIShow(player, CurrentShop[player])
+            elseif not GetSoundIsPlaying(SoundNoLumber[GetPlayerRace(player)]) then
+                StartSoundForPlayerBJ(player, SoundNoLumber[GetPlayerRace(player)])
+            end
+        elseif not GetSoundIsPlaying(SoundNoGold[GetPlayerRace(player)]) then
+            StartSoundForPlayerBJ(player, SoundNoGold[GetPlayerRace(player)])
+        end
+    end, print)
+    end
+
+    local function SellItem(player, item)
+        xpcall(function()
+        local wasSelectedItem = (item == TasItemShopUI.SelectedItem[player])
+        if not item then return end
+        local itemCode = GetItemTypeId(item)
+
+        local gold, lumber, charges = GetItemSellCosts(ShoperMain[player], CurrentShop[player], item)
+        
+        AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_GOLD, gold)
+        AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+        if canUndo then
+            undo = {ResultItem = {}, Result = itemCode, Gold = -gold, Lumber = -lumber, Items = {}, ActionName = "Sell"}
+            table.insert(TasItemShopUI.Undo[player], undo)
+            for i = 0, BlzGroupGetSize(Shoper[player]) - 1, 1 do
+                owner = BlzGroupUnitAt(Shoper[player], i)
+                if UnitHasItem(owner, item) then
+                    UnitRemoveItem(owner, item)
+                    SetItemVisible(item, false)
+                    undo.Items[1] = {item, owner}
+                    break
+                end
+            end
+            
+            if GetLocalPlayer() == player then
+                BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, true)
+                updateUndoButton(undo.Result, undo.ActionName)
+            end
+        else
+            RemoveItem(item)
+        end
+
+        if wasSelectedItem then
+            if GetLocalPlayer() == player then
+                BlzFrameSetEnable(TasItemShopUI.Frames.SellButton, false)
+                --BlzFrameSetVisible(TasItemShopUI.Frames.BoxSell, false)
+            end
+            TasItemShopUI.SelectedItem[player] = nil
+        end
+        end, print)
+    end
+    local function updateRefButton(frameObject, data, unit, updateBroken)
+        if data and data > 0 then
+            BlzFrameSetVisible(frameObject.Button, true)
+            BlzFrameSetTexture(frameObject.Icon, BlzGetAbilityIcon(data), 0, false)
+            BlzFrameSetTexture(frameObject.IconPushed, BlzGetAbilityIcon(data), 0, false)
+            BlzFrameSetTexture(frameObject.ToolTipFrameIcon, BlzGetAbilityIcon(data), 0, false)
+            if frameObject.ToolTipFrameName then
+                BlzFrameSetText(frameObject.ToolTipFrameName, GetObjectName(data))
+                BlzFrameSetText(frameObject.ToolTipFrameText, BlzGetAbilityExtendedTooltip(data, 0))
+                if string.len(BlzGetAbilityExtendedTooltip(data, 0)) >= toolTipLimitBig then
+                    BlzFrameSetSize(frameObject.ToolTipFrameText, toolTipSizeXBig, 0)
+                else
+                    BlzFrameSetSize(frameObject.ToolTipFrameText, toolTipSizeX, 0)
+                end
+            else
+                BlzFrameSetText(frameObject.ToolTipFrameText, GetObjectName(data))
+            end
+            
+            if unit ~= nill and IsUnitType(unit, UNIT_TYPE_HERO) then
+                BlzFrameSetText(frameObject.ToolTipFrameText, BlzFrameGetText(frameObject.ToolTipFrameText) .. "\n" .. GetHeroProperName(unit))
+            end
+            if updateBroken then
+                BlzFrameSetVisible(frameObject.IconBroken, not CanBuyItem(data, LocalShopObject, GetLocalPlayer()))
+            end
+        else
+            BlzFrameSetVisible(frameObject.Button, false)
+        end
+    end
+    local function updateRefButtons(dataTable, parent, refButtons, offSet, updateBroken)
+        local count, valid, data, dataSize
+        local validCounter = 0
+        BlzFrameSetVisible(parent, true)
+        BlzFrameSetText(refButtons.PageText, math.floor(offSet/#refButtons) + 1)
+        if type(dataTable) == "table" then
+            if dataTable.Count then
+                count = dataTable.Count
+            else
+                count = #dataTable
+            end
+            for index, frameObject in ipairs(refButtons) do
+                valid = index + offSet <= count
+                if valid then
+                    validCounter = validCounter + 1
+                    data = dataTable[index + offSet]
+                    if type(data) == "table" then data = data.Result
+                    elseif type(data) == "userdata" and string.sub(tostring(data),1,5) =="item:" then
+                        BlzFrameSetVisible(frameObject.IconDone, data == TasItemShopUI.SelectedItem[GetLocalPlayer()])
+                        data = GetItemTypeId(data)
+                    end
+                    updateRefButton(frameObject, data, nil, updateBroken)
+                else
+                    updateRefButton(frameObject, 0)
+                end
+            end
+        elseif type(dataTable) == "userdata" and string.sub(tostring(dataTable),1,6) =="group:" then
+            count = BlzGroupGetSize(dataTable)
+            local data2
+            for index, frameObject in ipairs(refButtons) do
+                valid = index + offSet <= count
+                if valid then
+                    validCounter = validCounter + 1
+                end
+                data = BlzGroupUnitAt(dataTable, index + offSet - 1)
+                data2 = GetUnitTypeId(data)
+                updateRefButton(frameObject, data2, data)
+            end
+        end
+        BlzFrameSetVisible(refButtons.Page, count > #refButtons)
+        return validCounter
+    end
+    
+    local function updateHaveMats(player, data)
+        local itemCounter = __jarray(0)
+        local mat
+        local useable = TasItemFusion.Player[player].UseAble
+        local offset = CurrentOffSetMaterial[player]
+        for index, frameObject in ipairs(TasItemShopUI.Frames.Material) do
+            if BlzFrameIsVisible(frameObject.Button) then
+                mat = TasItemFusion.BuiltWay[data].Mats[index + offset]
+                itemCounter[mat] = itemCounter[mat] + 1
+                BlzFrameSetVisible(frameObject.IconDone, itemCounter[mat] <= useable.ByType[mat])
+                BlzFrameSetVisible(frameObject.IconBroken, not BlzFrameIsVisible(frameObject.IconDone) and not CanBuyItem(mat, LocalShopObject, player))
+            end
+        end
+    end
+    local function updateOverLayMainSelected(player)
+        local offset = CurrentOffSetUser[player]
+        for index, frameObject in ipairs(TasItemShopUI.Frames.User) do
+            BlzFrameSetVisible(frameObject.IconDone, BlzFrameIsVisible(frameObject.Button) and ShoperMain[player] == BlzGroupUnitAt(Shoper[player], index - 1 + offset))
+        end
+    end
+    
+    local function setSelected(player, data)
+        local oldData = TasItemShopUI.Selected[player]
+        TasItemShopUI.Selected[player] = data
+        -- Reset RefPage only when a new data is selected
+        if oldData ~= data then
+            CurrentOffSetUpgrade[player] = 0
+            CurrentOffSetMaterial[player] = 0
+            TasItemShopUI.SelectedItem[player] = nil
+            if player == GetLocalPlayer() then
+                if canDefuse then BlzFrameSetEnable(TasItemShopUI.Frames.DefuseButton, false) end
+                if canSellItems then BlzFrameSetEnable(TasItemShopUI.Frames.SellButton, false) end
+            end
+        end
+        if player == GetLocalPlayer() then
+            TasItemShopUI.MarkedItemCodes[oldData] = false
+            TasItemShopUI.MarkedItemCodes[data] = true
+            if refButtonCountUp > 0 then
+                if TasItemFusion.UsedIn[data] then
+                    updateRefButtons(TasItemFusion.UsedIn[data], TasItemShopUI.Frames.BoxUpgrades, TasItemShopUI.Frames.Upgrades, CurrentOffSetUpgrade[player], true)
+                else
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxUpgrades, false)
+                end
+            end
+            if refButtonCountMats > 0 then
+                if TasItemFusion.BuiltWay[data] then
+                    updateRefButtons(TasItemFusion.BuiltWay[data].Mats, TasItemShopUI.Frames.BoxMaterial, TasItemShopUI.Frames.Material, CurrentOffSetMaterial[player])                
+                    updateHaveMats(player, data)
+                else
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxMaterial, false)
+                end
+            end
+            if refButtonCountInv > 0 then
+                if not inventoryShowMainOnly then
+                    if TasItemFusion.Player[player].UseAble.Count > 0 then
+                        updateRefButtons(TasItemFusion.Player[player].UseAble, TasItemShopUI.Frames.BoxInventory, TasItemShopUI.Frames.Inventory, CurrentOffSetInventory[player])        
+                    else
+                        BlzFrameSetVisible(TasItemShopUI.Frames.BoxInventory, false)
+                    end
+                else
+                    TasItemShopUI.TempTable.Count = bj_MAX_INVENTORY
+                    for i = 0, bj_MAX_INVENTORY - 1 do
+                        TasItemShopUI.TempTable[i + 1] = UnitItemInSlot(ShoperMain[player], i)
+                    end
+                    updateRefButtons(TasItemShopUI.TempTable, TasItemShopUI.Frames.BoxInventory, TasItemShopUI.Frames.Inventory, CurrentOffSetInventory[player])
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxInventory, true)
+                end
+            end
+            if refButtonCountQuickLink > 0 then
+                updateRefButtons(TasItemShopUI.QuickLink[player], TasItemShopUI.Frames.BoxQuickLink, TasItemShopUI.Frames.QuickLink, CurrentOffSetQuickLink[player], true)
+            end
+            if refButtonCountUser > 0 then
+                updateRefButtons(Shoper[player], TasItemShopUI.Frames.BoxUser, TasItemShopUI.Frames.User, CurrentOffSetUser[player])
+                updateOverLayMainSelected(player)
+            end
+
+            
+            updateItemFrame(TasItemShopUI.Frames.Current, data, buyButtonShowGold, buyButtonShowLumber)
+            if not flexibleShop and (not CanBuyItem(data, LocalShopObject, GetLocalPlayer()) or (TasItemFusion.BuiltWay[data] and #AllMatsProvided(player, data, LocalShopObject) > 0)) then
+                BlzFrameSetText(TasItemShopUI.Frames.Current.TextGold, GetLocalizedString(textUnBuyable))
+                BlzFrameSetText(TasItemShopUI.Frames.Current.TextLumber, GetLocalizedString(textUnBuyable))
+            end
+        end
+    end
+    
+    local function setSelectedItem(player, item)
+        TasItemShopUI.SelectedItem[player] = item
+        if item ~= nil then
+            local itemCode = GetItemTypeId(item)
+            local gold, lumber, charges
+            if GetLocalPlayer() == player then
+                if canDefuse then
+                    BlzFrameSetText(TasItemShopUI.Frames.DefuseText, GetLocalizedString(textDefuse).."\n"..BlzGetAbilityTooltip(itemCode, 0))
+                    BlzFrameSetEnable(TasItemShopUI.Frames.DefuseButton, TasItemFusion.BuiltWay[itemCode] ~=nil)
+                end
+
+                if canSellItems then
+                    BlzFrameSetEnable(TasItemShopUI.Frames.SellButton, true)
+                    --BlzFrameSetVisible(TasItemShopUI.Frames.BoxSell, true)
+                    gold, lumber, charges = GetItemSellCosts(ShoperMain[player], CurrentShop[player], item)
+                    BlzFrameSetText(TasItemShopUI.Frames.SellText, GetLocalizedString(textSell) .. " " .. GetItemName(item) .. "\n" .. GetLocalizedString("GOLD") .. " " .. gold .. "\n"..GetLocalizedString("LUMBER") .." " .. lumber)
+                end
+            end
+        end
+    end
+function TasItemShopUI.Create()
+    BlzLoadTOCFile("war3mapImported\\Templates.toc")
+    BlzLoadTOCFile("war3mapImported\\TasItemShop.toc")
+
+    local frames, parent, object, currentObject, frame
+    parent = GetParent()
+
+    if posScreenRelative then
+        frame = BlzCreateFrameByType("FRAME", "Fullscreen", parent, "", 0)
+        BlzFrameSetVisible(frame, false)
+        BlzFrameSetSize(frame, 0.8, 0.6)
+        BlzFrameSetAbsPoint(frame, FRAMEPOINT_BOTTOM, 0.4, 0)
+        TasItemShopUI.Frames.Fullscreen = frame
+    end
+
+    xSize = 0.02 + buttonListCols*buttonListButtonSizeX + buttonListButtonGapCol * (buttonListCols - 1)
+    --ySize = 0.1285 + buttonListRows*buttonListButtonSizeY + refButtonBoxSizeY
+    ySize = 0.0815 + buttonListRows*buttonListButtonSizeY + buttonListButtonGapRow * (buttonListRows - 1)
+    
+    -- super
+    TasItemShopUI.Frames.ParentSuper = BlzCreateFrameByType("FRAME", "TasItemShopUI", parent, "", 0)
+    BlzFrameSetSize(TasItemShopUI.Frames.ParentSuper, 0.001, 0.001)
+    
+    parent = BlzCreateFrameByType("BUTTON", "TasItemShopUI", TasItemShopUI.Frames.ParentSuper, "", 0)
+    BlzFrameSetSize(parent, xSize, ySize)
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerScrollParent, parent, FRAMEEVENT_MOUSE_WHEEL)
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, parent, FRAMEEVENT_CONTROL_CLICK)
+    if posScreenRelative then
+        BlzFrameSetPoint(parent, posPoint, TasItemShopUI.Frames.Fullscreen, posPoint, xPos, yPos)
+    else
+        BlzFrameSetAbsPoint(parent, posPoint, xPos, yPos)
+    end
+    
+    TasItemShopUI.Frames.ParentSuperUI = parent
+
+
+    frame = BlzCreateFrame(boxFrameName, parent, 0, 0)
+    BlzFrameSetAllPoints(frame, parent)
+    TasItemShopUI.Frames.BoxSuper = frame
+
+    -- round down, boxSize - 2times gap to border / buttonSize + gap between buttons
+    local buttonsInRow = math.floor(0.0 + ((xSize - (boxCatBorderGap)*2)/(categoryButtonSize + 0.003)))
+    -- round up
+    local rows = math.ceil(0.0+ (#TasItemShopUI.Categories/buttonsInRow))
+    --print(#TasItemShopUI.Categories, buttonsInRow, rows)
+    ySize = ySize + rows * categoryButtonSize
+    -- ButtonList
+    parent = BlzCreateFrame(boxButtonListFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+    BlzFrameSetPoint(parent, FRAMEPOINT_TOPRIGHT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_TOPRIGHT, 0, 0)  
+    -- baseSizeY = 0.0455
+    BlzFrameSetSize(parent, xSize, 0.0455 + buttonListRows*buttonListButtonSizeY + rows * categoryButtonSize + buttonListButtonGapRow * (buttonListRows - 1))
+    --ySize = 0.1285 + buttonListRows*buttonListButtonSizeY + refButtonBoxSizeY
+    object = CreateTasButtonListEx(buttonListButtonName, buttonListCols, buttonListRows, parent,
+        function(clickedData, buttonListObject, dataIndex)
+            local player = GetTriggerPlayer()
+            
+            if player == GetLocalPlayer() then
+                local time = os.clock()
+                if TasItemShopUI.Selected[player] == clickedData and time - DoubleClickStamp <= doubleClickTimeOut then
+                    -- finish the timer, so the player has to do 2 clicks again to trigger a DoubleClick
+                    DoubleClickStamp = 0
+                    BlzFrameClick(TasItemShopUI.Frames.Current.Button)
+                else
+                    DoubleClickStamp = time
+                end
+            end
+            if TasItemShopUI.QuickLinkKeyActive[player] then
+                TasItemShopUI.SetQuickLink(player, clickedData)
+            end
+
+            setSelected(player, clickedData)
+            
+        end
+        ,function(clickedData, buttonListObject, dataIndex) BuyItem(GetTriggerPlayer(), clickedData) end
+        ,updateItemFrame
+        ,function(data, searchedText, buttonListObject)
+            --return string.find(GetObjectName(data), searchedText)
+            return string.find(string.lower(GetObjectName(data)), string.lower(searchedText))
+            --return string.find(string.lower(BlzGetAbilityExtendedTooltip(data, 0)), string.lower(searchedText))
+        end
+        ,function(data, buttonListObject, isTextSearching)
+            local selected = TasItemShopUI.Categories.Value[GetLocalPlayer()]
+            if ToggleIconButtonGetValue(TasItemShopUI.ModeObject, GetLocalPlayer()) == 0 then
+                return selected == 0 or BlzBitAnd(TasItemCategory[data], selected) >= selected
+            else
+                return selected == 0 or BlzBitAnd(TasItemCategory[data], selected) > 0
+            end
+        end
+        --async Left Click
+        ,function(buttonListObject, data, frame)
+        end
+        --async Rigth Click
+        ,function(buttonListObject, data, frame)
+            ShowSprite(frame, GetLocalPlayer())
+        end
+        ,buttonListButtonGapCol
+        ,buttonListButtonGapRow
+    )
+    TasItemShopUI.ButtonList = object
+    TasItemShopUI.Frames.BoxButtonList = parent
+    
+    for i, frameObject in ipairs(object.Frames) do
+        if buttonListHighLightFrameName then
+            frameObject.HighLight = BlzCreateFrame(buttonListHighLightFrameName, frameObject.Button, 0, 0)
+            BlzFrameSetAllPoints(frameObject.HighLight, frameObject.Button)
+            BlzFrameSetVisible(frameObject.HighLight, false)
+        end
+
+    end
+    
+    
+    -- category
+    frame = BlzCreateFrame(boxCatFrameName, parent, 0, 0)
+    BlzFrameSetPoint(frame, FRAMEPOINT_TOPRIGHT, TasItemShopUI.ButtonList.InputFrame, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+    BlzFrameSetSize(frame, xSize, 0.0135 + rows * categoryButtonSize)
+    TasItemShopUI.Frames.BoxCategory = frame
+    parent = frame
+    frames = {}
+    local groupObject = CreateToggleIconButtonGroup(true, function(groupObject, buttonObject, player, groupValue)
+        TasItemShopUI.Categories.Value[player] = groupValue
+        TasButtonListSearch(TasItemShopUI.ButtonList)
+    end)
+    ToggleIconButton.DefaultSizeX = categoryButtonSize
+    ToggleIconButton.DefaultSizeY = categoryButtonSize
+    --frame = ToggleIconButtonGroupModeButton(groupObject, parent).Button
+    local clearButton = ToggleIconButtonGroupClearButton(groupObject, parent)
+    --BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_TOPLEFT, boxFrameBorderGap, -boxFrameBorderGap)
+    BlzFrameSetPoint(clearButton, FRAMEPOINT_TOPLEFT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_TOPLEFT, boxFrameBorderGap, -boxFrameBorderGap)
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearButton, clearButton, FRAMEEVENT_CONTROL_CLICK)
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, clearButton, FRAMEEVENT_CONTROL_CLICK)
+
+    local modeObject = CreateToggleIconButton(parent, 1, GetLocalizedString(categoryModeTextOr), categoryModeIconOr, 0, GetLocalizedString(categoryModeTextAnd), categoryModeIconAnd)
+    BlzFrameSetPoint(modeObject.Button, FRAMEPOINT_BOTTOMLEFT, clearButton, FRAMEPOINT_BOTTOMRIGHT, 0.003, 0)
+    modeObject.Action = function()
+        if GetTriggerPlayer() == GetLocalPlayer() then
+            TasButtonListSearch(TasItemShopUI.ButtonList)
+        end
+    end
+    TasItemShopUI.ModeObject = modeObject
+    
+
+    for index, value in ipairs(TasItemShopUI.Categories) do
+        frames[index] = CreateToggleIconButton(parent, CategoryValue[index], GetLocalizedString(value[2]), value[1])
+        if index == 1 then      
+            BlzFrameSetPoint(frames[index].Button, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxCatBorderGap, -boxCatBorderGap)
+        else
+            BlzFrameSetPoint(frames[index].Button, FRAMEPOINT_TOPLEFT, frames[index - 1].Button, FRAMEPOINT_TOPRIGHT, 0.003, 0)
+        end
+        ToggleIconButtonGroupAddButton(groupObject, frames[index])
+    end
+
+    for index = 2, rows, 1 do
+    --    print((index-1)*buttonsInRow + 1, "->", (index-2)*buttonsInRow + 1)
+        BlzFrameSetPoint(frames[(index-1)*buttonsInRow + 1].Button, FRAMEPOINT_TOPLEFT, frames[(index-2)*buttonsInRow + 1].Button, FRAMEPOINT_BOTTOMLEFT, 0, -0.001)        
+    end
+
+    frame = TasItemShopUI.ButtonList.Frames[1].Button
+    BlzFrameClearAllPoints(frame)
+    BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, TasItemShopUI.Frames.BoxCategory, FRAMEPOINT_BOTTOMLEFT, 0.0045, 0)
+
+
+    if toolTipPosY and toolTipPosX then
+        for i, v in ipairs(TasItemShopUI.ButtonList.Frames) do
+            BlzFrameClearAllPoints(v.ToolTipFrameText)
+            if toolTipPosPointParent then
+                BlzFrameSetPoint(v.ToolTipFrameText, toolTipPosPoint, v.Button, toolTipPosPointParent, toolTipPosX, toolTipPosY)                
+            else
+                BlzFrameSetAbsPoint(v.ToolTipFrameText, toolTipPosPoint, toolTipPosX, toolTipPosY)
+            end
+        end
+    end
+
+
+    local function CreateRefButtons(amount, parent, textFrame, trigger, haveTooltip)
+        frames = {}
+        for index = 1, amount do
+            frames[index] = {
+                Button = BlzCreateFrame("TasItemShopRefButton", parent, 0, 0),
+            }
+            frame = frames[index].Button
+            BlzFrameSetText(frame, index)
+            frames[index].Icon = BlzGetFrameByName("TasItemShopRefButtonBackdrop", 0)
+            frames[index].IconPushed = BlzGetFrameByName("TasItemShopRefButtonBackdropPushed", 0)
+            frames[index].IconDone = BlzGetFrameByName("TasItemShopRefButtonBackdropBackdrop", 0)
+            frames[index].IconBroken = BlzGetFrameByName("TasItemShopRefButtonBackdropBackdrop2", 0)
+            BlzFrameSetSize(frame, refButtonSize, refButtonSize)
+            
+            BlzFrameSetVisible(frames[index].IconDone, false)
+            BlzFrameSetVisible(frames[index].IconBroken, false)
+            if haveTooltip then
+                CreateTasButtonTooltip(frames[index], TasItemShopUI.Frames.BoxSuper)
+                
+                if toolTipPosY and toolTipPosX then
+                    BlzFrameClearAllPoints(frames[index].ToolTipFrameText)
+                    if toolTipPosPointParent then
+                        BlzFrameSetPoint(frames[index].ToolTipFrameText, toolTipPosPoint, frames[index].Button, toolTipPosPointParent, toolTipPosX, toolTipPosY)
+                    else
+                        BlzFrameSetAbsPoint(frames[index].ToolTipFrameText, toolTipPosPoint, toolTipPosX, toolTipPosY)
+                    end
+                end
+            end
+            if index == 1 then
+                BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, textFrame, FRAMEPOINT_BOTTOMLEFT, 0.0, -0.003)
+            --elseif index == 5 then
+            -- BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOMLEFT, frames[index - 4].Button, FRAMEPOINT_TOPLEFT, 0, 0.003)
+            else
+                BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOMLEFT, frames[index - 1].Button, FRAMEPOINT_BOTTOMRIGHT, refButtonGap, 0)
+            end
+
+            BlzTriggerRegisterFrameEvent(trigger, frame, FRAMEEVENT_CONTROL_CLICK)
+            BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frame, FRAMEEVENT_CONTROL_CLICK)
+            
+            BlzTriggerRegisterFrameEvent(trigger, frame, FRAMEEVENT_MOUSE_UP)
+            
+        end
+        return frames
+    end
+    local function MakeRefButtonsCol(box, textFrame, frames)
+        BlzFrameClearAllPoints(box)
+        BlzFrameClearAllPoints(frames.PageDown)
+        BlzFrameSetPoint(frames.PageDown, FRAMEPOINT_TOPRIGHT, textFrame, FRAMEPOINT_BOTTOMRIGHT, 0.0, -refButtonGap)
+        for i, v in ipairs(frames) do
+            
+            BlzFrameClearAllPoints(v.Button)
+            if i == 1 then
+                BlzFrameSetPoint(v.Button, FRAMEPOINT_TOP, box, FRAMEPOINT_TOP, 0.0, -BlzFrameGetHeight(textFrame) - refButtonPageSize -refButtonGap*2 -boxFrameBorderGap)
+            else
+                BlzFrameSetPoint(v.Button, FRAMEPOINT_TOPLEFT, frames[i - 1].Button, FRAMEPOINT_BOTTOMLEFT, 0, -refButtonGap)
+            end
+        end
+        BlzFrameSetSize(box, BlzFrameGetWidth(textFrame) + boxFrameBorderGap*2 , (refButtonSize + refButtonGap)*#frames + refButtonPageSize + boxFrameBorderGap*2)
+    end
+    local function CreateRefPage(parent, textFrame, trigger, pageSize, refButtons)
+        frames = {}
+        
+        frames[1] = BlzCreateFrameByType("FRAME", "TasItemShopUIPageControl", parent, "", 0)
+        frames[2] = BlzCreateFrame("TasItemShopCatButton", frames[1], 0, 0)
+        frames[3] = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        frames[4] = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        frames[5] = BlzCreateFrame("TasItemShopCatButton", frames[1], 0, 0)
+        frames[6] = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        frames[7] = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        frames[8] = BlzCreateFrame("TasButtonTextTemplate", frames[1], 0, 0)
+        BlzFrameSetText(frames[8], "00")
+        BlzFrameSetSize(frames[2], refButtonPageSize, refButtonPageSize)
+        BlzFrameSetSize(frames[5], refButtonPageSize, refButtonPageSize)
+        BlzTriggerRegisterFrameEvent(trigger, frames[2], FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(trigger, frames[2], FRAMEEVENT_MOUSE_UP)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frames[2], FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(trigger, frames[5], FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(trigger, frames[5], FRAMEEVENT_MOUSE_UP)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frames[5], FRAMEEVENT_CONTROL_CLICK)
+        BlzFrameSetTexture(frames[3], refButtonPageUp, 0, false)
+        BlzFrameSetTexture(frames[4], refButtonPageUp, 0, false)
+        BlzFrameSetTexture(frames[6], refButtonPageDown, 0, false)
+        BlzFrameSetTexture(frames[7], refButtonPageDown, 0, false)
+
+        --BlzFrameSetPoint(frames[2], FRAMEPOINT_TOPLEFT, textFrame, FRAMEPOINT_TOPRIGHT, 0.003, 0)
+        --BlzFrameSetPoint(frames[8], FRAMEPOINT_TOPLEFT, frames[2], FRAMEPOINT_TOPRIGHT, 0.003, 0)
+        --BlzFrameSetPoint(frames[5], FRAMEPOINT_TOPLEFT, frames[8], FRAMEPOINT_TOPRIGHT, 0.003, 0)
+
+        BlzFrameSetPoint(frames[2], FRAMEPOINT_TOPRIGHT, frames[8], FRAMEPOINT_TOPLEFT, -0.003, 0)
+        BlzFrameSetPoint(frames[8], FRAMEPOINT_TOPRIGHT, frames[5], FRAMEPOINT_TOPLEFT, -0.003, 0)
+        BlzFrameSetPoint(frames[5], FRAMEPOINT_TOPRIGHT, parent, FRAMEPOINT_TOPRIGHT, -boxFrameBorderGap, -boxFrameBorderGap)
+
+        --BlzFrameSetPoint(frames[2], FRAMEPOINT_TOPLEFT, textFrame, FRAMEPOINT_BOTTOMLEFT, 0, -0.003)
+        --BlzFrameSetPoint(frames[8], FRAMEPOINT_TOPLEFT, textFrame, FRAMEPOINT_TOPRIGHT, 0.003, 0)
+        --BlzFrameSetPoint(frames[5], FRAMEPOINT_TOPLEFT, frames[2], FRAMEPOINT_BOTTOMLEFT, 0, -0.003)
+
+
+        --CreateTasButtonTooltip(frames[index], TasItemShopUI.Frames.BoxSuper)
+        TasItemShopUI.Frames[frames[2]] = pageSize
+        TasItemShopUI.Frames[frames[5]] = -pageSize
+
+        refButtons.Page = frames[1]
+        refButtons.PageUp = frames[2]
+        refButtons.PageDown = frames[5]
+        refButtons.PageText = frames[8]
+        return frames
+    end
+    local refRows = {}
+    
+    local function PlaceRefButtonBox(box)
+        BlzFrameClearAllPoints(box)
+        if #refRows == 0 then
+            BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, TasItemShopUI.Frames.BoxButtonList, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+            refRows[1] = {xSize - BlzFrameGetWidth(box), box}
+            ySize = ySize + refButtonBoxSizeY
+            BlzFrameSetSize(TasItemShopUI.Frames.ParentSuperUI, xSize, ySize)
+            return #refRows
+        else
+            local found = false
+            for i, v in ipairs(refRows) do
+                if v[1] - BlzFrameGetWidth(box) >= 0 then
+                    found = true
+                    BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, v[#v], FRAMEPOINT_TOPLEFT, 0, 0)
+                    table.insert(v, box)
+                    v[1] = v[1] - BlzFrameGetWidth(box)
+                    return i
+                end
+            end
+            if not found then
+                BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, refRows[#refRows][2], FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+                table.insert(refRows, {xSize - BlzFrameGetWidth(box), box})
+                ySize = ySize + refButtonBoxSizeY
+                BlzFrameSetSize(TasItemShopUI.Frames.ParentSuperUI, xSize, ySize)
+                return #refRows
+            end
+        end
+        
+    end
+
+    local function PlaceRefButtonBoxCol(box)
+        
+        if #refRows == 0 then
+            BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, TasItemShopUI.Frames.ParentSuperUI, FRAMEPOINT_TOPLEFT, 0, 0)
+            refRows[1] = {ySize - BlzFrameGetHeight(box), box}
+            return #refRows
+        else
+            local found = false
+            for i, v in ipairs(refRows) do
+                if v[1] - BlzFrameGetHeight(box) >= 0 then
+                    found = true
+                    BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, v[#v], FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+                    table.insert(v, box)
+                    
+                    v[1] = v[1] - BlzFrameGetHeight(box)
+                    return i
+                    --break
+                end
+            end
+            if not found then
+                BlzFrameSetPoint(box, FRAMEPOINT_TOPRIGHT, refRows[#refRows][2], FRAMEPOINT_TOPLEFT, 0, 0)
+                table.insert(refRows, {ySize - BlzFrameGetHeight(box), box})
+                return #refRows
+            end
+        end
+    end
+   
+    
+    -- built from
+    if refButtonCountMats > 0 then
+        parent = BlzCreateFrame(boxRefFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, (refButtonSize + refButtonGap)*refButtonCountMats + boxFrameBorderGap*2, refButtonBoxSizeY)
+        local row = PlaceRefButtonBox(parent)
+        TasItemShopUI.Frames.BoxMaterial = parent
+
+        frame = BlzCreateFrame("TasButtonTextTemplate", parent, 0, 0)
+        BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxRefBorderGap, -boxRefBorderGap)
+        BlzFrameSetText(frame, GetLocalizedString(textMats))
+        TasItemShopUI.Frames.MaterialText = frame
+
+        TasItemShopUI.Frames.Material = CreateRefButtons(refButtonCountMats, parent, frame, TasItemShopUI.TriggerMaterial, true)
+
+        CreateRefPage(parent, TasItemShopUI.Frames.MaterialText, TasItemShopUI.TriggerMaterialPage, refButtonCountMats, TasItemShopUI.Frames.Material)
+    end
+
+    -- possible upgrades
+    if refButtonCountUp > 0 then
+        parent = BlzCreateFrame(boxRefFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, (refButtonSize + refButtonGap)*refButtonCountUp + boxFrameBorderGap*2, refButtonBoxSizeY)
+        local row = PlaceRefButtonBox(parent)
+        TasItemShopUI.Frames.BoxUpgrades = parent
+
+        frame = BlzCreateFrame("TasButtonTextTemplate", parent, 0, 0)
+        BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxRefBorderGap, -boxRefBorderGap)
+        BlzFrameSetText(frame, GetLocalizedString(textUpgrades))
+        TasItemShopUI.Frames.UpgradesText = frame
+
+        TasItemShopUI.Frames.Upgrades = CreateRefButtons(refButtonCountUp, parent, frame, TasItemShopUI.TriggerUpgrade, true)
+
+        CreateRefPage(parent, TasItemShopUI.Frames.UpgradesText, TasItemShopUI.TriggerUpgradePage, refButtonCountUp, TasItemShopUI.Frames.Upgrades)
+    end  
+    
+    -- ShortCuts
+    if refButtonCountQuickLink > 0 then
+        parent = BlzCreateFrame(boxRefFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, (refButtonSize + refButtonGap)*refButtonCountQuickLink + boxFrameBorderGap*2, refButtonBoxSizeY)
+        local row = PlaceRefButtonBox(parent)
+        TasItemShopUI.Frames.BoxQuickLink = parent
+
+        frame = BlzCreateFrame("TasButtonTextTemplate", parent, 0, 0)
+        BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxRefBorderGap, -boxRefBorderGap)
+        BlzFrameSetText(frame, GetLocalizedString(textQuickLink))
+        TasItemShopUI.Frames.QuickLinkText = frame
+
+        TasItemShopUI.Frames.QuickLinkHighLight = BlzCreateFrame(buttonListHighLightFrameName, parent, 0, 0)
+        BlzFrameSetAllPoints(TasItemShopUI.Frames.QuickLinkHighLight, parent)
+        BlzFrameSetVisible(TasItemShopUI.Frames.QuickLinkHighLight, false)
+
+        TasItemShopUI.Frames.QuickLink = CreateRefButtons(refButtonCountQuickLink, parent, frame, TasItemShopUI.TriggerQuickLink, true)
+
+        CreateRefPage(parent, TasItemShopUI.Frames.QuickLinkText, TasItemShopUI.TriggerQuickLinkPage, refButtonCountQuickLink, TasItemShopUI.Frames.QuickLink)
+    end
+
+    -- Inventory
+    if refButtonCountInv > 0 then
+        parent = BlzCreateFrame(boxRefFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, (refButtonSize + refButtonGap)*refButtonCountInv + boxFrameBorderGap*2, refButtonBoxSizeY)
+        local row = PlaceRefButtonBox(parent)
+        
+        TasItemShopUI.Frames.BoxInventory = parent
+
+        frame = BlzCreateFrame("TasButtonTextTemplate", parent, 0, 0)
+        BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxRefBorderGap, -boxRefBorderGap)
+        BlzFrameSetText(frame, GetLocalizedString(textInventory))
+        TasItemShopUI.Frames.InventoryText = frame
+
+        TasItemShopUI.Frames.Inventory = CreateRefButtons(refButtonCountInv, parent, frame, TasItemShopUI.TriggerInventory, true)
+
+        for i, v in ipairs(TasItemShopUI.Frames.Inventory) do
+            BlzFrameSetTexture(v.IconDone, MainItemTexture, 0, true)
+        end
+
+        CreateRefPage(parent, TasItemShopUI.Frames.InventoryText, TasItemShopUI.TriggerInventoryPage, refButtonCountInv, TasItemShopUI.Frames.Inventory)
+    end
+
+    -- User
+    if refButtonCountUser > 0 then
+        parent = BlzCreateFrame(boxRefFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, (refButtonSize + refButtonGap)*refButtonCountUser + boxFrameBorderGap*2, refButtonBoxSizeY)
+
+        PlaceRefButtonBox(parent)
+        if refBoxUserPos then
+            PlaceRefButtonBoxFree(parent, refBoxUserPos, refBoxUserRelative, refBoxUserPosRelative, refBoxUserX, refBoxUserY, refBoxUserDirection)
+        else
+            
+        end
+        TasItemShopUI.Frames.BoxUser = parent
+
+        frame = BlzCreateFrame("TasButtonTextTemplate", parent, 0, 0)
+        BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, parent, FRAMEPOINT_TOPLEFT, boxRefBorderGap, -boxRefBorderGap)
+        BlzFrameSetText(frame, GetLocalizedString(textUser))
+        TasItemShopUI.Frames.UserText = frame
+        TasItemShopUI.Frames.User = CreateRefButtons(refButtonCountUser, parent, frame, TasItemShopUI.TriggerUser, false)
+
+        
+        for i, v in ipairs(TasItemShopUI.Frames.User) do
+            BlzFrameSetTexture(v.IconDone, MainUserTexture, 0, true)
+            v.ToolTipFrameText = CreateSimpleTooltip(v.Button, "User")
+        end
+
+        CreateRefPage(parent, TasItemShopUI.Frames.UserText, TasItemShopUI.TriggerUserPage, refButtonCountUser, TasItemShopUI.Frames.User)
+    end
+    
+    local frameObject = {}
+    frameObject.Index = int
+    
+    frameObject.Button = BlzCreateFrame("TasButton", TasItemShopUI.Frames.BoxSuper, 0, 0)
+    CreateTasButtonTooltip(frameObject, TasItemShopUI.Frames.BoxSuper)
+
+    frameObject.Icon = BlzGetFrameByName("TasButtonIcon", 0)
+    frameObject.Text = BlzGetFrameByName("TasButtonText", 0)
+    frameObject.IconGold = BlzGetFrameByName("TasButtonIconGold", 0)
+    frameObject.TextGold = BlzGetFrameByName("TasButtonTextGold", 0)
+    frameObject.IconLumber = BlzGetFrameByName("TasButtonIconLumber", 0)
+    frameObject.TextLumber = BlzGetFrameByName("TasButtonTextLumber", 0)
+    BlzFrameSetPoint(frameObject.Button, FRAMEPOINT_BOTTOM, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_BOTTOM, 0, boxFrameBorderGap)
+    TasItemShopUI.Frames.Current = frameObject
+    currentObject = frameObject
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerBuy, currentObject.Button, FRAMEEVENT_CONTROL_CLICK)
+    BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, currentObject.Button, FRAMEEVENT_CONTROL_CLICK)
+
+    
+    frame = BlzCreateFrame("TasButtonTextTemplate", TasItemShopUI.Frames.BoxSuper, 0, 0)
+    BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.ButtonList.InputFrame, FRAMEPOINT_BOTTOMLEFT, -boxFrameBorderGap, 0)
+    BlzFrameSetPoint(frame, FRAMEPOINT_TOPLEFT, modeObject.Button, FRAMEPOINT_TOPRIGHT, boxFrameBorderGap, 0)
+    BlzFrameSetTextAlignment(frame, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_MIDDLE)
+    BlzFrameSetText(frame, "Name")
+    TasItemShopUI.Frames.TitelText = frame
+
+    BlzFrameClearAllPoints(currentObject.ToolTipFrameText)
+    if toolTipPosPointParent then
+        BlzFrameSetPoint(currentObject.ToolTipFrameText, toolTipPosPoint, currentObject.Button, toolTipPosPointParent, toolTipPosX, toolTipPosY)
+    else
+        BlzFrameSetAbsPoint(currentObject.ToolTipFrameText, toolTipPosPoint, toolTipPosX, toolTipPosY)
+    end
+
+    if canUndo then
+        parent = BlzCreateFrame(boxUndoFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, refButtonSize + boxUndoBorderGap*2, refButtonSize + boxUndoBorderGap*2)
+        BlzFrameSetPoint(parent, FRAMEPOINT_BOTTOMLEFT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_BOTTOMLEFT, 0.00, 0.00)
+        TasItemShopUI.Frames.BoxUndo = parent
+        TasItemShopUI.Frames.UndoButton = BlzCreateFrame("TasItemShopCatButton", parent, 0, 0)
+        TasItemShopUI.Frames.UndoButtonIcon = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        TasItemShopUI.Frames.UndoButtonIconPushed = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        TasItemShopUI.Frames.UndoText = CreateSimpleTooltip(TasItemShopUI.Frames.UndoButton, textUndo)
+
+        frame = TasItemShopUI.Frames.UndoButton
+        BlzFrameSetSize(frame, refButtonSize, refButtonSize)
+        BlzFrameSetPoint(frame, FRAMEPOINT_CENTER, parent, FRAMEPOINT_CENTER, 0, 0)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerUndo, frame, FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frame, FRAMEEVENT_CONTROL_CLICK)
+        BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, false)
+    end
+
+    if canDefuse then
+        parent = BlzCreateFrame(boxDefuseFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, refButtonSize + boxDefuseBorderGap*2, refButtonSize + boxDefuseBorderGap*2)
+        BlzFrameSetPoint(parent, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_BOTTOMRIGHT, 0.00, 0.00)
+        TasItemShopUI.Frames.BoxDefuse = parent
+        TasItemShopUI.Frames.DefuseButton = BlzCreateFrame("TasItemShopCatButton", parent, 0, 0)
+        TasItemShopUI.Frames.DefuseButtonIcon = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        TasItemShopUI.Frames.DefuseButtonIconPushed = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        TasItemShopUI.Frames.DefuseButtonIconDisabled = BlzGetFrameByName("TasItemShopCatButtonBackdropDisabled", 0)
+        TasItemShopUI.Frames.DefuseText = CreateSimpleTooltip(TasItemShopUI.Frames.DefuseButton, textDefuse)
+         
+        BlzFrameSetTexture(TasItemShopUI.Frames.DefuseButtonIcon, DefuseButtonIcon, 0, false)
+        BlzFrameSetTexture(TasItemShopUI.Frames.DefuseButtonIconPushed, DefuseButtonIcon, 0, false)
+        BlzFrameSetTexture(TasItemShopUI.Frames.DefuseButtonIconDisabled, DefuseButtonIconDisabled, 0, false)
+        frame = TasItemShopUI.Frames.DefuseButton
+        BlzFrameSetSize(frame, refButtonSize, refButtonSize)
+        BlzFrameSetPoint(frame, FRAMEPOINT_CENTER, parent, FRAMEPOINT_CENTER, 0, 0)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerDefuse, frame, FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frame, FRAMEEVENT_CONTROL_CLICK)
+        --BlzFrameSetVisible(TasItemShopUI.Frames.BoxDefuse, false)
+        BlzFrameSetEnable(TasItemShopUI.Frames.DefuseButton, false)
+
+        BlzFrameClearAllPoints(TasItemShopUI.Frames.DefuseText)
+        BlzFrameSetPoint(TasItemShopUI.Frames.DefuseText, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.Frames.DefuseButton, FRAMEPOINT_TOPRIGHT, 0, 0.008)
+    end
+    if canSellItems then
+        parent = BlzCreateFrame(boxDefuseFrameName, TasItemShopUI.Frames.BoxSuper, 0, 0)
+        BlzFrameSetSize(parent, refButtonSize + boxSellBorderGap*2, refButtonSize + boxSellBorderGap*2)
+        if canDefuse then      
+            BlzFrameSetPoint(parent, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.Frames.BoxDefuse, FRAMEPOINT_BOTTOMLEFT, 0.00, 0.00)
+        else
+            BlzFrameSetPoint(parent, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.Frames.BoxSuper, FRAMEPOINT_BOTTOMRIGHT, 0.00, 0.00)
+        end
+
+        TasItemShopUI.Frames.BoxSell = parent
+        TasItemShopUI.Frames.SellButton = BlzCreateFrame("TasItemShopCatButton", parent, 0, 0)
+        TasItemShopUI.Frames.SellButtonIcon = BlzGetFrameByName("TasItemShopCatButtonBackdrop", 0)
+        TasItemShopUI.Frames.SellButtonIconDisabled = BlzGetFrameByName("TasItemShopCatButtonBackdropDisabled", 0)
+        TasItemShopUI.Frames.SellButtonIconPushed = BlzGetFrameByName("TasItemShopCatButtonBackdropPushed", 0)
+        TasItemShopUI.Frames.SellText = CreateSimpleTooltip(TasItemShopUI.Frames.SellButton, textSell)
+
+        BlzFrameSetTexture(TasItemShopUI.Frames.SellButtonIcon, SellButtonIcon, 0, false)
+        BlzFrameSetTexture(TasItemShopUI.Frames.SellButtonIconPushed, SellButtonIcon, 0, false)
+        BlzFrameSetTexture(TasItemShopUI.Frames.SellButtonIconDisabled, SellButtonIconDisabled, 0, false)
+        frame = TasItemShopUI.Frames.SellButton
+        BlzFrameSetSize(frame, refButtonSize, refButtonSize)
+        BlzFrameSetPoint(frame, FRAMEPOINT_CENTER, parent, FRAMEPOINT_CENTER, 0, 0)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerSell, frame, FRAMEEVENT_CONTROL_CLICK)
+        BlzTriggerRegisterFrameEvent(TasItemShopUI.TriggerClearFocus, frame, FRAMEEVENT_CONTROL_CLICK)
+        BlzFrameSetEnable(TasItemShopUI.Frames.SellButton, false)
+        
+        BlzFrameClearAllPoints(TasItemShopUI.Frames.SellText)
+        BlzFrameSetPoint(TasItemShopUI.Frames.SellText, FRAMEPOINT_BOTTOMRIGHT, TasItemShopUI.Frames.SellButton, FRAMEPOINT_TOPRIGHT, 0, 0.008)
+    end
+    
+
+    parent = BlzCreateFrameByType("BUTTON", "TasRightClickSpriteParent", TasItemShopUI.Frames.BoxSuper, "", 0)
+    BlzFrameSetLevel(parent, 99)
+    frame = BlzCreateFrameByType("SPRITE", "TasRightClickSprite", parent, "", 0)
+    BlzFrameSetSize(frame, refButtonSize, refButtonSize)
+    BlzFrameSetScale(frame, spriteScale)
+    BlzFrameSetModel(frame, spriteModel, 0)   
+    BlzFrameSetVisible(parent, false)
+    TasItemShopUI.Frames.SpriteParent = parent
+    TasItemShopUI.Frames.Sprite = frame  
+    if LayoutType == 1 then
+
+    elseif LayoutType == 2 then
+        ySize = ySize - refButtonBoxSizeY*#refRows
+        BlzFrameSetSize(TasItemShopUI.Frames.ParentSuperUI, xSize, ySize)
+        BlzFrameSetPoint(refRows[1][2], FRAMEPOINT_TOPRIGHT, TasItemShopUI.Frames.ParentSuperUI, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+    elseif LayoutType == 3 then
+        ySize = ySize - refButtonBoxSizeY*#refRows
+        BlzFrameSetSize(TasItemShopUI.Frames.ParentSuperUI, xSize, ySize)
+        BlzFrameSetPoint(refRows[1][2], FRAMEPOINT_TOPRIGHT, TasItemShopUI.Frames.ParentSuperUI, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+        
+        
+        --MakeRefButtonsCol(box, textFrame, frames)
+        MakeRefButtonsCol(TasItemShopUI.Frames.BoxUser, TasItemShopUI.Frames.UserText, TasItemShopUI.Frames.User)
+        MakeRefButtonsCol(TasItemShopUI.Frames.BoxInventory, TasItemShopUI.Frames.InventoryText, TasItemShopUI.Frames.Inventory)
+        MakeRefButtonsCol(TasItemShopUI.Frames.BoxMaterial, TasItemShopUI.Frames.MaterialText, TasItemShopUI.Frames.Material)
+        MakeRefButtonsCol(TasItemShopUI.Frames.BoxUpgrades, TasItemShopUI.Frames.UpgradesText, TasItemShopUI.Frames.Upgrades)
+
+        refRows = {}
+        PlaceRefButtonBoxCol(TasItemShopUI.Frames.BoxUser)
+        PlaceRefButtonBoxCol(TasItemShopUI.Frames.BoxInventory)
+        PlaceRefButtonBoxCol(TasItemShopUI.Frames.BoxMaterial)
+        PlaceRefButtonBoxCol(TasItemShopUI.Frames.BoxUpgrades)
+
+        
+    end
+    BlzFrameSetSize(TasItemShopUI.Frames.ParentSuperUI, xSize, ySize)
+    BlzFrameSetVisible(TasItemShopUI.Frames.ParentSuper, false)
+end
+
+function TasItemShopUIShow(player, shop, shopperGroup, mainShoper)
+    xpcall(function()
+    local flag = (shop ~=nil)
+    
+    if player == GetLocalPlayer() then
+        BlzFrameSetVisible(TasItemShopUI.Frames.ParentSuper, flag)
+        if flag then
+            BlzFrameSetVisible(BlzFrameGetParent(TasItemShopUI.Frames.ParentSuper), true)
+        end
+    end
+
+    if flag then
+        local oldShop = CurrentShop[player]
+        local isNewShopType = GetUnitTypeId(oldShop) ~= GetUnitTypeId(shop)
+        CurrentShop[player] = shop
+
+        if mainShoper then
+            ShoperMain[player] = mainShoper
+        elseif shopperGroup then
+            ShoperMain[player] = FirstOfGroup(shopperGroup)
+        end
+        if shopperGroup then
+            GroupClear(Shoper[player])
+            -- when a group was given
+            if string.sub(tostring(shopperGroup), 1, 6) == "group:" then
+                BlzGroupAddGroupFast(shopperGroup, Shoper[player])
+            end
+        end
+
+        GroupAddUnit(Shoper[player], mainShoper)
+
+        local oldSize = TasItemFusion.Player[player].UseAble.Count
+        TasItemFusionGetUseableItems(player, Shoper[player], not sharedItems)
+        
+        if oldSize ~= TasItemFusion.Player[player].UseAble.Count then
+            
+            CurrentOffSetInventory[player] = 0
+        end
+        if isNewShopType then
+            -- has to unmark buyAble
+            local buttonList = TasItemShopUI.ButtonList
+            local shopObject = TasItemShopUI.Shops[GetUnitTypeId(shop)]
+            BUY_ABLE_ITEMS.Marker[player] = {}
+            
+            TasButtonListClearData(buttonList, player)
+            -- has custom Shop Data?
+            if shopObject then
+                -- WhiteListMode?
+                if shopObject.Mode then
+                    for i, v in ipairs(shopObject) do
+                        TasButtonListAddData(buttonList, v, player)
+                        BUY_ABLE_ITEMS.Marker[player][v] = true
+                    end
+                else
+                    -- BlackListMode
+                    for i, v in ipairs(BUY_ABLE_ITEMS) do
+                        if type(v) == "string" then
+                            if not shopObject[FourCC(v)] then
+                                TasButtonListAddData(buttonList, FourCC(v), player)
+                                BUY_ABLE_ITEMS.Marker[player][FourCC(v)] = true
+                            end
+                        elseif type(v) == "number" then
+                            if not shopObject[v] then
+                                TasButtonListAddData(buttonList, v, player)
+                                BUY_ABLE_ITEMS.Marker[player][v] = true
+                            end
+                        end
+                    end
+                end
+            else
+                -- none custom Shop, add all data.
+                for i, v in ipairs(BUY_ABLE_ITEMS) do
+                    if type(v) == "string" then
+                        BUY_ABLE_ITEMS.Marker[player][FourCC(v)] = true
+                        TasButtonListAddData(buttonList, FourCC(v), player)
+                    elseif type(v) == "number" then
+                        TasButtonListAddData(buttonList, v, player)
+                        BUY_ABLE_ITEMS.Marker[player][v] = true
+                    end
+                end
+            end
+        end
+        if GetLocalPlayer() == player then
+            if IsUnitType(ShoperMain[player], UNIT_TYPE_HERO) then
+                BlzFrameSetText(TasItemShopUI.Frames.TitelText, GetUnitName(shop) .. " - ".. GetHeroProperName(ShoperMain[player]))
+            else
+                BlzFrameSetText(TasItemShopUI.Frames.TitelText, GetUnitName(shop) .. " - ".. GetUnitName(ShoperMain[player]))
+            end
+            
+            LocalShopObject = TasItemShopUI.Shops[GetUnitTypeId(shop)]
+            if isNewShopType then
+                TasButtonListSearch(TasItemShopUI.ButtonList)
+            end
+        end
+        UpdateTasButtonList(TasItemShopUI.ButtonList)
+        setSelected(player, TasItemShopUI.Selected[player])
+        setSelectedItem(player, TasItemShopUI.SelectedItem[player])
+    else
+        CurrentShop[player] = nil
+        if canUndo then
+            -- loop the undo of that player from last to first
+            for i = #TasItemShopUI.Undo[player], 1, -1 do
+                -- remove all used material
+                for _,v in ipairs(TasItemShopUI.Undo[player][i].Items) do
+                    SetItemVisible(v[1], true)
+                    RemoveItem(v[1])
+                end
+                
+                TasItemShopUI.Undo[player][i].ResultItem = nil
+                TasItemShopUI.Undo[player][i].StackChargesGainer = nil
+                TasItemShopUI.Undo[player][i] = nil
+            end
+            if GetLocalPlayer() == player then
+                BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, false)
+            end
+            
+        end
+    end
+end, print)
+end
+
+
+function TasItemShopUIShowSimple(player, shop, mainShoper)
+    TasItemShopUIShow(player, shop, nil, mainShoper)
+end
+    local function RefButtonPageChange(current, add, min, max, player)
+        local size = math.abs(add)
+        if BlzGetTriggerFrameEvent() == FRAMEEVENT_CONTROL_CLICK then
+            current = current + add
+            if not refButtonPageRotate then
+                if current < min then
+                    current = min
+                end
+                if current >= max then
+                    current = max - add
+                end
+            else
+                if add > 0 then
+                    if current >= max then
+                        current = min
+                    end
+                else
+                    if current < min then
+                        local remain = ModuloInteger(max, size)
+                        -- last page is incomplete?
+                        if remain > 0 then
+                            current = max - remain
+                        else
+                            current = max - size
+                        end
+                    end
+                end
+            end
+        elseif IsRightClick(player) then
+            StartSoundForPlayerBJ(player, ToggleIconButton.Sound)
+            -- right clicks jump to the first or last Page
+            if add > 0 then
+                current = max - size
+            else
+                current = min
+            end
+        end
+        
+        return current
+    end
+    local function RefButtonAction(itemCode)
+        local player = GetTriggerPlayer()
+        local frame = BlzGetTriggerFrame()
+
+        if BlzGetTriggerFrameEvent() == FRAMEEVENT_CONTROL_CLICK then
+        -- print(GetPlayerName(player), "Clicked Material", index)
+            setSelected(player, itemCode)
+        else
+            if IsRightClick(player) then
+                ShowSprite(frame, player)
+                StartSoundForPlayerBJ(player, ToggleIconButton.Sound)
+                BuyItem(player, itemCode)
+            end
+        end
+    end
+    function MarkGameStarted()
+        real()
+    xpcall(function()
+        TasItemShopUI.IsReforged = (GetLocalizedString("REFORGED") ~= "REFORGED")
+        local function CreateTriggerEx(action)
+            local trigger = CreateTrigger()
+            TriggerAddAction(trigger, action)
+            return trigger
+        end
+ 
+        TasItemShopUI.TriggerClearButton = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            if player == GetLocalPlayer() then
+                BlzFrameSetText(TasItemShopUI.ButtonList.InputFrame, "")
+            end
+        end)
+
+        TasItemShopUI.TriggerClearFocus = CreateTriggerEx(function()
+            local frame = BlzGetTriggerFrame()
+            if GetTriggerPlayer() == GetLocalPlayer() then
+                BlzFrameSetEnable(frame, false)
+                BlzFrameSetEnable(frame, true)
+            end
+            frame = nil
+        end)
+
+        TasItemShopUI.TriggerBuy = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local itemCode = TasItemShopUI.Selected[player]
+            ShowSprite(BlzGetTriggerFrame(), player)
+            BuyItem(player, itemCode)
+        end)
+
+        TasItemShopUI.TriggerMaterial = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local itemCode = TasItemShopUI.Selected[player]
+            local index = tonumber(BlzFrameGetText(BlzGetTriggerFrame())) + CurrentOffSetMaterial[player]
+            RefButtonAction(TasItemFusion.BuiltWay[itemCode].Mats[index])
+
+        end)
+
+        TasItemShopUI.TriggerMaterialPage = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local itemCode = TasItemShopUI.Selected[player]
+            local max = #TasItemFusion.BuiltWay[itemCode].Mats
+            local min = 0
+            local add = TasItemShopUI.Frames[BlzGetTriggerFrame()]
+            
+            CurrentOffSetMaterial[player] = RefButtonPageChange(CurrentOffSetMaterial[player], add, min, max, player)
+            if GetLocalPlayer() == player then
+                updateRefButtons(TasItemFusion.BuiltWay[itemCode].Mats, TasItemShopUI.Frames.BoxMaterial, TasItemShopUI.Frames.Material, CurrentOffSetMaterial[player])
+                updateHaveMats(player, itemCode)
+            end
+        end)
+
+        TasItemShopUI.TriggerUpgrade = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local itemCode = TasItemShopUI.Selected[player]
+            local index = tonumber(BlzFrameGetText(BlzGetTriggerFrame())) + CurrentOffSetUpgrade[player]
+            RefButtonAction(TasItemFusion.UsedIn[itemCode][index].Result)
+        end)
+
+        
+
+        TasItemShopUI.TriggerUpgradePage = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local itemCode = TasItemShopUI.Selected[player]
+            local max = #TasItemFusion.UsedIn[itemCode]
+            local min = 0
+            local add = TasItemShopUI.Frames[BlzGetTriggerFrame()]
+            
+            CurrentOffSetUpgrade[player] = RefButtonPageChange(CurrentOffSetUpgrade[player], add, min, max, player)
+            if GetLocalPlayer() == player then
+                updateRefButtons(TasItemFusion.UsedIn[itemCode], TasItemShopUI.Frames.BoxUpgrades, TasItemShopUI.Frames.Upgrades, CurrentOffSetUpgrade[player])
+            end
+        end)
+
+        TasItemShopUI.TriggerQuickLink = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local index = tonumber(BlzFrameGetText(BlzGetTriggerFrame())) + CurrentOffSetQuickLink[player]
+            local itemCode = TasItemShopUI.QuickLink[player][index]
+            if TasItemShopUI.QuickLinkKeyActive[player] and BlzGetTriggerFrameEvent() == FRAMEEVENT_CONTROL_CLICK then
+                TasItemShopUI.SetQuickLink(player, itemCode)
+            else
+                RefButtonAction(itemCode)
+            end
+            
+        end)
+
+        TasItemShopUI.TriggerQuickLinkPage = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local max = #TasItemShopUI.QuickLink[player]
+            local min = 0
+            local add = TasItemShopUI.Frames[BlzGetTriggerFrame()]
+            
+            CurrentOffSetQuickLink[player] = RefButtonPageChange(CurrentOffSetQuickLink[player], add, min, max, player)
+            if GetLocalPlayer() == player then
+                updateRefButtons(TasItemShopUI.QuickLink[player], TasItemShopUI.Frames.BoxQuickLink, TasItemShopUI.Frames.QuickLink, CurrentOffSetQuickLink[player])
+            end          
+        end)
+
+        TasItemShopUI.TriggerInventory = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local frame = BlzGetTriggerFrame()
+            local index = tonumber(BlzFrameGetText(frame)) + CurrentOffSetInventory[player]
+            local item
+            if inventoryShowMainOnly then
+                -- warcraft inventory starts with 0 but button indexes with 1
+                item = UnitItemInSlot(ShoperMain[player], index - 1)
+            else
+                item = TasItemFusion.Player[player].UseAble[index]
+            end
+            local itemCode = GetItemTypeId(item)
+            
+            -- prevent a possible desync when the inventory item was not given to TasItemCost yet. TasItemCost creates and destroys an item when a new type is given.
+            TasItemCaclCost(itemCode)
+
+            if BlzGetTriggerFrameEvent() == FRAMEEVENT_CONTROL_CLICK then
+            -- print(GetPlayerName(player), "Clicked Material", index)
+                setSelected(player, itemCode)
+                setSelectedItem(player, item)
+            else
+                if IsRightClick(player) then
+                    ShowSprite(frame, player)
+                    StartSoundForPlayerBJ(player, ToggleIconButton.Sound)
+                    if canSellItems and inventoryRightClickSell then
+                        SellItem(player, item)
+                    else
+                        BuyItem(player, itemCode)
+                        setSelectedItem(player, item)
+                    end
+                end
+            end
+            
+        end)
+
+        TasItemShopUI.TriggerInventoryPage = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local max = TasItemFusion.Player[player].UseAble.Count
+            local min = 0
+            local add = TasItemShopUI.Frames[BlzGetTriggerFrame()]
+            
+            CurrentOffSetInventory[player] = RefButtonPageChange(CurrentOffSetInventory[player], add, min, max, player)
+            
+            if GetLocalPlayer() == player then
+                updateRefButtons(TasItemFusion.Player[player].UseAble, TasItemShopUI.Frames.BoxInventory, TasItemShopUI.Frames.Inventory, CurrentOffSetInventory[player])
+            end
+            
+        end)
+
+        
+
+        TasItemShopUI.TriggerUndo = CreateTriggerEx(function()
+            
+            xpcall(function()
+            local player = GetTriggerPlayer()
+            if #TasItemShopUI.Undo[player] < 1 then return end
+            local undo = table.remove(TasItemShopUI.Undo[player])
+            
+            --print("Use Undo:",#TasItemShopUI.Undo[player] + 1, GetObjectName(undo.Result))
+            AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_GOLD, undo.Gold)
+            AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_LUMBER, undo.Lumber)
+
+            -- find the result and destroy it, this assumes that the shoper Group not changed since the buying
+            for i, v in ipairs(undo.ResultItem) do RemoveItem(v[1]) undo.ResultItem[i][1] = nil end
+            
+            if undo.StackChargesGainer then
+                SetItemCharges(undo.StackChargesGainer, GetItemCharges(undo.StackChargesGainer) - undo.StackCharges)
+                undo.StackChargesGainer = nil
+            end
+            -- show the used material and give them back
+            for i,v in ipairs(undo.Items) do
+                SetItemVisible(v[1], true)
+                UnitAddItem(v[2], v[1])
+            end
+            TasItemShopUIShow(player, CurrentShop[player])
+            if GetLocalPlayer() == player then
+                
+                if #TasItemShopUI.Undo[GetLocalPlayer()] > 0 then
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, true)
+                    updateUndoButton(TasItemShopUI.Undo[player][#TasItemShopUI.Undo[player]].Result, TasItemShopUI.Undo[player][#TasItemShopUI.Undo[player]].ActionName)
+                else
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, false)
+                end
+            end
+        end, print)
+        end)
+
+        TasItemShopUI.TriggerSell = CreateTriggerEx(function()
+            SellItem(GetTriggerPlayer(), TasItemShopUI.SelectedItem[GetTriggerPlayer()])
+        end)
+
+        TasItemShopUI.TriggerDefuse = CreateTriggerEx(function()
+            
+            xpcall(function()
+                
+            local player = GetTriggerPlayer()
+            if not TasItemShopUI.SelectedItem[player] then return end
+            local item = TasItemShopUI.SelectedItem[player]
+            local itemCode = GetItemTypeId(item)
+            TasItemShopUI.SelectedItem[player] = nil
+            
+            local gold, lumber = TasItemGetCost(itemCode)
+            local gold2, lumber2
+            for i, v in ipairs(TasItemFusion.BuiltWay[itemCode].Mats) do
+                gold2, lumber2 = TasItemGetCost(v)
+                gold = gold - gold2
+                lumber = lumber - lumber2
+            end
+
+            AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_GOLD, gold)
+            AdjustPlayerStateSimpleBJ(player, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+            local undo
+            if canUndo then
+                undo = {ResultItem = {}, Result = itemCode, Gold = -gold, Lumber = -lumber, Items = {}, ActionName = GetLocalizedString(textDefuse)}
+                table.insert(TasItemShopUI.Undo[player], undo)
+                for i = 0, BlzGroupGetSize(Shoper[player]) - 1, 1 do
+                    owner = BlzGroupUnitAt(Shoper[player], i)
+                    if UnitHasItem(owner, item) then
+                        UnitRemoveItem(owner, item)
+                        SetItemVisible(item, false)
+                        undo.Items[1] = {item, owner}
+                        break
+                    end
+                end
+                
+                if GetLocalPlayer() == player then
+                    BlzFrameSetVisible(TasItemShopUI.Frames.BoxUndo, true)
+                    updateUndoButton(undo.Result, GetLocalizedString(textDefuse))
+                end
+            else
+                RemoveItem(item)
+            end
+
+            for i, v in ipairs(TasItemFusion.BuiltWay[itemCode].Mats) do
+                item = CreateItem(v, GetUnitX(ShoperMain[player]), GetUnitY(ShoperMain[player]))
+                GiveItemGroup(player, item, undo)
+            end
+            
+            if GetLocalPlayer() == player then
+                --BlzFrameSetVisible(TasItemShopUI.Frames.BoxDefuse, false)
+                BlzFrameSetEnable(TasItemShopUI.Frames.DefuseButton, false)
+            end
+        end, print)
+        end)
+        
+        local tempGroup = CreateGroup()
+        local function ShopSelectionAction(player, shop, target)
+            xpcall(function()
+            -- is a registered shop UnitType?
+            if TasItemShopUI.Shops[GetUnitTypeId(shop)] then
+                local range = TasItemShopUI.Shops[GetUnitTypeId(shop)].Range
+                if not range then range = shopRange end
+                GroupEnumUnitsInRange(tempGroup, GetUnitX(shop), GetUnitY(shop), range + 400, nil)
+                -- remove unallowed shoppers
+                
+                ForGroup(tempGroup, function()
+                    if not IsValidShopper(player, shop, GetEnumUnit(), range) then
+                        GroupRemoveUnit(tempGroup, GetEnumUnit())
+                    end
+                end)
+                if not target and IsUnitInGroup(ShoperMain[player], tempGroup) then
+                    target = ShoperMain[player]
+                end
+                
+                TasItemShopUIShow(player, shop, tempGroup, target)
+            -- no, end shopping!
+            elseif CurrentShop[player] then
+                TasItemShopUIShow(player)
+            end
+        end, print)
+        end
+        TasItemShopUI.TriggerSelect = CreateTriggerEx(function()
+            ShopSelectionAction(GetTriggerPlayer(), GetTriggerUnit())
+        end)
+        TriggerRegisterAnyUnitEventBJ(TasItemShopUI.TriggerSelect, EVENT_PLAYER_UNIT_SELECTED)
+
+        if userButtonOrder then
+            TasItemShopUI.TriggerOrder = CreateTriggerEx(function()
+                if TasItemShopUI.Shops[GetUnitTypeId(GetTriggerUnit())] then
+                    ShopSelectionAction(GetOwningPlayer(GetOrderTargetUnit()), GetTriggerUnit(), GetOrderTargetUnit())
+                end
+            end)
+            TriggerRegisterAnyUnitEventBJ(TasItemShopUI.TriggerOrder, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+        end
+
+        TasItemShopUI.TriggerUser = CreateTriggerEx(function()
+            local frame = BlzGetTriggerFrame()
+            local player = GetTriggerPlayer()
+            local index = tonumber(BlzFrameGetText(BlzGetTriggerFrame())) + CurrentOffSetUser[player]
+            local unit = BlzGroupUnitAt(Shoper[player], index - 1)
+
+            if BlzGetTriggerFrameEvent() == FRAMEEVENT_CONTROL_CLICK then
+                if not userButtonOrder then
+                    ShopSelectionAction(player, CurrentShop[player], unit)
+                end
+                IssueNeutralTargetOrder(player, CurrentShop[player], "smart", unit)
+            else
+                if IsRightClick(player) then
+                    SelectUnitForPlayerSingle(unit, player)
+                end
+            end
+        end)
+
+        TasItemShopUI.TriggerUserPage = CreateTriggerEx(function()
+            local player = GetTriggerPlayer()
+            local max = BlzGroupGetSize(Shoper[player])
+            local min = 0
+            local add = TasItemShopUI.Frames[BlzGetTriggerFrame()]
+            CurrentOffSetUser[player] = RefButtonPageChange(CurrentOffSetUser[player], add, min, max, player)
+            
+            if GetLocalPlayer() == player then
+                updateRefButtons(Shoper[player], TasItemShopUI.Frames.BoxUser, TasItemShopUI.Frames.User, CurrentOffSetUser[player])
+                updateOverLayMainSelected(player)
+            end
+            
+        end)
+
+        TasItemShopUI.TriggerESC = CreateTriggerEx(function()
+            TasItemShopUIShow(GetTriggerPlayer())
+        end)
+
+        TasItemShopUI.TriggerScrollParent = CreateTriggerEx(function()
+            local frame = TasItemShopUI.ButtonList.Slider
+            if GetLocalPlayer() == GetTriggerPlayer() then
+                if BlzGetTriggerFrameValue() > 0 then
+                    BlzFrameSetValue(frame, BlzFrameGetValue(frame) + TasItemShopUI.ButtonList.SliderStep)
+                else
+                    BlzFrameSetValue(frame, BlzFrameGetValue(frame) - TasItemShopUI.ButtonList.SliderStep)
+                end
+            end
+        end)
+
+        TasItemShopUI.TriggerCategoryMode = CreateTriggerEx(function()
+            if GetTriggerPlayer() == GetLocalPlayer() then
+                TasButtonListSearch(TasItemShopUI.ButtonList)
+            end
+        end)
+
+        TasItemShopUI.TriggerPressShift = CreateTriggerEx(function()
+            --print("Hold Shift")
+            TasItemShopUI.QuickLinkKeyActive[GetTriggerPlayer()] = true
+            if refButtonCountQuickLink > 0 and GetTriggerPlayer() == GetLocalPlayer() then
+                BlzFrameSetVisible(TasItemShopUI.Frames.QuickLinkHighLight, true)
+            end
+        end)
+        TasItemShopUI.TriggerReleaseShift = CreateTriggerEx(function()
+            --print("Release Shift")
+            TasItemShopUI.QuickLinkKeyActive[GetTriggerPlayer()] = false
+            if refButtonCountQuickLink > 0 and GetTriggerPlayer() == GetLocalPlayer() then
+                BlzFrameSetVisible(TasItemShopUI.Frames.QuickLinkHighLight, false)
+            end
+        end)
+        
+
+        local tempUnits = {Count = 0}
+        TimerStart(CreateTimer(), updateTime, true, function()
+          --  xpcall(function()
+          if posScreenRelative then
+            --credits to ScrewTheTrees(Fred) & Niklas
+            BlzFrameSetSize(TasItemShopUI.Frames.Fullscreen, BlzGetLocalClientWidth()/BlzGetLocalClientHeight()*0.6, 0.6)
+          end
+            local player, unit
+            for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+                player = Player(i)
+                
+                if CurrentShop[player] then
+                    ShopSelectionAction(player, CurrentShop[player])
+                end
+            end
+        --end, print)
+        end)
+        --call the function handling custom User setup
+        xpcall(UserInit, print)
+        --precalc any added Item
+        for i = 1, #BUY_ABLE_ITEMS do
+           -- if type(BUY_ABLE_ITEMS[i]) == "string" then BUY_ABLE_ITEMS[i] = FourCC(BUY_ABLE_ITEMS[i]) end
+            TasItemCaclCost(BUY_ABLE_ITEMS[i])
+        end
+        
+
+        local player
+        BUY_ABLE_ITEMS.Marker = {}
+        for i = 0, bj_MAX_PLAYER_SLOTS - 1 do
+            player = Player(i)
+            Shoper[player] = CreateGroup()
+            TasItemShopUI.Undo[player] = {}
+            BUY_ABLE_ITEMS.Marker[player] = {}
+            TriggerRegisterPlayerEventEndCinematic(TasItemShopUI.TriggerESC, player)
+            TasItemShopUI.QuickLink[player] = {}
+            if quickLinkKey then
+                --"none"(0), "shift"(1), "control"(2), "alt"(4) and "META"(8) (windows key)
+                --1 + 2 + 4 + 8 = 15
+                for meta = 0, 15 do
+                    BlzTriggerRegisterPlayerKeyEvent(TasItemShopUI.TriggerPressShift, player, quickLinkKey, meta, true)
+                    BlzTriggerRegisterPlayerKeyEvent(TasItemShopUI.TriggerReleaseShift, player, quickLinkKey, meta, false)
+                end
+            end
+        end
+
+        TasItemShopUI.Create()
+        -- Frame related code actions are not saved/Loaded, probably repeat them after Loading the game
+        if FrameLoaderAdd then FrameLoaderAdd(TasItemShopUI.Create) end
+        
+    end, print)
+end
+
+end
+
 function playGenericSpellSound(target, soundPath, duration)
 	udg_TempSound = CreateSound(soundPath, false, true, false, 1, 1, "SpellsEAX")
 	SetSoundDuration(udg_TempSound, duration)
@@ -4130,10 +7513,17 @@ end
 function CreateAllItems()
 local itemID
 
-BlzCreateItemWithSkin(FourCC("I009"), 11404.3, 21471.2, FourCC("I009"))
+BlzCreateItemWithSkin(FourCC("I003"), 11295.1, 21140.5, FourCC("I003"))
+BlzCreateItemWithSkin(FourCC("I004"), 11127.5, 21154.0, FourCC("I004"))
+BlzCreateItemWithSkin(FourCC("I006"), 11446.7, 21172.5, FourCC("I006"))
+BlzCreateItemWithSkin(FourCC("I007"), 11391.4, 21166.4, FourCC("I007"))
+BlzCreateItemWithSkin(FourCC("I008"), 11522.4, 21166.3, FourCC("I008"))
 BlzCreateItemWithSkin(FourCC("I009"), 5546.3, 10211.3, FourCC("I009"))
+BlzCreateItemWithSkin(FourCC("I009"), 11404.3, 21471.2, FourCC("I009"))
+BlzCreateItemWithSkin(FourCC("I00A"), 11333.6, 21173.6, FourCC("I00A"))
 BlzCreateItemWithSkin(FourCC("I00D"), 11316.4, 21667.5, FourCC("I00D"))
 BlzCreateItemWithSkin(FourCC("I00I"), 11288.0, 21923.3, FourCC("I00I"))
+BlzCreateItemWithSkin(FourCC("I00V"), 11232.1, 21173.6, FourCC("I00V"))
 BlzCreateItemWithSkin(FourCC("I024"), 11202.7, 21335.2, FourCC("I024"))
 BlzCreateItemWithSkin(FourCC("I025"), 11352.0, 22103.0, FourCC("I025"))
 BlzCreateItemWithSkin(FourCC("I026"), 11388.1, 22189.7, FourCC("I026"))
@@ -4164,9 +7554,9 @@ BlzCreateItemWithSkin(FourCC("I04I"), 11313.3, 21298.2, FourCC("I04I"))
 BlzCreateItemWithSkin(FourCC("I04J"), 11311.4, 21230.7, FourCC("I04J"))
 BlzCreateItemWithSkin(FourCC("I04K"), 11372.7, 21230.7, FourCC("I04K"))
 BlzCreateItemWithSkin(FourCC("I04L"), 11381.0, 21293.3, FourCC("I04L"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6639.1, 18525.1, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6641.2, 18838.8, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6793.5, 18777.5, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6641.2, 18838.8, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6639.1, 18525.1, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6501.6, 18720.5, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6803.6, 18583.8, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04O"), 11313.0, 21366.0, FourCC("I04O"))
@@ -6293,6 +9683,14 @@ u = BlzCreateUnitWithSkin(p, FourCC("H013"), 10470.6, 21173.4, 243.110, FourCC("
 SetUnitState(u, UNIT_STATE_MANA, 500)
 u = BlzCreateUnitWithSkin(p, FourCC("H019"), 11557.7, 21892.0, 218.600, FourCC("H019"))
 SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H001"), 10776.0, 21349.0, 336.320, FourCC("H001"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H003"), 10732.0, 21273.3, 267.673, FourCC("H003"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H00O"), 10650.7, 21168.7, 202.860, FourCC("H00O"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H005"), 10749.0, 21162.0, 265.040, FourCC("H005"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -6499,64 +9897,6 @@ gg_trg_AnimationResetLoop = CreateTrigger()
 DisableTrigger(gg_trg_AnimationResetLoop)
 TriggerRegisterTimerEventPeriodic(gg_trg_AnimationResetLoop, 0.03)
 TriggerAddAction(gg_trg_AnimationResetLoop, Trig_AnimationResetLoop_Actions)
-end
-
-function Trig_SolarFlare_Func001C()
-if (GetSpellAbilityId() == FourCC("A0KO")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0O9")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0B6")) then
-return true
-end
-return false
-end
-
-function Trig_SolarFlare_Conditions()
-if (not Trig_SolarFlare_Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_SolarFlare_Func011002003001()
-return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
-end
-
-function Trig_SolarFlare_Func011002003002()
-return (true == true)
-end
-
-function Trig_SolarFlare_Func011002003()
-return GetBooleanAnd(Trig_SolarFlare_Func011002003001(), Trig_SolarFlare_Func011002003002())
-end
-
-function Trig_SolarFlare_Func012A()
-IssueTargetOrderBJ(udg_TempUnit, "curse", GetEnumUnit())
-end
-
-function Trig_SolarFlare_Actions()
-udg_TempLoc = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 20.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-CreateNUnitsAtLoc(1, FourCC("h054"), GetTriggerPlayer(), udg_TempLoc, bj_UNIT_FACING)
-udg_TempUnit = GetLastCreatedUnit()
-UnitAddAbilityBJ(FourCC("A045"), udg_TempUnit)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit)
-udg_TempUnitGroup = GetUnitsInRangeOfLocMatching((udg_SolarFlareAOEBase + (udg_SolarFlareAOEIncrementPerLvl * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit())))), udg_TempLoc, Condition(Trig_SolarFlare_Func011002003))
-ForGroupBJ(udg_TempUnitGroup, Trig_SolarFlare_Func012A)
-    DestroyGroup(udg_TempUnitGroup)
-    RemoveLocation(udg_TempLoc)
-end
-
-function InitTrig_SolarFlare()
-gg_trg_SolarFlare = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_SolarFlare, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_SolarFlare, Condition(Trig_SolarFlare_Conditions))
-TriggerAddAction(gg_trg_SolarFlare, Trig_SolarFlare_Actions)
 end
 
 function Trig_Vegeta_Hakai_Cast_Conditions()
@@ -7211,8 +10551,8 @@ UnitRemoveAbilityBJ(FourCC("A11H"), udg_StatMultUnit)
 else
 end
 SetPlayerTechResearchedSwap(FourCC("R00G"), 0, udg_TempPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TempPlayer)
 GroupRemoveUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
 udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
 TriggerExecute(gg_trg_Auto_Transform_Player_Units)
@@ -8234,7 +11574,7 @@ if (Trig_Cell_Juniors_Func010C()) then
 UnitAddAbilityBJ(FourCC("A0CT"), GetSummonedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A0CT"), GetSummonedUnit(), 10)
 else
-UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
+UnitAddAbilityBJ(FourCC("A0CT"), GetSummonedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
 end
 if (Trig_Cell_Juniors_Func011C()) then
@@ -11381,7 +14721,6 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A0O2"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0LS"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0MY"), udg_TempPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A03N"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0PW"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0PR"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0PX"), udg_TempPlayer)
@@ -11462,6 +14801,16 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A131"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A132"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A137"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A138"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A003"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A00D"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A00O"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A00Y"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A012"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A015"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A020"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A021"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A023"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A024"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -21158,6 +24507,20 @@ end
 return true
 end
 
+function Trig_Ainz_Energy_Drain_Func005Func002Func001C()
+if (not (IsUnitInGroup(udg_MoroDrainSourceUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainSourceUnit))]) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Ainz_Energy_Drain_Func005Func002Func002C()
+if (not (IsUnitInGroup(udg_MoroDrainSourceUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainSourceUnit))]) == true)) then
+return false
+end
+return true
+end
+
 function Trig_Ainz_Energy_Drain_Func005Func002C()
 if (not (IsUnitInGroup(udg_MoroDrainTargetUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainTargetUnit))]) == true)) then
 return false
@@ -21178,9 +24541,6 @@ end
 if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
 return false
 end
-if (not (IsUnitInGroup(udg_MoroDrainSourceUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainSourceUnit))]) == true)) then
-return false
-end
 return true
 end
 
@@ -21194,16 +24554,22 @@ else
 end
 if (Trig_Ainz_Energy_Drain_Func005C()) then
 if (Trig_Ainz_Energy_Drain_Func005Func002C()) then
+if (Trig_Ainz_Energy_Drain_Func005Func002Func002C()) then
 udg_StatMultUnit = udg_MoroDrainSourceUnit
 udg_MoroStatMultReal = (1.50 * 0.10)
 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
+else
+end
 udg_StatMultUnit = udg_MoroDrainTargetUnit
 udg_MoroStatMultReal = (-1.00 * (1.50 * 0.10))
 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
 else
+if (Trig_Ainz_Energy_Drain_Func005Func002Func001C()) then
 udg_StatMultUnit = udg_MoroDrainSourceUnit
 udg_MoroStatMultReal = (0.10 * 0.75)
 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
+else
+end
 end
 udg_TempReal = RMinBJ((0.10 * GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_MoroDrainTargetUnit)), GetUnitStateSwap(UNIT_STATE_MANA, udg_MoroDrainTargetUnit))
 udg_TempReal2 = (0.50 * udg_TempReal)
@@ -21557,12 +24923,6 @@ TriggerAddAction(gg_trg_Ainz_Demiurge_Ability_Reset, Trig_Ainz_Demiurge_Ability_
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
-if (GetSpellAbilityId() == FourCC("A00U")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0P0")) then
-return true
-end
 return false
 end
 
@@ -23070,6 +26430,11 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A12Z"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A130"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A131"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A132"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A00A"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01I"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01M"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01O"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01R"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -24162,7 +27527,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Give_PvP_Stats_Func009Func004C()
+function Trig_Kill_Hero_Give_PvP_Stats_Func009Func005C()
 if (not (udg_TempInt2 == GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit())))) then
 return false
 end
@@ -24171,6 +27536,9 @@ end
 
 function Trig_Kill_Hero_Give_PvP_Stats_Func009C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AL"))) then
+return false
+end
+if (not (udg_GlobalStatMultiplier > 0.00)) then
 return false
 end
 return true
@@ -24185,6 +27553,13 @@ end
 
 function Trig_Kill_Hero_Give_PvP_Stats_Func012C()
 if (not (GetPlayerTechCountSimple(FourCC("R00O"), GetOwningPlayer(udg_StatMultUnit)) > 0)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Give_PvP_Stats_Func014C()
+if (not (udg_StatMultReal > 0.00)) then
 return false
 end
 return true
@@ -24212,7 +27587,7 @@ end
 if (Trig_Kill_Hero_Give_PvP_Stats_Func009C()) then
         udg_TempInt = StringHash("jaco|bounty|target")
 udg_TempInt2 = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
-if (Trig_Kill_Hero_Give_PvP_Stats_Func009Func004C()) then
+if (Trig_Kill_Hero_Give_PvP_Stats_Func009Func005C()) then
 udg_StatMultReal = (udg_StatMultReal + udg_JacoBountyBonus)
 DisplayTimedTextToForce(udg_TempPlayerGroup, 10.00, "TRIGSTR_19704")
             udg_TempInt = StringHash("jaco|bounty|refresh")
@@ -24231,14 +27606,17 @@ udg_StatMultReal = (udg_StatMultReal * (1.00 + (0.15 * I2R(GetPlayerTechCountSim
 else
 end
 udg_StatMultReal = (udg_StatMultReal * udg_GlobalStatMultiplier)
+if (Trig_Kill_Hero_Give_PvP_Stats_Func014C()) then
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Add_To_PvP_Stats_Data)
 TriggerExecute(gg_trg_Update_Current_Stats)
 udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
 TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-    RemoveLocation(udg_TempLoc)
-    DestroyForce(udg_TempPlayerGroup)
+        RemoveLocation(udg_TempLoc)
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
 end
 
 function InitTrig_Kill_Hero_Give_PvP_Stats()
@@ -24481,14 +27859,14 @@ end
 return true
 end
 
-function Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func002A()
+function Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func003A()
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Get_Base_Stats)
 udg_TempReal4 = ((udg_TempReal4 + (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))) + 30.00)
 end
 
 function Trig_Get_Saga_Catchup_Multiplier_Func009Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(GetEnumPlayer(), udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -24497,7 +27875,7 @@ end
 function Trig_Get_Saga_Catchup_Multiplier_Func009A()
 if (Trig_Get_Saga_Catchup_Multiplier_Func009Func001C()) then
 udg_TempInt3 = (udg_TempInt3 + 1)
-ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func002A)
+ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Get_Saga_Catchup_Multiplier_Func009Func001Func003A)
 else
 end
 end
@@ -24509,7 +27887,7 @@ udg_TempReal5 = ((udg_TempReal5 + (udg_StatMultStr + (udg_StatMultAgi + udg_Stat
 end
 
 function Trig_Get_Saga_Catchup_Multiplier_Func013Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(GetEnumPlayer(), udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -24961,28 +28339,45 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003Func003C()
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003C()
-if (not (udg_TempReal < 30.00)) then
-return false
-end
-return true
-end
-
 function Trig_Death_Hero_Voiceline_Dying_Func019Func002C()
-if (not (udg_TempReal < 10.00)) then
+if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func019C()
+if (not (udg_TempUnitType == FourCC("H001"))) then
+return false
+end
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func020Func002Func003Func003C()
+if (not (udg_TempReal < 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func020Func002Func003C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func020Func002C()
+if (not (udg_TempReal < 10.00)) then
+return false
+end
+return true
+end
+
+function Trig_Death_Hero_Voiceline_Dying_Func020C()
 if (not (udg_TempUnitType == FourCC("H08W"))) then
 return false
 end
@@ -24992,21 +28387,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func020Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func020Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func021Func002C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func020C()
+function Trig_Death_Hero_Voiceline_Dying_Func021C()
 if (not (udg_TempUnitType == FourCC("H00V"))) then
 return false
 end
@@ -25016,14 +28411,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func021Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func022Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func021C()
+function Trig_Death_Hero_Voiceline_Dying_Func022C()
 if (not (udg_TempUnitType == FourCC("H00R"))) then
 return false
 end
@@ -25036,21 +28431,21 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func023Func002Func001C()
 if (not (udg_TempReal < 100.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func023Func002C()
 if (not (udg_TempReal < 75.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func022C()
+function Trig_Death_Hero_Voiceline_Dying_Func023C()
 if (not (udg_TempUnitType == FourCC("H04Y"))) then
 return false
 end
@@ -25060,14 +28455,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func023Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func024Func002C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func023C()
+function Trig_Death_Hero_Voiceline_Dying_Func024C()
 if (not (udg_TempUnitType == FourCC("H09M"))) then
 return false
 end
@@ -25077,42 +28472,42 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func024Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func025Func002Func001C()
 if (not (udg_TempReal < 66.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func024Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func025Func002C()
 if (not (udg_TempReal < 33.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func024C()
+function Trig_Death_Hero_Voiceline_Dying_Func025C()
 if (not (udg_TempUnitType == FourCC("H07Y"))) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func026Func002Func001C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func026Func002C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func025C()
+function Trig_Death_Hero_Voiceline_Dying_Func026C()
 if (not (udg_TempUnitType == FourCC("H05V"))) then
 return false
 end
@@ -25122,14 +28517,14 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func026Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func027Func002C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func026C()
+function Trig_Death_Hero_Voiceline_Dying_Func027C()
 if (not (udg_TempUnitType == FourCC("H055"))) then
 return false
 end
@@ -25139,11 +28534,11 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func027Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func028Func002C()
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func027C()
+function Trig_Death_Hero_Voiceline_Dying_Func028C()
 if (not (udg_TempUnitType == FourCC("E003"))) then
 return false
 end
@@ -25153,28 +28548,28 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004Func003Func001C()
+function Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004Func003Func001C()
 if (not (udg_TempReal < 70.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004Func003C()
+function Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004Func003C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004C()
+function Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func028Func002C()
+function Trig_Death_Hero_Voiceline_Dying_Func029Func002C()
 if (not (udg_ScoreboardTimeHours == 0)) then
 return false
 end
@@ -25184,7 +28579,7 @@ end
 return true
 end
 
-function Trig_Death_Hero_Voiceline_Dying_Func028C()
+function Trig_Death_Hero_Voiceline_Dying_Func029C()
 if (not (udg_TempUnitType == FourCC("H0AO"))) then
 return false
 end
@@ -25400,14 +28795,23 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func019C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func019Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/Minato/Death.mp3"
+udg_DeathHeroVoicelineDuration = 1300
+else
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func020C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func020Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/NappaPreciousModellingCareer.mp3"
 udg_DeathHeroVoicelineDuration = 7536
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func020Func002Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/NappaFiddlesticks.mp3"
 udg_DeathHeroVoicelineDuration = 3792
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func019Func002Func003Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func020Func002Func003Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/NappaWhatTheWhat.mp3"
 udg_DeathHeroVoicelineDuration = 1392
 else
@@ -25416,13 +28820,13 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func020C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func021C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func020Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func021Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Pecorine/Cry.mp3"
 udg_DeathHeroVoicelineDuration = 1724
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func020Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func021Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Pecorine/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 835
 else
@@ -25430,22 +28834,22 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func021C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func022C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func021Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func022Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/KamiGettingRekt.mp3"
 udg_DeathHeroVoicelineDuration = 3912
 else
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func022C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func023C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func022Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func023Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay1.mp3"
 udg_DeathHeroVoicelineDuration = 2976
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func022Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func023Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Saitama/BargainDay2.mp3"
 udg_DeathHeroVoicelineDuration = 3192
 else
@@ -25453,22 +28857,22 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func023C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func024C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func023Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func024Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Sephiroth/Death.mp3"
 udg_DeathHeroVoicelineDuration = 4414
 else
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func024C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func025C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func024Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func025Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath1.mp3"
 udg_DeathHeroVoicelineDuration = 4230
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func024Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func025Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyDeath2.mp3"
 udg_DeathHeroVoicelineDuration = 3348
 else
@@ -25478,13 +28882,13 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func025C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func026C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func026Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Super17/Scream.mp3"
 udg_DeathHeroVoicelineDuration = 1632
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func025Func002Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func026Func002Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Super17/CurseYou.mp3"
 udg_DeathHeroVoicelineDuration = 3216
 else
@@ -25492,20 +28896,11 @@ end
 end
 else
 end
-if (Trig_Death_Hero_Voiceline_Dying_Func026C()) then
-udg_DeathHeroVoicelineUnit = GetDyingUnit()
-if (Trig_Death_Hero_Voiceline_Dying_Func026Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/Tien/KiKoFuckYourself.mp3"
-udg_DeathHeroVoicelineDuration = 5472
-else
-end
-else
-end
 if (Trig_Death_Hero_Voiceline_Dying_Func027C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func027Func002C()) then
-udg_DeathHeroVoicelinePath = "Audio/Voice/VegetaSwagger.mp3"
-udg_DeathHeroVoicelineDuration = 2351
+udg_DeathHeroVoicelinePath = "Audio/Voice/Tien/KiKoFuckYourself.mp3"
+udg_DeathHeroVoicelineDuration = 5472
 else
 end
 else
@@ -25513,18 +28908,27 @@ end
 if (Trig_Death_Hero_Voiceline_Dying_Func028C()) then
 udg_DeathHeroVoicelineUnit = GetDyingUnit()
 if (Trig_Death_Hero_Voiceline_Dying_Func028Func002C()) then
+udg_DeathHeroVoicelinePath = "Audio/Voice/VegetaSwagger.mp3"
+udg_DeathHeroVoicelineDuration = 2351
+else
+end
+else
+end
+if (Trig_Death_Hero_Voiceline_Dying_Func029C()) then
+udg_DeathHeroVoicelineUnit = GetDyingUnit()
+if (Trig_Death_Hero_Voiceline_Dying_Func029Func002C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 3657
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death1.mp3"
 udg_DeathHeroVoicelineDuration = 3657
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004Func003C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004Func003C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death3.mp3"
 udg_DeathHeroVoicelineDuration = 10080
 else
-if (Trig_Death_Hero_Voiceline_Dying_Func028Func002Func004Func003Func001C()) then
+if (Trig_Death_Hero_Voiceline_Dying_Func029Func002Func004Func003Func001C()) then
 udg_DeathHeroVoicelinePath = "Audio/Voice/Waluigi/Death2.mp3"
 udg_DeathHeroVoicelineDuration = 1933
 else
@@ -26543,14 +29947,62 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func032Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func032Func003Func001Func001C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func032Func003Func001C()
 if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
+function Trig_Kill_Hero_Voiceline_Killing_Func032Func003C()
+if (not (udg_TempReal < 10.00)) then
+return false
+end
+return true
+end
+
 function Trig_Kill_Hero_Voiceline_Killing_Func032C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H005"))) then
+return false
+end
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func033Func003C()
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func033C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H001"))) then
+return false
+end
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func034Func003C()
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func034C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00R"))) then
 return false
 end
@@ -26560,14 +30012,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func033Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func035Func003C()
 if (not (udg_TempReal < 40.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func033C()
+function Trig_Kill_Hero_Voiceline_Killing_Func035C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00V"))) then
 return false
 end
@@ -26577,87 +30029,32 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()
 if (not (GetUnitLifePercent(GetKillingUnitBJ()) >= 80.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func002Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func002C()
 if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func034Func002C()
-if (not (udg_TempReal < 20.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func034C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H04Y"))) then
-return false
-end
-if (not (udg_TempReal < 50.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func035Func002Func003C()
-if (not (udg_TempReal < 30.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func035Func002C()
-if (not (udg_TempReal < 25.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func035C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09M"))) then
-return false
-end
-if (not (udg_TempReal < 30.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001Func001C()
-if (not (udg_TempReal < 20.00)) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()
-if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func036Func002C()
-if (not (udg_TempReal < 5.00)) then
+if (not (udg_TempReal < 20.00)) then
 return false
 end
 return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func036C()
-if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H015"))) then
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H04Y"))) then
 return false
 end
-if (not (udg_TempReal < 20.00)) then
+if (not (udg_TempReal < 50.00)) then
 return false
 end
 return true
@@ -26671,13 +30068,68 @@ return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func037Func002C()
-if (not (udg_TempReal < 5.00)) then
+if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
 function Trig_Kill_Hero_Voiceline_Killing_Func037C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09M"))) then
+return false
+end
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func038Func002Func001Func001C()
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func038Func002Func001C()
+if (not (udg_TempReal < 10.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func038Func002C()
+if (not (udg_TempReal < 5.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func038C()
+if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H015"))) then
+return false
+end
+if (not (udg_TempReal < 20.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func039Func002Func003C()
+if (not (udg_TempReal < 30.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func039Func002C()
+if (not (udg_TempReal < 5.00)) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Hero_Voiceline_Killing_Func039C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H05V"))) then
 return false
 end
@@ -26687,35 +30139,35 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001Func003Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001Func003Func003C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001Func003C()
 if (not (udg_TempReal < 25.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001C()
 if (not (udg_TempReal < 30.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func038Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func040Func001C()
 if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("E003"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func038C()
+function Trig_Kill_Hero_Voiceline_Killing_Func040C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H055"))) then
 return false
 end
@@ -26725,14 +30177,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func039Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func041Func002C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func039C()
+function Trig_Kill_Hero_Voiceline_Killing_Func041C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H09C"))) then
 return false
 end
@@ -26742,14 +30194,14 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func040Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func042Func002Func001C()
 if (not (udg_TempReal < 10.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func040Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func042Func002C()
 if (not (udg_TempReal < 1.00)) then
 return false
 end
@@ -26759,7 +30211,7 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func040C()
+function Trig_Kill_Hero_Voiceline_Killing_Func042C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("E003"))) then
 return false
 end
@@ -26772,63 +30224,63 @@ end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func041Func002Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func043Func002Func001C()
 if (not (udg_TempReal < 66.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func041Func002C()
+function Trig_Kill_Hero_Voiceline_Killing_Func043Func002C()
 if (not (udg_TempReal < 33.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func041C()
+function Trig_Kill_Hero_Voiceline_Killing_Func043C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H07Y"))) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003Func003Func001C()
 if (not (udg_TempReal < 100.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003Func003C()
 if (not (udg_TempReal < 90.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003C()
 if (not (udg_TempReal < 60.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001C()
 if (not (udg_TempReal < 15.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042Func003C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044Func003C()
 if (not (udg_TempReal < 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Kill_Hero_Voiceline_Killing_Func042C()
+function Trig_Kill_Hero_Voiceline_Killing_Func044C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AO"))) then
 return false
 end
@@ -27378,25 +30830,53 @@ end
 if (Trig_Kill_Hero_Voiceline_Killing_Func032C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func032Func003C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/Piccolo/Underestimate.mp3"
-udg_KillHeroVoicelineDuration = 4344
+udg_KillHeroVoicelinePath = "Audio/Voice/MightGuy/Strongest.mp3"
+udg_KillHeroVoicelineDuration = 3600
 else
+if (Trig_Kill_Hero_Voiceline_Killing_Func032Func003Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/MightGuy/Smile.mp3"
+udg_KillHeroVoicelineDuration = 1100
+else
+if (Trig_Kill_Hero_Voiceline_Killing_Func032Func003Func001Func001C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/MightGuy/SunsetOfYouth.mp3"
+udg_KillHeroVoicelineDuration = 2600
+else
+end
+end
 end
 else
 end
 if (Trig_Kill_Hero_Voiceline_Killing_Func033C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 if (Trig_Kill_Hero_Voiceline_Killing_Func033Func003C()) then
-udg_KillHeroVoicelinePath = "Audio/Voice/Pecorine/Kill1.mp3"
-udg_KillHeroVoicelineDuration = 862
+udg_KillHeroVoicelinePath = "Audio/Voice/Minato/Taunt.mp3"
+udg_KillHeroVoicelineDuration = 2800
 else
 end
 else
 end
 if (Trig_Kill_Hero_Voiceline_Killing_Func034C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func002C()) then
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func034Func003C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Piccolo/Underestimate.mp3"
+udg_KillHeroVoicelineDuration = 4344
+else
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func035C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func035Func003C()) then
+udg_KillHeroVoicelinePath = "Audio/Voice/Pecorine/Kill1.mp3"
+udg_KillHeroVoicelineDuration = 862
+else
+end
+else
+end
+if (Trig_Kill_Hero_Voiceline_Killing_Func036C()) then
+udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/YouStupid.mp3"
 udg_KillHeroVoicelineDuration = 936
 else
@@ -27404,7 +30884,7 @@ udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/OK.mp3"
 udg_KillHeroVoicelineDuration = 408
 end
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func034Func002Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Saitama/HeroForFun.mp3"
 udg_KillHeroVoicelineDuration = 2136
 else
@@ -27412,13 +30892,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func035C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func035Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Sephiroth/Kill.mp3"
 udg_KillHeroVoicelineDuration = 1500
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func035Func002Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func037Func002Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Sephiroth/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 1332
 else
@@ -27426,17 +30906,17 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func036C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func038C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func038Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Shalltear/Laugh.mp3"
 udg_KillHeroVoicelineDuration = 2500
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func038Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Shalltear/Laugh2.mp3"
 udg_KillHeroVoicelineDuration = 2500
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func036Func002Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func038Func002Func001Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Shalltear/Subarashi.mp3"
 udg_KillHeroVoicelineDuration = 1500
 else
@@ -27445,13 +30925,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func037C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func039C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func037Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func039Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Super17/SawThrough.mp3"
 udg_KillHeroVoicelineDuration = 2352
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func037Func002Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func039Func002Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Super17/ClothesAreRuined.mp3"
 udg_KillHeroVoicelineDuration = 2928
 else
@@ -27459,19 +30939,19 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func038C()) then
-if (Trig_Kill_Hero_Voiceline_Killing_Func038Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func040C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func040Func001C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/NiceShirt.mp3"
 udg_KillHeroVoicelineDuration = 5376
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/TryAgain.mp3"
 udg_KillHeroVoicelineDuration = 2880
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func038Func001Func001Func003Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func040Func001Func001Func003Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Tien/EscapeThirdEye.mp3"
 udg_KillHeroVoicelineDuration = 4464
 else
@@ -27482,22 +30962,22 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func039C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func041C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func039Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func041Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/ToppoJusticePose.mp3"
 udg_KillHeroVoicelineDuration = 1410
 else
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func040C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func042C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func040Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func042Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/VegetaLookAtThem.mp3"
 udg_KillHeroVoicelineDuration = 3840
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func040Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func042Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/VegetaHype.mp3"
 udg_KillHeroVoicelineDuration = 1384
 else
@@ -27505,13 +30985,13 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func041C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func043C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func041Func002C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func043Func002C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill1.mp3"
 udg_KillHeroVoicelineDuration = 2042
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func041Func002Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func043Func002Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyKill2.mp3"
 udg_KillHeroVoicelineDuration = 4925
 else
@@ -27521,25 +31001,25 @@ end
 end
 else
 end
-if (Trig_Kill_Hero_Voiceline_Killing_Func042C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044C()) then
 udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
-if (Trig_Kill_Hero_Voiceline_Killing_Func042Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill1.mp3"
 udg_KillHeroVoicelineDuration = 10135
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill3.mp3"
 udg_KillHeroVoicelineDuration = 7344
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill4.mp3"
 udg_KillHeroVoicelineDuration = 2142
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003Func003C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003Func003C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Kill2.mp3"
 udg_KillHeroVoicelineDuration = 6552
 else
-if (Trig_Kill_Hero_Voiceline_Killing_Func042Func003Func001Func003Func003Func001C()) then
+if (Trig_Kill_Hero_Voiceline_Killing_Func044Func003Func001Func003Func003Func001C()) then
 udg_KillHeroVoicelinePath = "Audio/Voice/Waluigi/Waluigi.mp3"
 udg_KillHeroVoicelineDuration = 2142
 else
@@ -27824,10 +31304,7 @@ TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
 end
 
 function Trig_Auto_Free_Mode_SP_Func002Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -28736,35 +32213,49 @@ end
 return true
 end
 
+function Trig_Base_Armor_Set_Func033Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Base_Armor_Set_Func033C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A05X"), udg_StatMultUnit) > 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
 end
 
 function Trig_Base_Armor_Set_Func034C()
-if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Base_Armor_Set_Func035Func003C()
-if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05X"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
 end
 
 function Trig_Base_Armor_Set_Func035C()
-if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Base_Armor_Set_Func036Func003C()
+if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
 return false
 end
 return true
 end
 
 function Trig_Base_Armor_Set_Func036C()
+if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Base_Armor_Set_Func037C()
 if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
 return false
 end
@@ -29178,24 +32669,32 @@ udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
 else
 end
 if (Trig_Base_Armor_Set_Func033C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 600.00)
+if (Trig_Base_Armor_Set_Func033Func001C()) then
+udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
+else
+udg_BaseArmorReal = (udg_BaseArmorReal + ((10.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit))) - 10.00))
+end
 else
 end
 if (Trig_Base_Armor_Set_Func034C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 600.00)
 else
 end
 if (Trig_Base_Armor_Set_Func035C()) then
+udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+else
+end
+if (Trig_Base_Armor_Set_Func036C()) then
         old = udg_ID
         udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Base_Armor_Set_Func035Func003C()) then
+if (Trig_Base_Armor_Set_Func036Func003C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
 else
 end
         udg_ID = old
 else
 end
-if (Trig_Base_Armor_Set_Func036C()) then
+if (Trig_Base_Armor_Set_Func037C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal * 0.40)
 else
 end
@@ -29664,11 +33163,11 @@ udg_HintMessages[udg_NumHints] = "Don't give up! Your base stats will always be 
 udg_NumHints = (udg_NumHints + 1)
 udg_HintMessages[udg_NumHints] = "Saga stats are shared! All nearby allies gain 100% of the reward stats. You have nothing to lose by doing sagas together!"
 udg_NumHints = (udg_NumHints + 1)
-udg_HintMessages[udg_NumHints] = "Beam clashes exist! Firing a beam spell at an enemy beam will stop them in their tracks. The longer a clash, the less damage you take!"
+udg_HintMessages[udg_NumHints] = "Firing a beam spell at an enemy beam will cause the beams to clash. The longer the clash, the less damage you take!"
 udg_NumHints = (udg_NumHints + 1)
 udg_HintMessages[udg_NumHints] = "There are multiple food vendors located around the map that sell useful non-combat consumable regen items."
 udg_NumHints = (udg_NumHints + 1)
-udg_HintMessages[udg_NumHints] = "For each 1000 agility you have, you will receive +1 base armor."
+udg_HintMessages[udg_NumHints] = "For each 1000 STR you have, you will receive +1 base armor."
 udg_NumHints = (udg_NumHints + 1)
 udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 34th minute. You will receive warnings at the 32nd minute, so make sure to prepare beforehand."
 udg_NumHints = (udg_NumHints + 1)
@@ -29914,17 +33413,14 @@ gg_trg_Catchup_Settings_Automatic = CreateTrigger()
 TriggerAddAction(gg_trg_Catchup_Settings_Automatic, Trig_Catchup_Settings_Automatic_Actions)
 end
 
-function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A()
+function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func003A()
 udg_StatMultUnit = GetEnumUnit()
 udg_CatchupLevelInteger = (((25 * (10 + (4 * GetHeroLevel(udg_StatMultUnit)))) + 0) // IMaxBJ(1, udg_CatchupNumHeroes))
     AddHeroXP(udg_StatMultUnit, udg_CatchupLevelInteger, true)
 end
 
 function Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -29946,10 +33442,7 @@ TriggerExecute(gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats)
 end
 
 function Trig_Catchup_Timer_Loop_Func002Func001Func004Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -29996,7 +33489,7 @@ if (udg_CatchupInteger > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_CatchupInteger)
 if (Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002C()) then
 udg_CatchupNumHeroes = CountUnitsInGroup(udg_StatMultPlayerUnits[udg_CatchupInteger])
-ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func002A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_CatchupInteger], Trig_Catchup_Timer_Loop_Func002Func001Func001Func002Func002Func003A)
 else
 end
 udg_CatchupInteger = udg_CatchupInteger + 1
@@ -30262,8 +33755,8 @@ TriggerAddCondition(gg_trg_HBTC_Enter, Condition(Trig_HBTC_Enter_Conditions))
 TriggerAddAction(gg_trg_HBTC_Enter, Trig_HBTC_Enter_Actions)
 end
 
-function Trig_Scoreboard_Init_Func005Func002C()
-if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_EMPTY)) then
+function Trig_Scoreboard_Init_Func006Func002C()
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -30274,11 +33767,12 @@ udg_ScoreboardTimeSeconds = 0
 udg_ScoreboardTimeMinutes = 0
 udg_ScoreboardTimeHours = 0
 udg_TempInt2 = 0
+DisplayTextToForce(GetPlayersAll(), ("num conneted" .. I2S(CountPlayersInForceBJ(udg_ConnectedPlayers))))
 udg_TempInt = 1
 while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-if (Trig_Scoreboard_Init_Func005Func002C()) then
+if (Trig_Scoreboard_Init_Func006Func002C()) then
 udg_TempInt2 = (udg_TempInt2 + 1)
 udg_PlayerKills[udg_TempInt] = 0
 udg_PlayerDeaths[udg_TempInt] = 0
@@ -30386,7 +33880,7 @@ return true
 end
 
 function Trig_Scoreboard_Setup_Team_Func001Func002C()
-if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_EMPTY)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -30958,6 +34452,20 @@ end
 return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H005"))) then
+return false
+end
+return true
+end
+
+function Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H001"))) then
+return false
+end
+return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H019"))) then
 return false
@@ -31357,6 +34865,14 @@ else
 if (Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
 udg_TempString = "BTNVegetaMajin.blp"
 else
+if (Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+udg_TempString = "BTNMinato.blp"
+else
+if (Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+udg_TempString = "BTNGuy.blp"
+else
+end
+end
 end
 end
 end
@@ -31432,93 +34948,93 @@ TriggerAddCondition(gg_trg_Scoreboard_Death, Condition(Trig_Scoreboard_Death_Con
 TriggerAddAction(gg_trg_Scoreboard_Death, Trig_Scoreboard_Death_Actions)
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func001Func002C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func008Func001Func002C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0AL"))) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008Func001A()
+function Trig_Scoreboard_Update_Func001Func002Func005Func008Func001A()
 udg_StatMultUnit = GetEnumUnit()
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008Func001Func002C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func008Func001Func002C()) then
 TriggerExecute(gg_trg_Jaco_Bounty_Update)
 else
 end
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func008C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func008C()
 if (not (udg_ScoreboardTimeSeconds == 45)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func005Func002C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func005Func002C()
 if (not (udg_StatMultReal == udg_StatMultAgi)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func005C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func005C()
 if (not (udg_StatMultReal == udg_StatMultStr)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func007C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func007C()
 if (not (udg_StatMultReal > udg_TempReal)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func004C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func004C()
 if (not (udg_ScoreboardTimeSeconds == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func008Func002C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func008Func002C()
 if (not (udg_StatMultReal == udg_StatMultAgi)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func008C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func008C()
 if (not (udg_StatMultReal == udg_StatMultStr)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009Func009C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009Func009C()
 if (not (udg_StatMultReal > udg_TempReal2)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func009A()
+function Trig_Scoreboard_Update_Func001Func002Func005Func009A()
 udg_StatMultUnit = GetEnumUnit()
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func004C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func004C()) then
 TriggerExecute(gg_trg_Get_Base_Stats)
 TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func005C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func005C()) then
 udg_TempInt3 = 0
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func005Func002C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func005Func002C()) then
 udg_TempInt3 = 1
 else
 udg_TempInt3 = 2
 end
 end
 udg_StatMultReal = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func004Func007C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func004Func007C()) then
 udg_TempReal = udg_StatMultReal
 else
 end
@@ -31526,57 +35042,57 @@ else
 end
 TriggerExecute(gg_trg_Get_Stat_Multiplier_with_Modifiers)
 TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func008C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func008C()) then
 udg_TempInt4 = 0
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func008Func002C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func008Func002C()) then
 udg_TempInt4 = 1
 else
 udg_TempInt4 = 2
 end
 end
-if (Trig_Scoreboard_Update_Func001Func002Func004Func009Func009C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func009Func009C()) then
 udg_TempReal2 = udg_StatMultReal
 else
 end
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func012Func001C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func012Func001C()
 if (not (udg_TempInt4 == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func012C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func012C()
 if (not (udg_TempInt4 == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func015Func001Func001C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func015Func001Func001C()
 if (not (udg_TempInt3 == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func015Func001C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func015Func001C()
 if (not (udg_TempInt3 == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004Func015C()
+function Trig_Scoreboard_Update_Func001Func002Func005Func015C()
 if (not (udg_TempReal > 0.10)) then
 return false
 end
 return true
 end
 
-function Trig_Scoreboard_Update_Func001Func002Func004C()
+function Trig_Scoreboard_Update_Func001Func002Func005C()
 if (not (CountUnitsInGroup(udg_StatMultPlayerUnits[udg_ScoreboardInteger]) > 0)) then
 return false
 end
@@ -31584,7 +35100,7 @@ return true
 end
 
 function Trig_Scoreboard_Update_Func001Func002C()
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_LEFT)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_DisconnectedPlayers) == true)) then
 return false
 end
 return true
@@ -31600,32 +35116,32 @@ udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_ScoreboardInteger]
 MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_1964")
 MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, "TRIGSTR_7023")
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005C()) then
 udg_TempReal = 0.00
 udg_TempReal2 = 0.00
 udg_TempInt3 = 0
 udg_TempInt4 = 0
-if (Trig_Scoreboard_Update_Func001Func002Func004Func008C()) then
-ForGroupBJ(udg_StatMultPlayerUnits[udg_ScoreboardInteger], Trig_Scoreboard_Update_Func001Func002Func004Func008Func001A)
+if (Trig_Scoreboard_Update_Func001Func002Func005Func008C()) then
+ForGroupBJ(udg_StatMultPlayerUnits[udg_ScoreboardInteger], Trig_Scoreboard_Update_Func001Func002Func005Func008Func001A)
 else
 end
-ForGroupBJ(udg_StatMultPlayerUnits[udg_ScoreboardInteger], Trig_Scoreboard_Update_Func001Func002Func004Func009A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_ScoreboardInteger], Trig_Scoreboard_Update_Func001Func002Func005Func009A)
 udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_ScoreboardInteger]
-if (Trig_Scoreboard_Update_Func001Func002Func004Func012C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func012C()) then
 udg_TempString2 = "|cffff2020"
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func012Func001C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func012Func001C()) then
 udg_TempString2 = "|cff00ff00"
 else
 udg_TempString2 = "|cff00ffff"
 end
 end
 MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, (udg_TempString2 .. (R2S(udg_TempReal2) .. "x")))
-if (Trig_Scoreboard_Update_Func001Func002Func004Func015C()) then
-if (Trig_Scoreboard_Update_Func001Func002Func004Func015Func001C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func015C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func015Func001C()) then
 udg_TempString = "|cffff2020"
 else
-if (Trig_Scoreboard_Update_Func001Func002Func004Func015Func001Func001C()) then
+if (Trig_Scoreboard_Update_Func001Func002Func005Func015Func001Func001C()) then
 udg_TempString = "|cff00ff00"
 else
 udg_TempString = "|cff00ffff"
@@ -32626,6 +36142,27 @@ TriggerAddCondition(gg_trg_Final_Battle_Tagger, Condition(Trig_Final_Battle_Tagg
 TriggerAddAction(gg_trg_Final_Battle_Tagger, Trig_Final_Battle_Tagger_Actions)
 end
 
+function Trig_Team_System_Init_And_Commands_Func003Func002Func001Func001C()
+if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Team_System_Init_And_Commands_Func003Func002Func001C()
+if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_EMPTY)) then
+return false
+end
+return true
+end
+
+function Trig_Team_System_Init_And_Commands_Func003Func002C()
+if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+return false
+end
+return true
+end
+
 function Trig_Team_System_Init_And_Commands_Actions()
 udg_TempInt = 1
 while (true) do
@@ -32637,6 +36174,23 @@ udg_TempInt = ((udg_MaxNumPlayers // 2) + 1)
 while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
 ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[1])
+udg_TempInt = udg_TempInt + 1
+end
+udg_TempInt = 1
+while (true) do
+if (udg_TempInt > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+if (Trig_Team_System_Init_And_Commands_Func003Func002C()) then
+if (Trig_Team_System_Init_And_Commands_Func003Func002Func001C()) then
+ForceAddPlayerSimple(udg_TempPlayer, udg_ConnectedPlayers)
+else
+if (Trig_Team_System_Init_And_Commands_Func003Func002Func001Func001C()) then
+ForceAddPlayerSimple(udg_TempPlayer, udg_DisconnectedPlayers)
+else
+end
+end
+else
+end
 udg_TempInt = udg_TempInt + 1
 end
 udg_TempInt = 1
@@ -32702,7 +36256,7 @@ gg_trg_Update_Alliances_for_PlayerGroups = CreateTrigger()
 TriggerAddAction(gg_trg_Update_Alliances_for_PlayerGroups, Trig_Update_Alliances_for_PlayerGroups_Actions)
 end
 
-function Trig_Update_Host_Func001C()
+function Trig_Update_Host_Func003C()
 if (not (GetTriggerPlayer() == udg_HostPlayer)) then
 return false
 end
@@ -32713,7 +36267,9 @@ return true
 end
 
 function Trig_Update_Host_Actions()
-if (Trig_Update_Host_Func001C()) then
+ForceRemovePlayerSimple(GetTriggerPlayer(), udg_ConnectedPlayers)
+ForceAddPlayerSimple(GetTriggerPlayer(), udg_DisconnectedPlayers)
+if (Trig_Update_Host_Func003C()) then
 TriggerExecute(gg_trg_Update_Host_Check_Players)
 else
 end
@@ -32879,7 +36435,7 @@ function Trig_Is_Player_New_Host_Func003C()
 if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
 return false
 end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 if (not (udg_HostPlayer ~= udg_TempPlayer)) then
@@ -33595,10 +37151,7 @@ return true
 end
 
 function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func012Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER)) then
+if (not (IsPlayerInForce(GetEnumPlayer(), udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -33612,10 +37165,7 @@ end
 end
 
 function Trig_Move_and_Revive_Hero_To_Dead_Zone_Func014Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER)) then
+if (not (IsPlayerInForce(GetEnumPlayer(), udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -34027,6 +37577,7 @@ udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
 TriggerExecute(gg_trg_Ginyu_Change_Now_Ability_Resets)
 SetPlayerAbilityAvailableBJ(true, FourCC("A00R"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0LX"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L9"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0VN"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0H8"), udg_TempPlayer)
@@ -34038,6 +37589,10 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0L4"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A03N"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0MY"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0LS"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0GO"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A0GK"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0L3"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A0GL"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L6"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TempPlayer)
@@ -37746,13 +41301,23 @@ TriggerAddAction(gg_trg_Text_Tag_Charges_Upade_Loop_New, Trig_Text_Tag_Charges_U
 end
 
 function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func001C()
+if (not (IsUnitAliveBJ(udg_StatMultUnit) == false)) then
+return false
+end
+if (not (udg_TransformationAbility == FourCC("A01R"))) then
+return false
+end
+return true
+end
+
+function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func002C()
 if (not (ModuloReal(udg_TempReal, 1.00) == 0.00)) then
 return false
 end
 return true
 end
 
-function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004Func002C()
+function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005Func002C()
 if (not (udg_TempReal <= 0.00)) then
 return false
 end
@@ -37762,14 +41327,14 @@ end
 return true
 end
 
-function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004Func004C()
+function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005Func004C()
 if (not (udg_TempReal <= -185.00)) then
 return false
 end
 return true
 end
 
-function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004C()
+function Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005C()
 if (not (udg_TransformationAbility == FourCC("A0KR"))) then
 return false
 end
@@ -37792,12 +41357,12 @@ SaveRealBJ(udg_TempReal, 9, udg_ID, udg_StatMultHashtable)
 if (Trig_Temp_Skin_Transformation_Loop_Func002Func006C()) then
 udg_TempInt = LoadIntegerBJ(10, udg_ID, udg_StatMultHashtable)
         udg_TransformationAbility = udg_TempInt
-if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004C()) then
-if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004Func002C()) then
+if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005C()) then
+if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005Func002C()) then
 TriggerExecute(gg_trg_Temp_Skin_Revert)
 else
 end
-if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func004Func004C()) then
+if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func005Func004C()) then
 UnitRemoveAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0MZ"), GetOwningPlayer(udg_StatMultUnit))
 UnitAddAbilityBJ(FourCC("A0MZ"), udg_StatMultUnit)
@@ -37812,6 +41377,10 @@ TriggerExecute(gg_trg_Temp_Skin_Transformation_NonUI_Revert)
 end
 else
 if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func001C()) then
+TriggerExecute(gg_trg_Temp_Skin_Transformation_NonUI_Revert)
+else
+end
+if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func002C()) then
             udg_TransformationAbility = udg_TempInt
 udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
 DisplayTimedTextToForce(udg_TempPlayerGroup, 1.00, (("|cffffcc00Transform" .. ": ") .. I2S(R2I(udg_TempReal))))
@@ -38208,6 +41777,57 @@ end
 return true
 end
 
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func024C()
+if (not (udg_TransformationAbility == FourCC("A009"))) then
+return false
+end
+return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003Func003Func001C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003Func003C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+return false
+end
+return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func013C()
+if (udg_TransformationAbility == FourCC("A01I")) then
+return true
+end
+if (udg_TransformationAbility == FourCC("A01M")) then
+return true
+end
+if (udg_TransformationAbility == FourCC("A01O")) then
+return true
+end
+if (udg_TransformationAbility == FourCC("A01R")) then
+return true
+end
+return false
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func025C()
+if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func013C()) then
+return false
+end
+return true
+end
+
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
 udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
 if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func002C()) then
@@ -38467,6 +42087,36 @@ end
 if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func023C()) then
 UnitRemoveAbilityBJ(FourCC("A0EV"), udg_StatMultUnit)
 SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
+else
+end
+if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func024C()) then
+UnitRemoveAbilityBJ(FourCC("A00A"), udg_StatMultUnit)
+else
+end
+if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func025C()) then
+SetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit, 1)
+SetPlayerAbilityAvailableBJ(true, FourCC("A01I"), udg_TempPlayer)
+if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01M"), udg_TempPlayer)
+if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003Func003C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01O"), udg_TempPlayer)
+else
+if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func025Func003Func003Func001C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01R"), udg_TempPlayer)
+else
+end
+end
+else
+end
+SetPlayerAbilityAvailableBJ(true, FourCC("A00O"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A00Y"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A012"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A015"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A020"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A021"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A023"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A024"), udg_TempPlayer)
+SaveRealBJ(0.00, 12, udg_ID, udg_StatMultHashtable)
 else
 end
 SaveRealBJ(0.00, 9, udg_ID, udg_StatMultHashtable)
@@ -39312,7 +42962,7 @@ end
 return true
 end
 
-function Trig_Goku_UI_Func011C()
+function Trig_Goku_UI_Func010C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
 return false
 end
@@ -39338,7 +42988,7 @@ end
     udg_ID = GetHandleId(udg_StatMultUnit)
 SaveIntegerBJ(1, 30, udg_ID, udg_StatMultHashtable)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), GetOwningPlayer(udg_StatMultUnit))
-if (Trig_Goku_UI_Func011C()) then
+if (Trig_Goku_UI_Func010C()) then
         udg_TransformationID = FourCC('O013')
 else
         udg_TransformationID = FourCC('H08G')
@@ -40761,6 +44411,285 @@ TriggerAddCondition(gg_trg_Ainz_Greater_Full_Potential, Condition(Trig_Ainz_Grea
 TriggerAddAction(gg_trg_Ainz_Greater_Full_Potential, Trig_Ainz_Greater_Full_Potential_Actions)
 end
 
+function Trig_Minato_Kurama_Mode_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A009"))) then
+return false
+end
+return true
+end
+
+function Trig_Minato_Kurama_Mode_Func005C()
+if (not (udg_TempBool == true)) then
+return false
+end
+return true
+end
+
+function Trig_Minato_Kurama_Mode_Actions()
+udg_StatMultUnit = GetSpellAbilityUnit()
+udg_TempReal = 20.00
+    udg_TempInt = GetSpellAbilityId()
+TriggerExecute(gg_trg_Temp_Skin_Change_Init)
+if (Trig_Minato_Kurama_Mode_Func005C()) then
+UnitAddAbilityBJ(FourCC("A00A"), udg_StatMultUnit)
+TriggerExecute(gg_trg_Get_Stat_Multiplier)
+udg_TempReal4 = 0.10
+udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
+udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
+udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
+udg_StatMultInt = (udg_StatMultInt + udg_TempReal4)
+udg_TransformationSFXString = "AuraSS.mdx"
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+end
+    udg_TransformationID = FourCC('H003')
+TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+end
+
+function InitTrig_Minato_Kurama_Mode()
+gg_trg_Minato_Kurama_Mode = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Minato_Kurama_Mode, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+TriggerAddCondition(gg_trg_Minato_Kurama_Mode, Condition(Trig_Minato_Kurama_Mode_Conditions))
+TriggerAddAction(gg_trg_Minato_Kurama_Mode, Trig_Minato_Kurama_Mode_Actions)
+end
+
+function Trig_Might_Guy_Eight_Gates_Func001C()
+if (GetSpellAbilityId() == FourCC("A01I")) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A01M")) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A01O")) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A01R")) then
+return true
+end
+return false
+end
+
+function Trig_Might_Guy_Eight_Gates_Conditions()
+if (not Trig_Might_Guy_Eight_Gates_Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func008Func002Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01R"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func008Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01O"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func008C()
+if (not (GetSpellAbilityId() == FourCC("A01M"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func011C()
+if (not (udg_TempReal4 > 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func009Func001Func002Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01R"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func009Func001Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01O"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func009Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01M"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func009C()
+if (not (GetSpellAbilityId() == FourCC("A01I"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func010Func002Func006Func006C()
+if (not (udg_TempInt >= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func010Func002Func006C()
+if (not (udg_TempInt >= 3)) then
+return false
+end
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H005"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func010Func002C()
+if (not (udg_TempInt >= 2)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012Func010C()
+if (not (udg_TempInt >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func012C()
+if (not (udg_TempBool == true)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func013Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01R"))) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Func013C()
+if (not (udg_TempReal4 >= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Might_Guy_Eight_Gates_Actions()
+udg_StatMultUnit = GetSpellAbilityUnit()
+udg_TempReal = 30.00
+    udg_TempInt = GetSpellAbilityId()
+TriggerExecute(gg_trg_Temp_Skin_Change_Init)
+udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
+udg_TempReal4 = 0.05
+if (Trig_Might_Guy_Eight_Gates_Func008C()) then
+udg_TempReal4 = 0.10
+else
+if (Trig_Might_Guy_Eight_Gates_Func008Func002C()) then
+udg_TempReal4 = 0.15
+else
+if (Trig_Might_Guy_Eight_Gates_Func008Func002Func002C()) then
+udg_TempReal4 = 0.20
+else
+end
+end
+end
+udg_StatMultReal = LoadRealBJ(12, udg_ID, udg_StatMultHashtable)
+udg_TempReal4 = (udg_TempReal4 - udg_StatMultReal)
+if (Trig_Might_Guy_Eight_Gates_Func011C()) then
+udg_TempBool = true
+else
+end
+if (Trig_Might_Guy_Eight_Gates_Func012C()) then
+TriggerExecute(gg_trg_Get_Stat_Multiplier)
+SaveRealBJ(udg_TempReal4, 12, udg_ID, udg_StatMultHashtable)
+udg_StatMultReal = (udg_StatMultInt + udg_TempReal4)
+udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
+udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
+udg_StatMultInt = (udg_StatMultInt + udg_TempReal4)
+udg_TempInt = 0
+if (Trig_Might_Guy_Eight_Gates_Func012Func009C()) then
+udg_TempInt = 1
+udg_TransformationSFXString = "AuraYellow.mdx"
+else
+if (Trig_Might_Guy_Eight_Gates_Func012Func009Func001C()) then
+udg_TempInt = 2
+udg_TransformationSFXString = "AuraDarkGreen.mdx"
+else
+if (Trig_Might_Guy_Eight_Gates_Func012Func009Func001Func002C()) then
+udg_TempInt = 3
+udg_TransformationSFXString = "AuraLightBlue.mdx"
+else
+if (Trig_Might_Guy_Eight_Gates_Func012Func009Func001Func002Func002C()) then
+udg_TempInt = 4
+udg_TransformationSFXString = "AuraKaox10.mdx"
+else
+end
+end
+end
+end
+if (Trig_Might_Guy_Eight_Gates_Func012Func010C()) then
+SetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit, (udg_TempInt + 1))
+if (Trig_Might_Guy_Eight_Gates_Func012Func010Func002C()) then
+UnitAddAbilityBJ(FourCC("A020"), udg_StatMultUnit)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01I"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A00O"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A020"), udg_TempPlayer)
+SetUnitAbilityLevelSwapped(FourCC("A020"), udg_StatMultUnit, 10)
+if (Trig_Might_Guy_Eight_Gates_Func012Func010Func002Func006C()) then
+UnitAddAbilityBJ(FourCC("A021"), udg_StatMultUnit)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01M"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A00Y"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A021"), udg_TempPlayer)
+SetUnitAbilityLevelSwapped(FourCC("A021"), udg_StatMultUnit, 10)
+if (Trig_Might_Guy_Eight_Gates_Func012Func010Func002Func006Func006C()) then
+UnitAddAbilityBJ(FourCC("A023"), udg_StatMultUnit)
+UnitAddAbilityBJ(FourCC("A024"), udg_StatMultUnit)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01O"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A012"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A015"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A023"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A024"), udg_TempPlayer)
+SetUnitAbilityLevelSwapped(FourCC("A023"), udg_StatMultUnit, 10)
+SetUnitAbilityLevelSwapped(FourCC("A024"), udg_StatMultUnit, 10)
+else
+end
+else
+end
+else
+end
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+end
+if (Trig_Might_Guy_Eight_Gates_Func013C()) then
+if (Trig_Might_Guy_Eight_Gates_Func013Func002C()) then
+            udg_TransformationID = FourCC('H00O')
+else
+            udg_TransformationID = FourCC('H005')
+end
+TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+else
+end
+end
+
+function InitTrig_Might_Guy_Eight_Gates()
+gg_trg_Might_Guy_Eight_Gates = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Might_Guy_Eight_Gates, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+TriggerAddCondition(gg_trg_Might_Guy_Eight_Gates, Condition(Trig_Might_Guy_Eight_Gates_Conditions))
+TriggerAddAction(gg_trg_Might_Guy_Eight_Gates, Trig_Might_Guy_Eight_Gates_Actions)
+end
+
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func004C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04I")) == true)) then
 return false
@@ -40810,7 +44739,14 @@ end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func011Func001C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()
+if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I008")) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func012Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) ~= FourCC("H062"))) then
 return false
 end
@@ -40829,35 +44765,35 @@ end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04K")) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04L")) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func013Func003C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func014Func004C()
 if (not (GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true) < 20000)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I009")) == true)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func015C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04N")) == true)) then
 return false
 end
@@ -40867,14 +44803,14 @@ end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func015Func001Func001C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func016Func001Func001C()
 if (not (GetItemTypeId(UnitItemInSlotBJ(udg_StatMultUnit, udg_TransformationItemInt)) == FourCC("I04M"))) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func015C()
+function Trig_Transformations_Item_Stat_Mult_Boosts_Func016C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04M")) == true)) then
 return false
 end
@@ -40907,6 +44843,7 @@ udg_StatMultInt = (udg_StatMultInt - 0.10)
 else
 end
 if (Trig_Transformations_Item_Stat_Mult_Boosts_Func008C()) then
+udg_StatMultAgi = (udg_StatMultAgi - 0.10)
 udg_StatMultInt = (udg_StatMultInt + 0.10)
 else
 end
@@ -40920,37 +44857,42 @@ udg_StatMultInt = (udg_StatMultInt - 0.10)
 else
 end
 if (Trig_Transformations_Item_Stat_Mult_Boosts_Func011C()) then
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func011Func001C()) then
-udg_StatMultStr = (udg_StatMultStr - 0.10)
+udg_StatMultAgi = (udg_StatMultAgi - 0.10)
 else
+end
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012Func001C()) then
+else
+udg_StatMultStr = (udg_StatMultStr + 0.05)
 end
 udg_StatMultAgi = (udg_StatMultAgi + 0.15)
 else
 end
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func012C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()) then
 udg_StatMultInt = (udg_StatMultInt + 0.10)
 else
 end
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()) then
+udg_StatMultStr = (udg_StatMultStr - 0.10)
 udg_StatMultAgi = (udg_StatMultAgi - 0.10)
 udg_StatMultInt = (udg_StatMultInt + 0.05)
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func013Func003C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func014Func004C()) then
 udg_StatMultInt = (udg_StatMultInt + 0.05)
 else
 end
 else
 end
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func014C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func015C()) then
 udg_StatMultStr = (udg_StatMultStr - 0.20)
 udg_StatMultAgi = (udg_StatMultAgi - 0.20)
 udg_StatMultInt = (udg_StatMultInt - 0.20)
 else
 end
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func015C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func016C()) then
 udg_TransformationItemInt = 1
 while (true) do
 if (udg_TransformationItemInt > 6) then break end
-if (Trig_Transformations_Item_Stat_Mult_Boosts_Func015Func001Func001C()) then
+if (Trig_Transformations_Item_Stat_Mult_Boosts_Func016Func001Func001C()) then
 udg_StatMultStr = (udg_StatMultStr - 0.10)
 udg_StatMultAgi = (udg_StatMultAgi - 0.10)
 udg_StatMultInt = (udg_StatMultInt - 0.10)
@@ -42084,6 +46026,20 @@ end
 return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H005"))) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H001"))) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H019"))) then
 return false
@@ -42469,6 +46425,14 @@ else
 if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001C()) then
 TriggerExecute(gg_trg_Transformations_Majin_Vegeta)
 else
+if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Minato)
+else
+if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Might_Guy)
+else
+end
+end
 end
 end
 end
@@ -42859,13 +46823,7 @@ TriggerAddAction(gg_trg_Copy_Stat_Mult_Hashtable_To_New_Unit, Trig_Copy_Stat_Mul
 end
 
 function Trig_Transformations_Fix_Skin_Actions()
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TransformationPlayer = ConvertedPlayer(udg_TempInt)
-TriggerExecute(gg_trg_Auto_Transform_Player_Units)
-udg_TempInt = udg_TempInt + 1
-end
+TriggerExecute(gg_trg_Auto_Transform)
 end
 
 function InitTrig_Transformations_Fix_Skin()
@@ -43028,21 +46986,7 @@ end
 return false
 end
 
-function Trig_Transformations_Goku_Func023Func002Func012C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Goku_Func023Func002Func013C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0P0"), udg_StatMultUnit) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Goku_Func023Func002Func014Func002C()
+function Trig_Transformations_Goku_Func023Func002Func012Func002C()
 if (not (udg_TransformationString == "ui")) then
 return false
 end
@@ -43055,8 +46999,22 @@ end
 return true
 end
 
-function Trig_Transformations_Goku_Func023Func002Func014C()
+function Trig_Transformations_Goku_Func023Func002Func012C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Goku_Func023Func002Func013C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0P0"), udg_StatMultUnit) > 0)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Goku_Func023Func002Func014C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
@@ -43165,7 +47123,6 @@ if (Trig_Transformations_Goku_Func020Func003C()) then
 UnitAddAbilityBJ(FourCC("A0P0"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0P0"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0P0'))
-UnitRemoveAbilityBJ(FourCC("A00U"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A00U"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0P0"), udg_TransformationPlayer)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -43197,26 +47154,22 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
 if (Trig_Transformations_Goku_Func023Func002Func012C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A00R"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(false, FourCC("A0L9"), udg_TransformationPlayer)
-else
-SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
-end
-if (Trig_Transformations_Goku_Func023Func002Func013C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A00U"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(false, FourCC("A0P0"), udg_TransformationPlayer)
-else
-SetPlayerAbilityAvailableBJ(false, FourCC("A00U"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A0P0"), udg_TransformationPlayer)
-end
-if (Trig_Transformations_Goku_Func023Func002Func014C()) then
-if (Trig_Transformations_Goku_Func023Func002Func014Func002C()) then
+if (Trig_Transformations_Goku_Func023Func002Func012Func002C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
 UnitAddAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
                     UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0KR'))
 else
 end
+else
+end
+if (Trig_Transformations_Goku_Func023Func002Func013C()) then
+SetPlayerAbilityAvailableBJ(false, FourCC("A00U"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0P0"), udg_TransformationPlayer)
+else
+end
+if (Trig_Transformations_Goku_Func023Func002Func014C()) then
+SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
 else
 end
 else
@@ -43419,14 +47372,7 @@ end
 return false
 end
 
-function Trig_Transformations_Vegeta_Func021Func002Func012C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Vegeta_Func021Func002Func013Func001Func007C()
+function Trig_Transformations_Vegeta_Func021Func002Func012Func001Func006C()
 if (udg_TransformationString == "ssbe") then
 return true
 end
@@ -43439,28 +47385,28 @@ end
 return false
 end
 
-function Trig_Transformations_Vegeta_Func021Func002Func013Func001C()
-if (not Trig_Transformations_Vegeta_Func021Func002Func013Func001Func007C()) then
+function Trig_Transformations_Vegeta_Func021Func002Func012Func001C()
+if (not Trig_Transformations_Vegeta_Func021Func002Func012Func001Func006C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Vegeta_Func021Func002Func013C()
+function Trig_Transformations_Vegeta_Func021Func002Func012C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Vegeta_Func021Func002Func014Func004C()
+function Trig_Transformations_Vegeta_Func021Func002Func013Func004C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0GI"), udg_StatMultUnit) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Vegeta_Func021Func002Func014C()
+function Trig_Transformations_Vegeta_Func021Func002Func013C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
 return false
 end
@@ -43575,30 +47521,23 @@ SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_Transformation
             udg_TransformationID = FourCC('E003')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 if (Trig_Transformations_Vegeta_Func021Func002Func012C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A01B"), udg_TransformationPlayer)
-else
-SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
-end
-if (Trig_Transformations_Vegeta_Func021Func002Func013C()) then
-if (Trig_Transformations_Vegeta_Func021Func002Func013Func001C()) then
+if (Trig_Transformations_Vegeta_Func021Func002Func012Func001C()) then
 UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 10)
                     UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L4'))
-UnitRemoveAbilityBJ(FourCC("A01B"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L4"), udg_TransformationPlayer)
 else
 end
 else
 end
-if (Trig_Transformations_Vegeta_Func021Func002Func014C()) then
+if (Trig_Transformations_Vegeta_Func021Func002Func013C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A0MY"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0LS"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A03N"), udg_TransformationPlayer)
-if (Trig_Transformations_Vegeta_Func021Func002Func014Func004C()) then
+if (Trig_Transformations_Vegeta_Func021Func002Func013Func004C()) then
 UnitRemoveAbilityBJ(FourCC("A035"), udg_StatMultUnit)
 UnitRemoveAbilityBJ(FourCC("A0LS"), udg_StatMultUnit)
-UnitRemoveAbilityBJ(FourCC("A03N"), udg_StatMultUnit)
 UnitAddAbilityBJ(FourCC("A0GI"), udg_StatMultUnit)
                     UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0GI'))
 UnitAddAbilityBJ(FourCC("A0GM"), udg_StatMultUnit)
@@ -43783,27 +47722,20 @@ return false
 end
 
 function Trig_Transformations_Gohan_Func022Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit) == 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0TU"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func006C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0TU"), udg_StatMultUnit) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Gohan_Func022Func002Func008Func001C()
+function Trig_Transformations_Gohan_Func022Func002Func007Func001C()
 if (not (udg_TransformationString == "saiyaman")) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func008Func002Func001C()
+function Trig_Transformations_Gohan_Func022Func002Func007Func002Func001C()
 if (udg_TransformationString == "ult") then
 return true
 end
@@ -43816,35 +47748,35 @@ end
 return false
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func008Func002C()
-if (not Trig_Transformations_Gohan_Func022Func002Func008Func002Func001C()) then
+function Trig_Transformations_Gohan_Func022Func002Func007Func002C()
+if (not Trig_Transformations_Gohan_Func022Func002Func007Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func008C()
+function Trig_Transformations_Gohan_Func022Func002Func007C()
 if (not (GetHeroLevel(udg_StatMultUnit) < 110)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func010Func002Func002C()
+function Trig_Transformations_Gohan_Func022Func002Func009Func002Func002C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func010Func002C()
+function Trig_Transformations_Gohan_Func022Func002Func009Func002C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func010C()
+function Trig_Transformations_Gohan_Func022Func002Func009C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 3)) then
 return false
 end
@@ -43947,7 +47879,7 @@ end
 if (Trig_Transformations_Gohan_Func019C()) then
 if (Trig_Transformations_Gohan_Func019Func001C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
 UnitRemoveAbilityBJ(FourCC("A00R"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
@@ -43961,7 +47893,6 @@ if (Trig_Transformations_Gohan_Func019Func003C()) then
 UnitAddAbilityBJ(FourCC("A0TU"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0TU"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0TU'))
-UnitRemoveAbilityBJ(FourCC("A0H8"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0H8"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0TU"), udg_TransformationPlayer)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -43986,50 +47917,41 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
 if (Trig_Transformations_Gohan_Func022Func002Func005C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A00R"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(false, FourCC("A0L9"), udg_TransformationPlayer)
-else
-SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
-end
-if (Trig_Transformations_Gohan_Func022Func002Func006C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A0H8"), udg_TransformationPlayer)
-SetPlayerAbilityAvailableBJ(false, FourCC("A0TU"), udg_TransformationPlayer)
-else
-SetPlayerAbilityAvailableBJ(false, FourCC("A0H8"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0TU"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A0H8"), udg_TransformationPlayer)
+else
 end
-if (Trig_Transformations_Gohan_Func022Func002Func008C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func007C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                 udg_TransformationID = FourCC('H00K')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func008Func001C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func007Func001C()) then
                     udg_TransformationID = FourCC('H08L')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 end
-if (Trig_Transformations_Gohan_Func022Func002Func008Func002C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func007Func002C()) then
                     udg_TransformationID = FourCC('H086')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 end
 end
             udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Gohan_Func022Func002Func010C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func009C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func010Func002C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func009Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func010Func002Func002C()) then
+if (Trig_Transformations_Gohan_Func022Func002Func009Func002Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
@@ -44681,7 +48603,7 @@ return false
 end
 
 function Trig_Transformations_Future_Trunks_Func017Func002Func008C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0NL"), udg_StatMultUnit) == 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0NL"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
@@ -44785,17 +48707,16 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
 if (Trig_Transformations_Future_Trunks_Func017Func002Func008C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A02L"), udg_TransformationPlayer)
-else
+SetPlayerAbilityAvailableBJ(true, FourCC("A0NL"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A02L"), udg_TransformationPlayer)
+else
 end
 if (Trig_Transformations_Future_Trunks_Func017Func002Func009C()) then
 UnitAddAbilityBJ(FourCC("A0NL"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0NL"), udg_StatMultUnit, 10)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0NL'))
-UnitRemoveAbilityBJ(FourCC("A02L"), udg_StatMultUnit)
-SetPlayerAbilityAvailableBJ(false, FourCC("A02L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0NL"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A02L"), udg_TransformationPlayer)
 else
 end
 else
@@ -45409,6 +49330,13 @@ end
 return false
 end
 
+function Trig_Transformations_Pan_Func020Func002Func010C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0VN"), udg_StatMultUnit) > 0)) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Pan_Func020Func002C()
 if (not Trig_Transformations_Pan_Func020Func002Func001C()) then
 return false
@@ -45484,7 +49412,7 @@ end
 if (Trig_Transformations_Pan_Func018C()) then
 UnitAddAbilityBJ(FourCC("A0VN"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0VN"), udg_StatMultUnit, 10)
-        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
+        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0VN'))
 UnitRemoveAbilityBJ(FourCC("A0LX"), udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0LX"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0VN"), udg_TransformationPlayer)
@@ -45504,6 +49432,11 @@ SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationP
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H08P')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+if (Trig_Transformations_Pan_Func020Func002Func010C()) then
+SetPlayerAbilityAvailableBJ(false, FourCC("A0LX"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0VN"), udg_TransformationPlayer)
+else
+end
 else
 end
 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -48195,7 +52128,21 @@ end
 return true
 end
 
+function Trig_Kid_Buu_Bonus_Ability_Func002Func074C()
+if (not (udg_TempUnitType == FourCC("H001"))) then
+return false
+end
+return true
+end
+
 function Trig_Kid_Buu_Bonus_Ability_Func002Func075C()
+if (not (udg_TempUnitType == FourCC("H005"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func077C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -48248,7 +52195,7 @@ UnitAddAbilityBJ(FourCC("A0KT"), udg_TransformationResultUnit)
                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KT'))
 else
 UnitAddAbilityBJ(FourCC("A02L"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A02L"), udg_TransformationResultUnit, 7)
+SetUnitAbilityLevelSwapped(FourCC("A02L"), udg_TransformationResultUnit, 10)
                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A02L'))
 end
 else
@@ -48259,6 +52206,7 @@ UnitAddAbilityBJ(FourCC("A06F"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A06F"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06F'))
 SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TransformationPlayer)
 UnitAddAbilityBJ(FourCC("A04Y"), udg_TransformationResultUnit)
 UnitAddAbilityBJ(FourCC("A03S"), udg_TransformationResultUnit)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A03S'))
@@ -48313,7 +52261,7 @@ end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func021C()) then
 udg_TempBool = true
 UnitAddAbilityBJ(FourCC("A06C"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A06C"), udg_TransformationResultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A06C"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06C'))
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func021Func006C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A00H"), udg_TransformationPlayer)
@@ -48540,7 +52488,7 @@ end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func046C()) then
 udg_TempBool = true
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
 UnitAddAbilityBJ(FourCC("A0U0"), udg_TransformationResultUnit)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0U0'))
@@ -48792,7 +52740,27 @@ SetUnitAbilityLevelSwapped(FourCC("A13C"), udg_TransformationResultUnit, 10)
 UnitAddAbilityBJ(FourCC("A13G"), udg_TransformationResultUnit)
 else
 end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func074C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A000"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A000"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A000'))
+UnitAddAbilityBJ(FourCC("A009"), udg_TransformationResultUnit)
+else
+end
 if (Trig_Kid_Buu_Bonus_Ability_Func002Func075C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A00O"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A00O"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A00O'))
+UnitAddAbilityBJ(FourCC("A017"), udg_TransformationResultUnit)
+SetPlayerAbilityAvailableBJ(true, FourCC("A01I"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A01M"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A01O"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A01R"), udg_TransformationPlayer)
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func077C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -48801,7 +52769,7 @@ else
 end
 else
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
-SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
+SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
 end
@@ -49894,6 +53862,13 @@ end
 return false
 end
 
+function Trig_Transformations_Cell_Perfect_Func019Func001Func006C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit) > 0)) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Cell_Perfect_Func019Func001C()
 if (not Trig_Transformations_Cell_Perfect_Func019Func001Func003C()) then
 return false
@@ -49986,6 +53961,11 @@ SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationP
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H00G')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+if (Trig_Transformations_Cell_Perfect_Func019Func001Func006C()) then
+SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
+else
+end
 else
 end
 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -51058,7 +55038,7 @@ end
 return true
 end
 
-function Trig_Transformations_Raditz_Func020Func002Func001C()
+function Trig_Transformations_Raditz_Func019Func002Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -51068,14 +55048,14 @@ end
 return false
 end
 
-function Trig_Transformations_Raditz_Func020Func002C()
-if (not Trig_Transformations_Raditz_Func020Func002Func001C()) then
+function Trig_Transformations_Raditz_Func019Func002C()
+if (not Trig_Transformations_Raditz_Func019Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Raditz_Func020C()
+function Trig_Transformations_Raditz_Func019C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -51141,8 +55121,8 @@ udg_TransformationAbility = FourCC("A0NJ")
 udg_TransformationSFXString = "AuraBlue.mdx"
 else
 end
-if (Trig_Transformations_Raditz_Func020C()) then
-if (Trig_Transformations_Raditz_Func020Func002C()) then
+if (Trig_Transformations_Raditz_Func019C()) then
+if (Trig_Transformations_Raditz_Func019Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A0NG"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0NH"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0NJ"), udg_TransformationPlayer)
@@ -52644,21 +56624,21 @@ gg_trg_Transformations_Eis_Shenron = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Eis_Shenron, Trig_Transformations_Eis_Shenron_Actions)
 end
 
-function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func005C()
+function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func006C()
 if (not (udg_MultDBallHeldCount > udg_MultDBallHistoryCounter)) then
 return false
 end
 return true
 end
 
-function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func010C()
+function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func011C()
 if (not (udg_MultDBallWishCount > 0)) then
 return false
 end
 return true
 end
 
-function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func011C()
+function Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func012C()
 if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I02V")) == true)) then
 return false
 end
@@ -52678,19 +56658,21 @@ if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001C()) then
         udg_TempInt = StringHash("shadow_dragon|db|history")
 udg_MultDBallHistoryCounter = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
 udg_MultDBallHeldCount = GetItemCharges(GetItemOfTypeFromUnitBJ(udg_StatMultUnit, FourCC("I01V")))
-if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func005C()) then
+udg_MultDBallHeldCount = IMinBJ(7, udg_MultDBallHeldCount)
+if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func006C()) then
 SaveIntegerBJ(udg_MultDBallHeldCount, udg_TempInt, udg_ID, udg_SummonsHashtable)
+udg_MultDBallHistoryCounter = udg_MultDBallHeldCount
 else
 end
 udg_StatMultReal = (udg_StatMultReal + (0.01 * I2R(udg_MultDBallHeldCount)))
 udg_StatMultReal = (udg_StatMultReal + (0.01 * I2R(udg_MultDBallHistoryCounter)))
         udg_TempInt = StringHash("shadow_dragon|db|wish")
 udg_MultDBallWishCount = LoadIntegerBJ(udg_TempInt, udg_ID, udg_SummonsHashtable)
-if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func010C()) then
+if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func011C()) then
 udg_StatMultReal = (udg_StatMultReal + 0.10)
 else
 end
-if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func011C()) then
+if (Trig_Shadow_Dragon_DB_Stat_Mult_Bonus_Func001Func012C()) then
 udg_StatMultReal = (udg_StatMultReal + 0.05)
 else
 end
@@ -61844,6 +65826,16 @@ end
 return true
 end
 
+function Trig_Skurvy_Item_Mutli_Func003C()
+if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04Y"))) then
+return false
+end
+if (not (UnitHasItem(GetTriggerUnit(), GetManipulatedItem()) == true)) then
+return false
+end
+return true
+end
+
 function Trig_Skurvy_Item_Mutli_Func004Func002Func001C()
 if (not (GetItemTypeId(udg_TempItem) == FourCC("I04Y"))) then
 return false
@@ -61885,6 +65877,13 @@ end
 function Trig_Skurvy_Item_Mutli_Actions()
 udg_TempReal = 0.00
 udg_TempUnit = GetTriggerUnit()
+if (Trig_Skurvy_Item_Mutli_Func003C()) then
+udg_KillHeroVoicelineUnit = udg_TempUnit
+udg_KillHeroVoicelinePath = "Audio/Voice/Skurvy/SkurvyCoconutAcquire.mp3"
+udg_KillHeroVoicelineDuration = 5929
+SetPlayerAbilityAvailableBJ(true, FourCC("A0ZA"), GetTriggerPlayer())
+else
+end
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 6
 while (true) do
@@ -62457,13 +66456,6 @@ end
 return true
 end
 
-function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func005C()
-if (not (udg_TempBool == true)) then
-return false
-end
-return true
-end
-
 function Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001C()
 if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H0AA"))) then
 return false
@@ -62513,9 +66505,6 @@ end
 else
 end
 udg_TempInt4 = udg_TempInt4 + 1
-end
-if (Trig_Sonic_Chaos_Emerald_Kill_Hook_Func001Func005C()) then
-else
 end
 else
 end
@@ -63169,7 +67158,7 @@ TriggerAddAction(gg_trg_Transformations_Jaco, Trig_Transformations_Jaco_Actions)
 end
 
 function Trig_Jaco_Bounty_Update_Func006Func003C()
-if (not (GetPlayerSlotState(ConvertedPlayer(udg_TempInt2)) == PLAYER_SLOT_STATE_LEFT)) then
+if (not (IsPlayerInForce(ConvertedPlayer(udg_TempInt2), udg_ConnectedPlayers) == false)) then
 return false
 end
 return true
@@ -63216,7 +67205,7 @@ end
 if (not (IsPlayerEnemy(GetEnumPlayer(), udg_TempPlayer) == true)) then
 return false
 end
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(GetEnumPlayer(), udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -64110,6 +68099,16 @@ end
 return true
 end
 
+function Trig_Transformations_Megumin_Func020C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05Y"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Megumin_Func021C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A04A"), udg_StatMultUnit) == 0)) then
 return false
@@ -64217,6 +68216,14 @@ UnitAddAbilityBJ(FourCC("A048"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A048'))
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7974")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Megumin_Func020C()) then
+UnitAddAbilityBJ(FourCC("A05Y"), udg_StatMultUnit)
+        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A05Y'))
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_429")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
@@ -65950,6 +69957,388 @@ gg_trg_Transformations_Majin_Vegeta = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Majin_Vegeta, Trig_Transformations_Majin_Vegeta_Actions)
 end
 
+function Trig_Transformations_Minato_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func012C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func013C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func014C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func015C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func016C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func017C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A009"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func019Func002Func004C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Minato_Func019Func002C()
+if (not Trig_Transformations_Minato_Func019Func002Func004C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Func019C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Minato_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Minato_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_23560")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Minato_Func011C()) then
+udg_StatMultReal = 1.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func012C()) then
+udg_StatMultReal = 1.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func013C()) then
+udg_StatMultReal = 1.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func014C()) then
+udg_StatMultReal = 2.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func015C()) then
+udg_StatMultReal = 2.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func016C()) then
+udg_StatMultReal = 2.40
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Minato_Func017C()) then
+UnitAddAbilityBJ(FourCC("A009"), udg_StatMultUnit)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_23561")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Minato_Func019C()) then
+if (Trig_Transformations_Minato_Func019Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H001')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Minato()
+gg_trg_Transformations_Minato = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Minato, Trig_Transformations_Minato_Actions)
+end
+
+function Trig_Transformations_Might_Guy_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func012C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func013C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func014C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func015C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func016C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func017C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func018Func003Func002Func002C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func018Func003Func002C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func018Func003C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func018C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func020Func002Func004C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Might_Guy_Func020Func002C()
+if (not Trig_Transformations_Might_Guy_Func020Func002Func004C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Func020C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Might_Guy_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Might_Guy_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_23413")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Might_Guy_Func011C()) then
+udg_StatMultReal = 1.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func012C()) then
+udg_StatMultReal = 1.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func013C()) then
+udg_StatMultReal = 1.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func014C()) then
+udg_StatMultReal = 2.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func015C()) then
+udg_StatMultReal = 2.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func016C()) then
+udg_StatMultReal = 2.40
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func017C()) then
+udg_StatMultReal = 2.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Might_Guy_Func018C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01I"), udg_TransformationPlayer)
+if (Trig_Transformations_Might_Guy_Func018Func003C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01M"), udg_TransformationPlayer)
+if (Trig_Transformations_Might_Guy_Func018Func003Func002C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01O"), udg_TransformationPlayer)
+if (Trig_Transformations_Might_Guy_Func018Func003Func002Func002C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A01R"), udg_TransformationPlayer)
+else
+end
+else
+end
+else
+end
+else
+end
+if (Trig_Transformations_Might_Guy_Func020C()) then
+if (Trig_Transformations_Might_Guy_Func020Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H005')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Might_Guy()
+gg_trg_Transformations_Might_Guy = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Might_Guy, Trig_Transformations_Might_Guy_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
 if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
 return false
@@ -66141,7 +70530,7 @@ gg_trg_Saga_Unit_Capsule_Unlock = CreateTrigger()
 TriggerAddAction(gg_trg_Saga_Unit_Capsule_Unlock, Trig_Saga_Unit_Capsule_Unlock_Actions)
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func001Func004C()
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001Func004C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
 return true
 end
@@ -66151,14 +70540,14 @@ end
 return false
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func001C()
-if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func001Func004C()) then
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001C()
+if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001Func004C()) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func005C()
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func005C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -66171,30 +70560,30 @@ end
 return false
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004C()
-if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func005C()) then
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004C()
+if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func006C()
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func006C()
 if (not (udg_TempReal4 < (udg_SagaStatsSum * 0.66))) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004A()
+function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003A()
 udg_TempInt3 = (udg_TempInt3 + 1)
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Get_Base_Stats)
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004C()) then
 udg_StatMultStr = (udg_StatMultStr * 3.00)
 udg_StatMultAgi = (udg_StatMultAgi * 3.00)
 udg_StatMultInt = (udg_StatMultInt * 3.00)
 else
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func004Func001C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001C()) then
 udg_StatMultStr = (udg_StatMultStr * 2.00)
 udg_StatMultAgi = (udg_StatMultAgi * 2.00)
 udg_StatMultInt = (udg_StatMultInt * 2.00)
@@ -66202,7 +70591,7 @@ else
 end
 end
 udg_TempReal4 = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004Func006C()) then
+if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func006C()) then
 udg_StatMultStr = (udg_SagaStatsStr * 0.66)
 udg_StatMultAgi = (udg_SagaStatsAgi * 0.66)
 udg_StatMultInt = (udg_SagaStatsInt * 0.66)
@@ -66214,10 +70603,7 @@ udg_TempReal3 = (udg_TempReal3 + udg_StatMultInt)
 end
 
 function Trig_Saga_Unit_Loop_Func001Func002Func012Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -66326,7 +70712,7 @@ if (udg_TempInt > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002C()) then
 udg_TempInt2 = (udg_TempInt2 + 1)
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func004A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003A)
 else
 end
 udg_TempInt = udg_TempInt + 1
@@ -66429,7 +70815,7 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Unit_Loop, 0.06)
 TriggerAddAction(gg_trg_Saga_Unit_Loop, Trig_Saga_Unit_Loop_Actions)
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func004Func004C()
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004Func004C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
 return true
 end
@@ -66439,14 +70825,14 @@ end
 return false
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func004C()
-if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func004Func004C()) then
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004C()
+if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004Func004C()) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func005C()
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func005C()
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
 return true
 end
@@ -66459,29 +70845,29 @@ end
 return false
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003C()
-if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func005C()) then
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003C()
+if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func005C()
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func005C()
 if (not (udg_TempReal > udg_SagaStatsSum)) then
 return false
 end
 return true
 end
 
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003A()
+function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002A()
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Get_Base_Stats)
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003C()) then
+if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003C()) then
 udg_StatMultStr = (udg_StatMultStr * 3.00)
 udg_StatMultAgi = (udg_StatMultAgi * 3.00)
 udg_StatMultInt = (udg_StatMultInt * 3.00)
 else
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func003Func004C()) then
+if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004C()) then
 udg_StatMultStr = (udg_StatMultStr * 2.00)
 udg_StatMultAgi = (udg_StatMultAgi * 2.00)
 udg_StatMultInt = (udg_StatMultInt * 2.00)
@@ -66489,7 +70875,7 @@ else
 end
 end
 udg_TempReal = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003Func005C()) then
+if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func005C()) then
 udg_SagaStatsStr = udg_StatMultStr
 udg_SagaStatsAgi = udg_StatMultAgi
 udg_SagaStatsInt = udg_StatMultInt
@@ -66498,10 +70884,7 @@ end
 end
 
 function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 return true
@@ -66518,7 +70901,7 @@ while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002C()) then
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func003A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002A)
 else
 end
 udg_TempInt = udg_TempInt + 1
@@ -66606,6 +70989,18 @@ end
 if (GetItemTypeId(GetManipulatedItem()) == FourCC("I045")) then
 return true
 end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I007")) then
+return true
+end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I00A")) then
+return true
+end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I00V")) then
+return true
+end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I003")) then
+return true
+end
 return false
 end
 
@@ -66616,39 +71011,69 @@ end
 return true
 end
 
-function Trig_Regen_Items_Use_Func001Func001Func001Func002C()
+function Trig_Regen_Items_Use_Func001Func001C()
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I000")) then
+return true
+end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I00V")) then
+return true
+end
+return false
+end
+
+function Trig_Regen_Items_Use_Func001Func002Func001C()
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I001")) then
+return true
+end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I007")) then
+return true
+end
+return false
+end
+
+function Trig_Regen_Items_Use_Func001Func002Func002Func002C()
 if (GetItemTypeId(GetManipulatedItem()) == FourCC("I044")) then
 return true
 end
 if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04F")) then
 return true
 end
+if (GetItemTypeId(GetManipulatedItem()) == FourCC("I00A")) then
+return true
+end
 return false
 end
 
-function Trig_Regen_Items_Use_Func001Func001Func001Func003C()
+function Trig_Regen_Items_Use_Func001Func002Func002Func003Func001C()
+if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I003"))) then
+return false
+end
+return true
+end
+
+function Trig_Regen_Items_Use_Func001Func002Func002Func003C()
 if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I045"))) then
 return false
 end
 return true
 end
 
-function Trig_Regen_Items_Use_Func001Func001Func001C()
-if (not Trig_Regen_Items_Use_Func001Func001Func001Func002C()) then
+function Trig_Regen_Items_Use_Func001Func002Func002C()
+if (not Trig_Regen_Items_Use_Func001Func002Func002Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Regen_Items_Use_Func001Func001C()
-if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I001"))) then
+function Trig_Regen_Items_Use_Func001Func002C()
+if (not Trig_Regen_Items_Use_Func001Func002Func001C()) then
 return false
 end
 return true
 end
 
 function Trig_Regen_Items_Use_Func001C()
-if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I000"))) then
+if (not Trig_Regen_Items_Use_Func001Func001C()) then
 return false
 end
 return true
@@ -66658,16 +71083,20 @@ function Trig_Regen_Items_Use_Actions()
 if (Trig_Regen_Items_Use_Func001C()) then
 GroupAddUnitSimple(GetTriggerUnit(), udg_BeanGroup)
 else
-if (Trig_Regen_Items_Use_Func001Func001C()) then
+if (Trig_Regen_Items_Use_Func001Func002C()) then
 GroupAddUnitSimple(GetTriggerUnit(), udg_RoastHamGroup)
 else
-if (Trig_Regen_Items_Use_Func001Func001Func001C()) then
+if (Trig_Regen_Items_Use_Func001Func002Func002C()) then
                 playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/Banana.mp3", 339)
 GroupAddUnitSimple(GetTriggerUnit(), udg_BananaUnitGroup)
 else
-if (Trig_Regen_Items_Use_Func001Func001Func001Func003C()) then
+if (Trig_Regen_Items_Use_Func001Func002Func002Func003C()) then
 GroupAddUnitSimple(GetTriggerUnit(), udg_KrabbyPattyGroup)
 else
+if (Trig_Regen_Items_Use_Func001Func002Func002Func003Func001C()) then
+GroupAddUnitSimple(GetTriggerUnit(), udg_MiniBeanGroup)
+else
+end
 end
 end
 end
@@ -66698,6 +71127,10 @@ udg_TempUnitGroup = udg_KrabbyPattyGroup
 udg_TempReal = 0.05
 udg_TempReal2 = 0.00
 TriggerExecute(gg_trg_Regen_Items_Do_Regen)
+udg_TempUnitGroup = udg_MiniBeanGroup
+udg_TempReal = 0.02
+udg_TempReal2 = 0.02
+TriggerExecute(gg_trg_Regen_Items_Do_Regen)
 end
 
 function InitTrig_Regen_Items_All_Looper()
@@ -66706,15 +71139,36 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Regen_Items_All_Looper, 1.00)
 TriggerAddAction(gg_trg_Regen_Items_All_Looper, Trig_Regen_Items_All_Looper_Actions)
 end
 
-function Trig_Regen_Items_Do_Regen_Func001Func001Func001C()
+function Trig_Regen_Items_Do_Regen_Func001Func001Func002C()
 if (not (UnitHasBuffBJ(GetEnumUnit(), FourCC("BIrg")) == false)) then
 return false
 end
 return true
 end
 
-function Trig_Regen_Items_Do_Regen_Func001Func001Func002C()
+function Trig_Regen_Items_Do_Regen_Func001Func001Func003C()
 if (not (UnitHasItemOfTypeBJ(GetEnumUnit(), FourCC("I00I")) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Regen_Items_Do_Regen_Func001Func001Func004C()
+if (not (UnitHasItemOfTypeBJ(GetEnumUnit(), FourCC("I04L")) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Regen_Items_Do_Regen_Func001Func001Func005C()
+if (not (UnitHasItemOfTypeBJ(GetEnumUnit(), FourCC("I026")) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Regen_Items_Do_Regen_Func001Func001Func007C()
+if (not (udg_TempReal3 > 0.00)) then
 return false
 end
 return true
@@ -66741,16 +71195,27 @@ end
 
 function Trig_Regen_Items_Do_Regen_Func001A()
 if (Trig_Regen_Items_Do_Regen_Func001Func001C()) then
-if (Trig_Regen_Items_Do_Regen_Func001Func001Func002C()) then
-udg_TempReal3 = 1.20
+udg_TempReal3 = 0.00
+if (Trig_Regen_Items_Do_Regen_Func001Func001Func003C()) then
+udg_TempReal3 = (udg_TempReal3 + 0.20)
+else
+end
+if (Trig_Regen_Items_Do_Regen_Func001Func001Func004C()) then
+udg_TempReal3 = (udg_TempReal3 - 0.25)
+else
+end
+if (Trig_Regen_Items_Do_Regen_Func001Func001Func005C()) then
+udg_TempReal3 = (udg_TempReal3 - 0.25)
+else
+end
+udg_TempReal3 = (1 + udg_TempReal3)
+if (Trig_Regen_Items_Do_Regen_Func001Func001Func007C()) then
 SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetEnumUnit()) * (udg_TempReal * udg_TempReal3))))
 SetUnitManaBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) * (udg_TempReal2 * udg_TempReal3))))
 else
-SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetEnumUnit()) * udg_TempReal)))
-SetUnitManaBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) * udg_TempReal2)))
 end
 else
-if (Trig_Regen_Items_Do_Regen_Func001Func001Func001C()) then
+if (Trig_Regen_Items_Do_Regen_Func001Func001Func002C()) then
 GroupRemoveUnitSimple(GetEnumUnit(), udg_TempUnitGroup)
 else
 end
@@ -66813,36 +71278,36 @@ else
 end
 end
 
-function Trig_Scouter_Scout_Func003Func004Func003Func001Func004Func007C()
+function Trig_Scouter_Scout_Func003Func004Func004Func001Func004Func007C()
 if (not (GetRandomReal(0, 100.00) < udg_TempReal)) then
 return false
 end
 return true
 end
 
-function Trig_Scouter_Scout_Func003Func004Func003Func001Func004C()
+function Trig_Scouter_Scout_Func003Func004Func004Func001Func004C()
 if (not (((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) > 3.00)) then
 return false
 end
 return true
 end
 
-function Trig_Scouter_Scout_Func003Func004Func003Func001C()
+function Trig_Scouter_Scout_Func003Func004Func004Func001C()
 if (not (udg_TempBool == true)) then
 return false
 end
 return true
 end
 
-function Trig_Scouter_Scout_Func003Func004Func003A()
-if (Trig_Scouter_Scout_Func003Func004Func003Func001C()) then
+function Trig_Scouter_Scout_Func003Func004Func004A()
+if (Trig_Scouter_Scout_Func003Func004Func004Func001C()) then
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Get_Stat_Multiplier_with_Modifiers)
-if (Trig_Scouter_Scout_Func003Func004Func003Func001Func004C()) then
+if (Trig_Scouter_Scout_Func003Func004Func004Func001Func004C()) then
 udg_TempInt2 = (((GetHeroStatBJ(bj_HEROSTAT_STR, udg_StatMultUnit, true) + (GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true) + GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true))) + 3) + 1)
 udg_TempReal = (I2R(udg_TempInt2) * (0.10 * 0.01))
 udg_TempReal = RMaxBJ(5.00, RMinBJ(95.00, (udg_TempReal + 0.01)))
-if (Trig_Scouter_Scout_Func003Func004Func003Func001Func004Func007C()) then
+if (Trig_Scouter_Scout_Func003Func004Func004Func001Func004Func007C()) then
 udg_TempBool = false
 DisplayTextToForce(udg_TempPlayerGroup, ("Your scouter has exploded! (" .. (R2S(udg_TempReal) .. "% chance)")))
 RemoveItem(udg_TempItem)
@@ -66859,7 +71324,7 @@ else
 end
 end
 
-function Trig_Scouter_Scout_Func003Func004Func005C()
+function Trig_Scouter_Scout_Func003Func004Func006C()
 if (not (udg_TempBool == true)) then
 return false
 end
@@ -66867,10 +71332,7 @@ return true
 end
 
 function Trig_Scouter_Scout_Func003Func004C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
 if (not (udg_TempItem ~= nil)) then
@@ -66906,9 +71368,9 @@ udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 if (Trig_Scouter_Scout_Func003Func004C()) then
 udg_TempBool = true
 udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scouter_Scout_Func003Func004Func003A)
+ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scouter_Scout_Func003Func004Func004A)
             DestroyForce(udg_TempPlayerGroup)
-if (Trig_Scouter_Scout_Func003Func004Func005C()) then
+if (Trig_Scouter_Scout_Func003Func004Func006C()) then
 TriggerExecute(gg_trg_Test_Stats_Get_Stats_Print)
 else
 end
@@ -67469,7 +71931,6 @@ function InitCustomTriggers()
 InitTrig_Get_Int_Damage_Multiplier()
 InitTrig_SetUnitAnimationThenReset()
 InitTrig_AnimationResetLoop()
-InitTrig_SolarFlare()
 InitTrig_Vegeta_Hakai_Cast()
 InitTrig_Vegeta_Hakai_Channel_Finish()
 InitTrig_Vegeta_Hakai_Channel_Interrupt()
@@ -67979,6 +72440,8 @@ InitTrig_Guts_Beast_of_Darkness()
 InitTrig_Gohan_Beast()
 InitTrig_Orange_Dende()
 InitTrig_Ainz_Greater_Full_Potential()
+InitTrig_Minato_Kurama_Mode()
+InitTrig_Might_Guy_Eight_Gates()
 InitTrig_Transformations_Item_Stat_Mult_Boosts()
 InitTrig_Transformations_Item_Auto_Transform_On_Death()
 InitTrig_Transformations_Item_Pickup()
@@ -68132,6 +72595,8 @@ InitTrig_Transformations_Albedo()
 InitTrig_Transformations_Shalltear()
 InitTrig_Transformations_Demiurge()
 InitTrig_Transformations_Majin_Vegeta()
+InitTrig_Transformations_Minato()
+InitTrig_Transformations_Might_Guy()
 InitTrig_Saga_Unit_Init()
 InitTrig_Saga_Unit_Capsule_Unlock()
 InitTrig_Saga_Unit_Loop()

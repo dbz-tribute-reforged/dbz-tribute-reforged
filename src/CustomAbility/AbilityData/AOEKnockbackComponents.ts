@@ -14,11 +14,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // to here, and replace with unique name
   // kame light knockback
@@ -33,11 +35,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // knockback deflect
   {
@@ -51,11 +55,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback deflect hero pushback",
@@ -68,11 +74,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: true,
     isPersistent: true,
+    isFixedAngle: false,
   },
   // super dragon flight
   {
@@ -86,11 +94,13 @@ export const AOEKnockbackComponents = [
       aoe: 200,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // heat dome attack
   {
@@ -104,11 +114,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // hellzone grenade
   // {
@@ -135,11 +147,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // videl punch
   {
@@ -153,11 +167,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // videl kick
   {
@@ -171,11 +187,13 @@ export const AOEKnockbackComponents = [
       aoe: 375,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // videl flying kick
   {
@@ -189,11 +207,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // javelin throw
   {
@@ -207,11 +227,13 @@ export const AOEKnockbackComponents = [
       aoe: 150,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // ss deadly hammer reverse knockback
   {
@@ -225,11 +247,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // android barrier knockback
   {
@@ -243,11 +267,13 @@ export const AOEKnockbackComponents = [
       aoe: 550,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // broly energy punch
   {
@@ -261,11 +287,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback energy punch",
@@ -278,11 +306,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: true,
   },
   {
     name: "knockback energy punch hero",
@@ -295,11 +325,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // broly power level rising
   {
@@ -313,11 +345,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // big bang attack reverse knockback
   {
@@ -331,11 +365,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback 1tick 25speed 180angle 250aoe",
@@ -348,11 +384,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // dfist knock-in
   {
@@ -366,11 +404,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // energy blast volley minor knockback
   {
@@ -384,11 +424,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tyrant breaker knockback
   {
@@ -402,11 +444,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // angry shout large aoe knockback
   {
@@ -420,11 +464,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // reliable friend
   {
@@ -438,11 +484,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // babidi barrier knockback
   {
@@ -456,11 +504,13 @@ export const AOEKnockbackComponents = [
       aoe: 650,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // evil spear knock in
   {
@@ -474,11 +524,13 @@ export const AOEKnockbackComponents = [
       aoe: 100,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // cooler deafening wave
   {
@@ -492,11 +544,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // solar kame
   {
@@ -510,11 +564,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // raditz behind you
   {
@@ -528,11 +584,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // power blitz
   {
@@ -546,11 +604,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // power blitz barrage
   {
@@ -564,11 +624,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // super electric strike
   {
@@ -582,11 +644,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // belly armor
   {
@@ -600,11 +664,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // hand kannon
   {
@@ -618,11 +684,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback hand kannon deflect",
@@ -635,11 +703,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // blast-o-matic
   {
@@ -653,11 +723,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // beam power impact
   {
@@ -671,11 +743,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // beam power impact
   {
@@ -689,11 +763,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // beam jiren meditate 2 barrier
   {
@@ -707,11 +783,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // justice tornado
   {
@@ -725,11 +803,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // justice tornado 2
   {
@@ -743,11 +823,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // death storm
   {
@@ -761,11 +843,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback death storm explosion",
@@ -778,11 +862,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback death storm end",
@@ -795,11 +881,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // nova star omega
   {
@@ -813,11 +901,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // justice kick 2
   {
@@ -831,11 +921,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // circle flash
   {
@@ -849,11 +941,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // yamcha r super spirit ball
   {
@@ -867,11 +961,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // yamcha r wolf fang hurricane
   {
@@ -885,11 +981,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // yamcha r batter up
   {
@@ -903,11 +1001,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: true,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // yamcha r sparking
   {
@@ -921,11 +1021,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: true,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // psycho javelin knock in
   {
@@ -939,11 +1041,13 @@ export const AOEKnockbackComponents = [
       aoe: 150,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // telekinesis knock in
   {
@@ -957,11 +1061,13 @@ export const AOEKnockbackComponents = [
       aoe: 550,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // kame super roshi
   {
@@ -975,11 +1081,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // lightning surprise
   {
@@ -993,11 +1101,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // mafuba
   {
@@ -1011,11 +1121,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // divine authority
   {
@@ -1029,11 +1141,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback divine authority knock-in",
@@ -1046,11 +1160,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // detroit smash
   {
@@ -1064,11 +1180,13 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // united states of smash
   {
@@ -1082,11 +1200,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback beam united states of smash inner",
@@ -1099,11 +1219,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback beam united states of smash outer",
@@ -1116,11 +1238,13 @@ export const AOEKnockbackComponents = [
       aoe: 750,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // oklahoma smash
   {
@@ -1134,11 +1258,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback oklahoma smash release",
@@ -1151,11 +1277,13 @@ export const AOEKnockbackComponents = [
       aoe: 900,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // new hampshire smash
   {
@@ -1169,11 +1297,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // black materia
   {
@@ -1187,11 +1317,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // mario cape
   {
@@ -1205,11 +1337,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tri beam
   {
@@ -1223,11 +1357,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tien kiai
   {
@@ -1241,11 +1377,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tyranno roar knockback / deflect
   {
@@ -1259,11 +1397,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // water 2
   {
@@ -1277,11 +1417,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // cyclone knock-in
   {
@@ -1295,11 +1437,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tail spin knock-in
   {
@@ -1313,11 +1457,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // aura storm
   {
@@ -1331,11 +1477,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback giga sphere",
@@ -1348,11 +1496,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // saitama serious punch
   {
@@ -1366,11 +1516,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // saitama serious sideways jumps
   {
@@ -1384,11 +1536,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // dk jungle rush
   {
@@ -1402,11 +1556,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // chou makousen
   {
@@ -1420,11 +1576,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // tail sweep
   {
@@ -1438,11 +1596,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // shocking death ball
   {
@@ -1456,11 +1616,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback super 17 shocking death ball 2",
@@ -1473,11 +1635,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback super 17 shocking death ball 3",
@@ -1490,11 +1654,13 @@ export const AOEKnockbackComponents = [
       aoe: 1050,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // flashfreeze heatwave
   {
@@ -1508,11 +1674,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: true,
+    isFixedAngle: false,
   },
   // skurvy kannon
   {
@@ -1526,11 +1694,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // skurvy pirate scorn cannon
   {
@@ -1544,11 +1714,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // jaco super elite combo
   {
@@ -1562,11 +1734,13 @@ export const AOEKnockbackComponents = [
       aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: true,
+    isFixedAngle: false,
   },
   // waluigi spin
   {
@@ -1580,11 +1754,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // leon kick
   {
@@ -1598,11 +1774,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback leon kick hero",
@@ -1615,11 +1793,13 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: true,
     isPersistent: true,
+    isFixedAngle: false,
   },
   // sephiroth octoslash
   {
@@ -1633,11 +1813,13 @@ export const AOEKnockbackComponents = [
       aoe: 475,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // megumin explosion 1
   {
@@ -1651,11 +1833,13 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // megumin explosion 2
   {
@@ -1669,11 +1853,13 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // megumin explosion 3
   {
@@ -1687,11 +1873,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // megumin explosion 4
   {
@@ -1705,11 +1893,13 @@ export const AOEKnockbackComponents = [
       aoe: 700,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // megumin explosion 5
   {
@@ -1723,11 +1913,13 @@ export const AOEKnockbackComponents = [
       aoe: 800,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // ainz black hole
   {
@@ -1736,16 +1928,18 @@ export const AOEKnockbackComponents = [
     startTick: 66,
     endTick: -1,
     knockbackData: {
-      speed: 8, 
+      speed: 9, 
       angle: 180, 
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback ainz black hole 2",
@@ -1758,11 +1952,13 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback ainz black hole 3",
@@ -1770,16 +1966,18 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 6, 
+      speed: 5, 
       angle: 180, 
       aoe: 800,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   {
     name: "knockback hell flame",
@@ -1792,11 +1990,13 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
   // majin vegeta final flash
   {
@@ -1810,13 +2010,15 @@ export const AOEKnockbackComponents = [
       aoe: 400,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
   },
-  // light grenade
+  // majin vegeta final explosion
   {
     name: "knockback majin vegeta final explosion",
     repeatInterval: 1, 
@@ -1828,10 +2030,52 @@ export const AOEKnockbackComponents = [
       aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
     useLastCastPoint: false,
     reflectBeams: false,
     affectAllies: false,
     onlyHeroes: false,
     isPersistent: false,
+    isFixedAngle: false,
+  },
+  // minato rasengan
+  {
+    name: "knockback target minato rasengan",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 0,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_TARGET_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: true,
+    isFixedAngle: true,
+  },
+  // might guy hirudora
+  {
+    name: "knockback might guy hirudora",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 90, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
   },
 ];

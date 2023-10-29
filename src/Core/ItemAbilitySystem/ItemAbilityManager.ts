@@ -1,4 +1,4 @@
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
@@ -197,6 +197,7 @@ export class ItemAbilityManager {
         if (
           GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL
           && GetPlayerId(GetTriggerPlayer()) < Constants.maxActivePlayers 
+          && !Globals.isKOTH
         ) {
           TournamentManager.getInstance().startTournament(Constants.finalBattleName);
         }

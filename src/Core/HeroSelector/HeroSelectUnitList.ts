@@ -920,6 +920,29 @@ const demiurgeData = {
     HeroSelectCategory.ASSASSIN
   )
 }
+const minatoData = {
+  unitCode: Id.minato,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN
+  )
+}
+const mightGuyData = {
+  unitCode: Id.mightGuy,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BRUISER
+  )
+}
 
 
 // order matters
@@ -1057,9 +1080,9 @@ export const HeroSelectUnitList = [
   albedoData,
   shalltearData,
   demiurgeData,
-  emptySpace,
+  minatoData,
   // 95
-  emptySpace,
+  mightGuyData,
   emptySpace,
   emptySpace,
   emptySpace,
