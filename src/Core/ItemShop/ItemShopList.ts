@@ -432,7 +432,7 @@ export const ItemShopList = [
     category: [
       ItemShopCategory.PASSIVE,
       ItemShopCategory.STR,
-      ItemShopCategory.AGI,
+      ItemShopCategory.INT,
     ],
     recipe: [
     ],
