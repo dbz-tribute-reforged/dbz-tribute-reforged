@@ -232,6 +232,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT,
+        ItemConstants.SagaDrops.SACRED_WATER,
       ]
     )],
     ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(25000, 19500))],

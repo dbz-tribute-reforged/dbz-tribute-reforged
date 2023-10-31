@@ -107,6 +107,7 @@ export module ItemConstants {
 
   export const bojackHeadband = FourCC("I004");
   export const brolyCollar = FourCC("I006");
+  export const sacredWater = FourCC("I00C");
 
   export const treeOfMightSapling = FourCC("I025");
   export const treeOfMightFruit = FourCC("I026");
@@ -151,6 +152,7 @@ export module ItemConstants {
     export const BATTLE_ARMOR_5 = battleArmor[5];
     export const BROLY_FUR = battleArmor[6];
 
+    export const SACRED_WATER = sacredWater;
     export const POWER_POLE = powerPole[0];
     export const VEGETA_TAIL = vegetaTail[0];
     export const WHEELO_RESEARCH_1 = wheeloResearch[0];

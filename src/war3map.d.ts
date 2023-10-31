@@ -750,6 +750,10 @@ declare var udg_TempInt: number;
 declare var udg_TempSound: sound;
 declare var udg_TempPlayer: player;
 
+declare var udg_Scoreboard: multiboard;
+
+declare var udg_IsCatchupSettingsAutomatic: boolean;
+
 declare var udg_GlobalStatMultiplier: number;
 
 declare var udg_StatMultHashtable: hashtable;

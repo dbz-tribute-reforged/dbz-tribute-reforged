@@ -3031,7 +3031,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.05,
+    multiplier: 0.04,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",

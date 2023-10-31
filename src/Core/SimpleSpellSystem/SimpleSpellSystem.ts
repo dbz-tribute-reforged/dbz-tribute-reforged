@@ -65,7 +65,7 @@ export module SimpleSpellSystem {
       if (func) {
         func();
       }
-      spellCDEffectLogic();
+      spellCDStartLogic(spellId);
     });
     
 
@@ -224,6 +224,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.mightGuyGate7, SimpleSpellSystem.doMightGuyGate);
     Globals.genericSpellMap.set(Id.mightGuyGate8, SimpleSpellSystem.doMightGuyGate);
 
+    Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -4162,6 +4163,7 @@ export module SimpleSpellSystem {
           const target = GetEnumUnit();
           if (
             UnitHelper.isUnitTargetableForPlayer(target, player, true)
+            && IsUnitType(target, UNIT_TYPE_HERO)
             && target != caster
           ) {
             Globals.tmpVector3.setUnit(target);
@@ -4792,6 +4794,9 @@ export module SimpleSpellSystem {
           GetUnitX(target), GetUnitY(target)
         )
       );
+      if (GetSpellAbilityId() == Id.itemSacredWaterAbility) {
+        UnitHelper.payHPPercentCost(target, 0.1, UNIT_STATE_MAX_LIFE);
+      }
     }
   }
 
@@ -5451,7 +5456,7 @@ export module SimpleSpellSystem {
     const searchAOE = 700;
     const dmgMult = BASE_DMG.KAME_DPS * 3 * tickRate;
     const minKunai = 2;
-    const maxKunaiSfxLength = 10;
+    const maxKunaiSfxLength = 9;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -5816,7 +5821,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuyAsaKujaku() {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.1;
+    const lifePctCost = 0.08;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -5825,7 +5830,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuyHirudora() {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.15;
+    const lifePctCost = 0.1;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -5850,7 +5855,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuySekizo() {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.1;
+    const lifePctCost = 0.08;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -6163,7 +6168,7 @@ export module SimpleSpellSystem {
   export function minatoKunaiCreateXY(caster: unit, x: number, y: number) {
     const player = GetOwningPlayer(caster);
     const kunaiDuration = 30;
-    const kunaiHpMult = 0.4;
+    const kunaiHpMult = 0.3;
 
     // const casterId = GetHandleId(caster);
     // const kunaiGroupKey = StringHash("kunai_group");
@@ -6215,12 +6220,11 @@ export module SimpleSpellSystem {
     BlzStartUnitAbilityCooldown(unit, Id.leonHeavyGrenade, cd);
   }
 
-  export function spellCDEffectLogic() {
+  export function spellCDStartLogic(abilId: number) {
     const unit = GetTriggerUnit();
     const player = GetOwningPlayer(unit);
     const playerId = GetPlayerId(player);
     if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-      const abilId = GetSpellAbilityId();
       if (
         abilId == Id.aylaTripleKick
         || abilId == Id.hirudegarnFlameBreath
@@ -6264,16 +6268,16 @@ export module SimpleSpellSystem {
           return;
         }
 
+        // const abilLvl = GetUnitAbilityLevel(unit, abilId)-1;
+        // const baseCd = BlzGetUnitAbilityCooldown(unit, abilId, abilLvl);
         const baseCd = BlzGetUnitAbilityCooldownRemaining(unit, abilId);
+        // print("cd " + abilId + " " + baseCd);
         if (baseCd <= 0) return;
 
         const unitId = GetHandleId(unit);
         const wasCasted = LoadBoolean(Globals.simpleSpellCDHashtable, unitId, abilId);
         if (!wasCasted) return;
         SaveBoolean(Globals.simpleSpellCDHashtable, unitId, abilId, false);
-
-        // const abilLvl = GetUnitAbilityLevel(unit, abilId)-1;
-        // const baseCd = BlzGetUnitAbilityCooldown(unit, abilId, abilLvl);
 
         let newCd = baseCd;
 

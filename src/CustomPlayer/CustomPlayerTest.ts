@@ -330,6 +330,7 @@ export function CustomPlayerTest() {
  
       if (spellName) { 
         const caster = GetTriggerUnit();
+        const unitTypeId = GetUnitTypeId(caster);
         let abilityLevel = GetUnitAbilityLevel(caster, abilityId);
         Globals.customPlayers[playerId].selectedUnit = caster;
         let damageMult = 1.0;
@@ -339,10 +340,10 @@ export function CustomPlayerTest() {
         if (abilityId == Id.jacoEliteBeamFire) {
           damageMult *= getJacoEliteBeamMult(caster);
         }
-        if (GetUnitTypeId(caster) == Id.shotoTodoroki) {
+        if (unitTypeId == Id.shotoTodoroki && Constants.isShotoAbility(abilityId)) {
           damageMult *= getTodorokiMult(caster, abilityId);
         }
-        if (GetUnitTypeId(caster) == Id.ainzOoalGown) {
+        if (unitTypeId == Id.ainzOoalGown && Constants.isAinzAbility(abilityId)) {
           abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
         }
 
@@ -516,8 +517,7 @@ export function CustomPlayerTest() {
 
   // UI info for selected unit
 	TimerStart(CreateTimer(), 0.03, true, () => {
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      let playerId = i;
+    for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
       let unit = Globals.customPlayers[playerId].selectedUnit;
 
       if (unit) {
@@ -544,6 +544,7 @@ export function CustomPlayerTest() {
           }
         }
         const spText = currentSp + "/" + maxSp;
+        // const spText = MultiboardGetTitleText(udg_Scoreboard);
 
         // // update stats
         // let nameString = "";

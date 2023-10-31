@@ -110,6 +110,9 @@ export class HeroPassiveManager {
       case Id.pecorine:
         pecoPassive(customHero);
         break;
+      case Id.linkTwilight:
+        linkPassive(customHero);
+        break;
       case Id.ainzOoalGown:
         ainzPassive(customHero);
         break;
@@ -2388,8 +2391,99 @@ export function pecoPassive(customHero: CustomHero) {
   );
 }
 
+export function linkPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const onHitAbility = customHero.getAbility(AbilityNames.Link.MASTER_SWORD_ON_HIT);
+  
+  const abilReadyKey = StringHash("rasengan_ready");
+  const abilSfxKey = StringHash("rasengan_sfx");
+  SaveBoolean(Globals.genericSpellHashtable, heroId, abilReadyKey, false);
+
+  TimerStart(timer, 0.04, true, () => {
+    const isReady = LoadBoolean(Globals.genericSpellHashtable, heroId, abilReadyKey);
+    if (
+      !isReady
+      && onHitAbility.currentCd == 0
+      && onHitAbility.currentTick == 0
+    ) {
+      // const sfx = AddSpecialEffectTarget(
+      //   "Radiance_Royal.mdl", customHero.unit, "right hand"
+      // );
+      // const sfx = AddSpecialEffectTarget(
+      //   "Radiance_Royal.mdl", customHero.unit, "origin"
+      // );
+      const sfx = AddSpecialEffect(
+        "Radiance_Royal.mdl", GetUnitX(customHero.unit), GetUnitY(customHero.unit)
+      );
+      SaveBoolean(Globals.genericSpellHashtable, heroId, abilReadyKey, true);
+      SaveEffectHandle(Globals.genericSpellHashtable, heroId, abilSfxKey, sfx);
+    } else if (isReady) {
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, heroId, abilSfxKey);
+      if (sfx) {
+        BlzSetSpecialEffectX(sfx, GetUnitX(customHero.unit));
+        BlzSetSpecialEffectY(sfx, GetUnitY(customHero.unit));
+      }
+    }
+  });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  const targetPos = new Vector2D();
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      const isReady = LoadBoolean(Globals.genericSpellHashtable, heroId, abilReadyKey);
+      if (!isReady) return false;
+
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, heroId, abilSfxKey);
+      if (sfx) DestroyEffect(sfx);
+      SaveBoolean(Globals.genericSpellHashtable, heroId, abilReadyKey, false);
+      SaveEffectHandle(Globals.genericSpellHashtable, heroId, abilSfxKey, null);
+      
+      const target = GetTriggerUnit();
+      targetPos.setUnit(target);
+
+      const input = new CustomAbilityInput(
+        Id.mightGuyDynamicEntry,
+        customHero, 
+        GetOwningPlayer(customHero.unit),
+        Math.min(10, Math.max(1, GetHeroLevel(customHero.unit) * 0.03)),
+        targetPos,
+        targetPos,
+        targetPos,
+        target,
+        target,
+      );
+
+      if (customHero.canCastAbility(onHitAbility.name, input)) {
+        if (Globals.showAbilityFloatingText) {
+          TextTagHelper.showPlayerColorTextOnUnit(
+            onHitAbility.name, 
+            GetPlayerId(GetOwningPlayer(customHero.unit)), 
+            customHero.unit
+          );
+        }
+        customHero.useAbility(onHitAbility.name, input);
+      }
+      
+      return false;
+    })
+  );
+}
+
 export function ainzPassive(customHero: CustomHero) {
-  const mpCostPct = 0.22;
+  const mpCostPct = 0.23;
+  const mpCostNonOffensivePct = 0.03;
   const mpCostTickRate = 0.2;
   const mpCostDefensiveRatio = 0.5;
   
@@ -2429,7 +2523,7 @@ export function ainzPassive(customHero: CustomHero) {
       const lifePct = GetUnitLifePercent(customHero.unit) * 0.01;
       const offensiveManaCost = R2I(maxMana * mpCostPct);
       const defensiveManaCost = Math.max(
-        0, 
+        R2I(maxMana * mpCostNonOffensivePct), 
         R2I(mpCostDefensiveRatio * offensiveManaCost * (1 - lifePct))
       );
 
@@ -2894,10 +2988,8 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (guyGateLvl > 1) {
       const pctLife = GetUnitLifePercent(customHero.unit);
       if (pctLife > Constants.MIGHT_GUY_GATE_HP_THRESHOLD[guyGateLvl-1]) {
-        // drain when above
-        const drainPct = 0.01 * (guyGateLvl == 5 ? 
-          guyGateLvl : guyGateLvl - 1
-        );
+        // drain 33% hp per second when above threshold
+        const drainPct = 0.33;
         incHp -= (
           Constants.REGEN_TICK_RATE
           * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 

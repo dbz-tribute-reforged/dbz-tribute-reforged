@@ -1899,7 +1899,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 15,
   },
   // ---
   // saga zanzo

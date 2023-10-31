@@ -156,17 +156,12 @@ function tsPostMain() {
     }
   });
 
-  TimerStart(CreateTimer(), 15, false, () => {
-    DestroyTimer(GetExpiredTimer());
-  })
-
   TimerStart(CreateTimer(), 30, false, () => {
     itemCleanupManager = ItemCleanupManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
 
   CameraZoom.onInit();
-
 
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
 

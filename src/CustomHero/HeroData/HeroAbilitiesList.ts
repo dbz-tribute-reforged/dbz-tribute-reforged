@@ -582,6 +582,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Link.BOW_ARROW_ICE,
       AbilityNames.Link.BOW_ARROW_LIGHTNING,
       AbilityNames.Link.BOW_ARROW_BOMB,
+      AbilityNames.Link.MASTER_SWORD_ON_HIT,
     ]],
 
     [Id.minato, [
@@ -702,6 +703,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Schala.MAGIC_ORBS,
       AbilityNames.Schala.MAGIC_SEAL,
       AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
+      AbilityNames.Saitama.NORMAL_PUNCH,
       AbilityNames.Saitama.SERIOUS_SERIES, AbilityNames.Saitama.SERIOUS_PUNCH, AbilityNames.Saitama.SERIOUS_SIDEWAYS_JUMPS,
       AbilityNames.DonkeyKong.GROUND_POUND, AbilityNames.DonkeyKong.BARREL_CANNON,
       AbilityNames.LeonSKennedy.PISTOL,
