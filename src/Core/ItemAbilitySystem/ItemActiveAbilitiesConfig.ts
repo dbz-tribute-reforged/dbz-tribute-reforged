@@ -1,6 +1,7 @@
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { ItemConstants } from "./ItemConstants";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export function performTimeRingAction() {
   const source = GetTriggerUnit();
@@ -20,11 +21,12 @@ export function doTimeRingSwap(source: unit, target: unit) {
       true, 
       unitX, unitY, BlzGetUnitZ(source), 
       targetX, targetY, BlzGetUnitZ(target),
-    )
-  
-    TimerStart(CreateTimer(), 0.5, false, () => {
+    );
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.5, false, () => {
       DestroyLightning(swapLightning);
-      DestroyTimer(GetExpiredTimer());
+      TimerManager.getInstance().recycle(timer);
     });
     
     if (!IsUnitType(source, UNIT_TYPE_STRUCTURE)) {

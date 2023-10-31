@@ -52,6 +52,7 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     EnableTrigger(gg_trg_Auto_Transform);
 
     udg_GlobalStatMultiplier = 0.5;
+    udg_IsCatchupSettingsAutomatic = true;
     
 
     Globals.tmpVector.setPos(0, 0);
@@ -88,8 +89,9 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     TriggerExecute(gg_trg_Catchup_Turn_Off);
 
     udg_GlobalStatMultiplier = 0.0;
+    udg_IsCatchupSettingsAutomatic = false;
 
-    VisionHelper.showFbArenaVision();
+    // VisionHelper.showFbArenaVision();
     
     const completeTimer = TimerManager.getInstance().get();
     TimerStart(completeTimer, 1.0, true, () => {

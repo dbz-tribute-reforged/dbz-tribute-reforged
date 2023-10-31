@@ -9931,6 +9931,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Link.MASTER_SWORD_ON_HIT,
+    currentCd: 0,
+    maxCd: 10,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam link master sword on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,

@@ -7517,10 +7517,11 @@ BlzCreateItemWithSkin(FourCC("I003"), 11295.1, 21140.5, FourCC("I003"))
 BlzCreateItemWithSkin(FourCC("I004"), 11127.5, 21154.0, FourCC("I004"))
 BlzCreateItemWithSkin(FourCC("I006"), 11446.7, 21172.5, FourCC("I006"))
 BlzCreateItemWithSkin(FourCC("I007"), 11391.4, 21166.4, FourCC("I007"))
-BlzCreateItemWithSkin(FourCC("I008"), 11522.4, 21166.3, FourCC("I008"))
+BlzCreateItemWithSkin(FourCC("I008"), 11377.7, 21199.2, FourCC("I008"))
 BlzCreateItemWithSkin(FourCC("I009"), 5546.3, 10211.3, FourCC("I009"))
 BlzCreateItemWithSkin(FourCC("I009"), 11404.3, 21471.2, FourCC("I009"))
 BlzCreateItemWithSkin(FourCC("I00A"), 11333.6, 21173.6, FourCC("I00A"))
+BlzCreateItemWithSkin(FourCC("I00C"), 11486.9, 21170.5, FourCC("I00C"))
 BlzCreateItemWithSkin(FourCC("I00D"), 11316.4, 21667.5, FourCC("I00D"))
 BlzCreateItemWithSkin(FourCC("I00I"), 11288.0, 21923.3, FourCC("I00I"))
 BlzCreateItemWithSkin(FourCC("I00V"), 11232.1, 21173.6, FourCC("I00V"))
@@ -7554,11 +7555,11 @@ BlzCreateItemWithSkin(FourCC("I04I"), 11313.3, 21298.2, FourCC("I04I"))
 BlzCreateItemWithSkin(FourCC("I04J"), 11311.4, 21230.7, FourCC("I04J"))
 BlzCreateItemWithSkin(FourCC("I04K"), 11372.7, 21230.7, FourCC("I04K"))
 BlzCreateItemWithSkin(FourCC("I04L"), 11381.0, 21293.3, FourCC("I04L"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6793.5, 18777.5, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6641.2, 18838.8, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6639.1, 18525.1, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6501.6, 18720.5, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6803.6, 18583.8, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6639.1, 18525.1, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6641.2, 18838.8, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6501.6, 18720.5, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6793.5, 18777.5, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04O"), 11313.0, 21366.0, FourCC("I04O"))
 BlzCreateItemWithSkin(FourCC("I04R"), 11062.3, 21359.5, FourCC("I04R"))
 BlzCreateItemWithSkin(FourCC("I04S"), 10941.5, 21187.3, FourCC("I04S"))
@@ -11781,12 +11782,12 @@ end
 function Trig_Nappa_Plant_Saibamen_Actions()
 udg_TempLoc = GetUnitLoc(GetTriggerUnit())
 if (Trig_Nappa_Plant_Saibamen_Func003C()) then
-udg_TempReal2 = 50.00
+udg_TempReal2 = 40.00
 udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 5)
 udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 5)
 udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 5)
 else
-udg_TempReal2 = 45.00
+udg_TempReal2 = 35.00
 udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 6)
 udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 6)
 udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 6)
@@ -26330,6 +26331,7 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A10H"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A11H"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A11T"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0EH"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A02S"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T4"), udg_TempPlayer)
@@ -32213,13 +32215,6 @@ end
 return true
 end
 
-function Trig_Base_Armor_Set_Func033Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) == 1)) then
-return false
-end
-return true
-end
-
 function Trig_Base_Armor_Set_Func033C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) > 0)) then
 return false
@@ -32669,11 +32664,7 @@ udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
 else
 end
 if (Trig_Base_Armor_Set_Func033C()) then
-if (Trig_Base_Armor_Set_Func033Func001C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
-else
-udg_BaseArmorReal = (udg_BaseArmorReal + ((10.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit))) - 10.00))
-end
+udg_BaseArmorReal = (udg_BaseArmorReal + ((5.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit))) + 5.00))
 else
 end
 if (Trig_Base_Armor_Set_Func034C()) then
@@ -33755,7 +33746,7 @@ TriggerAddCondition(gg_trg_HBTC_Enter, Condition(Trig_HBTC_Enter_Conditions))
 TriggerAddAction(gg_trg_HBTC_Enter, Trig_HBTC_Enter_Actions)
 end
 
-function Trig_Scoreboard_Init_Func006Func002C()
+function Trig_Scoreboard_Init_Func005Func002C()
 if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
 return false
 end
@@ -33767,12 +33758,11 @@ udg_ScoreboardTimeSeconds = 0
 udg_ScoreboardTimeMinutes = 0
 udg_ScoreboardTimeHours = 0
 udg_TempInt2 = 0
-DisplayTextToForce(GetPlayersAll(), ("num conneted" .. I2S(CountPlayersInForceBJ(udg_ConnectedPlayers))))
 udg_TempInt = 1
 while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-if (Trig_Scoreboard_Init_Func006Func002C()) then
+if (Trig_Scoreboard_Init_Func005Func002C()) then
 udg_TempInt2 = (udg_TempInt2 + 1)
 udg_PlayerKills[udg_TempInt] = 0
 udg_PlayerDeaths[udg_TempInt] = 0

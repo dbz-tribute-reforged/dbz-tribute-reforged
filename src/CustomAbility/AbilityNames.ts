@@ -525,6 +525,7 @@ export module AbilityNames {
     export const BOW_ARROW_ICE: string = "Link Bow Arrow Ice";
     export const BOW_ARROW_LIGHTNING: string = "Link Bow Arrow Lightning";
     export const BOW_ARROW_BOMB: string = "Link Bow Arrow Bomb";
+    export const MASTER_SWORD_ON_HIT: string = "Hyaa!";
   }
 
   export module Minato {

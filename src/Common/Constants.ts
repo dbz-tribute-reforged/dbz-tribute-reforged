@@ -149,7 +149,7 @@ export module Constants {
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
-  export const AGILITY_REGEN_EXPONENT = 3;
+  export const AGILITY_REGEN_EXPONENT = 1.8;
   export const FOUNTAIN_REGEN_MULT = 0.25;
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 0.15;
   export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 0.15;
@@ -158,11 +158,55 @@ export module Constants {
   export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
 
-  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 50, 25];
-  export const MIGHT_GUY_GATE_HP_MULTS = [0, 1, 3, 5, 9];
-  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.1, 0.2, 0.3, 0.4];
+  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
+  export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.05, 0.1, 0.15, 0.2];
 
   export const IS_APRIL_FOOLS_DAY = false;
+  
+  export function isShotoAbility(abilityId: number) {
+    return (
+      abilityId == Id.shotoTodorokiGlacier
+      || abilityId == Id.shotoTodorokiWallOfFlames
+      || abilityId == Id.shotoTodorokiIcePath
+      || abilityId == Id.shotoTodorokiFlashfreezeHeatwave
+      || abilityId == Id.shotoTodorokiHeavenPiercingIceWall
+      || abilityId == Id.shotoTodorokiFlashfireFist
+    );
+  }
+  
+  export function isAinzAbility(abilityId: number) {
+    return (
+      abilityId == Id.ainzBlackHole
+      || abilityId == Id.ainzBodyOfEffulgentBeryl
+      || abilityId == Id.ainzEnergyDrain
+      || abilityId == Id.ainzExplodeMine
+      || abilityId == Id.ainzFallenDown
+      || abilityId == Id.ainzGate
+      || abilityId == Id.ainzGraspHeart
+      || abilityId == Id.ainzGreaterFullPotential
+      || abilityId == Id.ainzGreaterHardening
+      || abilityId == Id.ainzGreaterMagicShield
+      || abilityId == Id.ainzGreaterTeleportation
+      || abilityId == Id.ainzGreaterThunder
+      || abilityId == Id.ainzHoldOfRibs
+      || abilityId == Id.ainzLaShubNiggurath
+      || abilityId == Id.ainzMagicBoost
+      || abilityId == Id.ainzPenetrateUp
+      || abilityId == Id.ainzPerfectUnknowable
+      || abilityId == Id.ainzRealitySlash
+      || abilityId == Id.ainzRemoteViewing
+      || abilityId == Id.ainzResistance
+      || abilityId == Id.ainzSummonAlbedo
+      || abilityId == Id.ainzSummonDemiurge
+      || abilityId == Id.ainzSummonPandora
+      || abilityId == Id.ainzSummonShalltear
+      || abilityId == Id.ainzTGOALID
+      || abilityId == Id.ainzTimeStop
+      || abilityId == Id.ainzWallOfSkeleton
+      || abilityId == Id.ainzWish
+    );
+  }
 }
 
 export enum CostType {
@@ -414,6 +458,7 @@ export module Id {
   export const locust = FourCC("Aloc");
 
   export const useItem = FourCC("A0VF");
+  export const itemSacredWaterAbility = FourCC("A02R");
   export const heroSelectorUnit = FourCC("n001");
   export const ultimateCharge = FourCC("A13U");
 

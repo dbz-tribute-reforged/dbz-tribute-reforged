@@ -10498,6 +10498,36 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // link master sword on hit
+  {
+    name: "damage link master sword on hit explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: 0,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 250,
+    damageHeroes: true,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE_DMG.KAME_DPS * 10,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    maxManaBurnPercent: 0,
+    maxManaLossPercent: 0,
+    applyDamageOverTime: false,
+    requireBuff: false,
+    buffId: 0,
+  },
 
 
 
@@ -11954,7 +11984,7 @@ export const AOEDamageComponents = [
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
-    sourceHPDamageScale: 0,
+    sourceHPDamageScale: 2,
     useInverseDamageScale: true,
     useLastCastPoint: true,
     aoe: 800,
@@ -11963,7 +11993,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 300,
+      multiplier: BASE_DMG.KAME_DPS * 5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -16839,7 +16869,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 5,
+      multiplier: BASE_DMG.KAME_DPS * 4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

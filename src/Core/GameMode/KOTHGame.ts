@@ -372,11 +372,19 @@ export class KOTHGame {
     // SetPlayerAbilityAvailable(player, Capsules.potaraEarring, true);
   }
 
+  getLumberModifier() {
+    return Math.max(1, TournamentData.kothPointsToWin / this.pointsToWin);
+  }
+
   preparePlayers(players: player[]) {
     for (const player of players) {
       const playerId = GetPlayerId(player);
       this.unlockWishAbilities(player);
-      SetPlayerStateBJ(player, PLAYER_STATE_RESOURCE_LUMBER, TournamentData.kothLumberStart);
+      SetPlayerStateBJ(
+        player, 
+        PLAYER_STATE_RESOURCE_LUMBER, 
+        TournamentData.kothLumberStart * this.getLumberModifier()
+      );
       ForGroup(udg_StatMultPlayerUnits[playerId], () => {
         const unit = GetEnumUnit();
         if (
@@ -555,7 +563,7 @@ export class KOTHGame {
         player, 
         PLAYER_STATE_RESOURCE_LUMBER, 
         GetPlayerState(player, PLAYER_STATE_RESOURCE_LUMBER) 
-        + TournamentData.kothLumberPerRound
+        + TournamentData.kothLumberPerRound * this.getLumberModifier()
       );
     }
 

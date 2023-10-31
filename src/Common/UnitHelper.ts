@@ -204,7 +204,7 @@ export module UnitHelper {
   export function payHPPercentCost(
     unit: unit, 
     hpCostPct: number, 
-    unitState: unitstate
+    unitStatePct: unitstate
   ) {
     SetUnitState(
       unit, 
@@ -212,7 +212,7 @@ export module UnitHelper {
       Math.max(
         1, 
         GetUnitState(unit, UNIT_STATE_LIFE) 
-        - hpCostPct * GetUnitState(unit, unitState)
+        - hpCostPct * GetUnitState(unit, unitStatePct)
       )
     );
   }
