@@ -22,7 +22,6 @@ export const ItemShopList = [
     ],
     recipe: [
       ItemConstants.SagaDrops.BATTLE_ARMOR_1,
-      ItemConstants.SagaDrops.BATTLE_ARMOR_1,
     ],
   },
   {
@@ -34,7 +33,6 @@ export const ItemShopList = [
     ],
     recipe: [
       ItemConstants.SagaDrops.BATTLE_ARMOR_2,
-      ItemConstants.SagaDrops.BATTLE_ARMOR_1,
     ],
   },
   {
@@ -46,7 +44,6 @@ export const ItemShopList = [
     ],
     recipe: [
       ItemConstants.SagaDrops.BATTLE_ARMOR_3,
-      ItemConstants.SagaDrops.BATTLE_ARMOR_1,
     ],
   },
   {
@@ -58,16 +55,44 @@ export const ItemShopList = [
     ],
     recipe: [
       ItemConstants.SagaDrops.BATTLE_ARMOR_4,
-      ItemConstants.SagaDrops.BATTLE_ARMOR_1,
     ],
   },
   {
     id: ItemConstants.SagaDrops.KING_COLD_ARMOR,
-    lumberCost: 200 + 250 + 200,
+    lumberCost: 700,
     category: [
-      ItemShopCategory.PASSIVE,
+      ItemShopCategory.ACTIVE,
       ItemShopCategory.ARMOR,
+      ItemShopCategory.DEFENSIVE,
       ItemShopCategory.INT,
+    ],
+    recipe: [
+      ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+    ],
+  },
+  {
+    id: ItemConstants.SagaDrops.NUOVA_HEAT_ARMOR,
+    lumberCost: 700,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.ARMOR,
+      ItemShopCategory.OFFENSIVE,
+      ItemShopCategory.AGI,
+      ItemShopCategory.INT,
+    ],
+    recipe: [
+      ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+    ],
+  },
+  {
+    id: ItemConstants.SagaDrops.MAJIN_BUU_FAT,
+    lumberCost: 800,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.ARMOR,
+      ItemShopCategory.DEFENSIVE,
+      ItemShopCategory.STR,
+      ItemShopCategory.HP_REGEN,
     ],
     recipe: [
       ItemConstants.SagaDrops.BATTLE_ARMOR_4,
@@ -226,6 +251,17 @@ export const ItemShopList = [
     recipe: [
     ],
   },
+  {
+    id: ItemConstants.SagaDrops.EIS_RAYS,
+    lumberCost: 400,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.OFFENSIVE,
+      ItemShopCategory.CROWD_CONTROL,
+    ],
+    recipe: [
+    ],
+  },
 
   // defensive
   {
@@ -240,10 +276,22 @@ export const ItemShopList = [
   },
   {
     id: ItemConstants.SagaDrops.SACRED_WATER,
-    lumberCost: 500,
+    lumberCost: 400,
     category: [
       ItemShopCategory.ACTIVE,
       ItemShopCategory.DEFENSIVE,
+    ],
+    recipe: [
+    ],
+  },
+  {
+    id: ItemConstants.SagaDrops.CELL_MAX_WINGS,
+    lumberCost: 650,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.DEFENSIVE,
+      ItemShopCategory.CROWD_CONTROL,
+      ItemShopCategory.HP_REGEN,
     ],
     recipe: [
     ],
@@ -303,6 +351,16 @@ export const ItemShopList = [
     recipe: [
     ],
   },
+  {
+    id: ItemConstants.SagaDrops.BEBI_CRUSH,
+    lumberCost: 600,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.CROWD_CONTROL,
+    ],
+    recipe: [
+    ],
+  },
 
   // utility
   {
@@ -317,7 +375,7 @@ export const ItemShopList = [
   },
   {
     id: ItemConstants.SagaDrops.DARKNESS_GENERATOR,
-    lumberCost: 250,
+    lumberCost: 200,
     category: [
       ItemShopCategory.ACTIVE,
       ItemShopCategory.UTILITY,
@@ -397,6 +455,18 @@ export const ItemShopList = [
     lumberCost: 200,
     category: [
       ItemShopCategory.PASSIVE,
+      ItemShopCategory.HP_REGEN,
+      ItemShopCategory.MANA_REGEN,
+    ],
+    recipe: [
+    ],
+  },
+  {
+    id: ItemConstants.SagaDrops.SUPER_17_GENERATOR,
+    lumberCost: 300,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.STR,
       ItemShopCategory.HP_REGEN,
       ItemShopCategory.MANA_REGEN,
     ],

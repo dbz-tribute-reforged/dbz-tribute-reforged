@@ -162,6 +162,10 @@ export module Constants {
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
   export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.05, 0.1, 0.15, 0.2];
 
+  export const NUOVA_HEAT_ARMOR_HP_MULT = -2;
+  export const MAJIN_BUU_FAT_MP_REGEN_MULT = -0.75;
+  export const SUPER_17_GEN_REGEN_MULT = 0.25;
+
   export const IS_APRIL_FOOLS_DAY = false;
   
   export function isShotoAbility(abilityId: number) {
@@ -258,6 +262,7 @@ export module DebuffAbilities {
   export const APPULE_VENGEANCE = FourCC("A11D");
   export const CURSE_WALUIGI_SPIN = FourCC("A11X");
   export const CURSE_LEON_FLASHBANG = FourCC("A03F");
+  export const CURSE_CELL_MAX_WINGS = FourCC("A04F");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -326,6 +331,7 @@ export module DebuffAbilities {
   export const DEMIURGE_HELLFIRE_1 = FourCC("A13K");
   export const DEMIURGE_HELLFIRE_2 = FourCC("A13L");
   export const FAERIE_FIRE_MINATO_KUNAI = FourCC("A00C");
+  export const FAERIE_FIRE_NUOVA_HEAT_ARMOR = FourCC("A03Q");
 }
 
 export module Buffs {
@@ -384,6 +390,8 @@ export module Buffs {
 
   export const DEMIURGE_HELLFIRE_1 = FourCC("B06A");
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
+
+  export const NUOVA_HEAT_ARMOR = FourCC("B06J");
 }
 
 export module OrderIds {
@@ -458,7 +466,16 @@ export module Id {
   export const locust = FourCC("Aloc");
 
   export const useItem = FourCC("A0VF");
+  export const itemAndroidBomb = FourCC('A0NS');
+  export const itemGetiStarFragment = FourCC('A0NT');
   export const itemSacredWaterAbility = FourCC("A02R");
+  export const itemEisRays = FourCC("A036");
+  export const itemNuovaHeatArmor = FourCC("A03O");
+  export const itemCellMaxWings = FourCC("A04E");
+  export const itemMajinBuuFat = FourCC("A04Q");
+  export const itemKingColdArmor = FourCC("A04R");
+  export const itemSuper17Generator = FourCC("A04S");
+
   export const heroSelectorUnit = FourCC("n001");
   export const ultimateCharge = FourCC("A13U");
 

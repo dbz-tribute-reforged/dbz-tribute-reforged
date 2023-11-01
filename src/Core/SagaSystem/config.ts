@@ -8,7 +8,7 @@ import { LordSlugSaga } from "./Sagas/SagaSlugGroup";
 import { WheeloSaga } from "./Sagas/SagaWheeloGroup";
 import { AndroidsSaga1, AndroidsSaga2, Super13Saga, FutureAndroidsSaga } from "./Sagas/SagaAndroidsGroup";
 import { CoolerReturnSaga, CoolerRevengeSaga } from "./Sagas/SagaCoolerGroup";
-import { CellSaga, CellGamesSaga, FutureCellSaga } from "./Sagas/SagaCellGroup";
+import { CellSaga, CellGamesSaga, FutureCellSaga, CellMaxSaga } from "./Sagas/SagaCellGroup";
 import { BrolyDBZMovieSaga1, BrolyDBZMovieSaga2, BioBrolySaga, BrolyDBSSaga } from "./Sagas/SagaBrolyGroup";
 import { BojackSaga } from "./Sagas/SagaBojackGroup";
 import { OtherWorldTournamentSaga } from "./Sagas/SagaOtherWorldGroup";
@@ -194,6 +194,9 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BioBrolySaga, SagaState.Completed ],
       [ GoldenFriezaSaga, SagaState.Completed ],
     ],
+    CellMaxSaga: [
+      [ BrolyDBSSaga, SagaState.Completed ],
+    ],
     // GT branch
     BebiSaga: [
       [ BuuSaga, SagaState.Completed ],
@@ -215,7 +218,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
     // secret
     RustTyrannoSaga: [
       [ HirudegarnSaga, SagaState.Completed ],
-      [ BrolyDBSSaga, SagaState.Completed ],
+      [ CellMaxSaga, SagaState.Completed ],
       [ FTSuperSaga2, SagaState.Completed ],
       [ ShadowDragonSaga2, SagaState.Completed ],
     ],
@@ -248,6 +251,7 @@ export const fastSagaSystem: SagaSystemConfig = {
     WhisTrainingSaga,
     GoldenFriezaSaga,
     BrolyDBSSaga,
+    CellMaxSaga,
 
     // movies
     WheeloSaga,
@@ -324,6 +328,9 @@ export const fastSagaSystem: SagaSystemConfig = {
       // [ FTSuperSaga2, SagaState.Completed ],
       [ GoldenFriezaSaga, SagaState.Completed ],
     ],
+    CellMaxSaga: [
+      [ BrolyDBSSaga, SagaState.Completed ],
+    ],
 
 
 
@@ -382,7 +389,7 @@ export const fastSagaSystem: SagaSystemConfig = {
     ],
     // secret
     RustTyrannoSaga: [
-      [ BrolyDBSSaga, SagaState.Completed ],
+      [ CellMaxSaga, SagaState.Completed ],
       [ ShadowDragonSaga2, SagaState.Completed ],
     ],
   }

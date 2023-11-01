@@ -765,8 +765,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.vegetaMajinFinalExplosion, AbilityNames.MajinVegeta.FINAL_EXPLOSION],
 
     // items
-    [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
-    [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],
+    [Id.itemAndroidBomb, AbilityNames.Items.ANDROID_BOMB],
+    [Id.itemGetiStarFragment, AbilityNames.Items.GETI_STAR_FRAGMENT],
+    [Id.itemEisRays, AbilityNames.Items.EIS_RAYS],
+    [Id.itemNuovaHeatArmor, AbilityNames.Items.NUOVA_HEAT_ARMOR],
+    [Id.itemKingColdArmor, AbilityNames.Items.KING_COLD_ARMOR],
+    [Id.itemCellMaxWings, AbilityNames.Items.CELL_MAX_WINGS],
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7

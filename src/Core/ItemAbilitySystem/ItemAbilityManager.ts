@@ -112,8 +112,8 @@ export class ItemAbilityManager {
             let armorMessage;
 
             const droppedItem = UnitItemInSlot(unit, worstArmorSlot);
-            if (droppedItem != GetManipulatedItem()) {
-              armorMessage = "|cffff2020Armor " + (worstArmorValue + 1) + "/5 has been replaced.|r"
+            if (droppedItem != item) {
+              armorMessage = "|cffff2020Armor |r" + GetItemName(droppedItem) + "|cffff2020 has been replaced with |r" + GetItemName(item) + "|r"
             } else {
               armorMessage = "|cffff2020You can only carry 1 set of battle armor!|r";
             }

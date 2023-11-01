@@ -91,7 +91,7 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     udg_GlobalStatMultiplier = 0.0;
     udg_IsCatchupSettingsAutomatic = false;
 
-    // VisionHelper.showFbArenaVision();
+    VisionHelper.showFbArenaVision();
     
     const completeTimer = TimerManager.getInstance().get();
     TimerStart(completeTimer, 1.0, true, () => {

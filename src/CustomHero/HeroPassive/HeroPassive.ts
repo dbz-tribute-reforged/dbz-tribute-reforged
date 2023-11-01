@@ -9,9 +9,9 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { PathingCheck } from "Common/PathingCheck";
-import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SoundHelper } from "Common/SoundHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -2932,6 +2932,8 @@ export function setupRegenTimer(customHero: CustomHero) {
     const unitId = GetUnitTypeId(customHero.unit);
 
     const guyGateLvl = GetUnitAbilityLevel(customHero.unit, Id.mightGuyGateArmor);
+    const hasBuuFat = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.MAJIN_BUU_FAT);
+    const hasSuper17Gen = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.SUPER_17_GENERATOR);
 
     // agi has flat 3 regen
     let spAgi = Math.max(
@@ -3000,6 +3002,12 @@ export function setupRegenTimer(customHero: CustomHero) {
         hpMult += Constants.MIGHT_GUY_GATE_HP_MULTS[guyGateLvl-1];
       }
     }
+    if (GetUnitAbilityLevel(customHero.unit, Buffs.NUOVA_HEAT_ARMOR) > 0) {
+      hpMult += Constants.NUOVA_HEAT_ARMOR_HP_MULT;
+    }
+    if (hasSuper17Gen) {
+      hpMult += Constants.SUPER_17_GEN_REGEN_MULT;
+    }
     incHp += (
       Constants.REGEN_TICK_RATE
       * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
@@ -3026,6 +3034,12 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
       mpMult += Constants.FOUNTAIN_REGEN_MULT;
+    }
+    if (hasSuper17Gen) {
+      mpMult += Constants.SUPER_17_GEN_REGEN_MULT;
+    }
+    if (hasBuuFat) {
+      mpMult += Constants.MAJIN_BUU_FAT_MP_REGEN_MULT;
     }
     const incMp = (
       Constants.REGEN_TICK_RATE

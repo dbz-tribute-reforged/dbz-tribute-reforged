@@ -10,7 +10,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 70,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 4,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
@@ -2974,7 +2974,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.2,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",
@@ -3058,6 +3058,63 @@ export const DamageBlockComponents = [
     attachedSfxList: [
       {
         model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block item king cold armor",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 50,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 1,
+    sfxList: [
+      {
+        model: "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "WhisShield.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,

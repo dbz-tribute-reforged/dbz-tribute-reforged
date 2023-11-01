@@ -113,6 +113,10 @@ export class CustomHero {
     // item workaround.... for now
     this.addAbilityFromAll(AbilityNames.Items.ANDROID_BOMB);
     this.addAbilityFromAll(AbilityNames.Items.GETI_STAR_FRAGMENT);
+    this.addAbilityFromAll(AbilityNames.Items.EIS_RAYS);
+    this.addAbilityFromAll(AbilityNames.Items.NUOVA_HEAT_ARMOR);
+    this.addAbilityFromAll(AbilityNames.Items.KING_COLD_ARMOR);
+    this.addAbilityFromAll(AbilityNames.Items.CELL_MAX_WINGS);
 
     const unitTypeId = GetUnitTypeId(unit);
 

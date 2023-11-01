@@ -40,6 +40,7 @@ export class KOTHGame {
 
   protected fogs: fogmodifier[];
 
+  protected protectItemTrigger: trigger;
   protected rushTrigger: trigger;
 
   constructor(
@@ -126,7 +127,11 @@ export class KOTHGame {
     SetTextTagColor(this.captureTextTag, 255, 255, 255, 255);
     this.updateCaptureDisplay();
     
-
+    this.protectItemTrigger = CreateTrigger();
+    TriggerRegisterAnyUnitEventBJ(this.protectItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM);
+    TriggerAddAction(this.protectItemTrigger, () => {
+      this.protectItem(GetManipulatedItem());
+    });
     this.rushTrigger = CreateTrigger();
     for (const player of Constants.activePlayers) {
       TriggerRegisterPlayerChatEvent(this.rushTrigger, player, "rrr", true);
@@ -373,7 +378,7 @@ export class KOTHGame {
   }
 
   getLumberModifier() {
-    return Math.max(1, TournamentData.kothPointsToWin / this.pointsToWin);
+    return Math.max(1, TournamentData.kothPointsToWin / Math.max(1, this.pointsToWin));
   }
 
   preparePlayers(players: player[]) {
@@ -532,6 +537,7 @@ export class KOTHGame {
   }
 
   doFinished() {
+    DisableTrigger(this.protectItemTrigger);
     DisableTrigger(this.rushTrigger);
     PauseTimer(this.gameTimer);
 
@@ -726,7 +732,7 @@ export class KOTHGame {
     UnitRemoveBuffs(unit, true, true);
     IssueImmediateOrderById(unit, OrderIds.STOP);
 
-    this.protectUnitItems(unit);
+    // this.protectUnitItems(unit);
 
     SetUnitX(unit, pos.x);
     SetUnitY(unit, pos.y);
@@ -778,15 +784,19 @@ export class KOTHGame {
     if (!this.protectItems) return;
     for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
       const it = UnitItemInSlot(unit, i);
-      if (
-        it != null 
-        && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
-      ) {
-        // for some reason secretly changes ITEM_BF_PERISHABLE to false
-        BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
-        if (GetItemCharges(it) > 0) {
-          BlzSetItemBooleanField(it, ITEM_BF_PERISHABLE, true);
-        }
+      this.protectItem(it);
+    }
+  }
+
+  protectItem(it: item) {
+    if (
+      it != null 
+      && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
+    ) {
+      // for some reason secretly changes ITEM_BF_PERISHABLE to false
+      BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
+      if (GetItemCharges(it) > 0) {
+        BlzSetItemBooleanField(it, ITEM_BF_PERISHABLE, true);
       }
     }
   }

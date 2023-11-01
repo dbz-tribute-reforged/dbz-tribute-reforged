@@ -286,3 +286,102 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
     super.complete();
   }
 }
+
+
+export class CellMaxSaga extends AdvancedSaga implements Saga {
+  name: string = '[DBS] Super Heroes Saga';
+
+  protected cellMax: unit | undefined;
+  protected isDamaged: boolean;
+  protected auraSfx: effect;
+
+  constructor() {
+    super();
+    this.delay = 45;
+    this.isDamaged = false;
+    this.auraSfx = null
+  }
+
+  spawnSagaUnits(): void {
+    super.spawnSagaUnits();
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "A mysterious red-ribbon bio-organism has been prematurely released!",
+      ],
+    );
+
+    this.addHeroListToSaga(["Cell Max"], true);
+
+    this.cellMax = this.bosses[0];
+
+    for (const boss of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+
+    this.ping();
+    this.setupBossDeathActions(this);
+  }
+
+  update(t: number): void {
+    super.update(t);
+    if (
+      this.cellMax &&
+      !this.isDamaged && 
+      SagaHelper.checkUnitHp(this.cellMax, 0.6, true, false, true)  
+    ) { 
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Gamma 2|r: When you see me go in for the last blow, get away from here as fast as you can!",
+          "|cffffcc00Piccolo|r: Hold on. What's the strategy here?",
+          "|cffffcc00Cell Max|r: AAAARRRGGGHHHHH!",
+        ],
+      );
+      this.isDamaged = true;
+      SetUnitLifePercentBJ(this.cellMax, 80);
+      SetHeroLevel(this.cellMax, GetHeroLevel(this.cellMax) + 25, true);
+      SetHeroStr(this.cellMax, Math.floor(GetHeroStr(this.cellMax, true) * 1.3 + 4000), true);
+      SetHeroAgi(this.cellMax, Math.floor(GetHeroAgi(this.cellMax, true) * 1.1 + 4000), true);
+      SetHeroInt(this.cellMax, Math.floor(GetHeroInt(this.cellMax, true) * 1.3 + 4000), true);
+      this.auraSfx = AddSpecialEffectTarget(
+        "AuraDarkGreen.mdl",
+        this.cellMax,
+        "origin", 
+      );
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+          this.cellMax, 
+          "origin", 
+        )
+      );
+    }
+  }
+
+  canStart(): boolean {
+    return true;
+  }
+
+  canComplete(): boolean {
+    return super.canComplete();
+  }
+
+  start(): void {
+    super.start();
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.delay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
+        this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  }
+
+  complete(): void {
+    super.complete();
+  }
+}

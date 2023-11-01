@@ -12,7 +12,9 @@ export module ItemConstants {
     FourCC("I03C"),
     FourCC("I03D"),
     FourCC("I04R"),
+    FourCC("I00J"),
     FourCC("I03E"),
+    FourCC("I00K"),
     FourCC("I04B"),
   ];
   export const wheeloResearch = [
@@ -108,6 +110,10 @@ export module ItemConstants {
   export const bojackHeadband = FourCC("I004");
   export const brolyCollar = FourCC("I006");
   export const sacredWater = FourCC("I00C");
+  export const super17Generator = FourCC("I00G");
+  export const bebiCrush = FourCC("I00E");
+  export const eisRays = FourCC("I00H");
+  export const cellMaxWings= FourCC("I00M");
 
   export const treeOfMightSapling = FourCC("I025");
   export const treeOfMightFruit = FourCC("I026");
@@ -149,8 +155,10 @@ export module ItemConstants {
     export const BATTLE_ARMOR_3 = battleArmor[2];
     export const BATTLE_ARMOR_4 = battleArmor[3];
     export const KING_COLD_ARMOR = battleArmor[4];
-    export const BATTLE_ARMOR_5 = battleArmor[5];
-    export const BROLY_FUR = battleArmor[6];
+    export const NUOVA_HEAT_ARMOR = battleArmor[5];
+    export const BATTLE_ARMOR_5 = battleArmor[6];
+    export const MAJIN_BUU_FAT = battleArmor[7];
+    export const BROLY_FUR = battleArmor[8];
 
     export const SACRED_WATER = sacredWater;
     export const POWER_POLE = powerPole[0];
@@ -185,5 +193,9 @@ export module ItemConstants {
     export const TREE_OF_MIGHT_FRUIT = treeOfMightFruit;
     export const BOJACK_HEADBAND = bojackHeadband;
     export const BROLY_COLLAR = brolyCollar;
+    export const SUPER_17_GENERATOR = super17Generator;
+    export const BEBI_CRUSH = bebiCrush;
+    export const EIS_RAYS = eisRays;
+    export const CELL_MAX_WINGS = cellMaxWings;
   }
 }

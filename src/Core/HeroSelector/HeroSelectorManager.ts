@@ -374,8 +374,8 @@ export class HeroSelectorManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
 
-      // if (true) {
-      if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
+      if (true) {
+      // if (IsPlayerSlotState(udg_TempPlayer, PLAYER_SLOT_STATE_PLAYING)) {
         if (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[i]) == 0) {
           HeroSelector.forcePick(udg_TempPlayer);
         }
