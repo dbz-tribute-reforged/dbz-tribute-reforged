@@ -771,7 +771,7 @@ export const AbilitiesList = [
       { name: "damage super dragon flight dps" },
       { name: "knockback super dragon flight" },
       { name: "dash ground point super dragon flight" },
-      { name: "spell amp super dragon flight" },
+      { name: "spell amp 10 persistent" },
       { name: "sfx super dragon flight" },
     ],
   },
@@ -861,7 +861,7 @@ export const AbilitiesList = [
         AbilityNames.Gohan.UNLOCK_POTENTIAL
     },
     components: [
-      { name: "spell amp unlock potential" },
+      { name: "spell amp 10 persistent" },
       { name: "sfx unlock potential" },
     ],
   },
@@ -889,7 +889,7 @@ export const AbilitiesList = [
         "Justice Pose"
     },
     components: [
-      { name: "spell amp justice pose" },
+      { name: "spell amp 20 persistent" },
       { name: "sfx unlock potential" },
     ],
   },
@@ -917,7 +917,7 @@ export const AbilitiesList = [
         AbilityNames.Gohan.POTENTIAL_UNLEASHED
     },
     components: [
-      { name: "spell amp potential unleashed" },
+      { name: "spell amp 30 persistent" },
       { name: "dash ground forward 1dist" },
       { name: "sfx unlock potential" },
     ],
@@ -1925,7 +1925,7 @@ export const AbilitiesList = [
         "Honey Bee Custome"
     },
     components: [
-      { name: "spell amp honey bee costume" },
+      { name: "spell amp 30 persistent" },
       { name: "aoe apply pan immolation" },
     ],
   },
@@ -4049,7 +4049,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.SUMMON_PUAR,
     },
     components: [
-      { name: "spell amp yamcha r summon puar" },
+      { name: "spell amp 10 persistent" },
       { name: "beam puar barrier" },
     ],
   },
@@ -4471,7 +4471,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi all might left smash" },
-      { name: "spell amp left right smash" },
+      { name: "spell amp 5 persistent" },
       { name: "dash ground forward all might left smash" },
     ],
   },
@@ -4500,7 +4500,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi all might right smash" },
-      { name: "spell amp left right smash" },
+      { name: "spell amp 5 persistent" },
       { name: "dash ground forward all might right smash" },
     ],
   },
@@ -8810,7 +8810,7 @@ export const AbilitiesList = [
         AbilityNames.Jaco.ELITE_POSE
     },
     components: [
-      { name: "spell amp jaco elite pose" },
+      { name: "spell amp 10 persistent" },
       { name: "sfx unlock potential" },
     ],
   },
@@ -10064,7 +10064,7 @@ export const AbilitiesList = [
         AbilityNames.Skurvy.EXTRAORDINARY_POWER,
     },
     components: [
-      { name: "spell amp extraordinary power" },
+      { name: "spell amp 30 persistent" },
       { name: "dash ground forward extraordinary power" },
       { name: "sfx unlock potential" },
     ],
@@ -11370,7 +11370,7 @@ export const AbilitiesList = [
         AbilityNames.Raditz.DOUBLE_SUNDAE
     },
     components: [
-      { name: "spell amp double sundae" },
+      { name: "spell amp 20 persistent" },
     ],
   },
   // -------------------------------------------
@@ -12190,7 +12190,7 @@ export const AbilitiesList = [
         AbilityNames.KingKRool.KINGS_THRONE
     },
     components: [
-      { name: "spell amp kings throne" },
+      { name: "spell amp 10 persistent" },
     ],
   },
   // -------------------------------------------
@@ -14795,7 +14795,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "spell amp ainz penetrate up" },
+      { name: "spell amp 10 persistent" },
       { name: "sfx ainz penetrate up" },
     ],
   },
@@ -16431,6 +16431,122 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block geti star fragment item" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Items.EIS_RAYS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam item eis rays" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Items.NUOVA_HEAT_ARMOR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff faerie fire item nuova heat armor" },
+      { name: "sfx item nuova heat armor" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Items.CELL_MAX_WINGS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "heal item cell max wings" },
+      { name: "spell amp 10 persistent" },
+      { name: "debuff curse item cell max wings" },
+      { name: "knockback item cell max wings" },
+      { name: "sfx item cell max wings 1" },
+      { name: "sfx item cell max wings 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Items.KING_COLD_ARMOR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "spell amp 10 persistent" },
+      { name: "block item king cold armor" },
+      { name: "sfx item king cold armor" },
     ],
   },
   // -------------------------------------------

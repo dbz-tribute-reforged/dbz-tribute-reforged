@@ -57,7 +57,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.targetCoord.setUnit(target);
       const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
       if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
-        SetUnitFacing(target, sourceToTargetAngle);
+        // SetUnitFacing(target, sourceToTargetAngle);
+        BlzSetUnitFacingEx(target, sourceToTargetAngle * CoordMath.degreesToRadians);
       }
       const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
       this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);

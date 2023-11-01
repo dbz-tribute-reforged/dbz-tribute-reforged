@@ -1678,6 +1678,6 @@ export function SetupItemSplitter() {
   }));
 
   
-  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.SAIBAMEN_SEEDS, 3);
-  ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.BEERUS_PUDDING, 4);
+  // ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.SAIBAMEN_SEEDS, 3);
+  // ItemStackingManager.getInstance().addStackableItemType(ItemConstants.SagaDrops.BEERUS_PUDDING, 4);
 }

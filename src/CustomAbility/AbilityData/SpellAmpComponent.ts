@@ -11,7 +11,16 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp super dragon flight", 
+    name: "spell amp 5 persistent", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.05,
+    rate: 0.05,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp 10 persistent", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -20,16 +29,16 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp unlock potential", 
+    name: "spell amp 15 persistent", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.1,
-    rate: 0.1,
+    bonus: 0.15,
+    rate: 0.15,
   },
   // --------------------------------------------
   { 
-    name: "spell amp justice pose", 
+    name: "spell amp 20 persistent", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -38,16 +47,16 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp potential unleashed", 
+    name: "spell amp 25 persistent", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.3,
-    rate: 0.3,
+    bonus: 0.25,
+    rate: 0.25,
   },
   // --------------------------------------------
   { 
-    name: "spell amp extraordinary power", 
+    name: "spell amp 30 persistent", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -71,15 +80,6 @@ export const SpellAmpComponents = [
     endTick: -1,
     bonus: 0.05,
     rate: 0.00033,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp honey bee costume", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.3,
-    rate: 0.3,
   },
   // --------------------------------------------
   { 
@@ -146,24 +146,6 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp double sundae", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.2,
-    rate: 0.2,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp kings throne", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.1,
-    rate: 0.1,
-  },
-  // --------------------------------------------
-  { 
     name: "spell amp ginyu pose fighting", 
     repeatInterval: 1, 
     startTick: 0,
@@ -200,15 +182,6 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp left right smash", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.05,
-    rate: 0.05,
-  },
-  // --------------------------------------------
-  { 
     name: "spell amp kid trunks sword of hope", 
     repeatInterval: 1, 
     startTick: 0,
@@ -236,37 +209,11 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp yamcha r summon puar", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.1,
-    rate: 0.1,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp jaco elite pose", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.1,
-    rate: 0.1,
-  },
-  { 
     name: "spell amp dende orange dende", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     bonus: 0.15,
     rate: 0.0015,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp ainz penetrate up", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.1,
-    rate: 0.1,
   },
 ];

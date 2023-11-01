@@ -565,6 +565,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Buu.INNOCENCE_BREATH,
         SagaAbilities.Buu.ANGRY_EXPLOSION,
       ],
+      [
+        ItemConstants.SagaDrops.MAJIN_BUU_FAT,
+      ],
     )],
 
     // future babidi saga
@@ -679,6 +682,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+        ItemConstants.SagaDrops.BEBI_CRUSH,
       ]
     )],
 
@@ -689,6 +693,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
       ],
+      [
+        ItemConstants.SagaDrops.SUPER_17_GENERATOR,
+      ]
     )],
     // pui pui, yakon, 19, saibamen, appule, rilldo
     // cooler, king cold,
@@ -713,6 +720,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.NuovaShenron.BURNING_ATTACK,
       ],
+      [
+        ItemConstants.SagaDrops.NUOVA_HEAT_ARMOR,
+      ]
     )],
     ["Eis Shenron", new SagaUnit(FourCC("H09B"), 100, 17000, 400, 17000, new Vector2D(29000, -4800),
       [
@@ -720,6 +730,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.EisShenron.ICE_SLASH,
         SagaAbilities.EisShenron.ICE_CANNON,
       ],
+      [
+        ItemConstants.SagaDrops.EIS_RAYS,
+      ]
     )],
 
     ["Syn Shenron", new SagaUnit(FourCC("H09F"), 140, 21000, 400, 21000, new Vector2D(3000, 7000),
@@ -793,6 +806,22 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.SORBET_RING,
+      ]
+    )],
+
+
+    ["Cell Max", new SagaUnit(Id.cellMax, 200, 1, 1, 1, new Vector2D(15000, 6500),
+      [
+        SagaAbilities.CellMax.TAIL_WHIP,
+        SagaAbilities.CellMax.TAIL_WHIP_2,
+        SagaAbilities.CellMax.EXPLOSIVE_SCREAM,
+        SagaAbilities.CellMax.EXPLOSIVE_SCREAM_2,
+        SagaAbilities.CellMax.MAX_BARRIER,
+        SagaAbilities.CellMax.MAX_BARRIER_BURST,
+        SagaAbilities.Saga.GENERIC_BEAM,
+      ],
+      [
+        ItemConstants.SagaDrops.CELL_MAX_WINGS,
       ]
     )],
     // sorbet

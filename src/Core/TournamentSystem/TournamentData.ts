@@ -70,7 +70,7 @@ export module TournamentData {
   export const kothLvlsPerRound = 50;
   export const kothStatsPerRound = 15 * kothLvlsPerRound;
   export const kothLumberPerRound = 100;
-  export const kothLumberStart = 200;
+  export const kothLumberStart = 300;
 
   // export const kothNamekCenter: Vector2D = new Vector2D(28928, 26496);
   export const kothNamekCenter: Vector2D = new Vector2D(24576, 29568);

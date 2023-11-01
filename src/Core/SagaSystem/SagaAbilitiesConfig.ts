@@ -401,6 +401,27 @@ export module SagaAbilities {
     );
   }
 
+  export module CellMax {
+    export const TAIL_WHIP = new SagaAbility(
+      AbilityNames.CellMax.TAIL_WHIP, 10, 5, 20, EXTRA_SHORT_CAST_TIME
+    );
+    export const TAIL_WHIP_2 = new SagaAbility(
+      AbilityNames.CellMax.TAIL_WHIP, 10, 15, 20, EXTRA_SHORT_CAST_TIME
+    );
+    export const EXPLOSIVE_SCREAM = new SagaAbility(
+      AbilityNames.CellMax.EXPLOSIVE_SCREAM, 10, 25, 10, SHORT_CAST_TIME
+    );
+    export const EXPLOSIVE_SCREAM_2 = new SagaAbility(
+      AbilityNames.CellMax.EXPLOSIVE_SCREAM, 10, 25, 10, MEDIUM_CAST_TIME
+    );
+    export const MAX_BARRIER = new SagaAbility(
+      AbilityNames.CellMax.MAX_BARRIER, 10, 25, 20, SHORT_CAST_TIME
+    );
+    export const MAX_BARRIER_BURST = new SagaAbility(
+      AbilityNames.CellMax.MAX_BARRIER_BURST, 10, 25, 10, MEDIUM_CAST_TIME
+    );
+  }
+
   export module Hit {
     export const TIME_SKIP = new SagaAbility(
       AbilityNames.Hit.TIME_SKIP, 10, 10, 20, EXTRA_SHORT_CAST_TIME

@@ -952,5 +952,9 @@ export module AbilityNames {
   export module Items {
     export const ANDROID_BOMB: string = "Android Bomb";
     export const GETI_STAR_FRAGMENT: string = "Geti Star Fragment";
+    export const EIS_RAYS: string = "Eis Rays";
+    export const NUOVA_HEAT_ARMOR: string = "Nuova Heat Armor";
+    export const KING_COLD_ARMOR: string = "King Cold Armor";
+    export const CELL_MAX_WINGS: string = "Cell Max Wings";
   }
 }

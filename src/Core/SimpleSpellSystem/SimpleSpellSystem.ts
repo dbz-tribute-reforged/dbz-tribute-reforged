@@ -225,6 +225,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.mightGuyGate8, SimpleSpellSystem.doMightGuyGate);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
+    Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
+    Globals.genericSpellMap.set(Id.itemMajinBuuFat, SimpleSpellSystem.doMajinBuuFat);
+    Globals.genericSpellMap.set(Id.itemSuper17Generator, SimpleSpellSystem.doSuper17Generator);
 
     // Globals.genericSpellMap.set(Id.schalaPray, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaMagicSeal, SimpleSpellSystem.doSchalaLinkChannels);
@@ -1681,17 +1684,19 @@ export module SimpleSpellSystem {
     const madnessStunDamage = 0.1;
     const madnessCurseOrder = 852190;
 
+    const madnessHeroDebuffKey = StringHash(I2S(spellId) + "madness_hero");
+
     const target = GetSpellTargetUnit();
     const targetId = GetHandleId(target);
     if (GetUnitAbilityLevel(target, Buffs.MADNESS_CURSE_MISS) == 0) {
-      const stacks = 1+LoadInteger(Globals.genericEnemyHashtable, targetId, 0);
+      const stacks = 1+LoadInteger(Globals.genericEnemyHashtable, targetId, madnessHeroDebuffKey);
 
       TextTagHelper.showPlayerColorTextOnUnit(
         I2S(stacks), 3, target, stacks + 8     
       );
 
       if (stacks >= maxMadnessStacks) {
-        FlushChildHashtable(Globals.genericEnemyHashtable, targetId);
+        SaveInteger(Globals.genericEnemyHashtable, targetId, madnessHeroDebuffKey, 0);
         // stun.. n debuff 
         const caster = GetTriggerUnit();
         const casterPlayer = GetOwningPlayer(caster);
@@ -1723,7 +1728,7 @@ export module SimpleSpellSystem {
         RemoveUnit(castDummy);
 
       } else {
-        SaveInteger(Globals.genericEnemyHashtable, targetId, 0, stacks);
+        SaveInteger(Globals.genericEnemyHashtable, targetId, madnessHeroDebuffKey, stacks);
       }
     }
   }
@@ -2698,6 +2703,8 @@ export module SimpleSpellSystem {
                 && BlzGetItemBooleanField(stealItem, ITEM_BF_CAN_BE_DROPPED)
                 && BlzGetItemBooleanField(stealItem, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
                 && itemId != ItemConstants.SagaDrops.KING_COLD_ARMOR
+                && itemId != ItemConstants.SagaDrops.NUOVA_HEAT_ARMOR
+                && itemId != ItemConstants.SagaDrops.MAJIN_BUU_FAT
                 && itemId != ItemConstants.SagaDrops.BROLY_FUR
                 && itemId != DragonBallsConstants.dragonBallItem
               ) {
@@ -4609,8 +4616,9 @@ export module SimpleSpellSystem {
     const tpAOE = 400;
     const tpMaxDist = 6000;
     const excludeTicks = 100;
-    const tpRegisterKey = StringHash("gate_tp_count");
-    const tpTimeKey = StringHash("gate_tp_exclude_time");
+    const abilId = GetSpellAbilityId();
+    const tpRegisterKey = StringHash(I2S(abilId) + "gate_tp_count");
+    const tpTimeKey = StringHash(I2S(abilId) + "gate_tp_exclude_time");
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -6209,6 +6217,106 @@ export module SimpleSpellSystem {
     });
 
     return beam;
+  }
+
+  export function doCellMaxWings() {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const boostGroup = CreateGroup();
+    const maxTick = 333;
+    const lastDebuffTick = 166;
+    const boostAOE = 500;
+    const boostSpellPower = -0.1;
+    
+    const cellMaxWingsKey = StringHash(I2S(GetSpellAbilityId()) + "cell_max_wings");
+
+    let tick = 0;
+    const boostTimer = TimerManager.getInstance().get();
+    TimerStart(boostTimer, 0.03, true, () => {
+      if (tick > maxTick) {
+        ForGroup(boostGroup, () => {
+          const unit = GetEnumUnit();
+          const unitId = GetHandleId(unit);
+          SaveBoolean(Globals.genericEnemyHashtable, unitId, cellMaxWingsKey, false);
+          const targetPlayer = GetOwningPlayer(unit);
+          const targetPlayerId = GetPlayerId(targetPlayer);
+          const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+          if (ch) ch.removeSpellPower(boostSpellPower);
+        });
+        DestroyGroup(boostGroup);
+        TimerManager.getInstance().recycle(boostTimer);
+        return;
+      }
+
+      if (tick < lastDebuffTick) {
+        GroupClear(Globals.tmpUnitGroup);
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), boostAOE, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (
+            !IsUnitInGroup(unit, boostGroup)
+            && UnitHelper.isUnitTargetableForPlayer(unit, player)
+          ) {
+            const unitId = GetHandleId(unit);
+            if (!LoadBoolean(Globals.genericEnemyHashtable, unitId, cellMaxWingsKey)) {
+              const targetPlayer = GetOwningPlayer(unit);
+              const targetPlayerId = GetPlayerId(targetPlayer);
+              const ch = Globals.customPlayers[targetPlayerId].getCustomHero(unit);
+              SaveBoolean(Globals.genericEnemyHashtable, unitId, cellMaxWingsKey, true);
+              if (ch) {
+                ch.addSpellPower(boostSpellPower);
+                GroupAddUnit(boostGroup, unit);
+              }
+            }
+          }
+        });
+        GroupClear(Globals.tmpUnitGroup);
+      }
+
+      
+      if (UnitHelper.isUnitDead(caster)) {
+        tick += maxTick;
+      }
+      ++tick;
+    });
+  }
+
+  export function doMajinBuuFat() {
+    const target = GetTriggerUnit();
+
+    UnitRemoveBuffs(target, false, true);
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Human/DispelMagic/DispelMagicTarget.mdl",
+        GetUnitX(target), GetUnitY(target)
+      )
+    );
+    DestroyEffect(
+      AddSpecialEffect(
+        "FatBuu.mdl",
+        GetUnitX(target), GetUnitY(target)
+      )
+    );
+    UnitHelper.payHPPercentCost(target, -0.15, UNIT_STATE_MANA);
+    UnitHelper.payMPPercentCost(target, 1.0, UNIT_STATE_MAX_MANA);
+  }
+
+  export function doSuper17Generator() {
+    const target = GetTriggerUnit();
+    UnitHelper.payMPPercentCost(target, -0.2, UNIT_STATE_MAX_LIFE);
+    UnitHelper.payHPPercentCost(target, 0.2, UNIT_STATE_MAX_LIFE);
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Items/AIma/AImaTarget.mdl",
+        GetUnitX(target), GetUnitY(target)
+      )
+    );
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Other/Charm/CharmTarget.mdl",
+        GetUnitX(target), GetUnitY(target)
+      )
+    );
   }
 
   export function linkLeonSpellbook(unit: unit, cd: number) {
