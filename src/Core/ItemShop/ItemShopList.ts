@@ -341,22 +341,22 @@ export const ItemShopList = [
     ],
   },
   {
+    id: ItemConstants.SagaDrops.BEBI_CRUSH,
+    lumberCost: 500,
+    category: [
+      ItemShopCategory.ACTIVE,
+      ItemShopCategory.CROWD_CONTROL,
+    ],
+    recipe: [
+    ],
+  },
+  {
     id: ItemConstants.SagaDrops.SORBET_RING,
     lumberCost: 500,
     category: [
       ItemShopCategory.ACTIVE,
       ItemShopCategory.CROWD_CONTROL,
       ItemShopCategory.OFFENSIVE,
-    ],
-    recipe: [
-    ],
-  },
-  {
-    id: ItemConstants.SagaDrops.BEBI_CRUSH,
-    lumberCost: 600,
-    category: [
-      ItemShopCategory.ACTIVE,
-      ItemShopCategory.CROWD_CONTROL,
     ],
     recipe: [
     ],
