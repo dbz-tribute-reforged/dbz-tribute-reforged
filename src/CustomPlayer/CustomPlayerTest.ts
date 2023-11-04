@@ -29,6 +29,7 @@ import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -863,6 +864,35 @@ export function CustomPlayerTest() {
       DestroyGroup(group);
     });
 
+
+    const nukeTrigger = CreateTrigger();
+    TriggerRegisterPlayerChatEvent(nukeTrigger, Player(0), "-nuke", true);
+    TriggerAddAction(nukeTrigger, () => {
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      const ch = Globals.customPlayers[playerId].getLastSelectedOwnedCustomHero();
+      if (!ch) return;
+
+      GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetEntireMapRect(), null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const target = GetEnumUnit();
+        if (UnitHelper.isUnitTargetableForPlayer(target, player, false)) {
+          SetUnitState(target, UNIT_STATE_LIFE, 1);
+          UnitDamageTarget(
+            ch.unit, 
+            target, 
+            1000, 
+            false, false, 
+            ATTACK_TYPE_HERO, 
+            DAMAGE_TYPE_NORMAL,
+            WEAPON_TYPE_WHOKNOWS
+          );
+        }
+      });
+      GroupClear(Globals.tmpUnitGroup);
+    });
+
+
     const statsTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-setstats", false);
@@ -1307,7 +1337,6 @@ export function CustomPlayerTest() {
 
   SetupCustomAbilityRefresh();
   SoundHelper.SetupSpellSoundEffects();
-  DestroyTimer(GetExpiredTimer());
 }
 
 export function skurvyMirrorProcessOrder() {
@@ -1379,7 +1408,8 @@ export function SetupTreeOfMightSapling() {
       
       // grow wait
       let counter = 0;
-      TimerStart(CreateTimer(), 0.03, true, () => {
+      const timer = TimerManager.getInstance().get();
+      TimerStart(timer, 0.03, true, () => {
         if (counter > 1000) {
           // drop
           CreateItem(ItemConstants.treeOfMightFruit, x, y);
@@ -1391,7 +1421,7 @@ export function SetupTreeOfMightSapling() {
           DestroyEffect(explodeSfx);
           DestroyEffect(sfx);
           DestroyEffect(sfx2);
-          DestroyTimer(GetExpiredTimer());
+          TimerManager.getInstance().recycle(timer);
           return;
         }
 

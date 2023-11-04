@@ -294,6 +294,10 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
   export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
+  export const SLOW_GENERIC_25_PCT_1_5S = FourCC('A03T');
+  export const SLOW_GENERIC_50_PCT_1_5S = FourCC('A00K');
+  export const SLOW_GENERIC_75_PCT_1_5S = FourCC('A04U');
+
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
   export const CIRCLE_FLASH = FourCC("A0R6");

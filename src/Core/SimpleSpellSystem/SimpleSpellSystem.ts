@@ -2337,6 +2337,7 @@ export module SimpleSpellSystem {
             if (
               // TODO: turn this back on
               IsUnitAlly(unit, player)
+              && !Globals.barrierBlockUnits.has(unit)
               && UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
               && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
               && GetUnitTypeId(unit) != Id.schala
@@ -4733,6 +4734,7 @@ export module SimpleSpellSystem {
       const unit = GetEnumUnit();
       if (
         UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
+        && !Globals.barrierBlockUnits.has(unit)
         && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
         && !IsUnitInGroup(unit, excludeGroup)
       ) {

@@ -145,7 +145,7 @@ function tsPostMain() {
     DragonBallsConstants.shenronWaitingRoom.x, DragonBallsConstants.shenronWaitingRoom.y, 0
   );
   TimerStart(CreateTimer(), 1, true, () => {
-    if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
+    if (!UnitHelper.isUnitAlive(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
       // anything that happens after hero picking is done, should be placed here
       Globals.isMainGameStarted = true;
       sagaManager = SagaManager.getInstance();

@@ -1,4 +1,4 @@
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { CustomCreep } from "./CustomCreep";
 import { Vector2D } from "Common/Vector2D";
 import { DefaultCreepUpgradeConfig, CreepUpgradeConfig, CreepResearchUpgrade } from "./CreepUpgradeConfig";
@@ -190,15 +190,15 @@ export class CreepManager {
   setupCustomCreeps(): this {
     let allCreeps = GetUnitsOfPlayerAll(Constants.sagaPlayer);
     
-    let creepPlayerIndex = Constants.maxActivePlayers;
+    let creepPlayerIndex = 0;
     ForGroup(allCreeps, () => {
       const creepUnit = GetEnumUnit();
       creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length);
       while (
-        creepPlayerIndex + Constants.maxActivePlayers >= Constants.maxPlayers || 
-        creepPlayerIndex == Constants.heavenHellCreepPlayerId
+        creepPlayerIndex + Constants.maxActivePlayers >= Constants.maxPlayers
+        || creepPlayerIndex + Constants.maxActivePlayers == Constants.heavenHellCreepPlayerId
       ) {
-        creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length);
+        creepPlayerIndex = 0;
       }
       let creepPlayer = Player(creepPlayerIndex + Constants.maxActivePlayers);
 
@@ -224,7 +224,8 @@ export class CreepManager {
           creepUnit, 
           GetUnitTypeId(creepUnit), 
           creepPlayer, 
-          new Vector2D(GetUnitX(creepUnit), GetUnitY(creepUnit)), 
+          GetUnitX(creepUnit),
+          GetUnitY(creepUnit), 
           GetUnitFacing(creepUnit),
           false
         )
@@ -234,38 +235,41 @@ export class CreepManager {
   }
 
   doCreepRespawn(oldCreep: unit, customCreep: CustomCreep) {
-    let newCreepUnit = CreateUnit(
-      customCreep.owner, 
-      customCreep.unitTypeId, 
-      customCreep.position.x, 
-      customCreep.position.y, 
-      customCreep.facing,
-    );
-
-    if (IsUnitType(newCreepUnit, UNIT_TYPE_HERO)) {
+    if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
       if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
-        SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
+        SetHeroLevel(oldCreep, GetHeroLevel(oldCreep) + 1, false);
       } else {
-        SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep), false);
+        SetHeroLevel(oldCreep, GetHeroLevel(oldCreep), false);
       }
-      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.07 + 60), false);
-      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.07 + 60), false);
-      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.07 + 60), false);
-    } else {
-      SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
-    }
+      SetHeroStr(oldCreep, Math.floor(GetHeroStr(oldCreep, false) * 1.07 + 60), false);
+      SetHeroAgi(oldCreep, Math.floor(GetHeroAgi(oldCreep, false) * 1.07 + 60), false);
+      SetHeroInt(oldCreep, Math.floor(GetHeroInt(oldCreep, false) * 1.07 + 60), false);
     
-    // in with the new, out with the old
-    this.customCreeps.set(newCreepUnit, new CustomCreep(
-      newCreepUnit,
-      customCreep.unitTypeId,
-      customCreep.owner,
-      new Vector2D(customCreep.position.x, customCreep.position.y),
-      customCreep.facing,
-      false,
-    ));
-    this.customCreeps.delete(oldCreep);
-    RemoveUnit(oldCreep);
+      ReviveHero(oldCreep, customCreep.posX, customCreep.posY, false);
+    } else {
+      const newCreepUnit = CreateUnit(
+        customCreep.owner, 
+        customCreep.unitTypeId, 
+        customCreep.posX, 
+        customCreep.posY, 
+        customCreep.facing,
+      );
+
+      SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
+
+      // in with the new, out with the old
+      const cc = this.customCreeps.get(oldCreep);
+      cc.unit = newCreepUnit;
+      cc.unitTypeId = customCreep.unitTypeId;
+      cc.owner = customCreep.owner;
+      cc.posX = customCreep.posX;
+      cc.posY = customCreep.posY;
+      cc.facing = customCreep.facing;
+      cc.isUpgrading = false;
+      this.customCreeps.set(newCreepUnit, cc);
+      this.customCreeps.delete(oldCreep);
+      RemoveUnit(oldCreep);
+    }
   }
 
   // note: only respawns creeps that are placed on the map during init
@@ -326,10 +330,10 @@ export class CreepManager {
           const unitY = GetUnitY(unit);
           const unitX = GetUnitX(unit);
           if (
-            unitY >= customCreep.position.y - Constants.creepChainErrorMargin &&
-            unitY <= customCreep.position.y + Constants.creepChainErrorMargin &&
-            unitX >= customCreep.position.x - Constants.creepChainErrorMargin &&
-            unitX <= customCreep.position.x + Constants.creepChainErrorMargin
+            unitY >= customCreep.posY - Constants.creepChainErrorMargin &&
+            unitY <= customCreep.posY + Constants.creepChainErrorMargin &&
+            unitX >= customCreep.posX - Constants.creepChainErrorMargin &&
+            unitX <= customCreep.posX + Constants.creepChainErrorMargin
           ) {
             customCreep.isUpgrading = true;
             UnitApplyTimedLife(

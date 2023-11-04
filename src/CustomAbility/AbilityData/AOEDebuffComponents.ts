@@ -946,7 +946,7 @@ export const AOEDebuffComponents = [
     startTick: 0,
     endTick: -1,
     debuffSource: AOEDebuff.SOURCE_UNIT,
-    abilityId: DebuffAbilities.TABLE_FLIP,
+    abilityId: DebuffAbilities.SLOW_GENERIC_25_PCT_5S,
     orderId: OrderIds.SLOW,
     aoe: 500,
     keepCasting: false, 

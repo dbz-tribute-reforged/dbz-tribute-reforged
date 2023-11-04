@@ -7744,9 +7744,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 15,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 25,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
@@ -7764,8 +7764,8 @@ export const AbilitiesList = [
         "Becomes invulnerable for 0.03s.|n" +
         "Instantly purges all debuffs from Donkey Kong.|n" + 
         "Can be used while stunned.|n" +
-        "Cost: 35 SP|n" +
-        "CD: 5"
+        "Cost: 25 SP|n" +
+        "CD: 15"
     },
     components: [
       { name: "hide unit dk thrilla gorilla" },

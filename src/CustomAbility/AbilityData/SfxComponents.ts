@@ -34434,7 +34434,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "GokuBlackNeedl2.mdl",
+        model: "GokuBlackNeedle2.mdl",
         repeatInterval: 8,
         group: 0,
         scale: 1.0,
