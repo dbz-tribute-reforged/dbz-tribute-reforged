@@ -249,7 +249,6 @@ udg_LucarioIornDefenseUnitGroup = nil
 udg_EisAbsoluteZeroUnitGroup = nil
 udg_IsNightmareMode = false
 udg_SummonsSaibamenHashtable = nil
-udg_VegetaHakaiUnitGroup = nil
 udg_KidBuuTimer = 0
 udg_BabidiLampTimer = nil
 udg_BabidiLampLightning = nil
@@ -431,12 +430,6 @@ gg_snd_BattleNetTick = nil
 gg_trg_Get_Int_Damage_Multiplier = nil
 gg_trg_SetUnitAnimationThenReset = nil
 gg_trg_AnimationResetLoop = nil
-gg_trg_Vegeta_Hakai_Cast = nil
-gg_trg_Vegeta_Hakai_Channel_Finish = nil
-gg_trg_Vegeta_Hakai_Channel_Interrupt = nil
-gg_trg_Vegeta_Hakai_Loop = nil
-gg_trg_Vegeta_Hakai_Channel_Damage = nil
-gg_trg_Vegeta_Hakai_Launched_Damage = nil
 gg_trg_Kyodaika_Init = nil
 gg_trg_Kyodaika_Get_Str_Mult = nil
 gg_trg_Kyodaika_Mana_Drain = nil
@@ -1483,7 +1476,6 @@ udg_MarleAllureGroup = CreateGroup()
 udg_LucarioIornDefenseUnitGroup = CreateGroup()
 udg_EisAbsoluteZeroUnitGroup = CreateGroup()
 udg_IsNightmareMode = false
-udg_VegetaHakaiUnitGroup = CreateGroup()
 udg_KidBuuTimer = 300
 udg_BabidiLampTimer = CreateTimer()
 udg_Super17AbsorbUnitGroup = CreateGroup()
@@ -17086,268 +17078,6 @@ gg_trg_All_Might_Spellbook_CD = CreateTrigger()
 TriggerRegisterAnyUnitEventBJ(gg_trg_All_Might_Spellbook_CD, EVENT_PLAYER_UNIT_SPELL_EFFECT)
 TriggerAddCondition(gg_trg_All_Might_Spellbook_CD, Condition(Trig_All_Might_Spellbook_CD_Conditions))
 TriggerAddAction(gg_trg_All_Might_Spellbook_CD, Trig_All_Might_Spellbook_CD_Actions)
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Cast_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0TC"))) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Cast_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-PauseUnitBJ(true, udg_TempUnit)
-SetUnitInvulnerable(udg_TempUnit, true)
-SetUnitTimeScalePercent(udg_TempUnit, 200.00)
-    SetUnitAnimationByIndex(udg_TempUnit,13)
-GroupAddUnitSimple(udg_TempUnit, udg_SephirothOWAUnitGroup)
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
-EnableTrigger(gg_trg_Sephiroth_One_Winged_Angel_Loop)
-end
-
-function InitTrig_Sephiroth_One_Winged_Angel_Cast()
-gg_trg_Sephiroth_One_Winged_Angel_Cast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Sephiroth_One_Winged_Angel_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Sephiroth_One_Winged_Angel_Cast, Condition(Trig_Sephiroth_One_Winged_Angel_Cast_Conditions))
-TriggerAddAction(gg_trg_Sephiroth_One_Winged_Angel_Cast, Trig_Sephiroth_One_Winged_Angel_Cast_Actions)
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func003C()
-if (udg_TempInt >= 42) then
-return true
-end
-if (IsUnitDeadBJ(udg_TempUnit) == true) then
-return true
-end
-return false
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004C()
-if (not Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
-if (Trig_Sephiroth_One_Winged_Angel_Loop_Func001Func004C()) then
-SetUnitInvulnerable(udg_TempUnit, false)
-PauseUnitBJ(false, udg_TempUnit)
-ResetUnitAnimation(udg_TempUnit)
-SetUnitTimeScalePercent(udg_TempUnit, 100.00)
-AddUnitAnimationPropertiesBJ(true, "alternate", udg_TempUnit)
-GroupRemoveUnitSimple(udg_TempUnit, udg_SephirothOWAUnitGroup)
-SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.10)))
-SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
-else
-SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
-end
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_SephirothOWAUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_One_Winged_Angel_Loop_Actions()
-ForGroupBJ(udg_SephirothOWAUnitGroup, Trig_Sephiroth_One_Winged_Angel_Loop_Func001A)
-if (Trig_Sephiroth_One_Winged_Angel_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Sephiroth_One_Winged_Angel_Loop()
-gg_trg_Sephiroth_One_Winged_Angel_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Sephiroth_One_Winged_Angel_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Sephiroth_One_Winged_Angel_Loop, 0.03)
-TriggerAddAction(gg_trg_Sephiroth_One_Winged_Angel_Loop, Trig_Sephiroth_One_Winged_Angel_Loop_Actions)
-end
-
-function Trig_Sephiroth_Parry_Cast_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0TD"))) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Cast_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-PauseUnitBJ(true, udg_TempUnit)
-    SetUnitAnimationByIndex(udg_TempUnit,2)
-GroupAddUnitSimple(udg_TempUnit, udg_SephirothParryUnitGroup)
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(0, 1, udg_ID, udg_SummonsHashtable)
-SaveIntegerBJ(GetUnitAbilityLevelSwapped(FourCC("A0TD"), udg_TempUnit), 2, udg_ID, udg_SummonsHashtable)
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-AddSpecialEffectLocBJ(udg_TempLoc, "DTBlueNoRingWhite.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_TempLoc)
-EnableTrigger(gg_trg_Sephiroth_Parry_Loop)
-end
-
-function InitTrig_Sephiroth_Parry_Cast()
-gg_trg_Sephiroth_Parry_Cast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Sephiroth_Parry_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Sephiroth_Parry_Cast, Condition(Trig_Sephiroth_Parry_Cast_Conditions))
-TriggerAddAction(gg_trg_Sephiroth_Parry_Cast, Trig_Sephiroth_Parry_Cast_Actions)
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003001()
-return (IsUnitEnemy(GetFilterUnit(), udg_TempPlayer) == true)
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002001()
-return (IsUnitDeadBJ(GetFilterUnit()) == false)
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002002()
-return (IsUnitIdType(GetUnitTypeId(GetFilterUnit()), UNIT_TYPE_STRUCTURE) == false)
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002()
-return GetBooleanAnd(Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002001(), Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002002())
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003()
-return GetBooleanAnd(Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003001(), Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003002())
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009Func002Func001C()
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009Func002C()
-if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
-return false
-end
-if (not (BlzIsUnitInvulnerable(udg_TempUnit2) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009A()
-udg_TempUnit2 = GetEnumUnit()
-if (Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009Func002C()) then
-SetUnitLifeBJ(udg_TempUnit2, 1.00)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-else
-if (Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009Func002Func001C()) then
-udg_TempReal2 = (1500.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)) + RMaxBJ(0.00, (1.10 * ((1.05 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))) - I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit2, true)))))))
-else
-udg_TempReal2 = (1500.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)), 100.00))
-end
-udg_TempReal2 = (udg_DMG_KAME_DPS * (20.00 * (udg_TempReal2 * I2R(udg_TempInt2))))
-udg_TempReal2 = (udg_TempReal2 * udg_TempIntDamageMult)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-end
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc2, "animeslashfinal.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_TempLoc2)
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004Func004C()
-if (not (CountUnitsInGroup(udg_TempUnitGroup) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func004C()
-if (not (udg_TempInt >= 20)) then
-return false
-end
-if (not (udg_TempInt < 91)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func005Func003C()
-if (udg_TempInt >= 99) then
-return true
-end
-if (IsUnitDeadBJ(udg_TempUnit) == true) then
-return true
-end
-return false
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001Func005C()
-if (not Trig_Sephiroth_Parry_Loop_Func001Func005Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable)
-if (Trig_Sephiroth_Parry_Loop_Func001Func004C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(500.00, udg_TempLoc, Condition(Trig_Sephiroth_Parry_Loop_Func001Func004Func003002003))
-if (Trig_Sephiroth_Parry_Loop_Func001Func004Func004C()) then
-udg_TempInt = 92
-            playGenericSpellSound(udg_TempUnit, "Audio/Voice/Sephiroth/ParryStrike.mp3", 1410)
-SetUnitTimeScalePercent(udg_TempUnit, 200.00)
-SetUnitAnimation(udg_TempUnit, "attack")
-udg_TempReal = (0.66 * (20.00 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))
-udg_TempInt2 = LoadIntegerBJ(2, udg_ID, udg_SummonsHashtable)
-TriggerExecute(gg_trg_Get_Int_Damage_Multiplier)
-ForGroupBJ(udg_TempUnitGroup, Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func009A)
-else
-end
-        RemoveLocation(udg_TempLoc)
-        DestroyGroup(udg_TempUnitGroup)
-else
-end
-if (Trig_Sephiroth_Parry_Loop_Func001Func005C()) then
-SetUnitTimeScalePercent(udg_TempUnit, 100.00)
-PauseUnitBJ(false, udg_TempUnit)
-ResetUnitAnimation(udg_TempUnit)
-GroupRemoveUnitSimple(udg_TempUnit, udg_SephirothParryUnitGroup)
-SaveIntegerBJ(0, 1, udg_ID, udg_SummonsHashtable)
-else
-SaveIntegerBJ((udg_TempInt + 1), 1, udg_ID, udg_SummonsHashtable)
-end
-end
-
-function Trig_Sephiroth_Parry_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_SephirothParryUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Sephiroth_Parry_Loop_Actions()
-ForGroupBJ(udg_SephirothParryUnitGroup, Trig_Sephiroth_Parry_Loop_Func001A)
-if (Trig_Sephiroth_Parry_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Sephiroth_Parry_Loop()
-gg_trg_Sephiroth_Parry_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Sephiroth_Parry_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Sephiroth_Parry_Loop, 0.03)
-TriggerAddAction(gg_trg_Sephiroth_Parry_Loop, Trig_Sephiroth_Parry_Loop_Actions)
 end
 
 function Trig_Hit_Pocket_Dimension_Cast_Actions()
@@ -70086,10 +69816,6 @@ InitTrig_All_Might_United_States_of_Smash_Loop()
 InitTrig_All_Might_Left_Right_Smash_CD()
 InitTrig_All_Might_Left_Right_Smash_Loop()
 InitTrig_All_Might_Spellbook_CD()
-InitTrig_Sephiroth_One_Winged_Angel_Cast()
-InitTrig_Sephiroth_One_Winged_Angel_Loop()
-InitTrig_Sephiroth_Parry_Cast()
-InitTrig_Sephiroth_Parry_Loop()
 InitTrig_Hit_Pocket_Dimension_Cast()
 InitTrig_Hit_Pocket_Dimension_Loop()
 InitTrig_Hit_Begin_Cast_Spell()

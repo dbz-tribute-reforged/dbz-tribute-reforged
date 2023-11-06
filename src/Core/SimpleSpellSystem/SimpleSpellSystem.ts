@@ -38,6 +38,7 @@ export module SimpleSpellSystem {
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
 
+    setupGenericSpellEffectTrigger();
     setupEndFinishTriggers();
 
 
@@ -57,7 +58,135 @@ export module SimpleSpellSystem {
       }
     });
     
+    // add units to dds
+    TriggerRegisterEnterRectSimple(Globals.DDSEntryTrigger, GetEntireMapRect());
+    TriggerAddCondition(Globals.DDSEntryTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      if (
+        !Globals.DDSUnitMap.has(unit)
+        && IsUnitType(unit, UNIT_TYPE_HERO)
+        && GetHeroProperName(unit) == "Test Dummy"
+      ) {
+        Globals.DDSUnitMap.set(unit, true);
+        TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
+      }
+      return false;
+    }));
+
+    // add DDS stuff
+    TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
+      const target = BlzGetEventDamageTarget();
+      const dmg = GetEventDamage();
+      const source = GetEventDamageSource();
+      DDSRunJirenGlare(target, source, dmg);
+      DDSRunDPSCheck(target, source, dmg);
+      return false;
+    }));
+
     
+    // barrel
+    TriggerRegisterTimerEventPeriodic(Globals.barrelMoveTrigger, 0.03);
+    TriggerAddAction(Globals.barrelMoveTrigger, () => {
+      const barrelMoveSpeed = 50;
+      const barrelMoveDuration = 24;
+      const minOffsetDistance = 30;
+      ForGroup(Globals.barrelUnitGroup, () => {
+        // move barrel
+        const unit = GetEnumUnit();
+        const unitId = GetHandleId(unit);
+        const angle = LoadReal(Globals.barrelHashtable, unitId, 1);
+        const expectedX = LoadReal(Globals.barrelHashtable, unitId, 2);
+        const expectedY = LoadReal(Globals.barrelHashtable, unitId, 3);
+
+        Globals.tmpVector2.setPos(expectedX, expectedY);
+        Globals.tmpVector.setUnit(unit);
+        const offsetFromExpected = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+        // normal direction movement
+        Globals.tmpVector.polarProjectCoords(Globals.tmpVector, angle, barrelMoveSpeed);
+        PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector);
+        
+        // if barrel strayed from expected path, attempt to move it back (up to a limit)
+        if (offsetFromExpected >= minOffsetDistance) {
+          Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, angle, barrelMoveSpeed);
+
+          const reverseAngle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+          Globals.tmpVector.polarProjectCoords(
+            Globals.tmpVector, 
+            reverseAngle, 
+            Math.min(offsetFromExpected, minOffsetDistance)
+          );
+          PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector);
+        }
+
+        SaveReal(Globals.barrelHashtable, unitId, 2, GetUnitX(unit));
+        SaveReal(Globals.barrelHashtable, unitId, 3, GetUnitY(unit));
+        SetUnitFacingTimed(unit, angle, 0.03);
+
+        const duration = LoadInteger(Globals.barrelHashtable, unitId, 0);
+        if (duration >= barrelMoveDuration) {
+          FlushChildHashtable(Globals.barrelHashtable, unitId);
+          GroupRemoveUnit(Globals.barrelUnitGroup, unit);
+        } else {
+          SaveInteger(Globals.barrelHashtable, unitId, 0, duration + 1);
+        }
+      });
+
+      if (CountUnitsInGroup(Globals.barrelUnitGroup) == 0) {
+        DisableTrigger(Globals.barrelMoveTrigger);
+      }
+    });
+    DisableTrigger(Globals.barrelMoveTrigger);
+
+
+    TriggerRegisterEnterRectSimple(Globals.appuleVengeanceTeleportTrigger, GetPlayableMapRect());
+    TriggerAddCondition(Globals.appuleVengeanceTeleportTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+
+      if (IsUnitType(unit, UNIT_TYPE_HERO) && UnitHelper.isUnitAlive(unit)) {
+        const playerId = GetPlayerId(GetOwningPlayer(unit));
+        if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+          Globals.customPlayers[playerId].addHero(unit);
+          Globals.customPlayers[playerId].addUnit(unit);
+        }
+      }
+      if (
+        GetUnitTypeId(unit) == Id.appule 
+        && IsUnitIllusion(unit)
+      ) {
+        const player = GetOwningPlayer(unit);
+        const playerId = GetPlayerId(player);
+        const hero = Globals.customPlayers[playerId].firstCustomHero;
+        if (!hero) return false;
+        const heroId = GetHandleId(hero.unit);
+
+        SetUnitMoveSpeed(unit, GetUnitMoveSpeed(hero.unit));
+
+        const is_active = LoadBoolean(
+          Globals.genericSpellHashtable, 
+          GetHandleId(hero.unit),
+          StringHash("appule|illusion|active")
+        );
+        if (!is_active) return;
+
+        const target = LoadUnitHandle(Globals.genericSpellHashtable, heroId, StringHash("appule|illusion|target"));
+
+        Globals.tmpVector.setUnit(hero.unit);
+        Globals.tmpVector2.setUnit(target);
+        
+        // max cap teleportation distance
+        if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > 4000) {
+          return false;
+        }
+
+        SetUnitPosition(unit, GetUnitX(target), GetUnitY(target));
+        IssueTargetOrderById(unit, OrderIds.ATTACK, target);
+      }
+      return false;
+    }));
+  }
+
+  export function setupGenericSpellEffectTrigger() {
     TriggerRegisterAnyUnitEventBJ(Globals.simpleSpellEffectTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
     TriggerAddAction(Globals.simpleSpellEffectTrigger, () => {
       const spellId = GetSpellAbilityId();
@@ -225,6 +354,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.mightGuyGate7, SimpleSpellSystem.doMightGuyGate);
     Globals.genericSpellMap.set(Id.mightGuyGate8, SimpleSpellSystem.doMightGuyGate);
 
+    Globals.genericSpellMap.set(Id.sephirothOneWingedAngel, SimpleSpellSystem.doOneWingedAngel);
+    Globals.genericSpellMap.set(Id.sephirothParry, SimpleSpellSystem.doSephirothParry);
+
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
     Globals.genericSpellMap.set(Id.itemMajinBuuFat, SimpleSpellSystem.doMajinBuuFat);
@@ -236,132 +368,6 @@ export module SimpleSpellSystem {
     // Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
     
-    // add units to dds
-    TriggerRegisterEnterRectSimple(Globals.DDSEntryTrigger, GetEntireMapRect());
-    TriggerAddCondition(Globals.DDSEntryTrigger, Condition(() => {
-      const unit = GetTriggerUnit();
-      if (
-        !Globals.DDSUnitMap.has(unit)
-        && IsUnitType(unit, UNIT_TYPE_HERO)
-        && GetHeroProperName(unit) == "Test Dummy"
-      ) {
-        Globals.DDSUnitMap.set(unit, true);
-        TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
-      }
-      return false;
-    }));
-
-    // add DDS stuff
-    TriggerAddCondition(Globals.DDSTrigger, Condition(() => {
-      const target = BlzGetEventDamageTarget();
-      const dmg = GetEventDamage();
-      const source = GetEventDamageSource();
-      DDSRunJirenGlare(target, source, dmg);
-      DDSRunDPSCheck(target, source, dmg);
-      return false;
-    }));
-
-    
-    // barrel
-    TriggerRegisterTimerEventPeriodic(Globals.barrelMoveTrigger, 0.03);
-    TriggerAddAction(Globals.barrelMoveTrigger, () => {
-      const barrelMoveSpeed = 50;
-      const barrelMoveDuration = 24;
-      const minOffsetDistance = 30;
-      ForGroup(Globals.barrelUnitGroup, () => {
-        // move barrel
-        const unit = GetEnumUnit();
-        const unitId = GetHandleId(unit);
-        const angle = LoadReal(Globals.barrelHashtable, unitId, 1);
-        const expectedX = LoadReal(Globals.barrelHashtable, unitId, 2);
-        const expectedY = LoadReal(Globals.barrelHashtable, unitId, 3);
-
-        Globals.tmpVector2.setPos(expectedX, expectedY);
-        Globals.tmpVector.setUnit(unit);
-        const offsetFromExpected = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-
-        // normal direction movement
-        Globals.tmpVector.polarProjectCoords(Globals.tmpVector, angle, barrelMoveSpeed);
-        PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector);
-        
-        // if barrel strayed from expected path, attempt to move it back (up to a limit)
-        if (offsetFromExpected >= minOffsetDistance) {
-          Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, angle, barrelMoveSpeed);
-
-          const reverseAngle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-          Globals.tmpVector.polarProjectCoords(
-            Globals.tmpVector, 
-            reverseAngle, 
-            Math.min(offsetFromExpected, minOffsetDistance)
-          );
-          PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector);
-        }
-
-        SaveReal(Globals.barrelHashtable, unitId, 2, GetUnitX(unit));
-        SaveReal(Globals.barrelHashtable, unitId, 3, GetUnitY(unit));
-        SetUnitFacingTimed(unit, angle, 0.03);
-
-        const duration = LoadInteger(Globals.barrelHashtable, unitId, 0);
-        if (duration >= barrelMoveDuration) {
-          FlushChildHashtable(Globals.barrelHashtable, unitId);
-          GroupRemoveUnit(Globals.barrelUnitGroup, unit);
-        } else {
-          SaveInteger(Globals.barrelHashtable, unitId, 0, duration + 1);
-        }
-      });
-
-      if (CountUnitsInGroup(Globals.barrelUnitGroup) == 0) {
-        DisableTrigger(Globals.barrelMoveTrigger);
-      }
-    });
-    DisableTrigger(Globals.barrelMoveTrigger);
-
-
-    TriggerRegisterEnterRectSimple(Globals.appuleVengeanceTeleportTrigger, GetPlayableMapRect());
-    TriggerAddCondition(Globals.appuleVengeanceTeleportTrigger, Condition(() => {
-      const unit = GetTriggerUnit();
-
-      if (IsUnitType(unit, UNIT_TYPE_HERO) && UnitHelper.isUnitAlive(unit)) {
-        const playerId = GetPlayerId(GetOwningPlayer(unit));
-        if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-          Globals.customPlayers[playerId].addHero(unit);
-          Globals.customPlayers[playerId].addUnit(unit);
-        }
-      }
-      if (
-        GetUnitTypeId(unit) == Id.appule 
-        && IsUnitIllusion(unit)
-      ) {
-        const player = GetOwningPlayer(unit);
-        const playerId = GetPlayerId(player);
-        const hero = Globals.customPlayers[playerId].firstCustomHero;
-        if (!hero) return false;
-        const heroId = GetHandleId(hero.unit);
-
-        SetUnitMoveSpeed(unit, GetUnitMoveSpeed(hero.unit));
-
-        const is_active = LoadBoolean(
-          Globals.genericSpellHashtable, 
-          GetHandleId(hero.unit),
-          StringHash("appule|illusion|active")
-        );
-        if (!is_active) return;
-
-        const target = LoadUnitHandle(Globals.genericSpellHashtable, heroId, StringHash("appule|illusion|target"));
-
-        Globals.tmpVector.setUnit(hero.unit);
-        Globals.tmpVector2.setUnit(target);
-        
-        // max cap teleportation distance
-        if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > 4000) {
-          return false;
-        }
-
-        SetUnitPosition(unit, GetUnitX(target), GetUnitY(target));
-        IssueTargetOrderById(unit, OrderIds.ATTACK, target);
-      }
-      return false;
-    }));
   }
 
   export function setupEndFinishTriggers() {
@@ -1179,31 +1185,32 @@ export module SimpleSpellSystem {
     TimerStart(timer, 0.03, true, () => {
       if (counter >= duration) {
         TimerManager.getInstance().recycle(timer);
-      } else {
-        if (counter < duration) {
-          Globals.tmpVector3.polarProjectCoords(
-            Globals.tmpVector3,
-            direction,
-            itemMS
-          );
-
-          if (PathingCheck.isGroundWalkable(Globals.tmpVector3)) {
-            SetItemPosition(movedItem, Globals.tmpVector3.x, Globals.tmpVector3.y);
-          } else {
-            Globals.tmpVector3.x = GetItemX(movedItem);
-            Globals.tmpVector3.y = GetItemY(movedItem);
-          }
-        }
-        
-        if (
-          counter > minDuration
-          && SimpleSpellSystem.doAOEItemPickup(movedItem, Globals.tmpVector3, stealAOE)
-        ) {
-          counter = duration;
-        }
-
-        ++counter;
+        return;
       }
+
+      if (counter < duration) {
+        Globals.tmpVector3.polarProjectCoords(
+          Globals.tmpVector3,
+          direction,
+          itemMS
+        );
+
+        if (PathingCheck.isGroundWalkable(Globals.tmpVector3)) {
+          SetItemPosition(movedItem, Globals.tmpVector3.x, Globals.tmpVector3.y);
+        } else {
+          Globals.tmpVector3.x = GetItemX(movedItem);
+          Globals.tmpVector3.y = GetItemY(movedItem);
+        }
+      }
+      
+      if (
+        counter > minDuration
+        && SimpleSpellSystem.doAOEItemPickup(movedItem, Globals.tmpVector3, stealAOE)
+      ) {
+        counter = duration;
+      }
+
+      ++counter;
     });
   }
 
@@ -5756,11 +5763,11 @@ export module SimpleSpellSystem {
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
       if (ticks > maxTick) {
-        PauseManager.getInstance().unpause(caster);
+        PauseManager.getInstance().unpause(caster, false);
         SetUnitTimeScalePercent(caster, 100);
         ResetUnitAnimation(caster);
 
-        PauseManager.getInstance().unpause(target);
+        PauseManager.getInstance().unpause(target, false);
         ResetUnitAnimation(target);
         
         DestroyEffect(
@@ -5862,7 +5869,7 @@ export module SimpleSpellSystem {
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
       if (ticks > maxTick) {
-        PauseManager.getInstance().unpause(caster);
+        PauseManager.getInstance().unpause(caster, false);
         SetUnitTimeScalePercent(caster, 100);
         ResetUnitAnimation(caster);
 
@@ -5875,7 +5882,7 @@ export module SimpleSpellSystem {
 
         ForGroup(targetGroup, () => {
           const unit = GetEnumUnit();
-          PauseManager.getInstance().unpause(unit);
+          PauseManager.getInstance().unpause(unit, false);
           ResetUnitAnimation(unit);
         });
         
@@ -6322,6 +6329,127 @@ export module SimpleSpellSystem {
     });
 
     return beam;
+  }
+
+  export function doOneWingedAngel(spellId: number) {
+    const caster = GetTriggerUnit();
+
+    PauseManager.getInstance().pause(caster, true);
+    SetUnitTimeScale(caster, 2.0);
+    SetUnitAnimationByIndex(caster, 13);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 1.25, false, () => {
+      PauseManager.getInstance().unpause(caster, true);
+      SetUnitTimeScale(caster, 1.0);
+      ResetUnitAnimation(caster);
+    });
+  }
+
+  export function doSephirothParry(spellId: number) {
+    const activateTick = 20;
+    const endTick = 99;
+    const aoe = 500;
+    const dmgMult = BASE_DMG.KAME_DPS * 20;
+    const agiDiffMult = 1.1;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, spellId); 
+
+    PauseManager.getInstance().pause(caster, false);
+    SetUnitAnimationByIndex(caster, 2);
+
+    Globals.tmpVector.setUnit(caster);
+
+    const sfx = AddSpecialEffect("DTBlueNoRingWhite.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    BlzSetSpecialEffectScale(sfx, 3.0);
+    DestroyEffect(sfx);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > endTick) {
+        PauseManager.getInstance().unpause(caster, false);
+        ResetUnitAnimation(caster);
+        SetUnitTimeScale(caster, 1.0);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      if (ticks > activateTick && ticks % 2 == 0) {
+        let numUnits = 0;
+        GroupClear(Globals.tmpUnitGroup2);
+
+        Globals.tmpVector.setUnit(caster);
+        GroupClear(Globals.tmpUnitGroup);
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, Globals.tmpVector.x, Globals.tmpVector.y, aoe, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (
+            UnitHelper.isUnitTargetableForPlayer(unit, player)
+            && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+          ) {
+            GroupAddUnit(Globals.tmpUnitGroup2, unit);
+            numUnits++;
+          }
+        });
+
+        if (numUnits > 0) {
+          ticks = endTick;
+          SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Sephiroth/ParryStrike.mp3", 1410);
+
+          SetUnitTimeScale(caster, 2.0);
+          SetUnitAnimation(caster, "attack");
+          ForGroup(Globals.tmpUnitGroup2, () => {
+            const unit = GetEnumUnit();
+            if (UnitHelper.isUnitHakaiInstantDestroyable(unit, player)) {
+              UnitHelper.dealHakaiDamage(caster, unit);
+            } else {
+              let dmg = 0;
+              let agiDiff = 0;
+              if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+                agiDiff = Math.max(
+                  0, 
+                  agiDiffMult * (GetHeroAgi(caster, true) - GetHeroAgi(unit, true))
+                );
+                dmg += AOEDamage.calculateDamageRawForced(
+                  caster, abilLvl, spellPower, dmgMult, 1.0, agiDiff
+                );
+              }
+              dmg += AOEDamage.calculateDamageRaw(
+                caster, abilLvl, spellPower, dmgMult, 1.0, bj_HEROSTAT_INT
+              );
+              if (agiDiff > 0 && Globals.showAbilityFloatingText) {
+                TextTagHelper.showPlayerColorTextOnUnit(
+                  I2S(Math.floor(dmg)) + "!",
+                  playerId, unit, 
+                  10, 3.0
+                );
+              }
+              UnitDamageTarget(
+                caster, unit, 
+                dmg, false, false, 
+                ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+                WEAPON_TYPE_WHOKNOWS
+              );
+            }
+            const sfx2 = AddSpecialEffect("animeslashfinal.mdl", GetUnitX(unit), GetUnitY(unit));
+            BlzSetSpecialEffectScale(sfx2, 1.5);
+            DestroyEffect(sfx2);
+          });
+        }
+      }
+
+      if (UnitHelper.isUnitDead(caster)) {
+        ticks = endTick;
+      }
+      ticks++;
+    });
   }
 
   export function doCellMaxWings(spellId: number) {

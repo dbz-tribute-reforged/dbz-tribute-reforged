@@ -91,13 +91,18 @@ function tsPostMain() {
   PreloadModels.doPreload();
 
   setupHostPlayerTransfer();
-  TimerStart(CreateTimer(), 1, false, () => {
-    transferHostPlayer();
+
+  TimerStart(CreateTimer(), 0, false, () => {
     castTimeHelper = CastTimeHelper.getInstance();
     dualTechManager = DualTechManager.getInstance();  
     FBSimTestManager.getInstance().initialize();
     pauseManager = PauseManager.getInstance();
     SimpleSpellSystem.initialize();
+    DestroyTimer(GetExpiredTimer());
+  });
+
+  TimerStart(CreateTimer(), 1, false, () => {
+    transferHostPlayer();
     CustomPlayerTest();
     heroSelectorManager = HeroSelectorManager.getInstance();
     DestroyTimer(GetExpiredTimer());
