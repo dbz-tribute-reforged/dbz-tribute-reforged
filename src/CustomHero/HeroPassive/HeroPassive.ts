@@ -66,8 +66,8 @@ export class HeroPassiveManager {
 
   public setupHero(customHero: CustomHero) {
     setupRegenTimer(customHero);
-    const unitId = GetUnitTypeId(customHero.unit);
-    switch (unitId) {
+    const unitTypeId = GetUnitTypeId(customHero.unit);
+    switch (unitTypeId) {
       case HeroPassiveData.KID_BUU:
         kidBuuPassive(customHero);
         break;
@@ -2758,7 +2758,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
 }
 
 export function minatoPassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroId = GetHandleId(customHero.unit);
 
   const timer = CreateTimer();
   customHero.addTimer(timer);
@@ -2841,7 +2841,7 @@ export function minatoPassive(customHero: CustomHero) {
 }
 
 export function mightGuyPassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroId = GetHandleId(customHero.unit);
 
   const timer = CreateTimer();
   customHero.addTimer(timer);
@@ -2929,7 +2929,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     const heroInt = GetHeroInt(customHero.unit, true);
     const sumStats = 0.33 * (heroStr + heroAgi + heroInt);
 
-    const unitId = GetUnitTypeId(customHero.unit);
+    const unitTypeId = GetUnitTypeId(customHero.unit);
 
     const guyGateLvl = GetUnitAbilityLevel(customHero.unit, Id.mightGuyGateArmor);
     const hasBuuFat = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.MAJIN_BUU_FAT);
@@ -2949,7 +2949,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       spMult += 1;
     }
-    if (unitId == Id.saitama) {
+    if (unitTypeId == Id.saitama) {
       spMult += Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     } 
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
