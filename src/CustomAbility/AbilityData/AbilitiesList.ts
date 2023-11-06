@@ -2844,6 +2844,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_TORNADO
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground forward justice tornado" },
       { name: "damage justice tornado dps" },
       { name: "knockback justice tornado" },
@@ -2874,6 +2875,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_TORNADO
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground forward justice tornado 2" },
       { name: "damage justice tornado 2 dps" },
       { name: "knockback justice tornado 2" },
@@ -3020,6 +3022,7 @@ export const AbilitiesList = [
         AbilityNames.Dyspo.LIGHT_BULLET
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground point light bullet" },
       { name: "damage light bullet explosion" },
       { name: "sfx light bullet" },
@@ -6108,7 +6111,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.CYCLONE,
     },
     components: [
-      { name: "anim crono cyclone" },
+      { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
       { name: "knockback cyclone"},
@@ -14426,7 +14429,7 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "anim waluigi spin" },
+      { name: "anim add alternate" },
       { name: "dash ground forward 1dist" },
       { name: "debuff curse waluigi spin" },
       { name: "damage waluigi spin dps" },
@@ -15421,7 +15424,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "anim demiurge jaldabaoth" },
+      { name: "anim add alternate" },
       { name: "temp ability demiurge jaldabaoth invis" },
       { name: "dash ground forward 2dist" },
       { name: "sfx demiurge jaldabaoth" },
@@ -15741,7 +15744,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "anim might guy leaf hurricane" },
+      { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
       { name: "knockback cyclone"},

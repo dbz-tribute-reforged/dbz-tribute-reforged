@@ -198,6 +198,7 @@ export module SimpleSpellSystem {
     });
     
     Globals.genericSpellMap.set(Id.vegetaHakai, SimpleSpellSystem.doVegetaHakai);
+    Globals.genericSpellMap.set(Id.toppoHakai, SimpleSpellSystem.doVegetaHakai);
 
     Globals.genericSpellMap.set(Id.braveSwordAttack, SimpleSpellSystem.BraveSwordAttack);
 
@@ -404,6 +405,9 @@ export module SimpleSpellSystem {
 
     Globals.genericSpellEndMap.set(Id.vegetaHakai, endVegetaHakai);
     Globals.genericSpellFinishMap.set(Id.vegetaHakai, endVegetaHakai);
+
+    Globals.genericSpellEndMap.set(Id.toppoHakai, endVegetaHakai);
+    Globals.genericSpellFinishMap.set(Id.toppoHakai, endVegetaHakai);
   }
 
   export function doVegetaHakai(spellId: number) {
@@ -419,7 +423,7 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(caster);
     const damagedGroup = CreateGroup();
 
-    const hakaiKey = StringHash(I2S(spellId) + "hk_channel_end"); 
+    const hakaiKey = StringHash(I2S(spellId) + "hakai_channel_end"); 
     SaveInteger(Globals.genericSpellHashtable, casterId, hakaiKey, 1);
 
     let targetX = GetSpellTargetX();
@@ -441,12 +445,11 @@ export module SimpleSpellSystem {
     let ticks = 0;
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
-      const flag = LoadInteger(Globals.genericSpellHashtable, casterId, hakaiKey);
       if (ticks >= endTick) {
         const dmgSfx = AddSpecialEffect(
           "PurpleSlam.mdl", targetX, targetY
         );
-        BlzSetSpecialEffectScale(dmgSfx, 2.0);
+        BlzSetSpecialEffectScale(dmgSfx, 3.0);
         DestroyEffect(dmgSfx);
 
         DestroyEffect(sfx);
@@ -455,47 +458,46 @@ export module SimpleSpellSystem {
         return;
       }
 
-        if (ticks == 19) {
-          SoundHelper.playSoundOnUnit(caster, "Audio/Effects/HakaiToppo.mp3", 3082);
-        }
+      if (ticks == 18) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Effects/HakaiToppo.mp3", 3082);
+      }
 
-        if (ticks % 2 == 0) {
-          GroupEnumUnitsInRange(Globals.tmpUnitGroup, targetX, targetY, aoe, null);
-          ForGroup(Globals.tmpUnitGroup, () => {
-            const unit = GetEnumUnit();
-            if (
-              IsUnitInGroup(unit, damagedGroup)
-              || !UnitHelper.isUnitTargetableForPlayer(unit, player)
-            ) {
-              return;
-            }
-            if (UnitHelper.isUnitHakaiInstantDestroyable(unit, player)) {
-              UnitHelper.dealHakaiDamage(caster, unit);
-            } else if (ticks >= channelTick) {
-              const dmg = (
-                GetUnitState(unit, UNIT_STATE_LIFE) * currHpPct
-                + GetUnitState(unit, UNIT_STATE_MAX_LIFE) * maxHpPct
-              );
-              GroupAddUnit(damagedGroup, unit);
-              UnitDamageTarget(
-                caster, unit, dmg, 
-                false, false, 
-                ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
-                WEAPON_TYPE_WHOKNOWS
-              );
-            } 
-            if (GetUnitTypeId(unit) == Constants.dummyBeamUnitId) {
-              const dmgSfx = AddSpecialEffect(
-                "PurpleSlam.mdl", GetUnitX(unit), GetUnitY(unit)
-              );
-              BlzSetSpecialEffectScale(dmgSfx, 2.0);
-              DestroyEffect(dmgSfx);
-            }
-          });
-        }
+      if (ticks % 2 == 0) {
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, targetX, targetY, aoe, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (
+            IsUnitInGroup(unit, damagedGroup)
+            || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+          ) {
+            return;
+          }
+          if (UnitHelper.isUnitHakaiInstantDestroyable(unit, player)) {
+            UnitHelper.dealHakaiDamage(caster, unit);
+          } else if (ticks >= channelTick) {
+            const dmg = (
+              GetUnitState(unit, UNIT_STATE_LIFE) * currHpPct
+              + GetUnitState(unit, UNIT_STATE_MAX_LIFE) * maxHpPct
+            );
+            GroupAddUnit(damagedGroup, unit);
+            UnitDamageTarget(
+              caster, unit, dmg, 
+              false, false, 
+              ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+              WEAPON_TYPE_WHOKNOWS
+            );
+          } 
+          if (GetUnitTypeId(unit) == Constants.dummyBeamUnitId) {
+            const dmgSfx = AddSpecialEffect(
+              "PurpleSlam.mdl", GetUnitX(unit), GetUnitY(unit)
+            );
+            BlzSetSpecialEffectScale(dmgSfx, 2.0);
+            DestroyEffect(dmgSfx);
+          }
+        });
+      }
 
       if (ticks >= channelTick) {
-        // move it
         Globals.tmpVector.setPos(targetX, targetY);
         Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, speed);
         BlzSetSpecialEffectX(sfx, Globals.tmpVector.x);
@@ -506,7 +508,14 @@ export module SimpleSpellSystem {
         BlzSetSpecialEffectScale(sfx, 0.5 + ticks * 0.04);
       }
 
-      if (flag == 2 && ticks < channelTick) {
+      const flag = LoadInteger(Globals.genericSpellHashtable, casterId, hakaiKey);
+      if (
+        ticks < channelTick
+        && (
+          flag == 2
+          || UnitHelper.isUnitDead(caster)
+        )
+      ) {
         ticks = endTick;
       }
       ticks++;
@@ -516,8 +525,7 @@ export module SimpleSpellSystem {
   export function endVegetaHakai(spellId: number) {
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
-    const hakaiKey = StringHash(I2S(spellId) + "hk_channel_end"); 
-
+    const hakaiKey = StringHash(I2S(spellId) + "hakai_channel_end"); 
     SaveInteger(Globals.genericSpellHashtable, casterId, hakaiKey, 2);
   }
 

@@ -1233,6 +1233,7 @@ export module Id {
   export const justiceHold2 = FourCC("A0PM");
   export const justicePoseToppo = FourCC("A0PF");
   export const toppoGodOfDestruction = FourCC("A0PC");
+  export const toppoHakai = FourCC("A0PH");
 
   export const upa = FourCC("H099");
   export const javelinThrow = FourCC("A0OH");

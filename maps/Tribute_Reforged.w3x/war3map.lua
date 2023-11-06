@@ -180,7 +180,6 @@ udg_ScouterDropCounter = 0
 udg_SagaStatsInvulUnitGroup = nil
 udg_PrideTrooperAlliesPlayerGroup = nil
 udg_PrideTrooperMult = 0.0
-udg_ToppoHakaiUnitGroup = nil
 udg_TransformationItemUnitGroup = nil
 udg_TransformationItemTimer = nil
 udg_TransformationItemInt = 0
@@ -208,8 +207,6 @@ udg_RoshiNewTrickUnitGroup = nil
 udg_AllMightUnitedStatesOfSmash = nil
 udg_AllMightLeftRightSmash = nil
 udg_HostPlayer = nil
-udg_SephirothOWAUnitGroup = nil
-udg_SephirothParryUnitGroup = nil
 udg_HitPocketDimensionUnitGroup = nil
 udg_HitChargesUnitGroup = nil
 udg_HitHashtable = nil
@@ -482,13 +479,6 @@ gg_trg_Eis_Absolute_Zero_Level_Up = nil
 gg_trg_Eis_Absolute_Zero_Cast = nil
 gg_trg_Eis_Absolute_Zero_Stun = nil
 gg_trg_Eis_Absolute_Zero_Loop = nil
-gg_trg_Toppo_Hakai_Cast = nil
-gg_trg_Toppo_Hakai_Channel_Finish = nil
-gg_trg_Toppo_Hakai_Channel_Interrupt = nil
-gg_trg_Toppo_Hakai_Loop = nil
-gg_trg_Toppo_Hakai_Channel_Damage = nil
-gg_trg_Toppo_Hakai_Launched_Damage = nil
-gg_trg_Toppo_Justice_Tornado_Cast = nil
 gg_trg_Toppo_Justice_Pose_Cast = nil
 gg_trg_Toppo_God_of_Destruction_Cast = nil
 gg_trg_Toppo_Upgrade_Spells = nil
@@ -551,10 +541,6 @@ gg_trg_All_Might_United_States_of_Smash_Loop = nil
 gg_trg_All_Might_Left_Right_Smash_CD = nil
 gg_trg_All_Might_Left_Right_Smash_Loop = nil
 gg_trg_All_Might_Spellbook_CD = nil
-gg_trg_Sephiroth_One_Winged_Angel_Cast = nil
-gg_trg_Sephiroth_One_Winged_Angel_Loop = nil
-gg_trg_Sephiroth_Parry_Cast = nil
-gg_trg_Sephiroth_Parry_Loop = nil
 gg_trg_Hit_Pocket_Dimension_Cast = nil
 gg_trg_Hit_Pocket_Dimension_Loop = nil
 gg_trg_Hit_Begin_Cast_Spell = nil
@@ -1393,7 +1379,6 @@ udg_ScouterDropCounter = 0
 udg_SagaStatsInvulUnitGroup = CreateGroup()
 udg_PrideTrooperAlliesPlayerGroup = CreateForce()
 udg_PrideTrooperMult = 0.0
-udg_ToppoHakaiUnitGroup = CreateGroup()
 udg_TransformationItemUnitGroup = CreateGroup()
 udg_TransformationItemTimer = CreateTimer()
 udg_TransformationItemInt = 0
@@ -1413,8 +1398,6 @@ udg_RoshiNewTrickUnitGroup = CreateGroup()
 udg_AllMightUnitedStatesOfSmash = CreateGroup()
 udg_AllMightLeftRightSmash = CreateGroup()
 udg_HostPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
-udg_SephirothOWAUnitGroup = CreateGroup()
-udg_SephirothParryUnitGroup = CreateGroup()
 udg_HitPocketDimensionUnitGroup = CreateGroup()
 udg_HitChargesUnitGroup = CreateGroup()
 udg_MarioJumpUnitGroup = CreateGroup()
@@ -12778,445 +12761,6 @@ gg_trg_Eis_Absolute_Zero_Loop = CreateTrigger()
 DisableTrigger(gg_trg_Eis_Absolute_Zero_Loop)
 TriggerRegisterTimerEventPeriodic(gg_trg_Eis_Absolute_Zero_Loop, 0.03)
 TriggerAddAction(gg_trg_Eis_Absolute_Zero_Loop, Trig_Eis_Absolute_Zero_Loop_Actions)
-end
-
-function Trig_Toppo_Hakai_Cast_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0PH"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Cast_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-    playGenericSpellSound(udg_TempUnit, "Audio/Voice/ToppoGoDHakai.mp3", 653)
-GroupAddUnitSimple(udg_TempUnit, udg_ToppoHakaiUnitGroup)
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
-SaveIntegerBJ(1, 1, udg_ID, udg_SummonsHashtable)
-udg_TempLoc = GetSpellTargetLoc()
-SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-udg_TempReal = AngleBetweenPoints(udg_TempLoc2, udg_TempLoc)
-    RemoveLocation(udg_TempLoc)
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, udg_TempReal)
-AddSpecialEffectLocBJ(udg_TempLoc, "ToppoHakai.mdl")
-SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 4, udg_ID, udg_SummonsHashtable)
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
-BlzSetSpecialEffectColor(GetLastCreatedEffectBJ(), 255, 0, 255)
-BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), (GetUnitFlyHeight(udg_TempUnit) + 100.00))
-    RemoveLocation(udg_TempLoc2)
-    RemoveLocation(udg_TempLoc)
-    udg_TempUnitGroup = CreateGroup()
-SaveGroupHandleBJ(udg_TempUnitGroup, 6, udg_ID, udg_SummonsHashtable)
-EnableTrigger(gg_trg_Toppo_Hakai_Loop)
-end
-
-function InitTrig_Toppo_Hakai_Cast()
-gg_trg_Toppo_Hakai_Cast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Hakai_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Toppo_Hakai_Cast, Condition(Trig_Toppo_Hakai_Cast_Conditions))
-TriggerAddAction(gg_trg_Toppo_Hakai_Cast, Trig_Toppo_Hakai_Cast_Actions)
-end
-
-function Trig_Toppo_Hakai_Channel_Finish_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0PH"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Finish_Func003C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Finish_Actions()
-udg_TempUnit = GetTriggerUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-if (Trig_Toppo_Hakai_Channel_Finish_Func003C()) then
-SaveIntegerBJ(2, 1, udg_ID, udg_SummonsHashtable)
-else
-end
-end
-
-function InitTrig_Toppo_Hakai_Channel_Finish()
-gg_trg_Toppo_Hakai_Channel_Finish = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Hakai_Channel_Finish, EVENT_PLAYER_UNIT_SPELL_FINISH)
-TriggerAddCondition(gg_trg_Toppo_Hakai_Channel_Finish, Condition(Trig_Toppo_Hakai_Channel_Finish_Conditions))
-TriggerAddAction(gg_trg_Toppo_Hakai_Channel_Finish, Trig_Toppo_Hakai_Channel_Finish_Actions)
-end
-
-function Trig_Toppo_Hakai_Channel_Interrupt_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0PH"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Interrupt_Func004C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Interrupt_Actions()
-udg_TempUnit = GetTriggerUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-if (Trig_Toppo_Hakai_Channel_Interrupt_Func004C()) then
-SaveIntegerBJ(0, 1, udg_ID, udg_SummonsHashtable)
-else
-end
-end
-
-function InitTrig_Toppo_Hakai_Channel_Interrupt()
-gg_trg_Toppo_Hakai_Channel_Interrupt = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Hakai_Channel_Interrupt, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-TriggerAddCondition(gg_trg_Toppo_Hakai_Channel_Interrupt, Condition(Trig_Toppo_Hakai_Channel_Interrupt_Conditions))
-TriggerAddAction(gg_trg_Toppo_Hakai_Channel_Interrupt, Trig_Toppo_Hakai_Channel_Interrupt_Actions)
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func005C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) ~= 1)) then
-return false
-end
-if (not (udg_TempInt < 32)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()
-if (not (udg_TempInt == 65)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()
-if (not (udg_TempInt == 32)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001C()
-if (not (udg_TempInt > 32)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()
-if (not (udg_TempInt == 18)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()
-if (not (ModuloInteger(udg_TempInt, 2) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002C()
-if (not (udg_TempInt < 32)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001Func006C()
-if (not (udg_TempInt >= 66)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
-udg_TempSpecialEffect = LoadEffectHandleBJ(4, udg_ID, udg_SummonsHashtable)
-if (Trig_Toppo_Hakai_Loop_Func001Func005C()) then
-SaveIntegerBJ(66, 0, udg_ID, udg_SummonsHashtable)
-udg_TempInt = 66
-else
-end
-if (Trig_Toppo_Hakai_Loop_Func001Func006C()) then
-GroupRemoveUnitSimple(udg_TempUnit, udg_ToppoHakaiUnitGroup)
-DestroyEffectBJ(udg_TempSpecialEffect)
-udg_TempUnitGroup = LoadGroupHandleBJ(6, udg_ID, udg_SummonsHashtable)
-        DestroyGroup(udg_TempUnitGroup)
-FlushChildHashtableBJ(udg_ID, udg_SummonsHashtable)
-else
-SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002C()) then
-BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.04)))
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()) then
-                playGenericSpellSound(udg_TempUnit, "Audio/Effects/HakaiToppo.mp3", 3082)
-else
-end
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()) then
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, GetUnitFacing(udg_TempUnit))
-BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
-BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
-BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, IMinBJ(255, (udg_TempInt * 3)), 255)
-TriggerExecute(gg_trg_Toppo_Hakai_Channel_Damage)
-                RemoveLocation(udg_TempLoc2)
-                RemoveLocation(udg_TempLoc)
-else
-end
-else
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001C()) then
-udg_TempReal = LoadRealBJ(5, udg_ID, udg_SummonsHashtable)
-udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 40.00, udg_TempReal)
-BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
-BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
-SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()) then
-AddSpecialEffectLocBJ(udg_TempLoc, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-else
-end
-TriggerExecute(gg_trg_Toppo_Hakai_Launched_Damage)
-                RemoveLocation(udg_TempLoc)
-                RemoveLocation(udg_TempLoc2)
-else
-if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
-udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
-SaveRealBJ(udg_TempReal, 5, udg_ID, udg_SummonsHashtable)
-                    RemoveLocation(udg_TempLoc2)
-udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 300.00, udg_TempReal)
-SaveRealBJ(GetLocationX(udg_TempLoc2), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc2), 3, udg_ID, udg_SummonsHashtable)
-                    RemoveLocation(udg_TempLoc)
-                    RemoveLocation(udg_TempLoc2)
-else
-end
-end
-end
-end
-end
-
-function Trig_Toppo_Hakai_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_ToppoHakaiUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Loop_Actions()
-ForGroupBJ(udg_ToppoHakaiUnitGroup, Trig_Toppo_Hakai_Loop_Func001A)
-if (Trig_Toppo_Hakai_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Toppo_Hakai_Loop()
-gg_trg_Toppo_Hakai_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Toppo_Hakai_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Toppo_Hakai_Loop, 0.03)
-TriggerAddAction(gg_trg_Toppo_Hakai_Loop, Trig_Toppo_Hakai_Loop_Actions)
-end
-
-function Trig_Toppo_Hakai_Channel_Damage_Func002Func002Func004C()
-if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()
-if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_STRUCTURE) == false)) then
-return false
-end
-if (not (IsUnitAliveBJ(udg_TempUnit2) == true)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("BHbn")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Channel_Damage_Func002A()
-udg_TempUnit2 = GetEnumUnit()
-if (Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()) then
-SetUnitLifeBJ(udg_TempUnit2, 1.00)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-if (Trig_Toppo_Hakai_Channel_Damage_Func002Func002Func004C()) then
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-            RemoveLocation(udg_TempLoc3)
-else
-end
-else
-end
-end
-
-function Trig_Toppo_Hakai_Channel_Damage_Actions()
-udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
-ForGroupBJ(udg_TempUnitGroup, Trig_Toppo_Hakai_Channel_Damage_Func002A)
-    DestroyGroup(udg_TempUnitGroup)
-end
-
-function InitTrig_Toppo_Hakai_Channel_Damage()
-gg_trg_Toppo_Hakai_Channel_Damage = CreateTrigger()
-TriggerAddAction(gg_trg_Toppo_Hakai_Channel_Damage, Trig_Toppo_Hakai_Channel_Damage_Actions)
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()
-if (not (IsUnitInGroup(udg_TempUnit2, udg_TempUnitGroup2) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func004C()
-if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001C()
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_STRUCTURE) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Func003Func002C()
-if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
-return false
-end
-if (not (IsUnitAliveBJ(udg_TempUnit2) == true)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("BHbn")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Func003A()
-udg_TempUnit2 = GetEnumUnit()
-if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002C()) then
-if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001C()) then
-SetUnitLifeBJ(udg_TempUnit2, 1.00)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func004C()) then
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-                RemoveLocation(udg_TempLoc3)
-else
-end
-else
-if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()) then
-GroupAddUnitSimple(udg_TempUnit2, udg_TempUnitGroup2)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, ((GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.20) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit2) * 0.10)), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-                RemoveLocation(udg_TempLoc3)
-else
-end
-end
-else
-end
-end
-
-function Trig_Toppo_Hakai_Launched_Damage_Actions()
-udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
-udg_TempUnitGroup2 = LoadGroupHandleBJ(6, udg_ID, udg_SummonsHashtable)
-ForGroupBJ(udg_TempUnitGroup, Trig_Toppo_Hakai_Launched_Damage_Func003A)
-    DestroyGroup(udg_TempUnitGroup)
-end
-
-function InitTrig_Toppo_Hakai_Launched_Damage()
-gg_trg_Toppo_Hakai_Launched_Damage = CreateTrigger()
-TriggerAddAction(gg_trg_Toppo_Hakai_Launched_Damage, Trig_Toppo_Hakai_Launched_Damage_Actions)
-end
-
-function Trig_Toppo_Justice_Tornado_Cast_Func001C()
-if (GetSpellAbilityId() == FourCC("A0PJ")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0PL")) then
-return true
-end
-return false
-end
-
-function Trig_Toppo_Justice_Tornado_Cast_Conditions()
-if (not Trig_Toppo_Justice_Tornado_Cast_Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Justice_Tornado_Cast_Func003C()
-if (not (GetSpellAbilityId() == FourCC("A0PJ"))) then
-return false
-end
-return true
-end
-
-function Trig_Toppo_Justice_Tornado_Cast_Actions()
-AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
-if (Trig_Toppo_Justice_Tornado_Cast_Func003C()) then
-TriggerSleepAction(3.00)
-else
-TriggerSleepAction(4.00)
-end
-AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
-end
-
-function InitTrig_Toppo_Justice_Tornado_Cast()
-gg_trg_Toppo_Justice_Tornado_Cast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Justice_Tornado_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Toppo_Justice_Tornado_Cast, Condition(Trig_Toppo_Justice_Tornado_Cast_Conditions))
-TriggerAddAction(gg_trg_Toppo_Justice_Tornado_Cast, Trig_Toppo_Justice_Tornado_Cast_Actions)
 end
 
 function Trig_Toppo_Justice_Pose_Cast_Conditions()
@@ -69751,13 +69295,6 @@ InitTrig_Eis_Absolute_Zero_Level_Up()
 InitTrig_Eis_Absolute_Zero_Cast()
 InitTrig_Eis_Absolute_Zero_Stun()
 InitTrig_Eis_Absolute_Zero_Loop()
-InitTrig_Toppo_Hakai_Cast()
-InitTrig_Toppo_Hakai_Channel_Finish()
-InitTrig_Toppo_Hakai_Channel_Interrupt()
-InitTrig_Toppo_Hakai_Loop()
-InitTrig_Toppo_Hakai_Channel_Damage()
-InitTrig_Toppo_Hakai_Launched_Damage()
-InitTrig_Toppo_Justice_Tornado_Cast()
 InitTrig_Toppo_Justice_Pose_Cast()
 InitTrig_Toppo_God_of_Destruction_Cast()
 InitTrig_Toppo_Upgrade_Spells()
