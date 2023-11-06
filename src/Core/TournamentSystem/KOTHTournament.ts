@@ -49,7 +49,7 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     EnableTrigger(gg_trg_Teleport_Future_Cell);
     EnableTrigger(gg_trg_Teleport_Future_Cell_2);
 
-    EnableTrigger(gg_trg_Auto_Transform);
+    EnableTrigger(gg_trg_Auto_Transform_Loop);
 
     udg_GlobalStatMultiplier = 0.5;
     udg_IsCatchupSettingsAutomatic = true;
@@ -83,7 +83,7 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     DisableTrigger(gg_trg_Teleport_Future_Trunks_2);
     DisableTrigger(gg_trg_Teleport_Future_Cell);
     DisableTrigger(gg_trg_Teleport_Future_Cell_2);
-    DisableTrigger(gg_trg_Auto_Transform);
+    DisableTrigger(gg_trg_Auto_Transform_Loop);
     DisableTrigger(gg_trg_Auto_Transform_Turn_On);
 
     TriggerExecute(gg_trg_Catchup_Turn_Off);

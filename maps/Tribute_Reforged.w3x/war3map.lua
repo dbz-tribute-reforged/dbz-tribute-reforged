@@ -17,8 +17,6 @@ udg_CP_HiddenItemsIndex = 0
 udg_CP_HiddenItems = {}
 udg_CP_Point = nil
 udg_CP_PointIsWalkable = false
-udg_SolarFlareAOEBase = 0.0
-udg_SolarFlareAOEIncrementPerLvl = 0.0
 udg_StatMultHashtable = nil
 udg_StatMultUnit = nil
 udg_StatMultReal = 0.0
@@ -173,7 +171,6 @@ udg_BuuLightningUnitGroup = nil
 udg_TapionSpellsHashtable = nil
 udg_TempSound = nil
 udg_FinalBattleTimer = nil
-udg_KillHeroVoicelineTimer = nil
 udg_KillHeroVoicelinePath = ""
 udg_KillHeroVoicelineDuration = 0
 udg_KillHeroVoicelineUnit = nil
@@ -257,7 +254,6 @@ udg_KidBuuTimer = 0
 udg_BabidiLampTimer = nil
 udg_BabidiLampLightning = nil
 udg_LastImmortalityUser = nil
-udg_HeroPickWantsRandom = false
 udg_Super17AbsorbUnitGroup = nil
 udg_Super17HellStormUnitGroup = nil
 udg_SchalaPrayGroup = nil
@@ -276,7 +272,6 @@ udg_DeathHeroVoicelineDelay = 0
 udg_DeathHeroVoicelineUnit = nil
 udg_DeathHeroVoicelinePath = ""
 udg_DeathHeroVoicelineDuration = 0
-udg_DeathHeroVoicelineTimer = nil
 udg_PhoneSkurvyPRNG = 0
 udg_PhoneSkurvyPRNGReq = 0
 udg_FarmerWarehouseUnitGroup = nil
@@ -358,6 +353,7 @@ udg_LvlUpInt2 = 0
 udg_MiniBeanGroup = nil
 udg_ConnectedPlayers = nil
 udg_DisconnectedPlayers = nil
+udg_HKVoiceTimer = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -435,9 +431,6 @@ gg_snd_BattleNetTick = nil
 gg_trg_Get_Int_Damage_Multiplier = nil
 gg_trg_SetUnitAnimationThenReset = nil
 gg_trg_AnimationResetLoop = nil
-gg_trg_SolarFlare = nil
-gg_trg_Oozaru_Vegeta_Old = nil
-gg_trg_Oozaru_Vegeta_New = nil
 gg_trg_Vegeta_Hakai_Cast = nil
 gg_trg_Vegeta_Hakai_Channel_Finish = nil
 gg_trg_Vegeta_Hakai_Channel_Interrupt = nil
@@ -741,18 +734,20 @@ gg_trg_Final_Battle_Sim_Set_Stat_Individually = nil
 gg_trg_Final_Battle_Sim_Set_All_Stats = nil
 gg_trg_Final_Battle_Sim_Set_Mult = nil
 gg_trg_Final_Battle_Sim_Set_Level = nil
-gg_trg_Map_Setup = nil
+gg_trg_Setup_Map_Setup = nil
+gg_trg_Setup_Map_Hashtables = nil
 gg_trg_Setup_Per_Player_Properties = nil
-gg_trg_Setup_Quests = nil
 gg_trg_Init_Disable_Abilities_For_TempPlayer = nil
 gg_trg_Disable_Abilities_for_TempPlayer = nil
-gg_trg_Prevent_Invalid_Buildings = nil
+gg_trg_Setup_Quests = nil
 gg_trg_Setup_Spawns_Other = nil
-gg_trg_Map_Setup_Hashtables = nil
-gg_trg_Hero_Pick_Floating_Text_Help = nil
-gg_trg_Misc_Area_Labels = nil
+gg_trg_Setup_Hero_Pick_Floating_Text = nil
+gg_trg_Setup_Misc_Area_Labels = nil
 gg_trg_Force_Remove_T2_Buggy_Vision = nil
+gg_trg_Collect_Preload_Units = nil
 gg_trg_Remove_Preload_Units = nil
+gg_trg_Prevent_Invalid_Buildings = nil
+gg_trg_MoneyCounterTest = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
@@ -764,6 +759,7 @@ gg_trg_Kill_Hero_Give_PvP_Stats = nil
 gg_trg_Kill_Saga_Give_Saga_Stats = nil
 gg_trg_Get_Saga_Catchup_Multiplier = nil
 gg_trg_Kill_Hero_Voiceline_Timer_Init = nil
+gg_trg_HKVoiceTimerExpire = nil
 gg_trg_Death_Hero_Voiceline_Dying = nil
 gg_trg_Death_Hero_Voiceline_Timer = nil
 gg_trg_Kill_Hero_Voiceline = nil
@@ -864,53 +860,12 @@ gg_trg_Hero_Leaves_Deadzone = nil
 gg_trg_Hero_Enters_Deadzone_Respawn_Region = nil
 gg_trg_Hero_Respawn_To_Earth = nil
 gg_trg_Respawn_Creep_Heroes_in_Deadzones = nil
-gg_trg_Disable_Old_Hero_Pick = nil
 gg_trg_Hero_Pick_Reset_Abilities = nil
 gg_trg_Hero_Pick_Setup_Selected_Heroes = nil
 gg_trg_Hero_Pick_Forced_Invul = nil
 gg_trg_Hero_Pick_Enable_Abilities = nil
 gg_trg_Hero_Pick_Completion = nil
-gg_trg_Hero_Pick_Stall = nil
-gg_trg_Hero_Pick_Unstall = nil
-gg_trg_Hero_Pick_Rush = nil
-gg_trg_Hero_Pick_Rush_Repick = nil
-gg_trg_Hero_Pick_End_Bans_Command = nil
-gg_trg_Hero_Pick_Show_Pickable_Heroes = nil
-gg_trg_Hero_Pick_Repick_Randomly = nil
-gg_trg_Hero_Pick_Secret_Heroes = nil
-gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate = nil
-gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick = nil
-gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate = nil
-gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick = nil
-gg_trg_Hero_Pick_Secret_Magus_Generate = nil
-gg_trg_Hero_Pick_Secret_Magus_Pick = nil
-gg_trg_Hero_Pick_Force_Pick_Unit_Type = nil
-gg_trg_Hero_Pick_Modes_Show = nil
-gg_trg_Hero_Pick_Mode_Default = nil
-gg_trg_Hero_Pick_Mode_All_Pick = nil
-gg_trg_Hero_Pick_Mode_All_Random = nil
-gg_trg_Hero_Pick_Mode_Single_Draft = nil
-gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental = nil
-gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio = nil
-gg_trg_Hero_Pick_Set_HeroPickUnitType_availability = nil
-gg_trg_Hero_Pick_Init_Available_Heroes = nil
-gg_trg_Hero_Pick_Disable_Unmade_Heroes = nil
-gg_trg_Hero_Pick_Disable_Spellcasting = nil
-gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup = nil
-gg_trg_Hero_Pick_Pick_A_Hero = nil
-gg_trg_Hero_Pick_Ban_A_Hero = nil
-gg_trg_Hero_Pick_End_Bans = nil
-gg_trg_Hero_Pick_Remove_Picked_Heroes = nil
-gg_trg_Hero_Pick_Get_Num_Pickable_Heroes = nil
-gg_trg_Hero_Pick_Give_Random_Hero_to_Player = nil
-gg_trg_Hero_Pick_Add_Secondary_Heroes_UNFINISHED = nil
-gg_trg_Hero_Pick_Timer_Start = nil
-gg_trg_Hero_Pick_Timer_Complete = nil
-gg_trg_Hero_Pick_Repick_Start = nil
-gg_trg_Hero_Pick_Repick_Complete = nil
-gg_trg_Hero_Pick_Disable_Pick_Modes = nil
-gg_trg_Hero_Pick_Force_Disable_Picking = nil
-gg_trg_Test_StatMult_Init = nil
+gg_trg_Setup_StatMult_Initial_Units = nil
 gg_trg_Test_Stats_Add_Command = nil
 gg_trg_Test_Stats_Get_Stats_Command = nil
 gg_trg_Test_Stats_Get_Stats_Print = nil
@@ -941,10 +896,10 @@ gg_trg_Add_To_Tower_Stats_Data = nil
 gg_trg_Add_To_Farming_Stats_Data = nil
 gg_trg_Add_To_Power_Wish_Stats_Data = nil
 gg_trg_Get_Stat_Sources_Data = nil
-gg_trg_Auto_Transform = nil
+gg_trg_Setup_Auto_Transform = nil
+gg_trg_Auto_Transform_Loop = nil
 gg_trg_Auto_Transform_Player_Units = nil
 gg_trg_Auto_Transform_Toggle = nil
-gg_trg_Auto_Transform_Init = nil
 gg_trg_Auto_Transform_Turn_On = nil
 gg_trg_Add_Unit_To_Text_Tag_Charges = nil
 gg_trg_Text_Tag_Charges_Update_Loop = nil
@@ -1200,8 +1155,6 @@ udg_TempPlayerGroup = CreateForce()
 udg_TempReal = 0.0
 udg_CP_HiddenItemsIndex = 0
 udg_CP_PointIsWalkable = false
-udg_SolarFlareAOEBase = 200.00
-udg_SolarFlareAOEIncrementPerLvl = 100.00
 udg_StatMultReal = 0.0
 i = 0
 while (true) do
@@ -1440,7 +1393,6 @@ udg_BlastOMaticUnitGroup = CreateGroup()
 udg_KingsThroneUnitGroup = CreateGroup()
 udg_BuuLightningUnitGroup = CreateGroup()
 udg_FinalBattleTimer = CreateTimer()
-udg_KillHeroVoicelineTimer = CreateTimer()
 udg_KillHeroVoicelinePath = ""
 udg_KillHeroVoicelineDuration = 0
 udg_KillHeroVoicelineDelay = 0
@@ -1534,7 +1486,6 @@ udg_IsNightmareMode = false
 udg_VegetaHakaiUnitGroup = CreateGroup()
 udg_KidBuuTimer = 300
 udg_BabidiLampTimer = CreateTimer()
-udg_HeroPickWantsRandom = false
 udg_Super17AbsorbUnitGroup = CreateGroup()
 udg_Super17HellStormUnitGroup = CreateGroup()
 udg_SchalaPrayGroup = CreateGroup()
@@ -1554,7 +1505,6 @@ udg_SkurvyItemMultUnitGroup = CreateGroup()
 udg_DeathHeroVoicelineDelay = 0
 udg_DeathHeroVoicelinePath = ""
 udg_DeathHeroVoicelineDuration = 0
-udg_DeathHeroVoicelineTimer = CreateTimer()
 udg_PhoneSkurvyPRNG = 0
 udg_PhoneSkurvyPRNGReq = 10000
 udg_FarmerWarehouseUnitGroup = CreateGroup()
@@ -1654,6 +1604,7 @@ udg_LvlUpInt2 = 0
 udg_MiniBeanGroup = CreateGroup()
 udg_ConnectedPlayers = CreateForce()
 udg_DisconnectedPlayers = CreateForce()
+udg_HKVoiceTimer = CreateTimer()
 end
 
 -- in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
@@ -7314,90 +7265,6 @@ function playGenericSpellSound(target, soundPath, duration)
 	PlaySoundOnUnitBJ(udg_TempSound, 100, target)
 	KillSoundWhenDone(udg_TempSound)
 end
-function Angle_Diff(a1, a2)
-	return Acos(Cos((a1 - a2) * bj_DEGTORAD)) * bj_RADTODEG
-end
-
-function Setup_Ooz_Tail(inputHero)
-	oozHero = inputHero
-	oozTail = CreateUnit(
-		GetOwningPlayer(oozHero), 
-		FourCC("H096"),
-		GetUnitX(oozHero),
-		GetUnitY(oozHero),
-		0
-	)
-	UnitApplyTimedLife(oozTail, FourCC("BTLF"), 33)
-	SetHeroStr(oozTail, R2I(GetHeroStr(oozHero, true) * 0.5))
-	PauseUnit(oozTail, true)
-	
-	timeLeft = 30.0
-
-	oozTimer = CreateTimer()
-	oozTrig = CreateTrigger()
-  
-	TimerStart(
-		oozTimer, 
-		0.03, 
-		true, 
-		function()
-			dist = 256
-			angle = GetUnitFacing(oozHero)
-			SetUnitFacing(oozTail, angle)
-			
-			angle = angle + 180
-			SetUnitX(oozTail, GetUnitX(oozHero) + dist * Cos(angle * bj_DEGTORAD))
-			SetUnitY(oozTail, GetUnitY(oozHero) + dist * Sin(angle * bj_DEGTORAD))
-			timeLeft = timeLeft - 0.03
-			if (timeLeft <= 0 or GetUnitTypeId(oozTail) == 0) then
-				SaveReal(udg_StatMultHashtable, GetHandleId(oozHero), 9, 0)
-				RemoveUnit(oozTail)
-				DestroyTrigger(oozTrig)
-				DestroyTimer(oozTimer)
-			end
-		end
-	)
-  
-	TriggerRegisterUnitEvent(
-		oozTrig, 
-		oozHero, 
-		EVENT_UNIT_DAMAGED
-	)
-	TriggerAddCondition(
-		oozTrig, 
-		Condition(
-			function() 
-				src = GetEventDamageSource()
-				target = GetTriggerUnit()
-
-				srcX = GetUnitX(src)
-				srcY = GetUnitY(src)
-				targetX = GetUnitX(target)
-				targetY = GetUnitY(target)
-
-				damageAngle = Atan2(targetY - srcY, targetX - srcX) * bj_RADTODEG
-				targetFacing = GetUnitFacing(target)
-        
-				newHp = GetUnitState(oozTail, UNIT_STATE_LIFE)
-
-				if (Angle_Diff(damageAngle, targetFacing) < 68) then
- 					newHp = newHp - GetEventDamage()
-				end
-
-				if (newHp <= 1) then
-					SaveReal(udg_StatMultHashtable, GetHandleId(oozHero), 9, 0)
-					RemoveUnit(oozTail)
-					DestroyTimer(oozTimer)
-					DestroyTrigger(oozTrig)
-				else
-					SetUnitState(oozTail, UNIT_STATE_LIFE, newHp)
-				end
-
-				return false
-			end
-		)
-	)
-end
 function InitSounds()
 gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
 SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
@@ -7519,8 +7386,8 @@ BlzCreateItemWithSkin(FourCC("I004"), 11127.5, 21154.0, FourCC("I004"))
 BlzCreateItemWithSkin(FourCC("I006"), 11446.7, 21172.5, FourCC("I006"))
 BlzCreateItemWithSkin(FourCC("I007"), 11391.4, 21166.4, FourCC("I007"))
 BlzCreateItemWithSkin(FourCC("I008"), 11377.7, 21199.2, FourCC("I008"))
-BlzCreateItemWithSkin(FourCC("I009"), 11404.3, 21471.2, FourCC("I009"))
 BlzCreateItemWithSkin(FourCC("I009"), 5546.3, 10211.3, FourCC("I009"))
+BlzCreateItemWithSkin(FourCC("I009"), 11404.3, 21471.2, FourCC("I009"))
 BlzCreateItemWithSkin(FourCC("I00A"), 11333.6, 21173.6, FourCC("I00A"))
 BlzCreateItemWithSkin(FourCC("I00C"), 11486.9, 21170.5, FourCC("I00C"))
 BlzCreateItemWithSkin(FourCC("I00D"), 11316.4, 21667.5, FourCC("I00D"))
@@ -7563,10 +7430,10 @@ BlzCreateItemWithSkin(FourCC("I04J"), 11311.4, 21230.7, FourCC("I04J"))
 BlzCreateItemWithSkin(FourCC("I04K"), 11372.7, 21230.7, FourCC("I04K"))
 BlzCreateItemWithSkin(FourCC("I04L"), 11381.0, 21293.3, FourCC("I04L"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6639.1, 18525.1, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6803.6, 18583.8, FourCC("I04M"))
-BlzCreateItemWithSkin(FourCC("I04M"), -6793.5, 18777.5, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6501.6, 18720.5, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04M"), -6641.2, 18838.8, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6793.5, 18777.5, FourCC("I04M"))
+BlzCreateItemWithSkin(FourCC("I04M"), -6803.6, 18583.8, FourCC("I04M"))
 BlzCreateItemWithSkin(FourCC("I04O"), 11313.0, 21366.0, FourCC("I04O"))
 BlzCreateItemWithSkin(FourCC("I04R"), 11062.3, 21359.5, FourCC("I04R"))
 BlzCreateItemWithSkin(FourCC("I04S"), 10941.5, 21187.3, FourCC("I04S"))
@@ -9112,16 +8979,6 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("n03X"), 29696.0, 20928.0, 270.000, FourCC("n03X"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n03Y"), 29696.0, 20096.0, 270.000, FourCC("n03Y"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n03Z"), 29696.0, 20480.0, 270.000, FourCC("n03Z"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n040"), 29696.0, 21696.0, 270.000, FourCC("n040"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n041"), 29696.0, 21312.0, 270.000, FourCC("n041"))
-SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 6976.0, 5440.0, 270.000, FourCC("n02M"))
 SetResourceAmount(u, 1000000)
 u = BlzCreateUnitWithSkin(p, FourCC("n01P"), 24192.0, 19392.0, 270.000, FourCC("n01P"))
@@ -9153,16 +9010,6 @@ SetResourceAmount(u, 100000)
 gg_unit_n01H_1159 = BlzCreateUnitWithSkin(p, FourCC("n01H"), 24576.0, 22912.0, 270.000, FourCC("n01H"))
 SetUnitColor(gg_unit_n01H_1159, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n042"), -6656.0, 18752.0, 270.000, FourCC("n042"))
-u = BlzCreateUnitWithSkin(p, FourCC("n044"), 30400.0, 19712.0, 270.000, FourCC("n044"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n045"), 28992.0, 19712.0, 270.000, FourCC("n045"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n046"), 29696.0, 19712.0, 270.000, FourCC("n046"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n048"), 30336.0, 21696.0, 270.000, FourCC("n048"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n049"), 29056.0, 21696.0, 270.000, FourCC("n049"))
-SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n02M"), -1280.0, -7040.0, 270.000, FourCC("n02M"))
 SetResourceAmount(u, 25000)
 u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 11008.0, -4224.0, 270.000, FourCC("n02M"))
@@ -9907,403 +9754,6 @@ gg_trg_AnimationResetLoop = CreateTrigger()
 DisableTrigger(gg_trg_AnimationResetLoop)
 TriggerRegisterTimerEventPeriodic(gg_trg_AnimationResetLoop, 0.03)
 TriggerAddAction(gg_trg_AnimationResetLoop, Trig_AnimationResetLoop_Actions)
-end
-
-function Trig_Vegeta_Hakai_Cast_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0GK"))) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Cast_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-GroupAddUnitSimple(udg_TempUnit, udg_VegetaHakaiUnitGroup)
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
-SaveIntegerBJ(1, 1, udg_ID, udg_SummonsHashtable)
-udg_TempLoc = GetSpellTargetLoc()
-SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-udg_TempReal = AngleBetweenPoints(udg_TempLoc2, udg_TempLoc)
-    RemoveLocation(udg_TempLoc)
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, udg_TempReal)
-AddSpecialEffectLocBJ(udg_TempLoc, "ToppoHakai.mdl")
-SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 4, udg_ID, udg_SummonsHashtable)
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
-BlzSetSpecialEffectColor(GetLastCreatedEffectBJ(), 255, 0, 255)
-BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), (GetUnitFlyHeight(udg_TempUnit) + 100.00))
-    RemoveLocation(udg_TempLoc2)
-    RemoveLocation(udg_TempLoc)
-    udg_TempUnitGroup = CreateGroup()
-SaveGroupHandleBJ(udg_TempUnitGroup, 6, udg_ID, udg_SummonsHashtable)
-EnableTrigger(gg_trg_Vegeta_Hakai_Loop)
-end
-
-function InitTrig_Vegeta_Hakai_Cast()
-gg_trg_Vegeta_Hakai_Cast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Vegeta_Hakai_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Vegeta_Hakai_Cast, Condition(Trig_Vegeta_Hakai_Cast_Conditions))
-TriggerAddAction(gg_trg_Vegeta_Hakai_Cast, Trig_Vegeta_Hakai_Cast_Actions)
-end
-
-function Trig_Vegeta_Hakai_Channel_Finish_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0GK"))) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Finish_Func003C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Finish_Actions()
-udg_TempUnit = GetTriggerUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-if (Trig_Vegeta_Hakai_Channel_Finish_Func003C()) then
-SaveIntegerBJ(2, 1, udg_ID, udg_SummonsHashtable)
-else
-end
-end
-
-function InitTrig_Vegeta_Hakai_Channel_Finish()
-gg_trg_Vegeta_Hakai_Channel_Finish = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Vegeta_Hakai_Channel_Finish, EVENT_PLAYER_UNIT_SPELL_FINISH)
-TriggerAddCondition(gg_trg_Vegeta_Hakai_Channel_Finish, Condition(Trig_Vegeta_Hakai_Channel_Finish_Conditions))
-TriggerAddAction(gg_trg_Vegeta_Hakai_Channel_Finish, Trig_Vegeta_Hakai_Channel_Finish_Actions)
-end
-
-function Trig_Vegeta_Hakai_Channel_Interrupt_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0GK"))) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Interrupt_Func004C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Interrupt_Actions()
-udg_TempUnit = GetTriggerUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-if (Trig_Vegeta_Hakai_Channel_Interrupt_Func004C()) then
-SaveIntegerBJ(0, 1, udg_ID, udg_SummonsHashtable)
-else
-end
-end
-
-function InitTrig_Vegeta_Hakai_Channel_Interrupt()
-gg_trg_Vegeta_Hakai_Channel_Interrupt = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Vegeta_Hakai_Channel_Interrupt, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-TriggerAddCondition(gg_trg_Vegeta_Hakai_Channel_Interrupt, Condition(Trig_Vegeta_Hakai_Channel_Interrupt_Conditions))
-TriggerAddAction(gg_trg_Vegeta_Hakai_Channel_Interrupt, Trig_Vegeta_Hakai_Channel_Interrupt_Actions)
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func005C()
-if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) ~= 1)) then
-return false
-end
-if (not (udg_TempInt < 32)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001Func008C()
-if (not (udg_TempInt == 65)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001Func012C()
-if (not (udg_TempInt == 32)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001C()
-if (not (udg_TempInt > 32)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func003C()
-if (not (udg_TempInt == 19)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func004C()
-if (not (ModuloInteger(udg_TempInt, 2) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006Func002C()
-if (not (udg_TempInt < 32)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001Func006C()
-if (not (udg_TempInt >= 66)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable)
-udg_TempSpecialEffect = LoadEffectHandleBJ(4, udg_ID, udg_SummonsHashtable)
-if (Trig_Vegeta_Hakai_Loop_Func001Func005C()) then
-SaveIntegerBJ(66, 0, udg_ID, udg_SummonsHashtable)
-udg_TempInt = 66
-else
-end
-if (Trig_Vegeta_Hakai_Loop_Func001Func006C()) then
-GroupRemoveUnitSimple(udg_TempUnit, udg_VegetaHakaiUnitGroup)
-DestroyEffectBJ(udg_TempSpecialEffect)
-udg_TempUnitGroup = LoadGroupHandleBJ(6, udg_ID, udg_SummonsHashtable)
-        DestroyGroup(udg_TempUnitGroup)
-FlushChildHashtableBJ(udg_ID, udg_SummonsHashtable)
-else
-SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002C()) then
-BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.04)))
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func003C()) then
-                playGenericSpellSound(udg_TempUnit, "Audio/Effects/HakaiToppo.mp3", 3082)
-else
-end
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func004C()) then
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, GetUnitFacing(udg_TempUnit))
-BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
-BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
-BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, IMinBJ(255, (udg_TempInt * 3)), 255)
-TriggerExecute(gg_trg_Vegeta_Hakai_Channel_Damage)
-                RemoveLocation(udg_TempLoc2)
-                RemoveLocation(udg_TempLoc)
-else
-end
-else
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001C()) then
-udg_TempReal = LoadRealBJ(5, udg_ID, udg_SummonsHashtable)
-udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
-udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 40.00, udg_TempReal)
-BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
-BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
-SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001Func008C()) then
-AddSpecialEffectLocBJ(udg_TempLoc, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-else
-end
-TriggerExecute(gg_trg_Vegeta_Hakai_Launched_Damage)
-                RemoveLocation(udg_TempLoc)
-                RemoveLocation(udg_TempLoc2)
-else
-if (Trig_Vegeta_Hakai_Loop_Func001Func006Func002Func001Func012C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
-udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
-SaveRealBJ(udg_TempReal, 5, udg_ID, udg_SummonsHashtable)
-                    RemoveLocation(udg_TempLoc2)
-udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 300.00, udg_TempReal)
-SaveRealBJ(GetLocationX(udg_TempLoc2), 2, udg_ID, udg_SummonsHashtable)
-SaveRealBJ(GetLocationY(udg_TempLoc2), 3, udg_ID, udg_SummonsHashtable)
-                    RemoveLocation(udg_TempLoc)
-                    RemoveLocation(udg_TempLoc2)
-else
-end
-end
-end
-end
-end
-
-function Trig_Vegeta_Hakai_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_VegetaHakaiUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Loop_Actions()
-ForGroupBJ(udg_VegetaHakaiUnitGroup, Trig_Vegeta_Hakai_Loop_Func001A)
-if (Trig_Vegeta_Hakai_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Vegeta_Hakai_Loop()
-gg_trg_Vegeta_Hakai_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Vegeta_Hakai_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Vegeta_Hakai_Loop, 0.03)
-TriggerAddAction(gg_trg_Vegeta_Hakai_Loop, Trig_Vegeta_Hakai_Loop_Actions)
-end
-
-function Trig_Vegeta_Hakai_Channel_Damage_Func002Func002Func004C()
-if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Damage_Func002Func002C()
-if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_STRUCTURE) == false)) then
-return false
-end
-if (not (IsUnitAliveBJ(udg_TempUnit2) == true)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("BHbn")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Channel_Damage_Func002A()
-udg_TempUnit2 = GetEnumUnit()
-if (Trig_Vegeta_Hakai_Channel_Damage_Func002Func002C()) then
-SetUnitLifeBJ(udg_TempUnit2, 1.00)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-if (Trig_Vegeta_Hakai_Channel_Damage_Func002Func002Func004C()) then
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-            RemoveLocation(udg_TempLoc3)
-else
-end
-else
-end
-end
-
-function Trig_Vegeta_Hakai_Channel_Damage_Actions()
-udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
-ForGroupBJ(udg_TempUnitGroup, Trig_Vegeta_Hakai_Channel_Damage_Func002A)
-    DestroyGroup(udg_TempUnitGroup)
-end
-
-function InitTrig_Vegeta_Hakai_Channel_Damage()
-gg_trg_Vegeta_Hakai_Channel_Damage = CreateTrigger()
-TriggerAddAction(gg_trg_Vegeta_Hakai_Channel_Damage, Trig_Vegeta_Hakai_Channel_Damage_Actions)
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001Func001C()
-if (not (IsUnitInGroup(udg_TempUnit2, udg_TempUnitGroup2) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001Func004C()
-if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001C()
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_STRUCTURE) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Func003Func002C()
-if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
-return false
-end
-if (not (IsUnitAliveBJ(udg_TempUnit2) == true)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
-return false
-end
-if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("BHbn")) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Func003A()
-udg_TempUnit2 = GetEnumUnit()
-if (Trig_Vegeta_Hakai_Launched_Damage_Func003Func002C()) then
-if (Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001C()) then
-SetUnitLifeBJ(udg_TempUnit2, 1.00)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-if (Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001Func004C()) then
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-                RemoveLocation(udg_TempLoc3)
-else
-end
-else
-if (Trig_Vegeta_Hakai_Launched_Damage_Func003Func002Func001Func001C()) then
-GroupAddUnitSimple(udg_TempUnit2, udg_TempUnitGroup2)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, ((GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.20) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit2) * 0.05)), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
-AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-                RemoveLocation(udg_TempLoc3)
-else
-end
-end
-else
-end
-end
-
-function Trig_Vegeta_Hakai_Launched_Damage_Actions()
-udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
-udg_TempUnitGroup2 = LoadGroupHandleBJ(6, udg_ID, udg_SummonsHashtable)
-ForGroupBJ(udg_TempUnitGroup, Trig_Vegeta_Hakai_Launched_Damage_Func003A)
-    DestroyGroup(udg_TempUnitGroup)
-end
-
-function InitTrig_Vegeta_Hakai_Launched_Damage()
-gg_trg_Vegeta_Hakai_Launched_Damage = CreateTrigger()
-TriggerAddAction(gg_trg_Vegeta_Hakai_Launched_Damage, Trig_Vegeta_Hakai_Launched_Damage_Actions)
 end
 
 function Trig_Kyodaika_Init_Conditions()
@@ -25521,13 +24971,13 @@ TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_King_K_Rool_Crown, udg_TempPlayer
 TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Short_Axe, udg_TempPlayer, "-shortaxe", true)
 TriggerRegisterPlayerChatEvent(gg_trg_Cosmetic_Clear, udg_TempPlayer, "-removehats", true)
 TriggerRegisterPlayerChatEvent(gg_trg_ToggleSummonSelect, udg_TempPlayer, "-tss", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, udg_TempPlayer, "-fbsimtest", true)
 udg_TempInt = udg_TempInt + 1
 end
 end
 
 function InitTrig_Commands_Init()
 gg_trg_Commands_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Commands_Init, 4.00)
 TriggerAddAction(gg_trg_Commands_Init, Trig_Commands_Init_Actions)
 end
 
@@ -25866,7 +25316,6 @@ end
 
 function InitTrig_Shaggy_Init()
 gg_trg_Shaggy_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Shaggy_Init, 6.00)
 TriggerAddAction(gg_trg_Shaggy_Init, Trig_Shaggy_Init_Actions)
 end
 
@@ -25958,16 +25407,6 @@ end
 
 function InitTrig_Final_Battle_Sim_On()
 gg_trg_Final_Battle_Sim_On = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(0), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(1), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(2), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(3), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(4), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(5), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(6), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(7), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(8), "-fbsimtest", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(9), "-fbsimtest", true)
 TriggerAddCondition(gg_trg_Final_Battle_Sim_On, Condition(Trig_Final_Battle_Sim_On_Conditions))
 TriggerAddAction(gg_trg_Final_Battle_Sim_On, Trig_Final_Battle_Sim_On_Actions)
 end
@@ -26131,17 +25570,9 @@ TriggerAddCondition(gg_trg_Final_Battle_Sim_Set_Level, Condition(Trig_Final_Batt
 TriggerAddAction(gg_trg_Final_Battle_Sim_Set_Level, Trig_Final_Battle_Sim_Set_Level_Actions)
 end
 
-function Trig_Map_Setup_Actions()
+function Trig_Setup_Map_Setup_Actions()
 udg_DMG_KAME_DPS = (1.00 * 0.01)
-TriggerExecute(gg_trg_Map_Setup_Hashtables)
-udg_TempInt = 0
-while (true) do
-if (udg_TempInt > 29) then break end
-InitHashtableBJ()
-udg_HeroAvailabilityHashtable[udg_TempInt] = GetLastCreatedHashtableBJ()
-udg_PlayerColorString[udg_TempInt] = "|cffffffff"
-udg_TempInt = udg_TempInt + 1
-end
+TriggerExecute(gg_trg_Setup_Map_Hashtables)
 udg_PlayerColorString[1] = "|cffff0000"
 udg_PlayerColorString[2] = "|cff0000ff"
 udg_PlayerColorString[3] = "|cff00ffff"
@@ -26153,21 +25584,66 @@ udg_PlayerColorString[8] = "|cffff8080"
 udg_PlayerColorString[9] = "|cff808080"
 udg_PlayerColorString[10] = "|cff8080ff"
 udg_CP_Rect = Rect(0, 0, 128.00, 128.00)
-    udg_CP_Item = CreateItem('wtlg', 0, 0)
+    udg_CP_Item = CreateItem(FourCC("wtlg"), 0, 0)
 SetItemVisibleBJ(false, udg_CP_Item)
 udg_CP_HiddenItemsIndex = 0
+TriggerExecute(gg_trg_Setup_Quests)
+TriggerExecute(gg_trg_Setup_Per_Player_Properties)
+TriggerExecute(gg_trg_Team_System_Init_And_Commands)
+TriggerExecute(gg_trg_Setup_Spawns_Other)
+TriggerExecute(gg_trg_Setup_Misc_Area_Labels)
+TriggerExecute(gg_trg_Force_Remove_T2_Buggy_Vision)
+TriggerExecute(gg_trg_Collect_Preload_Units)
+EnableTrigger(gg_trg_Remove_Preload_Units)
+TriggerExecute(gg_trg_Shaggy_Init)
+TriggerExecute(gg_trg_Commands_Init)
+TriggerExecute(gg_trg_Setup_StatMult_Initial_Units)
+TriggerExecute(gg_trg_Setup_Auto_Transform)
+DisplayTextToForce(GetPlayersAll(), "TRIGSTR_745")
 end
 
-function InitTrig_Map_Setup()
-gg_trg_Map_Setup = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Map_Setup, 0.00)
-TriggerAddAction(gg_trg_Map_Setup, Trig_Map_Setup_Actions)
+function InitTrig_Setup_Map_Setup()
+gg_trg_Setup_Map_Setup = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Setup_Map_Setup, 0.00)
+TriggerAddAction(gg_trg_Setup_Map_Setup, Trig_Setup_Map_Setup_Actions)
+end
+
+function Trig_Setup_Map_Hashtables_Actions()
+InitHashtableBJ()
+udg_StatMultHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_HeroRespawnHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_SummonsHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_SummonsSaibamenHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_TeleporterHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_UpaJavelinHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_TapionSpellsHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_GinyuHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_YamchaHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_JirenHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_HitHashtable = GetLastCreatedHashtableBJ()
+InitHashtableBJ()
+udg_AnimationHashtable = GetLastCreatedHashtableBJ()
+end
+
+function InitTrig_Setup_Map_Hashtables()
+gg_trg_Setup_Map_Hashtables = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_Map_Hashtables, Trig_Setup_Map_Hashtables_Actions)
 end
 
 function Trig_Setup_Per_Player_Properties_Actions()
 SetTimeOfDay(12)
 UseTimeOfDayBJ(false)
-SetTerrainFogExBJ(0, 99999.00, 99999.00, 0, 100, 100, 100)
+SetTerrainFogExBJ(0, 32000.00, 32000.00, 0, 100, 100, 100)
 udg_TempInt = 1
 while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -26235,38 +25711,7 @@ end
 
 function InitTrig_Setup_Per_Player_Properties()
 gg_trg_Setup_Per_Player_Properties = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.03)
 TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
-end
-
-function Trig_Setup_Quests_Actions()
-CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "BTNBardock.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_3710", "TRIGSTR_10646", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNNagaUnBurrow.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\CommandButtons\\BTNBookOfTheDead.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_1414", "TRIGSTR_10352", "ReplaceableTextures\\CommandButtons\\BTNFlare.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_6348", "TRIGSTR_6349", "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_11860", "TRIGSTR_11861", "ReplaceableTextures\\CommandButtons\\BTNTome.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2676", "TRIGSTR_2677", "BTNBasicZanzo.blp")
-QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-FlashQuestDialogButtonBJ()
-end
-
-function InitTrig_Setup_Quests()
-gg_trg_Setup_Quests = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Setup_Quests, 5)
-TriggerAddAction(gg_trg_Setup_Quests, Trig_Setup_Quests_Actions)
 end
 
 function Trig_Init_Disable_Abilities_For_TempPlayer_Actions()
@@ -26457,53 +25902,33 @@ gg_trg_Disable_Abilities_for_TempPlayer = CreateTrigger()
 TriggerAddAction(gg_trg_Disable_Abilities_for_TempPlayer, Trig_Disable_Abilities_for_TempPlayer_Actions)
 end
 
-function Trig_Prevent_Invalid_Buildings_Func002Func001C()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("u001"))) then
-return false
-end
-return true
-end
-
-function Trig_Prevent_Invalid_Buildings_Func002Func002C()
-if (RectContainsLoc(gg_rct_HeroPickRegion, udg_TempLoc) == true) then
-return true
-end
-if (RectContainsLoc(gg_rct_HeavenZone, udg_TempLoc) == true) then
-return true
-end
-if (RectContainsLoc(gg_rct_HellZone, udg_TempLoc) == true) then
-return true
-end
-if (RectContainsLoc(gg_rct_Budokai_Arena, udg_TempLoc) == true) then
-return true
-end
-return false
-end
-
-function Trig_Prevent_Invalid_Buildings_Func002C()
-if (not Trig_Prevent_Invalid_Buildings_Func002Func002C()) then
-return false
-end
-return true
+function Trig_Setup_Quests_Actions()
+CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "BTNBardock.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_3710", "TRIGSTR_10646", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNNagaUnBurrow.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\CommandButtons\\BTNBookOfTheDead.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_1414", "TRIGSTR_10352", "ReplaceableTextures\\CommandButtons\\BTNFlare.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_6348", "TRIGSTR_6349", "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_11860", "TRIGSTR_11861", "ReplaceableTextures\\CommandButtons\\BTNTome.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2676", "TRIGSTR_2677", "BTNBasicZanzo.blp")
+QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+FlashQuestDialogButtonBJ()
 end
 
-function Trig_Prevent_Invalid_Buildings_Actions()
-udg_TempLoc = GetUnitLoc(GetConstructingStructure())
-if (Trig_Prevent_Invalid_Buildings_Func002C()) then
-if (Trig_Prevent_Invalid_Buildings_Func002Func001C()) then
-AdjustPlayerStateBJ(udg_GetiStarFragmentBaseCost, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
-else
-end
-KillUnit(GetConstructingStructure())
-else
-end
-    RemoveLocation(udg_TempLoc)
-end
-
-function InitTrig_Prevent_Invalid_Buildings()
-gg_trg_Prevent_Invalid_Buildings = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Prevent_Invalid_Buildings, EVENT_PLAYER_UNIT_CONSTRUCT_START)
-TriggerAddAction(gg_trg_Prevent_Invalid_Buildings, Trig_Prevent_Invalid_Buildings_Actions)
+function InitTrig_Setup_Quests()
+gg_trg_Setup_Quests = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_Quests, Trig_Setup_Quests_Actions)
 end
 
 function Trig_Setup_Spawns_Other_Func002Func003Func001C()
@@ -26569,43 +25994,10 @@ end
 
 function InitTrig_Setup_Spawns_Other()
 gg_trg_Setup_Spawns_Other = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Setup_Spawns_Other, 0.05)
 TriggerAddAction(gg_trg_Setup_Spawns_Other, Trig_Setup_Spawns_Other_Actions)
 end
 
-function Trig_Map_Setup_Hashtables_Actions()
-InitHashtableBJ()
-udg_StatMultHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_HeroRespawnHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_SummonsHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_SummonsSaibamenHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_TeleporterHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_UpaJavelinHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_TapionSpellsHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_GinyuHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_YamchaHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_JirenHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_HitHashtable = GetLastCreatedHashtableBJ()
-InitHashtableBJ()
-udg_AnimationHashtable = GetLastCreatedHashtableBJ()
-end
-
-function InitTrig_Map_Setup_Hashtables()
-gg_trg_Map_Setup_Hashtables = CreateTrigger()
-TriggerAddAction(gg_trg_Map_Setup_Hashtables, Trig_Map_Setup_Hashtables_Actions)
-end
-
-function Trig_Hero_Pick_Floating_Text_Help_Actions()
+function Trig_Setup_Hero_Pick_Floating_Text_Actions()
     udg_TempLoc = Location(29800, 21500)
 CreateTextTagLocBJ("TRIGSTR_11040", udg_TempLoc, 0, 20.00, 100, 100, 100, 15.00)
 udg_TempFloatingText = GetLastCreatedTextTag()
@@ -26627,16 +26019,14 @@ udg_TempFloatingText = GetLastCreatedTextTag()
 SetTextTagPermanentBJ(udg_TempFloatingText, false)
 SetTextTagLifespanBJ(udg_TempFloatingText, 185.00)
 SetTextTagFadepointBJ(udg_TempFloatingText, 155.00)
-DisableTrigger(GetTriggeringTrigger())
 end
 
-function InitTrig_Hero_Pick_Floating_Text_Help()
-gg_trg_Hero_Pick_Floating_Text_Help = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Floating_Text_Help, 0.10)
-TriggerAddAction(gg_trg_Hero_Pick_Floating_Text_Help, Trig_Hero_Pick_Floating_Text_Help_Actions)
+function InitTrig_Setup_Hero_Pick_Floating_Text()
+gg_trg_Setup_Hero_Pick_Floating_Text = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_Hero_Pick_Floating_Text, Trig_Setup_Hero_Pick_Floating_Text_Actions)
 end
 
-function Trig_Misc_Area_Labels_Actions()
+function Trig_Setup_Misc_Area_Labels_Actions()
     udg_TempLoc = Location(16000, -6000)
 CreateTextTagLocBJ("TRIGSTR_9041", udg_TempLoc, 0, 20.00, 100, 100, 100, 15.00)
 udg_TempFloatingText = GetLastCreatedTextTag()
@@ -26699,10 +26089,9 @@ udg_TempFloatingText = GetLastCreatedTextTag()
 SetTextTagPermanentBJ(udg_TempFloatingText, true)
 end
 
-function InitTrig_Misc_Area_Labels()
-gg_trg_Misc_Area_Labels = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Misc_Area_Labels, 42.00)
-TriggerAddAction(gg_trg_Misc_Area_Labels, Trig_Misc_Area_Labels_Actions)
+function InitTrig_Setup_Misc_Area_Labels()
+gg_trg_Setup_Misc_Area_Labels = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_Misc_Area_Labels, Trig_Setup_Misc_Area_Labels_Actions)
 end
 
 function Trig_Force_Remove_T2_Buggy_Vision_Func003Func001A()
@@ -26715,7 +26104,23 @@ SetPlayerAllianceBJ(udg_TempPlayer, ALLIANCE_SHARED_VISION, false, Player(23))
 SetPlayerAllianceBJ(Player(23), ALLIANCE_SHARED_VISION, false, udg_TempPlayer)
 end
 
-function Trig_Force_Remove_T2_Buggy_Vision_Func005Func002C()
+function Trig_Force_Remove_T2_Buggy_Vision_Actions()
+SetForceAllianceStateBJ(udg_TeamsPlayerGroup[0], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
+SetForceAllianceStateBJ(udg_TeamsPlayerGroup[1], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
+udg_TempInt = 0
+while (true) do
+if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
+ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Remove_T2_Buggy_Vision_Func003Func001A)
+udg_TempInt = udg_TempInt + 1
+end
+end
+
+function InitTrig_Force_Remove_T2_Buggy_Vision()
+gg_trg_Force_Remove_T2_Buggy_Vision = CreateTrigger()
+TriggerAddAction(gg_trg_Force_Remove_T2_Buggy_Vision, Trig_Force_Remove_T2_Buggy_Vision_Actions)
+end
+
+function Trig_Collect_Preload_Units_Func002Func002C()
 if (not (GetOwningPlayer(udg_TempUnit) == Player(PLAYER_NEUTRAL_PASSIVE))) then
 return false
 end
@@ -26734,34 +26139,23 @@ end
 return true
 end
 
-function Trig_Force_Remove_T2_Buggy_Vision_Func005A()
+function Trig_Collect_Preload_Units_Func002A()
 udg_TempUnit = GetEnumUnit()
-if (Trig_Force_Remove_T2_Buggy_Vision_Func005Func002C()) then
+if (Trig_Collect_Preload_Units_Func002Func002C()) then
 GroupAddUnitSimple(udg_TempUnit, udg_PreloadUnitGroup)
 else
 end
 end
 
-function Trig_Force_Remove_T2_Buggy_Vision_Actions()
-SetForceAllianceStateBJ(udg_TeamsPlayerGroup[0], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
-SetForceAllianceStateBJ(udg_TeamsPlayerGroup[1], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
-udg_TempInt = 0
-while (true) do
-if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
-ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Remove_T2_Buggy_Vision_Func003Func001A)
-udg_TempInt = udg_TempInt + 1
-end
+function Trig_Collect_Preload_Units_Actions()
 udg_TempGroup = GetUnitsInRectAll(gg_rct_HeroInit)
-ForGroupBJ(udg_TempGroup, Trig_Force_Remove_T2_Buggy_Vision_Func005A)
+ForGroupBJ(udg_TempGroup, Trig_Collect_Preload_Units_Func002A)
     DestroyGroup(udg_TempGroup)
-EnableTrigger(gg_trg_Remove_Preload_Units)
-DisableTrigger(GetTriggeringTrigger())
 end
 
-function InitTrig_Force_Remove_T2_Buggy_Vision()
-gg_trg_Force_Remove_T2_Buggy_Vision = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Force_Remove_T2_Buggy_Vision, 11.00)
-TriggerAddAction(gg_trg_Force_Remove_T2_Buggy_Vision, Trig_Force_Remove_T2_Buggy_Vision_Actions)
+function InitTrig_Collect_Preload_Units()
+gg_trg_Collect_Preload_Units = CreateTrigger()
+TriggerAddAction(gg_trg_Collect_Preload_Units, Trig_Collect_Preload_Units_Actions)
 end
 
 function Trig_Remove_Preload_Units_Func002Func001C()
@@ -26802,6 +26196,71 @@ gg_trg_Remove_Preload_Units = CreateTrigger()
 DisableTrigger(gg_trg_Remove_Preload_Units)
 TriggerRegisterTimerEventPeriodic(gg_trg_Remove_Preload_Units, 5.00)
 TriggerAddAction(gg_trg_Remove_Preload_Units, Trig_Remove_Preload_Units_Actions)
+end
+
+function Trig_Prevent_Invalid_Buildings_Func002Func001C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("u001"))) then
+return false
+end
+return true
+end
+
+function Trig_Prevent_Invalid_Buildings_Func002Func002C()
+if (RectContainsLoc(gg_rct_HeroPickRegion, udg_TempLoc) == true) then
+return true
+end
+if (RectContainsLoc(gg_rct_HeavenZone, udg_TempLoc) == true) then
+return true
+end
+if (RectContainsLoc(gg_rct_HellZone, udg_TempLoc) == true) then
+return true
+end
+if (RectContainsLoc(gg_rct_Budokai_Arena, udg_TempLoc) == true) then
+return true
+end
+return false
+end
+
+function Trig_Prevent_Invalid_Buildings_Func002C()
+if (not Trig_Prevent_Invalid_Buildings_Func002Func002C()) then
+return false
+end
+return true
+end
+
+function Trig_Prevent_Invalid_Buildings_Actions()
+udg_TempLoc = GetUnitLoc(GetConstructingStructure())
+if (Trig_Prevent_Invalid_Buildings_Func002C()) then
+if (Trig_Prevent_Invalid_Buildings_Func002Func001C()) then
+AdjustPlayerStateBJ(udg_GetiStarFragmentBaseCost, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
+else
+end
+KillUnit(GetConstructingStructure())
+else
+end
+    RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_Prevent_Invalid_Buildings()
+gg_trg_Prevent_Invalid_Buildings = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Prevent_Invalid_Buildings, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+TriggerAddAction(gg_trg_Prevent_Invalid_Buildings, Trig_Prevent_Invalid_Buildings_Actions)
+end
+
+function Trig_MoneyCounterTest_Actions()
+udg_TempInt = 1
+while (true) do
+if (udg_TempInt > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+AdjustPlayerStateBJ(1, udg_TempPlayer, PLAYER_STATE_RESOURCE_LUMBER)
+udg_TempInt = udg_TempInt + 1
+end
+end
+
+function InitTrig_MoneyCounterTest()
+gg_trg_MoneyCounterTest = CreateTrigger()
+TriggerRegisterTimerEventPeriodic(gg_trg_MoneyCounterTest, 1.00)
+TriggerAddAction(gg_trg_MoneyCounterTest, Trig_MoneyCounterTest_Actions)
 end
 
 function Trig_Kill_Creep_Stats_and_Non_Heroes_Conditions()
@@ -27979,14 +27438,23 @@ end
 
 function Trig_Kill_Hero_Voiceline_Timer_Init_Actions()
 udg_KillHeroVoicelineDelay = 0
-StartTimerBJ(udg_DeathHeroVoicelineTimer, true, 1.20)
-StartTimerBJ(udg_KillHeroVoicelineTimer, true, 1.00)
+StartTimerBJ(udg_HKVoiceTimer, true, 1.00)
 end
 
 function InitTrig_Kill_Hero_Voiceline_Timer_Init()
 gg_trg_Kill_Hero_Voiceline_Timer_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Kill_Hero_Voiceline_Timer_Init, 10.00)
 TriggerAddAction(gg_trg_Kill_Hero_Voiceline_Timer_Init, Trig_Kill_Hero_Voiceline_Timer_Init_Actions)
+end
+
+function Trig_HKVoiceTimerExpire_Actions()
+TriggerExecute(gg_trg_Death_Hero_Voiceline_Timer)
+TriggerExecute(gg_trg_Kill_Hero_Voiceline_Timer)
+end
+
+function InitTrig_HKVoiceTimerExpire()
+gg_trg_HKVoiceTimerExpire = CreateTrigger()
+TriggerRegisterTimerExpireEventBJ(gg_trg_HKVoiceTimerExpire, udg_HKVoiceTimer)
+TriggerAddAction(gg_trg_HKVoiceTimerExpire, Trig_HKVoiceTimerExpire_Actions)
 end
 
 function Trig_Death_Hero_Voiceline_Dying_Func003Func001C()
@@ -28987,16 +28455,15 @@ if (Trig_Death_Hero_Voiceline_Timer_Func003C()) then
         playGenericSpellSound(udg_DeathHeroVoicelineUnit, udg_DeathHeroVoicelinePath, udg_DeathHeroVoicelineDuration)
 udg_DeathHeroVoicelineDelay = 5
 udg_KillHeroVoicelineDelay = (udg_KillHeroVoicelineDelay + 1)
-else
-end
 udg_DeathHeroVoicelineUnit = nil
 udg_DeathHeroVoicelinePath = ""
 udg_DeathHeroVoicelineDuration = 0
+else
+end
 end
 
 function InitTrig_Death_Hero_Voiceline_Timer()
 gg_trg_Death_Hero_Voiceline_Timer = CreateTrigger()
-TriggerRegisterTimerExpireEventBJ(gg_trg_Death_Hero_Voiceline_Timer, udg_KillHeroVoicelineTimer)
 TriggerAddAction(gg_trg_Death_Hero_Voiceline_Timer, Trig_Death_Hero_Voiceline_Timer_Actions)
 end
 
@@ -31079,16 +30546,15 @@ if (Trig_Kill_Hero_Voiceline_Timer_Func003C()) then
         playGenericSpellSound(udg_KillHeroVoicelineUnit, udg_KillHeroVoicelinePath, udg_KillHeroVoicelineDuration)
 udg_KillHeroVoicelineDelay = 5
 udg_DeathHeroVoicelineDelay = (udg_DeathHeroVoicelineDelay + 1)
-else
-end
 udg_KillHeroVoicelineUnit = nil
 udg_KillHeroVoicelinePath = ""
 udg_KillHeroVoicelineDuration = 0
+else
+end
 end
 
 function InitTrig_Kill_Hero_Voiceline_Timer()
 gg_trg_Kill_Hero_Voiceline_Timer = CreateTrigger()
-TriggerRegisterTimerExpireEventBJ(gg_trg_Kill_Hero_Voiceline_Timer, udg_KillHeroVoicelineTimer)
 TriggerAddAction(gg_trg_Kill_Hero_Voiceline_Timer, Trig_Kill_Hero_Voiceline_Timer_Actions)
 end
 
@@ -36163,22 +35629,15 @@ TriggerAddCondition(gg_trg_Final_Battle_Tagger, Condition(Trig_Final_Battle_Tagg
 TriggerAddAction(gg_trg_Final_Battle_Tagger, Trig_Final_Battle_Tagger_Actions)
 end
 
-function Trig_Team_System_Init_And_Commands_Func003Func002Func001Func001C()
+function Trig_Team_System_Init_And_Commands_Func003Func002Func001C()
 if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
 return true
 end
 
-function Trig_Team_System_Init_And_Commands_Func003Func002Func001C()
-if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_EMPTY)) then
-return false
-end
-return true
-end
-
 function Trig_Team_System_Init_And_Commands_Func003Func002C()
-if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
 return false
 end
 return true
@@ -36202,15 +35661,12 @@ while (true) do
 if (udg_TempInt > udg_MaxNumPlayers) then break end
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 if (Trig_Team_System_Init_And_Commands_Func003Func002C()) then
-if (Trig_Team_System_Init_And_Commands_Func003Func002Func001C()) then
 ForceAddPlayerSimple(udg_TempPlayer, udg_ConnectedPlayers)
 else
-if (Trig_Team_System_Init_And_Commands_Func003Func002Func001Func001C()) then
+if (Trig_Team_System_Init_And_Commands_Func003Func002Func001C()) then
 ForceAddPlayerSimple(udg_TempPlayer, udg_DisconnectedPlayers)
 else
 end
-end
-else
 end
 udg_TempInt = udg_TempInt + 1
 end
@@ -36222,14 +35678,6 @@ TriggerRegisterPlayerChatEvent(gg_trg_Swap_Command, udg_TempPlayer, "-swap", fal
 TriggerRegisterPlayerChatEvent(gg_trg_Freemode, udg_TempPlayer, "-freemode", true)
 TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, udg_TempPlayer, "-lights", true)
 TriggerRegisterPlayerChatEvent(gg_trg_Catchup_Input, udg_TempPlayer, "-catchup", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_All_Pick, udg_TempPlayer, "-ap", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_All_Pick, udg_TempPlayer, "-allpick", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_All_Random, udg_TempPlayer, "-ar", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_All_Random, udg_TempPlayer, "-allrandom", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental, udg_TempPlayer, "-cm", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental, udg_TempPlayer, "-captainsmode", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_Default, udg_TempPlayer, "-default", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Mode_Single_Draft, udg_TempPlayer, "-sd", false)
 TriggerRegisterPlayerChatEvent(gg_trg_Nightmare_Mode, udg_TempPlayer, "-nightmare", false)
 TriggerRegisterPlayerChatEvent(gg_trg_Nightmare_Mode, udg_TempPlayer, "-nm", false)
 TriggerRegisterPlayerChatEvent(gg_trg_Ultimate_Mode, udg_TempPlayer, "-ultimate", false)
@@ -36243,7 +35691,6 @@ end
 
 function InitTrig_Team_System_Init_And_Commands()
 gg_trg_Team_System_Init_And_Commands = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Team_System_Init_And_Commands, 0.10)
 TriggerAddAction(gg_trg_Team_System_Init_And_Commands, Trig_Team_System_Init_And_Commands_Actions)
 end
 
@@ -37531,68 +36978,6 @@ TriggerAddCondition(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Condition(Trig_Res
 TriggerAddAction(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Trig_Respawn_Creep_Heroes_in_Deadzones_Actions)
 end
 
-function Trig_Disable_Old_Hero_Pick_Func037Func002C()
-if (not (IsUnitType(udg_TempUnit, UNIT_TYPE_STRUCTURE) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Disable_Old_Hero_Pick_Func037A()
-udg_TempUnit = GetEnumUnit()
-if (Trig_Disable_Old_Hero_Pick_Func037Func002C()) then
-ShowUnitHide(udg_TempUnit)
-else
-end
-end
-
-function Trig_Disable_Old_Hero_Pick_Actions()
-DisableTrigger(gg_trg_Hero_Pick_Unstall)
-DisableTrigger(gg_trg_Hero_Pick_Rush)
-DisableTrigger(gg_trg_Hero_Pick_Rush_Repick)
-DisableTrigger(gg_trg_Hero_Pick_End_Bans_Command)
-DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Magus_Generate)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Magus_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Force_Pick_Unit_Type)
-DisableTrigger(gg_trg_Hero_Pick_Modes_Show)
-DisableTrigger(gg_trg_Hero_Pick_Mode_Default)
-DisableTrigger(gg_trg_Hero_Pick_Mode_All_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Mode_All_Random)
-DisableTrigger(gg_trg_Hero_Pick_Mode_Single_Draft)
-DisableTrigger(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental)
-DisableTrigger(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-DisableTrigger(gg_trg_Hero_Pick_Init_Available_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
-DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
-DisableTrigger(gg_trg_Hero_Pick_Ban_A_Hero)
-DisableTrigger(gg_trg_Hero_Pick_End_Bans)
-DisableTrigger(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
-DisableTrigger(gg_trg_Hero_Pick_Add_Secondary_Heroes_UNFINISHED)
-DisableTrigger(gg_trg_Hero_Pick_Timer_Start)
-DisableTrigger(gg_trg_Hero_Pick_Timer_Complete)
-DisableTrigger(gg_trg_Hero_Pick_Repick_Start)
-DisableTrigger(gg_trg_Hero_Pick_Repick_Complete)
-DisableTrigger(gg_trg_Hero_Pick_Disable_Pick_Modes)
-udg_TempUnitGroup = GetUnitsInRectOfPlayer(gg_rct_HeroPickRegion, Player(PLAYER_NEUTRAL_PASSIVE))
-ForGroupBJ(udg_TempUnitGroup, Trig_Disable_Old_Hero_Pick_Func037A)
-    DestroyGroup(udg_TempUnitGroup)
-end
-
-function InitTrig_Disable_Old_Hero_Pick()
-gg_trg_Disable_Old_Hero_Pick = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Disable_Old_Hero_Pick, 0.00)
-TriggerAddAction(gg_trg_Disable_Old_Hero_Pick, Trig_Disable_Old_Hero_Pick_Actions)
-end
-
 function Trig_Hero_Pick_Reset_Abilities_Actions()
 udg_TempPlayer = ConvertedPlayer(udg_TempInt)
 TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
@@ -38489,13 +37874,6 @@ TriggerAddAction(gg_trg_Hero_Pick_Enable_Abilities, Trig_Hero_Pick_Enable_Abilit
 end
 
 function Trig_Hero_Pick_Completion_Actions()
-DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
-DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
-DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
-DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick)
-EnableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
 DisableTrigger(gg_trg_Hero_Pick_Forced_Invul)
 EnableTrigger(gg_trg_Force_Win_Loss)
 EnableTrigger(gg_trg_Moro_Energy_Drain_Passive)
@@ -38511,1460 +37889,32 @@ gg_trg_Hero_Pick_Completion = CreateTrigger()
 TriggerAddAction(gg_trg_Hero_Pick_Completion, Trig_Hero_Pick_Completion_Actions)
 end
 
-function Trig_Hero_Pick_Stall_Actions()
-PauseTimerBJ(true, udg_HeroPickTimer)
-end
-
-function InitTrig_Hero_Pick_Stall()
-gg_trg_Hero_Pick_Stall = CreateTrigger()
-DisableTrigger(gg_trg_Hero_Pick_Stall)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Stall, Player(0), "stall", true)
-TriggerAddAction(gg_trg_Hero_Pick_Stall, Trig_Hero_Pick_Stall_Actions)
-end
-
-function Trig_Hero_Pick_Unstall_Actions()
-PauseTimerBJ(false, udg_HeroPickTimer)
-end
-
-function InitTrig_Hero_Pick_Unstall()
-gg_trg_Hero_Pick_Unstall = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Unstall, Player(0), "unstall", true)
-TriggerAddAction(gg_trg_Hero_Pick_Unstall, Trig_Hero_Pick_Unstall_Actions)
-end
-
-function Trig_Hero_Pick_Rush_Func001C()
-if (not (GetPlayerName(GetTriggerPlayer()) == "Local Player")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Rush_Actions()
-if (Trig_Hero_Pick_Rush_Func001C()) then
-StartTimerBJ(udg_HeroPickTimer, false, 1.00)
-else
-StartTimerBJ(udg_HeroPickTimer, false, 10.00)
-end
-DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Hero_Pick_Rush()
-gg_trg_Hero_Pick_Rush = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Rush, Player(0), "rush", true)
-TriggerAddAction(gg_trg_Hero_Pick_Rush, Trig_Hero_Pick_Rush_Actions)
-end
-
-function Trig_Hero_Pick_Rush_Repick_Actions()
-StartTimerBJ(udg_HeroRepickTimer, false, 0.00)
-DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Hero_Pick_Rush_Repick()
-gg_trg_Hero_Pick_Rush_Repick = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Rush_Repick, Player(0), "rusher", true)
-TriggerAddAction(gg_trg_Hero_Pick_Rush_Repick, Trig_Hero_Pick_Rush_Repick_Actions)
-end
-
-function Trig_Hero_Pick_End_Bans_Command_Actions()
-TriggerExecute(gg_trg_Hero_Pick_End_Bans)
-end
-
-function InitTrig_Hero_Pick_End_Bans_Command()
-gg_trg_Hero_Pick_End_Bans_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_End_Bans_Command, Player(0), "-endbans", true)
-TriggerAddAction(gg_trg_Hero_Pick_End_Bans_Command, Trig_Hero_Pick_End_Bans_Command_Actions)
-end
-
-function Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()
-if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()
-if (not (CountPlayersInForceBJ(udg_TempPlayerGroup) > 1)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Show_Pickable_Heroes_Actions()
-    udg_TempLoc = Location(2820, 22009)
-udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
-udg_TempString = ""
-udg_RandomHeroIndex = 0
-udg_RandomHeroCounter = 0
-    while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
-    udg_HeroAvailabilityKey = udg_HeroPickUnitType
-if (Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()) then
-CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-udg_TempUnit = GetLastCreatedUnit()
-udg_TempString = (udg_TempString .. (GetHeroProperName(udg_TempUnit) .. " | "))
-RemoveUnit(udg_TempUnit)
-else
-end
-udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
-    end
-    RemoveLocation(udg_TempLoc)
-udg_TempString = (udg_TempString .. "Random Hero")
-udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
-if (Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()) then
-DisplayTextToForce(udg_TempPlayerGroup, ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
-else
-DisplayTextToForce(GetPlayersAll(), ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
-end
-    DestroyForce(udg_TempPlayerGroup)
-end
-
-function InitTrig_Hero_Pick_Show_Pickable_Heroes()
-gg_trg_Hero_Pick_Show_Pickable_Heroes = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(0), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(1), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(2), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(3), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(4), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(5), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(6), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(7), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(8), "-picks", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(9), "-picks", true)
-TriggerAddAction(gg_trg_Hero_Pick_Show_Pickable_Heroes, Trig_Hero_Pick_Show_Pickable_Heroes_Actions)
-end
-
-function Trig_Hero_Pick_Repick_Randomly_Actions()
-udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
-end
-
-function InitTrig_Hero_Pick_Repick_Randomly()
-gg_trg_Hero_Pick_Repick_Randomly = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(0), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(1), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(2), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(3), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(4), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(5), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(6), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(7), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(8), "-repick", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(9), "-repick", true)
-TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Heroes_Actions()
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-TriggerExecute(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick, udg_TempPlayer, udg_TempString, true)
-TriggerExecute(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick, udg_TempPlayer, udg_TempString, true)
-TriggerExecute(gg_trg_Hero_Pick_Secret_Magus_Generate)
-TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Magus_Pick, udg_TempPlayer, udg_TempString, true)
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Hero_Pick_Secret_Heroes()
-gg_trg_Hero_Pick_Secret_Heroes = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Secret_Heroes, 0.60)
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Heroes, Trig_Hero_Pick_Secret_Heroes_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Old_Krillin_Code_Generate_Actions()
-udg_TempString = udg_OriginalPlayerNames[GetConvertedPlayerId(udg_TempPlayer)]
-udg_TempString = ("-8" .. (SubStringBJ(udg_TempString, 3, 3) .. ("W" .. (SubStringBJ(udg_TempString, 1, 1) .. ("27f" .. SubStringBJ(udg_TempString, 2, 2))))))
-end
-
-function InitTrig_Hero_Pick_Secret_Old_Krillin_Code_Generate()
-gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate, Trig_Hero_Pick_Secret_Old_Krillin_Code_Generate_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Old_Krillin_Code_Pick_Func002C()
-if (not (udg_TempReal < 101.00)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Secret_Old_Krillin_Code_Pick_Actions()
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Hero_Pick_Secret_Old_Krillin_Code_Pick_Func002C()) then
-udg_HeroPickUnitType = FourCC("H03Y")
-udg_TempPlayer = GetTriggerPlayer()
-TriggerExecute(gg_trg_Hero_Pick_Force_Pick_Unit_Type)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Secret_Old_Krillin_Code_Pick()
-gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick, Trig_Hero_Pick_Secret_Old_Krillin_Code_Pick_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Rust_Tyranno_Generate_Actions()
-udg_TempString = udg_OriginalPlayerNames[GetConvertedPlayerId(udg_TempPlayer)]
-udg_TempString = ("-R" .. (SubStringBJ(udg_TempString, 1, 1) .. ("u" .. (SubStringBJ(udg_TempString, 3, 3) .. ("STy" .. SubStringBJ(udg_TempString, 2, 2))))))
-end
-
-function InitTrig_Hero_Pick_Secret_Rust_Tyranno_Generate()
-gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate, Trig_Hero_Pick_Secret_Rust_Tyranno_Generate_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Rust_Tyranno_Pick_Func002C()
-if (not (udg_TempReal < 101.00)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Secret_Rust_Tyranno_Pick_Actions()
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Hero_Pick_Secret_Rust_Tyranno_Pick_Func002C()) then
-udg_HeroPickUnitType = FourCC("H09Z")
-udg_TempPlayer = GetTriggerPlayer()
-TriggerExecute(gg_trg_Hero_Pick_Force_Pick_Unit_Type)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Secret_Rust_Tyranno_Pick()
-gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick, Trig_Hero_Pick_Secret_Rust_Tyranno_Pick_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Magus_Generate_Actions()
-udg_TempString = udg_OriginalPlayerNames[GetConvertedPlayerId(udg_TempPlayer)]
-udg_TempString = ("-J" .. (SubStringBJ(udg_TempString, 1, 1) .. ("a" .. (SubStringBJ(udg_TempString, 3, 3) .. ("NUs" .. SubStringBJ(udg_TempString, 2, 2))))))
-end
-
-function InitTrig_Hero_Pick_Secret_Magus_Generate()
-gg_trg_Hero_Pick_Secret_Magus_Generate = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Magus_Generate, Trig_Hero_Pick_Secret_Magus_Generate_Actions)
-end
-
-function Trig_Hero_Pick_Secret_Magus_Pick_Func002C()
-if (not (udg_TempReal < 101.00)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Secret_Magus_Pick_Actions()
-udg_TempReal = GetRandomReal(0, 100.00)
-if (Trig_Hero_Pick_Secret_Magus_Pick_Func002C()) then
-udg_HeroPickUnitType = FourCC("H0A3")
-udg_TempPlayer = GetTriggerPlayer()
-TriggerExecute(gg_trg_Hero_Pick_Force_Pick_Unit_Type)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Secret_Magus_Pick()
-gg_trg_Hero_Pick_Secret_Magus_Pick = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Secret_Magus_Pick, Trig_Hero_Pick_Secret_Magus_Pick_Actions)
-end
-
-function Trig_Hero_Pick_Force_Pick_Unit_Type_Func003C()
-if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
-return false
-end
-if (not (IsTriggerEnabled(gg_trg_Hero_Pick_Pick_A_Hero) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Force_Pick_Unit_Type_Actions()
-udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
-    udg_HeroAvailabilityKey = udg_HeroPickUnitType
-if (Trig_Hero_Pick_Force_Pick_Unit_Type_Func003C()) then
-PlaySoundBJ(gg_snd_SecretFound)
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-        udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
-CreateNUnitsAtLoc(1, udg_HeroPickUnitType, udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
-udg_TempUnit = GetLastCreatedUnit()
-        RemoveLocation(udg_TempLoc)
-TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Force_Pick_Unit_Type()
-gg_trg_Hero_Pick_Force_Pick_Unit_Type = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Force_Pick_Unit_Type, Trig_Hero_Pick_Force_Pick_Unit_Type_Actions)
-end
-
-function Trig_Hero_Pick_Modes_Show_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_8858")
-end
-
-function InitTrig_Hero_Pick_Modes_Show()
-gg_trg_Hero_Pick_Modes_Show = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Modes_Show, 7.00)
-TriggerAddAction(gg_trg_Hero_Pick_Modes_Show, Trig_Hero_Pick_Modes_Show_Actions)
-end
-
-function Trig_Hero_Pick_Mode_Default_Conditions()
-if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_Default_Func005Func001Func003Func001C()
-if (udg_HeroPickUnitType == FourCC("H08S")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("E01D")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H09K")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H05X")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H09M")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H09Q")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H09Y")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H09S")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H0A7")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H04Y")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H05Q")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H07Y")) then
-return true
-end
-if (udg_HeroPickUnitType == FourCC("H0AA")) then
-return true
-end
-return false
-end
-
-function Trig_Hero_Pick_Mode_Default_Func005Func001Func003C()
-if (not Trig_Hero_Pick_Mode_Default_Func005Func001Func003Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_Default_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9978")
-udg_HeroPickMode = "default"
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumAvailableHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 255
-if (Trig_Hero_Pick_Mode_Default_Func005Func001Func003C()) then
-udg_TempInt3 = 0
-else
-end
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > (udg_MaxNumPlayers // 2)) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumEvilHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_EvilHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 0
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-udg_TempInt = udg_TempInt + 1
-end
-udg_TempInt = ((udg_MaxNumPlayers // 2) + 1)
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumGoodHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_GoodHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 0
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Hero_Pick_Mode_Default()
-gg_trg_Hero_Pick_Mode_Default = CreateTrigger()
-TriggerAddCondition(gg_trg_Hero_Pick_Mode_Default, Condition(Trig_Hero_Pick_Mode_Default_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Mode_Default, Trig_Hero_Pick_Mode_Default_Actions)
-end
-
-function Trig_Hero_Pick_Mode_All_Pick_Conditions()
-if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_All_Pick_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9979")
-udg_HeroPickMode = "ap"
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumAvailableHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 255
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Hero_Pick_Mode_All_Pick()
-gg_trg_Hero_Pick_Mode_All_Pick = CreateTrigger()
-TriggerAddCondition(gg_trg_Hero_Pick_Mode_All_Pick, Condition(Trig_Hero_Pick_Mode_All_Pick_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Mode_All_Pick, Trig_Hero_Pick_Mode_All_Pick_Actions)
-end
-
-function Trig_Hero_Pick_Mode_All_Random_Conditions()
-if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_All_Random_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9980")
-udg_HeroPickMode = "ar"
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumAvailableHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 0
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Hero_Pick_Mode_All_Random()
-gg_trg_Hero_Pick_Mode_All_Random = CreateTrigger()
-TriggerAddCondition(gg_trg_Hero_Pick_Mode_All_Random, Condition(Trig_Hero_Pick_Mode_All_Random_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Mode_All_Random, Trig_Hero_Pick_Mode_All_Random_Actions)
-end
-
-function Trig_Hero_Pick_Mode_Single_Draft_Conditions()
-if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_Single_Draft_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9981")
-udg_HeroPickMode = "sd"
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumAvailableHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 0
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-udg_HeroPickUnitType = udg_GoodHeroTypesArray[GetRandomInt(0, (udg_NumGoodHeroes - 1))]
-udg_TempInt3 = 255
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_HeroPickUnitType = udg_EvilHeroTypesArray[GetRandomInt(0, (udg_NumEvilHeroes - 1))]
-udg_TempInt3 = 255
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Hero_Pick_Mode_Single_Draft()
-gg_trg_Hero_Pick_Mode_Single_Draft = CreateTrigger()
-TriggerAddCondition(gg_trg_Hero_Pick_Mode_Single_Draft, Condition(Trig_Hero_Pick_Mode_Single_Draft_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Mode_Single_Draft, Trig_Hero_Pick_Mode_Single_Draft_Actions)
-end
-
-function Trig_Hero_Pick_Mode_Captains_Mode_Experimental_Conditions()
-if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_Captains_Mode_Experimental_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9982")
-udg_HeroPickMode = "cm"
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempInt2 = 0
-while (true) do
-if (udg_TempInt2 > (udg_NumAvailableHeroes - 1)) then break end
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[udg_TempInt2]
-udg_TempInt3 = 255
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt2 = udg_TempInt2 + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-udg_NumEvilBans = 6
-udg_NumGoodBans = 6
-udg_HeroPickTime = 120.00
-StartTimerBJ(udg_HeroPickTimer, false, udg_HeroPickTime)
-DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
-EnableTrigger(gg_trg_Hero_Pick_Ban_A_Hero)
-EnableTrigger(gg_trg_Hero_Pick_Stall)
-end
-
-function InitTrig_Hero_Pick_Mode_Captains_Mode_Experimental()
-gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental = CreateTrigger()
-TriggerAddCondition(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental, Condition(Trig_Hero_Pick_Mode_Captains_Mode_Experimental_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental, Trig_Hero_Pick_Mode_Captains_Mode_Experimental_Actions)
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001Func001C()
-if (not (udg_TempInt == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001C()
-if (not (udg_HeroPickMode == "cm")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func002C()
-if (not (udg_TempInt == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001C()
-if (not (udg_HeroPickMode == "sd")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func002C()
-if (not (udg_TempInt == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001C()
-if (not (udg_HeroPickMode == "ar")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func002C()
-if (not (udg_TempInt == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001C()
-if (not (udg_HeroPickMode == "ap")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func002C()
-if (not (udg_TempInt == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002C()
-if (not (udg_HeroPickMode == "default")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Actions()
-udg_TempInt = GetRandomInt(0, 1)
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002C()) then
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func002C()) then
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode)
-else
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode)
-end
-else
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001C()) then
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func002C()) then
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01)
-else
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03)
-end
-else
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001C()) then
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func002C()) then
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_random_01)
-else
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_random_02)
-end
-else
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001C()) then
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func002C()) then
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01)
-else
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02)
-end
-else
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001C()) then
-if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001Func001C()) then
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this)
-else
-PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03)
-end
-else
-end
-end
-end
-end
-end
-end
-
-function InitTrig_Hero_Pick_Mode_RandM_Announcer_Audio()
-gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio, Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Actions)
-end
-
-function Trig_Hero_Pick_Set_HeroPickUnitType_availability_Actions()
-SetPlayerTechMaxAllowedSwap(udg_HeroPickUnitType, udg_TempInt3, ConvertedPlayer(udg_TempInt))
-    udg_HeroAvailabilityKey = udg_HeroPickUnitType
-SaveIntegerBJ(udg_TempInt3, 0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt])
-end
-
-function InitTrig_Hero_Pick_Set_HeroPickUnitType_availability()
-gg_trg_Hero_Pick_Set_HeroPickUnitType_availability = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability, Trig_Hero_Pick_Set_HeroPickUnitType_availability_Actions)
-end
-
-function Trig_Hero_Pick_Init_Available_Heroes_Actions()
-udg_NumGoodHeroes = 0
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H000")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E003")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00K")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H008")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H009")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00R")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08M")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08P")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08S")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08Z")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H085")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H099")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E014")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E01P")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09C")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09H")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H03Y")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E010")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E001")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09K")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09Q")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H055")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09S")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H09Y")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A0")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A1")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A2")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A4")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A5")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A6")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A7")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H04Y")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H05Q")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H05W")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H05X")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0AA")
-udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-udg_NumEvilHeroes = 0
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("O001")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H00M")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("N00Q")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H042")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("O005")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H08U")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H08W")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H08Y")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H062")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("E01D")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09B")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09E")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H06X")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09F")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09J")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("E012")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09M")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("E00K")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09Z")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H0A3")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H05V")
-udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-udg_NumAvailableHeroes = 0
-udg_TempInt = 0
-while (true) do
-if (udg_TempInt > (udg_NumGoodHeroes - 1)) then break end
-udg_AvailableHeroTypesArray[udg_NumAvailableHeroes] = udg_GoodHeroTypesArray[udg_TempInt]
-udg_NumAvailableHeroes = (udg_NumAvailableHeroes + 1)
-udg_TempInt = udg_TempInt + 1
-end
-udg_TempInt = 0
-while (true) do
-if (udg_TempInt > (udg_NumEvilHeroes - 1)) then break end
-udg_AvailableHeroTypesArray[udg_NumAvailableHeroes] = udg_EvilHeroTypesArray[udg_TempInt]
-udg_NumAvailableHeroes = (udg_NumAvailableHeroes + 1)
-udg_TempInt = udg_TempInt + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Mode_All_Pick)
-end
-
-function InitTrig_Hero_Pick_Init_Available_Heroes()
-gg_trg_Hero_Pick_Init_Available_Heroes = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Init_Available_Heroes, 0.30)
-TriggerAddAction(gg_trg_Hero_Pick_Init_Available_Heroes, Trig_Hero_Pick_Init_Available_Heroes_Actions)
-end
-
-function Trig_Hero_Pick_Disable_Spellcasting_Conditions()
-if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Disable_Spellcasting_Actions()
-IssueImmediateOrderBJ(GetTriggerUnit(), "stop")
-end
-
-function InitTrig_Hero_Pick_Disable_Spellcasting()
-gg_trg_Hero_Pick_Disable_Spellcasting = CreateTrigger()
-DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Disable_Spellcasting, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Hero_Pick_Disable_Spellcasting, Condition(Trig_Hero_Pick_Disable_Spellcasting_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Disable_Spellcasting, Trig_Hero_Pick_Disable_Spellcasting_Actions)
-end
-
-function Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003Func002C()
-if (not (udg_ScoreboardTimeSeconds == 0)) then
-return false
-end
-if (not (udg_ScoreboardTimeMinutes == 0)) then
-return false
-end
-if (not (udg_ScoreboardTimeHours == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003A()
-if (Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003Func002C()) then
-SetUnitInvulnerable(GetEnumUnit(), true)
-ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_SET, 0)
-else
-end
-udg_StatMultUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Add_Unit_To_StatMult)
-end
-
-function Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Actions()
-GroupAddUnitSimple(udg_TempUnit, udg_PlayerPickedHeroesUnitGroup[udg_TempInt])
-TriggerExecute(gg_trg_Hero_Pick_Add_Secondary_Heroes_UNFINISHED)
-ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[udg_TempInt], Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003A)
-end
-
-function InitTrig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup()
-gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup, Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Actions)
-end
-
-function Trig_Hero_Pick_Pick_A_Hero_Conditions()
-if (not (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Pick_A_Hero_Func005C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H04F"))) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Pick_A_Hero_Actions()
-udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))
-TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities)
-udg_TempUnit = GetSoldUnit()
-TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-if (Trig_Hero_Pick_Pick_A_Hero_Func005C()) then
-RemoveUnit(udg_TempUnit)
-udg_HeroPickWantsRandom = true
-TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
-else
-udg_TempLoc = GetUnitLoc(GetBuyingUnit())
-        SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc))
-        SetUnitY(udg_TempUnit, GetLocationY(udg_TempLoc))
-        RemoveLocation(udg_TempLoc)
-TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
-end
-end
-
-function InitTrig_Hero_Pick_Pick_A_Hero()
-gg_trg_Hero_Pick_Pick_A_Hero = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Pick_A_Hero, EVENT_PLAYER_UNIT_SELL)
-TriggerAddCondition(gg_trg_Hero_Pick_Pick_A_Hero, Condition(Trig_Hero_Pick_Pick_A_Hero_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Pick_A_Hero, Trig_Hero_Pick_Pick_A_Hero_Actions)
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Conditions()
-if (not (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
-if (not (udg_TempInt2 <= 5)) then
-return false
-end
-if (not (udg_NumGoodBans > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()
-if (not (udg_TempInt2 >= 6)) then
-return false
-end
-if (not (udg_NumEvilBans > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()
-if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()) then
-return true
-end
-if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()) then
-return true
-end
-return false
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()
-if (not (udg_TempInt2 <= 5)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func004C()
-if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("H04F"))) then
-return false
-end
-if (not Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Func005C()
-if (not (udg_NumEvilBans == 0)) then
-return false
-end
-if (not (udg_NumGoodBans == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Ban_A_Hero_Actions()
-udg_TempInt2 = GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))
-udg_TempUnit = GetSoldUnit()
-RemoveUnit(udg_TempUnit)
-if (Trig_Hero_Pick_Ban_A_Hero_Func004C()) then
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_HeroPickUnitType = GetUnitTypeId(udg_TempUnit)
-udg_TempInt3 = 0
-TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
-udg_TempInt = udg_TempInt + 1
-end
-if (Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()) then
-udg_NumGoodBans = (udg_NumGoodBans - 1)
-DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 1 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00]|r")))
-DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 1 has |cff00ffff" .. (I2S(udg_NumGoodBans) .. "|r|cffffcc00 bans remaining.|r")))
-else
-udg_NumEvilBans = (udg_NumEvilBans - 1)
-DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00]|r")))
-DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has |cff00ffff" .. (I2S(udg_NumEvilBans) .. "|r|cffffcc00 bans remaining.|r")))
-end
-else
-end
-if (Trig_Hero_Pick_Ban_A_Hero_Func005C()) then
-TriggerExecute(gg_trg_Hero_Pick_End_Bans)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Ban_A_Hero()
-gg_trg_Hero_Pick_Ban_A_Hero = CreateTrigger()
-DisableTrigger(gg_trg_Hero_Pick_Ban_A_Hero)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Ban_A_Hero, EVENT_PLAYER_UNIT_SELL)
-TriggerAddCondition(gg_trg_Hero_Pick_Ban_A_Hero, Condition(Trig_Hero_Pick_Ban_A_Hero_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Ban_A_Hero, Trig_Hero_Pick_Ban_A_Hero_Actions)
-end
-
-function Trig_Hero_Pick_End_Bans_Actions()
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9983")
-EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
-DisableTrigger(gg_trg_Hero_Pick_Ban_A_Hero)
-end
-
-function InitTrig_Hero_Pick_End_Bans()
-gg_trg_Hero_Pick_End_Bans = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_End_Bans, Trig_Hero_Pick_End_Bans_Actions)
-end
-
-function Trig_Hero_Pick_Remove_Picked_Heroes_Func001A()
-RemoveUnit(GetEnumUnit())
-udg_StatMultUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Remove_Unit_From_StatMult)
-end
-
-function Trig_Hero_Pick_Remove_Picked_Heroes_Actions()
-ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[udg_TempInt], Trig_Hero_Pick_Remove_Picked_Heroes_Func001A)
-GroupClear(udg_PlayerPickedHeroesUnitGroup[udg_TempInt])
-end
-
-function InitTrig_Hero_Pick_Remove_Picked_Heroes()
-gg_trg_Hero_Pick_Remove_Picked_Heroes = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Remove_Picked_Heroes, Trig_Hero_Pick_Remove_Picked_Heroes_Actions)
-end
-
-function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()
-if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions()
-udg_RandomHeroSkipNum = 0
-udg_RandomHeroIndex = 0
-udg_RandomHeroCounter = 0
-    while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
-    udg_HeroAvailabilityKey = udg_HeroPickUnitType
-if (Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()) then
-udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum + 1)
-else
-end
-udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
-    end
-end
-
-function InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
-gg_trg_Hero_Pick_Get_Num_Pickable_Heroes = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes, Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions)
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()
-if (not (udg_TempInt <= (udg_MaxNumPlayers // 2))) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func001C()
-if (not (udg_RandomHeroSkipNum <= 0)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func005Func002C()
-if (not (udg_HeroPickUnitType ~= FourCC("E010"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H09Y"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H08Z"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H06X"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H09S"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("E01D"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H05Q"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H09Q"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H062"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("E00K"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H08Y"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H008"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H01V"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("O001"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("O005"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H0A6"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H03Y"))) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func005C()
-if (udg_HeroPickWantsRandom == true) then
-return true
-end
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func005Func002C()) then
-return true
-end
-return false
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008C()
-if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H09Z"))) then
-return false
-end
-if (not (udg_HeroPickUnitType ~= FourCC("H0A3"))) then
-return false
-end
-if (not Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()
-if (not (udg_TempBool == false)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()
-if (not (udg_HeroPickMode ~= "ar")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()
-if (not (udg_HeroPickMode ~= "ar")) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()
-if (not (udg_TempBool == false)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions()
-    udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes)
-udg_RandomHeroIndex = 0
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()) then
-udg_RandomHeroIndex = udg_TempInt
-else
-udg_RandomHeroIndex = (udg_NumGoodHeroes + (udg_TempInt - (udg_MaxNumPlayers // 2)))
-end
-udg_RandomHeroCounter = 0
-udg_RandomHeroSkipNum = (GetRandomInt(0, (udg_RandomHeroSkipNum - 1)) + 0)
-udg_TempBool = false
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()) then
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()) then
-udg_RandomHeroMaxCounter = (udg_NumAvailableHeroes * 2)
-            while (udg_RandomHeroCounter < udg_RandomHeroMaxCounter) do
-udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
-            udg_HeroAvailabilityKey = udg_HeroPickUnitType
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008C()) then
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func001C()) then
-CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-udg_RandomHeroCounter = udg_RandomHeroMaxCounter
-udg_TempBool = true
-else
-udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum - 1)
-end
-else
-end
-udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
-            end
-else
-end
-else
-end
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()) then
-if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()) then
-DisplayTextToForce(GetPlayersAll(), ("Could not find a valid random hero for Player " .. (I2S(udg_TempInt) .. " that was also pickable (i.e. not banned/blocked)")))
-else
-end
-CreateNUnitsAtLoc(1, udg_AvailableHeroTypesArray[GetRandomInt(0, (udg_NumAvailableHeroes - 1))], ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-else
-end
-udg_TempUnit = GetLastCreatedUnit()
-    RemoveLocation(udg_TempLoc)
-TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
-end
-
-function InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
-gg_trg_Hero_Pick_Give_Random_Hero_to_Player = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Give_Random_Hero_to_Player, Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions)
-end
-
-function Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func001C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H008"))) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func002C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H01V"))) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Actions()
-if (Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func001C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-CreateNUnitsAtLoc(1, FourCC("H016"), ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-GroupAddUnitSimple(GetLastCreatedUnit(), udg_PlayerPickedHeroesUnitGroup[udg_TempInt])
-        RemoveLocation(udg_TempLoc)
-else
-end
-if (Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func002C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-CreateNUnitsAtLoc(1, FourCC("H01S"), ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-GroupAddUnitSimple(GetLastCreatedUnit(), udg_PlayerPickedHeroesUnitGroup[udg_TempInt])
-CreateNUnitsAtLoc(1, FourCC("H01T"), ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
-GroupAddUnitSimple(GetLastCreatedUnit(), udg_PlayerPickedHeroesUnitGroup[udg_TempInt])
-        RemoveLocation(udg_TempLoc)
-else
-end
-end
-
-function InitTrig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED()
-gg_trg_Hero_Pick_Add_Secondary_Heroes_UNFINISHED = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Add_Secondary_Heroes_UNFINISHED, Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Actions)
-end
-
-function Trig_Hero_Pick_Timer_Start_Actions()
-CreateTimerDialogBJ(udg_HeroPickTimer, "TRIGSTR_9984")
-udg_HeroPickTimerWindow = GetLastCreatedTimerDialogBJ()
-TimerDialogDisplayBJ(true, udg_HeroPickTimerWindow)
-StartTimerBJ(udg_HeroPickTimer, false, udg_HeroPickTime)
-end
-
-function InitTrig_Hero_Pick_Timer_Start()
-gg_trg_Hero_Pick_Timer_Start = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Timer_Start, 1.00)
-TriggerAddAction(gg_trg_Hero_Pick_Timer_Start, Trig_Hero_Pick_Timer_Start_Actions)
-end
-
-function Trig_Hero_Pick_Timer_Complete_Func004Func003A()
-SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_PASSIVE), true)
-end
-
-function Trig_Hero_Pick_Timer_Complete_Func004Func005Func004C()
-if (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER) then
-return true
-end
-if (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_COMPUTER) then
-return true
-end
-return false
-end
-
-function Trig_Hero_Pick_Timer_Complete_Func004Func005C()
-if (not Trig_Hero_Pick_Timer_Complete_Func004Func005Func004C()) then
-return false
-end
-if (not (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]) == 0)) then
-return false
-end
-if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Timer_Complete_Actions()
-DisableTrigger(gg_trg_Hero_Pick_Timer_Complete)
-DestroyTimerDialogBJ(udg_HeroPickTimerWindow)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9985")
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-udg_TempGroup = GetUnitsOfPlayerAndTypeId(udg_TempPlayer, FourCC("n001"))
-ForGroupBJ(udg_TempGroup, Trig_Hero_Pick_Timer_Complete_Func004Func003A)
-        DestroyGroup(udg_TempGroup)
-if (Trig_Hero_Pick_Timer_Complete_Func004Func005C()) then
-udg_HeroPickWantsRandom = false
-TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
-else
-end
-udg_TempInt = udg_TempInt + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Disable_Pick_Modes)
-TriggerExecute(gg_trg_Hero_Pick_Repick_Start)
-EnableTrigger(gg_trg_Hero_Pick_Repick_Complete)
-end
-
-function InitTrig_Hero_Pick_Timer_Complete()
-gg_trg_Hero_Pick_Timer_Complete = CreateTrigger()
-TriggerRegisterTimerExpireEventBJ(gg_trg_Hero_Pick_Timer_Complete, udg_HeroPickTimer)
-TriggerAddAction(gg_trg_Hero_Pick_Timer_Complete, Trig_Hero_Pick_Timer_Complete_Actions)
-end
-
-function Trig_Hero_Pick_Repick_Start_Actions()
-DisplayTextToForce(GetPlayersAll(), ("|cff20ffffYou can still repick within the next " .. (I2S(R2I(udg_HeroRepickTime)) .. " seconds.|r")))
-CreateTimerDialogBJ(udg_HeroRepickTimer, "TRIGSTR_9986")
-udg_HeroRepickTimerWindow = GetLastCreatedTimerDialogBJ()
-TimerDialogDisplayBJ(true, udg_HeroRepickTimerWindow)
-StartTimerBJ(udg_HeroRepickTimer, false, udg_HeroRepickTime)
-end
-
-function InitTrig_Hero_Pick_Repick_Start()
-gg_trg_Hero_Pick_Repick_Start = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Repick_Start, Trig_Hero_Pick_Repick_Start_Actions)
-end
-
-function Trig_Hero_Pick_Repick_Complete_Actions()
-DestroyTimerDialogBJ(udg_HeroRepickTimerWindow)
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Enable_Abilities)
-ConditionalTriggerExecute(gg_trg_Hero_Pick_Setup_Selected_Heroes)
-udg_TempInt = udg_TempInt + 1
-end
-TriggerExecute(gg_trg_Hero_Pick_Completion)
-end
-
-function InitTrig_Hero_Pick_Repick_Complete()
-gg_trg_Hero_Pick_Repick_Complete = CreateTrigger()
-DisableTrigger(gg_trg_Hero_Pick_Repick_Complete)
-TriggerRegisterTimerExpireEventBJ(gg_trg_Hero_Pick_Repick_Complete, udg_HeroRepickTimer)
-TriggerAddAction(gg_trg_Hero_Pick_Repick_Complete, Trig_Hero_Pick_Repick_Complete_Actions)
-end
-
-function Trig_Hero_Pick_Disable_Pick_Modes_Actions()
-DisableTrigger(gg_trg_Hero_Pick_Mode_Default)
-DisableTrigger(gg_trg_Hero_Pick_Mode_All_Pick)
-DisableTrigger(gg_trg_Hero_Pick_Mode_All_Random)
-DisableTrigger(gg_trg_Hero_Pick_Mode_Single_Draft)
-DisableTrigger(gg_trg_Hero_Pick_Mode_Captains_Mode_Experimental)
-end
-
-function InitTrig_Hero_Pick_Disable_Pick_Modes()
-gg_trg_Hero_Pick_Disable_Pick_Modes = CreateTrigger()
-TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
-end
-
-function Trig_Hero_Pick_Force_Disable_Picking_Conditions()
-if (not (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Hero_Pick_Force_Disable_Picking_Actions()
-RemoveUnit(GetSoldUnit())
-end
-
-function InitTrig_Hero_Pick_Force_Disable_Picking()
-gg_trg_Hero_Pick_Force_Disable_Picking = CreateTrigger()
-DisableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Force_Disable_Picking, EVENT_PLAYER_UNIT_SELL)
-TriggerAddCondition(gg_trg_Hero_Pick_Force_Disable_Picking, Condition(Trig_Hero_Pick_Force_Disable_Picking_Conditions))
-TriggerAddAction(gg_trg_Hero_Pick_Force_Disable_Picking, Trig_Hero_Pick_Force_Disable_Picking_Actions)
-end
-
-function Trig_Test_StatMult_Init_Func001002002001()
+function Trig_Setup_StatMult_Initial_Units_Func001002002001()
 return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
 end
 
-function Trig_Test_StatMult_Init_Func001002002002()
+function Trig_Setup_StatMult_Initial_Units_Func001002002002()
 return (IsPlayerInForce(GetOwningPlayer(GetFilterUnit()), udg_ActivePlayerGroup) == true)
 end
 
-function Trig_Test_StatMult_Init_Func001002002()
-return GetBooleanAnd(Trig_Test_StatMult_Init_Func001002002001(), Trig_Test_StatMult_Init_Func001002002002())
+function Trig_Setup_StatMult_Initial_Units_Func001002002()
+return GetBooleanAnd(Trig_Setup_StatMult_Initial_Units_Func001002002001(), Trig_Setup_StatMult_Initial_Units_Func001002002002())
 end
 
-function Trig_Test_StatMult_Init_Func002A()
+function Trig_Setup_StatMult_Initial_Units_Func002A()
 udg_StatMultUnit = GetEnumUnit()
 TriggerExecute(gg_trg_Add_Unit_To_StatMult)
 end
 
-function Trig_Test_StatMult_Init_Actions()
-udg_TempGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Test_StatMult_Init_Func001002002))
-ForGroupBJ(udg_TempGroup, Trig_Test_StatMult_Init_Func002A)
+function Trig_Setup_StatMult_Initial_Units_Actions()
+udg_TempGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Setup_StatMult_Initial_Units_Func001002002))
+ForGroupBJ(udg_TempGroup, Trig_Setup_StatMult_Initial_Units_Func002A)
     DestroyGroup(udg_TempGroup)
-DisableTrigger(GetTriggeringTrigger())
 end
 
-function InitTrig_Test_StatMult_Init()
-gg_trg_Test_StatMult_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Test_StatMult_Init, 3.00)
-TriggerAddAction(gg_trg_Test_StatMult_Init, Trig_Test_StatMult_Init_Actions)
+function InitTrig_Setup_StatMult_Initial_Units()
+gg_trg_Setup_StatMult_Initial_Units = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_StatMult_Initial_Units, Trig_Setup_StatMult_Initial_Units_Actions)
 end
 
 function Trig_Test_Stats_Get_Stats_Command_Conditions()
@@ -41070,18 +39020,34 @@ gg_trg_Get_Stat_Sources_Data = CreateTrigger()
 TriggerAddAction(gg_trg_Get_Stat_Sources_Data, Trig_Get_Stat_Sources_Data_Actions)
 end
 
-function Trig_Auto_Transform_Func001Func001C()
+function Trig_Setup_Auto_Transform_Actions()
+udg_TempInt = 1
+while (true) do
+if (udg_TempInt > udg_MaxNumPlayers) then break end
+udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+udg_AutoTransformPlayer[udg_TempInt] = true
+TriggerRegisterPlayerChatEvent(gg_trg_Auto_Transform_Toggle, udg_TempPlayer, "-autotransform", true)
+udg_TempInt = udg_TempInt + 1
+end
+end
+
+function InitTrig_Setup_Auto_Transform()
+gg_trg_Setup_Auto_Transform = CreateTrigger()
+TriggerAddAction(gg_trg_Setup_Auto_Transform, Trig_Setup_Auto_Transform_Actions)
+end
+
+function Trig_Auto_Transform_Loop_Func001Func001C()
 if (not (udg_AutoTransformPlayer[udg_AutoTransformPlayerInt] == true)) then
 return false
 end
 return true
 end
 
-function Trig_Auto_Transform_Actions()
+function Trig_Auto_Transform_Loop_Actions()
 udg_AutoTransformPlayerInt = 1
 while (true) do
 if (udg_AutoTransformPlayerInt > udg_MaxNumPlayers) then break end
-if (Trig_Auto_Transform_Func001Func001C()) then
+if (Trig_Auto_Transform_Loop_Func001Func001C()) then
 udg_TransformationPlayer = ConvertedPlayer(udg_AutoTransformPlayerInt)
 TriggerExecute(gg_trg_Auto_Transform_Player_Units)
 else
@@ -41090,11 +39056,11 @@ udg_AutoTransformPlayerInt = udg_AutoTransformPlayerInt + 1
 end
 end
 
-function InitTrig_Auto_Transform()
-gg_trg_Auto_Transform = CreateTrigger()
-DisableTrigger(gg_trg_Auto_Transform)
-TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform, 30.00)
-TriggerAddAction(gg_trg_Auto_Transform, Trig_Auto_Transform_Actions)
+function InitTrig_Auto_Transform_Loop()
+gg_trg_Auto_Transform_Loop = CreateTrigger()
+DisableTrigger(gg_trg_Auto_Transform_Loop)
+TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform_Loop, 30.00)
+TriggerAddAction(gg_trg_Auto_Transform_Loop, Trig_Auto_Transform_Loop_Actions)
 end
 
 function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func003C()
@@ -41180,26 +39146,9 @@ gg_trg_Auto_Transform_Toggle = CreateTrigger()
 TriggerAddAction(gg_trg_Auto_Transform_Toggle, Trig_Auto_Transform_Toggle_Actions)
 end
 
-function Trig_Auto_Transform_Init_Actions()
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-udg_AutoTransformPlayer[udg_TempInt] = true
-TriggerRegisterPlayerChatEvent(gg_trg_Auto_Transform_Toggle, udg_TempPlayer, "-autotransform", true)
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Auto_Transform_Init()
-gg_trg_Auto_Transform_Init = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Auto_Transform_Init, 5.00)
-TriggerAddAction(gg_trg_Auto_Transform_Init, Trig_Auto_Transform_Init_Actions)
-end
-
 function Trig_Auto_Transform_Turn_On_Actions()
 DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9286")
-EnableTrigger(gg_trg_Auto_Transform)
+EnableTrigger(gg_trg_Auto_Transform_Loop)
 end
 
 function InitTrig_Auto_Transform_Turn_On()
@@ -46893,7 +44842,7 @@ TriggerAddAction(gg_trg_Copy_Stat_Mult_Hashtable_To_New_Unit, Trig_Copy_Stat_Mul
 end
 
 function Trig_Transformations_Fix_Skin_Actions()
-TriggerExecute(gg_trg_Auto_Transform)
+TriggerExecute(gg_trg_Auto_Transform_Loop)
 end
 
 function InitTrig_Transformations_Fix_Skin()
@@ -71972,7 +69921,6 @@ function Trig_Rainbow_Shell_Activate_Actions()
 udg_TempPlayer = GetOwningPlayer(GetManipulatingUnit())
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
 if (Trig_Rainbow_Shell_Activate_Func003C()) then
-TriggerExecute(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
 udg_TempString2 = ("[|cff666666SECRET|r] You have unlocked |cffff4411Rust Tyranno|r use the code |cff00ffff" .. (udg_TempString .. "|r next game!"))
 DisplayTimedTextToForce(udg_TempPlayerGroup, 30, udg_TempString2)
 PlaySoundBJ(gg_snd_GoodJob)
@@ -72022,12 +69970,6 @@ function InitCustomTriggers()
 InitTrig_Get_Int_Damage_Multiplier()
 InitTrig_SetUnitAnimationThenReset()
 InitTrig_AnimationResetLoop()
-InitTrig_Vegeta_Hakai_Cast()
-InitTrig_Vegeta_Hakai_Channel_Finish()
-InitTrig_Vegeta_Hakai_Channel_Interrupt()
-InitTrig_Vegeta_Hakai_Loop()
-InitTrig_Vegeta_Hakai_Channel_Damage()
-InitTrig_Vegeta_Hakai_Launched_Damage()
 InitTrig_Kyodaika_Init()
 InitTrig_Kyodaika_Get_Str_Mult()
 InitTrig_Kyodaika_Mana_Drain()
@@ -72299,18 +70241,20 @@ InitTrig_Final_Battle_Sim_Set_Stat_Individually()
 InitTrig_Final_Battle_Sim_Set_All_Stats()
 InitTrig_Final_Battle_Sim_Set_Mult()
 InitTrig_Final_Battle_Sim_Set_Level()
-InitTrig_Map_Setup()
+InitTrig_Setup_Map_Setup()
+InitTrig_Setup_Map_Hashtables()
 InitTrig_Setup_Per_Player_Properties()
-InitTrig_Setup_Quests()
 InitTrig_Init_Disable_Abilities_For_TempPlayer()
 InitTrig_Disable_Abilities_for_TempPlayer()
-InitTrig_Prevent_Invalid_Buildings()
+InitTrig_Setup_Quests()
 InitTrig_Setup_Spawns_Other()
-InitTrig_Map_Setup_Hashtables()
-InitTrig_Hero_Pick_Floating_Text_Help()
-InitTrig_Misc_Area_Labels()
+InitTrig_Setup_Hero_Pick_Floating_Text()
+InitTrig_Setup_Misc_Area_Labels()
 InitTrig_Force_Remove_T2_Buggy_Vision()
+InitTrig_Collect_Preload_Units()
 InitTrig_Remove_Preload_Units()
+InitTrig_Prevent_Invalid_Buildings()
+InitTrig_MoneyCounterTest()
 InitTrig_Kill_Creep_Stats_and_Non_Heroes()
 InitTrig_Kill_Hero_Revive()
 InitTrig_Kill_Hero_PvP_and_Saga()
@@ -72318,6 +70262,7 @@ InitTrig_Kill_Hero_Give_PvP_Stats()
 InitTrig_Kill_Saga_Give_Saga_Stats()
 InitTrig_Get_Saga_Catchup_Multiplier()
 InitTrig_Kill_Hero_Voiceline_Timer_Init()
+InitTrig_HKVoiceTimerExpire()
 InitTrig_Death_Hero_Voiceline_Dying()
 InitTrig_Death_Hero_Voiceline_Timer()
 InitTrig_Kill_Hero_Voiceline()
@@ -72409,52 +70354,12 @@ InitTrig_Hero_Leaves_Deadzone()
 InitTrig_Hero_Enters_Deadzone_Respawn_Region()
 InitTrig_Hero_Respawn_To_Earth()
 InitTrig_Respawn_Creep_Heroes_in_Deadzones()
-InitTrig_Disable_Old_Hero_Pick()
 InitTrig_Hero_Pick_Reset_Abilities()
 InitTrig_Hero_Pick_Setup_Selected_Heroes()
 InitTrig_Hero_Pick_Forced_Invul()
 InitTrig_Hero_Pick_Enable_Abilities()
 InitTrig_Hero_Pick_Completion()
-InitTrig_Hero_Pick_Stall()
-InitTrig_Hero_Pick_Unstall()
-InitTrig_Hero_Pick_Rush()
-InitTrig_Hero_Pick_Rush_Repick()
-InitTrig_Hero_Pick_End_Bans_Command()
-InitTrig_Hero_Pick_Show_Pickable_Heroes()
-InitTrig_Hero_Pick_Repick_Randomly()
-InitTrig_Hero_Pick_Secret_Heroes()
-InitTrig_Hero_Pick_Secret_Old_Krillin_Code_Generate()
-InitTrig_Hero_Pick_Secret_Old_Krillin_Code_Pick()
-InitTrig_Hero_Pick_Secret_Rust_Tyranno_Generate()
-InitTrig_Hero_Pick_Secret_Rust_Tyranno_Pick()
-InitTrig_Hero_Pick_Secret_Magus_Generate()
-InitTrig_Hero_Pick_Secret_Magus_Pick()
-InitTrig_Hero_Pick_Force_Pick_Unit_Type()
-InitTrig_Hero_Pick_Modes_Show()
-InitTrig_Hero_Pick_Mode_Default()
-InitTrig_Hero_Pick_Mode_All_Pick()
-InitTrig_Hero_Pick_Mode_All_Random()
-InitTrig_Hero_Pick_Mode_Single_Draft()
-InitTrig_Hero_Pick_Mode_Captains_Mode_Experimental()
-InitTrig_Hero_Pick_Mode_RandM_Announcer_Audio()
-InitTrig_Hero_Pick_Set_HeroPickUnitType_availability()
-InitTrig_Hero_Pick_Init_Available_Heroes()
-InitTrig_Hero_Pick_Disable_Spellcasting()
-InitTrig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup()
-InitTrig_Hero_Pick_Pick_A_Hero()
-InitTrig_Hero_Pick_Ban_A_Hero()
-InitTrig_Hero_Pick_End_Bans()
-InitTrig_Hero_Pick_Remove_Picked_Heroes()
-InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
-InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
-InitTrig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED()
-InitTrig_Hero_Pick_Timer_Start()
-InitTrig_Hero_Pick_Timer_Complete()
-InitTrig_Hero_Pick_Repick_Start()
-InitTrig_Hero_Pick_Repick_Complete()
-InitTrig_Hero_Pick_Disable_Pick_Modes()
-InitTrig_Hero_Pick_Force_Disable_Picking()
-InitTrig_Test_StatMult_Init()
+InitTrig_Setup_StatMult_Initial_Units()
 InitTrig_Test_Stats_Get_Stats_Command()
 InitTrig_Test_Stats_Get_Stats_Print()
 InitTrig_Add_Unit_To_StatMult()
@@ -72483,10 +70388,10 @@ InitTrig_Add_To_Tower_Stats_Data()
 InitTrig_Add_To_Farming_Stats_Data()
 InitTrig_Add_To_Power_Wish_Stats_Data()
 InitTrig_Get_Stat_Sources_Data()
-InitTrig_Auto_Transform()
+InitTrig_Setup_Auto_Transform()
+InitTrig_Auto_Transform_Loop()
 InitTrig_Auto_Transform_Player_Units()
 InitTrig_Auto_Transform_Toggle()
-InitTrig_Auto_Transform_Init()
 InitTrig_Auto_Transform_Turn_On()
 InitTrig_Add_Unit_To_Text_Tag_Charges()
 InitTrig_Text_Tag_Charges_Update_Loop()

@@ -32,6 +32,7 @@ import { SmartPingManager } from "Core/SmartPingSystem/SmartPingManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
 import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { ItemShopManager } from "Core/ItemShop/ItemShopManager";
+import { PreloadModels } from "Common/PreloadModels";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -73,68 +74,50 @@ function tsPostMain() {
   print(`Build: ${BUILD_DATE}`);
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
-  
-  // preload (temp) test
-  Preload("DragonHead2.mdl");
-  Preload("DragonSegment2.mdl");
-  Preload("DragonTail.mdl");
-  Preload("Conflagrate.mdl");
-  Preload("BladeBeamBlack.mdx");
-  Preload("BladeBeamFinal.mdx");
-  Preload("SpiritBomb.mdx");
-  Preload("SpiritBombShine.mdx");
-  Preload("Link.mdl");
+
+  PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
 
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));
   }
   
   // preload custom abilities
+  PathingCheck.Init();
   customAbilityManager = CustomAbilityManager.getInstance();
+  timerManager = TimerManager.getInstance();
+  SetCreepCampFilterState(false);
+  CustomUiTest();
+  CameraZoom.onInit();
+  PreloadModels.doPreload();
 
   setupHostPlayerTransfer();
-  TimerStart(CreateTimer(), 0.03, false, () => {
+  TimerStart(CreateTimer(), 1, false, () => {
     transferHostPlayer();
-  });
-
-  SetCreepCampFilterState(false);
-  
-  CustomUiTest();
-
-  PathingCheck.Init();
-  timerManager = TimerManager.getInstance();
-
-  // delay init
-  TimerStart(CreateTimer(), 0.05, false, () => {
-    DestroyTimer(GetExpiredTimer());
-    // initialize some systems
     castTimeHelper = CastTimeHelper.getInstance();
-    CustomPlayerTest();
-    keyInputManager = KeyInputManager.getInstance();
-    smartPingManager = SmartPingManager.getInstance();
-    SimpleSpellSystem.initialize();
     dualTechManager = DualTechManager.getInstance();  
     FBSimTestManager.getInstance().initialize();
     pauseManager = PauseManager.getInstance();
-  })
-
-  TimerStart(CreateTimer(), 0.1, false, () => {
-    DestroyTimer(GetExpiredTimer());
+    SimpleSpellSystem.initialize();
+    CustomPlayerTest();
     heroSelectorManager = HeroSelectorManager.getInstance();
-    itemShopManager = ItemShopManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
   });
 
-
+  // delay init
   TimerStart(CreateTimer(), 5, false, () => {
-    itemAbilityManager = ItemAbilityManager.getInstance();
-    itemStackingManager = ItemStackingManager.getInstance();
-    farmingManager = FarmingManager.getInstance();
+    // initialize some systems
+    keyInputManager = KeyInputManager.getInstance();
+    smartPingManager = SmartPingManager.getInstance();
+    creepManager = CreepManager.getInstance();
     DestroyTimer(GetExpiredTimer());
-  })
+  });
 
   TimerStart(CreateTimer(), 10, false, () => {
-    // teamManager = TeamManager.getInstance();
-    creepManager = CreepManager.getInstance();
+    itemAbilityManager = ItemAbilityManager.getInstance();
+    itemStackingManager = ItemStackingManager.getInstance();
+    itemCleanupManager = ItemCleanupManager.getInstance();
+    farmingManager = FarmingManager.getInstance();
+    itemShopManager = ItemShopManager.getInstance();
     experienceManager = ExperienceManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })
@@ -156,14 +139,6 @@ function tsPostMain() {
     }
   });
 
-  TimerStart(CreateTimer(), 30, false, () => {
-    itemCleanupManager = ItemCleanupManager.getInstance();
-    DestroyTimer(GetExpiredTimer());
-  });
-
-  CameraZoom.onInit();
-
-  PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
 
   const musicDelayTimer = TimerManager.getInstance().get();
   TimerStart(musicDelayTimer, 25, false, () => {

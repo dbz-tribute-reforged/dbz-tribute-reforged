@@ -24,7 +24,8 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const simpleSpellEffectTrigger = CreateTrigger();
-  export const simpleSpellCDFinishTrigger = CreateTrigger();
+  export const simpleSpellFinishTrigger = CreateTrigger();
+  export const simpleSpellEndTrigger = CreateTrigger();
   export const simpleSpellCDHashtable = InitHashtable();
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
@@ -32,7 +33,9 @@ export module Globals {
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
   export const minatoHashtable = InitHashtable();
-  export const genericSpellMap = new Map<number, ()=>void>();
+  export const genericSpellMap = new Map<number, (spellId: number)=>void>();
+  export const genericSpellFinishMap = new Map<number, (spellId: number)=>void>();
+  export const genericSpellEndMap = new Map<number, (spellId: number)=>void>();
   export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
   export const barrelMoveTrigger = CreateTrigger();
@@ -343,6 +346,7 @@ export module Buffs {
   export const TIMED_LIFE = FourCC("BTLF");
   export const STUNNED = FourCC("BPSE");
   export const LIFE_REGENERATION_AURA = FourCC("B068"); // fountain
+  export const BANISHED = FourCC("BHbn");
 
   export const HEROS_SONG = FourCC("B01H");
 
