@@ -787,8 +787,11 @@ declare var gg_unit_n01H_1159: unit;
 
 
 declare var udg_TempInt: number;
+declare var udg_TempInt2: number;
+declare var udg_TempInt3: number;
 declare var udg_TempSound: sound;
 declare var udg_TempPlayer: player;
+declare var udg_TempUnit: unit;
 
 declare var udg_Scoreboard: multiboard;
 

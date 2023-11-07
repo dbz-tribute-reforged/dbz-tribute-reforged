@@ -14230,9 +14230,6 @@ udg_TempInt2 = udg_TempInt2 + 1
 end
 else
 end
-AddUnitAnimationPropertiesBJ(true, "alternate", udg_TempUnit)
-TriggerSleepAction(0.50)
-AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
 end
 
 function InitTrig_Dyspo_Light_Bullet()
@@ -14429,555 +14426,6 @@ gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD = CreateTrigger()
 TriggerRegisterAnyUnitEventBJ(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, EVENT_PLAYER_UNIT_SPELL_FINISH)
 TriggerAddCondition(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, Condition(Trig_Dyspo_Upgraded_Spells_Update_Old_CD_Conditions))
 TriggerAddAction(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, Trig_Dyspo_Upgraded_Spells_Update_Old_CD_Actions)
-end
-
-function Trig_Jiren_Mighty_Punch_Func037C()
-if (GetSpellAbilityId() == FourCC("A0K8")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0SJ")) then
-return true
-end
-return false
-end
-
-function Trig_Jiren_Mighty_Punch_Conditions()
-if (not Trig_Jiren_Mighty_Punch_Func037C()) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Func027C()
-if (not (GetSpellAbilityId() == FourCC("A0SJ"))) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Func029C()
-if (not (GetSpellAbilityId() == FourCC("A0SJ"))) then
-return false
-end
-if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-udg_TempUnit2 = GetSpellTargetUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-PauseUnitBJ(true, udg_TempUnit2)
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit2)
-udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
-AddSpecialEffectLocBJ(udg_TempLoc2, "DetroitSmash_Effect.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AddSpecialEffectLocBJ(udg_TempLoc2, "dash sfx.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AddSpecialEffectLocBJ(udg_TempLoc2, "Slam.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_TempLoc2)
-    RemoveLocation(udg_TempLoc)
-GroupAddUnitSimple(udg_TempUnit, udg_JirenMightyPunchUnitGroup)
-SaveIntegerBJ(1, 1, udg_ID, udg_JirenHashtable)
-SaveUnitHandleBJ(udg_TempUnit2, 2, udg_ID, udg_JirenHashtable)
-if (Trig_Jiren_Mighty_Punch_Func027C()) then
-SaveIntegerBJ(1, 3, udg_ID, udg_JirenHashtable)
-        SetUnitAnimationByIndex(udg_TempUnit,10)
-else
-SaveIntegerBJ(0, 3, udg_ID, udg_JirenHashtable)
-end
-SaveRealBJ(udg_TempReal, 4, udg_ID, udg_JirenHashtable)
-if (Trig_Jiren_Mighty_Punch_Func029C()) then
-udg_TempReal2 = (1500.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)) + RMaxBJ(0.00, (1.10 * ((1.05 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true))) - I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit2, true)))))))
-else
-udg_TempReal2 = (1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)))
-end
-udg_TempReal2 = (udg_DMG_KAME_DPS * (6.00 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
-TriggerExecute(gg_trg_Get_Int_Damage_Multiplier)
-udg_TempReal2 = (udg_TempReal2 * udg_TempIntDamageMult)
-SaveRealBJ(udg_TempReal2, 5, udg_ID, udg_JirenHashtable)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-SaveIntegerBJ(0, 6, udg_ID, udg_JirenHashtable)
-EnableTrigger(gg_trg_Jiren_Mighty_Punch_Loop)
-end
-
-function InitTrig_Jiren_Mighty_Punch()
-gg_trg_Jiren_Mighty_Punch = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Jiren_Mighty_Punch, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Jiren_Mighty_Punch, Condition(Trig_Jiren_Mighty_Punch_Conditions))
-TriggerAddAction(gg_trg_Jiren_Mighty_Punch, Trig_Jiren_Mighty_Punch_Actions)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func001C()
-if (udg_TempInt >= 66) then
-return true
-end
-if (IsUnitDeadBJ(udg_TempUnit2) == true) then
-return true
-end
-if (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) <= 0.00) then
-return true
-end
-return false
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func002Func006C()
-if (not (udg_TempInt4 > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func002C()
-if (not (LoadIntegerBJ(3, udg_ID, udg_JirenHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func006C()
-if (not Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func001C()
-if (not (IsUnitPausedBJ(udg_TempUnit2) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func002Func001C()
-if (not (IsUnitPausedBJ(udg_TempUnit2) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func002C()
-if (not (udg_TempInt == 33)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003001()
-return (IsUnitHiddenBJ(GetFilterUnit()) == false)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002001()
-return (UnitHasBuffBJ(GetFilterUnit(), FourCC("BHbn")) == false)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002001()
-return (true == true)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002001()
-return (GetFilterUnit() ~= udg_TempUnit)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002001()
-return (IsUnitDeadBJ(GetFilterUnit()) == false)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002002()
-return (true == true)
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002()
-return GetBooleanAnd(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002001(), Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002002())
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002()
-return GetBooleanAnd(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002001(), Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002002())
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002()
-return GetBooleanAnd(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002001(), Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002002())
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002()
-return GetBooleanAnd(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002001(), Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002002())
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003()
-return GetBooleanAnd(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003001(), Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003002())
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013Func002C()
-if (not (IsUnitEnemy(udg_TempUnit4, udg_TempPlayer) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013A()
-udg_TempUnit4 = GetEnumUnit()
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013Func002C()) then
-IssueTargetOrderBJ(udg_TempUnit3, "thunderbolt", udg_TempUnit4)
-UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit4, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-else
-end
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005C()
-if (not (udg_TempBool ~= true)) then
-return false
-end
-if (not (GetTerrainTypeBJ(udg_TempLoc2) ~= FourCC("cLc2"))) then
-return false
-end
-if (not (GetTerrainTypeBJ(udg_TempLoc2) ~= FourCC("cLc1"))) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003C()
-if (not (udg_TempInt < 33)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007Func003C()
-if (not (ModuloInteger(udg_TempInt, 3) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007Func004C()
-if (not (udg_TempInt > 33)) then
-return false
-end
-if (not (DistanceBetweenPoints(udg_TempLoc2, udg_TempLoc3) <= 49.00)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007C()
-if (not (udg_TempBool ~= true)) then
-return false
-end
-if (not (GetTerrainTypeBJ(udg_TempLoc3) ~= FourCC("cLc2"))) then
-return false
-end
-if (not (GetTerrainTypeBJ(udg_TempLoc3) ~= FourCC("cLc1"))) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004C()
-if (not (LoadIntegerBJ(6, udg_ID, udg_JirenHashtable) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func006C()
-if (udg_TempInt >= 99) then
-return true
-end
-if (IsUnitDeadBJ(udg_TempUnit2) == true) then
-return true
-end
-return false
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001Func007C()
-if (not Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func006C()) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_JirenHashtable)
-udg_TempUnit2 = LoadUnitHandleBJ(2, udg_ID, udg_JirenHashtable)
-udg_TempReal = LoadRealBJ(4, udg_ID, udg_JirenHashtable)
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func006C()) then
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func002C()) then
-SaveIntegerBJ(0, 3, udg_ID, udg_JirenHashtable)
-udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-SetPlayerAbilityAvailableBJ(false, FourCC("A0KB"), udg_TempPlayer)
-ResetUnitAnimation(udg_TempUnit)
-udg_TempInt4 = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func006Func002Func006C()) then
-SetPlayerAbilityAvailableBJ(true, FourCC("A0SJ"), udg_TempPlayer)
-else
-                udg_TempInt2 = FourCC("A0K8")
-                udg_TempInt3 = FourCC("A0SJ")
-TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
-end
-else
-end
-else
-end
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007C()) then
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func001C()) then
-PauseUnitBJ(false, udg_TempUnit2)
-else
-end
-GroupRemoveUnitSimple(udg_TempUnit, udg_JirenMightyPunchUnitGroup)
-SaveIntegerBJ(0, 1, udg_ID, udg_JirenHashtable)
-else
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func002C()) then
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func002Func001C()) then
-PauseUnitBJ(false, udg_TempUnit2)
-else
-end
-else
-end
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit2)
-udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 40.00, udg_TempReal)
-            udg_TempBool = IsTerrainPathable(GetLocationX(udg_TempLoc2), GetLocationY(udg_TempLoc2), PATHING_TYPE_WALKABILITY)
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005C()) then
-                SetUnitX(udg_TempUnit2, GetLocationX(udg_TempLoc2))
-                SetUnitY(udg_TempUnit2, GetLocationY(udg_TempLoc2))
-else
-udg_TempInt = 33
-AddSpecialEffectLocBJ(udg_TempLoc2, "Slam.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-udg_TempReal2 = LoadRealBJ(5, udg_ID, udg_JirenHashtable)
-udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-CreateNUnitsAtLoc(1, FourCC("h054"), udg_TempPlayer, udg_TempLoc2, bj_UNIT_FACING)
-udg_TempUnit3 = GetLastCreatedUnit()
-UnitAddAbilityBJ(FourCC("A0NR"), udg_TempUnit3)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit3)
-PauseUnitBJ(false, udg_TempUnit2)
-udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(250.00, udg_TempLoc2, Condition(Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func012002003))
-ForGroupBJ(udg_TempUnitGroup, Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013A)
-                DestroyGroup(udg_TempUnitGroup)
-end
-            RemoveLocation(udg_TempLoc2)
-            RemoveLocation(udg_TempLoc)
-else
-end
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004C()) then
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-udg_TempLoc2 = GetUnitLoc(udg_TempUnit2)
-udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
-udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, RMinBJ(DistanceBetweenPoints(udg_TempLoc, udg_TempLoc2), 50.00), udg_TempReal)
-            udg_TempBool = IsTerrainPathable(GetLocationX(udg_TempLoc3), GetLocationY(udg_TempLoc3), PATHING_TYPE_WALKABILITY)
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007C()) then
-                SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc3))
-                SetUnitY(udg_TempUnit, GetLocationY(udg_TempLoc3))
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007Func003C()) then
-AddSpecialEffectLocBJ(udg_TempLoc3, "Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-BlzSetUnitFacingEx(udg_TempUnit, udg_TempReal)
-else
-end
-if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func004Func007Func004C()) then
-udg_TempInt = 99
-else
-end
-else
-end
-            RemoveLocation(udg_TempLoc3)
-            RemoveLocation(udg_TempLoc2)
-            RemoveLocation(udg_TempLoc)
-else
-end
-SaveIntegerBJ((udg_TempInt + 1), 1, udg_ID, udg_JirenHashtable)
-end
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Func003C()
-if (not (CountUnitsInGroup(udg_JirenMightyPunchUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Mighty_Punch_Loop_Actions()
-ForGroupBJ(udg_JirenMightyPunchUnitGroup, Trig_Jiren_Mighty_Punch_Loop_Func001A)
-if (Trig_Jiren_Mighty_Punch_Loop_Func003C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Jiren_Mighty_Punch_Loop()
-gg_trg_Jiren_Mighty_Punch_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Jiren_Mighty_Punch_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Jiren_Mighty_Punch_Loop, 0.03)
-TriggerAddAction(gg_trg_Jiren_Mighty_Punch_Loop, Trig_Jiren_Mighty_Punch_Loop_Actions)
-end
-
-function Trig_Jiren_Follow_Up_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A0KB"))) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Follow_Up_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(1, 6, udg_ID, udg_JirenHashtable)
-    SetUnitAnimationByIndex(udg_TempUnit,10)
-udg_TempLoc = GetUnitLoc(udg_TempUnit)
-AddSpecialEffectLocBJ(udg_TempLoc, "dash sfx.mdx")
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_TempLoc)
-end
-
-function InitTrig_Jiren_Follow_Up()
-gg_trg_Jiren_Follow_Up = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Jiren_Follow_Up, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Jiren_Follow_Up, Condition(Trig_Jiren_Follow_Up_Conditions))
-TriggerAddAction(gg_trg_Jiren_Follow_Up, Trig_Jiren_Follow_Up_Actions)
-end
-
-function Trig_Jiren_Meditate_Func001C()
-if (GetSpellAbilityId() == FourCC("A0KD")) then
-return true
-end
-if (GetSpellAbilityId() == FourCC("A0SM")) then
-return true
-end
-return false
-end
-
-function Trig_Jiren_Meditate_Conditions()
-if (not Trig_Jiren_Meditate_Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Func010Func004C()
-if (not (GetSpellAbilityId() == FourCC("A0SM"))) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Func010C()
-if (not (RectContainsUnit(gg_rct_HeroPickRegion, GetTriggerUnit()) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Actions()
-udg_TempUnit = GetSpellAbilityUnit()
-PauseUnitBJ(true, udg_TempUnit)
-    SetUnitAnimationByIndex(udg_TempUnit,6)
-GroupAddUnitSimple(udg_TempUnit, udg_JirenMeditateUnitGroup)
-    udg_ID = GetHandleId(udg_TempUnit)
-SaveIntegerBJ(0, 0, udg_ID, udg_JirenHashtable)
-EnableTrigger(gg_trg_Jiren_Meditate_Loop)
-if (Trig_Jiren_Meditate_Func010C()) then
-udg_StatMultUnit = GetTriggerUnit()
-TriggerExecute(gg_trg_Get_Base_Stats)
-if (Trig_Jiren_Meditate_Func010Func004C()) then
-udg_StatMultReal = RMaxBJ(4.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.30)))
-else
-udg_StatMultReal = RMaxBJ(4.00, ((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) * (0.01 * 0.20)))
-end
-TriggerExecute(gg_trg_Add_To_Base_Stats)
-TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
-TriggerExecute(gg_trg_Update_Current_Stats)
-else
-end
-end
-
-function InitTrig_Jiren_Meditate()
-gg_trg_Jiren_Meditate = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Jiren_Meditate, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-TriggerAddCondition(gg_trg_Jiren_Meditate, Condition(Trig_Jiren_Meditate_Conditions))
-TriggerAddAction(gg_trg_Jiren_Meditate, Trig_Jiren_Meditate_Actions)
-end
-
-function Trig_Jiren_Meditate_Loop_Func001Func004Func002C()
-if (udg_TempInt >= 99) then
-return true
-end
-if (IsUnitDeadBJ(udg_TempUnit) == true) then
-return true
-end
-return false
-end
-
-function Trig_Jiren_Meditate_Loop_Func001Func004Func008C()
-if (not (RectContainsUnit(gg_rct_HeroPickRegion, udg_TempUnit) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Loop_Func001Func004C()
-if (not Trig_Jiren_Meditate_Loop_Func001Func004Func002C()) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-    udg_ID = GetHandleId(udg_TempUnit)
-udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_JirenHashtable)
-if (Trig_Jiren_Meditate_Loop_Func001Func004C()) then
-PauseUnitBJ(false, udg_TempUnit)
-ResetUnitAnimation(udg_TempUnit)
-GroupRemoveUnitSimple(udg_TempUnit, udg_JirenMeditateUnitGroup)
-SetUnitManaBJ(udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MANA, udg_TempUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.10)))
-SaveIntegerBJ(0, 0, udg_ID, udg_JirenHashtable)
-if (Trig_Jiren_Meditate_Loop_Func001Func004Func008C()) then
-udg_TempInt = 1
-TriggerExecute(gg_trg_Jiren_Upgrade_Spells)
-else
-end
-else
-SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_JirenHashtable)
-end
-end
-
-function Trig_Jiren_Meditate_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_JirenMeditateUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Jiren_Meditate_Loop_Actions()
-ForGroupBJ(udg_JirenMeditateUnitGroup, Trig_Jiren_Meditate_Loop_Func001A)
-if (Trig_Jiren_Meditate_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Jiren_Meditate_Loop()
-gg_trg_Jiren_Meditate_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Jiren_Meditate_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Jiren_Meditate_Loop, 0.03)
-TriggerAddAction(gg_trg_Jiren_Meditate_Loop, Trig_Jiren_Meditate_Loop_Actions)
 end
 
 function Trig_Jiren_Upgrade_Spells_Func001Func006C()
@@ -15212,10 +14660,10 @@ return true
 end
 
 function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func002C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0K8"), udg_TempUnit) > 0)) then
+if (not (GetSpellAbilityId() ~= FourCC("A0SJ"))) then
 return false
 end
-if (not (LoadIntegerBJ(1, udg_ID, udg_JirenHashtable) == 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0K8"), udg_TempUnit) > 0)) then
 return false
 end
 return true
@@ -29961,9 +29409,9 @@ udg_StatMultStr = (udg_PlayerStatModStr[udg_LvlUpPlayerNum] * I2R(udg_LvlUpInt))
 udg_StatMultAgi = (udg_PlayerStatModAgi[udg_LvlUpPlayerNum] * I2R(udg_LvlUpInt))
 udg_StatMultInt = (udg_PlayerStatModInt[udg_LvlUpPlayerNum] * I2R(udg_LvlUpInt))
 if (Trig_Hero_Level_up_New_New_Func005Func004C()) then
-udg_StatMultStr = (udg_StatMultStr + (2.00 * I2R(udg_LvlUpInt)))
-udg_StatMultAgi = (udg_StatMultAgi + (2.00 * I2R(udg_LvlUpInt)))
-udg_StatMultInt = (udg_StatMultInt + (2.00 * I2R(udg_LvlUpInt)))
+udg_StatMultStr = (udg_StatMultStr + (1.50 * I2R(udg_LvlUpInt)))
+udg_StatMultAgi = (udg_StatMultAgi + (1.50 * I2R(udg_LvlUpInt)))
+udg_StatMultInt = (udg_StatMultInt + (1.50 * I2R(udg_LvlUpInt)))
 else
 end
 if (Trig_Hero_Level_up_New_New_Func005Func005C()) then
@@ -42539,6 +41987,8 @@ udg_TransformationCommandsNonAuto[udg_TempInt] = "cell max"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommandsNonAuto[udg_TempInt] = "majin"
 udg_TempInt = (udg_TempInt + 1)
+udg_TransformationCommandsNonAuto[udg_TempInt] = "beast"
+udg_TempInt = (udg_TempInt + 1)
 udg_TempInt2 = 1
 while (true) do
 if (udg_TempInt2 > udg_MaxNumPlayers) then break end
@@ -42660,8 +42110,6 @@ udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "final shikai"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "orange"
-udg_TempInt = (udg_TempInt + 1)
-udg_TransformationCommands[udg_TempInt] = "beast"
 udg_TempInt = (udg_TempInt + 1)
 udg_TransformationCommands[udg_TempInt] = "black frieza"
 udg_TempInt = (udg_TempInt + 1)
@@ -44945,6 +44393,19 @@ return true
 end
 
 function Trig_Transformations_Gohan_Func018C()
+if (not (udg_TransformationString == "ult")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+return false
+end
+if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) < 3)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Gohan_Func019C()
 if (not (udg_TransformationString == "beast")) then
 return false
 end
@@ -44954,14 +44415,14 @@ end
 return true
 end
 
-function Trig_Transformations_Gohan_Func019Func001C()
+function Trig_Transformations_Gohan_Func020Func001C()
 if (not (udg_TransformationString == "god kame")) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func019Func002C()
+function Trig_Transformations_Gohan_Func020Func002C()
 if (udg_TransformationString == "god kame") then
 return true
 end
@@ -44971,15 +44432,15 @@ end
 return false
 end
 
-function Trig_Transformations_Gohan_Func019Func003C()
+function Trig_Transformations_Gohan_Func020Func003C()
 if (not (udg_TransformationString == "super masenko")) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func019C()
-if (not Trig_Transformations_Gohan_Func019Func002C()) then
+function Trig_Transformations_Gohan_Func020C()
+if (not Trig_Transformations_Gohan_Func020Func002C()) then
 return false
 end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 175)) then
@@ -44994,8 +44455,8 @@ end
 return true
 end
 
-function Trig_Transformations_Gohan_Func020C()
-if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+function Trig_Transformations_Gohan_Func021C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 70)) then
 return false
 end
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0OY"), udg_StatMultUnit) < 10)) then
@@ -45004,7 +44465,7 @@ end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func001C()
+function Trig_Transformations_Gohan_Func023Func002Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -45014,21 +44475,21 @@ end
 return false
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func005C()
+function Trig_Transformations_Gohan_Func023Func002Func005C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A0TU"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func007Func001C()
+function Trig_Transformations_Gohan_Func023Func002Func007Func001C()
 if (not (udg_TransformationString == "saiyaman")) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func007Func002Func001C()
+function Trig_Transformations_Gohan_Func023Func002Func007Func002Func001C()
 if (udg_TransformationString == "ult") then
 return true
 end
@@ -45041,49 +44502,49 @@ end
 return false
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func007Func002C()
-if (not Trig_Transformations_Gohan_Func022Func002Func007Func002Func001C()) then
+function Trig_Transformations_Gohan_Func023Func002Func007Func002C()
+if (not Trig_Transformations_Gohan_Func023Func002Func007Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func007C()
+function Trig_Transformations_Gohan_Func023Func002Func007C()
 if (not (GetHeroLevel(udg_StatMultUnit) < 110)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func009Func002Func002C()
+function Trig_Transformations_Gohan_Func023Func002Func009Func002Func002C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func009Func002C()
+function Trig_Transformations_Gohan_Func023Func002Func009Func002C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002Func009C()
+function Trig_Transformations_Gohan_Func023Func002Func009C()
 if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022Func002C()
-if (not Trig_Transformations_Gohan_Func022Func002Func001C()) then
+function Trig_Transformations_Gohan_Func023Func002C()
+if (not Trig_Transformations_Gohan_Func023Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Gohan_Func022C()
+function Trig_Transformations_Gohan_Func023C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -45163,14 +44624,22 @@ end
 if (Trig_Transformations_Gohan_Func018C()) then
 udg_StatMultReal = 2.60
 udg_TransformationAbility = FourCC("A0AJ")
+udg_TransformationSFXString = "AuraWhite.mdx"
+        udg_ID = GetHandleId(udg_StatMultUnit)
+SaveIntegerBJ(IMaxBJ(2, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
+else
+end
+if (Trig_Transformations_Gohan_Func019C()) then
+udg_StatMultReal = 2.50
+udg_TransformationAbility = FourCC("A0AJ")
 udg_TransformationSFXString = "AuraPink2.mdx"
 udg_TransformationSFXString2 = "AuraWhite.mdx"
         udg_ID = GetHandleId(udg_StatMultUnit)
 SaveIntegerBJ(IMaxBJ(3, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
 else
 end
-if (Trig_Transformations_Gohan_Func019C()) then
-if (Trig_Transformations_Gohan_Func019Func001C()) then
+if (Trig_Transformations_Gohan_Func020C()) then
+if (Trig_Transformations_Gohan_Func020Func001C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
@@ -45182,7 +44651,7 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_1566")
             DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Gohan_Func019Func003C()) then
+if (Trig_Transformations_Gohan_Func020Func003C()) then
 UnitAddAbilityBJ(FourCC("A0TU"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0TU"), udg_StatMultUnit, 10)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0TU'))
@@ -45195,7 +44664,7 @@ else
 end
 else
 end
-if (Trig_Transformations_Gohan_Func020C()) then
+if (Trig_Transformations_Gohan_Func021C()) then
 UnitAddAbilityBJ(FourCC("A0OY"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0OY"), udg_StatMultUnit, 10)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
@@ -45204,47 +44673,47 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_1568")
 else
 end
     udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Gohan_Func022C()) then
-if (Trig_Transformations_Gohan_Func022Func002C()) then
+if (Trig_Transformations_Gohan_Func023C()) then
+if (Trig_Transformations_Gohan_Func023Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
-if (Trig_Transformations_Gohan_Func022Func002Func005C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func005C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A0TU"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0H8"), udg_TransformationPlayer)
 else
 end
-if (Trig_Transformations_Gohan_Func022Func002Func007C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func007C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                 udg_TransformationID = FourCC('H00K')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func007Func001C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func007Func001C()) then
                     udg_TransformationID = FourCC('H08L')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 end
-if (Trig_Transformations_Gohan_Func022Func002Func007Func002C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func007Func002C()) then
                     udg_TransformationID = FourCC('H086')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
 end
 end
             udg_ID = GetHandleId(udg_StatMultUnit)
-if (Trig_Transformations_Gohan_Func022Func002Func009C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func009C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func009Func002C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func009Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
 else
-if (Trig_Transformations_Gohan_Func022Func002Func009Func002Func002C()) then
+if (Trig_Transformations_Gohan_Func023Func002Func009Func002Func002C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A11L"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
@@ -69318,11 +68787,6 @@ InitTrig_Dyspo_Super_Max_Cast()
 InitTrig_Dyspo_Upgrade_Spells()
 InitTrig_Dyspo_Upgraded_Spells_Cast()
 InitTrig_Dyspo_Upgraded_Spells_Update_Old_CD()
-InitTrig_Jiren_Mighty_Punch()
-InitTrig_Jiren_Mighty_Punch_Loop()
-InitTrig_Jiren_Follow_Up()
-InitTrig_Jiren_Meditate()
-InitTrig_Jiren_Meditate_Loop()
 InitTrig_Jiren_Upgrade_Spells()
 InitTrig_Jiren_Add_And_CD_Link_Spells()
 InitTrig_Jiren_Upgraded_Spells_Cast()
