@@ -195,12 +195,13 @@ export module UnitHelper {
     unit: unit,
     srcAbilityId: number,
     destAbilityId: number,
+    linkCooldowns: boolean = false,
+    cdOffsets: number = 0, // default: cds are not linked
     enableDest: boolean = true,
     disableSrc: boolean = true,
     addAbility: boolean = true,
     makePermanent: boolean = true,
     equalizeLevels: boolean = true,
-    linkCooldowns: number = 0,
   ) {
     if (enableDest) {
       SetPlayerAbilityAvailable(player, destAbilityId, true);
@@ -223,9 +224,9 @@ export module UnitHelper {
         SetUnitAbilityLevel(unit, destAbilityId, srcAbilityLevel);
       }
     }
-    if (linkCooldowns > 0) {
+    if (linkCooldowns) {
       BlzStartUnitAbilityCooldown(unit, destAbilityId, 
-        linkCooldowns + 
+        cdOffsets + 
         Math.max(
           BlzGetUnitAbilityCooldownRemaining(unit, srcAbilityId),
           BlzGetUnitAbilityCooldownRemaining(unit, destAbilityId)

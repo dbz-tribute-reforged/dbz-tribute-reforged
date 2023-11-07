@@ -472,6 +472,7 @@ export module Id {
   export const ghostNonVis = FourCC("Agho");
   export const ghostVisible = FourCC("Aeth");
   export const locust = FourCC("Aloc");
+  export const flagArmor100k = FourCC("A00G");
 
   export const useItem = FourCC("A0VF");
   export const itemAndroidBomb = FourCC('A0NS');
@@ -1065,8 +1066,8 @@ export module Id {
   export const roshiMaxPower = FourCC("A0FH");
 
   export const mario = FourCC("H09Q");
-  export const jump = FourCC("A0TJ");
-  export const groundPound = FourCC("A0TK");
+  export const marioJump = FourCC("A0TJ");
+  export const marioGroundPound = FourCC("A0TK");
   export const hammerTime = FourCC("A0TL");
   export const spinJump = FourCC("A0TM");
   export const superCape = FourCC("A0TN");

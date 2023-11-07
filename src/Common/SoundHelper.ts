@@ -916,7 +916,7 @@ export module SoundHelper {
         break;
 
       // donkey kong
-      case Id.groundPound:
+      case Id.dkGroundPound:
       case Id.dkBarrelRoll:
         if (rng < 25) {
           playSoundOnUnit(unit, "Audio/Voice/DK/Drum.mp3", 1671);
@@ -1825,6 +1825,14 @@ export module SoundHelper {
         break;
       
       // mario
+      case Id.marioJump:
+        playSoundOnUnit(unit, "Audio/Effects/Mario/Jump.mp3", 720);
+        break;
+
+      case Id.spinJump:
+        playSoundOnUnit(unit, "Audio/Effects/Mario/SpinJump.mp3", 1097);
+        break;
+
       case Id.fireball:
         playSoundOnUnit(unit, "Audio/Effects/Mario/Fireball.mp3", 252);
         break;

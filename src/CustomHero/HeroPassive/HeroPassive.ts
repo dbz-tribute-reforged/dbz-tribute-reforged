@@ -2066,21 +2066,21 @@ export function gutsPassive(customHero: CustomHero) {
         case Id.gutsHeavySlam:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsHeavySlam, Id.gutsHeavySlash, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, slashKey, 0);
           break;
         case Id.gutsBurstingFlame:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBurstingFlame, Id.gutsCannonSlash, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, cannonSlashKey, 0);
           break;
         case Id.gutsRelentlessAssault:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsRelentlessAssault, Id.gutsRecklessCharge, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, chargeKey, 0);
           break;
@@ -2094,21 +2094,21 @@ export function gutsPassive(customHero: CustomHero) {
           );
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBerserk, Id.gutsRage, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, rageKey, 0);
           break;
         case Id.gutsBeastOfDarkness:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBeastOfDarkness, Id.gutsBerserkerArmor, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, armorKey, 0);
           break;
         case Id.gutsDragonCannonShot:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsDragonCannonShot, Id.gutsCannonArm, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, cannonKey, 0);
           break;

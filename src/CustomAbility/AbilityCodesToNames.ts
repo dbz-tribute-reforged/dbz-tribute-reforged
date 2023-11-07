@@ -221,8 +221,8 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0T6'), AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH],
     
     // mario
-    [Id.jump, AbilityNames.Mario.JUMP],
-    [Id.groundPound, AbilityNames.Mario.GROUND_POUND],
+    [Id.marioJump, AbilityNames.Mario.JUMP],
+    [Id.marioGroundPound, AbilityNames.Mario.GROUND_POUND],
     [Id.hammerTime, AbilityNames.Mario.HAMMER_TIME],
     [Id.spinJump, AbilityNames.Mario.SPIN_JUMP],
     [Id.superCape, AbilityNames.Mario.SUPER_CAPE],

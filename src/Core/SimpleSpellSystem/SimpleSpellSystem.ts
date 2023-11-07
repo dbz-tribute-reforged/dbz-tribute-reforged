@@ -206,6 +206,10 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.mightyPunch2, SimpleSpellSystem.doJirenMightyPunch);
     Globals.genericSpellMap.set(Id.followUp, SimpleSpellSystem.doJirenFollowUp);
 
+    Globals.genericSpellMap.set(Id.marioJump, SimpleSpellSystem.doMarioJump);
+    Globals.genericSpellMap.set(Id.marioGroundPound, SimpleSpellSystem.doMarioGroundPound);
+    Globals.genericSpellMap.set(Id.spinJump, SimpleSpellSystem.doMarioSpinJump);
+
     Globals.genericSpellMap.set(Id.braveSwordAttack, SimpleSpellSystem.BraveSwordAttack);
 
     Globals.genericSpellMap.set(Id.dragonFist, SimpleSpellSystem.InitDragonFists);
@@ -652,11 +656,7 @@ export module SimpleSpellSystem {
           if (charges > 0) {
             SetPlayerAbilityAvailable(player, Id.mightyPunch2, true);
           } else {
-            udg_TempUnit = caster;
-            udg_TempPlayer = player;
-            udg_TempInt2 = Id.mightyPunch;
-            udg_TempInt3 = Id.mightyPunch2;
-            TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells);
+            UnitHelper.abilitySwap(player, caster, Id.mightyPunch2, Id.mightyPunch, true);
           }
         }
 
@@ -753,6 +753,240 @@ export module SimpleSpellSystem {
     const casterId = GetHandleId(caster);
     const followUpKey = StringHash(I2S(Id.followUp) + "follow_up_flag");
     SaveBoolean(Globals.genericSpellHashtable, casterId, followUpKey, true);
+  }
+
+  export function doMarioJump(spellId: number) {
+    const maxJumps = 9;
+    const jumpAOE = 350;
+    const jumpAirHeight = 3;
+    const jumpAirTicks = 33;
+    const groundPoundWaitTicks = 12;
+    const groundPoundFallSpeed = -100;
+    const groundPoundAOE = 400;
+    const dmgMultPerJump = 0.15;
+    const dmgJumpMult = BASE_DMG.KAME_DPS * 4;
+    const dmgGroundPoundMult = BASE_DMG.KAME_DPS * 10;
+    const groundPoundKey = StringHash(I2S(Id.marioGroundPound) + "ground_pound_flag");
+    const spinJumpKey = StringHash(I2S(Id.spinJump) + "spin_jump_flag");
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const casterUnitTypeId = GetUnitTypeId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, spellId);
+
+    UnitHelper.giveUnitFlying(caster);
+    UnitAddAbility(caster, Id.ghostVisible);
+    UnitHelper.abilitySwap(player, caster, Id.marioJump, Id.marioGroundPound);
+    if (casterUnitTypeId == Id.mario) {
+      UnitHelper.abilitySwap(player, caster, Id.hammerTime, Id.spinJump, true);
+    }
+    SetUnitTimeScale(caster, 0.01);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+
+    const maxEmptyJumps = GetHeroLevel(caster) > 250 ? 2 : 1;
+    let sfx = null;
+    let height = 0;
+    let groundPoundTicks = 0;
+    let jumpTicks = 0;
+    let numJumps = 0;
+    let numEmptyJumps = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (numJumps >= maxJumps) {
+        TimerManager.getInstance().recycle(timer);
+
+        SetUnitFlyHeight(caster, 0, 0.0);
+
+        UnitRemoveAbility(caster, Id.ghostVisible);
+        UnitHelper.abilitySwap(player, caster, Id.marioGroundPound, Id.marioJump);
+        if (casterUnitTypeId == Id.mario) {
+          UnitHelper.abilitySwap(player, caster, Id.spinJump, Id.hammerTime, true);
+        }
+
+        SetUnitTimeScale(caster, 1.0);
+        ResetUnitAnimation(caster);
+        if (LoadBoolean(Globals.genericSpellHashtable, casterId, groundPoundKey)) {
+          PauseManager.getInstance().unpause(caster);
+          SaveBoolean(Globals.genericSpellHashtable, casterId, groundPoundKey, false);
+        }
+
+        if (LoadBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey)) {
+          UnitRemoveAbility(caster, Id.flagArmor100k);
+          udg_StatMultUnit = caster;
+          TriggerExecute(gg_trg_Base_Armor_Set);
+          SaveBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey, false);
+        }
+
+        BlzStartUnitAbilityCooldown(
+          caster, Id.marioJump, 
+          BlzGetAbilityCooldown(Id.marioJump, abilLvl-1)
+        );
+        SaveInteger(udg_StatMultHashtable, casterId, 11, 0);
+
+        return;
+      }
+
+      Globals.tmpVector.setUnit(caster);
+      const damageMultiplier = 1 + numJumps * dmgMultPerJump;
+
+      if (LoadBoolean(Globals.genericSpellHashtable, casterId, groundPoundKey)) {
+        groundPoundTicks++;
+        // spin over in air until ready to fall
+        if (groundPoundTicks > groundPoundWaitTicks) {
+          height = Math.max(0, height + groundPoundFallSpeed);
+          SetUnitFlyHeight(caster, height, 0.0);
+          SetUnitTimeScale(caster, 0.01);
+          if (height <= 0) {
+            numJumps = maxJumps;
+
+            sfx = AddSpecialEffect(
+              "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+              Globals.tmpVector.x, Globals.tmpVector.y
+            );
+            DestroyEffect(sfx);
+
+            // deal ground pound damage and slow
+            const dummyCaster = CreateUnit(
+              player, Constants.dummyCasterId, 
+              Globals.tmpVector.x, Globals.tmpVector.y, 0
+            );
+            UnitAddAbility(dummyCaster, DebuffAbilities.FLATTEN);
+
+            const groundPoundDmg = AOEDamage.calculateDamageRaw(
+              caster, 
+              abilLvl,
+              ch ? ch.spellPower : 1.0,
+              dmgGroundPoundMult,
+              damageMultiplier,
+              bj_HEROSTAT_INT
+            );
+            GroupEnumUnitsInRange(
+              Globals.tmpUnitGroup, 
+              Globals.tmpVector.x, Globals.tmpVector.y, 
+              groundPoundAOE, null
+            );
+            ForGroup(Globals.tmpUnitGroup, () => {
+              const unit = GetEnumUnit();
+              if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+                UnitDamageTarget(
+                  caster, unit,
+                  groundPoundDmg, 
+                  false, false,
+                  ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+                  WEAPON_TYPE_WHOKNOWS
+                );
+                IssueTargetOrderById(dummyCaster, OrderIds.SLOW, unit);
+              }
+            });
+          }
+        }
+      } else {
+        // do normal jump
+        height = Math.max(0, jumpTicks * (jumpAirTicks - jumpTicks) * jumpAirHeight);
+        SetUnitFlyHeight(caster, height, 0.0);
+        
+
+        if (LoadBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey)) {
+          SetUnitAnimationByIndex(caster, 0);
+          BlzSetUnitFacingEx(caster, jumpTicks * 30 % 360);
+        } else {
+          SetUnitAnimationByIndex(caster, 7);
+        }
+
+        if (height == 0 && numJumps > 0) {
+          // jump landing dmg
+          SoundHelper.playSoundOnUnit(caster, "Audio/Effects/Mario/JumpDamage.mp3", 396);
+          
+          sfx = AddSpecialEffect("Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+          BlzSetSpecialEffectScale(sfx, 0.5);
+          BlzSetSpecialEffectTimeScale(sfx, 2);
+          DestroyEffect(sfx);
+
+          const jumpDmg = AOEDamage.calculateDamageRaw(
+            caster,
+            abilLvl,
+            ch ? ch.spellPower : 1.0,
+            dmgJumpMult,
+            damageMultiplier,
+            bj_HEROSTAT_INT
+          );
+          let numJumped = 0;
+          GroupEnumUnitsInRange(Globals.tmpUnitGroup, Globals.tmpVector.x, Globals.tmpVector.y, jumpAOE, null);
+          ForGroup(Globals.tmpUnitGroup, () => {
+            const unit = GetEnumUnit();
+            if (
+              UnitHelper.isUnitTargetableForPlayer(unit, player, true)
+              && unit != caster  
+            ) {
+              if (IsUnitEnemy(unit, player)) {
+                UnitDamageTarget(
+                  caster, unit,
+                  jumpDmg, 
+                  false, false,
+                  ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+                  WEAPON_TYPE_WHOKNOWS
+                );
+              }
+              numJumped++;
+            }
+          });
+          if (numJumped == 0) {
+            numEmptyJumps++;
+            if (numEmptyJumps > maxEmptyJumps) numJumps = maxJumps;
+          }
+        }
+        if (height == 0) {
+          SaveInteger(udg_StatMultHashtable, casterId, 11, numJumps);
+          jumpTicks = 0; // reset jump ticks
+          numJumps++;
+        }
+        jumpTicks++;
+      }
+
+      if (UnitHelper.isUnitDead(caster)) {
+        numJumps = maxJumps;
+      }
+    });
+  }
+
+  export function doMarioGroundPound(spellId: number) {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const groundPoundKey = StringHash(I2S(Id.marioGroundPound) + "ground_pound_flag");
+    SaveBoolean(Globals.genericSpellHashtable, casterId, groundPoundKey, true);
+    SetUnitTimeScale(caster, 1.33);
+    PauseManager.getInstance().pause(caster);
+    SetUnitAnimationByIndex(caster, 8);
+  }
+
+  export function doMarioSpinJump(spellId: number) {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const spinJumpKey = StringHash(I2S(Id.spinJump) + "spin_jump_flag");
+    SaveBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey, true);
+    BlzStartUnitAbilityCooldown(caster, Id.marioGroundPound, 1.0);
+
+    const sfx = AddSpecialEffectTarget("Abilities/Spells/Other/Tornado/Tornado_Target.mdl", caster, "origin");
+    BlzSetSpecialEffectTimeScale(sfx, 2.0);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 1.0, false, () => {
+      DestroyEffect(sfx);
+      TimerManager.getInstance().recycle(timer);
+      if (LoadBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey)) {
+        UnitRemoveAbility(caster, Id.flagArmor100k);
+        udg_StatMultUnit = caster;
+        TriggerExecute(gg_trg_Base_Armor_Set);
+        SaveBoolean(Globals.genericSpellHashtable, casterId, spinJumpKey, false);
+      }
+    });
+
+    UnitAddAbility(caster, Id.flagArmor100k);
+    udg_StatMultUnit = caster;
+    TriggerExecute(gg_trg_Base_Armor_Set);
   }
 
   export function BraveSwordAttack(spellId: number) {
