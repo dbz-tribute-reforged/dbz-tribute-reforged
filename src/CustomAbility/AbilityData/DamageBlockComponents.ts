@@ -415,7 +415,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Jade.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -433,7 +433,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "overhead",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -472,7 +472,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Jade.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -586,7 +586,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Jade.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -604,7 +604,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "overhead",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -830,13 +830,13 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Jade.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 6.0,
+        scale: 1.0,
         endScale: -1,
-        startHeight: 100,
-        endHeight: 100,
+        startHeight: 25,
+        endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
         extraRoll: 0,
@@ -848,7 +848,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -944,7 +944,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Summer.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -962,7 +962,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -1824,10 +1824,10 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Eggplant.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 1.5,
+        scale: 1.0,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
@@ -1842,7 +1842,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "head",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -2487,7 +2487,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Marine.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2505,7 +2505,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -2544,10 +2544,10 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Bubblegum.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 2.0,
+        scale: 1.0,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
@@ -2562,7 +2562,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -2601,7 +2601,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "WhisShield.mdl",
+        model: "Ubershield Bubblegum.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -2614,12 +2614,12 @@ export const DamageBlockComponents = [
         animSpeed: 1.0,
         color: {
           x: 255,
-          y: 85,
-          z: 195,
+          y: 255,
+          z: 255,
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -2658,10 +2658,10 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield Bubblegum.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 2.0,
+        scale: 1.0,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
@@ -2676,7 +2676,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -3057,7 +3057,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities/Spells/Undead/AntiMagicShell/AntiMagicShell.mdl",
+        model: "Ubershield White.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -3075,7 +3075,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
@@ -3114,7 +3114,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "WhisShield.mdl",
+        model: "Ubershield Winter.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -3132,7 +3132,7 @@ export const DamageBlockComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },

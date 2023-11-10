@@ -611,6 +611,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.YAGAI,
       AbilityNames.MightGuy.STRONG_FIST,
     ]],
+
+    [Id.genos, [
+      AbilityNames.Genos.MACHINE_GUN_BLOWS,
+      AbilityNames.Genos.INCINERATE,
+      AbilityNames.Genos.INCINERATION_CANNON,
+      AbilityNames.Genos.JET_DRIVE_ARROW,
+      AbilityNames.Genos.ROCKET_STOMP,
+      AbilityNames.Genos.SPIRAL_INCINERATION_CANNON,
+      AbilityNames.Genos.LIGHTNING_EYE,
+      AbilityNames.Genos.HIGH_VOLTAGE_FIST,
+      AbilityNames.Genos.OVERCHARGE,
+    ]],
     
 
 

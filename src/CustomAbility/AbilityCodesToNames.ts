@@ -480,6 +480,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.mightGuySekizo, AbilityNames.MightGuy.SEKIZO],
     [Id.mightGuyYagai, AbilityNames.MightGuy.YAGAI],
 
+    [Id.genosMachineGunBlow, AbilityNames.Genos.MACHINE_GUN_BLOWS],
+    [Id.genosIncinerate, AbilityNames.Genos.INCINERATE],
+    [Id.genosIncinerationCannon, AbilityNames.Genos.INCINERATION_CANNON],
+    [Id.genosJetDriveArrow, AbilityNames.Genos.JET_DRIVE_ARROW],
+    [Id.genosRocketStomp, AbilityNames.Genos.ROCKET_STOMP],
+    [Id.genosSpiralIncinerationCannon, AbilityNames.Genos.SPIRAL_INCINERATION_CANNON],
+    [Id.genosLightningEye, AbilityNames.Genos.LIGHTNING_EYE],
+    [Id.genosHighVoltageFist, AbilityNames.Genos.HIGH_VOLTAGE_FIST],
+    [Id.genosOvercharge, AbilityNames.Genos.OVERCHARGE],
+
 
 
 

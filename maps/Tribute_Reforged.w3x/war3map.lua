@@ -1086,6 +1086,7 @@ gg_trg_Transformations_Demiurge = nil
 gg_trg_Transformations_Majin_Vegeta = nil
 gg_trg_Transformations_Minato = nil
 gg_trg_Transformations_Might_Guy = nil
+gg_trg_Transformations_Genos = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -13807,6 +13808,12 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A020"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A021"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A023"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A024"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A00P"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A03U"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A030"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A01J"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A050"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A05K"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -32150,6 +32157,13 @@ end
 return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00P"))) then
+return false
+end
+return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H005"))) then
 return false
@@ -32569,6 +32583,10 @@ else
 if (Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
 udg_TempString = "BTNGuy.blp"
 else
+if (Trig_Scoreboard_Assign_Hero_Icon_Func004Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+udg_TempString = "BTNGenos.blp"
+else
+end
 end
 end
 end
@@ -42256,6 +42274,13 @@ end
 return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00P"))) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H005"))) then
 return false
@@ -42661,6 +42686,10 @@ else
 if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001C()) then
 TriggerExecute(gg_trg_Transformations_Might_Guy)
 else
+if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Genos)
+else
+end
 end
 end
 end
@@ -48393,7 +48422,14 @@ end
 return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func077C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func076C()
+if (not (udg_TempUnitType == FourCC("H00P"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func078C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -49011,7 +49047,15 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A01O"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A01R"), udg_TransformationPlayer)
 else
 end
-if (Trig_Kid_Buu_Bonus_Ability_Func002Func077C()) then
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func076C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A04T"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A04T"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A04T'))
+UnitAddAbilityBJ(FourCC("A05L"), udg_TransformationResultUnit)
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func078C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -66590,6 +66634,176 @@ gg_trg_Transformations_Might_Guy = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Might_Guy, Trig_Transformations_Might_Guy_Actions)
 end
 
+function Trig_Transformations_Genos_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func012C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func013C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func014C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func015C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func016C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func017C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A05L"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func019Func002Func004C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Genos_Func019Func002C()
+if (not Trig_Transformations_Genos_Func019Func002Func004C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Func019C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Genos_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Genos_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_8916")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Genos_Func011C()) then
+udg_StatMultReal = 1.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func012C()) then
+udg_StatMultReal = 1.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func013C()) then
+udg_StatMultReal = 1.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func014C()) then
+udg_StatMultReal = 2.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func015C()) then
+udg_StatMultReal = 2.25
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func016C()) then
+udg_StatMultReal = 2.50
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Genos_Func017C()) then
+UnitAddAbilityBJ(FourCC("A05L"), udg_StatMultUnit)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_8917")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Genos_Func019C()) then
+if (Trig_Transformations_Genos_Func019Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H00P')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Genos()
+gg_trg_Transformations_Genos = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Genos, Trig_Transformations_Genos_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
 if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
 return false
@@ -68808,6 +69022,7 @@ InitTrig_Transformations_Demiurge()
 InitTrig_Transformations_Majin_Vegeta()
 InitTrig_Transformations_Minato()
 InitTrig_Transformations_Might_Guy()
+InitTrig_Transformations_Genos()
 InitTrig_Saga_Unit_Init()
 InitTrig_Saga_Unit_Capsule_Unlock()
 InitTrig_Saga_Unit_Loop()

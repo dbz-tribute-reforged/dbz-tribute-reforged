@@ -200,7 +200,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Knockbacked enemies are slowed 50% for 3s|n" +
+        "Enemies in 450 AOE are slowed 50% for 1s|n" +
         "Cost: 35 SP|nCD: 2"
     },
     components: [
@@ -209,6 +209,40 @@ export const AbilitiesList = [
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.STAND_UP,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 25,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGenosStand.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGenosStand.blp",
+    },
+    tooltip: {
+      title: "(V) Stand Up",
+      body: 
+        "Stand up after any attack, purging all negative debuffs.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemies in 450 AOE are slowed 50% for 1s|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 25 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit dk thrilla gorilla" },
+      { name: "debuff slow genos stand up" },
+      { name: "sfx genos stand up" },
     ],
   },
   // -------------------------------------------
@@ -5029,7 +5063,8 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "debuff blind solar flare" },
+      { name: "debuff stun solar flare" },
+      { name: "debuff curse solar flare" },
       { name: "sfx solar flare" },
     ],
   },
@@ -8707,7 +8742,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 200,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -8737,7 +8772,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 166,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -9961,6 +9996,237 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Genos.MACHINE_GUN_BLOWS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi genos machine gun blows" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.INCINERATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos incineration cannon" },
+      { name: "beam genos incinerate" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.INCINERATION_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam genos incineration cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.JET_DRIVE_ARROW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos rocket stomp" },
+      { name: "anim genos jet drive arrow" },
+      { name: "dash ground point genos jet drive arrow" },
+      { name: "damage genos jet drive arrow" },
+      { name: "sfx genos jet drive arrow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.ROCKET_STOMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim genos rocket stomp" },
+      { name: "debuff slow genos rocket stomp" },
+      { name: "dash ground point 30dist" },
+      { name: "damage genos rocket stomp" },
+      { name: "jump crono cleave" },
+      { name: "sfx genos rocket stomp" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.SPIRAL_INCINERATION_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi genos spiral incineration cannon" },
+      { name: "sfx nova star omega caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.LIGHTNING_EYE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos high voltage fist" },
+      { name: "debuff curse solar flare" },
+      { name: "sfx solar flare"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.HIGH_VOLTAGE_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage genos high voltage fist" },
+      { name: "sfx genos high voltage fist"}
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -10891,6 +11157,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
+      { name: "debuff curse solar flare" },
       { name: "multi solar kame" },
       { name: "damage solar kame dps charging" },
       { name: "sfx solar kame caster" },
@@ -11020,7 +11287,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 166,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,

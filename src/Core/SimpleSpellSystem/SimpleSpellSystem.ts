@@ -367,6 +367,8 @@ export module SimpleSpellSystem {
 
     Globals.genericSpellMap.set(Id.sephirothOneWingedAngel, SimpleSpellSystem.doOneWingedAngel);
     Globals.genericSpellMap.set(Id.sephirothParry, SimpleSpellSystem.doSephirothParry);
+    
+    Globals.genericSpellMap.set(Id.genosIncinerationCannon, SimpleSpellSystem.doIncinerationCannon);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
@@ -5264,8 +5266,8 @@ export module SimpleSpellSystem {
         }
 
         if (tick >= moveDurationTicks) {
-          genericGateTP(caster, srcPos, targetPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
-          genericGateTP(caster, targetPos, srcPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
+          genericGateTP(spellId, caster, srcPos, targetPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
+          genericGateTP(spellId, caster, targetPos, srcPos, tpAOE, tpMaxDist, excludeGroup, excludeTicks)
         }
 
         // every x ticks, clear the exclude group
@@ -5295,6 +5297,7 @@ export module SimpleSpellSystem {
   }
 
   export function genericGateTP(
+    spellId: number,
     caster: unit,
     pos1: Vector2D,
     pos2: Vector2D,
@@ -5321,8 +5324,8 @@ export module SimpleSpellSystem {
           GroupAddUnit(excludeGroup, unit);
           
           const unitId = GetHandleId(unit);
-          const tpRegisterKey = StringHash("gate_tp_count");
-          const tpTimeKey = StringHash("gate_tp_exclude_time");
+          const tpRegisterKey = StringHash(I2S(spellId) + "gate_tp_count");
+          const tpTimeKey = StringHash(I2S(spellId) + "gate_tp_exclude_time");
           SaveInteger(Globals.genericGateTPHashtable, unitId, tpRegisterKey, 
             LoadInteger(Globals.genericGateTPHashtable, unitId, tpRegisterKey) + 1
           );
@@ -6911,6 +6914,124 @@ export module SimpleSpellSystem {
       }
 
       if (UnitHelper.isUnitDead(caster)) {
+        ticks = endTick;
+      }
+      ticks++;
+    });
+  }
+
+  export function doIncinerationCannon(spellId: number) {
+    const detonationAOE = 800;
+    const detectionAOE = 400;
+    const beamSpeed = 60;
+    const beamHpMult = BASE_DMG.KAME_DPS * 3;
+    const detonationDmgMult = BASE_DMG.KAME_DPS * 20;
+    const endTick = 33;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const abilLvl = GetUnitAbilityLevel(caster, spellId);
+    
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+
+    const beam = CreateUnit(
+      player, 
+      Constants.dummyBeamUnitId, 
+      GetUnitX(caster), 
+      GetUnitY(caster),
+      ang
+    );
+    BlzSetUnitName(beam, "beam genos incineration cannon detect");
+
+    const beamHp = BeamComponent.calculateBeamHp(abilLvl, beamHpMult, caster, bj_HEROSTAT_INT);
+    BlzSetUnitMaxHP(beam, beamHp);
+    SetUnitLifePercentBJ(beam, 100);
+
+    PauseUnit(beam, true);
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, 1.0);
+    SetUnitPathing(beam, false);
+    
+    let oldHp = GetUnitState(beam, UNIT_STATE_LIFE);
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > endTick) {
+        RemoveUnit(beam);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      const currentHp = GetUnitState(beam, UNIT_STATE_LIFE);
+      if (currentHp < oldHp) {
+        oldHp = currentHp;
+      } else {
+        Globals.tmpVector.setUnit(beam);
+        Globals.tmpVector.polarProjectCoords(
+          Globals.tmpVector, 
+          GetUnitFacing(beam), 
+          beamSpeed
+        );
+        PathingCheck.moveFlyingUnitToCoord(beam, Globals.tmpVector);
+      }
+
+      let firstBeam = null;
+      let secondBeam = null;
+      Globals.tmpVector.setUnit(beam);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y,
+        detectionAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          GetOwningPlayer(unit) == player
+          && GetUnitTypeId(unit) == Constants.dummyBeamUnitId
+        ) {
+          if (GetUnitName(unit) == "beam genos incinerate") {
+            firstBeam = unit;
+          } else if (GetUnitName(unit) == "beam genos incineration cannon") {
+            secondBeam = unit;
+          }
+        }
+      });
+
+      if (firstBeam != null && secondBeam != null) {
+        // detonate
+        ticks = endTick;
+
+        Globals.tmpVector.setUnit(firstBeam);
+        const sfx = AddSpecialEffect(
+          "NuclearExplosion.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y
+        );
+        BlzSetSpecialEffectScale(sfx, 1.71);
+        BlzSetSpecialEffectTimeScale(sfx, 1.33);
+        DestroyEffect(sfx);
+        AOEDamage.genericDealAOEDamage(
+          Globals.tmpUnitGroup,
+          caster,
+          Globals.tmpVector.x, Globals.tmpVector.y,
+          detonationAOE,
+          abilLvl,
+          ch ? ch.spellPower : 1.0,
+          detonationDmgMult,
+          1.0,
+          bj_HEROSTAT_INT
+        );
+
+        ticks = endTick;
+        UnitHelper.dealHakaiDamage(caster, firstBeam);
+        UnitHelper.dealHakaiDamage(caster, secondBeam);
+      }
+
+      if (UnitHelper.isUnitDead(beam)) {
         ticks = endTick;
       }
       ticks++;

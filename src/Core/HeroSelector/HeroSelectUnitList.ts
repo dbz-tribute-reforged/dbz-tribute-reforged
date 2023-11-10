@@ -700,6 +700,18 @@ const saitamaData = {
     HeroSelectCategory.BRUISER
   )
 }
+const genosData = {
+  unitCode: Id.genos,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.ASSASSIN
+  )
+}
 const ichigoData = {
   unitCode: Id.ichigo,
   onlyRandom: false,
@@ -1058,7 +1070,7 @@ export const HeroSelectUnitList = [
   // ====
 
   saitamaData,
-  ichigoData,
+  genosData,
   gutsData,
   allMightData,
   shotoTodorokiData,
@@ -1083,7 +1095,7 @@ export const HeroSelectUnitList = [
   minatoData,
   // 95
   mightGuyData,
-  emptySpace,
+  ichigoData,
   emptySpace,
   emptySpace,
   emptySpace,

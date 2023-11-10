@@ -448,6 +448,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil3, OSKEY_V, 0, true);
   addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
   addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
+  addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
   
 
   /*

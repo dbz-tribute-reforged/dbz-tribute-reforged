@@ -297,9 +297,9 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
   export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
-  export const SLOW_GENERIC_25_PCT_1_5S = FourCC('A03T');
-  export const SLOW_GENERIC_50_PCT_1_5S = FourCC('A00K');
-  export const SLOW_GENERIC_75_PCT_1_5S = FourCC('A04U');
+  export const SLOW_GENERIC_25_PCT_1S = FourCC('A03T');
+  export const SLOW_GENERIC_50_PCT_1S = FourCC('A00K');
+  export const SLOW_GENERIC_75_PCT_1S = FourCC('A04U');
 
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
@@ -808,6 +808,17 @@ export module Id {
   export const shiningSwordAttack = FourCC("A0LF");
   export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
+
+  export const genos = FourCC("H00P");
+  export const genosMachineGunBlow = FourCC("A04T");
+  export const genosIncinerate = FourCC("A00P");
+  export const genosIncinerationCannon = FourCC("A01J");
+  export const genosJetDriveArrow = FourCC("A030");
+  export const genosRocketStomp = FourCC("A03U");
+  export const genosSpiralIncinerationCannon = FourCC("A04V");
+  export const genosLightningEye = FourCC("A050");
+  export const genosHighVoltageFist = FourCC("A05K");
+  export const genosOvercharge = FourCC("A05L");
 
   export const getiStarHero = FourCC("H002");
   export const metalCoolerClone = FourCC("H01Z");

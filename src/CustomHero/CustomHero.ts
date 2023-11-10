@@ -105,6 +105,8 @@ export class CustomHero {
 
     if (id == Id.donkeyKong) {
       this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
+    } else if (id == Id.genos) {
+      this.addAbilityFromAll(AbilityNames.Genos.STAND_UP);
     } else {
       this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
     }
