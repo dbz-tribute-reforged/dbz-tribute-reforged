@@ -3727,6 +3727,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi genos high voltage fist", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    forceMinDistance: 0,
+    forceMaxDistance: 250,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 3,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "damage genos high voltage fist" },
+      { name: "sfx genos high voltage fist"}
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

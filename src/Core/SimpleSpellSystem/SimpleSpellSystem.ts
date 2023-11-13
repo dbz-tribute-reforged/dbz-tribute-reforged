@@ -369,6 +369,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.sephirothParry, SimpleSpellSystem.doSephirothParry);
     
     Globals.genericSpellMap.set(Id.genosIncinerationCannon, SimpleSpellSystem.doIncinerationCannon);
+    Globals.genericSpellMap.set(Id.genosOvercharge, SimpleSpellSystem.doGenosOvercharge);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
@@ -2790,7 +2791,7 @@ export module SimpleSpellSystem {
     const playerId = GetPlayerId(player);
     const ch = Globals.customPlayers[playerId].getCustomHero(unit);
 
-    if (ch) return;
+    if (!ch) return;
 
     // give spell amp
     const spellAmp = 0.3 * (
@@ -6923,7 +6924,7 @@ export module SimpleSpellSystem {
   export function doIncinerationCannon(spellId: number) {
     const detonationAOE = 800;
     const detectionAOE = 400;
-    const beamSpeed = 60;
+    const beamSpeed = 70;
     const beamHpMult = BASE_DMG.KAME_DPS * 3;
     const detonationDmgMult = BASE_DMG.KAME_DPS * 20;
     const endTick = 33;
@@ -7036,6 +7037,17 @@ export module SimpleSpellSystem {
       }
       ticks++;
     });
+  }
+
+  export function doGenosOvercharge(spellId: number) {
+    const caster = GetTriggerUnit();
+    const lvl = GetUnitAbilityLevel(caster, Id.genosOvercharge);
+
+    if (lvl == 1) {
+      SetUnitAbilityLevel(caster, Id.genosOvercharge, 2);
+    } else {
+      SetUnitAbilityLevel(caster, Id.genosOvercharge, 1);
+    }
   }
 
   export function doCellMaxWings(spellId: number) {

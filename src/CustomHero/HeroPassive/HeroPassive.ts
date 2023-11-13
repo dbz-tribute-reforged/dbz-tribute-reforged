@@ -128,6 +128,9 @@ export class HeroPassiveManager {
       case Id.mightGuy:
         mightGuyPassive(customHero);
         break;
+      case Id.genos:
+        genosPassive(customHero);
+        break;
       default:
         break;
     }
@@ -2558,7 +2561,7 @@ export function ainzPassive(customHero: CustomHero) {
 }
 
 export function demiurgePassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroUnitTypeId = GetUnitTypeId(customHero.unit);
   const hellfireMantleSP = 0.15;
   const hellfireMantleManaDrain = 0.015;
   const hellfireMantleDmgBlockPct = 0.25;
@@ -2679,7 +2682,7 @@ export function demiurgePassive(customHero: CustomHero) {
       // const attacker = GetEventDamageSource();
       // const attacked = BlzGetEventDamageTarget();
       if (
-        GetUnitTypeId(attacker) == heroId &&
+        GetUnitTypeId(attacker) == heroUnitTypeId &&
         GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
         IsUnitType(attacked, UNIT_TYPE_HERO)
       ) {
@@ -2918,6 +2921,86 @@ export function mightGuyPassive(customHero: CustomHero) {
   );
 }
 
+export function genosPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+  const overchargeSPPerSecond = 0.05;
+  const overchargeMaxSP = 0.2;
+  const overchargeManaDrain = 0.05;
+  const overchargeTickRate = 0.03;
+  const bonusMs = 5;
+
+  const overchargeTimer = CreateTimer();
+  customHero.addTimer(overchargeTimer);
+
+  const overChargeAbil = customHero.getAbility(AbilityNames.Genos.OVERCHARGE);
+
+  let tempMultDelay = 0;
+  let overchargeState = 0;
+  let overchargeTempSP = 0;
+  let overchargeSfx = null;
+  TimerStart(overchargeTimer, overchargeTickRate, true, () => {
+    if (overchargeState == 0) {
+      if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+        // do overcharge
+        overchargeState = 1;
+        overchargeTempSP = 0;
+        overchargeSfx = AddSpecialEffectTarget(
+          "GEHLightningOrb.mdl", 
+          customHero.unit, "origin"
+        );
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", 
+            GetUnitX(customHero.unit), GetUnitY(customHero.unit)
+          )
+        );
+      }
+    }
+
+    if (overchargeState == 1) {
+      if (
+        UnitHelper.isUnitDead(customHero.unit)
+        || GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 1
+        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain
+      ) {
+        overchargeState = 2;
+      } else {
+        const currentMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
+        const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+        const mpDrain = maxMana * overchargeManaDrain * overchargeTickRate;
+        SetUnitState(customHero.unit, UNIT_STATE_MANA, currentMana - mpDrain);
+
+        if (overchargeTempSP < overchargeMaxSP) {
+          customHero.removeSpellPower(overchargeTempSP);
+          overchargeTempSP = Math.min(
+            overchargeMaxSP,
+            overchargeTempSP + overchargeSPPerSecond * overchargeTickRate
+          );
+          customHero.addSpellPower(overchargeTempSP);
+        }
+      }
+    }
+
+    if (overchargeState == 2) {
+      overChargeAbil.endAbility();
+      overchargeState = 0;
+      customHero.removeSpellPower(overchargeTempSP);
+      overchargeTempSP = 0;
+      DestroyEffect(overchargeSfx);
+      SetUnitAbilityLevel(customHero.unit, Id.genosOvercharge, 1);
+    }
+
+    if (GetUnitLifePercent(customHero.unit) > 99) {
+      if (tempMultDelay == 0) {
+        udg_StatMultUnit = customHero.unit;
+        udg_MoroStatMultReal = 0.25;
+        TriggerExecute(gg_trg_Moro_Modify_Temp_Mult);
+      }
+      tempMultDelay = (tempMultDelay+1) % 33;
+    }
+  });
+}
+
 export function setupRegenTimer(customHero: CustomHero) {
   const regenTimer = CreateTimer();
   customHero.addTimer(regenTimer);
@@ -2960,6 +3043,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (guyGateLvl > 1) {
       spMult += Constants.MIGHT_GUY_GATE_SP_MULTS[guyGateLvl-1]
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+      spMult += Constants.GENOS_OVERCHARGE_REGEN_MULT;
     }
     const incSp = (
       Constants.REGEN_TICK_RATE

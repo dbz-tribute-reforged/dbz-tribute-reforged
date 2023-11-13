@@ -792,6 +792,7 @@ declare var udg_TempInt3: number;
 declare var udg_TempSound: sound;
 declare var udg_TempPlayer: player;
 declare var udg_TempUnit: unit;
+declare var udg_MoroStatMultReal: number;
 
 declare var udg_Scoreboard: multiboard;
 

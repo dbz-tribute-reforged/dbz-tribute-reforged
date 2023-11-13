@@ -66652,7 +66652,7 @@ function Trig_Transformations_Genos_Func012C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
 return false
 end
 return true
@@ -66682,23 +66682,13 @@ function Trig_Transformations_Genos_Func015C()
 if (not (udg_TransformationString == "fp")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Genos_Func016C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Genos_Func017C()
+function Trig_Transformations_Genos_Func016C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A05L"), udg_StatMultUnit) == 0)) then
 return false
 end
@@ -66708,7 +66698,7 @@ end
 return true
 end
 
-function Trig_Transformations_Genos_Func019Func002Func004C()
+function Trig_Transformations_Genos_Func018Func002Func004C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -66718,14 +66708,14 @@ end
 return false
 end
 
-function Trig_Transformations_Genos_Func019Func002C()
-if (not Trig_Transformations_Genos_Func019Func002Func004C()) then
+function Trig_Transformations_Genos_Func018Func002C()
+if (not Trig_Transformations_Genos_Func018Func002Func004C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Genos_Func019C()
+function Trig_Transformations_Genos_Func018C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -66759,7 +66749,7 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Genos_Func013C()) then
-udg_StatMultReal = 1.50
+udg_StatMultReal = 1.75
 udg_TransformationAbility = FourCC("AUan")
 else
 end
@@ -66769,24 +66759,19 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Genos_Func015C()) then
-udg_StatMultReal = 2.25
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Genos_Func016C()) then
 udg_StatMultReal = 2.50
 udg_TransformationAbility = FourCC("AUan")
 else
 end
-if (Trig_Transformations_Genos_Func017C()) then
+if (Trig_Transformations_Genos_Func016C()) then
 UnitAddAbilityBJ(FourCC("A05L"), udg_StatMultUnit)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_8917")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Genos_Func019C()) then
-if (Trig_Transformations_Genos_Func019Func002C()) then
+if (Trig_Transformations_Genos_Func018C()) then
+if (Trig_Transformations_Genos_Func018Func002C()) then
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             udg_TransformationID = FourCC('H00P')

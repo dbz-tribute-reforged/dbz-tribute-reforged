@@ -181,7 +181,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 33,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -201,7 +201,7 @@ export const AbilitiesList = [
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
         "Enemies in 450 AOE are slowed 50% for 1s|n" +
-        "Cost: 35 SP|nCD: 2"
+        "Cost: 33 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -209,6 +209,40 @@ export const AbilitiesList = [
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 25,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
+    },
+    tooltip: {
+      title: "(V) Thrilla Gorilla",
+      body: 
+        "Instantly purges all debuffs from Donkey Kong.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemies in 450 AOE are slowed by 50% for 1s|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 25 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit dk thrilla gorilla" },
+      { name: "debuff slow genos stand up" },
+      { name: "sfx dk thrilla gorilla" },
     ],
   },
   // -------------------------------------------
@@ -234,7 +268,7 @@ export const AbilitiesList = [
       body: 
         "Stand up after any attack, purging all negative debuffs.|n" + 
         "Becomes invulnerable for 0.03s.|n" +
-        "Enemies in 450 AOE are slowed 50% for 1s|n" +
+        "Enemies in 450 AOE are slowed by 50% for 1s|n" +
         "Can be used while stunned.|n" +
         "Cost: 25 SP|n" +
         "CD: 15"
@@ -7780,38 +7814,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
-    currentCd: 0,
-    maxCd: 15,
-    costType: CostType.SP,
-    costAmount: 25,
-    duration: 1,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: true,
-    animation: "spell",
-    icon: {
-      enabled: "BTNDK.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
-    },
-    tooltip: {
-      title: "(V) Thrilla Gorilla",
-      body: 
-        "Becomes invulnerable for 0.03s.|n" +
-        "Instantly purges all debuffs from Donkey Kong.|n" + 
-        "Can be used while stunned.|n" +
-        "Cost: 25 SP|n" +
-        "CD: 15"
-    },
-    components: [
-      { name: "hide unit dk thrilla gorilla" },
-      { name: "sfx dk thrilla gorilla" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.DonkeyKong.GROUND_POUND,
     currentCd: 0,
     maxCd: 1,
@@ -10193,8 +10195,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "temp ability genos high voltage fist" },
-      { name: "debuff curse solar flare" },
-      { name: "sfx solar flare"}
+      { name: "beam genos lightning eye" },
     ],
   },
   // -------------------------------------------
@@ -10221,8 +10222,34 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "damage genos high voltage fist" },
-      { name: "sfx genos high voltage fist"}
+      { name: "multi genos high voltage fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.OVERCHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 999999,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 3dist" },
     ],
   },
   // -------------------------------------------

@@ -160,10 +160,11 @@ export module Constants {
   export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 0.25;
   export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
+  export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
-  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.05, 0.1, 0.15, 0.2];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.03, 0.06, 0.09, 0.12];
 
   export const NUOVA_HEAT_ARMOR_HP_MULT = -2;
   export const MAJIN_BUU_FAT_MP_REGEN_MULT = -0.75;

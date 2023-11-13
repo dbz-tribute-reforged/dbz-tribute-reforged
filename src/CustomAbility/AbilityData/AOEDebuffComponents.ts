@@ -1934,4 +1934,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff curse genos lightning eye",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.CURSE_SOLAR_FLARE,
+    orderId: OrderIds.CURSE,
+    aoe: 200,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]
