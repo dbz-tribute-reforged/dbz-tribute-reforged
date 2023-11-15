@@ -3516,6 +3516,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi ainz tgoalid", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 178,
+    angleMax: 179,
+    forceMinDistance: 150,
+    forceMaxDistance: 150,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_SOURCE_FORWARD,
+    sfxList: true,
+    components: [
+      { name: "sfx ainz tgoalid 0" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi albedo decapitate", 
     repeatInterval: 1, 
     startTick: 0,

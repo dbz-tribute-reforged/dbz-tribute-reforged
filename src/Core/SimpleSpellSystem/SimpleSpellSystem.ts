@@ -5407,8 +5407,18 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectScale(sfx, 8.0);
       DestroyEffect(sfx);
 
+      sfx = AddSpecialEffect(
+        "SuperTierMagic.mdl", GetUnitX(caster), GetUnitY(caster)
+      );
+      DestroyEffect(sfx);
+
       DragonBallsManager.getInstance().summonShenron(GetUnitX(caster), GetUnitY(caster));
-      UnitRemoveAbility(caster, GetSpellAbilityId());
+
+      const timer = TimerManager.getInstance().get();
+      TimerStart(timer, 0.5, false, () => {
+        UnitRemoveAbility(caster, Id.ainzWish);
+        TimerManager.getInstance().recycle(timer);
+      });
     }
   }
 

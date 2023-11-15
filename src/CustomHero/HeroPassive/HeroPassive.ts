@@ -2940,6 +2940,9 @@ export function genosPassive(customHero: CustomHero) {
   let overchargeSfx = null;
   TimerStart(overchargeTimer, overchargeTickRate, true, () => {
     if (overchargeState == 0) {
+      if (overChargeAbil.isInUse()) {
+        overChargeAbil.endAbility();
+      }
       if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
         // do overcharge
         overchargeState = 1;

@@ -15209,6 +15209,7 @@ export const AbilitiesList = [
       { name: "channel caster default" },
       { name: "damage ainz tgoalid explosion" },
       { name: "damage ainz tgoalid explosion bonus" },
+      { name: "multi ainz tgoalid" },
       { name: "sfx ainz tgoalid 1" },
       { name: "sfx ainz tgoalid 2" },
     ],
@@ -15241,6 +15242,34 @@ export const AbilitiesList = [
       { name: "damage ainz fallen down explosion" },
       { name: "sfx ainz fallen down 1" },
       { name: "sfx ainz fallen down 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.LA_SHUB_NIGGURATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "sfx ainz fallen down 1" },
     ],
   },
   // -------------------------------------------
