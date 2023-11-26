@@ -14,6 +14,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
+  public isSfx: boolean = false;
 
   // may need its own sfx component to indicate when block is dead or not
   constructor(
@@ -53,6 +54,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     }
     
     if (this.remainingBlock > 0) {
+      this.isSfx = true;
       const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
       // show group 0 of sfx while remainingBlock > 0
       const yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
@@ -121,14 +123,21 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
       }
 
       this.previousHp = this.currentHp;
+    } else if (this.isSfx) {
+      this.isSfx = false;
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
     }
 
     if (ability.isFinishedUsing(this)) {
       this.isStarted = false;
       this.isFinished = true;
       
-      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
-      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+      if (this.isSfx) {
+        AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+        AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+        this.isSfx = false;
+      }
     }
   }
   

@@ -10177,8 +10177,9 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 166,
-    updateRate: 0.03,
+    duration: 250,
+    // higher update rate than normal!!
+    updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -10250,6 +10251,119 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward 3dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.COMPRESSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage tatsumaki compress dps outer" },
+      { name: "damage tatsumaki compress dps inner" },
+      { name: "debuff slow tatsumaki compress" },
+      { name: "sfx tatsumaki compress" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.LIFT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage tatsumaki lift explosion" },
+      { name: "debuff slow tatsumaki lift" },
+      { name: "sfx tatsumaki lift" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.BOMBS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi tatsumaki bombs" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+    currentCd: 0,
+    maxCd: 60,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 2000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block tatsumaki telekinetic shield" },
     ],
   },
   // -------------------------------------------
@@ -16008,7 +16122,7 @@ export const AbilitiesList = [
     components: [
       { name: "damage target minato rasengan explosion" },
       { name: "knockback target minato rasengan" },
-      { name: "debuff stun minato rasengan" },
+      // { name: "debuff stun minato rasengan" },
       { name: "sfx minato rasengan" },
     ],
   },

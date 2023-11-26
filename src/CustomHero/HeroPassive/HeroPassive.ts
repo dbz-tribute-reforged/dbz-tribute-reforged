@@ -12,6 +12,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { SoundHelper } from "Common/SoundHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -130,6 +131,9 @@ export class HeroPassiveManager {
         break;
       case Id.genos:
         genosPassive(customHero);
+        break;
+      case Id.tatsumaki:
+        tatsumakiPassive(customHero);
         break;
       default:
         break;
@@ -3001,6 +3005,154 @@ export function genosPassive(customHero: CustomHero) {
       }
       tempMultDelay = (tempMultDelay+1) % 33;
     }
+  });
+}
+
+
+export function tatsumakiPassive(customHero: CustomHero) {
+  const maxDist = 2400;
+  const minSpeed = 5;
+  const distScaledSpeed = 45;
+  const bonusSpeedRatio = 2;
+  const vectorAOE = 200;
+  const vectorManaCostPct = 0.03;
+  const shieldHpThresholdPct = 70;
+
+  const caster = customHero.unit;
+  const casterId = GetHandleId(caster);
+  const vectorKey = StringHash("tatsumaki_vector");
+  const vectorXSourceKey = StringHash("tatsumaki_vector_x_source");
+  const vectorYSourceKey = StringHash("tatsumaki_vector_y_source");
+  const vectorXTargetKey = StringHash("tatsumaki_vector_x_target");
+  const vectorYTargetKey = StringHash("tatsumaki_vector_y_target");
+  const vectorAngKey = StringHash("tatsumaki_vector_ang");
+  const vectorDistKey = StringHash("tatsumaki_vector_dist");
+  const vectorSfxKey = StringHash("tatsumaki_vector_sfx");
+  const vectorSfx1Key = StringHash("tatsumaki_vector_sfx_1");
+  const vectorSfx2Key = StringHash("tatsumaki_vector_sfx_2");
+  const vectorStop = StringHash("tatsumaki_vector_stop");
+
+  const vectorTimer = CreateTimer();
+  customHero.addTimer(vectorTimer);
+  
+  const shieldAbility = customHero.getAbility(AbilityNames.Tatsumaki.TELEKINETIC_SHIELD);
+
+  const targetPos = new Vector2D();
+  const seenGroup = CreateGroup(); // leaks
+  let isSeen = false;
+  TimerStart(vectorTimer, 0.03, true, () => {
+    if (
+      !shieldAbility.isOnCooldown()
+      && UnitHelper.isUnitAlive(customHero.unit)
+      && GetUnitLifePercent(customHero.unit) < shieldHpThresholdPct
+    ) {
+      const input = new CustomAbilityInput(
+        Id.tatsumakiCompress,
+        customHero, 
+        GetOwningPlayer(customHero.unit),
+        Math.min(10, Math.max(1, GetHeroLevel(customHero.unit) * 0.03)),
+        targetPos,
+        targetPos,
+        targetPos,
+        customHero.unit,
+        customHero.unit,
+      );
+
+      if (customHero.canCastAbility(shieldAbility.name, input)) {
+        if (Globals.showAbilityFloatingText) {
+          TextTagHelper.showPlayerColorTextOnUnit(
+            shieldAbility.name, 
+            GetPlayerId(GetOwningPlayer(customHero.unit)), 
+            customHero.unit
+          );
+        }
+        customHero.useAbility(shieldAbility.name, input);
+      }
+    }
+
+    // vector
+    const vectorState = LoadInteger(Globals.genericSpellHashtable, casterId, vectorKey);
+    const vectorStopState = LoadBoolean(Globals.genericSpellHashtable, casterId, vectorStop);
+
+    if (vectorStopState) {
+      // force deactivation
+      SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, false);
+      SaveInteger(Globals.genericSpellHashtable, casterId, vectorKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXTargetKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey, 0);
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
+      if (sfx) BlzSetSpecialEffectScale(sfx, 0.01);
+      const sfx1 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx1Key);
+      if (sfx1) BlzSetSpecialEffectScale(sfx1, 0.01);
+      const sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
+      if (sfx2) BlzSetSpecialEffectScale(sfx2, 0.01);
+      return;
+    }
+
+    if (vectorState == 1) {
+      if (isSeen) GroupClear(seenGroup);
+      isSeen = false;
+      return;
+    }
+    const sourceX = LoadReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey);
+    const sourceY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey);
+    const targetX = LoadReal(Globals.genericSpellHashtable, casterId, vectorXTargetKey);
+    const targetY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey);
+    if (sourceX == 0 && sourceY == 0 && targetX == 0 && targetY == 0) return;
+
+    if (GetUnitManaPercent(customHero.unit) >= vectorManaCostPct * 100 && !vectorStopState) {
+      UnitHelper.payMPPercentCost(caster, vectorManaCostPct * 0.03, UNIT_STATE_MAX_MANA);
+    } else {
+      SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, true);
+      return;
+    }
+
+    const ang = LoadReal(Globals.genericSpellHashtable, casterId, vectorAngKey);
+    const dist = LoadReal(Globals.genericSpellHashtable, casterId, vectorDistKey);
+    
+    const player = GetOwningPlayer(customHero.unit);
+
+    const speed = minSpeed + (1 - dist / maxDist) * distScaledSpeed;
+    const intervals = Math.floor(dist / speed);
+    Globals.tmpVector.setPos(sourceX, sourceY);
+
+    GroupClear(Globals.tmpUnitGroup2);
+    for (let i = 0; i < intervals; ++i) {
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, speed);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y, 
+        vectorAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
+          || IsUnitInGroup(unit, Globals.tmpUnitGroup2)
+        ) return;
+        if (
+          !IsUnitInGroup(unit, seenGroup) 
+          && SimpleSpellSystem.isUnitTatsumakiBeam(unit)
+          && GetOwningPlayer(unit) == player
+        ) {
+          isSeen = true;
+          SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
+          GroupAddUnit(seenGroup, unit);
+        }
+        SimpleSpellSystem.doTatsumakiMoveBeam(
+          unit, 
+          speed, bonusSpeedRatio, 
+          ang, 
+          Globals.tmpVector2, 
+          Globals.tmpVector3,
+          Globals.tmpUnitGroup3
+        );
+        GroupAddUnit(Globals.tmpUnitGroup2, unit);
+      });
+    }
+    GroupClear(Globals.tmpUnitGroup2);
   });
 }
 

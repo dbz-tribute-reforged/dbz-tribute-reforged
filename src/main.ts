@@ -101,7 +101,7 @@ function tsPostMain() {
     DestroyTimer(GetExpiredTimer());
   });
 
-  TimerStart(CreateTimer(), 1, false, () => {
+  TimerStart(CreateTimer(), 0.1, false, () => {
     transferHostPlayer();
     CustomPlayerTest();
     heroSelectorManager = HeroSelectorManager.getInstance();

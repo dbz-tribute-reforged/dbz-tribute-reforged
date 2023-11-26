@@ -624,6 +624,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Genos.OVERCHARGE,
     ]],
     
+    [Id.tatsumaki, [
+      AbilityNames.Tatsumaki.COMPRESSS,
+      AbilityNames.Tatsumaki.LIFT,
+      AbilityNames.Tatsumaki.BOMBS,
+      AbilityNames.Tatsumaki.TORNADO_OF_TERROR,
+      AbilityNames.Tatsumaki.VECTOR,
+      AbilityNames.Tatsumaki.GIANT_SPEAR,
+      AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+    ]],
+    
 
 
 

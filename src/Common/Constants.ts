@@ -164,7 +164,7 @@ export module Constants {
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
-  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.03, 0.06, 0.09, 0.12];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.04, 0.08, 0.12, 0.16];
 
   export const NUOVA_HEAT_ARMOR_HP_MULT = -2;
   export const MAJIN_BUU_FAT_MP_REGEN_MULT = -0.75;
@@ -1225,6 +1225,14 @@ export module Id {
   export const shiningSword = FourCC("A0IC");
   export const herosFlute = FourCC("A0IB");
   export const braveSwordAttack = FourCC('A0IA');
+
+  export const tatsumaki = FourCC("H01C");
+  export const tatsumakiCompress = FourCC("A05M");
+  export const tatsumakiLift = FourCC("A05N");
+  export const tatsumakiBombs = FourCC("A05O");
+  export const tatsumakiTornado = FourCC("A05P");
+  export const tatsumakiVector = FourCC("A05R");
+  export const tatsumakiGiantSpear = FourCC("A062");
 
   export const tien = FourCC("H055");
   export const tienClone = FourCC("H05Y");

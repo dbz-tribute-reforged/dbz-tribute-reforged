@@ -712,6 +712,17 @@ const genosData = {
     HeroSelectCategory.ASSASSIN
   )
 }
+const tatsumakiData = {
+  unitCode: Id.tatsumaki,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BEAMER
+  )
+}
 const ichigoData = {
   unitCode: Id.ichigo,
   onlyRandom: false,
@@ -1069,35 +1080,37 @@ export const HeroSelectUnitList = [
   // 75
   // ====
 
-  saitamaData,
-  genosData,
-  gutsData,
-  allMightData,
-  shotoTodorokiData,
-  // 80
-  meguminData,
-  pecorineData,
-  lucarioData,
-  sephirothData,
-  dartFeldData,
-  // 85
-  leonSKennedyData,
-  marioData,
-  waluigiData,
-  sonicData,
-  linkTwilightData,
-
-  // 90
   ainzData,
   albedoData,
   shalltearData,
   demiurgeData,
-  minatoData,
-  // 95
-  mightGuyData,
+  saitamaData,
+  // 80
+  genosData,
+  tatsumakiData,
+  meguminData,
+  allMightData,
+  shotoTodorokiData,
+  // 85
+  gutsData,
   ichigoData,
+  minatoData,
+  mightGuyData,
   emptySpace,
-  emptySpace,
+
+  // ====
+  // 90
+  // ====
+  pecorineData,
+  linkTwilightData,
+  marioData,
+  waluigiData,
+  sonicData,
+  // 95
+  sephirothData,
+  lucarioData,
+  dartFeldData,
+  leonSKennedyData,
   emptySpace,
   // 100
   emptySpace,

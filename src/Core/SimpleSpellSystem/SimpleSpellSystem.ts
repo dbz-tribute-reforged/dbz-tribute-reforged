@@ -370,6 +370,12 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.genosIncinerationCannon, SimpleSpellSystem.doIncinerationCannon);
     Globals.genericSpellMap.set(Id.genosOvercharge, SimpleSpellSystem.doGenosOvercharge);
+    
+    Globals.genericSpellMap.set(Id.tatsumakiCompress, SimpleSpellSystem.doTatsumakiCompress);
+    Globals.genericSpellMap.set(Id.tatsumakiLift, SimpleSpellSystem.doTatsumakiLift);
+    Globals.genericSpellMap.set(Id.tatsumakiTornado, SimpleSpellSystem.doTatsumakiTornado);
+    Globals.genericSpellMap.set(Id.tatsumakiVector, SimpleSpellSystem.doTatsumakiVector);
+    Globals.genericSpellMap.set(Id.tatsumakiGiantSpear, SimpleSpellSystem.doTatsumakiGiantSpear);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
@@ -2481,7 +2487,8 @@ export module SimpleSpellSystem {
             distance,
             closenessDistanceMult,
             durationRatio,
-            currentPos
+            currentPos,
+            false,
           );
           ++currentTick;
         }
@@ -2536,6 +2543,7 @@ export module SimpleSpellSystem {
     closenessDistanceMult: number,
     durationRatio: number,
     currentPos: Vector2D,
+    affectAllies: boolean,
   ) {
     GroupEnumUnitsInRange(
       Globals.tmpUnitGroup, 
@@ -2548,7 +2556,7 @@ export module SimpleSpellSystem {
     // this.currentCoord.setUnit(input.caster.unit);
     ForGroup(Globals.tmpUnitGroup, () => {
       const target = GetEnumUnit();
-      if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer)) {
+      if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer, affectAllies)) {
 
         Globals.tmpVector.setUnit(target);
         const targetDistance = CoordMath.distance(currentPos, Globals.tmpVector);
@@ -2572,16 +2580,18 @@ export module SimpleSpellSystem {
         );
 
         PathingCheck.moveGroundUnitToCoord(target, Globals.tmpVector);
-        SimpleSpellSystem.groundVortexDamageTarget(
-          target,
-          caster,
-          level,
-          damage,
-          closenessDamageMult,
-          durationDamageMult,
-          closenessRatio,
-          durationRatio
-        );
+        if (!IsUnitAlly(target, casterPlayer)) {
+          SimpleSpellSystem.groundVortexDamageTarget(
+            target,
+            caster,
+            level,
+            damage,
+            closenessDamageMult,
+            durationDamageMult,
+            closenessRatio,
+            durationRatio
+          );
+        }
       }
     });
 
@@ -6007,6 +6017,8 @@ export module SimpleSpellSystem {
     const caster = GetTriggerUnit();
     const abilLvl = GetUnitAbilityLevel(caster, GetSpellAbilityId());
 
+    BlzStartUnitAbilityCooldown(caster, Id.minatoSpiralFlash, 0);
+
     Globals.tmpVector.setUnit(caster);
 
     const ang = GetUnitFacing(caster);
@@ -7060,6 +7072,679 @@ export module SimpleSpellSystem {
     }
   }
 
+  export function doTatsumakiCompress(spellId: number) {
+    const aoe = 500;
+    const kbSpeed = 8;
+    const kbSpeedInc = 12;
+    const bonusSpeedRatio = 1.5;
+    const incSpeedTick = 33;
+    const endTick = 100;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+
+    const seenGroup = CreateGroup();
+    
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks >= endTick) {
+        DestroyGroup(seenGroup);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      Globals.tmpVector.setPos(targetX, targetY);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y, 
+        aoe, null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        // move units to targetX / targetY
+        const unit = GetEnumUnit();
+        if (!UnitHelper.isUnitTargetableForPlayer(unit, player, true)) return;
+
+        Globals.tmpVector2.setUnit(unit);
+        const ang = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
+        const speed = Math.min(
+          kbSpeed + (ticks > incSpeedTick ? kbSpeedInc : 0), 
+          CoordMath.distance(Globals.tmpVector2, Globals.tmpVector)
+        );
+
+        if (
+          !IsUnitInGroup(unit, seenGroup)
+          && SimpleSpellSystem.isUnitTatsumakiBeam(unit)
+          && GetOwningPlayer(unit) == player
+        ) {
+          SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
+          GroupAddUnit(seenGroup, unit);
+        }
+
+        SimpleSpellSystem.doTatsumakiMoveBeam(
+          unit, speed, bonusSpeedRatio, 
+          ang, 
+          Globals.tmpVector2,
+          Globals.tmpVector3,
+          Globals.tmpUnitGroup3
+        );
+      });
+
+      ++ticks;
+    });
+  }
+  
+  export function doTatsumakiLift(spellId: number) {
+    const caster = GetTriggerUnit();
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+
+    createTatsumakiRock(caster, targetX, targetY);
+  }
+
+  export function doTatsumakiTornado(spellId: number) {
+    const dmgMult = BASE_DMG.KAME_DPS * 0.06;
+    const bonusDmgMultPerBeam = 0.25;
+    const bonusSpeedRatio = 1.0;
+    const aoe = 600;
+    const angle = 75;
+    const closenessAngle = 90 + 10;
+    const distance = 30;
+    const closenessDistanceMult = -0.25;
+    const endTick = 166;
+  
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const abilLvl = GetUnitAbilityLevel(caster, spellId);
+
+    if (!customHero) return;
+    Globals.tmpVector3.setPos(GetSpellTargetX(), GetSpellTargetY());
+
+    const sfx = AddSpecialEffect(
+      "Abilities/Spells/Other/Tornado/TornadoElemental.mdl", 
+      Globals.tmpVector3.x, Globals.tmpVector3.y
+    );
+    BlzSetSpecialEffectScale(sfx, 3);
+    
+
+    const seenGroup = CreateGroup();
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks >= endTick) {
+        DestroyGroup(seenGroup);
+        BlzSetSpecialEffectScale(sfx, 0.01);
+        DestroyEffect(sfx);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      } 
+      // const durationRatio = ticks / Math.max(1, maxDuration);
+      
+      let numBeams = 0;
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector3.x, Globals.tmpVector3.y, 
+        aoe, null
+      );
+
+      // this.currentCoord.setUnit(input.caster.unit);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const target = GetEnumUnit();
+        if (UnitHelper.isUnitTargetableForPlayer(target, player, true)) {
+
+          Globals.tmpVector.setUnit(target);
+          const targetDistance = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector);
+
+          // closenessRatio = 1 at 0 distance, 0 at max distance
+          const closenessRatio = 1 - (targetDistance / Math.max(1, aoe));
+
+          const projectionAngle = (
+            angle + 
+            (closenessAngle - angle) * closenessRatio + 
+            CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector3)
+          );
+          const projectionDistance = (
+            distance + 
+            (closenessDistanceMult * distance) * closenessRatio
+          );
+          
+          // Globals.tmpVector.polarProjectCoords(
+          //   Globals.tmpVector, 
+          //   projectionAngle,
+          //   projectionDistance
+          // );
+
+          SimpleSpellSystem.doTatsumakiMoveBeam(
+            target, projectionDistance, bonusSpeedRatio, projectionAngle,
+            Globals.tmpVector, Globals.tmpVector2,
+            Globals.tmpUnitGroup3
+          );
+
+          if (
+            GetOwningPlayer(target) == player 
+            && SimpleSpellSystem.isUnitTatsumakiBeam(target)
+          ) {
+            numBeams++;
+            if (!IsUnitInGroup(target, seenGroup)) {
+              doTatsumakiBeamGroupReset(target);
+              GroupAddUnit(seenGroup, target);
+            }
+          }
+        }
+      });
+      
+      AOEDamage.genericDealDamageToGroup(
+        Globals.tmpUnitGroup,
+        caster,
+        abilLvl,
+        customHero.spellPower,
+        dmgMult,
+        1.0 + bonusDmgMultPerBeam * numBeams,
+        bj_HEROSTAT_INT
+      );
+
+      GroupClear(Globals.tmpUnitGroup);
+
+      // TODO: get tornado order id
+      if (
+        GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF
+        || !UnitHelper.isUnitAlive(caster)
+      ) {
+        ticks += endTick;
+      }
+
+      ++ticks;
+    });
+  }
+
+  export function doTatsumakiVector(spellId: number) {
+    const vectorMaxDist = 2400;
+    const sfxPathSize = 5.0;
+    const sfxMarkerSize = 2.0;
+    const vectorManaCostPct = 0.12;
+    const sfxHeight = 100;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const vectorKey = StringHash("tatsumaki_vector");
+    const vectorXSourceKey = StringHash("tatsumaki_vector_x_source");
+    const vectorYSourceKey = StringHash("tatsumaki_vector_y_source");
+    const vectorXTargetKey = StringHash("tatsumaki_vector_x_target");
+    const vectorYTargetKey = StringHash("tatsumaki_vector_y_target");
+    const vectorAngKey = StringHash("tatsumaki_vector_ang");
+    const vectorDistKey = StringHash("tatsumaki_vector_dist");
+    const vectorSfxKey = StringHash("tatsumaki_vector_sfx");
+    const vectorSfx1Key = StringHash("tatsumaki_vector_sfx_1");
+    const vectorSfx2Key = StringHash("tatsumaki_vector_sfx_2");
+    const vectorTimerKey = StringHash("tatsumaki_vector_timer");
+
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+
+    const abil = BlzGetUnitAbility(caster, Id.tatsumakiVector);
+
+    let sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
+    const vectorState = LoadInteger(Globals.genericSpellHashtable, casterId, vectorKey);
+    if (vectorState == 0) {
+      SaveInteger(Globals.genericSpellHashtable, casterId, vectorKey, 1);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey, targetX);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey, targetY);
+
+      if (!sfx) {
+        sfx = AddSpecialEffect("Abilities/Spells/Other/ANrm/ANrmTarget.mdl", targetX, targetY);
+        SaveEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey, sfx);
+        BlzSetSpecialEffectScale(sfx, sfxPathSize);
+
+        sfx = AddSpecialEffect("Spell_Marker_Green.mdl", targetX, targetY);
+        SaveEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx1Key, sfx);
+
+        sfx = AddSpecialEffect("Spell_Marker_Green.mdl", targetX, targetY);
+        SaveEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key, sfx);
+      }
+      // sfx path
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
+      BlzSetSpecialEffectScale(sfx, sfxPathSize);
+      BlzSetSpecialEffectPitch(sfx, 0);
+      BlzSetSpecialEffectX(sfx, targetX);
+      BlzSetSpecialEffectY(sfx, targetY);
+      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      // sfx1 marker
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx1Key);
+      BlzSetSpecialEffectScale(sfx, sfxMarkerSize);
+      BlzSetSpecialEffectX(sfx, targetX);
+      BlzSetSpecialEffectY(sfx, targetY);
+      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      // sfx2 marker
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
+      BlzSetSpecialEffectScale(sfx, 0.01);
+
+    } else if (vectorState == 1) {
+      SaveInteger(Globals.genericSpellHashtable, casterId, vectorKey, 0);
+      const sourceX = LoadReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey);
+      const sourceY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey);
+      Globals.tmpVector.setPos(sourceX, sourceY);
+      Globals.tmpVector2.setPos(targetX, targetY);
+      const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+      const dist = Math.min(
+        vectorMaxDist, 
+        Math.max(100, CoordMath.distance(Globals.tmpVector, Globals.tmpVector2))
+      );
+      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, dist);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXTargetKey, Globals.tmpVector2.x);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey, Globals.tmpVector2.y);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorAngKey, ang);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorDistKey, dist);
+      
+      // sfx path
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
+      BlzSetSpecialEffectMatrixScale(sfx, sfxPathSize, sfxPathSize, sfxPathSize * dist / 10);
+      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
+      // sfx2
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
+      BlzSetSpecialEffectX(sfx, Globals.tmpVector2.x);
+      BlzSetSpecialEffectY(sfx, Globals.tmpVector2.y);
+      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectScale(sfx, sfxMarkerSize);
+
+      UnitHelper.payMPPercentCost(caster, vectorManaCostPct - 0.01, UNIT_STATE_MAX_MANA);
+    }
+    
+    // set mana cost to 1%
+    const manaCost = vectorState == 1 ? 1 : Math.max(
+      BlzGetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0),
+      Math.floor(0.01 * GetUnitState(caster, UNIT_STATE_MAX_MANA))
+    );
+    BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, manaCost);
+  }
+
+  export function doTatsumakiGiantSpear(spellId: number) {
+    const collisionSpacing = 50;
+    const spearDetonationAOE = 900;
+    const fuseAOE = 800;
+    const fuseSpeed1 = 10;
+    const fuseSpeed2 = 120;
+    const fuseTick = 66;
+    const endTick = 500;
+    const beamDuration = 20;
+    const dmgMult = BASE_DMG.KAME_DPS * 4;
+    const dmgMultPerBeam = BASE_DMG.KAME_DPS * 4;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const casterId = GetHandleId(caster);
+    const casterX = GetUnitX(caster);
+    const casterY = GetUnitY(caster);
+    let targetX = GetSpellTargetX();
+    let targetY = GetSpellTargetY();
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+
+    const fuseGroup = CreateGroup();
+
+    // create tatsumaki giant spear
+    const beam = createTatsumakiGiantSpear(caster, targetX, targetY);
+    const beamId = GetHandleId(beam);
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, beamDuration);
+    PauseUnit(beam, true);
+
+    const sfx = AddSpecialEffect("UlquiorraSpear.mdl", targetX, targetY);
+    BlzSetSpecialEffectYaw(sfx, GetUnitFacing(beam) * CoordMath.degreesToRadians);
+    BlzSetSpecialEffectZ(sfx, GetUnitFlyHeight(beam) + BlzGetUnitZ(beam));
+    const sfx2 = AddSpecialEffect("SpiritBomb.mdl", targetX, targetY);
+    BlzSetSpecialEffectColor(sfx2, 55, 255, 175);
+    BlzSetSpecialEffectZ(sfx2, GetUnitFlyHeight(beam) + BlzGetUnitZ(beam));
+    
+    let hasCollided = false;
+    let fusedBeams = 0;
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > endTick) {
+        Globals.tmpVector.setUnit(beam);
+        AOEDamage.genericDealAOEDamage(
+          Globals.tmpUnitGroup3,
+          caster,
+          Globals.tmpVector.x, Globals.tmpVector.y,
+          spearDetonationAOE,
+          10,
+          ch ? ch.spellPower : 1.0,
+          dmgMult + dmgMultPerBeam * fusedBeams,
+          1.0,
+          bj_HEROSTAT_INT
+        );
+
+        DestroyEffect(sfx);
+        DestroyEffect(sfx2);
+
+        const sfxExplode = AddSpecialEffect(
+          "AncientExplode.mdl", Globals.tmpVector.x, Globals.tmpVector.y
+        );
+        BlzSetSpecialEffectScale(sfxExplode, 3.0);
+        DestroyEffect(sfxExplode);
+
+        DestroyGroup(fuseGroup);
+        FlushChildHashtable(Globals.genericSpellHashtable, beamId);
+        RemoveUnit(beam);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      const facing = GetUnitFacing(beam);
+      if (ticks < fuseTick) {
+        SetUnitX(beam, targetX);
+        SetUnitY(beam, targetY);
+        BlzSetSpecialEffectScale(sfx, 1.0 + 3 * ticks * 0.03);
+      }
+
+      Globals.tmpVector.setUnit(beam);
+      BlzSetSpecialEffectX(sfx, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(sfx, Globals.tmpVector.y);
+      BlzSetSpecialEffectZ(sfx, GetUnitFlyHeight(beam) + BlzGetUnitZ(beam));
+      BlzSetSpecialEffectYaw(sfx, facing * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectX(sfx2, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(sfx2, Globals.tmpVector.y);
+      BlzSetSpecialEffectZ(sfx2, GetUnitFlyHeight(beam) + BlzGetUnitZ(beam));
+      BlzSetSpecialEffectScale(sfx2, 1.0 + 0.2 * fusedBeams);
+
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, Globals.tmpVector.x, Globals.tmpVector.y, fuseAOE, null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          !IsUnitInGroup(unit, fuseGroup)
+          && GetOwningPlayer(unit) == player 
+          && isUnitTatsumakiBeam(unit)
+          && GetUnitName(unit) != GetUnitName(beam)
+        ) {
+          GroupAddUnit(fuseGroup, unit);
+        }
+      });
+      GroupClear(Globals.tmpUnitGroup);
+
+      let index = 0;
+      ForGroup(fuseGroup, () => {
+        const unit = GetEnumUnit();
+        if (UnitHelper.isUnitAlive(unit)) {
+          Globals.tmpVector2.setUnit(unit);
+
+          const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+          const ang = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
+
+          if (dist > fuseSpeed1) {
+            const fuseSpeed = ticks < fuseTick ? fuseSpeed1 : fuseSpeed2;
+            SimpleSpellSystem.doTatsumakiMoveBeam(
+              unit, 
+              Math.min(dist, fuseSpeed), 1.0, 
+              ang, 
+              Globals.tmpVector2, Globals.tmpVector3, Globals.tmpUnitGroup3
+            );
+          } else {
+            // reached the center, destroy beam
+            ++fusedBeams;
+            KillUnit(unit);
+          }
+        }
+        ++index;
+      });
+
+      if (ticks % 16 == 0) {
+        const sfx2 = AddSpecialEffect(
+          "WindCircleFaster.mdl", Globals.tmpVector.x, Globals.tmpVector.y
+        );
+        BlzSetSpecialEffectScale(sfx2, 1.3);
+        DestroyEffect(sfx2);
+      }
+
+      if (ticks == fuseTick) {
+        const sfxReady = AddSpecialEffect(
+          "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", Globals.tmpVector.x, Globals.tmpVector.y
+        );
+        BlzSetSpecialEffectScale(sfxReady, 3.0);
+        DestroyEffect(sfxReady);
+      }
+
+      if (ticks >= fuseTick) {
+        // hit detection for a spear type beam
+        for (let j = 0; j <= 1; ++j) {
+          for (let i = collisionSpacing; i <= fuseAOE - collisionSpacing; i += collisionSpacing) {
+            Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, (facing + 180 * j + 360 % 360), i);
+            // print(j, " ", i, " : ", Globals.tmpVector2.x, " - ", Globals.tmpVector2.y);
+            GroupEnumUnitsInRange(
+              Globals.tmpUnitGroup, 
+              Globals.tmpVector2.x, Globals.tmpVector2.y, 
+              collisionSpacing * 2, null
+            );
+            ForGroup(Globals.tmpUnitGroup, () => {
+              const unit = GetEnumUnit();
+              if (
+                UnitHelper.isUnitTargetableForPlayer(unit, player)
+                && IsUnitType(unit, UNIT_TYPE_HERO)
+              ) {
+                hasCollided = true;
+              }
+            });
+            if (hasCollided) break;
+          }
+          if (hasCollided) break;
+        }
+      }
+
+      if (!UnitHelper.isUnitAlive(beam) || hasCollided) {
+        ticks = endTick;
+      }
+      ++ticks;
+    });
+  }
+
+  export function createTatsumakiRock(caster: unit, x: number, y: number) {
+    const casterKey = StringHash("tatsumaki_caster");
+    const dmgGroupKey = StringHash("tatsumaki_dmg_group");
+
+    const beamDuration = 30;
+    const beamHpMult = 1.0;
+    const rotationsPerSecond = 0.5;
+    const beamHeight = 150;
+
+    const player = GetOwningPlayer(caster);
+    const beam = CreateUnit(
+      player, 
+      Constants.dummyBeamUnitId, 
+      x, y, 
+      CoordMath.angleBetweenXY(
+        GetUnitX(caster), GetUnitY(caster),
+        x, y
+      )
+    );
+    BlzSetUnitName(beam, "Tatsumaki Rock");
+    const beamId = GetHandleId(beam);
+
+    UnitHelper.giveUnitFlying(beam);
+    SetUnitFlyHeight(beam, beamHeight, beamHeight);
+    
+    const maxHp = BeamComponent.calculateBeamHp(
+      10, BASE_DMG.KAME_DPS * beamHpMult, caster, bj_HEROSTAT_INT
+    );
+    BlzSetUnitMaxHP(beam, maxHp);
+    SetUnitLifePercentBJ(beam, 100);
+    SetUnitMoveSpeed(beam, 0);
+    UnitRemoveAbility(beam, Id.attack);
+
+    const sfx = AddSpecialEffect("Doodads/LordaeronSummer/Terrain/LoardaeronRockChunks/LoardaeronRockChunks1.mdl", x, y);
+    BlzSetSpecialEffectScale(sfx, 1.7);
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, beamDuration);
+
+    const sfx2 = AddSpecialEffect("SpiritBomb.mdl", x, y);
+    BlzSetSpecialEffectScale(sfx2, 2.5);
+    BlzSetSpecialEffectColor(sfx2, 155, 205, 155);
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, beamDuration);
+
+    SaveUnitHandle(Globals.genericSpellHashtable, beamId, casterKey, caster);
+
+    const dmgGroup = CreateGroup();
+    SaveGroupHandle(Globals.genericSpellHashtable, beamId, dmgGroupKey, dmgGroup);
+    
+    const beamTimer = TimerManager.getInstance().get();
+    let ticks = 0;
+    TimerStart(beamTimer, 0.03, true, () => {
+      if (!UnitHelper.isUnitAlive(beam)) {
+        if (sfx) DestroyEffect(sfx);
+        if (sfx2) DestroyEffect(sfx2);
+        if (dmgGroup) DestroyGroup(dmgGroup);
+        FlushChildHashtable(Globals.genericSpellHashtable, beamId);
+        TimerManager.getInstance().recycle(beamTimer);
+        return;
+      }
+
+      const newX = GetUnitX(beam);
+      const newY = GetUnitY(beam);
+      const newZ = Math.min(beamHeight, ticks * 0.03 * beamHeight);
+      BlzSetSpecialEffectPosition(sfx, newX, newY, newZ);
+      BlzSetSpecialEffectPosition(sfx2, newX, newY, newZ);
+
+      const ang = (ticks * 0.03 * rotationsPerSecond * 360) % 360;
+      // BlzSetSpecialEffectRoll(sfx, ang * CoordMath.degreesToRadians);
+      // BlzSetSpecialEffectPitch(sfx, ang * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+      ++ticks;
+    });
+    return beam;
+  }
+
+  export function createTatsumakiGiantSpear(caster: unit, x: number, y: number) {
+    const beamHeight = 200;
+    const beamHpMult = 5.0;
+    const casterKey = StringHash("tatsumaki_caster");
+
+    const player = GetOwningPlayer(caster);
+    const beam = CreateUnit(
+      player, 
+      Constants.dummyBeamUnitId, 
+      x, y, 
+      CoordMath.angleBetweenXY(
+        GetUnitX(caster), GetUnitY(caster),
+        x, y
+      )
+    );
+    BlzSetUnitName(beam, "Tatsumaki Giant Spear");
+    const beamId = GetHandleId(beam);
+
+    UnitHelper.giveUnitFlying(beam);
+    SetUnitFlyHeight(beam, beamHeight, beamHeight);
+    
+    const maxHp = BeamComponent.calculateBeamHp(
+      10, BASE_DMG.KAME_DPS * beamHpMult, caster, bj_HEROSTAT_INT
+    );
+    BlzSetUnitMaxHP(beam, maxHp);
+    SetUnitLifePercentBJ(beam, 100);
+    SetUnitMoveSpeed(beam, 0);
+    UnitRemoveAbility(beam, Id.attack);
+
+    SaveUnitHandle(Globals.genericSpellHashtable, beamId, casterKey, caster);
+
+    return beam;
+  }
+
+  export function doTatsumakiMoveBeam(
+    unit: unit, 
+    speed: number,
+    bonusSpeedRatio: number,
+    ang: number,
+    pos1: Vector2D,
+    pos2: Vector2D,
+    tmpGroup: group,
+  ) {
+    pos1.setUnit(unit);
+    const isTatsumakiBeam = SimpleSpellSystem.isUnitTatsumakiBeam(unit);
+    if (isTatsumakiBeam) {
+      pos2.polarProjectCoords(pos1, ang, speed * bonusSpeedRatio);
+      BlzSetUnitFacingEx(unit, ang);
+    } else {
+      pos2.polarProjectCoords(pos1, ang, speed);
+    }
+    PathingCheck.moveGroundUnitToCoord(unit, pos2, speed);
+    if (GetUnitName(unit) == "Tatsumaki Rock") {
+      pos2.setUnit(unit);
+      SimpleSpellSystem.doTatsumakiMoveBeamDamage(
+        unit, Math.min(speed * bonusSpeedRatio, CoordMath.distance(pos1, pos2)),
+        pos1, tmpGroup,
+      );
+    }
+  }
+
+  export function doTatsumakiMoveBeamDamage(
+    beam: unit, 
+    speed: number,
+    tmpPos: Vector2D,
+    tmpGroup: group,
+  ) {
+    const dmgMult = BASE_DMG.KAME_DPS * 4;
+    const aoe = 300;
+    // Globals.tmpUnitGroup and Globals.tmpUnitGroup2 in use
+    // Globals.tmpVector and Globals.tmpVector2 in use
+    const casterKey = StringHash("tatsumaki_caster");
+    const dmgGroupKey = StringHash("tatsumaki_dmg_group");
+
+    const beamId = GetHandleId(beam);
+    const caster = LoadUnitHandle(Globals.genericSpellHashtable, beamId, casterKey);
+    const dmgGroup = LoadGroupHandle(Globals.genericSpellHashtable, beamId, dmgGroupKey);
+    // make caster deal damage in aoe
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const spellPower = ch ? ch.spellPower : 1.0;
+
+    const abilLvl = GetUnitAbilityLevel(caster, Id.tatsumakiLift);
+    
+    tmpPos.setUnit(beam);
+    GroupEnumUnitsInRange(tmpGroup, tmpPos.x, tmpPos.y, aoe, null);
+    ForGroup(tmpGroup, () => {
+      const unit = GetEnumUnit();
+      if (
+        !IsUnitInGroup(unit, dmgGroup)
+        && UnitHelper.isUnitTargetableForPlayer(unit, player)
+      ) {
+        AOEDamage.dealDamageRaw(
+          caster,
+          abilLvl,
+          spellPower,
+          dmgMult,
+          1.0,
+          bj_HEROSTAT_INT,
+          unit,
+        );
+        GroupAddUnit(dmgGroup, unit);
+      }
+    });
+  }
+
+  export function isUnitTatsumakiBeam(unit: unit) {
+    const name = GetUnitName(unit);
+    return (
+      GetUnitTypeId(unit) == Constants.dummyBeamUnitId
+      && (
+        name == "Tatsumaki Rock" 
+        || name == "beam tatsumaki bombs"
+        || name == "Tatsumaki Giant Spear" 
+      )
+    );
+  }
+
+  export function doTatsumakiBeamGroupReset(unit: unit) {
+    const dmgGroupKey = StringHash("tatsumaki_dmg_group");
+    const beamId = GetHandleId(unit);
+    const dmgGroup = LoadGroupHandle(Globals.genericSpellHashtable, beamId, dmgGroupKey);
+    GroupClear(dmgGroup);
+  }
+
   export function doCellMaxWings(spellId: number) {
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -7215,6 +7900,12 @@ export module SimpleSpellSystem {
 
       let newCd = baseCd;
 
+      if (spellId == Id.tatsumakiVector) {
+        if (LoadInteger(Globals.genericSpellHashtable, unitId, StringHash("tatsumaki_vector")) == 0) {
+          // newCd = 3.0
+        }
+      }
+
       if (Globals.clownValue > 0) {
         newCd = newCd * ((100 - Globals.clownValue) * 0.01)
       }
@@ -7231,6 +7922,7 @@ export module SimpleSpellSystem {
       if (UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.SPARE_PARTS)) {
         newCd *= 0.9;
       }
+
 
       if (newCd != baseCd) {
         BlzStartUnitAbilityCooldown(unit, spellId, newCd);

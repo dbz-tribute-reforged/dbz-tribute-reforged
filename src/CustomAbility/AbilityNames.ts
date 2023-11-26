@@ -570,6 +570,16 @@ export module AbilityNames {
     export const STAND_UP: string = "Stand Up!";
   }
 
+  export module Tatsumaki {
+    export const COMPRESSS: string = "Tatsumaki Compress";
+    export const LIFT: string = "Tatsumaki Lift";
+    export const BOMBS: string = "Tatsumaki Bombs";
+    export const TORNADO_OF_TERROR: string = "Tatsumaki Tornado of Terror";
+    export const VECTOR: string = "Tatsumaki Vector";
+    export const GIANT_SPEAR: string = "Tatsumaki Giant Spear";
+    export const TELEKINETIC_SHIELD: string = "Telekinetic Shield!";
+  }
+
 
 
 

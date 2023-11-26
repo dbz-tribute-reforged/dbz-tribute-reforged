@@ -400,6 +400,9 @@ export function CustomPlayerTest() {
         if (GetUnitTypeId(unit) == Id.dende) {
           SaveBoolean(Globals.genericSpellHashtable, GetHandleId(unit), StringHash("dende|heal|active"), false);
         }
+        if (GetUnitAbilityLevel(unit, Id.tatsumakiVector) > 0) {
+          SaveBoolean(Globals.genericSpellHashtable, GetHandleId(unit), StringHash("tatsumaki_vector_stop"), true);
+        }
       }
     }
     return false;
