@@ -3067,6 +3067,11 @@ export function tatsumakiPassive(customHero: CustomHero) {
           );
         }
         customHero.useAbility(shieldAbility.name, input);
+        if (GetUnitLifePercent(customHero.unit) < shieldHpThresholdPct * 0.5) {
+          SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Tatsumaki/Oh.mp3", 400);
+        } else {
+          SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Tatsumaki/BarelyAnAttack.mp3", 2100);
+        }
       }
     }
 

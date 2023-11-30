@@ -7067,8 +7067,14 @@ export module SimpleSpellSystem {
 
     if (lvl == 1) {
       SetUnitAbilityLevel(caster, Id.genosOvercharge, 2);
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge2.mp3", 1500);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge3.mp3", 1000);
+      }
     } else {
       SetUnitAbilityLevel(caster, Id.genosOvercharge, 1);
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge1.mp3", 1500);
     }
   }
 
@@ -7355,6 +7361,17 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectScale(sfx, sfxMarkerSize);
 
       UnitHelper.payMPPercentCost(caster, vectorManaCostPct - 0.01, UNIT_STATE_MAX_MANA);
+
+      const rng = Math.random() * 100;
+      if (rng < 25) { 
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/Disgust.mp3", 2000);
+      } else if (rng < 50) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/GoOnHome.mp3", 1100);
+      } else if (rng < 75) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/OutOfMyWay.mp3", 1100);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/TakeBack.mp3", 2900);
+      }
     }
     
     // set mana cost to 1%
