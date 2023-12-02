@@ -916,7 +916,7 @@ export module SoundHelper {
         break;
 
       // donkey kong
-      case Id.groundPound:
+      case Id.dkGroundPound:
       case Id.dkBarrelRoll:
         if (rng < 25) {
           playSoundOnUnit(unit, "Audio/Voice/DK/Drum.mp3", 1671);
@@ -1146,7 +1146,81 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/FT/SwordOfHope.mp3", 2500);
         }
         break;
-
+      
+      // genos
+      case Id.genosMachineGunBlow:
+        if (unitId == Id.genos) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/MachineGunBlows1.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/MachineGunBlows2.mp3", 2200);
+          }
+        }
+        return;
+      
+      case Id.genosIncinerate:
+        if (unitId == Id.genos) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/TargetAcquired1.mp3", 1500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/TargetAcquired2.mp3", 1100);
+          }
+        }
+        return;
+      
+      case Id.genosIncinerationCannon:
+        if (unitId == Id.genos) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/Incinerate1.mp3", 900);
+          } else if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/Incinerate3.mp3", 1000);
+          } else if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/Incinerate4.mp3", 1000);
+          } else if (rng < 90) {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/Incinerate5.mp3", 1300);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Genos/Incinerate2.mp3", 2700);
+          }
+          playSoundOnUnit(unit, "Audio/Effects/Genos/Incinerate.mp3", 1300);
+        }
+        return;
+      
+      case Id.genosJetDriveArrow:
+        if (unitId == Id.genos) {
+          playSoundOnUnit(unit, "Audio/Voice/Genos/JetDriveArrow.mp3", 2300);
+        }
+        return;
+      
+      case Id.genosRocketStomp:
+        if (unitId == Id.genos) {
+          playSoundOnUnit(unit, "Audio/Voice/Genos/RocketStomp1.mp3", 1500);
+        }
+        playSoundOnUnit(unit, "Audio/Voice/Genos/RocketStomp2.mp3", 1000);
+        return;
+      
+      case Id.genosSpiralIncinerationCannon:
+        if (unitId == Id.genos) {
+          playSoundOnUnit(unit, "Audio/Voice/Genos/IncinerateSpiral.mp3", 1500);
+        }
+        SoundHelper.playTwoSoundsWithDelay(
+          unit,
+          "Audio/Effects/Genos/Spiral1.mp3", 3000, 3.0,
+          "Audio/Effects/Genos/Spiral2.mp3", 5127
+        );
+        return;
+      
+      case Id.genosLightningEye:
+        if (unitId == Id.genos) {
+          playSoundOnUnit(unit, "Audio/Voice/Genos/LightningEye.mp3", 1000);
+        }
+        return;
+      
+      case Id.genosHighVoltageFist:
+        if (unitId == Id.genos) {
+          playSoundOnUnit(unit, "Audio/Voice/Genos/HighVoltageFist.mp3", 1500);
+        }
+        return;
+        
       // ginyu
       case Id.milkyCannon:
         if (unitId == Id.ginyu) {
@@ -1825,6 +1899,14 @@ export module SoundHelper {
         break;
       
       // mario
+      case Id.marioJump:
+        playSoundOnUnit(unit, "Audio/Effects/Mario/Jump.mp3", 720);
+        break;
+
+      case Id.spinJump:
+        playSoundOnUnit(unit, "Audio/Effects/Mario/SpinJump.mp3", 1097);
+        break;
+
       case Id.fireball:
         playSoundOnUnit(unit, "Audio/Effects/Mario/Fireball.mp3", 252);
         break;
@@ -2550,6 +2632,57 @@ export module SoundHelper {
         // playSoundOnUnit(unit, "Audio/Effects/HerosFlute.mp3", 11755);
         break;
       
+      // tatsumaki
+      case Id.tatsumakiCompress:
+        if (unitId == Id.tatsumaki) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Hold.mp3", 1300);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/WhatDoing.mp3", 1200);
+          }
+        }
+        break;
+      
+      case Id.tatsumakiLift:
+        if (unitId == Id.tatsumaki) {
+          if (rng < 33) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Brat.mp3", 1100);
+          } else if (rng < 66) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Runt.mp3", 2100);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/YouJerk.mp3", 700);
+          }
+        }
+        break;
+      
+      case Id.tatsumakiBombs:
+        if (unitId == Id.tatsumaki) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Useless.mp3", 1600);
+          } else if (rng < 55) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/DontWorry.mp3", 1600);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/StopIgnoring.mp3", 1300);
+          }
+        }
+        break;
+      
+      case Id.tatsumakiTornado:
+        if (unitId == Id.tatsumaki) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/CleanUp.mp3", 2300);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Unforgivable.mp3", 1000);
+          }
+        }
+        break;
+      
+      case Id.tatsumakiGiantSpear:
+        if (unitId == Id.tatsumaki) {
+          playSoundOnUnit(unit, "Audio/Voice/Tatsumaki/Rubble.mp3", 2080);
+        }
+        break;
+
       // tien
       case Id.dodonRay:
         if (unitId == Id.tien) {

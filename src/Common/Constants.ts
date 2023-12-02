@@ -24,7 +24,8 @@ export module Globals {
   // to save number of events and triggers
   export const genericSpellTrigger = CreateTrigger();
   export const simpleSpellEffectTrigger = CreateTrigger();
-  export const simpleSpellCDFinishTrigger = CreateTrigger();
+  export const simpleSpellFinishTrigger = CreateTrigger();
+  export const simpleSpellEndTrigger = CreateTrigger();
   export const simpleSpellCDHashtable = InitHashtable();
   export const genericUpgradeTrigger = CreateTrigger();
   export const genericSpellHashtable = InitHashtable();
@@ -32,7 +33,9 @@ export module Globals {
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
   export const minatoHashtable = InitHashtable();
-  export const genericSpellMap = new Map<number, ()=>void>();
+  export const genericSpellMap = new Map<number, (spellId: number)=>void>();
+  export const genericSpellFinishMap = new Map<number, (spellId: number)=>void>();
+  export const genericSpellEndMap = new Map<number, (spellId: number)=>void>();
   export const linkedSpellsMap = new Map<number, (unit: unit, cd: number)=>void>();
 
   export const barrelMoveTrigger = CreateTrigger();
@@ -157,10 +160,11 @@ export module Constants {
   export const AINZ_MAGIC_BOOST_MP_REGEN_MULT = 0.25;
   export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
+  export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
-  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.05, 0.1, 0.15, 0.2];
+  export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.04, 0.08, 0.12, 0.16];
 
   export const NUOVA_HEAT_ARMOR_HP_MULT = -2;
   export const MAJIN_BUU_FAT_MP_REGEN_MULT = -0.75;
@@ -294,6 +298,10 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
   export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
+  export const SLOW_GENERIC_25_PCT_1S = FourCC('A03T');
+  export const SLOW_GENERIC_50_PCT_1S = FourCC('A00K');
+  export const SLOW_GENERIC_75_PCT_1S = FourCC('A04U');
+
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -339,6 +347,7 @@ export module Buffs {
   export const TIMED_LIFE = FourCC("BTLF");
   export const STUNNED = FourCC("BPSE");
   export const LIFE_REGENERATION_AURA = FourCC("B068"); // fountain
+  export const BANISHED = FourCC("BHbn");
 
   export const HEROS_SONG = FourCC("B01H");
 
@@ -464,6 +473,7 @@ export module Id {
   export const ghostNonVis = FourCC("Agho");
   export const ghostVisible = FourCC("Aeth");
   export const locust = FourCC("Aloc");
+  export const flagArmor100k = FourCC("A00G");
 
   export const useItem = FourCC("A0VF");
   export const itemAndroidBomb = FourCC('A0NS');
@@ -800,6 +810,17 @@ export module Id {
   export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
 
+  export const genos = FourCC("H00P");
+  export const genosMachineGunBlow = FourCC("A04T");
+  export const genosIncinerate = FourCC("A00P");
+  export const genosIncinerationCannon = FourCC("A01J");
+  export const genosJetDriveArrow = FourCC("A030");
+  export const genosRocketStomp = FourCC("A03U");
+  export const genosSpiralIncinerationCannon = FourCC("A04V");
+  export const genosLightningEye = FourCC("A050");
+  export const genosHighVoltageFist = FourCC("A05K");
+  export const genosOvercharge = FourCC("A05L");
+
   export const getiStarHero = FourCC("H002");
   export const metalCoolerClone = FourCC("H01Z");
   export const getiStarUpgradeCDR = FourCC("R00M");
@@ -1057,8 +1078,8 @@ export module Id {
   export const roshiMaxPower = FourCC("A0FH");
 
   export const mario = FourCC("H09Q");
-  export const jump = FourCC("A0TJ");
-  export const groundPound = FourCC("A0TK");
+  export const marioJump = FourCC("A0TJ");
+  export const marioGroundPound = FourCC("A0TK");
   export const hammerTime = FourCC("A0TL");
   export const spinJump = FourCC("A0TM");
   export const superCape = FourCC("A0TN");
@@ -1205,6 +1226,14 @@ export module Id {
   export const herosFlute = FourCC("A0IB");
   export const braveSwordAttack = FourCC('A0IA');
 
+  export const tatsumaki = FourCC("H01C");
+  export const tatsumakiCompress = FourCC("A05M");
+  export const tatsumakiLift = FourCC("A05N");
+  export const tatsumakiBombs = FourCC("A05O");
+  export const tatsumakiTornado = FourCC("A05P");
+  export const tatsumakiVector = FourCC("A05R");
+  export const tatsumakiGiantSpear = FourCC("A062");
+
   export const tien = FourCC("H055");
   export const tienClone = FourCC("H05Y");
   export const dodonRay = FourCC("A06X");
@@ -1225,6 +1254,7 @@ export module Id {
   export const justiceHold2 = FourCC("A0PM");
   export const justicePoseToppo = FourCC("A0PF");
   export const toppoGodOfDestruction = FourCC("A0PC");
+  export const toppoHakai = FourCC("A0PH");
 
   export const upa = FourCC("H099");
   export const javelinThrow = FourCC("A0OH");

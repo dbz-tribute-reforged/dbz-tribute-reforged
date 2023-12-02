@@ -9,6 +9,10 @@ export module CoordMath {
     return radiansToDegrees * Atan2(target.y - source.y, target.x - source.x);
   }
 
+  export function angleBetweenXY(x1: number, y1: number, x2: number, y2: number): number {
+    return radiansToDegrees * Atan2(y2 - y1, x2 - x1);
+  }
+
   export function distance(source: Vector2D, target: Vector2D): number {
     const xDifference = source.x - target.x;
     const yDifference = source.y - target.y;

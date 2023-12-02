@@ -1901,6 +1901,18 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 15,
   },
+  {
+    name: "dash ground point genos jet drive arrow",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 16,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 30,
+  },
   // ---
   // saga zanzo
   {

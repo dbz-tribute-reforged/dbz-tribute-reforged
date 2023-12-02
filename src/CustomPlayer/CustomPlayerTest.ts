@@ -26,9 +26,9 @@ import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
-import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -57,7 +57,7 @@ export function transferHostPlayer() {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 
         15, 
-        "Player " + (Constants.hostPlayerOrder[i]+1).toString() + " is now the host"
+        "Player " + I2S(Constants.hostPlayerOrder[i]+1) + " is now the host"
       );
       break;
     }
@@ -400,6 +400,9 @@ export function CustomPlayerTest() {
         if (GetUnitTypeId(unit) == Id.dende) {
           SaveBoolean(Globals.genericSpellHashtable, GetHandleId(unit), StringHash("dende|heal|active"), false);
         }
+        if (GetUnitAbilityLevel(unit, Id.tatsumakiVector) > 0) {
+          SaveBoolean(Globals.genericSpellHashtable, GetHandleId(unit), StringHash("tatsumaki_vector_stop"), true);
+        }
       }
     }
     return false;
@@ -448,6 +451,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil3, OSKEY_V, 0, true);
   addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
   addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
+  addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
   
 
   /*
@@ -862,6 +866,35 @@ export function CustomPlayerTest() {
 
       DestroyGroup(group);
     });
+
+
+    const nukeTrigger = CreateTrigger();
+    TriggerRegisterPlayerChatEvent(nukeTrigger, Player(0), "-nuke", true);
+    TriggerAddAction(nukeTrigger, () => {
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      const ch = Globals.customPlayers[playerId].getLastSelectedOwnedCustomHero();
+      if (!ch) return;
+
+      GroupEnumUnitsInRect(Globals.tmpUnitGroup, GetEntireMapRect(), null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const target = GetEnumUnit();
+        if (UnitHelper.isUnitTargetableForPlayer(target, player, false)) {
+          SetUnitState(target, UNIT_STATE_LIFE, 1);
+          UnitDamageTarget(
+            ch.unit, 
+            target, 
+            1000, 
+            false, false, 
+            ATTACK_TYPE_HERO, 
+            DAMAGE_TYPE_NORMAL,
+            WEAPON_TYPE_WHOKNOWS
+          );
+        }
+      });
+      GroupClear(Globals.tmpUnitGroup);
+    });
+
 
     const statsTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -1307,7 +1340,6 @@ export function CustomPlayerTest() {
 
   SetupCustomAbilityRefresh();
   SoundHelper.SetupSpellSoundEffects();
-  DestroyTimer(GetExpiredTimer());
 }
 
 export function skurvyMirrorProcessOrder() {
@@ -1379,7 +1411,8 @@ export function SetupTreeOfMightSapling() {
       
       // grow wait
       let counter = 0;
-      TimerStart(CreateTimer(), 0.03, true, () => {
+      const timer = TimerManager.getInstance().get();
+      TimerStart(timer, 0.03, true, () => {
         if (counter > 1000) {
           // drop
           CreateItem(ItemConstants.treeOfMightFruit, x, y);
@@ -1391,7 +1424,7 @@ export function SetupTreeOfMightSapling() {
           DestroyEffect(explodeSfx);
           DestroyEffect(sfx);
           DestroyEffect(sfx2);
-          DestroyTimer(GetExpiredTimer());
+          TimerManager.getInstance().recycle(timer);
           return;
         }
 

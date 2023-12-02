@@ -221,8 +221,8 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0T6'), AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH],
     
     // mario
-    [Id.jump, AbilityNames.Mario.JUMP],
-    [Id.groundPound, AbilityNames.Mario.GROUND_POUND],
+    [Id.marioJump, AbilityNames.Mario.JUMP],
+    [Id.marioGroundPound, AbilityNames.Mario.GROUND_POUND],
     [Id.hammerTime, AbilityNames.Mario.HAMMER_TIME],
     [Id.spinJump, AbilityNames.Mario.SPIN_JUMP],
     [Id.superCape, AbilityNames.Mario.SUPER_CAPE],
@@ -479,6 +479,23 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.mightGuyHirudora, AbilityNames.MightGuy.HIRUDORA],
     [Id.mightGuySekizo, AbilityNames.MightGuy.SEKIZO],
     [Id.mightGuyYagai, AbilityNames.MightGuy.YAGAI],
+
+    [Id.genosMachineGunBlow, AbilityNames.Genos.MACHINE_GUN_BLOWS],
+    [Id.genosIncinerate, AbilityNames.Genos.INCINERATE],
+    [Id.genosIncinerationCannon, AbilityNames.Genos.INCINERATION_CANNON],
+    [Id.genosJetDriveArrow, AbilityNames.Genos.JET_DRIVE_ARROW],
+    [Id.genosRocketStomp, AbilityNames.Genos.ROCKET_STOMP],
+    [Id.genosSpiralIncinerationCannon, AbilityNames.Genos.SPIRAL_INCINERATION_CANNON],
+    [Id.genosLightningEye, AbilityNames.Genos.LIGHTNING_EYE],
+    [Id.genosHighVoltageFist, AbilityNames.Genos.HIGH_VOLTAGE_FIST],
+    [Id.genosOvercharge, AbilityNames.Genos.OVERCHARGE],
+
+    [Id.tatsumakiCompress, AbilityNames.Tatsumaki.COMPRESSS],
+    [Id.tatsumakiLift, AbilityNames.Tatsumaki.LIFT],
+    [Id.tatsumakiBombs, AbilityNames.Tatsumaki.BOMBS],
+    [Id.tatsumakiTornado, AbilityNames.Tatsumaki.TORNADO_OF_TERROR],
+    [Id.tatsumakiVector, AbilityNames.Tatsumaki.VECTOR],
+    [Id.tatsumakiGiantSpear, AbilityNames.Tatsumaki.GIANT_SPEAR],
 
 
 

@@ -611,6 +611,28 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.YAGAI,
       AbilityNames.MightGuy.STRONG_FIST,
     ]],
+
+    [Id.genos, [
+      AbilityNames.Genos.MACHINE_GUN_BLOWS,
+      AbilityNames.Genos.INCINERATE,
+      AbilityNames.Genos.INCINERATION_CANNON,
+      AbilityNames.Genos.JET_DRIVE_ARROW,
+      AbilityNames.Genos.ROCKET_STOMP,
+      AbilityNames.Genos.SPIRAL_INCINERATION_CANNON,
+      AbilityNames.Genos.LIGHTNING_EYE,
+      AbilityNames.Genos.HIGH_VOLTAGE_FIST,
+      AbilityNames.Genos.OVERCHARGE,
+    ]],
+    
+    [Id.tatsumaki, [
+      AbilityNames.Tatsumaki.COMPRESSS,
+      AbilityNames.Tatsumaki.LIFT,
+      AbilityNames.Tatsumaki.BOMBS,
+      AbilityNames.Tatsumaki.TORNADO_OF_TERROR,
+      AbilityNames.Tatsumaki.VECTOR,
+      AbilityNames.Tatsumaki.GIANT_SPEAR,
+      AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+    ]],
     
 
 
@@ -715,7 +737,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.DYNAMIC_ENTRY, AbilityNames.MightGuy.ASA_KUJAKU,
       AbilityNames.MightGuy.FIFTH_GATE, AbilityNames.MightGuy.SIXTH_GATE,
       AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
-      
+      AbilityNames.Genos.MACHINE_GUN_BLOWS, AbilityNames.Genos.OVERCHARGE,
+      AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

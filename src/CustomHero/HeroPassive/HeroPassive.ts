@@ -12,6 +12,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { SoundHelper } from "Common/SoundHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -66,8 +67,8 @@ export class HeroPassiveManager {
 
   public setupHero(customHero: CustomHero) {
     setupRegenTimer(customHero);
-    const unitId = GetUnitTypeId(customHero.unit);
-    switch (unitId) {
+    const unitTypeId = GetUnitTypeId(customHero.unit);
+    switch (unitTypeId) {
       case HeroPassiveData.KID_BUU:
         kidBuuPassive(customHero);
         break;
@@ -128,6 +129,12 @@ export class HeroPassiveManager {
       case Id.mightGuy:
         mightGuyPassive(customHero);
         break;
+      case Id.genos:
+        genosPassive(customHero);
+        break;
+      case Id.tatsumaki:
+        tatsumakiPassive(customHero);
+        break;
       default:
         break;
     }
@@ -141,6 +148,10 @@ export function kidBuuPassive(customHero: CustomHero) {
     tapionPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, Id.vacuumWave) > 0) {
     lucarioPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) > 0) {
+    genosPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.tatsumakiVector) > 0) {
+    tatsumakiPassive(customHero);
   }
 }
 
@@ -2066,21 +2077,21 @@ export function gutsPassive(customHero: CustomHero) {
         case Id.gutsHeavySlam:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsHeavySlam, Id.gutsHeavySlash, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, slashKey, 0);
           break;
         case Id.gutsBurstingFlame:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBurstingFlame, Id.gutsCannonSlash, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, cannonSlashKey, 0);
           break;
         case Id.gutsRelentlessAssault:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsRelentlessAssault, Id.gutsRecklessCharge, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, chargeKey, 0);
           break;
@@ -2094,21 +2105,21 @@ export function gutsPassive(customHero: CustomHero) {
           );
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBerserk, Id.gutsRage, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, rageKey, 0);
           break;
         case Id.gutsBeastOfDarkness:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsBeastOfDarkness, Id.gutsBerserkerArmor, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, armorKey, 0);
           break;
         case Id.gutsDragonCannonShot:
           UnitHelper.abilitySwap(
             player, customHero.unit, Id.gutsDragonCannonShot, Id.gutsCannonArm, 
-            true, true, false, false, false, -1
+            false, 0, true, true, false, false, false, 
           );
           SaveReal(Globals.genericSpellHashtable, unitId, cannonKey, 0);
           break;
@@ -2558,7 +2569,7 @@ export function ainzPassive(customHero: CustomHero) {
 }
 
 export function demiurgePassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroUnitTypeId = GetUnitTypeId(customHero.unit);
   const hellfireMantleSP = 0.15;
   const hellfireMantleManaDrain = 0.015;
   const hellfireMantleDmgBlockPct = 0.25;
@@ -2679,7 +2690,7 @@ export function demiurgePassive(customHero: CustomHero) {
       // const attacker = GetEventDamageSource();
       // const attacked = BlzGetEventDamageTarget();
       if (
-        GetUnitTypeId(attacker) == heroId &&
+        GetUnitTypeId(attacker) == heroUnitTypeId &&
         GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
         IsUnitType(attacked, UNIT_TYPE_HERO)
       ) {
@@ -2758,7 +2769,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
 }
 
 export function minatoPassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroId = GetHandleId(customHero.unit);
 
   const timer = CreateTimer();
   customHero.addTimer(timer);
@@ -2841,7 +2852,7 @@ export function minatoPassive(customHero: CustomHero) {
 }
 
 export function mightGuyPassive(customHero: CustomHero) {
-  const heroId = GetUnitTypeId(customHero.unit);
+  const heroId = GetHandleId(customHero.unit);
 
   const timer = CreateTimer();
   customHero.addTimer(timer);
@@ -2918,6 +2929,242 @@ export function mightGuyPassive(customHero: CustomHero) {
   );
 }
 
+export function genosPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+  const overchargeSPPerSecond = 0.05;
+  const overchargeMaxSP = 0.2;
+  const overchargeManaDrain = 0.05;
+  const overchargeTickRate = 0.03;
+  const bonusMs = 5;
+
+  const overchargeTimer = CreateTimer();
+  customHero.addTimer(overchargeTimer);
+
+  const overChargeAbil = customHero.getAbility(AbilityNames.Genos.OVERCHARGE);
+
+  let tempMultDelay = 0;
+  let overchargeState = 0;
+  let overchargeTempSP = 0;
+  let overchargeSfx = null;
+  TimerStart(overchargeTimer, overchargeTickRate, true, () => {
+    if (overchargeState == 0) {
+      if (overChargeAbil.isInUse()) {
+        overChargeAbil.endAbility();
+      }
+      if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+        // do overcharge
+        overchargeState = 1;
+        overchargeTempSP = 0;
+        overchargeSfx = AddSpecialEffectTarget(
+          "GEHLightningOrb.mdl", 
+          customHero.unit, "origin"
+        );
+        DestroyEffect(
+          AddSpecialEffect(
+            "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", 
+            GetUnitX(customHero.unit), GetUnitY(customHero.unit)
+          )
+        );
+      }
+    }
+
+    if (overchargeState == 1) {
+      if (
+        UnitHelper.isUnitDead(customHero.unit)
+        || GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 1
+        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain
+      ) {
+        overchargeState = 2;
+      } else {
+        const currentMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
+        const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+        const mpDrain = maxMana * overchargeManaDrain * overchargeTickRate;
+        SetUnitState(customHero.unit, UNIT_STATE_MANA, currentMana - mpDrain);
+
+        if (overchargeTempSP < overchargeMaxSP) {
+          customHero.removeSpellPower(overchargeTempSP);
+          overchargeTempSP = Math.min(
+            overchargeMaxSP,
+            overchargeTempSP + overchargeSPPerSecond * overchargeTickRate
+          );
+          customHero.addSpellPower(overchargeTempSP);
+        }
+      }
+    }
+
+    if (overchargeState == 2) {
+      overChargeAbil.endAbility();
+      overchargeState = 0;
+      customHero.removeSpellPower(overchargeTempSP);
+      overchargeTempSP = 0;
+      DestroyEffect(overchargeSfx);
+      SetUnitAbilityLevel(customHero.unit, Id.genosOvercharge, 1);
+    }
+
+    if (GetUnitLifePercent(customHero.unit) > 99) {
+      if (tempMultDelay == 0) {
+        udg_StatMultUnit = customHero.unit;
+        udg_MoroStatMultReal = 0.25;
+        TriggerExecute(gg_trg_Moro_Modify_Temp_Mult);
+      }
+      tempMultDelay = (tempMultDelay+1) % 33;
+    }
+  });
+}
+
+
+export function tatsumakiPassive(customHero: CustomHero) {
+  const maxDist = 2400;
+  const minSpeed = 5;
+  const distScaledSpeed = 45;
+  const bonusSpeedRatio = 2;
+  const vectorAOE = 200;
+  const vectorManaCostPct = 0.03;
+  const shieldHpThresholdPct = 70;
+
+  const caster = customHero.unit;
+  const casterId = GetHandleId(caster);
+  const vectorKey = StringHash("tatsumaki_vector");
+  const vectorXSourceKey = StringHash("tatsumaki_vector_x_source");
+  const vectorYSourceKey = StringHash("tatsumaki_vector_y_source");
+  const vectorXTargetKey = StringHash("tatsumaki_vector_x_target");
+  const vectorYTargetKey = StringHash("tatsumaki_vector_y_target");
+  const vectorAngKey = StringHash("tatsumaki_vector_ang");
+  const vectorDistKey = StringHash("tatsumaki_vector_dist");
+  const vectorSfxKey = StringHash("tatsumaki_vector_sfx");
+  const vectorSfx1Key = StringHash("tatsumaki_vector_sfx_1");
+  const vectorSfx2Key = StringHash("tatsumaki_vector_sfx_2");
+  const vectorStop = StringHash("tatsumaki_vector_stop");
+
+  const vectorTimer = CreateTimer();
+  customHero.addTimer(vectorTimer);
+  
+  const shieldAbility = customHero.getAbility(AbilityNames.Tatsumaki.TELEKINETIC_SHIELD);
+
+  const targetPos = new Vector2D();
+  const seenGroup = CreateGroup(); // leaks
+  let isSeen = false;
+  TimerStart(vectorTimer, 0.03, true, () => {
+    if (
+      !shieldAbility.isOnCooldown()
+      && UnitHelper.isUnitAlive(customHero.unit)
+      && GetUnitLifePercent(customHero.unit) < shieldHpThresholdPct
+    ) {
+      const input = new CustomAbilityInput(
+        Id.tatsumakiCompress,
+        customHero, 
+        GetOwningPlayer(customHero.unit),
+        10,
+        targetPos,
+        targetPos,
+        targetPos,
+        customHero.unit,
+        customHero.unit,
+      );
+
+      if (customHero.canCastAbility(shieldAbility.name, input)) {
+        if (Globals.showAbilityFloatingText) {
+          TextTagHelper.showPlayerColorTextOnUnit(
+            shieldAbility.name, 
+            GetPlayerId(GetOwningPlayer(customHero.unit)), 
+            customHero.unit
+          );
+        }
+        customHero.useAbility(shieldAbility.name, input);
+        if (GetUnitLifePercent(customHero.unit) < shieldHpThresholdPct * 0.5) {
+          SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Tatsumaki/Oh.mp3", 400);
+        } else {
+          SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Voice/Tatsumaki/BarelyAnAttack.mp3", 2100);
+        }
+      }
+    }
+
+    // vector
+    const vectorState = LoadInteger(Globals.genericSpellHashtable, casterId, vectorKey);
+    const vectorStopState = LoadBoolean(Globals.genericSpellHashtable, casterId, vectorStop);
+
+    if (vectorStopState) {
+      // force deactivation
+      SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, false);
+      SaveInteger(Globals.genericSpellHashtable, casterId, vectorKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorXTargetKey, 0);
+      SaveReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey, 0);
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
+      if (sfx) BlzSetSpecialEffectScale(sfx, 0.01);
+      const sfx1 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx1Key);
+      if (sfx1) BlzSetSpecialEffectScale(sfx1, 0.01);
+      const sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
+      if (sfx2) BlzSetSpecialEffectScale(sfx2, 0.01);
+      return;
+    }
+
+    if (vectorState == 1) {
+      if (isSeen) GroupClear(seenGroup);
+      isSeen = false;
+      return;
+    }
+    const sourceX = LoadReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey);
+    const sourceY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYSourceKey);
+    const targetX = LoadReal(Globals.genericSpellHashtable, casterId, vectorXTargetKey);
+    const targetY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey);
+    if (sourceX == 0 && sourceY == 0 && targetX == 0 && targetY == 0) return;
+
+    if (GetUnitManaPercent(customHero.unit) >= vectorManaCostPct * 100 && !vectorStopState) {
+      UnitHelper.payMPPercentCost(caster, vectorManaCostPct * 0.03, UNIT_STATE_MAX_MANA);
+    } else {
+      SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, true);
+      return;
+    }
+
+    const ang = LoadReal(Globals.genericSpellHashtable, casterId, vectorAngKey);
+    const dist = LoadReal(Globals.genericSpellHashtable, casterId, vectorDistKey);
+    
+    const player = GetOwningPlayer(customHero.unit);
+
+    const speed = minSpeed + (1 - dist / maxDist) * distScaledSpeed;
+    const intervals = Math.floor(dist / speed);
+    Globals.tmpVector.setPos(sourceX, sourceY);
+
+    GroupClear(Globals.tmpUnitGroup2);
+    for (let i = 0; i < intervals; ++i) {
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, speed);
+      GroupEnumUnitsInRange(
+        Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y, 
+        vectorAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
+          || IsUnitInGroup(unit, Globals.tmpUnitGroup2)
+        ) return;
+        if (
+          !IsUnitInGroup(unit, seenGroup) 
+          && SimpleSpellSystem.isUnitTatsumakiBeam(unit)
+          && GetOwningPlayer(unit) == player
+        ) {
+          isSeen = true;
+          SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
+          GroupAddUnit(seenGroup, unit);
+        }
+        SimpleSpellSystem.doTatsumakiMoveBeam(
+          unit, 
+          speed, bonusSpeedRatio, 
+          ang, 
+          Globals.tmpVector2, 
+          Globals.tmpVector3,
+          Globals.tmpUnitGroup3
+        );
+        GroupAddUnit(Globals.tmpUnitGroup2, unit);
+      });
+    }
+    GroupClear(Globals.tmpUnitGroup2);
+  });
+}
+
 export function setupRegenTimer(customHero: CustomHero) {
   const regenTimer = CreateTimer();
   customHero.addTimer(regenTimer);
@@ -2929,7 +3176,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     const heroInt = GetHeroInt(customHero.unit, true);
     const sumStats = 0.33 * (heroStr + heroAgi + heroInt);
 
-    const unitId = GetUnitTypeId(customHero.unit);
+    const unitTypeId = GetUnitTypeId(customHero.unit);
 
     const guyGateLvl = GetUnitAbilityLevel(customHero.unit, Id.mightGuyGateArmor);
     const hasBuuFat = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.MAJIN_BUU_FAT);
@@ -2949,7 +3196,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
       spMult += 1;
     }
-    if (unitId == Id.saitama) {
+    if (unitTypeId == Id.saitama) {
       spMult += Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
     } 
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
@@ -2960,6 +3207,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (guyGateLvl > 1) {
       spMult += Constants.MIGHT_GUY_GATE_SP_MULTS[guyGateLvl-1]
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+      spMult += Constants.GENOS_OVERCHARGE_REGEN_MULT;
     }
     const incSp = (
       Constants.REGEN_TICK_RATE

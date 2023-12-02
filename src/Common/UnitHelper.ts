@@ -90,7 +90,7 @@ export module UnitHelper {
   ): boolean {
     return (
       (IsUnitEnemy(unit, caster) || affectAllies)
-      && !BlzIsUnitInvulnerable(unit)
+      && !isUnitInvul(unit)
       && !UnitHelper.isUnitDead(unit)
     );
   }
@@ -98,7 +98,7 @@ export module UnitHelper {
   export function isUnitMoveable(unit: unit) {
     return (
       !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
-      && !BlzIsUnitInvulnerable(unit)
+      && !isUnitInvul(unit)
       && !UnitHelper.isUnitDead(unit)
     );
   }
@@ -123,6 +123,39 @@ export module UnitHelper {
     return (
       UnitHasBuffBJ(unit, Constants.buffImmortal)
       || GetUnitAbilityLevel(unit, Constants.wishImmortalAbility) > 0
+    );
+  }
+
+  export function isUnitInvul(unit: unit) {
+    return (
+      BlzIsUnitInvulnerable(unit)
+      || GetUnitAbilityLevel(unit, Buffs.BANISHED) > 0
+    );
+  } 
+
+  export function isUnitHakaiDamageable(unit: unit, caster: player): boolean {
+    return (
+      isUnitTargetableForPlayer(unit, caster) 
+      && !isImmortal(unit)
+      && !isUnitInvul(unit)
+    );
+  }
+
+  export function isUnitHakaiInstantDestroyable(unit: unit, caster: player) {
+    return (
+      isUnitHakaiDamageable(unit, caster)
+      && !IsUnitType(unit, UNIT_TYPE_HERO)
+      && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+    )
+  }
+
+  export function dealHakaiDamage(caster: unit, target: unit) {
+    SetUnitState(target, UNIT_STATE_LIFE, 1);
+    UnitDamageTarget(
+      caster, target, 1000, 
+      false, false, 
+      ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+      WEAPON_TYPE_WHOKNOWS
     );
   }
 
@@ -162,12 +195,13 @@ export module UnitHelper {
     unit: unit,
     srcAbilityId: number,
     destAbilityId: number,
+    linkCooldowns: boolean = false,
+    cdOffsets: number = 0, // default: cds are not linked
     enableDest: boolean = true,
     disableSrc: boolean = true,
     addAbility: boolean = true,
     makePermanent: boolean = true,
     equalizeLevels: boolean = true,
-    linkCooldowns: number = 0,
   ) {
     if (enableDest) {
       SetPlayerAbilityAvailable(player, destAbilityId, true);
@@ -190,9 +224,9 @@ export module UnitHelper {
         SetUnitAbilityLevel(unit, destAbilityId, srcAbilityLevel);
       }
     }
-    if (linkCooldowns > 0) {
+    if (linkCooldowns) {
       BlzStartUnitAbilityCooldown(unit, destAbilityId, 
-        linkCooldowns + 
+        cdOffsets + 
         Math.max(
           BlzGetUnitAbilityCooldownRemaining(unit, srcAbilityId),
           BlzGetUnitAbilityCooldownRemaining(unit, destAbilityId)

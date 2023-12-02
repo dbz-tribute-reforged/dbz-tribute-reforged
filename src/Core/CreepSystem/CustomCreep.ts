@@ -6,14 +6,11 @@ export class CustomCreep {
     public unit: unit, 
     public unitTypeId: number = GetUnitTypeId(unit),
     public owner: player,
-    public position: Vector2D,
+    public posX: number,
+    public posY: number,
     public facing: number,
     public isUpgrading: boolean = false,
   ) {
 
-  }
-
-  shallowCopy(): CustomCreep {
-    return Object.assign({}, this);
   }
 }

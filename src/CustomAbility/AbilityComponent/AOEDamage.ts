@@ -90,6 +90,22 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
   }
 
+  static calculateDamageRawForced(
+    caster: unit,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    forcedStat: number
+  ): number {
+    return (
+      damageMult 
+      * AOEDamage.getIntDamageMult(caster) 
+      * spellLevel * spellPower * damageDataMultiplier
+      * forcedStat
+    );
+  }
+
   static calculateDamageRaw(
     caster: unit,
     spellLevel: number,

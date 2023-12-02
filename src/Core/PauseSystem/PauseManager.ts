@@ -25,7 +25,7 @@ export class PauseManager {
     }
   }
 
-  unpause(unit: unit, doVul: boolean = true) {
+  unpause(unit: unit, doVul: boolean = false) {
     if (IsUnitType(unit, UNIT_TYPE_HERO)) { 
       const key = GetHandleId(unit);
       const count = this.map.get(key);

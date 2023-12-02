@@ -14,6 +14,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
 
   static readonly YAW_SOURCE_FACING = 0;
   static readonly YAW_SOURCE_TO_TARGET = 1;
+  static readonly YAW_SOURCE_UNIT_TO_TARGET = 2;
 
   protected sfxCoords: Vector2D;
 
@@ -72,9 +73,14 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     let yaw = 0;
     if (this.sfxYawType == SfxComponent.YAW_SOURCE_FACING) {
       yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
-    } else {
+    } else if (this.sfxYawType == SfxComponent.YAW_SOURCE_TO_TARGET) {
       yaw = (
         CoordMath.angleBetweenCoords(this.sfxCoords, this.getActualTargetPoint(input)) + 360
+      ) * CoordMath.degreesToRadians;
+    } else if (this.sfxYawType == SfxComponent.YAW_SOURCE_UNIT_TO_TARGET) {
+      yaw = CoordMath.angleBetweenXY(
+        GetUnitX(source), GetUnitY(source),
+        this.getActualTargetPoint(input).x, this.getActualTargetPoint(input).y
       ) * CoordMath.degreesToRadians;
     }
     const height = (this.useHeight) ? GetUnitFlyHeight(source) + BlzGetUnitZ(source) : 0;

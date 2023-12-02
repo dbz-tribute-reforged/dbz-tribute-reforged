@@ -484,7 +484,7 @@ export class KOTHGame {
     if (this.gameCounter == 0) {
       this.moveTeamsToArena(Constants.defaultTeam1, this.currentStage.spawn1);
       this.moveTeamsToArena(Constants.defaultTeam2, this.currentStage.spawn2);
-      TriggerExecute(gg_trg_Auto_Transform);
+      TriggerExecute(gg_trg_Auto_Transform_Loop);
       TimerStart(this.showTimer, TournamentData.kothArenaTimeout, false, null);
     }
 
@@ -776,7 +776,7 @@ export class KOTHGame {
         
         // mark items to not drop on death
       });
-      PanCameraToTimedForPlayer(player, pos.x, pos.y, 0);
+      PanCameraToTimedForPlayer(player, pos.x, pos.y, 0.1);
     }
   }
 
@@ -822,13 +822,13 @@ export class KOTHGame {
       });
 
       if (this.isFinished()) {
-        PanCameraToTimedForPlayer(player, spawn.x, spawn.y, 0);
+        PanCameraToTimedForPlayer(player, spawn.x, spawn.y, 0.1);
       } else {
         PanCameraToTimedForPlayer(
           player, 
           this.currentStage.capturePoint.x, 
           this.currentStage.capturePoint.y,
-          0
+          0.1
         );
         const timer = TimerManager.getInstance().get();
         TimerStart(timer, TournamentData.kothArenaCamDelay1, false, () => {

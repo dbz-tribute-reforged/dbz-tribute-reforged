@@ -557,6 +557,28 @@ export module AbilityNames {
     export const STRONG_FIST: string = "Might Guy Strong Fist";
   }
 
+  export module Genos {
+    export const MACHINE_GUN_BLOWS: string = "Genos Machine Gun Blows";
+    export const INCINERATE: string = "Genos Incinerate";
+    export const INCINERATION_CANNON: string = "Genos Incineration Cannon";
+    export const JET_DRIVE_ARROW: string = "Genos Jet Drive Arrow";
+    export const ROCKET_STOMP: string = "Genos Rocket Stomp";
+    export const SPIRAL_INCINERATION_CANNON: string = "Genos Spiral Incineration Cannon";
+    export const LIGHTNING_EYE: string = "Genos Lightning Eye";
+    export const HIGH_VOLTAGE_FIST: string = "Genos High Voltage Fist";
+    export const OVERCHARGE: string = "Genos Overcharge";
+    export const STAND_UP: string = "Stand Up!";
+  }
+
+  export module Tatsumaki {
+    export const COMPRESSS: string = "Tatsumaki Compress";
+    export const LIFT: string = "Tatsumaki Lift";
+    export const BOMBS: string = "Tatsumaki Bombs";
+    export const TORNADO_OF_TERROR: string = "Tatsumaki Tornado of Terror";
+    export const VECTOR: string = "Tatsumaki Vector";
+    export const GIANT_SPEAR: string = "Tatsumaki Giant Spear";
+    export const TELEKINETIC_SHIELD: string = "Telekinetic Shield!";
+  }
 
 
 

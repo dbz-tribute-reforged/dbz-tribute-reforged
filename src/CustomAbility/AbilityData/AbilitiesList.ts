@@ -181,7 +181,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 33,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -200,8 +200,8 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Knockbacked enemies are slowed 50% for 3s|n" +
-        "Cost: 35 SP|nCD: 2"
+        "Enemies in 450 AOE are slowed 50% for 1s|n" +
+        "Cost: 33 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -209,6 +209,74 @@ export const AbilitiesList = [
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 25,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDK.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
+    },
+    tooltip: {
+      title: "(V) Thrilla Gorilla",
+      body: 
+        "Instantly purges all debuffs from Donkey Kong.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemies in 450 AOE are slowed by 50% for 1s|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 25 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit dk thrilla gorilla" },
+      { name: "debuff slow genos stand up" },
+      { name: "sfx dk thrilla gorilla" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.STAND_UP,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 25,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGenosStand.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGenosStand.blp",
+    },
+    tooltip: {
+      title: "(V) Stand Up",
+      body: 
+        "Stand up after any attack, purging all negative debuffs.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemies in 450 AOE are slowed by 50% for 1s|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 25 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit dk thrilla gorilla" },
+      { name: "debuff slow genos stand up" },
+      { name: "sfx genos stand up" },
     ],
   },
   // -------------------------------------------
@@ -2844,6 +2912,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_TORNADO
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground forward justice tornado" },
       { name: "damage justice tornado dps" },
       { name: "knockback justice tornado" },
@@ -2874,6 +2943,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_TORNADO
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground forward justice tornado 2" },
       { name: "damage justice tornado 2 dps" },
       { name: "knockback justice tornado 2" },
@@ -3020,6 +3090,7 @@ export const AbilitiesList = [
         AbilityNames.Dyspo.LIGHT_BULLET
     },
     components: [
+      { name: "anim add alternate" },
       { name: "dash ground point light bullet" },
       { name: "damage light bullet explosion" },
       { name: "sfx light bullet" },
@@ -5026,7 +5097,8 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "debuff blind solar flare" },
+      { name: "debuff stun solar flare" },
+      { name: "debuff curse solar flare" },
       { name: "sfx solar flare" },
     ],
   },
@@ -6108,7 +6180,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.CYCLONE,
     },
     components: [
-      { name: "anim crono cyclone" },
+      { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
       { name: "knockback cyclone"},
@@ -7742,38 +7814,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.DonkeyKong.THRILLA_GORILLA,
-    currentCd: 0,
-    maxCd: 5,
-    costType: CostType.SP,
-    costAmount: 35,
-    duration: 1,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: true,
-    animation: "spell",
-    icon: {
-      enabled: "BTNDK.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
-    },
-    tooltip: {
-      title: "(V) Thrilla Gorilla",
-      body: 
-        "Becomes invulnerable for 0.03s.|n" +
-        "Instantly purges all debuffs from Donkey Kong.|n" + 
-        "Can be used while stunned.|n" +
-        "Cost: 35 SP|n" +
-        "CD: 5"
-    },
-    components: [
-      { name: "hide unit dk thrilla gorilla" },
-      { name: "sfx dk thrilla gorilla" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.DonkeyKong.GROUND_POUND,
     currentCd: 0,
     maxCd: 1,
@@ -8704,7 +8744,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 200,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -8734,7 +8774,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 166,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -9958,6 +9998,376 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Genos.MACHINE_GUN_BLOWS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi genos machine gun blows" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.INCINERATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos incineration cannon" },
+      { name: "beam genos incinerate" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.INCINERATION_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam genos incineration cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.JET_DRIVE_ARROW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos rocket stomp" },
+      { name: "anim genos jet drive arrow" },
+      { name: "dash ground point genos jet drive arrow" },
+      { name: "damage genos jet drive arrow" },
+      { name: "sfx genos jet drive arrow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.ROCKET_STOMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim genos rocket stomp" },
+      { name: "debuff slow genos rocket stomp" },
+      { name: "dash ground point 30dist" },
+      { name: "damage genos rocket stomp" },
+      { name: "jump crono cleave" },
+      { name: "sfx genos rocket stomp" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.SPIRAL_INCINERATION_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi genos spiral incineration cannon" },
+      { name: "sfx nova star omega caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.LIGHTNING_EYE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 250,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability genos high voltage fist" },
+      { name: "beam genos lightning eye" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.HIGH_VOLTAGE_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi genos high voltage fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Genos.OVERCHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 999999,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 3dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.COMPRESSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage tatsumaki compress dps outer" },
+      { name: "damage tatsumaki compress dps inner" },
+      { name: "debuff slow tatsumaki compress" },
+      { name: "sfx tatsumaki compress" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.LIFT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1, 
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage tatsumaki lift explosion" },
+      { name: "debuff slow tatsumaki lift" },
+      { name: "sfx tatsumaki lift" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.BOMBS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 666,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi tatsumaki bombs" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+    currentCd: 0,
+    maxCd: 60,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 2000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block tatsumaki telekinetic shield" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -10888,6 +11298,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
+      { name: "debuff curse solar flare" },
       { name: "multi solar kame" },
       { name: "damage solar kame dps charging" },
       { name: "sfx solar kame caster" },
@@ -11017,7 +11428,7 @@ export const AbilitiesList = [
     costType: CostType.MP,
     costAmount: 0,
     duration: 166,
-    updateRate: 0.02,
+    updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -14426,7 +14837,7 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "anim waluigi spin" },
+      { name: "anim add alternate" },
       { name: "dash ground forward 1dist" },
       { name: "debuff curse waluigi spin" },
       { name: "damage waluigi spin dps" },
@@ -14912,6 +15323,7 @@ export const AbilitiesList = [
       { name: "channel caster default" },
       { name: "damage ainz tgoalid explosion" },
       { name: "damage ainz tgoalid explosion bonus" },
+      { name: "multi ainz tgoalid" },
       { name: "sfx ainz tgoalid 1" },
       { name: "sfx ainz tgoalid 2" },
     ],
@@ -14944,6 +15356,34 @@ export const AbilitiesList = [
       { name: "damage ainz fallen down explosion" },
       { name: "sfx ainz fallen down 1" },
       { name: "sfx ainz fallen down 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ainz.LA_SHUB_NIGGURATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "sfx ainz fallen down 1" },
     ],
   },
   // -------------------------------------------
@@ -15421,7 +15861,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "anim demiurge jaldabaoth" },
+      { name: "anim add alternate" },
       { name: "temp ability demiurge jaldabaoth invis" },
       { name: "dash ground forward 2dist" },
       { name: "sfx demiurge jaldabaoth" },
@@ -15682,7 +16122,7 @@ export const AbilitiesList = [
     components: [
       { name: "damage target minato rasengan explosion" },
       { name: "knockback target minato rasengan" },
-      { name: "debuff stun minato rasengan" },
+      // { name: "debuff stun minato rasengan" },
       { name: "sfx minato rasengan" },
     ],
   },
@@ -15741,7 +16181,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "anim might guy leaf hurricane" },
+      { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
       { name: "knockback cyclone"},
