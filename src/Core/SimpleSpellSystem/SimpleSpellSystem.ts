@@ -7112,7 +7112,13 @@ export module SimpleSpellSystem {
       ForGroup(Globals.tmpUnitGroup, () => {
         // move units to targetX / targetY
         const unit = GetEnumUnit();
-        if (!UnitHelper.isUnitTargetableForPlayer(unit, player, true)) return;
+        if (
+          !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
+          || (
+            IsUnitAlly(unit, player)
+            && GetUnitTypeId(unit) != Constants.dummyBeamUnitId
+          )
+        ) return;
 
         Globals.tmpVector2.setUnit(unit);
         const ang = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
@@ -7154,7 +7160,7 @@ export module SimpleSpellSystem {
   export function doTatsumakiTornado(spellId: number) {
     const dmgMult = BASE_DMG.KAME_DPS * 0.06;
     const bonusDmgMultPerBeam = 0.25;
-    const bonusSpeedRatio = 1.0;
+    const bonusSpeedRatio = 1;
     const aoe = 600;
     const angle = 75;
     const closenessAngle = 90 + 10;
@@ -7202,7 +7208,13 @@ export module SimpleSpellSystem {
       // this.currentCoord.setUnit(input.caster.unit);
       ForGroup(Globals.tmpUnitGroup, () => {
         const target = GetEnumUnit();
-        if (UnitHelper.isUnitTargetableForPlayer(target, player, true)) {
+        if (
+          UnitHelper.isUnitTargetableForPlayer(target, player, true)
+          && (
+            !IsUnitAlly(target, player)
+            || GetUnitTypeId(target) == Constants.dummyBeamUnitId
+          )
+        ) {
 
           Globals.tmpVector.setUnit(target);
           const targetDistance = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector);
@@ -7273,7 +7285,7 @@ export module SimpleSpellSystem {
     const vectorMaxDist = 2400;
     const sfxPathSize = 5.0;
     const sfxMarkerSize = 2.0;
-    const vectorManaCostPct = 0.12;
+    const vectorManaCostPct = 0.09;
     const sfxHeight = 100;
 
     const caster = GetTriggerUnit();
@@ -7680,12 +7692,14 @@ export module SimpleSpellSystem {
   ) {
     pos1.setUnit(unit);
     const isTatsumakiBeam = SimpleSpellSystem.isUnitTatsumakiBeam(unit);
+    const adjSpeed = isTatsumakiBeam && bonusSpeedRatio != 1 ? 
+      Math.max(30, speed * bonusSpeedRatio) : 
+      speed
+    ;
     if (isTatsumakiBeam) {
-      pos2.polarProjectCoords(pos1, ang, speed * bonusSpeedRatio);
       BlzSetUnitFacingEx(unit, ang);
-    } else {
-      pos2.polarProjectCoords(pos1, ang, speed);
     }
+    pos2.polarProjectCoords(pos1, ang, adjSpeed);
     PathingCheck.moveGroundUnitToCoord(unit, pos2, speed);
     if (GetUnitName(unit) == "Tatsumaki Rock") {
       pos2.setUnit(unit);

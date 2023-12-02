@@ -148,6 +148,10 @@ export function kidBuuPassive(customHero: CustomHero) {
     tapionPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, Id.vacuumWave) > 0) {
     lucarioPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) > 0) {
+    genosPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.tatsumakiVector) > 0) {
+    tatsumakiPassive(customHero);
   }
 }
 
@@ -3050,7 +3054,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
         Id.tatsumakiCompress,
         customHero, 
         GetOwningPlayer(customHero.unit),
-        Math.min(10, Math.max(1, GetHeroLevel(customHero.unit) * 0.03)),
+        10,
         targetPos,
         targetPos,
         targetPos,

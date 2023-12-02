@@ -48503,7 +48503,14 @@ end
 return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func078C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func077C()
+if (not (udg_TempUnitType == FourCC("H01C"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func079C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -49129,7 +49136,15 @@ SetUnitAbilityLevelSwapped(FourCC("A04T"), udg_TransformationResultUnit, 10)
 UnitAddAbilityBJ(FourCC("A05L"), udg_TransformationResultUnit)
 else
 end
-if (Trig_Kid_Buu_Bonus_Ability_Func002Func078C()) then
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func077C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A05M"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A05M"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A05M'))
+UnitAddAbilityBJ(FourCC("A05R"), udg_TransformationResultUnit)
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func079C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))

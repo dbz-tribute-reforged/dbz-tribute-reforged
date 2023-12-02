@@ -737,7 +737,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.DYNAMIC_ENTRY, AbilityNames.MightGuy.ASA_KUJAKU,
       AbilityNames.MightGuy.FIFTH_GATE, AbilityNames.MightGuy.SIXTH_GATE,
       AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
-      
+      AbilityNames.Genos.MACHINE_GUN_BLOWS, AbilityNames.Genos.OVERCHARGE,
+      AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
