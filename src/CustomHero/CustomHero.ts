@@ -8,6 +8,8 @@ import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive, HeroPassiveManager } from "./HeroPassive/HeroPassive";
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 import { Constants, Id, Globals } from "Common/Constants";
+import { UnitHelper } from "Common/UnitHelper";
+import { MinimapHelper } from "Common/MinimapHelper";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -22,6 +24,9 @@ export class CustomHero {
 
   public passiveTrigger: trigger[];
   public timers: timer[];
+
+  public minimapIconBG: minimapicon;
+  public minimapIcon: minimapicon;
 
   constructor(
     public readonly unit: unit,
@@ -131,6 +136,25 @@ export class CustomHero {
 
     HeroPassiveManager.getInstance().setupHero(this);
 
+    if (
+      UnitHelper.isUnitRealHero(unit)
+      && playerId >= 0 
+      && playerId < Constants.maxActivePlayers
+    ) {
+      this.minimapIconBG = CreateMinimapIconOnUnit(
+        unit, 255, 255, 255, 
+        MinimapHelper.getMinimapIconBG(unit),
+        FOG_OF_WAR_VISIBLE 
+      );
+      this.minimapIcon = CreateMinimapIconOnUnit(
+        unit, 255, 255, 255, 
+        MinimapHelper.getMinimapIcon(unit),
+        FOG_OF_WAR_VISIBLE 
+      );
+    } else {
+      this.minimapIconBG = null;
+      this.minimapIcon = null;
+    }
   }
 
   public addAbilityFromAll(name: string) {
@@ -271,6 +295,15 @@ export class CustomHero {
     return false;
   }
 
+  public resetMinimapIconBG() {
+    if (this.minimapIconBG) DestroyMinimapIcon(this.minimapIconBG);
+    this.minimapIconBG = CreateMinimapIconOnUnit(
+      this.unit, 255, 255, 255, 
+      MinimapHelper.getMinimapIconBG(this.unit),
+      FOG_OF_WAR_FOGGED 
+    );
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();
@@ -283,5 +316,7 @@ export class CustomHero {
     const unitId = GetHandleId(this.unit);
     FlushChildHashtable(Globals.genericSpellHashtable, unitId);
     FlushChildHashtable(Globals.simpleSpellCDHashtable, unitId);
+    if (this.minimapIconBG) DestroyMinimapIcon(this.minimapIconBG);
+    if (this.minimapIcon) DestroyMinimapIcon(this.minimapIcon);
   }
 }

@@ -1445,12 +1445,52 @@ export const AOEKnockbackComponents = [
     isPersistent: false,
     isFixedAngle: false,
   },
+  // cyclone knock-in
+  {
+    name: "knockback rocket roll",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 5, 
+      angle: 180, 
+      aoe: 1000,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
   // tail spin knock-in
   {
     name: "knockback tail spin",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackData: {
+      speed: 6, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
+  // ayla fire whirl knock-in
+  {
+    name: "knockback ayla fire whirl",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 132,
     knockbackData: {
       speed: 6, 
       angle: 180, 

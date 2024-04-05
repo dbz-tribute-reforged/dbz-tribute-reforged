@@ -215,6 +215,30 @@ export class CustomAbilityManager {
 
     // probably dont need addable components after this
     // this.addableComponents.clear();
+
+    // SfxComponents.splice(0, SfxComponents.length);
+    // AnimationComponents.splice(0, AnimationComponents.length);
+    // AOEDamageComponents.splice(0, AOEDamageComponents.length);
+    // AOEDebuffComponents.splice(0, AOEDebuffComponents.length);
+    // AOEHealComponents.splice(0, AOEHealComponents.length);
+    // AOEKnockbackComponents.splice(0, AOEKnockbackComponents.length);
+    // BarrierComponents.splice(0, BarrierComponents.length);
+    // ChannellingComponents.splice(0, ChannellingComponents.length);
+    // DamageBlockComponents.splice(0, DamageBlockComponents.length);
+    // DashComponents.splice(0, DashComponents.length);
+    // DodgeComponents.splice(0, DodgeComponents.length);
+    // HideUnitComponents.splice(0, HideUnitComponents.length);
+    // HookComponents.splice(0, HookComponents.length);
+    // JumpComponents.splice(0, JumpComponents.length);
+    // SelfDestructComponents.splice(0, SelfDestructComponents.length);
+    // SpellAmpComponents.splice(0, SpellAmpComponents.length);
+    // SwordSlashComponents.splice(0, SwordSlashComponents.length);
+    // TeleportComponents.splice(0, TeleportComponents.length);
+    // TempAbilityComponents.splice(0, TempAbilityComponents.length);
+    // TimedLifeComponents.splice(0, TimedLifeComponents.length);
+    // BeamComponents.splice(0, BeamComponents.length);
+    // AOEApplyComponentComponents.splice(0, AOEApplyComponentComponents.length);
+    // MultiComponents.splice(0, MultiComponents.length);
   }
 
   setComponent(component: AbilityComponent): this {

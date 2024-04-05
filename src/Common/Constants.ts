@@ -310,6 +310,13 @@ export module DebuffAbilities {
   export const ROOT_AINZ_HOLD_OF_RIBS = FourCC("A12O");
   export const ROOT_GALAXY_DONUT = FourCC("A13T");
 
+  export const ROOT_GENERIC_HALF_SECOND = FourCC("A06H");
+  export const ROOT_GENERIC_ONE_SECOND = FourCC("A06I");
+  export const ROOT_GENERIC_ONE_AND_A_HALF_SECOND = FourCC("A06O");
+  export const ROOT_GENERIC_TWO_SECOND = FourCC("A06R");
+  export const ROOT_GENERIC_TWO_AND_A_HALF_SECOND = FourCC("A07G");
+  export const ROOT_GENERIC_THREE_SECOND = FourCC("A07H");
+
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
   export const AINZ_TIME_STOP_SLEEP = FourCC("A12R");
@@ -326,6 +333,12 @@ export module DebuffAbilities {
   export const MAFUBA_SEALED = FourCC("A10R");
   export const MAFUBA_SEALING = FourCC("A10S");
   export const DEMIURGE_COMMAND_SILENCE = FourCC("A13M");
+
+  export const SILENCE_GENERIC_ONE_SECOND = FourCC("A07I");
+  export const SILENCE_GENERIC_TWO_SECOND = FourCC("A07J");
+  export const SILENCE_GENERIC_THREE_SECOND = FourCC("A07K");
+  export const SILENCE_GENERIC_FOUR_SECOND = FourCC("A07L");
+  export const SILENCE_GENERIC_FIVE_SECOND = FourCC("A07U");
 
   // wand of illusion
   export const APPULE_VENGEANCE_CLONE = FourCC("A11C");
@@ -401,6 +414,8 @@ export module Buffs {
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
 
   export const NUOVA_HEAT_ARMOR = FourCC("B06J");
+
+  export const ROOT_GENERIC = FourCC("B018");
 }
 
 export module OrderIds {

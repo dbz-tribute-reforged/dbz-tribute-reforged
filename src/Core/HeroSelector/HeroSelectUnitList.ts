@@ -579,19 +579,6 @@ const roboData = {
     HeroSelectCategory.BRUISER
   )
 }
-const magusData = {
-  unitCode: Id.magus,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.CRONO + 
-    HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
-  )
-}
 const luccaData = {
   unitCode: Id.lucca,
   onlyRandom: false,
@@ -623,6 +610,19 @@ const marleData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
+    HeroSelectCategory.CRONO + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.SUPPORT
+  )
+}
+const magusData = {
+  unitCode: Id.magus,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.EVIL + 
     HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
     HeroSelectCategory.SUPPORT
@@ -1061,11 +1061,11 @@ export const HeroSelectUnitList = [
   cronoData,
   frogData,
   roboData,
-  magusData,
   luccaData,
-  // 65
   aylaData,
+  // 65
   marleData,
+  magusData,
   schalaData,
   rustyData,
   emptySpace,

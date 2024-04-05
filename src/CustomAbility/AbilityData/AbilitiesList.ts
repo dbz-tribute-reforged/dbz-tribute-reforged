@@ -6182,7 +6182,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
-      { name: "dash ground forward crono cyclone" },
+      { name: "dash ground forward 1dist" },
       { name: "knockback cyclone"},
       { name: "sfx crono cyclone" },
     ],
@@ -6363,6 +6363,252 @@ export const AbilitiesList = [
       { name: "sfx crono lumi explode" },
     ],
   },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.FLAME_WHIRL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "damage crono flame whirl dps" },
+      { name: "dash ground forward 2dist" },
+      { name: "knockback cyclone"},
+      { name: "sfx crono flame whirl" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.FIRE_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim crono cleave" },
+      { name: "dash ground point 25dist" },
+      { name: "damage crono fire sword explosion" },
+      { name: "damage crono fire sword explosion inner" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono fire sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.X_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point x strike" },
+      { name: "debuff stun crono x strike" },
+      { name: "damage crono x strike explosion" },
+      { name: "sfx crono x strike" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.SWORD_STREAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim crono cleave" },
+      { name: "dash ground point 25dist" },
+      { name: "damage crono sword stream explosion" },
+      { name: "damage crono sword stream explosion inner" },
+      { name: "jump crono cleave" },
+      { name: "knockback cyclone"},
+      { name: "sfx crono sword stream" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.ROCKET_ROLL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "damage crono rocket roll dps" },
+      { name: "knockback rocket roll"},
+      { name: "sfx crono rocket roll" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.SUPER_VOLT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam crono super volt" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.AURA_WHIRL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "heal crono aura whirl" },
+      { name: "dash ground forward 1dist" },
+      { name: "sfx crono aura whirl" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.ICE_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim crono cleave" },
+      { name: "dash ground point 20dist" },
+      { name: "damage crono ice sword explosion" },
+      { name: "damage crono ice sword explosion inner" },
+      { name: "debuff stun crono ice sword" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono ice sword" },
+    ],
+  },
   //---------------------------------------
   {
     name: AbilityNames.Frog.SLURP_CUT,
@@ -6535,6 +6781,154 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Frog.RED_PIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim frog cleave" },
+      { name: "dash ground point 25dist" },
+      { name: "debuff root frog red pin" },
+      { name: "damage frog red pin explosion" },
+      { name: "damage frog red pin explosion inner" },
+      { name: "jump crono cleave" },
+      { name: "sfx frog red pin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.LINE_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "jump frog line bomb" },
+      { name: "dash ground point frog line bomb" },
+      { name: "damage frog line bomb explosion" },
+      { name: "sfx frog line bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.BLADE_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 40dist" },
+      { name: "debuff silence frog blade toss" },
+      { name: "damage frog blade toss explosion" },
+      { name: "sfx shining sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.SLURP_KISS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "heal frog slurp kiss" },
+      { name: "sfx frog slurp kiss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.ICE_WATER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam frog ice water" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Robo.ROBO_TACKLE,
     currentCd: 0,
     maxCd: 1,
@@ -6647,7 +7041,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
-      { name: "damage uzzi punch explosion" },
+      { name: "damage robo uzzi punch explosion" },
       { name: "sfx uzzi punch" },
     ],
   },
@@ -6679,6 +7073,156 @@ export const AbilitiesList = [
       { name: "multi robo electrocute inner" },
       { name: "multi robo electrocute outer" },
       { name: "sfx robo electrocute caster"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.SUPER_VOLT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam robo super volt" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.FIRE_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim robo tackle" },
+      { name: "dash ground point robo fire tackle" },
+      { name: "damage robo fire tackle" },
+      { name: "sfx robo fire tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.FIRE_UZZI_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage robo fire uzzi punch explosion" },
+      { name: "sfx robo fire uzzi punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.BUBBLE_SNAP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim robo bubble snap" },
+      { name: "jump robo bubble snap" },
+      { name: "dash ground forward robo bubble snap" },
+      { name: "block robo bubble snap" },
+      { name: "debuff slow robo bubble snap 1" },
+      { name: "debuff slow robo bubble snap 2" },
+      { name: "damage robo bubble snap explosion" },
+      { name: "sfx robo bubble snap" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.BOOGIE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "dash ground forward boogie" },
+      { name: "debuff slow robo boogie" },
+      { name: "sfx robo boogie" },
     ],
   },
   // -------------------------------------------
@@ -6945,18 +7489,18 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "spell",
     icon: {
-      enabled: "BTNCronoCyclone.blp",
-      disabled: "BTNCronoCyclone.blp",
+      enabled: "",
+      disabled: "",
     },
     tooltip: {
-      title:  AbilityNames.Crono.CYCLONE,
+      title:  "",
       body: 
-        AbilityNames.Crono.CYCLONE,
+        "",
     },
     components: [
-      { name: "anim crono cyclone" },
+      { name: "anim add alternate" },
       { name: "damage ayla tail spin dps" },
-      { name: "dash ground forward crono cyclone" },
+      { name: "dash ground forward 1dist" },
       { name: "knockback tail spin"},
       { name: "sfx crono cyclone" },
     ],
@@ -7020,6 +7564,260 @@ export const AbilitiesList = [
       { name: "damage ayla triple kick explosion" },
       { name: "jump ayla triple kick" },
       { name: "sfx ayla triple kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.DRILL_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "damage ayla drill kick explosion" },
+      { name: "dash ground forward 10dist" },
+      { name: "sfx guts relentless assault" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.VOLT_BITE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "damage ayla volt bite dps" },
+      { name: "debuff slow ayla volt bite" },
+      { name: "dash ground forward 10dist" },
+      { name: "sfx ayla volt bite" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.FIRE_WHIRL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title:  "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "damage ayla fire whirl dps" },
+      { name: "damage ayla fire whirl bonus dps" },
+      { name: "dash ground forward 1dist" },
+      { name: "knockback ayla fire whirl"},
+      { name: "sfx ayla fire whirl 1" },
+      { name: "sfx ayla fire whirl 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.BLAZE_KICK_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point ayla triple kick" },
+      { name: "damage ayla triple kick dps" },
+      { name: "damage ayla triple kick explosion" },
+      { name: "damage ayla blaze kick 1 explosion" },
+      { name: "jump ayla triple kick" },
+      { name: "sfx ayla triple kick" },
+      { name: "sfx ayla blaze kick 1" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.BLAZE_KICK_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point ayla triple kick" },
+      { name: "damage ayla triple kick dps" },
+      { name: "damage ayla triple kick explosion" },
+      { name: "damage ayla blaze kick 2 explosion" },
+      { name: "jump ayla triple kick" },
+      { name: "sfx ayla triple kick" },
+      { name: "sfx ayla blaze kick 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.BUBBLE_HIT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "jump robo bubble snap" },
+      { name: "dash ground forward robo bubble snap" },
+      { name: "block robo bubble snap" },
+      { name: "debuff slow robo bubble snap 1" },
+      { name: "debuff slow robo bubble snap 2" },
+      { name: "damage robo bubble snap explosion" },
+      { name: "sfx robo bubble snap" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ICE_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim robo tackle" },
+      { name: "debuff stun robo ice tackle" },
+      { name: "dash ground point robo fire tackle" },
+      { name: "damage robo ice tackle" },
+      { name: "sfx robo ice tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.SPIN_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },,
+      { name: "debuff stun ayla spin kick" },
+      { name: "dash ground point ayla spin kick" },
+      { name: "damage ayla spin kick explosion" },
+      { name: "sfx ayla spin kick" },
     ],
   },
   // -------------------------------------------
@@ -7159,6 +7957,143 @@ export const AbilitiesList = [
       { name: "aoe apply marle haste" },
       { name: "sfx marle haste"},
       { name: "sfx marle haste explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ANTIPODE_1,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam marle antipode 1" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ANTIPODE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam marle antipode 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.ANTIPODE_3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam marle antipode 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.GLACIER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam marle glacier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.AURA_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "heal marle aura beam" },
+      { name: "sfx marle aura beam"}
     ],
   },
   // -------------------------------------------
@@ -16183,7 +17118,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim add alternate" },
       { name: "damage crono cyclone dps" },
-      { name: "dash ground forward crono cyclone" },
+      { name: "dash ground forward 1dist" },
       { name: "knockback cyclone"},
       { name: "sfx might guy leaf hurricane" },
     ],

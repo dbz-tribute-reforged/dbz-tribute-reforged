@@ -16,6 +16,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
   static readonly DIRECTION_CASTER_POINT = 4;
   static readonly DIRECTION_LAST_CAST_POINT = 5;
+  static readonly DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE = 6;
 
   // 20% per 10k stats
   static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0020 * 0.01;
@@ -37,6 +38,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   protected targetCoord: Vector2D;
   protected distanceTravelled: number;
   protected distanceMult: number;
+  protected previousDirection: number;
   
   public isStarted: boolean = false;
   public isFinished: boolean = true;
@@ -59,6 +61,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.targetCoord = new Vector2D();
     this.distanceTravelled = 0;
     this.distanceMult = 0;
+    this.previousDirection = 0;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -66,8 +69,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       this.isStarted = true;
       this.isFinished = false;
     }
-
-    this.currentCoord.setPos(GetUnitX(source), GetUnitY(source));
+    
+    this.currentCoord.setUnit(source);
     this.targetCoord.setVector(this.currentCoord);
 
     if (
@@ -116,8 +119,17 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           this.dashTargetPoint.setVector(input.castPoint);
           direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
           SetUnitFacing(source, direction);
+        } 
+        else if (this.targetDirection == Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE) {
+          if (this.distanceTravelled <= 0) {
+            direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
+          } else {
+            direction = this.previousDirection;
+            this.dashTargetPoint.polarProjectCoords(this.currentCoord, direction, this.distance);
+          }
         }
-
+        
+        this.previousDirection = direction;
         direction += this.angleOffset;
 
         this.distanceMult = 1;
@@ -296,6 +308,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       }
 
       this.distanceTravelled = 0;
+      this.previousDirection = 0;
       this.isStarted = false;
       this.isFinished = true;
     }

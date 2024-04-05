@@ -14,14 +14,10 @@ import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
-import { CoordMath } from "Common/CoordMath";
-import { PathingCheck } from "Common/PathingCheck";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { SoundHelper } from "Common/SoundHelper";
-import { DamageData } from "Common/DamageData";
 import { setupCustomUI } from "./SetupCustomUI";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
-import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { SagaAIData } from "Core/SagaSystem/SagaAISystem/SagaAIData";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
@@ -86,6 +82,17 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           Globals.customPlayers[playerId].targetUnit,
           Globals.customPlayers[playerId].lastCastUnit,
         );
+        
+        // cant cast zanzo if inside barrier
+        if (
+          (
+            name == AbilityNames.BasicAbility.ZANZO_DASH
+            || name == AbilityNames.BasicAbility.ZANZOKEN
+            || name == AbilityNames.Minato.HIRAISHIN_ZANZO
+          ) && Globals.barrierBlockUnits.has(customHero.unit)
+        ) {
+          continue;
+        }
 
         if (customHero.canCastAbility(name, abilityInput)) {
           // show custom ability name on activation, if castable
@@ -308,78 +315,79 @@ export function CustomPlayerTest() {
       const abilityId = GetSpellAbilityId();
       Globals.customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
 
-      if (Globals.showAbilityFloatingText) {
-        if (
-          IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
-          && abilityId != Id.yamchaRLightPunch
-          && abilityId != Id.yamchaRMediumPunch 
-          && abilityId != Id.yamchaRHeavyPunch
-        ) {
-          // show ability name on activation
-          TextTagHelper.showPlayerColorTextOnUnit(
-            GetAbilityName(abilityId), 
-            playerId, 
-            GetTriggerUnit()
-          );
+      let showAbilFloatingText = true;
+      if (abilityId != Id.ceroFire) {
+        const spellName = abilityCodesToNames.get(abilityId);
+        if (spellName) { 
+          const caster = GetTriggerUnit();
+          const unitTypeId = GetUnitTypeId(caster);
+          let abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+          Globals.customPlayers[playerId].selectedUnit = caster;
+          let damageMult = 1.0;
+          if (abilityId == Id.ftSwordOfHope) {
+            damageMult *= getSwordOfHopeMult(player);
+          }
+          if (abilityId == Id.jacoEliteBeamFire) {
+            damageMult *= getJacoEliteBeamMult(caster);
+          }
+          if (unitTypeId == Id.shotoTodoroki && Constants.isShotoAbility(abilityId)) {
+            damageMult *= getTodorokiMult(caster, abilityId);
+          }
+          if (unitTypeId == Id.ainzOoalGown && Constants.isAinzAbility(abilityId)) {
+            abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
+          }
+
+
+          let spellTargetUnit = undefined;
+          if (GetSpellTargetUnit()) {
+            Globals.customPlayers[playerId].targetUnit = GetSpellTargetUnit();
+            spellTargetUnit = Globals.customPlayers[playerId].targetUnit;
+          }
+          const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
+          if (customHero) {
+            // temp fix for double ss rage trigger
+            if (
+              spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || 
+              GetUnitTypeId(customHero.unit) != FourCC("H08I")
+            ) {
+              const input = new CustomAbilityInput(
+                abilityId,
+                customHero,
+                player,
+                abilityLevel,
+                Globals.customPlayers[playerId].orderPoint,
+                Globals.customPlayers[playerId].mouseData,
+                Globals.customPlayers[playerId].lastCastPoint.clone(),
+                spellTargetUnit,
+                GetSpellTargetUnit(),
+                damageMult
+              );
+
+              let do_abil = true;
+              if (DualTechManager.getInstance().has(abilityId)) {
+                do_abil = DualTechManager.getInstance().execute(abilityId, input);
+                if (!do_abil) showAbilFloatingText = false;
+              }
+              if (do_abil) customHero.useAbility(spellName,input);
+            }
+          }
         }
       }
       
-      if (abilityId == Id.ceroFire) return false;
-
-      const spellName = abilityCodesToNames.get(abilityId);
- 
-      if (spellName) { 
-        const caster = GetTriggerUnit();
-        const unitTypeId = GetUnitTypeId(caster);
-        let abilityLevel = GetUnitAbilityLevel(caster, abilityId);
-        Globals.customPlayers[playerId].selectedUnit = caster;
-        let damageMult = 1.0;
-        if (abilityId == Id.ftSwordOfHope) {
-          damageMult *= getSwordOfHopeMult(player);
-        }
-        if (abilityId == Id.jacoEliteBeamFire) {
-          damageMult *= getJacoEliteBeamMult(caster);
-        }
-        if (unitTypeId == Id.shotoTodoroki && Constants.isShotoAbility(abilityId)) {
-          damageMult *= getTodorokiMult(caster, abilityId);
-        }
-        if (unitTypeId == Id.ainzOoalGown && Constants.isAinzAbility(abilityId)) {
-          abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
-        }
-
-
-        let spellTargetUnit = undefined;
-        if (GetSpellTargetUnit()) {
-          Globals.customPlayers[playerId].targetUnit = GetSpellTargetUnit();
-          spellTargetUnit = Globals.customPlayers[playerId].targetUnit;
-        }
-        const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
-        if (customHero) {
-          // temp fix for double ss rage trigger
-          if (
-            spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || 
-            GetUnitTypeId(customHero.unit) != FourCC("H08I")
-          ) {
-            const input = new CustomAbilityInput(
-              abilityId,
-              customHero,
-              player,
-              abilityLevel,
-              Globals.customPlayers[playerId].orderPoint,
-              Globals.customPlayers[playerId].mouseData,
-              Globals.customPlayers[playerId].lastCastPoint.clone(),
-              spellTargetUnit,
-              GetSpellTargetUnit(),
-              damageMult
-            );
-
-            let do_abil = true;
-            if (DualTechManager.getInstance().has(abilityId)) {
-              do_abil = DualTechManager.getInstance().execute(abilityId, input);
-            }
-            if (do_abil) customHero.useAbility(spellName,input);
-          }
-        }
+      if (
+        Globals.showAbilityFloatingText 
+        && showAbilFloatingText
+        && IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
+        && abilityId != Id.yamchaRLightPunch
+        && abilityId != Id.yamchaRMediumPunch 
+        && abilityId != Id.yamchaRHeavyPunch
+      ) {
+        // show ability name on activation
+        TextTagHelper.showPlayerColorTextOnUnit(
+          GetAbilityName(abilityId), 
+          playerId, 
+          GetTriggerUnit()
+        );
       }
     }
     return false;
@@ -623,10 +631,20 @@ export function CustomPlayerTest() {
             if (abilityCd > 0) {
               cdText = R2SW(abilityCd,2,2);
             }
-
+            
+            // if req SP less than necessary or is zanzo blocked
             let overwriteCd = (
-              heroAbility.costType == CostType.SP 
-              && heroAbility.costAmount > ownedHero.getCurrentSP()
+              (
+                heroAbility.costType == CostType.SP 
+                && heroAbility.costAmount > ownedHero.getCurrentSP()
+              ) ||
+              (
+                (
+                  heroAbility.name == AbilityNames.BasicAbility.ZANZO_DASH
+                  || heroAbility.name == AbilityNames.BasicAbility.ZANZOKEN
+                  || heroAbility.name == AbilityNames.Minato.HIRAISHIN_ZANZO
+                ) && Globals.barrierBlockUnits.has(ownedHero.unit)
+              )
             );
             // BJDebugMsg(cdText);
             if (GetPlayerId(GetLocalPlayer()) == playerId) {
@@ -693,7 +711,19 @@ export function CustomPlayerTest() {
       Colorizer.getColoredPlayerName(leavePlayer) + 
       " has left the game."
     );
-  })
+    
+    // kill leavers if they are in the main game
+    if (Globals.isMainGameStarted) {
+      const playerId = GetPlayerId(leavePlayer);
+      ForGroup(udg_StatMultPlayerUnits[playerId], () => {
+        const u = GetEnumUnit();
+        KillUnit(u);
+      });
+    }
+
+    // remove the leaver units
+    HeroSelectorManager.getInstance().doRepickForPlayer(leavePlayer, !Globals.isKOTH);
+  });
 
   // player kills another player
   const killTrig = CreateTrigger();
@@ -804,6 +834,9 @@ export function CustomPlayerTest() {
             Constants.defaultTeam2.splice(index, 1);
             Constants.defaultTeam1.push(targetPlayer);
           }
+        }
+        for (const customHero of Globals.customPlayers[playerId].allHeroes) {
+          customHero.resetMinimapIconBG();
         }
       }
     }
@@ -1258,6 +1291,24 @@ export function CustomPlayerTest() {
     DisableTrigger(zanzoToggleTrigger);
     DestroyTimer(GetExpiredTimer());
   });
+
+  const dualTechToggleTrigger = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(dualTechToggleTrigger, Player(i), "-dt", true);
+  }
+  TriggerAddAction(dualTechToggleTrigger, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      Globals.customPlayers[playerId].dualTechSendFlag = !Globals.customPlayers[playerId].dualTechSendFlag;
+      Globals.customPlayers[playerId].dualTechReceiveFlag = !Globals.customPlayers[playerId].dualTechReceiveFlag;
+      if (Globals.customPlayers[playerId].dualTechSendFlag) {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cff00ff00Dual Techs Enabled|r");
+      } else {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffff2222Dual Techs Disabled|r");
+      }
+    }
+  });
+
 
   createCdTrigger();
 

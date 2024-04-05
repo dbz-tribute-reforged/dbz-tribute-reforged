@@ -13,6 +13,7 @@ import { SoundHelper } from "Common/SoundHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
+import { MinimapHelper } from "Common/MinimapHelper";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -3170,6 +3171,12 @@ export function setupRegenTimer(customHero: CustomHero) {
   customHero.addTimer(regenTimer);
 
   TimerStart(regenTimer, Constants.REGEN_TICK_RATE, true, () => {
+    // am i visible?
+    if (customHero.minimapIcon) {
+      const mmVisible = MinimapHelper.isUnitMinimapVisible(customHero.unit);
+      SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);
+      if (customHero.minimapIconBG) SetMinimapIconVisible(customHero.minimapIcon, mmVisible);
+    }
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
     const heroAgi = GetHeroAgi(customHero.unit, true);

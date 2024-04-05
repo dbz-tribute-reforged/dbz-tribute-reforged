@@ -378,6 +378,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Crono.LIGHTNING_3,
       AbilityNames.Crono.CLEAVE,
       AbilityNames.Crono.LUMINAIRE,
+      AbilityNames.Crono.AURA_WHIRL,
+      AbilityNames.Crono.X_STRIKE,
+      AbilityNames.Crono.SUPER_VOLT,
+      AbilityNames.Crono.ICE_SWORD,
+      AbilityNames.Crono.FLAME_WHIRL,
+      AbilityNames.Crono.FIRE_SWORD,
+      AbilityNames.Crono.SWORD_STREAM,
+      AbilityNames.Crono.ROCKET_ROLL,
     ]],
 
     [Id.frog, [
@@ -387,6 +395,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Frog.WATER2,
       AbilityNames.Frog.AERIAL_STRIKE,
       AbilityNames.Frog.FROG_SQUASH,
+      AbilityNames.Crono.X_STRIKE,
+      AbilityNames.Frog.RED_PIN,
+      AbilityNames.Frog.LINE_BOMB,
+      AbilityNames.Frog.BLADE_TOSS,
+      AbilityNames.Frog.SLURP_KISS,
+      AbilityNames.Frog.ICE_WATER,
+      AbilityNames.Marle.GLACIER,
     ]],
 
     [Id.robo, [
@@ -395,6 +410,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Robo.HEAL_BEAM,
       AbilityNames.Robo.UZZI_PUNCH,
       AbilityNames.Robo.ELECTROCUTE,
+      AbilityNames.Robo.SUPER_VOLT,
+      AbilityNames.Marle.AURA_BEAM,
+      AbilityNames.Robo.ICE_TACKLE,
+      AbilityNames.Robo.BUBBLE_SNAP,
+      AbilityNames.Robo.FIRE_TACKLE,
+      AbilityNames.Robo.FIRE_UZZI_PUNCH,
+      AbilityNames.Robo.BOOGIE,
     ]],
 
     [Id.lucca, [
@@ -405,6 +427,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucca.NAPALM,
       AbilityNames.Lucca.MEGABOMB,
       AbilityNames.Lucca.FLARE,
+      AbilityNames.Marle.ANTIPODE_1,
+      AbilityNames.Marle.ANTIPODE_2,
+      AbilityNames.Lucca.ANTIPODE_3,
     ]],
     
     [Id.magus, [
@@ -423,6 +448,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ayla.TAIL_SPIN,
       AbilityNames.Ayla.DINO_TAIL,
       AbilityNames.Ayla.TRIPLE_KICK,
+      AbilityNames.Ayla.DRILL_KICK,
+      AbilityNames.Ayla.VOLT_BITE,
+      AbilityNames.Ayla.FIRE_WHIRL,
+      AbilityNames.Ayla.BLAZE_KICK_1,
+      AbilityNames.Ayla.BLAZE_KICK_2,
+      AbilityNames.Ayla.BUBBLE_HIT,
+      AbilityNames.Robo.BOOGIE,
+      AbilityNames.Ayla.SPIN_KICK,
     ]],
 
     [Id.marle, [
@@ -432,6 +465,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Marle.ICE_2,
       AbilityNames.Marle.CURE,
       AbilityNames.Marle.HASTE,
+      AbilityNames.Crono.AURA_WHIRL,
+      AbilityNames.Marle.ANTIPODE_1,
+      AbilityNames.Marle.ANTIPODE_2,
+      AbilityNames.Marle.GLACIER,
+      AbilityNames.Marle.AURA_BEAM,
     ]],
 
     [Id.lucario, [

@@ -21,6 +21,7 @@ export class DragonBallsManager {
   protected radarTrigger: trigger;
   protected numWishesGranted: number;
   protected summonFlag: boolean;
+  protected minimapShenron: minimapicon;
 
   constructor (
   ) {
@@ -46,6 +47,7 @@ export class DragonBallsManager {
     this.radarTrigger = CreateTrigger();
     this.numWishesGranted = 1;
     this.summonFlag = false;
+    this.minimapShenron = null;
     this.initialize();
   }
 
@@ -389,7 +391,15 @@ export class DragonBallsManager {
       this.dummyShenron,
       "birth"
     );
-
+    
+    if (!this.minimapShenron) {
+      this.minimapShenron = CreateMinimapIcon(
+        x, y, 
+        255, 255, 255, 
+        "MM_dballs.mdl", 
+        FOG_OF_WAR_VISIBLE
+      );
+    }
     const sfxTimer = TimerManager.getInstance().get();
     TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
       this.playShenronSFX(this.dummyShenron);
@@ -512,6 +522,8 @@ export class DragonBallsManager {
       BlzSetUnitSkin(this.dummyShenron, DragonBallsConstants.shenronUnitDummy);
       SetUnitScale(this.dummyShenron, 4.0, 4.0, 4.0);
     }
+    
+    if (this.minimapShenron) SetMinimapIconVisible(this.minimapShenron, false);
 
     return this;
   }

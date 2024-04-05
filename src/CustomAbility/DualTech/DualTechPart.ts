@@ -1,4 +1,5 @@
 import { Globals } from "Common/Constants";
+import { TextTagHelper } from "Common/TextTagHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
@@ -14,6 +15,9 @@ export class DualTechPart {
     public reqAbilityId: number = 0,
     public forceCastAbilityName: string = "",
 
+    public castNothing: boolean = false,
+    public showForceCastText: boolean = false,
+    public useReqAbilityLevel: boolean = false,
     public includeAllies: boolean = false,
     public applyCd: boolean = true,
     public applyOriginalCd: boolean = true,
@@ -25,7 +29,12 @@ export class DualTechPart {
   isValid(input: CustomAbilityInput, u: unit): boolean {
     if (this.isStarted) return false;
     if (!IsUnitAlly(u, input.casterPlayer)) return false;
-    if (!this.includeAllies && GetOwningPlayer(u) != input.casterPlayer) return false;
+    if (GetOwningPlayer(u) != input.casterPlayer) {
+      if (!this.includeAllies) return false;
+      // check owning player for dual tech receive flag
+      const playerId = GetPlayerId(GetOwningPlayer(u));
+      if (!Globals.customPlayers[playerId].dualTechReceiveFlag) return false;
+    }
     return (
       (
         this.reqUnitTypeId != 0
@@ -43,7 +52,7 @@ export class DualTechPart {
   execute(input: CustomAbilityInput, source: unit) {
     // do somethin
     this.isStarted = true;
-
+ 
     let abilityName = this.forceCastAbilityName;
 
     const sourcePlayer = GetOwningPlayer(source);
@@ -52,30 +61,44 @@ export class DualTechPart {
     const customHero = Globals.customPlayers[sourcePlayerId].getCustomHero(source);
 
     if (customHero) {
-      if (abilityName == "") {
-        abilityName = abilityCodesToNames.get(this.reqAbilityId);
-      }
-      const abil = customHero.getAbility(abilityName);
-      if (abil && abil.canCastAbility(input)) {
-        const input2 = input.clone();
-        input2.caster = customHero;
-        customHero.useAbility(abilityName, input2);
-
-        if (this.applyCd && this.reqAbilityId != 0) {
-          let newCd = 0;
-          if (this.applyOriginalCd) {
-            newCd = BlzGetAbilityCooldown(
-              this.reqAbilityId,
-              GetUnitAbilityLevel(source, this.reqAbilityId)-1
+      let casted = this.castNothing;
+      if (!this.castNothing) {
+        if (abilityName == "") {
+          abilityName = abilityCodesToNames.get(this.reqAbilityId);
+        }
+        const abil = customHero.getAbility(abilityName);
+        if (abil && abil.canCastAbility(input)) {
+          const input2 = input.clone();
+          input2.caster = customHero;
+          if (this.useReqAbilityLevel) input2.level = GetUnitAbilityLevel(source, this.reqAbilityId);
+          customHero.useAbility(abilityName, input2);
+  
+          if (Globals.showAbilityFloatingText) {
+            // show ability name on activation
+            TextTagHelper.showPlayerColorTextOnUnit(
+              abilityName, 
+              sourcePlayerId, 
+              source
             );
           }
-          if (this.cdPenalty != 0) newCd += this.cdPenalty;
-          if (newCd > 0) {
-            BlzStartUnitAbilityCooldown(source, this.reqAbilityId, newCd);
-          }
+          casted = true;
         }
-        return true;
       }
+
+      if (this.applyCd && this.reqAbilityId != 0) {
+        let newCd = 0;
+        if (this.applyOriginalCd) {
+          newCd = BlzGetAbilityCooldown(
+            this.reqAbilityId,
+            GetUnitAbilityLevel(source, this.reqAbilityId)-1
+          );
+        }
+        if (this.cdPenalty != 0) newCd += this.cdPenalty;
+        if (newCd > 0) {
+          BlzStartUnitAbilityCooldown(source, this.reqAbilityId, newCd);
+        }
+      }
+      return casted;
     }
     return false;
   }
@@ -90,6 +113,9 @@ export class DualTechPart {
       this.reqUnitTypeId,
       this.reqAbilityId,
       this.forceCastAbilityName,
+      this.castNothing,
+      this.showForceCastText,
+      this.useReqAbilityLevel,
       this.includeAllies,
       this.applyCd,
       this.applyOriginalCd,
@@ -103,6 +129,9 @@ export class DualTechPart {
       reqUnitTypeId: number;
       reqAbilityId: number;
       forceCastAbilityName: string;
+      castNothing: boolean;
+      showForceCastText: boolean;
+      useReqAbilityLevel: boolean;
       includeAllies: boolean;
       applyCd: boolean;
       applyOriginalCd: boolean;
@@ -113,6 +142,9 @@ export class DualTechPart {
     dtp.reqUnitTypeId = input.reqUnitTypeId;
     dtp.reqAbilityId = input.reqAbilityId;
     dtp.forceCastAbilityName = input.forceCastAbilityName;
+    dtp.castNothing = input.castNothing;
+    dtp.showForceCastText = input.showForceCastText;
+    dtp.useReqAbilityLevel = input.useReqAbilityLevel;
     dtp.includeAllies = input.includeAllies;
     dtp.applyCd = input.applyCd;
     dtp.applyOriginalCd = input.applyOriginalCd;

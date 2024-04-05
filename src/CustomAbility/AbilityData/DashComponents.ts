@@ -254,7 +254,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 51,
+    distance: 65,
   },
   // zanzoken
   {
@@ -267,7 +267,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 1000,
+    distance: 1200,
   },
   // max power
   {
@@ -1296,18 +1296,18 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 35,
   },
-  // crono cyclone speed boost
+  // crono x strike
   {
-    name: "dash ground forward crono cyclone",
+    name: "dash ground point x strike",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
-    useLastCastPoint: true,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
     angleOffset: 0,
-    distance: 1,
+    distance: 60,
   },
   // frog squash
   {
@@ -1322,6 +1322,19 @@ export const DashComponents = [
     angleOffset: 180,
     distance: 6,
   },
+  // frog line bomb
+  {
+    name: "dash ground point frog line bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 50,
+  },
   // robo tackle
   {
     name: "dash ground point robo tackle",
@@ -1330,10 +1343,49 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
+    checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 35,
+  },
+  // robo fire tackle
+  {
+    name: "dash ground point robo fire tackle",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 50,
+  },
+  // robo bubble snap
+  {
+    name: "dash ground forward robo bubble snap",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
+  },
+  // robo boogie
+  {
+    name: "dash ground forward robo boogie",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 30,
   },
   // ayla triple kick
   {
@@ -1360,6 +1412,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 12,
+  },
+  // ayla spin kick
+  {
+    name: "dash ground point ayla spin kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 70,
   },
   // saitama serious punch
   {
@@ -1539,6 +1604,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 3,
+  },
+  // marle glacier
+  {
+    name: "dash flying point marle glacier",
+    repeatInterval: 1, 
+    startTick: 16,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_FLYING,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
   },
   // bunkai teleport dash
   {
