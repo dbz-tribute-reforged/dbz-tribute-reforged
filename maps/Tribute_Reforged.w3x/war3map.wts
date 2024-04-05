@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute |cffffcc00Reforged 1.02
+Tribute |cffffcc00Reforged 1.03
 }
 
 STRING 4
@@ -46881,28 +46881,6 @@ STRING 7230
 [|cff00FF00F|r] (|cff00ffffShooting Star|r) Super Tier Magic: Wish Upon A Star
 }
 
-STRING 7231
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool1,.>s|r
-}
-
-STRING 7232
-// Abilities: A0HZ (Disaster Ray), Researchubertip (Tooltip - Learn - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool1,.> - <A0HZ,Cool10,.>s|r
-}
-
 STRING 7233
 // Abilities: A00R (Kamehameha), Tip (Tooltip - Normal)
 {
@@ -46973,17 +46951,6 @@ STRING 7244
 // Abilities: A0SO (Super Kamehameha Charge), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 7245
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool10,.>s|r
 }
 
 STRING 7246
@@ -47742,50 +47709,6 @@ STRING 7361
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: <A0JQ,Cool1> - <A0JQ,Cool10> seconds)|r
 }
 
-STRING 7362
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool2,.>s|r
-}
-
-STRING 7363
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool3,.>s|r
-}
-
-STRING 7364
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool4,.>s|r
-}
-
-STRING 7365
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool5,.>s|r
-}
-
 STRING 7366
 // Abilities: A0EM (Heavy Stomp), Tip (Tooltip - Normal)
 {
@@ -47924,17 +47847,6 @@ STRING 7388
 E
 }
 
-STRING 7389
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool6,.>s|r
-}
-
 STRING 7390
 // Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -47970,17 +47882,6 @@ STRING 7395
 // Abilities: A0EO (Dark Eyes), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dark Eyes - [|cffffcc00Level 5|r]
-}
-
-STRING 7396
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool7,.>s|r
 }
 
 STRING 7397
@@ -51698,28 +51599,6 @@ STRING 7979
 // Abilities: A0K2 (Overcharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00F|r] Overcharge - [|cffffcc00Level 10|r]
-}
-
-STRING 7980
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool8,.>s|r
-}
-
-STRING 7981
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
-
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
 }
 
 STRING 7982
@@ -67639,8 +67518,8 @@ STRING 10351
 STRING 10352
 {
 |cffffff00T+Click: Generic|r
-|cff00ff00Shift+T+Click: Group|r
-|cffff2222Ctrl+Shift+Click: Retreat|r
+|cff00ff00G+Click: Group|r
+|cffff2222Shift+T+Click: Retreat|r
 }
 
 STRING 10353
@@ -69656,7 +69535,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 02 December 2023
+This map is under active development - 1 April 2024
 }
 
 STRING 10653
@@ -89167,6 +89046,12 @@ STRING 13494
 (frieza)
 }
 
+STRING 13495
+// Abilities: A06H (Debuff Root Generic 0.5s), Name (Name)
+{
+Debuff Root Generic 0.5s
+}
+
 STRING 13496
 // Abilities: A0Q6 (Death Beam Barrage), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -89354,6 +89239,30 @@ STRING 13522
 // Abilities: A0Q7 (Nova Rush), Researchubertip (Tooltip - Learn - Extended)
 {
 Frieza leaps into the air and accelerates to an extreme speed before crashing down on his enemies. Deals bonus damage when landing.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0Q7,Cool1> seconds|r
+}
+
+STRING 13523
+// Abilities: A118 (Debuff Slow 50% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 13524
+// Abilities: A06I (Debuff Root Generic 1s), Name (Name)
+{
+Debuff Root Generic 1s
+}
+
+STRING 13525
+// Abilities: A119 (Debuff Slow 75% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 13526
+// Abilities: A06O (Debuff Root Generic 1.5s), Name (Name)
+{
+Debuff Root Generic 1.5s
 }
 
 STRING 13527
@@ -109286,6 +109195,24 @@ STRING 16296
 [|cff00ff00R|r] Tornado of Terror - [|cffffcc00Level 10|r]
 }
 
+STRING 16297
+// Abilities: A11A (Debuff Slow 90% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 16298
+// Abilities: A06R (Debuff Root Generic 2s), Name (Name)
+{
+Debuff Root Generic 2s
+}
+
+STRING 16299
+// Abilities: A0BQ (Debuff Slow 25% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 16300
 // Abilities: A0B6 (Multi Form Solar Flare), Tip (Tooltip - Normal)
 {
@@ -109302,6 +109229,12 @@ STRING 16302
 // Abilities: A0B6 (Multi Form Solar Flare), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Multi Form / Solar Flare - [|cffffcc00Level 3|r]
+}
+
+STRING 16303
+// Abilities: A07G (Debuff Root Generic 2.5s), Name (Name)
+{
+Debuff Root Generic 2.5s
 }
 
 STRING 16304
@@ -115744,6 +115677,12 @@ STRING 17160
 [|cff00FF00F|r] Red-Eyed Dragon Summoning - [|cffffcc00Level 7|r]
 }
 
+STRING 17161
+// Abilities: A0C3 (Debuff Slow 50% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 17162
 // Abilities: A0V8 (Madness Slow Debuff), EditorSuffix (Editor Suffix)
 {
@@ -121458,6 +121397,12 @@ STRING 17963
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
+STRING 17964
+// Abilities: A07H (Debuff Root Generic 3s), Name (Name)
+{
+Debuff Root Generic 3s
+}
+
 STRING 17965
 // Abilities: A0WO (Fire 2), Tip (Tooltip - Normal)
 {
@@ -124221,12 +124166,6 @@ STRING 18350
 F
 }
 
-STRING 18351
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 1|r]
-}
-
 STRING 18352
 // Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124259,36 +124198,6 @@ STRING 18356
 Lucca unleashes a barrage of flames upon her enemies.
 |cff00ff00Damage: Int * Lvl * ?
 |cff00FFFFCooldown: <A0X1,Cool10>s|r
-}
-
-STRING 18357
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 2|r]
-}
-
-STRING 18358
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 3|r]
-}
-
-STRING 18359
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 4|r]
-}
-
-STRING 18360
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 5|r]
-}
-
-STRING 18361
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 6|r]
 }
 
 STRING 18362
@@ -124331,12 +124240,6 @@ Lucca unleashes a barrage of flames upon her enemies.
 |cff00FFFFCooldown: <A0X1,Cool10>s|r
 }
 
-STRING 18367
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 7|r]
-}
-
 STRING 18368
 // Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124370,24 +124273,6 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 |cff00ffffCooldown: <A0FL,Cool3,.> seconds|r
 }
 
-STRING 18372
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 8|r]
-}
-
-STRING 18373
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 9|r]
-}
-
-STRING 18374
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 10|r]
-}
-
 STRING 18375
 // Abilities: A0X2 (Fire), EditorSuffix (Editor Suffix)
 {
@@ -124398,12 +124283,6 @@ STRING 18376
 // Abilities: A0GU (Hell Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hell Storm - [|cffffcc00Level 5|r]
-}
-
-STRING 18377
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 1|r]
 }
 
 STRING 18378
@@ -124440,36 +124319,6 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 
 |cff00ff00Damage: [Int] 500u (+500u)
 |cff00ffffCooldown: <A0FL,Cool5,.> seconds|r
-}
-
-STRING 18383
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 2|r]
-}
-
-STRING 18384
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 3|r]
-}
-
-STRING 18385
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 4|r]
-}
-
-STRING 18386
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 5|r]
-}
-
-STRING 18387
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 6|r]
 }
 
 STRING 18388
@@ -124517,12 +124366,6 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 |cff00ffffCooldown: <A0FL,Cool10,.> seconds|r
 }
 
-STRING 18393
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 7|r]
-}
-
 STRING 18394
 // Abilities: A0FL (Boomerang), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -124554,24 +124397,6 @@ STRING 18397
 // Abilities: A04Q (Majin Buu's Fat), EditorSuffix (Editor Suffix)
 {
 (item)
-}
-
-STRING 18398
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 8|r]
-}
-
-STRING 18399
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 9|r]
-}
-
-STRING 18400
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire - [|cffffcc00Level 10|r]
 }
 
 STRING 18401
@@ -128070,6 +127895,12 @@ STRING 18897
 // Buffs/Effects: B04X (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18898
+// Abilities: A0C4 (Debuff Slow 75% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
 }
 
 STRING 18899
@@ -131938,6 +131769,12 @@ STRING 19430
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 19431
+// Buffs/Effects: B018 (Rooted Generic), Bufftip (Tooltip)
+{
+Rooted
 }
 
 STRING 19432
@@ -138088,7 +137925,7 @@ Debuff Slow 25% 3s
 }
 
 STRING 20294
-// Abilities: A118 (Debuff Slow 50% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A0CA (Debuff Slow 90% 3s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -138480,7 +138317,7 @@ Crop Circles
 }
 
 STRING 20345
-// Abilities: A119 (Debuff Slow 75% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A00K (Debuff Slow 50% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -138570,7 +138407,7 @@ STRING 20358
 }
 
 STRING 20359
-// Abilities: A11A (Debuff Slow 90% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Debuff Slow 75% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147734,7 +147571,7 @@ STRING 21611
 }
 
 STRING 21612
-// Abilities: A0BQ (Debuff Slow 25% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A04U (Debuff Slow 25% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147746,7 +147583,7 @@ STRING 21613
 }
 
 STRING 21614
-// Abilities: A0C3 (Debuff Slow 50% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06H (Debuff Root Generic 0.5s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147760,7 +147597,7 @@ Dende has learned the power to unlock the hidden potential inside his allies, gr
 }
 
 STRING 21616
-// Abilities: A0C4 (Debuff Slow 75% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06I (Debuff Root Generic 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147772,7 +147609,7 @@ STRING 21617
 }
 
 STRING 21618
-// Abilities: A0CA (Debuff Slow 90% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06O (Debuff Root Generic 1.5s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -151265,215 +151102,6 @@ STRING 22043
 // Abilities: A11M (Special Beast Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Special Beast Cannon - [|cffffcc00Level 10|r]
-}
-
-STRING 22044
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool1>s|r
-}
-
-STRING 22045
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool2>s|r
-}
-
-STRING 22046
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool3>s|r
-}
-
-STRING 22047
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool4>s|r
-}
-
-STRING 22048
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool5>s|r
-}
-
-STRING 22049
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool6>s|r
-}
-
-STRING 22050
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool7>s|r
-}
-
-STRING 22051
-// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool1>s|r
-}
-
-STRING 22052
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool8>s|r
-}
-
-STRING 22053
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool9>s|r
-}
-
-STRING 22054
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool10>s|r
-}
-
-STRING 22055
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool1,.>s|r
-}
-
-STRING 22056
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool2,.>s|r
-}
-
-STRING 22057
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool3,.>s|r
-}
-
-STRING 22058
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool4,.>s|r
-}
-
-STRING 22059
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool5,.>s|r
-}
-
-STRING 22060
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool6,.>s|r
-}
-
-STRING 22061
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool7,.>s|r
-}
-
-STRING 22062
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool8,.>s|r
-}
-
-STRING 22063
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool9,.>s|r
-}
-
-STRING 22064
-// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool1,.>s|r
-}
-
-STRING 22065
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool10,.>s|r
 }
 
 STRING 22066
@@ -158234,10 +157862,22 @@ STRING 22889
 Q
 }
 
+STRING 22890
+// Buffs/Effects: B018 (Rooted Generic), Buffubertip (Tooltip - Extended)
+{
+This unit is rooted; it cannot move or zanzoken but can still cast spells.
+}
+
 STRING 22891
 // Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 22892
+// Buffs/Effects: B018 (Rooted Generic), EditorName (Name (Editor Only))
+{
+Rooted Generic
 }
 
 STRING 22893
@@ -158246,16 +157886,34 @@ STRING 22893
 W
 }
 
+STRING 22894
+// Abilities: A07I (Debuff Soul Burn Silence 1s), Name (Name)
+{
+Debuff Soul Burn Silence 1s
+}
+
 STRING 22895
 // Abilities: A023 (Sekizo: Evening Elephant), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Sekizo: Evening Elephant - [|cffffcc00Level 10|r]
 }
 
+STRING 22896
+// Abilities: A06R (Debuff Root Generic 2s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 22897
 // Abilities: A0B4 (Princess Valiant), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Princess Valiant - [|cffffcc00Level 10|r]
+}
+
+STRING 22898
+// Abilities: A07J (Debuff Soul Burn Silence 2s), Name (Name)
+{
+Debuff Soul Burn Silence 2s
 }
 
 STRING 22899
@@ -158744,6 +158402,18 @@ STRING 22959
 // Abilities: A002 (Hiraishin no Jutsu: Second Step), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] |cffffff00Hiraishin no Jutsu: Second Step|r - [|cffffcc00Level 10|r]
+}
+
+STRING 22960
+// Abilities: A07G (Debuff Root Generic 2.5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 22961
+// Abilities: A07K (Debuff Soul Burn Silence 3s), Name (Name)
+{
+Debuff Soul Burn Silence 3s
 }
 
 STRING 22962
@@ -159415,10 +159085,22 @@ STRING 23051
 (shalltear)
 }
 
+STRING 23052
+// Abilities: A07H (Debuff Root Generic 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 23053
 // Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 23054
+// Abilities: A07L (Debuff Soul Burn Silence 4s), Name (Name)
+{
+Debuff Soul Burn Silence 4s
 }
 
 STRING 23055
@@ -159427,10 +159109,28 @@ STRING 23055
 W
 }
 
+STRING 23056
+// Abilities: A07I (Debuff Soul Burn Silence 1s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 23057
 // Abilities: A003 (Hiraishin no Jutsu: Third Stage), EditorSuffix (Editor Suffix)
 {
 (minato)
+}
+
+STRING 23058
+// Abilities: A07U (Debuff Soul Burn Silence 5s), Name (Name)
+{
+Debuff Soul Burn Silence 5s
+}
+
+STRING 23059
+// Abilities: A07J (Debuff Soul Burn Silence 2s), EditorSuffix (Editor Suffix)
+{
+(generic)
 }
 
 STRING 23060
@@ -159878,6 +159578,12 @@ STRING 23121
 Giant Arm of the Demon
 }
 
+STRING 23122
+// Buffs/Effects: B01D (Silence Generic), EditorName (Name (Editor Only))
+{
+Silence Generic
+}
+
 STRING 23123
 // Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
 {
@@ -159967,10 +159673,37 @@ Creates an illusion of Shalltear that deals deals <A13B,DataA1,%>% damage and ta
 |cff00ffffCooldown: <A137,Cool1>s
 }
 
+STRING 23132
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 23133
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool2>s|r
+}
+
 STRING 23134
 // Abilities: A05L (Overcharge), EditorSuffix (Editor Suffix)
 {
 (genos)
+}
+
+STRING 23135
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool3>s|r
 }
 
 STRING 23136
@@ -160669,10 +160402,142 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 |cffffcc00Damage|r - <A00S,DataB15,.> times
 }
 
+STRING 23232
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool4>s|r
+}
+
 STRING 23233
 // Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Scything Claws
+}
+
+STRING 23234
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool5>s|r
+}
+
+STRING 23235
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool6>s|r
+}
+
+STRING 23236
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool7>s|r
+}
+
+STRING 23237
+// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 23238
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool8>s|r
+}
+
+STRING 23239
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool9>s|r
+}
+
+STRING 23240
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool10>s|r
+}
+
+STRING 23241
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool1,.>s|r
+}
+
+STRING 23242
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool2,.>s|r
+}
+
+STRING 23243
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool3,.>s|r
+}
+
+STRING 23244
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool4,.>s|r
+}
+
+STRING 23245
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool5,.>s|r
+}
+
+STRING 23246
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool6,.>s|r
 }
 
 STRING 23247
@@ -160733,6 +160598,16 @@ STRING 23255
 (demiurge)
 }
 
+STRING 23256
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool7,.>s|r
+}
+
 STRING 23257
 // Buffs/Effects: B06A (), Bufftip (Tooltip)
 {
@@ -160763,10 +160638,30 @@ STRING 23261
 Debuff Invis Pocket Dimension Dummy
 }
 
+STRING 23262
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool8,.>s|r
+}
+
 STRING 23263
 // Abilities: A0XP (Janemba Corruption Passive), EditorSuffix (Editor Suffix)
 {
 (janemba)
+}
+
+STRING 23264
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool9,.>s|r
 }
 
 STRING 23265
@@ -160781,10 +160676,42 @@ STRING 23266
 (hit)
 }
 
+STRING 23267
+// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool1,.>s|r
+}
+
+STRING 23268
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool10,.>s|r
+}
+
+STRING 23269
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 1|r]
+}
+
 STRING 23270
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 23271
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 2|r]
 }
 
 STRING 23272
@@ -161819,6 +161746,30 @@ Guy rapidly spins and kicks at nearby enemies for 2s.
 |cff00ffffCooldown: <A00Y,Cool3,.> seconds|r
 }
 
+STRING 23409
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 23410
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 23411
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 23412
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 6|r]
+}
+
 STRING 23413
 {
 Type "r" to revert.
@@ -161865,6 +161816,12 @@ Guy rapidly spins and kicks at nearby enemies for 2s.
 
 |cff00ff00Damage: [Int] 400u/s
 |cff00ffffCooldown: <A00Y,Cool6,.> seconds|r
+}
+
+STRING 23418
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 7|r]
 }
 
 STRING 23419
@@ -162864,14 +162821,26 @@ STRING 23530
 Debuff Slow Waluigi Fireball 50% 1.5s
 }
 
+STRING 23531
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 8|r]
+}
+
 STRING 23532
-// Abilities: A00K (Debuff Slow 50% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07K (Debuff Soul Burn Silence 3s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
 
+STRING 23533
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 9|r]
+}
+
 STRING 23534
-// Abilities: A03T (Debuff Slow 75% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07L (Debuff Soul Burn Silence 4s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -162942,16 +162911,40 @@ STRING 23545
 [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Third Stage|r - [|cffffcc00Level 10|r]
 }
 
+STRING 23546
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 10|r]
+}
+
 STRING 23547
-// Abilities: A04U (Debuff Slow 25% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07U (Debuff Soul Burn Silence 5s), EditorSuffix (Editor Suffix)
 {
 (generic)
+}
+
+STRING 23548
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 23549
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 2|r]
 }
 
 STRING 23550
 // Abilities: A004 (Hiraishin no Jutsu), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] |cffffff00Hiraishin no Jutsu|r
+}
+
+STRING 23551
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 3|r]
 }
 
 STRING 23552
@@ -163009,6 +163002,12 @@ A long range caster with high utility. Can massively disrupt the flow of battle 
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
+STRING 23559
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 4|r]
+}
+
 STRING 23560
 {
 Type "r" to revert.
@@ -163031,10 +163030,28 @@ STRING 23561
 Minato can now tap into Kurama's chakra to empower himself.
 }
 
+STRING 23562
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 5|r]
+}
+
+STRING 23563
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 6|r]
+}
+
 STRING 23564
 // Abilities: A00A (Kurama Mode Flag), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cffffaa00Kurama Mode|r
+}
+
+STRING 23565
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 7|r]
 }
 
 STRING 23566
@@ -163047,6 +163064,12 @@ STRING 23567
 // Abilities: A00C (Debuff Faerie Fire Minato Kunai), EditorSuffix (Editor Suffix)
 {
 (minato)
+}
+
+STRING 23568
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 8|r]
 }
 
 STRING 23569
@@ -163073,10 +163096,44 @@ STRING 23572
 Debuff Faerie Fire Minato Kunai
 }
 
+STRING 23573
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 9|r]
+}
+
 STRING 23574
 // Buffs/Effects: B06D (), Buffubertip (Tooltip - Extended)
 {
 This unit has been damaged by Hiraishin Kunai; it has reduced armor and can be seen by the enemy.
+}
+
+STRING 23575
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 23576
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool1,.>s|r
+}
+
+STRING 23577
+// Abilities: A0HZ (Disaster Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool1,.> - <A0HZ,Cool10,.>s|r
 }
 
 STRING 23578
@@ -163369,6 +163426,61 @@ Dyspo dashes in a single direction, a thousand times faster than usual.
 |cff00ffffCooldown: <A0QY,Cool10> seconds|r
 }
 
+STRING 23610
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool10,.>s|r
+}
+
+STRING 23611
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool2,.>s|r
+}
+
+STRING 23612
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool3,.>s|r
+}
+
+STRING 23613
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool4,.>s|r
+}
+
+STRING 23614
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool5,.>s|r
+}
+
 STRING 23615
 // Abilities: A012 (Front Lotus), Ubertip (Tooltip - Normal - Extended)
 {
@@ -163587,6 +163699,50 @@ The user opens at least three of the Eight Gates to remove their body's limitati
 |cffff2222Costs 10% of Max HP|r
 |cff00ff00Damage: [Int] 1000u
 |cff00ffffCooldown: <A015,Cool2,.> seconds|r
+}
+
+STRING 23637
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool6,.>s|r
+}
+
+STRING 23638
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool7,.>s|r
+}
+
+STRING 23639
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool8,.>s|r
+}
+
+STRING 23640
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
 }
 
 STRING 23677
