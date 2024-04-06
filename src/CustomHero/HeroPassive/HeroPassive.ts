@@ -118,6 +118,9 @@ export class HeroPassiveManager {
       case Id.ainzOoalGown:
         ainzPassive(customHero);
         break;
+      case Id.shalltearBloodfallen:
+        shalltearPassive(customHero);
+        break;
       case Id.demiurge:
         demiurgePassive(customHero);
         break;
@@ -2569,6 +2572,30 @@ export function ainzPassive(customHero: CustomHero) {
   });
 }
 
+export function shalltearPassive(customHero: CustomHero) {
+  const hpCostPct = 0.02;
+
+  const bloodFrenzyTimer = CreateTimer();
+  customHero.addTimer(bloodFrenzyTimer);
+
+  TimerStart(bloodFrenzyTimer, 0.03, true, () => {
+    if (GetUnitAbilityLevel(customHero.unit, Id.shalltearBloodFrenzyPassive) > 0) {
+      const lifePct = GetUnitLifePercent(customHero.unit);
+      if (lifePct < 1) {
+        const player = GetOwningPlayer(customHero.unit);
+        SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOn, true);
+        SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOff, false);
+        SetPlayerAbilityAvailable(player, Id.shalltearMistForm, false);
+        UnitRemoveAbility(customHero.unit, Id.shalltearBloodFrenzyPassive);
+      } else if (!UnitHelper.isUnitInvul(customHero.unit)) {
+        UnitHelper.payHPPercentCost(customHero.unit, hpCostPct * 0.03, UNIT_STATE_MAX_LIFE);
+        const lvl = Math.min(10, 1 + Math.floor((100 - lifePct) / 10));
+        SetUnitAbilityLevel(customHero.unit, Id.shalltearBloodFrenzyPassive, lvl);
+      }
+    }
+  });
+}
+
 export function demiurgePassive(customHero: CustomHero) {
   const heroUnitTypeId = GetUnitTypeId(customHero.unit);
   const hellfireMantleSP = 0.15;
@@ -2618,7 +2645,7 @@ export function demiurgePassive(customHero: CustomHero) {
       if (
         UnitHelper.isUnitDead(customHero.unit)
         || GetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle) == 1
-        || GetUnitManaPercent(customHero.unit) < hellfireMantleManaDrain
+        || GetUnitManaPercent(customHero.unit) < hellfireMantleManaDrain * 100
       ) {
         mantleState = 2;
       } else {
@@ -2973,7 +3000,7 @@ export function genosPassive(customHero: CustomHero) {
       if (
         UnitHelper.isUnitDead(customHero.unit)
         || GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 1
-        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain
+        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain * 100
       ) {
         overchargeState = 2;
       } else {

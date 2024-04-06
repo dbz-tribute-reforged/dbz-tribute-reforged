@@ -1119,7 +1119,8 @@ gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Rainbow_Shell_Activate = nil
 gg_trg_Tree_of_Might_Fruit_Bonus = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Set_AOE_Flying_Vision_for_TempUnit_TEST = nil
+gg_trg_Auto_Transform_Loop_T1 = nil
+gg_trg_Auto_Transform_Loop_T2 = nil
 function InitGlobals()
 local i = 0
 
@@ -7879,7 +7880,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8680.3, 8678.8, 270.880, FourCC("n0
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8049.0, 11728.6, 6.467, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6681.3, 11250.2, 16.778, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 4666.1, 14293.6, 87.399, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 11020.6, 9685.9, -75.669, FourCC("n03G"))
+u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 11020.6, 9685.9, 284.331, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11962.9, 8684.5, 270.880, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 12094.8, 8465.1, 183.885, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 4688.7, 14574.5, 16.778, FourCC("n01E"))
@@ -8555,7 +8556,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 31187.7, 6935.4, 165.576, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 27869.6, 4136.4, 324.002, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 26164.5, 8231.7, 323.747, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 26167.3, 27413.8, 304.408, FourCC("n02P"))
-u = BlzCreateUnitWithSkin(p, FourCC("n038"), -3893.3, 18629.3, -72.761, FourCC("n038"))
+u = BlzCreateUnitWithSkin(p, FourCC("n038"), -3893.3, 18629.3, 287.239, FourCC("n038"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 9197.6, 18659.2, 267.045, FourCC("n03B"))
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 12949.0, 18184.0, 273.223, FourCC("n03B"))
@@ -8622,7 +8623,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13745.2, 11714.1, 214.987, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13174.0, 11697.4, 104.956, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13444.0, 11678.2, 280.918, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18351.4, 12199.9, 11.692, FourCC("n019"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 3949.3, 7295.0, -31.891, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 3949.3, 7295.0, 328.109, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 22241.4, 9609.2, 11.885, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 22075.6, 9418.6, 283.446, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 11287.5, -3525.8, 217.129, FourCC("n015"))
@@ -8803,7 +8804,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n015"), 30709.1, 896.4, 132.543, FourCC("n0
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 30597.8, 1270.3, 347.332, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -6879.3, 4545.8, 44.859, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 4159.7, 7461.0, -79.521, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 4159.7, 7461.0, 280.479, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12244.9, -1016.0, 96.561, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 3446.8, -808.1, 242.416, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 27353.8, -1127.2, 80.051, FourCC("n01D"))
@@ -13753,6 +13754,11 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A030"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A01J"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A050"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A05K"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A133"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A09M"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A0A1"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A0B5"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A135"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -34467,7 +34473,7 @@ end
 
 function Trig_Update_AOE_Flying_Vision_Func001Func002A()
 udg_TempUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Set_AOE_Flying_Vision_for_TempUnit_TEST)
+TriggerExecute(gg_trg_Set_AOE_Flying_Vision_for_TempUnit)
 end
 
 function Trig_Update_AOE_Flying_Vision_Actions()
@@ -34599,117 +34605,6 @@ end
 function InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
 gg_trg_Set_AOE_Flying_Vision_for_TempUnit = CreateTrigger()
 TriggerAddAction(gg_trg_Set_AOE_Flying_Vision_for_TempUnit, Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions)
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003Func003Func001C()
-if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I00D")) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003Func003C()
-if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I03Q")) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003C()
-if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func004C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0Y9"), udg_TempUnit) > 0)) then
-return false
-end
-if (not (BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0Y9")) >= (BlzGetUnitAbilityCooldown(udg_TempUnit, FourCC("A0Y9"), 0) - 15.00))) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A113"), udg_TempUnit) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func006C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A11N"), udg_TempUnit) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func007C()
-if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04Y")) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001C()
-if (not (udg_IsAOEFlyingVision == true)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002C()
-if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Actions()
-    udg_ID = GetHandleId(udg_TempUnit)
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002C()) then
-else
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001C()) then
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003C()) then
-udg_TempReal = RMinBJ(4500.00, (1200.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.40)))
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003Func003C()) then
-udg_TempReal = (udg_TempReal + 1000.00)
-else
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func003Func003Func001C()) then
-udg_TempReal = (udg_TempReal + 500.00)
-else
-end
-end
-else
-udg_TempReal = 600.00
-end
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func004C()) then
-udg_TempReal = (udg_TempReal + 2000.00)
-else
-end
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func005C()) then
-udg_TempReal = (udg_TempReal + 2000.00)
-else
-end
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func006C()) then
-udg_TempReal = (udg_TempReal + 1000.00)
-else
-end
-if (Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Func002Func001Func007C()) then
-udg_TempReal = (udg_TempReal + 2000.00)
-else
-end
-BlzSetUnitRealFieldBJ(udg_TempUnit, UNIT_RF_SIGHT_RADIUS, udg_TempReal)
-else
-end
-end
-end
-
-function InitTrig_Set_AOE_Flying_Vision_for_TempUnit_TEST()
-gg_trg_Set_AOE_Flying_Vision_for_TempUnit_TEST = CreateTrigger()
-TriggerAddAction(gg_trg_Set_AOE_Flying_Vision_for_TempUnit_TEST, Trig_Set_AOE_Flying_Vision_for_TempUnit_TEST_Actions)
 end
 
 function Trig_Spell_Zone_System_Cast_Conditions()
@@ -37434,6 +37329,60 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform_Loop, 30.00)
 TriggerAddAction(gg_trg_Auto_Transform_Loop, Trig_Auto_Transform_Loop_Actions)
 end
 
+function Trig_Auto_Transform_Loop_T1_Func001Func001C()
+if (not (udg_AutoTransformPlayer[udg_AutoTransformPlayerInt] == true)) then
+return false
+end
+return true
+end
+
+function Trig_Auto_Transform_Loop_T1_Actions()
+udg_AutoTransformPlayerInt = 1
+while (true) do
+if (udg_AutoTransformPlayerInt > (udg_MaxNumPlayers // 2)) then break end
+if (Trig_Auto_Transform_Loop_T1_Func001Func001C()) then
+udg_TransformationPlayer = ConvertedPlayer(udg_AutoTransformPlayerInt)
+TriggerExecute(gg_trg_Auto_Transform_Player_Units)
+else
+end
+udg_AutoTransformPlayerInt = udg_AutoTransformPlayerInt + 1
+end
+end
+
+function InitTrig_Auto_Transform_Loop_T1()
+gg_trg_Auto_Transform_Loop_T1 = CreateTrigger()
+DisableTrigger(gg_trg_Auto_Transform_Loop_T1)
+TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform_Loop_T1, 30.00)
+TriggerAddAction(gg_trg_Auto_Transform_Loop_T1, Trig_Auto_Transform_Loop_T1_Actions)
+end
+
+function Trig_Auto_Transform_Loop_T2_Func001Func001C()
+if (not (udg_AutoTransformPlayer[udg_AutoTransformPlayerInt] == true)) then
+return false
+end
+return true
+end
+
+function Trig_Auto_Transform_Loop_T2_Actions()
+udg_AutoTransformPlayerInt = ((udg_MaxNumPlayers // 2) + 1)
+while (true) do
+if (udg_AutoTransformPlayerInt > udg_MaxNumPlayers) then break end
+if (Trig_Auto_Transform_Loop_T2_Func001Func001C()) then
+udg_TransformationPlayer = ConvertedPlayer(udg_AutoTransformPlayerInt)
+TriggerExecute(gg_trg_Auto_Transform_Player_Units)
+else
+end
+udg_AutoTransformPlayerInt = udg_AutoTransformPlayerInt + 1
+end
+end
+
+function InitTrig_Auto_Transform_Loop_T2()
+gg_trg_Auto_Transform_Loop_T2 = CreateTrigger()
+DisableTrigger(gg_trg_Auto_Transform_Loop_T2)
+TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform_Loop_T2, 30.00)
+TriggerAddAction(gg_trg_Auto_Transform_Loop_T2, Trig_Auto_Transform_Loop_T2_Actions)
+end
+
 function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func003C()
 if (not (udg_StatMultReal > 0.00)) then
 return false
@@ -37519,7 +37468,9 @@ end
 
 function Trig_Auto_Transform_Turn_On_Actions()
 DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9286")
-EnableTrigger(gg_trg_Auto_Transform_Loop)
+EnableTrigger(gg_trg_Auto_Transform_Loop_T1)
+TriggerSleepAction(5.00)
+EnableTrigger(gg_trg_Auto_Transform_Loop_T2)
 end
 
 function InitTrig_Auto_Transform_Turn_On()
@@ -38539,42 +38490,42 @@ end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func007Func002Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func006Func002Func002C()
 if (not (udg_StatMultAgi < 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func007Func002C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func006Func002C()
 if (not (udg_StatMultAgi < 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func007C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func006C()
 if (not (udg_StatMultAgi < 1.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func022Func001Func001C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func021Func001Func001C()
 if (not (udg_StatMultAgi < 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func022Func001C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func021Func001C()
 if (not (udg_StatMultAgi < 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Oozaru_Vegeta_Skin_Change_Func022C()
+function Trig_Oozaru_Vegeta_Skin_Change_Func021C()
 if (not (udg_StatMultAgi < 1.50)) then
 return false
 end
@@ -38587,13 +38538,13 @@ udg_TempReal = 30.00
     udg_TempInt = GetSpellAbilityId()
 TriggerExecute(gg_trg_Temp_Skin_Change_Init)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-if (Trig_Oozaru_Vegeta_Skin_Change_Func007C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func006C()) then
 udg_StatMultStr = 1.50
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func007Func002C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func006Func002C()) then
 udg_StatMultStr = RMinBJ(2.55, RMaxBJ((udg_StatMultStr + 0.25), 2.00))
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func007Func002Func002C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func006Func002Func002C()) then
 udg_StatMultStr = 2.60
 else
 udg_StatMultStr = 2.75
@@ -38613,13 +38564,13 @@ BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
 DestroyEffectBJ(GetLastCreatedEffectBJ())
     RemoveLocation(udg_TempLoc)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
-if (Trig_Oozaru_Vegeta_Skin_Change_Func022C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func021C()) then
         udg_TransformationID = FourCC('H090')
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func022Func001C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func021Func001C()) then
             udg_TransformationID = FourCC('H093')
 else
-if (Trig_Oozaru_Vegeta_Skin_Change_Func022Func001Func001C()) then
+if (Trig_Oozaru_Vegeta_Skin_Change_Func021Func001Func001C()) then
                 udg_TransformationID = FourCC('H094')
 else
                 udg_TransformationID = FourCC('H095')
@@ -69101,7 +69052,6 @@ InitTrig_Update_MS()
 InitTrig_Set_HP_scaled_MS_for_TempUnit()
 InitTrig_Update_AOE_Flying_Vision()
 InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
-InitTrig_Set_AOE_Flying_Vision_for_TempUnit_TEST()
 InitTrig_Spell_Zone_System_Cast()
 InitTrig_TS_Game_Start_Indicator_Unit_Removal()
 InitTrig_Make_player_units_go_rez()
@@ -69152,6 +69102,8 @@ InitTrig_Add_To_Power_Wish_Stats_Data()
 InitTrig_Get_Stat_Sources_Data()
 InitTrig_Setup_Auto_Transform()
 InitTrig_Auto_Transform_Loop()
+InitTrig_Auto_Transform_Loop_T1()
+InitTrig_Auto_Transform_Loop_T2()
 InitTrig_Auto_Transform_Player_Units()
 InitTrig_Auto_Transform_Toggle()
 InitTrig_Auto_Transform_Turn_On()

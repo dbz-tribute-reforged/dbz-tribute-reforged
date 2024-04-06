@@ -7104,6 +7104,37 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Robo.ICE_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim robo tackle" },
+      { name: "debuff stun robo ice tackle" },
+      { name: "dash ground point robo fire tackle" },
+      { name: "damage robo ice tackle" },
+      { name: "sfx robo ice tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Robo.FIRE_TACKLE,
     currentCd: 0,
     maxCd: 1,
@@ -7187,7 +7218,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim robo bubble snap" },
       { name: "jump robo bubble snap" },
-      { name: "dash ground forward robo bubble snap" },
+      { name: "dash ground point robo bubble snap" },
       { name: "block robo bubble snap" },
       { name: "debuff slow robo bubble snap 1" },
       { name: "debuff slow robo bubble snap 2" },
@@ -7628,6 +7659,60 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ayla.ICE_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam ayla ice toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.CUBE_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam ayla cube toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ayla.FIRE_WHIRL,
     currentCd: 0,
     maxCd: 1,
@@ -7750,43 +7835,12 @@ export const AbilitiesList = [
     },
     components: [
       { name: "jump robo bubble snap" },
-      { name: "dash ground forward robo bubble snap" },
+      { name: "dash ground point robo bubble snap" },
       { name: "block robo bubble snap" },
       { name: "debuff slow robo bubble snap 1" },
       { name: "debuff slow robo bubble snap 2" },
       { name: "damage robo bubble snap explosion" },
       { name: "sfx robo bubble snap" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Robo.ICE_TACKLE,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 20,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "",
-      disabled: "",
-    },
-    tooltip: {
-      title: "",
-      body: 
-        ""
-    },
-    components: [
-      { name: "anim robo tackle" },
-      { name: "debuff stun robo ice tackle" },
-      { name: "dash ground point robo fire tackle" },
-      { name: "damage robo ice tackle" },
-      { name: "sfx robo ice tackle" },
     ],
   },
   // -------------------------------------------
@@ -16501,7 +16555,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 33,
+    duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -16518,6 +16572,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
+      { name: "temp ability shalltear draining lance" },
       { name: "beam shalltear purifying javelin" },
     ],
   },

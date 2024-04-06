@@ -284,6 +284,38 @@ export const DualTechList = [
       { name: "marle glacier" },
     ]
   },
+  // glacier
+  {
+    name: "2T Marle Ice Toss",
+    sourceAbility: Id.marleIce,
+    replaceAbilityName: "",
+    aoe: 400,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: false,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "ayla ice toss" },
+    ]
+  },
+  // cube toss
+  {
+    name: "2T Marle Cube Toss",
+    sourceAbility: Id.marleIce2,
+    replaceAbilityName: "",
+    aoe: 400,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: false,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "ayla cube toss" },
+    ]
+  },
   // aura beam
   {
     name: "2T Marle Aura Beam",
@@ -504,10 +536,25 @@ export const DualTechList = [
   },
   // fire whirl
   {
-    name: "2T Lucca Fire Whirl",
+    name: "2T Lucca Fire Whirl 1",
     sourceAbility: Id.luccaFire,
     replaceAbilityName: "",
-    aoe: 400,
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "ayla fire whirl" },
+    ]
+  },
+  {
+    name: "2T Lucca Fire Whirl 2",
+    sourceAbility: Id.luccaFire2,
+    replaceAbilityName: "",
+    aoe: 600,
     casterDistance: -1,
     limit: 1,
     useCasterPoint: false,

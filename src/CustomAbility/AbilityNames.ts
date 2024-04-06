@@ -387,8 +387,8 @@ export module AbilityNames {
     export const TRIPLE_KICK: string = "Ayla Triple Kick";
     export const DRILL_KICK: string = "Ayla Drill Kick";
     export const VOLT_BITE: string = "Ayla Volt Bite";
-    export const ICE_TOSS: string = "Marle Ice Toss";
-    export const CUBE_TOSS: string = "Marle Cube Toss";
+    export const ICE_TOSS: string = "Ayla Ice Toss";
+    export const CUBE_TOSS: string = "Ayla Cube Toss";
     export const FIRE_WHIRL: string = "Ayla Fire Whirl";
     export const BLAZE_KICK_1: string = "Ayla Blaze Kick 1";
     export const BLAZE_KICK_2: string = "Ayla Blaze Kick 2";

@@ -450,6 +450,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ayla.TRIPLE_KICK,
       AbilityNames.Ayla.DRILL_KICK,
       AbilityNames.Ayla.VOLT_BITE,
+      AbilityNames.Ayla.ICE_TOSS,
+      AbilityNames.Ayla.CUBE_TOSS,
       AbilityNames.Ayla.FIRE_WHIRL,
       AbilityNames.Ayla.BLAZE_KICK_1,
       AbilityNames.Ayla.BLAZE_KICK_2,

@@ -1204,6 +1204,10 @@ export module Id {
   export const shalltearEinherjar = FourCC("A137");
   export const shalltearValhalla = FourCC("A138");
   export const shalltearTimeReverse = FourCC("A139");
+  export const shalltearDrainingLance = FourCC("A09M");
+  export const shalltearBloodFrenzyOn = FourCC("A0A1");
+  export const shalltearBloodFrenzyOff = FourCC("A0B5");
+  export const shalltearBloodFrenzyPassive = FourCC("A0BC");
 
   export const shotoTodoroki = FourCC("H05X");
   export const shotoTodorokiGlacier = FourCC("A0YR");

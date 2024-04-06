@@ -341,6 +341,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.albedoSkillBoost, SimpleSpellSystem.doAlbedoSkillBoost);
 
     Globals.genericSpellMap.set(Id.shalltearValhalla, SimpleSpellSystem.doShalltearValhalla);
+    Globals.genericSpellMap.set(Id.shalltearDrainingLance, SimpleSpellSystem.doShalltearDrainingLance);
+    Globals.genericSpellMap.set(Id.shalltearBloodFrenzyOn, SimpleSpellSystem.doShalltearBloodFrenzyOn);
+    Globals.genericSpellMap.set(Id.shalltearBloodFrenzyOff, SimpleSpellSystem.doShalltearBloodFrenzyOff);
 
     Globals.genericSpellMap.set(Id.demiurgeHellfireMantle, SimpleSpellSystem.doDemiurgeHellfireMantle);
 
@@ -5582,7 +5585,7 @@ export module SimpleSpellSystem {
   export function doShalltearValhalla(spellId: number) {
     const caster = GetTriggerUnit();
     const valhallaAOE = 1800;
-    const valhallaHeal = 0.25;
+    const valhallaHeal = 0.3;
     const valhallaHealMin = 0.1;
 
     let healMult = 0;
@@ -5644,6 +5647,86 @@ export module SimpleSpellSystem {
         + healMult * GetUnitState(caster, UNIT_STATE_MAX_LIFE)
       );
     }
+  }
+
+  export function doShalltearDrainingLance(spellId: number) {
+    const drainPct = 0.05;
+
+    const caster = GetTriggerUnit();
+    const target = GetSpellTargetUnit();
+    const player = GetOwningPlayer(caster);
+    
+    DestroyEffect(
+      AddSpecialEffectTarget(
+        "Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl",
+        caster, "origin"
+      )
+    );
+
+    const drainAmount = drainPct * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+    UnitDamageTarget(
+      caster, 
+      target,
+      drainAmount,
+      false, false,
+      ATTACK_TYPE_HERO,
+      DAMAGE_TYPE_NORMAL,
+      WEAPON_TYPE_WHOKNOWS
+    );
+    SetUnitState(
+      caster, 
+      UNIT_STATE_LIFE, 
+      GetUnitState(caster, UNIT_STATE_LIFE) + drainAmount
+    );
+    
+    const castDummy = CreateUnit(
+      player, 
+      Constants.dummyCasterId, 
+      GetUnitX(caster), GetUnitY(caster), 
+      0
+    );
+    UnitAddAbility(castDummy, DebuffAbilities.SLOW_GENERIC_25_PCT_5S);
+    IssueTargetOrderById(castDummy, OrderIds.SLOW, target);
+    RemoveUnit(castDummy);
+  }
+
+  export function doShalltearBloodFrenzyOn(spellId: number) {
+    const mistDuration = 5.0;
+    const caster = GetTriggerUnit();
+
+    if (GetUnitAbilityLevel(caster, Id.shalltearBloodFrenzyOn) > 0) {
+      const player = GetOwningPlayer(caster);
+      UnitAddAbility(caster, Id.shalltearMistForm);
+      UnitAddAbility(caster, Id.shalltearBloodFrenzyPassive);
+      SetUnitAbilityLevel(caster, Id.shalltearMistForm, Math.floor(GetHeroLevel(caster) * 0.1));
+
+      const lvl = Math.min(10, 1 + Math.floor((100 - GetUnitLifePercent(caster)) / 10));
+      SetUnitAbilityLevel(caster, Id.shalltearBloodFrenzyPassive, lvl);
+      BlzUnitHideAbility(caster, Id.shalltearBloodFrenzyPassive, true);
+
+      SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOn, false);
+      SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOff, false);
+      SetPlayerAbilityAvailable(player, Id.shalltearMistForm, true);
+
+      TimerStart(CreateTimer(), mistDuration, false, () => {
+        if (GetUnitAbilityLevel(caster, Id.shalltearBloodFrenzyPassive) > 0) {
+          SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOn, false);
+          SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOff, true);
+          SetPlayerAbilityAvailable(player, Id.shalltearMistForm, false);
+          UnitAddAbility(caster, Id.shalltearBloodFrenzyOff);
+        }
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  }
+  
+  export function doShalltearBloodFrenzyOff(spellId: number) {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOn, true);
+    SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOff, false);
+    SetPlayerAbilityAvailable(player, Id.shalltearMistForm, false);
+    UnitRemoveAbility(caster, Id.shalltearBloodFrenzyPassive);
   }
 
   export function doDemiurgeHellfireMantle(spellId: number) {

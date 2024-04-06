@@ -46881,6 +46881,26 @@ STRING 7230
 [|cff00FF00F|r] (|cff00ffffShooting Star|r) Super Tier Magic: Wish Upon A Star
 }
 
+STRING 7231
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool1,.> seconds|r
+}
+
+STRING 7232
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool3,.> seconds|r
+}
+
 STRING 7233
 // Abilities: A00R (Kamehameha), Tip (Tooltip - Normal)
 {
@@ -46951,6 +46971,16 @@ STRING 7244
 // Abilities: A0SO (Super Kamehameha Charge), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 7245
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool4,.> seconds|r
 }
 
 STRING 7246
@@ -47709,6 +47739,46 @@ STRING 7361
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: <A0JQ,Cool1> - <A0JQ,Cool10> seconds)|r
 }
 
+STRING 7362
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool5,.> seconds|r
+}
+
+STRING 7363
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool6,.> seconds|r
+}
+
+STRING 7364
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool7,.> seconds|r
+}
+
+STRING 7365
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool8,.> seconds|r
+}
+
 STRING 7366
 // Abilities: A0EM (Heavy Stomp), Tip (Tooltip - Normal)
 {
@@ -47847,6 +47917,16 @@ STRING 7388
 E
 }
 
+STRING 7389
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool9,.> seconds|r
+}
+
 STRING 7390
 // Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -47882,6 +47962,16 @@ STRING 7395
 // Abilities: A0EO (Dark Eyes), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dark Eyes - [|cffffcc00Level 5|r]
+}
+
+STRING 7396
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool10,.> seconds|r
 }
 
 STRING 7397
@@ -51599,6 +51689,26 @@ STRING 7979
 // Abilities: A0K2 (Overcharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00F|r] Overcharge - [|cffffcc00Level 10|r]
+}
+
+STRING 7980
+// Abilities: A133 (Purifying Javelin), Researchubertip (Tooltip - Learn - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool1,.> - <A133,Cool10,.> seconds|r
+}
+
+STRING 7981
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
+
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool2,.> seconds|r
 }
 
 STRING 7982
@@ -69510,8 +69620,11 @@ Mid-Class Saiyan Warrior
 }
 
 STRING 10648
+// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
 {
-|cffff2020Activating Auto Transformation. Type -autotransform to toggle on/off.|r
+The caster destroys illusions of themselves under their control in 1800 AOE. If any valid illusions were destroyed the caster restores 10% to 30% of their max HP proportional to the remaining HP of the illusion.
+
+|cff00ffffCooldown: <A138,Cool1>s
 }
 
 STRING 10649
@@ -93826,7 +93939,7 @@ R
 }
 
 STRING 14147
-// Abilities: A139 (Time Reverse), Researchhotkey (Hotkey - Learn)
+// Abilities: A135 (Mist Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -94713,7 +94826,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A139 (Time Reverse), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mist Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -101109,13 +101222,13 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A09M (Draining Lance), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15198
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A09M (Draining Lance), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -107446,7 +107559,7 @@ STRING 16055
 }
 
 STRING 16056
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0A1 (Blood Frenzy Activate), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -107530,7 +107643,7 @@ W
 }
 
 STRING 16070
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0A1 (Blood Frenzy Activate), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -107542,7 +107655,7 @@ Super Cape
 }
 
 STRING 16072
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108427,7 +108540,7 @@ STRING 16195
 }
 
 STRING 16196
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -108445,7 +108558,7 @@ STRING 16198
 }
 
 STRING 16199
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -112155,7 +112268,7 @@ STRING 16681
 }
 
 STRING 16682
-// Abilities: A135 (Mist Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A139 (Time Reverse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112179,7 +112292,7 @@ STRING 16685
 }
 
 STRING 16686
-// Abilities: A135 (Mist Form), Hotkey (Hotkey - Normal)
+// Abilities: A139 (Time Reverse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -117411,13 +117524,13 @@ STRING 17399
 }
 
 STRING 17400
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 17401
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -124166,6 +124279,12 @@ STRING 18350
 F
 }
 
+STRING 18351
+// Abilities: A09M (Draining Lance), Name (Name)
+{
+Draining Lance
+}
+
 STRING 18352
 // Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124198,6 +124317,36 @@ STRING 18356
 Lucca unleashes a barrage of flames upon her enemies.
 |cff00ff00Damage: Int * Lvl * ?
 |cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18357
+// Abilities: A09M (Draining Lance), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Draining Lance
+}
+
+STRING 18358
+// Abilities: A09M (Draining Lance), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear activates her Spuit Lance to drain 5% of the target's max HP and transfer it to herself. The attack leaves her victim slowed by 25% for 5s.
+}
+
+STRING 18359
+// Abilities: A133 (Purifying Javelin), EditorSuffix (Editor Suffix)
+{
+(shalltear)
+}
+
+STRING 18360
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18361
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
 STRING 18362
@@ -124240,6 +124389,12 @@ Lucca unleashes a barrage of flames upon her enemies.
 |cff00FFFFCooldown: <A0X1,Cool10>s|r
 }
 
+STRING 18367
+// Abilities: A0A1 (Blood Frenzy Activate), Name (Name)
+{
+Blood Frenzy Activate
+}
+
 STRING 18368
 // Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124273,6 +124428,12 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 |cff00ffffCooldown: <A0FL,Cool3,.> seconds|r
 }
 
+STRING 18374
+// Abilities: A134 (Vermilion Nova), EditorSuffix (Editor Suffix)
+{
+(shalltear)
+}
+
 STRING 18375
 // Abilities: A0X2 (Fire), EditorSuffix (Editor Suffix)
 {
@@ -124283,6 +124444,12 @@ STRING 18376
 // Abilities: A0GU (Hell Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hell Storm - [|cffffcc00Level 5|r]
+}
+
+STRING 18377
+// Abilities: A0B5 (Blood Frenzy Deactivate), Name (Name)
+{
+Blood Frenzy Deactivate
 }
 
 STRING 18378
@@ -124319,6 +124486,24 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 
 |cff00ff00Damage: [Int] 500u (+500u)
 |cff00ffffCooldown: <A0FL,Cool5,.> seconds|r
+}
+
+STRING 18384
+// Abilities: A0B5 (Blood Frenzy Deactivate), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear leaves her frenzied state by using her spuit lance to drain the blood off of her.
+}
+
+STRING 18385
+// Abilities: A135 (Mist Form), EditorSuffix (Editor Suffix)
+{
+(shalltear)
+}
+
+STRING 18386
+// Abilities: A0BC (Blood Frenzy), Name (Name)
+{
+Blood Frenzy
 }
 
 STRING 18388
@@ -124397,6 +124582,24 @@ STRING 18397
 // Abilities: A04Q (Majin Buu's Fat), EditorSuffix (Editor Suffix)
 {
 (item)
+}
+
+STRING 18398
+// Abilities: A136 (Negative Impact Shield), EditorSuffix (Editor Suffix)
+{
+(shalltear)
+}
+
+STRING 18399
+// Buffs/Effects: B06L (), Bufftip (Tooltip)
+{
+Blood Frenzy
+}
+
+STRING 18400
+// Buffs/Effects: B06L (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Blood Frenzy; it has increased attack damage.
 }
 
 STRING 18401
@@ -136418,7 +136621,7 @@ Dart shoots a ball of fire in the target direction.
 }
 
 STRING 20081
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -136994,7 +137197,7 @@ STRING 20164
 }
 
 STRING 20165
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -138172,7 +138375,7 @@ Farming Book
 }
 
 STRING 20324
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -139458,7 +139661,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -151104,6 +151307,114 @@ STRING 22043
 [|cff00ff00F|r] Special Beast Cannon - [|cffffcc00Level 10|r]
 }
 
+STRING 22048
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 2|r]
+}
+
+STRING 22049
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 3|r]
+}
+
+STRING 22050
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 4|r]
+}
+
+STRING 22051
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 5|r]
+}
+
+STRING 22052
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 6|r]
+}
+
+STRING 22053
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 1|r]
+}
+
+STRING 22054
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 7|r]
+}
+
+STRING 22055
+// Abilities: A135 (Mist Form), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Mist Form - [|cffffcc00Level %d|r]
+}
+
+STRING 22056
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 9|r]
+}
+
+STRING 22057
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 8|r]
+}
+
+STRING 22058
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 10|r]
+}
+
+STRING 22059
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 2|r]
+}
+
+STRING 22060
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 3|r]
+}
+
+STRING 22061
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 4|r]
+}
+
+STRING 22062
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 5|r]
+}
+
+STRING 22063
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 6|r]
+}
+
+STRING 22064
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 1|r]
+}
+
+STRING 22065
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 7|r]
+}
+
 STRING 22066
 // Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
@@ -155187,11 +155498,9 @@ STRING 22523
 }
 
 STRING 22524
-// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Researchtip (Tooltip - Learn)
 {
-The caster destroys illusions of themselves under their control in 1800 AOE. If any valid illusions were destroyed the caster restores 10% to 25% of their max HP proportional to the remaining HP of the illusion.
-
-|cff00ffffCooldown: <A138,Cool1>s
+[|cff00ff00E|r] Learn Time Reverse - [|cffffcc00Level %d|r]
 }
 
 STRING 22525
@@ -158417,7 +158726,7 @@ Debuff Soul Burn Silence 3s
 }
 
 STRING 22962
-// Abilities: A133 (Purifying Javelin), EditorSuffix (Editor Suffix)
+// Abilities: A137 (Einherjar), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -158591,7 +158900,7 @@ Shalltear creates a pillar of flame at the target location that erupts after a b
 }
 
 STRING 22986
-// Abilities: A134 (Vermilion Nova), EditorSuffix (Editor Suffix)
+// Abilities: A138 (Valhalla), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -158653,76 +158962,10 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 |cff00ffffCooldown: <A135,Cool7,.> seconds|r
 }
 
-STRING 22994
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 2|r]
-}
-
-STRING 22995
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 3|r]
-}
-
-STRING 22996
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 4|r]
-}
-
-STRING 22997
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 5|r]
-}
-
-STRING 22998
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 6|r]
-}
-
-STRING 22999
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 1|r]
-}
-
-STRING 23000
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 7|r]
-}
-
 STRING 23001
 // Abilities: A135 (Mist Form), Name (Name)
 {
 Mist Form
-}
-
-STRING 23002
-// Abilities: A135 (Mist Form), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00E|r] Learn Mist Form - [|cffffcc00Level %d|r]
-}
-
-STRING 23003
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 9|r]
-}
-
-STRING 23004
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 8|r]
-}
-
-STRING 23005
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 10|r]
 }
 
 STRING 23006
@@ -158758,7 +159001,7 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 }
 
 STRING 23010
-// Abilities: A135 (Mist Form), EditorSuffix (Editor Suffix)
+// Abilities: A139 (Time Reverse), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -158954,7 +159197,7 @@ Shalltear activates her negative impact shield that blocks incoming damage and a
 }
 
 STRING 23034
-// Abilities: A136 (Negative Impact Shield), EditorSuffix (Editor Suffix)
+// Abilities: A13A (Spuit Lance), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159023,7 +159266,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 23043
-// Abilities: A137 (Einherjar), EditorSuffix (Editor Suffix)
+// Abilities: A09M (Draining Lance), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159080,7 +159323,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 23051
-// Abilities: A138 (Valhalla), EditorSuffix (Editor Suffix)
+// Abilities: A0A1 (Blood Frenzy Activate), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159239,76 +159482,10 @@ Demiurge summons the flames of hell at the target location before dragging any e
 |cff00ffffCooldown: <A13C,Cool6,.> seconds|r
 }
 
-STRING 23074
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 2|r]
-}
-
-STRING 23075
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 3|r]
-}
-
-STRING 23076
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 4|r]
-}
-
-STRING 23077
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 5|r]
-}
-
-STRING 23078
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 6|r]
-}
-
-STRING 23079
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 1|r]
-}
-
-STRING 23080
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 7|r]
-}
-
 STRING 23081
 // Abilities: A139 (Time Reverse), Name (Name)
 {
 Time Reverse
-}
-
-STRING 23082
-// Abilities: A139 (Time Reverse), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00F|r] Learn Time Reverse - [|cffffcc00Level %d|r]
-}
-
-STRING 23083
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 9|r]
-}
-
-STRING 23084
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 8|r]
-}
-
-STRING 23085
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 10|r]
 }
 
 STRING 23086
@@ -159348,7 +159525,7 @@ Demiurge infuses his arm with demonic energy before punching his enemies, stunni
 }
 
 STRING 23090
-// Abilities: A139 (Time Reverse), EditorSuffix (Editor Suffix)
+// Abilities: A0B5 (Blood Frenzy Deactivate), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159363,7 +159540,7 @@ Demiurge infuses his arm with demonic energy before punching his enemies, stunni
 }
 
 STRING 23092
-// Abilities: A13A (Spuit Lance), EditorSuffix (Editor Suffix)
+// Abilities: A0BC (Blood Frenzy), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -160739,102 +160916,57 @@ Vegeta fires an energy blast that detonates on contact with enemies.
 }
 
 STRING 23275
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool1,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 9|r]
 }
 
 STRING 23276
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool3,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 8|r]
 }
 
 STRING 23277
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool4,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 10|r]
 }
 
 STRING 23278
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A1 (Blood Frenzy Activate), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool5,.> seconds|r
-}
-
-STRING 23279
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
-{
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool6,.> seconds|r
+[|cff00FF00F|r] Blood Frenzy Activate
 }
 
 STRING 23280
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool7,.> seconds|r
+[|cff00FF00F|r] Blood Frenzy Deactivate
 }
 
 STRING 23281
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool8,.> seconds|r
+F
 }
 
 STRING 23282
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool9,.> seconds|r
+F
 }
 
 STRING 23283
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool10,.> seconds|r
+F
 }
 
 STRING 23284
-// Abilities: A133 (Purifying Javelin), Researchubertip (Tooltip - Learn - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool1,.> - <A133,Cool10,.> seconds|r
-}
-
-STRING 23285
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
-{
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool2,.> seconds|r
+F
 }
 
 STRING 23286
@@ -163743,6 +163875,13 @@ Cell Max writhes in anger as the black spots on its armor glow purple before emi
 |cff00ff00Damage: [Int] 400u/s (+200u/s)|r
 |cff00ff00Damage Block: [Int] 1000u @ 40%|r
 |cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
+}
+
+STRING 23643
+// Abilities: A0A1 (Blood Frenzy Activate), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear enters a frenzied state to hunt for blood. Drains 2% of her max HP per second to increase her attack damage by +10% per 10% missing HP. The bonus attack damage is increased by +60% when below 30% HP. Cannot be deactivated in the first 5 seconds.
+Unlocks [|cff00ff00F|r] Mist Form for 5 seconds.
 }
 
 STRING 23677

@@ -111,4 +111,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.ORIGINAL_POINT,
     maxRange: 1200,
   },
+  {
+    name: "teleport caster point 33", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 33,
+    teleportTick: 0,
+    teleportOnce: false,
+    teleportTarget: Teleport.CASTER_POINT,
+    maxRange: Teleport.INFINITE_RANGE,
+  },
 ];
