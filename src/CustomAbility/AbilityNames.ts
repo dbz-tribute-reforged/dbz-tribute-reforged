@@ -324,7 +324,9 @@ export module AbilityNames {
     export const FIRE_SWORD: string = "Crono Fire Sword";
     export const X_STRIKE: string = "Crono X Strike";
     export const SWORD_STREAM: string = "Crono Sword Stream";
+    export const SPIRE: string = "Crono Spire";
     export const ROCKET_ROLL: string = "Crono Rocket Roll";
+    export const MAX_CYCLONE: string = "Crono Max Cyclone";
     export const SUPER_VOLT: string = "Crono Super Volt";
     export const AURA_WHIRL: string = "Crono Aura Whirl";
     export const ICE_SWORD: string = "Crono Ice Sword";
@@ -350,6 +352,7 @@ export module AbilityNames {
     export const HEAL_BEAM: string = "Robo Heal Beam";
     export const UZZI_PUNCH: string = "Robo Uzzi Punch";
     export const ELECTROCUTE: string = "Robo Electrocute";
+    export const ROCKET_ROLL: string = "Robo Rocket Roll";
     export const SUPER_VOLT: string = "Robo Super Volt";
     export const ICE_TACKLE: string = "Robo Ice Tackle";
     export const FIRE_TACKLE: string = "Robo Fire Tackle";

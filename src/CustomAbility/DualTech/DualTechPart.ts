@@ -19,6 +19,7 @@ export class DualTechPart {
     public showForceCastText: boolean = false,
     public useReqAbilityLevel: boolean = false,
     public includeAllies: boolean = false,
+    public setTargetUnitToSrcCaster: boolean = false,
     public applyCd: boolean = true,
     public applyOriginalCd: boolean = true,
     public cdPenalty: number = 0,
@@ -71,6 +72,7 @@ export class DualTechPart {
           const input2 = input.clone();
           input2.caster = customHero;
           if (this.useReqAbilityLevel) input2.level = GetUnitAbilityLevel(source, this.reqAbilityId);
+          if (this.setTargetUnitToSrcCaster) input2.targetUnit = input.caster.unit;
           customHero.useAbility(abilityName, input2);
   
           if (Globals.showAbilityFloatingText) {
@@ -117,6 +119,7 @@ export class DualTechPart {
       this.showForceCastText,
       this.useReqAbilityLevel,
       this.includeAllies,
+      this.setTargetUnitToSrcCaster,
       this.applyCd,
       this.applyOriginalCd,
       this.cdPenalty,
@@ -133,6 +136,7 @@ export class DualTechPart {
       showForceCastText: boolean;
       useReqAbilityLevel: boolean;
       includeAllies: boolean;
+      setTargetUnitToSrcCaster: boolean;
       applyCd: boolean;
       applyOriginalCd: boolean;
       cdPenalty: number;
@@ -146,6 +150,7 @@ export class DualTechPart {
     dtp.showForceCastText = input.showForceCastText;
     dtp.useReqAbilityLevel = input.useReqAbilityLevel;
     dtp.includeAllies = input.includeAllies;
+    dtp.setTargetUnitToSrcCaster = input.setTargetUnitToSrcCaster;
     dtp.applyCd = input.applyCd;
     dtp.applyOriginalCd = input.applyOriginalCd;
     dtp.cdPenalty = input.cdPenalty;

@@ -38,8 +38,8 @@ export class DualTechManager {
       if (!this.dualTechMap.has(dt.sourceAbility)) {
         this.dualTechMap.set(dt.sourceAbility, new Map());
       }
-      const arr = this.dualTechMap.get(dt.sourceAbility);
-      arr.set(dt.name, dt);
+      const val = this.dualTechMap.get(dt.sourceAbility);
+      val.set(dt.name, dt);
     }
   }
 

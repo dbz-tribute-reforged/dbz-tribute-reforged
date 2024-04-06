@@ -6491,6 +6491,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Crono.SPIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam crono spire" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Crono.ROCKET_ROLL,
     currentCd: 0,
     maxCd: 1,
@@ -6517,6 +6544,36 @@ export const AbilitiesList = [
       { name: "damage crono rocket roll dps" },
       { name: "knockback rocket roll"},
       { name: "sfx crono rocket roll" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.MAX_CYCLONE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "multi crono max cyclone"},
+      { name: "damage crono max cyclone dps" },
+      { name: "knockback cyclone"},
     ],
   },
   // -------------------------------------------
@@ -7073,6 +7130,38 @@ export const AbilitiesList = [
       { name: "multi robo electrocute inner" },
       { name: "multi robo electrocute outer" },
       { name: "sfx robo electrocute caster"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ROCKET_ROLL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability ghost visible" },
+      { name: "anim add alternate" },
+      { name: "teleport robo rocket roll" },
+      { name: "multi robo laser spin 1" },
+      { name: "multi robo laser spin 2" },
+      { name: "sfx robo laser spin" },
     ],
   },
   // -------------------------------------------

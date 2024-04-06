@@ -63,6 +63,7 @@ export class MultiComponent implements
     public fixedSourceCoords: boolean = false,
     public fixedReplacementCoords: boolean = false,
     public targetSource: number = MultiComponent.SOURCE_CASTER,
+    public replaceSourceWithTargetUnit: boolean = false,
     public useLastCastPoint: boolean = false,
     public whichTargetPoint: number = MultiComponent.TARGET_POINT_TARGET,
     public components: AbilityComponent[] = [],
@@ -201,9 +202,10 @@ export class MultiComponent implements
         this.angleDirection = -1;
       }
       if (this.whichTargetPoint == MultiComponent.TARGET_POINT_TARGET) {
-        this.targettedPoint.setVector(input.targetPoint);
         if (this.useLastCastPoint) {
           this.targettedPoint.setVector(input.castPoint);
+        } else {
+          this.targettedPoint.setVector(input.targetPoint);
         }
       } else if (this.whichTargetPoint == MultiComponent.TARGET_POINT_SOURCE_FORWARD) {
         this.targettedPoint.setPos(GetUnitX(source), GetUnitY(source));
@@ -267,7 +269,7 @@ export class MultiComponent implements
       }
 
       let oldSource = source;
-      if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT && input.targetUnit) {
+      if (input.targetUnit && this.replaceSourceWithTargetUnit) {
         source = input.targetUnit;
       }
 
@@ -282,7 +284,7 @@ export class MultiComponent implements
         }
       }
 
-      if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT && input.targetUnit) {
+      if (input.targetUnit && this.replaceSourceWithTargetUnit) {
         source = oldSource;
       }
 
@@ -342,6 +344,7 @@ export class MultiComponent implements
       this.fixedSourceCoords,
       this.fixedReplacementCoords,
       this.targetSource,
+      this.replaceSourceWithTargetUnit,
       this.useLastCastPoint,
       this.whichTargetPoint,
       AbilityComponentHelper.clone(this.components)
@@ -367,6 +370,7 @@ export class MultiComponent implements
       fixedSourceCoords: boolean;
       fixedReplacementCoords: boolean;
       targetSource: number;
+      replaceSourceWithTargetUnit: boolean;
       useLastCastPoint: boolean;
       whichTargetPoint: number;
       components: {
@@ -391,6 +395,7 @@ export class MultiComponent implements
     this.fixedSourceCoords = input.fixedSourceCoords;
     this.fixedReplacementCoords = input.fixedReplacementCoords;
     this.targetSource = input.targetSource;
+    this.replaceSourceWithTargetUnit = input.replaceSourceWithTargetUnit;
     this.useLastCastPoint = input.useLastCastPoint;
     this.whichTargetPoint = input.whichTargetPoint;
     return this;

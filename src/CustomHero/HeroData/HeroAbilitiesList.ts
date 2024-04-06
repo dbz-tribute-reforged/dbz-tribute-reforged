@@ -381,11 +381,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Crono.AURA_WHIRL,
       AbilityNames.Crono.X_STRIKE,
       AbilityNames.Crono.SUPER_VOLT,
+      AbilityNames.Crono.SPIRE,
       AbilityNames.Crono.ICE_SWORD,
       AbilityNames.Crono.FLAME_WHIRL,
       AbilityNames.Crono.FIRE_SWORD,
       AbilityNames.Crono.SWORD_STREAM,
       AbilityNames.Crono.ROCKET_ROLL,
+      AbilityNames.Crono.MAX_CYCLONE,
     ]],
 
     [Id.frog, [
@@ -410,6 +412,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Robo.HEAL_BEAM,
       AbilityNames.Robo.UZZI_PUNCH,
       AbilityNames.Robo.ELECTROCUTE,
+      AbilityNames.Robo.ROCKET_ROLL,
       AbilityNames.Robo.SUPER_VOLT,
       AbilityNames.Marle.AURA_BEAM,
       AbilityNames.Robo.ICE_TACKLE,

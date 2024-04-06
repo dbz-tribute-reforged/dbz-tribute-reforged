@@ -81,6 +81,22 @@ export const DualTechList = [
       { name: "crono x strike" },
     ]
   },
+  // rocket roll
+  {
+    name: "2T Crono Rocket Roll",
+    sourceAbility: Id.cronoCyclone,
+    replaceAbilityName: AbilityNames.Crono.ROCKET_ROLL,
+    aoe: 400,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: false,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "robo rocket roll" },
+    ]
+  },
   // super volt
   {
     name: "2T Crono Super Volt",
@@ -596,6 +612,23 @@ export const DualTechList = [
       { name: "crono sword stream" },
     ]
   },
+  // spire
+  {
+    name: "2T Frog Spire",
+    sourceAbility: Id.frogAerialStrike,
+    replaceAbilityName: "",
+    aoe: 1200,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "crono spire 2" },
+      { name: "crono spire 3" },
+    ]
+  },
   // blade toss
   {
     name: "2T Frog Blade Toss",
@@ -674,9 +707,9 @@ export const DualTechList = [
       { name: "ayla bubble hit" },
     ]
   },
-  // rocket roll
+  // max cyclone
   {
-    name: "2T Robo Rocket Roll",
+    name: "2T Robo Max Cyclone",
     sourceAbility: Id.roboLaserSpin,
     replaceAbilityName: "",
     aoe: 400,
@@ -684,10 +717,10 @@ export const DualTechList = [
     limit: 1,
     useCasterPoint: true,
     useLastCastPoint: false,
-    useOriginalAbility: true,
+    useOriginalAbility: false,
     useOriginalOnEmpty: true,
     parts: [
-      { name: "crono rocket roll" },
+      { name: "crono max cyclone" },
     ]
   },
   // fire uzzi punch

@@ -2172,4 +2172,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff stun crono spire",
+    repeatInterval: 1,
+    startTick: 20,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.STUN_ONE_SECOND,
+    orderId: OrderIds.THUNDERBOLT,
+    aoe: 450,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]
