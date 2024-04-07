@@ -33,6 +33,7 @@ export module MinimapHelper {
       [Id.fourthCooler, "MM_cooler4.mdl"],
       [Id.fifthCooler, "MM_cooler5.mdl"],
       [Id.metalCooler, "MM_cooler_metal.mdl"],
+      [Id.metalCoolerClone, "MM_cooler_metal.mdl"],
       [Id.getiStarHero, "MM_geti_star.mdl"],
       [Id.bardock, "MM_bardock.mdl"],
       [Id.pan, "MM_pan.mdl"],

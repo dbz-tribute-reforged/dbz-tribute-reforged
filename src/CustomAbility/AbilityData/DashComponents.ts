@@ -269,6 +269,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1200,
   },
+  // zanzoken initial
+  {
+    name: "dash zanzoken initial",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 0,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_ZANZO,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1200,
+  },
   // max power
   {
     name: "dash ground forward max power",
@@ -1309,6 +1322,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 60,
   },
+  // crono falcon hit
+  {
+    name: "dash ground point crono falcon hit",
+    repeatInterval: 1, 
+    startTick: 16,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 75,
+  },
   // frog squash
   {
     name: "dash ground forward beam frog squash pushback",
@@ -1343,7 +1369,7 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 35,
@@ -1382,7 +1408,7 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 30,
@@ -1443,14 +1469,14 @@ export const DashComponents = [
   {
     name: "dash ground point ayla spin kick",
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 16,
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_TO_TARGET_FIXED_ANGLE,
     dashType: Dash.DASH_TYPE_GROUND,
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 70,
+    distance: 60,
   },
   // saitama serious punch
   {

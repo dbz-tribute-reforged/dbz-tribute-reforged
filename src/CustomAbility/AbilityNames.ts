@@ -320,6 +320,8 @@ export module AbilityNames {
     export const LIGHTNING_3: string = "Crono Lightning 3";
     export const CLEAVE: string = "Crono Cleave";
     export const LUMINAIRE: string = "Crono Luminaire";
+    export const AURA_WHIRL: string = "Crono Aura Whirl";
+    export const ICE_SWORD: string = "Crono Ice Sword";
     export const FLAME_WHIRL: string = "Crono Flame Whirl";
     export const FIRE_SWORD: string = "Crono Fire Sword";
     export const X_STRIKE: string = "Crono X Strike";
@@ -328,8 +330,7 @@ export module AbilityNames {
     export const ROCKET_ROLL: string = "Crono Rocket Roll";
     export const MAX_CYCLONE: string = "Crono Max Cyclone";
     export const SUPER_VOLT: string = "Crono Super Volt";
-    export const AURA_WHIRL: string = "Crono Aura Whirl";
-    export const ICE_SWORD: string = "Crono Ice Sword";
+    export const FALCON_HIT: string = "Crono Falcon Hit";
   }
 
   export module Frog {
@@ -339,11 +340,13 @@ export module AbilityNames {
     export const WATER2: string = "Frog Water 2";
     export const AERIAL_STRIKE: string = "Frog Aerial Strike";
     export const FROG_SQUASH: string = "Frog Squash";
+    export const ICE_WATER: string = "Frog Ice Water";
     export const RED_PIN: string = "Frog Red Pin";
     export const LINE_BOMB: string = "Frog Line Bomb";
+    export const FROG_FLARE: string = "Frog Frog Flare";
     export const BLADE_TOSS: string = "Frog Blade Toss";
     export const SLURP_KISS: string = "Frog Slurp Kiss";
-    export const ICE_WATER: string = "Frog Ice Water";
+    export const DROP_KICK: string = "Frog Drop Kick";
   }
 
   export module Robo {
@@ -356,6 +359,7 @@ export module AbilityNames {
     export const SUPER_VOLT: string = "Robo Super Volt";
     export const ICE_TACKLE: string = "Robo Ice Tackle";
     export const FIRE_TACKLE: string = "Robo Fire Tackle";
+    export const DOUBLE_BOMB: string = "Robo Double Bomb";
     export const FIRE_UZZI_PUNCH: string = "Robo Fire Uzzi Punch";
     export const BUBBLE_SNAP: string = "Robo Bubble Snap";
     export const BOOGIE: string = "Robo Boogie";
@@ -392,6 +396,7 @@ export module AbilityNames {
     export const VOLT_BITE: string = "Ayla Volt Bite";
     export const ICE_TOSS: string = "Ayla Ice Toss";
     export const CUBE_TOSS: string = "Ayla Cube Toss";
+    export const FLAME_KICK: string = "Ayla Flame Kick";
     export const FIRE_WHIRL: string = "Ayla Fire Whirl";
     export const BLAZE_KICK_1: string = "Ayla Blaze Kick 1";
     export const BLAZE_KICK_2: string = "Ayla Blaze Kick 2";

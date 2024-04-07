@@ -6365,6 +6365,69 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Crono.AURA_WHIRL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim add alternate" },
+      { name: "heal crono aura whirl" },
+      { name: "dash ground forward 1dist" },
+      { name: "sfx crono aura whirl" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.ICE_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim crono cleave" },
+      { name: "dash ground point 20dist" },
+      { name: "damage crono ice sword explosion" },
+      { name: "damage crono ice sword explosion inner" },
+      { name: "debuff stun crono ice sword" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono ice sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Crono.FLAME_WHIRL,
     currentCd: 0,
     maxCd: 1,
@@ -6605,12 +6668,12 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Crono.AURA_WHIRL,
+    name: AbilityNames.Crono.FALCON_HIT,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 99,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -6622,48 +6685,16 @@ export const AbilitiesList = [
       disabled: "",
     },
     tooltip: {
-      title: "",
+      title:  "",
       body: 
-        ""
+        "",
     },
     components: [
-      { name: "anim add alternate" },
-      { name: "heal crono aura whirl" },
-      { name: "dash ground forward 1dist" },
-      { name: "sfx crono aura whirl" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Crono.ICE_SWORD,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 25,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "",
-      disabled: "",
-    },
-    tooltip: {
-      title: "",
-      body: 
-        ""
-    },
-    components: [
-      { name: "anim crono cleave" },
-      { name: "dash ground point 20dist" },
-      { name: "damage crono ice sword explosion" },
-      { name: "damage crono ice sword explosion inner" },
-      { name: "debuff stun crono ice sword" },
-      { name: "jump crono cleave" },
-      { name: "sfx crono ice sword" },
+      { name: "multi ayla spin kick"},
+      { name: "debuff slow crono falcon hit" },
+      { name: "dash ground point crono falcon hit" },
+      { name: "damage crono falcon hit explosion" },
+      { name: "sfx crono falcon hit" },
     ],
   },
   //---------------------------------------
@@ -6838,6 +6869,68 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Frog.DROP_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "anim frog cleave" },
+      { name: "sfx shunpo start" },
+      { name: "dash zanzoken initial" },
+      { name: "sfx shunpo end initial" },
+      { name: "debuff silence frog drop kick" },
+      { name: "damage frog drop kick explosion" },
+      { name: "damage frog drop kick explosion inner" },
+      { name: "jump frog drop kick" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.ICE_WATER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "beam frog ice water" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Frog.RED_PIN,
     currentCd: 0,
     maxCd: 1,
@@ -6901,6 +6994,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Frog.FROG_FLARE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam frog flare" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Frog.BLADE_TOSS,
     currentCd: 0,
     maxCd: 1,
@@ -6955,33 +7075,6 @@ export const AbilitiesList = [
     components: [
       { name: "heal frog slurp kiss" },
       { name: "sfx frog slurp kiss" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Frog.ICE_WATER,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 33,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "",
-      disabled: "",
-    },
-    tooltip: {
-      title: "",
-      body: 
-        "",
-    },
-    components: [
-      { name: "beam frog ice water" },
     ],
   },
   // -------------------------------------------
@@ -7139,7 +7232,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 50,
+    duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -7198,7 +7291,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 20,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -7229,7 +7322,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 20,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -7250,6 +7343,34 @@ export const AbilitiesList = [
       { name: "dash ground point robo fire tackle" },
       { name: "damage robo fire tackle" },
       { name: "sfx robo fire tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.DOUBLE_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "block robo double bomb" },
+      { name: "beam robo double bomb" },
     ],
   },
   // -------------------------------------------
@@ -7340,7 +7461,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim add alternate" },
-      { name: "dash ground forward boogie" },
+      { name: "dash ground forward robo boogie" },
       { name: "debuff slow robo boogie" },
       { name: "sfx robo boogie" },
     ],
@@ -7740,9 +7861,9 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "damage ayla volt bite dps" },
-      { name: "debuff slow ayla volt bite" },
       { name: "dash ground forward 10dist" },
+      { name: "debuff slow ayla volt bite" },
+      { name: "damage ayla volt bite dps" },
       { name: "sfx ayla volt bite" },
     ],
   },
@@ -7798,6 +7919,37 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam ayla cube toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.FLAME_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point ayla triple kick" },
+      { name: "damage ayla flame kick dps" },
+      { name: "damage ayla flame kick explosion" },
+      { name: "jump ayla triple kick" },
+      { name: "sfx ayla flame kick" },
     ],
   },
   // -------------------------------------------
@@ -7939,7 +8091,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 20,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -7956,7 +8108,8 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "anim add alternate" },,
+      { name: "anim add alternate" },
+      { name: "multi ayla spin kick"},
       { name: "debuff stun ayla spin kick" },
       { name: "dash ground point ayla spin kick" },
       { name: "damage ayla spin kick explosion" },

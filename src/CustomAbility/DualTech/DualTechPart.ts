@@ -96,9 +96,7 @@ export class DualTechPart {
           );
         }
         if (this.cdPenalty != 0) newCd += this.cdPenalty;
-        if (newCd > 0) {
-          BlzStartUnitAbilityCooldown(source, this.reqAbilityId, newCd);
-        }
+        BlzStartUnitAbilityCooldown(source, this.reqAbilityId, Math.max(0, newCd));
       }
       return casted;
     }

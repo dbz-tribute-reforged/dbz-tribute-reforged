@@ -2402,6 +2402,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi ayla spin kick", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 16,
+    angleDifference: -3,
+    angleMin: 360,
+    angleMax: 0,
+    forceMinDistance: 200,
+    forceMaxDistance: 200,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.WRAPAROUND_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 2,
+    alwaysUpdateAngle: true,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_TARGET_UNIT,
+    replaceSourceWithTargetUnit: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "teleport crono max cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi aura storm", 
     repeatInterval: 1, 
     startTick: 0,

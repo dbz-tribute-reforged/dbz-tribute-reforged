@@ -177,8 +177,23 @@ export const DualTechList = [
   },
   // ice sword
   {
-    name: "2T Marle Ice Sword",
+    name: "2T Marle Ice Sword 1",
     sourceAbility: Id.marleIce,
+    replaceAbilityName: "",
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "crono ice sword" },
+    ]
+  },
+  {
+    name: "2T Marle Ice Sword 2",
+    sourceAbility: Id.marleIce2,
     replaceAbilityName: "",
     aoe: 600,
     casterDistance: -1,
@@ -550,6 +565,53 @@ export const DualTechList = [
       { name: "robo fire tackle" },
     ]
   },
+  // double bomb
+  {
+    name: "2T Lucca Double Bomb 1",
+    sourceAbility: Id.luccaNapalm,
+    replaceAbilityName: "",
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "robo double bomb" },
+    ]
+  },
+  {
+    name: "2T Lucca Double Bomb 2",
+    sourceAbility: Id.luccaMegaBomb,
+    replaceAbilityName: "",
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "robo double bomb" },
+    ]
+  },
+  // flame kick
+  {
+    name: "2T Lucca Flame Kick",
+    sourceAbility: Id.luccaFlamethrower,
+    replaceAbilityName: "",
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "ayla flame kick" },
+    ]
+  },
   // fire whirl
   {
     name: "2T Lucca Fire Whirl 1",
@@ -627,6 +689,22 @@ export const DualTechList = [
     parts: [
       { name: "crono spire 2" },
       { name: "crono spire 3" },
+    ]
+  },
+  // frog flare
+  {
+    name: "2T Frog Frog Flare",
+    sourceAbility: Id.frogSquash,
+    replaceAbilityName: AbilityNames.Frog.FROG_FLARE,
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: false,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "lucca frog flare" },
     ]
   },
   // blade toss
@@ -772,6 +850,22 @@ export const DualTechList = [
       { name: "ayla spin kick" },
     ]
   },
+  // ayla falcon hit
+  {
+    name: "2T Ayla Falcon Hit",
+    sourceAbility: Id.aylaBoulderToss,
+    replaceAbilityName: "",
+    aoe: 400,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: true,
+    useLastCastPoint: false,
+    useOriginalAbility: false,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "crono falcon hit" },
+    ]
+  },
   // blaze kick
   {
     name: "2T Ayla Blaze Kick 1",
@@ -817,6 +911,22 @@ export const DualTechList = [
     useOriginalOnEmpty: true,
     parts: [
       { name: "frog slurp kiss" },
+    ]
+  },
+  // drop kick
+  {
+    name: "2T Ayla Drop Kick",
+    sourceAbility: Id.aylaTripleKick,
+    replaceAbilityName: "",
+    aoe: 600,
+    casterDistance: -1,
+    limit: 1,
+    useCasterPoint: false,
+    useLastCastPoint: true,
+    useOriginalAbility: true,
+    useOriginalOnEmpty: true,
+    parts: [
+      { name: "frog drop kick" },
     ]
   },
 ];
