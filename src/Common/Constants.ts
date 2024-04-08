@@ -32,6 +32,7 @@ export module Globals {
   export const genericEnemyHashtable = InitHashtable();
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
+  export const tatsumakiHashtable = InitHashtable();
   export const minatoHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, (spellId: number)=>void>();
   export const genericSpellFinishMap = new Map<number, (spellId: number)=>void>();
@@ -46,8 +47,7 @@ export module Globals {
   export const DDSTrigger = CreateTrigger();
   export const DDSEntryTrigger = CreateTrigger();
 
-  // global beam units
-  export const beamUnitGroup = CreateGroup();
+  export const tatsumakiBeamGroup = CreateGroup();
 
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();

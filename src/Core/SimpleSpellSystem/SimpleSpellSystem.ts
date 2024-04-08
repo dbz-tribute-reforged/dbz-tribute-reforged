@@ -40,6 +40,7 @@ export module SimpleSpellSystem {
 
     setupGenericSpellEffectTrigger();
     setupEndFinishTriggers();
+    setupTatsumakiMovementTimer();
 
 
     TriggerRegisterAnyUnitEventBJ(Globals.genericUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH);
@@ -430,6 +431,66 @@ export module SimpleSpellSystem {
 
     Globals.genericSpellEndMap.set(Id.toppoHakai, endVegetaHakai);
     Globals.genericSpellFinishMap.set(Id.toppoHakai, endVegetaHakai);
+  }
+
+  export function addToTatsumakiMovementGroup(
+    unit: unit,
+    speed: number,
+    bonusSpeedRatio: number,
+    ang: number,
+  ) {
+    const beamSpeedKey = StringHash("tatsumaki_beam_speed");
+    const beamSpeedRatioKey = StringHash("tatsumaki_beam_speed_ratio");
+    const beamAngleKey = StringHash("tatsumaki_beam_ang");
+    const unitId = GetHandleId(unit);
+    SaveReal(Globals.tatsumakiHashtable, unitId, beamSpeedKey, speed);
+    SaveReal(Globals.tatsumakiHashtable, unitId, beamSpeedRatioKey, bonusSpeedRatio);
+    SaveReal(Globals.tatsumakiHashtable, unitId, beamAngleKey, ang);
+    GroupAddUnit(Globals.tatsumakiBeamGroup, unit);
+  }
+
+  export function setupTatsumakiMovementTimer() {
+    // required to prevnt overwriting Globals.tmpVector
+    // when used by doTatsumakiTornado
+    const vec1 = new Vector2D();
+    const vec2 = new Vector2D();
+
+    const beamFrictionPct = 0.94;
+    const beamFrictionFlat = 0.1;
+
+    const beamSpeedKey = StringHash("tatsumaki_beam_speed");
+    const beamSpeedRatioKey = StringHash("tatsumaki_beam_speed_ratio");
+    const beamAngleKey = StringHash("tatsumaki_beam_ang");
+
+    TimerStart(CreateTimer(), 0.03, true, () => {
+      ForGroup(Globals.tatsumakiBeamGroup, () => {
+        const unit = GetEnumUnit();
+        const unitId = GetHandleId(unit);
+        const speed = LoadReal(Globals.tatsumakiHashtable, unitId, beamSpeedKey);
+        const speedRatio = LoadReal(Globals.tatsumakiHashtable, unitId, beamSpeedRatioKey);
+        const ang = LoadReal(Globals.tatsumakiHashtable, unitId, beamAngleKey);
+  
+        if (
+          GetUnitTypeId(unit) == 0
+          || !UnitHelper.isUnitAlive(unit) 
+          || speed < 0.9
+        ) {
+          FlushChildHashtable(Globals.tatsumakiHashtable, unitId);
+          GroupRemoveUnit(Globals.tatsumakiBeamGroup, unit);
+          return;
+        }
+        SimpleSpellSystem.doTatsumakiMoveBeam(
+          unit, 
+          speed, speedRatio, 
+          ang, 
+          vec1, 
+          vec2,
+          Globals.tmpUnitGroup3
+        );
+        const newSpeed = (speed - beamFrictionFlat) * beamFrictionPct;
+        SaveReal(Globals.tatsumakiHashtable, unitId, beamSpeedKey, newSpeed);
+      });
+    });
   }
 
   export function doVegetaHakai(spellId: number) {
@@ -7321,10 +7382,13 @@ export module SimpleSpellSystem {
           //   projectionDistance
           // );
 
-          SimpleSpellSystem.doTatsumakiMoveBeam(
-            target, projectionDistance, bonusSpeedRatio, projectionAngle,
-            Globals.tmpVector, Globals.tmpVector2,
-            Globals.tmpUnitGroup3
+          // SimpleSpellSystem.doTatsumakiMoveBeam(
+          //   target, projectionDistance, bonusSpeedRatio, projectionAngle,
+          //   Globals.tmpVector, Globals.tmpVector2,
+          //   Globals.tmpUnitGroup3
+          // );
+          SimpleSpellSystem.addToTatsumakiMovementGroup(
+            target, projectionDistance, bonusSpeedRatio, projectionAngle
           );
 
           if (
@@ -7352,7 +7416,6 @@ export module SimpleSpellSystem {
 
       GroupClear(Globals.tmpUnitGroup);
 
-      // TODO: get tornado order id
       if (
         GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF
         || !UnitHelper.isUnitAlive(caster)

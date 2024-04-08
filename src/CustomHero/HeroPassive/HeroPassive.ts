@@ -3070,7 +3070,16 @@ export function tatsumakiPassive(customHero: CustomHero) {
   const shieldAbility = customHero.getAbility(AbilityNames.Tatsumaki.TELEKINETIC_SHIELD);
 
   const targetPos = new Vector2D();
-  const seenGroup = CreateGroup(); // leaks
+  const seenGroup = CreateGroup();
+
+  const tmpTimer = CreateTimer();
+  TimerStart(tmpTimer, 30, true, () => {
+    if (!customHero || GetUnitTypeId(customHero.unit) == 0) {
+      DestroyGroup(seenGroup);
+      DestroyTimer(tmpTimer);
+    }
+  });
+
   let isSeen = false;
   TimerStart(vectorTimer, 0.03, true, () => {
     if (
@@ -3178,14 +3187,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
           SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
           GroupAddUnit(seenGroup, unit);
         }
-        SimpleSpellSystem.doTatsumakiMoveBeam(
-          unit, 
-          speed, bonusSpeedRatio, 
-          ang, 
-          Globals.tmpVector2, 
-          Globals.tmpVector3,
-          Globals.tmpUnitGroup3
-        );
+        SimpleSpellSystem.addToTatsumakiMovementGroup(unit, speed, bonusSpeedRatio, ang);
         GroupAddUnit(Globals.tmpUnitGroup2, unit);
       });
     }

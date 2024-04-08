@@ -918,7 +918,7 @@ export const DualTechList = [
     name: "2T Ayla Drop Kick",
     sourceAbility: Id.aylaTripleKick,
     replaceAbilityName: "",
-    aoe: 600,
+    aoe: 800,
     casterDistance: -1,
     limit: 1,
     useCasterPoint: false,

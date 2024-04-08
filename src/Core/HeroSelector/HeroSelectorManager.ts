@@ -189,11 +189,17 @@ export class HeroSelectorManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       // TriggerRegisterPlayerEventEndCinematic(this.repickTrigger, Player(i));
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick", true);
+      TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick2", true);
     }
     TriggerAddCondition(this.repickTrigger, Condition(() => {
       if (this.allowRepick) {
         const player = GetTriggerPlayer();
-        // this.doRepickForPlayer(player);
+        if (
+          !Globals.isFBSimTest
+          && GetEventPlayerChatString() == "-repick"
+        ) {
+          this.doRepickForPlayer(player);
+        }
 
         if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
           HeroSelector.show(false, player);

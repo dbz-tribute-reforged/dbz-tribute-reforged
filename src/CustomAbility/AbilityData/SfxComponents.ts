@@ -18265,7 +18265,7 @@ export const SfxComponents = [
   { 
     name: "sfx robo bubble snap", 
     repeatInterval: 1,
-    startTick: 33,
+    startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
@@ -18276,7 +18276,7 @@ export const SfxComponents = [
         model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 2,
         group: 0,
-        scale: 2.5,
+        scale: 2,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
@@ -18297,7 +18297,7 @@ export const SfxComponents = [
         model: "Abilities/Spells/Undead/FreezingBreath/FreezingBreathMissile.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 5.0,
+        scale: 4.0,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
@@ -18318,7 +18318,7 @@ export const SfxComponents = [
         model: "FrogWater.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 0.5,
+        scale: 1,
         endScale: 2.5,
         startHeight: 0,
         endHeight: 0,
@@ -18878,7 +18878,7 @@ export const SfxComponents = [
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
-    useLastCastPoint: false,
+    useLastCastPoint: true,
     useHeight: true,
     sfxList: [
       {
@@ -18977,7 +18977,7 @@ export const SfxComponents = [
     endTick: 66,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
-    useLastCastPoint: false,
+    useLastCastPoint: true,
     useHeight: true,
     sfxList: [
       {

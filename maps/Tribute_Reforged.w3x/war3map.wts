@@ -15307,33 +15307,33 @@ STRING 2341
 }
 
 STRING 2342
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +1 and HP by +(2500*1).
 }
 
 STRING 2343
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +2 and HP by +(2500*2).
 }
 
 STRING 2344
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +3 and HP by +(2500*3).
 }
 
 STRING 2345
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +4 and HP by +(2500*4).
 }
 
 STRING 2346
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +5 and HP by +(2500*5).
 }
 
 STRING 2347
@@ -15427,9 +15427,9 @@ Hercule's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2362
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +6 and HP by +(2500*6).
 }
 
 STRING 2363
@@ -15451,15 +15451,15 @@ Alpha Ape
 }
 
 STRING 2366
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +7 and HP by +(2500*7).
 }
 
 STRING 2367
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +8 and HP by +(2500*8).
 }
 
 STRING 2368
@@ -20030,9 +20030,9 @@ Super 17 has further improved his mechanical body by absorbing Android 18.
 }
 
 STRING 3065
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +9 and HP by +(2500*9).
 }
 
 STRING 3066
@@ -20429,9 +20429,9 @@ STRING 3128
 }
 
 STRING 3129
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +10 and HP by +(2500*10).
 }
 
 STRING 3130
@@ -20711,45 +20711,45 @@ Bebi's Crush
 }
 
 STRING 3171
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +11 and HP by +(2500*11).
 }
 
 STRING 3172
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +12 and HP by +(2500*12).
 }
 
 STRING 3173
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +13 and HP by +(2500*13).
 }
 
 STRING 3174
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +14 and HP by +(2500*14).
 }
 
 STRING 3175
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +15 and HP by +(2500*15).
 }
 
 STRING 3176
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +16 and HP by +(2500*16).
 }
 
 STRING 3177
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +17 and HP by +(2500*17).
 }
 
 STRING 3178
@@ -20807,9 +20807,9 @@ STRING 3186
 }
 
 STRING 3187
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +18 and HP by +(2500*18).
 }
 
 STRING 3188
@@ -21971,15 +21971,15 @@ Infinite Energy Android
 }
 
 STRING 3357
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +19 and HP by +(2500*19).
 }
 
 STRING 3358
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +20 and HP by +(2500*20).
 }
 
 STRING 3359
@@ -22032,7 +22032,7 @@ W
 STRING 3365
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3366
@@ -22077,13 +22077,13 @@ An attack made up of the heavily condensed Negative Energy of the Dragon Balls a
 STRING 3372
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3373
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3374
@@ -22831,31 +22831,31 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 STRING 3484
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3485
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3486
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3487
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3488
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3489
@@ -22927,7 +22927,7 @@ E
 STRING 3499
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3500
@@ -22951,13 +22951,13 @@ STRING 3502
 STRING 3503
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3504
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3505
@@ -22976,7 +22976,7 @@ A tanky frontline hero that can greatly reduce incoming damage. Some of his abil
 STRING 3506
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3507
@@ -23648,7 +23648,7 @@ For every level of this spell your control over this body and power grows.
 STRING 3612
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3613
@@ -25688,7 +25688,7 @@ Q
 STRING 3932
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3933
@@ -26603,7 +26603,7 @@ STRING 4053
 STRING 4054
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4055
@@ -27984,7 +27984,7 @@ Upgraded Defense Systems
 STRING 4278
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4279
@@ -28215,25 +28215,25 @@ Magus channels a spell for 2 seconds dealing damage to enemies based on their di
 STRING 4313
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4314
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4315
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4316
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4317
@@ -28313,7 +28313,7 @@ STRING 4327
 STRING 4328
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4329
@@ -28708,7 +28708,7 @@ E
 STRING 4389
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4390
@@ -28738,7 +28738,7 @@ STRING 4393
 STRING 4394
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4395
@@ -29110,7 +29110,7 @@ Boomerang
 STRING 4456
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4457
@@ -31075,7 +31075,7 @@ E
 STRING 4762
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4763
@@ -33966,7 +33966,7 @@ Book Main Heroes
 STRING 5235
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5236
@@ -34080,7 +34080,7 @@ Q
 STRING 5254
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5255
@@ -34194,7 +34194,7 @@ W
 STRING 5273
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5274
@@ -35981,13 +35981,13 @@ STRING 5557
 STRING 5558
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5559
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5560
@@ -78903,6 +78903,24 @@ After a short delay, Hirudegarn slams the ground with his foot, stunning nearby 
 
 |cff00ff00Damage: [Int] 900u
 |cff00ffffCooldown: <A0EM,Cool5> seconds|r
+}
+
+STRING 12009
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 12010
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 12011
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 12012
@@ -124512,12 +124530,6 @@ STRING 18386
 Blood Frenzy
 }
 
-STRING 18387
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +50, HP by 2000 and HP regen by 200%.
-}
-
 STRING 18388
 // Abilities: A0FL (Boomerang), Ubertip (Tooltip - Normal - Extended)
 {
@@ -124561,12 +124573,6 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 
 |cff00ff00Damage: [Int] 500u (+500u)
 |cff00ffffCooldown: <A0FL,Cool10,.> seconds|r
-}
-
-STRING 18393
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +100, HP by 4000 and HP regen by 400%.
 }
 
 STRING 18394
@@ -142154,12 +142160,6 @@ Immunity to debuffs.|r
 |cff00FFFFCooldown: <A0GI,Cool1> seconds|r
 }
 
-STRING 20833
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +1 and HP by +(2500*1).
-}
-
 STRING 20834
 // Abilities: A10D (Berserker Armor), Name (Name)
 {
@@ -142170,24 +142170,6 @@ STRING 20835
 // Abilities: A10D (Berserker Armor), EditorSuffix (Editor Suffix)
 {
 (guts)
-}
-
-STRING 20836
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +2 and HP by +(2500*2).
-}
-
-STRING 20837
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +3 and HP by +(2500*3).
-}
-
-STRING 20838
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +4 and HP by +(2500*4).
 }
 
 STRING 20839
@@ -142748,12 +142730,6 @@ STRING 20911
 [|cff00FF00D|r] |cffff2020Beast of Darkness|r
 }
 
-STRING 20912
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +5 and HP by +(2500*5).
-}
-
 STRING 20913
 // Abilities: A10I (Berserker Armor Damage Bonus), Name (Name)
 {
@@ -142909,12 +142885,6 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 |cffff0000Warning: Can damage the caster.
 |cff00ff00Damage: [Int] 3000u
 |cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
-}
-
-STRING 20936
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +6 and HP by +(2500*6).
 }
 
 STRING 20937
@@ -143089,30 +143059,6 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 |cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
 }
 
-STRING 20960
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +7 and HP by +(2500*7).
-}
-
-STRING 20961
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +8 and HP by +(2500*8).
-}
-
-STRING 20962
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +9 and HP by +(2500*9).
-}
-
-STRING 20963
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +10 and HP by +(2500*10).
-}
-
 STRING 20964
 // Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
 {
@@ -143191,12 +143137,6 @@ Frieza fires a stronger version of his iconic Finger Beam energy attack infused 
 
 |cff00ff00Damage: [Int] 175u x 3t + 1.2% Max HP|r
 |cff00ffffCooldown: <A0QD,Cool6> seconds|r
-}
-
-STRING 20973
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +11 and HP by +(2500*11).
 }
 
 STRING 20974
@@ -143284,30 +143224,6 @@ STRING 20987
 // Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 10|r]
-}
-
-STRING 20988
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +12 and HP by +(2500*12).
-}
-
-STRING 20989
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +13 and HP by +(2500*13).
-}
-
-STRING 20990
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +14 and HP by +(2500*14).
-}
-
-STRING 20991
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +15 and HP by +(2500*15).
 }
 
 STRING 20992
@@ -143557,12 +143473,6 @@ STRING 21032
 [|cff00ff00F|r] Learn Cannon Arm - [|cffffcc00Level %d|r]
 }
 
-STRING 21033
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +16 and HP by +(2500*16).
-}
-
 STRING 21034
 // Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -143641,30 +143551,6 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00ff00Damage Block: [Int] 80% up to 3000u|r
 |cff00ff00Damage: [Int] 500u
 |cff00FFFFCooldown: <A11S,Cool1,.> seconds|r
-}
-
-STRING 21043
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +17 and HP by +(2500*17).
-}
-
-STRING 21044
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +18 and HP by +(2500*18).
-}
-
-STRING 21045
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +19 and HP by +(2500*19).
-}
-
-STRING 21046
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +20 and HP by +(2500*20).
 }
 
 STRING 21047
@@ -144290,6 +144176,12 @@ STRING 21134
 // Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 1|r]
+}
+
+STRING 21135
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 21136
@@ -151299,18 +151191,6 @@ STRING 22043
 // Abilities: A11M (Special Beast Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Special Beast Cannon - [|cffffcc00Level 10|r]
-}
-
-STRING 22044
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +150, HP by 6000 and HP regen by 600%.
-}
-
-STRING 22045
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 and HP regen by 800%.
 }
 
 STRING 22048
@@ -163890,11 +163770,131 @@ Shalltear enters a frenzied state to hunt for blood. Drains 2% of her max HP per
 Unlocks [|cff00ff00F|r] Mist Form for 5 seconds.
 }
 
+STRING 23659
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +50, HP by 2000 and HP regen by +10.
+}
+
+STRING 23660
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +100, HP by 4000 and HP regen by +20.
+}
+
+STRING 23661
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +150, HP by 6000 and HP regen by +30.
+}
+
+STRING 23662
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 and HP regen by +40.
+}
+
+STRING 23663
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23664
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23665
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23666
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23667
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23668
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23669
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23670
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23671
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23672
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23673
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23674
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23675
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23676
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
 STRING 23677
 // Abilities: A028 (Sunset of Youth Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Might Guy radiates an aura of youthfulness granting increased stamina regen in 1800 AOE.
 
 |cffffff00+25% stamina regen
+}
+
+STRING 23678
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23679
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
