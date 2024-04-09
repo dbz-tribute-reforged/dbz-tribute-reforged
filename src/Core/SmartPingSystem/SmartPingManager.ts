@@ -52,15 +52,16 @@ export class SmartPingManager {
         const unit = BlzGetMouseFocusUnit();
 
         const ki_t = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_T);
-        const ki_ctrl = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_LCONTROL);
-        const ki_shift = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_LSHIFT);
+        const ki_g = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_G);
 
         const is_generic_ping = ki_t.isDown && ki_t.meta == KeyInput.META_NONE;
-        const is_group_ping = ki_t.isDown && ki_t.meta == KeyInput.META_SHIFT;
-        const is_retreat_ping = (
-          (ki_ctrl.isDown && ki_ctrl.meta == KeyInput.META_SHIFT + KeyInput.META_CONTROL)
-          || (ki_shift.isDown && ki_shift.meta == KeyInput.META_SHIFT + KeyInput.META_CONTROL)
-        );
+        // const is_group_ping = ki_t.isDown && ki_t.meta == KeyInput.META_SHIFT;
+        const is_group_ping = ki_g.isDown && ki_g.meta == KeyInput.META_SHIFT;
+        // const is_retreat_ping = (
+        //   (ki_ctrl.isDown && ki_ctrl.meta == KeyInput.META_SHIFT + KeyInput.META_CONTROL)
+        //   || (ki_shift.isDown && ki_shift.meta == KeyInput.META_SHIFT + KeyInput.META_CONTROL)
+        // );
+        const is_retreat_ping = ki_t.isDown && ki_t.meta == KeyInput.META_SHIFT;
         
         if (mouseButton == MOUSE_BUTTON_TYPE_LEFT) {
           if (GetLocalPlayer() == GetTriggerPlayer() && (is_retreat_ping || is_group_ping || is_generic_ping)) {

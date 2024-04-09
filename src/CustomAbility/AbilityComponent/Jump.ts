@@ -19,6 +19,7 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public startTimeRatio: number = 0,
     public duration: number = 40,
     public maxHeight: number = 900,
     public useSpeedToCastPoint: boolean = false,
@@ -34,6 +35,8 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
       UnitHelper.giveUnitFlying(source);
       this.isStarted = true;
       this.isFinished = false;
+      this.currentTime = Math.floor(this.startTimeRatio * this.duration);
+
       if (this.useSpeedToCastPoint && this.speed >= 0) {
         this.duration = ability.currentTick + Math.floor(
           CoordMath.distance(
@@ -42,7 +45,9 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
           ) / Math.floor(this.speed)
         )
       }
-    } else {
+    } 
+    
+    if (this.isStarted) {
       this.timeRatio = -1 + 2 * this.currentTime / Math.max(this.duration, 1);
       this.currentHeight = this.maxHeight * (
         1 - this.timeRatio * this.timeRatio
@@ -67,6 +72,7 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
   clone(): AbilityComponent {
     return new Jump(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.startTimeRatio,
       this.duration, this.maxHeight,
       this.useSpeedToCastPoint, this.speed,
     );
@@ -78,6 +84,7 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      startTimeRatio: number;
       duration: number;
       maxHeight: number;
       useSpeedToCastPoint: boolean;
@@ -88,6 +95,7 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.startTimeRatio = input.startTimeRatio;
     this.duration = input.duration;
     this.maxHeight = input.maxHeight;
     this.useSpeedToCastPoint = input.useSpeedToCastPoint;

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute |cffffcc00Reforged 1.02
+Tribute |cffffcc00Reforged 1.03
 }
 
 STRING 4
@@ -9979,7 +9979,7 @@ Mysterious Scroll
 }
 
 STRING 1507
-// Abilities: A072 (Flying Pillar), Researchhotkey (Hotkey - Learn)
+// Items: I00N (Zeno's Button), Hotkey (Hotkey)
 {
 R
 }
@@ -10181,7 +10181,7 @@ STRING 1536
 }
 
 STRING 1537
-// Abilities: A072 (Flying Pillar), Hotkey (Hotkey - Normal)
+// Abilities: A072 (Flying Pillar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -10235,7 +10235,7 @@ Ghostly Key
 }
 
 STRING 1546
-// Abilities: A064 (High Power Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A072 (Flying Pillar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -10462,7 +10462,7 @@ STRING 1578
 }
 
 STRING 1579
-// Abilities: A064 (High Power Rush), Hotkey (Hotkey - Normal)
+// Abilities: A064 (High Power Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -10528,7 +10528,7 @@ Odd Key
 }
 
 STRING 1590
-// Abilities: A035 (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A064 (High Power Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -10558,7 +10558,7 @@ Odd Barrel
 }
 
 STRING 1595
-// Abilities: A035 (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A035 (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -10588,7 +10588,7 @@ One Star Namekian Dragon Ball
 }
 
 STRING 1600
-// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A035 (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -10618,7 +10618,7 @@ Package
 }
 
 STRING 1605
-// Abilities: A049 (Gather Anger), Researchhotkey (Hotkey - Learn)
+// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -10654,7 +10654,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 1611
-// Abilities: A049 (Gather Anger), Hotkey (Hotkey - Normal)
+// Abilities: A049 (Gather Anger), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -10690,7 +10690,7 @@ Strange Riddle
 }
 
 STRING 1617
-// Abilities: A07D (Create Android), Researchhotkey (Hotkey - Learn)
+// Abilities: A049 (Gather Anger), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -10767,13 +10767,17 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 1627
-// Items: I02V (Cleansed Dragon Ball), Description (Description)
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
-Cleansed Dragon Ball
+|cffffff00+0.10x Str mult
++0.05x Int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
 }
 
 STRING 1628
-// Abilities: A07D (Create Android), Hotkey (Hotkey - Normal)
+// Abilities: A07D (Create Android), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -13688,7 +13692,7 @@ STRING 2089
 }
 
 STRING 2090
-// Abilities: A03E (Summon Dabura), Researchhotkey (Hotkey - Learn)
+// Abilities: A07D (Create Android), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -13712,7 +13716,7 @@ Tao throws a pillar into the air and rides it to his destination.|n|cff00ff00(Da
 }
 
 STRING 2094
-// Abilities: A03E (Summon Dabura), Hotkey (Hotkey - Normal)
+// Abilities: A03E (Summon Dabura), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -14153,7 +14157,7 @@ Transformations:
 }
 
 STRING 2162
-// Abilities: A05I (Tsufuru Elite Guard Training), Hotkey (Hotkey - Normal)
+// Abilities: A03E (Summon Dabura), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -14404,7 +14408,7 @@ STRING 2200
 }
 
 STRING 2201
-// Abilities: A04J (Saiya-jin memories), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -14428,7 +14432,7 @@ Trunks teleports behind the enemy and punches it with all of his might.
 }
 
 STRING 2205
-// Abilities: A01L (Buu Beam (Area)), Researchhotkey (Hotkey - Learn)
+// Abilities: A04J (Saiya-jin memories), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -15118,7 +15122,7 @@ STRING 2313
 }
 
 STRING 2314
-// Abilities: A01L (Buu Beam (Area)), Hotkey (Hotkey - Normal)
+// Abilities: A01L (Buu Beam (Area)), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -15142,7 +15146,7 @@ Creates an artificial moon, causing the user to transform into a great ape. Whil
 }
 
 STRING 2318
-// Abilities: A06N (Deafening Wave), Researchhotkey (Hotkey - Learn)
+// Abilities: A01L (Buu Beam (Area)), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -15307,33 +15311,33 @@ STRING 2341
 }
 
 STRING 2342
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +1 and HP by +(2500*1).
 }
 
 STRING 2343
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +2 and HP by +(2500*2).
 }
 
 STRING 2344
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +3 and HP by +(2500*3).
 }
 
 STRING 2345
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +4 and HP by +(2500*4).
 }
 
 STRING 2346
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +5 and HP by +(2500*5).
 }
 
 STRING 2347
@@ -15427,9 +15431,9 @@ Hercule's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2362
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +6 and HP by +(2500*6).
 }
 
 STRING 2363
@@ -15451,15 +15455,15 @@ Alpha Ape
 }
 
 STRING 2366
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +7 and HP by +(2500*7).
 }
 
 STRING 2367
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +8 and HP by +(2500*8).
 }
 
 STRING 2368
@@ -15832,13 +15836,13 @@ E
 }
 
 STRING 2418
-// Abilities: A06N (Deafening Wave), Hotkey (Hotkey - Normal)
+// Abilities: A06N (Deafening Wave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 2419
-// Abilities: A01Z (Spawn Cell Juniors), Researchhotkey (Hotkey - Learn)
+// Abilities: A06N (Deafening Wave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -16643,7 +16647,7 @@ Magus channels a spell for 2 seconds dealing damage to enemies based on their di
 }
 
 STRING 2537
-// Abilities: A01Z (Spawn Cell Juniors), Hotkey (Hotkey - Normal)
+// Abilities: A01Z (Spawn Cell Juniors), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -17502,7 +17506,7 @@ STRING 2665
 }
 
 STRING 2666
-// Abilities: A060 (Unfuse), Hotkey (Hotkey - Normal)
+// Abilities: A01Z (Spawn Cell Juniors), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17526,7 +17530,7 @@ Bebi calls for all the humans on earth to send him their anger. This anger trans
 }
 
 STRING 2670
-// Abilities: A088 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A060 (Unfuse), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17544,7 +17548,7 @@ Table Flip
 }
 
 STRING 2673
-// Abilities: A088 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A088 (Multi Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17982,7 +17986,7 @@ Hirudegarn fires a barrage of flaming energy balls at his enemies that explode t
 }
 
 STRING 2741
-// Abilities: A08E (Plant Tree of Might), Hotkey (Hotkey - Normal)
+// Abilities: A088 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -18006,7 +18010,7 @@ D
 }
 
 STRING 2745
-// Abilities: A08F (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A08E (Plant Tree of Might), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19048,7 +19052,7 @@ Q
 }
 
 STRING 2908
-// Abilities: A08G (HPR Clone), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19072,7 +19076,7 @@ Q
 }
 
 STRING 2912
-// Abilities: A08G (HPR Clone), Hotkey (Hotkey - Normal)
+// Abilities: A08G (HPR Clone), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -19763,7 +19767,7 @@ STRING 3023
 }
 
 STRING 3024
-// Abilities: A08N (Self-Destruct), Hotkey (Hotkey - Normal)
+// Abilities: A08G (HPR Clone), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19790,7 +19794,7 @@ Albedo protects the targetted ally hero. Whenever the ally loses HP, Albedo rest
 }
 
 STRING 3028
-// Abilities: A09U (Photon Strike Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A08N (Self-Destruct), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19880,7 +19884,7 @@ STRING 3042
 }
 
 STRING 3043
-// Abilities: A09U (Photon Strike Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A09U (Photon Strike Barrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -19904,7 +19908,7 @@ Turns the target creep into an android, increasing its combat capabilities and p
 }
 
 STRING 3047
-// Abilities: A09X (Hell's Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A09U (Photon Strike Barrage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -20030,9 +20034,9 @@ Super 17 has further improved his mechanical body by absorbing Android 18.
 }
 
 STRING 3065
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +9 and HP by +(2500*9).
 }
 
 STRING 3066
@@ -20194,7 +20198,7 @@ STRING 3090
 }
 
 STRING 3091
-// Abilities: A09X (Hell's Storm), Hotkey (Hotkey - Normal)
+// Abilities: A09X (Hell's Storm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -20223,7 +20227,7 @@ Unlocks [|cff00ff00R|r] Max Barrier: Burst that deals damage to nearby units.
 }
 
 STRING 3095
-// Abilities: A0B2 (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A09X (Hell's Storm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -20429,9 +20433,9 @@ STRING 3128
 }
 
 STRING 3129
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +10 and HP by +(2500*10).
 }
 
 STRING 3130
@@ -20609,7 +20613,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 3156
-// Abilities: A0B2 (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0B2 (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -20711,45 +20715,45 @@ Bebi's Crush
 }
 
 STRING 3171
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +11 and HP by +(2500*11).
 }
 
 STRING 3172
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +12 and HP by +(2500*12).
 }
 
 STRING 3173
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +13 and HP by +(2500*13).
 }
 
 STRING 3174
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +14 and HP by +(2500*14).
 }
 
 STRING 3175
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +15 and HP by +(2500*15).
 }
 
 STRING 3176
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +16 and HP by +(2500*16).
 }
 
 STRING 3177
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +17 and HP by +(2500*17).
 }
 
 STRING 3178
@@ -20807,9 +20811,9 @@ STRING 3186
 }
 
 STRING 3187
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +18 and HP by +(2500*18).
 }
 
 STRING 3188
@@ -20891,7 +20895,7 @@ STRING 3200
 }
 
 STRING 3201
-// Abilities: A0BK (Focus Ally), Hotkey (Hotkey - Normal)
+// Abilities: A0B2 (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21451,7 +21455,7 @@ STRING 3284
 }
 
 STRING 3285
-// Abilities: A0BM (Focus none), Hotkey (Hotkey - Normal)
+// Abilities: A0BK (Focus Ally), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21661,7 +21665,7 @@ Might Guy gains bonus armor when using the Eight Gates.
 }
 
 STRING 3318
-// Abilities: A0BT (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BM (Focus none), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21688,7 +21692,7 @@ This unit is under the effects of Sunset of Youth; it has increased stamina rege
 }
 
 STRING 3322
-// Abilities: A0BT (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0BT (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -21887,7 +21891,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3348
-// Abilities: A0BY (Train All), Hotkey (Hotkey - Normal)
+// Abilities: A0BT (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21971,15 +21975,15 @@ Infinite Energy Android
 }
 
 STRING 3357
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +19 and HP by +(2500*19).
 }
 
 STRING 3358
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's, Metal Cooler Clones and Geti Star Workers armor by +20 and HP by +(2500*20).
 }
 
 STRING 3359
@@ -22032,7 +22036,7 @@ W
 STRING 3365
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3366
@@ -22077,13 +22081,13 @@ An attack made up of the heavily condensed Negative Energy of the Dragon Balls a
 STRING 3372
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3373
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3374
@@ -22308,7 +22312,7 @@ STRING 3406
 }
 
 STRING 3407
-// Abilities: A0D0 (Sample Ramen), Hotkey (Hotkey - Normal)
+// Abilities: A0BY (Train All), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -22779,7 +22783,7 @@ STRING 3476
 }
 
 STRING 3477
-// Abilities: A0D8 (Augment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -22803,7 +22807,7 @@ Buu turns every human near him into candy. |n[|cffffcc00History|r] - |cff0066CCT
 }
 
 STRING 3481
-// Abilities: A0D8 (Augment), Hotkey (Hotkey - Normal)
+// Abilities: A0D8 (Augment), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -22831,31 +22835,31 @@ A well-rounded hero who works best with powerful spell amp and nuking capabiliti
 STRING 3484
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3485
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3486
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3487
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3488
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3489
@@ -22927,7 +22931,7 @@ E
 STRING 3499
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3500
@@ -22951,13 +22955,13 @@ STRING 3502
 STRING 3503
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3504
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3505
@@ -22976,7 +22980,7 @@ A tanky frontline hero that can greatly reduce incoming damage. Some of his abil
 STRING 3506
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3507
@@ -23648,7 +23652,7 @@ For every level of this spell your control over this body and power grows.
 STRING 3612
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3613
@@ -23858,13 +23862,13 @@ Reduces max movement speed by 50|r
 }
 
 STRING 3643
-// Abilities: A0DB (Beerus Inner Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0D8 (Augment), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 3644
-// Abilities: A0DB (Beerus Inner Fire), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DB (Beerus Inner Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -23888,7 +23892,7 @@ STRING 3647
 }
 
 STRING 3648
-// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0DB (Beerus Inner Fire), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -24768,7 +24772,7 @@ STRING 3783
 }
 
 STRING 3784
-// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -24786,7 +24790,7 @@ STRING 3786
 }
 
 STRING 3787
-// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -25688,7 +25692,7 @@ Q
 STRING 3932
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 3933
@@ -26565,7 +26569,7 @@ STRING 4047
 }
 
 STRING 4048
-// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
+// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -26589,7 +26593,7 @@ STRING 4051
 }
 
 STRING 4052
-// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -26603,7 +26607,7 @@ STRING 4053
 STRING 4054
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4055
@@ -26712,7 +26716,7 @@ STRING 4070
 }
 
 STRING 4071
-// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -26766,7 +26770,7 @@ STRING 4079
 }
 
 STRING 4080
-// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
+// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -27984,7 +27988,7 @@ Upgraded Defense Systems
 STRING 4278
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4279
@@ -28215,25 +28219,25 @@ Magus channels a spell for 2 seconds dealing damage to enemies based on their di
 STRING 4313
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4314
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4315
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4316
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4317
@@ -28243,7 +28247,7 @@ STRING 4317
 }
 
 STRING 4318
-// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -28313,7 +28317,7 @@ STRING 4327
 STRING 4328
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4329
@@ -28479,7 +28483,7 @@ STRING 4355
 }
 
 STRING 4356
-// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -28708,7 +28712,7 @@ E
 STRING 4389
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4390
@@ -28738,7 +28742,7 @@ STRING 4393
 STRING 4394
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4395
@@ -29110,7 +29114,7 @@ Boomerang
 STRING 4456
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4457
@@ -29171,7 +29175,7 @@ STRING 4465
 }
 
 STRING 4466
-// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -29197,7 +29201,7 @@ The caster drains the enemy's life force to greatly empower their own abilities.
 }
 
 STRING 4470
-// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -29954,7 +29958,7 @@ Goten and Trunks perform the fusion dance. They must be touching each other for 
 }
 
 STRING 4580
-// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30100,13 +30104,13 @@ Hirudegarn fires a barrage of flaming energy balls at his enemies that explode t
 }
 
 STRING 4603
-// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 4604
-// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30674,7 +30678,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4696
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -30788,7 +30792,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4715
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30866,7 +30870,7 @@ STRING 4727
 }
 
 STRING 4728
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30890,7 +30894,7 @@ Trunks teleports behind the enemy and punches it with all of his might.
 }
 
 STRING 4732
-// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -31075,7 +31079,7 @@ E
 STRING 4762
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 4763
@@ -31105,7 +31109,7 @@ Tien blinds his opponents with a solar flare before splitting into copies of him
 }
 
 STRING 4767
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -31142,7 +31146,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 4771
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -31280,7 +31284,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 4794
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -32488,7 +32492,7 @@ STRING 4994
 }
 
 STRING 4995
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -32506,7 +32510,7 @@ STRING 4997
 }
 
 STRING 4998
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -32902,7 +32906,7 @@ STRING 5063
 }
 
 STRING 5064
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -32920,7 +32924,7 @@ STRING 5066
 }
 
 STRING 5067
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -33346,7 +33350,7 @@ Transforms Yamcha back to normal.
 }
 
 STRING 5138
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -33370,7 +33374,7 @@ Creates an artificial moon, it starts out as a sphere within the users hand that
 }
 
 STRING 5142
-// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -33568,13 +33572,13 @@ STRING 5174
 }
 
 STRING 5175
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 5176
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -33966,7 +33970,7 @@ Book Main Heroes
 STRING 5235
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5236
@@ -34080,7 +34084,7 @@ Q
 STRING 5254
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5255
@@ -34194,7 +34198,7 @@ W
 STRING 5273
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5274
@@ -34414,7 +34418,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 5310
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -34528,7 +34532,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 5329
-// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -34602,7 +34606,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5341
-// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -34988,7 +34992,7 @@ You receive +0.01x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 5403
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -35023,7 +35027,7 @@ Gains |cffffcc00+0.05x|r for holding the cleansed dragon ball
 }
 
 STRING 5407
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -35744,7 +35748,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5525
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -35981,13 +35985,13 @@ STRING 5557
 STRING 5558
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5559
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones attack damage by 50 per level.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 5560
@@ -36477,7 +36481,7 @@ STRING 5627
 }
 
 STRING 5628
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -36507,7 +36511,7 @@ STRING 5632
 }
 
 STRING 5633
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -37348,7 +37352,7 @@ Shoots a beam of negative energy from the fingertip.
 }
 
 STRING 5748
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -38769,7 +38773,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5982
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39573,7 +39577,7 @@ STRING 6115
 }
 
 STRING 6116
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39597,7 +39601,7 @@ Enhances the target hero with a cybernetic augmentation. Grants one beneficial e
 }
 
 STRING 6120
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39621,13 +39625,13 @@ Beerus Inner Fire
 }
 
 STRING 6124
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6125
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39665,13 +39669,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 6131
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6132
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39683,7 +39687,7 @@ Beerus Fart
 }
 
 STRING 6134
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -40912,7 +40916,7 @@ Removes 60 armor from nearby enemies.
 }
 
 STRING 6331
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -40930,7 +40934,7 @@ E
 }
 
 STRING 6334
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41823,7 +41827,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6463
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42386,7 +42390,7 @@ STRING 6555
 }
 
 STRING 6556
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42410,7 +42414,7 @@ STRING 6559
 }
 
 STRING 6560
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43739,7 +43743,7 @@ STRING 6758
 }
 
 STRING 6759
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43757,7 +43761,7 @@ Change Now
 }
 
 STRING 6762
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44016,7 +44020,7 @@ STRING 6802
 }
 
 STRING 6803
-// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44045,13 +44049,13 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 6807
-// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0OK (Last Stand), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44644,7 +44648,7 @@ STRING 6894
 }
 
 STRING 6895
-// Abilities: A0OK (Last Stand), Hotkey (Hotkey - Normal)
+// Abilities: A0OK (Last Stand), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44670,7 +44674,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 6899
-// Abilities: A0P4 (Ice Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OK (Last Stand), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44898,7 +44902,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0P4 (Ice Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44934,7 +44938,7 @@ F
 }
 
 STRING 6943
-// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45541,7 +45545,7 @@ Creates 3 explosive mines near the target location that detonate on contact with
 }
 
 STRING 7035
-// Abilities: A0PE (Justice Hold), Hotkey (Hotkey - Normal)
+// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45583,7 +45587,7 @@ STRING 7040
 }
 
 STRING 7041
-// Abilities: A0PM (Justice Hold 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PE (Justice Hold), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -46882,25 +46886,23 @@ STRING 7230
 }
 
 STRING 7231
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool1,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool1,.> seconds|r
 }
 
 STRING 7232
-// Abilities: A0HZ (Disaster Ray), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool1,.> - <A0HZ,Cool10,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool3,.> seconds|r
 }
 
 STRING 7233
@@ -46976,14 +46978,13 @@ STRING 7244
 }
 
 STRING 7245
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool10,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool4,.> seconds|r
 }
 
 STRING 7246
@@ -47017,7 +47018,7 @@ STRING 7250
 }
 
 STRING 7251
-// Abilities: A0PM (Justice Hold 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PM (Justice Hold 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -47516,7 +47517,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0PS (Ginyu Pose Ultimate), Hotkey (Hotkey - Normal)
+// Abilities: A0PM (Justice Hold 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47540,7 +47541,7 @@ Death Blow
 }
 
 STRING 7331
-// Abilities: A0PS (Ginyu Pose Ultimate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PS (Ginyu Pose Ultimate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47670,7 +47671,7 @@ Q
 }
 
 STRING 7351
-// Abilities: A0Q2 (Supernova Frieza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -47743,47 +47744,43 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 7362
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool2,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool5,.> seconds|r
 }
 
 STRING 7363
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool3,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool6,.> seconds|r
 }
 
 STRING 7364
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool4,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool7,.> seconds|r
 }
 
 STRING 7365
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool5,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool8,.> seconds|r
 }
 
 STRING 7366
@@ -47925,14 +47922,13 @@ E
 }
 
 STRING 7389
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool6,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool9,.> seconds|r
 }
 
 STRING 7390
@@ -47973,14 +47969,13 @@ STRING 7395
 }
 
 STRING 7396
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool7,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool10,.> seconds|r
 }
 
 STRING 7397
@@ -48491,7 +48486,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7477
-// Abilities: A0Q2 (Supernova Frieza), Hotkey (Hotkey - Normal)
+// Abilities: A0Q2 (Supernova Frieza), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -49519,7 +49514,7 @@ D
 }
 
 STRING 7640
-// Abilities: A0Q4 (Death Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0Q2 (Supernova Frieza), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50337,7 +50332,7 @@ STRING 7760
 }
 
 STRING 7761
-// Abilities: A0Q4 (Death Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q4 (Death Storm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51334,7 +51329,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0Q6 (Death Beam Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q4 (Death Storm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51352,7 +51347,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0Q6 (Death Beam Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0Q6 (Death Beam Barrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51701,25 +51696,23 @@ STRING 7979
 }
 
 STRING 7980
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Researchubertip (Tooltip - Learn - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool8,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool1,.> - <A133,Cool10,.> seconds|r
 }
 
 STRING 7981
-// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
 {
-Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
+Unlocks [|cff00ff00Q|r] Draining Lance.
 
-|cff00ff00Duration: 5s|r
-|cff00ff00Damage: [Int] 350u/s (+175u/s)|r
-|cff00ff00Damage Block: [Int] 1000u @ 40%|r
-|cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
+|cff00ff00Damage: [Int] 600u (+600u)|r
+|cff00ffffCooldown: <A133,Cool2,.> seconds|r
 }
 
 STRING 7982
@@ -52627,7 +52620,7 @@ STRING 8115
 }
 
 STRING 8116
-// Abilities: A0Q8 (Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q6 (Death Beam Barrage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -52715,7 +52708,7 @@ STRING 8129
 }
 
 STRING 8130
-// Abilities: A0Q8 (Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0Q8 (Death Ball), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53902,7 +53895,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0Q9 (Supernova Frieza 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q8 (Death Ball), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54208,7 +54201,7 @@ Q
 }
 
 STRING 8364
-// Abilities: A0Q9 (Supernova Frieza 2), Hotkey (Hotkey - Normal)
+// Abilities: A0Q9 (Supernova Frieza 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54688,7 +54681,7 @@ STRING 8421
 }
 
 STRING 8422
-// Abilities: A0QG (Earth Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0Q9 (Supernova Frieza 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54724,7 +54717,7 @@ STRING 8427
 }
 
 STRING 8428
-// Abilities: A0QG (Earth Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QG (Earth Breaker), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55815,7 +55808,7 @@ Kannonblast
 }
 
 STRING 8572
-// Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0QG (Earth Breaker), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55839,7 +55832,7 @@ Monkey Smasher
 }
 
 STRING 8576
-// Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57169,7 +57162,7 @@ Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to 
 }
 
 STRING 8782
-// Abilities: A0QR (Dragon Thunder), Hotkey (Hotkey - Normal)
+// Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57193,7 +57186,7 @@ Temporal Warp
 }
 
 STRING 8786
-// Abilities: A0QR (Dragon Thunder), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QR (Dragon Thunder), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57463,7 +57456,7 @@ STRING 8830
 }
 
 STRING 8831
-// Abilities: A0R0 (Circle Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QR (Dragon Thunder), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -57487,7 +57480,7 @@ Dende links all units near him for 5s, causing all damage received by linked uni
 }
 
 STRING 8835
-// Abilities: A0R0 (Circle Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0R0 (Circle Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57523,13 +57516,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8840
-// Abilities: A0R5 (Circle Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R0 (Circle Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8841
-// Abilities: A0R5 (Circle Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0R5 (Circle Flash 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57821,7 +57814,7 @@ VegetaSSB2
 }
 
 STRING 8881
-// Abilities: A0SB (Sparking!), Hotkey (Hotkey - Normal)
+// Abilities: A0R5 (Circle Flash 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57845,7 +57838,7 @@ STRING 8884
 }
 
 STRING 8885
-// Abilities: A0SF (Time Stop), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SB (Sparking!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57959,7 +57952,7 @@ Overcharge
 }
 
 STRING 8904
-// Abilities: A0SF (Time Stop), Hotkey (Hotkey - Normal)
+// Abilities: A0SF (Time Stop), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57983,7 +57976,7 @@ STRING 8907
 }
 
 STRING 8908
-// Abilities: A0SL (Heatwave 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SF (Time Stop), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58216,7 +58209,7 @@ Bio Broly
 }
 
 STRING 8940
-// Abilities: A0SL (Heatwave 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SL (Heatwave 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58260,11 +58253,9 @@ Tatsumaki creates a tornado that damages enemies and spins all beams and enemy u
 }
 
 STRING 8945
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-|cffffff00+0.10x Str mult
-+0.05x Int mult|r
-A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+Increases the attack range of Geti Star Defense buildings by +50, HP by 2000 and HP regen by +15.
 }
 
 STRING 8946
@@ -58338,7 +58329,7 @@ Ginyu Pose Fighting Armor Aura
 }
 
 STRING 8954
-// Abilities: A0SU (Heavenly Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SL (Heatwave 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58479,7 +58470,7 @@ Genos discharges a wave of blinding light from his eye, causing nearby enemies t
 }
 
 STRING 8970
-// Abilities: A0SU (Heavenly Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0SU (Heavenly Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58503,7 +58494,7 @@ Genos discharges a wave of blinding light from his eye, causing nearby enemies t
 }
 
 STRING 8973
-// Abilities: A0T2 (United States of Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SU (Heavenly Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58631,7 +58622,7 @@ Dypso's signature flying kick.
 }
 
 STRING 8987
-// Abilities: A0T2 (United States of Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T2 (United States of Smash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58670,13 +58661,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8993
-// Abilities: A0T6 (New Hampshire Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T2 (United States of Smash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 8994
-// Abilities: A0TB (Black Materia), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T6 (New Hampshire Smash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58790,7 +58781,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 9013
-// Abilities: A0TB (Black Materia), Hotkey (Hotkey - Normal)
+// Abilities: A0TB (Black Materia), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58916,7 +58907,7 @@ all
 }
 
 STRING 9034
-// Abilities: A0TO (Power Up Block), Hotkey (Hotkey - Normal)
+// Abilities: A0TB (Black Materia), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59007,7 +58998,7 @@ STRING 9047
 }
 
 STRING 9048
-// Abilities: A0TO (Power Up Block), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TO (Power Up Block), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59255,7 +59246,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 9080
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TO (Power Up Block), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -59294,7 +59285,7 @@ Mafuba
 }
 
 STRING 9086
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -59609,7 +59600,7 @@ Follow-Up
 }
 
 STRING 9134
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60265,7 +60256,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Hotkey (Hotkey - Normal)
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60289,7 +60280,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60592,13 +60583,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A0UU (Madness Hero), Hotkey (Hotkey - Normal)
+// Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0UU (Madness Hero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UU (Madness Hero), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60610,7 +60601,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0V0 (Final Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0UU (Madness Hero), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60621,7 +60612,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0V0 (Final Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V0 (Final Burst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64051,13 +64042,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0VT (Cleave), Hotkey (Hotkey - Normal)
+// Abilities: A0V0 (Final Burst), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0VT (Cleave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VT (Cleave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64691,7 +64682,7 @@ STRING 9919
 }
 
 STRING 9920
-// Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0VT (Cleave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -65796,7 +65787,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66951,7 +66942,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0WJ (Uzzi Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -66969,7 +66960,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0WJ (Uzzi Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0WJ (Uzzi Punch), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -67639,8 +67630,8 @@ STRING 10351
 STRING 10352
 {
 |cffffff00T+Click: Generic|r
-|cff00ff00Shift+T+Click: Group|r
-|cffff2222Ctrl+Shift+Click: Retreat|r
+|cff00ff00G+Click: Group|r
+|cffff2222Shift+T+Click: Retreat|r
 }
 
 STRING 10353
@@ -69168,7 +69159,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0WQ (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WJ (Uzzi Punch), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69234,7 +69225,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0WR (Dark Mist), Hotkey (Hotkey - Normal)
+// Abilities: A0WQ (Water 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69631,8 +69622,11 @@ Mid-Class Saiyan Warrior
 }
 
 STRING 10648
+// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
 {
-|cffff2020Activating Auto Transformation. Type -autotransform to toggle on/off.|r
+The caster destroys illusions of themselves under their control in 1800 AOE. If any valid illusions were destroyed the caster restores 10% to 30% of their max HP proportional to the remaining HP of the illusion.
+
+|cff00ffffCooldown: <A138,Cool1>s
 }
 
 STRING 10649
@@ -69656,7 +69650,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 02 December 2023
+This map is under active development - 1 April 2024
 }
 
 STRING 10653
@@ -69936,7 +69930,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0WR (Dark Mist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WR (Dark Mist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -70201,7 +70195,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0X3 (Napalm), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (Dark Mist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -70222,7 +70216,7 @@ Fires a beam of energy from the users palm.
 }
 
 STRING 10734
-// Abilities: A0X3 (Napalm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X3 (Napalm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -71494,7 +71488,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0X4 (Mega Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0X3 (Napalm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -72241,7 +72235,7 @@ STRING 11047
 }
 
 STRING 11048
-// Abilities: A0X4 (Mega Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X4 (Mega Bomb), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77798,7 +77792,7 @@ Lucca throws a bomb at the target area that explodes on impact, dealing damage t
 }
 
 STRING 11844
-// Abilities: A0XE (Cure), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X4 (Mega Bomb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -77861,13 +77855,13 @@ Reduces the sight radius of all other heroes for a brief period of time.|n|cffff
 }
 
 STRING 11854
-// Abilities: A0XE (Cure), Hotkey (Hotkey - Normal)
+// Abilities: A0XE (Cure), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 11855
-// Abilities: A0XX (Aura Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0XE (Cure), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78914,21 +78908,21 @@ After a short delay, Hirudegarn slams the ground with his foot, stunning nearby 
 }
 
 STRING 12009
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-+0.05x |cffff2222Strength|r multiplier up to 2.90x total.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 12010
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-+0.05x |cff00ff00Agility|r multiplier up to 2.90x total.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 12011
-// Upgrades: R00J (Cannibalize), Ubertip (Tooltip - Extended)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-+0.05x |cff00ffffIntelligence|r multiplier up to 2.90x total.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 12012
@@ -79272,7 +79266,7 @@ Bee
 }
 
 STRING 12058
-// Abilities: A0XX (Aura Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XX (Aura Sphere), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79673,7 +79667,7 @@ STRING 12115
 }
 
 STRING 12116
-// Abilities: A011 (Table Flip), Hotkey (Hotkey - Normal)
+// Abilities: A0XX (Aura Sphere), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79721,7 +79715,7 @@ STRING 12123
 }
 
 STRING 12124
-// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
+// Abilities: A011 (Table Flip), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81039,7 +81033,7 @@ STRING 12320
 }
 
 STRING 12321
-// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81067,7 +81061,7 @@ Zamasu channels his godly energy to deflect the attacks of lesser beings and pun
 }
 
 STRING 12325
-// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
+// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81143,7 +81137,7 @@ Zamasu swiftly slashes nearby enemies.
 }
 
 STRING 12335
-// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
+// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -83907,7 +83901,7 @@ Kid UI
 }
 
 STRING 12731
-// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
+// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -83925,7 +83919,7 @@ Q
 }
 
 STRING 12734
-// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84930,7 +84924,7 @@ STRING 12880
 }
 
 STRING 12881
-// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84975,7 +84969,7 @@ STRING 12885
 }
 
 STRING 12886
-// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -85272,7 +85266,7 @@ Toppo's God of Destruction form.
 }
 
 STRING 12922
-// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -86403,13 +86397,13 @@ STRING 13087
 }
 
 STRING 13088
-// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 13089
-// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87089,7 +87083,7 @@ STRING 13187
 }
 
 STRING 13188
-// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87125,7 +87119,7 @@ STRING 13193
 }
 
 STRING 13194
-// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88568,7 +88562,7 @@ STRING 13405
 }
 
 STRING 13406
-// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88586,7 +88580,7 @@ STRING 13408
 }
 
 STRING 13409
-// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88813,7 +88807,7 @@ STRING 13443
 }
 
 STRING 13444
-// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88855,7 +88849,7 @@ Magus spawns giant chunks of jagged ice to crush his enemies for 3s. Afflicts en
 }
 
 STRING 13450
-// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89167,6 +89161,12 @@ STRING 13494
 (frieza)
 }
 
+STRING 13495
+// Abilities: A06H (Debuff Root Generic 0.5s), Name (Name)
+{
+Debuff Root Generic 0.5s
+}
+
 STRING 13496
 // Abilities: A0Q6 (Death Beam Barrage), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -89258,7 +89258,7 @@ STRING 13508
 }
 
 STRING 13509
-// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89276,7 +89276,7 @@ STRING 13511
 }
 
 STRING 13512
-// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89354,6 +89354,30 @@ STRING 13522
 // Abilities: A0Q7 (Nova Rush), Researchubertip (Tooltip - Learn - Extended)
 {
 Frieza leaps into the air and accelerates to an extreme speed before crashing down on his enemies. Deals bonus damage when landing.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0Q7,Cool1> seconds|r
+}
+
+STRING 13523
+// Abilities: A118 (Debuff Slow 50% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 13524
+// Abilities: A06I (Debuff Root Generic 1s), Name (Name)
+{
+Debuff Root Generic 1s
+}
+
+STRING 13525
+// Abilities: A119 (Debuff Slow 75% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 13526
+// Abilities: A06O (Debuff Root Generic 1.5s), Name (Name)
+{
+Debuff Root Generic 1.5s
 }
 
 STRING 13527
@@ -89609,7 +89633,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 13562
-// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89630,7 +89654,7 @@ STRING 13564
 }
 
 STRING 13565
-// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89806,7 +89830,7 @@ STRING 13587
 }
 
 STRING 13588
-// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
+// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89824,7 +89848,7 @@ STRING 13590
 }
 
 STRING 13591
-// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -91038,7 +91062,7 @@ Mario throws a fireball to burn his enemies.
 }
 
 STRING 13754
-// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -91131,7 +91155,7 @@ STRING 13764
 }
 
 STRING 13765
-// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92371,7 +92395,7 @@ STRING 13919
 }
 
 STRING 13920
-// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
+// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92407,7 +92431,7 @@ STRING 13925
 }
 
 STRING 13926
-// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
+// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92681,7 +92705,7 @@ STRING 13966
 }
 
 STRING 13967
-// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92703,7 +92727,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 13970
-// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -93739,7 +93763,7 @@ STRING 14119
 }
 
 STRING 14120
-// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
+// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -93757,7 +93781,7 @@ Q
 }
 
 STRING 14123
-// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
+// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -93911,13 +93935,13 @@ STRING 14145
 }
 
 STRING 14146
-// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14147
-// Abilities: A139 (Time Reverse), Researchhotkey (Hotkey - Learn)
+// Abilities: A135 (Mist Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -94615,7 +94639,7 @@ STRING 14240
 }
 
 STRING 14241
-// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -94633,7 +94657,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
+// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -94804,7 +94828,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A139 (Time Reverse), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mist Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -99689,7 +99713,7 @@ The user fires two beams of energy that will hunt down the enemy and deal massiv
 }
 
 STRING 14981
-// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
+// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -100908,7 +100932,7 @@ STRING 15154
 }
 
 STRING 15155
-// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
+// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -100932,7 +100956,7 @@ STRING 15158
 }
 
 STRING 15159
-// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
+// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -101200,13 +101224,13 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A09M (Draining Lance), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15198
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A09M (Draining Lance), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -104016,7 +104040,7 @@ STRING 15569
 }
 
 STRING 15570
-// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -104034,7 +104058,7 @@ STRING 15572
 }
 
 STRING 15573
-// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
+// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -104441,7 +104465,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 15633
-// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
+// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -105656,7 +105680,7 @@ Fire Arrow
 }
 
 STRING 15797
-// Abilities: A0A2 (Princess Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -105920,7 +105944,7 @@ E
 }
 
 STRING 15841
-// Abilities: A0A2 (Princess Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Princess Strike), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -106397,7 +106421,7 @@ STRING 15908
 }
 
 STRING 15909
-// Abilities: A0EK (Unlock Potential), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A2 (Princess Strike), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -107537,7 +107561,7 @@ STRING 16055
 }
 
 STRING 16056
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0A1 (Blood Frenzy Activate), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -107621,7 +107645,7 @@ W
 }
 
 STRING 16070
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0A1 (Blood Frenzy Activate), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -107633,7 +107657,7 @@ Super Cape
 }
 
 STRING 16072
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108270,7 +108294,7 @@ STRING 16156
 }
 
 STRING 16157
-// Abilities: A0EK (Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Unlock Potential), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -108288,7 +108312,7 @@ Power Up Block
 }
 
 STRING 16160
-// Abilities: A0FX (Bow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Unlock Potential), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -108518,7 +108542,7 @@ STRING 16195
 }
 
 STRING 16196
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -108536,7 +108560,7 @@ STRING 16198
 }
 
 STRING 16199
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0CB (Item Replicator), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109286,6 +109310,24 @@ STRING 16296
 [|cff00ff00R|r] Tornado of Terror - [|cffffcc00Level 10|r]
 }
 
+STRING 16297
+// Abilities: A11A (Debuff Slow 90% 5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 16298
+// Abilities: A06R (Debuff Root Generic 2s), Name (Name)
+{
+Debuff Root Generic 2s
+}
+
+STRING 16299
+// Abilities: A0BQ (Debuff Slow 25% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 16300
 // Abilities: A0B6 (Multi Form Solar Flare), Tip (Tooltip - Normal)
 {
@@ -109302,6 +109344,12 @@ STRING 16302
 // Abilities: A0B6 (Multi Form Solar Flare), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Multi Form / Solar Flare - [|cffffcc00Level 3|r]
+}
+
+STRING 16303
+// Abilities: A07G (Debuff Root Generic 2.5s), Name (Name)
+{
+Debuff Root Generic 2.5s
 }
 
 STRING 16304
@@ -109705,7 +109753,7 @@ STRING 16359
 }
 
 STRING 16360
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -111100,7 +111148,7 @@ STRING 16539
 }
 
 STRING 16540
-// Abilities: A0FX (Bow), Hotkey (Hotkey - Normal)
+// Abilities: A0FX (Bow), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -111118,7 +111166,7 @@ STRING 16542
 }
 
 STRING 16543
-// Abilities: A0GF (Lightning Arrow), Hotkey (Hotkey - Normal)
+// Abilities: A0FX (Bow), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -111277,7 +111325,7 @@ Donkey Kong winds up for a brief moment before unleashing a mighty punch.
 }
 
 STRING 16566
-// Abilities: A0HM (Max Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GF (Lightning Arrow), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -112222,7 +112270,7 @@ STRING 16681
 }
 
 STRING 16682
-// Abilities: A135 (Mist Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A139 (Time Reverse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -112246,7 +112294,7 @@ STRING 16685
 }
 
 STRING 16686
-// Abilities: A135 (Mist Form), Hotkey (Hotkey - Normal)
+// Abilities: A139 (Time Reverse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112309,7 +112357,7 @@ Mugetsu
 }
 
 STRING 16695
-// Abilities: A0HM (Max Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Max Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -114672,7 +114720,7 @@ STRING 17005
 }
 
 STRING 17006
-// Abilities: A0HY (Max Barrier: Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HM (Max Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -114782,7 +114830,7 @@ STRING 17023
 }
 
 STRING 17024
-// Abilities: A0HY (Max Barrier: Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Max Barrier: Burst), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -115423,7 +115471,7 @@ STRING 17116
 }
 
 STRING 17117
-// Abilities: A0J0 (Explode Mine), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Max Barrier: Burst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115560,7 +115608,7 @@ STRING 17133
 }
 
 STRING 17134
-// Abilities: A11Y (Greater Magic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0J0 (Explode Mine), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115742,6 +115790,12 @@ STRING 17160
 // Abilities: A0V3 (Red-Eyed Dragon Summoning), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Red-Eyed Dragon Summoning - [|cffffcc00Level 7|r]
+}
+
+STRING 17161
+// Abilities: A0C3 (Debuff Slow 50% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
 }
 
 STRING 17162
@@ -117472,13 +117526,13 @@ STRING 17399
 }
 
 STRING 17400
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 17401
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -118959,7 +119013,7 @@ STRING 17594
 }
 
 STRING 17595
-// Abilities: A125 (Remote Viewing), Hotkey (Hotkey - Normal)
+// Abilities: A11Y (Greater Magic Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119079,7 +119133,7 @@ STRING 17612
 }
 
 STRING 17613
-// Abilities: A12B (Summon: Pandora's Actor), Hotkey (Hotkey - Normal)
+// Abilities: A125 (Remote Viewing), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119391,7 +119445,7 @@ STRING 17658
 }
 
 STRING 17659
-// Abilities: A12F (Spells: Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A12B (Summon: Pandora's Actor), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -120848,7 +120902,7 @@ STRING 17879
 }
 
 STRING 17880
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0CD (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -120906,7 +120960,7 @@ STRING 17888
 }
 
 STRING 17889
-// Abilities: A12Q (Time Stop), Hotkey (Hotkey - Normal)
+// Abilities: A12F (Spells: Summoning), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -121046,7 +121100,7 @@ STRING 17906
 }
 
 STRING 17907
-// Abilities: A12W (Aegis), Researchhotkey (Hotkey - Learn)
+// Abilities: A12Q (Time Stop), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -121456,6 +121510,12 @@ STRING 17963
 // Abilities: A127 (Gate), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
+}
+
+STRING 17964
+// Abilities: A07H (Debuff Root Generic 3s), Name (Name)
+{
+Debuff Root Generic 3s
 }
 
 STRING 17965
@@ -122189,7 +122249,7 @@ STRING 18074
 }
 
 STRING 18075
-// Abilities: A12W (Aegis), Hotkey (Hotkey - Normal)
+// Abilities: A12W (Aegis), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -122207,7 +122267,7 @@ STRING 18077
 }
 
 STRING 18078
-// Abilities: A136 (Negative Impact Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A12W (Aegis), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -122990,7 +123050,7 @@ STRING 18178
 }
 
 STRING 18179
-// Abilities: A136 (Negative Impact Shield), Hotkey (Hotkey - Normal)
+// Abilities: A136 (Negative Impact Shield), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -123056,7 +123116,7 @@ STRING 18187
 }
 
 STRING 18188
-// Abilities: A13F (Meteor Fall), Researchhotkey (Hotkey - Learn)
+// Abilities: A136 (Negative Impact Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -123267,7 +123327,7 @@ This unit is affected by Dark Mist. It will miss when it attacks.
 }
 
 STRING 18216
-// Abilities: A13F (Meteor Fall), Hotkey (Hotkey - Normal)
+// Abilities: A13F (Meteor Fall), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -124222,9 +124282,9 @@ F
 }
 
 STRING 18351
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Abilities: A09M (Draining Lance), Name (Name)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 1|r]
+Draining Lance
 }
 
 STRING 18352
@@ -124262,33 +124322,27 @@ Lucca unleashes a barrage of flames upon her enemies.
 }
 
 STRING 18357
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Abilities: A09M (Draining Lance), Tip (Tooltip - Normal)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 2|r]
-}
-
-STRING 18358
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 3|r]
+[|cff00FF00Q|r] Draining Lance
 }
 
 STRING 18359
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Abilities: A133 (Purifying Javelin), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 4|r]
+(shalltear)
 }
 
 STRING 18360
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 5|r]
+Q
 }
 
 STRING 18361
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 6|r]
+Q
 }
 
 STRING 18362
@@ -124332,9 +124386,9 @@ Lucca unleashes a barrage of flames upon her enemies.
 }
 
 STRING 18367
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Abilities: A0A1 (Blood Frenzy Activate), Name (Name)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 7|r]
+Blood Frenzy Activate
 }
 
 STRING 18368
@@ -124371,21 +124425,25 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 }
 
 STRING 18372
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 8|r]
++0.05x |cffff2222Strength|r multiplier up to 2.90x total.
+
+Recommended to be upgraded at most 10 times.
 }
 
 STRING 18373
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 9|r]
++0.05x |cff00ff00Agility|r multiplier up to 2.90x total.
+
+Recommended to be upgraded at most 10 times.
 }
 
 STRING 18374
-// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+// Abilities: A134 (Vermilion Nova), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 10|r]
+(shalltear)
 }
 
 STRING 18375
@@ -124401,9 +124459,9 @@ STRING 18376
 }
 
 STRING 18377
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Name (Name)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 1|r]
+Blood Frenzy Deactivate
 }
 
 STRING 18378
@@ -124443,33 +124501,35 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 }
 
 STRING 18383
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Upgrades: R00J (Cannibalize), Ubertip (Tooltip - Extended)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 2|r]
++0.05x |cff00ffffIntelligence|r multiplier up to 2.90x total.
+
+Recommended to be upgraded at most 10 times.
 }
 
 STRING 18384
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 3|r]
+Shalltear leaves her frenzied state by using her spuit lance to drain the blood off of her.
 }
 
 STRING 18385
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Abilities: A135 (Mist Form), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 4|r]
+(shalltear)
 }
 
 STRING 18386
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Abilities: A0BC (Blood Frenzy), Name (Name)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 5|r]
+Blood Frenzy
 }
 
 STRING 18387
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 6|r]
+Increases the attack range of Geti Star Defense buildings by +100, HP by 4000 and HP regen by +30.
 }
 
 STRING 18388
@@ -124518,9 +124578,9 @@ Link throws an arcing boomerang that deals damage on the way forward and back. D
 }
 
 STRING 18393
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Items: I00N (Zeno's Button), Name (Name)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 7|r]
+Zeno's Button
 }
 
 STRING 18394
@@ -124557,21 +124617,21 @@ STRING 18397
 }
 
 STRING 18398
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Abilities: A136 (Negative Impact Shield), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 8|r]
+(shalltear)
 }
 
 STRING 18399
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Buffs/Effects: B06L (), Bufftip (Tooltip)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 9|r]
+Blood Frenzy
 }
 
 STRING 18400
-// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+// Buffs/Effects: B06L (), Buffubertip (Tooltip - Extended)
 {
-[|cff00ff00W|r] Fire - [|cffffcc00Level 10|r]
+This unit is under the effects of Blood Frenzy; it has increased attack damage.
 }
 
 STRING 18401
@@ -124581,7 +124641,7 @@ STRING 18401
 }
 
 STRING 18402
-// Abilities: A13Q (Final Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A13F (Meteor Fall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -128072,6 +128132,12 @@ STRING 18897
 This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
 }
 
+STRING 18898
+// Abilities: A0C4 (Debuff Slow 75% 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 18899
 // Abilities: A106 (Heavy Slam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -130793,7 +130859,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 19282
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -130829,7 +130895,7 @@ Increases STR.
 }
 
 STRING 19286
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -131067,7 +131133,7 @@ STRING 19313
 }
 
 STRING 19314
-// Abilities: A13Q (Final Flash), Hotkey (Hotkey - Normal)
+// Abilities: A13Q (Final Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -131085,7 +131151,7 @@ STRING 19316
 }
 
 STRING 19317
-// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A13Q (Final Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -131940,6 +132006,12 @@ STRING 19430
 Q
 }
 
+STRING 19431
+// Buffs/Effects: B018 (Rooted Generic), Bufftip (Tooltip)
+{
+Rooted
+}
+
 STRING 19432
 // Abilities: A10T (Elite Beam Charge), Name (Name)
 {
@@ -132102,7 +132174,7 @@ Upgrades to [|cff00ff00W|r] Bursting Flame.
 }
 
 STRING 19449
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A0CC (Emergency Cloning), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -132349,7 +132421,7 @@ STRING 19480
 }
 
 STRING 19481
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -132367,7 +132439,7 @@ STRING 19483
 }
 
 STRING 19484
-// Abilities: A0XK (Dino Tail), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -133198,13 +133270,13 @@ E
 }
 
 STRING 19598
-// Abilities: A0XK (Dino Tail), Hotkey (Hotkey - Normal)
+// Abilities: A0XK (Dino Tail), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 19599
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XK (Dino Tail), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134482,7 +134554,7 @@ STRING 19772
 }
 
 STRING 19773
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Hotkey (Hotkey - Normal)
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -134500,7 +134572,7 @@ STRING 19775
 }
 
 STRING 19776
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134563,7 +134635,7 @@ A bulky hero that specializes in disrupting teams and stealing booty.
 }
 
 STRING 19785
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Hotkey (Hotkey - Normal)
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -134610,7 +134682,7 @@ Cooling Down
 }
 
 STRING 19793
-// Abilities: A015 (Reverse Lotus), Researchhotkey (Hotkey - Learn)
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134826,7 +134898,7 @@ STRING 19826
 }
 
 STRING 19827
-// Abilities: A015 (Reverse Lotus), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Reverse Lotus), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -134844,7 +134916,7 @@ STRING 19829
 }
 
 STRING 19830
-// Abilities: A01R (Eighth Gate: Gate of Death), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Reverse Lotus), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -135683,7 +135755,7 @@ STRING 19952
 }
 
 STRING 19953
-// Abilities: A024 (Yagai: Night Guy), Researchhotkey (Hotkey - Learn)
+// Abilities: A01R (Eighth Gate: Gate of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -135701,7 +135773,7 @@ STRING 19955
 }
 
 STRING 19956
-// Abilities: A024 (Yagai: Night Guy), Hotkey (Hotkey - Normal)
+// Abilities: A024 (Yagai: Night Guy), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -136581,7 +136653,7 @@ Dart shoots a ball of fire in the target direction.
 }
 
 STRING 20081
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -136967,7 +137039,7 @@ Sonic jumps into the air before crashing down on his enemies.
 }
 
 STRING 20137
-// Abilities: A04V (Spiral Incineration Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A024 (Yagai: Night Guy), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -137157,7 +137229,7 @@ STRING 20164
 }
 
 STRING 20165
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -137915,7 +137987,7 @@ STRING 20271
 }
 
 STRING 20272
-// Abilities: A04V (Spiral Incineration Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A04V (Spiral Incineration Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -137933,7 +138005,7 @@ STRING 20274
 }
 
 STRING 20275
-// Abilities: A0B6 (Multi Form Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A04V (Spiral Incineration Cannon), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -138088,7 +138160,7 @@ Debuff Slow 25% 3s
 }
 
 STRING 20294
-// Abilities: A118 (Debuff Slow 50% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A0CA (Debuff Slow 90% 3s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -138335,7 +138407,7 @@ Farming Book
 }
 
 STRING 20324
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -138480,7 +138552,7 @@ Crop Circles
 }
 
 STRING 20345
-// Abilities: A119 (Debuff Slow 75% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A00K (Debuff Slow 50% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -138498,7 +138570,7 @@ Warehouse
 }
 
 STRING 20348
-// Abilities: A0B6 (Multi Form Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B6 (Multi Form Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -138570,7 +138642,7 @@ STRING 20358
 }
 
 STRING 20359
-// Abilities: A11A (Debuff Slow 90% 5s), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Debuff Slow 75% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -138701,7 +138773,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20375
-// Abilities: A05P (Tornado of Terror), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B6 (Multi Form Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -139169,7 +139241,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20440
-// Abilities: A05P (Tornado of Terror), Hotkey (Hotkey - Normal)
+// Abilities: A05P (Tornado of Terror), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -139621,7 +139693,7 @@ Improved Fattack
 }
 
 STRING 20498
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -139724,13 +139796,13 @@ STRING 20512
 }
 
 STRING 20513
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A05P (Tornado of Terror), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20514
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0CE (Mass Move Order), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -140457,7 +140529,7 @@ Goku Black rushes the target area, damaging units in his path.
 }
 
 STRING 20618
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -142097,9 +142169,9 @@ Immunity to debuffs.|r
 }
 
 STRING 20833
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Items: I00N (Zeno's Button), Tip (Tooltip - Basic)
 {
-Increase Metal Cooler's and his clones armor by +1 and HP by +(2500*1).
+Zeno's Button
 }
 
 STRING 20834
@@ -142115,21 +142187,21 @@ STRING 20835
 }
 
 STRING 20836
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +2 and HP by +(2500*2).
+Increases the attack range of Geti Star Defense buildings by +150, HP by 6000 and HP regen by +45.
 }
 
 STRING 20837
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +3 and HP by +(2500*3).
+Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 and HP regen by +60.
 }
 
 STRING 20838
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
-Increase Metal Cooler's and his clones armor by +4 and HP by +(2500*4).
+R
 }
 
 STRING 20839
@@ -142691,9 +142763,13 @@ STRING 20911
 }
 
 STRING 20912
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Items: I02V (Cleansed Dragon Ball), Description (Description)
 {
-Increase Metal Cooler's and his clones armor by +5 and HP by +(2500*5).
+|cffffff00+0.10x Str mult
++0.05x Int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
 }
 
 STRING 20913
@@ -142854,9 +142930,12 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 20936
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Items: I00N (Zeno's Button), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +6 and HP by +(2500*6).
+A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+|cff888888(Zeno can only watch one tournament at a time!)|r
 }
 
 STRING 20937
@@ -143032,27 +143111,29 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 20960
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Items: I00N (Zeno's Button), Description (Description)
 {
-Increase Metal Cooler's and his clones armor by +7 and HP by +(2500*7).
+A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+|cff888888(Zeno can only watch one tournament at a time!)|r
 }
 
 STRING 20961
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CB (Item Replicator), Name (Name)
 {
-Increase Metal Cooler's and his clones armor by +8 and HP by +(2500*8).
+Item Replicator
 }
 
 STRING 20962
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CB (Item Replicator), EditorSuffix (Editor Suffix)
 {
-Increase Metal Cooler's and his clones armor by +9 and HP by +(2500*9).
+(geti star)
 }
 
 STRING 20963
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increase Metal Cooler's and his clones armor by +10 and HP by +(2500*10).
+|cffff2222Insufficient gold.|r
 }
 
 STRING 20964
@@ -143136,9 +143217,13 @@ Frieza fires a stronger version of his iconic Finger Beam energy attack infused 
 }
 
 STRING 20973
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CB (Item Replicator), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +11 and HP by +(2500*11).
+Creates a replica of the target item.
+This ability costs 100000 gold.
+Requires Upgraded Assembly 10.
+
+|cff00ffffCooldown: <A0CB,Cool1>s
 }
 
 STRING 20974
@@ -143229,27 +143314,21 @@ STRING 20987
 }
 
 STRING 20988
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
-Increase Metal Cooler's and his clones armor by +12 and HP by +(2500*12).
+W
 }
 
 STRING 20989
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A09M (Draining Lance), Ubertip (Tooltip - Normal - Extended)
 {
-Increase Metal Cooler's and his clones armor by +13 and HP by +(2500*13).
-}
-
-STRING 20990
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +14 and HP by +(2500*14).
+Shalltear activates her Spuit Lance to drain 4% of the target's max HP and transfers it to heal herself. The attack leaves her victim slowed by 25% for 5s.
 }
 
 STRING 20991
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CC (Emergency Cloning), Name (Name)
 {
-Increase Metal Cooler's and his clones armor by +15 and HP by +(2500*15).
+Emergency Cloning
 }
 
 STRING 20992
@@ -143500,9 +143579,9 @@ STRING 21032
 }
 
 STRING 21033
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CC (Emergency Cloning), EditorSuffix (Editor Suffix)
 {
-Increase Metal Cooler's and his clones armor by +16 and HP by +(2500*16).
+(geti star)
 }
 
 STRING 21034
@@ -143586,27 +143665,21 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 }
 
 STRING 21043
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CC (Emergency Cloning), Tip (Tooltip - Normal)
 {
-Increase Metal Cooler's and his clones armor by +17 and HP by +(2500*17).
-}
-
-STRING 21044
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Increase Metal Cooler's and his clones armor by +18 and HP by +(2500*18).
+[|cff00ff00W|r] Emergency Cloning
 }
 
 STRING 21045
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CD (Mass Attack Order), Name (Name)
 {
-Increase Metal Cooler's and his clones armor by +19 and HP by +(2500*19).
+Mass Attack Order
 }
 
 STRING 21046
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+// Abilities: A0CD (Mass Attack Order), EditorSuffix (Editor Suffix)
 {
-Increase Metal Cooler's and his clones armor by +20 and HP by +(2500*20).
+(geti star)
 }
 
 STRING 21047
@@ -144235,9 +144308,9 @@ STRING 21134
 }
 
 STRING 21135
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +50, HP by 1250 and HP regen by 100%.
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 
 STRING 21136
@@ -144289,21 +144362,24 @@ STRING 21143
 }
 
 STRING 21144
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0CD (Mass Attack Order), Tip (Tooltip - Normal)
 {
-Increases the attack range of Geti Star Defense buildings by +100, HP by 2500 and HP regen by 200%.
+[|cff00ff00E|r] Mass Attack Order
 }
 
 STRING 21145
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0CD (Mass Attack Order), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the attack range of Geti Star Defense buildings by +150, HP by 3750 and HP regen by 300%.
+Issues an attack order to all Metal Cooler clones.
+Targetting the ground trigger an attack-move order.
+
+|cff00ffffCooldown: <A0CD,Cool1>s
 }
 
 STRING 21146
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
+// Abilities: A0CE (Mass Move Order), Name (Name)
 {
-Increases the attack range of Geti Star Defense buildings by +200, HP by 5000 and HP regen by 400%.
+Mass Move Order
 }
 
 STRING 21147
@@ -147734,7 +147810,7 @@ STRING 21611
 }
 
 STRING 21612
-// Abilities: A0BQ (Debuff Slow 25% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A04U (Debuff Slow 25% 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147746,7 +147822,7 @@ STRING 21613
 }
 
 STRING 21614
-// Abilities: A0C3 (Debuff Slow 50% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06H (Debuff Root Generic 0.5s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147760,7 +147836,7 @@ Dende has learned the power to unlock the hidden potential inside his allies, gr
 }
 
 STRING 21616
-// Abilities: A0C4 (Debuff Slow 75% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06I (Debuff Root Generic 1s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -147772,7 +147848,7 @@ STRING 21617
 }
 
 STRING 21618
-// Abilities: A0CA (Debuff Slow 90% 3s), EditorSuffix (Editor Suffix)
+// Abilities: A06O (Debuff Root Generic 1.5s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -149135,7 +149211,7 @@ R
 }
 
 STRING 21804
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -151268,212 +151344,137 @@ STRING 22043
 }
 
 STRING 22044
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CE (Mass Move Order), EditorSuffix (Editor Suffix)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool1>s|r
+(geti star)
 }
 
 STRING 22045
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CE (Mass Move Order), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool2>s|r
+[|cff00ff00R|r] Mass Move Order
 }
 
 STRING 22046
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CE (Mass Move Order), Ubertip (Tooltip - Normal - Extended)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+Issues a move order to all Metal Cooler clones.
 
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool3>s|r
+|cff00ffffCooldown: <A0CD,Cool1>s
 }
 
 STRING 22047
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool4>s|r
+E
 }
 
 STRING 22048
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool5>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 2|r]
 }
 
 STRING 22049
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool6>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 3|r]
 }
 
 STRING 22050
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool7>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 4|r]
 }
 
 STRING 22051
-// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool1>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 5|r]
 }
 
 STRING 22052
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool8>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 6|r]
 }
 
 STRING 22053
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool9>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 1|r]
 }
 
 STRING 22054
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
-
-|cff00ff00Damage: [Int] 750u
-|cff00FFFFCooldown: <A071,Cool10>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 7|r]
 }
 
 STRING 22055
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Researchtip (Tooltip - Learn)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool1,.>s|r
+[|cff00ff00F|r] Learn Mist Form - [|cffffcc00Level %d|r]
 }
 
 STRING 22056
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool2,.>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 9|r]
 }
 
 STRING 22057
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool3,.>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 8|r]
 }
 
 STRING 22058
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool4,.>s|r
+[|cff00ff00F|r] Mist Form - [|cffffcc00Level 10|r]
 }
 
 STRING 22059
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool5,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 2|r]
 }
 
 STRING 22060
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool6,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 3|r]
 }
 
 STRING 22061
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool7,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 4|r]
 }
 
 STRING 22062
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool8,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 5|r]
 }
 
 STRING 22063
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool9,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 6|r]
 }
 
 STRING 22064
-// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool1,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 1|r]
 }
 
 STRING 22065
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-The user punches in front of them, dealing damage to enemies and deflecting beams.
-
-|cffff2020Warning: Actual range is shorter than cast range!
-|cff00ff00Damage: [Int] 600u
-|cff00FFFFCooldown: <A073,Cool10,.>s|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 7|r]
 }
 
 STRING 22066
@@ -152658,7 +152659,7 @@ R
 }
 
 STRING 22205
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
 {
 R
 }
@@ -155559,11 +155560,9 @@ STRING 22523
 }
 
 STRING 22524
-// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Researchtip (Tooltip - Learn)
 {
-The caster destroys illusions of themselves under their control in 1800 AOE. If any valid illusions were destroyed the caster restores 10% to 25% of their max HP proportional to the remaining HP of the illusion.
-
-|cff00ffffCooldown: <A138,Cool1>s
+[|cff00ff00E|r] Learn Time Reverse - [|cffffcc00Level %d|r]
 }
 
 STRING 22525
@@ -158234,10 +158233,22 @@ STRING 22889
 Q
 }
 
+STRING 22890
+// Buffs/Effects: B018 (Rooted Generic), Buffubertip (Tooltip - Extended)
+{
+This unit is rooted; it cannot move or zanzoken but can still cast spells.
+}
+
 STRING 22891
 // Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 22892
+// Buffs/Effects: B018 (Rooted Generic), EditorName (Name (Editor Only))
+{
+Rooted Generic
 }
 
 STRING 22893
@@ -158246,16 +158257,34 @@ STRING 22893
 W
 }
 
+STRING 22894
+// Abilities: A07I (Debuff Soul Burn Silence 1s), Name (Name)
+{
+Debuff Soul Burn Silence 1s
+}
+
 STRING 22895
 // Abilities: A023 (Sekizo: Evening Elephant), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Sekizo: Evening Elephant - [|cffffcc00Level 10|r]
 }
 
+STRING 22896
+// Abilities: A06R (Debuff Root Generic 2s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 22897
 // Abilities: A0B4 (Princess Valiant), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Princess Valiant - [|cffffcc00Level 10|r]
+}
+
+STRING 22898
+// Abilities: A07J (Debuff Soul Burn Silence 2s), Name (Name)
+{
+Debuff Soul Burn Silence 2s
 }
 
 STRING 22899
@@ -158746,8 +158775,20 @@ STRING 22959
 [|cff00ff00E|r] |cffffff00Hiraishin no Jutsu: Second Step|r - [|cffffcc00Level 10|r]
 }
 
+STRING 22960
+// Abilities: A07G (Debuff Root Generic 2.5s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
+STRING 22961
+// Abilities: A07K (Debuff Soul Burn Silence 3s), Name (Name)
+{
+Debuff Soul Burn Silence 3s
+}
+
 STRING 22962
-// Abilities: A133 (Purifying Javelin), EditorSuffix (Editor Suffix)
+// Abilities: A137 (Einherjar), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -158921,7 +158962,7 @@ Shalltear creates a pillar of flame at the target location that erupts after a b
 }
 
 STRING 22986
-// Abilities: A134 (Vermilion Nova), EditorSuffix (Editor Suffix)
+// Abilities: A138 (Valhalla), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -158984,75 +159025,37 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 }
 
 STRING 22994
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
 {
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 2|r]
-}
-
-STRING 22995
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 3|r]
+R
 }
 
 STRING 22996
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+// Abilities: A0CB (Item Replicator), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 4|r]
+[|cff00ff00F|r] Item Replicator
 }
 
 STRING 22997
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 5|r]
-}
-
-STRING 22998
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 6|r]
+F
 }
 
 STRING 22999
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
+// Abilities: A0CC (Emergency Cloning), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 1|r]
-}
+Immedieately creates a Metal Cooler clone. 
+This ability costs 1000 gold.
+Requires Upgraded Cloning 10.
 
-STRING 23000
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 7|r]
+|cff00ffffCooldown: <A0CC,Cool1>s
 }
 
 STRING 23001
 // Abilities: A135 (Mist Form), Name (Name)
 {
 Mist Form
-}
-
-STRING 23002
-// Abilities: A135 (Mist Form), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00E|r] Learn Mist Form - [|cffffcc00Level %d|r]
-}
-
-STRING 23003
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 9|r]
-}
-
-STRING 23004
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 8|r]
-}
-
-STRING 23005
-// Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Mist Form - [|cffffcc00Level 10|r]
 }
 
 STRING 23006
@@ -159088,7 +159091,7 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 }
 
 STRING 23010
-// Abilities: A135 (Mist Form), EditorSuffix (Editor Suffix)
+// Abilities: A139 (Time Reverse), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159284,7 +159287,7 @@ Shalltear activates her negative impact shield that blocks incoming damage and a
 }
 
 STRING 23034
-// Abilities: A136 (Negative Impact Shield), EditorSuffix (Editor Suffix)
+// Abilities: A13A (Spuit Lance), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159353,7 +159356,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 23043
-// Abilities: A137 (Einherjar), EditorSuffix (Editor Suffix)
+// Abilities: A09M (Draining Lance), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159410,9 +159413,15 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 23051
-// Abilities: A138 (Valhalla), EditorSuffix (Editor Suffix)
+// Abilities: A0A1 (Blood Frenzy Activate), EditorSuffix (Editor Suffix)
 {
 (shalltear)
+}
+
+STRING 23052
+// Abilities: A07H (Debuff Root Generic 3s), EditorSuffix (Editor Suffix)
+{
+(generic)
 }
 
 STRING 23053
@@ -159421,16 +159430,40 @@ STRING 23053
 W
 }
 
+STRING 23054
+// Abilities: A07L (Debuff Soul Burn Silence 4s), Name (Name)
+{
+Debuff Soul Burn Silence 4s
+}
+
 STRING 23055
 // Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
+STRING 23056
+// Abilities: A07I (Debuff Soul Burn Silence 1s), EditorSuffix (Editor Suffix)
+{
+(generic)
+}
+
 STRING 23057
 // Abilities: A003 (Hiraishin no Jutsu: Third Stage), EditorSuffix (Editor Suffix)
 {
 (minato)
+}
+
+STRING 23058
+// Abilities: A07U (Debuff Soul Burn Silence 5s), Name (Name)
+{
+Debuff Soul Burn Silence 5s
+}
+
+STRING 23059
+// Abilities: A07J (Debuff Soul Burn Silence 2s), EditorSuffix (Editor Suffix)
+{
+(generic)
 }
 
 STRING 23060
@@ -159539,76 +159572,10 @@ Demiurge summons the flames of hell at the target location before dragging any e
 |cff00ffffCooldown: <A13C,Cool6,.> seconds|r
 }
 
-STRING 23074
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 2|r]
-}
-
-STRING 23075
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 3|r]
-}
-
-STRING 23076
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 4|r]
-}
-
-STRING 23077
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 5|r]
-}
-
-STRING 23078
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 6|r]
-}
-
-STRING 23079
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 1|r]
-}
-
-STRING 23080
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 7|r]
-}
-
 STRING 23081
 // Abilities: A139 (Time Reverse), Name (Name)
 {
 Time Reverse
-}
-
-STRING 23082
-// Abilities: A139 (Time Reverse), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00F|r] Learn Time Reverse - [|cffffcc00Level %d|r]
-}
-
-STRING 23083
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 9|r]
-}
-
-STRING 23084
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 8|r]
-}
-
-STRING 23085
-// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
-{
-[|cff00ff00F|r] Time Reverse - [|cffffcc00Level 10|r]
 }
 
 STRING 23086
@@ -159648,7 +159615,7 @@ Demiurge infuses his arm with demonic energy before punching his enemies, stunni
 }
 
 STRING 23090
-// Abilities: A139 (Time Reverse), EditorSuffix (Editor Suffix)
+// Abilities: A0B5 (Blood Frenzy Deactivate), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159663,7 +159630,7 @@ Demiurge infuses his arm with demonic energy before punching his enemies, stunni
 }
 
 STRING 23092
-// Abilities: A13A (Spuit Lance), EditorSuffix (Editor Suffix)
+// Abilities: A0BC (Blood Frenzy), EditorSuffix (Editor Suffix)
 {
 (shalltear)
 }
@@ -159878,6 +159845,12 @@ STRING 23121
 Giant Arm of the Demon
 }
 
+STRING 23122
+// Buffs/Effects: B01D (Silence Generic), EditorName (Name (Editor Only))
+{
+Silence Generic
+}
+
 STRING 23123
 // Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
 {
@@ -159967,10 +159940,37 @@ Creates an illusion of Shalltear that deals deals <A13B,DataA1,%>% damage and ta
 |cff00ffffCooldown: <A137,Cool1>s
 }
 
+STRING 23132
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 23133
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool2>s|r
+}
+
 STRING 23134
 // Abilities: A05L (Overcharge), EditorSuffix (Editor Suffix)
 {
 (genos)
+}
+
+STRING 23135
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool3>s|r
 }
 
 STRING 23136
@@ -160669,10 +160669,142 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 |cffffcc00Damage|r - <A00S,DataB15,.> times
 }
 
+STRING 23232
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool4>s|r
+}
+
 STRING 23233
 // Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Scything Claws
+}
+
+STRING 23234
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool5>s|r
+}
+
+STRING 23235
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool6>s|r
+}
+
+STRING 23236
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool7>s|r
+}
+
+STRING 23237
+// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 23238
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool8>s|r
+}
+
+STRING 23239
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool9>s|r
+}
+
+STRING 23240
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. 
+
+|cff00ff00Damage: [Int] 825u
+|cff00FFFFCooldown: <A071,Cool10>s|r
+}
+
+STRING 23241
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool1,.>s|r
+}
+
+STRING 23242
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool2,.>s|r
+}
+
+STRING 23243
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool3,.>s|r
+}
+
+STRING 23244
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool4,.>s|r
+}
+
+STRING 23245
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool5,.>s|r
+}
+
+STRING 23246
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool6,.>s|r
 }
 
 STRING 23247
@@ -160733,6 +160865,16 @@ STRING 23255
 (demiurge)
 }
 
+STRING 23256
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool7,.>s|r
+}
+
 STRING 23257
 // Buffs/Effects: B06A (), Bufftip (Tooltip)
 {
@@ -160763,10 +160905,30 @@ STRING 23261
 Debuff Invis Pocket Dimension Dummy
 }
 
+STRING 23262
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool8,.>s|r
+}
+
 STRING 23263
 // Abilities: A0XP (Janemba Corruption Passive), EditorSuffix (Editor Suffix)
 {
 (janemba)
+}
+
+STRING 23264
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool9,.>s|r
 }
 
 STRING 23265
@@ -160781,10 +160943,42 @@ STRING 23266
 (hit)
 }
 
+STRING 23267
+// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool1,.>s|r
+}
+
+STRING 23268
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.
+
+|cffff2020Warning: Actual range is shorter than cast range!
+|cff00ff00Damage: [Int] 660u
+|cff00FFFFCooldown: <A073,Cool10,.>s|r
+}
+
+STRING 23269
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 1|r]
+}
+
 STRING 23270
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 23271
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 2|r]
 }
 
 STRING 23272
@@ -160812,102 +161006,57 @@ Vegeta fires an energy blast that detonates on contact with enemies.
 }
 
 STRING 23275
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool1,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 9|r]
 }
 
 STRING 23276
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool3,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 8|r]
 }
 
 STRING 23277
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A139 (Time Reverse), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool4,.> seconds|r
+[|cff00ff00E|r] Time Reverse - [|cffffcc00Level 10|r]
 }
 
 STRING 23278
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A1 (Blood Frenzy Activate), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool5,.> seconds|r
-}
-
-STRING 23279
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
-{
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool6,.> seconds|r
+[|cff00FF00F|r] Blood Frenzy Activate
 }
 
 STRING 23280
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0B5 (Blood Frenzy Deactivate), Tip (Tooltip - Normal)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool7,.> seconds|r
+[|cff00FF00F|r] Blood Frenzy Deactivate
 }
 
 STRING 23281
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool8,.> seconds|r
+F
 }
 
 STRING 23282
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool9,.> seconds|r
+F
 }
 
 STRING 23283
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool10,.> seconds|r
+F
 }
 
 STRING 23284
-// Abilities: A133 (Purifying Javelin), Researchubertip (Tooltip - Learn - Extended)
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool1,.> - <A133,Cool10,.> seconds|r
-}
-
-STRING 23285
-// Abilities: A133 (Purifying Javelin), Ubertip (Tooltip - Normal - Extended)
-{
-Shalltear throws a holy javelin at the target, dealing bonus damage to enemies that are hit near the center.
-
-|cff00ff00Damage: [Int] 600u (+600u)|r
-|cff00ffffCooldown: <A133,Cool2,.> seconds|r
+F
 }
 
 STRING 23286
@@ -161819,6 +161968,30 @@ Guy rapidly spins and kicks at nearby enemies for 2s.
 |cff00ffffCooldown: <A00Y,Cool3,.> seconds|r
 }
 
+STRING 23409
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 23410
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 23411
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 23412
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 6|r]
+}
+
 STRING 23413
 {
 Type "r" to revert.
@@ -161865,6 +162038,12 @@ Guy rapidly spins and kicks at nearby enemies for 2s.
 
 |cff00ff00Damage: [Int] 400u/s
 |cff00ffffCooldown: <A00Y,Cool6,.> seconds|r
+}
+
+STRING 23418
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 7|r]
 }
 
 STRING 23419
@@ -162864,14 +163043,26 @@ STRING 23530
 Debuff Slow Waluigi Fireball 50% 1.5s
 }
 
+STRING 23531
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 8|r]
+}
+
 STRING 23532
-// Abilities: A00K (Debuff Slow 50% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07K (Debuff Soul Burn Silence 3s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
 
+STRING 23533
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 9|r]
+}
+
 STRING 23534
-// Abilities: A03T (Debuff Slow 75% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07L (Debuff Soul Burn Silence 4s), EditorSuffix (Editor Suffix)
 {
 (generic)
 }
@@ -162942,16 +163133,40 @@ STRING 23545
 [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Third Stage|r - [|cffffcc00Level 10|r]
 }
 
+STRING 23546
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire 2 - [|cffffcc00Level 10|r]
+}
+
 STRING 23547
-// Abilities: A04U (Debuff Slow 25% 1s), EditorSuffix (Editor Suffix)
+// Abilities: A07U (Debuff Soul Burn Silence 5s), EditorSuffix (Editor Suffix)
 {
 (generic)
+}
+
+STRING 23548
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 23549
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 2|r]
 }
 
 STRING 23550
 // Abilities: A004 (Hiraishin no Jutsu), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] |cffffff00Hiraishin no Jutsu|r
+}
+
+STRING 23551
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 3|r]
 }
 
 STRING 23552
@@ -163009,6 +163224,12 @@ A long range caster with high utility. Can massively disrupt the flow of battle 
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
+STRING 23559
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 4|r]
+}
+
 STRING 23560
 {
 Type "r" to revert.
@@ -163031,10 +163252,28 @@ STRING 23561
 Minato can now tap into Kurama's chakra to empower himself.
 }
 
+STRING 23562
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 5|r]
+}
+
+STRING 23563
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 6|r]
+}
+
 STRING 23564
 // Abilities: A00A (Kurama Mode Flag), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cffffaa00Kurama Mode|r
+}
+
+STRING 23565
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 7|r]
 }
 
 STRING 23566
@@ -163047,6 +163286,12 @@ STRING 23567
 // Abilities: A00C (Debuff Faerie Fire Minato Kunai), EditorSuffix (Editor Suffix)
 {
 (minato)
+}
+
+STRING 23568
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 8|r]
 }
 
 STRING 23569
@@ -163073,10 +163318,44 @@ STRING 23572
 Debuff Faerie Fire Minato Kunai
 }
 
+STRING 23573
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 9|r]
+}
+
 STRING 23574
 // Buffs/Effects: B06D (), Buffubertip (Tooltip - Extended)
 {
 This unit has been damaged by Hiraishin Kunai; it has reduced armor and can be seen by the enemy.
+}
+
+STRING 23575
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 23576
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool1,.>s|r
+}
+
+STRING 23577
+// Abilities: A0HZ (Disaster Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool1,.> - <A0HZ,Cool10,.>s|r
 }
 
 STRING 23578
@@ -163369,6 +163648,61 @@ Dyspo dashes in a single direction, a thousand times faster than usual.
 |cff00ffffCooldown: <A0QY,Cool10> seconds|r
 }
 
+STRING 23610
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool10,.>s|r
+}
+
+STRING 23611
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool2,.>s|r
+}
+
+STRING 23612
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool3,.>s|r
+}
+
+STRING 23613
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool4,.>s|r
+}
+
+STRING 23614
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool5,.>s|r
+}
+
 STRING 23615
 // Abilities: A012 (Front Lotus), Ubertip (Tooltip - Normal - Extended)
 {
@@ -163589,11 +163923,158 @@ The user opens at least three of the Eight Gates to remove their body's limitati
 |cff00ffffCooldown: <A015,Cool2,.> seconds|r
 }
 
+STRING 23637
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool6,.>s|r
+}
+
+STRING 23638
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool7,.>s|r
+}
+
+STRING 23639
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool8,.>s|r
+}
+
+STRING 23640
+// Abilities: A0HZ (Disaster Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max writhes in anger as the black spots on its armor glow purple before emitting massive lasers in all directions. After a brief charging period he reduces incoming damage while also dealing damage to enemies 1000 AOE. Deals +0.5% damage for each 1% remaining HP.
+
+|cff00ff00Duration: 5s|r
+|cff00ff00Damage: [Int] 400u/s (+200u/s)|r
+|cff00ff00Damage Block: [Int] 1000u @ 40%|r
+|cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
+}
+
+STRING 23643
+// Abilities: A0A1 (Blood Frenzy Activate), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear enters a frenzied state to hunt for blood. Drains 2% of her max HP per second to increase her attack damage by +10% per 10% missing HP. The bonus attack damage is increased by +60% when below 30% HP. Cannot be deactivated in the first 5 seconds.
+Unlocks [|cff00ff00F|r] Mist Form for 5 seconds.
+}
+
+STRING 23663
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23664
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23665
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23666
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23667
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23668
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23669
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23670
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23671
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23672
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23673
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23674
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23675
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23676
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
 STRING 23677
 // Abilities: A028 (Sunset of Youth Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Might Guy radiates an aura of youthfulness granting increased stamina regen in 1800 AOE.
 
 |cffffff00+25% stamina regen
+}
+
+STRING 23678
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23679
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increase Metal Cooler's and his clones attack damage by 30 per level.
 }
 

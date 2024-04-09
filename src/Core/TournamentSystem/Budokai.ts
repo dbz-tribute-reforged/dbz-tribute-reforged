@@ -274,7 +274,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
             for (const rewardedUnit of contestant.getUnits()) {
               if (
                 UnitHelper.isUnitTournamentViable(rewardedUnit) &&
-                !UnitHelper.isUnitDead(rewardedUnit)
+                UnitHelper.isUnitAlive(rewardedUnit)
               ) {
                 this.giveTrophy(rewardedUnit);
               }
@@ -288,9 +288,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
               ForGroup(Globals.tmpUnitGroup2, () => {
                 const unit = GetEnumUnit();
                 const uPlayerId = GetPlayerId(GetOwningPlayer(unit));
-                if (
-                  uPlayerId == contestant.id 
-                  && UnitHelper.isUnitAlive
+                if (uPlayerId == contestant.id
                   // && !contestant.hasUnit(unit)
                 ) {
                   SetUnitX(unit, unitContestant.oldPosition.x);
@@ -323,18 +321,18 @@ export class Budokai extends AdvancedTournament implements Tournament {
             winner.returnAllUnits();
           }
           
-          for (const unit of winner.getUnits()) {
-            if (UnitHelper.isUnitTournamentViable(unit)) {
-              this.giveTrophy(unit);
-              // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
-              // TextTagHelper.showPlayerColorTextOnUnit(
-              //   "+" + (numTournaments * 50) + " tournament stats",
-              //   winner.id,
-              //   unit
-              // );
+          // for (const unit of winner.getUnits()) {
+          //   if (UnitHelper.isUnitTournamentViable(unit)) {
+          //     this.giveTrophy(unit);
+          //     // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
+          //     // TextTagHelper.showPlayerColorTextOnUnit(
+          //     //   "+" + (numTournaments * 50) + " tournament stats",
+          //     //   winner.id,
+          //     //   unit
+          //     // );
 
-            }
-          }
+          //   }
+          // }
           
           for (const unitContestant of winner.units.values()) {
             if (UnitHelper.isUnitAlive(unitContestant.unit)) {

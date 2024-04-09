@@ -46,6 +46,7 @@ export class SagaManager {
       this.sagas.push(new sagaType() as Saga);
     }
     TimerStart(this.sagaPingTimer, Constants.sagaPingInterval, true, () => {
+      if (Globals.isKOTH) return;
       for (const saga of this.sagas) {
         if (saga.state == SagaState.InProgress) {
           saga.ping();
@@ -62,8 +63,19 @@ export class SagaManager {
     })
 
     TimerStart(this.sagaUpdateTimer, 0.03, true, () => {
+      if (Globals.isKOTH) return;
       this.step();
     });
+  }
+
+  public pause() {
+    PauseTimer(this.sagaUpdateTimer);
+    PauseTimer(this.sagaPingTimer);
+  }
+
+  public resume() {
+    ResumeTimer(this.sagaUpdateTimer);
+    ResumeTimer(this.sagaPingTimer);
   }
 
   protected calculateMaxNumberOfConcurrentSagas() {

@@ -19,6 +19,12 @@ export module CoordMath {
     return Math.sqrt(xDifference * xDifference + yDifference * yDifference);
   }
 
+  export function distanceXY(x1: number, y1: number, x2: number, y2: number): number {
+    const xDifference = x1 - x2;
+    const yDifference = y1 - y2;
+    return Math.sqrt(xDifference * xDifference + yDifference * yDifference);
+  }
+
   // legacy function
   export function polarProjectCoords(source: Vector2D, target: Vector2D, angle: number, distance: number) {
     target.setPos(

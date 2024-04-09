@@ -3,6 +3,8 @@ import { DualTechPart } from "./DualTechPart";
 import { DualTechList } from "./DualTechList";
 import { DualTechPartList } from "./DualTechPartList";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
+import { Globals } from "Common/Constants";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class DualTechManager {
   private static instance: DualTechManager; 
@@ -14,7 +16,7 @@ export class DualTechManager {
   }
 
   public dualTechParts: Map<string, DualTechPart> = new Map();
-  public dualTechMap: Map<number, DualTech> = new Map();
+  public dualTechMap: Map<number, Map<string, DualTech>> = new Map();
 
   constructor() {
 
@@ -33,7 +35,11 @@ export class DualTechManager {
           dt.addPart(getPart.clone());
         }
       }
-      this.dualTechMap.set(dt.sourceAbility, dt);
+      if (!this.dualTechMap.has(dt.sourceAbility)) {
+        this.dualTechMap.set(dt.sourceAbility, new Map());
+      }
+      const val = this.dualTechMap.get(dt.sourceAbility);
+      val.set(dt.name, dt);
     }
   }
 
@@ -42,10 +48,27 @@ export class DualTechManager {
   }
 
   execute(abilityId: number, input: CustomAbilityInput): boolean {
-    const dt = this.dualTechMap.get(abilityId);
-    if (dt) {
-      return dt.execute(input);
+    const dtMap = this.dualTechMap.get(abilityId);
+    if (!dtMap) return false;
+    
+    let useOnEmpty = false;
+    for (const dt of dtMap.values()) {
+      if (dt.useOriginalOnEmpty) useOnEmpty = true;
+      const count = dt.execute(input);
+      if (count > 0) {
+        if (dt.replaceAbilityName) {
+          input.caster.useAbility(dt.replaceAbilityName, input);
+          if (Globals.showAbilityFloatingText) {
+            TextTagHelper.showPlayerColorTextOnUnit(
+              dt.replaceAbilityName, 
+              GetPlayerId(input.casterPlayer), 
+              GetTriggerUnit()
+            );
+          }
+        }
+        return dt.useOriginalAbility;
+      }
     }
-    return false;
+    return useOnEmpty;
   }
 }

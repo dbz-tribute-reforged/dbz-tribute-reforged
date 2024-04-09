@@ -13,6 +13,7 @@ import { SoundHelper } from "Common/SoundHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
+import { MinimapHelper } from "Common/MinimapHelper";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -116,6 +117,9 @@ export class HeroPassiveManager {
         break;
       case Id.ainzOoalGown:
         ainzPassive(customHero);
+        break;
+      case Id.shalltearBloodfallen:
+        shalltearPassive(customHero);
         break;
       case Id.demiurge:
         demiurgePassive(customHero);
@@ -2568,6 +2572,30 @@ export function ainzPassive(customHero: CustomHero) {
   });
 }
 
+export function shalltearPassive(customHero: CustomHero) {
+  const hpCostPct = 0.02;
+
+  const bloodFrenzyTimer = CreateTimer();
+  customHero.addTimer(bloodFrenzyTimer);
+
+  TimerStart(bloodFrenzyTimer, 0.03, true, () => {
+    if (GetUnitAbilityLevel(customHero.unit, Id.shalltearBloodFrenzyPassive) > 0) {
+      const lifePct = GetUnitLifePercent(customHero.unit);
+      if (lifePct < 1) {
+        const player = GetOwningPlayer(customHero.unit);
+        SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOn, true);
+        SetPlayerAbilityAvailable(player, Id.shalltearBloodFrenzyOff, false);
+        SetPlayerAbilityAvailable(player, Id.shalltearMistForm, false);
+        UnitRemoveAbility(customHero.unit, Id.shalltearBloodFrenzyPassive);
+      } else if (!UnitHelper.isUnitInvul(customHero.unit)) {
+        UnitHelper.payHPPercentCost(customHero.unit, hpCostPct * 0.03, UNIT_STATE_MAX_LIFE);
+        const lvl = Math.min(10, 1 + Math.floor((100 - lifePct) / 10));
+        SetUnitAbilityLevel(customHero.unit, Id.shalltearBloodFrenzyPassive, lvl);
+      }
+    }
+  });
+}
+
 export function demiurgePassive(customHero: CustomHero) {
   const heroUnitTypeId = GetUnitTypeId(customHero.unit);
   const hellfireMantleSP = 0.15;
@@ -2617,7 +2645,7 @@ export function demiurgePassive(customHero: CustomHero) {
       if (
         UnitHelper.isUnitDead(customHero.unit)
         || GetUnitAbilityLevel(customHero.unit, Id.demiurgeHellfireMantle) == 1
-        || GetUnitManaPercent(customHero.unit) < hellfireMantleManaDrain
+        || GetUnitManaPercent(customHero.unit) < hellfireMantleManaDrain * 100
       ) {
         mantleState = 2;
       } else {
@@ -2972,7 +3000,7 @@ export function genosPassive(customHero: CustomHero) {
       if (
         UnitHelper.isUnitDead(customHero.unit)
         || GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 1
-        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain
+        || GetUnitManaPercent(customHero.unit) < overchargeManaDrain * 100
       ) {
         overchargeState = 2;
       } else {
@@ -3042,7 +3070,16 @@ export function tatsumakiPassive(customHero: CustomHero) {
   const shieldAbility = customHero.getAbility(AbilityNames.Tatsumaki.TELEKINETIC_SHIELD);
 
   const targetPos = new Vector2D();
-  const seenGroup = CreateGroup(); // leaks
+  const seenGroup = CreateGroup();
+
+  const tmpTimer = CreateTimer();
+  TimerStart(tmpTimer, 30, true, () => {
+    if (!customHero || GetUnitTypeId(customHero.unit) == 0) {
+      DestroyGroup(seenGroup);
+      DestroyTimer(tmpTimer);
+    }
+  });
+
   let isSeen = false;
   TimerStart(vectorTimer, 0.03, true, () => {
     if (
@@ -3137,6 +3174,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
       );
       ForGroup(Globals.tmpUnitGroup, () => {
         const unit = GetEnumUnit();
+        if (IsUnitType(unit, UNIT_TYPE_STRUCTURE)) return;
         if (
           !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
           || IsUnitInGroup(unit, Globals.tmpUnitGroup2)
@@ -3150,14 +3188,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
           SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
           GroupAddUnit(seenGroup, unit);
         }
-        SimpleSpellSystem.doTatsumakiMoveBeam(
-          unit, 
-          speed, bonusSpeedRatio, 
-          ang, 
-          Globals.tmpVector2, 
-          Globals.tmpVector3,
-          Globals.tmpUnitGroup3
-        );
+        SimpleSpellSystem.addToTatsumakiMovementGroup(unit, speed, bonusSpeedRatio, ang);
         GroupAddUnit(Globals.tmpUnitGroup2, unit);
       });
     }
@@ -3170,6 +3201,12 @@ export function setupRegenTimer(customHero: CustomHero) {
   customHero.addTimer(regenTimer);
 
   TimerStart(regenTimer, Constants.REGEN_TICK_RATE, true, () => {
+    // am i visible?
+    if (customHero.minimapIcon) {
+      const mmVisible = MinimapHelper.isUnitMinimapVisible(customHero.unit);
+      SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);
+      if (customHero.minimapIconBG) SetMinimapIconVisible(customHero.minimapIcon, mmVisible);
+    }
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
     const heroAgi = GetHeroAgi(customHero.unit, true);

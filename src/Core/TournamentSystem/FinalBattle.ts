@@ -201,7 +201,22 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
           teamNumber = Constants.team2Value;
         }
       }
-      if (teamNumber != Constants.invalidTeamValue && dyingUnitTeam.length == 0) {
+
+      let isAllDead = true;
+      for (const unit of dyingUnitTeam) {
+        if (UnitHelper.isUnitAlive(unit)) {
+          isAllDead = false;
+          break;
+        }
+      }
+      
+      if (
+        teamNumber != Constants.invalidTeamValue 
+        && (
+          dyingUnitTeam.length == 0
+          || isAllDead
+        )
+      ) {
         this.winTeam = teamNumber % 2 + 1;
         this.complete();
       }

@@ -195,7 +195,10 @@ export class ItemAbilityManager {
       this.itemFinalBattleTrigger,
       Condition(() => {
         if (
-          GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL
+          (
+            GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL
+            || GetItemTypeId(GetManipulatedItem()) == ItemConstants.ZENO_BUTTON
+          )
           && GetPlayerId(GetTriggerPlayer()) < Constants.maxActivePlayers 
           && !Globals.isKOTH
         ) {

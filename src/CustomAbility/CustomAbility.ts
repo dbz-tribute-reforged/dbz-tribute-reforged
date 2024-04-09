@@ -142,12 +142,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       return GetUnitState(input.caster.unit, UNIT_STATE_MANA) > this.costAmount;
 
     } else if (this.costType == CostType.SP) {
-      // stamina
-      const playerId = GetPlayerId(input.casterPlayer);
-      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
-      if (customHero) {
-        return customHero.getCurrentSP() > this.costAmount;
-      }
+      return input.caster.getCurrentSP() > this.costAmount;
     }
 
     return true;
@@ -168,18 +163,9 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       );
     } else if (this.costType == CostType.SP) {
       // stamina
-      const playerId = GetPlayerId(input.casterPlayer);
-      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
-      if (customHero) {
-        customHero.setCurrentSP(customHero.getCurrentSP() - this.costAmount);
-      }
+      input.caster.setCurrentSP(input.caster.getCurrentSP() - this.costAmount);
     } else if (this.costType == CostType.TMP_SP) {
-      // stamina
-      const playerId = GetPlayerId(input.casterPlayer);
-      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
-      if (customHero) {
-        customHero.setCurrentSP(Math.max(0, customHero.getCurrentSP() - this.costAmount));
-      }
+      input.caster.setCurrentSP(Math.max(0, input.caster.getCurrentSP() - this.costAmount));
     }
     this.currentCd = this.maxCd;
   }

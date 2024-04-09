@@ -32,6 +32,7 @@ export module Globals {
   export const genericEnemyHashtable = InitHashtable();
   export const genericDDSHashtable = InitHashtable();
   export const genericGateTPHashtable = InitHashtable(); // for ainz gate teleportation cooldowns
+  export const tatsumakiHashtable = InitHashtable();
   export const minatoHashtable = InitHashtable();
   export const genericSpellMap = new Map<number, (spellId: number)=>void>();
   export const genericSpellFinishMap = new Map<number, (spellId: number)=>void>();
@@ -46,8 +47,7 @@ export module Globals {
   export const DDSTrigger = CreateTrigger();
   export const DDSEntryTrigger = CreateTrigger();
 
-  // global beam units
-  export const beamUnitGroup = CreateGroup();
+  export const tatsumakiBeamGroup = CreateGroup();
 
   // reuseable unit group
   export const tmpUnitGroup = CreateGroup();
@@ -310,6 +310,13 @@ export module DebuffAbilities {
   export const ROOT_AINZ_HOLD_OF_RIBS = FourCC("A12O");
   export const ROOT_GALAXY_DONUT = FourCC("A13T");
 
+  export const ROOT_GENERIC_HALF_SECOND = FourCC("A06H");
+  export const ROOT_GENERIC_ONE_SECOND = FourCC("A06I");
+  export const ROOT_GENERIC_ONE_AND_A_HALF_SECOND = FourCC("A06O");
+  export const ROOT_GENERIC_TWO_SECOND = FourCC("A06R");
+  export const ROOT_GENERIC_TWO_AND_A_HALF_SECOND = FourCC("A07G");
+  export const ROOT_GENERIC_THREE_SECOND = FourCC("A07H");
+
   // sleep
   export const HYPNOWAVE_SLEEP = FourCC("A0X9");
   export const AINZ_TIME_STOP_SLEEP = FourCC("A12R");
@@ -326,6 +333,12 @@ export module DebuffAbilities {
   export const MAFUBA_SEALED = FourCC("A10R");
   export const MAFUBA_SEALING = FourCC("A10S");
   export const DEMIURGE_COMMAND_SILENCE = FourCC("A13M");
+
+  export const SILENCE_GENERIC_ONE_SECOND = FourCC("A07I");
+  export const SILENCE_GENERIC_TWO_SECOND = FourCC("A07J");
+  export const SILENCE_GENERIC_THREE_SECOND = FourCC("A07K");
+  export const SILENCE_GENERIC_FOUR_SECOND = FourCC("A07L");
+  export const SILENCE_GENERIC_FIVE_SECOND = FourCC("A07U");
 
   // wand of illusion
   export const APPULE_VENGEANCE_CLONE = FourCC("A11C");
@@ -401,6 +414,8 @@ export module Buffs {
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
 
   export const NUOVA_HEAT_ARMOR = FourCC("B06J");
+
+  export const ROOT_GENERIC = FourCC("B018");
 }
 
 export module OrderIds {
@@ -587,6 +602,7 @@ export module Id {
   export const babidiDabura = FourCC("A03E");
   export const babidiDaburaUnit = FourCC("O000");
   export const babidiYakonUnit = FourCC("O009");
+  export const babidiPuiPuiUnit = FourCC("O004");
 
   export const bardock = FourCC("H08M");
   export const futureSight = FourCC('A0LN');
@@ -627,6 +643,7 @@ export module Id {
   export const cellJuniors = FourCC("A01Z");
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
+  export const cellJrUnit = FourCC("H01J");
   export const cellJrKame = FourCC("A0CT");
 
   export const cellMax = FourCC("H00Y");
@@ -825,6 +842,8 @@ export module Id {
   export const metalCoolerClone = FourCC("H01Z");
   export const getiStarUpgradeCDR = FourCC("R00M");
   export const getiStarUpgradeSpellPower = FourCC("R00K");
+  export const getiStarItemReplicator = FourCC("A0CB");
+  export const getiStarEmergencyCloning = FourCC("A0CC");
 
   export const ginyu = FourCC("H09E");
   export const milkyCannon = FourCC("A0PP");
@@ -1121,6 +1140,7 @@ export module Id {
   export const maidenBlast = FourCC("A0LU");
   export const reliableFriend = FourCC("A0LV");
   export const summonGiru = FourCC("A0LW");
+  export const panGiruUnit = FourCC("H08Q");
 
   export const pecorine = FourCC("H00V");
   export const pecorinePrincessSplash = FourCC("A07F");
@@ -1189,6 +1209,10 @@ export module Id {
   export const shalltearEinherjar = FourCC("A137");
   export const shalltearValhalla = FourCC("A138");
   export const shalltearTimeReverse = FourCC("A139");
+  export const shalltearDrainingLance = FourCC("A09M");
+  export const shalltearBloodFrenzyOn = FourCC("A0A1");
+  export const shalltearBloodFrenzyOff = FourCC("A0B5");
+  export const shalltearBloodFrenzyPassive = FourCC("A0BC");
 
   export const shotoTodoroki = FourCC("H05X");
   export const shotoTodorokiGlacier = FourCC("A0YR");

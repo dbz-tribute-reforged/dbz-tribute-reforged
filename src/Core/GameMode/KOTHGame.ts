@@ -112,9 +112,11 @@ export class KOTHGame {
       TournamentData.tournamentRect
     );
     this.currentStage.copyStage(this.fbStage);
-
+    
+    // note: cannot pass fogmodifier array into a function (for some reason)
     this.fogs = VisionHelper.startFogModifierRadius(Constants.activePlayers, this.namekStage.capturePoint, TournamentData.kothCaptureRadius, FOG_OF_WAR_VISIBLE, true);
-    this.fogs = VisionHelper.startFogModifierRadius(Constants.activePlayers, this.futureStage.capturePoint, TournamentData.kothCaptureRadius, FOG_OF_WAR_VISIBLE, true);
+    let fogMods = VisionHelper.startFogModifierRadius(Constants.activePlayers, this.futureStage.capturePoint, TournamentData.kothCaptureRadius, FOG_OF_WAR_VISIBLE, true);
+    this.fogs = this.fogs.concat(fogMods);
 
     SetTextTagPos(
       this.captureTextTag, 
@@ -128,7 +130,9 @@ export class KOTHGame {
     this.updateCaptureDisplay();
     
     this.protectItemTrigger = CreateTrigger();
-    TriggerRegisterAnyUnitEventBJ(this.protectItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM);
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerUnitEvent(this.protectItemTrigger, player, EVENT_PLAYER_UNIT_PICKUP_ITEM, null);
+    }
     TriggerAddAction(this.protectItemTrigger, () => {
       this.protectItem(GetManipulatedItem());
     });
@@ -732,10 +736,10 @@ export class KOTHGame {
     UnitRemoveBuffs(unit, true, true);
     IssueImmediateOrderById(unit, OrderIds.STOP);
 
-    // this.protectUnitItems(unit);
-
     SetUnitX(unit, pos.x);
     SetUnitY(unit, pos.y);
+
+    this.protectUnitItems(unit);
   }
 
   moveTeamsToLobby(players: player[], pos: Vector2D): void {
@@ -794,10 +798,9 @@ export class KOTHGame {
       && BlzGetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES)
     ) {
       // for some reason secretly changes ITEM_BF_PERISHABLE to false
-      BlzSetItemBooleanField(it, ITEM_BF_DROPPED_WHEN_CARRIER_DIES, false);
-      if (GetItemCharges(it) > 0) {
-        BlzSetItemBooleanField(it, ITEM_BF_PERISHABLE, true);
-      }
+      // const wasPerishable = BlzGetItemBooleanField(it, ITEM_BF_PERISHABLE);
+      SetItemDropOnDeath(it, false);
+      // if (wasPerishable) BlzSetItemBooleanField(it, ITEM_BF_PERISHABLE, wasPerishable);
     }
   }
 

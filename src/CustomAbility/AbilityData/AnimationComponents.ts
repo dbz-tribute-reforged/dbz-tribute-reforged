@@ -73,6 +73,18 @@ export const AnimationComponents = [
     resetAnimation: true,
   },
   {
+    name: "anim robo bubble snap",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 3,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
+  {
     name: "anim saitama leap slam",
     repeatInterval: 1,
     startTick: 0,

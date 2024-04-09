@@ -6,6 +6,7 @@ import { HeroSelectUnit } from "./HeroSelectUnit";
 import { HeroSelectUnitList } from "./HeroSelectUnitList";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -188,11 +189,17 @@ export class HeroSelectorManager {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       // TriggerRegisterPlayerEventEndCinematic(this.repickTrigger, Player(i));
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick", true);
+      TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick2", true);
     }
     TriggerAddCondition(this.repickTrigger, Condition(() => {
       if (this.allowRepick) {
         const player = GetTriggerPlayer();
-        this.doRepickForPlayer(player);
+        if (
+          !Globals.isFBSimTest
+          || GetEventPlayerChatString() == "-repick"
+        ) {
+          this.doRepickForPlayer(player);
+        }
 
         if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
           HeroSelector.show(false, player);
@@ -212,27 +219,28 @@ export class HeroSelectorManager {
     }));
   }
 
-  doRepickForPlayer(player: player) {
+  doRepickForPlayer(player: player, dropItems: boolean = false) {
     GroupClear(Globals.tmpUnitGroup)  
     GroupEnumUnitsOfPlayer(Globals.tmpUnitGroup, player, null);
     ForGroup(Globals.tmpUnitGroup, () => {
       const unit = GetEnumUnit();
-      if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+      if (UnitHelper.isUnitRealHero(unit)) {
         const playerId = GetPlayerId(player);
         udg_StatMultUnit = unit;
         TriggerExecute(gg_trg_Remove_Unit_From_StatMult);
         GroupRemoveUnit(udg_PlayerPickedHeroesUnitGroup[playerId], unit);
 
         // drop items
-        for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
-          const item = UnitItemInSlot(unit, i);
-          if (BlzGetItemBooleanField(item, ITEM_BF_CAN_BE_DROPPED)) {
-            SetItemPosition(item, GetUnitX(unit), GetUnitY(unit));
+        if (dropItems) {
+          for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+            const item = UnitItemInSlot(unit, i);
+            if (BlzGetItemBooleanField(item, ITEM_BF_CAN_BE_DROPPED)) {
+              SetItemPosition(item, GetUnitX(unit), GetUnitY(unit));
+            }
           }
         }
 
         const unitId = GetUnitTypeId(unit);
-
         let isRemoved = false;
         for (const hsUnit of this.heroSelectUnits) {
           if (unitId == hsUnit.unitCode) {
@@ -246,7 +254,7 @@ export class HeroSelectorManager {
         }
       }
     });
-    GroupClear(Globals.tmpUnitGroup)  
+    GroupClear(Globals.tmpUnitGroup);
   }
 
   setupHideSelectorTrigger() {
@@ -303,7 +311,7 @@ export class HeroSelectorManager {
 
   forceAllRepick() {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-      this.doRepickForPlayer(Player(i));
+      this.doRepickForPlayer(Player(i), false);
     }
   }
 

@@ -20,10 +20,12 @@ export class CustomPlayer {
   public lastOrderId: number;
 
   public useZanzoDash: boolean;
-
   public heroPickSpawn: Vector2D;
 
   public osKeyMap: Map<oskeytype, KeyInput> = new Map();
+
+  public dualTechSendFlag: boolean;
+  public dualTechReceiveFlag: boolean;
 
   constructor(
     public id: number, 
@@ -46,6 +48,9 @@ export class CustomPlayer {
     this.useZanzoDash = false;
 
     this.heroPickSpawn = new Vector2D();
+
+    this.dualTechSendFlag = false;
+    this.dualTechReceiveFlag = false;
   }
 
   public addHero(hero: unit): this {
@@ -69,7 +74,6 @@ export class CustomPlayer {
     return this;
   }
 
-  // slow, loops through all heroes and removes that hero
   public removeHero(hero: unit): boolean {
     return this.heroes.delete(hero);
   }

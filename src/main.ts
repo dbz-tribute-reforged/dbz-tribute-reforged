@@ -76,7 +76,7 @@ function tsPostMain() {
   print(`Transpiler: v${TSTL_VERSION}`);
 
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
-
+  
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));
   }

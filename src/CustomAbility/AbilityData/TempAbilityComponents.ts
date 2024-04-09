@@ -2,6 +2,21 @@ import { Id } from "Common/Constants";
 
 export const TempAbilityComponents = [
   {
+    name: "temp ability ghost visible", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: Id.ghostVisible,
+    oldAbility: 0,
+    performSwap: false,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: false,
+    equalizeLevels: false,
+    linkCooldowns: -1,
+  },
+  {
     name: "temp ability candy gobbler", 
     repeatInterval: 1, 
     startTick: 0,
@@ -629,6 +644,21 @@ export const TempAbilityComponents = [
     addAbility: true,
     tempPermanence: false,
     equalizeLevels: true,
+    linkCooldowns: -1,
+  },
+  {
+    name: "temp ability shalltear draining lance", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: Id.shalltearDrainingLance,
+    oldAbility: Id.shalltearPurifyingJavelin,
+    performSwap: true,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: false,
+    equalizeLevels: false,
     linkCooldowns: -1,
   },
 ];
