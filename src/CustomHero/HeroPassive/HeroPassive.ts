@@ -3174,6 +3174,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
       );
       ForGroup(Globals.tmpUnitGroup, () => {
         const unit = GetEnumUnit();
+        if (IsUnitType(unit, UNIT_TYPE_STRUCTURE)) return;
         if (
           !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
           || IsUnitInGroup(unit, Globals.tmpUnitGroup2)

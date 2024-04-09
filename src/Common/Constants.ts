@@ -602,6 +602,7 @@ export module Id {
   export const babidiDabura = FourCC("A03E");
   export const babidiDaburaUnit = FourCC("O000");
   export const babidiYakonUnit = FourCC("O009");
+  export const babidiPuiPuiUnit = FourCC("O004");
 
   export const bardock = FourCC("H08M");
   export const futureSight = FourCC('A0LN');
@@ -642,6 +643,7 @@ export module Id {
   export const cellJuniors = FourCC("A01Z");
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
+  export const cellJrUnit = FourCC("H01J");
   export const cellJrKame = FourCC("A0CT");
 
   export const cellMax = FourCC("H00Y");
@@ -1138,6 +1140,7 @@ export module Id {
   export const maidenBlast = FourCC("A0LU");
   export const reliableFriend = FourCC("A0LV");
   export const summonGiru = FourCC("A0LW");
+  export const panGiruUnit = FourCC("H08Q");
 
   export const pecorine = FourCC("H00V");
   export const pecorinePrincessSplash = FourCC("A07F");

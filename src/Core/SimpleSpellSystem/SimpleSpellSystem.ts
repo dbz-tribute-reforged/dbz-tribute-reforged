@@ -7259,6 +7259,7 @@ export module SimpleSpellSystem {
       ForGroup(Globals.tmpUnitGroup, () => {
         // move units to targetX / targetY
         const unit = GetEnumUnit();
+        if (IsUnitType(unit, UNIT_TYPE_STRUCTURE)) return;
         if (
           !UnitHelper.isUnitTargetableForPlayer(unit, player, true)
           || (
@@ -7355,6 +7356,7 @@ export module SimpleSpellSystem {
       // this.currentCoord.setUnit(input.caster.unit);
       ForGroup(Globals.tmpUnitGroup, () => {
         const target = GetEnumUnit();
+        if (IsUnitType(target, UNIT_TYPE_STRUCTURE)) return;
         if (
           UnitHelper.isUnitTargetableForPlayer(target, player, true)
           && (
@@ -7647,9 +7649,9 @@ export module SimpleSpellSystem {
       });
       GroupClear(Globals.tmpUnitGroup);
 
-      let index = 0;
       ForGroup(fuseGroup, () => {
         const unit = GetEnumUnit();
+        if (IsUnitType(unit, UNIT_TYPE_STRUCTURE)) return;
         if (UnitHelper.isUnitAlive(unit)) {
           Globals.tmpVector2.setUnit(unit);
 
@@ -7670,7 +7672,6 @@ export module SimpleSpellSystem {
             KillUnit(unit);
           }
         }
-        ++index;
       });
 
       if (ticks % 16 == 0) {
