@@ -381,6 +381,8 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.tatsumakiVector, SimpleSpellSystem.doTatsumakiVector);
     Globals.genericSpellMap.set(Id.tatsumakiGiantSpear, SimpleSpellSystem.doTatsumakiGiantSpear);
 
+    Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
+
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
     Globals.genericSpellMap.set(Id.itemCellMaxWings, SimpleSpellSystem.doCellMaxWings);
     Globals.genericSpellMap.set(Id.itemMajinBuuFat, SimpleSpellSystem.doMajinBuuFat);
@@ -391,6 +393,7 @@ export module SimpleSpellSystem {
     // Globals.genericSpellMap.set(Id.schalaMagicSeal2, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
+    
     
   }
 
@@ -473,7 +476,7 @@ export module SimpleSpellSystem {
         if (
           GetUnitTypeId(unit) == 0
           || !UnitHelper.isUnitAlive(unit) 
-          || speed < 0.9
+          || speed < 1
         ) {
           FlushChildHashtable(Globals.tatsumakiHashtable, unitId);
           GroupRemoveUnit(Globals.tatsumakiBeamGroup, unit);
@@ -7920,6 +7923,59 @@ export module SimpleSpellSystem {
     const beamId = GetHandleId(unit);
     const dmgGroup = LoadGroupHandle(Globals.genericSpellHashtable, beamId, dmgGroupKey);
     GroupClear(dmgGroup);
+  }
+  
+  export function doGetiStarItemReplicator(spellId: number) {
+    const goldCost = 100000;
+    const item = GetSpellTargetItem();
+    if (!item) return;
+    const itemId = GetItemTypeId(item);
+    const unit = GetTriggerUnit();
+    const player = GetOwningPlayer(unit);
+    if (
+      itemId == ItemConstants.CLEANSED_DRAGONBALL
+      && itemId == ItemConstants.ZENO_BUTTON
+      && itemId == ItemConstants.dragonBallItem
+      && itemId == ItemConstants.KOTH.hamGenerator
+      && itemId == ItemConstants.KOTH.bananaGenerator
+      && itemId == ItemConstants.KOTH.senzuGenerator
+      && itemId == ItemConstants.KOTH.miniSenzuGenerator
+      && itemId == ItemConstants.chaosEmerald
+      && itemId == ItemConstants.crystalCoconut
+      && itemId == ItemConstants.sandbags[0]
+    ) {
+      DisplayTimedTextToPlayer(player, 0, 0, 5, "|cffff2222Invalid Item.|r");
+      BlzStartUnitAbilityCooldown(unit, Id.getiStarItemReplicator, 1);
+      return;
+    }
+
+    const gold = GetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD);
+    if (gold < goldCost) {
+      DisplayTimedTextToPlayer(player, 0, 0, 5, "|cffff2222Insufficient gold.|r");
+      BlzStartUnitAbilityCooldown(unit, Id.getiStarItemReplicator, 1);
+      return;
+    }
+
+    SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, gold-goldCost);
+    const x = GetUnitX(unit);
+    const y = GetUnitY(unit);
+    const dupeIt = CreateItem(itemId, x, y);
+    if (GetItemCharges(item) > 0) {
+      SetItemCharges(item, GetItemCharges(item));
+    }
+    UnitAddItem(unit, dupeIt);
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Items/TomeOfRetraining/TomeOfRetrainingCaster.mdl",
+        x, y
+      )
+    );
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Other/Transmute/PileofGold.mdl",
+        x, y
+      )
+    );
   }
 
   export function doCellMaxWings(spellId: number) {

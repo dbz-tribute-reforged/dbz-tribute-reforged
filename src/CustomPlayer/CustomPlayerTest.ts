@@ -53,7 +53,7 @@ export function transferHostPlayer() {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 
         15, 
-        "Player " + I2S(Constants.hostPlayerOrder[i]+1) + " is now the host"
+        GetPlayerName(newHost) + " (Player " + I2S(Constants.hostPlayerOrder[i]+1) + ") is now the host"
       );
       break;
     }

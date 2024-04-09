@@ -840,6 +840,8 @@ export module Id {
   export const metalCoolerClone = FourCC("H01Z");
   export const getiStarUpgradeCDR = FourCC("R00M");
   export const getiStarUpgradeSpellPower = FourCC("R00K");
+  export const getiStarItemReplicator = FourCC("A0CB");
+  export const getiStarEmergencyCloning = FourCC("A0CC");
 
   export const ginyu = FourCC("H09E");
   export const milkyCannon = FourCC("A0PP");

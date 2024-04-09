@@ -10766,6 +10766,16 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 
 }
 
+STRING 1627
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
+{
+|cffffff00+0.10x Str mult
++0.05x Int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+}
+
 STRING 1628
 // Abilities: A07D (Create Android), Researchhotkey (Hotkey - Learn)
 {
@@ -58243,11 +58253,9 @@ Tatsumaki creates a tornado that damages enemies and spins all beams and enemy u
 }
 
 STRING 8945
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-|cffffff00+0.10x Str mult
-+0.05x Int mult|r
-A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+Increases the attack range of Geti Star Defense buildings by +50, HP by 2000 and HP regen by +15.
 }
 
 STRING 8946
@@ -108552,7 +108560,7 @@ STRING 16198
 }
 
 STRING 16199
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0CB (Item Replicator), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -109745,7 +109753,7 @@ STRING 16359
 }
 
 STRING 16360
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -120894,7 +120902,7 @@ STRING 17879
 }
 
 STRING 17880
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0CD (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -124319,12 +124327,6 @@ STRING 18357
 [|cff00FF00Q|r] Draining Lance
 }
 
-STRING 18358
-// Abilities: A09M (Draining Lance), Ubertip (Tooltip - Normal - Extended)
-{
-Shalltear activates her Spuit Lance to drain 5% of the target's max HP and transfer it to herself. The attack leaves her victim slowed by 25% for 5s.
-}
-
 STRING 18359
 // Abilities: A133 (Purifying Javelin), EditorSuffix (Editor Suffix)
 {
@@ -124525,11 +124527,9 @@ Blood Frenzy
 }
 
 STRING 18387
-// Items: I02V (Cleansed Dragon Ball), Description (Description)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-|cffffff00+0.10x Str mult
-+0.05x Int mult|r
-A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+Increases the attack range of Geti Star Defense buildings by +100, HP by 4000 and HP regen by +30.
 }
 
 STRING 18388
@@ -130859,7 +130859,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 19282
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -130895,7 +130895,7 @@ Increases STR.
 }
 
 STRING 19286
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -132174,7 +132174,7 @@ Upgrades to [|cff00ff00W|r] Bursting Flame.
 }
 
 STRING 19449
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A0CC (Emergency Cloning), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -139802,7 +139802,7 @@ R
 }
 
 STRING 20514
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0CE (Mass Move Order), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -140529,7 +140529,7 @@ Goku Black rushes the target area, damaging units in his path.
 }
 
 STRING 20618
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -142187,19 +142187,19 @@ STRING 20835
 }
 
 STRING 20836
-// Items: I00N (Zeno's Button), Ubertip (Tooltip - Extended)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+Increases the attack range of Geti Star Defense buildings by +150, HP by 6000 and HP regen by +45.
 }
 
 STRING 20837
-// Items: I00N (Zeno's Button), Description (Description)
+// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
 {
-A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 and HP regen by +60.
 }
 
 STRING 20838
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -142762,6 +142762,16 @@ STRING 20911
 [|cff00FF00D|r] |cffff2020Beast of Darkness|r
 }
 
+STRING 20912
+// Items: I02V (Cleansed Dragon Ball), Description (Description)
+{
+|cffffff00+0.10x Str mult
++0.05x Int mult|r
+A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+}
+
 STRING 20913
 // Abilities: A10I (Berserker Armor Damage Bonus), Name (Name)
 {
@@ -142917,6 +142927,15 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 |cffff0000Warning: Can damage the caster.
 |cff00ff00Damage: [Int] 3000u
 |cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
+}
+
+STRING 20936
+// Items: I00N (Zeno's Button), Ubertip (Tooltip - Extended)
+{
+A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+|cff888888(Zeno can only watch one tournament at a time!)|r
 }
 
 STRING 20937
@@ -143091,6 +143110,32 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 |cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
 }
 
+STRING 20960
+// Items: I00N (Zeno's Button), Description (Description)
+{
+A button that summons the Omni-King Zeno to begin a final battle for the fate of the universe.
+
+Cannot be used if there is an ongoing Budokai Tournament.
+|cff888888(Zeno can only watch one tournament at a time!)|r
+}
+
+STRING 20961
+// Abilities: A0CB (Item Replicator), Name (Name)
+{
+Item Replicator
+}
+
+STRING 20962
+// Abilities: A0CB (Item Replicator), EditorSuffix (Editor Suffix)
+{
+(geti star)
+}
+
+STRING 20963
+{
+|cffff2222Insufficient gold.|r
+}
+
 STRING 20964
 // Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
 {
@@ -143169,6 +143214,16 @@ Frieza fires a stronger version of his iconic Finger Beam energy attack infused 
 
 |cff00ff00Damage: [Int] 175u x 3t + 1.2% Max HP|r
 |cff00ffffCooldown: <A0QD,Cool6> seconds|r
+}
+
+STRING 20973
+// Abilities: A0CB (Item Replicator), Ubertip (Tooltip - Normal - Extended)
+{
+Creates a replica of the target item.
+This ability costs 100000 gold.
+Requires Upgraded Assembly 10.
+
+|cff00ffffCooldown: <A0CB,Cool1>s
 }
 
 STRING 20974
@@ -143256,6 +143311,24 @@ STRING 20987
 // Abilities: A10L (Dragon Cannon Shot), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Dragon Cannon Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 20988
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 20989
+// Abilities: A09M (Draining Lance), Ubertip (Tooltip - Normal - Extended)
+{
+Shalltear activates her Spuit Lance to drain 4% of the target's max HP and transfers it to heal herself. The attack leaves her victim slowed by 25% for 5s.
+}
+
+STRING 20991
+// Abilities: A0CC (Emergency Cloning), Name (Name)
+{
+Emergency Cloning
 }
 
 STRING 20992
@@ -143505,6 +143578,12 @@ STRING 21032
 [|cff00ff00F|r] Learn Cannon Arm - [|cffffcc00Level %d|r]
 }
 
+STRING 21033
+// Abilities: A0CC (Emergency Cloning), EditorSuffix (Editor Suffix)
+{
+(geti star)
+}
+
 STRING 21034
 // Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -143583,6 +143662,24 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00ff00Damage Block: [Int] 80% up to 3000u|r
 |cff00ff00Damage: [Int] 500u
 |cff00FFFFCooldown: <A11S,Cool1,.> seconds|r
+}
+
+STRING 21043
+// Abilities: A0CC (Emergency Cloning), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Emergency Cloning
+}
+
+STRING 21045
+// Abilities: A0CD (Mass Attack Order), Name (Name)
+{
+Mass Attack Order
+}
+
+STRING 21046
+// Abilities: A0CD (Mass Attack Order), EditorSuffix (Editor Suffix)
+{
+(geti star)
 }
 
 STRING 21047
@@ -144262,6 +144359,27 @@ STRING 21143
 // Abilities: A10X (Rocket Boots), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Rocket Boots - [|cffffcc00Level 9|r]
+}
+
+STRING 21144
+// Abilities: A0CD (Mass Attack Order), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Mass Attack Order
+}
+
+STRING 21145
+// Abilities: A0CD (Mass Attack Order), Ubertip (Tooltip - Normal - Extended)
+{
+Issues an attack order to all Metal Cooler clones.
+Targetting the ground trigger an attack-move order.
+
+|cff00ffffCooldown: <A0CD,Cool1>s
+}
+
+STRING 21146
+// Abilities: A0CE (Mass Move Order), Name (Name)
+{
+Mass Move Order
 }
 
 STRING 21147
@@ -151223,6 +151341,32 @@ STRING 22043
 // Abilities: A11M (Special Beast Cannon), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Special Beast Cannon - [|cffffcc00Level 10|r]
+}
+
+STRING 22044
+// Abilities: A0CE (Mass Move Order), EditorSuffix (Editor Suffix)
+{
+(geti star)
+}
+
+STRING 22045
+// Abilities: A0CE (Mass Move Order), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Mass Move Order
+}
+
+STRING 22046
+// Abilities: A0CE (Mass Move Order), Ubertip (Tooltip - Normal - Extended)
+{
+Issues a move order to all Metal Cooler clones.
+
+|cff00ffffCooldown: <A0CD,Cool1>s
+}
+
+STRING 22047
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
 }
 
 STRING 22048
@@ -158880,6 +159024,34 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 |cff00ffffCooldown: <A135,Cool7,.> seconds|r
 }
 
+STRING 22994
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 22996
+// Abilities: A0CB (Item Replicator), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Item Replicator
+}
+
+STRING 22997
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 22999
+// Abilities: A0CC (Emergency Cloning), Ubertip (Tooltip - Normal - Extended)
+{
+Immedieately creates a Metal Cooler clone. 
+This ability costs 1000 gold.
+Requires Upgraded Cloning 10.
+
+|cff00ffffCooldown: <A0CC,Cool1>s
+}
+
 STRING 23001
 // Abilities: A135 (Mist Form), Name (Name)
 {
@@ -163800,30 +163972,6 @@ STRING 23643
 {
 Shalltear enters a frenzied state to hunt for blood. Drains 2% of her max HP per second to increase her attack damage by +10% per 10% missing HP. The bonus attack damage is increased by +60% when below 30% HP. Cannot be deactivated in the first 5 seconds.
 Unlocks [|cff00ff00F|r] Mist Form for 5 seconds.
-}
-
-STRING 23659
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +50, HP by 2000 and HP regen by +10.
-}
-
-STRING 23660
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +100, HP by 4000 and HP regen by +20.
-}
-
-STRING 23661
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +150, HP by 6000 and HP regen by +30.
-}
-
-STRING 23662
-// Upgrades: R00P (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 and HP regen by +40.
 }
 
 STRING 23663
