@@ -196,7 +196,7 @@ export class HeroSelectorManager {
         const player = GetTriggerPlayer();
         if (
           !Globals.isFBSimTest
-          && GetEventPlayerChatString() == "-repick"
+          || GetEventPlayerChatString() == "-repick"
         ) {
           this.doRepickForPlayer(player);
         }

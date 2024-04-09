@@ -631,6 +631,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BEE_DOG_ITEM,
+        ItemConstants.ZENO_BUTTON,
       ]
     )],
 

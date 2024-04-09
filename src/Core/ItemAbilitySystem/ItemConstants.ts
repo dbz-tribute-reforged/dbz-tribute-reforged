@@ -102,6 +102,7 @@ export module ItemConstants {
   ];
 
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
+  export const ZENO_BUTTON = FourCC("I00N");
   export const rainbowShell = FourCC("I04P");
   export const saibamenSeeds = FourCC("I024");
   export const babidiEnergyAbsorber = FourCC("I04S");
