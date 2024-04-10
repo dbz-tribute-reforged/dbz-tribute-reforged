@@ -225,6 +225,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Krillin.SCATTERING_BULLET,
       AbilityNames.Krillin.DESTRUCTO_DISC,
       AbilityNames.Krillin.SENZU_THROW,
+      AbilityNames.Goku.SOLAR_FLARE,
     ]],
 
     // yamcha r
@@ -828,9 +829,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     
     // cell unformed / 1st form / 2nd form / perfect
     [FourCC("N00Q"), [AbilityNames.Goku.KAMEHAMEHA]],
-    [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
-    [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
-    [FourCC("H00G"), [
+    [Id.cellFirst, [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON,
+      AbilityNames.Goku.SOLAR_FLARE,
+      AbilityNames.Cell.ABSORB
+    ]],
+    [Id.cellSemi, [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
+      AbilityNames.Goku.SOLAR_FLARE, 
+      AbilityNames.Cell.ABSORB
+    ]],
+    [Id.cellPerfect, [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Gohan.MASENKO, 
