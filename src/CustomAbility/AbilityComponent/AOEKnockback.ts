@@ -13,7 +13,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   static readonly SOURCE_TARGET_POINT = 1;
 
   static readonly TARGET_AOE = 0;
-  static readonly TARGET_TARGET_UNIT = 0;
+  static readonly TARGET_TARGET_UNIT = 1;
 
   protected sourceCoord: Vector2D;
   protected targetCoord: Vector2D;

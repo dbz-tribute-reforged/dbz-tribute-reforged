@@ -1514,7 +1514,7 @@ export function sonicPassive(customHero: CustomHero) {
   const magnitudeMaxBase = 22;
   const magnitudeMaxUpg = 4;
   const magnitudeMaxUpg2 = 4;
-  const magnitudeLowHPThreshold = 75;
+  const magnitudeLowHPThreshold = 50;
   const bonusSpeedDmgMult = 2;
   const minMagnitudeBonus = 15;
   const magnitudeLossStunned = 0.95;
@@ -3352,7 +3352,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     ) {
       maxStamina *= 0.55;
     } else if (id == Id.saitama) {
-      maxStamina *= Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT;
+      maxStamina = Math.ceil(
+        maxStamina * (1 + Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT)
+      );
     }
     customHero.setMaxSP(maxStamina);
   });
