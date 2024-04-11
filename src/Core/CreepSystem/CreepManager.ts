@@ -237,13 +237,19 @@ export class CreepManager {
   doCreepRespawn(oldCreep: unit, customCreep: CustomCreep) {
     if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
       if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
-        if (udg_ScoreboardTimeMinutes > 20 || udg_ScoreboardTimeHours > 0) {
-          SetHeroLevel(oldCreep, GetHeroLevel(oldCreep) + 1, false);
-        } else {
-          SetHeroLevel(oldCreep, Constants.heavenHellMaxHeroLevel, false);
-        }
+        SetHeroLevel(oldCreep, GetHeroLevel(oldCreep) + 1, false);
       } else {
-        SetHeroLevel(oldCreep, GetHeroLevel(oldCreep), false);
+        if (
+          GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel + 1 
+          && (
+            udg_ScoreboardTimeMinutes > 15 
+            || udg_ScoreboardTimeHours > 0
+          )
+        ) {
+          SetHeroLevel(oldCreep, Constants.heavenHellMaxHeroLevel + 1, false);
+        } else {
+          SetHeroLevel(oldCreep, GetHeroLevel(oldCreep), false);
+        }
       }
       SetHeroStr(oldCreep, Math.floor(GetHeroStr(oldCreep, false) * 1.06 + 60), false);
       SetHeroAgi(oldCreep, Math.floor(GetHeroAgi(oldCreep, false) * 1.06 + 60), false);
