@@ -2497,7 +2497,9 @@ export function linkPassive(customHero: CustomHero) {
 }
 
 export function ainzPassive(customHero: CustomHero) {
-  const mpCostPct = 0.23;
+  const mpCostPct = 0.25;
+  const mpCostRedOrbDiscountPct = 0.05;
+  const mpCostGuildWeaponDiscountPct = 0.03;
   const mpCostNonOffensivePct = 0.03;
   const mpCostTickRate = 0.2;
   const mpCostDefensiveRatio = 0.5;
@@ -2529,6 +2531,8 @@ export function ainzPassive(customHero: CustomHero) {
     BlzGetUnitAbility(customHero.unit, Id.ainzPenetrateUp),
   ];
 
+  const summonSpells = [];
+
   let isAddSummon = false;
   let isAddSpecial = false;
 
@@ -2536,11 +2540,20 @@ export function ainzPassive(customHero: CustomHero) {
     if (UnitHelper.isUnitAlive(customHero.unit)) {
       const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
       const lifePct = GetUnitLifePercent(customHero.unit) * 0.01;
-      const offensiveManaCost = R2I(maxMana * mpCostPct);
+      const hasRedOrb = GetUnitAbilityLevel(customHero.unit, Id.ainzRedOrbFlag) > 0;
+      const hasGuildWeapon = GetUnitAbilityLevel(customHero.unit, Id.ainzGuildWeaponFlag) > 0;
+      const offensiveManaCost = hasRedOrb ?
+        R2I(maxMana * (mpCostPct - mpCostRedOrbDiscountPct)) :  
+        R2I(maxMana * mpCostPct)
+      ;
       const defensiveManaCost = Math.max(
         R2I(maxMana * mpCostNonOffensivePct), 
         R2I(mpCostDefensiveRatio * offensiveManaCost * (1 - lifePct))
       );
+      const summonManaCost = hasGuildWeapon ? 
+        R2I(Math.max(defensiveManaCost, offensiveManaCost - maxMana * mpCostGuildWeaponDiscountPct)) : 
+        offensiveManaCost  
+      ;
 
       for (const abil of offensiveSpells) {
         BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, offensiveManaCost);
@@ -2549,10 +2562,14 @@ export function ainzPassive(customHero: CustomHero) {
       for (const abil of defensiveSpells) {
         BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, defensiveManaCost);
       }
+      
+      for (const abil of summonSpells) {
+        BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, summonManaCost);
+      }
 
       if (!isAddSummon && GetUnitAbilityLevel(customHero.unit, Id.ainzSummonAlbedo) > 0) {
         isAddSummon = true;
-        offensiveSpells.push(
+        summonSpells.push(
           BlzGetUnitAbility(customHero.unit, Id.ainzSummonAlbedo),
           BlzGetUnitAbility(customHero.unit, Id.ainzSummonShalltear),
           BlzGetUnitAbility(customHero.unit, Id.ainzSummonDemiurge),
@@ -3042,7 +3059,7 @@ export function genosPassive(customHero: CustomHero) {
 
 
 export function tatsumakiPassive(customHero: CustomHero) {
-  const maxDist = 2400;
+  const maxDist = 2000;
   const minSpeed = 5;
   const distScaledSpeed = 45;
   const bonusSpeedRatio = 2;

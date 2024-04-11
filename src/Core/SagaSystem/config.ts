@@ -267,6 +267,7 @@ export const fastSagaSystem: SagaSystemConfig = {
     FutureBabidiSaga,
     FTSuperSaga2,
     BebiSaga,
+    Super17Saga,
     ShadowDragonSaga1,
     ShadowDragonSaga2,
 
@@ -375,8 +376,11 @@ export const fastSagaSystem: SagaSystemConfig = {
     BebiSaga: [
       [ FTSuperSaga2, SagaState.Completed ],
     ],
-    ShadowDragonSaga1: [
+    Super17Saga: [
       [ BebiSaga, SagaState.Completed ],
+    ],
+    ShadowDragonSaga1: [
+      [ Super17Saga, SagaState.Completed ],
     ],
     ShadowDragonSaga2: [
       [ ShadowDragonSaga1, SagaState.Completed ],

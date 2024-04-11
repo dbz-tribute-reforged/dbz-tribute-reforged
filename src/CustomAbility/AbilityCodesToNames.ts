@@ -154,6 +154,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.superMaximumLightSpeedMode, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE],
 
     // krillin
+    [Id.krillinKame, AbilityNames.Krillin.KRILLIN_KAMEHAMEHA],
     [Id.scatteringBullet, AbilityNames.Krillin.SCATTERING_BULLET],
     [Id.destructoDisc, AbilityNames.Krillin.DESTRUCTO_DISC],
     [Id.senzuThrow, AbilityNames.Krillin.SENZU_THROW],

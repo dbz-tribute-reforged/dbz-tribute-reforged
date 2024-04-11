@@ -5876,12 +5876,14 @@ export module SimpleSpellSystem {
   }
 
   export function doMinatoHiraishinNoJutsu(spellId: number) {
-    const maxCastDistance = 1400;
-    const maxTravelDistance = 1500;
+    const maxCastDistance = 1100;
+    const maxTravelDistance = 1200;
+    const spCost = 5;
     let searchAOE = maxTravelDistance;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
     Globals.tmpVector.setUnit(caster);
     Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
 
@@ -5890,7 +5892,9 @@ export module SimpleSpellSystem {
     let closestUnit = caster;
     let minDistance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
 
-    if (!Globals.barrierBlockUnits.has(caster)) {
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    
+    if (!Globals.barrierBlockUnits.has(caster) && customHero.getCurrentSP() >= spCost) {
       GroupClear(Globals.tmpUnitGroup);
       GroupEnumUnitsInRange(Globals.tmpUnitGroup, Globals.tmpVector2.x, Globals.tmpVector2.y, searchAOE, null);
       ForGroup(Globals.tmpUnitGroup, () => {
@@ -5934,6 +5938,7 @@ export module SimpleSpellSystem {
       AbilityNames.Minato.HIRAISHIN_ZANZO
     );
     if (closestUnit != caster) {
+      customHero.setCurrentSP(customHero.getCurrentSP() - spCost);
       PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector3);
     } else {
       const errorSfx = AddSpecialEffect(
@@ -5964,7 +5969,7 @@ export module SimpleSpellSystem {
   ) {
     const tickRate = 0.03;
     const moveSpeed = BeamComponent.BEAM_SPEED_INSANE;
-    const maxDistance = 1200;
+    const maxDistance = 1000;
     const dmgAOE = 150;
     const dmgMult = BASE_DMG.KAME_DPS * 2;
     const beamHeight = 150;
@@ -6072,7 +6077,7 @@ export module SimpleSpellSystem {
     const maxDistance = 1000;
     const dmgAOE = 300;
     const dmgSpeed = 100;
-    const dmgMult = BASE_DMG.KAME_DPS * 6;
+    const dmgMult = BASE_DMG.KAME_DPS * 5;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -6213,7 +6218,7 @@ export module SimpleSpellSystem {
     const tickRate = 0.02;
     const maxTicks = 50;
     const searchAOE = 700;
-    const dmgMult = BASE_DMG.KAME_DPS * 3 * tickRate;
+    const dmgMult = BASE_DMG.KAME_DPS * 2.5 * tickRate;
     const minKunai = 2;
     const maxKunaiSfxLength = 9;
 
@@ -7436,7 +7441,7 @@ export module SimpleSpellSystem {
     const vectorMaxDist = 2400;
     const sfxPathSize = 5.0;
     const sfxMarkerSize = 2.0;
-    const vectorManaCostPct = 0.09;
+    const vectorManaCostPct = 0.1;
     const sfxHeight = 100;
 
     const caster = GetTriggerUnit();
@@ -7455,11 +7460,13 @@ export module SimpleSpellSystem {
 
     const targetX = GetSpellTargetX();
     const targetY = GetSpellTargetY();
+    const loc = GetSpellTargetLoc();
 
     const abil = BlzGetUnitAbility(caster, Id.tatsumakiVector);
 
     let sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
     const vectorState = LoadInteger(Globals.genericSpellHashtable, casterId, vectorKey);
+    const sfxZHeight = GetLocationZ(loc);
     if (vectorState == 0) {
       SaveInteger(Globals.genericSpellHashtable, casterId, vectorKey, 1);
       SaveReal(Globals.genericSpellHashtable, casterId, vectorXSourceKey, targetX);
@@ -7482,13 +7489,13 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectPitch(sfx, 0);
       BlzSetSpecialEffectX(sfx, targetX);
       BlzSetSpecialEffectY(sfx, targetY);
-      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectZ(sfx, sfxZHeight + sfxHeight);
       // sfx1 marker
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx1Key);
       BlzSetSpecialEffectScale(sfx, sfxMarkerSize);
       BlzSetSpecialEffectX(sfx, targetX);
       BlzSetSpecialEffectY(sfx, targetY);
-      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectZ(sfx, sfxZHeight + sfxHeight);
       // sfx2 marker
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
       BlzSetSpecialEffectScale(sfx, 0.01);
@@ -7513,25 +7520,25 @@ export module SimpleSpellSystem {
       // sfx path
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfxKey);
       BlzSetSpecialEffectMatrixScale(sfx, sfxPathSize, sfxPathSize, sfxPathSize * dist / 10);
-      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectZ(sfx, sfxZHeight + sfxHeight);
       BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
       BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
       // sfx2
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, casterId, vectorSfx2Key);
       BlzSetSpecialEffectX(sfx, Globals.tmpVector2.x);
       BlzSetSpecialEffectY(sfx, Globals.tmpVector2.y);
-      BlzSetSpecialEffectZ(sfx, BlzGetLocalSpecialEffectZ(sfx) + sfxHeight);
+      BlzSetSpecialEffectZ(sfx, sfxZHeight + sfxHeight);
       BlzSetSpecialEffectScale(sfx, sfxMarkerSize);
 
       UnitHelper.payMPPercentCost(caster, vectorManaCostPct - 0.01, UNIT_STATE_MAX_MANA);
 
       const rng = Math.random() * 100;
-      if (rng < 25) { 
+      if (rng < 35) { 
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/Disgust.mp3", 2000);
-      } else if (rng < 50) {
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/GoOnHome.mp3", 1100);
-      } else if (rng < 75) {
+      } else if (rng < 70) {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/OutOfMyWay.mp3", 1100);
+      } else if (rng < 90) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/GoOnHome.mp3", 1100);
       } else {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Tatsumaki/TakeBack.mp3", 2900);
       }
@@ -7543,6 +7550,8 @@ export module SimpleSpellSystem {
       Math.floor(0.01 * GetUnitState(caster, UNIT_STATE_MAX_MANA))
     );
     BlzSetAbilityIntegerLevelField(abil, ABILITY_ILF_MANA_COST, 0, manaCost);
+
+    RemoveLocation(loc);
   }
 
   export function doTatsumakiGiantSpear(spellId: number) {

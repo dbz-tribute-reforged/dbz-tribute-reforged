@@ -1282,6 +1282,7 @@ export module SoundHelper {
 
       // goku
       case Id.kamehameha:
+      case Id.kamehamehaGod:
         if (unitId == Id.goku) {
           playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
         } else if (unitId == Id.gohan) {
@@ -1824,6 +1825,13 @@ export module SoundHelper {
         break;
       
       // krillin
+      case Id.krillinKame: 
+        if (unitId == Id.krillin) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinTakeThis.mp3", 1272);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
+        break;
+
       case Id.scatteringBullet:
         if (unitId == Id.krillin) {
           if (rng < 5) {
