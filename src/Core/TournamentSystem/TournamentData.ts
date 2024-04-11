@@ -14,12 +14,12 @@ export module TournamentData {
     tournamentTopRight.x,
     tournamentTopRight.y
   );
-  export const budokaiArenaBottomLeft: Vector2D = new Vector2D(12930, 19964);
-  export const budokaiArenaTopRight: Vector2D = new Vector2D(16737, 23848);
-  export const budokaiArenaMidPoint: Vector2D = new Vector2D(14778, 21687);
-  export const budokaiSpawn1: Vector2D = new Vector2D(13778, 20747);
-  export const budokaiSpawn2: Vector2D = new Vector2D(15775, 22690);
-  export const finalBattleDetector: Vector2D = new Vector2D(11020, 22858);
+  export const budokaiArenaBottomLeft: Vector2D = new Vector2D(-3711, 15105);
+  export const budokaiArenaTopRight: Vector2D = new Vector2D(255, 19073);
+  export const budokaiArenaMidPoint: Vector2D = new Vector2D(-1708, 16926);
+  export const budokaiSpawn1: Vector2D = new Vector2D(-2550, 16100);
+  export const budokaiSpawn2: Vector2D = new Vector2D(-860, 17764);
+  export const finalBattleDetector: Vector2D = new Vector2D(-6128, 18249);
   export const finalBattleName: string = "Final Battle";
   export const finalBattleTime: number = 32 * 60;
   export const finalBattleInterval: number = 5;
