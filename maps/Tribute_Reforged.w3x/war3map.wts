@@ -164189,7 +164189,7 @@ STRING 23709
 {
 The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2000. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active. Can be cancelled by pressing S.
 
-|cff88ffffMana Cost: 10% of Max Mana + 3% max mana/s|r
+|cff88ffffMana Cost: 10% of Max Mana + 4% max mana/s|r
 |cff00ffffCooldown: 0s|r
 }
 

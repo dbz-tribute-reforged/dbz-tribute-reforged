@@ -3064,7 +3064,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
   const distScaledSpeed = 45;
   const bonusSpeedRatio = 2;
   const vectorAOE = 200;
-  const vectorManaCostPct = 0.03;
+  const vectorManaCostPct = 0.04;
   const shieldHpThresholdPct = 70;
 
   const caster = customHero.unit;
