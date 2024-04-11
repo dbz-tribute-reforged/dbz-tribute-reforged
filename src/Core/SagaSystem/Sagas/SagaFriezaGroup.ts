@@ -285,7 +285,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 20;
     this.stats = 100;
   }
 

@@ -27,6 +27,12 @@ export class UnitContestant {
     this.item4 = UnitItemInSlot(unit, i++);
     this.item5 = UnitItemInSlot(unit, i++);
     this.item6 = UnitItemInSlot(unit, i++);
+    if (this.item1) SetItemInvulnerable(this.item1, true);
+    if (this.item2) SetItemInvulnerable(this.item2, true);
+    if (this.item3) SetItemInvulnerable(this.item3, true);
+    if (this.item4) SetItemInvulnerable(this.item4, true);
+    if (this.item5) SetItemInvulnerable(this.item5, true);
+    if (this.item6) SetItemInvulnerable(this.item6, true);
   }
 
   getItem(index: number): item {
@@ -162,6 +168,7 @@ export class TournamentContestant {
     // force add what is yours
     for (let i = 0; i < 6; ++i) {
       this.returnItemsDoAdd(unitContestant, i);
+      if (unitContestant.getItem(i)) SetItemInvulnerable(unitContestant.getItem(i), false);
     }
   }
 

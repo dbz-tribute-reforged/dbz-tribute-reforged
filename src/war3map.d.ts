@@ -795,6 +795,9 @@ declare var udg_TempUnit: unit;
 declare var udg_MoroStatMultReal: number;
 
 declare var udg_Scoreboard: multiboard;
+declare var udg_ScoreboardTimeHours: number;
+declare var udg_ScoreboardTimeMinutes: number;
+declare var udg_ScoreboardTimeSeconds: number;
 
 declare var udg_IsCatchupSettingsAutomatic: boolean;
 

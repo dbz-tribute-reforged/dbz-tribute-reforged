@@ -3352,6 +3352,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Krillin.KRILLIN_KAMEHAMEHA, // Goku's Kame 2
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam krillin kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Krillin.SCATTERING_BULLET,
     currentCd: 0,
     maxCd: 1,
@@ -17335,7 +17362,7 @@ export const AbilitiesList = [
     maxCd: 4,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 16,
+    duration: 12,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

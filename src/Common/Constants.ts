@@ -152,7 +152,7 @@ export module Constants {
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
 
-  export const AGILITY_REGEN_EXPONENT = 1.8;
+  export const AGILITY_REGEN_EXPONENT = 1.7;
   export const FOUNTAIN_REGEN_MULT = 0.25;
   export const SAITAMA_PASSIVE_STAMINA_BONUS_MULT = 0.15;
   export const OMEGA_SHENRON_PASSIVE_REGEN_MULT = 0.15;
@@ -546,6 +546,9 @@ export module Id {
   export const ainzTimeStop = FourCC("A12Q");
   export const ainzResistance = FourCC("A12S");
   export const ainzWish = FourCC("A12J");
+
+  export const ainzGuildWeaponFlag = FourCC("A0CF");
+  export const ainzRedOrbFlag = FourCC("A0CG");
 
   export const albedo = FourCC("H013");
   export const albedoDress = FourCC("H010");
@@ -1001,6 +1004,7 @@ export module Id {
   export const ultimateBurningWarrior3 = FourCC("A005");
 
   export const krillin = FourCC("H03Y");
+  export const krillinKame = FourCC("A0CH");
   export const scatteringBullet = FourCC("A0R9");
   export const destructoDisc = FourCC("A0RA");
   export const senzuThrow = FourCC("A0RB");

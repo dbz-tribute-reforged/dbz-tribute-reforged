@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100Tribute Reforged 1.03a
+|cffaf1100Tribute Reforged 1.03b
 }
 
 STRING 4
@@ -2414,14 +2414,6 @@ Albedo swings 3F around her, reducing incoming damage for 3s and slowing nearby 
 |cff00ffffCooldown: <A12U,Cool2,.> seconds|r
 }
 
-STRING 383
-// Abilities: A004 (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-The Flying Thunder God technique is a space-time ninjutsu developed by Tobirama that allows the user to instantly teleport to previously marked targets. The user will teleport to the closest Hiraishin Kunai or allied hero to the targetted location.
-
-|cff00FFFFCooldown: <A004,Cool1,.> seconds|r
-}
-
 STRING 384
 // Units: n02C (Lost Soul), Name (Name)
 {
@@ -3914,21 +3906,6 @@ STRING 621
 // Units: H049 (Half Cyborg / Half Changling), Awakentip (Tooltip - Awaken)
 {
 Rebuild Metal Koola
-}
-
-STRING 622
-// Units: H001 (Yondaime Hokage), Ubertip (Tooltip - Extended)
-{
-A high mobility assassin.
-
-|cffffff00Yellow Flash:|r Cast point reduced to 0.1s
-|cff00ffffRasengan:|r Every 4s auto-attacks deal |cff00ff00[Int] 500u damage|r and knockback.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
 STRING 623
@@ -8327,109 +8304,10 @@ STRING 1291
 Android 17
 }
 
-STRING 1292
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool1,.> seconds|r
-}
-
-STRING 1293
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool3,.> seconds|r
-}
-
-STRING 1294
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool4,.> seconds|r
-}
-
-STRING 1295
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool5,.> seconds|r
-}
-
-STRING 1296
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool6,.> seconds|r
-}
-
-STRING 1297
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool7,.> seconds|r
-}
-
-STRING 1298
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool8,.> seconds|r
-}
-
-STRING 1299
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool9,.> seconds|r
-}
-
-STRING 1300
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool10,.> seconds|r
-}
-
 STRING 1301
 // Buffs/Effects: B00X (), Bufftip (Tooltip)
 {
 Majin Influence
-}
-
-STRING 1302
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Researchubertip (Tooltip - Learn - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool1,.> - <A001,Cool10,.> seconds|r
-}
-
-STRING 1303
-// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Damage: [Int] 600u
-|cff00ffffCooldown: <A001,Cool2,.> seconds|r
 }
 
 STRING 1304
@@ -8625,15 +8503,6 @@ Minato counterattacks the next enemy to damage him in 1.5s within <A002,Area1> A
 |cff00ff00Duration: 1.5s
 |cff00ff00Damage: [Int] 1000u (+10% damage received)
 |cff00ffffCooldown: <A002,Cool1,.> seconds|r
-}
-
-STRING 1335
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool1,.> seconds|r
 }
 
 STRING 1336
@@ -8882,43 +8751,10 @@ Shalltear can instantly reverse incoming damage that is unable to kill her in on
 |cff00ffffCooldown: <A139,Cool2,.> seconds|r
 }
 
-STRING 1369
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool1,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1370
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool3,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
 STRING 1371
 // Items: I027 (Fusion Successful), Name (Name)
 {
 Fusion Successful
-}
-
-STRING 1372
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool4,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1373
@@ -9031,17 +8867,6 @@ STRING 1390
 This body is being controlled by Bebi
 }
 
-STRING 1391
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool5,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
 STRING 1392
 // Items: I00I (Dr Wheelo's Research), Name (Name)
 {
@@ -9071,39 +8896,6 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 1395
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool6,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1396
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool7,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1397
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool8,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1398
@@ -9154,17 +8946,6 @@ STRING 1405
 // Items: I01Q (|cffffcc00Tournament Trophy|r), Name (Name)
 {
 |cffffcc00Tournament Trophy|r
-}
-
-STRING 1406
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool9,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1407
@@ -9228,17 +9009,6 @@ STRING 1416
 // Items: I02E (Bio Lab Research), Name (Name)
 {
 Bio Lab Research
-}
-
-STRING 1417
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool10,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1418
@@ -9382,54 +9152,10 @@ STRING 1434
 You are currently dead.
 }
 
-STRING 1435
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchubertip (Tooltip - Learn - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool1,.> - <A003,Cool10,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
 STRING 1436
 // Items: I001 (Roast Ham), Description (Description)
 {
 A little undercooked, but it fills you up.
-}
-
-STRING 1437
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
-{
-Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A003,Cool2,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1438
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool1,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1439
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool3,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1440
@@ -9519,94 +9245,6 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 
 |cff00ff00Damage: [Int] 90u x 8t + 90u|r
 |cff00ffffCooldown: <A01B,Cool5> seconds|r
-}
-
-STRING 1450
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool4,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1451
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool5,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1452
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool6,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1453
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool7,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1454
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool8,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1455
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool9,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1456
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool10,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
-}
-
-STRING 1457
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
-
-|cff00ff00Duration: 1s
-Damage: [Int] 300u/s per Kunai
-|cff00ffffCooldown: <A00D,Cool2,.> seconds|r
-|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 1458
@@ -12859,6 +12497,22 @@ STRING 1955
 E
 }
 
+STRING 1956
+// Units: H001 (Yondaime Hokage), Ubertip (Tooltip - Extended)
+{
+A high mobility assassin.
+
+|cffffff00Yellow Flash:|r Cast point reduced to 0.1s
+|cff00ffffRasengan:|r Every 4s auto-attacks deal |cff00ff00[Int] 500u damage|r and knockback.
+|cffff00ffReaper Death Seal:|r -0.2x Str Mult
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+}
+
 STRING 1957
 // Units: H00L (|cffff4422Arch-Wizard|r), Name (Name)
 {
@@ -13972,24 +13626,6 @@ STRING 2135
 // Abilities: A053 (Saga Item), Name (Name)
 {
 Saga Item
-}
-
-STRING 2136
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool3,.> seconds|r
-}
-
-STRING 2137
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool4,.> seconds|r
 }
 
 STRING 2138
@@ -21718,7 +21354,11 @@ Transformations:
 [lvl 100] 2.25x "fp"
 [lvl 150] 2.50x "fp" [Unlocks Special Spells]
 
-|cff00ffffMagic Caster:|r Spells cost 23% of max mana. Non-offensive spells cost less at high HP.
+|cff00ff00Pick ONE of the following:|r
+[lvl 200] "|cffff3333red orb|r" [all spells cost 5% less max mana]
+[lvl 200] "|cffffcc00guild weapon|r" [summon spells cost 3% less max mana, +10% summon stats]
+
+|cff00ffffMagic Caster:|r Spells cost 25% of max mana. Non-offensive spells cost less at high HP.
 }
 
 STRING 3326
@@ -22608,15 +22248,6 @@ STRING 3453
 // Units: H01C (Tornado of Terror), Propernames (Proper Names)
 {
 Tatsumaki
-}
-
-STRING 3454
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool5,.> seconds|r
 }
 
 STRING 3455
@@ -24130,24 +23761,6 @@ Unlocks [|cff00ff00R|r] Yagai: Night Guy.
 Current HP cannot exceed 20% of Max HP|r
 |cff00ff00Duration: 30s|r
 |cff00ffffCooldown: <A01R,Cool1>s|r
-}
-
-STRING 3682
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool6,.> seconds|r
-}
-
-STRING 3683
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool7,.> seconds|r
 }
 
 STRING 3684
@@ -45797,33 +45410,6 @@ STRING 7070
 [|cff00ff00Q|r] Compress - [|cffffcc00Level 10|r]
 }
 
-STRING 7071
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool8,.> seconds|r
-}
-
-STRING 7072
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool9,.> seconds|r
-}
-
-STRING 7073
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool10,.> seconds|r
-}
-
 STRING 7074
 // Abilities: A0NQ (Sorbet's Ring), Name (Name)
 {
@@ -46152,28 +45738,10 @@ STRING 7125
 Dende links up to |cff00FF00lvl+1|r units together. Reduces Dende's damage taken by 50% and splits the remaining damage between all linked units.|n|cff00FF00Duration:8 seconds|r|n|cff00FFFFCooldown: 20 seconds|r
 }
 
-STRING 7126
-// Abilities: A05O (Telekinetic Bombs), Researchubertip (Tooltip - Learn - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool1,.> - <A05O,Cool10,.> seconds|r
-}
-
 STRING 7127
 // Abilities: A05M (Compress), EditorSuffix (Editor Suffix)
 {
 (tatsumaki)
-}
-
-STRING 7128
-// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
-{
-Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
-
-|cff00ff00Damage: [Int] 400u (x3)
-|cff00ffffCooldown: <A05O,Cool2,.> seconds|r
 }
 
 STRING 7129
@@ -47587,15 +47155,6 @@ STRING 7339
 // Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 10|r]
-}
-
-STRING 7340
-// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
-{
-The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2400. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active. Can be cancelled by pressing S.
-
-|cff4444ffMana Cost: 9% of Max Mana + 3% max mana/s|r
-|cff00ffffCooldown: 0s|r
 }
 
 STRING 7341
@@ -52434,13 +51993,12 @@ Split Transformations:
 [lvl 20]  1.25x "fp"
 [lvl 35]  1.50x "fp"
 [lvl 60]  2.00x "fp" [unlocks Mature Hirudegarn]
-[lvl 150] 2.40x "fp" [unlocks R abilities]
-[lvl 200] 2.60x "fp"
+[lvl 150] 2.60x "fp" [unlocks R abilities]
 
 Type "mature" after level 60 to turn into Mature Hirudegarn.
 Mature Transformations:
 [lvl 150] 2.50x "fp" [unlocks Dark Transformation]
-[lvl 300] 2.75x "fp"
+[lvl 200] 2.60x "fp"
 }
 
 STRING 8088
@@ -65859,16 +65417,6 @@ STRING 10099
 (DBO Nappa model)
 }
 
-STRING 10100
-// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
-{
-Summons Albedo, a defensive tank that can reduce incoming damage and redirect it towards herself.
-
-|cffffff00Stats: 40%|r
-|cff00ff00Duration: 45s|r
-|cff00ffffCooldown: <A128,Cool1>s|r
-}
-
 STRING 10101
 // Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
 {
@@ -65941,7 +65489,7 @@ STRING 10111
 }
 
 STRING 10112
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0CF (Ainz Guild Weapon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -65959,7 +65507,7 @@ Justice Pose
 }
 
 STRING 10115
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0CG (Ainz Red Orb), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -76447,21 +75995,6 @@ STRING 11640
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 7|r]
 }
 
-STRING 11641
-// Units: H00Z (Supreme One), Ubertip (Tooltip - Extended)
-{
-The strongest spellcaster with with near limitless utility. He can deal massive damage, control the battlefield, and summon multiple minions.
-
-|cff00ffffMagic Caster:|r Spells cost 23% of max mana. Non-offensive spells cost less at high HP.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11642
 // Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
 {
@@ -84436,7 +83969,7 @@ STRING 12809
 }
 
 STRING 12810
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -87355,7 +86888,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -95227,7 +94760,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.40x "fp"
+[lvl 150] 2.40x "fp" [Unlocks [|cff00ff00Q|r] Krillin Kamehameha]
 [lvl 200] 2.50x "fp"
 }
 
@@ -101231,7 +100764,7 @@ Q
 }
 
 STRING 15199
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0CH (Kamehameha Krillin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -101460,7 +100993,7 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15233
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0CH (Kamehameha Krillin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -109216,6 +108749,23 @@ Maximum speed decreases when below 50% HP.|r
 |cff00FFFFCooldown: <A0ZG,Cool1> seconds|r
 }
 
+STRING 16283
+// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
+{
+The target ally turns invisible for <A12P,Dur1>s.
+
+|cff00ffffCooldown: <A124,Cool1>s
+}
+
+STRING 16286
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool1,.> seconds|r
+}
+
 STRING 16287
 // Abilities: A08J (Tri Beam Fire), Tip (Tooltip - Normal)
 {
@@ -109228,10 +108778,46 @@ STRING 16288
 [|cff00ff00W|r] Tri Beam Fire - [|cffffcc00Level 9|r]
 }
 
+STRING 16289
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool3,.> seconds|r
+}
+
+STRING 16290
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool4,.> seconds|r
+}
+
+STRING 16291
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool5,.> seconds|r
+}
+
 STRING 16292
 // Abilities: A08J (Tri Beam Fire), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Tri Beam Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 16293
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool6,.> seconds|r
 }
 
 STRING 16294
@@ -113667,14 +113253,6 @@ STRING 16886
 Hero attacks deal 100% damage to all armor types.
 }
 
-STRING 16887
-// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
-{
-The target ally turns invisible for 5s.
-
-|cff00ffffCooldown: <A124,Cool1>s
-}
-
 STRING 16888
 // Units: N00Q (Cell  "Unformed"), Ubertip (Tooltip - Extended)
 {
@@ -117480,7 +117058,7 @@ Q
 }
 
 STRING 17402
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -117895,7 +117473,7 @@ A more powerful version of the kamehameha that taps into godly energy. At first 
 }
 
 STRING 17442
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -121083,6 +120661,15 @@ STRING 17912
 // Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 10|r]
+}
+
+STRING 17913
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool7,.> seconds|r
 }
 
 STRING 17914
@@ -126563,6 +126150,15 @@ A large red energy ball charged with both hands that has immense destructive pow
 
 |cff00ff00Bomber Damage: [Int] 600u/s + 2% max HP/s
 |cff00ffffCooldown: <A0LD,Cool1> seconds|r
+}
+
+STRING 18694
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool8,.> seconds|r
 }
 
 STRING 18695
@@ -149067,16 +148663,6 @@ STRING 21791
 [|cffFFFF00E|r] Masenko - [|cffffcc00Level 12|r]
 }
 
-STRING 21792
-// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons Pandora's Actor to replicate Ainz Ooal Gown but with only the offensive, utility and buff spellbooks.
-
-|cffffff00Stats: 50%|r
-|cff00ff00Duration: 30s|r
-|cff00ffffCooldown: <A12B,Cool1>s|r
-}
-
 STRING 21793
 // Abilities: A0H8 (Masenko), Tip (Tooltip - Normal)
 {
@@ -155844,7 +155430,7 @@ STRING 22561
 }
 
 STRING 22562
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -156167,7 +155753,7 @@ Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and root
 }
 
 STRING 22597
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -156911,26 +156497,6 @@ STRING 22708
 
 |cff00ff00Damage: [Int] 750u
 |cff00ffffCooldown: 45s|r
-}
-
-STRING 22709
-// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
-{
-Summons Shalltear Bloodfallen a high DPS bruiser who can sustain themselves by dealing damage to enemies.
-
-|cffffff00Stats: 40%|r
-|cff00ff00Duration: 45s|r
-|cff00ffffCooldown: <A129,Cool1>s|r
-}
-
-STRING 22710
-// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
-{
-Summons Demiurge, an intelligent devil who has many useful tools to control the battlefield.
-
-|cffffff00Stats: 40%|r
-|cff00ff00Duration: 45s|r
-|cff00ffffCooldown: <A12A,Cool1>s
 }
 
 STRING 22711
@@ -158176,7 +157742,7 @@ This unit is under the effects of Voracity Aura; it has an increased movement sp
 }
 
 STRING 22889
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -159582,10 +159148,112 @@ STRING 23074
 [|cff00FF00W|r] Learn Charm - [|cffffcc00Level %d|r]
 }
 
+STRING 23075
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool9,.> seconds|r
+}
+
+STRING 23076
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool10,.> seconds|r
+}
+
+STRING 23077
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Researchubertip (Tooltip - Learn - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool1,.> - <A001,Cool10,.> seconds|r
+}
+
+STRING 23078
+// Abilities: A001 (Hiraishin no Jutsu: First Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato teleports towards the target point in a zigzag path damaging enemies he passes through. Drops a Kunai where Minato starts the ability. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A001,Cool2,.> seconds|r
+}
+
+STRING 23079
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool1,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23080
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool3,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
 STRING 23081
 // Abilities: A139 (Time Reverse), Name (Name)
 {
 Time Reverse
+}
+
+STRING 23082
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool4,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23083
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool5,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23084
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool6,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23085
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool7,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 23086
@@ -161039,6 +160707,17 @@ STRING 23278
 [|cff00FF00F|r] Blood Frenzy Activate
 }
 
+STRING 23279
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool8,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
 STRING 23280
 // Abilities: A0B5 (Blood Frenzy Deactivate), Tip (Tooltip - Normal)
 {
@@ -161067,6 +160746,17 @@ STRING 23284
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 23285
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool9,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
 }
 
 STRING 23286
@@ -163254,6 +162944,7 @@ Transformations:
 
 |cffffff00Yellow Flash:|r Cast point reduced to 0.1s
 |cff00ffffRasengan:|r Every 4s auto-attacks deal |cff00ff00[Int] 500u damage|r and knockback.
+|cffff00ffReaper Death Seal:|r -0.2x Str Mult
 }
 
 STRING 23561
@@ -163977,11 +163668,200 @@ Cell Max writhes in anger as the black spots on its armor glow purple before emi
 |cff00FFFFCooldown: <A0HZ,Cool9,.>s|r
 }
 
+STRING 23641
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool10,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23642
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchubertip (Tooltip - Learn - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool1,.> - <A003,Cool10,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
 STRING 23643
 // Abilities: A0A1 (Blood Frenzy Activate), Ubertip (Tooltip - Normal - Extended)
 {
 Shalltear enters a frenzied state to hunt for blood. Drains 2% of her max HP per second to increase her attack damage by +10% per 10% missing HP. The bonus attack damage is increased by +60% when below 30% HP. Cannot be deactivated in the first 5 seconds.
 Unlocks [|cff00ff00F|r] Mist Form for 5 seconds.
+}
+
+STRING 23644
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
+{
+Minato instantly throws 6 Hiraishin Kunai around himself. Unlocks [|cff00ff00R|r] |cffffff00Hiraishin no Jutsu: Spiral Flash|r for 5 seconds, an ability that causes Minato to rapidly teleport between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai. Minato can teleport to the Kunai using [|cff00ff00F|r] |cffffff00Hiraishin no Jutsu|r.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A003,Cool2,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23646
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool1,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23647
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool3,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23648
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool4,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23649
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool5,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23650
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool6,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23651
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool7,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23652
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool8,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23653
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool9,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23654
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool10,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23655
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Minato rapidly teleports between all nearby Hiraishin Kunai, dealing bonus damage for each Kunai.
+
+|cff00ff00Duration: 1s
+Damage: [Int] 250u/s per Kunai
+|cff00ffffCooldown: <A00D,Cool2,.> seconds|r
+|cff888888"Rasen Senko Cho Rinbuko Sanshiki!"|r
+}
+
+STRING 23656
+// Abilities: A004 (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+The Flying Thunder God technique is a space-time ninjutsu developed by Tobirama that allows the user to instantly teleport to previously marked targets. The user will teleport to the closest Hiraishin Kunai or allied hero to the targetted location.
+
+|cff00ff00Stamina Cost: 5|r
+|cff00FFFFCooldown: <A004,Cool1,.> seconds|r
+}
+
+STRING 23659
+{
+[|cffffcc00Talent|r] |cffff3333Red Orb|r
+All spells costs 5% less max mana.
+}
+
+STRING 23660
+{
+[|cffffcc00Talent|r] |cffffcc00Guild Weapon|r
+Summon spells cost 3% less max mana. Summons gain +10% stats.
+}
+
+STRING 23661
+// Units: H00Z (Supreme One), Ubertip (Tooltip - Extended)
+{
+The strongest spellcaster with with near limitless utility. He can deal massive damage, control the battlefield, and summon multiple minions.
+
+|cff00ffffMagic Caster:|r Spells cost 25% of max mana. Non-offensive spells cost less at high HP.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 23662
+// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Albedo, a defensive tank that can reduce incoming damage and redirect it towards herself.
+
+|cffffff00Stats: 30%|r
+|cff00ff00Duration: 50s|r
+|cff00ffffCooldown: <A128,Cool1>s|r
 }
 
 STRING 23663
@@ -164086,5 +163966,239 @@ STRING 23679
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
 Increase Metal Cooler's and his clones attack damage by 30 per level.
+}
+
+STRING 23680
+// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Shalltear Bloodfallen a high DPS berserker who sustains herself by draining the life of her enemies.
+
+|cffffff00Stats: 30%|r
+|cff00ff00Duration: 50s|r
+|cff00ffffCooldown: <A129,Cool1>s|r
+}
+
+STRING 23681
+// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Demiurge, an intelligent devil who has many useful tools to control the battlefield.
+
+|cffffff00Stats: 30%|r
+|cff00ff00Duration: 50s|r
+|cff00ffffCooldown: <A12A,Cool1>s
+}
+
+STRING 23682
+// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Pandora's Actor to replicate Ainz Ooal Gown but with only the offensive, utility and buff spellbooks.
+
+|cffffff00Stats: 30%|r
+|cff00ff00Duration: 30s|r
+|cff00ffffCooldown: <A12B,Cool1>s|r
+}
+
+STRING 23683
+// Abilities: A0CF (Ainz Guild Weapon), Name (Name)
+{
+Ainz Guild Weapon
+}
+
+STRING 23684
+// Abilities: A0CF (Ainz Guild Weapon), EditorSuffix (Editor Suffix)
+{
+(ainz)
+}
+
+STRING 23685
+// Abilities: A0CG (Ainz Red Orb), Name (Name)
+{
+Ainz Red Orb
+}
+
+STRING 23686
+// Abilities: A0CG (Ainz Red Orb), EditorSuffix (Editor Suffix)
+{
+(ainz)
+}
+
+STRING 23687
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 23688
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 23689
+{
+[|cffffcc00Upgrade|r] |cff00ffffKrillin Kamehameha|r
+Krillin has perfected his Kamehameha to deal bonus damage and silence enemies.
+}
+
+STRING 23690
+// Abilities: A0CH (Kamehameha Krillin), Name (Name)
+{
+Kamehameha Krillin
+}
+
+STRING 23691
+// Abilities: A0CH (Kamehameha Krillin), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 23693
+// Abilities: A0CH (Kamehameha Krillin), Researchubertip (Tooltip - Learn - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. 
+
+|cff00ff00Damage: [Int] 50u x 8t + 50u + 2.4% Max HP|r
+|cff00ffffCooldown: <A00R,Cool1> seconds|r
+}
+
+STRING 23694
+// Abilities: A0CH (Kamehameha Krillin), EditorSuffix (Editor Suffix)
+{
+(krillin)
+}
+
+STRING 23695
+// Abilities: A0CH (Kamehameha Krillin), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Krillin Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 23696
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23697
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23698
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool1,.> seconds|r
+}
+
+STRING 23699
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool3,.> seconds|r
+}
+
+STRING 23700
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool4,.> seconds|r
+}
+
+STRING 23701
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool5,.> seconds|r
+}
+
+STRING 23702
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool6,.> seconds|r
+}
+
+STRING 23703
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool7,.> seconds|r
+}
+
+STRING 23704
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool8,.> seconds|r
+}
+
+STRING 23705
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool9,.> seconds|r
+}
+
+STRING 23706
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool10,.> seconds|r
+}
+
+STRING 23707
+// Abilities: A05O (Telekinetic Bombs), Researchubertip (Tooltip - Learn - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool1,.> - <A05O,Cool10,.> seconds|r
+}
+
+STRING 23708
+// Abilities: A05O (Telekinetic Bombs), Ubertip (Tooltip - Normal - Extended)
+{
+Tatsumaki infuses nearby debris with telekinetic energy turning them into explosives that detonate on contact with enemies.
+
+|cff00ff00Damage: [Int] 500u (x3)
+|cff00ffffCooldown: <A05O,Cool2,.> seconds|r
+}
+
+STRING 23709
+// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
+{
+The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2000. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active. Can be cancelled by pressing S.
+
+|cff88ffffMana Cost: 10% of Max Mana + 4% max mana/s|r
+|cff00ffffCooldown: 0s|r
+}
+
+STRING 23710
+// Abilities: A0CH (Kamehameha Krillin), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that hits the enemy's throat and silences them for 1s. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line.
+
+|cff00ff00Damage: [Int] 90u x 6t + 120u + 3.6% Max HP|r
+|cff00ffffCooldown: <A0CH,Cool10> seconds|r
 }
 

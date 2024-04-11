@@ -220,8 +220,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // krillin
-    [FourCC("H03Y"), [
+    [Id.krillin, [
       AbilityNames.Krillin.KAMEHAMEHA,
+      AbilityNames.Krillin.KRILLIN_KAMEHAMEHA,
       AbilityNames.Krillin.SCATTERING_BULLET,
       AbilityNames.Krillin.DESTRUCTO_DISC,
       AbilityNames.Krillin.SENZU_THROW,
@@ -818,7 +819,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.CellMax.TAIL_WHIP,
       AbilityNames.Ainz.REALITY_SLASH,
       AbilityNames.Albedo.DECAPITATE,
-      AbilityNames.Shalltear.PURIFYING_JAVELIN,
+      AbilityNames.Shalltear.PURIFYING_JAVELIN, AbilityNames.Shalltear.EINHERJAR,
       AbilityNames.Demiurge.HELLFIRE_WALL,
 
       AbilityNames.Magus.DARK_MATTER

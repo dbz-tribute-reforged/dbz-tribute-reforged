@@ -105,7 +105,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 45;
+    this.delay = 30;
     this.stats = 100;
     this.metalCoolers = [];
     this.revives = 1;

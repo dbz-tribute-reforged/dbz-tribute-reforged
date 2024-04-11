@@ -174,6 +174,7 @@ export module AbilityNames {
 
   export module Krillin {
     export const KAMEHAMEHA: string = Goku.KAMEHAMEHA;
+    export const KRILLIN_KAMEHAMEHA: string = "Krillin Kamehameha";
     export const SCATTERING_BULLET: string = "Scattering Bullet";
     export const DESTRUCTO_DISC: string = "Destructo Disc";
     export const SENZU_THROW: string = "Senzu Bean!";
