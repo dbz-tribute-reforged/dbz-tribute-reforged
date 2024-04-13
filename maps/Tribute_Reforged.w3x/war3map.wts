@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100Tribute Reforged 1.03b
+|cffaf1100Tribute Reforged 1.04
 }
 
 STRING 4
@@ -2414,6 +2414,12 @@ Albedo swings 3F around her, reducing incoming damage for 3s and slowing nearby 
 |cff00ffffCooldown: <A12U,Cool2,.> seconds|r
 }
 
+STRING 383
+// Destructibles: B000 (DBU Tree 1), Name (Name)
+{
+DBU Tree 1
+}
+
 STRING 384
 // Units: n02C (Lost Soul), Name (Name)
 {
@@ -3906,6 +3912,12 @@ STRING 621
 // Units: H049 (Half Cyborg / Half Changling), Awakentip (Tooltip - Awaken)
 {
 Rebuild Metal Koola
+}
+
+STRING 622
+// Destructibles: B001 (DBU Tree 2), Name (Name)
+{
+DBU Tree 2
 }
 
 STRING 623
@@ -6147,7 +6159,7 @@ Frieza's Ship
 }
 
 STRING 961
-// Units: n03F (Healing Chamber), Name (Name)
+// Units: n02O (Healing Chamber), Name (Name)
 {
 Healing Chamber
 }
@@ -8304,10 +8316,76 @@ STRING 1291
 Android 17
 }
 
+STRING 1292
+// Destructibles: B003 (DBU Tree 3), Name (Name)
+{
+DBU Tree 3
+}
+
+STRING 1293
+// Doodads: D00H (Rock Spires DESERT), Name (Name)
+{
+Rock Spires DESERT
+}
+
+STRING 1294
+// Doodads: D021 (Rock Spires GREEN), Name (Name)
+{
+Rock Spires GREEN
+}
+
+STRING 1295
+// Doodads: D022 (Rocks SILVER), Name (Name)
+{
+Rocks SILVER
+}
+
+STRING 1296
+// Destructibles: B00J (DBO Mushroom Tree 1), Name (Name)
+{
+DBO Mushroom Tree 1
+}
+
+STRING 1297
+// Destructibles: B00L (DBO Mushroom Tree 2), Name (Name)
+{
+DBO Mushroom Tree 2
+}
+
+STRING 1298
+// Doodads: D02U (grass DBZU), Name (Name)
+{
+grass DBZU
+}
+
+STRING 1299
+// Destructibles: B00Y (DBO Mushroom Tree 4), Name (Name)
+{
+DBO Mushroom Tree 4
+}
+
+STRING 1300
+// Destructibles: B00Z (DBO Mushroom Tree 5), Name (Name)
+{
+DBO Mushroom Tree 5
+}
+
 STRING 1301
 // Buffs/Effects: B00X (), Bufftip (Tooltip)
 {
 Majin Influence
+}
+
+STRING 1302
+// Destructibles: B010 (DBO Mushroom Tree 6), Name (Name)
+{
+DBO Mushroom Tree 6
+}
+
+STRING 1303
+// Doodads: D023 (DBO Hills 1), Name (Name)
+{
+DBO Hills 1
 }
 
 STRING 1304
@@ -8503,6 +8581,12 @@ Minato counterattacks the next enemy to damage him in 1.5s within <A002,Area1> A
 |cff00ff00Duration: 1.5s
 |cff00ff00Damage: [Int] 1000u (+10% damage received)
 |cff00ffffCooldown: <A002,Cool1,.> seconds|r
+}
+
+STRING 1335
+// Doodads: D024 (DBO Rock), Name (Name)
+{
+DBO Rock
 }
 
 STRING 1336
@@ -8751,10 +8835,28 @@ Shalltear can instantly reverse incoming damage that is unable to kill her in on
 |cff00ffffCooldown: <A139,Cool2,.> seconds|r
 }
 
+STRING 1369
+// Doodads: D025 (DBO Hills 2), Name (Name)
+{
+DBO Hills 2
+}
+
+STRING 1370
+// Doodads: D026 (DBO Hills 3), Name (Name)
+{
+DBO Hills 3
+}
+
 STRING 1371
 // Items: I027 (Fusion Successful), Name (Name)
 {
 Fusion Successful
+}
+
+STRING 1372
+// Doodads: D027 (DBO Hills 4), Name (Name)
+{
+DBO Hills 4
 }
 
 STRING 1373
@@ -8867,6 +8969,12 @@ STRING 1390
 This body is being controlled by Bebi
 }
 
+STRING 1391
+// Doodads: D028 (DBO Hills 5), Name (Name)
+{
+DBO Hills 5
+}
+
 STRING 1392
 // Items: I00I (Dr Wheelo's Research), Name (Name)
 {
@@ -8896,6 +9004,24 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 1395
+// Doodads: D029 (DBO Hills 10), Name (Name)
+{
+DBO Hills 10
+}
+
+STRING 1396
+// Doodads: D02A (DBO Hills 11x), Name (Name)
+{
+DBO Hills 11x
+}
+
+STRING 1397
+// Doodads: D02B (DBO Hills Darker 1), Name (Name)
+{
+DBO Hills Darker 1
 }
 
 STRING 1398
@@ -8946,6 +9072,12 @@ STRING 1405
 // Items: I01Q (|cffffcc00Tournament Trophy|r), Name (Name)
 {
 |cffffcc00Tournament Trophy|r
+}
+
+STRING 1406
+// Doodads: D02C (DBO Hills Darker 2), Name (Name)
+{
+DBO Hills Darker 2
 }
 
 STRING 1407
@@ -9009,6 +9141,12 @@ STRING 1416
 // Items: I02E (Bio Lab Research), Name (Name)
 {
 Bio Lab Research
+}
+
+STRING 1417
+// Doodads: D02D (DBO Hills Darker 3), Name (Name)
+{
+DBO Hills Darker 3
 }
 
 STRING 1418
@@ -9152,10 +9290,34 @@ STRING 1434
 You are currently dead.
 }
 
+STRING 1435
+// Doodads: D02E (DBO Hills Darker 4), Name (Name)
+{
+DBO Hills Darker 4
+}
+
 STRING 1436
 // Items: I001 (Roast Ham), Description (Description)
 {
 A little undercooked, but it fills you up.
+}
+
+STRING 1437
+// Doodads: D02F (DBO Hills Darker 5), Name (Name)
+{
+DBO Hills Darker 5
+}
+
+STRING 1438
+// Doodads: D02G (DBO Hills Darker 11x), Name (Name)
+{
+DBO Hills Darker 11x
+}
+
+STRING 1439
+// Units: n03F (Guru's House), Name (Name)
+{
+Guru's House
 }
 
 STRING 1440
@@ -9245,6 +9407,54 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 
 |cff00ff00Damage: [Int] 90u x 8t + 90u|r
 |cff00ffffCooldown: <A01B,Cool5> seconds|r
+}
+
+STRING 1450
+// Destructibles: B005 (DBO Mushroom Tree 0), Name (Name)
+{
+DBO Mushroom Tree 0
+}
+
+STRING 1451
+// Doodads: D02K (DBO Farm 1), Name (Name)
+{
+DBO Farm 1
+}
+
+STRING 1452
+// Doodads: D02H (DBO Farm 2), Name (Name)
+{
+DBO Farm 2
+}
+
+STRING 1453
+// Doodads: D02I (DBO Farm 4), Name (Name)
+{
+DBO Farm 4
+}
+
+STRING 1454
+// Doodads: D02J (DBO Farm 6), Name (Name)
+{
+DBO Farm 6
+}
+
+STRING 1455
+// Doodads: D02L (DBO Farm 7), Name (Name)
+{
+DBO Farm 7
+}
+
+STRING 1456
+// Doodads: D02M (DBO Farm 8), Name (Name)
+{
+DBO Farm 8
+}
+
+STRING 1457
+// Doodads: D02N (DBO Farm 10), Name (Name)
+{
+DBO Farm 10
 }
 
 STRING 1458
@@ -11482,9 +11692,9 @@ STRING 1790
 }
 
 STRING 1791
-// Destructibles: B003 (Large Ashenvale Canopy Tree), Name (Name)
+// Doodads: D02O (DBO Farm Ranch Silo), Name (Name)
 {
-Large Ashenvale Canopy Tree
+DBO Farm Ranch Silo
 }
 
 STRING 1792
@@ -11578,9 +11788,9 @@ Large Snowy Pine
 }
 
 STRING 1807
-// Destructibles: B00J (Tree), Name (Name)
+// Doodads: D02P (DBO Farm Tractor), Name (Name)
 {
-Tree
+DBO Farm Tractor
 }
 
 STRING 1808
@@ -13626,6 +13836,18 @@ STRING 2135
 // Abilities: A053 (Saga Item), Name (Name)
 {
 Saga Item
+}
+
+STRING 2136
+// Doodads: D02Q (DBO Desert Capsule 2), Name (Name)
+{
+DBO Desert Capsule 2
+}
+
+STRING 2137
+// Doodads: D02R (DBO Desert Capsule 3), Name (Name)
+{
+DBO Desert Capsule 3
 }
 
 STRING 2138
@@ -22250,6 +22472,12 @@ STRING 3453
 Tatsumaki
 }
 
+STRING 3454
+// Doodads: D02S (DBO Desert Capsule 4), Name (Name)
+{
+DBO Desert Capsule 4
+}
+
 STRING 3455
 // Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
@@ -23761,6 +23989,18 @@ Unlocks [|cff00ff00R|r] Yagai: Night Guy.
 Current HP cannot exceed 20% of Max HP|r
 |cff00ff00Duration: 30s|r
 |cff00ffffCooldown: <A01R,Cool1>s|r
+}
+
+STRING 3682
+// Doodads: D02T (DBO Cell Ring), Name (Name)
+{
+DBO Cell Ring
+}
+
+STRING 3683
+// Destructibles: B00U (DBU Palm Tree), Name (Name)
+{
+DBU Palm Tree
 }
 
 STRING 3684
@@ -45410,6 +45650,21 @@ STRING 7070
 [|cff00ff00Q|r] Compress - [|cffffcc00Level 10|r]
 }
 
+STRING 7071
+{
+|cff40ff40Fly to Lookout|r
+}
+
+STRING 7072
+{
+|cff40ff40Fly to Satan City|r
+}
+
+STRING 7073
+{
+|cff40ff40South West Forest|r
+}
+
 STRING 7074
 // Abilities: A0NQ (Sorbet's Ring), Name (Name)
 {
@@ -45736,6 +45991,12 @@ STRING 7125
 // Abilities: A0G2 (Spirit Link), Researchubertip (Tooltip - Learn - Extended)
 {
 Dende links up to |cff00FF00lvl+1|r units together. Reduces Dende's damage taken by 50% and splits the remaining damage between all linked units.|n|cff00FF00Duration:8 seconds|r|n|cff00FFFFCooldown: 20 seconds|r
+}
+
+STRING 7126
+// Doodads: D02V (TP Popo Carpet), Name (Name)
+{
+TP Popo Carpet
 }
 
 STRING 7127
@@ -76393,12 +76654,6 @@ STRING 11706
 |cffffff00Jump at an enemy and then self destruct yourself to deal massive damage! Deals +2% bonus damage for each 1% missing HP.|r|n|cffff2020Warning: Kills the caster afterwards.|r|n|cff00ff00Damage: [Int] 500u (+1000u)|r|n|cff808080"A critical error has ocurred. Where's the kaboom? There was supposed to be a cell-shattering kaboom!"|r
 }
 
-STRING 11707
-// Destructibles: B00U (Palm Tree Wall), Name (Name)
-{
-Palm Tree Wall
-}
-
 STRING 11708
 // Doodads: D01S (Kamis Lookout), Name (Name)
 {
@@ -76440,12 +76695,12 @@ STRING 11713
 
 STRING 11714
 {
-|cff40ff40Fly to Northern Glacier|r
+|cff40ff40Fly to Baba's Palace|r
 }
 
 STRING 11715
 {
-|cff40ff40Fly to Satan City|r
+|cff40ff40Fly to Kame House|r
 }
 
 STRING 11716
@@ -134882,12 +135137,6 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 |cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
 }
 
-STRING 19895
-// Destructibles: B001 (Ashenvale Fruit Tree), Name (Name)
-{
-Ashenvale Fruit Tree
-}
-
 STRING 19896
 // Abilities: A0Z2 (I'll Run Ye Through!), Tip (Tooltip - Normal)
 {
@@ -164189,7 +164438,7 @@ STRING 23709
 {
 The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2000. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active. Can be cancelled by pressing S.
 
-|cff88ffffMana Cost: 10% of Max Mana + 4% max mana/s|r
+|cff88ffffMana Cost: 10% of Max Mana + 3% max mana/s|r
 |cff00ffffCooldown: 0s|r
 }
 

@@ -132,7 +132,6 @@ export module Constants {
   export const wishImmortalAbility: number = FourCC("A0M8");
   export const floatingTextVisionRange: number = 3000;
   export const beamSpawnOffset: number = 40;
-  export const gameStartIndicatorUnit: number = FourCC("hkni");
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 

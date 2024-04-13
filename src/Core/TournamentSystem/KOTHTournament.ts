@@ -40,14 +40,16 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     ExperienceManager.getInstance().enableXPTrigger();
     EnableTrigger(gg_trg_Kill_Hero_Revive);
     // EnableTrigger(gg_trg_Kill_Hero_PvP_and_Saga);
-    EnableTrigger(gg_trg_Teleport_Namek_Frieza);
-    EnableTrigger(gg_trg_Teleport_Namek_Frieza_2);
-    EnableTrigger(gg_trg_Teleport_Namek_Pod);
-    EnableTrigger(gg_trg_Teleport_Namek_Pod_2);
-    EnableTrigger(gg_trg_Teleport_Future_Trunks);
-    EnableTrigger(gg_trg_Teleport_Future_Trunks_2);
-    EnableTrigger(gg_trg_Teleport_Future_Cell);
-    EnableTrigger(gg_trg_Teleport_Future_Cell_2);
+    if (gg_trg_Teleport_Namek_Frieza) {
+      EnableTrigger(gg_trg_Teleport_Namek_Frieza);
+      EnableTrigger(gg_trg_Teleport_Namek_Frieza_2);
+      EnableTrigger(gg_trg_Teleport_Namek_Pod);
+      EnableTrigger(gg_trg_Teleport_Namek_Pod_2);
+      EnableTrigger(gg_trg_Teleport_Future_Trunks);
+      EnableTrigger(gg_trg_Teleport_Future_Trunks_2);
+      EnableTrigger(gg_trg_Teleport_Future_Cell);
+      EnableTrigger(gg_trg_Teleport_Future_Cell_2);
+    }
 
     EnableTrigger(gg_trg_Auto_Transform_Loop);
 
@@ -75,16 +77,18 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     ExperienceManager.getInstance().disableXPTrigger();
     DisableTrigger(gg_trg_Kill_Hero_Revive);
     // DisableTrigger(gg_trg_Kill_Hero_PvP_and_Saga);
-    DisableTrigger(gg_trg_Teleport_Namek_Frieza);
-    DisableTrigger(gg_trg_Teleport_Namek_Frieza_2);
-    DisableTrigger(gg_trg_Teleport_Namek_Pod);
-    DisableTrigger(gg_trg_Teleport_Namek_Pod_2);
-    DisableTrigger(gg_trg_Teleport_Future_Trunks);
-    DisableTrigger(gg_trg_Teleport_Future_Trunks_2);
-    DisableTrigger(gg_trg_Teleport_Future_Cell);
-    DisableTrigger(gg_trg_Teleport_Future_Cell_2);
-    DisableTrigger(gg_trg_Auto_Transform_Loop);
-    DisableTrigger(gg_trg_Auto_Transform_Turn_On);
+    if (gg_trg_Teleport_Namek_Frieza) {
+      DisableTrigger(gg_trg_Teleport_Namek_Frieza);
+      DisableTrigger(gg_trg_Teleport_Namek_Frieza_2);
+      DisableTrigger(gg_trg_Teleport_Namek_Pod);
+      DisableTrigger(gg_trg_Teleport_Namek_Pod_2);
+      DisableTrigger(gg_trg_Teleport_Future_Trunks);
+      DisableTrigger(gg_trg_Teleport_Future_Trunks_2);
+      DisableTrigger(gg_trg_Teleport_Future_Cell);
+      DisableTrigger(gg_trg_Teleport_Future_Cell_2);
+      DisableTrigger(gg_trg_Auto_Transform_Loop);
+      DisableTrigger(gg_trg_Auto_Transform_Turn_On);
+    }
 
     TriggerExecute(gg_trg_Catchup_Turn_Off);
 

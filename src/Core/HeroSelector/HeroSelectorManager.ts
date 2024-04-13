@@ -78,7 +78,7 @@ export class HeroSelectorManager {
     HeroSelector.show(true);
     CustomUI.show(false, false);
 
-    SetTextTagPos(this.timerText, 29676, 21905, 10);
+    SetTextTagPos(this.timerText, GetRectCenterX(gg_rct_HeroPickRegion), GetRectMaxY(gg_rct_HeroPickRegion), 10);
     SetTextTagColor(this.timerText, 255, 255, 255, 255);
     SetTextTagVisibility(this.timerText, true);
     SetTextTagPermanent(this.timerText, true);
@@ -94,6 +94,10 @@ export class HeroSelectorManager {
         });
       }
     })
+  }
+
+  public checkIsGameStarted(): boolean {
+    return this.isGameStarted;
   }
 
   enableFBSimTest(state: boolean) {

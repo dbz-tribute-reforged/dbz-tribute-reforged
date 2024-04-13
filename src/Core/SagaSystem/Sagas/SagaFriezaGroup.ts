@@ -302,18 +302,27 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       ], 3, 5,
     );
 
-    // create unit
-    const maxFriezaHenchmen = 8;
-    for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 2000;
-      let offsetY = Math.random() * 2000;
-      CreateUnit(Constants.sagaPlayer, Creep.FriezaAppule, 21500 + offsetX, 26100 + offsetY, Math.random() * 360);
-    }
 
     this.addHeroListToSaga(["Frieza 5"], true);
     
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
+    }
+
+    if (this.bosses.length > 0) {
+      // create unit
+      const maxFriezaHenchmen = 8;
+      for (let i = 0; i < maxFriezaHenchmen; ++i) {
+        let offsetX = Math.random() * 2000;
+        let offsetY = Math.random() * 2000;
+        CreateUnit(
+          Constants.sagaPlayer, 
+          Creep.FriezaAppule, 
+          GetUnitX(this.bosses[0]) + offsetX, 
+          GetUnitY(this.bosses[0]) + offsetY, 
+          Math.random() * 360
+        );
+      }
     }
     
     this.ping()
@@ -375,20 +384,29 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
       ],
     );
 
-    // create unit
-    const maxFriezaHenchmen = 8;
-    for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 1200;
-      let offsetY = Math.random() * 1200;
-      const sagaCreep = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), Creep.FriezaPineapple, 23500 + offsetX, 5000 + offsetY, Math.random() * 360);
-    }
 
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
     
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
+
+    if (this.bosses.length > 0) {
+      // create unit
+      for (let i = 0; i < 8; ++i) {
+        let offsetX = Math.random() * 1000;
+        let offsetY = Math.random() * 1000;
+        const sagaCreep = CreateUnit(
+          Player(PLAYER_NEUTRAL_AGGRESSIVE), 
+          Creep.FriezaPineapple, 
+          GetUnitX(this.bosses[0]) + offsetX, 
+          GetUnitY(this.bosses[0]) + offsetY, 
+          Math.random() * 360
+        );
+      }
+    }
     
+
     this.ping()
     this.setupBossDeathActions(this);
   }

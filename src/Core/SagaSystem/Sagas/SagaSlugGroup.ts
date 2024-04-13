@@ -31,18 +31,25 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
       ],
     );
     
-    // create unit
-    for (let i = 0; i < 5; ++i) {
-      let offsetX = Math.random() * 1000;
-      let offsetY = Math.random() * 1000;
-      const sagaCreep = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), Creep.SlugGuard, 8700 + offsetX, -5200 + offsetY, Math.random() * 360);
-    }
 
     this.addHeroListToSaga(["Lord Slug"], true);
     this.slug = this.bosses[0];
 
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+
+    // create unit
+    for (let i = 0; i < 5; ++i) {
+      let offsetX = Math.random() * 1000;
+      let offsetY = Math.random() * 1000;
+      const sagaCreep = CreateUnit(
+        Player(PLAYER_NEUTRAL_AGGRESSIVE), 
+        Creep.SlugGuard, 
+        GetUnitX(this.slug) + offsetX, 
+        GetUnitY(this.slug) + offsetY, 
+        Math.random() * 360
+      );
     }
 
     this.ping()
