@@ -93,10 +93,10 @@ export module Constants {
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 9;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
-    -8200, 20000
+    -15200, 16000
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    9200, 24000
+    -5800, 23000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;
