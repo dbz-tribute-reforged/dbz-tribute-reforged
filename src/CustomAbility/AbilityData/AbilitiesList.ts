@@ -25,7 +25,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Zanzo Dash",
+      title: "Zanzo Dash",
       body: 
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -58,7 +58,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Zanzoken",
+      title: "Zanzoken",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -91,7 +91,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMinatoZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Hiraishin Zanzo",
+      title: "Hiraishin Zanzo",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -128,7 +128,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicGuard.blp",
     },
     tooltip: {
-      title: "(X) Guard",
+      title: "Guard",
       body: 
         "Block 70% of incoming damage until more than 3 * STR damage is blocked for 1.5s.|n" +
         "After a 0.3s delay, damage is reduced by 95% up to 3 * STR for the next 0.3s.|n" +  
@@ -161,7 +161,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicMaxPower.blp",
     },
     tooltip: {
-      title: "(C) Max Power",
+      title: "Max Power",
       body: 
         "+20% ability damage, +50% attack damage, +132 ms.|n" + 
         "Cost: 40 SP|n" +
@@ -196,7 +196,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicDeflect.blp",
     },
     tooltip: {
-      title: "(V) Deflect",
+      title: "Deflect",
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
@@ -230,7 +230,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
     },
     tooltip: {
-      title: "(V) Thrilla Gorilla",
+      title: "Thrilla Gorilla",
       body: 
         "Instantly purges all debuffs from Donkey Kong.|n" + 
         "Becomes invulnerable for 0.03s.|n" +
@@ -264,7 +264,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGenosStand.blp",
     },
     tooltip: {
-      title: "(V) Stand Up",
+      title: "Stand Up",
       body: 
         "Stand up after any attack, purging all negative debuffs.|n" + 
         "Becomes invulnerable for 0.03s.|n" +

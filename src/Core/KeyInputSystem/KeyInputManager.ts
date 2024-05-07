@@ -12,6 +12,7 @@ export class KeyInputManager {
   }
 
   public keyInputTrigger: trigger = CreateTrigger();
+  public callbacks: ((player: player, ki: KeyInput) => void)[] = [];
 
   constructor() {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -50,6 +51,14 @@ export class KeyInputManager {
       if (ki.isDown != isDown) {
         ki.isDown = isDown;
         ki.meta = meta;
+      }
+
+      if (ki.isDown) {
+        Globals.customPlayers[playerId].lastKey = key;
+      }
+
+      for (const func of this.callbacks) {
+        func(player, ki);
       }
 
       return false;

@@ -104,6 +104,7 @@ function tsPostMain() {
   TimerStart(CreateTimer(), 0.1, false, () => {
     transferHostPlayer();
     CustomPlayerTest();
+    keyInputManager = KeyInputManager.getInstance();
     heroSelectorManager = HeroSelectorManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
@@ -111,7 +112,6 @@ function tsPostMain() {
   // delay init
   TimerStart(CreateTimer(), 5, false, () => {
     // initialize some systems
-    keyInputManager = KeyInputManager.getInstance();
     smartPingManager = SmartPingManager.getInstance();
     creepManager = CreepManager.getInstance();
     DestroyTimer(GetExpiredTimer());

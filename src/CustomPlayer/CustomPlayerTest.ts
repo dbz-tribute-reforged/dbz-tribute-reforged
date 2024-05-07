@@ -25,6 +25,9 @@ import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
+import { KeyInput } from "Core/KeyInputSystem/KeyInput";
+import { CustomAbilityButton } from "./AbilityButton";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -105,6 +108,65 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
       }
     }
   });
+}
+
+export function createCustomAbilityButtonTrigger(i: number) {
+  const trig = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(trig, BlzGetFrameByName("abilityButton" + I2S(i), i), FRAMEEVENT_CONTROL_CLICK);
+  TriggerAddAction(trig, () => {
+    customAbilityActivate(GetTriggerPlayer(), i);
+  });
+}
+
+export function customAbilityActivateButton(player: player, ki: KeyInput) {
+  const playerId = GetPlayerId(player);
+  const customPlayer = Globals.customPlayers[playerId];
+  customPlayer.abilityButtons.forEach((button: CustomAbilityButton, i: number) => {
+    if (ki.oskey == button.key && ki.isDown) {
+      customAbilityActivate(player, i);
+    }
+  });
+}
+
+export function customAbilityActivate(player: player, index: number) {
+  const playerId = GetPlayerId(player);
+  const abilName = Globals.customPlayers[playerId].abilityButtons[index].name;
+  // const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
+  for (const customHero of Globals.customPlayers[playerId].allHeroes) {
+    if (!customHero || !IsUnitSelected(customHero.unit, player)) continue;
+
+    const abilityInput = new CustomAbilityInput(
+      0,
+      customHero,
+      player,
+      1,
+      Globals.customPlayers[playerId].orderPoint,
+      Globals.customPlayers[playerId].mouseData,
+      Globals.customPlayers[playerId].lastCastPoint.clone(),
+      Globals.customPlayers[playerId].targetUnit,
+      Globals.customPlayers[playerId].lastCastUnit,
+    );
+    
+    // cant cast zanzo if inside barrier
+    if (
+      (
+        abilName == AbilityNames.BasicAbility.ZANZO_DASH
+        || abilName == AbilityNames.BasicAbility.ZANZOKEN
+        || abilName == AbilityNames.Minato.HIRAISHIN_ZANZO
+      ) && Globals.barrierBlockUnits.has(customHero.unit)
+    ) {
+      continue;
+    }
+
+    if (customHero.canCastAbility(abilName, abilityInput)) {
+      // show custom ability name on activation, if castable
+      TextTagHelper.showPlayerColorTextOnUnit(abilName, playerId, customHero.unit);
+      if (abilName == AbilityNames.BasicAbility.MAX_POWER) {
+        SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      }
+      customHero.useAbility(abilName, abilityInput);
+    }
+  }
 }
 
 export function addKeyEvent(trigger: trigger, oskey: oskeytype, metaKey: number, keyDown: boolean) {
@@ -432,80 +494,39 @@ export function CustomPlayerTest() {
     return false;
   });
 
-  // zanzo activation trigger
-  // tied to z for now
-  const abil0 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
-  // replace key events with more organized method of key reading
-  addKeyEvent(abil0, OSKEY_Z, 0, true);
-  addKeyEvent(abil0, OSKEY_Y, 0, true);
-  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
-  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
-  addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
+  for (let i = 0; i < 4; ++i) {
+    createCustomAbilityButtonTrigger(i);
+  }
+  KeyInputManager.getInstance().callbacks.push(customAbilityActivateButton);
 
-  const abil1 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil1, OSKEY_X, 0, true);
-  addAbilityAction(abil1, AbilityNames.BasicAbility.GUARD);
+  // // zanzo activation trigger
+  // // tied to z for now
+  // const abil0 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
+  // // replace key events with more organized method of key reading
+  // addKeyEvent(abil0, OSKEY_Z, 0, true);
+  // addKeyEvent(abil0, OSKEY_Y, 0, true);
+  // addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
+  // addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
+  // addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
 
-  const abil2 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil2, OSKEY_C, 0, true);
-  addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
-  addAbilityAction(abil2, AbilityNames.Cell.SUPER_CHARGE);
+  // const abil1 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil1, OSKEY_X, 0, true);
+  // addAbilityAction(abil1, AbilityNames.BasicAbility.GUARD);
 
-  const abil3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_V, 0, true);
-  addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
-  addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
-  addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
-  
+  // const abil2 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil2, OSKEY_C, 0, true);
+  // addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
+  // addAbilityAction(abil2, AbilityNames.Cell.SUPER_CHARGE);
 
-  /*
-
-  const abil3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, AbilityNames.Bardock.FUTURE_SIGHT);
-
-  const abil4 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, AbilityNames.Bardock.TYRANT_LANCER);
-
-  const abil5 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, AbilityNames.Bardock.RIOT_JAVELIN);
-
-  const abil6 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, AbilityNames.Bardock.REBELLION_SPEAR);
-
-  const abil7 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, AbilityNames.Vegeta.ANGRY_SHOUT);
-
-  const abil8 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, AbilityNames.Bardock.SAIYAN_SPIRIT);
-
-
-
-
-
-
-
-
-  const abil9 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil9, OSKEY_V, 0, true);
-  addAbilityAction(abil9, "SS Rage");
-  */
+  // const abil3 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil3, OSKEY_V, 0, true);
+  // addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
+  // addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
+  // addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
  
   // hack for qwertz keyboard integration
   // const alreadyQwertzed: boolean[] = [];

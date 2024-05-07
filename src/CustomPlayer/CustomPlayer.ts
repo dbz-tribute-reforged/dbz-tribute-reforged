@@ -2,6 +2,8 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { KeyInput } from "Core/KeyInputSystem/KeyInput";
+import { AbilityNames } from "CustomAbility/AbilityNames";
+import { CustomAbilityButton } from "./AbilityButton";
 
 export class CustomPlayer {
   public name: string;
@@ -22,7 +24,10 @@ export class CustomPlayer {
   public useZanzoDash: boolean;
   public heroPickSpawn: Vector2D;
 
-  public osKeyMap: Map<oskeytype, KeyInput> = new Map();
+  public osKeyMap: Map<oskeytype, KeyInput>;
+  public lastKey: oskeytype;
+
+  public abilityButtons: CustomAbilityButton[];
 
   public dualTechSendFlag: boolean;
   public dualTechReceiveFlag: boolean;
@@ -48,6 +53,16 @@ export class CustomPlayer {
     this.useZanzoDash = false;
 
     this.heroPickSpawn = new Vector2D();
+
+    this.osKeyMap = new Map();
+    this.lastKey = null;
+
+    this.abilityButtons = [
+      new CustomAbilityButton(OSKEY_Z, AbilityNames.BasicAbility.ZANZOKEN),
+      new CustomAbilityButton(OSKEY_X, AbilityNames.BasicAbility.GUARD),
+      new CustomAbilityButton(OSKEY_C, AbilityNames.BasicAbility.MAX_POWER),
+      new CustomAbilityButton(OSKEY_V, AbilityNames.BasicAbility.DEFLECT),
+    ];
 
     this.dualTechSendFlag = false;
     this.dualTechReceiveFlag = false;

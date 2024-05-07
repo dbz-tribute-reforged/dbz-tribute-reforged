@@ -7,6 +7,8 @@ import { HeroSelectUnitList } from "./HeroSelectUnitList";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
+import { AbilityShop } from "Core/AbilityShop/AbilityShop";
+import { Frame } from "w3ts";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -33,6 +35,8 @@ export class HeroSelectorManager {
   public timerText: texttag;
 
   public heroSelectUnits: HeroSelectUnit[];
+
+  public abilShop: AbilityShop;
 
 
   public static getInstance() {
@@ -64,6 +68,9 @@ export class HeroSelectorManager {
     this.heroSelectUnits = [];
 
     this.init();
+
+    this.abilShop = new AbilityShop();
+    this.abilShop.setup();
   }
 
   init() {
