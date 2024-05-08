@@ -43,11 +43,11 @@ export class AbilityShop {
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142090, 0.0620000)
         
       this.AbilityTooltipBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.248000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.240000)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.200000, 0.120000)
   
       this.AbilityTooltip = new Frame("name", this.AbilityTooltipBG, 0, 0, "Text", "")
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00800, 0.240000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00800, 0.232000)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.198000, 0.120000)
         .setText("|cffFFCC00|r")
         .setEnabled(true)
@@ -429,11 +429,12 @@ export class AbilityShop {
   public clickSelect(index: number) {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    if (this.playerSelectIndex[playerId] == AbilityShop.INVALID_INDEX) {
-      this.playerSelectIndex[playerId] = index;
-    } else {
-      this.playerSelectIndex2[playerId] = index;
-    }
+    this.playerSelectIndex[playerId] = index;
+    // if (this.playerSelectIndex[playerId] == AbilityShop.INVALID_INDEX) {
+    //   this.playerSelectIndex[playerId] = index;
+    // } else {
+    //   this.playerSelectIndex2[playerId] = index;
+    // }
     this.doAbilitySelection(player);
   }
 
@@ -468,10 +469,6 @@ export class AbilityShop {
 
     const customPlayer = Globals.customPlayers[playerId];
 
-    if (shopIndex != AbilityShop.INVALID_INDEX) {
-      this.tooltipShop(shopIndex);
-    }
-
     if (
       selectIndex == AbilityShop.INVALID_INDEX
       || (
@@ -479,11 +476,11 @@ export class AbilityShop {
         && shopIndex == AbilityShop.INVALID_INDEX
       )
     ) {
-      // if (selectIndex != AbilityShop.INVALID_INDEX) {
-      //   this.tooltipSelect(selectIndex);
-      // } else if (shopIndex != AbilityShop.INVALID_INDEX) {
-      //   this.tooltipShop(shopIndex);
-      // }
+      if (selectIndex != AbilityShop.INVALID_INDEX) {
+        this.tooltipSelect(selectIndex);
+      } else if (shopIndex != AbilityShop.INVALID_INDEX) {
+        this.tooltipShop(shopIndex);
+      }
       return;
     }
 
@@ -575,7 +572,7 @@ export class AbilityShop {
       if (player == GetLocalPlayer()) {
         this.highlightSprite
           .setAllPoints(this.AbilityShopButtonT[index])
-          .setEnabled(true)
+          .setEnabled(true);
       }
     }
   }

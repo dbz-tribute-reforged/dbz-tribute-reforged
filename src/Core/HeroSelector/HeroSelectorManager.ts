@@ -198,17 +198,17 @@ export class HeroSelectorManager {
   }
 
   hookHeroSelectorHeroButton() {
-    const func = HeroSelector["actionPressHeroButton"];
-    HeroSelector["actionPressHeroButton"] = function() {
-      print("C");
-      func();
-      print("B");
-      const button = BlzGetTriggerFrame();
-      const player = GetTriggerPlayer();
-      const buttonIndex = HeroSelector["HeroButtons"][button];
-      const unitCode = HeroSelector["UnitData"][buttonIndex];
-      print("A", unitCode);
-    }
+    // const func = HeroSelector["actionPressHeroButton"];
+    // HeroSelector["actionPressHeroButton"] = function() {
+    //   print("C");
+    //   func();
+    //   print("B");
+    //   const button = BlzGetTriggerFrame();
+    //   const player = GetTriggerPlayer();
+    //   const buttonIndex = HeroSelector["HeroButtons"][button];
+    //   const unitCode = HeroSelector["UnitData"][buttonIndex];
+    //   print("A", unitCode);
+    // }
   }
 
   setupRepickTrigger() {
