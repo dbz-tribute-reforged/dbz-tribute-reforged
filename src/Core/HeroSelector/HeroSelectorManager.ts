@@ -78,6 +78,7 @@ export class HeroSelectorManager {
     TeamViewer.Init();
     this.setupPlayerSpawns();
     this.setupUnitCreatedFunction();
+    this.hookHeroSelectorHeroButton();
     this.setupRepickTrigger();
     this.setupHideSelectorTrigger();
     this.setupHeroes();
@@ -194,6 +195,20 @@ export class HeroSelectorManager {
       //     globals.udg_HeroSelectorEvent = 1.0
       // end
     };
+  }
+
+  hookHeroSelectorHeroButton() {
+    const func = HeroSelector["actionPressHeroButton"];
+    HeroSelector["actionPressHeroButton"] = function() {
+      print("C");
+      func();
+      print("B");
+      const button = BlzGetTriggerFrame();
+      const player = GetTriggerPlayer();
+      const buttonIndex = HeroSelector["HeroButtons"][button];
+      const unitCode = HeroSelector["UnitData"][buttonIndex];
+      print("A", unitCode);
+    }
   }
 
   setupRepickTrigger() {

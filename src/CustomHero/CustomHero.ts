@@ -87,34 +87,39 @@ export class CustomHero {
     // then read some data and apply special abilities for
     // relevant heroes
     const playerId = GetPlayerId(GetOwningPlayer(unit));
-    if (id == Id.minato) {
-      this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
-    } else {
-      if (
-        playerId >= 0 
-        && playerId < Constants.maxActivePlayers 
-        && Globals.customPlayers[playerId].useZanzoDash
-      ) {
-        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
-      } else {
-        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
-      }
-    }
-    this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
 
-    if (id == Id.cellPerfect) {
-      this.addAbilityFromAll(AbilityNames.Cell.SUPER_CHARGE);
-    } else {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    for (let i = 0; i < Globals.customPlayers[playerId].abilityButtons.length; ++i) {
+      this.addAbilityFromAll(Globals.customPlayers[playerId].abilityButtons[i].name);
     }
 
-    if (id == Id.donkeyKong) {
-      this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
-    } else if (id == Id.genos) {
-      this.addAbilityFromAll(AbilityNames.Genos.STAND_UP);
-    } else {
-      this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
-    }
+    // if (id == Id.minato) {
+    //   this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
+    // } else {
+    //   if (
+    //     playerId >= 0 
+    //     && playerId < Constants.maxActivePlayers 
+    //     && Globals.customPlayers[playerId].useZanzoDash
+    //   ) {
+    //     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    //   } else {
+    //     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+    //   }
+    // }
+    // this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
+
+    // if (id == Id.cellPerfect) {
+    //   this.addAbilityFromAll(AbilityNames.Cell.SUPER_CHARGE);
+    // } else {
+    //   this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    // }
+
+    // if (id == Id.donkeyKong) {
+    //   this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
+    // } else if (id == Id.genos) {
+    //   this.addAbilityFromAll(AbilityNames.Genos.STAND_UP);
+    // } else {
+    //   this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
+    // }
     
     // TODO: fix item abilities for heroes... 
     // item workaround.... for now

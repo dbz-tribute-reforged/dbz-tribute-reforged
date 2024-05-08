@@ -66,6 +66,17 @@ export const HideUnitComponents = [
     forceReselect: false,
   },
   {
+    name: "hide unit sparking", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 1,
+    doHide: false,
+    doInvul: true,
+    preventMovement: true,
+    removeNegativeBuffs: true,
+    forceReselect: false,
+  },
+  {
     name: "hide unit dk thrilla gorilla", 
     repeatInterval: 1, 
     startTick: 0,

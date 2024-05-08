@@ -54,8 +54,10 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "",
     icon: {
-      enabled: "BTNBasicZanzo.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
+      // enabled: "BTNBasicZanzo.blp",
+      // disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
       title: "Zanzoken",
@@ -181,7 +183,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 33,
+    costAmount: 30,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -199,9 +201,8 @@ export const AbilitiesList = [
       title: "Deflect",
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
-        "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Enemies in 450 AOE are slowed 50% for 1s|n" +
-        "Cost: 33 SP|nCD: 2"
+        "Deflects incoming beams and slows nearby enemies by 50% for 1s.|n" +
+        "Cost: 30 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -209,6 +210,40 @@ export const AbilitiesList = [
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.BasicAbility.SPARKING,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 60,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBasicSparking.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicSparking.blp",
+    },
+    tooltip: {
+      title: "Sparking Blast",
+      body: 
+        "Instantly purges all debuffs.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemy heroes are repelled over 0.5s.|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 60 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit sparking" },
+      { name: "knockback sparking hero pushback" },
+      { name: "sfx sparking" },
     ],
   },
   // -------------------------------------------

@@ -5,6 +5,7 @@ export module AbilityNames {
     export const GUARD: string = "Guard";
     export const MAX_POWER: string = "Max Power";
     export const DEFLECT: string = "Deflect";
+    export const SPARKING: string = "Sparking";
   }
 
   export module Goku {
