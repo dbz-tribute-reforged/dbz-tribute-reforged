@@ -3500,7 +3500,7 @@ export module SimpleSpellSystem {
         if (sfx) {
           DestroyEffect(sfx);
         }
-        FlushChildHashtable(Globals.genericSpellHashtable, unitId);
+        SaveInteger(Globals.genericSpellHashtable, unitId, 0, 0);
         DestroyTimer(GetExpiredTimer());
       });
     }
@@ -5805,13 +5805,15 @@ export module SimpleSpellSystem {
   }
 
   export function doUltimateCharge(spellId: number) {
+    const caster = GetTriggerUnit();
+    doUltimateChargeUnit(caster, 0.04, 0.01);
+  }
+
+  export function doUltimateChargeUnit(caster: unit, mpPct: number, hpPct: number) {
     const tickRate = 0.03;
     const endTick = 2000;
     const minHPTick = 7 * 33;
-    const mpPct = 0.04;
-    const hpPct = 0.01;
 
-    const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
     const chargeKey = StringHash("ultimate_charge_flag");
 
@@ -5828,6 +5830,9 @@ export module SimpleSpellSystem {
       GetUnitX(caster), GetUnitY(caster)
     );
     BlzSetSpecialEffectScale(dustWaveSfx, 1.5);
+
+    const playerId = GetPlayerId(GetOwningPlayer(caster));
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
 
     const tpTimer = TimerManager.getInstance().get();
     TimerStart(tpTimer, tickRate, true, () => {
@@ -5868,7 +5873,10 @@ export module SimpleSpellSystem {
       }
         
       // hack to check channel
-      if (GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF) {
+      // if (GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF) {
+      //   tick += endTick;
+      // }
+      if (tick > 1 && !ch.isChanneling()) {
         tick += endTick;
       }
       ++tick;

@@ -3274,8 +3274,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     
 
 
-
+    
     // hp, 1 agi gives 0.05 hp regen
+    // at 1:1, 0.5% of max hp/s
     let incHp = 0;
     let hpMult = 1.0;
     let hpAgi = Pow(heroAgi / heroStr, Constants.AGILITY_REGEN_EXPONENT);
@@ -3325,6 +3326,7 @@ export function setupRegenTimer(customHero: CustomHero) {
 
 
     // 1 agi gives 0.1 mana regen
+    // at 1:1, 1% of max MP/s
     let mpAgi = Pow(heroAgi / heroInt, Constants.AGILITY_REGEN_EXPONENT);
     let mpMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {

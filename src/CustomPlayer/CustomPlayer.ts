@@ -21,7 +21,6 @@ export class CustomPlayer {
   public orderWidget: widget | null;
   public lastOrderId: number;
 
-  public useZanzoDash: boolean;
   public heroPickSpawn: Vector2D;
 
   public osKeyMap: Map<oskeytype, KeyInput>;
@@ -49,8 +48,6 @@ export class CustomPlayer {
     this.usingCustomUI = false;
     this.orderWidget = null;
     this.lastOrderId = 0;
-
-    this.useZanzoDash = false;
 
     this.heroPickSpawn = new Vector2D();
 

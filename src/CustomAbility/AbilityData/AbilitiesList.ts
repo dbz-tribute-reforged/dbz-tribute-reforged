@@ -30,7 +30,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for moving within 500 range of an enemy hero.|n" +
-        "|nCost: 45 SP|nCD: 8 (varies)",
+        "Cost: 45 SP|nCD: 8 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -54,10 +54,8 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "",
     icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
-      // enabled: "BTNBasicZanzo.blp",
-      // disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
+      enabled: "BTNBasicZanzo2.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo2.blp",
     },
     tooltip: {
       title: "Zanzoken",
@@ -312,6 +310,37 @@ export const AbilitiesList = [
       { name: "hide unit dk thrilla gorilla" },
       { name: "debuff slow genos stand up" },
       { name: "sfx genos stand up" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.BasicAbility.CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.SP,
+    costAmount: 5,
+    duration: 999999,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBasicCharge.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicCharge.blp",
+    },
+    tooltip: {
+      title: "Max Charge",
+      body: 
+        "Stand still to recover MP over time. After 7s HP is also restored.|n" + 
+        "Restores Agi/Int x 2% max mana per second.|n" +
+        "Restores Agi/Str x 0.5% max hp per second after 7s.|n" +
+        "Cost: 5 SP|n" +
+        "CD: 1"
+    },
+    components: [
+      { name: "channel caster fake channel" },
     ],
   },
   // -------------------------------------------

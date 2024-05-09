@@ -321,6 +321,7 @@ export class AbilityShop {
           AbilityNames.BasicAbility.DEFLECT,
           AbilityNames.BasicAbility.SPARKING,
           AbilityNames.BasicAbility.ZANZO_DASH,
+          AbilityNames.BasicAbility.CHARGE,
         ]
       )
     }
@@ -348,7 +349,7 @@ export class AbilityShop {
     for (const player of Constants.activePlayers) {
       this.displayShop(player);
       this.displaySelected(player);
-      this.tooltipSelect(0);
+      this.tooltipSelect(player, 0);
     }
   }
 
@@ -477,9 +478,9 @@ export class AbilityShop {
       )
     ) {
       if (selectIndex != AbilityShop.INVALID_INDEX) {
-        this.tooltipSelect(selectIndex);
+        this.tooltipSelect(player, selectIndex);
       } else if (shopIndex != AbilityShop.INVALID_INDEX) {
-        this.tooltipShop(shopIndex);
+        this.tooltipShop(player, shopIndex);
       }
       return;
     }
@@ -497,13 +498,13 @@ export class AbilityShop {
 
       // give player shop abil
       customPlayer.abilityButtons[selectIndex].name = shopAbilName;
-      this.tooltipSelect(selectIndex);
+      this.tooltipSelect(player, selectIndex);
     } else {
       // swap
       const tmp = customPlayer.abilityButtons[selectIndex].name;
       customPlayer.abilityButtons[selectIndex].name = customPlayer.abilityButtons[selectIndex2].name;
       customPlayer.abilityButtons[selectIndex2].name = tmp;
-      this.tooltipSelect(selectIndex2);
+      this.tooltipSelect(player, selectIndex2);
     }
 
     this.displaySelected(player);
@@ -539,7 +540,7 @@ export class AbilityShop {
   //   const trig = new Trigger();
   //   trig.triggerRegisterFrameEvent(this.AbilitySelectButtonT[index], FRAMEEVENT_MOUSE_ENTER);
   //   trig.addAction(() => {
-  //     this.tooltipSelect(index);
+  //     this.tooltipSelect(GetTriggerPlayer(), index);
   //   })
   // }
 
@@ -547,12 +548,11 @@ export class AbilityShop {
   //   const trig = new Trigger();
   //   trig.triggerRegisterFrameEvent(this.AbilityShopButtonT[index], FRAMEEVENT_MOUSE_ENTER);
   //   trig.addAction(() => {
-  //     this.tooltipShop(index);
+  //     this.tooltipShop(GetTriggerPlayer(), index);
   //   })
   // }
 
-  public tooltipSelect(index: number) {
-    const player = GetTriggerPlayer();
+  public tooltipSelect(player: player, index: number) {
     const playerId = GetPlayerId(player);
     if (index < Globals.customPlayers[playerId].abilityButtons.length) {
       this.displayTooltip(player, Globals.customPlayers[playerId].abilityButtons[index].name);
@@ -564,8 +564,7 @@ export class AbilityShop {
     }
   }
 
-  public tooltipShop(index: number) {
-    const player = GetTriggerPlayer();
+  public tooltipShop(player: player, index: number) {
     const abilNames = this.playerShopMap.get(player);
     if (index < abilNames.length) {
       this.displayTooltip(player, abilNames[index]);
@@ -603,7 +602,7 @@ export class AbilityShop {
     // });
 
     this.displaySelected(player);
-    this.tooltipSelect(0);
+    this.tooltipSelect(player, 0);
   }
 
 }

@@ -88,8 +88,15 @@ export class CustomHero {
     // relevant heroes
     const playerId = GetPlayerId(GetOwningPlayer(unit));
 
-    for (let i = 0; i < Globals.customPlayers[playerId].abilityButtons.length; ++i) {
-      this.addAbilityFromAll(Globals.customPlayers[playerId].abilityButtons[i].name);
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      for (let i = 0; i < Globals.customPlayers[playerId].abilityButtons.length; ++i) {
+        this.addAbilityFromAll(Globals.customPlayers[playerId].abilityButtons[i].name);
+      }
+    } else {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+      this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
+      this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+      this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
     }
 
     // if (id == Id.minato) {

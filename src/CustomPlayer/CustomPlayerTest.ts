@@ -28,6 +28,7 @@ import { TimerManager } from "Core/Utility/TimerManager";
 import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
 import { KeyInput } from "Core/KeyInputSystem/KeyInput";
 import { CustomAbilityButton } from "./AbilityButton";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -164,6 +165,12 @@ export function customAbilityActivate(player: player, index: number) {
       if (abilName == AbilityNames.BasicAbility.MAX_POWER) {
         SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
       }
+
+      if (abilName == AbilityNames.BasicAbility.CHARGE) {
+        IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
+        SimpleSpellSystem.doUltimateChargeUnit(customHero.unit, 0.02, 0.005);
+      }
+
       customHero.useAbility(abilName, abilityInput);
     }
   }
@@ -1274,43 +1281,6 @@ export function CustomPlayerTest() {
         print("DT: " + R2S(Globals.ddsTimeoutSeconds));
       }
     }
-  });
-
-
-  const zanzoToggleTrigger = CreateTrigger();
-  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zanzo", true);
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zd", true);
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zz", true);
-  }
-  TriggerAddAction(zanzoToggleTrigger, () => {
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-      Globals.customPlayers[playerId].useZanzoDash = !Globals.customPlayers[playerId].useZanzoDash;
-
-      if (Globals.customPlayers[playerId].useZanzoDash) {
-        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Enabled|r");
-      } else {
-        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Disabled|r");
-      }
-    }
-  });
-  TimerStart(CreateTimer(), 15, false, () => {
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 
-      10, 
-      "|cffffff00Last chance to change to zanzo dash! (Requires repick)|r"
-    );
-    DestroyTimer(GetExpiredTimer());
-  });
-  TimerStart(CreateTimer(), 60, false, () => {
-    // DisplayTimedTextToForce(
-    //   bj_FORCE_ALL_PLAYERS, 
-    //   10, 
-    //   "|cffff2020Zanzo Dash Toggle Disabled|r"
-    // );
-    DisableTrigger(zanzoToggleTrigger);
-    DestroyTimer(GetExpiredTimer());
   });
 
   const dualTechToggleTrigger = CreateTrigger();
