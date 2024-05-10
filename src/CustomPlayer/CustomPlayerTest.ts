@@ -166,7 +166,7 @@ export function customAbilityActivate(player: player, index: number) {
         SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
       }
 
-      if (abilName == AbilityNames.BasicAbility.CHARGE) {
+      if (abilName == AbilityNames.BasicAbility.MAX_CHARGE) {
         IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
         SimpleSpellSystem.doUltimateChargeUnit(customHero.unit, 0.02, 0.005);
       }

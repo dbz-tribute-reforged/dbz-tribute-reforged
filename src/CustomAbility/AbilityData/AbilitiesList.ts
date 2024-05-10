@@ -212,7 +212,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.BasicAbility.SPARKING,
+    name: AbilityNames.BasicAbility.SPARKING_BLAST,
     currentCd: 0,
     maxCd: 15,
     costType: CostType.SP,
@@ -314,7 +314,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.BasicAbility.CHARGE,
+    name: AbilityNames.BasicAbility.MAX_CHARGE,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.SP,

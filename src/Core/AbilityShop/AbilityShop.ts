@@ -4,10 +4,27 @@ import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 import { CustomAbilityButton } from "CustomPlayer/AbilityButton";
 import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 import { Frame, Trigger } from "w3ts"
+import { AbilityShopData } from "./AbilityShopData";
 
 export class AbilityShop {
   static readonly INVALID_INDEX = -1;
+  static readonly DEFAULT_SELECT_ABILITIES = [
+    AbilityNames.BasicAbility.ZANZOKEN,
+    AbilityNames.BasicAbility.GUARD,
+    AbilityNames.BasicAbility.MAX_POWER,
+    AbilityNames.BasicAbility.DEFLECT,
+  ];
+  static readonly DEFAULT_SHOP_ABILITIES = [
+    AbilityNames.BasicAbility.ZANZOKEN,
+    AbilityNames.BasicAbility.GUARD,
+    AbilityNames.BasicAbility.MAX_POWER,
+    AbilityNames.BasicAbility.DEFLECT,
+    AbilityNames.BasicAbility.SPARKING_BLAST,
+    AbilityNames.BasicAbility.ZANZO_DASH,
+    AbilityNames.BasicAbility.MAX_CHARGE,
+  ];
 
+  canSwap: boolean = false;
   playerSelectIndex: number[] = [];
   playerSelectIndex2: number[] = [];
   playerShopIndex: number[] = [];
@@ -306,6 +323,16 @@ export class AbilityShop {
     
   }
 
+  public setCanSwap(b: boolean) {
+    this.canSwap = b;
+    this.highlightSprite.setModel(
+      this.canSwap ?
+        "UI\\Feedback\\Autocast\\UI-ModalButtonOn.mdl" :
+        "war3mapImported\\HeroSelectorBan.mdl"
+      , 0
+    );
+  }
+
   public setup() {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       this.playerKeyFlag.push(false);
@@ -314,15 +341,7 @@ export class AbilityShop {
       this.playerShopIndex.push(AbilityShop.INVALID_INDEX);
       this.playerShopMap.set(
         Player(i), 
-        [
-          AbilityNames.BasicAbility.ZANZOKEN,
-          AbilityNames.BasicAbility.GUARD,
-          AbilityNames.BasicAbility.MAX_POWER,
-          AbilityNames.BasicAbility.DEFLECT,
-          AbilityNames.BasicAbility.SPARKING,
-          AbilityNames.BasicAbility.ZANZO_DASH,
-          AbilityNames.BasicAbility.CHARGE,
-        ]
+        AbilityShop.DEFAULT_SHOP_ABILITIES
       )
     }
 
@@ -482,6 +501,9 @@ export class AbilityShop {
       } else if (shopIndex != AbilityShop.INVALID_INDEX) {
         this.tooltipShop(player, shopIndex);
       }
+      if (!this.canSwap) {
+        this.resetIndex(playerId);
+      }
       return;
     }
 
@@ -525,6 +547,7 @@ export class AbilityShop {
 
   public displayShop(player: player) {
     const shopAbils = this.playerShopMap.get(player);
+    let j = 0;
     shopAbils.forEach((name: string, i: number) => {
       const abil = CustomAbilityManager.getInstance().getAbility(name);
       if (player == GetLocalPlayer()) {
@@ -532,7 +555,13 @@ export class AbilityShop {
           abil ? abil.icon.enabled : "Blank.blp", 0, true
         );
       }
+      j = i;
     });
+    for (j = j+1; j < this.BackdropAbilityShopButtonT.length; ++j) {
+      if (player == GetLocalPlayer()) {
+        this.BackdropAbilityShopButtonT[j].setTexture("Blank.blp", 0, true);
+      }
+    }
   }
 
   // FRAMEEVENT_MOUSE_ENTER has infinite loop bug that glitches the mouse
@@ -584,25 +613,56 @@ export class AbilityShop {
     }
   }
 
-  public resetPlayerUnit(player: player, unitId: number) {
+  public setPlayerShop(player: player, unitCode: number) {
     // change shop to allow more abilities
+
+    this.resetPlayerShop(player, unitCode);
+    this.resetPlayerSelected(player);
+
+    this.displaySelected(player);
+    this.displayShop(player);
+    this.tooltipSelect(player, 0);
+  }
+
+  public resetPlayerShop(player: player, unitCode: number) {
+    const abils: string[] = [];
+    const shopData = AbilityShopData.get(unitCode);
+    if (shopData && shopData[0].length > 0) {
+      abils.push(...shopData[0]);
+    }
+    for (let i = 0; i < AbilityShop.DEFAULT_SHOP_ABILITIES.length; ++i) {
+      if (shopData && shopData[1].length > 0) {
+        const removeIndex = shopData[1].findIndex((str: string) => {
+          return str == AbilityShop.DEFAULT_SHOP_ABILITIES[i];
+        });
+        if (removeIndex >= 0) continue;
+      }
+      abils.push(AbilityShop.DEFAULT_SHOP_ABILITIES[i]);
+    }
+
+    this.playerShopMap.set(player, abils);
   }
 
   public resetPlayerSelected(player: player) {
+    const abilNames = this.playerShopMap.get(player);
     const playerId = GetPlayerId(player);
-    // remove non-standard abilities
-    
-    // Globals.customPlayers[playerId].abilityButtons.forEach((value: CustomAbilityButton, i: number) => {
-    //   const abil = CustomAbilityManager.getInstance().getAbility(value.name);
-    //   if (player == GetLocalPlayer()) {
-    //     this.BackdropAbilitySelectButtonT[i].setTexture(
-    //       abil ? abil.icon.enabled : "Blank.blp", 0, true
-    //     );
-    //   }
-    // });
+    const customPlayer = Globals.customPlayers[playerId];
 
-    this.displaySelected(player);
-    this.tooltipSelect(player, 0);
+    customPlayer.abilityButtons.forEach((playerAbil: CustomAbilityButton, i: number) => {
+      // if ability isnt in player's shop
+      // replace it with another valid ability
+      const val = abilNames.findIndex((str: string) => {
+        return playerAbil.name == str;
+      });
+      if (val < 0) {
+        for (const name of abilNames) {
+          if (this.isAbilitySelectValid(customPlayer, name)) {
+            playerAbil.name = name;
+            break;
+          }
+        }
+      }
+    });
   }
 
 }

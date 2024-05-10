@@ -165,6 +165,9 @@ export class HeroSelectorManager {
   setupUnitCreatedFunction() {
     // override unitCreated function
     HeroSelector["unitCreated"] = function(player: player, unitCode: number, isRandom: boolean) {
+      // enforce correct abilities for unit   
+      this.abilShop.setPlayerShop(player, unitCode); 
+      
       const unit = this.heroPickSpawnUnitForPlayer(unitCode, player);
       
       this.spawnExtraUnitsForPlayer(unitCode, player);
@@ -198,17 +201,11 @@ export class HeroSelectorManager {
   }
 
   hookHeroSelectorHeroButton() {
-    // const func = HeroSelector["actionPressHeroButton"];
-    // HeroSelector["actionPressHeroButton"] = function() {
-    //   print("C");
-    //   func();
-    //   print("B");
-    //   const button = BlzGetTriggerFrame();
-    //   const player = GetTriggerPlayer();
-    //   const buttonIndex = HeroSelector["HeroButtons"][button];
-    //   const unitCode = HeroSelector["UnitData"][buttonIndex];
-    //   print("A", unitCode);
-    // }
+    const func = HeroSelector["buttonSelected"];
+    HeroSelector["buttonSelected"] = function(player: player, unitCode: number) {
+      func(player, unitCode);
+      this.abilShop.setPlayerShop(player, unitCode);
+    }
   }
 
   setupRepickTrigger() {
@@ -360,6 +357,7 @@ export class HeroSelectorManager {
     HeroSelector.show(true);
     CustomUI.show(false, false);
     this.isPicking = true;
+    this.abilShop.setCanSwap(true);
   }
 
   runBanPhase() {
@@ -370,6 +368,7 @@ export class HeroSelectorManager {
     HeroSelector.show(true);
     CustomUI.show(false, false);
     this.isPicking = false;
+    this.abilShop.setCanSwap(false);
   }
 
   runHeroSelectTimer() {
