@@ -1382,6 +1382,44 @@ export function CustomPlayerTest() {
 
   SetupCustomAbilityRefresh();
   SoundHelper.SetupSpellSoundEffects();
+
+
+  // give neutral passive buildings minimap icon
+  GroupEnumUnitsOfPlayer(Globals.tmpUnitGroup, Constants.neutralPassivePlayer, null);
+  ForGroup(Globals.tmpUnitGroup, () => {
+    if (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE)) {
+      const unit = GetEnumUnit();
+      const unitId = GetUnitTypeId(unit);
+      if (
+        unitId == Id.vendorKorin
+        || unitId == Id.vendorChefSatan
+        || unitId == Id.vendorRoshi
+        || unitId == Id.vendorElHermano
+        || unitId == Id.vendorSaitama
+        || unitId == Id.vendorAinz
+        || unitId == Id.vendorKrustyKrab
+      ) { 
+        const x = GetUnitX(unit)
+        const y = GetUnitY(unit)
+        const mm = CreateMinimapIcon(
+          x, y, 255, 255, 255, 
+          "MM_shop.mdl", 
+          FOG_OF_WAR_VISIBLE
+        );
+        SetMinimapIconVisible(mm, true);
+        if (unitId != Id.vendorKorin) {
+          for (const player of Constants.activePlayers) {
+            const fm = CreateFogModifierRadius(
+              player, FOG_OF_WAR_VISIBLE, 
+              x, y, 128, 
+              true, false
+            );
+            FogModifierStart(fm);
+          }
+        }
+      }
+    }
+  });
 }
 
 export function skurvyMirrorProcessOrder() {

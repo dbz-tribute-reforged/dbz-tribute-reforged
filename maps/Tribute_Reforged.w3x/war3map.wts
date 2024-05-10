@@ -16164,7 +16164,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2491
-// Units: n03P (Kame House), EditorSuffix (Name - Editor Suffix)
+// Units: n03P (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (regen seller)
 }
@@ -47424,6 +47424,12 @@ STRING 7339
 [|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 10|r]
 }
 
+STRING 7340
+// Units: n03P (Master Roshi), Name (Name)
+{
+Master Roshi
+}
+
 STRING 7341
 // Abilities: A05M (Compress), Ubertip (Tooltip - Normal - Extended)
 {
@@ -60481,12 +60487,6 @@ STRING 9294
 // Abilities: A029 (Absorb), Ubertip (Tooltip - Normal - Extended)
 {
 Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
-}
-
-STRING 9295
-// Units: n03P (Kame House), Name (Name)
-{
-Kame House
 }
 
 STRING 9296
@@ -109039,6 +109039,12 @@ STRING 16284
 // Items: I00O (|cffff00ffRevive Ticket|r), Tip (Tooltip - Basic)
 {
 |cffff00ffRevive Ticket|r
+}
+
+STRING 16285
+// Doodads: D02W (kame house final), Name (Name)
+{
+kame house final
 }
 
 STRING 16286

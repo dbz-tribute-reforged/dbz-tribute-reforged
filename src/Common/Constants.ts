@@ -594,7 +594,11 @@ export module Id {
   export const neutralAndroid18 = FourCC("n008");
   export const vendorElHermano = FourCC("n03U");
   export const vendorChefSatan = FourCC("n03T");
+  export const vendorRoshi = FourCC("n03P");
+  export const vendorSaitama = FourCC("n03S");
   export const vendorKorin = FourCC("n01P");
+  export const vendorAinz = FourCC("n03R");
+  export const vendorKrustyKrab = FourCC("n03V");
   export const vendorWhis = FourCC("n01G");
 
   export const ainzOoalGown = FourCC("H00Z");
