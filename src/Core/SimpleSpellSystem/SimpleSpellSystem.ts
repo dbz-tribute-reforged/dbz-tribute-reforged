@@ -198,6 +198,10 @@ export module SimpleSpellSystem {
       spellCDStartLogic(spellId);
     });
     
+    Globals.genericSpellMap.set(Id.gokuKaiokenOn, SimpleSpellSystem.doGokuKaiokenOn);
+    Globals.genericSpellMap.set(Id.gokuKaiokenOff, SimpleSpellSystem.doGokuKaiokenOff);
+    Globals.genericSpellMap.set(Id.gokuLimitBreaker, SimpleSpellSystem.doGokuLimitBreaker);
+
     Globals.genericSpellMap.set(Id.vegetaHakai, SimpleSpellSystem.doVegetaHakai);
     Globals.genericSpellMap.set(Id.toppoHakai, SimpleSpellSystem.doVegetaHakai);
 
@@ -493,6 +497,94 @@ export module SimpleSpellSystem {
         const newSpeed = (speed - beamFrictionFlat) * beamFrictionPct;
         SaveReal(Globals.tatsumakiHashtable, unitId, beamSpeedKey, newSpeed);
       });
+    });
+  }
+  
+  export function doGokuKaiokenOn(spellId: number) {
+    const hpCost = 0.015;
+    const spellAmp = 0.1;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+
+    const key = StringHash(I2S(spellId) + "kaioken"); 
+    const val = LoadInteger(Globals.genericSpellHashtable, casterId, key);
+
+    if (val == 0) {
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+
+      SaveInteger(Globals.genericSpellHashtable, casterId, key, 1);
+
+      UnitAddAbility(caster, Id.gokuKaiokenOff);
+      UnitAddAbility(caster, Id.gokuKaiokenPassive);
+      BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOff, 10);
+      BlzUnitHideAbility(caster, Id.gokuKaiokenOn, true);
+      BlzUnitHideAbility(caster, Id.gokuKaiokenPassive, true);
+      BlzUnitHideAbility(caster, Id.gokuKaiokenOff, false);
+
+      const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+      if (ch) ch.addSpellPower(spellAmp);
+
+      const sfx = AddSpecialEffectTarget("AuraKaox10.mdl", caster, "origin");
+
+      TimerStart(CreateTimer(), 0.03, true, () => {
+        const val2 = LoadInteger(Globals.genericSpellHashtable, casterId, key);
+        if (
+          UnitHelper.isUnitDead(caster) 
+          || GetUnitLifePercent(caster) < 1
+          || val2 == 2
+        ) {
+          SaveInteger(Globals.genericSpellHashtable, casterId, key, 0);
+          // hiding kaioken off doesnt seem to work
+          UnitRemoveAbility(caster, Id.gokuKaiokenOff);
+          UnitRemoveAbility(caster, Id.gokuKaiokenPassive);
+          BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOn, 10);
+          BlzUnitHideAbility(caster, Id.gokuKaiokenOn, false);
+          if (ch) ch.removeSpellPower(spellAmp);
+          DestroyEffect(sfx);
+          DestroyTimer(GetExpiredTimer());
+        }
+        UnitHelper.payHPPercentCost(caster, hpCost * 0.03, UNIT_STATE_MAX_LIFE);
+      });
+    }
+  }
+
+  export function doGokuKaiokenOff(spellId: number) {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+
+    const key = StringHash(I2S(Id.gokuKaiokenOn) + "kaioken"); 
+    SaveInteger(Globals.genericSpellHashtable, casterId, key, 2);
+  }
+
+  export function doGokuLimitBreaker(spellId: number) {
+    const unit = GetTriggerUnit();
+    const player = GetOwningPlayer(unit);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(unit);
+    if (!ch) return;
+
+    let spellAmp = 0;
+    const playerAllies = GetPlayersAllies(player);
+    ForForce(playerAllies, () => {
+      const p = GetEnumPlayer();
+      const pId = GetPlayerId(p);
+      if (
+        p != player 
+        && pId >= 0 
+        && pId < Constants.maxActivePlayers
+        && IsPlayerSlotState(p, PLAYER_SLOT_STATE_PLAYING)
+      ) {
+        spellAmp += 0.03;
+      }
+    });
+    DestroyForce(playerAllies);
+
+    ch.addSpellPower(spellAmp);
+    TimerStart(CreateTimer(), 30.0, false, () => {
+      ch.removeSpellPower(spellAmp);
+      DestroyTimer(GetExpiredTimer());
     });
   }
 
@@ -1793,6 +1885,11 @@ export module SimpleSpellSystem {
   }
 
   export function InitJirenGlare(spellId: number) {
+    const unit = GetTriggerUnit();
+    DoJirenGlare(spellId, unit);
+  }
+
+  export function DoJirenGlare(spellId: number, unit: unit) {
     /**
      * hashtable
      * 0: spellId, or 0 if not activated
@@ -1805,12 +1902,11 @@ export module SimpleSpellSystem {
     const negativeImpactShieldDuration = 3.0;
     const minatoSecondStepDuration = 1.5;
 
-    const unit = GetTriggerUnit();
     const unitId = GetHandleId(unit);
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, spellId);
     
     let effect: effect;
-    if (spellId == Id.glare || spellId == Id.glare2) {
+    if (spellId == Id.glare || spellId == Id.glare2 || spellId == Id.gokuInstantTransmission) {
       effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
       // BlzSetSpecialEffectScale(effect, 1.5);
     } else if (spellId == Id.hirudegarnDarkEyes) {
@@ -1869,6 +1965,7 @@ export module SimpleSpellSystem {
         && spellId != Id.hirudegarnDarkEyes
         && spellId != Id.shalltearNegativeImpactShield
         && spellId != Id.minatoSecondStep
+        && spellId != Id.gokuInstantTransmission
       )
     ) return;
 
@@ -1884,6 +1981,7 @@ export module SimpleSpellSystem {
     const glarePunishDamageMult = 0.15;
     const darkEyesPunishDamageMult = 0.25;
     const minatoPunishDamageMult = 0.1;
+    const gokuITPunishDamageMult = 0.1;
 
     SaveInteger(Globals.genericSpellHashtable, targetId, 0, 0);
 
@@ -1902,14 +2000,18 @@ export module SimpleSpellSystem {
 
     SetUnitX(target, Globals.tmpVector2.x);
     SetUnitY(target, Globals.tmpVector2.y);
-        
-    const castDummy = CreateUnit(
-      player, 
-      Constants.dummyCasterId, 
-      Globals.tmpVector2.x, Globals.tmpVector2.y, 
-      0
-    );
-    UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
+    
+    if (spellId != Id.gokuInstantTransmission) {
+      const castDummy = CreateUnit(
+        player, 
+        Constants.dummyCasterId, 
+        Globals.tmpVector2.x, Globals.tmpVector2.y, 
+        0
+      );
+      UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
+      IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
+      RemoveUnit(castDummy);
+    }
 
     const customHero = Globals.customPlayers[GetPlayerId(player)].getCustomHero(target);
     let spellPower = customHero ? customHero.spellPower : 1.0;
@@ -1919,6 +2021,8 @@ export module SimpleSpellSystem {
       punishMult = darkEyesPunishDamageMult;
     } else if (spellId == Id.minatoSecondStep) {
       punishMult = minatoPunishDamageMult;
+    } else if (spellId == Id.gokuInstantTransmission) {
+      punishMult = gokuITPunishDamageMult;
     }
 
     let damageMult = glareDamageMult;
@@ -1928,6 +2032,8 @@ export module SimpleSpellSystem {
       damageMult = negativeImpactShieldDamageMult;
     } else if (spellId == Id.minatoSecondStep) {
       damageMult = minatoSecondStepDamageMult;
+    } else if (spellId == Id.gokuInstantTransmission) {
+      damageMult = 0;
     }
 
     let damageBase = CustomAbility.BASE_DAMAGE + GetHeroInt(target, true);
@@ -1936,8 +2042,6 @@ export module SimpleSpellSystem {
     }
 
     const abilityLevel = LoadInteger(Globals.genericSpellHashtable, targetId, 2);
-
-    
     if (spellId == Id.minatoSecondStep) {
       const animDelay = 0.9;
       const dmgDelay = 0.43 / animDelay;
@@ -2011,8 +2115,6 @@ export module SimpleSpellSystem {
         WEAPON_TYPE_WHOKNOWS
       );
     }
-    IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
-    RemoveUnit(castDummy);
     
     if (spellId == Id.shalltearNegativeImpactShield) {
       DestroyEffect(
@@ -2023,6 +2125,8 @@ export module SimpleSpellSystem {
       );
     } else if (spellId == Id.minatoSecondStep) {
       DestroyEffect(AddSpecialEffect("RasenganWhiteShockwave.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y));
+    } else if (spellId == Id.gokuInstantTransmission) {
+      
     } else {
       DestroyEffect(
         AddSpecialEffect("Slam.mdl", Globals.tmpVector2.x, Globals.tmpVector2.y)

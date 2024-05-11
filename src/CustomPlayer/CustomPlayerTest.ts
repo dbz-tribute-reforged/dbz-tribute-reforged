@@ -93,6 +93,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
             name == AbilityNames.BasicAbility.ZANZO_DASH
             || name == AbilityNames.BasicAbility.ZANZOKEN
             || name == AbilityNames.Minato.HIRAISHIN_ZANZO
+            || name == AbilityNames.Goku.INSTANT_TRANSMISSION
           ) && Globals.barrierBlockUnits.has(customHero.unit)
         ) {
           continue;
@@ -154,6 +155,7 @@ export function customAbilityActivate(player: player, index: number) {
         abilName == AbilityNames.BasicAbility.ZANZO_DASH
         || abilName == AbilityNames.BasicAbility.ZANZOKEN
         || abilName == AbilityNames.Minato.HIRAISHIN_ZANZO
+        || abilName == AbilityNames.Goku.INSTANT_TRANSMISSION
       ) && Globals.barrierBlockUnits.has(customHero.unit)
     ) {
       continue;
@@ -164,11 +166,11 @@ export function customAbilityActivate(player: player, index: number) {
       TextTagHelper.showPlayerColorTextOnUnit(abilName, playerId, customHero.unit);
       if (abilName == AbilityNames.BasicAbility.MAX_POWER) {
         SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
-      }
-
-      if (abilName == AbilityNames.BasicAbility.MAX_CHARGE) {
+      } else if (abilName == AbilityNames.BasicAbility.MAX_CHARGE) {
         IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
         SimpleSpellSystem.doUltimateChargeUnit(customHero.unit, 0.02, 0.005);
+      } else if (abilName == AbilityNames.Goku.INSTANT_TRANSMISSION) {
+        SimpleSpellSystem.DoJirenGlare(Id.gokuInstantTransmission, customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
@@ -671,6 +673,7 @@ export function CustomPlayerTest() {
                   heroAbility.name == AbilityNames.BasicAbility.ZANZO_DASH
                   || heroAbility.name == AbilityNames.BasicAbility.ZANZOKEN
                   || heroAbility.name == AbilityNames.Minato.HIRAISHIN_ZANZO
+                  || heroAbility.name == AbilityNames.Goku.INSTANT_TRANSMISSION
                 ) && Globals.barrierBlockUnits.has(ownedHero.unit)
               )
             );
@@ -1693,7 +1696,12 @@ export function getSwordOfHopeMult(player: player): number {
   ForForce(playerAllies, () => {
     const p = GetEnumPlayer();
     const pId = GetPlayerId(p);
-    if (p != player && pId >= 0 && pId < Constants.maxActivePlayers) {
+    if (
+      p != player 
+      && pId >= 0 
+      && pId < Constants.maxActivePlayers 
+      && IsPlayerSlotState(p, PLAYER_SLOT_STATE_PLAYING)
+    ) {
       result += 0.2;
     }
   });

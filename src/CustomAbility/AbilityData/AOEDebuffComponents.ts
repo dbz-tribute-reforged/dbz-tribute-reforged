@@ -2228,4 +2228,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff slow goku kamehameha x10",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.SLOW_GENERIC_50_PCT_3S,
+    orderId: OrderIds.SLOW,
+    aoe: 350,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

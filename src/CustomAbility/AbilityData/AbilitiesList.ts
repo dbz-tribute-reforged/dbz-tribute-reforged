@@ -109,6 +109,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Goku.INSTANT_TRANSMISSION,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 30,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.03,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNGokuIT.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGokuIT.blp",
+    },
+    tooltip: {
+      title: "Instant Transmission",
+      body: 
+        "Teleport to the next enemy hero that damages you within 2.5s. " + 
+        "Deals 10% of the damage received.|n" + 
+        "Cost: 30 SP|n" + 
+        "CD: 15",
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
     maxCd: 4,
@@ -164,8 +193,8 @@ export const AbilitiesList = [
       title: "Max Power",
       body: 
         "+20% ability damage, +50% attack damage, +132 ms.|n" + 
-        "Cost: 40 SP|n" +
         "Duration: 5s|n" + 
+        "Cost: 40 SP|n" +
         "CD: 5s"
     },
     components: [
@@ -399,6 +428,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Goku.KAMEHAMEHA_X10,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam goku kamehameha x10" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Goku.SPIRIT_BOMB,
     currentCd: 0,
     maxCd: 1,
@@ -479,7 +535,7 @@ export const AbilitiesList = [
         "Dragon Fisto"
     },
     components: [
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage super dragon fist dps" },
       { name: "damage super dragon fist explosion" },
       { name: "knockback dfist" },
@@ -520,7 +576,7 @@ export const AbilitiesList = [
     name: AbilityNames.Goku.ULTRA_INSTINCT,
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.MP,
     costAmount: 0,
     duration: 495,
     updateRate: 0.03,
@@ -549,7 +605,7 @@ export const AbilitiesList = [
     name: AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.MP,
     costAmount: 0,
     duration: 495,
     updateRate: 0.03,
@@ -573,6 +629,35 @@ export const AbilitiesList = [
       { name: "dodge ultra instinct" },
       { name: "block mastered ultra instinct" },
       { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.LIMIT_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage goku limit breaker dps" },
+      { name: "temp ability goku limit breaker passive" },
+      { name: "sfx goku limit breaker" },
     ],
   },
   // -------------------------------------------
@@ -18376,7 +18461,7 @@ export const AbilitiesList = [
     name: "Test Ability",
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.HP,
     costAmount: 25,
     duration: 150,
     updateRate: 0.03,

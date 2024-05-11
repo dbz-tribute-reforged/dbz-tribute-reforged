@@ -7,12 +7,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [Id.goku, [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.KAMEHAMEHA_X10, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
       AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+      AbilityNames.Goku.LIMIT_BREAKER,
     ]],
     [FourCC("H08J"), [
       AbilityNames.Goku.KAMEHAMEHA, 

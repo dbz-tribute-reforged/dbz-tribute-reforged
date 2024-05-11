@@ -10,14 +10,17 @@ export module AbilityNames {
   }
 
   export module Goku {
+    export const INSTANT_TRANSMISSION: string = "Instant Transmission";
     export const KAMEHAMEHA: string = "Kamehameha";
     export const GOD_KAMEHAMEHA: string = "God Kamehameha";
+    export const KAMEHAMEHA_X10: string = "Kamehameha x10";
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
     export const SUPER_DRAGON_FIST: string = "Super Dragon Fist";
     export const SOLAR_FLARE: string = "Goku Solar Flare";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
     export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
+    export const LIMIT_BREAKER: string = "Limit Breaker";
   }
 
   export module Vegeta {

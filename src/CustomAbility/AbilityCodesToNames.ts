@@ -6,12 +6,14 @@ export const abilityCodesToNames = new Map<number, string>(
     // goku
     [Id.kamehameha, AbilityNames.Goku.KAMEHAMEHA],
     [Id.kamehamehaGod, AbilityNames.Goku.GOD_KAMEHAMEHA],
+    [Id.kamehamehaX10, AbilityNames.Goku.KAMEHAMEHA_X10],
     [Id.spiritBomb, AbilityNames.Goku.SPIRIT_BOMB],
     [Id.dragonFist, AbilityNames.Goku.DRAGON_FIST],
     [Id.superDragonFist, AbilityNames.Goku.SUPER_DRAGON_FIST],
     [Id.solarFlare, AbilityNames.Goku.SOLAR_FLARE],
     [Id.ultraInstinct, AbilityNames.Goku.ULTRA_INSTINCT],
     [Id.masteredUltraInstinct, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
+    [Id.gokuLimitBreaker, AbilityNames.Goku.LIMIT_BREAKER],
 
     // vegeta
     [Id.galickGun, AbilityNames.Vegeta.GALICK_GUN],

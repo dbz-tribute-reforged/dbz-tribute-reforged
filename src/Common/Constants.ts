@@ -960,12 +960,19 @@ export module Id {
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");
   export const kamehamehaGod = FourCC('A0L9');
+  export const kamehamehaX10 = FourCC('A0CJ');
   export const spiritBomb = FourCC('A0JP');
   export const dragonFist = FourCC("A00U");
   export const superDragonFist = FourCC("A0P0");
   export const solarFlare = FourCC("A0KO");
   export const ultraInstinct = FourCC('A0KR');
   export const masteredUltraInstinct = FourCC('A0MZ');
+  export const gokuLimitBreaker = FourCC('A0CM');
+  export const gokuLimitBreakerPassive = FourCC('A0CR');
+  export const gokuKaiokenOn = FourCC('A0CK');
+  export const gokuKaiokenOff = FourCC('A0CL');
+  export const gokuKaiokenPassive = FourCC('A0CS');
+  export const gokuInstantTransmission = FourCC('A0CR'); // borrows limit breaker passive id
 
   export const gokuBlack = FourCC("E019");
   export const gokuBlackClone = FourCC("E01A");

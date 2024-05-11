@@ -3,6 +3,17 @@ import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
   [
+    Id.goku, [
+      [
+        // add
+        AbilityNames.Goku.INSTANT_TRANSMISSION,
+      ],
+      [
+        // remove
+      ]
+    ]
+  ],
+  [
     Id.cellUnformed, [
       [
         AbilityNames.Cell.SUPER_CHARGE,
@@ -25,7 +36,6 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
   [
     Id.vegetaMajin, [
       [
-
       ],
       [
         AbilityNames.BasicAbility.MAX_CHARGE,
@@ -35,11 +45,9 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
   [
     Id.minato, [
       [
-        // add
         AbilityNames.Minato.HIRAISHIN_ZANZO,
       ],
       [
-        // remove
         AbilityNames.BasicAbility.ZANZOKEN,
         AbilityNames.BasicAbility.ZANZO_DASH,
       ]
