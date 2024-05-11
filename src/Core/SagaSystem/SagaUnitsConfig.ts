@@ -425,14 +425,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // future androids saga
-    ["Future Android 17", new SagaUnit(FourCC("H05C"), 50, 2800, 350, 2000, new Vector2D(11000, 29500),
+    ["Future Android 17", new SagaUnit(FourCC("H05C"), 50, 2800, 350, 2000, new Vector2D(11000, 30700),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
         SagaAbilities.Android17DBS.SUPER_ELECTRIC_STRIKE,
       ],
     )],
-    ["Future Android 18", new SagaUnit(FourCC("H05D"), 50, 2000, 350, 2700, new Vector2D(11400, 29500),
+    ["Future Android 18", new SagaUnit(FourCC("H05D"), 50, 2000, 350, 2700, new Vector2D(11400, 30700),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -570,10 +570,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // future babidi saga
-    ["Future Pui Pui", new SagaUnit(FourCC("O004"), 7, 1000, 400, 1000, new Vector2D(16800, 26000))],
-    ["Future Yakon", new SagaUnit(FourCC("O009"), 20, 3600, 400, 3300, new Vector2D(16900, 26000))],
+    ["Future Pui Pui", new SagaUnit(FourCC("O004"), 7, 1000, 400, 1000, new Vector2D(16800, 20600))],
+    ["Future Yakon", new SagaUnit(FourCC("O009"), 20, 3600, 400, 3300, new Vector2D(16900, 20800))],
     // dabura and babidi
-    ["Future Dabura", new SagaUnit(FourCC("H0A9"), 60, 7500, 400, 7500, new Vector2D(17000, 26000),
+    ["Future Dabura", new SagaUnit(FourCC("H0A9"), 60, 7500, 400, 7500, new Vector2D(17000, 20600),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -583,7 +583,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.DABURA_SWORD,
       ],
     )],
-    ["Future Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(17100, 25500),
+    ["Future Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(17000, 20600),
       [
         SagaAbilities.Babidi.HARETSU,
         SagaAbilities.Babidi.BABIDI_BARRIER
@@ -708,8 +708,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // shadow dragon saga
     ["Haze Shenron", new SagaUnit(FourCC("U00S"), 9, 3500, 400, 3500, new Vector2D(6000, 8000))],
     ["Rage Shenron", new SagaUnit(FourCC("U00V"), 50, 15000, 400, 15000, new Vector2D(14400, 11000))],
-    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 70, 15000, 400, 15000, new Vector2D(-4600, -2000))],
-    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 70, 15000, 400, 15000, new Vector2D(10000, 3000), 
+    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 70, 15000, 400, 15000, new Vector2D(-8000, -2500))],
+    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 70, 15000, 400, 15000, new Vector2D(10000, 0), 
       [
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
@@ -759,7 +759,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // battle of gods movie/super
     // beerus
-    ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(2000, 1000),
+    ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(2000, 0),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
@@ -773,7 +773,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // possible whis training saga?
     // whis E01I
-    ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(2000, 1000),
+    ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(2000, 0),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -861,7 +861,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
     )],
     // gb + zamasu
-    ["Goku Black 2", new SagaUnit(FourCC("E019"), 130, 21000, 400, 21000, new Vector2D(12000, 28000),
+    ["Goku Black 2", new SagaUnit(FourCC("E019"), 130, 21000, 400, 21000, new Vector2D(9500, 24000),
       [
         SagaAbilities.GokuBlack.GOD_KAMEHAMEHA,
         SagaAbilities.GokuBlack.BLACK_KAMEHAMEHA,
@@ -873,7 +873,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.SORROWFUL_SCYTHE,
       ]
     )],
-    ["Zamasu", new SagaUnit(FourCC("E012"), 110, 14000, 400, 17000, new Vector2D(12000, 28000),
+    ["Zamasu", new SagaUnit(FourCC("E012"), 110, 14000, 400, 17000, new Vector2D(10000, 24500),
       [
         SagaAbilities.Zamasu.DIVINE_AUTHORITY,
         SagaAbilities.Zamasu.HOLY_LIGHT_GRENADE,
