@@ -473,8 +473,20 @@ export class AbilityShop {
 
   public isAbilitySelectValid(customPlayer: CustomPlayer, newAbil: string) {
     // ensure no duplicates
+    // ensure no double zanzo
     for (const abil of customPlayer.abilityButtons) {
       if (newAbil == abil.name) {
+        return false;
+      }
+      if (
+        (
+          newAbil == AbilityNames.BasicAbility.ZANZO_DASH 
+          && abil.name == AbilityNames.BasicAbility.ZANZOKEN
+        ) || (
+          newAbil == AbilityNames.BasicAbility.ZANZOKEN 
+          && abil.name == AbilityNames.BasicAbility.ZANZO_DASH
+        )
+      ) {
         return false;
       }
     }
@@ -512,7 +524,7 @@ export class AbilityShop {
       const shopAbilName = shopAbils[shopIndex];
       if (!this.isAbilitySelectValid(customPlayer, shopAbilName)) {
         DisplayTimedTextToPlayer(player, 0, 0, 2, 
-          "|cffff2222DUPLICATE ABILITY: " + shopAbilName
+          "|cffff2222INVALID ABILITY: " + shopAbilName
         );
         this.resetIndex(playerId);
         return;
