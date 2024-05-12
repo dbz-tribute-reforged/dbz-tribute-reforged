@@ -471,7 +471,11 @@ export class AbilityShop {
     this.playerShopIndex[playerId] = AbilityShop.INVALID_INDEX;
   }
 
-  public isAbilitySelectValid(customPlayer: CustomPlayer, newAbil: string) {
+  public isAbilitySelectValid(
+    customPlayer: CustomPlayer,
+    newAbil: string, 
+    oldAbil: string
+  ) {
     // ensure no duplicates
     // ensure no double zanzo
     for (const abil of customPlayer.abilityButtons) {
@@ -482,9 +486,11 @@ export class AbilityShop {
         (
           newAbil == AbilityNames.BasicAbility.ZANZO_DASH 
           && abil.name == AbilityNames.BasicAbility.ZANZOKEN
+          && oldAbil != abil.name
         ) || (
           newAbil == AbilityNames.BasicAbility.ZANZOKEN 
           && abil.name == AbilityNames.BasicAbility.ZANZO_DASH
+          && oldAbil != abil.name
         )
       ) {
         return false;
@@ -521,8 +527,9 @@ export class AbilityShop {
 
     if (selectIndex2 == AbilityShop.INVALID_INDEX) {
       const shopAbils = this.playerShopMap.get(player);
+      const selectName = customPlayer.abilityButtons[selectIndex].name;
       const shopAbilName = shopAbils[shopIndex];
-      if (!this.isAbilitySelectValid(customPlayer, shopAbilName)) {
+      if (!this.isAbilitySelectValid(customPlayer, shopAbilName, selectName)) {
         DisplayTimedTextToPlayer(player, 0, 0, 2, 
           "|cffff2222INVALID ABILITY: " + shopAbilName
         );
@@ -668,7 +675,7 @@ export class AbilityShop {
       });
       if (val < 0) {
         for (const name of abilNames) {
-          if (this.isAbilitySelectValid(customPlayer, name)) {
+          if (this.isAbilitySelectValid(customPlayer, name, playerAbil.name)) {
             playerAbil.name = name;
             break;
           }
