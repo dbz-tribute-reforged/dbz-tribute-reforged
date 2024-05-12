@@ -27,7 +27,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected damageCoords: Vector2D;
 
-  protected damagedTargets: Map<unit, number>;
+  protected damagedTargets: unit[];
+  protected damagedTargetsHits: number[];
   protected damagedGroup: group;
 
   public isStarted: boolean = false;
@@ -63,7 +64,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public buffId: number = 0,
   ) {
     this.damageCoords = new Vector2D(0, 0);
-    this.damagedTargets = new Map();
+    this.damagedTargets = [];
+    this.damagedTargetsHits = [];
     this.damagedGroup = CreateGroup();
   }
 
@@ -251,6 +253,23 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return damage;
   }
 
+  protected getDamageTargetsHits(unit: unit) {
+    for (let i = 0; i < this.damagedTargets.length; ++i) {
+      if (this.damagedTargets[i] == unit) return this.damagedTargetsHits[i];
+    }
+    return null;
+  }
+
+  protected setDamageTargets(unit: unit, val: number) {
+    this.damagedTargets.push(unit);
+    this.damagedTargetsHits.push(val);
+  }
+
+  protected clearDamageTargets() {
+    this.damagedTargets.splice(0, this.damagedTargets.length);
+    this.damagedTargetsHits.splice(0, this.damagedTargetsHits.length);
+  }
+
   protected dealDamageToUnit(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
     if (
       (
@@ -270,14 +289,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
           (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
         ) {
-          const damageCount = this.damagedTargets.get(target);
+          const damageCount = this.getDamageTargetsHits(target);
           if (damageCount) {
             if (damageCount < this.maxDamageTicks) {
-              this.damagedTargets.set(target, damageCount + 1);
+              this.setDamageTargets(target, damageCount + 1);
               this.performDamage(input, target, damage, sourceHPPercent);
             }
           } else {
-            this.damagedTargets.set(target, 1);
+            this.setDamageTargets(target, 1);
             this.performDamage(input, target, damage, sourceHPPercent);
           }
         } else {    
@@ -353,7 +372,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.isStarted = true;
       this.isFinished = false;
       
-      this.damagedTargets.clear();
+      this.clearDamageTargets();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
       }
@@ -408,7 +427,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     const damage = this.calculateDamage(input, source, sourceHPPercent);
 
     if (this.applyDamageOverTime) {
-      for (const target of this.damagedTargets.keys()) {
+      for (const target of this.damagedTargets) {
         this.dealDamageToUnit(input, target, damage, sourceHPPercent);
       }
     }
@@ -428,7 +447,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   reset() {
     this.isStarted = false;
     this.isFinished = true;
-    this.damagedTargets.clear();
+    this.clearDamageTargets();
   }
 
   cleanup() {
