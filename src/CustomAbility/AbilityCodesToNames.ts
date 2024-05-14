@@ -500,6 +500,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.tatsumakiVector, AbilityNames.Tatsumaki.VECTOR],
     [Id.tatsumakiGiantSpear, AbilityNames.Tatsumaki.GIANT_SPEAR],
 
+    [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
+    [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
+    [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],
+    [Id.granolahPressurePoint, AbilityNames.Granolah.PRESSURE_POINT],
+    [Id.granolahFinalShot, AbilityNames.Granolah.FINAL_SHOT],
+    [Id.granolahEvolvedEyes, AbilityNames.Granolah.EVOLVED_EYES],
+    [Id.granolahSnipeVolley, AbilityNames.Granolah.SNIPE_VOLLEY],
+    [Id.granolahSnipeCharged, AbilityNames.Granolah.SNIPE_CHARGED],
+
 
 
 

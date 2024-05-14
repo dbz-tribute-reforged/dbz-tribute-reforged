@@ -35,16 +35,17 @@ export class Jump implements AbilityComponent, Serializable<Jump> {
       UnitHelper.giveUnitFlying(source);
       this.isStarted = true;
       this.isFinished = false;
-      this.currentTime = Math.floor(this.startTimeRatio * this.duration);
 
       if (this.useSpeedToCastPoint && this.speed >= 0) {
-        this.duration = ability.currentTick + Math.floor(
+        this.duration = Math.floor(
           CoordMath.distance(
             new Vector2D(GetUnitX(source), GetUnitY(source)), 
             input.castPoint
           ) / Math.floor(this.speed)
         )
       }
+      
+      this.currentTime = Math.floor(this.startTimeRatio * this.duration);
     } 
     
     if (this.isStarted) {

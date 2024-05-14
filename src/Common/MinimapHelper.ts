@@ -106,6 +106,7 @@ export module MinimapHelper {
       [Id.mightGuy, "MM_might_guy.mdl"],
       [Id.genos, "MM_genos.mdl"],
       [Id.tatsumaki, "MM_tatsumaki.mdl"],
+      [Id.granolah, "MM_granolah.mdl"],
     ]
   );
 

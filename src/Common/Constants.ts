@@ -437,6 +437,7 @@ export module DebuffAbilities {
   export const DEMIURGE_HELLFIRE_2 = FourCC("A13L");
   export const FAERIE_FIRE_MINATO_KUNAI = FourCC("A00C");
   export const FAERIE_FIRE_NUOVA_HEAT_ARMOR = FourCC("A03Q");
+  export const FAERIE_FIRE_GRANOLAH_VULNERABLE = FourCC("A0IR");
 }
 
 export module Buffs {
@@ -496,6 +497,8 @@ export module Buffs {
 
   export const DEMIURGE_HELLFIRE_1 = FourCC("B06A");
   export const DEMIURGE_HELLFIRE_2 = FourCC("B06B");
+
+  export const GRANOLAH_DEBUFF = FourCC("B06O");
 
   export const NUOVA_HEAT_ARMOR = FourCC("B06J");
 
@@ -997,6 +1000,16 @@ export module Id {
   export const superGhostKamikazeAttack = FourCC("A0U4");
   export const superGhostKamikazeAttack2 = FourCC("A0U5");
   export const gotenksSS3 = FourCC("A0U0");
+
+  export const granolah = FourCC("H029");
+  export const granolahSnipe = FourCC("A0DH");
+  export const granolahSnipe2 = FourCC("A0DL");
+  export const granolahEnergyVolley = FourCC("A0DU");
+  export const granolahPressurePoint = FourCC("A0DV");
+  export const granolahFinalShot = FourCC("A0EW");
+  export const granolahEvolvedEyes = FourCC("A0FZ");
+  export const granolahSnipeVolley = FourCC("A0G1");
+  export const granolahSnipeCharged = FourCC("A0H5");
 
   export const guldo = FourCC("H09J");
   export const psychoJavelin = FourCC("A0SC");

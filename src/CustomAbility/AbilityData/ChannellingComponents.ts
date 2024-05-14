@@ -24,6 +24,14 @@ export const ChannellingComponents = [
     fakeChannel: false,
   },
   {
+    name: "channel caster 1.5s", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 50,
+    ticksFromEnd: 0,
+    fakeChannel: false,
+  },
+  {
     name: "channel caster 2s", 
     repeatInterval: 1, 
     startTick: 0,
@@ -37,6 +45,14 @@ export const ChannellingComponents = [
     startTick: 0,
     endTick: -1,
     ticksFromEnd: 12,
+    fakeChannel: false,
+  },
+  {
+    name: "channel caster granolah snipe charged", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    ticksFromEnd: 0,
     fakeChannel: false,
   },
 ];

@@ -34,6 +34,15 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
     ]
   ],
   [
+    Id.vegeta, [
+      [
+      ],
+      [
+        AbilityNames.BasicAbility.MAX_CHARGE,
+      ]
+    ]
+  ],
+  [
     Id.vegetaMajin, [
       [
       ],
@@ -60,6 +69,17 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
       ],
       [
         AbilityNames.BasicAbility.SPARKING_BLAST,
+      ]
+    ]
+  ],
+  [
+    Id.granolah, [
+      [
+        AbilityNames.Granolah.SHIELD,
+        AbilityNames.Goku.INSTANT_TRANSMISSION,
+      ],
+      [
+        AbilityNames.BasicAbility.GUARD,
       ]
     ]
   ],

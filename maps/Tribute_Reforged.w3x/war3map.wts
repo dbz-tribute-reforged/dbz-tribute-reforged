@@ -21589,6 +21589,12 @@ STRING 3326
 King K Rool is the mightiest being to sit upon the throne of Krokodile Island. Slapping the armrest of his throne empowers him for a brief duration.|n|n|cffff2020Channel Duration: up to 5s|r|n|cff00ff00Stat Multiplier: +0.06x per second channeled|nSpell Amp: +10%|r|n|cffffff00Duration: <A0OV,Dur1>s|r|n|cff00ffffCooldown: <A0OV,Cool1>s
 }
 
+STRING 3327
+// Units: H029 (Cerelian Bounty Hunter), Name (Name)
+{
+Cerelian Bounty Hunter
+}
+
 STRING 3328
 // Units: H008 (Goku's Youngest Son), Ubertip (Tooltip - Extended)
 {
@@ -21646,6 +21652,12 @@ STRING 3335
 [|cff00FF00W|r] Learn Burning Attack - [|cffffcc00Level %d|r]
 }
 
+STRING 3336
+// Units: H029 (Cerelian Bounty Hunter), Propernames (Proper Names)
+{
+Granolah
+}
+
 STRING 3337
 // Abilities: A03I (Burning Attack), Tip (Tooltip - Normal)
 {
@@ -21667,6 +21679,18 @@ Janemba rapidly slices his opponent with 4 powerful Ki Slash waves infused with 
 Passively grants +500 damage and -5 armor on hit|r
 |cff00ff00Damage: [Int] 18u x 4t + 0.4% Max HP (x4)|r
 |cff00ffffCooldown: <A0NZ,Cool10> seconds|r
+}
+
+STRING 3340
+// Units: H029 (Cerelian Bounty Hunter), Ubertip (Tooltip - Extended)
+{
+A long range sniper.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 }
 
 STRING 3341
@@ -36668,10 +36692,10 @@ Transformations:
 [lvl 110] 2.25x "ss3"
 
 |cff00ff00Pick ONE of the following:|r
-[lvl 150] 2.40x "|cffff2222super|r" [unlocks God Kame]
-[lvl 150] 2.40x "|cffffcc00gt|r" [unlocks x10 Kame]
+[lvl 150] 2.50x "|cffff2222super|r" [unlocks God Kame]
+[lvl 150] 2.50x "|cffffcc00gt|r" [unlocks x10 Kame]
 
-[lvl 200] 2.50x "ssb" or "ss4" [unlocks Ultra Instinct or Limit Breaker]
+[lvl 200] 2.60x "ssb" or "ss4" [unlocks Ultra Instinct or Limit Breaker]
 }
 
 STRING 5690
@@ -51784,6 +51808,12 @@ STRING 8024
 Units hit by Zamasu's auto attacks take extra damage from Zamasu's spells.
 }
 
+STRING 8025
+// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 8026
 // Abilities: A0FX (Bow), Tip (Tooltip - Normal)
 {
@@ -51974,7 +52004,7 @@ Freemode Disabled, forced win/loss conditions are enabled.
 }
 
 STRING 8054
-// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
+// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55405,7 +55435,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 8546
-// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55629,7 +55659,7 @@ Sniper Rifle
 }
 
 STRING 8581
-// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -57471,7 +57501,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8866
-// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
+// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63858,7 +63888,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
+// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63870,7 +63900,7 @@ Evil
 }
 
 STRING 9832
-// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
+// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63882,7 +63912,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
+// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63894,7 +63924,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
+// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63924,85 +63954,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64014,13 +64044,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
+// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
+// Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64032,103 +64062,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65057,7 +65087,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65768,7 +65798,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0FZ (Evolved Eyes), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -65978,7 +66008,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68033,7 +68063,7 @@ Jiren unleashes a mighty punch on the target unit, causing it to be knocked back
 }
 
 STRING 10447
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69331,7 +69361,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69839,7 +69869,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71752,7 +71782,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72012,7 +72042,7 @@ R
 }
 
 STRING 11049
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72872,7 +72902,7 @@ STRING 11173
 }
 
 STRING 11174
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -73792,7 +73822,7 @@ STRING 11299
 }
 
 STRING 11300
-// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76817,7 +76847,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79630,7 +79660,7 @@ STRING 12145
 }
 
 STRING 12146
-// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
+// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -80629,7 +80659,7 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -80998,7 +81028,7 @@ STRING 12346
 }
 
 STRING 12347
-// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
+// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82688,7 +82718,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82960,7 +82990,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82972,7 +83002,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82984,7 +83014,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83592,7 +83622,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -86514,7 +86544,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -89293,7 +89323,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -90990,7 +91020,7 @@ E
 }
 
 STRING 13774
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -92343,7 +92373,7 @@ STRING 13948
 }
 
 STRING 13949
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -92546,7 +92576,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -92558,7 +92588,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -95494,7 +95524,7 @@ STRING 14402
 }
 
 STRING 14403
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -102488,7 +102518,7 @@ Q
 }
 
 STRING 15404
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0DH (Snipe), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -104123,19 +104153,19 @@ STRING 15617
 }
 
 STRING 15618
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0DH (Snipe), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15619
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0DL (Perfect Snipe), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15620
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0DL (Perfect Snipe), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -112406,7 +112436,7 @@ W
 }
 
 STRING 16733
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113276,7 +113306,7 @@ Frieza fires multiple death beams at a very rapid rate.
 }
 
 STRING 16855
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113609,7 +113639,7 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114559,7 +114589,7 @@ Q
 }
 
 STRING 17017
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114628,7 +114658,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114652,7 +114682,7 @@ STRING 17031
 }
 
 STRING 17032
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0G1 (Snipe Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -114784,7 +114814,7 @@ STRING 17049
 }
 
 STRING 17050
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0G1 (Snipe Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -115504,7 +115534,7 @@ STRING 17150
 }
 
 STRING 17151
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0H5 (Charged Snipe), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -115609,7 +115639,7 @@ STRING 17167
 }
 
 STRING 17168
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0H5 (Charged Snipe), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -116024,7 +116054,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118069,7 +118099,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118796,7 +118826,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119154,13 +119184,13 @@ STRING 17649
 }
 
 STRING 17650
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 17651
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -119210,7 +119240,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119747,7 +119777,7 @@ STRING 17742
 }
 
 STRING 17743
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -119759,7 +119789,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -121217,7 +121247,7 @@ STRING 17954
 }
 
 STRING 17955
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0DV (Pressure Point Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -121246,7 +121276,7 @@ STRING 17958
 }
 
 STRING 17959
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0DV (Pressure Point Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -123161,7 +123191,7 @@ STRING 18225
 }
 
 STRING 18226
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0HE (Oatmeal), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -123623,7 +123653,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -123690,7 +123720,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123909,7 +123939,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -124110,7 +124140,7 @@ STRING 18359
 }
 
 STRING 18360
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -125078,7 +125108,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
+// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -125178,7 +125208,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
+// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -126141,6 +126171,15 @@ STRING 18660
 // Abilities: A0XT (Macho Brace), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 18661
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool1> seconds|r
 }
 
 STRING 18662
@@ -129309,7 +129348,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
+// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -130656,7 +130695,7 @@ Increases STR.
 }
 
 STRING 19286
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -132409,7 +132448,7 @@ Melee Damage: [Int] 750u
 }
 
 STRING 19511
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -132442,7 +132481,7 @@ A medium punch.
 }
 
 STRING 19515
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -133254,6 +133293,15 @@ STRING 19625
 // Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
+}
+
+STRING 19626
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool3> seconds|r
 }
 
 STRING 19627
@@ -134082,7 +134130,7 @@ STRING 19735
 }
 
 STRING 19736
-// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
+// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -134852,7 +134900,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
+// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -138616,7 +138664,7 @@ c hotkey (farmer)
 }
 
 STRING 20389
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A0DU (Energy Volley), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -139581,7 +139629,7 @@ STRING 20517
 }
 
 STRING 20518
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0EW (Final Shot), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -139611,7 +139659,7 @@ STRING 20522
 }
 
 STRING 20523
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0EW (Final Shot), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -142470,7 +142518,7 @@ STRING 20903
 }
 
 STRING 20904
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A0DU (Energy Volley), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -146328,7 +146376,7 @@ Armor Aura: 8|r
 }
 
 STRING 21429
-// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
+// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -148079,7 +148127,7 @@ Bomb Arrow: [Int] 800u (AOE detonation)
 }
 
 STRING 21681
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -148942,7 +148990,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 21799
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -152390,7 +152438,7 @@ W
 }
 
 STRING 22199
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -152420,7 +152468,7 @@ E
 }
 
 STRING 22204
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -153157,19 +153205,19 @@ Dart summons the Red-Eyed Dragon causing a massive explosion in the target area.
 }
 
 STRING 22280
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 22281
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 22282
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -154074,7 +154122,7 @@ Transformations:
 }
 
 STRING 22381
-// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
+// Units: H029 (Cerelian Bounty Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -156004,7 +156052,7 @@ E
 }
 
 STRING 22600
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
 {
 R
 }
@@ -156411,7 +156459,7 @@ Q
 }
 
 STRING 22662
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -156450,7 +156498,7 @@ Tatsumaki raises a giant rock out of the ground at the target location. Enemies 
 }
 
 STRING 22667
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -158000,7 +158048,7 @@ This unit is rooted; it cannot move or zanzoken but can still cast spells.
 }
 
 STRING 22891
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -159253,7 +159301,7 @@ Debuff Soul Burn Silence 4s
 }
 
 STRING 23055
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
@@ -164333,13 +164381,13 @@ STRING 23695
 }
 
 STRING 23696
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 23697
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -164515,6 +164563,15 @@ STRING 23716
 (goku)
 }
 
+STRING 23717
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool4> seconds|r
+}
+
 STRING 23718
 // Abilities: A0CJ (Kamehameha x10), EditorSuffix (Editor Suffix)
 {
@@ -164665,19 +164722,19 @@ Goku
 }
 
 STRING 23738
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 23739
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 23740
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -164825,5 +164882,1404 @@ A more powerful version of the kamehameha that uses SS4 energy. Damaged enemies 
 
 |cff00ff00Damage: [Int] 90u x 6t + 120u + 3.6% Max HP|r
 |cff00ffffCooldown: <A0CJ,Cool10> seconds|r
+}
+
+STRING 23759
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool5> seconds|r
+}
+
+STRING 23760
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool6> seconds|r
+}
+
+STRING 23761
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool7> seconds|r
+}
+
+STRING 23762
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool8> seconds|r
+}
+
+STRING 23763
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool9> seconds|r
+}
+
+STRING 23764
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool10> seconds|r
+}
+
+STRING 23765
+// Abilities: A0DH (Snipe), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals teh enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool1> - <A0DH,Cool10> seconds|r
+}
+
+STRING 23766
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool2> seconds|r
+}
+
+STRING 23767
+// Abilities: A0DH (Snipe), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23768
+// Abilities: A0IR (Debuff Faerie Fire Granolah Snipe), Name (Name)
+{
+Debuff Faerie Fire Granolah Snipe
+}
+
+STRING 23769
+// Abilities: A0DH (Snipe), Name (Name)
+{
+Snipe
+}
+
+STRING 23770
+// Abilities: A0DH (Snipe), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Snipe - [|cffffcc00Level %d|r]
+}
+
+STRING 23771
+// Buffs/Effects: B06O (), Bufftip (Tooltip)
+{
+Exposed Vulnerabilities
+}
+
+STRING 23772
+// Buffs/Effects: B06O (), Buffubertip (Tooltip - Extended)
+{
+This unit's vulnerabilities have been exposed by Granolah; it has reduced armor and can be seen by the enemy.
+}
+
+STRING 23773
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA1>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool1> seconds|r
+}
+
+STRING 23774
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA3>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool3> seconds|r
+}
+
+STRING 23775
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA4>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool4> seconds|r
+}
+
+STRING 23776
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA5>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool5> seconds|r
+}
+
+STRING 23777
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA6>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool6> seconds|r
+}
+
+STRING 23778
+// Abilities: A0DL (Perfect Snipe), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23779
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA7>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool7> seconds|r
+}
+
+STRING 23780
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23781
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23788
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 2|r]
+}
+
+STRING 23789
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 3|r]
+}
+
+STRING 23790
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 4|r]
+}
+
+STRING 23791
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 5|r]
+}
+
+STRING 23792
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 6|r]
+}
+
+STRING 23793
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 1|r]
+}
+
+STRING 23794
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 7|r]
+}
+
+STRING 23795
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 9|r]
+}
+
+STRING 23796
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 8|r]
+}
+
+STRING 23797
+// Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Snipe - [|cffffcc00Level 10|r]
+}
+
+STRING 23803
+// Abilities: A0DL (Perfect Snipe), Name (Name)
+{
+Perfect Snipe
+}
+
+STRING 23804
+// Abilities: A0DL (Perfect Snipe), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Snipe - [|cffffcc00Level %d|r]
+}
+
+STRING 23805
+// Abilities: A0DU (Energy Volley), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23806
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 10|r]
+}
+
+STRING 23807
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA8>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool8> seconds|r
+}
+
+STRING 23808
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA9>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool9> seconds|r
+}
+
+STRING 23809
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA10>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool10> seconds|r
+}
+
+STRING 23810
+// Abilities: A0DU (Energy Volley), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA1>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool1> - <A0DU,Cool10> seconds|r
+}
+
+STRING 23811
+// Abilities: A0DU (Energy Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a volley of energy beams at the target location, slowing enemies by 50%.
+
+|cffff2222Channel Duration: <A0DU,DataA2>s
+|cff00ff00Damage: [Int] 550u/s|r
+|cff00ffffCooldown: <A0DU,Cool2> seconds|r
+}
+
+STRING 23812
+// Abilities: A0FZ (Evolved Eyes), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah evolves the hidden power behind his eyes to massively boost his power.
+|cffffff00+0.1x agi mult
++20% spell amp
+Upgrades Snipe into Perfect Snipe|r
+|cff00FF00Duration: <A0FZ,Dur1> seconds|r
+|cff00FFFFCooldown: <A0FZ,Cool1> seconds|r
+}
+
+STRING 23813
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool1> seconds|r
+}
+
+STRING 23814
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 2|r]
+}
+
+STRING 23815
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 3|r]
+}
+
+STRING 23816
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 4|r]
+}
+
+STRING 23817
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 5|r]
+}
+
+STRING 23818
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 6|r]
+}
+
+STRING 23819
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 1|r]
+}
+
+STRING 23820
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 7|r]
+}
+
+STRING 23821
+// Abilities: A0DU (Energy Volley), Name (Name)
+{
+Energy Volley
+}
+
+STRING 23822
+// Abilities: A0DU (Energy Volley), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Energy Volley - [|cffffcc00Level %d|r]
+}
+
+STRING 23823
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 9|r]
+}
+
+STRING 23824
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 8|r]
+}
+
+STRING 23825
+// Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Volley - [|cffffcc00Level 10|r]
+}
+
+STRING 23826
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool10> seconds|r
+}
+
+STRING 23827
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool2> seconds|r
+}
+
+STRING 23828
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool3> seconds|r
+}
+
+STRING 23829
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool4> seconds|r
+}
+
+STRING 23830
+// Abilities: A0DV (Pressure Point Attack), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23831
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool5> seconds|r
+}
+
+STRING 23838
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 23839
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 23840
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 23841
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 23842
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 23843
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 23844
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 23845
+// Abilities: A0DV (Pressure Point Attack), Name (Name)
+{
+Pressure Point Attack
+}
+
+STRING 23846
+// Abilities: A0DV (Pressure Point Attack), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Pressure Point Attack - [|cffffcc00Level %d|r]
+}
+
+STRING 23847
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 23848
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 23849
+// Abilities: A0DV (Pressure Point Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 23854
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool6> seconds|r
+}
+
+STRING 23856
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23857
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 23858
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 23859
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 23860
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 23861
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 23863
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 1|r]
+}
+
+STRING 23865
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 2|r]
+}
+
+STRING 23866
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 3|r]
+}
+
+STRING 23867
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 4|r]
+}
+
+STRING 23868
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 5|r]
+}
+
+STRING 23869
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 6|r]
+}
+
+STRING 23870
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 7|r]
+}
+
+STRING 23871
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 8|r]
+}
+
+STRING 23872
+// Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 9|r]
+}
+
+STRING 23881
+// Abilities: A0EW (Final Shot), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23888
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 2|r]
+}
+
+STRING 23889
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 3|r]
+}
+
+STRING 23890
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 4|r]
+}
+
+STRING 23891
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 5|r]
+}
+
+STRING 23892
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 6|r]
+}
+
+STRING 23893
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 1|r]
+}
+
+STRING 23894
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 7|r]
+}
+
+STRING 23895
+// Abilities: A0EW (Final Shot), Name (Name)
+{
+Final Shot
+}
+
+STRING 23896
+// Abilities: A0EW (Final Shot), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Final Shot - [|cffffcc00Level %d|r]
+}
+
+STRING 23897
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 9|r]
+}
+
+STRING 23898
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 8|r]
+}
+
+STRING 23899
+// Abilities: A0EW (Final Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Final Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 23904
+// Abilities: A0FZ (Evolved Eyes), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23906
+// Abilities: A0FZ (Evolved Eyes), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffff2222Evolved Eyes|r
+}
+
+STRING 23907
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool7> seconds|r
+}
+
+STRING 23908
+// Abilities: A0FZ (Evolved Eyes), Name (Name)
+{
+Evolved Eyes
+}
+
+STRING 23909
+// Abilities: A0G1 (Snipe Volley), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23923
+// Abilities: A0G1 (Snipe Volley), Name (Name)
+{
+Snipe Volley
+}
+
+STRING 23927
+// Abilities: A0G1 (Snipe Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Snipe Volley - [|cffffcc00Level 10|r]
+}
+
+STRING 23932
+// Abilities: A0H5 (Charged Snipe), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23947
+// Abilities: A0H5 (Charged Snipe), Name (Name)
+{
+Charged Snipe
+}
+
+STRING 23951
+// Abilities: A0H5 (Charged Snipe), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Charged Snipe - [|cffffcc00Level 10|r]
+}
+
+STRING 23956
+// Abilities: A0HE (Oatmeal), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23958
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+Oatmeal increases Granolah's accuracy in finding vital points and helps him evade incoming attacks. Grants true strike and increases vision range by 2000.
+
+|cffffcc00Evasion|r - <A0HE,DataD1,%>% 
+|cffffcc00Critical|r - <A0HE,DataA1>% 
+|cffffcc00Damage|r - <A0HE,DataB1,.> times
+}
+
+STRING 23959
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 23960
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 23961
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 23962
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 23963
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 23964
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 23965
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 23966
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 23967
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 23968
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 23969
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 23970
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 23971
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 23972
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 23973
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 23974
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Oatmeal - [|cffffcc00Level 1|r]
+}
+
+STRING 23975
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
+STRING 23976
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 23977
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 23978
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 23979
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 23980
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 23981
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 23982
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 23983
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 23984
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 23985
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 23986
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 23987
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 23988
+// Abilities: A0HE (Oatmeal), Name (Name)
+{
+Oatmeal
+}
+
+STRING 23989
+// Abilities: A0HE (Oatmeal), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 23990
+// Abilities: A0HE (Oatmeal), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 23991
+// Abilities: A0IR (Debuff Faerie Fire Granolah Snipe), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 23992
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 23993
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 23994
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 23995
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 23996
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 23997
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 23998
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 23999
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24000
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 100] 2.00x "fp"
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.40x "fp" 
+[lvl 200] 2.50x "fp" [Unlocks [|cff00ff00D|r] |cffff2222Evolved Eyes|r]
+
+|cff00ff00Pick ONE of the following:|r
+[lvl 150] "|cff00ff00snipe volley|r" [unlocks [|cff00ff00F|r] Snipe Volley]
+[lvl 150] "|cffff4400charged snipe|r" [unlocks [|cff00ff00F|r] Charged Snipe]
+}
+
+STRING 24001
+{
+[|cffffcc00Unlock|r] |cffff2222Evolved Eyes|r
+Granolah has unlocked his full power by evolving his cerelian eyes, allowing him to perfect his snipe.
+}
+
+STRING 24002
+{
+[|cffffcc00Talent|r] |cff00ff00Snipe Volley|r
+Granolah can now fire a volley of snipes.
+}
+
+STRING 24003
+{
+[|cffffcc00Talent|r] |cffff4400Charged Snipe|r
+Granolah can now charge a high powered snipe.
+}
+
+STRING 24004
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool8> seconds|r
+}
+
+STRING 24005
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool9> seconds|r
+}
+
+STRING 24006
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool1> seconds|r
+}
+
+STRING 24007
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool3> seconds|r
+}
+
+STRING 24008
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool4> seconds|r
+}
+
+STRING 24009
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool5> seconds|r
+}
+
+STRING 24010
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool6> seconds|r
+}
+
+STRING 24011
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool7> seconds|r
+}
+
+STRING 24012
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool8> seconds|r
+}
+
+STRING 24013
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool9> seconds|r
+}
+
+STRING 24014
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool10> seconds|r
+}
+
+STRING 24015
+// Abilities: A0DV (Pressure Point Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool1> - <A0DV,Cool10> seconds|r
+}
+
+STRING 24016
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool2> seconds|r
+}
+
+STRING 24029
+// Abilities: A0H5 (Charged Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a charged snipe that deals bonus damage. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cffff2222Channel Duration: <A0H5,DataA10,.>s
+|cff00ff00Damage: [Int] 750u (+750u)|r
+|cff00ffffCooldown: <A0H5,Cool10> seconds|r
+}
+
+STRING 24030
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool1> seconds|r
+}
+
+STRING 24031
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA3,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool3> seconds|r
+}
+
+STRING 24032
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA4,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool4> seconds|r
+}
+
+STRING 24033
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA5,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool5> seconds|r
+}
+
+STRING 24034
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA6,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool6> seconds|r
+}
+
+STRING 24035
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA7,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool7> seconds|r
+}
+
+STRING 24036
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA8,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool8> seconds|r
+}
+
+STRING 24037
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA9,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool9> seconds|r
+}
+
+STRING 24038
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA10,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool10> seconds|r
+}
+
+STRING 24039
+// Abilities: A0EW (Final Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool1> - <A0EW,Cool10> seconds|r
+}
+
+STRING 24040
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+
+|cffff2222Costs 5% of Max HP
+Warning: Can damage the caster!
+Channel Duration: <A0EW,DataA2,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool2> seconds|r
+}
+
+STRING 24041
+// Abilities: A0G1 (Snipe Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires multiple snipes from his fingers. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 200u (+200u) (x5)|r
+|cff00ffffCooldown: <A0G1,Cool10> seconds|r
 }
 

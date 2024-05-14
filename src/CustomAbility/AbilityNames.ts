@@ -628,6 +628,17 @@ export module AbilityNames {
     export const TELEKINETIC_SHIELD: string = "Telekinetic Shield!";
   }
 
+  export module Granolah {
+    export const SHIELD: string = "Cerelian Shield";
+    export const SNIPE: string = "Granolah Snipe";
+    export const SNIPE_2: string = "Granolah Snipe 2";
+    export const ENERGY_VOLLEY: string = "Granolah Energy Volley";
+    export const PRESSURE_POINT: string = "Granolah Pressure Point";
+    export const FINAL_SHOT: string = "Granolah Final Shot";
+    export const EVOLVED_EYES: string = "Granolah Evolved Eyes";
+    export const SNIPE_VOLLEY: string = "Granolah Snipe Volley";
+    export const SNIPE_CHARGED: string = "Granolah Snipe Charged";
+  }
 
 
 

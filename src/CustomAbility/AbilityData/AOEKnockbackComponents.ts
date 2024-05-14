@@ -2137,6 +2137,26 @@ export const AOEKnockbackComponents = [
     isPersistent: false,
     isFixedAngle: false,
   },
+  // final shot
+  {
+    name: "knockback beam granolah final shot",
+    repeatInterval: 1, 
+    startTick: 53,
+    endTick: -1,
+    knockbackData: {
+      speed: 65, 
+      angle: 180, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
   // item cell max wings
   {
     name: "knockback item cell max wings",

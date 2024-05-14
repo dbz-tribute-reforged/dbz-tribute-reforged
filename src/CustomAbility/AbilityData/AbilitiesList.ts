@@ -171,6 +171,37 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Granolah.SHIELD,
+    currentCd: 0,
+    maxCd: 10,
+    costType: CostType.SP,
+    costAmount: 35,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGranolahShield.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGranolahShield.blp",
+    },
+    tooltip: {
+      title: "Cerelian Shield",
+      body: 
+        "Creates a barrier for 3s that restricts movement and reduces incoming damage.|n" +
+        "Blocks 70% of incoming damage up to 3 * STR.|n" +
+        "Cost: 35 SP|n" + 
+        "CD: 10"
+    },
+    components: [
+      { name: "beam android barrier" },
+      { name: "block basic guard" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.BasicAbility.MAX_POWER,
     currentCd: 0,
     maxCd: 5,
@@ -11771,6 +11802,236 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block tatsumaki telekinetic shield" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam granolah snipe" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam granolah snipe 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_CHARGED,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 65,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster granolah snipe charged" },
+      { name: "multi granolah snipe charged" },
+      { name: "sfx granolah snipe charged caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_VOLLEY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi granolah snipe volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.ENERGY_VOLLEY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi granolah energy volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.EVOLVED_EYES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "spell amp 20 persistent" },
+      { name: "temp ability granolah snipe 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.PRESSURE_POINT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "debuff stun granolah pressure point" },
+      { name: "debuff stun granolah pressure point bonus" },
+      { name: "damage granolah pressure point explosion" },
+      { name: "sfx granolah pressure point" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.FINAL_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1.5s" },
+      { name: "multi granolah final shot" },
+      { name: "sfx granolah final shot caster" },
     ],
   },
   // -------------------------------------------

@@ -277,6 +277,17 @@ const dendeData = {
     HeroSelectCategory.SUPPORT
   )
 }
+const granolahData = {
+  unitCode: Id.granolah,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.CARRY
+  )
+}
 const android13Data = {
   unitCode: Id.android13,
   onlyRandom: false,
@@ -1000,7 +1011,7 @@ export const HeroSelectUnitList = [
   // 20
   jacoData,
   dendeData,
-  emptySpace,
+  granolahData,
   emptySpace,
   emptySpace,
   // 25

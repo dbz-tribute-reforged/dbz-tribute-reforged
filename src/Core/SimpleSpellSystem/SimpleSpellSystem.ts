@@ -384,6 +384,9 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.tatsumakiTornado, SimpleSpellSystem.doTatsumakiTornado);
     Globals.genericSpellMap.set(Id.tatsumakiVector, SimpleSpellSystem.doTatsumakiVector);
     Globals.genericSpellMap.set(Id.tatsumakiGiantSpear, SimpleSpellSystem.doTatsumakiGiantSpear);
+    
+    Globals.genericSpellMap.set(Id.granolahEnergyVolley, SimpleSpellSystem.doGranolahEnergyVolley);
+    Globals.genericSpellMap.set(Id.granolahFinalShot, SimpleSpellSystem.doGranolahFinalShot);
 
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
@@ -7842,6 +7845,32 @@ export module SimpleSpellSystem {
       }
       ++ticks;
     });
+  }
+
+  export function doGranolahEnergyVolley(spellId: number) {
+    const height = 600;
+    const heightRate = height / 0.25;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    UnitHelper.giveUnitFlying(caster);
+    SetUnitFlyHeight(caster, 600, heightRate);
+
+    TimerStart(CreateTimer(), 0.03, true, () => {
+      if (!ch.isChanneling()) {
+        SetUnitFlyHeight(caster, 0, 0);
+        DestroyTimer(GetExpiredTimer());
+      }
+    });
+  }
+
+  export function doGranolahFinalShot(spellId: number) {
+    UnitHelper.payHPPercentCost(GetTriggerUnit(), 0.05, UNIT_STATE_MAX_LIFE);
   }
 
   export function createTatsumakiRock(caster: unit, x: number, y: number) {
