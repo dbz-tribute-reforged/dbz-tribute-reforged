@@ -686,6 +686,12 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
     ]],
     
+    [Id.whis, [
+      AbilityNames.Whis.PRELUDE_TO_DESTRUCTION,
+      AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+      AbilityNames.Whis.SYMPHONIC_DESTRUCTION,
+    ]],
+    
     [Id.granolah, [
       AbilityNames.Granolah.SNIPE,
       AbilityNames.Granolah.SNIPE_2,
@@ -696,6 +702,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Granolah.SNIPE_VOLLEY,
       AbilityNames.Granolah.SNIPE_CHARGED,
     ]],
+
+
 
 
 
@@ -802,6 +810,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Genos.MACHINE_GUN_BLOWS, AbilityNames.Genos.OVERCHARGE,
       AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
       AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
+      AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

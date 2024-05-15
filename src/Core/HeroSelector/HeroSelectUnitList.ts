@@ -277,6 +277,17 @@ const dendeData = {
     HeroSelectCategory.SUPPORT
   )
 }
+const whisData = {
+  unitCode: Id.whis,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.SUPPORT
+  )
+}
 const granolahData = {
   unitCode: Id.granolah,
   onlyRandom: false,
@@ -1011,8 +1022,8 @@ export const HeroSelectUnitList = [
   // 20
   jacoData,
   dendeData,
+  whisData,
   granolahData,
-  emptySpace,
   emptySpace,
   // 25
   emptySpace,

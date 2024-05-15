@@ -2137,6 +2137,26 @@ export const AOEKnockbackComponents = [
     isPersistent: false,
     isFixedAngle: false,
   },
+  // whis sym
+  {
+    name: "knockback beam whis sym",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 180, 
+      aoe: 250,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
   // final shot
   {
     name: "knockback beam granolah final shot",

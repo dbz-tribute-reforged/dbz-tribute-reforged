@@ -500,6 +500,10 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.tatsumakiVector, AbilityNames.Tatsumaki.VECTOR],
     [Id.tatsumakiGiantSpear, AbilityNames.Tatsumaki.GIANT_SPEAR],
 
+    [Id.whisPreludeToDestruction, AbilityNames.Whis.PRELUDE_TO_DESTRUCTION],
+    [Id.whisAngelicUltraInstinct, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT],
+    [Id.whisSymphonicDestruction, AbilityNames.Whis.SYMPHONIC_DESTRUCTION],
+
     [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
     [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
     [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],

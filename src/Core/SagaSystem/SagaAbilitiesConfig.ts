@@ -396,8 +396,14 @@ export module SagaAbilities {
   }
 
   export module Whis {
-    export const ULTRA_INSTINCT = new SagaAbility(
-      AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
+    export const PRELUDE_TO_DESTRUCTION = new SagaAbility(
+      AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, 10, 12, 20, SHORT_CAST_TIME
+    );
+    export const SYMPHONIC_DESTRUCTION = new SagaAbility(
+      AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT, 10, 120, 10, MEDIUM_CAST_TIME
+    );
+    export const ANGELIC_ULTRA_INSTINCT = new SagaAbility(
+      AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
     );
   }
 

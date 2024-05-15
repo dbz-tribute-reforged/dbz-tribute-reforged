@@ -773,11 +773,12 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // possible whis training saga?
     // whis E01I
-    ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(2000, 0),
+    ["Whis", new SagaUnit(Id.whis, 150, 17000, 400, 17000, new Vector2D(2000, 0),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Whis.PRELUDE_TO_DESTRUCTION,
         SagaAbilities.Cooler.NOVA_CHARIOT,
-        SagaAbilities.Whis.ULTRA_INSTINCT,
+        SagaAbilities.Whis.ANGELIC_ULTRA_INSTINCT,
+        SagaAbilities.Whis.SYMPHONIC_DESTRUCTION,
       ],
       [
         ItemConstants.SagaDrops.WHIS_STAFF,

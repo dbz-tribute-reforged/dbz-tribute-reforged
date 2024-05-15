@@ -628,6 +628,12 @@ export module AbilityNames {
     export const TELEKINETIC_SHIELD: string = "Telekinetic Shield!";
   }
 
+  export module Whis {
+    export const PRELUDE_TO_DESTRUCTION: string = "Whis Prelude To Destruction";
+    export const ANGELIC_ULTRA_INSTINCT: string = "Whis Angelic Ultra Instinct";
+    export const SYMPHONIC_DESTRUCTION: string = "Whis Symphonic Destruction";
+  }
+
   export module Granolah {
     export const SHIELD: string = "Cerelian Shield";
     export const SNIPE: string = "Granolah Snipe";
@@ -639,6 +645,7 @@ export module AbilityNames {
     export const SNIPE_VOLLEY: string = "Granolah Snipe Volley";
     export const SNIPE_CHARGED: string = "Granolah Snipe Charged";
   }
+
 
 
 
@@ -1028,6 +1035,7 @@ export module AbilityNames {
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
     export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";
     export const NOVA_STAR_OMEGA_CUSTOM: string = "Omega Nova Star!";
+    export const SYMPHONIC_DESTRUCTION: string = "Symphonic Destruction!";
   }
 
   export module Items {

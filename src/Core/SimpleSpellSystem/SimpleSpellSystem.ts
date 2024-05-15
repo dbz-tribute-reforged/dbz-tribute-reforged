@@ -79,8 +79,10 @@ export module SimpleSpellSystem {
       const target = BlzGetEventDamageTarget();
       const dmg = GetEventDamage();
       const source = GetEventDamageSource();
-      DDSRunJirenGlare(target, source, dmg);
-      DDSRunDPSCheck(target, source, dmg);
+      DDSWhisDamageBlock(target, source, dmg);
+      DDSWhisDoOver();
+      DDSJirenGlare();
+      DDSDPSCheck();
       return false;
     }));
 
@@ -385,9 +387,13 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.tatsumakiVector, SimpleSpellSystem.doTatsumakiVector);
     Globals.genericSpellMap.set(Id.tatsumakiGiantSpear, SimpleSpellSystem.doTatsumakiGiantSpear);
     
+    Globals.genericSpellMap.set(Id.whisTemporalDoOver, SimpleSpellSystem.doWhisTemporalDoOver);
+    Globals.genericSpellMap.set(Id.whisAngelicShield, SimpleSpellSystem.doWhisAngelicShield);
+    Globals.genericSpellMap.set(Id.whisTemporalWarp, SimpleSpellSystem.doWhisTemporalWarp);
+
     Globals.genericSpellMap.set(Id.granolahEnergyVolley, SimpleSpellSystem.doGranolahEnergyVolley);
     Globals.genericSpellMap.set(Id.granolahFinalShot, SimpleSpellSystem.doGranolahFinalShot);
-
+    
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
@@ -501,6 +507,34 @@ export module SimpleSpellSystem {
         SaveReal(Globals.tatsumakiHashtable, unitId, beamSpeedKey, newSpeed);
       });
     });
+  }
+
+  export function DDSWhisDamageBlock(target: unit, source: unit, dmg: number) {
+    const shieldHpKey = StringHash("whis_e_hp");
+    const targetId = GetHandleId(target);
+    const shieldHp = LoadReal(Globals.genericDDSHashtable, targetId, shieldHpKey);
+    if (shieldHp <= 0) return;
+
+    if (dmg <= shieldHp) {
+      BlzSetEventDamage(1);
+      SaveReal(Globals.genericDDSHashtable, targetId, shieldHpKey, shieldHp - dmg);
+    } else {
+      BlzSetEventDamage(dmg - shieldHp);
+      SaveReal(Globals.genericDDSHashtable, targetId, shieldHpKey, 0);
+    }
+  }
+  
+  export function DDSWhisDoOver() {
+    const target = BlzGetEventDamageTarget();
+
+    const healActiveKey = StringHash("whis_w_heal_active");
+    const targetId = GetHandleId(target);
+    if (!LoadBoolean(Globals.genericDDSHashtable, targetId, healActiveKey)) return;
+
+    const healKey = StringHash("whis_w_heal");
+    const healAmt = LoadReal(Globals.genericDDSHashtable, targetId, healKey);
+    const dmg = GetEventDamage();
+    SaveReal(Globals.genericDDSHashtable, targetId, healKey, healAmt + dmg);
   }
   
   export function doGokuKaiokenOn(spellId: number) {
@@ -1508,7 +1542,9 @@ export module SimpleSpellSystem {
           );
           // const targetYaw = facingAngle * CoordMath.degreesToRadians;
 
-          const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
+          const pitch = (
+            startingAngle - startingPitch + yawModifier *  time * anglesPerTick
+          ) * CoordMath.degreesToRadians;
 
           const sfx = AddSpecialEffect(spiralModel, newPos.x, newPos.y);
           // sfxList.push(sfx);
@@ -1947,11 +1983,10 @@ export module SimpleSpellSystem {
     });
   }
 
-  export function DDSRunJirenGlare(
-    target: unit,
-    source: unit,
-    dmg: number,
-  ) {
+  export function DDSJirenGlare() {
+    const target = BlzGetEventDamageTarget();
+    const dmg = GetEventDamage();
+    const source = GetEventDamageSource();
     if (
       UnitHelper.isUnitDead(target)
       || !IsUnitType(source, UNIT_TYPE_HERO)
@@ -2151,11 +2186,10 @@ export module SimpleSpellSystem {
     }
   }
   
-  export function DDSRunDPSCheck(
-    target: unit,
-    source: unit,
-    dmg: number,
-  ) {
+  export function DDSDPSCheck() {
+    const target = BlzGetEventDamageTarget();
+    const dmg = GetEventDamage();
+    const source = GetEventDamageSource();
     if (
       UnitHelper.isUnitDead(target)
       || !IsUnitType(source, UNIT_TYPE_HERO)
@@ -5377,6 +5411,10 @@ export module SimpleSpellSystem {
   }
 
   export function doAinzGate(spellId: number) {
+    createGateTeleporter(spellId, GetTriggerUnit(), GetSpellTargetX(), GetSpellTargetY());
+  }
+
+  export function createGateTeleporter(spellId: number, caster: unit, x: number, y: number) {
     const moveDurationTicks = 16;
     const schalaTpEndTick = 333;
     const tpAOE = 400;
@@ -5385,7 +5423,6 @@ export module SimpleSpellSystem {
     const tpRegisterKey = StringHash(I2S(spellId) + "gate_tp_count");
     const tpTimeKey = StringHash(I2S(spellId) + "gate_tp_exclude_time");
 
-    const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
 
     const tpUnit = CreateUnit(
@@ -5399,7 +5436,7 @@ export module SimpleSpellSystem {
     SetUnitInvulnerable(tpUnit, true);
     
     const srcPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-    const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+    const targetPos = new Vector2D(x, y);
     const direction = CoordMath.angleBetweenCoords(srcPos, targetPos);
     const maxDist =  Math.min(4000, Math.max(1500, CoordMath.distance(srcPos, targetPos)));
     const excludeGroup = CreateGroup();
@@ -6605,7 +6642,10 @@ export module SimpleSpellSystem {
     SetUnitAnimation(caster, "spell one");
 
     GroupClear(Globals.tmpUnitGroup);
-    GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), reverseLotusAOE, null);
+    GroupEnumUnitsInRange(
+      Globals.tmpUnitGroup, 
+      GetUnitX(caster), GetUnitY(caster), reverseLotusAOE, null
+    );
     ForGroup(Globals.tmpUnitGroup, () => {
       const unit = GetEnumUnit();
       if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
@@ -7847,6 +7887,299 @@ export module SimpleSpellSystem {
     });
   }
 
+
+  export function doWhisTemporalDoOver(spellId: number) {
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const target = GetSpellTargetUnit();
+
+    if (!UnitHelper.isUnitRealHero(target)) {
+      DisplayTimedTextToPlayer(player, 0, 0, 3, "|cffff2222Invalid Target.|r");
+      BlzStartUnitAbilityCooldown(caster, spellId, 1);
+      return;
+    }
+
+    if (!Globals.DDSUnitMap.has(target)) {
+      Globals.DDSUnitMap.set(target, true);
+      TriggerRegisterUnitEvent(Globals.DDSTrigger, target, EVENT_UNIT_DAMAGED);
+    }
+
+    const timer = TimerManager.getInstance().get();
+    const timerId = GetHandleId(timer);
+    const ticksKey = StringHash("whis_w_ticks");
+    const targetKey = StringHash("whis_w_target");
+    const xKey = StringHash("whis_w_x");
+    const yKey = StringHash("whis_w_y");
+    const sfxKey = StringHash("whis_w_sfx");
+
+    const healActiveKey = StringHash("whis_w_heal_active");
+    const healKey = StringHash("whis_w_heal");
+    const targetId = GetHandleId(target);
+    const x = GetUnitX(target);
+    const y = GetUnitY(target);
+
+    SaveInteger(Globals.genericSpellHashtable, timerId, ticksKey, 1);
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, targetKey, target);
+    SaveReal(Globals.genericSpellHashtable, timerId, xKey, x);
+    SaveReal(Globals.genericSpellHashtable, timerId, yKey, y);
+    const sfx = AddSpecialEffect("MagicTimerCircle.mdl", x, y);
+    BlzSetSpecialEffectScale(sfx, 2.0);
+    BlzSetSpecialEffectHeight(sfx, BlzGetUnitZ(target) + 150);
+    BlzSetSpecialEffectTimeScale(sfx, 0.5);
+    SaveEffectHandle(
+      Globals.genericSpellHashtable, timerId, sfxKey, 
+      sfx
+    );
+    
+    SaveBoolean(Globals.genericDDSHashtable, targetId, healActiveKey, true);
+    SaveReal(Globals.genericDDSHashtable, targetId, healKey, 0);
+
+    TimerStart(timer, 0.03, true, temporalDoOverHook);
+  }
+
+  export function temporalDoOverHook() {
+    const delayTick = 100;
+    const healTicks = 133;
+    const healEndTick = delayTick + healTicks;
+    const maxDist = 5000;
+
+    const ticksKey = StringHash("whis_w_ticks");
+    const targetKey = StringHash("whis_w_target");
+    const healActiveKey = StringHash("whis_w_heal_active");
+    const healKey = StringHash("whis_w_heal");
+
+    const timer = GetExpiredTimer();
+    const timerId = GetHandleId(timer);
+
+    const ticks = LoadInteger(Globals.genericSpellHashtable, timerId, ticksKey);
+    const target = LoadUnitHandle(Globals.genericSpellHashtable, timerId, targetKey);
+    const targetId = GetHandleId(target);
+
+    if (ticks < delayTick) {
+      // the dds trigger will sum the amount to heal
+    } else if (ticks < healEndTick) {
+
+      if (ticks == delayTick) {
+        SaveBoolean(Globals.genericDDSHashtable, targetId, healActiveKey, false);
+
+        const sfxKey = StringHash("whis_w_sfx");
+        const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, sfxKey);
+        DestroyEffect(sfx);
+
+        const xKey = StringHash("whis_w_x");
+        const yKey = StringHash("whis_w_y");
+        const oldX = LoadReal(Globals.genericSpellHashtable, timerId, xKey);
+        const oldY = LoadReal(Globals.genericSpellHashtable, timerId, yKey);
+        
+        Globals.tmpVector.setPos(oldX, oldY);
+        Globals.tmpVector2.setUnit(target);
+        if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) < maxDist) {
+          SetUnitX(target, oldX);
+          SetUnitY(target, oldY);
+        }
+
+        SaveEffectHandle(
+          Globals.genericSpellHashtable, timerId, sfxKey,
+          AddSpecialEffectTarget(
+            "Abilities/Spells/NightElf/Rejuvenation/RejuvenationTarget.mdl", 
+            target, "origin"
+          )
+        );
+      }
+      
+      // start healing
+      const heal = LoadReal(Globals.genericDDSHashtable, targetId, healKey);
+      SetUnitState(
+        target, UNIT_STATE_LIFE, 
+        GetUnitState(target, UNIT_STATE_LIFE)
+        + Math.max(1, heal / healTicks)
+      );
+    }
+
+    // end
+    if (ticks >= healEndTick || UnitHelper.isUnitDead(target)) {
+
+      const sfxKey = StringHash("whis_w_sfx");
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, sfxKey);
+      DestroyEffect(sfx);
+
+      SaveBoolean(Globals.genericDDSHashtable, targetId, healActiveKey, false);
+      SaveReal(Globals.genericDDSHashtable, targetId, healKey, 0);
+
+      FlushChildHashtable(Globals.genericSpellHashtable, timerId);
+      TimerManager.getInstance().recycle(timer);
+      return;
+    }
+
+    SaveInteger(Globals.genericSpellHashtable, timerId, ticksKey, ticks + 1);
+  }
+
+  export function doWhisAngelicShield(spellId: number) {
+    const shieldHpMult = BASE_DMG.KAME_DPS * 10;
+    const maxHpPctPerLevel = 0.015;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const target = GetSpellTargetUnit();
+
+    if (!UnitHelper.isUnitRealHero(target)) {
+      DisplayTimedTextToPlayer(player, 0, 0, 3, "|cffff2222Invalid Target.|r");
+      BlzStartUnitAbilityCooldown(caster, spellId, 1);
+      return;
+    }
+
+    if (!Globals.DDSUnitMap.has(target)) {
+      Globals.DDSUnitMap.set(target, true);
+      TriggerRegisterUnitEvent(Globals.DDSTrigger, target, EVENT_UNIT_DAMAGED);
+    }
+    
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    const timer = TimerManager.getInstance().get();
+    const timerId = GetHandleId(timer);
+    const ticksKey = StringHash("whis_e_ticks");
+    const casterKey = StringHash("whis_e_caster");
+    const targetKey = StringHash("whis_e_target");
+    const sfxKey = StringHash("whis_e_sfx");
+    const texttagKey = StringHash("whis_e_tt");
+    
+    // DDS
+    const shieldHpKey = StringHash("whis_e_hp");
+    const targetId = GetHandleId(target);
+    const abilLvl = GetUnitAbilityLevel(caster, spellId);
+    const shieldHp = AOEDamage.calculateDamageRaw(
+      caster, abilLvl,
+      ch.spellPower, 
+      shieldHpMult, 1.0, 
+      bj_HEROSTAT_INT,
+    ) + abilLvl * maxHpPctPerLevel * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+    SaveReal(Globals.genericDDSHashtable, targetId, shieldHpKey, shieldHp);
+    
+    // timer
+    SaveInteger(Globals.genericSpellHashtable, timerId, ticksKey, 1);
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, casterKey, caster);
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, targetKey, target);
+    SaveEffectHandle(Globals.genericSpellHashtable, timerId, sfxKey, 
+      AddSpecialEffectTarget("WhisShield.mdl", target, "origin")
+    );
+
+    const texttag = CreateTextTag();
+    SetTextTagPermanent(texttag, true);
+    SetTextTagColor(texttag, 255, 255, 255, 100);
+    SetTextTagVisibility(texttag, true);
+    SetTextTagPos(texttag, GetUnitX(target), GetUnitY(target), 10);
+    SetTextTagTextBJ(texttag, I2S(R2I(shieldHp)), 10);
+    SaveTextTagHandle(Globals.genericSpellHashtable, timerId, texttagKey, texttag);
+
+    TimerStart(timer, 0.03, true, angelicShieldHook);
+  }
+  
+  export function angelicShieldHook() {
+    const endTick = 200;
+    const dmgAOE = 500;
+    const shieldToDmgPct = 0.9;
+
+    const timer = GetExpiredTimer();
+    const timerId = GetHandleId(timer);
+    
+    const ticksKey = StringHash("whis_e_ticks");
+    const targetKey = StringHash("whis_e_target");
+    const sfxKey = StringHash("whis_e_sfx");
+    const texttagKey = StringHash("whis_e_tt");
+    const shieldHpKey = StringHash("whis_e_hp");
+
+    const ticks = LoadInteger(Globals.genericSpellHashtable, timerId, ticksKey);
+    const target = LoadUnitHandle(Globals.genericSpellHashtable, timerId, targetKey);
+    const texttag = LoadTextTagHandle(Globals.genericSpellHashtable, timerId, texttagKey);
+    const x = GetUnitX(target);
+    const y = GetUnitY(target);
+    const targetId = GetHandleId(target);
+
+    // shield hp from DDS hashtable
+    const shieldHp = LoadReal(Globals.genericDDSHashtable, targetId, shieldHpKey);
+
+    if (ticks < endTick) {
+      SetTextTagPos(texttag, x, y, 10);
+      SetTextTagTextBJ(texttag, I2S(R2I(shieldHp)), 10);
+    }
+
+    if (ticks >= endTick || UnitHelper.isUnitDead(target) || shieldHp <= 0) {
+      if (shieldHp > 0) {
+        const casterKey = StringHash("whis_e_caster");
+        const caster = LoadUnitHandle(Globals.genericSpellHashtable, timerId, casterKey);
+        const casterPlayer = GetOwningPlayer(caster);
+
+        // detonate the shield
+        DestroyEffect(
+          AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", x, y)
+        );
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, x, y, dmgAOE, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (UnitHelper.isUnitTargetableForPlayer(unit, casterPlayer)) {
+            UnitDamageTarget(
+              caster, unit, shieldHp * shieldToDmgPct, 
+              false, false, 
+              ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+              WEAPON_TYPE_WHOKNOWS
+            );
+          }
+        });
+      }
+      SaveReal(Globals.genericDDSHashtable, targetId, shieldHpKey, 0);
+      DestroyTextTag(texttag);
+      DestroyEffect(LoadEffectHandle(Globals.genericSpellHashtable, timerId, sfxKey));
+      FlushChildHashtable(Globals.genericSpellHashtable, timerId);
+      TimerManager.getInstance().recycle(timer);
+      return;
+    }
+
+    SaveInteger(Globals.genericSpellHashtable, timerId, ticksKey, ticks + 1);
+  }
+
+  export function doWhisTemporalWarp(spellId: number) {
+    const endTick = 66;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    const x = GetSpellTargetX();
+    const y = GetSpellTargetY();
+    
+    const sfx = AddSpecialEffect(
+      "WhisTeleport3.mdl",
+      GetUnitX(caster), GetUnitY(caster)
+    );
+
+    SetUnitTimeScale(caster, 0.5);
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks >= endTick || ticks < 0) {
+        SetUnitTimeScale(caster, 1.0);
+        if (ticks > 0) {
+          createGateTeleporter(spellId, caster, x, y);
+        }
+        DestroyEffect(sfx);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      if (!ch.isChanneling()) {
+        ticks = -1;
+        return;
+      }
+      BlzSetSpecialEffectScale(sfx, 1.0 + 2*ticks/endTick);
+      ++ticks;
+    });
+  }
+
   export function doGranolahEnergyVolley(spellId: number) {
     const height = 600;
     const heightRate = height / 0.25;
@@ -7861,10 +8194,11 @@ export module SimpleSpellSystem {
     UnitHelper.giveUnitFlying(caster);
     SetUnitFlyHeight(caster, 600, heightRate);
 
-    TimerStart(CreateTimer(), 0.03, true, () => {
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
       if (!ch.isChanneling()) {
         SetUnitFlyHeight(caster, 0, 0);
-        DestroyTimer(GetExpiredTimer());
+        TimerManager.getInstance().recycle(timer);
       }
     });
   }

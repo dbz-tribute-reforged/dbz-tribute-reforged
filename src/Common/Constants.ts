@@ -1444,6 +1444,14 @@ export module Id {
   export const waluigiSpin = FourCC("A11R");
   export const waluigiJump = FourCC("A11S");
 
+  export const whis = FourCC("E01I");
+  export const whisPreludeToDestruction = FourCC("A0JI");
+  export const whisTemporalDoOver = FourCC("A0JJ");
+  export const whisAngelicShield = FourCC("A0JH");
+  export const whisTemporalWarp = FourCC("A0JK");
+  export const whisAngelicUltraInstinct = FourCC("A0JG");
+  export const whisSymphonicDestruction = FourCC("A0JO");
+
   export const yamchaR = FourCC("E010");
   export const yamchaRLightPunch = FourCC("A0RC");
   export const yamchaRMediumPunch = FourCC("A0RD");

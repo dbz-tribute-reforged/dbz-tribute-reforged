@@ -2916,6 +2916,79 @@ export module SoundHelper {
           }
         }
         break;
+        
+      // whis
+      case Id.whisPreludeToDestruction:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/NiceTry.mp3", 783);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/OhMy.mp3", 1515);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Whis/WhisQ.mp3", 653);
+        break;
+      
+      case Id.whisTemporalDoOver:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/ReverseTheTime.mp3", 783);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/OnlyDoOver.mp3", 1071);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Whis/WhisW.mp3", 3030);
+        break;
+      
+      case Id.whisAngelicShield:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Laugh.mp3", 1593);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Remarkable.mp3", 1227);
+          }
+        }
+        break;
+
+      case Id.whisTemporalWarp:
+        if (unitId == Id.whis) {
+          if (rng < 66) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/TravelComplicated.mp3", 2089);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/NullRealm.mp3", 3056);
+          }
+        }
+        break;
+      
+      case Id.whisAngelicUltraInstinct:
+        if (unitId == Id.whis) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Think.mp3", 5224);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/VeryWellThen.mp3", 940);
+          }
+        }
+        break;
+      
+      case Id.whisSymphonicDestruction:
+        if (unitId == Id.whis) {
+          if (rng < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingRapGod.mp3", 15621);
+          } else if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingAllStar.mp3", 17815);
+          } else if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingBarbie.mp3", 14759);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingLetItGo2.mp3", 17214);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingLetItGo1.mp3", 10344);
+          } else if (rng < 80) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingRickRoll.mp3", 12146);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingYoureWelcome.mp3", 10840);
+          }
+        }
+        break;
     }
   }
 }

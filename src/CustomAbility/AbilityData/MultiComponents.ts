@@ -3979,6 +3979,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi whis sym", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 15,
+    angleMin: -60,
+    angleMax: 60,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 4,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 125,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    replaceSourceWithTargetUnit: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam whis sym" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi granolah energy volley", 
     repeatInterval: 1, 
     startTick: 0,

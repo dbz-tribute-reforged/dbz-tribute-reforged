@@ -437,7 +437,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -445,13 +445,13 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "spell",
     icon: {
-      enabled: "BTNKameGod.blp",
-      disabled: "BTNKameGod.blp",
+      enabled: "",
+      disabled: "",
     },
     tooltip: {
-      title: AbilityNames.Goku.GOD_KAMEHAMEHA,
+      title: "",
       body: 
-        "God Kame"
+        ""
     },
     components: [
       { name: "beam god kamehameha" },
@@ -464,7 +464,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -609,7 +609,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 495,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -638,7 +638,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 495,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3537,7 +3537,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -11806,6 +11806,92 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Whis.PRELUDE_TO_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam whis prelude" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward mastered ultra instinct" },
+      { name: "spell amp mastered ultra instinct" },
+      { name: "dodge ultra instinct" },
+      { name: "block mastered ultra instinct" },
+      { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Whis.SYMPHONIC_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi whis sym" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Granolah.SNIPE,
     currentCd: 0,
     maxCd: 1,
@@ -18483,6 +18569,34 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi mankind destruction attack saga" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.SYMPHONIC_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi whis sym" },
     ],
   },
   // -------------------------------------------

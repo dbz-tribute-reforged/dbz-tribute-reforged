@@ -35398,7 +35398,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (Prelude to Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35416,7 +35416,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Prelude to Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56687,18 +56687,6 @@ STRING 8737
 E
 }
 
-STRING 8738
-// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8739
-// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FF00Deals damage based on how much shield remains.|r|n|cff00FFFFCooldown: 9s|r
-}
-
 STRING 8740
 // Abilities: A0JH (Angelic Shield), Name (Name)
 {
@@ -56711,64 +56699,13 @@ STRING 8741
 E
 }
 
-STRING 8742
-// Abilities: A0JH (Angelic Shield), Researchtip (Tooltip - Learn)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8743
-// Abilities: A0JH (Angelic Shield), Researchubertip (Tooltip - Learn - Extended)
-{
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FFFFCooldown: 9s|r
-}
-
-STRING 8744
-// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8745
-// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8746
-// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8747
-// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Angelic Shield
-}
-
-STRING 8748
-// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FF00Deals damage based on how much shield remains.|r|n|cff00FFFFCooldown: 9s|r
-}
-
-STRING 8749
-// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FF00Deals damage based on how much shield remains.|r|n|cff00FFFFCooldown: 9s|r
-}
-
-STRING 8750
-// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FF00Deals damage based on how much shield remains.|r|n|cff00FFFFCooldown: 9s|r
-}
-
 STRING 8751
-// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff00 int*1.5+(lvl*3)%health.|r|n|cffFFFF00Duration: 6s|r|n|cff00FF00Deals damage based on how much shield remains.|r|n|cff00FFFFCooldown: 9s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool1>s|r
 }
 
 STRING 8752
@@ -56778,19 +56715,25 @@ Q
 }
 
 STRING 8753
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool2>s|r
 }
 
 STRING 8754
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool3>s|r
 }
 
 STRING 8755
-// Abilities: A0JI (Symphonic Destruction), Name (Name)
+// Abilities: A0JO (Symphonic Destruction), Name (Name)
 {
 Symphonic Destruction
 }
@@ -56802,111 +56745,175 @@ Q
 }
 
 STRING 8757
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool4>s|r
 }
 
 STRING 8758
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool5>s|r
 }
 
 STRING 8759
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool6>s|r
 }
 
 STRING 8760
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool7>s|r
 }
 
 STRING 8761
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool8>s|r
 }
 
 STRING 8762
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool9>s|r
 }
 
 STRING 8763
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Researchubertip (Tooltip - Learn - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool1> - <A0JI,Cool10>s|r
 }
 
 STRING 8764
-// Abilities: A0JI (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JI (Prelude to Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Whis fires a blue beam that deals damage and silences enemies for 2s.
+
+|cff00FF00Damage: [Int] 125u x 3t + 2.4% Max HP|r
+|cff00FFFFCooldown: <A0JI,Cool10>s|r
 }
 
 STRING 8765
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool1>s|r
 }
 
 STRING 8766
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool1>s|r
 }
 
 STRING 8767
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool2>s|r
 }
 
 STRING 8768
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool4>s|r
 }
 
 STRING 8769
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool3>s|r
 }
 
 STRING 8770
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool5>s|r
 }
 
 STRING 8771
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool6>s|r
 }
 
 STRING 8772
-// Abilities: A0JI (Symphonic Destruction), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool7>s|r
 }
 
 STRING 8773
-// Abilities: A0JI (Symphonic Destruction), Researchtip (Tooltip - Learn)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00Q|r] Symphonic Destruction
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool8>s|r
 }
 
 STRING 8774
-// Abilities: A0JI (Symphonic Destruction), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
+
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool9>s|r
 }
 
 STRING 8775
@@ -56916,16 +56923,13 @@ W
 }
 
 STRING 8776
-// Abilities: A0JJ (Temporal Do-Over), Tip (Tooltip - Normal)
+// Abilities: A0JH (Angelic Shield), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00W|r] Temporal Do-Over
-}
+Grants Whis or an ally a shield which absorbs incoming damage. When the shield expires, 90% of the remaining shield health is dealt as damage in 500 AOE.
 
-STRING 8777
-// Abilities: A0JJ (Temporal Do-Over), Ubertip (Tooltip - Normal - Extended)
-{
-Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.|n|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r|nHeals |cffFFFF00100%|r of damage taken over 4s.|r|n|cff00FFFFCooldown: 12s|r
-
+|cff00ff00Damage Block: [Int] 1000u + (lvl*1.5)% max hp.|r
+|cffFFFF00Duration: 6s
+|cff00FFFFCooldown: <A0JH,Cool10>s|r
 }
 
 STRING 8778
@@ -56940,35 +56944,10 @@ STRING 8779
 W
 }
 
-STRING 8780
-// Abilities: A0JJ (Temporal Do-Over), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00W|r] Temporal Do-Over
-}
-
-STRING 8781
-// Abilities: A0JJ (Temporal Do-Over), Researchubertip (Tooltip - Learn - Extended)
-{
-Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.|n|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r|nHeals |cffFFFF00100%|r of damage taken over 4s.|r|n|cff00FFFFCooldown: 12s|r
-
-}
-
 STRING 8782
 // Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 8783
-// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Temporal Warp
-}
-
-STRING 8784
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
-{
-Whis raises his staff, creating a portal that can teleport himself and others to a position on the map.|n|cff00FF00Range: 3500|r|n|cff00FFFFCooldown: 40s|r
 }
 
 STRING 8785
@@ -56981,42 +56960,6 @@ STRING 8786
 // Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
 {
 R
-}
-
-STRING 8787
-// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Temporal Warp
-}
-
-STRING 8788
-// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Temporal Warp
-}
-
-STRING 8789
-// Abilities: A0JK (Temporal Warp), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00R|r] Temporal Warp
-}
-
-STRING 8790
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
-{
-Whis raises his staff, creating a portal that can teleport himself and others to a position on the map.|n|cff00FF00Range: 4000|r|n|cff00FFFFCooldown: 40s|r
-}
-
-STRING 8791
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
-{
-Whis raises his staff, creating a portal that can teleport himself and others to a position on the map.|n|cff00FF00Range: 4500|r|n|cff00FFFFCooldown: 40s|r
-}
-
-STRING 8792
-// Abilities: A0JK (Temporal Warp), Researchubertip (Tooltip - Learn - Extended)
-{
-Whis raises his staff, creating a portal that can teleport himself and others to a position on the map.|n|cff00FF00Range: 2000+lvl*500|r|n|cff00FFFFCooldown: 120s|r
 }
 
 STRING 8793
@@ -67965,7 +67908,7 @@ STRING 10431
 }
 
 STRING 10432
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0JG (Angelic Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97077,7 +97020,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -123653,7 +123596,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0JF (Angelic Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -123726,7 +123669,7 @@ STRING 18300
 }
 
 STRING 18301
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0JO (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -124074,7 +124017,7 @@ STRING 18349
 }
 
 STRING 18350
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -126174,12 +126117,9 @@ STRING 18660
 }
 
 STRING 18661
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool1> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 1|r]
 }
 
 STRING 18662
@@ -133293,15 +133233,6 @@ STRING 19625
 // Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
-}
-
-STRING 19626
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool3> seconds|r
 }
 
 STRING 19627
@@ -156941,7 +156872,7 @@ D
 }
 
 STRING 22733
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -158198,7 +158129,7 @@ Dende splashes sacred water at the target location, dealing damage to enemies. A
 }
 
 STRING 22911
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -164564,12 +164495,9 @@ STRING 23716
 }
 
 STRING 23717
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Researchtip (Tooltip - Learn)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool4> seconds|r
+[|cff00FF00E|r] Learn Angelic Shield - [|cffffcc00Level %d|r]
 }
 
 STRING 23718
@@ -164884,76 +164812,28 @@ A more powerful version of the kamehameha that uses SS4 energy. Damaged enemies 
 |cff00ffffCooldown: <A0CJ,Cool10> seconds|r
 }
 
-STRING 23759
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool5> seconds|r
-}
-
 STRING 23760
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool6> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 2|r]
 }
 
 STRING 23761
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool7> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 3|r]
 }
 
 STRING 23762
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool8> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 4|r]
 }
 
 STRING 23763
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool9> seconds|r
-}
-
-STRING 23764
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool10> seconds|r
-}
-
-STRING 23765
-// Abilities: A0DH (Snipe), Researchubertip (Tooltip - Learn - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals teh enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool1> - <A0DH,Cool10> seconds|r
-}
-
-STRING 23766
-// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cff00ff00Damage: [Int] 500u (+500u)|r
-|cff00ffffCooldown: <A0DH,Cool2> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 5|r]
 }
 
 STRING 23767
@@ -165070,6 +164950,60 @@ STRING 23781
 Q
 }
 
+STRING 23782
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool1> seconds|r
+}
+
+STRING 23783
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool3> seconds|r
+}
+
+STRING 23784
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool4> seconds|r
+}
+
+STRING 23785
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool5> seconds|r
+}
+
+STRING 23786
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool6> seconds|r
+}
+
+STRING 23787
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool7> seconds|r
+}
+
 STRING 23788
 // Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
 {
@@ -165128,6 +165062,51 @@ STRING 23797
 // Abilities: A0DH (Snipe), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Snipe - [|cffffcc00Level 10|r]
+}
+
+STRING 23798
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool8> seconds|r
+}
+
+STRING 23799
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool9> seconds|r
+}
+
+STRING 23800
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool10> seconds|r
+}
+
+STRING 23801
+// Abilities: A0DH (Snipe), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals teh enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool1> - <A0DH,Cool10> seconds|r
+}
+
+STRING 23802
+// Abilities: A0DH (Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cff00ff00Damage: [Int] 500u (+500u)|r
+|cff00ffffCooldown: <A0DH,Cool2> seconds|r
 }
 
 STRING 23803
@@ -165215,15 +165194,6 @@ Upgrades Snipe into Perfect Snipe|r
 |cff00FFFFCooldown: <A0FZ,Cool1> seconds|r
 }
 
-STRING 23813
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool1> seconds|r
-}
-
 STRING 23814
 // Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
 {
@@ -165297,39 +165267,27 @@ STRING 23825
 }
 
 STRING 23826
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), EditorSuffix (Editor Suffix)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool10> seconds|r
+(whis)
 }
 
 STRING 23827
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool2> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 6|r]
 }
 
 STRING 23828
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool3> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 7|r]
 }
 
 STRING 23829
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool4> seconds|r
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 8|r]
 }
 
 STRING 23830
@@ -165339,9 +165297,60 @@ STRING 23830
 }
 
 STRING 23831
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 9|r]
+}
+
+STRING 23832
 // Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool1> seconds|r
+}
+
+STRING 23833
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool10> seconds|r
+}
+
+STRING 23834
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool2> seconds|r
+}
+
+STRING 23835
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool3> seconds|r
+}
+
+STRING 23836
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool4> seconds|r
+}
+
+STRING 23837
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
 
 |cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
 |cff00ffffCooldown: <A0DL,Cool5> seconds|r
@@ -165419,13 +165428,55 @@ STRING 23849
 [|cff00ff00E|r] Pressure Point Attack - [|cffffcc00Level 10|r]
 }
 
-STRING 23854
+STRING 23850
 // Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
 
 |cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
 |cff00ffffCooldown: <A0DL,Cool6> seconds|r
+}
+
+STRING 23851
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool7> seconds|r
+}
+
+STRING 23852
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool8> seconds|r
+}
+
+STRING 23853
+// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a powerful long range energy beam from the tip of his finger. After 0.3s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.6s the beam deals another +100% damage and stuns for 2s instead.
+
+|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
+|cff00ffffCooldown: <A0DL,Cool9> seconds|r
+}
+
+STRING 23854
+// Abilities: A0JH (Angelic Shield), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 10|r]
+}
+
+STRING 23855
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool1,.> seconds|r
 }
 
 STRING 23856
@@ -165464,10 +165515,28 @@ STRING 23861
 E
 }
 
+STRING 23862
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool3,.> seconds|r
+}
+
 STRING 23863
 // Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 1|r]
+}
+
+STRING 23864
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool4,.> seconds|r
 }
 
 STRING 23865
@@ -165518,10 +165587,89 @@ STRING 23872
 [|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 9|r]
 }
 
+STRING 23873
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool5,.> seconds|r
+}
+
+STRING 23874
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool6,.> seconds|r
+}
+
+STRING 23875
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool7,.> seconds|r
+}
+
+STRING 23876
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool8,.> seconds|r
+}
+
+STRING 23877
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool9,.> seconds|r
+}
+
+STRING 23878
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool10,.> seconds|r
+}
+
+STRING 23879
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+
+|cff00ff00Damage: [Int] 500u + 1% Max HP|r
+|cff00ffffCooldown: <A0DV,Cool2,.> seconds|r
+}
+
+STRING 23880
+// Abilities: A0H5 (Charged Snipe), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah fires a charged snipe that deals bonus damage. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+
+|cffff2222Channel Duration: <A0H5,DataA10,.>s
+|cff00ff00Damage: [Int] 750u (+750u)|r
+|cff00ffffCooldown: <A0H5,Cool10> seconds|r
+}
+
 STRING 23881
 // Abilities: A0EW (Final Shot), EditorSuffix (Editor Suffix)
 {
 (granolah)
+}
+
+STRING 23887
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 1|r]
 }
 
 STRING 23888
@@ -165596,6 +165744,12 @@ STRING 23899
 [|cff00ff00R|r] Final Shot - [|cffffcc00Level 10|r]
 }
 
+STRING 23901
+// Abilities: A0JI (Prelude to Destruction), Name (Name)
+{
+Prelude to Destruction
+}
+
 STRING 23904
 // Abilities: A0FZ (Evolved Eyes), EditorSuffix (Editor Suffix)
 {
@@ -165606,15 +165760,6 @@ STRING 23906
 // Abilities: A0FZ (Evolved Eyes), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cffff2222Evolved Eyes|r
-}
-
-STRING 23907
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
-
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool7> seconds|r
 }
 
 STRING 23908
@@ -165629,10 +165774,70 @@ STRING 23909
 (granolah)
 }
 
+STRING 23914
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 2|r]
+}
+
+STRING 23915
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 3|r]
+}
+
+STRING 23916
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 4|r]
+}
+
+STRING 23917
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 5|r]
+}
+
+STRING 23918
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 6|r]
+}
+
+STRING 23919
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 7|r]
+}
+
+STRING 23920
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 8|r]
+}
+
+STRING 23921
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 9|r]
+}
+
+STRING 23922
+// Abilities: A0JI (Prelude to Destruction), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Prelude to Destruction - [|cffffcc00Level %d|r]
+}
+
 STRING 23923
 // Abilities: A0G1 (Snipe Volley), Name (Name)
 {
 Snipe Volley
+}
+
+STRING 23925
+// Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Prelude to Destruction - [|cffffcc00Level 10|r]
 }
 
 STRING 23927
@@ -165641,10 +165846,152 @@ STRING 23927
 [|cff00ff00F|r] Snipe Volley - [|cffffcc00Level 10|r]
 }
 
+STRING 23928
+// Abilities: A0JI (Prelude to Destruction), EditorSuffix (Editor Suffix)
+{
+(whis)
+}
+
+STRING 23929
+// Abilities: A0JJ (Temporal Do-Over), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Temporal Do-Over - [|cffffcc00Level 1|r]
+}
+
+STRING 23930
+// Abilities: A0JJ (Temporal Do-Over), Ubertip (Tooltip - Normal - Extended)
+{
+Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
+|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
+Heals |cffFFFF00100%|r of damage taken over 4s.|r
+|cff00FFFFCooldown: <A0JJ,Cool1>s|r
+}
+
+STRING 23931
+// Abilities: A0JJ (Temporal Do-Over), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Temporal Do-Over - [|cffffcc00Level %d|r]
+}
+
 STRING 23932
 // Abilities: A0H5 (Charged Snipe), EditorSuffix (Editor Suffix)
 {
 (granolah)
+}
+
+STRING 23933
+// Abilities: A0JJ (Temporal Do-Over), Researchubertip (Tooltip - Learn - Extended)
+{
+Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
+|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
+Heals |cffFFFF00100%|r of damage taken over 4s.|r
+|cff00FFFFCooldown: <A0JJ,Cool1>s|r
+}
+
+STRING 23934
+// Abilities: A0JJ (Temporal Do-Over), EditorSuffix (Editor Suffix)
+{
+(whis)
+}
+
+STRING 23935
+// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Temporal Warp - [|cffffcc00Level 1|r]
+}
+
+STRING 23936
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
+{
+Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
+
+|cffff2222Channel Duration: <A0JK,DataA1,.>s
+|cff00FF00Range: 2000/2500/3000|r
+|cff00FFFFCooldown: <A0JK,Cool1>s|r
+}
+
+STRING 23937
+// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Temporal Warp - [|cffffcc00Level 2|r]
+}
+
+STRING 23938
+// Abilities: A0JK (Temporal Warp), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Temporal Warp - [|cffffcc00Level 3|r]
+}
+
+STRING 23939
+// Abilities: A0JK (Temporal Warp), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Temporal Warp - [|cffffcc00Level %d|r]
+}
+
+STRING 23940
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
+{
+Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
+
+|cffff2222Channel Duration: <A0JK,DataA2,.>s
+|cff00FF00Range: 2000/2500/3000|r
+|cff00FFFFCooldown: <A0JK,Cool2>s|r
+}
+
+STRING 23941
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
+{
+Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
+
+|cffff2222Channel Duration: <A0JK,DataA3,.>s
+|cff00FF00Range: 2000/2500/3000|r
+|cff00FFFFCooldown: <A0JK,Cool3>s|r
+}
+
+STRING 23942
+// Abilities: A0JK (Temporal Warp), Researchubertip (Tooltip - Learn - Extended)
+{
+Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
+
+|cffff2222Channel Duration: <A0JK,DataA1,.>s
+|cff00FF00Range: 2000/2500/3000|r
+|cff00FFFFCooldown: <A0JK,Cool1>s|r
+}
+
+STRING 23943
+// Abilities: A0JK (Temporal Warp), EditorSuffix (Editor Suffix)
+{
+(whis)
+}
+
+STRING 23944
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+The fighting style of the angels.
+
+|cffffcc00Evasion|r - <A0JF,DataD1,%>% 
+|cffffcc00Critical|r - <A0JF,DataA1>% 
+|cffffcc00Damage|r - <A0JF,DataB1,.> times
+}
+
+STRING 23945
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 23946
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
 }
 
 STRING 23947
@@ -165653,16 +166000,96 @@ STRING 23947
 Charged Snipe
 }
 
+STRING 23948
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 23949
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 23950
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
 STRING 23951
 // Abilities: A0H5 (Charged Snipe), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Charged Snipe - [|cffffcc00Level 10|r]
 }
 
+STRING 23952
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 23953
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 23954
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 23955
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
 STRING 23956
 // Abilities: A0HE (Oatmeal), EditorSuffix (Editor Suffix)
 {
 (granolah)
+}
+
+STRING 23957
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
 }
 
 STRING 23958
@@ -165676,7 +166103,7 @@ Oatmeal increases Granolah's accuracy in finding vital points and helps him evad
 }
 
 STRING 23959
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165686,7 +166113,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23960
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165696,7 +166123,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23961
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165706,7 +166133,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23962
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165716,7 +166143,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23963
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165726,7 +166153,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23964
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165736,7 +166163,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23965
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165746,7 +166173,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23966
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165756,7 +166183,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23967
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165766,7 +166193,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23968
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166016,102 +166443,85 @@ Granolah can now charge a high powered snipe.
 }
 
 STRING 24004
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool8> seconds|r
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
 }
 
 STRING 24005
-// Abilities: A0DL (Perfect Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires a powerful long range energy beam from the tip of his finger. After 0.25s the beam deals +100% damage, stuns enemies for 1s, reduces armor by 5 and reveals the enemy. After 0.5s the beam deals another +100% damage and stuns for 2s instead.
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
-|cff00ff00Damage: [Int] 500u (+500u) (+500u)|r
-|cff00ffffCooldown: <A0DL,Cool9> seconds|r
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
 }
 
 STRING 24006
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool1> seconds|r
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
 }
 
 STRING 24007
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool3> seconds|r
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
 }
 
 STRING 24008
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool4> seconds|r
+Saiyan Blood - [|cffffcc00Level 3|r]
 }
 
 STRING 24009
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool5> seconds|r
+Angelic Fighting Style - [|cffffcc00Level 1|r]
 }
 
 STRING 24010
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool6> seconds|r
+Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 24011
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool7> seconds|r
+Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 24012
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool8> seconds|r
+Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 24013
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool9> seconds|r
+Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 24014
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool10> seconds|r
+Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 24015
@@ -166124,22 +166534,98 @@ Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced 
 }
 
 STRING 24016
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 3s.
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
 
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool2> seconds|r
+STRING 24017
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 24018
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 24019
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 24020
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 24021
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 24022
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 24023
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 24024
+// Abilities: A0JF (Angelic Fighting Style), Name (Name)
+{
+Angelic Fighting Style
+}
+
+STRING 24025
+// Abilities: A0JF (Angelic Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 24026
+// Abilities: A0JF (Angelic Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 24027
+// Abilities: A0JF (Angelic Fighting Style), EditorSuffix (Editor Suffix)
+{
+(basic)
+}
+
+STRING 24028
+// Abilities: A0JG (Angelic Ultra Instinct), Name (Name)
+{
+Angelic Ultra Instinct
 }
 
 STRING 24029
-// Abilities: A0H5 (Charged Snipe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JG (Angelic Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires a charged snipe that deals bonus damage. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
-
-|cffff2222Channel Duration: <A0H5,DataA10,.>s
-|cff00ff00Damage: [Int] 750u (+750u)|r
-|cff00ffffCooldown: <A0H5,Cool10> seconds|r
+Ultra instinct used by the angels to instinctively attack and dodge without thinking.
+|cffffff00+0.1x stat multiplier.
++165ms and unlocks movement speed cap.
++3% spell amp per second up to +12%.
+100% damage block up to [Str] 8000u.
+Automatically moves away from enemies.|r
+|cff00ff00Duration: <A0JG,Dur1> seconds
+|cff00ffffCooldown: <A0JG,Cool1>s
 }
 
 STRING 24030
@@ -166274,12 +166760,94 @@ Channel Duration: <A0EW,DataA2,.>s|r
 |cff00ffffCooldown: <A0EW,Cool2> seconds|r
 }
 
-STRING 24041
+STRING 24042
+// Abilities: A0JG (Angelic Ultra Instinct), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Angelic Ultra Instinct - [|cffffcc00Level 10|r]
+}
+
+STRING 24043
+// Abilities: A0JG (Angelic Ultra Instinct), EditorSuffix (Editor Suffix)
+{
+(whis)
+}
+
+STRING 24045
+// Abilities: A0JO (Symphonic Destruction), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Symphonic Destruction - [|cffffcc00Level 10|r]
+}
+
+STRING 24046
+// Abilities: A0JO (Symphonic Destruction), EditorSuffix (Editor Suffix)
+{
+(whis)
+}
+
+STRING 24047
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 24048
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24049
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24050
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp" [Unlocks Angelic Fighting Style]
+[lvl 90]  2.00x "fp"
+[lvl 125] 2.25x "fp" [Unlocks [|cff00ff00F|r] Symphonic Destruction]
+[lvl 150] 2.50x "fp" 
+[lvl 200] 2.60x "fp" [Unlocks [|cff00ff00D|r] Angelic Ultra Instinct]
+}
+
+STRING 24051
+{
+[|cffffcc00Unlock|r] Angelic Fighting Style
+Whis has unlocked his angelic fighting style allowing him to dodge most incoming attacks.
+}
+
+STRING 24054
+{
+[|cffffcc00Unlock|r] Symphonic Destruction
+Whis's Symphony of Destruction allows him to control wide areas of the battlefield.
+}
+
+STRING 24055
+{
+[|cffffcc00Unlock|r] Angelic Ultra Instinct
+Whis can now enter his Angelic Ultra Instinct state.
+}
+
+STRING 24056
 // Abilities: A0G1 (Snipe Volley), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah fires multiple snipes from his fingers. After 0.25s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
+Granolah fires multiple snipes from his fingers. After 0.3s the beam stuns enemies for 1s, deals +100% damage, reduces armor by 5 and reveals the enemy.
 
 |cff00ff00Damage: [Int] 200u (+200u) (x5)|r
 |cff00ffffCooldown: <A0G1,Cool10> seconds|r
+}
+
+STRING 24057
+// Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Whis channels a symphony of destruction, that damages, silences and knocks back enemies in a wide arc in front of him.
+
+|cffff2222Channel Duration: <A0JO,DataA1>s
+|cff00ff00Damage: [Int] 60u (x9) per second
+|cff00ffffCooldown: <A0JO,Cool1>s
 }
 
