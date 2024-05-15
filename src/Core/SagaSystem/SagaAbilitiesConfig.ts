@@ -400,7 +400,7 @@ export module SagaAbilities {
       AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, 10, 12, 20, SHORT_CAST_TIME
     );
     export const SYMPHONIC_DESTRUCTION = new SagaAbility(
-      AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT, 10, 120, 10, MEDIUM_CAST_TIME
+      AbilityNames.Saga.SYMPHONIC_DESTRUCTION, 10, 120, 10, MEDIUM_CAST_TIME
     );
     export const ANGELIC_ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
