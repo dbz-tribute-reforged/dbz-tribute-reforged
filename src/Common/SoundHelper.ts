@@ -1426,6 +1426,42 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
         break;
       
+      // granolah
+      case Id.granolahSnipe:
+      case Id.granolahSnipe2:
+      case Id.granolahSnipeCharged:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+        break;
+      
+      case Id.granolahEnergyVolley:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
+
+      case Id.granolahPressurePoint:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      
+      case Id.granolahFinalShot:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+      
+      case Id.granolahEvolvedEyes:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      
+      case Id.granolahSnipeVolley:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/DeathBeam.mp3", 2768);
+        break;
+
+      // guldo
       case Id.psychoJavelin:
         if (unitId == Id.guldo) {
           playSoundOnUnit(unit, "Audio/Voice/GuldoTakeThis.mp3", 1071);
