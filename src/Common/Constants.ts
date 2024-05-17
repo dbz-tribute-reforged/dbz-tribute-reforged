@@ -160,6 +160,7 @@ export module Constants {
   export const ALBEDO_GUARDIAN_AURA_REGEN_MULT = 0.25;
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
   export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
+  export const BEERUS_REGEN_MULT = 0.2;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
@@ -409,6 +410,7 @@ export module DebuffAbilities {
   export const LUCARIO_FORCE_DEBUFF = FourCC("A0Y5");
   export const MAX_POWER_DMG_BUFF = FourCC('A114');
   export const SUPER_CHARGE_DMG_BUFF = FourCC('A115');
+  export const BEERUS_PIZZA_DMG_BUFF = FourCC('A0D4');
   export const AINZ_GREATER_HARDENING = FourCC('A12L');
   export const AINZ_GREATER_MAGIC_SHIELD = FourCC('A12M');
   export const AINZ_MAGIC_BOOST = FourCC('A12N');
@@ -438,6 +440,9 @@ export module DebuffAbilities {
   export const FAERIE_FIRE_MINATO_KUNAI = FourCC("A00C");
   export const FAERIE_FIRE_NUOVA_HEAT_ARMOR = FourCC("A03Q");
   export const FAERIE_FIRE_GRANOLAH_VULNERABLE = FourCC("A0IR");
+
+  // anti magic shell
+  export const AMS_BEERUS_PUDDING = FourCC("A0JX");
 }
 
 export module Buffs {
@@ -510,6 +515,7 @@ export module OrderIds {
   export const CURSE = 852190;
   export const SLOW = 852075;
   export const ENTANGLING_ROOTS = 852171;
+  export const ANTI_MAGIC_SHELL = 852186;
   export const SLEEP = 852227;
   export const INNER_FIRE = 852066;
   export const INVISIBILITY = 852069
@@ -705,6 +711,26 @@ export module Id {
   export const riotJavelin = FourCC("A0LP");
   export const rebellionSpear = FourCC("A0LQ");
   export const saiyanSpirit = FourCC("A0LR");
+
+  export const beerus = FourCC("H06M");
+  export const beerusCataclysmicOrbUnitId = FourCC("h06U");
+  export const beerusCataclysmicOrb = FourCC("A0DF");
+  export const beerusSphereOfDestruction = FourCC("A0CU");
+  export const beerusAuraOfDestruction = FourCC("A0JS");
+  export const beerusGodWrath = FourCC("A0DG");
+  export const beerusFury = FourCC("A0JT");
+  export const beerusHakai = FourCC("A0D2");
+  export const beerusFoodSushi = FourCC("A0CX"); // q - speed
+  export const beerusFoodPizza = FourCC("A0CY"); // w - attack dmg
+  export const beerusFoodRamen = FourCC("A0D0"); // e - heal
+  export const beerusFoodIceCream = FourCC("A0D1"); // r - cdr
+  export const beerusFoodTakoyaki = FourCC("A0D3"); // d - iframe
+  export const beerusFoodPudding = FourCC("A0CZ"); // f - debuff immunity
+  export const beerusPassive = FourCC("A0CW");
+  // pretend beerus counter has beerus passive id
+  export const beerusCounter = beerusPassive; 
+  export const beerusFuryCDRFlag = FourCC("A0D5");
+  export const beerusIceCreamCDRFlag = FourCC("A0D6");
 
   export const broly = FourCC("H00M");
   export const energyPunch = FourCC("A0G8");

@@ -116,7 +116,7 @@ export const AbilitiesList = [
     costAmount: 30,
     duration: 1,
     updateRate: 0.03,
-    castTime: 0.03,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     canUseWhenStunned: false,
@@ -132,6 +132,35 @@ export const AbilitiesList = [
         "Deals 10% of the damage received.|n" + 
         "Cost: 30 SP|n" + 
         "CD: 15",
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_COUNTER,
+    currentCd: 0,
+    maxCd: 20,
+    costType: CostType.SP,
+    costAmount: 65,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNBeerusCounter.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBeerusCounter.blp",
+    },
+    tooltip: {
+      title: "Beerus Counter",
+      body: 
+        "Teleport to the next enemy hero that damages you within 2.5s and stun them for 1s. " + 
+        "Deals 15% of the damage received.|n" + 
+        "Cost: 65 SP|n" + 
+        "CD: 20",
     },
     components: [
     ],
@@ -196,7 +225,7 @@ export const AbilitiesList = [
         "CD: 10"
     },
     components: [
-      { name: "beam android barrier" },
+      { name: "beam granolah cerelian shield" },
       { name: "block basic guard" },
     ],
   },
@@ -11892,6 +11921,258 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Beerus.SPHERE_OF_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 116,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 0.5s" },
+      { name: "multi beerus sphere of destruction" },
+      { name: "sfx beerus sphere of destruction caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.AURA_OF_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow beerus aura of destruction" },
+      { name: "damage beerus aura of destruction dps" },
+      { name: "knockback beerus aura of destruction" },
+      { name: "sfx beerus aura of destruction" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi beerus god of destruction wrath" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_FURY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 833,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability beerus fury cdr flag" },
+      { name: "dash ground forward 3dist" },
+      { name: "spell amp 10 persistent" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_SUSHI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_PIZZA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "buff inner fire beerus pizza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_ICE_CREAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability beerus ice cream cdr flag" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_TAKOYAKI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "hide unit iframe pause" },
+      { name: "sfx beerus takoyaki" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_PUDDING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "buff anti magic shell beerus pudding" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Granolah.SNIPE,
     currentCd: 0,
     maxCd: 1,
@@ -12056,7 +12337,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "spell amp 20 persistent" },
+      { name: "spell amp 15 persistent" },
       { name: "temp ability granolah snipe 2" },
     ],
   },
@@ -15781,6 +16062,7 @@ export const AbilitiesList = [
       { name: "dash ground forward 5dist" },
       { name: "spell amp one winged angel" },
       { name: "sfx one winged angel" },
+      { name: "sfx sephiroth one winged angel initial" },
     ],
   },
   // -------------------------------------------

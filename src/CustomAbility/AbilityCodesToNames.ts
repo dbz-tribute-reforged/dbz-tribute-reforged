@@ -504,6 +504,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.whisAngelicUltraInstinct, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT],
     [Id.whisSymphonicDestruction, AbilityNames.Whis.SYMPHONIC_DESTRUCTION],
 
+    [Id.beerusSphereOfDestruction, AbilityNames.Beerus.SPHERE_OF_DESTRUCTION],
+    [Id.beerusAuraOfDestruction, AbilityNames.Beerus.AURA_OF_DESTRUCTION],
+    [Id.beerusGodWrath, AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH],
+    [Id.beerusFury, AbilityNames.Beerus.BEERUS_FURY],
+    [Id.beerusFoodSushi, AbilityNames.Beerus.BEERUS_SUSHI],
+    [Id.beerusFoodPizza, AbilityNames.Beerus.BEERUS_PIZZA],
+    [Id.beerusFoodIceCream, AbilityNames.Beerus.BEERUS_ICE_CREAM],
+    [Id.beerusFoodTakoyaki, AbilityNames.Beerus.BEERUS_TAKOYAKI],
+    [Id.beerusFoodPudding, AbilityNames.Beerus.BEERUS_PUDDING],
+
     [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
     [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
     [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],

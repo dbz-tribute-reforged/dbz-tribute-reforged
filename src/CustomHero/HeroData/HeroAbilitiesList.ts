@@ -692,6 +692,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Whis.SYMPHONIC_DESTRUCTION,
     ]],
     
+    [Id.beerus, [
+      AbilityNames.Beerus.SPHERE_OF_DESTRUCTION,
+      AbilityNames.Beerus.AURA_OF_DESTRUCTION,
+      AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH,
+      AbilityNames.Beerus.BEERUS_FURY,
+      AbilityNames.Beerus.BEERUS_SUSHI,
+      AbilityNames.Beerus.BEERUS_PIZZA,
+      AbilityNames.Beerus.BEERUS_ICE_CREAM,
+      AbilityNames.Beerus.BEERUS_TAKOYAKI,
+      AbilityNames.Beerus.BEERUS_PUDDING,
+    ]],
+    
     [Id.granolah, [
       AbilityNames.Granolah.SNIPE,
       AbilityNames.Granolah.SNIPE_2,
@@ -811,6 +823,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
       AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
       AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+      AbilityNames.Beerus.BEERUS_FURY, 
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

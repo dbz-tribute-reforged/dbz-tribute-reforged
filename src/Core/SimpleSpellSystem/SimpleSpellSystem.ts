@@ -81,6 +81,7 @@ export module SimpleSpellSystem {
       const source = GetEventDamageSource();
       DDSWhisDamageBlock(target, source, dmg);
       DDSWhisDoOver();
+      DDSBeerusCataclysmicOrb();
       DDSJirenGlare();
       DDSDPSCheck();
       return false;
@@ -206,6 +207,7 @@ export module SimpleSpellSystem {
 
     Globals.genericSpellMap.set(Id.vegetaHakai, SimpleSpellSystem.doVegetaHakai);
     Globals.genericSpellMap.set(Id.toppoHakai, SimpleSpellSystem.doVegetaHakai);
+    Globals.genericSpellMap.set(Id.beerusHakai, SimpleSpellSystem.doVegetaHakai);
 
     Globals.genericSpellMap.set(Id.meditate, SimpleSpellSystem.doJirenMeditate);
     Globals.genericSpellMap.set(Id.meditate2, SimpleSpellSystem.doJirenMeditate);
@@ -391,6 +393,13 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.whisAngelicShield, SimpleSpellSystem.doWhisAngelicShield);
     Globals.genericSpellMap.set(Id.whisTemporalWarp, SimpleSpellSystem.doWhisTemporalWarp);
 
+    Globals.genericSpellMap.set(Id.beerusCataclysmicOrb, SimpleSpellSystem.doBeerusCataclysmicOrb);
+    Globals.genericSpellMap.set(Id.beerusSphereOfDestruction, SimpleSpellSystem.doBeerusSphereOfDestruction);
+    Globals.genericSpellMap.set(Id.beerusAuraOfDestruction, SimpleSpellSystem.doBeerusAuraOfDestruction);
+    Globals.genericSpellMap.set(Id.beerusGodWrath, SimpleSpellSystem.doBeerusGodWrath);
+    Globals.genericSpellMap.set(Id.beerusFoodSushi, SimpleSpellSystem.doBeerusSushi);
+    Globals.genericSpellMap.set(Id.beerusFoodRamen, SimpleSpellSystem.doBeerusRamen);
+
     Globals.genericSpellMap.set(Id.granolahEnergyVolley, SimpleSpellSystem.doGranolahEnergyVolley);
     Globals.genericSpellMap.set(Id.granolahFinalShot, SimpleSpellSystem.doGranolahFinalShot);
     
@@ -442,11 +451,18 @@ export module SimpleSpellSystem {
     Globals.linkedSpellsMap.set(Id.fleshAttack, SimpleSpellSystem.linkBuuFleshCD);
     Globals.linkedSpellsMap.set(Id.fleshAttackAbsorbTarget, SimpleSpellSystem.linkBuuFleshCD);
 
-    Globals.genericSpellEndMap.set(Id.vegetaHakai, endVegetaHakai);
-    Globals.genericSpellFinishMap.set(Id.vegetaHakai, endVegetaHakai);
+    Globals.linkedSpellsMap.set(Id.beerusFoodSushi, SimpleSpellSystem.linkBeerusFoodCD);
+    Globals.linkedSpellsMap.set(Id.beerusFoodPizza, SimpleSpellSystem.linkBeerusFoodCD);
+    Globals.linkedSpellsMap.set(Id.beerusFoodRamen, SimpleSpellSystem.linkBeerusFoodCD);
+    Globals.linkedSpellsMap.set(Id.beerusFoodIceCream, SimpleSpellSystem.linkBeerusFoodCD);
+    Globals.linkedSpellsMap.set(Id.beerusFoodTakoyaki, SimpleSpellSystem.linkBeerusFoodCD);
+    Globals.linkedSpellsMap.set(Id.beerusFoodPudding, SimpleSpellSystem.linkBeerusFoodCD);
 
-    Globals.genericSpellEndMap.set(Id.toppoHakai, endVegetaHakai);
-    Globals.genericSpellFinishMap.set(Id.toppoHakai, endVegetaHakai);
+    // Globals.genericSpellEndMap.set(Id.vegetaHakai, endVegetaHakai);
+    // Globals.genericSpellFinishMap.set(Id.vegetaHakai, endVegetaHakai);
+
+    // Globals.genericSpellEndMap.set(Id.toppoHakai, endVegetaHakai);
+    // Globals.genericSpellFinishMap.set(Id.toppoHakai, endVegetaHakai);
   }
 
   export function addToTatsumakiMovementGroup(
@@ -535,6 +551,35 @@ export module SimpleSpellSystem {
     const healAmt = LoadReal(Globals.genericDDSHashtable, targetId, healKey);
     const dmg = GetEventDamage();
     SaveReal(Globals.genericDDSHashtable, targetId, healKey, healAmt + dmg);
+  }
+
+  export function DDSBeerusCataclysmicOrb() {
+    const target = BlzGetEventDamageTarget();
+    const targetTypeId = GetUnitTypeId(target);
+    if (
+      // targetTypeId != Constants.dummyBeamUnitId
+      targetTypeId != Id.beerusCataclysmicOrbUnitId
+      || GetUnitName(target) != "Cataclysmic Orb"
+    ) return;
+
+    const src = GetEventDamageSource();
+    const player = GetOwningPlayer(target);
+    if (player != GetOwningPlayer(src)) return;
+
+    const timerDDSKey = StringHash("beerus_q_timer_dds");
+    const motionTimerKey = StringHash("beerus_q_motion");
+    const motionAngleKey = StringHash("beerus_q_motion_ang");
+
+    const beamId = GetHandleId(target);
+    const timerId = LoadInteger(Globals.genericDDSHashtable, beamId, timerDDSKey);
+    SaveBoolean(Globals.genericSpellHashtable, timerId, motionTimerKey, true);
+
+    Globals.tmpVector.setUnit(src);
+    Globals.tmpVector2.setUnit(target);
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    SaveReal(Globals.genericSpellHashtable, timerId, motionAngleKey, ang);
+
+    BlzSetEventDamage(1);
   }
   
   export function doGokuKaiokenOn(spellId: number) {
@@ -636,10 +681,11 @@ export module SimpleSpellSystem {
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
     const damagedGroup = CreateGroup();
 
-    const hakaiKey = StringHash(I2S(spellId) + "hakai_channel_end"); 
-    SaveInteger(Globals.genericSpellHashtable, casterId, hakaiKey, 1);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
 
     let targetX = GetSpellTargetX();
     let targetY = GetSpellTargetY();
@@ -723,11 +769,11 @@ export module SimpleSpellSystem {
         BlzSetSpecialEffectScale(sfx, 0.5 + ticks * 0.04);
       }
 
-      const flag = LoadInteger(Globals.genericSpellHashtable, casterId, hakaiKey);
       if (
         ticks < channelTick
         && (
-          flag == 2
+          !ch.isChanneling()
+          || ch.channelAbilityId != spellId
           || UnitHelper.isUnitDead(caster)
         )
       ) {
@@ -737,12 +783,12 @@ export module SimpleSpellSystem {
     });
   }
 
-  export function endVegetaHakai(spellId: number) {
-    const caster = GetTriggerUnit();
-    const casterId = GetHandleId(caster);
-    const hakaiKey = StringHash(I2S(spellId) + "hakai_channel_end"); 
-    SaveInteger(Globals.genericSpellHashtable, casterId, hakaiKey, 2);
-  }
+  // export function endVegetaHakai(spellId: number) {
+  //   const caster = GetTriggerUnit();
+  //   const casterId = GetHandleId(caster);
+  //   const hakaiKey = StringHash(I2S(spellId) + "hakai_channel_end"); 
+  //   SaveInteger(Globals.genericSpellHashtable, casterId, hakaiKey, 2);
+  // }
 
   export function doJirenMeditate(spellId: number) {
     const endTick = 30;
@@ -1945,16 +1991,22 @@ export module SimpleSpellSystem {
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, spellId);
     
     let effect: effect;
-    if (spellId == Id.glare || spellId == Id.glare2 || spellId == Id.gokuInstantTransmission) {
-      effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
-      // BlzSetSpecialEffectScale(effect, 1.5);
-    } else if (spellId == Id.hirudegarnDarkEyes) {
+    if (spellId == Id.hirudegarnDarkEyes) {
       effect = AddSpecialEffectTarget("MagusDarkMist.mdl", unit, "head");
       // BlzSetSpecialEffectScale(effect, 2.0);
     } else if (spellId == Id.shalltearNegativeImpactShield) {
       effect = AddSpecialEffectTarget("AuraKaox10.mdl", unit, "origin");
     } else if (spellId == Id.minatoSecondStep) {
       effect = AddSpecialEffectTarget("Rasengan4.mdl", unit, "right hand");
+    } else {
+      // if (
+      //   spellId == Id.glare 
+      //   || spellId == Id.glare2 
+      //   || spellId == Id.gokuInstantTransmission 
+      //   || spellId == Id.beerusCounter
+      // )
+      effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
+      // BlzSetSpecialEffectScale(effect, 1.5);
     }
     SaveEffectHandle(Globals.genericSpellHashtable, unitId, 1, effect);
     SaveInteger(Globals.genericSpellHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
@@ -2004,6 +2056,7 @@ export module SimpleSpellSystem {
         && spellId != Id.shalltearNegativeImpactShield
         && spellId != Id.minatoSecondStep
         && spellId != Id.gokuInstantTransmission
+        && spellId != Id.beerusCounter
       )
     ) return;
 
@@ -2070,7 +2123,7 @@ export module SimpleSpellSystem {
       damageMult = negativeImpactShieldDamageMult;
     } else if (spellId == Id.minatoSecondStep) {
       damageMult = minatoSecondStepDamageMult;
-    } else if (spellId == Id.gokuInstantTransmission) {
+    } else if (spellId == Id.gokuInstantTransmission || spellId == Id.beerusCounter) {
       damageMult = 0;
     }
 
@@ -7107,7 +7160,8 @@ export module SimpleSpellSystem {
     BlzSetUnitName(beam, "Hiraishin Kunai");
     
     const maxHp = BeamComponent.calculateBeamHp(
-      10, BASE_DMG.KAME_DPS * kunaiHpMult, caster, bj_HEROSTAT_INT
+      GetUnitAbilityLevel(caster, Id.minatoKunai), 
+      BASE_DMG.KAME_DPS * kunaiHpMult, caster, bj_HEROSTAT_INT
     );
 
     BlzSetUnitMaxHP(beam, maxHp);
@@ -8171,7 +8225,7 @@ export module SimpleSpellSystem {
         TimerManager.getInstance().recycle(timer);
         return;
       }
-      if (!ch.isChanneling()) {
+      if (!ch.isChanneling() || ch.channelAbilityId != spellId) {
         ticks = -1;
         return;
       }
@@ -8180,6 +8234,288 @@ export module SimpleSpellSystem {
     });
   }
 
+  export function beerusCreateOrb(
+    caster: unit,
+    targetX: number,
+    targetY: number,
+  ) {
+    const tickRate = 0.03;
+    const beamHpMult = 0.7;
+    const beamDuration = 60.0;
+    const maxDist = 300;
+
+    const beamTimerKey = StringHash("beerus_q_beam");
+    const beamCasterTimerKey = StringHash("beerus_q_caster");
+    const beamSfxTimerKey = StringHash("beerus_q_sfx");
+    const timerDDSKey = StringHash("beerus_q_timer_dds");
+
+    const player = GetOwningPlayer(caster);
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, maxDist);
+    
+    const beam = CreateUnit(
+      player, 
+      // Constants.dummyBeamUnitId, 
+      Id.beerusCataclysmicOrbUnitId, 
+      Globals.tmpVector2.x, Globals.tmpVector2.y, 0,
+    );
+    const beamId = GetHandleId(beam);
+    BlzSetUnitName(beam, "Cataclysmic Orb");
+
+    const sfx = AddSpecialEffectTarget("CataclysmicOrb.mdl", beam, "origin");
+
+    const maxHp = BeamComponent.calculateBeamHp(
+      GetUnitAbilityLevel(caster, Id.beerusCataclysmicOrb), 
+      BASE_DMG.KAME_DPS * beamHpMult, caster, bj_HEROSTAT_INT
+    );
+
+    BlzSetUnitMaxHP(beam, maxHp);
+    SetUnitLifePercentBJ(beam, 100);
+    SetUnitMoveSpeed(beam, 0);
+    UnitRemoveAbility(beam, Id.attack);
+
+    UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, beamDuration);
+
+    // DDS for cataclysmic orb
+    if (!Globals.DDSUnitMap.has(beam)) {
+      Globals.DDSUnitMap.set(beam, true);
+      TriggerRegisterUnitEvent(Globals.DDSTrigger, beam, EVENT_UNIT_DAMAGED);
+    }
+
+    const timer = TimerManager.getInstance().get();
+    const timerId = GetHandleId(timer);
+
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, beamTimerKey, beam);
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, beamCasterTimerKey, caster);
+    SaveEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey, sfx);
+    SaveInteger(Globals.genericDDSHashtable, beamId, timerDDSKey, timerId);
+
+    TimerStart(timer, tickRate, true, beerusCataclysmicOrbLoop);
+  }
+
+  export function beerusCataclysmicOrbLoop() {
+    const beamSpeed = 50;
+    const detonateAOE = 250;
+    const dmgAOE = 350;
+    const dmgDataMult = BASE_DMG.KAME_DPS * 3;
+    const manaToDmgPct = 0.04;
+
+    const timer = GetExpiredTimer();
+    const timerId = GetHandleId(timer);
+
+    const beamTimerKey = StringHash("beerus_q_beam");
+    const beamCasterTimerKey = StringHash("beerus_q_caster");
+    const beamSfxTimerKey = StringHash("beerus_q_sfx");
+    const motionTimerKey = StringHash("beerus_q_motion");
+    const motionAngleKey = StringHash("beerus_q_motion_ang");
+
+    const beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, beamTimerKey);
+    const beamId = GetHandleId(beam);
+    const player = GetOwningPlayer(beam);
+    const playerId = GetPlayerId(player);
+    const x = GetUnitX(beam);
+    const y = GetUnitY(beam);
+
+    const inMotion = LoadBoolean(Globals.genericSpellHashtable, timerId, motionTimerKey);
+
+    // move
+    if (inMotion) {
+      const angle = LoadReal(Globals.genericSpellHashtable, timerId, motionAngleKey);
+      Globals.tmpVector.setUnit(beam);
+      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, angle, beamSpeed);
+      PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector2);
+    }
+    
+    // AOE detonate
+    let doDeto = UnitHelper.isUnitDead(beam);
+    if (!doDeto) {
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, x, y, detonateAOE, null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (UnitHelper.isUnitDead(unit)) return;
+        if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+          doDeto = true;
+        } else if (
+          unit != beam
+          // && GetUnitTypeId(unit) == Constants.dummyBeamUnitId 
+          && GetUnitTypeId(unit) == Id.beerusCataclysmicOrbUnitId 
+          && GetUnitName(unit) == "Cataclysmic Orb"
+        ) {
+          doDeto = true;
+        }
+      });
+    }
+    
+    if (doDeto) {
+      const caster = LoadUnitHandle(Globals.genericSpellHashtable, timerId, beamCasterTimerKey);
+      const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+
+      const dmg = AOEDamage.calculateDamageRaw(
+        caster,
+        GetUnitAbilityLevel(caster, Id.beerusCataclysmicOrb),
+        ch ? ch.spellPower : 1.0,
+        dmgDataMult,
+        inMotion ? 2.0 : 1.0,
+        bj_HEROSTAT_INT
+      ) + GetUnitState(caster, UNIT_STATE_MANA) * manaToDmgPct;
+
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, x, y, dmgAOE, null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+          UnitDamageTarget(
+            caster, unit, dmg, 
+            false, false,
+            ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+            WEAPON_TYPE_WHOKNOWS
+          );
+        }
+      });
+
+      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey);
+      if (sfx) DestroyEffect(sfx);
+      const sfx2 = AddSpecialEffect("NewDirtEXNofire.mdl", x, y);
+      BlzSetSpecialEffectScale(sfx2, 1.5);
+      BlzSetSpecialEffectTimeScale(sfx2, 1.5);
+      DestroyEffect(sfx2);
+
+      FlushChildHashtable(Globals.genericSpellHashtable, timerId);
+      FlushChildHashtable(Globals.genericDDSHashtable, beamId);
+      if (Globals.DDSUnitMap.has(beam)) Globals.DDSUnitMap.delete(beam);
+      RemoveUnit(beam);
+      TimerManager.getInstance().recycle(timer);
+      return;
+    }
+  }
+
+  export function doBeerusCataclysmicOrb(spellId: number) {
+    const mpCostPct = 0.04;
+
+    const caster = GetTriggerUnit();
+
+    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MAX_MANA);
+
+    beerusCreateOrb(caster, GetSpellTargetX(), GetSpellTargetY());
+  }
+
+  export function doBeerusSphereOfDestruction(spellId: number) {
+    const mpCostPct = 0.15;
+
+    const caster = GetTriggerUnit();
+
+    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MAX_MANA);
+  }
+
+  export function doBeerusAuraOfDestruction(spellId: number) {
+    const mpCostPct = 0.1;
+    const dmgAOE = 500;
+    const mpDmgPct = 0.01 * 0.03;
+    const endTick = 166;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+
+    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MAX_MANA);
+
+    let tick = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (tick < endTick) {
+        // dmg
+        const dmg = GetUnitState(caster, UNIT_STATE_MANA) * mpDmgPct;
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), dmgAOE, null);
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+            UnitDamageTarget(
+              caster, unit, dmg, 
+              false, false, 
+              ATTACK_TYPE_HERO, 
+              DAMAGE_TYPE_NORMAL, 
+              WEAPON_TYPE_WHOKNOWS
+            );
+          }
+        });
+      }
+      ++tick;
+    });
+  }
+
+  export function doBeerusGodWrath(spellId: number) {
+    const mpCostPct = 0.2;
+    const spellAmpPerMpPct = 0.003;
+    const height = 200;
+    const heightRate = height / 0.5;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MAX_MANA);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    UnitHelper.giveUnitFlying(caster);
+    SetUnitFlyHeight(caster, height, heightRate);
+
+    let spellAmp = GetUnitManaPercent(caster) * spellAmpPerMpPct;
+    ch.addSpellPower(spellAmp);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ch.isChanneling() && ch.channelAbilityId == spellId) {
+        ch.removeSpellPower(spellAmp);
+        spellAmp = GetUnitManaPercent(caster) * spellAmpPerMpPct;
+        ch.addSpellPower(spellAmp);
+      } else {
+        ch.removeSpellPower(spellAmp);
+        SetUnitFlyHeight(caster, 0, 0);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+    });
+  }
+
+  export function doBeerusSushi(spellId: number) {
+    const spPct = 0.15;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    ch.setCurrentSP(Math.ceil(ch.getCurrentSP() + ch.getMaxSP() * spPct));
+
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Undead/DarkRitual/DarkRitualTarget.mdl", 
+        GetUnitX(caster), GetUnitY(caster)
+      )
+    );
+  }
+
+  export function doBeerusRamen(spellId: number) {
+    const hpPct = 0.15;
+    const mpPct = 0.15;
+
+    const caster = GetTriggerUnit();
+
+    UnitHelper.payHPPercentCost(caster, -hpPct, UNIT_STATE_MAX_LIFE);
+    UnitHelper.payMPPercentCost(caster, -mpPct, UNIT_STATE_MAX_MANA);
+
+    DestroyEffect(
+      AddSpecialEffect(
+        "Abilities/Spells/Human/HolyBolt/HolyBoltSpecialArt.mdl", 
+        GetUnitX(caster), GetUnitY(caster)
+      )
+    );
+  }
+  
   export function doGranolahEnergyVolley(spellId: number) {
     const height = 600;
     const heightRate = height / 0.25;
@@ -8192,13 +8528,14 @@ export module SimpleSpellSystem {
     if (!ch) return;
 
     UnitHelper.giveUnitFlying(caster);
-    SetUnitFlyHeight(caster, 600, heightRate);
+    SetUnitFlyHeight(caster, height, heightRate);
 
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
-      if (!ch.isChanneling()) {
+      if (!ch.isChanneling() || ch.channelAbilityId != spellId) {
         SetUnitFlyHeight(caster, 0, 0);
         TimerManager.getInstance().recycle(timer);
+        return;
       }
     });
   }
@@ -8233,7 +8570,8 @@ export module SimpleSpellSystem {
     SetUnitFlyHeight(beam, beamHeight, beamHeight);
     
     const maxHp = BeamComponent.calculateBeamHp(
-      10, BASE_DMG.KAME_DPS * beamHpMult, caster, bj_HEROSTAT_INT
+      GetUnitAbilityLevel(caster, Id.tatsumakiLift), 
+      BASE_DMG.KAME_DPS * beamHpMult, caster, bj_HEROSTAT_INT
     );
     BlzSetUnitMaxHP(beam, maxHp);
     SetUnitLifePercentBJ(beam, 100);
@@ -8636,6 +8974,12 @@ export module SimpleSpellSystem {
       if (GetUnitAbilityLevel(unit, Id.minatoKuramaModeFlag) > 0) {
         newCd *= 0.5;
       }
+      if (GetUnitAbilityLevel(unit, Id.beerusFuryCDRFlag) > 0) {
+        newCd *= 0.85;
+      }
+      if (GetUnitAbilityLevel(unit, Id.beerusIceCreamCDRFlag) > 0) {
+        newCd *= 0.9;
+      }
 
       if (UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.SPARE_PARTS)) {
         newCd *= 0.9;
@@ -8659,6 +9003,15 @@ export module SimpleSpellSystem {
     if (GetUnitAbilityLevel(unit, Id.fleshAttackAbsorbTarget) > 0) {
       BlzStartUnitAbilityCooldown(unit, Id.fleshAttackAbsorbTarget, cd);
     }
+  }
+
+  export function linkBeerusFoodCD(unit: unit, cd: number) {
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodSushi, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodPizza, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodRamen, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodIceCream, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodTakoyaki, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.beerusFoodPudding, cd);
   }
 
 }

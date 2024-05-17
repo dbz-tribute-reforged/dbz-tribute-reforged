@@ -2157,6 +2157,26 @@ export const AOEKnockbackComponents = [
     isPersistent: false,
     isFixedAngle: false,
   },
+  // beerus aura of destruction
+  {
+    name: "knockback beerus aura of destruction",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 33,
+    knockbackData: {
+      speed: 1, 
+      angle: 0, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
   // final shot
   {
     name: "knockback beam granolah final shot",

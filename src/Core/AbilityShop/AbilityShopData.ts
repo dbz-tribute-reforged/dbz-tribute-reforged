@@ -73,6 +73,15 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
     ]
   ],
   [
+    Id.beerus, [
+      [
+        AbilityNames.Beerus.BEERUS_COUNTER,
+      ],
+      [
+      ]
+    ]
+  ],
+  [
     Id.granolah, [
       [
         AbilityNames.Granolah.SHIELD,

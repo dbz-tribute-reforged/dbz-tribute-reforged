@@ -94,6 +94,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
             || name == AbilityNames.BasicAbility.ZANZOKEN
             || name == AbilityNames.Minato.HIRAISHIN_ZANZO
             || name == AbilityNames.Goku.INSTANT_TRANSMISSION
+            || name == AbilityNames.Beerus.BEERUS_COUNTER
           ) && Globals.barrierBlockUnits.has(customHero.unit)
         ) {
           continue;
@@ -156,6 +157,7 @@ export function customAbilityActivate(player: player, index: number) {
         || abilName == AbilityNames.BasicAbility.ZANZOKEN
         || abilName == AbilityNames.Minato.HIRAISHIN_ZANZO
         || abilName == AbilityNames.Goku.INSTANT_TRANSMISSION
+        || abilName == AbilityNames.Beerus.BEERUS_COUNTER
       ) && Globals.barrierBlockUnits.has(customHero.unit)
     ) {
       continue;
@@ -171,6 +173,8 @@ export function customAbilityActivate(player: player, index: number) {
         SimpleSpellSystem.doUltimateChargeUnit(customHero.unit, 0.02, 0.005);
       } else if (abilName == AbilityNames.Goku.INSTANT_TRANSMISSION) {
         SimpleSpellSystem.DoJirenGlare(Id.gokuInstantTransmission, customHero.unit);
+      } else if (abilName == AbilityNames.Beerus.BEERUS_COUNTER) {
+        SimpleSpellSystem.DoJirenGlare(Id.beerusCounter, customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
@@ -674,6 +678,7 @@ export function CustomPlayerTest() {
                   || heroAbility.name == AbilityNames.BasicAbility.ZANZOKEN
                   || heroAbility.name == AbilityNames.Minato.HIRAISHIN_ZANZO
                   || heroAbility.name == AbilityNames.Goku.INSTANT_TRANSMISSION
+                  || heroAbility.name == AbilityNames.Beerus.BEERUS_COUNTER
                 ) && Globals.barrierBlockUnits.has(ownedHero.unit)
               )
             );

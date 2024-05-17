@@ -3235,6 +3235,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     const guyGateLvl = GetUnitAbilityLevel(customHero.unit, Id.mightGuyGateArmor);
     const hasBuuFat = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.MAJIN_BUU_FAT);
     const hasSuper17Gen = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.SUPER_17_GENERATOR);
+    const hasBeerusPassive = GetUnitAbilityLevel(customHero.unit, Id.beerusPassive) > 0;
 
     // agi has flat 3 regen
     let spAgi = Math.max(
@@ -3265,6 +3266,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
       spMult += Constants.GENOS_OVERCHARGE_REGEN_MULT;
     }
+    if (hasBeerusPassive) {
+      spMult += Constants.BEERUS_REGEN_MULT;
+    }
     const incSp = (
       Constants.REGEN_TICK_RATE
       * Constants.BASE_SP_REGEN 
@@ -3291,6 +3295,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
       hpMult += Constants.FOUNTAIN_REGEN_MULT;
+    }
+    if (hasBeerusPassive) {
+      hpMult += Constants.BEERUS_REGEN_MULT;
     }
     if (guyGateLvl > 1) {
       const pctLife = GetUnitLifePercent(customHero.unit);
@@ -3341,6 +3348,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (GetUnitAbilityLevel(customHero.unit, Buffs.LIFE_REGENERATION_AURA) > 0) {
       mpMult += Constants.FOUNTAIN_REGEN_MULT;
     }
+    if (hasBeerusPassive) {
+      mpMult += Constants.BEERUS_REGEN_MULT;
+    }
     if (hasSuper17Gen) {
       mpMult += Constants.SUPER_17_GEN_REGEN_MULT;
     }
@@ -3373,6 +3383,11 @@ export function setupRegenTimer(customHero: CustomHero) {
     } else if (id == Id.saitama) {
       maxStamina = Math.ceil(
         maxStamina * (1 + Constants.SAITAMA_PASSIVE_STAMINA_BONUS_MULT)
+      );
+    }
+    if (GetUnitAbilityLevel(customHero.unit, Id.beerusPassive) > 0) {
+      maxStamina = Math.ceil(
+        maxStamina * (1 + Constants.BEERUS_REGEN_MULT)
       );
     }
     customHero.setMaxSP(maxStamina);

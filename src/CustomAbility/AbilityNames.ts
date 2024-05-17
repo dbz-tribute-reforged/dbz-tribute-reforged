@@ -634,6 +634,20 @@ export module AbilityNames {
     export const SYMPHONIC_DESTRUCTION: string = "Whis Symphonic Destruction";
   }
 
+  export module Beerus {
+    export const BEERUS_COUNTER: string = "Beerus Counter";
+    export const SPHERE_OF_DESTRUCTION: string = "Beerus Sphere Of Destruction";
+    export const AURA_OF_DESTRUCTION: string = "Beerus Aura Of Destruction";
+    export const GOD_OF_DESTRUCTION_WRATH: string = "Beerus God Of Destruction Wrath";
+    export const BEERUS_FURY: string = "Beerus Fury";
+    export const BEERUS_SUSHI: string = "Beerus Sushi";
+    export const BEERUS_PIZZA: string = "Beerus Pizza";
+    // export const BEERUS_RAMEN: string = "Beerus Ramen";
+    export const BEERUS_ICE_CREAM: string = "Beerus Ice Cream";
+    export const BEERUS_TAKOYAKI: string = "Beerus Takoyaki";
+    export const BEERUS_PUDDING: string = "Beerus Pudding";
+  }
+
   export module Granolah {
     export const SHIELD: string = "Cerelian Shield";
     export const SNIPE: string = "Granolah Snipe";

@@ -288,6 +288,18 @@ const whisData = {
     HeroSelectCategory.SUPPORT
   )
 }
+const beerusData = {
+  unitCode: Id.beerus,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER + 
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.CARRY
+  )
+}
 const granolahData = {
   unitCode: Id.granolah,
   onlyRandom: false,
@@ -1022,9 +1034,9 @@ export const HeroSelectUnitList = [
   // 20
   jacoData,
   dendeData,
+  beerusData,
   whisData,
   granolahData,
-  emptySpace,
   // 25
   emptySpace,
   emptySpace,

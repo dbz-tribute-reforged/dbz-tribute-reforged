@@ -87,4 +87,15 @@ export const HideUnitComponents = [
     removeNegativeBuffs: true,
     forceReselect: false,
   },
+  {
+    name: "hide unit iframe pause", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    doHide: false,
+    doInvul: true,
+    preventMovement: true,
+    removeNegativeBuffs: false,
+    forceReselect: false,
+  },
 ];

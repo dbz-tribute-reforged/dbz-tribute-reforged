@@ -16,6 +16,14 @@ export const ChannellingComponents = [
     fakeChannel: false,
   },
   {
+    name: "channel caster 0.5s", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 16,
+    ticksFromEnd: 0,
+    fakeChannel: false,
+  },
+  {
     name: "channel caster 1s", 
     repeatInterval: 1, 
     startTick: 0,
