@@ -293,11 +293,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           for (let i = 0; i < this.damagedTargets.length; ++i) {
             if (this.damagedTargets[i] == target) {
               dmgIndex = i;
+              break;
             }
           }
           if (dmgIndex >= 0) {
             if (this.damagedTargetsHits[dmgIndex] < this.maxDamageTicks) {
-              this.damagedTargetsHits[dmgIndex] = this.damagedTargetsHits[dmgIndex] + 1;
+              ++this.damagedTargetsHits[dmgIndex];
               this.performDamage(input, target, damage, sourceHPPercent);
             }
           } else {

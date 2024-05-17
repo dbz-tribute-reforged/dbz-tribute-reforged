@@ -44,6 +44,7 @@ export class MultiComponent implements
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
+  public isFirst: boolean = false;
 
   constructor(
     public name: string = "MultiComponent",
@@ -182,6 +183,7 @@ export class MultiComponent implements
     if (!this.isStarted) {
       this.isStarted = true;
       this.isFinished = false;
+      this.isFirst = true;
       
       if (this.startAtMax) {
         this.angleCurrent = this.angleMax;
@@ -274,11 +276,18 @@ export class MultiComponent implements
       }
 
       // keep showing active components
-      if (this.components.length > 0 && this.activeComponents.length > 0 && this.delayBetweenComponents == 0) {
+      if (
+        this.delayBetweenComponents == 0 
+        && this.isFirst
+        && this.activeComponents.length > 0
+      ) {
+        // on the first activation for delay = 0
+        // only show the latest activated component
         const component = this.activeComponents[this.activeComponents.length-1];
         this.triggerComponent(component, ability, input, source);
 
       } else {
+        // show all of them
         for (const component of this.activeComponents) {
           this.triggerComponent(component, ability, input, source);
         }
@@ -301,6 +310,7 @@ export class MultiComponent implements
       ++this.currentDelay;
 
       if (this.delayBetweenComponents != 0 || this.components.length == 0) {
+        this.isFirst = false;
         break;
       }
     }
