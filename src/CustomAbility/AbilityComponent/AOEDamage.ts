@@ -289,14 +289,20 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
           (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
         ) {
-          const damageCount = this.getDamageTargetsHits(target);
-          if (damageCount) {
-            if (damageCount < this.maxDamageTicks) {
-              this.setDamageTargets(target, damageCount + 1);
+          let dmgIndex = -1;
+          for (let i = 0; i < this.damagedTargets.length; ++i) {
+            if (this.damagedTargets[i] == target) {
+              dmgIndex = i;
+            }
+          }
+          if (dmgIndex >= 0) {
+            if (this.damagedTargetsHits[dmgIndex] < this.maxDamageTicks) {
+              this.damagedTargetsHits[dmgIndex] = this.damagedTargetsHits[dmgIndex] + 1;
               this.performDamage(input, target, damage, sourceHPPercent);
             }
           } else {
-            this.setDamageTargets(target, 1);
+            this.damagedTargets.push(target);
+            this.damagedTargetsHits.push(1);
             this.performDamage(input, target, damage, sourceHPPercent);
           }
         } else {    
