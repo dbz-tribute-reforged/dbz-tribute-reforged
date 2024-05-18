@@ -759,11 +759,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // battle of gods movie/super
     // beerus
-    ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(2000, 0),
+    ["Beerus", new SagaUnit(Id.beerus, 200, 20000, 400, 20000, new Vector2D(2000, 0),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Beerus.SPHERE_OF_DESTRUCTION,
+        SagaAbilities.Beerus.AURA_OF_DESTRUCTION,
+        SagaAbilities.Beerus.BEERUS_SUSHI,
+        SagaAbilities.Beerus.BEERUS_TAKOYAKI,
+        SagaAbilities.Beerus.GOD_OF_DESTRUCTION_WRATH,
+        SagaAbilities.Beerus.BEERUS_FURY,
       ],
       [
         ItemConstants.SagaDrops.BEERUS_PUDDING,

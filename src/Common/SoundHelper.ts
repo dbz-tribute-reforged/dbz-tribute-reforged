@@ -560,6 +560,136 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
         break;
       
+      // beerus
+      case Id.beerusCataclysmicOrb:
+        if (unitId == Id.beerus) {
+          if (rng < 4) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sneeze.mp3", 654);
+          } else if (rng < 8) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bored.mp3", 1264);
+          } else if (rng < 16) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bye1.mp3", 1264);
+          } else if (rng < 24) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bye2.mp3", 1264);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Beerus/Q.mp3", 1865);
+        break;
+      
+      case Id.beerusSphereOfDestruction:
+        if (unitId == Id.beerus) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/BeforeCreation1.mp3", 2612);
+          } else if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/NotDone.mp3", 1277);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Destroy1.mp3", 2262);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Destroy2.mp3", 1552);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Beerus/W.mp3", 1299);
+        break;
+
+      case Id.beerusAuraOfDestruction:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Angry1.mp3", 1605);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Angry2.mp3", 1294);
+          } 
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+        break;
+
+      case Id.beerusGodWrath:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Seathe.mp3", 2797);
+          }
+        }
+        break;
+
+      case Id.beerusFury:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Underestimate.mp3", 2637);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+        break;
+      
+      case Id.beerusFoodSushi:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sushi1.mp3", 711);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sushi2.mp3", 3901);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodPizza:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pizza1.mp3", 5040);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pizza2.mp3", 3145);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodRamen:
+        if (unitId == Id.beerus) {
+          if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Heal.mp3", 2186);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Voice/Beerus/Ramen.mp3", 4760);
+        break;
+      
+      case Id.beerusFoodIceCream:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/IceCream1.mp3", 1202);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/IceCream2.mp3", 5107);
+          }
+        }
+        break;
+
+      case Id.beerusFoodTakoyaki:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Takoyaki1.mp3", 2296);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Takoyaki2.mp3", 4175);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodPudding:
+        if (unitId == Id.beerus) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding4.mp3", 2752);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding1.mp3", 2567);
+          } else if (rng < 70) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding2.mp3", 1292);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding3.mp3", 2506);
+          }
+        }
+        break;
+        
+      case Id.beerusHakai:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Hakai.mp3", 1048);
+          }
+        }
+        break;
+
       // broly
       case Id.energyPunch:
         if (unitId == Id.broly) {

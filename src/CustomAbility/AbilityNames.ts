@@ -1049,7 +1049,9 @@ export module AbilityNames {
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
     export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";
     export const NOVA_STAR_OMEGA_CUSTOM: string = "Omega Nova Star!";
-    export const SYMPHONIC_DESTRUCTION: string = "Symphonic Destruction!";
+    export const SYMPHONIC_DESTRUCTION_CUSTOM: string = "Symphonic Destruction!";
+    export const SPHERE_OF_DESTRUCTION_CUSTOM: string = "Sphere of Destruction!";
+    export const GOD_OF_DESTRUCTION_WRATH_CUSTOM: string = "God of Destruction's Wrath!";
   }
 
   export module Items {

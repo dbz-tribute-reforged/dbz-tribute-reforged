@@ -579,6 +579,25 @@ export module SimpleSpellSystem {
     const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
     SaveReal(Globals.genericSpellHashtable, timerId, motionAngleKey, ang);
 
+    if (GetUnitTypeId(src) == Id.beerus) {
+      const rng = Math.random() * 100;
+      if (rng < 20) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/Grunt1.mp3", 600);
+      } else if (rng < 40) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/Grunt2.mp3", 193);
+      } else if (rng < 60) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/Grunt3.mp3", 262);
+      } else if (rng < 75) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/This1.mp3", 931);
+      } else if (rng < 90) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/This2.mp3", 568);
+      } else if (rng < 95) {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/This3.mp3", 762);
+      } else {
+        SoundHelper.playSoundOnUnit(src, "Audio/Voice/Beerus/OnTheHouse.mp3", 1240);
+      }
+    }
+
     BlzSetEventDamage(1);
   }
   
@@ -2229,6 +2248,14 @@ export module SimpleSpellSystem {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
       } else {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenGlare2.mp3", 1018);
+      }
+    }
+
+    if (targetId == Id.beerus) {
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/Beerus/Counter1.mp3", 1073);
+      } else {
+        SoundHelper.playSoundOnUnit(target, "Audio/Voice/Beerus/Counter2.mp3", 672);
       }
     }
 
@@ -8246,7 +8273,7 @@ export module SimpleSpellSystem {
 
     const beamTimerKey = StringHash("beerus_q_beam");
     const beamCasterTimerKey = StringHash("beerus_q_caster");
-    const beamSfxTimerKey = StringHash("beerus_q_sfx");
+    // const beamSfxTimerKey = StringHash("beerus_q_sfx");
     const timerDDSKey = StringHash("beerus_q_timer_dds");
 
     const player = GetOwningPlayer(caster);
@@ -8264,7 +8291,7 @@ export module SimpleSpellSystem {
     const beamId = GetHandleId(beam);
     BlzSetUnitName(beam, "Cataclysmic Orb");
 
-    const sfx = AddSpecialEffectTarget("CataclysmicOrb.mdl", beam, "origin");
+    // const sfx = AddSpecialEffectTarget("CataclysmicOrb.mdl", beam, "origin");
 
     const maxHp = BeamComponent.calculateBeamHp(
       GetUnitAbilityLevel(caster, Id.beerusCataclysmicOrb), 
@@ -8289,7 +8316,7 @@ export module SimpleSpellSystem {
 
     SaveUnitHandle(Globals.genericSpellHashtable, timerId, beamTimerKey, beam);
     SaveUnitHandle(Globals.genericSpellHashtable, timerId, beamCasterTimerKey, caster);
-    SaveEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey, sfx);
+    // SaveEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey, sfx);
     SaveInteger(Globals.genericDDSHashtable, beamId, timerDDSKey, timerId);
 
     TimerStart(timer, tickRate, true, beerusCataclysmicOrbLoop);
@@ -8307,7 +8334,7 @@ export module SimpleSpellSystem {
 
     const beamTimerKey = StringHash("beerus_q_beam");
     const beamCasterTimerKey = StringHash("beerus_q_caster");
-    const beamSfxTimerKey = StringHash("beerus_q_sfx");
+    // const beamSfxTimerKey = StringHash("beerus_q_sfx");
     const motionTimerKey = StringHash("beerus_q_motion");
     const motionAngleKey = StringHash("beerus_q_motion_ang");
 
@@ -8325,7 +8352,9 @@ export module SimpleSpellSystem {
       const angle = LoadReal(Globals.genericSpellHashtable, timerId, motionAngleKey);
       Globals.tmpVector.setUnit(beam);
       Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, angle, beamSpeed);
-      PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector2);
+      if (!PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector2)) {
+        SaveBoolean(Globals.genericSpellHashtable, timerId, motionTimerKey, false);
+      }
     }
     
     // AOE detonate
@@ -8374,8 +8403,8 @@ export module SimpleSpellSystem {
         }
       });
 
-      const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey);
-      if (sfx) DestroyEffect(sfx);
+      // const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, beamSfxTimerKey);
+      // if (sfx) DestroyEffect(sfx);
       const sfx2 = AddSpecialEffect("NewDirtEXNofire.mdl", x, y);
       BlzSetSpecialEffectScale(sfx2, 1.5);
       BlzSetSpecialEffectTimeScale(sfx2, 1.5);

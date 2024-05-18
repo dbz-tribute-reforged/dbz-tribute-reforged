@@ -18855,7 +18855,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Saga.SYMPHONIC_DESTRUCTION,
+    name: AbilityNames.Saga.SYMPHONIC_DESTRUCTION_CUSTOM,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,
@@ -18879,6 +18879,62 @@ export const AbilitiesList = [
     components: [
       { name: "teleport original point continuous" },
       { name: "multi whis sym" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.SPHERE_OF_DESTRUCTION_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 116,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi beerus sphere of destruction" },
+      { name: "sfx beerus sphere of destruction caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.GOD_OF_DESTRUCTION_WRATH_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi beerus god of destruction wrath" },
     ],
   },
   // -------------------------------------------
