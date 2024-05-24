@@ -704,6 +704,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Beerus.BEERUS_PUDDING,
     ]],
     
+    [Id.gojo, [
+      AbilityNames.Gojo.UNLIMITED_VOID,
+    ]],
+    
     [Id.granolah, [
       AbilityNames.Granolah.SNIPE,
       AbilityNames.Granolah.SNIPE_2,

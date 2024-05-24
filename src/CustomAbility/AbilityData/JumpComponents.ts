@@ -383,4 +383,15 @@ export const JumpComponents = [
     useSpeedToCastPoint: true,
     speed: 30,
   },
+  {
+    name: "jump crono lumi",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    startTimeRatio: 0,
+    duration: 133,
+    maxHeight: 200,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]

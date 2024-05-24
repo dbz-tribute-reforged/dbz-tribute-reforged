@@ -6594,6 +6594,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
+      { name: "jump crono lumi" },
       { name: "damage crono lumi explosion" },
       { name: "sfx crono lumi" },
       { name: "sfx crono lumi explode" },
@@ -12399,6 +12400,34 @@ export const AbilitiesList = [
       { name: "channel caster 1.5s" },
       { name: "multi granolah final shot" },
       { name: "sfx granolah final shot caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.UNLIMITED_VOID,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam gojo unlimited void barrier" },
     ],
   },
   // -------------------------------------------

@@ -109,6 +109,7 @@ export module MinimapHelper {
       [Id.whis, "MM_whis.mdl"],
       [Id.beerus, "MM_beerus.mdl"],
       [Id.granolah, "MM_granolah.mdl"],
+      [Id.gojo, "MM_gojo.mdl"],
     ]
   );
 

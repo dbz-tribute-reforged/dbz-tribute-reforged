@@ -14,6 +14,7 @@ import { TimerManager } from "Core/Utility/TimerManager";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { MinimapHelper } from "Common/MinimapHelper";
+import { BeamComponent } from "CustomAbility/AbilityComponent/BeamComponent";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -138,6 +139,9 @@ export class HeroPassiveManager {
         break;
       case Id.tatsumaki:
         tatsumakiPassive(customHero);
+        break;
+      case Id.gojo:
+        gojoPassive(customHero);
         break;
       default:
         break;
@@ -3210,6 +3214,353 @@ export function tatsumakiPassive(customHero: CustomHero) {
       });
     }
     GroupClear(Globals.tmpUnitGroup2);
+  });
+}
+
+export function gojoPassive(customHero: CustomHero) {
+  const limitlessAOE = 1200;
+  const limitlessMinDist = 3;
+  const limitlessDistPct = 0.4;
+  const limitlessSixEyesDistPct = 0.8;
+  const limitlessMPCostPct = 0.03 * 0.01;
+
+  const gojoBluePressKey = StringHash("gojo_q_press");
+  const gojoBlueChargeFlagKey = StringHash("gojo_q_charge_flag");
+  const gojoBlueCasterTimerKey = StringHash("gojo_q_caster");
+  const gojoBlueChargeTicksKey = StringHash("gojo_q_charge_ticks");
+  const gojoBlueShootTicksKey = StringHash("gojo_q_shoot_ticks");
+  const gojoQXKey = StringHash("gojo_q_x");
+  const gojoQYKey = StringHash("gojo_q_y");
+  
+  const gojoRedPressKey = StringHash("gojo_w_press");
+  const gojoRedChargeFlagKey = StringHash("gojo_w_charge_flag");
+  const gojoRedCasterTimerKey = StringHash("gojo_w_caster");
+  const gojoRedChargeTicksKey = StringHash("gojo_w_charge_ticks");
+  const gojoRedShootTicksKey = StringHash("gojo_w_shoot_ticks");
+  const gojoWXKey = StringHash("gojo_w_x");
+  const gojoWYKey = StringHash("gojo_w_y");
+
+  const gojoPurpleCasterTimerKey = StringHash("gojo_e_caster");
+  const gojoEXKey = StringHash("gojo_e_x");
+  const gojoEYKey = StringHash("gojo_e_y");
+
+  const gojoSixEyesActiveKey = StringHash("gojo_d_active");
+
+  const casterId = GetHandleId(customHero.unit);
+
+  UnitAddAbility(customHero.unit, Id.gojoBlueActive);
+  SetPlayerAbilityAvailable(
+    GetOwningPlayer(customHero.unit), Id.gojoBlueActive, false
+  );
+  UnitAddAbility(customHero.unit, Id.gojoRedActive);
+  SetPlayerAbilityAvailable(
+    GetOwningPlayer(customHero.unit), Id.gojoRedActive, false
+  );
+  SetPlayerAbilityAvailable(
+    GetOwningPlayer(customHero.unit), Id.gojoPurplePassive, false
+  );
+
+
+  const gojoLimitlessGroup = CreateGroup();
+  const gojoLimitlessMap = new Map<unit, [number, number]>();
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) gojoLimitlessMap.clear();
+
+    const player = GetOwningPlayer(customHero.unit);
+    const playerId = GetPlayerId(player);
+    // const redLvl = Math.min(10, 1 + (heroLvl - 30) / 3);
+
+    const keyQ = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_Q);
+    const keyW = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_W);
+
+    let qPress = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoBluePressKey
+    );
+    let wPress = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoRedPressKey
+    );
+
+    let blueChargeTicks = LoadInteger(Globals.genericSpellHashtable, 
+      casterId, gojoBlueChargeTicksKey
+    );
+    const isBlueCharging = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoBlueChargeFlagKey
+    );
+    const blueCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.gojoBlueActive);
+    
+    let redChargeTicks = LoadInteger(Globals.genericSpellHashtable, 
+      casterId, gojoRedChargeTicksKey
+    );
+    const isRedCharging = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoRedChargeFlagKey
+    );
+    const redCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.gojoRedActive);
+    
+    const purpleCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.gojoPurpleActive);
+    const isSixEyes = LoadBoolean(Globals.genericSpellHashtable, casterId, gojoSixEyesActiveKey);
+
+    if (blueCD == 0) {
+      SetPlayerAbilityAvailable(player, Id.gojoBluePassive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoBlueActive, false);
+    }
+    if (redCD == 0) {
+      SetPlayerAbilityAvailable(player, Id.gojoRedPassive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoRedActive, false);
+    }
+    if (isSixEyes) {
+      if (purpleCD == 0) {
+        SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, false);
+      } else {
+        SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
+      }
+    }
+
+    if (keyQ.isDown) {
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoQXKey,
+        Globals.customPlayers[playerId].mouseData.x
+      );
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoQYKey,
+        Globals.customPlayers[playerId].mouseData.y
+      );
+    }
+
+    if (keyW.isDown) {
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoWXKey,
+        Globals.customPlayers[playerId].mouseData.x
+      );
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoWYKey,
+        Globals.customPlayers[playerId].mouseData.y
+      );
+    }
+
+    // check six-eyes + charging + ready
+    if (
+      isSixEyes
+      && blueChargeTicks > 0
+      && blueCD == 0
+      && redChargeTicks > 0
+      && redCD == 0
+      && purpleCD == 0
+    ) {
+      // if release
+      if (!keyQ.isDown || !keyW.isDown) {
+        TextTagHelper.showPlayerColorTextOnUnit(
+          GetAbilityName(Id.gojoPurplePassive), playerId, customHero.unit
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          casterId, gojoBlueChargeTicksKey, 0
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          casterId, gojoRedChargeTicksKey, 0
+        );
+
+        // blue, red and purple
+        SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
+        SimpleSpellSystem.startCooldown(customHero.unit, Id.gojoPurpleActive);
+
+        const purpleBeamTimer = CreateTimer();
+        const purpleBeamTimerId = GetHandleId(purpleBeamTimer);
+        SaveUnitHandle(Globals.genericSpellHashtable, 
+          purpleBeamTimerId, gojoPurpleCasterTimerKey, customHero.unit
+        );
+        SaveReal(Globals.genericSpellHashtable, 
+          purpleBeamTimerId, gojoEXKey, 
+          LoadReal(Globals.genericSpellHashtable, casterId, gojoQXKey)
+        );
+        SaveReal(Globals.genericSpellHashtable, 
+          purpleBeamTimerId, gojoEYKey, 
+          LoadReal(Globals.genericSpellHashtable, casterId, gojoQYKey)
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          purpleBeamTimerId, gojoBlueShootTicksKey, blueChargeTicks
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          purpleBeamTimerId, gojoRedShootTicksKey, redChargeTicks
+        );
+        TimerStart(purpleBeamTimer, 0.03, true, SimpleSpellSystem.gojoPurpleBeamLoop);
+
+        blueChargeTicks = 0;
+        redChargeTicks = 0;
+      }
+    }
+
+    if (qPress) {
+      // initiate charging
+      SaveBoolean(Globals.genericSpellHashtable, 
+        casterId, gojoBluePressKey, false
+      );
+      if (blueChargeTicks <= 0 && !isBlueCharging && blueCD == 0) {
+        // if on cd, dont charge
+        TextTagHelper.showPlayerColorTextOnUnit(
+          GetAbilityName(Id.gojoBluePassive), playerId, customHero.unit
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          casterId, gojoBlueChargeTicksKey, 1
+        );
+        const blueChargeTimer = CreateTimer();
+        const blueChargeTimerId = GetHandleId(blueChargeTimer);
+        SaveUnitHandle(Globals.genericSpellHashtable, 
+          blueChargeTimerId, gojoBlueCasterTimerKey, customHero.unit
+        );
+        TimerStart(blueChargeTimer, 0.03, true, 
+          SimpleSpellSystem.gojoBlueChargeLoop
+        );
+      }
+    }
+
+    // q fire
+    if (blueChargeTicks > 0 && isBlueCharging && !keyQ.isDown) {
+      SetPlayerAbilityAvailable(player, Id.gojoBlueActive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoBluePassive, false);
+      BlzStartUnitAbilityCooldown(
+        customHero.unit, Id.gojoBlueActive, 
+        SimpleSpellSystem.getCooldown(
+          customHero.unit, Id.gojoBlueActive,
+          BlzGetUnitAbilityCooldown(customHero.unit, Id.gojoBlueActive, 0)
+        )
+      );
+
+      // end charging and fire
+      SaveInteger(Globals.genericSpellHashtable, 
+        casterId, gojoBlueChargeTicksKey, 0
+      );
+      const blueBeamTimer = CreateTimer();
+      const blueBeamTimerId = GetHandleId(blueBeamTimer);
+      SaveUnitHandle(Globals.genericSpellHashtable, 
+        blueBeamTimerId, gojoBlueCasterTimerKey, customHero.unit
+      );
+      SaveInteger(Globals.genericSpellHashtable, 
+        blueBeamTimerId, gojoBlueShootTicksKey, blueChargeTicks
+      );
+      TimerStart(blueBeamTimer, 0.03, true, SimpleSpellSystem.gojoBlueBeamLoop);
+    }
+    
+    if (GetUnitAbilityLevel(customHero.unit, Id.gojoRedPassive) > 0) {
+      if (wPress) {
+        // initiate charging
+        SaveBoolean(Globals.genericSpellHashtable, 
+          casterId, gojoRedPressKey, false
+        );
+        if (redChargeTicks <= 0 && !isRedCharging && redCD == 0) {
+          // if on cd, dont charge
+          TextTagHelper.showPlayerColorTextOnUnit(
+            GetAbilityName(Id.gojoRedPassive), playerId, customHero.unit
+          );
+          SaveInteger(Globals.genericSpellHashtable, 
+            casterId, gojoRedChargeTicksKey, 1
+          );
+          const redChargeTimer = CreateTimer();
+          const redChargeTimerId = GetHandleId(redChargeTimer);
+          SaveUnitHandle(Globals.genericSpellHashtable, 
+            redChargeTimerId, gojoRedCasterTimerKey, customHero.unit
+          );
+          TimerStart(redChargeTimer, 0.03, true, 
+            SimpleSpellSystem.gojoRedChargeLoop
+          );
+        }
+      }
+
+      // w fire
+      if (redChargeTicks > 0 && isRedCharging && !keyW.isDown) {
+        SetPlayerAbilityAvailable(player, Id.gojoRedActive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoRedPassive, false);
+        BlzStartUnitAbilityCooldown(
+          customHero.unit, Id.gojoRedActive, 
+          SimpleSpellSystem.getCooldown(
+            customHero.unit, Id.gojoRedActive,
+            BlzGetUnitAbilityCooldown(customHero.unit, Id.gojoRedActive, 0)
+          )
+        );
+  
+        // end charging and fire
+        SaveInteger(Globals.genericSpellHashtable, 
+          casterId, gojoRedChargeTicksKey, 0
+        );
+        const redBeamTimer = CreateTimer();
+        const redBeamTimerId = GetHandleId(redBeamTimer);
+        SaveUnitHandle(Globals.genericSpellHashtable, 
+          redBeamTimerId, gojoRedCasterTimerKey, customHero.unit
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          redBeamTimerId, gojoRedShootTicksKey, redChargeTicks
+        );
+        TimerStart(redBeamTimer, 0.03, true, SimpleSpellSystem.gojoRedBeamLoop);
+      }
+    }
+
+    // limitless
+    if (GetUnitManaPercent(customHero.unit) > 1) {
+      Globals.tmpVector.setUnit(customHero.unit);
+
+      let isLimitless = false;
+      const limitlessUpg = isSixEyes && GetHeroLevel(customHero.unit) >= 150;
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup3, 
+        Globals.tmpVector.x, Globals.tmpVector.y, limitlessAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup3, () => {
+        const unit = GetEnumUnit();
+        if (
+          UnitHelper.isUnitTargetableForPlayer(unit, player)
+          && !IsUnitType(unit, UNIT_TYPE_MAGIC_IMMUNE)
+        ) {
+          isLimitless = true;
+          GroupAddUnit(gojoLimitlessGroup, unit);
+          const coord = gojoLimitlessMap.get(unit);
+          if (!coord) {
+            gojoLimitlessMap.set(unit, [GetUnitX(unit), GetUnitY(unit)]);
+            return;
+          } else if (coord && coord.length >= 2) {
+            // move reduced distance
+            Globals.tmpVector2.setUnit(unit);
+            Globals.tmpVector3.setPos(coord[0], coord[1]);
+
+            const distToCaster = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+            const dist = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector2);
+            if (dist > limitlessMinDist) {
+              const ang = CoordMath.angleBetweenCoords(Globals.tmpVector3, Globals.tmpVector2);
+              const pctDist = limitlessUpg ? limitlessSixEyesDistPct : limitlessDistPct;
+              Globals.tmpVector3.polarProjectCoords(Globals.tmpVector3, 
+                ang, dist * (1 - pctDist * (1 - distToCaster / limitlessAOE))
+              );
+              if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+                PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector3);
+              } else {
+                PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector3);
+              }
+            }
+            coord[0] = GetUnitX(unit);
+            coord[1] = GetUnitY(unit);
+          }
+        }
+      });
+
+      // check if unit too far
+      if (gojoLimitlessMap.size > 0) {
+        Globals.tmpVector.setUnit(customHero.unit);
+        ForGroup(gojoLimitlessGroup, () => {
+          const unit = GetEnumUnit();
+          Globals.tmpVector2.setUnit(unit);
+          if (
+            CoordMath.distance(Globals.tmpVector2, Globals.tmpVector) > limitlessAOE
+            || !UnitHelper.isUnitAlive(unit)
+            || !UnitHelper.isUnitAlive(customHero.unit)
+          ) {
+            GroupRemoveUnit(gojoLimitlessGroup, unit);
+            gojoLimitlessMap.delete(unit);
+          }
+        });
+      }
+
+      if (isLimitless) {
+        UnitHelper.payMPPercentCost(customHero.unit, limitlessMPCostPct, UNIT_STATE_MAX_MANA);
+      }
+    }
   });
 }
 

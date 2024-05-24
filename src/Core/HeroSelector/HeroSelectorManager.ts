@@ -325,7 +325,7 @@ export class HeroSelectorManager {
     HeroSelector.deselectButtons();
     this.forceAllRepick();
     this.resetBansAndPicks();
-    if (doBans) {
+    if (doBans && !Globals.isFBSimTest) {
       this.runBanPhase();
     } else {
       this.runPickPhase();

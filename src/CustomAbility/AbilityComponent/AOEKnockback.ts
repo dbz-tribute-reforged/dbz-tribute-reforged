@@ -15,6 +15,9 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   static readonly TARGET_AOE = 0;
   static readonly TARGET_TARGET_UNIT = 1;
 
+  static readonly tmpKBVec1: Vector2D = new Vector2D();
+  static readonly tmpKBVec2: Vector2D = new Vector2D();
+
   protected sourceCoord: Vector2D;
   protected targetCoord: Vector2D;
   protected newTargetCoord: Vector2D;
@@ -45,6 +48,55 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.targetCoord = new Vector2D();
     this.newTargetCoord = new Vector2D();
     this.affectedGroup = CreateGroup();
+  }
+
+  static genericDoKnockbackToGroup(
+    targetGroup: group,
+    caster: unit,
+    x: number,
+    y: number,
+    angle: number,
+    speed: number,
+  ) {
+    const player = GetOwningPlayer(caster);
+    AOEKnockback.tmpKBVec1.setPos(x, y);
+    ForGroup(targetGroup, () => {
+      const target = GetEnumUnit();
+      if (
+        UnitHelper.isUnitTargetableForPlayer(target, player)
+        && !IsUnitType(target, UNIT_TYPE_STRUCTURE)
+      ) {
+        AOEKnockback.tmpKBVec2.setUnit(target);
+        const sourceToTargetAngle = CoordMath.angleBetweenCoords(
+          AOEKnockback.tmpKBVec1, AOEKnockback.tmpKBVec2
+        );
+        AOEKnockback.tmpKBVec2.polarProjectCoords(
+          AOEKnockback.tmpKBVec2, 
+          angle + sourceToTargetAngle, speed
+        );
+        PathingCheck.moveGroundUnitToCoord(target, AOEKnockback.tmpKBVec2);
+      }
+    });
+  }
+
+  static genericDoKnockback(
+    targetGroup: group,
+    caster: unit,
+    x: number,
+    y: number,
+    aoe: number,
+    angle: number,
+    speed: number,
+  ) {
+    GroupClear(targetGroup);
+    GroupEnumUnitsInRange(
+      targetGroup,
+      x,
+      y,
+      aoe,
+      null
+    );
+    AOEKnockback.genericDoKnockbackToGroup(targetGroup, caster, x, y, angle, speed);
   }
 
   doKnockback(input: CustomAbilityInput, target: unit) {

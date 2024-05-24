@@ -59,6 +59,10 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       this.toStartDelay + " seconds!"
     );
     
+    TournamentData.finalBattleDetector.setPos(
+      GetRectCenterX(gg_rct_Final_Battle_Detector_Region),
+      GetRectCenterY(gg_rct_Final_Battle_Detector_Region),
+    );
     // tell gui respawn system final battle is happening
     const dummyCaster = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE), 

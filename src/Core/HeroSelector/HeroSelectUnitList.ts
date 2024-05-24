@@ -1000,6 +1000,17 @@ const mightGuyData = {
     HeroSelectCategory.BRUISER
   )
 }
+const gojoData = {
+  unitCode: Id.gojo,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.MEME + 
+    HeroSelectCategory.BEAMER
+  )
+}
 
 
 // order matters
@@ -1130,7 +1141,7 @@ export const HeroSelectUnitList = [
   ichigoData,
   minatoData,
   mightGuyData,
-  emptySpace,
+  gojoData,
 
   // ====
   // 90

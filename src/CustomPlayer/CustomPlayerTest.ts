@@ -299,22 +299,22 @@ export function CustomPlayerTest() {
 
   // // update mouse positions for now
   // // might be a bit laggy?
-  // const updatePlayerMouseData = CreateTrigger();
-	// for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-  //   TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
-	// }
-	// TriggerAddAction(updatePlayerMouseData, () => {
-  //   const player = GetTriggerPlayer();
-  //   const playerId = GetPlayerId(player);
-  //   if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
-  //     const x = BlzGetTriggerPlayerMouseX();
-  //     const y = BlzGetTriggerPlayerMouseY();
-  //     if (x != 0 && y != 0) {
-  //       Globals.customPlayers[playerId].mouseData.x = x;
-  //       Globals.customPlayers[playerId].mouseData.y = y;
-  //     }
-  //   }
-  // });
+  const updatePlayerMouseData = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
+	}
+	TriggerAddAction(updatePlayerMouseData, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
+      const x = BlzGetTriggerPlayerMouseX();
+      const y = BlzGetTriggerPlayerMouseY();
+      if (x != 0 && y != 0) {
+        Globals.customPlayers[playerId].mouseData.x = x;
+        Globals.customPlayers[playerId].mouseData.y = y;
+      }
+    }
+  });
 
 
   const updatePlayerOrderPoint = CreateTrigger();

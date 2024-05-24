@@ -37830,16 +37830,118 @@ Beerus unleashes his wrath and fires a massive amount of ki blasts in all direct
 |cff00ffffCooldown: <A0DG,Cool1> seconds|r
 }
 
+STRING 5849
+// Units: H02A (Special Grade Sorcerer), Name (Name)
+{
+Special Grade Sorcerer
+}
+
+STRING 5850
+// Units: H02A (Special Grade Sorcerer), Propernames (Proper Names)
+{
+Satoru Gojo
+}
+
+STRING 5851
+// Units: H02A (Special Grade Sorcerer), Ubertip (Tooltip - Extended)
+{
+A hero with limitless capability that focuses on timing his cursed techniques for massive damage.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 5852
+// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 5853
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
+{
+Blue is an application of the Limitless centered around infinitely converging space to a single point to create a void-like effect, resulting in a powerful, attractive force.
+
+Hold down the Q button to charge for up to +200% damage.
+
+|cff00ff00Damage: [Int] 100u x 5t (+200%)
+|cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
 STRING 5854
 // Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
+STRING 5855
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 5856
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
 STRING 5857
 // Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 5858
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 5859
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 5860
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 5861
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
 }
 
 STRING 5862
@@ -38520,6 +38622,16 @@ STRING 5956
 |cffffcc00D|rodon Ray
 }
 
+STRING 5957
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
 STRING 5958
 // Abilities: A0E2 (Transform - Second), Tip (Tooltip - Normal)
 {
@@ -38554,6 +38666,16 @@ STRING 5963
 // Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 5964
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
 }
 
 STRING 5965
@@ -39931,6 +40053,16 @@ STRING 6174
 [|cff00ff00W|r] Cataclysmic Orb
 }
 
+STRING 6175
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
 STRING 6176
 // Abilities: A0E6 (Call Ship), Tip (Tooltip - Normal)
 {
@@ -39947,6 +40079,16 @@ STRING 6178
 // Abilities: A0DG (God of Destruction's Wrath), Name (Name)
 {
 God of Destruction's Wrath
+}
+
+STRING 6179
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
 }
 
 STRING 6180
@@ -39989,6 +40131,16 @@ STRING 6186
 // Abilities: A0GY (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
 {
 Bombards the area with 125 ki blasts from the fingertip.|n|cff00ff00(Damage: int * lvl * .087 per blast.)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 6187
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
 }
 
 STRING 6188
@@ -40052,6 +40204,26 @@ STRING 6196
 // Abilities: A0D1 (Sample Ice Cream), Ubertip (Tooltip - Normal - Extended)
 {
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School. |n|cff00ff00(Damage: (Int * lvl * 2.25) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
+}
+
+STRING 6197
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 6198
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
 }
 
 STRING 6199
@@ -40451,7 +40623,7 @@ A high mobility assassin.
 }
 
 STRING 6259
-// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
+// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -41351,6 +41523,34 @@ STRING 6390
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed. |n|cff00ff00(Duration: 4 seconds)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
+STRING 6391
+// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 6392
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 6393
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Cursed Technique Lapse: Blue
+}
+
+STRING 6394
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
 STRING 6395
 // Abilities: A0D0 (Sample Ramen), Tip (Tooltip - Normal)
 {
@@ -41448,6 +41648,30 @@ STRING 6409
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed. |n|cff00ff00(Duration: 4 seconds)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
+STRING 6410
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 6411
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 6412
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 6413
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
 STRING 6414
 // Abilities: A0D3 (Sample Takoyaki), Tip (Tooltip - Normal)
 {
@@ -41543,6 +41767,30 @@ STRING 6428
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed. |n|cff00ff00(Duration: 4 seconds)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
+STRING 6429
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 6430
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 6431
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 6432
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
 STRING 6433
 // Abilities: A0CZ (Sample Pudding), Tip (Tooltip - Normal)
 {
@@ -41621,16 +41869,52 @@ STRING 6445
 [|cff00ff00Q|r] Normal Arrow
 }
 
+STRING 6446
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
 STRING 6447
 // Abilities: A0D1 (Sample Ice Cream), Ubertip (Tooltip - Normal - Extended)
 {
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed. |n|cff00ff00(Duration: 4 seconds)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
+STRING 6448
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 6449
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 6450
+// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 6451
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Name (Name)
+{
+Cursed Technique Lapse: Blue
+}
+
 STRING 6452
 // Abilities: A0D1 (Sample Ice Cream), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Energy Absorption
+}
+
+STRING 6453
+// Abilities: A0WW (Saiyan Blood), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 6454
@@ -41681,6 +41965,16 @@ STRING 6461
 [|cff00ff00E|r] Learn Energy Absorption
 }
 
+STRING 6462
+// Abilities: A00S (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
 STRING 6463
 // Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
@@ -41693,6 +41987,30 @@ STRING 6464
 [|cff00ff00Q|r] Pistol - [|cffffcc00Level 7|r]
 }
 
+STRING 6465
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), EditorSuffix (Editor Suffix)
+{
+(gojo passive)
+}
+
+STRING 6466
+// Abilities: A0KA (Cursed Technique Lapse: Blue), Name (Name)
+{
+Cursed Technique Lapse: Blue
+}
+
+STRING 6467
+// Abilities: A0KA (Cursed Technique Lapse: Blue), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
+STRING 6468
+// Abilities: A0KA (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Cursed Technique Lapse: Blue
+}
+
 STRING 6469
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
@@ -41703,6 +42021,28 @@ STRING 6470
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Banana Slamma - [|cffffcc00Level 1|r]
+}
+
+STRING 6471
+// Abilities: A0KA (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
+{
+Blue is an application of the Limitless centered around infinitely converging space to a single point to create a void-like effect, resulting in a powerful, attractive force.
+
+Hold down the Q button to charge for up to +200% damage.
+
+|cff00ff00Damage: [Int] 100u x 5t (+200%)
+|cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
+STRING 6472
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
+{
+The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. 
+
+Hold down the W button to charge for up to +200% damage.
+
+|cff00ff00Damage: [Int] 500u (+1000u)
+|cff00ffffCooldown: <A0OE,Cool1>s|r
 }
 
 STRING 6473
@@ -41750,6 +42090,26 @@ STRING 6479
 // Abilities: A0E5 (Transform - 100%), Name (Name)
 {
 Transform - 100%
+}
+
+STRING 6480
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 6481
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
 }
 
 STRING 6482
@@ -41872,6 +42232,16 @@ STRING 6501
 [|cff00ff00W|r] Cataclysmic Orb
 }
 
+STRING 6502
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
 STRING 6503
 // Abilities: A0GY (Cosmic Illusion), Tip (Tooltip - Normal)
 {
@@ -41944,10 +42314,70 @@ STRING 6514
 Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb and send it flying.|cff00ff00(Damage: (????) +???)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
+STRING 6515
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 6516
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 6517
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 6518
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 6519
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
 STRING 6520
 // Abilities: A0E7 (Travel), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Travel
+}
+
+STRING 6521
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
 }
 
 STRING 6522
@@ -41972,6 +42402,26 @@ STRING 6525
 // Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
+}
+
+STRING 6526
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 6527
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
 }
 
 STRING 6528
@@ -42222,7 +42672,7 @@ STRING 6567
 }
 
 STRING 6568
-// Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
+// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -42284,7 +42734,7 @@ STRING 6575
 }
 
 STRING 6576
-// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -42656,6 +43106,26 @@ STRING 6626
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed. |n|cff00ff00(Duration: 1 second)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
+STRING 6627
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 6628
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
 STRING 6629
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
@@ -42678,6 +43148,16 @@ STRING 6632
 // Abilities: A083 (Dark Mist), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Dark Mist - [|cffffcc00Level 1|r]
+}
+
+STRING 6633
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
 }
 
 STRING 6634
@@ -42704,6 +43184,12 @@ STRING 6637
 |cffffcc00D|rodon Ray
 }
 
+STRING 6638
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
 STRING 6639
 // Abilities: A0D1 (Sample Ice Cream), Tip (Tooltip - Normal)
 {
@@ -42720,6 +43206,12 @@ STRING 6641
 // Abilities: A0EL (Energy Absorption Buu), Name (Name)
 {
 Energy Absorption Buu
+}
+
+STRING 6642
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cursed Technique Reversal: Red
 }
 
 STRING 6643
@@ -42890,10 +43382,22 @@ STRING 6670
 [|cff00ff00D|r] Pressure Point Attack
 }
 
+STRING 6671
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
 STRING 6672
 // Abilities: A0EN (Pressure Point Attack Buu), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Pressure Point Attack
+}
+
+STRING 6673
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 6674
@@ -46349,7 +46853,7 @@ Throw Bomb
 }
 
 STRING 7197
-// Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
+// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -50960,6 +51464,12 @@ STRING 7912
 Vegito fires five quick-moving orbs towards the targeted area at once. They explode if they encounter an enemy or at their destination.|n|cff00FF00Damage: Int * lvl * 0.9 + 50 per hit.|r|n|cff00FFFFCooldown: 23 seconds|r
 }
 
+STRING 7913
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
 STRING 7914
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
@@ -50992,6 +51502,12 @@ STRING 7918
 // Abilities: A0HP (Home Run), Tip (Tooltip - Normal)
 {
 [|cffFFff00E|r] Banshee Blast
+}
+
+STRING 7919
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 7920
@@ -51684,7 +52200,7 @@ Units hit by Zamasu's auto attacks take extra damage from Zamasu's spells.
 }
 
 STRING 8025
-// Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
+// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -51879,7 +52395,7 @@ Freemode Disabled, forced win/loss conditions are enabled.
 }
 
 STRING 8054
-// Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -53032,6 +53548,18 @@ STRING 8233
 (leon)
 }
 
+STRING 8234
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 8235
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
 STRING 8236
 // Abilities: A0GK (Hakai), Tip (Tooltip - Normal)
 {
@@ -53047,7 +53575,7 @@ Vegeta fires a powerful Galick Gun infused with the powers of destruction. Deals
 }
 
 STRING 8238
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -53057,13 +53585,43 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8239
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
 |cffffcc00Evasion|r - <A00S,DataD5,%>% 
 |cffffcc00Critical|r - <A00S,DataA5>% 
 |cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 8240
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 8241
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 8242
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 8243
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 8244
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 8245
@@ -53075,6 +53633,12 @@ Sephiroth dashes forwards delivering a swift sequence of sword slashes for that 
 |cff00FFFFCooldown: <A0T7,Cool6,.> seconds|r
 
 |cff808080"Traitor... you will pay!"|r
+}
+
+STRING 8246
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 8247
@@ -53089,6 +53653,18 @@ STRING 8248
 Transform - Mecha
 }
 
+STRING 8249
+// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 8250
+// Abilities: A0MB (Cursed Technique Reversal: Red), Name (Name)
+{
+Cursed Technique Reversal: Red
+}
+
 STRING 8251
 // Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
 {
@@ -53101,8 +53677,24 @@ STRING 8252
 [|cff00ff00Q|r] Death Beam - [|cffffcc00Level 2|r]
 }
 
+STRING 8253
+// Abilities: A0GG (Hirudegarn Passive), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 8254
+// Abilities: A0WW (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
 STRING 8255
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -53112,7 +53704,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8256
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -53122,7 +53714,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8257
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -53132,13 +53724,48 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8258
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
 |cffffcc00Evasion|r - <A00S,DataD9,%>% 
 |cffffcc00Critical|r - <A00S,DataA9>% 
 |cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 8259
+// Abilities: A0MB (Cursed Technique Reversal: Red), EditorSuffix (Editor Suffix)
+{
+(gojo passive)
+}
+
+STRING 8260
+// Abilities: A0OE (Cursed Technique Reversal: Red), Name (Name)
+{
+Cursed Technique Reversal: Red
+}
+
+STRING 8261
+// Abilities: A0OE (Cursed Technique Reversal: Red), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
+STRING 8262
+// Abilities: A0OE (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cursed Technique Reversal: Red
+}
+
+STRING 8263
+// Abilities: A0OE (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
+{
+The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. 
+
+Hold down the W button to charge for up to +200% damage.
+
+|cff00ff00Damage: [Int] 500u (+1000u)
+|cff00ffffCooldown: <A0OE,Cool1>s|r
 }
 
 STRING 8264
@@ -53152,6 +53779,18 @@ Sephiroth dashes forwards delivering a swift sequence of sword slashes for that 
 |cff808080"Traitor... you will pay!"|r
 }
 
+STRING 8265
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. 
+
+Using Red on Blue or vice versa will create a special purple detonation that deals 100% of the damage of Red and Blue.
+Charge Purple directly by holding down Q and W (or just E) to deal 75% of the combined damage of Red and Blue.
+
+|cff00ff00Damage: [Int] Red + Blue (+25%) (+100%)
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
 STRING 8266
 // Abilities: A0TW (Super Goten Strike), Researchhotkey (Hotkey - Learn)
 {
@@ -53162,6 +53801,26 @@ STRING 8267
 // Abilities: A0IG (Transform - Golden), Name (Name)
 {
 Transform - Golden
+}
+
+STRING 8268
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 8269
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
 }
 
 STRING 8270
@@ -55190,7 +55849,7 @@ Schala creates a protective aura, increasing the armor of nearby allies.
 }
 
 STRING 8546
-// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55414,7 +56073,7 @@ Sniper Rifle
 }
 
 STRING 8581
-// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
+// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -56330,7 +56989,7 @@ STRING 8722
 }
 
 STRING 8723
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -56442,6 +57101,16 @@ STRING 8737
 E
 }
 
+STRING 8738
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
 STRING 8739
 // Abilities: A0DG (God of Destruction's Wrath), Tip (Tooltip - Normal)
 {
@@ -56466,6 +57135,16 @@ STRING 8742
 [|cff00ff00R|r] Learn God of Destruction's Wrath - [|cffffcc00Level %d|r]
 }
 
+STRING 8743
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
 STRING 8744
 // Abilities: A0D7 (Gourmet), EditorSuffix (Editor Suffix)
 {
@@ -56478,10 +57157,50 @@ STRING 8745
 [|cff00FF00Q|r] Cataclysmic Orb - [|cffffcc00Level 1|r]
 }
 
+STRING 8746
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
 STRING 8747
 // Abilities: A0DF (Cataclysmic Orb), Name (Name)
 {
 Cataclysmic Orb
+}
+
+STRING 8748
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 8749
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 8750
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
 }
 
 STRING 8751
@@ -56717,6 +57436,16 @@ Grants Whis or an ally a shield which absorbs incoming damage. When the shield e
 |cff00FFFFCooldown: <A0JH,Cool10>s|r
 }
 
+STRING 8777
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
 STRING 8778
 // Abilities: A0JJ (Temporal Do-Over), Name (Name)
 {
@@ -56729,10 +57458,50 @@ STRING 8779
 W
 }
 
+STRING 8780
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 8781
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
 STRING 8782
 // Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 8783
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 8784
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
 }
 
 STRING 8785
@@ -57131,7 +57900,7 @@ Frieza transforms into his first form.
 }
 
 STRING 8849
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -57222,7 +57991,7 @@ Farmer with Shotgun
 }
 
 STRING 8862
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -57232,7 +58001,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8863
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -57255,7 +58024,7 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 }
 
 STRING 8865
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -57265,7 +58034,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8866
-// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
+// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -57354,7 +58123,7 @@ STRING 8878
 }
 
 STRING 8879
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -58228,10 +58997,26 @@ STRING 8994
 R
 }
 
+STRING 8995
+// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
 STRING 8996
 // Abilities: A06C (Death Beam), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Death Beam - [|cffffcc00Level 3|r]
+}
+
+STRING 8997
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
 }
 
 STRING 8998
@@ -58253,9 +59038,15 @@ Hirudegarn - [|cffffcc00Lower Half|r]
 }
 
 STRING 9001
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 9002
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hollow Technique: Purple
 }
 
 STRING 9003
@@ -58264,16 +59055,58 @@ STRING 9003
 [|cff00ff00Q|r] Death Beam - [|cffffcc00Level 4|r]
 }
 
+STRING 9004
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
+STRING 9005
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 9006
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
 STRING 9007
 // Abilities: A0D1 (Sample Ice Cream), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Sample Ice Cream
 }
 
+STRING 9008
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
 STRING 9009
 // Abilities: A0VJ (Tyranno Roar), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 9010
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 9011
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 9012
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9013
@@ -58506,7 +59339,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 9050
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
@@ -59758,7 +60591,7 @@ R
 }
 
 STRING 9232
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
@@ -59812,13 +60645,13 @@ STRING 9240
 }
 
 STRING 9241
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 9242
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
@@ -59935,7 +60768,7 @@ STRING 9258
 }
 
 STRING 9259
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
@@ -60114,7 +60947,7 @@ R
 }
 
 STRING 9288
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
@@ -60369,7 +61202,7 @@ STRING 9325
 }
 
 STRING 9326
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
@@ -60773,7 +61606,7 @@ Hookshot
 }
 
 STRING 9390
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
@@ -61053,7 +61886,7 @@ It's Vegeta!
 }
 
 STRING 9435
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
@@ -61077,7 +61910,7 @@ It's Gotenks!
 }
 
 STRING 9439
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
@@ -63350,7 +64183,7 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9793
-// Abilities: A0GG (Hirudegarn Passive), Tip (Tooltip - Normal)
+// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -63592,7 +64425,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
+// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63604,7 +64437,7 @@ Evil
 }
 
 STRING 9832
-// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
+// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63616,7 +64449,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
+// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63628,7 +64461,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
+// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63658,85 +64491,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63748,13 +64581,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
+// Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
+// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63766,103 +64599,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: n041 (Beamers / Other), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64048,13 +64881,13 @@ Hirudegarn Passive
 }
 
 STRING 9899
-// Abilities: A0WW (Saiyan Blood), Researchtip (Tooltip - Learn)
+// Abilities: A10K (Sword of Hope), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 9900
-// Abilities: A00S (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GG (Hirudegarn Passive), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -64791,7 +65624,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65712,7 +66545,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67669,7 +68502,7 @@ STRING 10431
 }
 
 STRING 10432
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A13X (Six Eyes Activate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -67767,7 +68600,7 @@ Jiren unleashes a mighty punch on the target unit, causing it to be knocked back
 }
 
 STRING 10447
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69065,7 +69898,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69573,7 +70406,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69609,7 +70442,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A13Y (Six Eyes Deactivate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -71486,7 +72319,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71746,7 +72579,7 @@ R
 }
 
 STRING 11049
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72606,7 +73439,7 @@ STRING 11173
 }
 
 STRING 11174
-// Units: n048 (Sega Mega), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -73526,7 +74359,7 @@ STRING 11299
 }
 
 STRING 11300
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76551,7 +77384,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
+// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79364,7 +80197,7 @@ STRING 12145
 }
 
 STRING 12146
-// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -80363,7 +81196,7 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
+// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -80732,7 +81565,7 @@ STRING 12346
 }
 
 STRING 12347
-// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82422,7 +83255,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82694,7 +83527,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82706,7 +83539,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82718,7 +83551,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83326,7 +84159,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -86248,7 +87081,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -89027,7 +89860,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -90724,7 +91557,7 @@ E
 }
 
 STRING 13774
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -92280,7 +93113,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -92292,7 +93125,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -93732,7 +94565,7 @@ STRING 14188
 }
 
 STRING 14189
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93748,7 +94581,7 @@ STRING 14190
 }
 
 STRING 14191
-// Abilities: A00S (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93764,7 +94597,7 @@ STRING 14192
 }
 
 STRING 14193
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93774,7 +94607,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14194
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93820,7 +94653,7 @@ STRING 14200
 }
 
 STRING 14201
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93830,7 +94663,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14202
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93840,7 +94673,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14203
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93850,7 +94683,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14204
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93860,7 +94693,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14205
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93870,7 +94703,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14206
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93964,7 +94797,7 @@ STRING 14220
 }
 
 STRING 14221
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93974,7 +94807,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14222
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93984,7 +94817,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14223
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -93994,7 +94827,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 14224
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -94010,7 +94843,7 @@ STRING 14225
 }
 
 STRING 14226
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -95228,7 +96061,7 @@ STRING 14402
 }
 
 STRING 14403
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -95376,7 +96209,7 @@ Hit's Assassination Contract
 }
 
 STRING 14422
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 2|r]
 }
@@ -95416,19 +96249,19 @@ A very fast hero that relies on moving quickly to deal damage in close range. Ha
 }
 
 STRING 14427
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 14428
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 14429
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
@@ -95494,43 +96327,43 @@ STRING 14439
 }
 
 STRING 14440
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 14441
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
 
 STRING 14442
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 14443
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 14444
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 14445
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 14446
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
@@ -96781,7 +97614,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -99954,13 +100787,13 @@ Lucca designates a target location to burst into flames after 0.5s and continous
 }
 
 STRING 15089
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 15090
-// Abilities: A10K (Sword of Hope), Tip (Tooltip - Normal)
+// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -99972,13 +100805,13 @@ Explosion Mastery
 }
 
 STRING 15092
-// Abilities: A0GG (Hirudegarn Passive), Researchtip (Tooltip - Learn)
+// Abilities: A04G (Explosion Mastery), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 15093
-// Abilities: A0WW (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A10K (Sword of Hope), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102148,7 +102981,7 @@ STRING 15392
 }
 
 STRING 15393
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -102412,7 +103245,7 @@ STRING 15430
 }
 
 STRING 15431
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102428,7 +103261,7 @@ E
 }
 
 STRING 15433
-// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102438,7 +103271,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15434
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102837,7 +103670,7 @@ STRING 15476
 }
 
 STRING 15477
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102847,7 +103680,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15478
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102857,7 +103690,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15479
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102867,7 +103700,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15480
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102877,7 +103710,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15481
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -102887,7 +103720,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 15482
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -103912,6 +104745,12 @@ STRING 15625
 [|cffffff00A|r] Choose All Might
 }
 
+STRING 15626
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
 STRING 15627
 // Abilities: A0SZ (Right Smash), Researchtip (Tooltip - Learn)
 {
@@ -104097,7 +104936,7 @@ STRING 15651
 }
 
 STRING 15652
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -105194,7 +106033,7 @@ STRING 15800
 }
 
 STRING 15801
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0KA (Cursed Technique Lapse: Blue), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -110979,7 +111818,7 @@ This unit has been hit by Galactic Donut; it cannot move and takes damage over t
 }
 
 STRING 16587
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -110989,7 +111828,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16588
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -110999,7 +111838,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16589
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -111009,7 +111848,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16590
-// Abilities: A0GG (Hirudegarn Passive), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -111019,7 +111858,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 16591
-// Abilities: A0GG (Hirudegarn Passive), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A04G (Explosion Mastery), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -112134,7 +112973,7 @@ W
 }
 
 STRING 16733
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113004,7 +113843,7 @@ Frieza fires multiple death beams at a very rapid rate.
 }
 
 STRING 16855
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113337,7 +114176,7 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114287,7 +115126,7 @@ Q
 }
 
 STRING 17017
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114356,7 +115195,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -115752,7 +116591,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -117797,7 +118636,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118524,7 +119363,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118938,7 +119777,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119323,7 +120162,7 @@ Lightning 2
 }
 
 STRING 17721
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A13V (Hollow Technique: Purple), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -119487,7 +120326,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -121569,7 +122408,7 @@ Pecorine summons a line of water dealing damage to enemy units in a line, then e
 }
 
 STRING 18049
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -122011,6 +122850,12 @@ STRING 18112
 // Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
 {
 |cffffff00Allows you to travel through time, instantly swapping positions with another allied hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 50s|r
+}
+
+STRING 18113
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 18114
@@ -123115,7 +123960,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18261
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123125,7 +123970,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18262
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123135,7 +123980,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18263
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123145,7 +123990,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18264
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123155,7 +124000,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18265
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123165,7 +124010,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18266
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123175,7 +124020,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18267
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123185,7 +124030,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18268
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123195,7 +124040,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18269
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123205,7 +124050,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18270
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123215,7 +124060,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18271
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123225,7 +124070,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18272
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123235,7 +124080,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18273
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123245,7 +124090,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18274
-// Abilities: A10K (Sword of Hope), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123255,7 +124100,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 18275
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -123267,79 +124112,79 @@ Saiyan Blood - [|cffffcc00Level 1|r]
 }
 
 STRING 18277
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 18278
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 18279
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 18280
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 18281
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 18282
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
 
 STRING 18283
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 18284
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 18285
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 18286
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 18287
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 18288
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 18289
-// Abilities: A04G (Explosion Mastery), Tip (Tooltip - Normal)
+// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -123357,13 +124202,13 @@ Saiyan Blood
 }
 
 STRING 18292
-// Abilities: A10K (Sword of Hope), Researchtip (Tooltip - Learn)
+// Abilities: A13I (Scything Claws), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 18293
-// Abilities: A10K (Sword of Hope), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A13I (Scything Claws), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -123412,7 +124257,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123631,7 +124476,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
+// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -123838,7 +124683,7 @@ Q
 }
 
 STRING 18361
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -124325,25 +125170,25 @@ F
 }
 
 STRING 18433
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18434
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18435
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A0YQ (Hollow Technique: Purple), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18436
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A13Z (Limitless: Teleport), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -124379,7 +125224,7 @@ STRING 18441
 }
 
 STRING 18442
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A140 (Limitless), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -124397,7 +125242,7 @@ STRING 18444
 }
 
 STRING 18445
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -124800,7 +125645,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
+// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -124900,7 +125745,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
+// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -125383,7 +126228,7 @@ Ice 2
 }
 
 STRING 18589
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -129037,7 +129882,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
+// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -133816,7 +134661,7 @@ STRING 19735
 }
 
 STRING 19736
-// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
+// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -134586,7 +135431,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
+// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -134907,6 +135752,12 @@ STRING 19905
 // Abilities: A0KL (Use Potara), EditorSuffix (Editor Suffix)
 {
 2.0
+}
+
+STRING 19906
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 19907
@@ -138383,6 +139234,12 @@ STRING 20394
 Drop Items
 }
 
+STRING 20395
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
 STRING 20396
 // Abilities: A0ZZ (Drop Items), Tip (Tooltip - Normal)
 {
@@ -139345,7 +140202,7 @@ R
 }
 
 STRING 20525
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A13W (Domain Expansion: Unlimited Void), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -141777,7 +142634,7 @@ Future Trunks' swordsmanship allows him to deal critical damage to enemies and e
 }
 
 STRING 20851
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141787,7 +142644,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20852
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141797,7 +142654,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20853
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141807,7 +142664,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20854
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141817,7 +142674,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20855
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141827,7 +142684,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20856
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141837,7 +142694,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20857
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141847,7 +142704,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20858
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141857,7 +142714,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20859
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141867,7 +142724,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20860
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141877,7 +142734,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20861
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141887,7 +142744,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20862
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141897,7 +142754,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20863
-// Abilities: A04G (Explosion Mastery), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -141907,7 +142764,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 20864
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -141925,25 +142782,25 @@ Future Trunks' Sword of Light - [|cffffcc00Level 2|r]
 }
 
 STRING 20867
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 20868
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 20869
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 20870
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
@@ -141961,7 +142818,7 @@ STRING 20872
 }
 
 STRING 20873
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
@@ -142101,55 +142958,55 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 20890
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 20891
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 20892
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 20893
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 20894
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 20895
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 20896
-// Abilities: A13I (Scything Claws), Tip (Tooltip - Normal)
+// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 20897
-// Abilities: A04G (Explosion Mastery), Researchtip (Tooltip - Learn)
+// Abilities: A0HE (Oatmeal), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 20898
-// Abilities: A04G (Explosion Mastery), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0HE (Oatmeal), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -142198,7 +143055,7 @@ W
 }
 
 STRING 20905
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A0OE (Cursed Technique Reversal: Red), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -143719,10 +144576,50 @@ STRING 21121
 Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane School.
 }
 
+STRING 21122
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 21123
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 21124
+// Abilities: A0YQ (Hollow Technique: Purple), Name (Name)
+{
+Hollow Technique: Purple
+}
+
+STRING 21125
+// Abilities: A0JF (Angelic Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 21126
+// Abilities: A0JF (Angelic Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
 STRING 21127
 // Abilities: A0LX (Kamehameha), Name (Name)
 {
 Kamehameha
+}
+
+STRING 21128
+// Abilities: A0YQ (Hollow Technique: Purple), EditorSuffix (Editor Suffix)
+{
+(gojo passive)
 }
 
 STRING 21129
@@ -143738,6 +144635,12 @@ Frieza fires a stronger version of his iconic Finger Beam energy attack infused 
 
 |cff00ff00Damage: [Int] 175u x 3t + 1.2% Max HP|r
 |cff00ffffCooldown: <A0QD,Cool8> seconds|r
+}
+
+STRING 21131
+// Abilities: A13V (Hollow Technique: Purple), Name (Name)
+{
+Hollow Technique: Purple
 }
 
 STRING 21132
@@ -144200,6 +145103,12 @@ STRING 21191
 // Abilities: A10Z (Super Elite Combo), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Super Elite Combo - [|cffffcc00Level 9|r]
+}
+
+STRING 21192
+// Abilities: A13V (Hollow Technique: Purple), EditorSuffix (Editor Suffix)
+{
+(gojo active)
 }
 
 STRING 21193
@@ -146002,7 +146911,7 @@ Armor Aura: 8|r
 }
 
 STRING 21429
-// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
+// Units: H029 (Cerelian Bounty Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -150804,6 +151713,12 @@ Issues a move order to all Metal Cooler clones.
 |cff00ffffCooldown: <A0CD,Cool1>s
 }
 
+STRING 22047
+// Abilities: A13V (Hollow Technique: Purple), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hollow Technique: Purple
+}
+
 STRING 22048
 // Abilities: A135 (Mist Form), Tip (Tooltip - Normal)
 {
@@ -152063,6 +152978,18 @@ STRING 22199
 R
 }
 
+STRING 22200
+// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. 
+
+Using Red on Blue or vice versa will create a special purple detonation that deals 100% of the damage of Red and Blue.
+Charge Purple directly by holding down Q and W (or just E) to deal 75% of the combined damage of Red and Blue.
+
+|cff00ff00Damage: [Int] Red + Blue (+25%) (+100%)
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
 STRING 22201
 {
 [|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r
@@ -152073,6 +153000,12 @@ STRING 22202
 // Abilities: A0FJ (God's Vision), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] |cff00ffffGod's Vision|r
+}
+
+STRING 22203
+// Abilities: A13W (Domain Expansion: Unlimited Void), Name (Name)
+{
+Domain Expansion: Unlimited Void
 }
 
 STRING 22204
@@ -152813,7 +153746,7 @@ Dart summons the Red-Eyed Dragon causing a massive explosion in the target area.
 }
 
 STRING 22280
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -153730,7 +154663,7 @@ Transformations:
 }
 
 STRING 22381
-// Units: H029 (Cerelian Bounty Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: H02A (Special Grade Sorcerer), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -155653,6 +156586,12 @@ STRING 22598
 W
 }
 
+STRING 22599
+// Abilities: A13W (Domain Expansion: Unlimited Void), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
 STRING 22600
 // Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
 {
@@ -156064,6 +157003,12 @@ STRING 22662
 // Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 22663
+// Abilities: A13W (Domain Expansion: Unlimited Void), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Domain Expansion: Unlimited Void
 }
 
 STRING 22664
@@ -157656,7 +158601,7 @@ Rooted Generic
 }
 
 STRING 22893
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -159252,7 +160197,7 @@ F
 }
 
 STRING 23101
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -160098,7 +161043,7 @@ Demiurge extends his claws to deal bonus damage to enemies he attacks. Enemies a
 }
 
 STRING 23218
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160108,7 +161053,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23219
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160118,7 +161063,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23220
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160128,7 +161073,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23221
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160138,7 +161083,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23222
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160148,7 +161093,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23223
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160158,7 +161103,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23224
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160168,7 +161113,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23225
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160178,7 +161123,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23226
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160188,7 +161133,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23227
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160198,7 +161143,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23228
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160208,7 +161153,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23229
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160218,7 +161163,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23230
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160228,7 +161173,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23231
-// Abilities: A13I (Scything Claws), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160382,13 +161327,13 @@ Scything Claws
 }
 
 STRING 23248
-// Abilities: A13I (Scything Claws), Researchtip (Tooltip - Learn)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 23249
-// Abilities: A13I (Scything Claws), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -160538,7 +161483,7 @@ STRING 23269
 }
 
 STRING 23270
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -160615,19 +161560,19 @@ STRING 23280
 }
 
 STRING 23281
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 23282
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 23283
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -164327,7 +165272,7 @@ Q
 }
 
 STRING 23740
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -164511,6 +165456,16 @@ STRING 23764
 // Abilities: A0DF (Cataclysmic Orb), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Cataclysmic Orb - [|cffffcc00Level %d|r]
+}
+
+STRING 23765
+// Abilities: A13W (Domain Expansion: Unlimited Void), Ubertip (Tooltip - Normal - Extended)
+{
+Unlimited Void brings the user and their targets inside the Limitless itself. Boundless raw information floods into the target's mind, overwhelming them to the point where they're completely immobilized.
+
+|cffff2222Channel Duration: <A13W,DataA1>s|r
+|cff00ff00Damage: [Int] 300u/s + 7% of Current Mana/s
+|cff00ffffCooldown: <A13W,Cool1>s|r
 }
 
 STRING 23766
@@ -164866,6 +165821,18 @@ Granolah fires a volley of energy beams at the target location, slowing enemies 
 |cff00ffffCooldown: <A0DU,Cool2> seconds|r
 }
 
+STRING 23812
+// Abilities: A13X (Six Eyes Activate), Name (Name)
+{
+Six Eyes Activate
+}
+
+STRING 23813
+// Abilities: A13X (Six Eyes Activate), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
 STRING 23814
 // Abilities: A0DU (Energy Volley), Tip (Tooltip - Normal)
 {
@@ -165164,15 +166131,36 @@ W
 }
 
 STRING 23858
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 23859
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 23860
+// Abilities: A13X (Six Eyes Activate), Ubertip (Tooltip - Normal - Extended)
+{
+An innate technique inherited through the Gojo family that allows the user to see the flow of cursed energy in extreme detail. Cannot be deactivated in the first 5 seconds.
+|cffffff00Drains 4% max mana per second
+Unlocks Hollow Technique: Purple
+Unlocks Domain Expansion: Unlimited Void (lvl 200)
+Gains True Sight
++50% cooldown reduction
+|cff00ffffCooldown: <A13X,Cool1>s|r
+}
+
+STRING 23861
+// Abilities: A13Z (Limitless: Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Gojo teleports all non-invulnerable allies within 500 AOE of himself to the target location within 1400 range.
+
+|cff8888ffMana Cost: 1% of Current Mana per 100 units travelled.
+|cff00ffffCooldown: <A13Z,Cool1>s|r
 }
 
 STRING 23862
@@ -165332,6 +166320,30 @@ STRING 23882
 (beerus)
 }
 
+STRING 23883
+// Abilities: A13Y (Six Eyes Deactivate), Name (Name)
+{
+Six Eyes Deactivate
+}
+
+STRING 23884
+// Abilities: A13Y (Six Eyes Deactivate), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
+STRING 23885
+// Abilities: A141 (Six Eyes True Sight), Name (Name)
+{
+Six Eyes True Sight
+}
+
+STRING 23886
+// Abilities: A141 (Six Eyes True Sight), EditorSuffix (Editor Suffix)
+{
+(gojo)
+}
+
 STRING 23887
 // Abilities: A0JI (Prelude to Destruction), Tip (Tooltip - Normal)
 {
@@ -165410,10 +166422,28 @@ STRING 23899
 [|cff00ff00R|r] Final Shot - [|cffffcc00Level 10|r]
 }
 
+STRING 23900
+// Abilities: A13Z (Limitless: Teleport), Name (Name)
+{
+Limitless: Teleport
+}
+
 STRING 23901
 // Abilities: A0JI (Prelude to Destruction), Name (Name)
 {
 Prelude to Destruction
+}
+
+STRING 23902
+// Abilities: A13Z (Limitless: Teleport), EditorSuffix (Editor Suffix)
+{
+(gojo active)
+}
+
+STRING 23903
+// Abilities: A141 (Six Eyes True Sight), Tip (Tooltip - Normal)
+{
+Six Eyes: True Sight
 }
 
 STRING 23904
@@ -165689,7 +166719,7 @@ The fighting style of the angels.
 }
 
 STRING 23945
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165699,7 +166729,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23946
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165715,7 +166745,7 @@ Charged Snipe
 }
 
 STRING 23948
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165725,7 +166755,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23949
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165735,7 +166765,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23950
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165751,7 +166781,7 @@ STRING 23951
 }
 
 STRING 23952
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165761,7 +166791,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23953
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165771,7 +166801,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23954
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165781,7 +166811,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23955
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165797,7 +166827,7 @@ STRING 23956
 }
 
 STRING 23957
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165817,7 +166847,7 @@ Oatmeal increases Granolah's accuracy in finding vital points and helps him evad
 }
 
 STRING 23959
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165827,7 +166857,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23960
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165837,7 +166867,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23961
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165847,7 +166877,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23962
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165857,7 +166887,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23963
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165867,7 +166897,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23964
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165877,7 +166907,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23965
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165887,7 +166917,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23966
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165897,7 +166927,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23967
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165907,7 +166937,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23968
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165917,7 +166947,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23969
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165927,7 +166957,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23970
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165937,7 +166967,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23971
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165947,7 +166977,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23972
-// Abilities: A0HE (Oatmeal), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -165957,7 +166987,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 23973
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -165969,79 +166999,79 @@ Oatmeal - [|cffffcc00Level 1|r]
 }
 
 STRING 23975
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 23976
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 23977
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 23978
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 23979
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 23980
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
 
 STRING 23981
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 23982
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 23983
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 23984
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 23985
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 23986
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 23987
-// Abilities: A0HE (Oatmeal), Tip (Tooltip - Normal)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -166053,13 +167083,13 @@ Oatmeal
 }
 
 STRING 23989
-// Abilities: A0HE (Oatmeal), Researchtip (Tooltip - Learn)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 23990
-// Abilities: A0HE (Oatmeal), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MB (Cursed Technique Reversal: Red), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166075,7 +167105,7 @@ STRING 23991
 }
 
 STRING 23992
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
 {
 R
 }
@@ -166157,7 +167187,7 @@ Granolah can now charge a high powered snipe.
 }
 
 STRING 24004
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166167,7 +167197,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 24005
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166177,7 +167207,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 24006
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166187,7 +167217,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 24007
-// Abilities: A0JF (Angelic Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166197,7 +167227,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 24008
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 3|r]
 }
@@ -166209,31 +167239,31 @@ Angelic Fighting Style - [|cffffcc00Level 1|r]
 }
 
 STRING 24010
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 24011
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 4|r]
 }
 
 STRING 24012
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 24013
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 6|r]
 }
 
 STRING 24014
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
@@ -166248,49 +167278,49 @@ Granolah dashes forward and stuns enemies for 2s. Enemies debuffed with reduced 
 }
 
 STRING 24016
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 8|r]
 }
 
 STRING 24017
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 24018
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 24019
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 11|r]
 }
 
 STRING 24020
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 12|r]
 }
 
 STRING 24021
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 13|r]
 }
 
 STRING 24022
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 14|r]
 }
 
 STRING 24023
-// Abilities: A0JF (Angelic Fighting Style), Tip (Tooltip - Normal)
+// Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
 Saiyan Blood - [|cffffcc00Level 15|r]
 }
@@ -166302,13 +167332,13 @@ Angelic Fighting Style
 }
 
 STRING 24025
-// Abilities: A0JF (Angelic Fighting Style), Researchtip (Tooltip - Learn)
+// Abilities: A0YQ (Hollow Technique: Purple), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
 }
 
 STRING 24026
-// Abilities: A0JF (Angelic Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0YQ (Hollow Technique: Purple), Researchubertip (Tooltip - Learn - Extended)
 {
 The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
 
@@ -166564,6 +167594,14 @@ STRING 24055
 Whis can now enter his Angelic Ultra Instinct state.
 }
 
+STRING 24056
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+All enemy units in 900 range travel less distance from 25% up to 99% depending on their distance to Gojo. Does not affect spell immune units.
+
+|cff8888ffMana Cost: 1% of max mana per second while active
+}
+
 STRING 24057
 // Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
 {
@@ -166572,6 +167610,46 @@ Whis channels a symphony of destruction, that damages, silences and knocks back 
 |cffff2222Channel Duration: <A0JO,DataA1>s
 |cff00ff00Damage: [Int] 60u (x9) per second
 |cff00ffffCooldown: <A0JO,Cool1>s
+}
+
+STRING 24058
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 24059
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 24060
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 24061
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
 }
 
 STRING 24062
@@ -166586,6 +167664,16 @@ STRING 24063
 [|cff00ff00E|r] Aura of Destruction - [|cffffcc00Level 1|r]
 }
 
+STRING 24064
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
 STRING 24065
 // Abilities: A0JS (Aura of Destruction), Name (Name)
 {
@@ -166596,6 +167684,16 @@ STRING 24066
 // Abilities: A0JS (Aura of Destruction), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Aura of Destruction - [|cffffcc00Level %d|r]
+}
+
+STRING 24067
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
 }
 
 STRING 24068
@@ -166620,6 +167718,46 @@ STRING 24071
 // Abilities: A0JS (Aura of Destruction), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Aura of Destruction - [|cffffcc00Level 5|r]
+}
+
+STRING 24072
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 24073
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 24074
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 24075
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
 }
 
 STRING 24076
@@ -166658,10 +167796,80 @@ STRING 24081
 [|cff00ff00E|r] Aura of Destruction - [|cffffcc00Level 10|r]
 }
 
+STRING 24082
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 24083
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 24084
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 24085
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 24086
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 24087
+// Abilities: A140 (Limitless), Name (Name)
+{
+Limitless
+}
+
+STRING 24088
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
 STRING 24089
 // Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
 {
 R
+}
+
+STRING 24090
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 24091
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
 }
 
 STRING 24092
@@ -166708,6 +167916,12 @@ STRING 24098
 Beerus' Fury
 }
 
+STRING 24099
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
 STRING 24100
 // Abilities: A0JT (Beerus' Fury), Tip (Tooltip - Normal)
 {
@@ -166739,6 +167953,12 @@ STRING 24104
 // Abilities: A0D0 (Sample Ramen), EditorSuffix (Editor Suffix)
 {
 (beerus)
+}
+
+STRING 24105
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
 STRING 24106
@@ -166780,6 +168000,12 @@ STRING 24111
 (beerus)
 }
 
+STRING 24112
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
 STRING 24113
 // Abilities: A0CZ (Sample Pudding), Tip (Tooltip - Normal)
 {
@@ -166790,6 +168016,12 @@ STRING 24114
 // Abilities: A0D1 (Sample Ice Cream), EditorSuffix (Editor Suffix)
 {
 (beerus)
+}
+
+STRING 24115
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 24116
@@ -166808,6 +168040,12 @@ STRING 24118
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 24119
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 24120
@@ -166870,9 +168108,187 @@ Transformations:
 [lvl 200] 2.60x "god" [Unlocks [|cff00ff00D|r] Beerus' Fury]
 }
 
+STRING 24128
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
 STRING 24129
 {
 [|cffffcc00Unlock|r] Beerus' Fury
 Beerus can now increase his power by unleashing his fury.
+}
+
+STRING 24130
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 24131
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 24132
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 24133
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 24134
+// Abilities: A141 (Six Eyes True Sight), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals all invisible units.
+}
+
+STRING 24135
+// Abilities: A140 (Limitless), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 24136
+// Abilities: A140 (Limitless), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 24137
+// Abilities: A140 (Limitless), EditorSuffix (Editor Suffix)
+{
+(gojo passive)
+}
+
+STRING 24138
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24139
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24140
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 24141
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24142
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 24143
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 24144
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24145
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24146
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24147
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24148
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24149
+{
+|cffffff00Transformations:|r
+|cffffcc00Gains +0.011x mult every level up to 2.5x|r
+
+|cffffff00[level 25] Unlocks [|cff00ff00W|r|cffffff00] Reversal Red
+[Level 75] Unlocks [|r|cff00ff00D|r|cffffff00] Six Eyes and [|cff00ff00E|r|cffffff00] Hollow Purple
+[Level 150] Upgrades Limitless when using [|cff00ff00D|r|cffffff00] Six Eyes
+[level 200] Unlocks [|r|cff00ff00R|r|cffffff00] Unlimited Void when using [|cff00ff00D|r|cffffff00] Six Eyes|r
+}
+
+STRING 24150
+// Abilities: A13X (Six Eyes Activate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] |cff00ffffSix Eyes Activate|r
+}
+
+STRING 24151
+{
+[|cffffcc00Unlock|r] |cffff2222Cursed Technique Reversal: Red|r
+Gojo can now reverse cursed energy to create a powerful repelling force.
+}
+
+STRING 24153
+{
+[|cffffcc00Unlock|r] |cff00ffffSix Eyes|r
+Gojo can now remove his blindfold to better control cursed energy, giving him access to [|cff00ff00D|r] Hollow Technique: Purple
+}
+
+STRING 24154
+// Abilities: A13Y (Six Eyes Deactivate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] |cff00ffffSix Eyes Deactivate|r
+}
+
+STRING 24155
+// Abilities: A13Y (Six Eyes Deactivate), Ubertip (Tooltip - Normal - Extended)
+{
+Gojo puts his blindfold back on, disabling the active use of his Six Eyes technique.
+|cff00ffffCooldown: <A13X,Cool1>s|r
+}
+
+STRING 24156
+// Abilities: A13Z (Limitless: Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] |cffffcc00Limitless: Teleport|r
+}
+
+STRING 24157
+// Abilities: A140 (Limitless), Tip (Tooltip - Normal)
+{
+|cffffcc00Limitless|r
 }
 

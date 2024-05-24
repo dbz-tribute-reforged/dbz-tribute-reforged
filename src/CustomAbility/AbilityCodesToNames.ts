@@ -514,6 +514,8 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.beerusFoodTakoyaki, AbilityNames.Beerus.BEERUS_TAKOYAKI],
     [Id.beerusFoodPudding, AbilityNames.Beerus.BEERUS_PUDDING],
 
+    [Id.gojoUnlimitedVoid, AbilityNames.Gojo.UNLIMITED_VOID],
+
     [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
     [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
     [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],

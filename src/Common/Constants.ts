@@ -57,6 +57,7 @@ export module Globals {
   export const tmpVector = new Vector2D();
   export const tmpVector2 = new Vector2D();
   export const tmpVector3 = new Vector2D();
+  export const tmpLoc = Location(0,0);
 
   export const globalDummyCaster = CreateUnit(
     Player(PLAYER_NEUTRAL_PASSIVE), FourCC("h054"), 0, 0, 0
@@ -86,6 +87,7 @@ export module Constants {
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
   export const creepHeavenHellHeroRespawnDelay: number = 15;
+  export const creepHeavenHellSpecialHeroRespawnDelay: number = 60;
   export const sagaPlayerId = PLAYER_NEUTRAL_AGGRESSIVE;
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const neutralPassivePlayer: player = Player(PLAYER_NEUTRAL_PASSIVE);
@@ -93,10 +95,14 @@ export module Constants {
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 9;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
-    -15200, 16000
+    -15872, 15360
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    -5800, 23000
+    -5120, 23552
+  );
+  export const heavenHellRect: rect = Rect(
+    heavenHellBottomLeft.x, heavenHellBottomLeft.y,
+    heavenHellTopRight.x, heavenHellTopRight.y
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;
@@ -986,6 +992,20 @@ export module Id {
   export const potentialUnleashed = FourCC("A0L8");
   export const beastGohan = FourCC("A11L");
 
+  export const gojo = FourCC("H02A");
+  export const gojoBluePassive = FourCC("A0K0");
+  export const gojoBlueActive = FourCC("A0KA");
+  export const gojoRedPassive = FourCC("A0MB");
+  export const gojoRedActive = FourCC("A0OE");
+  export const gojoPurplePassive = FourCC("A0YQ");
+  export const gojoPurpleActive = FourCC("A13V");
+  export const gojoUnlimitedVoid = FourCC("A13W");
+  export const gojoSixEyesOn = FourCC("A13X");
+  export const gojoSixEyesOff = FourCC("A13Y");
+  export const gojoTeleport = FourCC("A13Z");
+  export const gojoLimitless = FourCC("A140");
+  export const gojoSixEyesTrueSight = FourCC("A141");
+
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");
   export const kamehamehaGod = FourCC('A0L9');
@@ -1111,6 +1131,7 @@ export module Id {
   export const jacoShip = FourCC("A111");
   export const jacoSuperJaco = FourCC("A112");
 
+  export const janembaFat = FourCC("H061");
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
   export const rakshasaClaw = FourCC("A0NY");

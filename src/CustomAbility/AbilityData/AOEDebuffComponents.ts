@@ -2438,4 +2438,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: Buffs.GRANOLAH_DEBUFF,
   },
+  {
+    name: "debuff stun gojo unlimited void",
+    repeatInterval: 66,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.STUN_ONE_SECOND,
+    orderId: OrderIds.THUNDERBOLT,
+    aoe: 600,
+    keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

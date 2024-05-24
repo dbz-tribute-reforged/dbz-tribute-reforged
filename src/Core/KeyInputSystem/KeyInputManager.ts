@@ -66,4 +66,8 @@ export class KeyInputManager {
 
     // after 30s of key down, automatically unset?
   }
+
+  public addCallback(func: (player: player, ki: KeyInput) => void) {
+    this.callbacks.push(func);
+  }
 }

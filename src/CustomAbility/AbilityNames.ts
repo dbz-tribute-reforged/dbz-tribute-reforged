@@ -660,6 +660,10 @@ export module AbilityNames {
     export const SNIPE_CHARGED: string = "Granolah Snipe Charged";
   }
 
+  export module Gojo {
+    export const UNLIMITED_VOID: string = "Gojo Domain Expansion: Unlimited Void";
+  }
+
 
 
 
