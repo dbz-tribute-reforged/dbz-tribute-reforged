@@ -270,7 +270,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 30,
+    costAmount: 25,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -289,7 +289,7 @@ export const AbilitiesList = [
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Deflects incoming beams and slows nearby enemies by 50% for 1s.|n" +
-        "Cost: 30 SP|nCD: 2"
+        "Cost: 25 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -430,6 +430,69 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster fake channel" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.BLACK_FLASH,
+    currentCd: 0,
+    maxCd: 6,
+    costType: CostType.SP,
+    costAmount: 20,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGojoBlackFlash.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGojoBlackFlash.blp",
+    },
+    tooltip: {
+      title: "Black Flash",
+      body: 
+        "Activate within 0.12s after damaging an enemy hero with an auto attack " + 
+        "to deal 0.9 x Int damage and restore 20% of max mana. " + 
+        "A successful hit will reset the cooldown of Black Flash.|n" +
+        "Cost: 20 SP (10 if missed)|n" + 
+        "CD: 6"
+    },
+    components: [
+      
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.LIMITLESS_GUARD,
+    currentCd: 0,
+    maxCd: 12,
+    costType: CostType.SP,
+    costAmount: 35,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGojoGuard.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGojoGuard.blp",
+    },
+    tooltip: {
+      title: "Limitless Guard",
+      body: 
+        "Increases limitless distance reduction to 99% and " + 
+        "causes limitless to have 100% effect on heroes.|n" +
+        "Blocks 70% of incoming damage up to 3 * STR.|n" +
+        "Duration: 3s|n" + 
+        "Cost: 35 SP|n" + 
+        "CD: 12"
+    },
+    components: [
+      { name: "block basic guard" },
     ],
   },
   // -------------------------------------------
@@ -12426,7 +12489,6 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "channel caster default" },
       { name: "beam gojo unlimited void barrier" },
     ],
   },

@@ -1005,6 +1005,9 @@ export module Id {
   export const gojoTeleport = FourCC("A13Z");
   export const gojoLimitless = FourCC("A140");
   export const gojoSixEyesTrueSight = FourCC("A141");
+  // pretend black flash has six eyes true sight passive id
+  export const gojoBlackFlash = gojoSixEyesTrueSight;
+  export const gojoLimitlessGuard = gojoLimitless;
 
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");

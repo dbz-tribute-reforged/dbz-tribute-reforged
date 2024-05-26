@@ -3219,10 +3219,16 @@ export function tatsumakiPassive(customHero: CustomHero) {
 
 export function gojoPassive(customHero: CustomHero) {
   const limitlessAOE = 1200;
+  const limitlessMaxDistPerTick = 120;
   const limitlessMinDist = 3;
-  const limitlessDistPct = 0.4;
-  const limitlessSixEyesDistPct = 0.8;
+  const limitlessDistPct = 0.33;
+  const limitlessSixEyesDistPct = 0.66;
+  const limitlessGuardDistPct = 0.95;
+  const limitlessHeroEffectPct = 0.5;
   const limitlessMPCostPct = 0.03 * 0.01;
+
+  const gojoBlackFlashTicksKey = StringHash("gojo_black_flash_ticks");
+  const gojoLimitlessGuardTicksKey = StringHash("gojo_limitless_guard_ticks");
 
   const gojoBluePressKey = StringHash("gojo_q_press");
   const gojoBlueChargeFlagKey = StringHash("gojo_q_charge_flag");
@@ -3256,10 +3262,6 @@ export function gojoPassive(customHero: CustomHero) {
   SetPlayerAbilityAvailable(
     GetOwningPlayer(customHero.unit), Id.gojoRedActive, false
   );
-  SetPlayerAbilityAvailable(
-    GetOwningPlayer(customHero.unit), Id.gojoPurplePassive, false
-  );
-
 
   const gojoLimitlessGroup = CreateGroup();
   const gojoLimitlessMap = new Map<unit, [number, number]>();
@@ -3283,6 +3285,19 @@ export function gojoPassive(customHero: CustomHero) {
       casterId, gojoRedPressKey
     );
 
+    // increment black flash
+    const blackFlashTicks = LoadInteger(Globals.genericSpellHashtable,
+      casterId, gojoBlackFlashTicksKey
+    );
+    if (blackFlashTicks > 0) {
+      SaveInteger(Globals.genericSpellHashtable,
+        casterId, gojoBlackFlashTicksKey, 
+        blackFlashTicks > 6 ? 
+          0 : 
+          blackFlashTicks + 1
+      );
+    }
+
     let blueChargeTicks = LoadInteger(Globals.genericSpellHashtable, 
       casterId, gojoBlueChargeTicksKey
     );
@@ -3302,6 +3317,8 @@ export function gojoPassive(customHero: CustomHero) {
     const purpleCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.gojoPurpleActive);
     const isSixEyes = LoadBoolean(Globals.genericSpellHashtable, casterId, gojoSixEyesActiveKey);
 
+    const isHardStunned = UnitHelper.isUnitHardStunned(customHero.unit);
+
     if (blueCD == 0) {
       SetPlayerAbilityAvailable(player, Id.gojoBluePassive, true);
       SetPlayerAbilityAvailable(player, Id.gojoBlueActive, false);
@@ -3310,14 +3327,9 @@ export function gojoPassive(customHero: CustomHero) {
       SetPlayerAbilityAvailable(player, Id.gojoRedPassive, true);
       SetPlayerAbilityAvailable(player, Id.gojoRedActive, false);
     }
-    if (isSixEyes) {
-      if (purpleCD == 0) {
-        SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, true);
-        SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, false);
-      } else {
-        SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
-        SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
-      }
+    if (purpleCD == 0) {
+      SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, false);
     }
 
     if (keyQ.isDown) {
@@ -3360,9 +3372,15 @@ export function gojoPassive(customHero: CustomHero) {
         );
 
         // blue, red and purple
+        SetPlayerAbilityAvailable(player, Id.gojoBlueActive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoBluePassive, false);
+        SetPlayerAbilityAvailable(player, Id.gojoRedActive, true);
+        SetPlayerAbilityAvailable(player, Id.gojoRedPassive, false);
         SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
         SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
         SimpleSpellSystem.startCooldown(customHero.unit, Id.gojoPurpleActive);
+        SimpleSpellSystem.startCooldown(customHero.unit, Id.gojoRedActive);
+        SimpleSpellSystem.startCooldown(customHero.unit, Id.gojoBlueActive);
 
         const purpleBeamTimer = CreateTimer();
         const purpleBeamTimerId = GetHandleId(purpleBeamTimer);
@@ -3390,7 +3408,7 @@ export function gojoPassive(customHero: CustomHero) {
       }
     }
 
-    if (qPress) {
+    if (qPress && !isHardStunned) {
       // initiate charging
       SaveBoolean(Globals.genericSpellHashtable, 
         casterId, gojoBluePressKey, false
@@ -3415,7 +3433,7 @@ export function gojoPassive(customHero: CustomHero) {
     }
 
     // q fire
-    if (blueChargeTicks > 0 && isBlueCharging && !keyQ.isDown) {
+    if (blueChargeTicks > 0 && isBlueCharging && !keyQ.isDown && !isHardStunned) {
       SetPlayerAbilityAvailable(player, Id.gojoBlueActive, true);
       SetPlayerAbilityAvailable(player, Id.gojoBluePassive, false);
       BlzStartUnitAbilityCooldown(
@@ -3442,7 +3460,7 @@ export function gojoPassive(customHero: CustomHero) {
     }
     
     if (GetUnitAbilityLevel(customHero.unit, Id.gojoRedPassive) > 0) {
-      if (wPress) {
+      if (wPress && !isHardStunned) {
         // initiate charging
         SaveBoolean(Globals.genericSpellHashtable, 
           casterId, gojoRedPressKey, false
@@ -3467,7 +3485,7 @@ export function gojoPassive(customHero: CustomHero) {
       }
 
       // w fire
-      if (redChargeTicks > 0 && isRedCharging && !keyW.isDown) {
+      if (redChargeTicks > 0 && isRedCharging && !keyW.isDown && !isHardStunned) {
         SetPlayerAbilityAvailable(player, Id.gojoRedActive, true);
         SetPlayerAbilityAvailable(player, Id.gojoRedPassive, false);
         BlzStartUnitAbilityCooldown(
@@ -3477,7 +3495,7 @@ export function gojoPassive(customHero: CustomHero) {
             BlzGetUnitAbilityCooldown(customHero.unit, Id.gojoRedActive, 0)
           )
         );
-  
+
         // end charging and fire
         SaveInteger(Globals.genericSpellHashtable, 
           casterId, gojoRedChargeTicksKey, 0
@@ -3492,6 +3510,19 @@ export function gojoPassive(customHero: CustomHero) {
         );
         TimerStart(redBeamTimer, 0.03, true, SimpleSpellSystem.gojoRedBeamLoop);
       }
+    }
+
+
+    const limitlessGuardTicks = LoadInteger(Globals.genericSpellHashtable, 
+      casterId, gojoLimitlessGuardTicksKey
+    );
+    if (limitlessGuardTicks > 0) {
+      SaveInteger(Globals.genericSpellHashtable, 
+        casterId, gojoLimitlessGuardTicksKey, 
+        limitlessGuardTicks > 100 ? 
+          0 : 
+          limitlessGuardTicks + 1
+      );
     }
 
     // limitless
@@ -3523,15 +3554,27 @@ export function gojoPassive(customHero: CustomHero) {
             const distToCaster = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
             const dist = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector2);
             if (dist > limitlessMinDist) {
-              const ang = CoordMath.angleBetweenCoords(Globals.tmpVector3, Globals.tmpVector2);
-              const pctDist = limitlessUpg ? limitlessSixEyesDistPct : limitlessDistPct;
-              Globals.tmpVector3.polarProjectCoords(Globals.tmpVector3, 
-                ang, dist * (1 - pctDist * (1 - distToCaster / limitlessAOE))
-              );
-              if (IsUnitType(unit, UNIT_TYPE_HERO)) {
-                PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector3);
+              const ang = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector3);
+              const isHero = IsUnitType(unit, UNIT_TYPE_HERO);
+              let pctDist = 0;
+              if (limitlessGuardTicks > 0) {
+                pctDist = limitlessGuardDistPct;
               } else {
-                PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector3);
+                pctDist = (isHero ? limitlessHeroEffectPct : 1) * (
+                  limitlessUpg ? 
+                    limitlessSixEyesDistPct : 
+                    limitlessDistPct
+                );
+              }
+              Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, 
+                ang, Math.min(limitlessMaxDistPerTick, 
+                  dist * (pctDist * (1 - distToCaster / limitlessAOE))
+                )
+              );
+              if (isHero) {
+                PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector2);
+              } else {
+                PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector2);
               }
             }
             coord[0] = GetUnitX(unit);
@@ -3562,6 +3605,28 @@ export function gojoPassive(customHero: CustomHero) {
       }
     }
   });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      // mark it for dds
+      const attacked = GetTriggerUnit();
+      if (UnitHelper.isUnitRealHero(attacked)) {
+        if (!Globals.DDSUnitMap.has(attacked)) {
+          Globals.DDSUnitMap.set(attacked, true);
+        }
+      }
+      return false;
+    })
+  );
 }
 
 export function setupRegenTimer(customHero: CustomHero) {

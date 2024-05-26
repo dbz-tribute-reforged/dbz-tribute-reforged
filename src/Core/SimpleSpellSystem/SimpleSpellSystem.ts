@@ -37,17 +37,19 @@ export module SimpleSpellSystem {
     DAMAGE_TYPE_NORMAL, 
     WEAPON_TYPE_WHOKNOWS
   );
-  const gojoBlueBurstDmgDataMult = BASE_DMG.KAME_DPS * 1.5;
-  const gojoBlueDPSDmgDataMult = BASE_DMG.KAME_DPS * 0.015;
-  const gojoRedBurstDmgDataMult = BASE_DMG.KAME_DPS * 4;
+  const gojoBlueBurstDmgDataMult = BASE_DMG.KAME_DPS * 1;
+  const gojoBlueDPSDmgDataMult = BASE_DMG.KAME_DPS * 0.012;
+  const gojoRedBurstDmgDataMult = BASE_DMG.KAME_DPS * 3;
   const gojoRedDPSDmgDataMult = BASE_DMG.KAME_DPS * 0.005;
-  const gojoPurpleBlueDmgMult = 2;
-  const gojoPurpleRedDmgMult = 1.5;
-  const gojoPurpleBlueLesserDmgMult = 1.5;
-  const gojoPurpleRedLesserDmgMult = 1.25;
+  const gojoPurpleBlueDmgMult = 1.6;
+  const gojoPurpleRedDmgMult = 1.6;
+  const gojoPurpleBlueLesserDmgMult = 1.1;
+  const gojoPurpleRedLesserDmgMult = 1.1;
   const gojoPurpleAOE = 500;
-  const gojoPurpleKBSpeed = 60;
-  const gojoPurpleLesserMPCostPct = 0.03 * 0.08;
+  const gojoPurpleBeamSpeed = 50;
+  const gojoPurpleKBRelativeSpeed = 20;
+  const gojoPurpleLesserMPCostPct = 0.03 * 0.03;
+  const gojoPurpleBeamExistTicks = 40;
 
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
@@ -96,6 +98,7 @@ export module SimpleSpellSystem {
       DDSWhisDamageBlock(target, source, dmg);
       DDSWhisDoOver();
       DDSBeerusCataclysmicOrb();
+      DDSGojoBlackFlash();
       DDSJirenGlare();
       DDSDPSCheck();
       return false;
@@ -276,8 +279,8 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.vegetaFightingSpirit, SimpleSpellSystem.VegetaFightingSpirit);
     
-    Globals.genericSpellMap.set(Id.schalaTeleportation, SimpleSpellSystem.SchalaTeleportation);
-    Globals.genericSpellMap.set(Id.schalaTeleportation2, SimpleSpellSystem.SchalaTeleportation);
+    Globals.genericSpellMap.set(Id.schalaTeleportation, SimpleSpellSystem.doSchalaTeleportation);
+    Globals.genericSpellMap.set(Id.schalaTeleportation2, SimpleSpellSystem.doSchalaTeleportation);
     Globals.genericSpellMap.set(Id.schalaProtect2, SimpleSpellSystem.schalaEmpoweredProtectDebuff);
     
     Globals.genericSpellMap.set(Id.yamchaRLightPunch, SimpleSpellSystem.YamchaCombos);
@@ -417,6 +420,7 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.granolahEnergyVolley, SimpleSpellSystem.doGranolahEnergyVolley);
     Globals.genericSpellMap.set(Id.granolahFinalShot, SimpleSpellSystem.doGranolahFinalShot);
     
+    Globals.genericSpellMap.set(Id.gojoUnlimitedVoid, SimpleSpellSystem.doGojoUnlimitedVoid);
     Globals.genericSpellMap.set(Id.gojoSixEyesOn, SimpleSpellSystem.doGojoSixEyesOn);
     Globals.genericSpellMap.set(Id.gojoSixEyesOff, SimpleSpellSystem.doGojoSixEyesOff);
     Globals.genericSpellMap.set(Id.gojoTeleport, SimpleSpellSystem.doGojoTeleport);
@@ -660,6 +664,24 @@ export module SimpleSpellSystem {
     }
 
     BlzSetEventDamage(1);
+  }
+
+  export function DDSGojoBlackFlash() {
+    const src = GetEventDamageSource();
+    if (
+      GetUnitTypeId(src) != Id.gojo
+      || !UnitHelper.isUnitRealHero(src)
+      || !BlzGetEventIsAttack()
+    ) return;
+
+    const gojoBlackFlashTargetKey = StringHash("gojo_black_flash_target");
+    const gojoBlackFlashTicksKey = StringHash("gojo_black_flash_ticks");
+
+    const casterId = GetHandleId(src);
+    const target = BlzGetEventDamageTarget();
+
+    SaveUnitHandle(Globals.genericSpellHashtable, casterId, gojoBlackFlashTargetKey, target);
+    SaveInteger(Globals.genericSpellHashtable, casterId, gojoBlackFlashTicksKey, 1);
   }
   
   export function doGokuKaiokenOn(spellId: number) {
@@ -3210,15 +3232,33 @@ export module SimpleSpellSystem {
     });
   }
 
-  export function SchalaTeleportation(spellId: number) {
-    const schalaTpMoveDuration = 33;
-    const schalaTpMoveDuration2 = 16;
-    const schalaTpEndTick = 166;
+  export function doSchalaTeleportation(spellId: number) {
+    SchalaTeleportation(
+      spellId, 
+      GetTriggerUnit(), 
+      GetSpellTargetX(), GetSpellTargetY(),
+      spellId == Id.schalaTeleportation ? 33 : 16,
+      166
+    );
+  }
+
+  export function SchalaTeleportation(
+    spellId: number,
+    caster: unit,
+    x: number,
+    y: number,
+    tpDelayTicks: number,
+    tpDurationTicks: number,
+  ) {
+    const isSchalaTP = (
+      spellId == Id.schalaTeleportation 
+      || spellId == Id.schalaTeleportation2 
+    );
     const schalaTpAOE = 600;
     const schalaTpMaxDist = 6000;
 
-    const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
 
     const tpUnit = CreateUnit(
       player, 
@@ -3230,121 +3270,114 @@ export module SimpleSpellSystem {
     ShowUnit(tpUnit, false);
     SetUnitInvulnerable(tpUnit, true);
     
-    const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-    const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
-    const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
-    const maxDist =  Math.min(4000, Math.max(1500, CoordMath.distance(casterPos, targetPos)));
+    const casterX = GetUnitX(caster);
+    const casterY = GetUnitY(caster);
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(x, y);
+    const direction = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    const maxDist =  Math.min(
+      4000, 
+      Math.max(1500, CoordMath.distance(Globals.tmpVector, Globals.tmpVector2))
+    );
 
-    let beamSpeed = maxDist
+    let beamSpeed = maxDist;
     if (spellId == Id.schalaTeleportation) {
-      beamSpeed /= schalaTpMoveDuration;
-    } else if (spellId == Id.schalaTeleportation2) {
-      beamSpeed /= schalaTpMoveDuration2;
+      beamSpeed /= tpDelayTicks;
+    } else {
+      beamSpeed /= tpDelayTicks;
     }
-    beamSpeed *= 2;
+    beamSpeed = Math.min(maxDist, beamSpeed * 2);
     const sfxCast = AddSpecialEffect(
       "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
-      casterPos.x, casterPos.y
+      casterX, casterY
     );
     BlzSetSpecialEffectScale(sfxCast, 3.0);
     const sfxBeam = AddSpecialEffect(
       "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
-      casterPos.x, casterPos.y
+      casterX, casterY
     );
     BlzSetSpecialEffectScale(sfxBeam, 3.0);
+
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
 
     let tick = 0;
     const tpTimer = TimerManager.getInstance().get();
     TimerStart(tpTimer, 0.03, true, () => {
-      if (tick > schalaTpEndTick) {
+      if (tick > tpDurationTicks) {
         RemoveUnit(tpUnit);
         DestroyEffect(sfxCast);
         DestroyEffect(sfxBeam);
         TimerManager.getInstance().recycle(tpTimer);
-      } else {
-        targetPos.setUnit(tpUnit);
-        if (
-          CoordMath.distance(casterPos, targetPos) < maxDist
-          && (
-            (
-              spellId == Id.schalaTeleportation && 
-              tick < schalaTpMoveDuration
-            ) ||
-            (
-              spellId == Id.schalaTeleportation2 &&
-              tick < schalaTpMoveDuration2
+        return;
+      }
+
+      Globals.tmpVector.setPos(casterX, casterY);
+      Globals.tmpVector2.setPos(x, y);
+
+      const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+      if (distToTarget > 0 && distToTarget < maxDist && tick < tpDelayTicks) {
+        Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, 
+          direction, Math.min(distToTarget, beamSpeed)
+        );
+        PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, Globals.tmpVector2);
+        BlzSetSpecialEffectX(sfxBeam, GetUnitX(tpUnit));
+        BlzSetSpecialEffectY(sfxBeam, GetUnitY(tpUnit));
+      }
+
+      if (tick >= tpDelayTicks) {
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+          Globals.tmpVector.x, Globals.tmpVector.y, 
+          schalaTpAOE, null
+        );
+        ForGroup(Globals.tmpUnitGroup, () => {
+          const unit = GetEnumUnit();
+          if (
+            IsUnitAlly(unit, player)
+            && !Globals.barrierBlockUnits.has(unit)
+            && UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
+            && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
+            && (
+              !isSchalaTP
+              || GetUnitTypeId(unit) != Id.schala
             )
-          )
-        ) {
-          targetPos.polarProjectCoords(targetPos, direction, beamSpeed);
-          BlzSetSpecialEffectX(sfxBeam, targetPos.x);
-          BlzSetSpecialEffectY(sfxBeam, targetPos.y);
-          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, targetPos);
-        }
+          ) {
+            Globals.tmpVector3.setUnit(unit);
+            const distance = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector);
+            if (CoordMath.distance(Globals.tmpVector3, Globals.tmpVector2) < schalaTpMaxDist) {                  
+              Globals.tmpVector3.polarProjectCoords(
+                Globals.tmpVector2, 
+                CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector3), 
+                distance
+              );
+              PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector3);
+              DestroyEffect(
+                AddSpecialEffect(
+                  "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", 
+                  Globals.tmpVector3.x, Globals.tmpVector3.y
+                )
+              );
 
-        if (
-          tick >= schalaTpMoveDuration
-          || (
-            spellId == Id.schalaTeleportation2
-            && tick >= schalaTpMoveDuration2
-          )
-        ) {
-          const schalaUnitGroup = CreateGroup();
-          
-          GroupEnumUnitsInRange(schalaUnitGroup, casterPos.x, casterPos.y, schalaTpAOE, null);
-
-          ForGroup(schalaUnitGroup, () => {
-            const unit = GetEnumUnit();
-            if (
-              // TODO: turn this back on
-              IsUnitAlly(unit, player)
-              && !Globals.barrierBlockUnits.has(unit)
-              && UnitHelper.isUnitTargetableForPlayer(unit, player, true) 
-              && !IsUnitType(unit, UNIT_TYPE_STRUCTURE)
-              && GetUnitTypeId(unit) != Id.schala
-              // true
-            ) {
-              Globals.tmpVector.setPos(GetUnitX(unit), GetUnitY(unit));
-              const distance = CoordMath.distance(Globals.tmpVector, casterPos);
-              if (CoordMath.distance(Globals.tmpVector, targetPos) < schalaTpMaxDist) {                  
-                Globals.tmpVector.polarProjectCoords(
-                  targetPos, 
-                  CoordMath.angleBetweenCoords(casterPos, Globals.tmpVector), 
-                  distance
+              if (
+                UnitHelper.isUnitRealHero(unit)
+                && GetPlayerController(GetOwningPlayer(unit)) == MAP_CONTROL_USER
+              ) {
+                SetCameraPositionForPlayer(
+                  GetOwningPlayer(unit), 
+                  Globals.tmpVector3.x, Globals.tmpVector3.y
                 );
-                PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector);
-                DestroyEffect(
-                  AddSpecialEffect(
-                    "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", 
-                    Globals.tmpVector.x, Globals.tmpVector.y
-                  )
-                );
-
-                if (
-                  IsUnitType(unit, UNIT_TYPE_HERO)
-                  && !IsUnitType(unit, UNIT_TYPE_SUMMONED)
-                  && GetPlayerController(GetOwningPlayer(unit)) == MAP_CONTROL_USER
-                ) {
-                  SetCameraPositionForPlayer(
-                    GetOwningPlayer(unit), 
-                    Globals.tmpVector.x, Globals.tmpVector.y
-                  );
-                }
               }
             }
-          });
-          DestroyGroup(schalaUnitGroup);
-        }
-        
-        // hack to check channel
-        if (
-          GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF
-          && GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_ON
-        ) {
-          tick += schalaTpEndTick;
-        }
-        ++tick;
+          }
+        });
       }
+      
+      // hack to check channel
+      if (isSchalaTP) {
+        if (!ch.isChanneling()) {
+          tick += tpDelayTicks;
+        }
+      }
+      ++tick;
     });
   }
 
@@ -5922,7 +5955,7 @@ export module SimpleSpellSystem {
       GroupClear(Globals.tmpUnitGroup);
       
       if (
-        UnitHelper.isUnitDead(caster)
+        !UnitHelper.isUnitAlive(caster)
         || GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF
       ) {
         tick += maxTick;
@@ -6121,7 +6154,7 @@ export module SimpleSpellSystem {
 
     const tpTimer = TimerManager.getInstance().get();
     TimerStart(tpTimer, tickRate, true, () => {
-      if (tick > endTick || UnitHelper.isUnitDead(caster)) {
+      if (tick > endTick || !UnitHelper.isUnitAlive(caster)) {
         if (sfx1 != null) DestroyEffect(sfx1); 
         if (sfx2 != null) DestroyEffect(sfx2);
         DestroyEffect(dustWaveSfx);
@@ -6356,7 +6389,7 @@ export module SimpleSpellSystem {
       }
 
       if (
-        UnitHelper.isUnitDead(beam) 
+        !UnitHelper.isUnitAlive(beam) 
         || !isMoved
       ) {
         ticks = maxTicks;
@@ -6984,7 +7017,7 @@ export module SimpleSpellSystem {
       if (ticks == deathTick) {
         BlzPlaySpecialEffectWithTimeScale(sfx, ANIM_TYPE_DEATH, 1.819);
       }
-      if (UnitHelper.isUnitDead(caster)) {
+      if (!UnitHelper.isUnitAlive(caster)) {
         if (ch && ch.isAbilityInUse(AbilityNames.MightGuy.YAGAI)) {
           ch.forceEndAbility(AbilityNames.MightGuy.YAGAI);
         }
@@ -7385,7 +7418,7 @@ export module SimpleSpellSystem {
         }
       }
 
-      if (UnitHelper.isUnitDead(caster)) {
+      if (!UnitHelper.isUnitAlive(caster)) {
         ticks = endTick;
       }
       ticks++;
@@ -7503,7 +7536,7 @@ export module SimpleSpellSystem {
         UnitHelper.dealHakaiDamage(caster, secondBeam);
       }
 
-      if (UnitHelper.isUnitDead(beam)) {
+      if (!UnitHelper.isUnitAlive(beam)) {
         ticks = endTick;
       }
       ticks++;
@@ -8097,6 +8130,10 @@ export module SimpleSpellSystem {
 
     if (ticks < delayTick) {
       // the dds trigger will sum the amount to heal
+      if (ticks % 33 == 0) {
+        const sfx = AddSpecialEffect("DTBlueNoRingWhite.mdl", GetUnitX(target), GetUnitY(target));
+        DestroyEffect(sfx);
+      }
     } else if (ticks < healEndTick) {
 
       if (ticks == delayTick) {
@@ -8137,7 +8174,7 @@ export module SimpleSpellSystem {
     }
 
     // end
-    if (ticks >= healEndTick || UnitHelper.isUnitDead(target)) {
+    if (ticks >= healEndTick || !UnitHelper.isUnitAlive(target)) {
 
       const sfxKey = StringHash("whis_w_sfx");
       const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, sfxKey);
@@ -8304,11 +8341,13 @@ export module SimpleSpellSystem {
     TimerStart(timer, 0.03, true, () => {
       if (ticks >= endTick || ticks < 0) {
         SetUnitTimeScale(caster, 1.0);
-        if (ticks > 0) {
-          createGateTeleporter(spellId, caster, x, y);
-        }
         DestroyEffect(sfx);
         TimerManager.getInstance().recycle(timer);
+
+        if (ticks > 0) {
+          // createGateTeleporter(spellId, caster, x, y);
+          SchalaTeleportation(spellId, caster, x, y, 3, 3);
+        }
         return;
       }
       if (!ch.isChanneling() || ch.channelAbilityId != spellId) {
@@ -8632,18 +8671,122 @@ export module SimpleSpellSystem {
     UnitHelper.payHPPercentCost(GetTriggerUnit(), 0.05, UNIT_STATE_MAX_LIFE);
   }
 
+  export function doGojoBlackFlash(spellId: number, caster: unit) {
+    const dmgDataMult = BASE_DMG.KAME_DPS * 9;
+    const mpHealPct = -1 * 0.2;
+    const reqDelay = 6;
+
+    const gojoBlackFlashTargetKey = StringHash("gojo_black_flash_target");
+    const gojoBlackFlashTicksKey = StringHash("gojo_black_flash_ticks");
+
+    const gojoUnlimitedVoidTicksKey = StringHash("gojo_r_ticks");
+    const gojoUnlimitedVoidXKey = StringHash("gojo_r_x");
+    const gojoUnlimitedVoidYKey = StringHash("gojo_r_y");
+
+    // if damaged within 0.12s by an auto attack deal damage
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    const abil = ch.getAbility(AbilityNames.Gojo.BLACK_FLASH);
+
+    const isUnlimitedVoid = LoadInteger(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidTicksKey) > 0;
+
+    const delay = LoadInteger(Globals.genericSpellHashtable, casterId, gojoBlackFlashTicksKey);
+    if (
+      !isUnlimitedVoid 
+      && (delay == 0 || delay >= reqDelay)
+    ) {
+      TextTagHelper.showPlayerColorTextOnUnit("Miss!", playerId, caster);
+      ch.setCurrentSP(ch.getCurrentSP() + Math.ceil(abil.costAmount / 2));
+      return;
+    }
+
+    UnitHelper.payMPPercentCost(caster, mpHealPct, UNIT_STATE_MAX_MANA);
+
+    const target = isUnlimitedVoid ? caster : LoadUnitHandle(
+      Globals.genericSpellHashtable,
+      casterId,
+      gojoBlackFlashTargetKey
+    );
+
+    // check unlimited void
+    if (isUnlimitedVoid) {
+      const voidX = LoadReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidXKey);
+      const voidY = LoadReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidYKey);
+      Globals.tmpVector3.setPos(voidX, voidY);
+
+      TextTagHelper.showPlayerColorTextOnUnit(
+        "Unlimited Void: " + AbilityNames.Gojo.BLACK_FLASH, playerId, caster
+      );
+      AOEDamage.genericDealAOEDamage(
+        Globals.tmpUnitGroup3, 
+        caster,
+        Globals.tmpVector3.x,
+        Globals.tmpVector3.y,
+        600, 
+        10, ch.spellPower,
+        dmgDataMult, 1.0, bj_HEROSTAT_INT,
+      )
+    } else {
+      abil.resetCooldown();
+      TextTagHelper.showPlayerColorTextOnUnit(
+        AbilityNames.Gojo.BLACK_FLASH, playerId, caster
+      );
+      if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+        AOEDamage.dealDamageRaw(
+          caster, 10, ch.spellPower, 
+          dmgDataMult, 1.0, bj_HEROSTAT_INT,
+          target
+        );
+        Globals.tmpVector3.setUnit(target);
+      }
+    }
+
+    const sfx = AddSpecialEffect("GojoBlackFlash.mdl", 
+      Globals.tmpVector3.x, Globals.tmpVector3.y
+    );
+    if (isUnlimitedVoid) {
+      BlzSetSpecialEffectScale(sfx, 4.0);
+    }
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.5, false, () => {
+      DestroyEffect(sfx);
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
+  export function doGojoLimitlessGuard(spellId: number, caster: unit) {
+    const gojoLimitlessGuardTicksKey = StringHash("gojo_limitless_guard_ticks");
+
+    const casterId = GetHandleId(caster);
+
+    SaveInteger(Globals.genericSpellHashtable, casterId, gojoLimitlessGuardTicksKey, 1);
+  }
+
   export function gojoIsPurpleCollision(
-    unit: unit, caster: unit, player: player
+    unit: unit, 
+    beam: unit,
+    caster: unit, 
+    player: player
   ) {
     return (
       GetUnitTypeId(unit) == Constants.dummyBeamUnitId
       && GetOwningPlayer(unit) == player
-      && (
-        GetUnitName(unit) == "Cursed Technique Lapse: Blue"
-        || GetUnitName(unit) == "Cursed Technique Reversal: Red"
-      )
       && GetUnitAbilityLevel(caster, Id.gojoPurplePassive) > 0
       && BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) == 0
+      && (
+        (
+          GetUnitName(unit) == "Cursed Technique Lapse: Blue"
+          && GetUnitName(beam) != "Cursed Technique Lapse: Blue"
+        )
+        || 
+        (
+          GetUnitName(unit) == "Cursed Technique Reversal: Red"
+          && GetUnitName(beam) != "Cursed Technique Reversal: Red"
+        )
+      )
     );
   }
 
@@ -8796,7 +8939,8 @@ export module SimpleSpellSystem {
     const blueBonusDmgMult = 2;
     const blueAOE = 400;
     const blueBeamSpeed = 30;
-    const blueKBSpeed = 40;
+    const blueKBRelativeSpeed = 15;
+    const blueChargeToKBRatio = 0.5;
     // const blueBeamMaxMoveTicks = 40;
     const blueBeamMaxExistTicks = 166;
     const blueBeamHpMult = BASE_DMG.KAME_DPS * 0.8;
@@ -8840,7 +8984,8 @@ export module SimpleSpellSystem {
       timerId, gojoBlueBeamTicksKey, blueBeamTicks + 1
     );
     const shootTicks = LoadInteger(Globals.genericSpellHashtable, timerId, gojoBlueShootTicksKey);
-    const bonusDmgMult = 1 + blueBonusDmgMult * (shootTicks / blueMaxChargeTicks);
+    const shootTicksRatio = (shootTicks / blueMaxChargeTicks);
+    const bonusDmgMult = 1 + blueBonusDmgMult * shootTicksRatio;
 
     let hasCollided = LoadBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey);
     const targetX = LoadReal(Globals.genericSpellHashtable, 
@@ -8859,6 +9004,7 @@ export module SimpleSpellSystem {
     let sfx = null;
     let sfx2 = null;
     let sfx3 = null;
+    let hasMoved = false;
     if (blueBeamTicks == 0) {
       // position beam
       Globals.tmpVector.setUnit(caster);
@@ -8911,17 +9057,21 @@ export module SimpleSpellSystem {
     const newHp = GetUnitState(beam, UNIT_STATE_LIFE);
     if (newHp >= oldHp) {
       const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-      const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-      Globals.tmpVector.polarProjectCoords(
-        Globals.tmpVector, ang, Math.min(distToTarget, blueBeamSpeed)
-      );
-      PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      if (distToTarget > 1) {
+        const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+        Globals.tmpVector.polarProjectCoords(
+          Globals.tmpVector, ang, Math.min(distToTarget, blueBeamSpeed)
+        );
+        hasMoved = PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      }
     }
     if (hasCollided && !isSixEyes) {
+      // unstable collision
       Globals.tmpVector.polarProjectCoords(Globals.tmpVector,
-        Math.random() * 360, 0.2 * Math.random() * blueBeamSpeed
+        Math.random() * 360, 0.4 * Math.random() * blueBeamSpeed
       );
       PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      hasMoved = false;
     }
     SaveReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey, newHp);
 
@@ -8935,6 +9085,15 @@ export module SimpleSpellSystem {
       sfxBaseHeight + BlzGetUnitZ(beam) + GetUnitFlyHeight(beam)
     );
 
+    const pullSpeedRatio = (1-blueChargeToKBRatio) + blueChargeToKBRatio * shootTicksRatio;
+    const pullSpeed = hasCollided ? 
+      gojoPurpleKBRelativeSpeed : 
+      (hasMoved ?
+        blueKBRelativeSpeed * pullSpeedRatio + blueBeamSpeed :
+        blueKBRelativeSpeed * pullSpeedRatio
+      )
+    ;
+    
 
     if (!hasCollided) {
       // suck enemies in
@@ -8945,7 +9104,7 @@ export module SimpleSpellSystem {
         Globals.tmpVector.y,
         blueAOE,
         180,
-        blueKBSpeed
+        pullSpeed
       );
   
       const burstDmg = AOEDamage.calculateDamageRaw(
@@ -8987,7 +9146,7 @@ export module SimpleSpellSystem {
           }
         }
         
-        if (!hasCollided && gojoIsPurpleCollision(unit, caster, player)) {
+        if (!hasCollided && gojoIsPurpleCollision(unit, beam, caster, player)) {
           hasCollided = true;
           SaveBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey, true);
           // fix target loc
@@ -8997,6 +9156,21 @@ export module SimpleSpellSystem {
           GroupClear(dmgGroup);
           // hakai properties
           SetUnitInvulnerable(beam, true);
+          // force earlier end
+          SaveInteger(Globals.genericSpellHashtable,
+            timerId, gojoBlueBeamTicksKey, 
+            Math.max(
+              blueBeamTicks, 
+              blueBeamMaxExistTicks - gojoPurpleBeamExistTicks
+            )
+          );
+
+          TextTagHelper.showPlayerColorTextOnUnit(
+            isSixEyes ? 
+              "Hollow Technique: Purple" :
+              "Hollow Technique: Purple (Unstable)"
+            , playerId, beam
+          );
           
           sfx3 = AddSpecialEffect("Flamestrike Mystic II.mdl", 
             Globals.tmpVector.x, Globals.tmpVector.y,
@@ -9011,13 +9185,13 @@ export module SimpleSpellSystem {
           SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfxKey, sfx);
         
           DestroyEffect(sfx2);
-          sfx2 = AddSpecialEffect("SuperLightningBall.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
-          BlzSetSpecialEffectScale(sfx2, 1.5);
-          BlzSetSpecialEffectTimeScale(sfx2, 0.5);
+          sfx2 = AddSpecialEffect("GojoHollowPurple.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+          BlzSetSpecialEffectScale(sfx2, 4);
+          BlzSetSpecialEffectTimeScale(sfx2, 1.5);
           SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfx2Key, sfx2);
           
-          BlzEndUnitAbilityCooldown(caster, Id.gojoBlueActive);
-          BlzEndUnitAbilityCooldown(caster, Id.gojoRedActive);
+          SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
+          SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
           startCooldown(caster, Id.gojoPurpleActive);
         }
       });
@@ -9032,7 +9206,7 @@ export module SimpleSpellSystem {
         Globals.tmpVector.y,
         gojoPurpleAOE,
         180,
-        blueKBSpeed
+        pullSpeed
       );
       
       const dmgMult = isSixEyes ? 
@@ -9122,6 +9296,15 @@ export module SimpleSpellSystem {
       );
       BlzSetSpecialEffectScale(sfx3, 2.5);
       DestroyEffect(sfx3);
+
+      if (hasCollided) {
+        sfx3 = AddSpecialEffect("SuperLightningBall.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfx3, 3.0);
+        BlzSetSpecialEffectTimeScale(sfx3, 2.0);
+        DestroyEffect(sfx3);
+      }
 
       RemoveUnit(beam);
       DestroyEffect(sfx);
@@ -9282,13 +9465,14 @@ export module SimpleSpellSystem {
 
   export function gojoRedBeamLoop() {
     const blueBonusDmgMult = 2;
-    const dmgAOE = 500;
+    const dmgAOE = 375;
     const kbAOE = 250;
     const blueBeamSpeed = 35;
-    const blueKBSpeed = 50;
+    const blueKBRelativeSpeed = 15;
     const blueKBDetoSpeed = 250;
     // const blueBeamMaxMoveTicks = 40;
-    const blueBeamMaxExistTicks = 66;
+    const blueBeamSpawnTick = 16;
+    const blueBeamMaxExistTicks = 66 + blueBeamSpawnTick;
     const blueBeamHpMult = BASE_DMG.KAME_DPS * 1.1;
     const blueBeamDuration = 15;
     const blueMaxChargeTicks = 133;
@@ -9323,12 +9507,16 @@ export module SimpleSpellSystem {
     const heroLvl = GetHeroLevel(caster);
     const abilLvl = Math.min(10, 1 + (heroLvl - 25) / 3);
 
+    let sfx = null;
+    let sfx2 = null;
+
     let blueBeamTicks = LoadInteger(Globals.genericSpellHashtable, 
       timerId, gojoBlueBeamTicksKey
     );
     SaveInteger(Globals.genericSpellHashtable,
       timerId, gojoBlueBeamTicksKey, blueBeamTicks + 1
     );
+
     const shootTicks = LoadInteger(Globals.genericSpellHashtable, timerId, gojoBlueShootTicksKey);
     const bonusDmgMult = 1 + blueBonusDmgMult * (shootTicks / blueMaxChargeTicks);
 
@@ -9339,13 +9527,30 @@ export module SimpleSpellSystem {
       casterId, gojoSixEyesActiveKey
     );
 
-    let hasCollided = LoadBoolean(Globals.genericSpellHashtable, casterId, gojoBlueCollideKey);
+    let hasCollided = LoadBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey);
     let beam = null;
     let dmgGroup = null;
     let oldHp = 0;
-    let sfx = null;
-    let sfx2 = null;
+    let hasMoved = false;
+
+    // delay beam spawning in
     if (blueBeamTicks == 0) {
+      Globals.tmpVector.setUnit(caster);
+      Globals.tmpVector2.setPos(targetX, targetY);
+      const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+      Globals.tmpVector.polarProjectCoords(
+        Globals.tmpVector, ang, blueBeamSpeed * 2
+      );
+      sfx = AddSpecialEffect("Flamestrike I.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+      BlzSetSpecialEffectScale(sfx, 2); 
+      BlzSetSpecialEffectTimeScale(sfx, 1.2);
+      BlzSetSpecialEffectHeight(sfx, BlzGetUnitZ(caster) + GetUnitFlyHeight(caster) + 125);
+      BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+      BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
+      DestroyEffect(sfx);
+    }
+    if (blueBeamTicks < blueBeamSpawnTick) return;
+    if (blueBeamTicks == blueBeamSpawnTick) {
       // position beam
       Globals.tmpVector.setUnit(caster);
       Globals.tmpVector2.setPos(targetX, targetY);
@@ -9371,9 +9576,7 @@ export module SimpleSpellSystem {
       SaveReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey, oldHp);
 
       sfx = AddSpecialEffect("Soul Armor Crimson.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
-      // BlzSetSpecialEffectScale(sfx, 1.0);
       BlzSetSpecialEffectTimeScale(sfx, 2.0);
-      // BlzSetSpecialEffectColor(sfx, 255, 55, 55);
       SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfxKey, sfx);
 
       sfx2 = AddSpecialEffect("SpiritBomb.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
@@ -9395,12 +9598,12 @@ export module SimpleSpellSystem {
     Globals.tmpVector2.setPos(targetX, targetY);
     const newHp = GetUnitState(beam, UNIT_STATE_LIFE);
     const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-    if (newHp >= oldHp) {
+    if (newHp >= oldHp && distToTarget > 1) {
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
       Globals.tmpVector.polarProjectCoords(
         Globals.tmpVector, ang, Math.min(distToTarget, blueBeamSpeed)
       );
-      PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      hasMoved = PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
     }
     SaveReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey, newHp);
 
@@ -9414,6 +9617,13 @@ export module SimpleSpellSystem {
       sfxBaseHeight + BlzGetUnitZ(beam) + GetUnitFlyHeight(beam)
     );
 
+    if (blueBeamTicks % 8 == 0) {
+      DestroyEffect(AddSpecialEffect(
+        "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+        Globals.tmpVector.x, Globals.tmpVector.y,
+      ));
+    }
+
     // suck enemies in
     AOEKnockback.genericDoKnockback(
       Globals.tmpUnitGroup,
@@ -9422,7 +9632,7 @@ export module SimpleSpellSystem {
       Globals.tmpVector.y,
       kbAOE,
       180,
-      blueKBSpeed
+      hasMoved ? blueKBRelativeSpeed + blueBeamSpeed : blueKBRelativeSpeed
     );
 
     const dpsDmg = AOEDamage.calculateDamageRaw(
@@ -9441,6 +9651,7 @@ export module SimpleSpellSystem {
     );
     ForGroup(Globals.tmpUnitGroup, () => {
       const unit = GetEnumUnit();
+      if (beam == unit) return;
       if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
         UnitDamageTarget(
           caster, unit, dpsDmg,
@@ -9449,11 +9660,11 @@ export module SimpleSpellSystem {
           WEAPON_TYPE_WHOKNOWS
         );
       }
-      if (!hasCollided && gojoIsPurpleCollision(unit, caster, player)) {
+      if (!hasCollided && gojoIsPurpleCollision(unit, beam, caster, player)) {
         hasCollided = true;
-        SaveBoolean(Globals.genericSpellHashtable, casterId, gojoBlueCollideKey, true);
+        SaveBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey, true);
         SaveInteger(Globals.genericSpellHashtable,
-          timerId, gojoBlueBeamTicksKey, blueBeamMaxExistTicks - 4
+          timerId, gojoBlueBeamTicksKey, blueBeamMaxExistTicks - 3
         );
       }
     });
@@ -9495,18 +9706,35 @@ export module SimpleSpellSystem {
         );
       }
 
-      let sfx3 = AddSpecialEffect("Firaga.mdl", 
-        Globals.tmpVector.x, Globals.tmpVector.y,
-      );
-      BlzSetSpecialEffectScale(sfx3, 3.0);
-      BlzSetSpecialEffectTimeScale(sfx3, 2.0);
-      DestroyEffect(sfx3);
+      if (hasCollided) {
+        let sfxDeto = AddSpecialEffect("Flamestrike Dark Void II.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfxDeto, 2);
+        BlzSetSpecialEffectTimeScale(sfxDeto, 1.2);
+        DestroyEffect(sfxDeto);
 
-      sfx3 = AddSpecialEffect("Firaga.mdl", 
-        Globals.tmpVector.x, Globals.tmpVector.y,
-      );
-      BlzSetSpecialEffectScale(sfx3, 2.0);
-      DestroyEffect(sfx3);
+        sfxDeto = AddSpecialEffect(
+          "Abilities/Spells/Demon/DemonBoltImpact/DemonBoltImpact.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfxDeto, 3);
+        DestroyEffect(sfxDeto);
+      } else {
+        let sfxDeto = AddSpecialEffect("Firaga.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfxDeto, 3.0);
+        BlzSetSpecialEffectTimeScale(sfxDeto, 2.0);
+        DestroyEffect(sfxDeto);
+
+        sfxDeto = AddSpecialEffect("Firaga.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+        );
+        BlzSetSpecialEffectScale(sfxDeto, 2.0);
+        DestroyEffect(sfxDeto);
+      }
+
 
       RemoveUnit(beam);
       DestroyEffect(sfx);
@@ -9521,10 +9749,8 @@ export module SimpleSpellSystem {
   export function gojoPurpleBeamLoop() {
     const blueMaxBonusDmgMult = 2;
     const redMaxBonusDmgMult = 2;
-    const purpleBeamSpeed = 40;
-    const purpleKBDetoSpeed = 400;
+    const purpleKBDetoSpeed = 350;
     // const blueBeamMaxMoveTicks = 40;
-    const blueBeamMaxExistTicks = 40;
     const blueBeamHpMult = BASE_DMG.KAME_DPS * 2.5;
     const maxChargeTicks = 133;
     const sfxBaseHeight = 150;
@@ -9543,6 +9769,7 @@ export module SimpleSpellSystem {
     const gojoPurpleBeamKey = StringHash("gojo_e_beam");
     const gojoPurpleBeamHpKey = StringHash("gojo_e_beam_hp");
     const gojoPurpleDmgGroupKey = StringHash("gojo_e_dmg_group");
+    const gojoPurpleStuckKey = StringHash("gojo_e_stuck");
     
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
@@ -9575,6 +9802,7 @@ export module SimpleSpellSystem {
     // fixed targetX and targetY
     const targetX = LoadReal(Globals.genericSpellHashtable, timerId, gojoEXKey);
     const targetY = LoadReal(Globals.genericSpellHashtable, timerId, gojoEYKey);
+    const isStuck = LoadBoolean(Globals.genericSpellHashtable, timerId, gojoPurpleStuckKey);
 
     let beam = null;
     let dmgGroup = null;
@@ -9583,13 +9811,13 @@ export module SimpleSpellSystem {
     let sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx2Key);
     let sfx3 = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx3Key);
     let sfx4 = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx4Key);
-    
+    let hasMoved = false;
     if (beamTicks == 0) {
       // position beam
       Globals.tmpVector.setUnit(caster);
       Globals.tmpVector2.setPos(targetX, targetY);
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, purpleBeamSpeed * 2);
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, gojoPurpleBeamSpeed * 2);
 
       beam = CreateUnit(
         player, 
@@ -9625,9 +9853,9 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectScale(sfx3, 8.0);
       SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx3Key, sfx3);
       
-      sfx4 = AddSpecialEffect("SuperLightningBall.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
-      BlzSetSpecialEffectScale(sfx4, 1.5);
-      BlzSetSpecialEffectTimeScale(sfx4, 0.5);
+      sfx4 = AddSpecialEffect("GojoHollowPurple.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+      BlzSetSpecialEffectScale(sfx4, 4);
+      BlzSetSpecialEffectTimeScale(sfx4, 1.5);
       SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx4Key, sfx4);
       
       dmgGroup = CreateGroup();
@@ -9643,12 +9871,12 @@ export module SimpleSpellSystem {
     Globals.tmpVector2.setPos(targetX, targetY);
     const newHp = GetUnitState(beam, UNIT_STATE_LIFE);
     const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-    if (newHp >= oldHp) {
+    if (newHp >= oldHp && distToTarget > 1 && !isStuck) {
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
       Globals.tmpVector.polarProjectCoords(
-        Globals.tmpVector, ang, Math.min(distToTarget, purpleBeamSpeed)
+        Globals.tmpVector, ang, Math.min(distToTarget, gojoPurpleBeamSpeed)
       );
-      PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
+      hasMoved = PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
     }
     SaveReal(Globals.genericSpellHashtable, timerId, gojoPurpleBeamHpKey, newHp);
 
@@ -9666,15 +9894,20 @@ export module SimpleSpellSystem {
       sfx4, Globals.tmpVector.x, Globals.tmpVector.y, sfxBaseHeight + beamHeight
     );
 
-    if (beamTicks % 3 == 0) {
-      DestroyEffect(AddSpecialEffect(
+    if (beamTicks % 4 == 0) {
+      let tmpSfx = AddSpecialEffect(
         "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
         Globals.tmpVector.x, Globals.tmpVector.y,
-      ));
-      DestroyEffect(AddSpecialEffect(
+      );
+      BlzSetSpecialEffectZ(tmpSfx, sfxBaseHeight + beamHeight);
+      DestroyEffect(tmpSfx);
+      
+      tmpSfx = AddSpecialEffect(
         "GEHLightningOrb.mdl",
         Globals.tmpVector.x, Globals.tmpVector.y,
-      ));
+      );
+      BlzSetSpecialEffectZ(tmpSfx, sfxBaseHeight + beamHeight);
+      DestroyEffect(tmpSfx);
     }
 
     // suck enemies in
@@ -9685,7 +9918,9 @@ export module SimpleSpellSystem {
       Globals.tmpVector.y,
       gojoPurpleAOE,
       180,
-      gojoPurpleKBSpeed
+      hasMoved ? 
+        gojoPurpleKBRelativeSpeed + gojoPurpleBeamSpeed + 5: 
+        gojoPurpleKBRelativeSpeed
     );
 
     // deal blue dmg + hakai
@@ -9740,16 +9975,15 @@ export module SimpleSpellSystem {
       }
     });
 
-    if (distToTarget <= purpleBeamSpeed) {
-      // detonate
-      beamTicks = blueBeamMaxExistTicks;
+    if (!isStuck && distToTarget <= gojoPurpleBeamSpeed) {
+      // lock into position
+      // beamTicks = gojoPurpleBeamExistTicks;
+      SaveBoolean(Globals.genericSpellHashtable, timerId, gojoPurpleStuckKey, true);
     }
     
-    // clash with blue then fire a signal to initiate hollow purple
-
     if (
       !UnitHelper.isUnitAlive(beam) 
-      || beamTicks >= blueBeamMaxExistTicks
+      || beamTicks >= gojoPurpleBeamExistTicks
     ) {
       // dmg enemies
       AOEDamage.genericDealDamageToGroup(
@@ -9772,19 +10006,18 @@ export module SimpleSpellSystem {
         purpleKBDetoSpeed,
       );
 
-      let sfxDeto = AddSpecialEffect("DarkBomb.mdl", 
+      let sfxDeto = AddSpecialEffect("SuperLightningBall.mdl", 
         Globals.tmpVector.x, Globals.tmpVector.y,
       );
-      BlzSetSpecialEffectScale(sfxDeto, 5.0);
-      BlzSetSpecialEffectTimeScale(sfxDeto, 4.0);
-      BlzSetSpecialEffectZ(sfxDeto, sfxBaseHeight + beamHeight);
+      BlzSetSpecialEffectScale(sfxDeto, 3.0);
+      BlzSetSpecialEffectTimeScale(sfxDeto, 2.0);
       DestroyEffect(sfxDeto);
 
       sfxDeto = AddSpecialEffect("Flamestrike Dark Void II.mdl", 
         Globals.tmpVector.x, Globals.tmpVector.y,
       );
       BlzSetSpecialEffectScale(sfxDeto, 2);
-      BlzSetSpecialEffectTimeScale(sfxDeto, 1.5);
+      BlzSetSpecialEffectTimeScale(sfxDeto, 1.2);
       DestroyEffect(sfxDeto);
 
       RemoveUnit(beam);
@@ -9798,7 +10031,93 @@ export module SimpleSpellSystem {
       return;
     }
   }
+
+  export function gojoUnlimitedVoidLoop() {
+    const mpCostPct = 0.03 * 0.02;
+    const dmgAOE = 600;
+    const endTick = 266;
+
+    const gojoUnlimitedVoidCasterKey = StringHash("gojo_r_caster");
+    const gojoUnlimitedVoidTicksKey = StringHash("gojo_r_ticks");
+    const gojoUnlimitedVoidXKey = StringHash("gojo_r_x");
+    const gojoUnlimitedVoidYKey = StringHash("gojo_r_y");
+
+    const timer = GetExpiredTimer();
+    const timerId = GetHandleId(timer);
+
+    const caster = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoUnlimitedVoidCasterKey);
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+
+    const ticks = LoadInteger(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidTicksKey);
+
+    if (
+      ticks > endTick 
+      || UnitHelper.isUnitHardStunned(caster)
+      || !UnitHelper.isUnitAlive(caster)
+    ) {
+      const playerId = GetPlayerId(player);
+      const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+      if (ch) {
+        const abil = ch.getAbility(AbilityNames.Gojo.UNLIMITED_VOID);
+        if (abil && abil.isInUse()) abil.endAbility();
+      }
+
+      SaveInteger(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidTicksKey, 0);
+      FlushChildHashtable(Globals.genericSpellHashtable, timerId);
+      TimerManager.getInstance().recycle(timer);
+      return;
+    }
+
+    const voidX = LoadReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidXKey);
+    const voidY = LoadReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidYKey);
+
+    let hasCaster = false;
+    Globals.tmpVector.setPos(voidX, voidY);
+    GroupEnumUnitsInRange(Globals.tmpUnitGroup,
+      Globals.tmpVector.x,
+      Globals.tmpVector.y,
+      dmgAOE,
+      null
+    );
+    const dmg = mpCostPct * GetUnitState(caster, UNIT_STATE_MANA);
+    ForGroup(Globals.tmpUnitGroup, () => {
+      const unit = GetEnumUnit();
+      if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
+        UnitDamageTarget(
+          caster, unit, dmg,
+          false, false,
+          ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+          WEAPON_TYPE_WHOKNOWS
+        );
+      }
+      if (unit == caster) hasCaster = true;
+    });
+    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MANA);
+
+    SaveInteger(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidTicksKey, 
+      hasCaster ? ticks+1 : endTick+1
+    );
+  }
   
+  export function doGojoUnlimitedVoid(spellId: number) {
+    const gojoUnlimitedVoidCasterKey = StringHash("gojo_r_caster");
+    const gojoUnlimitedVoidTicksKey = StringHash("gojo_r_ticks");
+    const gojoUnlimitedVoidXKey = StringHash("gojo_r_x");
+    const gojoUnlimitedVoidYKey = StringHash("gojo_r_y");
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const timer = TimerManager.getInstance().get(); 
+    const timerId = GetHandleId(timer);
+
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, gojoUnlimitedVoidCasterKey, caster);
+    SaveInteger(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidTicksKey, 1);
+    SaveReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidXKey, GetUnitX(caster));
+    SaveReal(Globals.genericSpellHashtable, casterId, gojoUnlimitedVoidYKey, GetUnitY(caster));
+    TimerStart(timer, 0.03, true, gojoUnlimitedVoidLoop);
+  }
+
   export function doGojoSixEyesOn(spellId: number) {
     const caster = GetTriggerUnit();
     toggleSixEyes(caster, spellId);
@@ -9824,7 +10143,7 @@ export module SimpleSpellSystem {
 
     if (
       GetUnitManaPercent(caster) < 1 
-      || UnitHelper.isUnitDead(caster)
+      || !UnitHelper.isUnitAlive(caster)
       || !isActive
     ) {
       if (isActive) {
@@ -9846,18 +10165,13 @@ export module SimpleSpellSystem {
 
     if (GetUnitTypeId(caster) == Id.gojo) {
       UnitAddAbility(caster, Id.gojoSixEyesOff);
-  
-      if (GetHeroLevel(caster) > 200) {
-        UnitAddAbility(caster, Id.gojoUnlimitedVoid);
-      }
     }
 
     const casterId = GetHandleId(caster);
     if (spellId == Id.gojoSixEyesOn && GetUnitManaPercent(caster) > 4) {
+      AddUnitAnimationProperties(caster, "alternate", false);
       UnitAddAbility(caster, Id.gojoSixEyesTrueSight);
 
-      SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, true);
-      SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, false);
       SetPlayerAbilityAvailable(player, Id.gojoUnlimitedVoid, true);
       SetPlayerAbilityAvailable(player, Id.gojoSixEyesOn, false);
       SetPlayerAbilityAvailable(player, Id.gojoSixEyesOff, true);
@@ -9871,11 +10185,28 @@ export module SimpleSpellSystem {
       SaveUnitHandle(Globals.genericSpellHashtable, timerId, gojoSixEyesCasterKey, caster);
       TimerStart(timer, 0.03, true, gojoSixEyesManaDrainLoop);
 
+      // force lower cds if above
+      let lowerCd = getCooldownDefault(caster, Id.gojoBlueActive);
+      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoBlueActive) > lowerCd) {
+        BlzStartUnitAbilityCooldown(caster, Id.gojoBlueActive, lowerCd);
+      }
+      lowerCd = getCooldownDefault(caster, Id.gojoRedActive);
+      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoRedActive) > lowerCd) {
+        BlzStartUnitAbilityCooldown(caster, Id.gojoRedActive, lowerCd);
+      }
+      lowerCd = getCooldownDefault(caster, Id.gojoPurpleActive);
+      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) > lowerCd) {
+        BlzStartUnitAbilityCooldown(caster, Id.gojoPurpleActive, lowerCd);
+      }
+      lowerCd = getCooldownDefault(caster, Id.gojoTeleport);
+      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoTeleport) > lowerCd) {
+        BlzStartUnitAbilityCooldown(caster, Id.gojoTeleport, lowerCd);
+      }
+
     } else {
+      AddUnitAnimationProperties(caster, "alternate", true);
       UnitRemoveAbility(caster, Id.gojoSixEyesTrueSight);
 
-      SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
-      SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, false);
       SetPlayerAbilityAvailable(player, Id.gojoUnlimitedVoid, false);
       SetPlayerAbilityAvailable(player, Id.gojoSixEyesOn, true);
       SetPlayerAbilityAvailable(player, Id.gojoSixEyesOff, false);
@@ -9942,28 +10273,30 @@ export module SimpleSpellSystem {
         Globals.tmpVector2.setUnit(unit);
         const teleportDist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
         const teleportAng = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+        
+        DestroyEffect(
+          AddSpecialEffect("BlackBlink.mdl", Globals.tmpVector2.x, Globals.tmpVector2.y)
+        );
 
         Globals.tmpVector2.setVector(Globals.tmpVector3);
         Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, teleportAng, teleportDist);
         PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector2);
-        DestroyEffect(
-          AddSpecialEffect("BlackBlink.mdl", Globals.tmpVector2.x, Globals.tmpVector2.y)
-        );
+
       }
     });
 
-    const sfx1 = AddSpecialEffect("Kuchiyose.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
-    const sfx2 = AddSpecialEffect("Kuchiyose.mdl", Globals.tmpVector3.x, Globals.tmpVector3.y);
-    BlzPlaySpecialEffect(sfx1, ANIM_TYPE_BIRTH);
-    BlzPlaySpecialEffect(sfx2, ANIM_TYPE_BIRTH);
-    BlzSetSpecialEffectTimeScale(sfx1, 5.0);
-    BlzSetSpecialEffectTimeScale(sfx2, 5.0);
-    const timer = TimerManager.getInstance().get();
-    TimerStart(timer, 1.0, false, () => {
-      DestroyEffect(sfx1);
-      DestroyEffect(sfx2);
-      TimerManager.getInstance().recycle(timer);
-    });
+    const sfx1 = AddSpecialEffect("Abilities/Spells/Human/Polymorph/PolyMorphDoneGround.mdl", 
+      Globals.tmpVector.x, Globals.tmpVector.y
+    );
+    DestroyEffect(sfx1);
+    const sfx2 = AddSpecialEffect("Abilities/Spells/Human/Polymorph/PolyMorphDoneGround.mdl",
+      Globals.tmpVector3.x, Globals.tmpVector3.y
+    );
+    DestroyEffect(sfx2);
+    // const timer = TimerManager.getInstance().get();
+    // TimerStart(timer, 0.5, false, () => {
+    //   TimerManager.getInstance().recycle(timer);
+    // });
   }
 
   export function createTatsumakiRock(caster: unit, x: number, y: number) {
@@ -10230,7 +10563,7 @@ export module SimpleSpellSystem {
     const maxTick = 333;
     const lastDebuffTick = 166;
     const boostAOE = 500;
-    const boostSpellPower = -0.1;
+    const boostSpellPower = -0.2;
     
     const cellMaxWingsKey = StringHash(I2S(GetSpellAbilityId()) + "cell_max_wings");
 
@@ -10278,7 +10611,7 @@ export module SimpleSpellSystem {
       }
 
       
-      if (UnitHelper.isUnitDead(caster)) {
+      if (!UnitHelper.isUnitAlive(caster)) {
         tick += maxTick;
       }
       ++tick;
@@ -10353,9 +10686,13 @@ export module SimpleSpellSystem {
   export function startCooldown(unit: unit, spellId: number) {
     BlzStartUnitAbilityCooldown(
       unit, spellId, 
-      BlzGetUnitAbilityCooldown(unit, spellId,
-        GetUnitAbilityLevel(unit, spellId)-1
-      )
+      getCooldownDefault(unit, spellId)
+    );
+  }
+
+  export function getCooldownDefault(unit: unit, spellId: number) {
+    return getCooldown(unit, spellId, 
+      BlzGetUnitAbilityCooldown(unit, spellId, GetUnitAbilityLevel(unit, spellId)-1)
     );
   }
 
@@ -10388,13 +10725,7 @@ export module SimpleSpellSystem {
     if (GetUnitAbilityLevel(unit, Id.beerusIceCreamCDRFlag) > 0) {
       newCd *= 0.9;
     }
-    if (
-      GetUnitAbilityLevel(unit, Id.gojoSixEyesOn) > 0
-      && LoadBoolean(
-        Globals.genericSpellHashtable, GetHandleId(unit), 
-        StringHash("gojo_d_active")
-      )
-    ) {
+    if (GetUnitAbilityLevel(unit, Id.gojoSixEyesTrueSight) > 0) {
       newCd *= 0.5;
     }
 

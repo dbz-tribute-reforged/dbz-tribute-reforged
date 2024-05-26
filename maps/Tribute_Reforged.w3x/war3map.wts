@@ -1297,9 +1297,13 @@ Yamcha
 }
 
 STRING 202
-// Units: n01X (King Yemma Helper), Name (Name)
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
 {
-King Yemma Helper
+Whis raises his staff and after a brief channel creates a portal that teleports himself and all allies in 600 AOE to a position on the map. Minimum distance 1500.
+
+|cffff2222Channel Duration: <A0JK,DataA1,.>s
+|cff00FF00Range: 2000|r
+|cff00FFFFCooldown: <A0JK,Cool1>s|r
 }
 
 STRING 203
@@ -9945,7 +9949,7 @@ Might Guy
 }
 
 STRING 1525
-// Items: I00M (Cell Max Wings), Description (Description)
+// Items: I00M (Cell Max Wings), Ubertip (Tooltip - Extended)
 {
 |cffffff00Activate to heal 1% of max HP/s and gain +10% spell amp for 10s. For the first 5s, enemies in 500 AOE are continuously knocked back, 100% blinded and lose 10% spell amp for 10s.
 
@@ -11005,15 +11009,6 @@ STRING 1686
 // Items: I037 (Battle Armor [|cffFFFF002/5|r]), Name (Name)
 {
 Battle Armor [|cffFFFF002/5|r]
-}
-
-STRING 1687
-// Items: I00M (Cell Max Wings), Ubertip (Tooltip - Extended)
-{
-|cffffff00Activate to heal 1% of max HP/s and gain +10% spell amp for 10s. For the first 5s, enemies in 500 AOE are continuously knocked back, 100% blinded and lose 10% spell amp for 10s.
-
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: 90s|r
 }
 
 STRING 1688
@@ -37862,14 +37857,14 @@ STRING 5852
 }
 
 STRING 5853
-// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13X (Six Eyes Activate), Ubertip (Tooltip - Normal - Extended)
 {
-Blue is an application of the Limitless centered around infinitely converging space to a single point to create a void-like effect, resulting in a powerful, attractive force.
-
-Hold down the Q button to charge for up to +200% damage.
-
-|cff00ff00Damage: [Int] 100u x 5t (+200%)
-|cff00ffffCooldown: <A0KA,Cool1>s|r
+An innate technique inherited through the Gojo family that allows the user to see the flow of cursed energy in extreme detail. Upgrades Hollow Technique: Purple to deal more damage. Above level 150, upgrades Limitless to slow incoming enemies even further. Above level 200, Unlocks [|cff00ff00R|r] Domain Expansion: Unlimited Void. Cannot be deactivated in the first 5 seconds.
+|cffffff00Drains 4% max mana per second
+Upgrades Hollow Technique: Purple
+Gains True Sight
++50% cooldown reduction
+|cff00ffffCooldown: <A13X,Cool1>s|r
 }
 
 STRING 5854
@@ -42021,28 +42016,6 @@ STRING 6470
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Banana Slamma - [|cffffcc00Level 1|r]
-}
-
-STRING 6471
-// Abilities: A0KA (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
-{
-Blue is an application of the Limitless centered around infinitely converging space to a single point to create a void-like effect, resulting in a powerful, attractive force.
-
-Hold down the Q button to charge for up to +200% damage.
-
-|cff00ff00Damage: [Int] 100u x 5t (+200%)
-|cff00ffffCooldown: <A0KA,Cool1>s|r
-}
-
-STRING 6472
-// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
-{
-The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. 
-
-Hold down the W button to charge for up to +200% damage.
-
-|cff00ff00Damage: [Int] 500u (+1000u)
-|cff00ffffCooldown: <A0OE,Cool1>s|r
 }
 
 STRING 6473
@@ -53758,14 +53731,12 @@ STRING 8262
 }
 
 STRING 8263
-// Abilities: A0OE (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13W (Domain Expansion: Unlimited Void), Ubertip (Tooltip - Normal - Extended)
 {
-The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. 
+Unlimited Void brings the user and their targets inside the Limitless itself. Boundless raw information floods into the target's mind, overwhelming them to the point where they're completely immobilized. Creates a 600 AOE barrier that continuously damages enemies. Every 2s, all enemies are stunned for 1s. Activating Black Flash inside Unlimited Void will cause it to instead hit all trapped enemies, however, the cooldown of Black Flash will not refresh. If Gojo is stunned the Domain Expansion will immediately dissipate and all trapped units will be released. Drains 2% of current mana per second. 
 
-Hold down the W button to charge for up to +200% damage.
-
-|cff00ff00Damage: [Int] 500u (+1000u)
-|cff00ffffCooldown: <A0OE,Cool1>s|r
+|cff00ff00Damage: [Int] 100u/s + 2% of Current Mana/s
+|cff00ffffCooldown: <A13W,Cool1>s (120s)|r
 }
 
 STRING 8264
@@ -53780,15 +53751,9 @@ Sephiroth dashes forwards delivering a swift sequence of sword slashes for that 
 }
 
 STRING 8265
-// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A141 (Six Eyes True Sight), Tip (Tooltip - Normal)
 {
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. 
-
-Using Red on Blue or vice versa will create a special purple detonation that deals 100% of the damage of Red and Blue.
-Charge Purple directly by holding down Q and W (or just E) to deal 75% of the combined damage of Red and Blue.
-
-|cff00ff00Damage: [Int] Red + Blue (+25%) (+100%)
-|cff00ffffCooldown: <A13V,Cool1>s|r
+|cff00ffffSix Eyes: True Sight|r
 }
 
 STRING 8266
@@ -152979,15 +152944,17 @@ R
 }
 
 STRING 22200
-// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
 {
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. 
+The Limitless technique grants users near absolute control over space through cursed energy manipulation. The user distorts space to dodge incoming auto attacks and allow their own auto attacks to deal critical damage.
 
-Using Red on Blue or vice versa will create a special purple detonation that deals 100% of the damage of Red and Blue.
-Charge Purple directly by holding down Q and W (or just E) to deal 75% of the combined damage of Red and Blue.
+All enemies in 1200 range travel up to 33% less distance depending on how close they are to Gojo with closer units moving slower. When Six Eyes is activated above level 150, the maximum slow is increased to 66%. This slowing effect is halved on heroes. Has reduced effect on units that travel faster than 4000 units per second. Does not affect spell immune units. 
 
-|cff00ff00Damage: [Int] Red + Blue (+25%) (+100%)
-|cff00ffffCooldown: <A13V,Cool1>s|r
+|cff8888ffMana Cost: 1% of max mana per second while actively slowing enemies
+
+|cffffcc00Evasion|r - <A140,DataD1,%>% 
+|cffffcc00Critical|r - <A140,DataA1>% 
+|cffffcc00Damage|r - <A140,DataB1,.> times
 }
 
 STRING 22201
@@ -165459,13 +165426,9 @@ STRING 23764
 }
 
 STRING 23765
-// Abilities: A13W (Domain Expansion: Unlimited Void), Ubertip (Tooltip - Normal - Extended)
 {
-Unlimited Void brings the user and their targets inside the Limitless itself. Boundless raw information floods into the target's mind, overwhelming them to the point where they're completely immobilized.
-
-|cffff2222Channel Duration: <A13W,DataA1>s|r
-|cff00ff00Damage: [Int] 300u/s + 7% of Current Mana/s
-|cff00ffffCooldown: <A13W,Cool1>s|r
+[|cffffcc00Unlock|r] |cff00ffffSix Eyes|r
+Gojo can now unveil his Six Eyes to better see the flow of cursed energy, granting him mastery over his cursed techniques and the ability to form a stable Hollow Technique: Purple.
 }
 
 STRING 23766
@@ -166143,15 +166106,9 @@ W
 }
 
 STRING 23860
-// Abilities: A13X (Six Eyes Activate), Ubertip (Tooltip - Normal - Extended)
+// Units: n01X (Lost Spirit), Name (Name)
 {
-An innate technique inherited through the Gojo family that allows the user to see the flow of cursed energy in extreme detail. Cannot be deactivated in the first 5 seconds.
-|cffffff00Drains 4% max mana per second
-Unlocks Hollow Technique: Purple
-Unlocks Domain Expansion: Unlimited Void (lvl 200)
-Gains True Sight
-+50% cooldown reduction
-|cff00ffffCooldown: <A13X,Cool1>s|r
+Lost Spirit
 }
 
 STRING 23861
@@ -166441,9 +166398,13 @@ STRING 23902
 }
 
 STRING 23903
-// Abilities: A141 (Six Eyes True Sight), Tip (Tooltip - Normal)
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
 {
-Six Eyes: True Sight
+Whis raises his staff and after a brief channel creates a portal that teleports himself and all allies in 600 AOE to a position on the map. Minimum distance 1500.
+
+|cffff2222Channel Duration: <A0JK,DataA2,.>s
+|cff00FF00Range: 2500|r
+|cff00FFFFCooldown: <A0JK,Cool2>s|r
 }
 
 STRING 23904
@@ -166645,13 +166606,12 @@ STRING 23935
 }
 
 STRING 23936
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
+// Items: I00M (Cell Max Wings), Description (Description)
 {
-Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
+|cffffff00Activate to heal 1% of max HP/s and gain +10% spell amp for 10s. For the first 5s, enemies in 500 AOE are continuously knocked back, 100% blinded and lose 20% spell amp for 10s.
 
-|cffff2222Channel Duration: <A0JK,DataA1,.>s
-|cff00FF00Range: 2000/2500/3000|r
-|cff00FFFFCooldown: <A0JK,Cool1>s|r
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: 90s|r
 }
 
 STRING 23937
@@ -166670,36 +166630,6 @@ STRING 23939
 // Abilities: A0JK (Temporal Warp), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Temporal Warp - [|cffffcc00Level %d|r]
-}
-
-STRING 23940
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
-{
-Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
-
-|cffff2222Channel Duration: <A0JK,DataA2,.>s
-|cff00FF00Range: 2000/2500/3000|r
-|cff00FFFFCooldown: <A0JK,Cool2>s|r
-}
-
-STRING 23941
-// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
-{
-Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
-
-|cffff2222Channel Duration: <A0JK,DataA3,.>s
-|cff00FF00Range: 2000/2500/3000|r
-|cff00FFFFCooldown: <A0JK,Cool3>s|r
-}
-
-STRING 23942
-// Abilities: A0JK (Temporal Warp), Researchubertip (Tooltip - Learn - Extended)
-{
-Whis raises his staff and after a brief channel creates a portal that can teleport himself and others to a position on the map.
-
-|cffff2222Channel Duration: <A0JK,DataA1,.>s
-|cff00FF00Range: 2000/2500/3000|r
-|cff00FFFFCooldown: <A0JK,Cool1>s|r
 }
 
 STRING 23943
@@ -167540,6 +167470,16 @@ STRING 24046
 (whis)
 }
 
+STRING 24047
+// Abilities: A0JK (Temporal Warp), Ubertip (Tooltip - Normal - Extended)
+{
+Whis raises his staff and after a brief channel creates a portal that teleports himself and all allies in 600 AOE to a position on the map. Minimum distance 1500.
+
+|cffff2222Channel Duration: <A0JK,DataA3,.>s
+|cff00FF00Range: 3000|r
+|cff00FFFFCooldown: <A0JK,Cool3>s|r
+}
+
 STRING 24048
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
@@ -167595,11 +167535,13 @@ Whis can now enter his Angelic Ultra Instinct state.
 }
 
 STRING 24056
-// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JK (Temporal Warp), Researchubertip (Tooltip - Learn - Extended)
 {
-All enemy units in 900 range travel less distance from 25% up to 99% depending on their distance to Gojo. Does not affect spell immune units.
+Whis raises his staff and after a brief channel creates a portal that teleports himself and all allies in 600 AOE to a position on the map. Minimum distance 1500.
 
-|cff8888ffMana Cost: 1% of max mana per second while active
+|cffff2222Channel Duration: <A0JK,DataA1,.>s
+|cff00FF00Range: 2000/2500/3000|r
+|cff00FFFFCooldown: <A0JK,Cool1>s|r
 }
 
 STRING 24057
@@ -168244,7 +168186,8 @@ STRING 24149
 |cffffcc00Gains +0.011x mult every level up to 2.5x|r
 
 |cffffff00[level 25] Unlocks [|cff00ff00W|r|cffffff00] Reversal Red
-[Level 75] Unlocks [|r|cff00ff00D|r|cffffff00] Six Eyes and [|cff00ff00E|r|cffffff00] Hollow Purple
+[Level 50] Unlocks [|cff00ff00E|r|cffffff00] Hollow Purple
+[Level 75] Unlocks [|r|cff00ff00D|r|cffffff00] Six Eyes 
 [Level 150] Upgrades Limitless when using [|cff00ff00D|r|cffffff00] Six Eyes
 [level 200] Unlocks [|r|cff00ff00R|r|cffffff00] Unlimited Void when using [|cff00ff00D|r|cffffff00] Six Eyes|r
 }
@@ -168261,23 +168204,22 @@ STRING 24151
 Gojo can now reverse cursed energy to create a powerful repelling force.
 }
 
+STRING 24152
+{
+[|cffffcc00Unlock|r] |cff666666Domain Expansion: Unlimited Void|r
+Gojo can now perform his domain expansion while using Six Eyes to disable his enemies inside the endless void of Limitless.
+}
+
 STRING 24153
 {
-[|cffffcc00Unlock|r] |cff00ffffSix Eyes|r
-Gojo can now remove his blindfold to better control cursed energy, giving him access to [|cff00ff00D|r] Hollow Technique: Purple
+[|cffffcc00Unlock|r] |cffaa22ffHollow Technique: Purple|r
+Gojo can now combine Red and Blue to create Hollow Technique: Purple.
 }
 
 STRING 24154
 // Abilities: A13Y (Six Eyes Deactivate), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] |cff00ffffSix Eyes Deactivate|r
-}
-
-STRING 24155
-// Abilities: A13Y (Six Eyes Deactivate), Ubertip (Tooltip - Normal - Extended)
-{
-Gojo puts his blindfold back on, disabling the active use of his Six Eyes technique.
-|cff00ffffCooldown: <A13X,Cool1>s|r
 }
 
 STRING 24156
@@ -168290,5 +168232,92 @@ STRING 24157
 // Abilities: A140 (Limitless), Tip (Tooltip - Normal)
 {
 |cffffcc00Limitless|r
+}
+
+STRING 24162
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 3% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 160% Blue + 160% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
+STRING 24163
+// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 3% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 160% Blue + 160% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
+STRING 24164
+// Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
+{
+Blue is an application of the Limitless centered around infinitely converging space to a single point that creates a powerful, attractive force. This ability automatically gains 1 level for every 3 hero levels, up to level 10.
+
+Hold down the Q button to charge for up to 4s to gain +200% damage and +50% pull speed. While charging, enemies are pulled towards Gojo. When fully charged, Gojo restores 1% of max mana per second.
+Redirect the beam after firing by using the Q key and the mouse cursor.
+
+|cff00ff00Duration: 5s
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
+STRING 24167
+// Abilities: A0KA (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
+{
+Blue is an application of the Limitless centered around infinitely converging space to a single point that creates a powerful, attractive force. This ability automatically gains 1 level for every 3 hero levels, up to level 10.
+
+Hold down the Q button to charge for up to 4s to gain +200% damage and +50% pull speed. While charging, enemies are pulled towards Gojo. When fully charged, Gojo restores 1% of max mana per second.
+Redirect the beam after firing by using the Q key and the mouse cursor.
+
+|cff00ff00Duration: 5s
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
+STRING 24168
+// Abilities: A13Y (Six Eyes Deactivate), Ubertip (Tooltip - Normal - Extended)
+{
+Gojo puts his blindfold back on, disabling the mana drain of using the Six Eyes.
+|cff00ffffCooldown: <A13X,Cool1>s|r
+}
+
+STRING 24169
+// Abilities: A0MB (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
+{
+The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. This ability automatically gains 1 level for every 3 hero levels above level 25, up to level 10.
+
+Hold down the W button to charge for up to 4s to gain +200% damage. While charging, enemies are pushed away from Gojo. When fully charged, Gojo restores 1% of max hp per second.
+The beam is fired 0.5s after the key is released. Redirect the beam after firing by using the W key and the mouse cursor. The beam automatically detonates if it arrives at the targetted location.
+
+|cff00ff00Duration: 2s
+|cff00ff00Damage: [Int] 16u/s + 300u (+200%)
+|cff00ffffCooldown: <A0OE,Cool1>s|r
+}
+
+STRING 24170
+// Abilities: A0OE (Cursed Technique Reversal: Red), Ubertip (Tooltip - Normal - Extended)
+{
+The reverse Limitless technique is powered by positive energy generated from reverse cursed technique as opposed to negative cursed energy. This reverses the effect of the strengthened Limitless, representing the concept of divergence brought into reality, producing a strong repelling effect rather than an attractive one. This ability automatically gains 1 level for every 3 hero levels above level 25, up to level 10.
+
+Hold down the W button to charge for up to 4s to gain +200% damage. While charging, enemies are pushed away from Gojo. When fully charged, Gojo restores 1% of max hp per second.
+The beam is fired 0.5s after the key is released. Redirect the beam after firing by using the W key and the mouse cursor. The beam automatically detonates if it arrives at the targetted location.
+
+|cff00ff00Duration: 2s
+|cff00ff00Damage: [Int] 16u/s + 300u (+200%)
+|cff00ffffCooldown: <A0OE,Cool1>s|r
 }
 

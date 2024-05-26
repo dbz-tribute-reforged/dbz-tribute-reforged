@@ -92,5 +92,17 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
       ]
     ]
   ],
+  [
+    Id.gojo, [
+      [
+        AbilityNames.Gojo.BLACK_FLASH,
+        AbilityNames.Gojo.LIMITLESS_GUARD,
+      ],
+      [
+        AbilityNames.BasicAbility.GUARD,
+        AbilityNames.BasicAbility.MAX_CHARGE,
+      ]
+    ]
+  ],
 
 ]);

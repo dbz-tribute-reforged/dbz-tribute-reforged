@@ -222,6 +222,14 @@ export class CreepManager {
         true, false
       )
     );
+    FogModifierStart(
+      CreateFogModifierRect(
+        Constants.heavenHellCreepPlayer,
+        FOG_OF_WAR_VISIBLE,
+        Constants.heavenHellRect,
+        true, false
+      )
+    );
 
     return this;
   }

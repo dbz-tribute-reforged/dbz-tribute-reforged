@@ -661,6 +661,8 @@ export module AbilityNames {
   }
 
   export module Gojo {
+    export const BLACK_FLASH: string = "Black Flash";
+    export const LIMITLESS_GUARD: string = "Limitless Guard";
     export const UNLIMITED_VOID: string = "Gojo Domain Expansion: Unlimited Void";
   }
 

@@ -165,7 +165,7 @@ export function customAbilityActivate(player: player, index: number) {
 
     if (customHero.canCastAbility(abilName, abilityInput)) {
       // show custom ability name on activation, if castable
-      TextTagHelper.showPlayerColorTextOnUnit(abilName, playerId, customHero.unit);
+
       if (abilName == AbilityNames.BasicAbility.MAX_POWER) {
         SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
       } else if (abilName == AbilityNames.BasicAbility.MAX_CHARGE) {
@@ -175,9 +175,17 @@ export function customAbilityActivate(player: player, index: number) {
         SimpleSpellSystem.DoJirenGlare(Id.gokuInstantTransmission, customHero.unit);
       } else if (abilName == AbilityNames.Beerus.BEERUS_COUNTER) {
         SimpleSpellSystem.DoJirenGlare(Id.beerusCounter, customHero.unit);
+      } else if (abilName == AbilityNames.Gojo.LIMITLESS_GUARD) {
+        SimpleSpellSystem.doGojoLimitlessGuard(Id.gojoLimitlessGuard, customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
+
+      if (abilName == AbilityNames.Gojo.BLACK_FLASH) {
+        SimpleSpellSystem.doGojoBlackFlash(Id.gojoBlackFlash, customHero.unit);
+      } else {
+        TextTagHelper.showPlayerColorTextOnUnit(abilName, playerId, customHero.unit);
+      }
     }
   }
 }

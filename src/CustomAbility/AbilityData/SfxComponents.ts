@@ -47631,6 +47631,42 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam gojo limitless guard", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "Ubershield White.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 4.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.5,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx beam gojo unlimited void", 
     repeatInterval: 1,
     startTick: 0,
