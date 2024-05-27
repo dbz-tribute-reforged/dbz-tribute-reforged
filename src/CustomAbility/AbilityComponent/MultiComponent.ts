@@ -88,15 +88,18 @@ export class MultiComponent implements
   }
 
   activateComponentsWhenReady() {
+    let numActivated = 0;
     if (this.currentDelay >= this.delayBetweenComponents) {
       for (let i = 0; i < this.componentsAddedPerRound && this.components.length > 0; ++i) {
         const component = this.components.pop();
         if (component) {
           this.activeComponents.push(component);
+          ++numActivated;
         }
       }
       this.currentDelay = 0;
     }
+    return numActivated;
   }
 
   adjustAngleCurrent() {
@@ -243,11 +246,12 @@ export class MultiComponent implements
     // very messy, but i used for 0 delay multis
     // 2 conditions for break at the end, 
     // if out of components or delay between components != 0, exit
+    let numActivated = 0;
     for (let activations = 0; activations < 100; ++activations) {
 
       if (this.components.length > 0) {
         // add components to active components when ready
-        this.activateComponentsWhenReady();
+        numActivated = this.activateComponentsWhenReady();
       }
       
       if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
@@ -283,8 +287,14 @@ export class MultiComponent implements
       ) {
         // on the first activation for delay = 0
         // only show the latest activated component
-        const component = this.activeComponents[this.activeComponents.length-1];
-        this.triggerComponent(component, ability, input, source);
+        
+        // show all num components added per round
+        for (let i = numActivated; i > 0; --i) {
+          if (i <= this.activeComponents.length) {
+            const component = this.activeComponents[this.activeComponents.length-i];
+            this.triggerComponent(component, ability, input, source);
+          }
+        }
 
       } else {
         // show all of them
