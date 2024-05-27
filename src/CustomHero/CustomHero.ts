@@ -28,6 +28,8 @@ export class CustomHero {
   public minimapIconBG: minimapicon;
   public minimapIcon: minimapicon;
 
+  public teamSfx: effect;
+
   constructor(
     public readonly unit: unit,
   ) {
@@ -167,6 +169,38 @@ export class CustomHero {
       this.minimapIconBG = null;
       this.minimapIcon = null;
     }
+
+    this.teamSfx = null;
+    this.setTeamSfx();
+  }
+
+  public resetTeamSfx() {
+    if (this.teamSfx) DestroyEffect(this.teamSfx);
+    this.setTeamSfx();
+  }
+
+  public setTeamSfx() {
+    const player = GetOwningPlayer(this.unit);
+    const playerId = GetPlayerId(player);
+    if (playerId >= Constants.maxActivePlayers) return;
+
+    let isTeam1 = false;
+    for (const p of Constants.defaultTeam1) {
+      if (p == player) isTeam1 = true;
+    }
+    this.teamSfx = AddSpecialEffect(
+      isTeam1 ? 
+        "Spell_Marker_Red.mdl" : 
+        "Spell_Marker_Blue.mdl"
+      ,
+      GetUnitX(this.unit),
+      GetUnitY(this.unit),
+    );
+    BlzSetSpecialEffectScale(this.teamSfx,
+      Math.max(1, Math.min(4, 
+        BlzGetUnitRealField(this.unit, UNIT_RF_SELECTION_SCALE)
+      ))
+    );
   }
 
   public addAbilityFromAll(name: string) {
@@ -330,5 +364,9 @@ export class CustomHero {
     FlushChildHashtable(Globals.simpleSpellCDHashtable, unitId);
     if (this.minimapIconBG) DestroyMinimapIcon(this.minimapIconBG);
     if (this.minimapIcon) DestroyMinimapIcon(this.minimapIcon);
+    if (this.teamSfx) {
+      DestroyEffect(this.teamSfx);
+      this.teamSfx = null;
+    }
   }
 }

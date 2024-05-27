@@ -454,7 +454,7 @@ export const AbilitiesList = [
       title: "Black Flash",
       body: 
         "Activate within 0.12s after damaging an enemy hero with an auto attack " + 
-        "to deal 0.9 x Int damage and restore 20% of max mana. " + 
+        "to deal 0.8 x Int damage and restore 20% of max mana. " + 
         "A successful hit will reset the cooldown of Black Flash.|n" +
         "Cost: 20 SP (10 if missed)|n" + 
         "CD: 6"

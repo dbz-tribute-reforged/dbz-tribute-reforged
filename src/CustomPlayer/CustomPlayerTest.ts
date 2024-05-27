@@ -881,6 +881,7 @@ export function CustomPlayerTest() {
         }
         for (const customHero of Globals.customPlayers[playerId].allHeroes) {
           customHero.resetMinimapIconBG();
+          customHero.resetTeamSfx();
         }
       }
     }

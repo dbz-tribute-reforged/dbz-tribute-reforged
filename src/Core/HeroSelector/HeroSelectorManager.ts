@@ -454,6 +454,8 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar2", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-crono", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-anime", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-vg", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-meme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-antimeme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
@@ -501,6 +503,14 @@ export class HeroSelectorManager {
 
         case "-crono":
           this.modeCrono();
+          break;
+
+        case "-anime":
+          this.modeAnime();
+          break;
+
+        case "-vg":
+          this.modeVG();
           break;
 
         case "-ar":
@@ -559,16 +569,16 @@ export class HeroSelectorManager {
   modeOriginal() {
     for (const hsUnit of this.heroSelectUnits) {
       if (
-        hsUnit.hasCategory(HeroSelectCategory.MEME)
+        hsUnit.hasCategory(HeroSelectCategory.DBZ)
         || hsUnit.hasCategory(HeroSelectCategory.CRONO)
       ) {
-        hsUnit.setUnitReq(RACE_DEMON);
-      } else {
         if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
           hsUnit.setUnitReq(0);
         } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
           hsUnit.setUnitReq(1);
         }
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
       }
     }
     this.startHeroSelection();
@@ -576,14 +586,14 @@ export class HeroSelectorManager {
 
   modeClassic() {
     for (const hsUnit of this.heroSelectUnits) {
-      if (hsUnit.hasCategory(HeroSelectCategory.MEME)) {
-        hsUnit.setUnitReq(RACE_DEMON);
-      } else {
+      if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
         if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
           hsUnit.setUnitReq(0);
         } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
           hsUnit.setUnitReq(1);
         }
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
       }
     }
     this.startHeroSelection();
@@ -591,10 +601,10 @@ export class HeroSelectorManager {
 
   modeMeme() {
     for (const hsUnit of this.heroSelectUnits) {
-      if (hsUnit.hasCategory(HeroSelectCategory.MEME)) {
-        hsUnit.setUnitReq(null);
-      } else {
+      if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
         hsUnit.setUnitReq(RACE_DEMON);
+      } else {
+        hsUnit.setUnitReq(null);
       }
     }
     this.startHeroSelection();
@@ -612,11 +622,31 @@ export class HeroSelectorManager {
   }
 
   modeCrono() {
-    let sum = 0;
     for (const hsUnit of this.heroSelectUnits) {
       if (hsUnit.hasCategory(HeroSelectCategory.CRONO)) {
         hsUnit.setUnitReq(null);
-        ++sum;
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
+      }
+    }
+    this.startHeroSelection();
+  }
+
+  modeAnime() {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.ANIME)) {
+        hsUnit.setUnitReq(null);
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
+      }
+    }
+    this.startHeroSelection();
+  }
+
+  modeVG() {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.VIDEOGAME)) {
+        hsUnit.setUnitReq(null);
       } else {
         hsUnit.setUnitReq(RACE_DEMON);
       }

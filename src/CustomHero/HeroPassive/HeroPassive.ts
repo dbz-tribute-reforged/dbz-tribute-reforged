@@ -3640,6 +3640,21 @@ export function setupRegenTimer(customHero: CustomHero) {
       SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);
       if (customHero.minimapIconBG) SetMinimapIconVisible(customHero.minimapIcon, mmVisible);
     }
+    if (customHero.teamSfx != null) {
+      const x = GetUnitX(customHero.unit);
+      const y = GetUnitY(customHero.unit);
+      MoveLocation(Globals.tmpLoc, x, y);
+      if (
+        !UnitHelper.isUnitAlive(customHero.unit) 
+        || !IsUnitVisible(customHero.unit, GetLocalPlayer())
+      ) {
+        BlzSetSpecialEffectZ(customHero.teamSfx, -512);
+      } else {
+        BlzSetSpecialEffectPosition(customHero.teamSfx,
+          x, y, 5 + GetLocationZ(Globals.tmpLoc)
+        );
+      }
+    }
     // regen: 3 stam per 1 second
     const heroStr = GetHeroStr(customHero.unit, true);
     const heroAgi = GetHeroAgi(customHero.unit, true);

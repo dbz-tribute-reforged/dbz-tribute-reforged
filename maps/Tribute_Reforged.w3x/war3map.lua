@@ -1638,7 +1638,7 @@ udg_DisconnectedPlayers = CreateForce()
 udg_HKVoiceTimer = CreateTimer()
 udg_TeleporterEnableFlag = true
 udg_NewTeleporterShortTime = 4.00
-udg_NewTeleporterLongTime = 8.00
+udg_NewTeleporterLongTime = 15.00
 udg_NeutralDroidsSpawns = 0
 i = 0
 while (true) do
@@ -9153,11 +9153,15 @@ u = BlzCreateUnitWithSkin(p, FourCC("n020"), 22765.7, -1813.7, 347.121, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 21605.0, -2005.5, 93.059, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 21652.2, -2205.5, 94.911, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10443.1, -6168.1, 265.857, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24760.3, -6550.9, 97.714, FourCC("n014"))
+SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9160.4, -4204.1, 146.606, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11459.6, -3553.9, 278.837, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10460.6, -4918.3, 123.701, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11831.3, -6992.9, 165.380, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -2797.4, -9987.3, 97.612, FourCC("n02F"))
+u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24502.6, -6451.1, -12.843, FourCC("n014"))
+SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6421.2, 444.6, 325.189, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6354.8, -452.9, 37.838, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 5207.8, 1694.3, 27.212, FourCC("n02E"))
@@ -9182,6 +9186,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 14074.9, -6217.6, 85.715, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14113.8, -5421.0, 90.828, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 14391.7, -3984.4, 268.415, FourCC("n03B"))
 SetUnitColor(u, ConvertPlayerColor(8))
+u = BlzCreateUnitWithSkin(p, FourCC("n038"), 22161.6, -6888.1, 168.568, FourCC("n038"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14973.9, 2793.2, 149.210, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16345.2, 2427.9, 302.492, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13815.6, 1109.3, 237.616, FourCC("n01E"))
@@ -30586,8 +30591,8 @@ ShowTextTagForceBJ(false, udg_TempFloatingText, GetPlayersAll())
 ShowTextTagForceBJ(true, udg_TempFloatingText, udg_TempPlayerGroup)
 SetTextTagVelocityBJ(udg_TempFloatingText, 48.00, 90)
 SetTextTagPermanentBJ(udg_TempFloatingText, false)
-SetTextTagLifespanBJ(udg_TempFloatingText, 5.00)
-SetTextTagFadepointBJ(udg_TempFloatingText, 3.50)
+SetTextTagLifespanBJ(udg_TempFloatingText, udg_TempReal5)
+SetTextTagFadepointBJ(udg_TempFloatingText, (0.70 * udg_TempReal5))
 end
 
 function InitTrig_FloatingText_Helper_Show_2()
@@ -35151,7 +35156,8 @@ if (Trig_Teleporter_New_Loop_Func001Func004Func010Func002C()) then
 udg_TempString = ("|cffff00ffTeleport in " .. (R2S(udg_TempReal) .. "s|r"))
 udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_TempUnit))
 udg_TempLoc = GetUnitLoc(udg_TempUnit)
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+udg_TempReal5 = 1.00
+TriggerExecute(gg_trg_FloatingText_Helper_Show_2)
 AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
                 RemoveLocation(udg_TempLoc)
@@ -37455,7 +37461,8 @@ SaveIntegerBJ(0, 1, udg_ID, udg_HeroRespawnHashtable)
 udg_TempString = ("|cffff00ffRespawn CD: " .. (I2S(R2I(LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable))) .. "|r"))
 udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_HeroRespawnUnit))
 udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
-TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+udg_TempReal5 = 1.00
+TriggerExecute(gg_trg_FloatingText_Helper_Show_2)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
 else

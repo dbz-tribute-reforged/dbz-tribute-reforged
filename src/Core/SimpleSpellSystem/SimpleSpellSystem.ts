@@ -8672,7 +8672,7 @@ export module SimpleSpellSystem {
   }
 
   export function doGojoBlackFlash(spellId: number, caster: unit) {
-    const dmgDataMult = BASE_DMG.KAME_DPS * 9;
+    const dmgDataMult = BASE_DMG.KAME_DPS * 8;
     const mpHealPct = -1 * 0.2;
     const reqDelay = 6;
 
