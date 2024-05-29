@@ -419,6 +419,10 @@ export function CustomPlayerTest() {
           if (unitTypeId == Id.ainzOoalGown && Constants.isAinzAbility(abilityId)) {
             abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
           }
+          if (GetUnitAbilityLevel(caster, Id.cheongMyeongCritPassive) > 0) {
+            abilityLevel = SimpleSpellSystem.cheungMyeongGetSpellLevel(abilityId, caster);
+            SimpleSpellSystem.cheungMyeongOnCast(abilityId, caster);
+          }
 
 
           let spellTargetUnit = undefined;

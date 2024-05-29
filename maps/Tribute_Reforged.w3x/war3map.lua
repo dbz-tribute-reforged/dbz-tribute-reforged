@@ -1142,6 +1142,7 @@ gg_trg_Transformations_Granolah = nil
 gg_trg_Transformations_Whis = nil
 gg_trg_Transformations_Beerus = nil
 gg_trg_Transformations_Gojo = nil
+gg_trg_Transformations_Cheong_Myeong = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -2659,6 +2660,7 @@ HeroName = {
   H00P = "Genos",
   H01C = "Tatsumaki",
   H02A = "Satoru Gojo",
+  H02B = "Cheong Myeong",
 
   H09Z = "Rust Tyranno"
 }
@@ -9160,7 +9162,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11459.6, -3553.9, 278.837, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10460.6, -4918.3, 123.701, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11831.3, -6992.9, 165.380, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -2797.4, -9987.3, 97.612, FourCC("n02F"))
-u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24502.6, -6451.1, -12.843, FourCC("n014"))
+u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24502.6, -6451.1, 347.157, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6421.2, 444.6, 325.189, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6354.8, -452.9, 37.838, FourCC("n02F"))
@@ -10649,6 +10651,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("H05C"), 2719.4, 17475.4, 271.245, FourCC("H
 u = BlzCreateUnitWithSkin(p, FourCC("h077"), -15085.0, 16880.9, 359.232, FourCC("h077"))
 SetUnitColor(u, ConvertPlayerColor(11))
 u = BlzCreateUnitWithSkin(p, FourCC("H022"), 3230.7, 17649.1, 268.260, FourCC("H022"))
+SetUnitState(u, UNIT_STATE_MANA, 650)
+u = BlzCreateUnitWithSkin(p, FourCC("H02B"), 3592.9, 17932.4, 345.970, FourCC("H02B"))
 SetUnitState(u, UNIT_STATE_MANA, 650)
 u = BlzCreateUnitWithSkin(p, FourCC("h00T"), 22323.8, 27425.5, 280.160, FourCC("h00T"))
 u = BlzCreateUnitWithSkin(p, FourCC("H029"), 3094.0, 17667.9, 277.600, FourCC("H029"))
@@ -13457,7 +13461,6 @@ ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_
 SuspendHeroXPBJ(false, GetSummonedUnit())
 SetUnitAnimation(GetSummonedUnit(), "stand")
 udg_TempUnit = GetSummonedUnit()
-    UntRemoveAbility(udg_TempUnit, FourCC('Amov'))
     udg_ID = GetHandleId(udg_TempUnit)
 SaveIntegerBJ(1, 0, udg_ID, udg_SummonsHashtable)
     udg_TempReal = GetUnitX(udg_TempUnit)
@@ -15003,6 +15006,14 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A13V"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A13W"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A13X"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A13Y"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(true, FourCC("A14D"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A14C"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A145"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A146"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A147"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A148"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A149"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A14A"), udg_TempPlayer)
 TriggerExecute(gg_trg_Frieza_Reset_Abilities)
 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -33913,6 +33924,13 @@ end
 return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func005C()
+if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H02B"))) then
+return false
+end
+return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Actions()
 if (Trig_Scoreboard_Assign_Hero_Icon_Func001C()) then
 udg_TempString = "BTNGoku.blp"
@@ -34265,6 +34283,10 @@ end
 end
 end
 end
+end
+if (Trig_Scoreboard_Assign_Hero_Icon_Func005C()) then
+udg_TempString = "BTNCheongMyeong.blp"
+else
 end
 end
 
@@ -45228,6 +45250,13 @@ end
 return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H02B"))) then
+return false
+end
+return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H02A"))) then
 return false
@@ -45693,6 +45722,10 @@ else
 if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
 TriggerExecute(gg_trg_Transformations_Gojo)
 else
+if (Trig_Transformations_Parse_String_Func001Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+TriggerExecute(gg_trg_Transformations_Cheong_Myeong)
+else
+end
 end
 end
 end
@@ -51609,7 +51642,14 @@ end
 return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func082C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func081C()
+if (not (udg_TempUnitType == FourCC("H02B"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func083C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -52271,7 +52311,15 @@ UnitAddAbilityBJ(FourCC("A0CW"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0CW"), udg_TransformationResultUnit, 10)
 else
 end
-if (Trig_Kid_Buu_Bonus_Ability_Func002Func082C()) then
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func081C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A142"), udg_TransformationResultUnit)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A142'))
+UnitAddAbilityBJ(FourCC("A14D"), udg_TransformationResultUnit)
+UnitAddAbilityBJ(FourCC("A14C"), udg_TransformationResultUnit)
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func083C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -71071,6 +71119,134 @@ gg_trg_Transformations_Gojo = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Gojo, Trig_Transformations_Gojo_Actions)
 end
 
+function Trig_Transformations_Cheong_Myeong_Func010C()
+if (not (udg_TransformationString == "hs")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func011C()
+if (not (udg_TransformationString == "r")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func012C()
+if (not (udg_TransformationString == "fp")) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func013C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A14B"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func014C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A14D"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetUnitAbilityLevelSwapped(FourCC("A14C"), udg_StatMultUnit) == 0)) then
+return false
+end
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func016Func002Func004C()
+if (udg_TransformationAbility ~= FourCC("ANcl")) then
+return true
+end
+if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+return true
+end
+return false
+end
+
+function Trig_Transformations_Cheong_Myeong_Func016Func002C()
+if (not Trig_Transformations_Cheong_Myeong_Func016Func002Func004C()) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Func016C()
+if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Cheong_Myeong_Actions()
+udg_TransformationSFXString = ""
+udg_TransformationSFXString2 = ""
+udg_TransformationAbility = FourCC("ANcl")
+udg_TransformationAbility2 = FourCC("ANcl")
+udg_StatMultReal = 0.00
+udg_StatMultStr = 0.00
+udg_StatMultAgi = 0.00
+udg_StatMultInt = 0.00
+    udg_ID = GetHandleId(udg_StatMultUnit)
+if (Trig_Transformations_Cheong_Myeong_Func010C()) then
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_24252")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Cheong_Myeong_Func011C()) then
+udg_StatMultReal = 1.00
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Cheong_Myeong_Func012C()) then
+udg_StatMultReal = RMinBJ(2.50, (1 + ((0.11 * 0.10) * I2R(GetHeroLevel(udg_StatMultUnit)))))
+udg_TransformationAbility = FourCC("AUan")
+else
+end
+if (Trig_Transformations_Cheong_Myeong_Func013C()) then
+UnitAddAbilityBJ(FourCC("A14B"), udg_StatMultUnit)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_24253")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Cheong_Myeong_Func014C()) then
+UnitAddAbilityBJ(FourCC("A14D"), udg_StatMultUnit)
+UnitAddAbilityBJ(FourCC("A14C"), udg_StatMultUnit)
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_24256")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Cheong_Myeong_Func016C()) then
+if (Trig_Transformations_Cheong_Myeong_Func016Func002C()) then
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            udg_TransformationID = FourCC('H02B')
+BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+else
+end
+TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+else
+udg_StatMultReal = 0.00
+end
+end
+
+function InitTrig_Transformations_Cheong_Myeong()
+gg_trg_Transformations_Cheong_Myeong = CreateTrigger()
+TriggerAddAction(gg_trg_Transformations_Cheong_Myeong, Trig_Transformations_Cheong_Myeong_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
 if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
 return false
@@ -73331,6 +73507,7 @@ InitTrig_Transformations_Granolah()
 InitTrig_Transformations_Whis()
 InitTrig_Transformations_Beerus()
 InitTrig_Transformations_Gojo()
+InitTrig_Transformations_Cheong_Myeong()
 InitTrig_Saga_Unit_Init()
 InitTrig_Saga_Unit_Capsule_Unlock()
 InitTrig_Saga_Unit_Loop()

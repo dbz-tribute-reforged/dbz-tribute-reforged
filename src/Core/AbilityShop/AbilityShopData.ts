@@ -43,6 +43,15 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
     ]
   ],
   [
+    Id.pecorine, [
+      [
+      ],
+      [
+        AbilityNames.BasicAbility.MAX_CHARGE,
+      ]
+    ]
+  ],
+  [
     Id.vegetaMajin, [
       [
       ],
@@ -100,6 +109,15 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
       ],
       [
         AbilityNames.BasicAbility.GUARD,
+        AbilityNames.BasicAbility.MAX_CHARGE,
+      ]
+    ]
+  ],
+  [
+    Id.cheongMyeong, [
+      [
+      ],
+      [
         AbilityNames.BasicAbility.MAX_CHARGE,
       ]
     ]

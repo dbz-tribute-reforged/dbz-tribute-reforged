@@ -514,8 +514,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.beerusFoodTakoyaki, AbilityNames.Beerus.BEERUS_TAKOYAKI],
     [Id.beerusFoodPudding, AbilityNames.Beerus.BEERUS_PUDDING],
 
-    [Id.gojoUnlimitedVoid, AbilityNames.Gojo.UNLIMITED_VOID],
-
     [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
     [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
     [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],
@@ -524,6 +522,18 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.granolahEvolvedEyes, AbilityNames.Granolah.EVOLVED_EYES],
     [Id.granolahSnipeVolley, AbilityNames.Granolah.SNIPE_VOLLEY],
     [Id.granolahSnipeCharged, AbilityNames.Granolah.SNIPE_CHARGED],
+
+    [Id.gojoUnlimitedVoid, AbilityNames.Gojo.UNLIMITED_VOID],
+
+    [Id.cheongMyeongSwordOfSixElements, AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS],
+    [Id.cheongMyeongFallingPetalSword, AbilityNames.CheongMyeong.FALLING_PETAL_SWORD],
+    [Id.cheongMyeongFlutteringShadowPetals, AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS],
+    [Id.cheongMyeongPlumBlossomCleave, AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE],
+    [Id.cheongMyeongPlumBlossomTempest, AbilityNames.CheongMyeong.PLUM_BLOSSOM_TEMPEST],
+    [Id.cheongMyeongCelestialFallingPetals, AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS],
+    [Id.cheongMyeongPlumBlossomPalisade, AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE],
+    [Id.cheongMyeongPlumBlossomFlow, AbilityNames.CheongMyeong.PLUM_BLOSSOM_FLOW],
+    [Id.cheongMyeongPlumBlossomCloudburst, AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST],
 
 
 

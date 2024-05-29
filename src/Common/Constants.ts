@@ -53,10 +53,13 @@ export module Globals {
   export const tmpUnitGroup = CreateGroup();
   export const tmpUnitGroup2 = CreateGroup();
   export const tmpUnitGroup3 = CreateGroup();
+  export const ddsUnitGroup = CreateGroup();
   export const tmpForce = CreateForce();
   export const tmpVector = new Vector2D();
   export const tmpVector2 = new Vector2D();
   export const tmpVector3 = new Vector2D();
+  export const ddsVector = new Vector2D();
+  export const ddsVector2 = new Vector2D();
   export const tmpLoc = Location(0,0);
 
   export const globalDummyCaster = CreateUnit(
@@ -779,6 +782,21 @@ export module Id {
   export const cellMaxBarrier = FourCC("A0HM");
   export const cellMaxBarrier2 = FourCC("A0HY");
   export const cellMaxDisaster = FourCC("A0HZ");
+
+  export const cheongMyeong = FourCC("H02B");
+  export const cheongMyeongSwordOfSixElements = FourCC("A142");
+  export const cheongMyeongFallingPetalSword = FourCC("A143");
+  export const cheongMyeongFlutteringShadowPetals = FourCC("A144");
+  export const cheongMyeongPlumBlossomCleave = FourCC("A145");
+  export const cheongMyeongPlumBlossomTempest = FourCC("A146");
+  export const cheongMyeongCelestialFallingPetals = FourCC("A147");
+  export const cheongMyeongPlumBlossomPalisade = FourCC("A148");
+  export const cheongMyeongPlumBlossomFlow = FourCC("A149");
+  export const cheongMyeongPlumBlossomCloudburst = FourCC("A14A");
+  export const cheongMyeongScatteredBlossomfall = FourCC("A14B");
+  export const cheongMyeongReturnActive = FourCC("A14C");
+  export const cheongMyeongReturnPassive = FourCC("A14D");
+  export const cheongMyeongCritPassive = FourCC("A0BB");
 
   export const crono = FourCC("H0A0");
   export const cronoCyclone = FourCC("A0VP");

@@ -14,6 +14,7 @@ export const DodgeComponents = [
     maxEnemies: 3,
     addRandomAngle: true,
     ignoreHeroes: true,
+    heroesOnly: false,
   },
   // to here, and replace with unique name
   {
@@ -30,6 +31,7 @@ export const DodgeComponents = [
     maxEnemies: 3,
     addRandomAngle: true,
     ignoreHeroes: true,
+    heroesOnly: false,
   },
   {
     name: "dodge future sight",
@@ -45,6 +47,7 @@ export const DodgeComponents = [
     maxEnemies: 3,
     addRandomAngle: true,
     ignoreHeroes: false,
+    heroesOnly: false,
   },
   {
     name: "dodge homing beam",
@@ -60,6 +63,7 @@ export const DodgeComponents = [
     maxEnemies: 1,
     addRandomAngle: false,
     ignoreHeroes: false,
+    heroesOnly: false,
   },
   {
     name: "dodge scattering bullet homing",
@@ -75,6 +79,7 @@ export const DodgeComponents = [
     maxEnemies: 1,
     addRandomAngle: false,
     ignoreHeroes: false,
+    heroesOnly: true,
   },
   // --------------------------------------------
   {
@@ -91,5 +96,6 @@ export const DodgeComponents = [
     maxEnemies: 3,
     addRandomAngle: true,
     ignoreHeroes: false,
+    heroesOnly: false,
   },
 ];

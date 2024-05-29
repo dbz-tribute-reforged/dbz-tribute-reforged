@@ -143,6 +143,9 @@ export class HeroPassiveManager {
       case Id.gojo:
         gojoPassive(customHero);
         break;
+      case Id.cheongMyeong:
+        cheongMyeongPassive(customHero);
+        break;
       default:
         break;
     }
@@ -3627,6 +3630,15 @@ export function gojoPassive(customHero: CustomHero) {
       return false;
     })
   );
+}
+
+export function cheongMyeongPassive(customHero: CustomHero) {
+  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCleave);
+  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomTempest);
+  UnitAddAbility(customHero.unit, Id.cheongMyeongCelestialFallingPetals);
+  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomPalisade);
+  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomFlow);
+  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCloudburst);
 }
 
 export function setupRegenTimer(customHero: CustomHero) {

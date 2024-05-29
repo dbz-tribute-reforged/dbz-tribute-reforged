@@ -424,6 +424,10 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.gojoSixEyesOn, SimpleSpellSystem.doGojoSixEyesOn);
     Globals.genericSpellMap.set(Id.gojoSixEyesOff, SimpleSpellSystem.doGojoSixEyesOff);
     Globals.genericSpellMap.set(Id.gojoTeleport, SimpleSpellSystem.doGojoTeleport);
+
+    Globals.genericSpellMap.set(Id.cheongMyeongSwordOfSixElements, SimpleSpellSystem.doCheongMyeongSwordOfSixElements);
+    Globals.genericSpellMap.set(Id.cheongMyeongFlutteringShadowPetals, SimpleSpellSystem.doCheongMyeongFlutteringShadowPetals);
+    Globals.genericSpellMap.set(Id.cheongMyeongPlumBlossomTempest, SimpleSpellSystem.doCheongMyeongPlumBlossomTempest);
     
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
@@ -2180,25 +2184,25 @@ export module SimpleSpellSystem {
 
     const unitId = GetUnitTypeId(target);
     const player = GetOwningPlayer(target);
-    Globals.tmpVector.setPos(GetUnitX(target), GetUnitY(target));
-    Globals.tmpVector2.setPos(GetUnitX(source), GetUnitY(source));
+    Globals.ddsVector.setPos(GetUnitX(target), GetUnitY(target));
+    Globals.ddsVector2.setPos(GetUnitX(source), GetUnitY(source));
 
     if (spellId == Id.shalltearNegativeImpactShield) {
-      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxNegativeImpactShieldDistance) return;
+      if (CoordMath.distance(Globals.ddsVector, Globals.ddsVector2) > maxNegativeImpactShieldDistance) return;
     } else if (spellId == Id.minatoSecondStep) {
-      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxMinatoSecondStepDistance) return;
+      if (CoordMath.distance(Globals.ddsVector, Globals.ddsVector2) > maxMinatoSecondStepDistance) return;
     } else {
-      if (CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > maxGlareDistance) return;
+      if (CoordMath.distance(Globals.ddsVector, Globals.ddsVector2) > maxGlareDistance) return;
     }
 
-    SetUnitX(target, Globals.tmpVector2.x);
-    SetUnitY(target, Globals.tmpVector2.y);
+    SetUnitX(target, Globals.ddsVector2.x);
+    SetUnitY(target, Globals.ddsVector2.y);
     
     if (spellId != Id.gokuInstantTransmission) {
       const castDummy = CreateUnit(
         player, 
         Constants.dummyCasterId, 
-        Globals.tmpVector2.x, Globals.tmpVector2.y, 
+        Globals.ddsVector2.x, Globals.ddsVector2.y, 
         0
       );
       UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
@@ -2240,7 +2244,7 @@ export module SimpleSpellSystem {
       const dmgDelay = 0.43 / animDelay;
       const animResetDelay = 0.66 - dmgDelay;
 
-      minatoKunaiCreateVec(target, Globals.tmpVector2);
+      minatoKunaiCreateVec(target, Globals.ddsVector2);
       
       PauseManager.getInstance().pause(target, true);
       SetUnitTimeScalePercent(target, animDelay * 100);
@@ -2259,11 +2263,11 @@ export module SimpleSpellSystem {
       TimerStart(dmgTimer, dmgDelay, false, () => {
 
         spellPower = customHero ? customHero.spellPower : 1.0;
-        Globals.tmpVector2.setUnit(target);
+        Globals.ddsVector2.setUnit(target);
         AOEDamage.genericDealAOEDamage(
-          Globals.tmpUnitGroup, 
+          Globals.ddsUnitGroup, 
           target,
-          Globals.tmpVector2.x, Globals.tmpVector2.y,
+          Globals.ddsVector2.x, Globals.ddsVector2.y,
           300,
           abilityLevel,
           spellPower,
@@ -2271,9 +2275,15 @@ export module SimpleSpellSystem {
           1.0,
           bj_HEROSTAT_INT
         );
-        const sfx1 = AddSpecialEffect("RasenganBomb2.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
-        const sfx2 = AddSpecialEffect("RasenganEffect4.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
-        const sfx3 = AddSpecialEffect("RasenganBlast.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y);
+        const sfx1 = AddSpecialEffect("RasenganBomb2.mdl",
+          Globals.ddsVector2.x, Globals.ddsVector2.y
+        );
+        const sfx2 = AddSpecialEffect("RasenganEffect4.mdl",
+          Globals.ddsVector2.x, Globals.ddsVector2.y
+        );
+        const sfx3 = AddSpecialEffect("RasenganBlast.mdl",
+          Globals.ddsVector2.x, Globals.ddsVector2.y
+        );
         
         const animResetTimer = TimerManager.getInstance().get();
         TimerStart(animResetTimer, animResetDelay, false, () => {
@@ -2313,16 +2323,16 @@ export module SimpleSpellSystem {
       DestroyEffect(
         AddSpecialEffect(
           "PurpleBigExplosion.mdl",
-          Globals.tmpVector2.x, Globals.tmpVector2.y
+          Globals.ddsVector2.x, Globals.ddsVector2.y
         )
       );
     } else if (spellId == Id.minatoSecondStep) {
-      DestroyEffect(AddSpecialEffect("RasenganWhiteShockwave.mdl",Globals.tmpVector2.x, Globals.tmpVector2.y));
+      DestroyEffect(AddSpecialEffect("RasenganWhiteShockwave.mdl",Globals.ddsVector2.x, Globals.ddsVector2.y));
     } else if (spellId == Id.gokuInstantTransmission) {
       
     } else {
       DestroyEffect(
-        AddSpecialEffect("Slam.mdl", Globals.tmpVector2.x, Globals.tmpVector2.y)
+        AddSpecialEffect("Slam.mdl", Globals.ddsVector2.x, Globals.ddsVector2.y)
       );
     }
     
@@ -10299,6 +10309,311 @@ export module SimpleSpellSystem {
     // });
   }
 
+  export function cheungMyeongGetSpellLevel(spellId: number, caster: unit) {
+    return Math.min(10, 1 + GetHeroLevel(caster) * 0.09);
+  }
+
+  export function cheungMyeongOnCast(spellId: number, caster: unit) {
+    // const basicManaCostPct = 0.1;
+    // const specialManaCostPct = 0.2;
+    const basicManaCostPct = -0.1;
+    const specialManaCostPct = -0.2;
+
+    if (spellId == Id.cheongMyeongScatteredBlossomfall) return;
+
+    const cheongMyeongComboKey = StringHash("cheong_combo");
+    const cheongMyeongComboLockKey = StringHash("cheong_combo_lock");
+
+    const isBasic = (
+      spellId == Id.cheongMyeongSwordOfSixElements
+      || spellId == Id.cheongMyeongFallingPetalSword
+      || spellId == Id.cheongMyeongFlutteringShadowPetals
+    );
+
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    UnitHelper.payMPPercentCost(
+      caster, 
+      isBasic ? basicManaCostPct : specialManaCostPct, 
+      UNIT_STATE_MAX_MANA
+    );
+
+    if (!isBasic) {
+      SetPlayerAbilityAvailable(player, spellId, false);
+      SaveBoolean(Globals.genericSpellHashtable, casterId, cheongMyeongComboLockKey, false);
+      return;
+    }
+    if (LoadBoolean(Globals.genericSpellHashtable, casterId, cheongMyeongComboLockKey)) return;
+
+    const spellVal = spellId == Id.cheongMyeongSwordOfSixElements ? 
+      1 : (spellId == Id.cheongMyeongFallingPetalSword ?
+      2 : 3
+    );
+
+    const comboVal = LoadInteger(Globals.genericSpellHashtable, casterId, cheongMyeongComboKey);
+    if (comboVal % 10 != spellVal ) {
+      const finalVal = spellVal + 10 * comboVal;
+      const isAddSpecial = finalVal >= 10;
+      SaveInteger(Globals.genericSpellHashtable, 
+        casterId, cheongMyeongComboKey, 
+        isAddSpecial ? 0 : finalVal
+      );
+      if (isAddSpecial) {
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongPlumBlossomCleave, finalVal == 12);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongPlumBlossomTempest, finalVal == 13);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongCelestialFallingPetals, finalVal == 21);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongPlumBlossomPalisade, finalVal == 23);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongPlumBlossomFlow, finalVal == 31);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongPlumBlossomCloudburst, finalVal == 32);
+        SaveBoolean(Globals.genericSpellHashtable, casterId, cheongMyeongComboLockKey, true);
+      }
+    }
+  }
+  
+  export function cheongMyeongSakuraSlash(
+    caster: unit, 
+    x: number, y: number,
+    maxDist: number,
+    dmgDataMult: number,
+  ) {
+    const dmgAOE = 150;
+    const speed = 100;
+    const sfxHeight = 100;
+
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(x, y);
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    const dist = Math.min(
+      maxDist,
+      Math.max(
+        speed,
+        CoordMath.distance(Globals.tmpVector, Globals.tmpVector2)
+      )
+    );
+    Globals.tmpVector3.polarProjectCoords(
+      Globals.tmpVector, ang, dist * 0.5
+    );
+
+    let sfx = AddSpecialEffect("SakuraSlash.mdl", Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectScale(sfx, dist * 0.002);
+    BlzSetSpecialEffectTimeScale(sfx, 0.75);
+    BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+    MoveLocation(Globals.tmpLoc, Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectZ(sfx, GetLocationZ(Globals.tmpLoc) + sfxHeight);
+    DestroyEffect(sfx);
+
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster, 1, ch.spellPower,
+      dmgDataMult, 1, bj_HEROSTAT_INT
+    );
+
+    Globals.tmpVector3.setVector(Globals.tmpVector);
+    GroupClear(Globals.tmpUnitGroup);
+    GroupClear(Globals.tmpUnitGroup2);
+    for (let i = 0; i < dist + speed; i += speed) {
+      if (!PathingCheck.isGroundWalkable(Globals.tmpVector3)) break;
+
+      sfx = AddSpecialEffect("BlossomsMissile.mdl", Globals.tmpVector3.x, Globals.tmpVector3.y);
+      MoveLocation(Globals.tmpLoc, Globals.tmpVector3.x, Globals.tmpVector3.y);
+      BlzSetSpecialEffectZ(sfx, GetLocationZ(Globals.tmpLoc) + sfxHeight);
+      DestroyEffect(sfx);
+
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup2, 
+        Globals.tmpVector3.x, Globals.tmpVector3.y, dmgAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup2, () => {
+        const unit = GetEnumUnit();
+        if (
+          !IsUnitInGroup(unit, Globals.tmpUnitGroup)
+          && UnitHelper.isUnitTargetableForPlayer(unit, player)
+        ) {
+          UnitDamageTarget(
+            caster, unit, dmg, 
+            false, false, 
+            ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+            WEAPON_TYPE_WHOKNOWS
+          );
+          GroupAddUnit(Globals.tmpUnitGroup, unit);
+        }
+      });
+
+      const newDist = CoordMath.distance(Globals.tmpVector3, Globals.tmpVector2);
+      if (newDist < 1) break;
+      Globals.tmpVector3.polarProjectCoords(
+        Globals.tmpVector3, ang, Math.min(speed, newDist)
+      );
+    }
+    
+    PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector3);
+  }
+
+  export function doCheongMyeongSwordOfSixElements(spellId: number) {
+    const dmgDataMult = BASE_DMG.KAME_DPS * 2;
+    const maxDist = 300;
+
+    const caster = GetTriggerUnit();
+    const spellX = GetSpellTargetX();
+    const spellY = GetSpellTargetY();
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.25, false, () => {
+      cheongMyeongSakuraSlash(
+        caster, 
+        spellX, spellY,
+        maxDist,
+        dmgDataMult,
+      );
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
+  export function doCheongMyeongFlutteringShadowPetals(spellId: number) {
+    const dmgDataMult = BASE_DMG.KAME_DPS * 3;
+    const maxDist = 700;
+    cheongMyeongSakuraSlash(
+      GetTriggerUnit(), 
+      GetSpellTargetX(), GetSpellTargetY(),
+      maxDist,
+      dmgDataMult
+    );
+  }
+  
+  export function doCheongMyeongPlumBlossomTempest(spellId: number) {
+    const maxDist = 1280;
+    const sfxHeight = 100;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    if (!ch) return;
+
+    const cheongTempestCasterKey = StringHash("cheong_tempest_caster");
+    const cheongTempestRepeatKey = StringHash("cheong_tempest_repeat");
+    const cheongTempestX1Key = StringHash("cheong_tempest_x1");
+    const cheongTempestY1Key = StringHash("cheong_tempest_y1");
+    const cheongTempestX2Key = StringHash("cheong_tempest_x2");
+    const cheongTempestY2Key = StringHash("cheong_tempest_y2");
+    const cheongTempestSfxKey = StringHash("cheong_tempest_sfx");
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(GetSpellTargetX(), GetSpellTargetY());
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, maxDist);
+
+    // create a line
+    Globals.tmpVector3.polarProjectCoords(Globals.tmpVector, ang, maxDist * 0.5);
+    let sfx = AddSpecialEffect("SakuraSlash.mdl", Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectScale(sfx, maxDist * 0.002);
+    BlzSetSpecialEffectTimeScale(sfx, 0.2);
+    BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+    MoveLocation(Globals.tmpLoc, Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectZ(sfx, GetLocationZ(Globals.tmpLoc) + sfxHeight);
+
+    // wait
+    const timer = TimerManager.getInstance().get();
+    const timerId = GetHandleId(timer);
+    SaveUnitHandle(Globals.genericSpellHashtable, timerId, cheongTempestCasterKey, caster);
+    SaveInteger(Globals.genericSpellHashtable, timerId, cheongTempestRepeatKey, 1);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestX1Key, Globals.tmpVector.x);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestY1Key, Globals.tmpVector.y);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestX2Key, Globals.tmpVector2.x);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestY2Key, Globals.tmpVector2.y);
+    SaveEffectHandle(Globals.genericSpellHashtable, timerId, cheongTempestSfxKey, sfx);
+    TimerStart(timer, 1.0, false, cheongMyeongTempestLoop);
+    
+  }
+
+  export function cheongMyeongTempestLoop() {
+    const dmgDataMult = BASE_DMG.KAME_DPS * 8;
+    const dmgAOE = 256;
+    const speed = 100;
+    const maxDist = 1280;
+    const sfxHeight = 100;
+
+    const cheongTempestCasterKey = StringHash("cheong_tempest_caster");
+    const cheongTempestRepeatKey = StringHash("cheong_tempest_repeat");
+    const cheongTempestX1Key = StringHash("cheong_tempest_x1");
+    const cheongTempestY1Key = StringHash("cheong_tempest_y1");
+    const cheongTempestX2Key = StringHash("cheong_tempest_x2");
+    const cheongTempestY2Key = StringHash("cheong_tempest_y2");
+    const cheongTempestSfxKey = StringHash("cheong_tempest_sfx");
+
+    const timer = GetExpiredTimer();
+    const timerId = GetHandleId(timer);
+
+    const caster = LoadUnitHandle(Globals.genericSpellHashtable, timerId, cheongTempestCasterKey);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(caster);
+    Globals.tmpVector.setPos(
+      LoadReal(Globals.genericSpellHashtable, timerId, cheongTempestX1Key),
+      LoadReal(Globals.genericSpellHashtable, timerId, cheongTempestY1Key)
+    );
+    Globals.tmpVector2.setPos(
+      LoadReal(Globals.genericSpellHashtable, timerId, cheongTempestX2Key),
+      LoadReal(Globals.genericSpellHashtable, timerId, cheongTempestY2Key)
+    );
+    let sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, cheongTempestSfxKey);
+    DestroyEffect(sfx);
+    
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+    sfx = AddSpecialEffect("SakuraLineBeam.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
+    BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+    DestroyEffect(sfx);
+
+    GroupClear(Globals.tmpUnitGroup);
+    GroupClear(Globals.tmpUnitGroup2);
+
+    const spellLevel = cheungMyeongGetSpellLevel(Id.cheongMyeongPlumBlossomTempest, caster);
+
+    Globals.tmpVector3.setVector(Globals.tmpVector);
+    for (let i = 0; i < dist; i += speed) {
+      AOEDamage.genericDealAOEDamageExclude(
+        Globals.tmpUnitGroup, Globals.tmpUnitGroup2,
+        caster,
+        Globals.tmpVector3.x, Globals.tmpVector3.y,
+        dmgAOE, spellLevel, ch.spellPower,
+        dmgDataMult, 1.0, bj_HEROSTAT_INT
+      );
+      Globals.tmpVector3.polarProjectCoords(Globals.tmpVector3, ang, speed);
+    }
+
+    const repeat = LoadInteger(Globals.genericSpellHashtable, timerId, cheongTempestRepeatKey);
+    if (repeat <= 0) {
+      FlushChildHashtable(Globals.genericSpellHashtable, timerId);
+      TimerManager.getInstance().recycle(timer);
+      return;
+    }
+
+    Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, maxDist * 0.5);
+    Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, maxDist);
+    Globals.tmpVector3.polarProjectCoords(Globals.tmpVector, ang, maxDist * 0.5);
+
+    sfx = AddSpecialEffect("SakuraSlash.mdl", Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectScale(sfx, maxDist * 0.002);
+    BlzSetSpecialEffectTimeScale(sfx, 0.4);
+    BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
+    MoveLocation(Globals.tmpLoc, Globals.tmpVector3.x, Globals.tmpVector3.y);
+    BlzSetSpecialEffectZ(sfx, GetLocationZ(Globals.tmpLoc) + sfxHeight);
+
+    SaveInteger(Globals.genericSpellHashtable, timerId, cheongTempestRepeatKey, repeat-1);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestX1Key, Globals.tmpVector.x);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestY1Key, Globals.tmpVector.y);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestX2Key, Globals.tmpVector2.x);
+    SaveReal(Globals.genericSpellHashtable, timerId, cheongTempestY2Key, Globals.tmpVector2.y);
+    SaveEffectHandle(Globals.genericSpellHashtable, timerId, cheongTempestSfxKey, sfx);
+
+    TimerStart(timer, 0.5, false, cheongMyeongTempestLoop);
+  }
+
   export function createTatsumakiRock(caster: unit, x: number, y: number) {
     const casterKey = StringHash("tatsumaki_caster");
     const dmgGroupKey = StringHash("tatsumaki_dmg_group");
@@ -10727,6 +11042,9 @@ export module SimpleSpellSystem {
     }
     if (GetUnitAbilityLevel(unit, Id.gojoSixEyesTrueSight) > 0) {
       newCd *= 0.5;
+    }
+    if (GetUnitAbilityLevel(unit, Id.cheongMyeongReturnPassive) > 0) {
+      newCd *= 0.75;
     }
 
     if (UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.SPARE_PARTS)) {

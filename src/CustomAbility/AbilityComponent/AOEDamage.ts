@@ -185,7 +185,45 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         );
       }
     });
+  }
 
+  static genericDealDamageToGroupExclude(
+    targetGroup: group,
+    excludeGroup: group,
+    caster: unit,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    const player = GetOwningPlayer(caster);
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat
+    );
+    ForGroup(targetGroup, () => {
+      const target = GetEnumUnit();
+      if (
+        !IsUnitInGroup(target, excludeGroup)
+        && UnitHelper.isUnitTargetableForPlayer(target, player)
+      ) {
+        UnitDamageTarget(
+          caster, 
+          target,
+          dmg,
+          true, false,
+          ATTACK_TYPE_HERO,
+          DAMAGE_TYPE_NORMAL,
+          WEAPON_TYPE_WHOKNOWS
+        );
+        GroupAddUnit(excludeGroup, target);
+      }
+    });
   }
 
   static genericDealAOEDamage(
@@ -210,6 +248,39 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
     AOEDamage.genericDealDamageToGroup(
       targetGroup,
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat,
+    );
+  }
+
+  static genericDealAOEDamageExclude(
+    targetGroup: group,
+    excludeGroup: group,
+    caster: unit,
+    x: number,
+    y: number,
+    aoe: number,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    GroupClear(targetGroup);
+    GroupEnumUnitsInRange(
+      targetGroup,
+      x,
+      y,
+      aoe,
+      null
+    );
+    AOEDamage.genericDealDamageToGroupExclude(
+      targetGroup,
+      excludeGroup,
       caster,
       spellLevel,
       spellPower,

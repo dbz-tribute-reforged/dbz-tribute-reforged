@@ -703,11 +703,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Beerus.BEERUS_TAKOYAKI,
       AbilityNames.Beerus.BEERUS_PUDDING,
     ]],
-    
-    [Id.gojo, [
-      AbilityNames.Gojo.UNLIMITED_VOID,
-    ]],
-    
+
     [Id.granolah, [
       AbilityNames.Granolah.SNIPE,
       AbilityNames.Granolah.SNIPE_2,
@@ -718,6 +714,23 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Granolah.SNIPE_VOLLEY,
       AbilityNames.Granolah.SNIPE_CHARGED,
     ]],
+    
+    [Id.gojo, [
+      AbilityNames.Gojo.UNLIMITED_VOID,
+    ]],
+
+    [Id.cheongMyeong, [
+      AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS,
+      AbilityNames.CheongMyeong.FALLING_PETAL_SWORD,
+      AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_TEMPEST,
+      AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_FLOW,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST,
+    ]],
+    
 
 
 

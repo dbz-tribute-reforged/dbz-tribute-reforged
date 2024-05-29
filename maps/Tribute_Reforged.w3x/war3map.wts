@@ -29,7 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Features 81+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Features 86+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -11009,6 +11009,19 @@ STRING 1686
 // Items: I037 (Battle Armor [|cffFFFF002/5|r]), Name (Name)
 {
 Battle Armor [|cffFFFF002/5|r]
+}
+
+STRING 1687
+// Units: H02A (Special Grade Sorcerer), Ubertip (Tooltip - Extended)
+{
+A hero with limitless capability that focuses on timing his cursed techniques for massive damage.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 1688
@@ -36709,8 +36722,6 @@ Transformations:
 
 STRING 5691
 {
-Type "r" to revert.
-Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 70]  2.00x "ss2" [unlocks Father-Son kame]
 [lvl 110] 2.10x "saiyaman"
@@ -37838,16 +37849,9 @@ Satoru Gojo
 }
 
 STRING 5851
-// Units: H02A (Special Grade Sorcerer), Ubertip (Tooltip - Extended)
+// Abilities: A142 (Sword of Six Elements), Name (Name)
 {
-A hero with limitless capability that focuses on timing his cursed techniques for massive damage.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Sword of Six Elements
 }
 
 STRING 5852
@@ -42016,6 +42020,18 @@ STRING 6470
 // Abilities: A06A (Banana Slamma), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Banana Slamma - [|cffffcc00Level 1|r]
+}
+
+STRING 6471
+// Units: H02B (Divine Dragon of Mount Hua), Name (Name)
+{
+Divine Dragon of Mount Hua
+}
+
+STRING 6472
+// Units: H02B (Divine Dragon of Mount Hua), Propernames (Proper Names)
+{
+Cheong Myeong
 }
 
 STRING 6473
@@ -70778,7 +70794,7 @@ STRING 10763
 }
 
 STRING 10764
-// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
+// Abilities: A14C (Return of the Blossoming Blade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -104418,7 +104434,7 @@ STRING 15581
 }
 
 STRING 15582
-// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00K (Cannibalize), Hotkey (Hotkey)
 {
 D
 }
@@ -106004,7 +106020,7 @@ Q
 }
 
 STRING 15802
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A142 (Sword of Six Elements), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -120903,7 +120919,7 @@ STRING 17834
 }
 
 STRING 17835
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A144 (Fluttering Shadow Petals), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -125207,13 +125223,13 @@ STRING 18444
 }
 
 STRING 18445
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A0BB (Master of the Blossoming Blade), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18446
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A14B (Scattered Blossomfall), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -125231,13 +125247,13 @@ STRING 18448
 }
 
 STRING 18449
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Abilities: A14D (Return of the Blossoming Blade), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18450
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -126193,7 +126209,7 @@ Ice 2
 }
 
 STRING 18589
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -127117,7 +127133,7 @@ Tail Spin
 }
 
 STRING 18718
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -127425,7 +127441,7 @@ Appule fires a cursed beam that causes enemy heroes to miss 30% of their attacks
 }
 
 STRING 18763
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -142498,7 +142514,7 @@ Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 an
 }
 
 STRING 20838
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A145 (Plum Blossom Cleave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -143050,7 +143066,7 @@ STRING 20909
 }
 
 STRING 20910
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A143 (Falling Petal Sword), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -145089,7 +145105,7 @@ STRING 21194
 }
 
 STRING 21195
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A146 (Plum Blossom Tempest), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -145107,7 +145123,7 @@ STRING 21197
 }
 
 STRING 21198
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A147 (Celestial Falling Petals), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -149382,7 +149398,7 @@ E
 }
 
 STRING 21784
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A148 (Plum Blossom Palisade), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -149520,13 +149536,13 @@ Moro manipulates the life force of living things into a powerful ball of energy 
 }
 
 STRING 21803
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A149 (Plum Blossom Flow), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 21804
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A14A (Plum Blossom Cloudburst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -156560,7 +156576,7 @@ STRING 22599
 }
 
 STRING 22600
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -159341,7 +159357,7 @@ Shalltear turns into mist to avoid all incoming attacks while moving towards the
 }
 
 STRING 22994
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -159797,7 +159813,7 @@ STRING 23052
 }
 
 STRING 23053
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -161545,7 +161561,7 @@ F
 }
 
 STRING 23284
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -165251,13 +165267,13 @@ D
 }
 
 STRING 23742
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 23743
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -165540,7 +165556,7 @@ Granolah fires a volley of energy beams at the target location, slowing enemies 
 }
 
 STRING 23780
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -166632,6 +166648,31 @@ STRING 23939
 [|cff00ff00R|r] Learn Temporal Warp - [|cffffcc00Level %d|r]
 }
 
+STRING 23940
+// Units: H02B (Divine Dragon of Mount Hua), Ubertip (Tooltip - Extended)
+{
+Return of the Blossoming Blade.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 23941
+// Units: H02B (Divine Dragon of Mount Hua), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 23942
+// Abilities: A142 (Sword of Six Elements), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
 STRING 23943
 // Abilities: A0JK (Temporal Warp), EditorSuffix (Editor Suffix)
 {
@@ -167035,13 +167076,13 @@ STRING 23991
 }
 
 STRING 23992
-// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 23993
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -167797,7 +167838,7 @@ Saiyan Blood - [|cffffcc00Level 2|r]
 }
 
 STRING 24089
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -168115,13 +168156,13 @@ STRING 24137
 }
 
 STRING 24138
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 24139
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
@@ -168133,7 +168174,7 @@ E
 }
 
 STRING 24141
-// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -168185,11 +168226,11 @@ STRING 24149
 |cffffff00Transformations:|r
 |cffffcc00Gains +0.011x mult every level up to 2.5x|r
 
-|cffffff00[level 25] Unlocks [|cff00ff00W|r|cffffff00] Reversal Red
+|cffffff00[Level 25] Unlocks [|cff00ff00W|r|cffffff00] Reversal Red
 [Level 50] Unlocks [|cff00ff00E|r|cffffff00] Hollow Purple
 [Level 75] Unlocks [|r|cff00ff00D|r|cffffff00] Six Eyes 
 [Level 150] Upgrades Limitless when using [|cff00ff00D|r|cffffff00] Six Eyes
-[level 200] Unlocks [|r|cff00ff00R|r|cffffff00] Unlimited Void when using [|cff00ff00D|r|cffffff00] Six Eyes|r
+[Level 200] Unlocks [|r|cff00ff00R|r|cffffff00] Unlimited Void when using [|cff00ff00D|r|cffffff00] Six Eyes|r
 }
 
 STRING 24150
@@ -168222,6 +168263,12 @@ STRING 24154
 [|cff00ff00R|r] |cff00ffffSix Eyes Deactivate|r
 }
 
+STRING 24155
+// Abilities: A142 (Sword of Six Elements), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Sword of Six Elements
+}
+
 STRING 24156
 // Abilities: A13Z (Limitless: Teleport), Tip (Tooltip - Normal)
 {
@@ -168232,6 +168279,31 @@ STRING 24157
 // Abilities: A140 (Limitless), Tip (Tooltip - Normal)
 {
 |cffffcc00Limitless|r
+}
+
+STRING 24158
+// Abilities: A142 (Sword of Six Elements), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A142,Cool1>s|r
+}
+
+STRING 24159
+// Abilities: A143 (Falling Petal Sword), Name (Name)
+{
+Falling Petal Sword
+}
+
+STRING 24160
+// Abilities: A143 (Falling Petal Sword), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24161
+// Abilities: A143 (Falling Petal Sword), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Falling Petal Sword
 }
 
 STRING 24162
@@ -168273,6 +168345,19 @@ Redirect the beam after firing by using the Q key and the mouse cursor.
 |cff00ff00Duration: 5s
 |cff00ff00Damage: [Int] 40u/s + 100u (+200%)
 |cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
+STRING 24165
+// Abilities: A143 (Falling Petal Sword), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A143,Cool1>s|r
+}
+
+STRING 24166
+// Abilities: A144 (Fluttering Shadow Petals), Name (Name)
+{
+Fluttering Shadow Petals
 }
 
 STRING 24167
@@ -168319,5 +168404,896 @@ The beam is fired 0.5s after the key is released. Redirect the beam after firing
 |cff00ff00Duration: 2s
 |cff00ff00Damage: [Int] 16u/s + 300u (+200%)
 |cff00ffffCooldown: <A0OE,Cool1>s|r
+}
+
+STRING 24171
+// Abilities: A144 (Fluttering Shadow Petals), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24172
+// Abilities: A144 (Fluttering Shadow Petals), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fluttering Shadow Petals
+}
+
+STRING 24173
+// Abilities: A144 (Fluttering Shadow Petals), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A143,Cool1>s|r
+}
+
+STRING 24174
+// Abilities: A145 (Plum Blossom Cleave), Name (Name)
+{
+Plum Blossom Cleave
+}
+
+STRING 24175
+// Abilities: A145 (Plum Blossom Cleave), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24176
+// Abilities: A145 (Plum Blossom Cleave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cleave
+}
+
+STRING 24177
+// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A146,Cool1>s|r
+}
+
+STRING 24178
+// Abilities: A146 (Plum Blossom Tempest), Name (Name)
+{
+Plum Blossom Tempest
+}
+
+STRING 24179
+// Abilities: A146 (Plum Blossom Tempest), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24180
+// Abilities: A146 (Plum Blossom Tempest), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Tempest
+}
+
+STRING 24181
+// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A145,Cool1>s|r
+}
+
+STRING 24182
+// Abilities: A147 (Celestial Falling Petals), Name (Name)
+{
+Celestial Falling Petals
+}
+
+STRING 24183
+// Abilities: A147 (Celestial Falling Petals), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24184
+// Abilities: A147 (Celestial Falling Petals), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 24 Strike Plum Blossom: Celestial Falling Petals
+}
+
+STRING 24185
+// Abilities: A147 (Celestial Falling Petals), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A147,Cool1>s|r
+}
+
+STRING 24186
+// Abilities: A148 (Plum Blossom Palisade), Name (Name)
+{
+Plum Blossom Palisade
+}
+
+STRING 24187
+// Abilities: A148 (Plum Blossom Palisade), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24188
+// Abilities: A148 (Plum Blossom Palisade), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Palisade
+}
+
+STRING 24189
+// Abilities: A148 (Plum Blossom Palisade), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A148,Cool1>s|r
+}
+
+STRING 24190
+// Abilities: A149 (Plum Blossom Flow), Name (Name)
+{
+Plum Blossom Flow
+}
+
+STRING 24191
+// Abilities: A149 (Plum Blossom Flow), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24192
+// Abilities: A149 (Plum Blossom Flow), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Flow
+}
+
+STRING 24193
+// Abilities: A149 (Plum Blossom Flow), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A149,Cool1>s|r
+}
+
+STRING 24194
+// Abilities: A14A (Plum Blossom Cloudburst), Name (Name)
+{
+Plum Blossom Cloudburst
+}
+
+STRING 24195
+// Abilities: A14A (Plum Blossom Cloudburst), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24196
+// Abilities: A14A (Plum Blossom Cloudburst), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
+}
+
+STRING 24197
+// Abilities: A14A (Plum Blossom Cloudburst), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A14A,Cool1>s|r
+}
+
+STRING 24198
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD1,%>% 
+|cffffcc00Critical|r - <A0BB,DataA1>% 
+|cffffcc00Damage|r - <A0BB,DataB1,.> times
+}
+
+STRING 24199
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD2,%>% 
+|cffffcc00Critical|r - <A0BB,DataA2>% 
+|cffffcc00Damage|r - <A0BB,DataB2,.> times
+}
+
+STRING 24200
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD3,%>% 
+|cffffcc00Critical|r - <A0BB,DataA3>% 
+|cffffcc00Damage|r - <A0BB,DataB3,.> times
+}
+
+STRING 24201
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD4,%>% 
+|cffffcc00Critical|r - <A0BB,DataA4>% 
+|cffffcc00Damage|r - <A0BB,DataB4,.> times
+}
+
+STRING 24202
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD5,%>% 
+|cffffcc00Critical|r - <A0BB,DataA5>% 
+|cffffcc00Damage|r - <A0BB,DataB5,.> times
+}
+
+STRING 24203
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD6,%>% 
+|cffffcc00Critical|r - <A0BB,DataA6>% 
+|cffffcc00Damage|r - <A0BB,DataB6,.> times
+}
+
+STRING 24204
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD7,%>% 
+|cffffcc00Critical|r - <A0BB,DataA7>% 
+|cffffcc00Damage|r - <A0BB,DataB7,.> times
+}
+
+STRING 24205
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD8,%>% 
+|cffffcc00Critical|r - <A0BB,DataA8>% 
+|cffffcc00Damage|r - <A0BB,DataB8,.> times
+}
+
+STRING 24206
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD9,%>% 
+|cffffcc00Critical|r - <A0BB,DataA9>% 
+|cffffcc00Damage|r - <A0BB,DataB9,.> times
+}
+
+STRING 24207
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
+
+|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
+|cffffcc00Evasion|r - <A0BB,DataD10,%>% 
+|cffffcc00Critical|r - <A0BB,DataA10>% 
+|cffffcc00Damage|r - <A0BB,DataB10,.> times
+}
+
+STRING 24208
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 24209
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 24210
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 24211
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 24212
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 24213
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 3|r]
+}
+
+STRING 24214
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 1|r]
+}
+
+STRING 24215
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 2|r]
+}
+
+STRING 24216
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 4|r]
+}
+
+STRING 24217
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 5|r]
+}
+
+STRING 24218
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 6|r]
+}
+
+STRING 24219
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 7|r]
+}
+
+STRING 24220
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 8|r]
+}
+
+STRING 24221
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 9|r]
+}
+
+STRING 24222
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Master of the Blossoming Blade - [|cffffcc00Level 10|r]
+}
+
+STRING 24223
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 24224
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 24225
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 24226
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 24227
+// Abilities: A0BB (Master of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 24228
+// Abilities: A0BB (Master of the Blossoming Blade), Name (Name)
+{
+Master of the Blossoming Blade
+}
+
+STRING 24229
+// Abilities: A0BB (Master of the Blossoming Blade), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 24230
+// Abilities: A0BB (Master of the Blossoming Blade), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 24231
+// Abilities: A0BB (Master of the Blossoming Blade), EditorSuffix (Editor Suffix)
+{
+(basic)
+}
+
+STRING 24232
+// Abilities: A14B (Scattered Blossomfall), Name (Name)
+{
+Scattered Blossomfall
+}
+
+STRING 24233
+// Abilities: A14B (Scattered Blossomfall), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
+}
+
+STRING 24234
+// Abilities: A14B (Scattered Blossomfall), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] 24-Strike Plum Blossom: Scattered Blossomfall
+}
+
+STRING 24235
+// Abilities: A14B (Scattered Blossomfall), Ubertip (Tooltip - Normal - Extended)
+{
+|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
+|cff00ffffCooldown: <A14B,Cool1>s|r
+}
+
+STRING 24236
+// Abilities: A14C (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffff88ccReturn of the Blossoming Blade|r
+}
+
+STRING 24238
+// Abilities: A14C (Return of the Blossoming Blade), Name (Name)
+{
+Return of the Blossoming Blade
+}
+
+STRING 24240
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24241
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24242
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24243
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24244
+// Upgrades: R00L (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24245
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 24246
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24247
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24248
+// Upgrades: R00O (Cannibalize), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24249
+// Upgrades: R00P (Long Rifles), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 24250
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24251
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 24252
+{
+|cffffff00Transformations:|r
+|cffffcc00Gains +0.011x mult every level up to 2.5x|r
+
+|cffffff00[Level 100] Unlocks [|r|cff00ff00F|r|cffffff00] Scattered Blossomfall
+[Level 200] Unlocks [|r|cff00ff00D|r|cffffff00] Return of the Blossoming Blade
+}
+
+STRING 24253
+{
+[|cffffcc00Unlock|r] |cffff44aaScattered Blossomfall|r
+Cheong Myeong can now unleash the legendary 24-Strike Plum Blossom technique.
+}
+
+STRING 24256
+{
+[|cffffcc00Unlock|r] |cffff88ccReturn of the Blossoming Blade|r
+Cheong Meong has been cursed to reincarnate in the next world should he die.
+}
+
+STRING 24257
+// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The curse of Cheonma reincarnates the user if they die. When off cooldown, the next instance of lethal damage is negated and the user becomes paused and invulnerable for 5s. Afterwards, convert all remaining MP into HP at a ratio of 3 MP to 1 HP. Passively provides +25% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
+STRING 24258
+// Abilities: A14C (Return of the Blossoming Blade), EditorSuffix (Editor Suffix)
+{
+(cheong myeong active)
+}
+
+STRING 24259
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The curse of Cheonma reincarnates the user if they die. When off cooldown, the next instance of lethal damage is negated and the user becomes paused and invulnerable for 5s. Afterwards, convert all remaining MP into HP at a ratio of 3 MP to 1 HP. Passively provides +25% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
+STRING 24260
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 24261
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 24262
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 24263
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 24264
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 24265
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 24266
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 24267
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 24268
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 24269
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 24270
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 24271
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 24272
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 24273
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 24274
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 24275
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] |cffff88ccReturn of the Blossoming Blade|r
+}
+
+STRING 24276
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
+STRING 24277
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 24278
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 24279
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 24280
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 24281
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 24282
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 24283
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 24284
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 24285
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 24286
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 24287
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 24288
+// Abilities: A14D (Return of the Blossoming Blade), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 24289
+// Abilities: A14D (Return of the Blossoming Blade), Name (Name)
+{
+Return of the Blossoming Blade
+}
+
+STRING 24290
+// Abilities: A14D (Return of the Blossoming Blade), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 24291
+// Abilities: A14D (Return of the Blossoming Blade), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 24292
+// Abilities: A14D (Return of the Blossoming Blade), EditorSuffix (Editor Suffix)
+{
+(cheong myeong passive)
+}
+
+STRING 24293
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
 }
 

@@ -666,6 +666,18 @@ export module AbilityNames {
     export const UNLIMITED_VOID: string = "Gojo Domain Expansion: Unlimited Void";
   }
 
+  export module CheongMyeong {
+    export const SWORD_OF_SIX_ELEMENTS: string = "Cheong Myeong Sword Of Six Elements";
+    export const FALLING_PETAL_SWORD: string = "Cheong Myeong Falling Petal Sword";
+    export const FLUTTERING_SHADOW_PETALS: string = "Cheong Myeong Fluttering Shadow Petals";
+    export const PLUM_BLOSSOM_CLEAVE: string = "Cheong Myeong Plum Blossom Cleave";
+    export const PLUM_BLOSSOM_TEMPEST: string = "Cheong Myeong Plum Blossom Tempest";
+    export const CELESTIAL_FALLING_PETALS: string = "Cheong Myeong Celestial Falling Petals";
+    export const PLUM_BLOSSOM_PALISADE: string = "Cheong Myeong Plum Blossom Palisade";
+    export const PLUM_BLOSSOM_FLOW: string = "Cheong Myeong Plum Blossom Flow";
+    export const PLUM_BLOSSOM_CLOUDBURST: string = "Cheong Myeong Plum Blossom Cloudburst";
+  }
+
 
 
 

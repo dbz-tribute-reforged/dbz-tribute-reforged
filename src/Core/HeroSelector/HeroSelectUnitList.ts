@@ -815,6 +815,19 @@ const linkTwilightData = {
     HeroSelectCategory.VIDEOGAME 
   )
 }
+const cheongMyeongData = {
+  unitCode: Id.cheongMyeong,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME +
+    HeroSelectCategory.MEME
+  )
+}
 const donkeyKongData = {
   unitCode: Id.donkeyKong,
   onlyRandom: false,
@@ -1153,7 +1166,7 @@ export const HeroSelectUnitList = [
   lucarioData,
   dartFeldData,
   leonSKennedyData,
-  emptySpace,
+  cheongMyeongData,
   // 85
   emptySpace,
   emptySpace,

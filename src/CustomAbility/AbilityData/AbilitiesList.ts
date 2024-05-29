@@ -12494,6 +12494,174 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi cheong myeong sword of six elements" },
+      { name: "spell amp 10 persistent" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.FALLING_PETAL_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "damage cheong myeong falling petal sword" },
+      { name: "block cheong myeong falling petal sword" },
+      { name: "sfx cheong myeong falling petal sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground forward 3dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong plum blossom cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong celestial falling petals" },
+      { name: "sfx cheong myeong celestial falling petals" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong plum blossom palisade" },
+      { name: "multi cheong myeong plum blossom palisade branch 1 1" },
+      { name: "multi cheong myeong plum blossom palisade branch 1 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
