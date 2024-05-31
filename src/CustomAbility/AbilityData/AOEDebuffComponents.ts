@@ -2452,4 +2452,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff slow cheong myeong plum blossom cloudburst",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.SLOW_GENERIC_50_PCT_3S,
+    orderId: OrderIds.SLOW,
+    aoe: 400,
+    keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

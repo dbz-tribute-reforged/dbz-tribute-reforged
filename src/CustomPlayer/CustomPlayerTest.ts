@@ -133,10 +133,12 @@ export function customAbilityActivateButton(player: player, ki: KeyInput) {
 
 export function customAbilityActivate(player: player, index: number) {
   const playerId = GetPlayerId(player);
-  const abilName = Globals.customPlayers[playerId].abilityButtons[index].name;
+  // const abilName = Globals.customPlayers[playerId].abilityButtons[index].name;
+
   // const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
   for (const customHero of Globals.customPlayers[playerId].allHeroes) {
     if (!customHero || !IsUnitSelected(customHero.unit, player)) continue;
+    const abilName = customHero.getAbilityByIndex(index).name;
 
     const abilityInput = new CustomAbilityInput(
       0,
@@ -177,6 +179,9 @@ export function customAbilityActivate(player: player, index: number) {
         SimpleSpellSystem.DoJirenGlare(Id.beerusCounter, customHero.unit);
       } else if (abilName == AbilityNames.Gojo.LIMITLESS_GUARD) {
         SimpleSpellSystem.doGojoLimitlessGuard(Id.gojoLimitlessGuard, customHero.unit);
+      } else if (abilName == AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX) {
+        IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
+        SimpleSpellSystem.doCheongMyeongEquilibriumOfSix(customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
@@ -420,7 +425,7 @@ export function CustomPlayerTest() {
             abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
           }
           if (GetUnitAbilityLevel(caster, Id.cheongMyeongCritPassive) > 0) {
-            abilityLevel = SimpleSpellSystem.cheungMyeongGetSpellLevel(abilityId, caster);
+            abilityLevel = SimpleSpellSystem.getCheungMyeongSpellLevel(abilityId, caster);
             SimpleSpellSystem.cheungMyeongOnCast(abilityId, caster);
           }
 

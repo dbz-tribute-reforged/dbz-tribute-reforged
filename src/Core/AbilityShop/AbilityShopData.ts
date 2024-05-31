@@ -116,6 +116,7 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
   [
     Id.cheongMyeong, [
       [
+        AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
       ],
       [
         AbilityNames.BasicAbility.MAX_CHARGE,

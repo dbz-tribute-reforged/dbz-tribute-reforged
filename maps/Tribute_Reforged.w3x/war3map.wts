@@ -69969,7 +69969,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 31 May 2024
+This map is under active development - 1 June 2024
 }
 
 STRING 10653
@@ -168282,10 +168282,12 @@ STRING 24157
 }
 
 STRING 24158
-// Abilities: A142 (Sword of Six Elements), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A142,Cool1>s|r
+Launches a fast moving sword slash that deals damage in a line.
+
+|cff00ff00Damage: [Int] 100u x 8t + 800u
+|cff00ffffCooldown: <A145,Cool1>s|r
 }
 
 STRING 24159
@@ -168348,10 +168350,12 @@ Redirect the beam after firing by using the Q key and the mouse cursor.
 }
 
 STRING 24165
-// Abilities: A143 (Falling Petal Sword), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A143,Cool1>s|r
+Launches a sword slash in a straight line that deals damage after a 1s delay. Then a second sword slash appears behind the first to deal damage after another 0.5s delay.
+
+|cff00ff00Damage: [Int] 800u (+800u)
+|cff00ffffCooldown: <A146,Cool1>s|r
 }
 
 STRING 24166
@@ -168419,10 +168423,13 @@ STRING 24172
 }
 
 STRING 24173
-// Abilities: A144 (Fluttering Shadow Petals), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14B (Scattered Blossomfall), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A143,Cool1>s|r
+The signature technique of Mount Hua that creates blooming plum blossoms interspersed with sword strikes to attack their enemies. After a 1s delay, Cheong Myeong teleports to the target location and launches multiple strikes on the closest enemy within 800 range of himself. The number of strikes is equal to 8 + 1 per 2% of remaining mana up to 24 times. Can only strike other vulnerable enemy heroes. The ability ends early if there are no more valid targets. Cheong Myeong turns invulnerable and hidden for the duration of the ability.
+
+|cff8888ffMana Cost: 100% of Max Mana
+|cff00ff00Damage: 50% of Attack Damage per Strike
+|cff00ffffCooldown: <A14B,Cool1>s|r
 }
 
 STRING 24174
@@ -168444,10 +168451,9 @@ STRING 24176
 }
 
 STRING 24177
-// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14E (Debuff Inner Fire Scattered Blossomfall), Name (Name)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A146,Cool1>s|r
+Debuff Inner Fire Scattered Blossomfall
 }
 
 STRING 24178
@@ -168469,10 +168475,9 @@ STRING 24180
 }
 
 STRING 24181
-// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B06Q (Inner Fire Scattered Blossomfall), Bufftip (Tooltip)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A145,Cool1>s|r
+Scattered Blossomfall
 }
 
 STRING 24182
@@ -168494,10 +168499,9 @@ STRING 24184
 }
 
 STRING 24185
-// Abilities: A147 (Celestial Falling Petals), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B06Q (Inner Fire Scattered Blossomfall), Buffubertip (Tooltip - Extended)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A147,Cool1>s|r
+This unit is casting Scattered Blossomfalll; it has decreased damage.
 }
 
 STRING 24186
@@ -168519,10 +168523,9 @@ STRING 24188
 }
 
 STRING 24189
-// Abilities: A148 (Plum Blossom Palisade), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B06Q (Inner Fire Scattered Blossomfall), EditorName (Name (Editor Only))
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A148,Cool1>s|r
+Inner Fire Scattered Blossomfall
 }
 
 STRING 24190
@@ -168544,10 +168547,11 @@ STRING 24192
 }
 
 STRING 24193
-// Abilities: A149 (Plum Blossom Flow), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A149,Cool1>s|r
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 4s and is prevented from acting. Afterwards, 50% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+Passively provides +20% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
 }
 
 STRING 24194
@@ -168566,153 +168570,6 @@ STRING 24196
 // Abilities: A14A (Plum Blossom Cloudburst), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
-}
-
-STRING 24197
-// Abilities: A14A (Plum Blossom Cloudburst), Ubertip (Tooltip - Normal - Extended)
-{
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A14A,Cool1>s|r
-}
-
-STRING 24198
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD1,%>% 
-|cffffcc00Critical|r - <A0BB,DataA1>% 
-|cffffcc00Damage|r - <A0BB,DataB1,.> times
-}
-
-STRING 24199
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD2,%>% 
-|cffffcc00Critical|r - <A0BB,DataA2>% 
-|cffffcc00Damage|r - <A0BB,DataB2,.> times
-}
-
-STRING 24200
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD3,%>% 
-|cffffcc00Critical|r - <A0BB,DataA3>% 
-|cffffcc00Damage|r - <A0BB,DataB3,.> times
-}
-
-STRING 24201
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD4,%>% 
-|cffffcc00Critical|r - <A0BB,DataA4>% 
-|cffffcc00Damage|r - <A0BB,DataB4,.> times
-}
-
-STRING 24202
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD5,%>% 
-|cffffcc00Critical|r - <A0BB,DataA5>% 
-|cffffcc00Damage|r - <A0BB,DataB5,.> times
-}
-
-STRING 24203
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD6,%>% 
-|cffffcc00Critical|r - <A0BB,DataA6>% 
-|cffffcc00Damage|r - <A0BB,DataB6,.> times
-}
-
-STRING 24204
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD7,%>% 
-|cffffcc00Critical|r - <A0BB,DataA7>% 
-|cffffcc00Damage|r - <A0BB,DataB7,.> times
-}
-
-STRING 24205
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD8,%>% 
-|cffffcc00Critical|r - <A0BB,DataA8>% 
-|cffffcc00Damage|r - <A0BB,DataB8,.> times
-}
-
-STRING 24206
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD9,%>% 
-|cffffcc00Critical|r - <A0BB,DataA9>% 
-|cffffcc00Damage|r - <A0BB,DataB9,.> times
-}
-
-STRING 24207
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.|r
-
-|cff8888ffQWER Mana Cost: AvgStat / Agi * 20% of max mana
-|cffffcc00Evasion|r - <A0BB,DataD10,%>% 
-|cffffcc00Critical|r - <A0BB,DataA10>% 
-|cffffcc00Damage|r - <A0BB,DataB10,.> times
 }
 
 STRING 24208
@@ -168901,13 +168758,6 @@ STRING 24234
 [|cff00ff00F|r] 24-Strike Plum Blossom: Scattered Blossomfall
 }
 
-STRING 24235
-// Abilities: A14B (Scattered Blossomfall), Ubertip (Tooltip - Normal - Extended)
-{
-|cff00ff00Damage: [Int] 40u/s + 100u (+200%)
-|cff00ffffCooldown: <A14B,Cool1>s|r
-}
-
 STRING 24236
 // Abilities: A14C (Return of the Blossoming Blade), Tip (Tooltip - Normal)
 {
@@ -169004,33 +168854,19 @@ STRING 24252
 STRING 24253
 {
 [|cffffcc00Unlock|r] |cffff44aaScattered Blossomfall|r
-Cheong Myeong can now unleash the legendary 24-Strike Plum Blossom technique.
+Cheong Myeong can now use the 24-Strike Plum Blossom technique.
 }
 
 STRING 24256
 {
 [|cffffcc00Unlock|r] |cffff88ccReturn of the Blossoming Blade|r
-Cheong Meong has been cursed to reincarnate in the next world should he die.
-}
-
-STRING 24257
-// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The curse of Cheonma reincarnates the user if they die. When off cooldown, the next instance of lethal damage is negated and the user becomes paused and invulnerable for 5s. Afterwards, convert all remaining MP into HP at a ratio of 3 MP to 1 HP. Passively provides +25% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+Cheong Meong is cursed to reincarnate upon death.
 }
 
 STRING 24258
 // Abilities: A14C (Return of the Blossoming Blade), EditorSuffix (Editor Suffix)
 {
 (cheong myeong active)
-}
-
-STRING 24259
-// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-The curse of Cheonma reincarnates the user if they die. When off cooldown, the next instance of lethal damage is negated and the user becomes paused and invulnerable for 5s. Afterwards, convert all remaining MP into HP at a ratio of 3 MP to 1 HP. Passively provides +25% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
 }
 
 STRING 24260
@@ -169295,5 +169131,271 @@ STRING 24293
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 24295
+// Abilities: A147 (Celestial Falling Petals), Ubertip (Tooltip - Normal - Extended)
+{
+Creates a plum blossom at the target location that falls to the ground after 1s. Upon landing, it deals impact damage in 1000 AOE and then starts blooming, dealing continuous damage in 500 AOE.
+
+|cff00ff00Duration: 2s|r
+|cff00ff00Damage: [Int] 630u/s + 600u
+|cff00ffffCooldown: <A147,Cool1>s|r
+}
+
+STRING 24296
+// Abilities: A148 (Plum Blossom Palisade), Ubertip (Tooltip - Normal - Extended)
+{
+Launches multiple sword slashes to create a giant plum blossomg tree that damages enemies. The branches of the tree deal less damage.
+
+|cff00ff00Main Damage: [Int] 50u x 8t + 400u
+Branch Damage: [Int] 9u x 8t + 45u (x20)
+|cff00ffffCooldown: <A148,Cool1>s|r
+}
+
+STRING 24297
+// Abilities: A149 (Plum Blossom Flow), Ubertip (Tooltip - Normal - Extended)
+{
+Instantly dashes in a straight line to deal damage and stun enemies for 1s.
+
+|cff00ff00Damage: [Int] 1200u
+|cff00ffffCooldown: <A149,Cool1>s|r
+}
+
+STRING 24298
+// Abilities: A14A (Plum Blossom Cloudburst), Ubertip (Tooltip - Normal - Extended)
+{
+Launches a plum blossom at the target location that detonates after 0.5s. Enemies caught in the explosion are slowed by 50% for 3s.
+
+|cff00ff00Damage: [Int] 50u x 8t + 800u
+|cff00ffffCooldown: <A14A,Cool1>s|r
+}
+
+STRING 24299
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD1,%>% 
+|cffffcc00Critical|r - <A0BB,DataA1>% 
+|cffffcc00Damage|r - <A0BB,DataB1,.> times
+}
+
+STRING 24300
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD2,%>% 
+|cffffcc00Critical|r - <A0BB,DataA2>% 
+|cffffcc00Damage|r - <A0BB,DataB2,.> times
+}
+
+STRING 24301
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD3,%>% 
+|cffffcc00Critical|r - <A0BB,DataA3>% 
+|cffffcc00Damage|r - <A0BB,DataB3,.> times
+}
+
+STRING 24302
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD4,%>% 
+|cffffcc00Critical|r - <A0BB,DataA4>% 
+|cffffcc00Damage|r - <A0BB,DataB4,.> times
+}
+
+STRING 24303
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD5,%>% 
+|cffffcc00Critical|r - <A0BB,DataA5>% 
+|cffffcc00Damage|r - <A0BB,DataB5,.> times
+}
+
+STRING 24304
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD6,%>% 
+|cffffcc00Critical|r - <A0BB,DataA6>% 
+|cffffcc00Damage|r - <A0BB,DataB6,.> times
+}
+
+STRING 24305
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD7,%>% 
+|cffffcc00Critical|r - <A0BB,DataA7>% 
+|cffffcc00Damage|r - <A0BB,DataB7,.> times
+}
+
+STRING 24306
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD8,%>% 
+|cffffcc00Critical|r - <A0BB,DataA8>% 
+|cffffcc00Damage|r - <A0BB,DataB8,.> times
+}
+
+STRING 24307
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD9,%>% 
+|cffffcc00Critical|r - <A0BB,DataA9>% 
+|cffffcc00Damage|r - <A0BB,DataB9,.> times
+}
+
+STRING 24308
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 5% of max mana
+R Mana Cost: 25% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD10,%>% 
+|cffffcc00Critical|r - <A0BB,DataA10>% 
+|cffffcc00Damage|r - <A0BB,DataB10,.> times
+}
+
+STRING 24310
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The curse of Cheonma reincarnates Cheong Myeong upon death. When off cooldown, the next instance of lethal damage is negated and the user turns invulnerable and prevented from acting for 4s. Afterwards, all remaining MP is converted into HP at a ratio of 2 MP to 1 HP. Half of the health restored is also given to the unit that killed Cheong Myeong.
+Passively provides +20% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
+STRING 24312
+// Abilities: A142 (Sword of Six Elements), Ubertip (Tooltip - Normal - Extended)
+{
+The fundamental sword strike that forms the foundation of all of Mount Hua's sword techniques. Deals damage 225 units towards the targetted direction in a 350 AOE.
+
+|cffffaadd[QW]: Plum Blossom Cleave
+[QE]: Plum Blossom Tempest
+[WQ]: Celestial Falling Petals
+[WE]: Plum Blossom Palisade
+[EQ]: Plum Blossom Flow
+[EW]: Plum Blossom Cloudburst
+
+|cffffff00+10% spell amp for 2s
+|cff00ff00Damage: [Int] 300u
+|cff00ffffCooldown: <A142,Cool1>s|r
+}
+
+STRING 24313
+// Abilities: A143 (Falling Petal Sword), Ubertip (Tooltip - Normal - Extended)
+{
+A basic sweeping strike that damages all enemies in 500 AOE. Gains temporary damage block for 2s.
+
+|cffffaadd[QW]: Plum Blossom Cleave
+[QE]: Plum Blossom Tempest
+[WQ]: Celestial Falling Petals
+[WE]: Plum Blossom Palisade
+[EQ]: Plum Blossom Flow
+[EW]: Plum Blossom Cloudburst
+
+|cff00ff00Damage: [Int] 300u
+|cff00ff00Damage Blocked: [Str] 500u @ 50%|r
+|cff00ffffCooldown: <A143,Cool1>s|r
+}
+
+STRING 24314
+// Abilities: A144 (Fluttering Shadow Petals), Ubertip (Tooltip - Normal - Extended)
+{
+A fast moving sword slash that allows the user to traverse short distances in a straight line and deal damage to all enemies it passes through.
+
+|cffffaadd[QW]: Plum Blossom Cleave
+[QE]: Plum Blossom Tempest
+[WQ]: Celestial Falling Petals
+[WE]: Plum Blossom Palisade
+[EQ]: Plum Blossom Flow
+[EW]: Plum Blossom Cloudburst
+
+|cff00ff00Damage: [Int] 300u
+|cff00ffffCooldown: <A143,Cool1>s|r
 }
 

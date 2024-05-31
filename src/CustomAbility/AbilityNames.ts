@@ -667,6 +667,7 @@ export module AbilityNames {
   }
 
   export module CheongMyeong {
+    export const EQUILIBRIUM_OF_SIX: string = "Equilibrium of Six";
     export const SWORD_OF_SIX_ELEMENTS: string = "Cheong Myeong Sword Of Six Elements";
     export const FALLING_PETAL_SWORD: string = "Cheong Myeong Falling Petal Sword";
     export const FLUTTERING_SHADOW_PETALS: string = "Cheong Myeong Fluttering Shadow Petals";

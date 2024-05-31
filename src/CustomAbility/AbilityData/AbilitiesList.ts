@@ -497,6 +497,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
+    currentCd: 0,
+    maxCd: 20,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCheongMyeongBasic.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNCheongMyeongBasic.blp",
+    },
+    tooltip: {
+      title: "Equilibrium of Six",
+      body: 
+        "Stand still to recover MP over 4s. Clears all debuffs.|n" + 
+        "Restores Agi/Int x 10% max mana per second.|n" +
+        "Cost: 50 SP|n" +
+        "CD: 10"
+    },
+    components: [
+      { name: "channel caster fake channel" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Goku.KAMEHAMEHA, // Goku's Kame
     currentCd: 0,
     maxCd: 1,
@@ -12638,7 +12668,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 66,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -12655,9 +12685,34 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "beam cheong myeong plum blossom palisade" },
-      { name: "multi cheong myeong plum blossom palisade branch 1 1" },
-      { name: "multi cheong myeong plum blossom palisade branch 1 2" },
+      { name: "multi cheong myeong plum blossom palisade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong plum blossom cloudburst" },
     ],
   },
   // -------------------------------------------

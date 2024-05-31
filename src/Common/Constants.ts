@@ -47,6 +47,19 @@ export module Globals {
   export const DDSTrigger = CreateTrigger();
   export const DDSEntryTrigger = CreateTrigger();
 
+  export function DDSAddUnit(unit: unit) {
+    if (!Globals.DDSUnitMap.has(unit)) {
+      Globals.DDSUnitMap.set(unit, true);
+      TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
+    }
+  }
+
+  export function DDSRemove(unit: unit) {
+    if (Globals.DDSUnitMap.has(unit)) {
+      Globals.DDSUnitMap.delete(unit);
+    }
+  }
+
   export const tatsumakiBeamGroup = CreateGroup();
 
   // reuseable unit group
@@ -423,6 +436,7 @@ export module DebuffAbilities {
   export const AINZ_GREATER_HARDENING = FourCC('A12L');
   export const AINZ_GREATER_MAGIC_SHIELD = FourCC('A12M');
   export const AINZ_MAGIC_BOOST = FourCC('A12N');
+  export const CHEONG_MYEONG_SCATTERED_BLOSSOMFALL_DMG_DEBUFF = FourCC('A14E');
 
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
@@ -586,6 +600,7 @@ export module Terrain {
 
 export module Id {
   export const attack = FourCC("Aatk");
+  export const move = FourCC("Amov");
   export const inventoryHero = FourCC("AInv");
   export const ghostNonVis = FourCC("Agho");
   export const ghostVisible = FourCC("Aeth");

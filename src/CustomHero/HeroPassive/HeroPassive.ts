@@ -3623,9 +3623,7 @@ export function gojoPassive(customHero: CustomHero) {
       // mark it for dds
       const attacked = GetTriggerUnit();
       if (UnitHelper.isUnitRealHero(attacked)) {
-        if (!Globals.DDSUnitMap.has(attacked)) {
-          Globals.DDSUnitMap.set(attacked, true);
-        }
+        Globals.DDSAddUnit(attacked);
       }
       return false;
     })
@@ -3633,12 +3631,91 @@ export function gojoPassive(customHero: CustomHero) {
 }
 
 export function cheongMyeongPassive(customHero: CustomHero) {
-  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCleave);
-  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomTempest);
-  UnitAddAbility(customHero.unit, Id.cheongMyeongCelestialFallingPetals);
-  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomPalisade);
-  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomFlow);
-  UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCloudburst);
+  const basicManaCostPct = 0.05;
+  const specialManaCostPct = 0.25;
+
+  const basicAbils = [
+    Id.cheongMyeongSwordOfSixElements,
+    Id.cheongMyeongFallingPetalSword,
+    Id.cheongMyeongFlutteringShadowPetals,
+  ];
+
+  const specialAbils = [
+    Id.cheongMyeongPlumBlossomCleave,
+    Id.cheongMyeongPlumBlossomTempest,
+    Id.cheongMyeongCelestialFallingPetals,
+    Id.cheongMyeongPlumBlossomPalisade,
+    Id.cheongMyeongPlumBlossomFlow,
+    Id.cheongMyeongPlumBlossomCloudburst,
+  ];
+
+  if (GetUnitTypeId(customHero.unit) == Id.cheongMyeong) {
+    UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCleave);
+    UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomTempest);
+    UnitAddAbility(customHero.unit, Id.cheongMyeongCelestialFallingPetals);
+    UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomPalisade);
+    UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomFlow);
+    UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCloudburst);
+  }
+
+  // return passive
+  Globals.DDSAddUnit(customHero.unit);
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitAbilityLevel(customHero.unit, Id.cheongMyeongReturnActive) > 0) {
+      const cd = BlzGetUnitAbilityCooldownRemaining(
+        customHero.unit, Id.cheongMyeongReturnActive
+      );
+      if (cd == 0) {
+        const player = GetOwningPlayer(customHero.unit);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongReturnPassive, true);
+        SetPlayerAbilityAvailable(player, Id.cheongMyeongReturnActive, false);
+      }
+    }
+
+    SetUnitAbilityLevel(customHero.unit, Id.cheongMyeongCritPassive, 
+      Math.min(10, 1 + Math.floor(0.1 * GetUnitManaPercent(customHero.unit)))
+    );
+
+    const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
+    for (const abil of basicAbils) {
+      if (GetUnitAbilityLevel(customHero.unit, abil) > 0) {
+        BlzSetUnitAbilityManaCost(customHero.unit, abil, 0, 
+          R2I(maxMana * basicManaCostPct)
+        );
+      }
+    }
+    for (const abil of specialAbils) {
+      if (GetUnitAbilityLevel(customHero.unit, abil) > 0) {
+        BlzSetUnitAbilityManaCost(customHero.unit, abil, 0, 
+          R2I(maxMana * specialManaCostPct)
+        );
+      }
+    }
+
+  });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      // mark it for dds
+      const attacked = GetTriggerUnit();
+      if (UnitHelper.isUnitRealHero(attacked)) {
+        Globals.DDSAddUnit(attacked);
+      }
+      return false;
+    })
+  );
 }
 
 export function setupRegenTimer(customHero: CustomHero) {

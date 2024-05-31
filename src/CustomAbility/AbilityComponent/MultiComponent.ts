@@ -274,10 +274,6 @@ export class MultiComponent implements
         input.targetPoint.setVector(this.newCoord);
       }
 
-      print(this.newCoord.x, this.newCoord.y);
-      DestroyEffect(AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", this.newCoord.x, this.newCoord.y));
-      
-
       let oldSource = source;
       if (input.targetUnit && this.replaceSourceWithTargetUnit) {
         source = input.targetUnit;
