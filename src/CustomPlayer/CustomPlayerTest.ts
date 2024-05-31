@@ -1465,19 +1465,16 @@ export function CustomPlayerTest() {
   TriggerAddCondition(toggleMinimapIcons, Condition(() => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    Globals.customPlayers[playerId].toggleMMFogModifier();
-    return false;
-  }));
-
-  const toggleMinimapIcons2 = CreateTrigger();
-  for (const player of Constants.activePlayers) {
-    TriggerRegisterPlayerChatEvent(toggleMinimapIcons2, player, "-mm2", true);
-  }
-  TriggerAddCondition(toggleMinimapIcons2, Condition(() => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
+    const visible = Globals.customPlayers[playerId].toggleMMFogModifierFlag();
+    DisplayTimedTextToPlayer(player, 0, 0, 2, "|cffffff00Minimap Icons: |r" + 
+      visible ? 
+        "|cff00ff00On|r" :
+        "|cffff2222Off|r"
+    );
     for (const mm of Globals.minimapIcons) {
-      SetMinimapIconVisible(mm, GetLocalPlayer() == player);
+      if (player == GetLocalPlayer()) {
+        SetMinimapIconVisible(mm, visible);
+      }
     }
     return false;
   }));

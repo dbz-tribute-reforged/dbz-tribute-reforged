@@ -11474,7 +11474,7 @@ export module SimpleSpellSystem {
       newCd *= 0.5;
     }
     if (GetUnitAbilityLevel(unit, Id.beerusFuryCDRFlag) > 0) {
-      newCd *= 0.85;
+      newCd *= 0.9;
     }
     if (GetUnitAbilityLevel(unit, Id.beerusIceCreamCDRFlag) > 0) {
       newCd *= 0.9;

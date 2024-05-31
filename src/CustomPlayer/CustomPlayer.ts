@@ -201,14 +201,12 @@ export class CustomPlayer {
     this.mmFogModifiers.push(fm);
   }
 
-  public toggleMMFogModifier() {
+  public toggleMMFogModifierFlag() {
     this.mmFogModifierFlag = !this.mmFogModifierFlag;
-    for (const fm of this.mmFogModifiers) {
-      if (this.mmFogModifierFlag) {
-        FogModifierStart(fm);
-      } else {
-        FogModifierStop(fm);
-      }
-    }
+    return this.mmFogModifierFlag;
+  }
+
+  public getMMFogModifierFlag() {
+    return this.mmFogModifierFlag;
   }
 }

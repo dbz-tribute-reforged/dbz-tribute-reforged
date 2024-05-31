@@ -204,7 +204,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 10,
     costType: CostType.SP,
-    costAmount: 35,
+    costAmount: 40,
     duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
@@ -221,7 +221,7 @@ export const AbilitiesList = [
       body: 
         "Creates a barrier for 3s that restricts movement and reduces incoming damage.|n" +
         "Blocks 70% of incoming damage up to 3 * STR.|n" +
-        "Cost: 35 SP|n" + 
+        "Cost: 40 SP|n" + 
         "CD: 10"
     },
     components: [
@@ -484,7 +484,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "Limitless Guard",
       body: 
-        "Increases limitless distance reduction to 99% and " + 
+        "Increases limitless distance reduction to 95% and " + 
         "causes limitless to have 100% effect on heroes.|n" +
         "Blocks 70% of incoming damage up to 3 * STR.|n" +
         "Duration: 3s|n" + 
