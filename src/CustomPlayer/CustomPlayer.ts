@@ -31,6 +31,9 @@ export class CustomPlayer {
   public dualTechSendFlag: boolean;
   public dualTechReceiveFlag: boolean;
 
+  public mmFogModifiers: fogmodifier[] = [];
+  public mmFogModifierFlag: boolean = true;
+
   constructor(
     public id: number, 
   ) {
@@ -192,5 +195,20 @@ export class CustomPlayer {
       return ki;
     }
     return this.osKeyMap.get(oskey);
+  }
+
+  public addMMFogModifier(fm: fogmodifier) {
+    this.mmFogModifiers.push(fm);
+  }
+
+  public toggleMMFogModifier() {
+    this.mmFogModifierFlag = !this.mmFogModifierFlag;
+    for (const fm of this.mmFogModifiers) {
+      if (this.mmFogModifierFlag) {
+        FogModifierStart(fm);
+      } else {
+        FogModifierStop(fm);
+      }
+    }
   }
 }

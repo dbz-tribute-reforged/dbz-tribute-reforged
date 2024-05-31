@@ -1409,12 +1409,34 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/GinyuBodyChange3.mp3", 1752);
         }
         break;
+      
+      // gojo
+      case Id.gojoUnlimitedVoid:
+        if (unitId == Id.gojo) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Gojo/UnlimitedVoid1.mp3", 8081);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Gojo/UnlimitedVoid2.mp3", 8406);
+          }
+        }
+        break;
+      
+      case Id.gojoTeleport:
+        if (unitId == Id.gojo) {
+          playSoundOnUnit(unit, "Audio/Voice/Gojo/Teleport.mp3", 889);
+        }
+        break;
 
       // goku
       case Id.kamehameha:
       case Id.kamehamehaGod:
+      case Id.kamehamehaX10:
         if (unitId == Id.goku) {
-          playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
+          if (GetUnitAbilityLevel(unit, Id.kamehamehaX10) > 0) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/Kame10.mp3", 1816);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
+          }
         } else if (unitId == Id.gohan) {
           if (GetHeroLevel(unit) < 115) {
             playSoundOnUnit(unit, "Audio/Voice/GohanTeenKamehameha.mp3", 1201);
@@ -1436,7 +1458,11 @@ export module SoundHelper {
       case Id.dragonFist:
       case Id.superDragonFist:
         if (unitId == Id.goku) {
-          playSoundOnUnit(unit, "Audio/Voice/GokuDragonFist.mp3", 3552);
+          if (GetUnitAbilityLevel(unit, Id.kamehamehaX10) > 0) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/DragonFistSS4.mp3", 1912);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuDragonFist.mp3", 3552);
+          }
         }
         playSoundOnUnit(unit, "Audio/Effects/DragonFist.mp3", 5093);
         break;
@@ -1461,7 +1487,18 @@ export module SoundHelper {
       case Id.masteredUltraInstinct:
         playSoundOnUnit(unit, "Audio/Effects/UltraInstinct.mp3", 9534);
         break;
-
+        
+      case Id.gokuLimitBreaker:
+        if (unitId == Id.goku) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/LimitBreaker1.mp3", 1697);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/LimitBreaker2.mp3", 1736);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
       // goku black
       case Id.gokuBlackKamehameha:
         if (unitId == Id.gokuBlack) {

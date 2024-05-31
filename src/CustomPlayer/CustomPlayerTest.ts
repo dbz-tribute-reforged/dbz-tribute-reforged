@@ -29,6 +29,7 @@ import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
 import { KeyInput } from "Core/KeyInputSystem/KeyInput";
 import { CustomAbilityButton } from "./AbilityButton";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
+import { MinimapHelper } from "Common/MinimapHelper";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1413,39 +1414,73 @@ export function CustomPlayerTest() {
   // give neutral passive buildings minimap icon
   GroupEnumUnitsOfPlayer(Globals.tmpUnitGroup, Constants.neutralPassivePlayer, null);
   ForGroup(Globals.tmpUnitGroup, () => {
-    if (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE)) {
-      const unit = GetEnumUnit();
-      const unitId = GetUnitTypeId(unit);
-      if (
-        unitId == Id.vendorKorin
-        || unitId == Id.vendorChefSatan
-        || unitId == Id.vendorRoshi
-        || unitId == Id.vendorElHermano
-        || unitId == Id.vendorSaitama
-        || unitId == Id.vendorAinz
-        || unitId == Id.vendorKrustyKrab
-      ) { 
-        const x = GetUnitX(unit)
-        const y = GetUnitY(unit)
-        const mm = CreateMinimapIcon(
-          x, y, 255, 255, 255, 
-          "MM_shop.mdl", 
-          FOG_OF_WAR_VISIBLE
-        );
-        SetMinimapIconVisible(mm, true);
-        if (unitId != Id.vendorKorin) {
-          for (const player of Constants.activePlayers) {
-            const fm = CreateFogModifierRadius(
-              player, FOG_OF_WAR_VISIBLE, 
-              x, y, 128, 
-              true, false
-            );
-            FogModifierStart(fm);
-          }
+    const unit = GetEnumUnit();
+    const unitId = GetUnitTypeId(unit);
+    if (
+      unitId == Id.vendorKorin
+      || unitId == Id.vendorChefSatan
+      || unitId == Id.vendorRoshi
+      || unitId == Id.vendorElHermano
+      || unitId == Id.vendorSaitama
+      || unitId == Id.vendorAinz
+      || unitId == Id.vendorKrustyKrab
+      || unitId == Id.tpLookoutUpa
+      || unitId == Id.tpLookoutPopo
+      || unitId == Id.tpNamekPod
+      || unitId == Id.tpNamekFrieza
+      || unitId == Id.tpTimeMachine
+      || unitId == Id.tpTimeMachineCell
+      || unitId == Id.tpCarpetPopo
+    ) {
+      const x = GetUnitX(unit)
+      const y = GetUnitY(unit)
+      const icon = MinimapHelper.getMinimapIcon(unit);
+      const mm = CreateMinimapIcon(
+        x, y, 255, 255, 255, 
+        icon, 
+        FOG_OF_WAR_VISIBLE
+      );
+      SetMinimapIconVisible(mm, true);
+      Globals.minimapIcons.push(mm);
+      if (unitId != Id.vendorKorin) {
+        for (const player of Constants.activePlayers) {
+          const fm = CreateFogModifierRadius(
+            player, FOG_OF_WAR_VISIBLE, 
+            x, y, 128, 
+            false, false
+          );
+          FogModifierStart(fm);
+          
+          const playerId = GetPlayerId(player);
+          Globals.customPlayers[playerId].addMMFogModifier(fm);
         }
       }
     }
   });
+  
+  const toggleMinimapIcons = CreateTrigger();
+  for (const player of Constants.activePlayers) {
+    TriggerRegisterPlayerChatEvent(toggleMinimapIcons, player, "-mm", true);
+  }
+  TriggerAddCondition(toggleMinimapIcons, Condition(() => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    Globals.customPlayers[playerId].toggleMMFogModifier();
+    return false;
+  }));
+
+  const toggleMinimapIcons2 = CreateTrigger();
+  for (const player of Constants.activePlayers) {
+    TriggerRegisterPlayerChatEvent(toggleMinimapIcons2, player, "-mm2", true);
+  }
+  TriggerAddCondition(toggleMinimapIcons2, Condition(() => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    for (const mm of Globals.minimapIcons) {
+      SetMinimapIconVisible(mm, GetLocalPlayer() == player);
+    }
+    return false;
+  }));
 }
 
 export function skurvyMirrorProcessOrder() {

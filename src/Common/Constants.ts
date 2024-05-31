@@ -82,6 +82,8 @@ export module Globals {
   export const appuleVengeanceTeleportTrigger = CreateTrigger();
 
   export const barrierBlockUnits: Map<unit, number> = new Map();
+
+  export const minimapIcons: minimapicon[] = [];
 }
 
 export module Constants {
@@ -633,6 +635,14 @@ export module Id {
   export const vendorAinz = FourCC("n03R");
   export const vendorKrustyKrab = FourCC("n03V");
   export const vendorWhis = FourCC("n01G");
+
+  export const tpLookoutUpa = FourCC("n007");
+  export const tpLookoutPopo = FourCC("h02C");
+  export const tpNamekPod = FourCC("h037");
+  export const tpNamekFrieza = FourCC("h01Y");
+  export const tpTimeMachine = FourCC("h00W");
+  export const tpTimeMachineCell = FourCC("h07V");
+  export const tpCarpetPopo = FourCC("h04E");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");

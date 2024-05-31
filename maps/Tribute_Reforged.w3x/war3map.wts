@@ -165358,15 +165358,9 @@ STRING 23753
 }
 
 STRING 23754
-// Abilities: A0CM (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
+// Units: n007 (Korins Tower), EditorSuffix (Name - Editor Suffix)
 {
-The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
-|cffffff00+0.1x stat multiplier
-+<A06R,DataA1,%>% attack damage
-+3% spell amp per allied player
-|cff00ff00Damage: [Int] 90u/s|r
-|cff00ff00Duration: <A0CM,Dur1> seconds
-|cff00ffffCooldown: <A0CM,Cool1>s
+(lookout)
 }
 
 STRING 23755
@@ -168475,7 +168469,7 @@ STRING 24180
 }
 
 STRING 24181
-// Buffs/Effects: B06Q (Inner Fire Scattered Blossomfall), Bufftip (Tooltip)
+// Abilities: A14B (Scattered Blossomfall), Name (Name)
 {
 Scattered Blossomfall
 }
@@ -168570,6 +168564,30 @@ STRING 24196
 // Abilities: A14A (Plum Blossom Cloudburst), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
+}
+
+STRING 24197
+// Abilities: A0CM (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
+{
+The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
+|cffffff00+0.1x stat multiplier
++<A0CR,DataA1,%>% attack damage
++3% spell amp per allied player
+|cff00ff00Damage: [Int] 90u/s|r
+|cff00ff00Duration: <A0CM,Dur1> seconds
+|cff00ffffCooldown: <A0CM,Cool1>s
+}
+
+STRING 24198
+// Units: h02C (Popo's Magic Carpet), Name (Name)
+{
+Popo's Magic Carpet
+}
+
+STRING 24199
+// Units: h02C (Popo's Magic Carpet), EditorSuffix (Name - Editor Suffix)
+{
+(Lookout)
 }
 
 STRING 24208
@@ -168741,7 +168759,7 @@ STRING 24231
 }
 
 STRING 24232
-// Abilities: A14B (Scattered Blossomfall), Name (Name)
+// Buffs/Effects: B06Q (Inner Fire Scattered Blossomfall), Bufftip (Tooltip)
 {
 Scattered Blossomfall
 }

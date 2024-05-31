@@ -8828,7 +8828,9 @@ export module SimpleSpellSystem {
         600, 
         10, ch.spellPower,
         dmgDataMult, 1.0, bj_HEROSTAT_INT,
-      )
+      );
+
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlackFlash1.mp3", 887);
     } else {
       abil.resetCooldown();
       TextTagHelper.showPlayerColorTextOnUnit(
@@ -8841,6 +8843,12 @@ export module SimpleSpellSystem {
           target
         );
         Globals.tmpVector3.setUnit(target);
+      }
+
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlackFlash2.mp3", 810);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlackFlash3.mp3", 480);
       }
     }
 
@@ -8972,6 +8980,12 @@ export module SimpleSpellSystem {
       SaveEffectHandle(Globals.genericSpellHashtable, 
         casterId, gojoBlueTargetSfxKey, sfx
       );
+
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge1.mp3", 1003);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge2.mp3", 1233);
+      }
     } else {
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
         casterId, gojoBlueCasterSfxKey
@@ -9009,6 +9023,7 @@ export module SimpleSpellSystem {
         TextTagHelper.showPlayerColorTextOnUnit(
           "Maximum Cursed Energy Output: Blue", playerId, caster
         );
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueChargeMax.mp3", 1245);
       }
     }
 
@@ -9144,6 +9159,12 @@ export module SimpleSpellSystem {
       
       dmgGroup = CreateGroup();
       SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoBlueDmgGroupKey, dmgGroup);
+    
+      if (Math.random() * 100 < 50) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueFire1.mp3", 330);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueFire2.mp3", 564);
+      }
     } else {
       beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamKey);
       oldHp = LoadReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey);
@@ -9500,6 +9521,12 @@ export module SimpleSpellSystem {
       SaveEffectHandle(Globals.genericSpellHashtable, 
         casterId, gojoBlueTargetSfxKey, sfx
       );
+
+      if (Math.random() * 100 < 33) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge1.mp3", 1267);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge2.mp3", 1015);
+      }
     } else {
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
         casterId, gojoBlueCasterSfxKey
@@ -9537,6 +9564,7 @@ export module SimpleSpellSystem {
         TextTagHelper.showPlayerColorTextOnUnit(
           "Maximum Cursed Energy Reversal: Red", playerId, caster
         );
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedOutOfTheWay.mp3", 625);
       }
     }
 
@@ -9648,6 +9676,12 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
       BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
       DestroyEffect(sfx);
+
+      if (Math.random() * 100 < 33) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedFire1.mp3", 415);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedFire2.mp3", 329);
+      }
     }
     if (blueBeamTicks < blueBeamSpawnTick) return;
     if (blueBeamTicks == blueBeamSpawnTick) {
@@ -9960,6 +9994,8 @@ export module SimpleSpellSystem {
       
       dmgGroup = CreateGroup();
       SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoPurpleDmgGroupKey, dmgGroup);
+      
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/Purple1.mp3", 1638);
     } else {
       beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamKey);
       oldHp = LoadReal(Globals.genericSpellHashtable, timerId, gojoPurpleBeamHpKey);
@@ -10303,6 +10339,8 @@ export module SimpleSpellSystem {
         BlzStartUnitAbilityCooldown(caster, Id.gojoTeleport, lowerCd);
       }
 
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes1.mp3", 918);
+
     } else {
       AddUnitAnimationProperties(caster, "alternate", true);
       UnitRemoveAbility(caster, Id.gojoSixEyesTrueSight);
@@ -10318,6 +10356,8 @@ export module SimpleSpellSystem {
       if (ch.isChanneling()) IssueImmediateOrderById(caster, OrderIds.STOP);
 
       SaveBoolean(Globals.genericSpellHashtable, casterId, gojoSixEyesActiveKey, false);
+
+      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes2.mp3", 1061);
     }
   }
 
