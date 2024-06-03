@@ -177,7 +177,7 @@ export module SagaAbilities {
     export const BARRIER_PRISON = new SagaAbility(
       AbilityNames.Android17DBS.BARRIER_PRISON, 10, 16, 10, SHORT_CAST_TIME
     );
-    export const BARRIER_PRISO3N = new SagaAbility(
+    export const BARRIER_WALL = new SagaAbility(
       AbilityNames.Android17DBS.BARRIER_WALL, 10, 30, 5, MEDIUM_CAST_TIME
     );
     export const ANDROID_BARRIER = new SagaAbility(

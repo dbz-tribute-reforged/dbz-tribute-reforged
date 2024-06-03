@@ -10,7 +10,7 @@ export module DragonBallsConstants {
   export const shenronUnitDummy: number = FourCC("z000");
   export const shenronUnit: number = FourCC("z001");
   // export const shenronUnit: number = FourCC("n03O");
-  export const shenronWaitingRoom: Vector2D = new Vector2D(10500, 22000);
+  export const shenronWaitingRoom: Vector2D = new Vector2D(2500, 17700);
   export const shenronVisionRadius: number = 800;
   export const shenronSfxInterval: number = 2;
   export const shenronDelay: number = 7.7;
@@ -23,7 +23,7 @@ export module DragonBallsConstants {
     // 1
     new Vector2D(-11000, 0), // lookout
     new Vector2D(2500, 10500), // top middle island
-    new Vector2D(26000, 10300), // android 8 ice area
+    new Vector2D(26000, 10000), // android 8 ice area
     new Vector2D(24200, 1000), // satan city
     new Vector2D(22400, -10200), // kame house
     new Vector2D(5000, -7000), // gohan training mtns
@@ -34,7 +34,7 @@ export module DragonBallsConstants {
     new Vector2D(-10000, 10000), // top left ice area
     new Vector2D(10000, 11400), // top ice mtn
     new Vector2D(20500, 6500), // el hermano
-    new Vector2D(22500, -4000), // goku house
+    new Vector2D(23900, -5500), // grandpa gohan house
     new Vector2D(29000, -13500), // bottom right island 
 
     // 3

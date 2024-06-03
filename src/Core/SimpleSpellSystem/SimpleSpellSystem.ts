@@ -153,7 +153,7 @@ export module SimpleSpellSystem {
         }
       });
 
-      if (CountUnitsInGroup(Globals.barrelUnitGroup) == 0) {
+      if (BlzGroupGetSize(Globals.barrelUnitGroup) == 0) {
         DisableTrigger(Globals.barrelMoveTrigger);
       }
     });
@@ -759,11 +759,12 @@ export module SimpleSpellSystem {
 
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 4, false, () => {
-      const manaToHealRatio = 0.5;
+      const manaToHealRatio = 0.33;
       const enemyHealPct = 0.5;
-      const heal = manaToHealRatio * GetUnitState(target, UNIT_STATE_MANA);
-      SetUnitState(target, UNIT_STATE_MANA, heal);
+      const currentMana = GetUnitState(target, UNIT_STATE_MANA);
+      const heal = manaToHealRatio * currentMana;
       SetUnitState(target, UNIT_STATE_LIFE, heal);
+      SetUnitState(target, UNIT_STATE_MANA, currentMana - heal);
 
       if (UnitHelper.isUnitAlive(src)) {
         SetUnitState(src, UNIT_STATE_LIFE, 
@@ -5777,7 +5778,7 @@ export module SimpleSpellSystem {
         }
 
         // every x ticks, clear the exclude group
-        if (CountUnitsInGroup(excludeGroup) > 0) {
+        if (BlzGroupGetSize(excludeGroup) > 0) {
           ForGroup(excludeGroup, () => {
             const tmpUnit = GetEnumUnit();
             const tmpUnitId = GetHandleId(tmpUnit);
@@ -6944,7 +6945,7 @@ export module SimpleSpellSystem {
       }
     });
 
-    const numTargets = CountUnitsInGroup(targetGroup);
+    const numTargets = BlzGroupGetSize(targetGroup);
 
     let ticks = 0;
     const timer = TimerManager.getInstance().get();
@@ -10299,7 +10300,7 @@ export module SimpleSpellSystem {
 
     const player = GetOwningPlayer(caster);
 
-    if (GetUnitTypeId(caster) == Id.gojo) {
+    if (GetUnitAbilityLevel(caster, Id.gojoSixEyesOff) == 0) {
       UnitAddAbility(caster, Id.gojoSixEyesOff);
     }
 
@@ -10326,21 +10327,21 @@ export module SimpleSpellSystem {
       if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoBlueActive) > lowerCd) {
         BlzStartUnitAbilityCooldown(caster, Id.gojoBlueActive, lowerCd);
       }
-      lowerCd = getCooldownDefault(caster, Id.gojoRedActive);
-      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoRedActive) > lowerCd) {
-        BlzStartUnitAbilityCooldown(caster, Id.gojoRedActive, lowerCd);
+      if (GetUnitTypeId(caster) == Id.gojo) {
+        lowerCd = getCooldownDefault(caster, Id.gojoRedActive);
+        if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoRedActive) > lowerCd) {
+          BlzStartUnitAbilityCooldown(caster, Id.gojoRedActive, lowerCd);
+        }
+        lowerCd = getCooldownDefault(caster, Id.gojoPurpleActive);
+        if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) > lowerCd) {
+          BlzStartUnitAbilityCooldown(caster, Id.gojoPurpleActive, lowerCd);
+        }
+        lowerCd = getCooldownDefault(caster, Id.gojoTeleport);
+        if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoTeleport) > lowerCd) {
+          BlzStartUnitAbilityCooldown(caster, Id.gojoTeleport, lowerCd);
+        }
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes1.mp3", 918);
       }
-      lowerCd = getCooldownDefault(caster, Id.gojoPurpleActive);
-      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) > lowerCd) {
-        BlzStartUnitAbilityCooldown(caster, Id.gojoPurpleActive, lowerCd);
-      }
-      lowerCd = getCooldownDefault(caster, Id.gojoTeleport);
-      if (BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoTeleport) > lowerCd) {
-        BlzStartUnitAbilityCooldown(caster, Id.gojoTeleport, lowerCd);
-      }
-
-      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes1.mp3", 918);
-
     } else {
       AddUnitAnimationProperties(caster, "alternate", true);
       UnitRemoveAbility(caster, Id.gojoSixEyesTrueSight);
@@ -10357,7 +10358,9 @@ export module SimpleSpellSystem {
 
       SaveBoolean(Globals.genericSpellHashtable, casterId, gojoSixEyesActiveKey, false);
 
-      SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes2.mp3", 1061);
+      if (GetUnitTypeId(caster) == Id.gojo) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/SixEyes2.mp3", 1061);
+      }
     }
   }
 

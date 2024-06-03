@@ -7,7 +7,7 @@ import { Id } from "Common/Constants";
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
     // dead zone
-    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 10, 30, 25, 20, new Vector2D(-12300, 27700),
+    ["Garlic Jr", new SagaUnit(Id.garlicJr, 10, 30, 25, 20, new Vector2D(-12300, 27700),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -16,9 +16,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.POWER_POLE,
       ],
     )],
-    ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(-12900, 26000))],
-    ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(-12300, 26000))],
-    ["Sansho", new SagaUnit(FourCC("N00C"), 2, 10, 5, 5, new Vector2D(-11700, 26000))],
+    ["Ginger", new SagaUnit(Id.ginger, 1, 5, 5, 5, new Vector2D(-12900, 26000))],
+    ["Nicky", new SagaUnit(Id.nicky, 1, 5, 5, 5, new Vector2D(-12300, 26000))],
+    ["Sansho", new SagaUnit(Id.sansho, 2, 10, 5, 5, new Vector2D(-11700, 26000))],
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
@@ -36,9 +36,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // saiyan saga
-    // ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(-3300, -5500))],
-    // ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(-3300, -5500))],
-    // ["Nappa", new SagaUnit(FourCC("U019"), 12, 120, 80, 80, new Vector2D(8800, 1400))],
     ["Nappa", new SagaUnit(FourCC("H08W"), 15, 120, 80, 80, new Vector2D(4600, -3000),
       [
         SagaAbilities.Nappa.BLAZING_STORM, 
@@ -51,7 +48,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.SAIBAMEN_SEEDS,
       ]
     )],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(4900, -3000),
+    ["Vegeta", new SagaUnit(FourCC("E003"), 25, 1, 1, 1, new Vector2D(4900, -3000),
       [
         SagaAbilities.Vegeta.GALICK_GUN, 
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
@@ -109,7 +106,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // namek saga
-    ["Dodoria", new SagaUnit(FourCC("U015"), 25, 350, 150, 200, new Vector2D(23500, 30000),
+    ["Dodoria", new SagaUnit(FourCC("U015"), 25, 1, 1, 1, new Vector2D(23500, 30000),
       [
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
         SagaAbilities.Nappa.BREAK_CANNON,
@@ -137,7 +134,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // ginyu force
-    ["Guldo", new SagaUnit(FourCC("H09J"), 9, 200, 200, 650, new Vector2D(26300, 26850),
+    ["Guldo", new SagaUnit(FourCC("H09J"), 9, 1, 1, 1, new Vector2D(26300, 26850),
       [
         SagaAbilities.Guldo.PSYCHO_JAVELIN, 
         SagaAbilities.Guldo.PSYCHIC_ROCK_THROW,
@@ -148,7 +145,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
-    ["Recoome", new SagaUnit(FourCC("U005"), 35, 900, 200, 300, new Vector2D(26300, 27000),
+    ["Recoome", new SagaUnit(FourCC("U005"), 35, 1, 1, 1, new Vector2D(26300, 27000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH, 
         SagaAbilities.Nappa.BREAK_CANNON
@@ -179,20 +176,20 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // frieza
-    ["Frieza 1", new SagaUnit(FourCC("H071"), 10, 1000, 200, 900, new Vector2D(22400, 27600),
+    ["Frieza 1", new SagaUnit(FourCC("H071"), 10, 1, 1, 1, new Vector2D(22400, 27600),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Frieza.DEATH_CANNON,
       ],
     )],
-    ["Frieza 2", new SagaUnit(FourCC("H070"), 15, 1200, 300, 800, new Vector2D(22400, 27600),
+    ["Frieza 2", new SagaUnit(FourCC("H070"), 15, 1, 1, 1, new Vector2D(22400, 27600),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Frieza.DEATH_STORM,
         SagaAbilities.Frieza.IMPALING_RUSH,
       ],
     )],
-    ["Frieza 3", new SagaUnit(FourCC("H06Z"), 20, 1300, 350, 850, new Vector2D(22400, 27600),
+    ["Frieza 3", new SagaUnit(FourCC("H06Z"), 20, 1, 1, 1, new Vector2D(22400, 27600),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Frieza.NOVA_RUSH,
@@ -207,7 +204,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Frieza.DEATH_BALL,
       ],
     )],
-    ["Frieza 5", new SagaUnit(FourCC("H06X"), 75, 2000, 500, 1800, new Vector2D(22400, 27600),
+    ["Frieza 5", new SagaUnit(FourCC("H06X"), 75, 1, 1, 1, new Vector2D(22400, 27600),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Frieza.DEATH_CANNON,
@@ -224,7 +221,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // garlic jr
-    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 60, 800, 350, 850, new Vector2D(-12300, 27700),
+    ["Garlic Jr 2", new SagaUnit(Id.garlicJrSuper, 60, 1, 1, 1, new Vector2D(-12300, 27700),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -234,10 +231,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.SACRED_WATER,
       ]
     )],
-    ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(-13200, 26000))],
-    ["Vinegar", new SagaUnit(FourCC("U00F"), 10, 500, 300, 600, new Vector2D(-12900, 26000))],
-    ["Mustard", new SagaUnit(FourCC("U00G"), 10, 600, 300, 500, new Vector2D(-12600, 26000))],
-    ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(-12300, 26000))],
+    ["Salt", new SagaUnit(FourCC("U00E"), 8, 1, 1, 1, new Vector2D(-13200, 26000))],
+    ["Vinegar", new SagaUnit(FourCC("U00F"), 10, 1, 1, 1, new Vector2D(-12900, 26000))],
+    ["Mustard", new SagaUnit(FourCC("U00G"), 10, 1, 1, 1, new Vector2D(-12600, 26000))],
+    ["Spice", new SagaUnit(FourCC("U00H"), 9, 1, 1, 1, new Vector2D(-12300, 26000))],
 
     // cooler's revenge
     ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(26100, -3000),
@@ -253,7 +250,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // return of cooler
-    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 40, 1800, 400, 2000, new Vector2D(26600, 27200),
+    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 40, 1, 1, 1, new Vector2D(26600, 27200),
       [
         SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -263,7 +260,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
       ]
     )],
-    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 40, 1800, 400, 2000, new Vector2D(26000, 26600),
+    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 40, 1, 1, 1, new Vector2D(26000, 26600),
       [
         SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -273,7 +270,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
       ]
     )],
-    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 40, 1800, 400, 2000, new Vector2D(27200, 26600),
+    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 40, 1, 1, 1, new Vector2D(27200, 26600),
       [
         SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -295,7 +292,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.SPARE_PARTS,
       ]
     )],
-    ["King Cold", new SagaUnit(FourCC("U00K"), 50, 2500, 410, 2000, new Vector2D(-3300, 7000),
+    ["King Cold", new SagaUnit(FourCC("U00K"), 50, 1, 1, 1, new Vector2D(-3300, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -306,13 +303,13 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // androids 19/20 saga
-    ["Android 19", new SagaUnit(FourCC("O00A"), 40, 2500, 350, 2500, new Vector2D(23000, 0),
+    ["Android 19", new SagaUnit(FourCC("O00A"), 40, 1, 1, 1, new Vector2D(23000, 0),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
-    ["Android 20", new SagaUnit(FourCC("H04T"), 50, 2500, 350, 3000, new Vector2D(23600, 0),
+    ["Android 20", new SagaUnit(FourCC("H04T"), 50, 1, 1, 1, new Vector2D(23600, 0),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -353,22 +350,22 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // super android 13
-    ["Android 13", new SagaUnit(FourCC("H01V"), 50, 4000, 350, 4000, new Vector2D(-3000, 12000),
+    ["Android 13", new SagaUnit(FourCC("H01V"), 50, 1, 1, 1, new Vector2D(-3000, 12000),
       [
         SagaAbilities.Android13.ENERGY_BEAM,
       ],
     )],
-    ["Android 14", new SagaUnit(FourCC("H01S"), 25, 3000, 350, 2000, new Vector2D(-2500, 12000),
+    ["Android 14", new SagaUnit(FourCC("H01S"), 25, 1, 1, 1, new Vector2D(-2500, 12000),
       [
         SagaAbilities.Android13.ENERGY_BEAM,
       ],
     )],
-    ["Android 15", new SagaUnit(FourCC("H01T"), 25, 2000, 350, 3000, new Vector2D(-3500, 12000),
+    ["Android 15", new SagaUnit(FourCC("H01T"), 25, 1, 1, 1, new Vector2D(-3500, 12000),
       [
         SagaAbilities.Android13.ENERGY_BEAM,
       ],
     )],
-    ["Super Android 13", new SagaUnit(FourCC("H01U"), 70, 4500, 400, 4000, new Vector2D(-3000, 12000),
+    ["Super Android 13", new SagaUnit(FourCC("H01U"), 70, 1, 1, 1, new Vector2D(-3000, 12000),
       [
         SagaAbilities.Android13.SS_DEADLY_BOMBER,
         SagaAbilities.Android13.SS_DEADLY_HAMMER,
@@ -425,14 +422,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // future androids saga
-    ["Future Android 17", new SagaUnit(FourCC("H05C"), 50, 2800, 350, 2000, new Vector2D(11000, 30700),
+    ["Future Android 17", new SagaUnit(FourCC("H05C"), 50, 1, 1, 1, new Vector2D(11000, 30700),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
         SagaAbilities.Android17DBS.SUPER_ELECTRIC_STRIKE,
       ],
     )],
-    ["Future Android 18", new SagaUnit(FourCC("H05D"), 50, 2000, 350, 2700, new Vector2D(11400, 30700),
+    ["Future Android 18", new SagaUnit(FourCC("H05D"), 50, 1, 1, 1, new Vector2D(11400, 30700),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -538,9 +535,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // babidi ship saga
     // pui pui
-    ["Pui Pui", new SagaUnit(FourCC("O004"), 9, 1000, 400, 1000, new Vector2D(-9200, -8500))],
-    ["Yakon", new SagaUnit(FourCC("O009"), 30, 3600, 400, 3300, new Vector2D(-9000, -8700))],
-    ["Dabura", new SagaUnit(FourCC("H0A9"), 80, 7500, 400, 7500, new Vector2D(-9400, -8200),
+    ["Pui Pui", new SagaUnit(FourCC("O004"), 9, 1000, 400, 1000, new Vector2D(-1000, 21100))],
+    ["Yakon", new SagaUnit(FourCC("O009"), 30, 3600, 400, 3300, new Vector2D(-2000, 21100))],
+    ["Dabura", new SagaUnit(FourCC("H0A9"), 80, 7500, 400, 7500, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -550,7 +547,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // buu saga
     // babidi
-    ["Babidi", new SagaUnit(FourCC("O001"), 60, 4000, 400, 12000, new Vector2D(-9200, -8500),
+    ["Babidi", new SagaUnit(FourCC("O001"), 60, 4000, 400, 12000, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Babidi.HARETSU,
         SagaAbilities.Babidi.BABIDI_BARRIER
@@ -559,7 +556,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.BABIDI_ENERGY_ABSORBER,
       ],
     )],
-    ["Fat Buu", new SagaUnit(FourCC("O005"), 100, 12000, 400, 12000, new Vector2D(-9200, -8500),
+    ["Fat Buu", new SagaUnit(FourCC("O005"), 100, 12000, 400, 12000, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Buu.INNOCENCE_BREATH,
         SagaAbilities.Buu.ANGRY_EXPLOSION,
@@ -630,7 +627,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BEE_DOG_ITEM,
-        ItemConstants.ZENO_BUTTON,
       ]
     )],
 
@@ -759,7 +755,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // battle of gods movie/super
     // beerus
-    ["Beerus", new SagaUnit(Id.beerus, 200, 20000, 400, 20000, new Vector2D(2000, 0),
+    ["Beerus", new SagaUnit(Id.beerus, 200, 1, 1, 1, new Vector2D(2000, 0),
       [
         SagaAbilities.Beerus.SPHERE_OF_DESTRUCTION,
         SagaAbilities.Beerus.AURA_OF_DESTRUCTION,
@@ -802,7 +798,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
-    ["Resurrection Frieza Golden", new SagaUnit(FourCC("U01G"), 150, 20000, 400, 20000, new Vector2D(28800, -13500),
+    ["Resurrection Frieza Golden", new SagaUnit(FourCC("U01G"), 150, 1, 1, 1, new Vector2D(28800, -13500),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
@@ -814,7 +810,27 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
 
-    ["Cell Max", new SagaUnit(Id.cellMax, 200, 1, 1, 1, new Vector2D(-11000, -5000),
+    ["Gamma 1", new SagaUnit(Id.gamma1, 150, 1, 1, 1, new Vector2D(-13200, -4000),
+      [
+        SagaAbilities.Android13.ANDROID_BARRIER,
+        SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Broly.ENERGY_PUNCH,
+      ],
+      [
+      ]
+    )],
+    ["Gamma 2", new SagaUnit(Id.gamma2, 150, 1, 1, 1, new Vector2D(-13200, -4000),
+      [
+        SagaAbilities.Android13.ANDROID_BARRIER,
+        SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Broly.ENERGY_PUNCH,
+      ],
+      [
+      ]
+    )],
+    ["Cell Max", new SagaUnit(Id.cellMax, 300, 1, 1, 1, new Vector2D(-13200, -4000),
       [
         SagaAbilities.CellMax.TAIL_WHIP,
         SagaAbilities.CellMax.TAIL_WHIP_2,
@@ -897,6 +913,138 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // universe survival
     // training
+
+    // zen exhibition match
+
+    // spawn inside babidi's ship
+    // ["Iwan", new SagaUnit(Id.iwan, 100, 1, 1, 1, new Vector2D(-3500, 21000),
+    ["Iwan", new SagaUnit(Id.iwan, 125, 1, 1, 1, new Vector2D(500, 7000),
+      [
+        SagaAbilities.NuovaShenron.BURNING_ATTACK,
+        SagaAbilities.Android13.NUKE,
+        SagaAbilities.Android13.OVERCHARGE,
+      ],
+      [
+      ]
+    )],
+    // ["Giin", new SagaUnit(Id.giin, 100, 1, 1, 1, new Vector2D(-3000, 21000),
+    ["Giin", new SagaUnit(Id.giin, 125, 1, 1, 1, new Vector2D(500, 6500),
+      [
+        SagaAbilities.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
+        SagaAbilities.Android17DBS.ANDROID_BARRIER,
+        SagaAbilities.Android17DBS.SUPER_ELECTRIC_STRIKE,
+      ],
+      [
+      ]
+    )],
+
+    // spawn at lookout
+    // ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(-12300, 27700),
+    ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(2500, 8000),
+      [
+        SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Cooler.GETI_STAR_REPAIR,
+        SagaAbilities.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
+      ],
+      [
+      ]
+    )],
+    // ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(-12000, 27700),
+    ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(4000, 6000),
+      [
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Broly.PLANET_CRUSHER,
+        SagaAbilities.Broly.GIGANTIC_OMEGASTORM,
+        SagaAbilities.LordSlug.SLAPPY_HAND,
+      ],
+      [
+      ]
+    )],
+
+    // spawns near kame house
+    // ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(22000, -10500),
+    ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(4500, 9500),
+      [
+        SagaAbilities.Cell.MASENKO,
+        SagaAbilities.Guldo.TELEKINESIS,
+        SagaAbilities.Zamasu.HOLY_LIGHT_GRENADE,
+      ],
+      [
+      ]
+    )],
+    // ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(22500, -10500),
+    ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(6000, 9500),
+      [
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Zamasu.HEAVENLY_RUSH,
+        SagaAbilities.GokuBlack.DIVINE_LASSO,
+      ],
+      [
+      ]
+    )],
+
+    
+    // spawn at cell arena
+    ["Champa", new SagaUnit(Id.champa, 200, 1, 1, 1, new Vector2D(3250, 6850),
+      [
+        SagaAbilities.Hit.TIME_SKIP,
+        SagaAbilities.Hit.FLASH_FIST,
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Beerus.AURA_OF_DESTRUCTION,
+        SagaAbilities.Beerus.GOD_OF_DESTRUCTION_WRATH,
+        SagaAbilities.Beerus.SPHERE_OF_DESTRUCTION,
+      ],
+      [
+        ItemConstants.ZENO_BUTTON
+      ]
+    )],
+    ["Heles", new SagaUnit(Id.heles, 150, 1, 1, 1, new Vector2D(3500, 6900),
+      [
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Beerus.AURA_OF_DESTRUCTION,
+        SagaAbilities.Beerus.SPHERE_OF_DESTRUCTION,
+      ],
+      [
+      ]
+    )],
+    ["Belmod", new SagaUnit(Id.belmod, 150, 1, 1, 1, new Vector2D(3000, 6900),
+      [
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Beerus.AURA_OF_DESTRUCTION,
+        SagaAbilities.Beerus.SPHERE_OF_DESTRUCTION,
+        SagaAbilities.Saga.NOVA_STAR_OMEGA_CUSTOM,
+      ],
+      [
+      ]
+    )],
+
+    // ice area
+    // ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(-12000, 10500),
+    ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(6000, 5000),
+      [
+        SagaAbilities.Hit.TIME_CAGE,
+        SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
+        SagaAbilities.Ginyu.MILKY_CANNON,
+        SagaAbilities.Ginyu.GALAXY_DYNAMITE,
+        SagaAbilities.Saga.NOVA_STAR_OMEGA_CUSTOM,
+      ],
+      [
+      ]
+    )],
+    // ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(-12500, 10500),
+    ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(5500, 5000),
+      [
+        SagaAbilities.Hit.TIME_SKIP,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Frieza.NOVA_RUSH,
+        SagaAbilities.Hirudgarn.TAIL_SWEEP,
+        SagaAbilities.CellMax.TAIL_WHIP,
+      ],
+      [
+      ]
+    )],
     // tournament of power
 
     // rust tyranno

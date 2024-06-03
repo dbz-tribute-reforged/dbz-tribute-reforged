@@ -77,7 +77,7 @@ export module Creep {
   export const MetalCoolerClone = FourCC("n03W"); // lvl 18
 
   // maybe use these for when hell opens up?
-  export const LostSpirit = FourCC("n01X"); // lvl 3
+  export const YemmaAssistant = FourCC("n01X"); // lvl 3
   export const LostSoul = FourCC("n02C"); // lvl 3
   export const YenmaGuard = FourCC("n02J"); // lvl 12
   export const YenmaElite = FourCC("n02K"); // lvl 17

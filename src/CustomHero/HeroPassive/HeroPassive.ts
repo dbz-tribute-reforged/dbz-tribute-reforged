@@ -163,6 +163,10 @@ export function kidBuuPassive(customHero: CustomHero) {
     genosPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, Id.tatsumakiVector) > 0) {
     tatsumakiPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.gojoBluePassive) > 0) {
+    buuGojoPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.cheongMyeongReturnActive) > 0) {
+    cheongMyeongPassive(customHero);
   }
 }
 
@@ -3630,6 +3634,132 @@ export function gojoPassive(customHero: CustomHero) {
   );
 }
 
+export function buuGojoPassive(customHero: CustomHero) {
+  const gojoBluePressKey = StringHash("gojo_q_press");
+  const gojoBlueChargeFlagKey = StringHash("gojo_q_charge_flag");
+  const gojoBlueCasterTimerKey = StringHash("gojo_q_caster");
+  const gojoBlueChargeTicksKey = StringHash("gojo_q_charge_ticks");
+  const gojoBlueShootTicksKey = StringHash("gojo_q_shoot_ticks");
+  const gojoQXKey = StringHash("gojo_q_x");
+  const gojoQYKey = StringHash("gojo_q_y");
+
+  const casterId = GetHandleId(customHero.unit);
+
+  UnitAddAbility(customHero.unit, Id.gojoBlueActive);
+  SetPlayerAbilityAvailable(
+    GetOwningPlayer(customHero.unit), Id.gojoBlueActive, false
+  );
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+  TimerStart(timer, 0.03, true, () => {
+    const player = GetOwningPlayer(customHero.unit);
+    const playerId = GetPlayerId(player);
+    // const redLvl = Math.min(10, 1 + (heroLvl - 30) / 3);
+
+    const keyQ = Globals.customPlayers[playerId].getOsKeyInput(OSKEY_Q);
+
+    let qPress = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoBluePressKey
+    );
+
+    let blueChargeTicks = LoadInteger(Globals.genericSpellHashtable, 
+      casterId, gojoBlueChargeTicksKey
+    );
+    const isBlueCharging = LoadBoolean(Globals.genericSpellHashtable, 
+      casterId, gojoBlueChargeFlagKey
+    );
+    const blueCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.gojoBlueActive);
+
+    const isHardStunned = UnitHelper.isUnitHardStunned(customHero.unit);
+
+    if (blueCD == 0) {
+      SetPlayerAbilityAvailable(player, Id.gojoBluePassive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoBlueActive, false);
+    }
+
+    if (keyQ.isDown) {
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoQXKey,
+        Globals.customPlayers[playerId].mouseData.x
+      );
+      SaveReal(Globals.genericSpellHashtable, casterId, gojoQYKey,
+        Globals.customPlayers[playerId].mouseData.y
+      );
+    }
+
+    if (qPress && !isHardStunned) {
+      // initiate charging
+      SaveBoolean(Globals.genericSpellHashtable, 
+        casterId, gojoBluePressKey, false
+      );
+      if (blueChargeTicks <= 0 && !isBlueCharging && blueCD == 0) {
+        // if on cd, dont charge
+        TextTagHelper.showPlayerColorTextOnUnit(
+          GetAbilityName(Id.gojoBluePassive), playerId, customHero.unit
+        );
+        SaveInteger(Globals.genericSpellHashtable, 
+          casterId, gojoBlueChargeTicksKey, 1
+        );
+        const blueChargeTimer = CreateTimer();
+        const blueChargeTimerId = GetHandleId(blueChargeTimer);
+        SaveUnitHandle(Globals.genericSpellHashtable, 
+          blueChargeTimerId, gojoBlueCasterTimerKey, customHero.unit
+        );
+        TimerStart(blueChargeTimer, 0.03, true, 
+          SimpleSpellSystem.gojoBlueChargeLoop
+        );
+      }
+    }
+
+    // q fire
+    if (blueChargeTicks > 0 && isBlueCharging && !keyQ.isDown && !isHardStunned) {
+      SetPlayerAbilityAvailable(player, Id.gojoBlueActive, true);
+      SetPlayerAbilityAvailable(player, Id.gojoBluePassive, false);
+      BlzStartUnitAbilityCooldown(
+        customHero.unit, Id.gojoBlueActive, 
+        SimpleSpellSystem.getCooldown(
+          customHero.unit, Id.gojoBlueActive,
+          BlzGetUnitAbilityCooldown(customHero.unit, Id.gojoBlueActive, 0)
+        )
+      );
+
+      // end charging and fire
+      SaveInteger(Globals.genericSpellHashtable, 
+        casterId, gojoBlueChargeTicksKey, 0
+      );
+      const blueBeamTimer = CreateTimer();
+      const blueBeamTimerId = GetHandleId(blueBeamTimer);
+      SaveUnitHandle(Globals.genericSpellHashtable, 
+        blueBeamTimerId, gojoBlueCasterTimerKey, customHero.unit
+      );
+      SaveInteger(Globals.genericSpellHashtable, 
+        blueBeamTimerId, gojoBlueShootTicksKey, blueChargeTicks
+      );
+      TimerStart(blueBeamTimer, 0.03, true, SimpleSpellSystem.gojoBlueBeamLoop);
+    }
+  });
+
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      // mark it for dds
+      const attacked = GetTriggerUnit();
+      if (UnitHelper.isUnitRealHero(attacked)) {
+        Globals.DDSAddUnit(attacked);
+      }
+      return false;
+    })
+  );
+}
+
 export function cheongMyeongPassive(customHero: CustomHero) {
   const basicManaCostPct = 0.05;
   const specialManaCostPct = 0.25;
@@ -3675,9 +3805,11 @@ export function cheongMyeongPassive(customHero: CustomHero) {
       }
     }
 
-    SetUnitAbilityLevel(customHero.unit, Id.cheongMyeongCritPassive, 
-      Math.min(10, 1 + Math.floor(0.1 * GetUnitManaPercent(customHero.unit)))
-    );
+    if (GetUnitAbilityLevel(customHero.unit, Id.cheongMyeongCritPassive) > 0) {
+      SetUnitAbilityLevel(customHero.unit, Id.cheongMyeongCritPassive, 
+        Math.min(10, 1 + Math.floor(0.1 * GetUnitManaPercent(customHero.unit)))
+      );
+    }
 
     const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MAX_MANA);
     for (const abil of basicAbils) {

@@ -463,7 +463,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 // tagoma / frieza force saga
 
 // export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
-//   name: string = '[DB Super] Resurrection \'F\'';
+//   name: string = '[DBS] Resurrection \'F\'';
 
 //   protected frieza1: unit | undefined;
 //   protected friezaFinal: unit | undefined;
@@ -563,7 +563,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 // }
 
 export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Resurrection \'F\'';
+  name: string = '[DBS] Resurrection \'F\'';
 
   constructor() {
     super();

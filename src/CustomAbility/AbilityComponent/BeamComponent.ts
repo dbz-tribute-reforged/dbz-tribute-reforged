@@ -171,7 +171,10 @@ export class BeamComponent implements
       
       const numEnemyHeroes = UnitHelper.countEnemyHeroes(Globals.tmpUnitGroup, input.casterPlayer, false);
       
-      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(Globals.tmpUnitGroup) > 0);
+      const beamClashTest = (
+        currentHp < this.previousHp 
+        && BlzGroupGetSize(Globals.tmpUnitGroup) > 0
+      );
       
       if (
         this.explodeOnContact && 

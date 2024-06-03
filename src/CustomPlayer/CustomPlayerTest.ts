@@ -30,6 +30,7 @@ import { KeyInput } from "Core/KeyInputSystem/KeyInput";
 import { CustomAbilityButton } from "./AbilityButton";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { MinimapHelper } from "Common/MinimapHelper";
+import { SagaManager } from "Core/SagaSystem/SagaManager";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -934,6 +935,7 @@ export function CustomPlayerTest() {
   // BJDebugMsg("Num players detected: " + numActivePlayers);
 
   if (numActivePlayers == 1) {
+    Globals.isSinglePlayer = true;
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
@@ -1127,6 +1129,21 @@ export function CustomPlayerTest() {
         BlzFrameSetSize(frame, x, y);
       }
     });
+
+    
+    const sagaDelayTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(sagaDelayTrig, Player(i), "-nodelay", true);
+    }
+    TriggerAddAction(sagaDelayTrig, () => {
+      if (SagaManager.delayOverride < 0) {
+        print("disable saga delay");
+        SagaManager.setDelayOverride(0);
+      } else {
+        print("enable saga delay");
+        SagaManager.setDelayOverride(-1);
+      }
+    });
   }
 
   // ally/unally as necessary
@@ -1283,7 +1300,7 @@ export function CustomPlayerTest() {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
           5, 
-          "Old sagas activated"
+          "Full sagas activated"
         );
       } else {
         Globals.sagaSystemMode = 0;
@@ -1431,6 +1448,7 @@ export function CustomPlayerTest() {
       || unitId == Id.tpTimeMachine
       || unitId == Id.tpTimeMachineCell
       || unitId == Id.tpCarpetPopo
+      || unitId == Id.tpBabidiShip
     ) {
       const x = GetUnitX(unit)
       const y = GetUnitY(unit)
@@ -1467,9 +1485,10 @@ export function CustomPlayerTest() {
     const playerId = GetPlayerId(player);
     const visible = Globals.customPlayers[playerId].toggleMMFogModifierFlag();
     DisplayTimedTextToPlayer(player, 0, 0, 2, "|cffffff00Minimap Icons: |r" + 
-      visible ? 
+      (visible ? 
         "|cff00ff00On|r" :
         "|cffff2222Off|r"
+      )
     );
     for (const mm of Globals.minimapIcons) {
       if (player == GetLocalPlayer()) {

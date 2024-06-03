@@ -22,12 +22,11 @@ import { BeerusSaga, WhisTrainingSaga } from "./Sagas/SagaBeerusGroup";
 import { Universe6Saga } from "./Sagas/SagaUniverse6Group";
 import { FTSuperSaga1, FTSuperSaga2 } from "./Sagas/SagaFTSuperGroup";
 import { RustTyrannoSaga } from "./Sagas/SagaCronoGroup";
+import { ZenExhibitionMatchSaga1, ZenExhibitionMatchSaga2 } from "./Sagas/SagaUniverseSurvivalGroup";
 
 // the actual saga configuration
 export const sagaSystemConfig: SagaSystemConfig = {
   sagas: [
-    // TestSaga,
-    // TestSagaTwo,
     // main line
     RaditzSaga,
     VegetaSaga,
@@ -58,9 +57,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
     HirudegarnSaga,
     // super branch
     BeerusSaga,
-    WhisTrainingSaga,
     GoldenFriezaSaga,
     Universe6Saga,
+    ZenExhibitionMatchSaga1,
+    ZenExhibitionMatchSaga2,
     BrolyDBSSaga,
     // gt branch
     BebiSaga,
@@ -183,16 +183,20 @@ export const sagaSystemConfig: SagaSystemConfig = {
     BeerusSaga: [
       [ BuuSaga, SagaState.Completed ],
     ],
-    WhisTrainingSaga: [
+    GoldenFriezaSaga: [
       [ BeerusSaga, SagaState.Completed ],
     ],
-    GoldenFriezaSaga: [
-      [ WhisTrainingSaga, SagaState.Completed ],
+    ZenExhibitionMatchSaga1: [
+      [ GoldenFriezaSaga, SagaState.Completed ],
+      [ ShadowDragonSaga1, SagaState.NotInProgress ],
+    ],
+    ZenExhibitionMatchSaga2: [
+      [ ZenExhibitionMatchSaga1, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
       // [ Universe6Saga, SagaState.Completed ],
       [ BioBrolySaga, SagaState.Completed ],
-      [ GoldenFriezaSaga, SagaState.Completed ],
+      [ ZenExhibitionMatchSaga2, SagaState.Completed ],
     ],
     CellMaxSaga: [
       [ BrolyDBSSaga, SagaState.Completed ],
@@ -206,6 +210,8 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     ShadowDragonSaga1: [
       [ Super17Saga, SagaState.Completed ],
+      [ ZenExhibitionMatchSaga1, SagaState.NotInProgress ],
+      [ ZenExhibitionMatchSaga2, SagaState.NotInProgress ],
     ],
     ShadowDragonSaga2: [
       [ ShadowDragonSaga1, SagaState.Completed ],
@@ -227,8 +233,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
 
 export const fastSagaSystem: SagaSystemConfig = {
   sagas: [
-    // TestSaga,
-    // TestSagaTwo,
     // main line
     
     // start
@@ -248,8 +252,9 @@ export const fastSagaSystem: SagaSystemConfig = {
     BabidiSaga,
     BuuSaga,
     BeerusSaga,
-    WhisTrainingSaga,
     GoldenFriezaSaga,
+    ZenExhibitionMatchSaga1,
+    ZenExhibitionMatchSaga2,
     BrolyDBSSaga,
     CellMaxSaga,
 
@@ -318,16 +323,21 @@ export const fastSagaSystem: SagaSystemConfig = {
     BeerusSaga: [
       [ BuuSaga, SagaState.Completed ],
     ],
-    WhisTrainingSaga: [
+    GoldenFriezaSaga: [
       [ BeerusSaga, SagaState.Completed ],
     ],
-    GoldenFriezaSaga: [
-      [ WhisTrainingSaga, SagaState.Completed ],
+    ZenExhibitionMatchSaga1: [
+      [ GoldenFriezaSaga, SagaState.Completed ],
+      [ ShadowDragonSaga1, SagaState.NotInProgress ],
+    ],
+    ZenExhibitionMatchSaga2: [
+      [ ZenExhibitionMatchSaga1, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
       // [ Universe6Saga, SagaState.Completed ],
       // [ FTSuperSaga2, SagaState.Completed ],
-      [ GoldenFriezaSaga, SagaState.Completed ],
+      // [ GoldenFriezaSaga, SagaState.Completed ],
+      [ ZenExhibitionMatchSaga2, SagaState.Completed ],
     ],
     CellMaxSaga: [
       [ BrolyDBSSaga, SagaState.Completed ],
@@ -381,6 +391,8 @@ export const fastSagaSystem: SagaSystemConfig = {
     ],
     ShadowDragonSaga1: [
       [ Super17Saga, SagaState.Completed ],
+      [ ZenExhibitionMatchSaga1, SagaState.NotInProgress ],
+      [ ZenExhibitionMatchSaga2, SagaState.NotInProgress ],
     ],
     ShadowDragonSaga2: [
       [ ShadowDragonSaga1, SagaState.Completed ],

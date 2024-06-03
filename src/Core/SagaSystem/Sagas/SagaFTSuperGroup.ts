@@ -4,7 +4,7 @@ import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
 
 export class FTSuperSaga1 extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Future Trunks Saga I: Goku Black\'s Incursion';
+  name: string = '[DBS] Future Trunks Saga I: Goku Black\'s Incursion';
 
   constructor() {
     super();
@@ -63,7 +63,7 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
 }
 
 export class FTSuperSaga2 extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Future Trunks Saga II: The Zero Mortal Plan';
+  name: string = '[DBS] Future Trunks Saga II: The Zero Mortal Plan';
 
   protected gokuBlack: unit | undefined;
   protected isRose: boolean;

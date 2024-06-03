@@ -3,6 +3,7 @@ import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
   export let isMainGameStarted: boolean = false;
+  export let isSinglePlayer: boolean = false;
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
@@ -126,7 +127,7 @@ export module Constants {
   export const sagaPingInterval: number = 30;
   export const sagaAggroInterval: number = 500;
   export const sagaMinAcquisitionRange: number = 2500;
-  export const sagaMaxAcquisitionRange: number = 35000;
+  export const sagaMaxAcquisitionRange: number = 33333;
   export const reviveDelay: number = 5;
   // dont make team values 0
   export const invalidTeamValue: number = 0;
@@ -407,9 +408,9 @@ export module DebuffAbilities {
   export const SLOW_GENERIC_75_PCT_3S = FourCC('A0C4');
   export const SLOW_GENERIC_90_PCT_3S = FourCC('A0CA');
 
-  export const SLOW_GENERIC_25_PCT_1S = FourCC('A03T');
+  export const SLOW_GENERIC_25_PCT_1S = FourCC('A04U');
   export const SLOW_GENERIC_50_PCT_1S = FourCC('A00K');
-  export const SLOW_GENERIC_75_PCT_1S = FourCC('A04U');
+  export const SLOW_GENERIC_75_PCT_1S = FourCC('A03T');
 
   // entangling roots
   export const FLESH_ATTACK_ABSORB = FourCC("A07E");
@@ -643,6 +644,7 @@ export module Id {
   export const tpTimeMachine = FourCC("h00W");
   export const tpTimeMachineCell = FourCC("h07V");
   export const tpCarpetPopo = FourCC("h04E");
+  export const tpBabidiShip = FourCC("h02E");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");
@@ -729,6 +731,8 @@ export module Id {
   export const appuleVengeance = FourCC("A11B");
   export const appuleClones = FourCC("A11E");
 
+  export const arak = FourCC("H02P");
+
   export const babidi = FourCC("O001");
   export const haretsu = FourCC("A02E");
   export const babidiBarrier = FourCC("A0LG");
@@ -765,6 +769,8 @@ export module Id {
   export const beerusCounter = beerusPassive; 
   export const beerusFuryCDRFlag = FourCC("A0D5");
   export const beerusIceCreamCDRFlag = FourCC("A0D6");
+
+  export const belmod = FourCC("H02K");
 
   export const broly = FourCC("H00M");
   export const energyPunch = FourCC("A0G8");
@@ -807,6 +813,8 @@ export module Id {
   export const cellMaxBarrier = FourCC("A0HM");
   export const cellMaxBarrier2 = FourCC("A0HY");
   export const cellMaxDisaster = FourCC("A0HZ");
+
+  export const champa = FourCC("H02F");
 
   export const cheongMyeong = FourCC("H02B");
   export const cheongMyeongSwordOfSixElements = FourCC("A142");
@@ -996,6 +1004,15 @@ export module Id {
   export const ftSwordOfHope = FourCC("A007");
   export const superSaiyanRage = FourCC("A0KT");
 
+  export const gamma1 = FourCC("H02G");
+  export const gamma2 = FourCC("H02H");
+
+  export const garlicJr = FourCC("H02U");
+  export const garlicJrSuper = FourCC("H02Y");
+  export const ginger = FourCC("H02V");
+  export const nicky = FourCC("H02W");
+  export const sansho = FourCC("H02X");
+
   export const genos = FourCC("H00P");
   export const genosMachineGunBlow = FourCC("A04T");
   export const genosIncinerate = FourCC("A00P");
@@ -1013,6 +1030,8 @@ export module Id {
   export const getiStarUpgradeSpellPower = FourCC("R00K");
   export const getiStarItemReplicator = FourCC("A0CB");
   export const getiStarEmergencyCloning = FourCC("A0CC");
+
+  export const giin = FourCC("H02S");
 
   export const ginyu = FourCC("H09E");
   export const milkyCannon = FourCC("A0PP");
@@ -1124,6 +1143,8 @@ export module Id {
   export const gutsDragonCannonShot = FourCC("A10L");
   export const gutsBurstingFlame = FourCC("A10M");
 
+  export const heles = FourCC("H02O");
+
   export const hirudegarn = FourCC("H05U");
   export const hirudegarnFlameBreath = FourCC("A081");
   export const hirudegarnFlameBall = FourCC("A082");
@@ -1164,6 +1185,8 @@ export module Id {
   export const hirenkyaku = FourCC("A0VL");
   export const blutVene = FourCC("A0VM");
   export const ceroGigante = FourCC("A0VO");
+
+  export const iwan = FourCC("H02M");
 
   export const jaco = FourCC("H0AL");
   export const jacoEliteBeamCharge = FourCC("A10T");
@@ -1247,6 +1270,8 @@ export module Id {
   export const linkArrowLightning = FourCC("A0GF");
   export const linkArrowBomb = FourCC("A0H2");
 
+  export const liquiir = FourCC("H02Q");
+
   export const lucario = FourCC("H0A7");
   export const vacuumWave = FourCC("A0XU");
   export const ironDefense = FourCC("A0XV");
@@ -1284,6 +1309,8 @@ export module Id {
   export const minatoHiraishin = FourCC("A004");
   export const minatoKuramaMode = FourCC("A009");
   export const minatoKuramaModeFlag = FourCC("A00A");
+
+  export const mule = FourCC("H02T");
 
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");
@@ -1366,7 +1393,13 @@ export module Id {
   export const hellzoneGrenade = FourCC("A0LM");
   export const multiForm = FourCC('A088');
   export const lightGrenade = FourCC("A11K");
+
+  export const princessSnake = FourCC("H02D");
   
+  export const quitela = FourCC("H02N");
+
+  export const rumsshi = FourCC("H02L");
+
   export const rustTyranno = FourCC("H09Z");
   export const tyrannoFlame = FourCC("A0VI");
   export const rustChomp = FourCC("A0VG");
@@ -1429,6 +1462,8 @@ export module Id {
   export const shotoTodorokiHeatingUp = FourCC("A0YV");
   export const shotoTodorokiCoolingDown = FourCC("A0YW");
   
+  export const sidra = FourCC("H02R");
+
   export const sonic = FourCC("H0AA");
   export const sonicJump = FourCC("A0ZE");
   export const sonicInstaShield = FourCC("A0ZH");
@@ -1528,6 +1563,8 @@ export module Id {
   export const skurvyScorn = FourCC("A0Z6");
   export const skurvyPower = FourCC("A0ZA");
   export const skurvyPlunderBird = FourCC("nalb");
+
+  export const vados = FourCC("E01J");
   
   export const waluigi = FourCC("H0AO");
   export const waluigiFireball = FourCC("A11N");

@@ -22,6 +22,7 @@ export module MinimapHelper {
       [Id.tpTimeMachine, "MM_tp_future_trunks.mdl"],
       [Id.tpTimeMachineCell, "MM_tp_future_cell.mdl"],
       [Id.tpCarpetPopo, "MM_tp_carpet.mdl"],
+      [Id.tpBabidiShip, "MM_tp_babidi.mdl"],
 
       [Id.goku, "MM_goku.mdl"],
       [Id.vegeta, "MM_vegeta.mdl"],

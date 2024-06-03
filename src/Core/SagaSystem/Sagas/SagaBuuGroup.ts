@@ -12,7 +12,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 10;
   }
 
   spawnSagaUnits(): void {
@@ -26,7 +26,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Pui Pui", "Yakon", "Dabura", "Babidi", "Fat Buu"], true);
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.dabura = this.bosses[2];
@@ -171,7 +171,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
 
 
 export class FutureBabidiSaga extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Future Babidi Saga';
+  name: string = '[DBS] Future Babidi Saga';
 
   protected yakon: unit | undefined;
   protected dabura: unit | undefined;

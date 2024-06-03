@@ -93,8 +93,8 @@ export class CreepManager {
 
     // special creeps
 
-    // mecha frieza
-    x = CreateUnit(Constants.sagaPlayer, FourCC("H072"), -15000, 22800, 315);
+    // princess snake
+    x = CreateUnit(Constants.sagaPlayer, Id.princessSnake, -14800, 22200, 315);
     SetHeroLevel(x, 20, false);
     SetHeroStr(x, 2000, true);
     SetHeroAgi(x, 2000, true);
@@ -108,7 +108,7 @@ export class CreepManager {
     SetHeroInt(x, 2000, true);
     UnitAddAbility(x, Constants.evilFightingSkills);
 
-    x = CreateUnit(Constants.sagaPlayer, Id.janembaFat, -10500, 19500, 270);
+    x = CreateUnit(Constants.sagaPlayer, Id.janembaFat, -11000, 19600, 270);
     SetHeroLevel(x, 40, false);
     SetHeroStr(x, 5000, true);
     SetHeroAgi(x, 5000, true);
@@ -178,12 +178,12 @@ export class CreepManager {
 
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
       let player = Player(i);
-      SetPlayerName(player, "Creeps");
       SetPlayerColorBJ(player, PLAYER_COLOR_COAL, false);
       if (i == Constants.heavenHellCreepPlayerId) {
         SetPlayerName(player, "Heaven/Hell");
         continue;
       }
+      SetPlayerName(player, "Creeps");
 
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
@@ -252,13 +252,15 @@ export class CreepManager {
       const x = GetUnitX(creepUnit);
       const y = GetUnitY(creepUnit);
       if (
-        IsUnitType(creepUnit, UNIT_TYPE_HERO) &&
         x > Constants.heavenHellBottomLeft.x &&
         y > Constants.heavenHellBottomLeft.y &&
         x < Constants.heavenHellTopRight.x &&
         y < Constants.heavenHellTopRight.y
       ) {
         creepPlayer = Constants.heavenHellCreepPlayer;
+        // if (!IsUnitType(creepUnit, UNIT_TYPE_HERO)) {
+          
+        // }
       }
       SetUnitOwner(creepUnit, creepPlayer, false);
 

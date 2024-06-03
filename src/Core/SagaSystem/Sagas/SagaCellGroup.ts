@@ -291,13 +291,15 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 export class CellMaxSaga extends AdvancedSaga implements Saga {
   name: string = '[DBS] Super Heroes Saga';
 
+  protected gamma1: unit | undefined;
+  protected gamma2: unit | undefined;
   protected cellMax: unit | undefined;
   protected isDamaged: boolean;
   protected auraSfx: effect;
 
   constructor() {
     super();
-    this.delay = 45;
+    this.delay = 10;
     this.isDamaged = false;
     this.auraSfx = null
   }
@@ -310,13 +312,17 @@ export class CellMaxSaga extends AdvancedSaga implements Saga {
       ],
     );
 
-    this.addHeroListToSaga(["Cell Max"], true);
-
-    this.cellMax = this.bosses[0];
+    this.addHeroListToSaga(["Gamma 1", "Gamma 2", "Cell Max"], true);
 
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
+
+    this.gamma1 = this.bosses[0];
+    this.gamma2 = this.bosses[1];
+    this.cellMax = this.bosses[2];
+
+    SagaHelper.sagaHideUnit(this.cellMax);
 
     this.ping();
     this.setupBossDeathActions(this);
@@ -324,6 +330,19 @@ export class CellMaxSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     super.update(t);
+    if (
+      this.gamma1 && this.gamma2 && this.cellMax &&
+      SagaHelper.checkUnitHp(this.gamma2, 0.1, false, true, false) &&
+      SagaHelper.isUnitSagaHidden(this.cellMax)
+    ) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Hedo|r: Magenta activated Cell Max early!",
+        ],
+      );
+      SagaHelper.genericTransformAndPing(this.cellMax, this.gamma2, this);
+
+    }
     if (
       this.cellMax &&
       !this.isDamaged && 
@@ -348,10 +367,17 @@ export class CellMaxSaga extends AdvancedSaga implements Saga {
         "origin", 
       );
       DestroyEffect(
-        AddSpecialEffectTarget(
-          "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
-          this.cellMax, 
-          "origin", 
+        AddSpecialEffect(
+          "AZ_BoomBlue.mdl",
+          GetUnitX(this.cellMax),
+          GetUnitY(this.cellMax),
+        )
+      );
+      DestroyEffect(
+        AddSpecialEffect(
+          "Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
+          GetUnitX(this.cellMax),
+          GetUnitY(this.cellMax),
         )
       );
     }

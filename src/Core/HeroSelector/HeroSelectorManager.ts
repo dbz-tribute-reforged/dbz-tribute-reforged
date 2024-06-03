@@ -8,7 +8,7 @@ import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityShop } from "Core/AbilityShop/AbilityShop";
-import { Frame } from "w3ts";
+import { Frame, Trigger } from "w3ts";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -35,6 +35,9 @@ export class HeroSelectorManager {
   public timerText: texttag;
 
   public heroSelectUnits: HeroSelectUnit[];
+
+  public repickButton: Frame;
+  public repickButtonTrigger: Trigger;
 
   public abilShop: AbilityShop;
 
@@ -67,6 +70,9 @@ export class HeroSelectorManager {
 
     this.heroSelectUnits = [];
 
+    this.repickButton = null;
+    this.repickButtonTrigger = null;
+
     this.init();
 
     this.abilShop = new AbilityShop();
@@ -79,11 +85,11 @@ export class HeroSelectorManager {
     this.setupPlayerSpawns();
     this.setupUnitCreatedFunction();
     this.hookHeroSelectorHeroButton();
-    this.setupRepickTrigger();
+    this.setupRepick();
     this.setupHideSelectorTrigger();
     this.setupHeroes();
     this.setupGameModes();
-    HeroSelector.show(true);
+    this.show(true);
     CustomUI.show(false, false);
 
     SetTextTagPos(this.timerText, GetRectCenterX(gg_rct_HeroPickRegion), GetRectMaxY(gg_rct_HeroPickRegion), 10);
@@ -180,7 +186,7 @@ export class HeroSelectorManager {
 
       SelectUnitForPlayerSingle(unit, player)
       HeroSelector.enablePick(false, player)
-      HeroSelector.show(false, player);
+      this.show(false, player);
       CustomUI.show(true, false, player);
 
       if (Globals.pecorinePickVoiceFlag && GetUnitTypeId(unit) == Id.pecorine) {
@@ -208,38 +214,58 @@ export class HeroSelectorManager {
     }
   }
 
-  setupRepickTrigger() {
+  setupRepick() {
+    // create ui for repick
+    
+    this.repickButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.3000, 0.1520)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3900, 0.1760)
+      .setText("|cffFFCC00Repick|r")
+      .setScale(1.00)
+
+    this.repickButtonTrigger = new Trigger();
+    this.repickButtonTrigger.triggerRegisterFrameEvent(this.repickButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.repickButtonTrigger.addAction( () => {
+      this.repickButton.enabled = false;
+      this.repickButton.enabled = true;
+      this.initRepick(GetTriggerPlayer(), true);
+    });
+
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       // TriggerRegisterPlayerEventEndCinematic(this.repickTrigger, Player(i));
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick", true);
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick2", true);
     }
     TriggerAddCondition(this.repickTrigger, Condition(() => {
-      if (this.allowRepick) {
-        const player = GetTriggerPlayer();
-        if (
-          !Globals.isFBSimTest
-          || GetEventPlayerChatString() == "-repick"
-        ) {
-          this.doRepickForPlayer(player);
-        }
-
-        if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
-          HeroSelector.show(false, player);
-          HeroSelector.forceRandom(player);
-        } else {
-          // remove gold
-          SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
-          HeroSelector.show(true, player);
-          HeroSelector.enablePick(true, player);
-          CustomUI.show(false, false, player);
-        }
-
-        udg_TempInt = GetConvertedPlayerId(player);
-        TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
-      }
+      this.initRepick(
+        GetTriggerPlayer(),
+        !Globals.isFBSimTest || GetEventPlayerChatString() == "-repick",
+      );
       return false;
     }));
+  }
+
+  initRepick(player: player, removeUnits: boolean) {
+    if (!this.allowRepick) return;
+    if (removeUnits) {
+      this.doRepickForPlayer(player);
+    }
+
+    if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
+      this.show(false, player);
+      HeroSelector.forceRandom(player);
+    } else {
+      // remove gold
+      SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
+      this.show(true, player);
+      HeroSelector.enablePick(true, player);
+      CustomUI.show(false, false, player);
+    }
+
+    udg_TempInt = GetConvertedPlayerId(player);
+    TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
   }
 
   doRepickForPlayer(player: player, dropItems: boolean = false) {
@@ -290,9 +316,9 @@ export class HeroSelectorManager {
       if (this.allowRepick) {
         const str = GetEventPlayerChatString();
         if (str == "-hide") {
-          HeroSelector.show(false, GetTriggerPlayer());
+          this.show(false, GetTriggerPlayer());
         } else if (str == "-show") {
-          HeroSelector.show(true, GetTriggerPlayer());
+          this.show(true, GetTriggerPlayer());
         }
       }
       return false;
@@ -317,7 +343,12 @@ export class HeroSelectorManager {
 
 
 
-
+  show(flag: boolean, who?: any) {
+    HeroSelector.show(flag, who);
+    if (!who || who == GetLocalPlayer()) {
+      this.repickButton.setVisible(!flag && !this.isGameStarted);
+    }
+  }
 
   startHeroSelection(doBans: boolean = false) {
     HeroSelector.deselectButtons();
@@ -354,7 +385,7 @@ export class HeroSelectorManager {
     HeroSelector.setTitleText("Picking: " + this.time);
     HeroSelector.enablePick(true);
     HeroSelector.update();
-    HeroSelector.show(true);
+    this.show(true);
     CustomUI.show(false, false);
     this.isPicking = true;
     this.abilShop.setCanSwap(true);
@@ -365,7 +396,7 @@ export class HeroSelectorManager {
     HeroSelector.setTitleText(GetLocalizedString(HeroSelector.BanButtonText) + ": " + this.time);
     HeroSelector.enableBan(true);
     HeroSelector.update();
-    HeroSelector.show(true);
+    this.show(true);
     CustomUI.show(false, false);
     this.isPicking = false;
     this.abilShop.setCanSwap(false);
@@ -401,7 +432,7 @@ export class HeroSelectorManager {
     DisableTrigger(this.gameModeTrigger);
     PauseTimer(this.selectTimer);
 
-    HeroSelector.show(false);
+    this.show(false);
     CustomUI.show(true, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -554,7 +585,7 @@ export class HeroSelectorManager {
     } else {
 
     }
-    HeroSelector.show(false);
+    this.show(false);
     CustomUI.show(true, false);
     this.time = 15;
 

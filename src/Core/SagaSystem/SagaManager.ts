@@ -9,6 +9,7 @@ export class SagaManager {
   private static instance: SagaManager;
 
   public static maxNumberConcurrentSagas: number = 4;
+  public static delayOverride: number = -1;
 
   protected inProgressSagas: number;
 
@@ -27,6 +28,10 @@ export class SagaManager {
 
     this.initialize();
   }
+  
+  public static setDelayOverride(delay: number) {
+    SagaManager.delayOverride = delay;
+  }
 
   public static getInstance() {
     if (this.instance == null) {
@@ -44,6 +49,10 @@ export class SagaManager {
     for (let i = 0; i < this.config.sagas.length; i++) {
       const sagaType = this.config.sagas[i];
       this.sagas.push(new sagaType() as Saga);
+      // force delay to 0
+      if (SagaManager.delayOverride >= 0) {
+        this.sagas[this.sagas.length-1].delay = 0;
+      }
     }
     TimerStart(this.sagaPingTimer, Constants.sagaPingInterval, true, () => {
       if (Globals.isKOTH) return;
@@ -146,11 +155,20 @@ export class SagaManager {
     for (const sagaDependencyKey of dependenciesOfSaga) {
       // get the current saga dependency from the list of initialized sagas so that we can check the state
       for (const saga of this.sagas) {
-        if (
-          saga.constructor.name == sagaDependencyKey[0].name && 
-          saga.state != sagaDependencyKey[1]
-        ) {
-          return false;
+        if (sagaDependencyKey[1] == SagaState.NotInProgress) {
+          if (
+            saga.constructor.name == sagaDependencyKey[0].name
+            && saga.state == SagaState.InProgress
+          ) {
+            return false;
+          }
+        } else {
+          if (
+            saga.constructor.name == sagaDependencyKey[0].name && 
+            saga.state != sagaDependencyKey[1]
+          ) {
+            return false;
+          }
         }
       }
     }

@@ -746,7 +746,7 @@ export class KOTHGame {
     // get all units put in wait rooms
     for (const player of players) {
       const playerId = GetPlayerId(player);
-      const numUnits = CountUnitsInGroup(udg_StatMultPlayerUnits[playerId]);
+      const numUnits = BlzGroupGetSize(udg_StatMultPlayerUnits[playerId]);
       if (numUnits == 0) continue;
       // const numUnitsMult = Math.min(1, 0.25 + 1 / numUnits);
       const numUnitsMult = Math.min(1, (2*numUnits-1) / (numUnits * numUnits));

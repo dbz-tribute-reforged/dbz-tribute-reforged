@@ -73,15 +73,15 @@ export module TournamentData {
   export const kothLumberStart = 300;
 
   // export const kothNamekCenter: Vector2D = new Vector2D(28928, 26496);
-  export const kothNamekCenter: Vector2D = new Vector2D(27134, 26620);
+  export const kothNamekCenter: Vector2D = new Vector2D(26850, 25850);
   export const kothNamekSpawn1: Vector2D = new Vector2D(29444, 29444); // losing side
   export const kothNamekSpawn2: Vector2D = new Vector2D(20990, 20990); // winning side
-  export const kothNamekBottomLeft: Vector2D = new Vector2D(19327, 19327);
+  export const kothNamekBottomLeft: Vector2D = new Vector2D(19327, 19328);
   export const kothNamekTopRight: Vector2D = new Vector2D(31872, 31872);
 
-  export const kothFutureCenter: Vector2D = new Vector2D(14208, 29824);
-  export const kothFutureSpawn1: Vector2D = new Vector2D(16208, 29824); // losing side
+  export const kothFutureCenter: Vector2D = new Vector2D(14208, 29000);
+  export const kothFutureSpawn1: Vector2D = new Vector2D(16208, 29000); // losing side
   export const kothFutureSpawn2: Vector2D = new Vector2D(6400, 25600); // winning side
-  export const kothFutureBottomLeft: Vector2D = new Vector2D(4992, 24320);
-  export const kothFutureTopRight: Vector2D = new Vector2D(18688  , 31744);
+  export const kothFutureBottomLeft: Vector2D = new Vector2D(4992, 19328);
+  export const kothFutureTopRight: Vector2D = new Vector2D(18688, 31744);
 }

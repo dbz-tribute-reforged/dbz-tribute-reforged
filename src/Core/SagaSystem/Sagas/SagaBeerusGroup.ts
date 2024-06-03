@@ -4,7 +4,7 @@ import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
 
 export class BeerusSaga extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] God of Destruction Beerus Saga';
+  name: string = '[DBS] God of Destruction Beerus Saga';
 
   constructor() {
     super();
@@ -19,7 +19,7 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
       ],
     );
 
-    this.addHeroListToSaga(["Beerus"], true);
+    this.addHeroListToSaga(["Beerus", "Whis"], true);
 
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
@@ -63,7 +63,7 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
 }
 
 export class WhisTrainingSaga extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Training with Whis';
+  name: string = '[DBS] Training with Whis';
 
   constructor() {
     super();

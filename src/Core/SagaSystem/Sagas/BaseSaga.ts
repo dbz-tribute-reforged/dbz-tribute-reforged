@@ -2,7 +2,8 @@
 export enum SagaState {
   NotStarted,
   InProgress,
-  Completed
+  Completed,
+  NotInProgress,
 };
 
 export class BaseSaga {

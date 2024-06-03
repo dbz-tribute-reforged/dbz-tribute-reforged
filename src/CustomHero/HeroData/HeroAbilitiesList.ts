@@ -838,9 +838,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
       AbilityNames.Genos.MACHINE_GUN_BLOWS, AbilityNames.Genos.OVERCHARGE,
       AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
-      AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
       AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
       AbilityNames.Beerus.BEERUS_FURY, 
+      AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
+      AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS, 
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

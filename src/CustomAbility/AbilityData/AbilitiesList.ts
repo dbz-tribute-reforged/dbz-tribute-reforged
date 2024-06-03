@@ -205,7 +205,7 @@ export const AbilitiesList = [
     maxCd: 10,
     costType: CostType.SP,
     costAmount: 40,
-    duration: 100,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -219,7 +219,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "Cerelian Shield",
       body: 
-        "Creates a barrier for 3s that restricts movement and reduces incoming damage.|n" +
+        "Creates a barrier for 2s that restricts movement and reduces incoming damage.|n" +
         "Blocks 70% of incoming damage up to 3 * STR.|n" +
         "Cost: 40 SP|n" + 
         "CD: 10"

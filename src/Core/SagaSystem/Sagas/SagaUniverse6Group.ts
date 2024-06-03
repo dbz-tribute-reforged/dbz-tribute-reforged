@@ -4,7 +4,7 @@ import { SagaHelper } from "../SagaHelper";
 import { Constants, Globals } from "Common/Constants";
 
 export class Universe6Saga extends AdvancedSaga implements Saga {
-  name: string = '[DB Super] Universe 6 Saga';
+  name: string = '[DBS] Universe 6 Saga';
 
   constructor() {
     super();

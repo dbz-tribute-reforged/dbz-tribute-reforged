@@ -123,8 +123,9 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
       ForGroup(this.outsideUnits, () => {
         const target = GetEnumUnit();
         if (
-          UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies) &&
-          !IsUnitInGroup(target, this.insideUnits)
+          UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)
+          && !IsUnitInGroup(target, this.insideUnits)
+          && !IsUnitType(target, UNIT_TYPE_STRUCTURE)
         ) {
           this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
           const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);

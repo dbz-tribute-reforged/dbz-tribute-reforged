@@ -672,13 +672,23 @@ export class SagaHeroAI {
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
     this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
-    GroupEnumUnitsInRange(
-      this.nearbyEnemies,
-      this.bossPos.x,
-      this.bossPos.y,
-      acquireRange,
-      null
-    );
+    if (acquireRange == Constants.sagaMaxAcquisitionRange) {
+      GroupClear(this.nearbyEnemies);
+      for (const player of Constants.activePlayers) {
+        const playerId = GetPlayerId(player);
+        // NOTE: the function parameters are inverted
+        BlzGroupAddGroupFast(udg_StatMultPlayerUnits[playerId], this.nearbyEnemies);
+      }
+    } else {
+      GroupEnumUnitsInRange(
+        this.nearbyEnemies,
+        this.bossPos.x,
+        this.bossPos.y,
+        acquireRange,
+        null
+      );
+    }
+
 
     let closestUnit = undefined;
     let closestNonSummonUnit = undefined;
