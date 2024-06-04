@@ -40,7 +40,29 @@ export module SoundHelper {
       TimerManager.getInstance().recycle(tim);
     });
   }
-  
+
+  export function playNSoundsWithDelay(
+    unit: unit, str: string[], dur: number[], delayMs: number
+  ) {
+    if (str.length <= 0 || dur.length <= 0) return 
+    let time = 0;
+    let targetTime = 0;
+    let counter = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, ()=> {
+      if (counter >= str.length) {
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      if (time >= targetTime) {
+        SoundHelper.playSoundOnUnit(unit, str[counter], dur[counter]);
+        targetTime += (delayMs + dur[counter]) * 0.001;
+        ++counter;
+      }
+      time += 0.03;
+    });
+  }
+
   export function playUnitSpellSound(unit: unit, spellId: number) {
     const unitId = GetUnitTypeId(unit);
     let rng = Math.random() * 100;

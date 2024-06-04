@@ -230,7 +230,9 @@ export class HeroSelectorManager {
     this.repickButtonTrigger.addAction( () => {
       this.repickButton.enabled = false;
       this.repickButton.enabled = true;
-      this.initRepick(GetTriggerPlayer(), true);
+      if (!this.isGameStarted) {
+        this.initRepick(GetTriggerPlayer(), true);
+      }
     });
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {

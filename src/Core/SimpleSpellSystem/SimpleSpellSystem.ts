@@ -50,6 +50,19 @@ export module SimpleSpellSystem {
   const gojoPurpleKBRelativeSpeed = 20;
   const gojoPurpleLesserMPCostPct = 0.03 * 0.03;
   const gojoPurpleBeamExistTicks = 40;
+  const gojoPurpleSoundStrings = [
+    "Audio/Voice/Gojo/BlueCharge1.mp3",
+    "Audio/Voice/Gojo/BlueFire1.mp3",
+    "Audio/Voice/Gojo/RedCharge2.mp3",
+    "Audio/Voice/Gojo/RedFire2.mp3",
+  ];
+  const gojoPurpleSoundDur = [
+    1003,
+    330,
+    1015,
+    329,
+  ];
+  const gojoVoiceTick = 2;
 
   export function initialize () {
     TriggerRegisterAnyUnitEventBJ(Globals.genericSpellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
@@ -8909,6 +8922,9 @@ export module SimpleSpellSystem {
     const gojoBlueChargeFlagKey = StringHash("gojo_q_charge_flag");
     const gojoBlueCasterSfxKey = StringHash("gojo_q_caster_sfx");
     const gojoBlueTargetSfxKey = StringHash("gojo_q_target_sfx");
+    const gojoBlueSoundKey = StringHash("gojo_q_sound");
+
+    const gojoRedChargeTicksKey = StringHash("gojo_w_charge_ticks");
 
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
@@ -8948,6 +8964,12 @@ export module SimpleSpellSystem {
       return;
     }
 
+    const redChargeTicks = LoadInteger(Globals.genericSpellHashtable, casterId, gojoRedChargeTicksKey);
+    const isPurpleCharge = (redChargeTicks > 0
+      && GetUnitAbilityLevel(caster, Id.gojoPurpleActive) > 0
+      && BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) == 0
+    );
+
     Globals.tmpVector3.setPos(
       Globals.customPlayers[playerId].mouseData.x,
       Globals.customPlayers[playerId].mouseData.y
@@ -8982,12 +9004,28 @@ export module SimpleSpellSystem {
         casterId, gojoBlueTargetSfxKey, sfx
       );
 
-      if (Math.random() * 100 < 50) {
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge1.mp3", 1003);
-      } else {
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge2.mp3", 1233);
-      }
     } else {
+
+      if (blueChargeTicks == gojoVoiceTick) {
+        if (!isPurpleCharge) {
+          if (Math.random() * 100 < 50) {
+            SaveInteger(Globals.genericSpellHashtable, casterId, gojoBlueSoundKey, 1);
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge1.mp3", 1003);
+          } else {
+            SaveInteger(Globals.genericSpellHashtable, casterId, gojoBlueSoundKey, 2);
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueCharge2.mp3", 1233);
+          }
+        } else {
+          SoundHelper.playNSoundsWithDelay(
+            caster,
+            gojoPurpleSoundStrings, 
+            gojoPurpleSoundDur,
+            200,
+          );
+          SaveInteger(Globals.genericSpellHashtable, casterId, gojoBlueSoundKey, 3);
+        }
+      }
+
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
         casterId, gojoBlueCasterSfxKey
       );
@@ -9024,7 +9062,9 @@ export module SimpleSpellSystem {
         TextTagHelper.showPlayerColorTextOnUnit(
           "Maximum Cursed Energy Output: Blue", playerId, caster
         );
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueChargeMax.mp3", 1245);
+        if (!isPurpleCharge) {
+          SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueChargeMax.mp3", 1245);
+        }
       }
     }
 
@@ -9076,6 +9116,7 @@ export module SimpleSpellSystem {
     const gojoBlueBeamHpKey = StringHash("gojo_q_beam_hp");
     const gojoBlueCollideKey = StringHash("gojo_q_collide");
     const gojoBlueDmgGroupKey = StringHash("gojo_q_dmg_group");
+    const gojoBlueSoundKey = StringHash("gojo_q_sound");
     
     const gojoSixEyesActiveKey = StringHash("gojo_d_active");
 
@@ -9160,12 +9201,23 @@ export module SimpleSpellSystem {
       
       dmgGroup = CreateGroup();
       SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoBlueDmgGroupKey, dmgGroup);
-    
-      if (Math.random() * 100 < 50) {
+      
+      const blueFireSound = LoadInteger(Globals.genericSpellHashtable, casterId, gojoBlueSoundKey);
+      if (blueFireSound == 0) {
+        // didnt have time to charge
+        SoundHelper.playTwoSoundsWithDelay(caster,
+          "Audio/Voice/Gojo/BlueCharge1.mp3", 1003, 1.2,
+          "Audio/Voice/Gojo/BlueFire1.mp3", 330
+        );
+      } else if (blueFireSound == 1) {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueFire1.mp3", 330);
-      } else {
+      } else if (blueFireSound == 2) {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueFire2.mp3", 564);
+      } else if (blueFireSound == 3) {
+        // only reaches here if six eyes is off
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/BlueFire1.mp3", 330);
       }
+      SaveInteger(Globals.genericSpellHashtable, casterId, gojoBlueSoundKey, 0);
     } else {
       beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamKey);
       oldHp = LoadReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey);
@@ -9271,6 +9323,8 @@ export module SimpleSpellSystem {
         if (!hasCollided && gojoIsPurpleCollision(unit, beam, caster, player)) {
           hasCollided = true;
           SaveBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey, true);
+          // send special signal to red that it has collided
+          SaveBoolean(Globals.genericSpellHashtable, casterId, gojoBlueCollideKey, true);
           // fix target loc
           SaveReal(Globals.genericSpellHashtable, timerId, gojoQXKey, GetUnitX(beam));
           SaveReal(Globals.genericSpellHashtable, timerId, gojoQYKey, GetUnitY(beam));
@@ -9315,6 +9369,8 @@ export module SimpleSpellSystem {
           SetPlayerAbilityAvailable(player, Id.gojoPurpleActive, true);
           SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
           startCooldown(caster, Id.gojoPurpleActive);
+
+          SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/Purple1.mp3", 1638);
         }
       });
     }
@@ -9440,20 +9496,23 @@ export module SimpleSpellSystem {
   
   export function gojoRedChargeLoop() {
     const hpHealPct = -1 * 0.03 * 0.01;
-    const blueMaxChargeTicks = 133;
+    const redMaxChargeTicks = 133;
     const minSfxAlpha = 100;
 
-    const gojoBlueCasterTimerKey = StringHash("gojo_w_caster");
-    const gojoBlueChargeTicksKey = StringHash("gojo_w_charge_ticks");
-    const gojoBlueChargeFlagKey = StringHash("gojo_w_charge_flag");
-    const gojoBlueCasterSfxKey = StringHash("gojo_w_caster_sfx");
-    const gojoBlueTargetSfxKey = StringHash("gojo_w_target_sfx");
+    const gojoRedCasterTimerKey = StringHash("gojo_w_caster");
+    const gojoRedChargeTicksKey = StringHash("gojo_w_charge_ticks");
+    const gojoRedChargeFlagKey = StringHash("gojo_w_charge_flag");
+    const gojoRedCasterSfxKey = StringHash("gojo_w_caster_sfx");
+    const gojoRedTargetSfxKey = StringHash("gojo_w_target_sfx");
+    const gojoRedSoundKey = StringHash("gojo_w_sound");
+
+    const gojoBlueChargeTicksKey = StringHash("gojo_q_charge_ticks");
 
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
 
     const caster = LoadUnitHandle(Globals.genericSpellHashtable, 
-      timerId, gojoBlueCasterTimerKey
+      timerId, gojoRedCasterTimerKey
     );
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
@@ -9464,39 +9523,45 @@ export module SimpleSpellSystem {
 
     let sfx = null;
 
-    const blueChargeTicks = LoadInteger(Globals.genericSpellHashtable,
-      casterId, gojoBlueChargeTicksKey
+    const redChargeTicks = LoadInteger(Globals.genericSpellHashtable,
+      casterId, gojoRedChargeTicksKey
     );
-    if (blueChargeTicks == 0) {
+    if (redChargeTicks == 0) {
       if (LoadBoolean(Globals.genericSpellHashtable, 
-        casterId, gojoBlueChargeFlagKey
+        casterId, gojoRedChargeFlagKey
       )) {
         sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
-          casterId, gojoBlueCasterSfxKey
+          casterId, gojoRedCasterSfxKey
         );
         BlzSetSpecialEffectScale(sfx, 0.01);
         DestroyEffect(sfx);
         sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
-          casterId, gojoBlueTargetSfxKey
+          casterId, gojoRedTargetSfxKey
         );
         DestroyEffect(sfx);
       }
       SaveBoolean(Globals.genericSpellHashtable, 
-        casterId, gojoBlueChargeFlagKey, false
+        casterId, gojoRedChargeFlagKey, false
       );
 
       DestroyTimer(timer);
       return;
     }
 
+    const blueChargeTicks = LoadInteger(Globals.genericSpellHashtable, casterId, gojoBlueChargeTicksKey);
+    const isPurpleCharge = (blueChargeTicks > 0
+      && GetUnitAbilityLevel(caster, Id.gojoPurpleActive) > 0
+      && BlzGetUnitAbilityCooldownRemaining(caster, Id.gojoPurpleActive) == 0
+    );
+
     Globals.tmpVector3.setPos(
       Globals.customPlayers[playerId].mouseData.x,
       Globals.customPlayers[playerId].mouseData.y
     );
 
-    if (blueChargeTicks == 1) {
+    if (redChargeTicks == 1) {
       SaveBoolean(Globals.genericSpellHashtable, 
-        casterId, gojoBlueChargeFlagKey, true
+        casterId, gojoRedChargeFlagKey, true
       );
 
       sfx = AddSpecialEffect(
@@ -9506,7 +9571,7 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectScale(sfx, 1.5);
       BlzSetSpecialEffectColor(sfx, 255, 255, 255);
       SaveEffectHandle(Globals.genericSpellHashtable, 
-        casterId, gojoBlueCasterSfxKey, sfx
+        casterId, gojoRedCasterSfxKey, sfx
       );
 
       const sfxName = player == GetLocalPlayer() ? 
@@ -9520,17 +9585,27 @@ export module SimpleSpellSystem {
       );
       BlzSetSpecialEffectScale(sfx, 2.0);
       SaveEffectHandle(Globals.genericSpellHashtable, 
-        casterId, gojoBlueTargetSfxKey, sfx
+        casterId, gojoRedTargetSfxKey, sfx
       );
 
-      if (Math.random() * 100 < 33) {
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge1.mp3", 1267);
-      } else {
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge2.mp3", 1015);
-      }
     } else {
+      if (redChargeTicks == gojoVoiceTick) {
+        if (isPurpleCharge) {
+          // purple dont say anything, blue will
+          SaveInteger(Globals.genericSpellHashtable, casterId, gojoRedSoundKey, 3);
+        } else {
+          if (Math.random() * 100 < 33) {
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge1.mp3", 1267);
+            SaveInteger(Globals.genericSpellHashtable, casterId, gojoRedSoundKey, 1);
+          } else {
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedCharge2.mp3", 1015);
+            SaveInteger(Globals.genericSpellHashtable, casterId, gojoRedSoundKey, 2);
+          }
+        }
+      }
+
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
-        casterId, gojoBlueCasterSfxKey
+        casterId, gojoRedCasterSfxKey
       );
       BlzSetSpecialEffectPosition(sfx, 
         casterX, casterY,
@@ -9543,7 +9618,7 @@ export module SimpleSpellSystem {
         Globals.tmpVector3.y,
       );
       sfx = LoadEffectHandle(Globals.genericSpellHashtable, 
-        casterId, gojoBlueTargetSfxKey
+        casterId, gojoRedTargetSfxKey
       );
       BlzSetSpecialEffectPosition(sfx, 
         Globals.tmpVector3.x,
@@ -9552,7 +9627,7 @@ export module SimpleSpellSystem {
       );
 
       // fully charged sfx
-      if (blueChargeTicks == blueMaxChargeTicks-1) {
+      if (redChargeTicks == redMaxChargeTicks-1) {
         const sfxName = player == GetLocalPlayer() ? 
           "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl" :
           "dummy.mdl"
@@ -9565,17 +9640,20 @@ export module SimpleSpellSystem {
         TextTagHelper.showPlayerColorTextOnUnit(
           "Maximum Cursed Energy Reversal: Red", playerId, caster
         );
-        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedOutOfTheWay.mp3", 625);
+
+        if (!isPurpleCharge) {
+          SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedOutOfTheWay.mp3", 625);
+        }
       }
     }
 
-    if (blueChargeTicks < blueMaxChargeTicks) {
+    if (redChargeTicks < redMaxChargeTicks) {
       SaveInteger(Globals.genericSpellHashtable,
-        casterId, gojoBlueChargeTicksKey, blueChargeTicks+1
+        casterId, gojoRedChargeTicksKey, redChargeTicks+1
       );
       BlzSetSpecialEffectAlpha(sfx, Math.ceil(
         minSfxAlpha + (255-minSfxAlpha) 
-        * blueChargeTicks / blueMaxChargeTicks
+        * redChargeTicks / redMaxChargeTicks
       ));
     } else {
       UnitHelper.payHPPercentCost(caster, hpHealPct, UNIT_STATE_MAX_LIFE);
@@ -9588,45 +9666,47 @@ export module SimpleSpellSystem {
       casterY,
       400,
       0,
-      blueChargeTicks <= blueMaxChargeTicks ? 5 : 15,
+      redChargeTicks <= redMaxChargeTicks ? 5 : 15,
     );
   }
 
   export function gojoRedBeamLoop() {
-    const blueBonusDmgMult = 2;
+    const redBonusDmgMult = 2;
     const dmgAOE = 375;
     const kbAOE = 250;
-    const blueBeamSpeed = 35;
-    const blueKBRelativeSpeed = 15;
-    const blueKBDetoSpeed = 250;
-    // const blueBeamMaxMoveTicks = 40;
-    const blueBeamSpawnTick = 16;
-    const blueBeamMaxExistTicks = 66 + blueBeamSpawnTick;
-    const blueBeamHpMult = BASE_DMG.KAME_DPS * 1.1;
-    const blueBeamDuration = 15;
-    const blueMaxChargeTicks = 133;
+    const redBeamSpeed = 35;
+    const redKBRelativeSpeed = 15;
+    const redKBDetoSpeed = 250;
+    // const redBeamMaxMoveTicks = 40;
+    const redBeamSpawnTick = 16;
+    const redBeamMaxExistTicks = 66 + redBeamSpawnTick;
+    const redBeamHpMult = BASE_DMG.KAME_DPS * 1.1;
+    const redMaxChargeTicks = 133;
     const sfxBaseHeight = 150;
     const beamMinHp = 1000;
     
-    const gojoBlueCasterTimerKey = StringHash("gojo_w_caster");
-    const gojoBlueBeamSfxKey = StringHash("gojo_w_beam_sfx");
-    const gojoBlueBeamSfx2Key = StringHash("gojo_w_beam_sfx_2");
-    const gojoBlueBeamTicksKey = StringHash("gojo_w_beam_ticks");
-    const gojoBlueShootTicksKey = StringHash("gojo_w_shoot_ticks");
+    const gojoRedCasterTimerKey = StringHash("gojo_w_caster");
+    const gojoRedBeamSfxKey = StringHash("gojo_w_beam_sfx");
+    const gojoRedBeamSfx2Key = StringHash("gojo_w_beam_sfx_2");
+    const gojoRedBeamTicksKey = StringHash("gojo_w_beam_ticks");
+    const gojoRedShootTicksKey = StringHash("gojo_w_shoot_ticks");
     const gojoQXKey = StringHash("gojo_w_x");
     const gojoQYKey = StringHash("gojo_w_y");
-    const gojoBlueBeamKey = StringHash("gojo_w_beam");
-    const gojoBlueBeamHpKey = StringHash("gojo_w_beam_hp");
-    const gojoBlueCollideKey = StringHash("gojo_w_collide");
-    const gojoBlueDmgGroupKey = StringHash("gojo_w_dmg_group");
+    const gojoRedBeamKey = StringHash("gojo_w_beam");
+    const gojoRedBeamHpKey = StringHash("gojo_w_beam_hp");
+    const gojoRedCollideKey = StringHash("gojo_w_collide");
+    const gojoRedDmgGroupKey = StringHash("gojo_w_dmg_group");
+    const gojoRedSoundKey = StringHash("gojo_w_sound");
     
+    const gojoBlueCollideKey = StringHash("gojo_q_collide");
+
     const gojoSixEyesActiveKey = StringHash("gojo_d_active");
 
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
 
     const caster = LoadUnitHandle(Globals.genericSpellHashtable, 
-      timerId, gojoBlueCasterTimerKey
+      timerId, gojoRedCasterTimerKey
     );
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
@@ -9639,15 +9719,15 @@ export module SimpleSpellSystem {
     let sfx = null;
     let sfx2 = null;
 
-    let blueBeamTicks = LoadInteger(Globals.genericSpellHashtable, 
-      timerId, gojoBlueBeamTicksKey
+    let redBeamTicks = LoadInteger(Globals.genericSpellHashtable, 
+      timerId, gojoRedBeamTicksKey
     );
     SaveInteger(Globals.genericSpellHashtable,
-      timerId, gojoBlueBeamTicksKey, blueBeamTicks + 1
+      timerId, gojoRedBeamTicksKey, redBeamTicks + 1
     );
 
-    const shootTicks = LoadInteger(Globals.genericSpellHashtable, timerId, gojoBlueShootTicksKey);
-    const bonusDmgMult = 1 + blueBonusDmgMult * (shootTicks / blueMaxChargeTicks);
+    const shootTicks = LoadInteger(Globals.genericSpellHashtable, timerId, gojoRedShootTicksKey);
+    const bonusDmgMult = 1 + redBonusDmgMult * (shootTicks / redMaxChargeTicks);
 
     const targetX = LoadReal(Globals.genericSpellHashtable, casterId, gojoQXKey);
     const targetY = LoadReal(Globals.genericSpellHashtable, casterId, gojoQYKey);
@@ -9656,19 +9736,19 @@ export module SimpleSpellSystem {
       casterId, gojoSixEyesActiveKey
     );
 
-    let hasCollided = LoadBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey);
+    const hasCollided = LoadBoolean(Globals.genericSpellHashtable, timerId, gojoRedCollideKey);
     let beam = null;
     let dmgGroup = null;
     let oldHp = 0;
     let hasMoved = false;
 
     // delay beam spawning in
-    if (blueBeamTicks == 0) {
+    if (redBeamTicks == 0) {
       Globals.tmpVector.setUnit(caster);
       Globals.tmpVector2.setPos(targetX, targetY);
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
       Globals.tmpVector.polarProjectCoords(
-        Globals.tmpVector, ang, blueBeamSpeed * 2
+        Globals.tmpVector, ang, redBeamSpeed * 2
       );
       sfx = AddSpecialEffect("Flamestrike I.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
       BlzSetSpecialEffectScale(sfx, 2); 
@@ -9678,19 +9758,30 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectPitch(sfx, 90 * CoordMath.degreesToRadians);
       DestroyEffect(sfx);
 
-      if (Math.random() * 100 < 33) {
+      const redFireSound = LoadInteger(Globals.genericSpellHashtable, casterId, gojoRedSoundKey);
+      if (redFireSound == 0) {
+        // didnt have time to charge
+        SoundHelper.playTwoSoundsWithDelay(caster,
+          "Audio/Voice/Gojo/RedCharge2.mp3", 1015, 1.2,
+          "Audio/Voice/Gojo/RedFire2.mp3", 329
+        );
+      } if (redFireSound == 1) {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedFire1.mp3", 415);
-      } else {
+      } else if (redFireSound == 2) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedFire2.mp3", 329);
+      } else if (redFireSound == 3) {
+        // only reaches here if six eyes is off
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/RedFire2.mp3", 329);
       }
+      SaveInteger(Globals.genericSpellHashtable, casterId, gojoRedSoundKey, 0);
     }
-    if (blueBeamTicks < blueBeamSpawnTick) return;
-    if (blueBeamTicks == blueBeamSpawnTick) {
+    if (redBeamTicks < redBeamSpawnTick) return;
+    if (redBeamTicks == redBeamSpawnTick) {
       // position beam
       Globals.tmpVector.setUnit(caster);
       Globals.tmpVector2.setPos(targetX, targetY);
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, blueBeamSpeed * 2);
+      Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, redBeamSpeed * 2);
 
       beam = CreateUnit(
         player, 
@@ -9700,33 +9791,33 @@ export module SimpleSpellSystem {
       BlzSetUnitName(beam, "Cursed Technique Reversal: Red");
 
       const maxHp = BeamComponent.calculateBeamHp(
-        abilLvl, blueBeamHpMult, caster, bj_HEROSTAT_INT
+        abilLvl, redBeamHpMult, caster, bj_HEROSTAT_INT
       );
       BlzSetUnitMaxHP(beam, Math.max(beamMinHp, maxHp));
       SetUnitLifePercentBJ(beam, 100);
       SetUnitMoveSpeed(beam, 0);
       UnitRemoveAbility(beam, Id.attack);
-      SaveUnitHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamKey, beam);
+      SaveUnitHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamKey, beam);
       oldHp = GetUnitState(beam, UNIT_STATE_LIFE);
-      SaveReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey, oldHp);
+      SaveReal(Globals.genericSpellHashtable, timerId, gojoRedBeamHpKey, oldHp);
 
       sfx = AddSpecialEffect("Soul Armor Crimson.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
       BlzSetSpecialEffectTimeScale(sfx, 2.0);
-      SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfxKey, sfx);
+      SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamSfxKey, sfx);
 
       sfx2 = AddSpecialEffect("SpiritBomb.mdl", Globals.tmpVector.x, Globals.tmpVector.y);
       BlzSetSpecialEffectScale(sfx2, 0.4);
       BlzSetSpecialEffectColor(sfx2, 255, 55, 55);
-      SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfx2Key, sfx2);
+      SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamSfx2Key, sfx2);
       
       dmgGroup = CreateGroup();
-      SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoBlueDmgGroupKey, dmgGroup);
+      SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoRedDmgGroupKey, dmgGroup);
     } else {
-      beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamKey);
-      oldHp = LoadReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey);
-      sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfxKey);
-      sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoBlueBeamSfx2Key);
-      dmgGroup = LoadGroupHandle(Globals.genericSpellHashtable, timerId, gojoBlueDmgGroupKey);
+      beam = LoadUnitHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamKey);
+      oldHp = LoadReal(Globals.genericSpellHashtable, timerId, gojoRedBeamHpKey);
+      sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamSfxKey);
+      sfx2 = LoadEffectHandle(Globals.genericSpellHashtable, timerId, gojoRedBeamSfx2Key);
+      dmgGroup = LoadGroupHandle(Globals.genericSpellHashtable, timerId, gojoRedDmgGroupKey);
     }
 
     Globals.tmpVector.setUnit(beam);
@@ -9736,11 +9827,11 @@ export module SimpleSpellSystem {
     if (newHp >= oldHp && distToTarget > 1) {
       const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
       Globals.tmpVector.polarProjectCoords(
-        Globals.tmpVector, ang, Math.min(distToTarget, blueBeamSpeed)
+        Globals.tmpVector, ang, Math.min(distToTarget, redBeamSpeed)
       );
       hasMoved = PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(beam, Globals.tmpVector);
     }
-    SaveReal(Globals.genericSpellHashtable, timerId, gojoBlueBeamHpKey, newHp);
+    SaveReal(Globals.genericSpellHashtable, timerId, gojoRedBeamHpKey, newHp);
 
     Globals.tmpVector.setUnit(beam);
     BlzSetSpecialEffectPosition(
@@ -9752,7 +9843,7 @@ export module SimpleSpellSystem {
       sfxBaseHeight + BlzGetUnitZ(beam) + GetUnitFlyHeight(beam)
     );
 
-    if (blueBeamTicks % 8 == 0) {
+    if (redBeamTicks % 8 == 0) {
       DestroyEffect(AddSpecialEffect(
         "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
         Globals.tmpVector.x, Globals.tmpVector.y,
@@ -9767,7 +9858,7 @@ export module SimpleSpellSystem {
       Globals.tmpVector.y,
       kbAOE,
       180,
-      hasMoved ? blueKBRelativeSpeed + blueBeamSpeed : blueKBRelativeSpeed
+      hasMoved ? redKBRelativeSpeed + redBeamSpeed : redKBRelativeSpeed
     );
 
     const dpsDmg = AOEDamage.calculateDamageRaw(
@@ -9795,23 +9886,26 @@ export module SimpleSpellSystem {
           WEAPON_TYPE_WHOKNOWS
         );
       }
-      if (!hasCollided && gojoIsPurpleCollision(unit, beam, caster, player)) {
-        hasCollided = true;
-        SaveBoolean(Globals.genericSpellHashtable, timerId, gojoBlueCollideKey, true);
-        SaveInteger(Globals.genericSpellHashtable,
-          timerId, gojoBlueBeamTicksKey, blueBeamMaxExistTicks - 3
-        );
-      }
     });
 
-    if (!hasCollided && distToTarget <= blueBeamSpeed) {
+    // blue collided
+    const hasBlueCollided = LoadBoolean(Globals.genericSpellHashtable, casterId, gojoBlueCollideKey);
+    if (!hasCollided && hasBlueCollided) {
+      SaveBoolean(Globals.genericSpellHashtable, casterId, gojoBlueCollideKey, false);
+      SaveBoolean(Globals.genericSpellHashtable, timerId, gojoRedCollideKey, true);
+      SaveInteger(Globals.genericSpellHashtable,
+        timerId, gojoRedBeamTicksKey, redBeamMaxExistTicks - 3
+      );
+    }
+
+    if (!hasCollided && distToTarget <= redBeamSpeed) {
       // detonate
-      blueBeamTicks = blueBeamMaxExistTicks;
+      redBeamTicks = redBeamMaxExistTicks;
     }
 
     if (
       !UnitHelper.isUnitAlive(beam) 
-      || blueBeamTicks >= blueBeamMaxExistTicks
+      || redBeamTicks >= redBeamMaxExistTicks
     ) {
       // dmg enemies
       AOEDamage.genericDealDamageToGroup(
@@ -9837,7 +9931,7 @@ export module SimpleSpellSystem {
           Globals.tmpVector.x,
           Globals.tmpVector.y,
           0,
-          blueKBDetoSpeed,
+          redKBDetoSpeed,
         );
       }
 
@@ -10061,7 +10155,8 @@ export module SimpleSpellSystem {
     );
 
     // deal blue dmg + hakai
-    const burstDmg = AOEDamage.calculateDamageRaw(
+    // double the burst damage because normal blue can trigger twice
+    const burstDmg = 2 * AOEDamage.calculateDamageRaw(
       caster,
       abilLvl,
       ch.spellPower,

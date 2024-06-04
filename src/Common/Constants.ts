@@ -91,6 +91,7 @@ export module Constants {
   export const maxSubAbilities = 4;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
+  export const npcPlayers = 4;
   export const dummyBeamUnitId = FourCC("hpea");
   export const dummyCasterId = FourCC("h054");
   export const korinFlag = FourCC("h09A");
