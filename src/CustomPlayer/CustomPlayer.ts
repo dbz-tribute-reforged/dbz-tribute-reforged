@@ -31,8 +31,7 @@ export class CustomPlayer {
   public dualTechSendFlag: boolean;
   public dualTechReceiveFlag: boolean;
 
-  public mmFogModifiers: fogmodifier[] = [];
-  public mmFogModifierFlag: boolean = true;
+  public mmVisibleFlag: boolean = true;
 
   constructor(
     public id: number, 
@@ -197,16 +196,8 @@ export class CustomPlayer {
     return this.osKeyMap.get(oskey);
   }
 
-  public addMMFogModifier(fm: fogmodifier) {
-    this.mmFogModifiers.push(fm);
-  }
-
-  public toggleMMFogModifierFlag() {
-    this.mmFogModifierFlag = !this.mmFogModifierFlag;
-    return this.mmFogModifierFlag;
-  }
-
-  public getMMFogModifierFlag() {
-    return this.mmFogModifierFlag;
+  public toggleMMVisibleFlag() {
+    this.mmVisibleFlag = !this.mmVisibleFlag;
+    return this.mmVisibleFlag;
   }
 }

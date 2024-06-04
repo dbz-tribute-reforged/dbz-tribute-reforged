@@ -2,17 +2,17 @@ import { TimerManager } from "Core/Utility/TimerManager";
 
 export module CameraZoom {
 
-    const ZOOM_DEFAULT = 3600.0;
-    const ANGLE_DEFAULT = 295.0;
+    export const ZOOM_DEFAULT = 3600.0;
+    export const ANGLE_DEFAULT = 295.0;
     // const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
-    const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 50.0; //?? but it works tho, thanks adam
-    const PERIOD = 0.1;
+    export const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 50.0; //?? but it works tho, thanks adam
+    export const PERIOD = 0.1;
 
-    const ZOOM_MIN = 1400.0;
-    const ZOOM_MAX = 6000.0;
+    export const ZOOM_MIN = 1400.0;
+    export const ZOOM_MAX = 6000.0;
 
-    const ANGLE_MIN = 270.0;
-    const ANGLE_MAX = 360.0;
+    export const ANGLE_MIN = 270.0;
+    export const ANGLE_MAX = 360.0;
 
     class PlayerCam {
         constructor(
@@ -36,6 +36,15 @@ export module CameraZoom {
 
     let arr: PlayerCam[] = [];
 
+    export function setPlayerZoom(player: player, zoom: number) {
+        const cam = arr[GetPlayerId(GetTriggerPlayer())];
+        let newZoom = zoom;
+        if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
+        else if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;
+        cam.zoom = newZoom;
+        cam.performZoom();
+    }
+
     export function onInit() {
 
         let zoomTrig = CreateTrigger();
@@ -50,7 +59,6 @@ export module CameraZoom {
         }
 
         TriggerAddCondition(zoomTrig, Condition(() => {
-            let cam = arr[GetPlayerId(GetTriggerPlayer())];
             const chatString = GetEventPlayerChatString();
             const command = SubString(chatString, 0, 5);
 
@@ -59,13 +67,8 @@ export module CameraZoom {
                 newZoom = S2R(SubString(chatString, 5, StringLength(GetEventPlayerChatString())));
             } else if (command == "-zoom") {
                 newZoom = S2R(SubString(chatString, 6, StringLength(GetEventPlayerChatString())));
-            } 
-
-            if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
-            else if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;
-
-            cam.zoom = newZoom;
-            cam.performZoom();
+            }
+            setPlayerZoom(GetTriggerPlayer(), newZoom);
 
             return false;
         }));

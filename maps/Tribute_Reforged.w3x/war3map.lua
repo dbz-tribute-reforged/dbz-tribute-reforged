@@ -8378,16 +8378,6 @@ u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2176.0, 20736.0, 270.000, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 1408.0, -1024.0, 270.000, FourCC("n02L"))
 end
 
-function CreateUnitsForPlayer0()
-local p = Player(0)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("n01Z"), 22768.9, -9839.2, 0.581, FourCC("n01Z"))
-end
-
 function CreateBuildingsForPlayer1()
 local p = Player(1)
 local u
@@ -10586,6 +10576,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("H09Y"), 2547.3, 17304.5, 293.810, FourCC("H
 SetUnitState(u, UNIT_STATE_MANA, 650)
 u = BlzCreateUnitWithSkin(p, FourCC("U00L"), 2770.4, 16898.1, 267.311, FourCC("U00L"))
 SetUnitColor(u, ConvertPlayerColor(9))
+u = BlzCreateUnitWithSkin(p, FourCC("n01Z"), 22768.9, -9839.2, 0.580, FourCC("n01Z"))
 u = BlzCreateUnitWithSkin(p, FourCC("U004"), 2266.3, 17580.1, 209.650, FourCC("U004"))
 SetUnitState(u, UNIT_STATE_MANA, 450)
 u = BlzCreateUnitWithSkin(p, FourCC("U015"), 2188.2, 16782.5, 258.428, FourCC("U015"))
@@ -10727,7 +10718,6 @@ CreateBuildingsForPlayer9()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer0()
 end
 
 function CreateAllUnits()

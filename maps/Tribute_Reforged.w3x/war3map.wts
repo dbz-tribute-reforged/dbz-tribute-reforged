@@ -5816,7 +5816,7 @@ God of Destruction
 }
 
 STRING 903
-// Units: H06M (Universe 7 God of Destruction), Propernames (Proper Names)
+// Units: H06M (U7 God of Destruction), Propernames (Proper Names)
 {
 Beerus
 }
@@ -5858,7 +5858,7 @@ Beerus
 }
 
 STRING 910
-// Units: H06M (Universe 7 God of Destruction), Awakentip (Tooltip - Awaken)
+// Units: H06M (U7 God of Destruction), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00C|r] Choose Beerus
 }
@@ -5877,13 +5877,13 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 }
 
 STRING 912
-// Units: H06M (Universe 7 God of Destruction), Tip (Tooltip - Basic)
+// Units: H06M (U7 God of Destruction), Tip (Tooltip - Basic)
 {
 [|cffffff00C|r] Choose Beerus
 }
 
 STRING 913
-// Units: H06M (Universe 7 God of Destruction), Hotkey (Hotkey)
+// Units: H06M (U7 God of Destruction), Hotkey (Hotkey)
 {
 C
 }
@@ -6829,18 +6829,6 @@ STRING 1061
 W
 }
 
-STRING 1062
-// Units: H06M (Universe 7 God of Destruction), Name (Name)
-{
-Universe 7 God of Destruction
-}
-
-STRING 1063
-// Units: H02F (Universe 6 God of Destruction), Name (Name)
-{
-Universe 6 God of Destruction
-}
-
 STRING 1064
 // Units: E012 (Supreme Kai Apprentice), Name (Name)
 {
@@ -7306,12 +7294,6 @@ STRING 1136
 // Abilities: A0CW (God of Destruction), Name (Name)
 {
 God of Destruction
-}
-
-STRING 1137
-// Units: H02T (Universe 3 God of Destruction), Name (Name)
-{
-Universe 3 God of Destruction
 }
 
 STRING 1138
@@ -49072,12 +49054,6 @@ STRING 7536
 Revive - Center Respawn
 }
 
-STRING 7537
-// Units: H02K (Universe 11 God of Destruction), Name (Name)
-{
-Universe 11 God of Destruction
-}
-
 STRING 7538
 {
 Type "r" to revert.
@@ -64432,7 +64408,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H06M (Universe 7 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H06M (U7 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71215,7 +71191,7 @@ STRING 10833
 }
 
 STRING 10834
-// Units: H02K (Universe 11 God of Destruction), Propernames (Proper Names)
+// Units: H02K (U11 God of Destruction), Propernames (Proper Names)
 {
 Belmod
 }
@@ -84717,7 +84693,7 @@ STRING 12807
 }
 
 STRING 12808
-// Units: H02T (Universe 3 God of Destruction), Propernames (Proper Names)
+// Units: H02T (U3 God of Destruction), Propernames (Proper Names)
 {
 Mule
 }
@@ -157166,7 +157142,7 @@ STRING 22708
 }
 
 STRING 22709
-// Units: H02K (Universe 11 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02K (U11 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -166058,6 +166034,48 @@ STRING 23872
 [|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 9|r]
 }
 
+STRING 23873
+// Units: H06M (U7 God of Destruction), Name (Name)
+{
+U7 God of Destruction
+}
+
+STRING 23874
+// Units: H02F (U6 God of Destruction), Name (Name)
+{
+U6 God of Destruction
+}
+
+STRING 23875
+// Units: n01Z (Turtle), EditorSuffix (Name - Editor Suffix)
+{
+(Roshi turtle)
+}
+
+STRING 23876
+// Units: H02K (U11 God of Destruction), Name (Name)
+{
+U11 God of Destruction
+}
+
+STRING 23877
+// Units: H02L (U10 God of Destruction), Name (Name)
+{
+U10 God of Destruction
+}
+
+STRING 23878
+// Units: H02M (U1 God of Destruction), Name (Name)
+{
+U1 God of Destruction
+}
+
+STRING 23879
+// Units: H02N (U4 God of Destruction), Name (Name)
+{
+U4 God of Destruction
+}
+
 STRING 23880
 // Abilities: A0H5 (Charged Snipe), Ubertip (Tooltip - Normal - Extended)
 {
@@ -166448,7 +166466,7 @@ An offense-oriented hero who struggles in the early and mid game but becomes one
 }
 
 STRING 23941
-// Units: H02F (Universe 6 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02F (U6 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -167025,6 +167043,12 @@ STRING 24014
 Saiyan Blood - [|cffffcc00Level 7|r]
 }
 
+STRING 24015
+// Units: H02O (U2 God of Destruction), Name (Name)
+{
+U2 God of Destruction
+}
+
 STRING 24016
 // Abilities: A0YQ (Hollow Technique: Purple), Tip (Tooltip - Normal)
 {
@@ -167358,6 +167382,12 @@ Whis raises his staff and after a brief channel creates a portal that teleports 
 |cffff2222Channel Duration: <A0JK,DataA1,.>s
 |cff00FF00Range: 2000/2500/3000|r
 |cff00FFFFCooldown: <A0JK,Cool1>s|r
+}
+
+STRING 24057
+// Units: H02P (U5 God of Destruction), Name (Name)
+{
+U5 God of Destruction
 }
 
 STRING 24058
@@ -167797,7 +167827,7 @@ Saiyan Blood - [|cffffcc00Level 10|r]
 }
 
 STRING 24120
-// Units: H02L (Universe 10 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02L (U10 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -168053,6 +168083,12 @@ STRING 24157
 |cffffcc00Limitless|r
 }
 
+STRING 24158
+// Units: H02Q (U8 God of Destruction), Name (Name)
+{
+U8 God of Destruction
+}
+
 STRING 24159
 // Abilities: A143 (Falling Petal Sword), Name (Name)
 {
@@ -168110,6 +168146,12 @@ Redirect the beam after firing by using the Q key and the mouse cursor.
 |cff00ff00Duration: 5s
 |cff00ff00Damage: [Int] 40u/s + 100u (+200%)
 |cff00ffffCooldown: <A0KA,Cool1>s|r
+}
+
+STRING 24165
+// Units: H02R (U9 God of Destruction), Name (Name)
+{
+U9 God of Destruction
 }
 
 STRING 24166
@@ -168174,6 +168216,12 @@ STRING 24172
 // Abilities: A144 (Fluttering Shadow Petals), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Fluttering Shadow Petals
+}
+
+STRING 24173
+// Units: H02S (U12 God of Destruction), Name (Name)
+{
+U12 God of Destruction
 }
 
 STRING 24174
@@ -168411,7 +168459,7 @@ A hero with powerful long range nukes, strong auto-attacks, and the ability to s
 }
 
 STRING 24206
-// Units: H06M (Universe 7 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H06M (U7 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A powerful high damage nuking hero that has reduced mobility. Focuses on landing difficult to aim cataclysmic orbs to deal massive damage from afar.
 
@@ -169601,19 +169649,19 @@ STRING 24336
 }
 
 STRING 24337
-// Units: H02F (Universe 6 God of Destruction), Propernames (Proper Names)
+// Units: H02F (U6 God of Destruction), Propernames (Proper Names)
 {
 Champa
 }
 
 STRING 24338
-// Units: H02F (Universe 6 God of Destruction), Awakentip (Tooltip - Awaken)
+// Units: H02F (U6 God of Destruction), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00C|r] Choose Beerus
 }
 
 STRING 24339
-// Units: H02F (Universe 6 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02F (U6 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A powerful high damage nuking hero that has reduced mobility. Focuses on landing difficult to aim cataclysmic orbs to deal massive damage from afar.
 
@@ -169626,7 +169674,7 @@ A powerful high damage nuking hero that has reduced mobility. Focuses on landing
 }
 
 STRING 24340
-// Units: H02F (Universe 6 God of Destruction), Tip (Tooltip - Basic)
+// Units: H02F (U6 God of Destruction), Tip (Tooltip - Basic)
 {
 [|cffffff00C|r] Choose Beerus
 }
@@ -169727,6 +169775,12 @@ STRING 24354
 C
 }
 
+STRING 24355
+// Units: H02T (U3 God of Destruction), Name (Name)
+{
+U3 God of Destruction
+}
+
 STRING 24356
 // Units: H06L ( ), EditorSuffix (Name - Editor Suffix)
 {
@@ -169810,7 +169864,7 @@ STRING 24367
 }
 
 STRING 24368
-// Units: H02K (Universe 11 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02K (U11 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169852,7 +169906,7 @@ STRING 24373
 }
 
 STRING 24374
-// Units: H02L (Universe 10 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02L (U10 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169903,12 +169957,6 @@ STRING 24382
 // Items: I00T (|cffffcc00One Day on Earth|r), Tip (Tooltip - Basic)
 {
 |cffffcc00One Day on Earth|r
-}
-
-STRING 24383
-// Units: H02L (Universe 10 God of Destruction), Name (Name)
-{
-Universe 10 God of Destruction
 }
 
 STRING 24384
@@ -169985,19 +170033,19 @@ The user's revive cooldown does not reduce while on Earth.|r
 }
 
 STRING 24396
-// Units: H02L (Universe 10 God of Destruction), Propernames (Proper Names)
+// Units: H02L (U10 God of Destruction), Propernames (Proper Names)
 {
 Rumsshi
 }
 
 STRING 24397
-// Units: H02M (Universe 1 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02M (U1 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24398
-// Units: H02M (Universe 1 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02M (U1 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170009,26 +170057,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24399
-// Units: H02M (Universe 1 God of Destruction), Name (Name)
-{
-Universe 1 God of Destruction
-}
-
 STRING 24400
-// Units: H02M (Universe 1 God of Destruction), Propernames (Proper Names)
+// Units: H02M (U1 God of Destruction), Propernames (Proper Names)
 {
 Iwan
 }
 
 STRING 24401
-// Units: H02N (Universe 4 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02N (U4 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24402
-// Units: H02N (Universe 4 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02N (U4 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170040,26 +170082,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24403
-// Units: H02N (Universe 4 God of Destruction), Name (Name)
-{
-Universe 4 God of Destruction
-}
-
 STRING 24404
-// Units: H02N (Universe 4 God of Destruction), Propernames (Proper Names)
+// Units: H02N (U4 God of Destruction), Propernames (Proper Names)
 {
 Quitela
 }
 
 STRING 24405
-// Units: H02O (Universe 2 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02O (U2 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24406
-// Units: H02O (Universe 2 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02O (U2 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170071,26 +170107,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24407
-// Units: H02O (Universe 2 God of Destruction), Name (Name)
-{
-Universe 2 God of Destruction
-}
-
 STRING 24408
-// Units: H02O (Universe 2 God of Destruction), Propernames (Proper Names)
+// Units: H02O (U2 God of Destruction), Propernames (Proper Names)
 {
 Heles
 }
 
 STRING 24409
-// Units: H02P (Universe 5 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02P (U5 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24410
-// Units: H02P (Universe 5 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02P (U5 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170102,26 +170132,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24411
-// Units: H02P (Universe 5 God of Destruction), Name (Name)
-{
-Universe 5 God of Destruction
-}
-
 STRING 24412
-// Units: H02P (Universe 5 God of Destruction), Propernames (Proper Names)
+// Units: H02P (U5 God of Destruction), Propernames (Proper Names)
 {
 Arak
 }
 
 STRING 24413
-// Units: H02Q (Universe 8 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02Q (U8 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24414
-// Units: H02Q (Universe 8 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02Q (U8 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170133,26 +170157,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24415
-// Units: H02Q (Universe 8 God of Destruction), Name (Name)
-{
-Universe 8 God of Destruction
-}
-
 STRING 24416
-// Units: H02Q (Universe 8 God of Destruction), Propernames (Proper Names)
+// Units: H02Q (U8 God of Destruction), Propernames (Proper Names)
 {
 Liquiir
 }
 
 STRING 24417
-// Units: H02R (Universe 9 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02R (U9 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24418
-// Units: H02R (Universe 9 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02R (U9 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170164,26 +170182,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24419
-// Units: H02R (Universe 9 God of Destruction), Name (Name)
-{
-Universe 9 God of Destruction
-}
-
 STRING 24420
-// Units: H02R (Universe 9 God of Destruction), Propernames (Proper Names)
+// Units: H02R (U9 God of Destruction), Propernames (Proper Names)
 {
 Sidra
 }
 
 STRING 24421
-// Units: H02S (Universe 12 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02S (U12 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24422
-// Units: H02S (Universe 12 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02S (U12 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 
@@ -170195,26 +170207,20 @@ A jack-of-all-trades hero who has a myriad of different tools to use in differen
 
 }
 
-STRING 24423
-// Units: H02S (Universe 12 God of Destruction), Name (Name)
-{
-Universe 12 God of Destruction
-}
-
 STRING 24424
-// Units: H02S (Universe 12 God of Destruction), Propernames (Proper Names)
+// Units: H02S (U12 God of Destruction), Propernames (Proper Names)
 {
 Giin
 }
 
 STRING 24425
-// Units: H02T (Universe 3 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02T (U3 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 24426
-// Units: H02T (Universe 3 God of Destruction), Ubertip (Tooltip - Extended)
+// Units: H02T (U3 God of Destruction), Ubertip (Tooltip - Extended)
 {
 A jack-of-all-trades hero who has a myriad of different tools to use in different situations.
 

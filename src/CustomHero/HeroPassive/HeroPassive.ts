@@ -3855,12 +3855,12 @@ export function setupRegenTimer(customHero: CustomHero) {
   customHero.addTimer(regenTimer);
 
   TimerStart(regenTimer, Constants.REGEN_TICK_RATE, true, () => {
-    // am i visible?
-    if (customHero.minimapIcon) {
-      const mmVisible = MinimapHelper.isUnitMinimapVisible(customHero.unit);
-      SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);
-      if (customHero.minimapIconBG) SetMinimapIconVisible(customHero.minimapIcon, mmVisible);
-    }
+    // visibility should be done automatically
+    // if (customHero.minimapIcon) {
+    //   const mmVisible = MinimapHelper.isUnitMinimapVisible(customHero.unit);
+    //   SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);
+    //   if (customHero.minimapIconBG) SetMinimapIconVisible(customHero.minimapIcon, mmVisible);
+    // }
     if (customHero.teamSfx != null) {
       const x = GetUnitX(customHero.unit);
       const y = GetUnitY(customHero.unit);

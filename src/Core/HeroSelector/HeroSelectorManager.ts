@@ -90,7 +90,7 @@ export class HeroSelectorManager {
     this.setupHeroes();
     this.setupGameModes();
     this.show(true);
-    CustomUI.show(false, false);
+    CustomUI.getInstance().show(false, false);
 
     SetTextTagPos(this.timerText, GetRectCenterX(gg_rct_HeroPickRegion), GetRectMaxY(gg_rct_HeroPickRegion), 10);
     SetTextTagColor(this.timerText, 255, 255, 255, 255);
@@ -187,7 +187,7 @@ export class HeroSelectorManager {
       SelectUnitForPlayerSingle(unit, player)
       HeroSelector.enablePick(false, player)
       this.show(false, player);
-      CustomUI.show(true, false, player);
+      CustomUI.getInstance().show(true, false, player);
 
       if (Globals.pecorinePickVoiceFlag && GetUnitTypeId(unit) == Id.pecorine) {
         SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Pecorine/Pick.mp3", 5355);
@@ -263,7 +263,7 @@ export class HeroSelectorManager {
       SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
       this.show(true, player);
       HeroSelector.enablePick(true, player);
-      CustomUI.show(false, false, player);
+      CustomUI.getInstance().show(false, false, player);
     }
 
     udg_TempInt = GetConvertedPlayerId(player);
@@ -388,7 +388,7 @@ export class HeroSelectorManager {
     HeroSelector.enablePick(true);
     HeroSelector.update();
     this.show(true);
-    CustomUI.show(false, false);
+    CustomUI.getInstance().show(false, false);
     this.isPicking = true;
     this.abilShop.setCanSwap(true);
   }
@@ -399,7 +399,7 @@ export class HeroSelectorManager {
     HeroSelector.enableBan(true);
     HeroSelector.update();
     this.show(true);
-    CustomUI.show(false, false);
+    CustomUI.getInstance().show(false, false);
     this.isPicking = false;
     this.abilShop.setCanSwap(false);
   }
@@ -435,7 +435,7 @@ export class HeroSelectorManager {
     PauseTimer(this.selectTimer);
 
     this.show(false);
-    CustomUI.show(true, false);
+    CustomUI.getInstance().show(true, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
@@ -588,7 +588,7 @@ export class HeroSelectorManager {
 
     }
     this.show(false);
-    CustomUI.show(true, false);
+    CustomUI.getInstance().show(true, false);
     this.time = 15;
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {

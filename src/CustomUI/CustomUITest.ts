@@ -20,10 +20,11 @@ import { AbilityButton } from './AbilityButton';
 import { Icon } from 'Common/Icon';
 import { AbilityButtonHotbar } from './AbilityButtonHotbar';
 import { FrameHelper } from 'Common/FrameHelper';
-import { Constants } from 'Common/Constants';
+import { Constants, Globals } from 'Common/Constants';
 import { BasicTitledBackdrop } from './BasicTitledBackdrop';
 import { BasicTextFrame } from './BasicTextFrame';
 import { HPBar, MPBar, SPBar, LevelBar, SpellPowerBar } from './MyBars';
+import { CustomUI } from './CustomUI';
 
 
 // need to add promise + error catching
@@ -42,6 +43,7 @@ const defaultToolTipSize = new Vector2D(0.287, 0.1);
 
 // perhaps a map of all ui elements, instead of these globals
 let mainMenu: ButtonMenu;
+let customUI: CustomUI;
 const buttonMenus: Map<String, ButtonMenu> = new Map();
 
 function moveButton3Around() {
@@ -63,6 +65,8 @@ export function CustomUiTest() {
 	const defaultToolTipPosition = new FramePosition(FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOMRIGHT, 0, 0.1639);
 	
 	BlzEnableUIAutoPosition(false);
+
+	customUI = CustomUI.getInstance();
 
 	/*
 		constant textaligntype TEXT_JUSTIFY_TOP = ConvertTextAlignType(0)
@@ -454,4 +458,6 @@ export function CustomUiTest() {
 	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
 	// 	"?",
 	// ).setRenderVisible(false);
+
+
 }

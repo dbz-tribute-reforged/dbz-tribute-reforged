@@ -1457,47 +1457,27 @@ export function CustomPlayerTest() {
       const mm = CreateMinimapIcon(
         x, y, 255, 255, 255, 
         icon, 
-        FOG_OF_WAR_VISIBLE
+        FOG_OF_WAR_FOGGED
       );
       SetMinimapIconVisible(mm, true);
       Globals.minimapIcons.push(mm);
-      if (unitId != Id.vendorKorin) {
-        for (const player of Constants.activePlayers) {
-          const fm = CreateFogModifierRadius(
-            player, FOG_OF_WAR_VISIBLE, 
-            x, y, 128, 
-            false, false
-          );
-          FogModifierStart(fm);
+      
+      // shows up for fogged now, so not needed
+      // if (unitId != Id.vendorKorin) {
+      //   for (const player of Constants.activePlayers) {
+      //     const fm = CreateFogModifierRadius(
+      //       player, FOG_OF_WAR_VISIBLE, 
+      //       x, y, 128, 
+      //       false, false
+      //     );
+      //     FogModifierStart(fm);
           
-          const playerId = GetPlayerId(player);
-          Globals.customPlayers[playerId].addMMFogModifier(fm);
-        }
-      }
+      //     const playerId = GetPlayerId(player);
+      //     Globals.customPlayers[playerId].addMMFogModifier(fm);
+      //   }
+      // }
     }
   });
-  
-  const toggleMinimapIcons = CreateTrigger();
-  for (const player of Constants.activePlayers) {
-    TriggerRegisterPlayerChatEvent(toggleMinimapIcons, player, "-mm", true);
-  }
-  TriggerAddCondition(toggleMinimapIcons, Condition(() => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
-    const visible = Globals.customPlayers[playerId].toggleMMFogModifierFlag();
-    DisplayTimedTextToPlayer(player, 0, 0, 2, "|cffffff00Minimap Icons: |r" + 
-      (visible ? 
-        "|cff00ff00On|r" :
-        "|cffff2222Off|r"
-      )
-    );
-    for (const mm of Globals.minimapIcons) {
-      if (player == GetLocalPlayer()) {
-        SetMinimapIconVisible(mm, visible);
-      }
-    }
-    return false;
-  }));
 
   const dmgStatsTrigger = CreateTrigger();
   for (const player of Constants.activePlayers) {
@@ -1520,6 +1500,7 @@ export function CustomPlayerTest() {
     return false;
   }));
 }
+
 
 export function skurvyMirrorProcessOrder() {
   const unit = GetTriggerUnit();
