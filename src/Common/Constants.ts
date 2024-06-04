@@ -46,19 +46,12 @@ export module Globals {
 
   export const DDSUnitMap = new Map<unit, boolean>();
   export const DDSTrigger = CreateTrigger();
-  export const DDSEntryTrigger = CreateTrigger();
 
   export function DDSAddUnit(unit: unit) {
-    if (!Globals.DDSUnitMap.has(unit)) {
-      Globals.DDSUnitMap.set(unit, true);
-      TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
-    }
-  }
-
-  export function DDSRemove(unit: unit) {
-    if (Globals.DDSUnitMap.has(unit)) {
-      Globals.DDSUnitMap.delete(unit);
-    }
+    // if (!Globals.DDSUnitMap.has(unit)) {
+    //   Globals.DDSUnitMap.set(unit, true);
+    //   TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
+    // }
   }
 
   export const tatsumakiBeamGroup = CreateGroup();

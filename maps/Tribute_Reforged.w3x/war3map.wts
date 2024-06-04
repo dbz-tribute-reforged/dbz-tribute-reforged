@@ -77307,6 +77307,16 @@ STRING 11731
 it's Nappa!
 }
 
+STRING 11732
+// Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Whis channels a symphony of destruction, that damages, silences and knocks back enemies in a wide arc in front of him.
+
+|cffff2222Channel Duration: <A0JO,DataA1>s
+|cff00ff00Damage: [Int] 30u (x9) per second
+|cff00ffffCooldown: <A0JO,Cool1>s
+}
+
 STRING 11733
 // Units: H092 (Shaggy Rogers), Name (Name)
 {
@@ -165927,6 +165937,15 @@ STRING 23854
 [|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 10|r]
 }
 
+STRING 23855
+// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
+{
+Launches a fast moving sword slash that deals damage in a line.
+
+|cff00ff00Damage: [Int] 100u x 8t + 600u
+|cff00ffffCooldown: <A145,Cool1>s|r
+}
+
 STRING 23856
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -165966,10 +165985,29 @@ Gojo teleports all non-invulnerable allies within 500 AOE of himself to the targ
 |cff00ffffCooldown: <A13Z,Cool1>s|r
 }
 
+STRING 23862
+// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Launches a sword slash in a straight line that deals damage after a 1s delay. Then a second sword slash appears behind the first to deal damage after another 0.5s delay.
+
+|cff00ff00Damage: [Int] 1000u (+1000u)
+|cff00ffffCooldown: <A146,Cool1>s|r
+}
+
 STRING 23863
 // Abilities: A0DL (Perfect Snipe), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Perfect Snipe - [|cffffcc00Level 1|r]
+}
+
+STRING 23864
+// Abilities: A14B (Scattered Blossomfall), Ubertip (Tooltip - Normal - Extended)
+{
+The signature technique of Mount Hua that creates blooming plum blossoms interspersed with sword strikes to attack their enemies. After a 1s delay, Cheong Myeong teleports to the target location and launches multiple strikes on the closest enemy within 800 range of himself. The number of strikes is equal to 8 + 1 per 2% of remaining mana up to 24 times. Can only strike other vulnerable enemy heroes. Cheong Myeong has a -50% attack damage debuff when attacking with this ability. The ability ends early if there are no more valid targets. Cheong Myeong turns invulnerable and hidden for the duration of the ability.
+
+|cff8888ffMana Cost: 100% of Max Mana
+|cff00ff00Damage: 50% of Attack Damage per Strike
+|cff00ffffCooldown: <A14B,Cool1>s|r
 }
 
 STRING 23865
@@ -167322,16 +167360,6 @@ Whis raises his staff and after a brief channel creates a portal that teleports 
 |cff00FFFFCooldown: <A0JK,Cool1>s|r
 }
 
-STRING 24057
-// Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Whis channels a symphony of destruction, that damages, silences and knocks back enemies in a wide arc in front of him.
-
-|cffff2222Channel Duration: <A0JO,DataA1>s
-|cff00ff00Damage: [Int] 60u (x9) per second
-|cff00ffffCooldown: <A0JO,Cool1>s
-}
-
 STRING 24058
 // Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
 {
@@ -168025,15 +168053,6 @@ STRING 24157
 |cffffcc00Limitless|r
 }
 
-STRING 24158
-// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
-{
-Launches a fast moving sword slash that deals damage in a line.
-
-|cff00ff00Damage: [Int] 100u x 8t + 800u
-|cff00ffffCooldown: <A145,Cool1>s|r
-}
-
 STRING 24159
 // Abilities: A143 (Falling Petal Sword), Name (Name)
 {
@@ -168091,15 +168110,6 @@ Redirect the beam after firing by using the Q key and the mouse cursor.
 |cff00ff00Duration: 5s
 |cff00ff00Damage: [Int] 40u/s + 100u (+200%)
 |cff00ffffCooldown: <A0KA,Cool1>s|r
-}
-
-STRING 24165
-// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
-{
-Launches a sword slash in a straight line that deals damage after a 1s delay. Then a second sword slash appears behind the first to deal damage after another 0.5s delay.
-
-|cff00ff00Damage: [Int] 800u (+800u)
-|cff00ffffCooldown: <A146,Cool1>s|r
 }
 
 STRING 24166
@@ -168164,16 +168174,6 @@ STRING 24172
 // Abilities: A144 (Fluttering Shadow Petals), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Fluttering Shadow Petals
-}
-
-STRING 24173
-// Abilities: A14B (Scattered Blossomfall), Ubertip (Tooltip - Normal - Extended)
-{
-The signature technique of Mount Hua that creates blooming plum blossoms interspersed with sword strikes to attack their enemies. After a 1s delay, Cheong Myeong teleports to the target location and launches multiple strikes on the closest enemy within 800 range of himself. The number of strikes is equal to 8 + 1 per 2% of remaining mana up to 24 times. Can only strike other vulnerable enemy heroes. The ability ends early if there are no more valid targets. Cheong Myeong turns invulnerable and hidden for the duration of the ability.
-
-|cff8888ffMana Cost: 100% of Max Mana
-|cff00ff00Damage: 50% of Attack Damage per Strike
-|cff00ffffCooldown: <A14B,Cool1>s|r
 }
 
 STRING 24174

@@ -31,6 +31,7 @@ import { CustomAbilityButton } from "./AbilityButton";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { MinimapHelper } from "Common/MinimapHelper";
 import { SagaManager } from "Core/SagaSystem/SagaManager";
+import { DDS } from "Core/DDS/DDS";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1494,6 +1495,27 @@ export function CustomPlayerTest() {
       if (player == GetLocalPlayer()) {
         SetMinimapIconVisible(mm, visible);
       }
+    }
+    return false;
+  }));
+
+  const dmgStatsTrigger = CreateTrigger();
+  for (const player of Constants.activePlayers) {
+    TriggerRegisterPlayerChatEvent(dmgStatsTrigger, player, "-dmg", true);
+  }
+  TriggerAddCondition(dmgStatsTrigger, Condition(() => {
+    const showPlayer = GetTriggerPlayer();
+    for (const player of Constants.activePlayers) {
+      const playerId = GetPlayerId(player);
+      const dmgSend = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_SEND_KEY);
+      const dmgSendSaga = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_SEND_SAGA_KEY);
+      const dmgRecv = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_RECV_KEY);
+      DisplayTimedTextToPlayer(showPlayer, 0, 0, 15, 
+        udg_OriginalPlayerNames[playerId] + ":" 
+        + " |cff00ff00PLAYER DMG:" + I2S(R2I(dmgSend))
+        + "|r / |cffffcc00SAGA DMG:" + I2S(R2I(dmgSendSaga))
+        + "|r / |cffff2222TANK:" + I2S(R2I(dmgRecv)) + "|r"
+      );
     }
     return false;
   }));

@@ -811,3 +811,5 @@ declare var udg_StatMultPlayerUnits: group[];
 declare var udg_PlayerPickedHeroesUnitGroup: group[];
 declare var udg_HeroPickTimer: timer;
 declare var udg_HeroPickTimerWindow: timerdialog;
+
+declare var udg_OriginalPlayerNames: string[];

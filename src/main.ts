@@ -33,6 +33,7 @@ import { FBSimTestManager } from "Common/FBSimTestManager";
 import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { ItemShopManager } from "Core/ItemShop/ItemShopManager";
 import { PreloadModels } from "Common/PreloadModels";
+import { DDS } from "Core/DDS/DDS";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -57,6 +58,7 @@ let timerManager: TimerManager;
 let keyInputManager: KeyInputManager;
 let smartPingManager: SmartPingManager;
 let pauseManager: PauseManager;
+let damageDetectionSystem: DDS;
 
 const musicStr = (
   + "Audio/Music/SecretOfTheForest.mp3;"
@@ -82,6 +84,7 @@ function tsPostMain() {
   }
   
   // preload custom abilities
+  damageDetectionSystem = DDS.getInstance();
   PathingCheck.Init();
   customAbilityManager = CustomAbilityManager.getInstance();
   timerManager = TimerManager.getInstance();

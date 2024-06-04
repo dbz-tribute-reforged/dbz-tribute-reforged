@@ -499,9 +499,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
     currentCd: 0,
-    maxCd: 20,
+    maxCd: 15,
     costType: CostType.SP,
-    costAmount: 40,
+    costAmount: 45,
     duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
@@ -518,8 +518,8 @@ export const AbilitiesList = [
       body: 
         "Stand still to recover MP over 4s. Clears all debuffs.|n" + 
         "Restores Agi/Int x 10% max mana per second.|n" +
-        "Cost: 50 SP|n" +
-        "CD: 10"
+        "Cost: 45 SP|n" +
+        "CD: 15"
     },
     components: [
       { name: "channel caster fake channel" },
