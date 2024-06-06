@@ -1,7 +1,10 @@
+import { PlayerProfile } from "Core/PlayerProfile/PlayerProfile";
 import { Vector2D } from "./Vector2D";
 import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
+  export let versionStr: string = "2.0";
+
   export let isMainGameStarted: boolean = false;
   export let isSinglePlayer: boolean = false;
   export let isFBSimTest: boolean = false;
@@ -15,6 +18,7 @@ export module Globals {
   export let ddsTimeoutSeconds: number = 5;
   
   export const customPlayers: CustomPlayer[] = [];
+  export const playerProfiles: PlayerProfile[] = [];
   export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export let canUseCustomUi: boolean = true;
 
@@ -81,6 +85,9 @@ export module Globals {
 }
 
 export module Constants {
+  export const MMR_PER_WIN = 10;
+  export const MMR_MIN = 100;
+
   export const maxSubAbilities = 4;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
@@ -319,6 +326,7 @@ export module Constants {
     [OSKEY_OEM_COMMA, ","],
     [OSKEY_OEM_PERIOD, "."],
   ]);
+  export const textToOsKeyMap = new Map<string, oskeytype>();
 }
 
 export enum CostType {

@@ -4,6 +4,8 @@ import { UnitHelper } from "Common/UnitHelper";
 import { KeyInput } from "Core/KeyInputSystem/KeyInput";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityButton } from "./AbilityButton";
+import { PlayerProfile } from "Core/PlayerProfile/PlayerProfile";
+import { PlayerCam } from "./PlayerCam";
 
 export class CustomPlayer {
   public name: string;
@@ -31,7 +33,11 @@ export class CustomPlayer {
   public dualTechSendFlag: boolean;
   public dualTechReceiveFlag: boolean;
 
-  public mmVisibleFlag: boolean = true;
+  public mmVisibleFlag: boolean;
+
+  public playerCam: PlayerCam;
+
+  public prefersZD: boolean;
 
   constructor(
     public id: number, 
@@ -65,6 +71,13 @@ export class CustomPlayer {
 
     this.dualTechSendFlag = false;
     this.dualTechReceiveFlag = false;
+    
+    this.mmVisibleFlag = true;
+
+    this.playerCam = new PlayerCam(this.player);
+    this.playerCam.update();
+    
+    this.prefersZD = false;
   }
 
   public addHero(hero: unit): this {
@@ -199,5 +212,13 @@ export class CustomPlayer {
   public toggleMMVisibleFlag() {
     this.mmVisibleFlag = !this.mmVisibleFlag;
     return this.mmVisibleFlag;
+  }
+
+  public hasCamChanged() {
+    return this.playerCam.hasChanged();
+  }
+
+  public performZoom() {
+    this.playerCam.update();
   }
 }

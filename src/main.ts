@@ -10,7 +10,6 @@ import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 import { ExperienceManager } from 'Core/ExperienceSystem/ExperienceManager';
-import { CameraZoom } from 'Common/CameraZoom';
 import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
 import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
@@ -34,6 +33,11 @@ import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { ItemShopManager } from "Core/ItemShop/ItemShopManager";
 import { PreloadModels } from "Common/PreloadModels";
 import { DDS } from "Core/DDS/DDS";
+import { SyncSaveLoad } from "Core/SyncSaveLoad/SyncSaveLoad";
+import { PlayerProfile } from "Core/PlayerProfile/PlayerProfile";
+import { WinLossSystem } from "Core/WinLossSystem/WinLossSystem";
+import { PlayerCam } from "CustomPlayer/PlayerCam";
+import { TransformationSystem } from "Core/TransformationSystem/TransformationSystem";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -59,6 +63,9 @@ let keyInputManager: KeyInputManager;
 let smartPingManager: SmartPingManager;
 let pauseManager: PauseManager;
 let damageDetectionSystem: DDS;
+let syncSaveLoad: SyncSaveLoad;
+let winLossSystem: WinLossSystem;
+let transformationSystem: TransformationSystem;
 
 const musicStr = (
   + "Audio/Music/SecretOfTheForest.mp3;"
@@ -78,22 +85,32 @@ function tsPostMain() {
   print(`Transpiler: v${TSTL_VERSION}`);
 
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
+  PreloadModels.doPreload();
   
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));
+    if (i < Constants.maxActivePlayers) {
+      Globals.playerProfiles.push(new PlayerProfile(Player(i)));
+    }
+  }
+  
+  for (const [key,value] of Constants.oskeyToTextMap.entries()) {
+    Constants.textToOsKeyMap.set(value, key);
   }
   
   // preload custom abilities
+  syncSaveLoad = SyncSaveLoad.getInstance();
   damageDetectionSystem = DDS.getInstance();
   PathingCheck.Init();
+  keyInputManager = KeyInputManager.getInstance();
   customAbilityManager = CustomAbilityManager.getInstance();
   timerManager = TimerManager.getInstance();
   SetCreepCampFilterState(false);
   CustomUiTest();
-  CameraZoom.onInit();
-  PreloadModels.doPreload();
+  transformationSystem = TransformationSystem.getInstance();
 
   setupHostPlayerTransfer();
+  
 
   TimerStart(CreateTimer(), 0, false, () => {
     castTimeHelper = CastTimeHelper.getInstance();
@@ -107,8 +124,9 @@ function tsPostMain() {
   TimerStart(CreateTimer(), 0.1, false, () => {
     transferHostPlayer();
     CustomPlayerTest();
-    keyInputManager = KeyInputManager.getInstance();
     heroSelectorManager = HeroSelectorManager.getInstance();
+    PlayerProfile.Init();
+    PlayerCam.Init();
     DestroyTimer(GetExpiredTimer());
   });
 
@@ -134,6 +152,9 @@ function tsPostMain() {
     if (HeroSelectorManager.getInstance().checkIsGameStarted()) {
       // anything that happens after hero picking is done, should be placed here
       Globals.isMainGameStarted = true;
+      if (!Globals.isSinglePlayer) PlayerProfile.startGame();
+      winLossSystem = WinLossSystem.getInstance();
+      winLossSystem.start();
       sagaManager = SagaManager.getInstance();
       tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
       dragonBallsManager = DragonBallsManager.getInstance();

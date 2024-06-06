@@ -7,6 +7,14 @@ import { Frame, Trigger } from "w3ts"
 import { AbilityShopData } from "./AbilityShopData";
 
 export class AbilityShop {
+  private static instance: AbilityShop;
+  public static getInstance() {
+    if (this.instance == null) {
+      this.instance = new AbilityShop();
+    }
+    return this.instance;
+  }
+
   static readonly INVALID_INDEX = -1;
   static readonly DEFAULT_SELECT_ABILITIES = [
     AbilityNames.BasicAbility.ZANZOKEN,
@@ -23,13 +31,22 @@ export class AbilityShop {
     AbilityNames.BasicAbility.ZANZO_DASH,
     AbilityNames.BasicAbility.MAX_CHARGE,
   ];
+  static readonly ZD_PREF_SHOP_ABILITIES = [
+    AbilityNames.BasicAbility.ZANZO_DASH,
+    AbilityNames.BasicAbility.GUARD,
+    AbilityNames.BasicAbility.MAX_POWER,
+    AbilityNames.BasicAbility.DEFLECT,
+    AbilityNames.BasicAbility.SPARKING_BLAST,
+    AbilityNames.BasicAbility.ZANZOKEN,
+    AbilityNames.BasicAbility.MAX_CHARGE,
+  ];
 
   canSwap: boolean = false;
   playerSelectIndex: number[] = [];
   playerSelectIndex2: number[] = [];
   playerShopIndex: number[] = [];
   playerKeyFlag: boolean[] = [];
-  playerShopMap: Map<player, string[]> = new Map();
+  playerShopMap: Map<number, string[]> = new Map();
 
   AbilitySelectBase: Frame
   AbilitySelectBG: Frame
@@ -340,7 +357,7 @@ export class AbilityShop {
       this.playerSelectIndex2.push(AbilityShop.INVALID_INDEX);
       this.playerShopIndex.push(AbilityShop.INVALID_INDEX);
       this.playerShopMap.set(
-        Player(i), 
+        i, 
         AbilityShop.DEFAULT_SHOP_ABILITIES
       )
     }
@@ -413,21 +430,26 @@ export class AbilityShop {
         );
       } else {
         const ki = customPlayer.getOsKeyInput(newKey);
-
-        let keyText = Constants.oskeyToTextMap.get(ki.oskey);
-        if (!keyText) keyText = "?";
-
-        customPlayer.abilityButtons[index].key = ki.oskey;
-        if (player == GetLocalPlayer()) this.AbilityKeyT[index].setText(keyText); 
-
-        DisplayTimedTextToPlayer(player, 0, 0, 2, 
-          "|cffffcc00KEY: " + keyText + "|r"
-        );
+        this.setAbilityKey(player, index, ki.oskey);
       }
 
       this.playerKeyFlag[playerId] = false;
       DestroyTimer(GetExpiredTimer());
     });
+  }
+
+  public setAbilityKey(
+    player: player, 
+    index: number,
+    oskey: oskeytype,
+  ) {
+    const playerId = GetPlayerId(player);
+    const customPlayer = Globals.customPlayers[playerId];
+    customPlayer.abilityButtons[index].key = oskey ? oskey : OSKEY_Z;
+    
+    let keyText = Constants.oskeyToTextMap.get(oskey);
+    if (!keyText) keyText = "?";
+    if (customPlayer.player == GetLocalPlayer()) this.AbilityKeyT[index].setText(keyText); 
   }
 
   public registerSelectPress(index: number) {
@@ -526,7 +548,7 @@ export class AbilityShop {
     }
 
     if (selectIndex2 == AbilityShop.INVALID_INDEX) {
-      const shopAbils = this.playerShopMap.get(player);
+      const shopAbils = this.playerShopMap.get(playerId);
       const selectName = customPlayer.abilityButtons[selectIndex].name;
       const shopAbilName = shopAbils[shopIndex];
       if (!this.isAbilitySelectValid(customPlayer, shopAbilName, selectName)) {
@@ -538,8 +560,9 @@ export class AbilityShop {
       }
 
       // give player shop abil
-      customPlayer.abilityButtons[selectIndex].name = shopAbilName;
-      this.tooltipSelect(player, selectIndex);
+      this.selectAbilityForPlayer(customPlayer, selectIndex, shopAbilName);
+      // customPlayer.abilityButtons[selectIndex].name = shopAbilName;
+      // this.tooltipSelect(player, selectIndex);
     } else {
       // swap
       const tmp = customPlayer.abilityButtons[selectIndex].name;
@@ -550,6 +573,11 @@ export class AbilityShop {
 
     this.displaySelected(player);
     this.resetIndex(playerId);
+  }
+
+  public selectAbilityForPlayer(customPlayer: CustomPlayer, index: number, name: string) {
+    customPlayer.abilityButtons[index].name = name;
+    this.tooltipSelect(customPlayer.player, index);
   }
 
   public displaySelected(player: player) {
@@ -565,7 +593,8 @@ export class AbilityShop {
   }
 
   public displayShop(player: player) {
-    const shopAbils = this.playerShopMap.get(player);
+    const playerId = GetPlayerId(player);
+    const shopAbils = this.playerShopMap.get(playerId);
     let j = 0;
     shopAbils.forEach((name: string, i: number) => {
       const abil = CustomAbilityManager.getInstance().getAbility(name);
@@ -613,7 +642,8 @@ export class AbilityShop {
   }
 
   public tooltipShop(player: player, index: number) {
-    const abilNames = this.playerShopMap.get(player);
+    const playerId = GetPlayerId(player);
+    const abilNames = this.playerShopMap.get(playerId);
     if (index < abilNames.length) {
       this.displayTooltip(player, abilNames[index]);
       if (player == GetLocalPlayer()) {
@@ -644,27 +674,40 @@ export class AbilityShop {
   }
 
   public resetPlayerShop(player: player, unitCode: number) {
+    const playerId = GetPlayerId(player);
+    const customPlayer = Globals.customPlayers[playerId];
+    this.playerShopMap.set(playerId, this.generateShopAbilities(
+      unitCode, 
+        customPlayer.prefersZD ?
+          AbilityShop.ZD_PREF_SHOP_ABILITIES :
+          AbilityShop.DEFAULT_SHOP_ABILITIES
+    ));
+  }
+
+  public generateShopAbilities(
+    unitCode: number,
+    defaultShop: string[],
+  ) {
     const abils: string[] = [];
     const shopData = AbilityShopData.get(unitCode);
     if (shopData && shopData[0].length > 0) {
       abils.push(...shopData[0]);
     }
-    for (let i = 0; i < AbilityShop.DEFAULT_SHOP_ABILITIES.length; ++i) {
+    for (let i = 0; i < defaultShop.length; ++i) {
       if (shopData && shopData[1].length > 0) {
         const removeIndex = shopData[1].findIndex((str: string) => {
-          return str == AbilityShop.DEFAULT_SHOP_ABILITIES[i];
+          return str == defaultShop[i];
         });
         if (removeIndex >= 0) continue;
       }
-      abils.push(AbilityShop.DEFAULT_SHOP_ABILITIES[i]);
+      abils.push(defaultShop[i]);
     }
-
-    this.playerShopMap.set(player, abils);
+    return abils;
   }
 
   public resetPlayerSelected(player: player) {
-    const abilNames = this.playerShopMap.get(player);
     const playerId = GetPlayerId(player);
+    const abilNames = this.playerShopMap.get(playerId);
     const customPlayer = Globals.customPlayers[playerId];
 
     customPlayer.abilityButtons.forEach((playerAbil: CustomAbilityButton, i: number) => {
@@ -684,4 +727,64 @@ export class AbilityShop {
     });
   }
 
+
+  public forceZDPrefShop(customPlayer: CustomPlayer, pref: string) {
+    const abilNames = this.playerShopMap.get(customPlayer.id);
+    if (abilNames) {
+      let prefIndex = -1;
+      let notPrefIndex = -1;
+      for (let i = 0; i < abilNames.length; ++i) {
+        if (abilNames[i] == pref) {
+          prefIndex = i;
+        } else if (
+          abilNames[i] == AbilityNames.BasicAbility.ZANZOKEN
+          || abilNames[i] == AbilityNames.BasicAbility.ZANZO_DASH
+        ) {
+          notPrefIndex = i;
+        }
+      }
+      if (prefIndex >= 0 && notPrefIndex >= 0 && prefIndex > notPrefIndex) {
+        const tmp = abilNames[prefIndex];
+        abilNames[prefIndex] = abilNames[notPrefIndex];
+        abilNames[notPrefIndex] = tmp;
+        this.playerShopMap.set(customPlayer.id, abilNames);
+      }
+    }
+  }
+
+  public forceZDPref(customPlayer: CustomPlayer) {
+    const abilNames = this.playerShopMap.get(customPlayer.id);
+    let hasZd = false;
+    let hasZanzo = false;
+    if (abilNames) {
+      for (const name of abilNames) {
+        if (name == AbilityNames.BasicAbility.ZANZO_DASH) {
+          hasZd = true;
+        }
+        if (name == AbilityNames.BasicAbility.ZANZOKEN) {
+          hasZanzo = true;
+        }
+      }
+
+      for (let i = 0; i < customPlayer.abilityButtons.length; ++i) {
+        if (customPlayer.prefersZD) {
+          if (customPlayer.abilityButtons[i].name == AbilityNames.BasicAbility.ZANZOKEN) {
+            customPlayer.abilityButtons[i].name = AbilityNames.BasicAbility.ZANZO_DASH;
+          }
+          this.forceZDPrefShop(customPlayer, AbilityNames.BasicAbility.ZANZO_DASH);
+          this.displayShop(customPlayer.player);
+          this.displaySelected(customPlayer.player);
+          break;
+        } else {
+          if (customPlayer.abilityButtons[i].name == AbilityNames.BasicAbility.ZANZO_DASH) {
+            customPlayer.abilityButtons[i].name = AbilityNames.BasicAbility.ZANZOKEN;
+          }
+          this.forceZDPrefShop(customPlayer, AbilityNames.BasicAbility.ZANZOKEN);
+          this.displayShop(customPlayer.player);
+          this.displaySelected(customPlayer.player);
+          break;
+        }
+      }
+    }
+  }
 }

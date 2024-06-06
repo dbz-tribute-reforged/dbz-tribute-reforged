@@ -29,14 +29,30 @@ export class FBSimTestManager {
     }
     TriggerAddAction(this.freeModeTrig, () => {
       if (GetTriggerPlayer() == Globals.hostPlayer) {
-        Globals.isFreemode = true;
         if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
           this.activate();
+        } else {
+          this.activateFreemode();
         }
       }
     });
 
     this.patrolTPTrig = CreateTrigger();
+    this.makeItemTrig = CreateTrigger();
+  }
+
+  activate() {
+    HeroSelectorManager.getInstance().enableFBSimTest(true);
+    if (Globals.isFBSimTest) return;
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 
+      15, 
+      "-fbsimtest activated (ts)"
+    );
+    Globals.isFBSimTest = true;
+    Globals.isFreemode = true
+    VisionHelper.showFbArenaVision();
+
     for (const player of Constants.activePlayers) {
       TriggerRegisterPlayerUnitEventSimple(this.patrolTPTrig, player, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
     };
@@ -49,7 +65,6 @@ export class FBSimTestManager {
       SetUnitY(unit, GetOrderPointY());
     });
 
-    this.makeItemTrig = CreateTrigger();
     for (const player of Constants.activePlayers) {
       TriggerRegisterPlayerChatEvent(this.makeItemTrig, player, "-item", false);
     }
@@ -66,16 +81,10 @@ export class FBSimTestManager {
     });
   }
 
-  activate() {
-    HeroSelectorManager.getInstance().enableFBSimTest(true);
-    if (Globals.isFBSimTest) return;
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 
-      15, 
-      "-fbsimtest activated (ts)"
+  activateFreemode() {
+    Globals.isFreemode = !Globals.isFreemode;
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, 
+      "-freemode " + (Globals.isFreemode ? "enabled" : "disabled")
     );
-    Globals.isFBSimTest = true;
-    Globals.isFreemode = true;
-    VisionHelper.showFbArenaVision();
   }
 }

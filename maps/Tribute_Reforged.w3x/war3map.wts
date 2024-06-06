@@ -35,7 +35,7 @@ A fast-paced action-packed hero arena based on the Dragon Ball series. Features 
 
 STRING 6
 {
-phone @ discord.gg/vayXJSZ
+randomkilla
 }
 
 STRING 7
@@ -6827,6 +6827,12 @@ STRING 1061
 // Units: H0A1 (Legendary Hero), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 1062
+// Units: H02X (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 1064
@@ -52353,11 +52359,6 @@ STRING 8052
 (Tavern All MightCape)
 }
 
-STRING 8053
-{
-Freemode Disabled, forced win/loss conditions are enabled.
-}
-
 STRING 8054
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
@@ -57905,9 +57906,10 @@ Heaven/Hell
 
 STRING 8857
 {
-Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
-
-If you find yourself stuck you can type -unstuck to attempt to fix it but it will cause you to end up dead in heaven/hell.
+Revive in 5 seconds at heaven/hell. Walk through the portal to revive back on Earth.
+Each team has a one time use One Day on Earth sold by Fortuneteller Baba.
+In ultimate mode, King Yemma sells a revive ticket that can be used once per player.
+If you find yourself stuck you can type -unstuck to attempt to fix it.
 }
 
 STRING 8858
@@ -62032,11 +62034,6 @@ STRING 9465
 Mana burns 10% of enemy's max mana in 300 AOE.
 
 |cff00ffffCooldown: <A05K,Cool10,.> seconds|r
-}
-
-STRING 9466
-{
-Freemode Enabled, forced win/loss conditions are disabled.
 }
 
 STRING 9467
@@ -66492,6 +66489,7 @@ STRING 10147
 -tss (toggle summon selection)
 -tft (host: toggle ability text)
 -saga (host: change saga line pre-game)
+-dmg (see damage dealt / received)
 }
 
 STRING 10148
@@ -69935,7 +69933,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 1 June 2024
+This map is under active development - 7 June 2024
 }
 
 STRING 10653
@@ -72526,7 +72524,7 @@ R
 }
 
 STRING 11049
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09M (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -73386,7 +73384,7 @@ STRING 11173
 }
 
 STRING 11174
-// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -73942,7 +73940,7 @@ Q
 }
 
 STRING 11255
-// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74306,7 +74304,7 @@ STRING 11299
 }
 
 STRING 11300
-// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
+// Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77327,7 +77325,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
+// Units: H0A0 (Silent Protagonist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -78176,7 +78174,7 @@ STRING 11861
 
 |cff00ff00Agility: Vision range, MS, dash mobility relative to total stats. Increases HP/MP/SP regen relative to STR/INT/Total.|r
 
-|cff00ffffIntelligence: Each point gives +10 mana, +0.125 attack damage, and beam clash power. Amplifies ability damage by an additional 90-115% relative to total stats.
+|cff00ffffIntelligence: Each point gives +10 mana, +0.125 attack damage, and beam clash power. Modifies ability damage by 90-115% depending on Int/AvgStats ratio.
 }
 
 STRING 11862
@@ -80140,7 +80138,7 @@ STRING 12145
 }
 
 STRING 12146
-// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: n049 (Chrono Trigger), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -81139,7 +81137,7 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
+// Units: H0A1 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -81508,7 +81506,7 @@ STRING 12346
 }
 
 STRING 12347
-// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
+// Units: H0A2 (Curious Brobot), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83198,7 +83196,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+// Units: H0A3 (Dark Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83462,7 +83460,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83474,7 +83472,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -83486,7 +83484,7 @@ STRING 12636
 }
 
 STRING 12637
-// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -84094,7 +84092,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -87016,7 +87014,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -89795,7 +89793,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
+// Units: H04Y (One Punch Man), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -91481,7 +91479,7 @@ E
 }
 
 STRING 13774
-// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
+// Units: H05Q (Alpha Ape), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -93037,7 +93035,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
+// Units: H05U (Demon God), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -93049,7 +93047,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
+// Units: H05V (Hell Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -95971,7 +95969,7 @@ STRING 14402
 }
 
 STRING 14403
-// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
+// Units: H05W (Princess of Zeal), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -103949,12 +103947,6 @@ STRING 15526
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 1|r]
-}
-
-STRING 15527
-// Units: H09M (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern Skin 1)
 }
 
 STRING 15528
@@ -112876,7 +112868,7 @@ W
 }
 
 STRING 16733
-// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
+// Units: H05X (Provisional Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -113746,7 +113738,7 @@ Frieza fires multiple death beams at a very rapid rate.
 }
 
 STRING 16855
-// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
+// Units: H07Y (Skurge of the Seven Seas), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114057,7 +114049,7 @@ Super Janemba is a close-quarters PvP-based assassin who has powerful offensive 
 }
 
 STRING 16898
-// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
+// Units: H0AA (The Hedgehog), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -114979,7 +114971,7 @@ Q
 }
 
 STRING 17017
-// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Frieza Force Soldier), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -115048,7 +115040,7 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 }
 
 STRING 17028
-// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
+// Units: H0AJ (Black Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -116444,7 +116436,7 @@ While in his Dragoon form, Dart is able to move faster gaining +50ms.
 }
 
 STRING 17223
-// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
+// Units: H0AL (Galactic Patrolman), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118489,7 +118481,7 @@ STRING 17488
 }
 
 STRING 17489
-// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+// Units: H0AO (Tennis Player), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119216,7 +119208,7 @@ STRING 17596
 }
 
 STRING 17597
-// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
+// Units: H002 (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -119630,7 +119622,7 @@ STRING 17657
 }
 
 STRING 17658
-// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
+// Units: H00B (DSO Agent), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -120179,7 +120171,7 @@ STRING 17744
 }
 
 STRING 17745
-// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
+// Units: H00L (|cffff4422Arch-Wizard|r), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -124110,7 +124102,7 @@ STRING 18299
 }
 
 STRING 18300
-// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
+// Units: H00V (Gourmet Guild Master), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -124329,7 +124321,7 @@ STRING 18328
 }
 
 STRING 18329
-// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
+// Units: H019 (Possessed Saiyan Prince), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -125489,7 +125481,7 @@ STRING 18503
 }
 
 STRING 18504
-// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
+// Units: H001 (Yondaime Hokage), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -125589,7 +125581,7 @@ STRING 18519
 }
 
 STRING 18520
-// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
+// Units: H005 (Konoha's Blue Beast), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -129726,7 +129718,7 @@ STRING 19094
 }
 
 STRING 19095
-// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
+// Units: H00P (Demon Cyborg), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -132009,7 +132001,7 @@ This unit is protected; it has additional armor
 }
 
 STRING 19403
-// Units: H029 (Cerelian Bounty Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: H01C (Tornado of Terror), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -134505,7 +134497,7 @@ STRING 19735
 }
 
 STRING 19736
-// Units: H02A (Special Grade Sorcerer), EditorSuffix (Name - Editor Suffix)
+// Units: H029 (Cerelian Bounty Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -135266,7 +135258,7 @@ STRING 19855
 }
 
 STRING 19856
-// Units: H02B (Divine Dragon of Mount Hua), EditorSuffix (Name - Editor Suffix)
+// Units: H02A (Special Grade Sorcerer), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -146736,7 +146728,7 @@ Armor Aura: 8|r
 }
 
 STRING 21429
-// Units: H02D (Princess Snake), EditorSuffix (Name - Editor Suffix)
+// Units: H02B (Divine Dragon of Mount Hua), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -154483,7 +154475,7 @@ Transformations:
 }
 
 STRING 22381
-// Units: E01J (Angel), EditorSuffix (Name - Editor Suffix)
+// Units: H02D (Princess Snake), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -166466,7 +166458,7 @@ An offense-oriented hero who struggles in the early and mid game but becomes one
 }
 
 STRING 23941
-// Units: H02F (U6 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: E01J (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169643,7 +169635,7 @@ STRING 24335
 }
 
 STRING 24336
-// Units: H02G (Superhero Android), EditorSuffix (Name - Editor Suffix)
+// Units: H02F (U6 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169680,7 +169672,7 @@ STRING 24340
 }
 
 STRING 24341
-// Units: H02H (Superhero Android), EditorSuffix (Name - Editor Suffix)
+// Units: H02G (Superhero Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169722,7 +169714,7 @@ STRING 24346
 }
 
 STRING 24347
-// Units: H02I (Omni-King), EditorSuffix (Name - Editor Suffix)
+// Units: H02H (Superhero Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169764,7 +169756,7 @@ STRING 24352
 }
 
 STRING 24353
-// Units: H02J (Omni-King Attendant), EditorSuffix (Name - Editor Suffix)
+// Units: H02I (Omni-King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169864,7 +169856,7 @@ STRING 24367
 }
 
 STRING 24368
-// Units: H02K (U11 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02J (Omni-King Attendant), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -169906,7 +169898,7 @@ STRING 24373
 }
 
 STRING 24374
-// Units: H02L (U10 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02K (U11 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170039,7 +170031,7 @@ Rumsshi
 }
 
 STRING 24397
-// Units: H02M (U1 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02L (U10 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170064,7 +170056,7 @@ Iwan
 }
 
 STRING 24401
-// Units: H02N (U4 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02M (U1 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170089,7 +170081,7 @@ Quitela
 }
 
 STRING 24405
-// Units: H02O (U2 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02N (U4 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170114,7 +170106,7 @@ Heles
 }
 
 STRING 24409
-// Units: H02P (U5 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02O (U2 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170139,7 +170131,7 @@ Arak
 }
 
 STRING 24413
-// Units: H02Q (U8 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02P (U5 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170164,7 +170156,7 @@ Liquiir
 }
 
 STRING 24417
-// Units: H02R (U9 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02Q (U8 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170189,7 +170181,7 @@ Sidra
 }
 
 STRING 24421
-// Units: H02S (U12 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02R (U9 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170214,7 +170206,7 @@ Giin
 }
 
 STRING 24425
-// Units: H02T (U3 God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H02S (U12 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170258,7 +170250,7 @@ A powerful high damage nuking hero that has reduced mobility. Focuses on landing
 }
 
 STRING 24430
-// Units: H02U (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
+// Units: H02T (U3 God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170283,7 +170275,7 @@ A powerful high damage nuking hero that has reduced mobility. Focuses on landing
 }
 
 STRING 24433
-// Units: H02V (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
+// Units: H02U (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170308,7 +170300,7 @@ A powerful high damage nuking hero that has reduced mobility. Focuses on landing
 }
 
 STRING 24436
-// Units: H02W (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
+// Units: H02V (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -170333,7 +170325,7 @@ A powerful high damage nuking hero that has reduced mobility. Focuses on landing
 }
 
 STRING 24439
-// Units: H02X (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
+// Units: H02W (Makyo-seijin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }

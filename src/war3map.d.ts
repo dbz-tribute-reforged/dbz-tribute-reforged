@@ -607,6 +607,7 @@ declare var gg_trg_Transformations_Item_Check_Manipulated_Item: trigger;
 declare var gg_trg_Transformations_Init_Commands_Non_Auto: trigger;
 declare var gg_trg_Transformations_Init_Commands: trigger;
 declare var gg_trg_Transformations_Entry_Point: trigger;
+declare var gg_trg_Transformations_Run_Command: trigger;
 declare var gg_trg_Transformations_Parse_String: trigger;
 declare var gg_trg_Transformations_Exit_Point: trigger;
 declare var gg_trg_Set_Transformation_Stat_Mult: trigger;
@@ -754,6 +755,13 @@ declare var gg_trg_Transformations_Demiurge: trigger;
 declare var gg_trg_Transformations_Majin_Vegeta: trigger;
 declare var gg_trg_Transformations_Minato: trigger;
 declare var gg_trg_Transformations_Might_Guy: trigger;
+declare var gg_trg_Transformations_Genos: trigger;
+declare var gg_trg_Transformations_Tatsumaki: trigger;
+declare var gg_trg_Transformations_Granolah: trigger;
+declare var gg_trg_Transformations_Whis: trigger;
+declare var gg_trg_Transformations_Beerus: trigger;
+declare var gg_trg_Transformations_Gojo: trigger;
+declare var gg_trg_Transformations_Cheong_Myeong: trigger;
 declare var gg_trg_Saga_Unit_Init: trigger;
 declare var gg_trg_Saga_Unit_Capsule_Unlock: trigger;
 declare var gg_trg_Saga_Unit_Loop: trigger;
@@ -812,4 +820,9 @@ declare var udg_PlayerPickedHeroesUnitGroup: group[];
 declare var udg_HeroPickTimer: timer;
 declare var udg_HeroPickTimerWindow: timerdialog;
 
+declare var udg_HeroRespawnHashtable: hashtable;
+
 declare var udg_OriginalPlayerNames: string[];
+
+declare var udg_TransformationPlayer: player;
+declare var udg_TransformationString: string;

@@ -47836,7 +47836,7 @@ export const SfxComponents = [
         model: "SlashRedX.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 2,
+        scale: 2.25,
         endScale: -1,
         startHeight: 100,
         endHeight: 100,

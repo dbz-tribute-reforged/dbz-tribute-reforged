@@ -39,8 +39,6 @@ export class HeroSelectorManager {
   public repickButton: Frame;
   public repickButtonTrigger: Trigger;
 
-  public abilShop: AbilityShop;
-
 
   public static getInstance() {
     if (this.instance == null) {
@@ -75,8 +73,7 @@ export class HeroSelectorManager {
 
     this.init();
 
-    this.abilShop = new AbilityShop();
-    this.abilShop.setup();
+    AbilityShop.getInstance().setup();
   }
 
   init() {
@@ -172,7 +169,7 @@ export class HeroSelectorManager {
     // override unitCreated function
     HeroSelector["unitCreated"] = function(player: player, unitCode: number, isRandom: boolean) {
       // enforce correct abilities for unit   
-      this.abilShop.setPlayerShop(player, unitCode); 
+      AbilityShop.getInstance().setPlayerShop(player, unitCode); 
       
       const unit = this.heroPickSpawnUnitForPlayer(unitCode, player);
       
@@ -210,7 +207,7 @@ export class HeroSelectorManager {
     const func = HeroSelector["buttonSelected"];
     HeroSelector["buttonSelected"] = function(player: player, unitCode: number) {
       func(player, unitCode);
-      this.abilShop.setPlayerShop(player, unitCode);
+      AbilityShop.getInstance().setPlayerShop(player, unitCode);
     }
   }
 
@@ -390,7 +387,7 @@ export class HeroSelectorManager {
     this.show(true);
     CustomUI.getInstance().show(false, false);
     this.isPicking = true;
-    this.abilShop.setCanSwap(true);
+    AbilityShop.getInstance().setCanSwap(true);
   }
 
   runBanPhase() {
@@ -401,7 +398,7 @@ export class HeroSelectorManager {
     this.show(true);
     CustomUI.getInstance().show(false, false);
     this.isPicking = false;
-    this.abilShop.setCanSwap(false);
+    AbilityShop.getInstance().setCanSwap(false);
   }
 
   runHeroSelectTimer() {

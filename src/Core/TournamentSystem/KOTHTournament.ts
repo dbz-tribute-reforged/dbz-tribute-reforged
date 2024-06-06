@@ -2,7 +2,6 @@ import { AdvancedTournament } from "./AdvancedTournament";
 import { TournamentState, Tournament } from "./Tournament";
 import { Constants, Globals } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
-import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
@@ -11,6 +10,7 @@ import { KOTHGame } from "Core/GameMode/KOTHGame";
 import { TimerManager } from "Core/Utility/TimerManager";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
 import { VisionHelper } from "Common/VisionHelper";
+import { WinLossSystem } from "Core/WinLossSystem/WinLossSystem";
 
 export class KOTHTournament extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -61,7 +61,7 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
     this.kothGame.moveTeamsToArena(Constants.defaultTeam1, Globals.tmpVector);
     this.kothGame.moveTeamsToArena(Constants.defaultTeam2, Globals.tmpVector);
 
-    WinLossHelper.forceTeamWin(this.kothGame.getWinner());
+    WinLossSystem.getInstance().forceTeamWin(this.kothGame.getWinner());
   }
 
   // what to do before the tournament actually starts

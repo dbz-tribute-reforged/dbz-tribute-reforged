@@ -3,7 +3,7 @@ import { AbilityButtonHotbar } from "./AbilityButtonHotbar";
 import { ButtonMenu } from "./ButtonMenu";
 import { HPBar, LevelBar, MPBar, SPBar } from "./MyBars";
 import { Frame, Trigger } from "w3ts";
-import { CameraZoom } from "Common/CameraZoom";
+import { PlayerCam } from "CustomPlayer/PlayerCam";
 
 // perhaps a map of all ui elements, instead of these globals
 export class CustomUI {
@@ -21,10 +21,11 @@ export class CustomUI {
   
   public zoomDistSlider: Frame;
   public zoomDistTrigger: Trigger;
+  
+  public helpSkillsButton: Frame;
+  public helpSkillsTrigger: Trigger;
 
   constructor() {
-      
-
     this.toggleMinimapButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
       .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1560, 0.0020)
       .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.1770, 0.0230)
@@ -49,9 +50,9 @@ export class CustomUI {
       Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0, 
       "SLIDER", "EscMenuSliderTemplate"
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.010, 0.1440)
-      .setMinMaxValue(CameraZoom.ZOOM_MIN, CameraZoom.ZOOM_MAX)
-      .setValue(CameraZoom.ZOOM_DEFAULT)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.010, 0.1540)
+      .setMinMaxValue(PlayerCam.ZOOM_MIN, PlayerCam.ZOOM_MAX)
+      .setValue(PlayerCam.ZOOM_MIN)
       .setStepSize(200)
     ;
     this.zoomDistTrigger = new Trigger();
@@ -59,9 +60,37 @@ export class CustomUI {
     this.zoomDistTrigger.addCondition(Condition(() => {
       this.zoomDistSlider.enabled = false;
       this.zoomDistSlider.enabled = true;
-      CameraZoom.setPlayerZoom(GetTriggerPlayer(), BlzGetTriggerFrameValue());
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      Globals.customPlayers[playerId].playerCam.setZoom(BlzGetTriggerFrameValue());
       return false;
     }));
+
+    
+    // this.helpSkillsButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+    //   .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1960, 0.0960)
+    //   .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2200, 0.1200)
+    //   .setText("?")
+    //   .setScale(1.00)
+    this.helpSkillsButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2300, 0.1100)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2800, 0.1305)
+      .setText("|cffFFFFFFInfo|r")
+      .setScale(1.00)
+
+    this.helpSkillsTrigger = new Trigger();
+    this.helpSkillsTrigger.triggerRegisterFrameEvent(this.helpSkillsButton, FRAMEEVENT_CONTROL_CLICK);
+    this.helpSkillsTrigger.addCondition(Condition(() => {
+      this.helpSkillsButton.enabled = false;
+      this.helpSkillsButton.enabled = true;
+      udg_TransformationPlayer = GetTriggerPlayer();
+      udg_TransformationString = "hs";
+      TriggerExecute(gg_trg_Transformations_Run_Command);
+      return false;
+    }));
+
+
   }
 
   toggleMinimapIcons(player: player) {

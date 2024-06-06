@@ -7,7 +7,6 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
-import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
@@ -32,6 +31,9 @@ import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { MinimapHelper } from "Common/MinimapHelper";
 import { SagaManager } from "Core/SagaSystem/SagaManager";
 import { DDS } from "Core/DDS/DDS";
+import { SyncSaveLoad } from "Core/SyncSaveLoad/SyncSaveLoad";
+import { FilePromise } from "Core/SyncSaveLoad/FilePromise";
+import { PlayerCam } from "./PlayerCam";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1301,14 +1303,14 @@ export function CustomPlayerTest() {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
           5, 
-          "Full sagas activated"
+          "Saga Mode: Full"
         );
       } else {
         Globals.sagaSystemMode = 0;
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
           5, 
-          "Fast sagas activated"
+          "Saga Mode: Fast"
         );
       }
     }
@@ -1485,18 +1487,9 @@ export function CustomPlayerTest() {
   }
   TriggerAddCondition(dmgStatsTrigger, Condition(() => {
     const showPlayer = GetTriggerPlayer();
-    for (const player of Constants.activePlayers) {
-      const playerId = GetPlayerId(player);
-      const dmgSend = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_SEND_KEY);
-      const dmgSendSaga = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_SEND_SAGA_KEY);
-      const dmgRecv = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_RECV_KEY);
-      DisplayTimedTextToPlayer(showPlayer, 0, 0, 15, 
-        udg_OriginalPlayerNames[playerId] + ":" 
-        + " |cff00ff00PLAYER DMG:" + I2S(R2I(dmgSend))
-        + "|r / |cffffcc00SAGA DMG:" + I2S(R2I(dmgSendSaga))
-        + "|r / |cffff2222TANK:" + I2S(R2I(dmgRecv)) + "|r"
-      );
-    }
+    DisplayTimedTextToPlayer(showPlayer, 0, 0, 15, 
+      DDS.getInstance().getDamageDataStr()
+    );
     return false;
   }));
 }
