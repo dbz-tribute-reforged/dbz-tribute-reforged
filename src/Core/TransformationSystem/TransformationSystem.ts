@@ -1,6 +1,9 @@
-import { Id } from "Common/Constants";
+import { Globals, Id } from "Common/Constants";
+import { SkinData } from "./SkinData";
 
 export class TransformationSystem {
+  public static KEY_SKIN_ID = 45;
+
   private static instance: TransformationSystem;
   public static getInstance() {
     if (this.instance == null) {
@@ -123,14 +126,79 @@ export class TransformationSystem {
       const playerId = GetPlayerId(udg_TransformationPlayer);
       const units = udg_StatMultPlayerUnits[playerId];
       for (let i = 0; i < BlzGroupGetSize(units); ++i) {
-        udg_StatMultUnit = BlzGroupUnitAt(units, i);
-        if (udg_StatMultUnit == null) continue;
-        const unitId = GetUnitTypeId(udg_StatMultUnit);
-        const trig = this.unitTypeIdToTriggerMap.get(unitId);
-        if (trig) {
-          TriggerExecute(trig);
-        }
+        this.transform(BlzGroupUnitAt(units, i));
       }
     });
-  } 
+  }
+
+  transform(unit: unit) {
+    if (unit == null) return;
+    this.transformSkinCheck(udg_StatMultUnit);
+    const unitTypeId = GetUnitTypeId(unit);
+    const trig = this.unitTypeIdToTriggerMap.get(unitTypeId);
+    if (trig) {
+      udg_StatMultUnit = unit;
+      TriggerExecute(trig);
+    }
+  }
+
+  transformSkinCheck(unit: unit) {
+    const unitId = GetHandleId(unit);
+    const transformTime = LoadReal(udg_StatMultHashtable, unitId, 9);
+    if (transformTime > 0) return;
+
+    const skinId = LoadInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID);
+    if (skinId && skinId != 0) {
+      if (skinId == SkinData.SKIN_ALTERNATE) {
+        AddUnitAnimationProperties(unit, "alternate", true);
+      } else {
+        BlzSetUnitSkin(unit, skinId);
+      }
+    }
+  }
+
+  changeSkin(player: player) {
+    DisplayTimedTextToPlayer(player, 0, 0, 1, "Changing skins");
+
+    const playerId = GetPlayerId(player);
+    const playerProfile = Globals.playerProfiles[playerId];
+
+    const units = udg_StatMultPlayerUnits[playerId];
+    for (let i = 0; i < BlzGroupGetSize(units); ++i) {
+      const unit = BlzGroupUnitAt(units, i);
+      if (unit == null) continue;
+      const unitTypeId = GetUnitTypeId(unit);
+      const skins = SkinData.getSkinData(unitTypeId);
+      if (!skins) {
+        DisplayTimedTextToPlayer(player, 0, 0, 1, "No skins for " + GetHeroProperName(unit));
+        continue;
+      }
+      const unitId = GetHandleId(unit);
+      
+      let currentSkin = LoadInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID);
+      let found = false;
+      let foundPrev = currentSkin == unitTypeId;
+      for (let i = 0; i < skins.length; ++i) {
+        const skin = skins[i];
+        const isValid = skin.isValid(playerProfile);
+
+        if (currentSkin == 0 || foundPrev) {
+          if (isValid) {
+            SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, skin.targetId);
+            found = true;
+            break;
+          }
+        } else if (currentSkin == skin.targetId) {
+          foundPrev = true;
+          if (skin.targetId == SkinData.SKIN_ALTERNATE) {
+            AddUnitAnimationProperties(unit, "alternate", false);
+          }
+        }
+      }
+      if (!found) {
+        SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, unitTypeId);
+      }
+      this.transform(unit);
+    }
+  }
 }

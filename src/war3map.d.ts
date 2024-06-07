@@ -826,3 +826,4 @@ declare var udg_OriginalPlayerNames: string[];
 
 declare var udg_TransformationPlayer: player;
 declare var udg_TransformationString: string;
+declare var udg_TransformationID: number;

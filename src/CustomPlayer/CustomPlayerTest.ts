@@ -1058,16 +1058,18 @@ export function CustomPlayerTest() {
     // force set unit skin
     const setUnitSkin = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(setUnitSkin, Player(i), "-skin", false);
+      TriggerRegisterPlayerChatEvent(setUnitSkin, Player(i), "-setskin", false);
     };
     TriggerAddAction(setUnitSkin, () => {
-      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
-      const group = GetUnitsSelectedAll(GetTriggerPlayer());
-      ForGroup(group, () => {
-        const target = GetEnumUnit();
-        BlzSetUnitSkin(target, value);
-      });
-      DestroyGroup(group);
+      const value = FourCC(SubString(GetEventPlayerChatString(), 9, 13));
+      if (value) {
+        const group = GetUnitsSelectedAll(GetTriggerPlayer());
+        ForGroup(group, () => {
+          const target = GetEnumUnit();
+          BlzSetUnitSkin(target, value);
+        });
+        DestroyGroup(group);
+      }
     });
 
     

@@ -4,6 +4,8 @@ import { ButtonMenu } from "./ButtonMenu";
 import { HPBar, LevelBar, MPBar, SPBar } from "./MyBars";
 import { Frame, Trigger } from "w3ts";
 import { PlayerCam } from "CustomPlayer/PlayerCam";
+import { DDS } from "Core/DDS/DDS";
+import { TransformationSystem } from "Core/TransformationSystem/TransformationSystem";
 
 // perhaps a map of all ui elements, instead of these globals
 export class CustomUI {
@@ -24,6 +26,15 @@ export class CustomUI {
   
   public helpSkillsButton: Frame;
   public helpSkillsTrigger: Trigger;
+
+  public dmgButton: Frame;
+  public dmgButtonBackdrop: Frame;
+  public dmgButtonTrigger: Trigger;
+
+  public skinButton: Frame;
+  public skinButtonBackdrop: Frame;
+  public skinButtonTrigger: Trigger;
+  
 
   constructor() {
     this.toggleMinimapButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
@@ -91,6 +102,43 @@ export class CustomUI {
     }));
 
 
+    this.dmgButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1840, 0.0020)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2050, 0.0230)
+      .setScale(1.00)
+
+    this.dmgButtonBackdrop = new Frame("DmgButton[0]", this.dmgButton, 0, 0, 'BACKDROP', "")
+      .setAllPoints(this.dmgButton)
+      .setTexture("BTNItemZSword.blp", 0, true)
+
+    this.dmgButtonTrigger = new Trigger();
+    this.dmgButtonTrigger.triggerRegisterFrameEvent(this.dmgButton, FRAMEEVENT_CONTROL_CLICK);
+    this.dmgButtonTrigger.addCondition(Condition(() => {
+      this.dmgButton.enabled = false;
+      this.dmgButton.enabled = true;
+      DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 15, 
+        DDS.getInstance().getDamageDataStr()
+      );
+      return false;
+    }));
+
+    this.skinButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1840, 0.0250)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2050, 0.0460)
+      .setScale(1.00)
+
+    this.skinButtonBackdrop = new Frame("SkinButton[0]", this.skinButton, 0, 0, 'BACKDROP', "")
+      .setAllPoints(this.skinButton)
+      .setTexture("BTNJusticePose.blp", 0, true)
+
+    this.skinButtonTrigger = new Trigger();
+    this.skinButtonTrigger.triggerRegisterFrameEvent(this.skinButton, FRAMEEVENT_CONTROL_CLICK);
+    this.skinButtonTrigger.addCondition(Condition(() => {
+      this.skinButton.enabled = false;
+      this.skinButton.enabled = true;
+      TransformationSystem.getInstance().changeSkin(GetTriggerPlayer());
+      return false;
+    }));
   }
 
   toggleMinimapIcons(player: player) {
@@ -143,7 +191,6 @@ export class CustomUI {
       BlzFrameSetVisible(abilityButtonHotbar, flag);
     }
   }
-
 }
 
 export function toggleFrameHandle(fh: framehandle, b:boolean): void {

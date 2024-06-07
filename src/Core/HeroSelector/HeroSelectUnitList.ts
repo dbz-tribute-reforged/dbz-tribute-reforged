@@ -761,7 +761,6 @@ const leonSKennedyData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.BEAMER +
     HeroSelectCategory.VIDEOGAME +
     HeroSelectCategory.MEME
   )

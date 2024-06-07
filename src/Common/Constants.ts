@@ -699,6 +699,7 @@ export module Id {
   export const albedoFearAura = FourCC("A132");
 
   export const allMight = FourCC("H09K");
+  export const allMightCape = FourCC("H09L");
   export const detroitSmash = FourCC("A0SX");
   export const leftSmash = FourCC("A0SY");
   export const rightSmash = FourCC("A0SZ");
@@ -782,6 +783,7 @@ export module Id {
   export const giganticOmegastorm = FourCC("A0H6");
 
   export const fatBuu = FourCC("O005");
+  export const fatBuuThin = FourCC("O00T");
   export const superBuu = FourCC("O006");
   export const kidBuu = FourCC("O00C");
   export const candyBeam = FourCC("A0EI");
@@ -1074,6 +1076,7 @@ export module Id {
   export const gojoLimitlessGuard = gojoLimitless;
 
   export const goku = FourCC("H000");
+  export const gokuXeno = FourCC("H03G");
   export const kamehameha = FourCC("A00R");
   export const kamehamehaGod = FourCC('A0L9');
   export const kamehamehaX10 = FourCC('A0CJ');
@@ -1147,6 +1150,8 @@ export module Id {
 
   export const heles = FourCC("H02O");
 
+  export const hercule = FourCC("H04P");
+
   export const hirudegarn = FourCC("H05U");
   export const hirudegarnFlameBreath = FourCC("A081");
   export const hirudegarnFlameBall = FourCC("A082");
@@ -1214,6 +1219,7 @@ export module Id {
   export const lightningShowerRain = FourCC("A0O4");
 
   export const jiren = FourCC("E01P");
+  export const elHermano = FourCC("E01T");
   export const powerImpact = FourCC("A0K9");
   export const powerImpact2 = FourCC("A0SI");
   export const mightyPunch = FourCC("A0K8");
@@ -1230,6 +1236,7 @@ export module Id {
   export const ultimateBurningWarrior3 = FourCC("A005");
 
   export const krillin = FourCC("H03Y");
+  export const krillinKid = FourCC("H03B");
   export const krillinKame = FourCC("A0CH");
   export const scatteringBullet = FourCC("A0R9");
   export const destructoDisc = FourCC("A0RA");
@@ -1433,6 +1440,9 @@ export module Id {
   export const schalaDreamDevourer = FourCC("A0YI");
 
   export const sephiroth = FourCC("H09M");
+  export const sephirothSkin2 = FourCC("H09N");
+  export const sephirothSkin3 = FourCC("H09O");
+  export const sephirothSkin4 = FourCC("H09P");
   export const sephirothOctoslash = FourCC("A0T7");
   export const sephirothHellsGate = FourCC("A0T8");
   export const sephirothFerventBlow = FourCC("A0T9");
@@ -1440,6 +1450,8 @@ export module Id {
   export const sephirothBlackMateria = FourCC("A0TB");
   export const sephirothOneWingedAngel = FourCC("A0TC");
   export const sephirothParry = FourCC("A0TD");
+
+  export const shaggyRogers = FourCC("H092");
 
   export const shalltearBloodfallen = FourCC("H015");
   export const shalltearPurifyingJavelin = FourCC("A133");
@@ -1465,6 +1477,17 @@ export module Id {
   export const shotoTodorokiCoolingDown = FourCC("A0YW");
   
   export const sidra = FourCC("H02R");
+
+  export const skurvy = FourCC("H07Y");
+  export const skurvyBigKannon = FourCC("A0Z0");
+  export const skurvyKannonFire = FourCC("A0Z1");
+  export const skurvyRunThrough = FourCC("A0Z2");
+  export const skurvyPlunder = FourCC("A0Z3");
+  export const skurvyMirrorNeverLies = FourCC("A0Z4");
+  export const skurvyPlank = FourCC("A0Z5");
+  export const skurvyScorn = FourCC("A0Z6");
+  export const skurvyPower = FourCC("A0ZA");
+  export const skurvyPlunderBird = FourCC("nalb");
 
   export const sonic = FourCC("H0AA");
   export const sonicJump = FourCC("A0ZE");
@@ -1551,20 +1574,10 @@ export module Id {
   export const vegetaMajinFinalExplosion = FourCC("A13S");
 
   export const videl = FourCC("H085");
+  export const videlLongHair = FourCC("H00S");
   export const punch = FourCC("A073");
   export const kick = FourCC("A071");
   export const flyingKick = FourCC("A0JW");
-
-  export const skurvy = FourCC("H07Y");
-  export const skurvyBigKannon = FourCC("A0Z0");
-  export const skurvyKannonFire = FourCC("A0Z1");
-  export const skurvyRunThrough = FourCC("A0Z2");
-  export const skurvyPlunder = FourCC("A0Z3");
-  export const skurvyMirrorNeverLies = FourCC("A0Z4");
-  export const skurvyPlank = FourCC("A0Z5");
-  export const skurvyScorn = FourCC("A0Z6");
-  export const skurvyPower = FourCC("A0ZA");
-  export const skurvyPlunderBird = FourCC("nalb");
 
   export const vados = FourCC("E01J");
   

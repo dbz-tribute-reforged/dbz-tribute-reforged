@@ -106,7 +106,7 @@ export class PlayerProfile {
   }
 
   public static startGame() {
-    // assume: profile.load has long since completed
+    // if (Globals.isFBSimTest) return;
     for (const profile of Globals.playerProfiles) {
       profile.addGame();
       profile.save();
@@ -114,6 +114,7 @@ export class PlayerProfile {
   }
 
   public static winGame(winTeam: number) {
+    // if (Globals.isFBSimTest) return;
     for (const profile of Globals.playerProfiles) {
       for (const player of Constants.defaultTeam1) {
         if (profile.player != player) continue;
