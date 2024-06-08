@@ -1,5 +1,6 @@
 import { Globals, Id } from "Common/Constants";
 import { SkinData } from "./SkinData";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export class TransformationSystem {
   public static KEY_SKIN_ID = 45;
@@ -126,17 +127,20 @@ export class TransformationSystem {
       const playerId = GetPlayerId(udg_TransformationPlayer);
       const units = udg_StatMultPlayerUnits[playerId];
       for (let i = 0; i < BlzGroupGetSize(units); ++i) {
-        this.transform(BlzGroupUnitAt(units, i));
+        this.transform(udg_TransformationPlayer, BlzGroupUnitAt(units, i));
       }
     });
   }
 
-  transform(unit: unit) {
+  // udg_TransformationPlayer
+  // udg_TransformationString
+  transform(player: player, unit: unit) {
     if (unit == null) return;
-    this.transformSkinCheck(udg_StatMultUnit);
     const unitTypeId = GetUnitTypeId(unit);
     const trig = this.unitTypeIdToTriggerMap.get(unitTypeId);
+    this.transformSkinCheck(udg_StatMultUnit);
     if (trig) {
+      udg_TransformationPlayer = player;
       udg_StatMultUnit = unit;
       TriggerExecute(trig);
     }
@@ -145,10 +149,12 @@ export class TransformationSystem {
   transformSkinCheck(unit: unit) {
     const unitId = GetHandleId(unit);
     const transformTime = LoadReal(udg_StatMultHashtable, unitId, 9);
+    udg_TransformationID = 0;
     if (transformTime > 0) return;
 
     const skinId = LoadInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID);
-    if (skinId && skinId != 0) {
+    if (skinId && skinId != 0 && skinId != GetUnitTypeId(unit)) {
+      udg_TransformationID = skinId;
       if (skinId == SkinData.SKIN_ALTERNATE) {
         AddUnitAnimationProperties(unit, "alternate", true);
       } else {
@@ -158,8 +164,6 @@ export class TransformationSystem {
   }
 
   changeSkin(player: player) {
-    DisplayTimedTextToPlayer(player, 0, 0, 1, "Changing skins");
-
     const playerId = GetPlayerId(player);
     const playerProfile = Globals.playerProfiles[playerId];
 
@@ -169,10 +173,12 @@ export class TransformationSystem {
       if (unit == null) continue;
       const unitTypeId = GetUnitTypeId(unit);
       const skins = SkinData.getSkinData(unitTypeId);
-      if (!skins) {
-        DisplayTimedTextToPlayer(player, 0, 0, 1, "No skins for " + GetHeroProperName(unit));
-        continue;
-      }
+      DisplayTimedTextToPlayer(player, 0, 0, 1, 
+        skins ? 
+          "Changing skins for " + GetHeroProperName(unit):
+          "No skins found for " + GetHeroProperName(unit)
+      );
+      if (!skins) continue;
       const unitId = GetHandleId(unit);
       
       let currentSkin = LoadInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID);
@@ -198,7 +204,29 @@ export class TransformationSystem {
       if (!found) {
         SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, unitTypeId);
       }
-      this.transform(unit);
+      this.autoTransformPlayerUnit(player, unit);
+    }
+  }
+
+  autoTransformPlayer(player: player) {
+    const playerId = GetPlayerId(player);
+    const units = udg_StatMultPlayerUnits[playerId];
+    for (let i = 0; i < BlzGroupGetSize(units); ++i) {
+      this.autoTransformPlayerUnit(player, BlzGroupUnitAt(units, i));
+    }
+  }
+
+  autoTransformPlayerUnit(player: player, unit: unit) {
+    udg_TransformationPlayer = player;
+    udg_StatMultUnit = unit;
+    let skip = false;
+    for (let i = udg_MaxTransformationStrings-1; i >= 0 && !skip; --i) {
+      udg_TransformationString = udg_TransformationCommands[i];
+      this.transform(player, unit);
+      if (udg_StatMultReal > 0) {
+        skip = true;
+      }
+      TriggerExecute(gg_trg_Transformations_Exit_Point);
     }
   }
 }

@@ -19,9 +19,6 @@ export class SkinData {
       new SkinData(Id.gokuXeno, [
         [SkinData.CONDITION_GAMES, 5],
       ]),
-      new SkinData(Id.shaggyRogers, [
-        [SkinData.CONDITION_WINS, 20],
-      ]),
     ]],
     [Id.fatBuu, [
       new SkinData(Id.fatBuuThin, [
