@@ -116,6 +116,7 @@ export class TransformationSystem {
       [Id.beerus, gg_trg_Transformations_Beerus],
       [Id.gojo, gg_trg_Transformations_Gojo],
       [Id.cheongMyeong, gg_trg_Transformations_Cheong_Myeong],
+      [Id.aggronor, gg_trg_Transformations_Aggronor],
     ]);
     
     this.init();

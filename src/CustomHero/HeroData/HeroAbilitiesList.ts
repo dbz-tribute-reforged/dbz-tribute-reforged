@@ -731,6 +731,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST,
     ]],
     
+    [Id.aggronor, [
+      AbilityNames.Aggronor.STORM_BOLT,
+      AbilityNames.Aggronor.THUNDERCLAP,
+      AbilityNames.Aggronor.DWARF_TOSS,
+      AbilityNames.Aggronor.AVATAR,
+      AbilityNames.Aggronor.STORMLORD,
+    ]],
 
 
 
@@ -842,6 +849,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Beerus.BEERUS_FURY, 
       AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
       AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS, 
+      AbilityNames.Aggronor.STORM_BOLT, AbilityNames.Aggronor.AVATAR, AbilityNames.Aggronor.STORMLORD, 
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

@@ -762,6 +762,7 @@ declare var gg_trg_Transformations_Whis: trigger;
 declare var gg_trg_Transformations_Beerus: trigger;
 declare var gg_trg_Transformations_Gojo: trigger;
 declare var gg_trg_Transformations_Cheong_Myeong: trigger;
+declare var gg_trg_Transformations_Aggronor: trigger;
 declare var gg_trg_Saga_Unit_Init: trigger;
 declare var gg_trg_Saga_Unit_Capsule_Unlock: trigger;
 declare var gg_trg_Saga_Unit_Loop: trigger;

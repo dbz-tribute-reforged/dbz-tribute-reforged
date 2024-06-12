@@ -679,6 +679,15 @@ export module AbilityNames {
     export const PLUM_BLOSSOM_CLOUDBURST: string = "Cheong Myeong Plum Blossom Cloudburst";
   }
 
+  export module Aggronor {
+    export const LIGHTNING_PLATE: string = "Lightning Plate";
+    export const STORM_BOLT: string = "Aggronor Storm Bolt";
+    export const THUNDERCLAP: string = "Aggronor Thunderclap";
+    export const DWARF_TOSS: string = "Aggronor Dwarf Toss";
+    export const AVATAR: string = "Aggronor Avatar";
+    export const STORMLORD: string = "Aggronor Stormlord";
+  }
+
 
 
 

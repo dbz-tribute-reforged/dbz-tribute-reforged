@@ -123,5 +123,15 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
       ]
     ]
   ],
+  [
+    Id.aggronor, [
+      [
+        AbilityNames.Aggronor.LIGHTNING_PLATE,
+      ],
+      [
+        AbilityNames.BasicAbility.GUARD,
+      ]
+    ]
+  ],
 
 ]);

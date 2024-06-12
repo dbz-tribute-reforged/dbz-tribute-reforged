@@ -74,6 +74,12 @@ export class SkinData {
         [SkinData.CONDITION_GAMES, 20],
       ]),
     ]],
+    // Hmkg scale too small
+    // [Id.aggronor, [
+    //   new SkinData(FourCC("Hmkg"), [
+    //     [SkinData.CONDITION_WINS, 25],
+    //   ]),
+    // ]],
   ]);
 
   constructor(

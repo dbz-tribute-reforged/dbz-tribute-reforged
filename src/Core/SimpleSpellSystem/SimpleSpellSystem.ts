@@ -91,6 +91,9 @@ export module SimpleSpellSystem {
       }
     });
 
+    DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSAggronorDamageDeal);
+
+    DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSAggronorDamageBlock);
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSWhisDamageBlock);
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSBeerusCataclysmicOrb);
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSGojoBlackFlash);
@@ -432,6 +435,8 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.cheongMyeongPlumBlossomFlow, SimpleSpellSystem.doCheongMyeongPlumBlossomFlow);
     Globals.genericSpellMap.set(Id.cheongMyeongScatteredBlossomfall, SimpleSpellSystem.doCheongMyeongScatteredBlossomfall);
     
+    Globals.genericSpellMap.set(Id.aggronorAvatar, SimpleSpellSystem.doAggronorAvatar);
+    
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
@@ -595,6 +600,79 @@ export module SimpleSpellSystem {
     }
   }
 
+  export function DDSAggronorDamageDeal(dmg: DDSData) {
+    if (
+      dmg.sourceTypeId != Id.aggronor
+      || dmg.dmg <= 0
+    ) return;
+
+    if (IsUnitType(dmg.target, UNIT_TYPE_HERO) && dmg.isAttack) {
+      if (
+        GetUnitAbilityLevel(dmg.source, Id.aggronorDwarvenStrengthPassive) > 0
+        && (
+          IsUnitType(dmg.target, UNIT_TYPE_STUNNED)
+          || GetUnitAbilityLevel(dmg.target, Buffs.STUNNED) > 0
+        )
+      ) {
+        const cd = BlzGetUnitAbilityCooldownRemaining(dmg.source, Id.aggronorDwarvenStrengthActive);
+        print(dmg.dmg, (GetUnitState(dmg.source, UNIT_STATE_LIFE) * cd * 0.0002));
+        dmg.setDamage(dmg.dmg + (GetUnitState(dmg.source, UNIT_STATE_LIFE) * cd * 0.0002));
+      }
+
+      if (
+        GetUnitAbilityLevel(dmg.source, Id.aggronorStormlord) > 0
+        && LoadReal(udg_StatMultHashtable, dmg.sourceHandleId, 9) > 0
+      ) {
+        doAggronorChainLightning(dmg.source, dmg.target, 0.2);
+      }
+    }
+  }
+
+  export function DDSAggronorDamageBlock(dmg: DDSData) {
+    if (
+      dmg.targetTypeId != Id.aggronor
+      || dmg.dmg <= 0
+    ) return;
+
+    // dwarven strength
+    if (
+      IsUnitType(dmg.source, UNIT_TYPE_HERO)
+      && GetUnitAbilityLevel(dmg.target, Id.aggronorDwarvenStrengthPassive) > 0
+    ) {
+      const cd = BlzGetUnitAbilityCooldownRemaining(dmg.target, Id.aggronorDwarvenStrengthActive);
+      if (cd == 0) {
+        SetPlayerAbilityAvailable(dmg.targetPlayer, Id.aggronorDwarvenStrengthActive, true);
+        SetPlayerAbilityAvailable(dmg.targetPlayer, Id.aggronorDwarvenStrengthPassive, false);
+      }
+      BlzStartUnitAbilityCooldown(dmg.target, Id.aggronorDwarvenStrengthActive, Math.min(250, cd+1));
+      dmg.setDamage(dmg.dmg * (1 - (cd+1) * 0.001));
+    }
+
+    const aggronorLightningPlateTicksKey = StringHash("aggronor_lightning_plate_ticks");
+    const plateTicks = LoadInteger(Globals.genericDDSHashtable, dmg.targetHandleId, aggronorLightningPlateTicksKey);
+    if (plateTicks > 0) {
+      const aggronorLightningPlateHpKey = StringHash("aggronor_lightning_plate_hp");
+      const shieldHp = LoadReal(Globals.genericDDSHashtable, dmg.targetHandleId, aggronorLightningPlateHpKey);
+      
+      if (plateTicks < 166) {
+        SaveReal(Globals.genericDDSHashtable, 
+          dmg.targetHandleId, aggronorLightningPlateHpKey, 
+          shieldHp + 1.5 * dmg.dmg
+        );
+      } else if (shieldHp > 0) {
+        // negate dmg
+        if (dmg.dmg <= shieldHp) {
+          const newHp = Math.max(shieldHp - dmg.dmg, 0);
+          SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, aggronorLightningPlateHpKey, newHp);
+          dmg.setDamage(Constants.MIN_DDS_DMG_AFTER_SHIELD);
+        } else {
+          SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, aggronorLightningPlateHpKey, 0);
+          dmg.setDamage(dmg.dmg - shieldHp);
+        }
+      }
+    }
+  }
+
   export function DDSWhisDamageBlock(dmg: DDSData) {
     const shieldHpKey = StringHash("whis_e_hp");
     const shieldHp = LoadReal(Globals.genericDDSHashtable, dmg.targetHandleId, shieldHpKey);
@@ -602,7 +680,7 @@ export module SimpleSpellSystem {
 
     if (dmg.dmg <= shieldHp) {
       SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, shieldHpKey, shieldHp - dmg.dmg);
-      dmg.setDamage(1);
+      dmg.setDamage(Constants.MIN_DDS_DMG_AFTER_SHIELD);
     } else {
       SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, shieldHpKey, 0);
       dmg.setDamage(dmg.dmg - shieldHp);
@@ -10874,7 +10952,7 @@ export module SimpleSpellSystem {
     TimerStart(timer, 0.5, false, cheongMyeongTempestLoop);
   }
 
-  export function doCheongMyeongScatteredBlossomfall() {
+  export function doCheongMyeongScatteredBlossomfall(spellId: number) {
     const minAttacks = 8;
     const maxAttacks = 24;
     const manaPctPerAttack = 2;
@@ -11145,6 +11223,177 @@ export module SimpleSpellSystem {
       }
       ticks++;
     });
+  }
+
+  export function getAggronorSpellLevel(spellId: number, caster: unit) {
+    return Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
+  }
+
+  export function doLightningBash(source: unit, target: unit) {
+    if (BlzGetUnitAbilityCooldownRemaining(source, Id.aggronorLightningBashActive) > 0) return;
+
+    const mpCostPct = 0.15;
+    const player = GetOwningPlayer(source);
+
+    const mp = GetUnitState(source, UNIT_STATE_MANA);
+    const mpCost = mpCostPct * GetUnitState(source, UNIT_STATE_MAX_MANA);
+    if (mp < mpCost) return;
+    SetUnitState(source, UNIT_STATE_MANA, mp - mpCost);
+
+    SetPlayerAbilityAvailable(player, Id.aggronorLightningBashActive, true);
+    SetPlayerAbilityAvailable(player, Id.aggronorLightningBashPassive, false);
+    startCooldown(source, Id.aggronorLightningBashActive);
+
+    if (IsUnitType(target, UNIT_TYPE_HERO)) {
+      const dummy = CreateUnit(player, Constants.dummyCasterId, Globals.tmpVector.x, Globals.tmpVector.y, 0);
+      UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1.0);
+      UnitAddAbility(dummy, DebuffAbilities.STUN_ONE_SECOND);
+      IssueTargetOrderById(dummy, OrderIds.THUNDERBOLT, target);
+  
+      const sourceId = GetHandleId(source);
+      SaveReal(udg_StatMultHashtable, sourceId, 47, 
+        LoadReal(udg_StatMultHashtable, sourceId, 47) + 0.01
+      );
+    }
+
+    doAggronorChainLightning(source, target, 0.5);
+  }
+
+  export function doAggronorChainLightning(source: unit, target: unit, dmgDataMult: number) {
+    const dmgData = BASE_DMG.KAME_DPS * dmgDataMult;
+    const maxTargets = 8;
+    const dmgTickRate = 5;
+    const bounceAOE = 800;
+    const endTick = maxTargets * dmgTickRate;
+
+    const player = GetOwningPlayer(source);
+    const playerId = GetPlayerId(player);
+    const ch = Globals.customPlayers[playerId].getCustomHero(source);
+
+    const excludeGroup = CreateGroup();
+
+    let prevTarget = source;
+    let nextTarget = target;
+    let lightning = null;
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks > endTick || prevTarget == nextTarget) {
+        if (lightning != null) DestroyLightning(lightning);
+        DestroyGroup(excludeGroup);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      if (ticks % dmgTickRate == 0) {
+        if (ticks > 0) DestroyLightning(lightning);
+        GroupAddUnit(excludeGroup, nextTarget);
+
+        lightning = AddLightningEx(
+          ticks == 0  ? "CLPB" : "CLSB", true, 
+          GetUnitX(prevTarget), GetUnitY(prevTarget), 50 + BlzGetUnitZ(prevTarget) + GetUnitFlyHeight(prevTarget),
+          GetUnitX(nextTarget), GetUnitY(nextTarget), 50 + BlzGetUnitZ(nextTarget) + GetUnitFlyHeight(nextTarget),
+        );
+        DestroyEffect(
+          AddSpecialEffect("Abilities/Weapons/Bolt/BoltImpact.mdl", 
+          GetUnitX(nextTarget), GetUnitY(nextTarget))
+        );
+        const dmg = AOEDamage.calculateDamageRaw(
+          source,
+          10,
+          ch ? ch.spellPower : 1.0,
+          dmgData,
+          1.0,
+          bj_HEROSTAT_INT
+        );
+        UnitDamageTarget(
+          source, nextTarget, 
+          dmg, 
+          false, false, 
+          ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+          WEAPON_TYPE_WHOKNOWS
+        );
+
+        // go find a new target
+        prevTarget = nextTarget;
+        let minDist = 999999;
+        Globals.tmpVector.setUnit(nextTarget);
+        GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+          Globals.tmpVector.x, Globals.tmpVector.y, 
+          bounceAOE, null
+        );
+        for (let i = 0; i < BlzGroupGetSize(Globals.tmpUnitGroup); ++i) {
+          const unit = BlzGroupUnitAt(Globals.tmpUnitGroup, i);
+          if (
+            unit == null
+            || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+            || IsUnitInGroup(unit, excludeGroup)
+          ) continue;
+          Globals.tmpVector2.setUnit(unit);
+          const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+          if (dist < minDist) {
+            nextTarget = unit;
+            minDist = dist;
+          }
+        }
+      }
+
+      ++ticks;
+    });
+  }
+  
+  export function doAggronorLightningPlate(spellId: number, caster: unit) {
+    const endTick = 666;
+
+    const aggronorLightningPlateTicksKey = StringHash("aggronor_lightning_plate_ticks");
+    const aggronorLightningPlateHpKey = StringHash("aggronor_lightning_plate_hp");
+
+    const casterId = GetHandleId(caster);
+    let ticks = LoadInteger(Globals.genericDDSHashtable, casterId, aggronorLightningPlateTicksKey);
+    SaveInteger(Globals.genericDDSHashtable, casterId, aggronorLightningPlateTicksKey, 1);
+    if (ticks > 0) {
+      return;
+    }
+
+    Globals.tmpVector.setUnit(caster);
+    let sfx = AddSpecialEffectTarget("SuperLightningBall.mdl", caster, "origin");
+    let texttag = CreateTextTag();
+    SetTextTagVisibility(texttag, true);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      ticks = LoadInteger(Globals.genericDDSHashtable, casterId, aggronorLightningPlateTicksKey);
+      if (ticks == 166) {
+        DestroyEffect(sfx);
+        sfx = AddSpecialEffectTarget("Ubershield White.mdl", caster, "chest");
+      }
+      if (ticks >= 166) {
+        const hp = LoadReal(Globals.genericDDSHashtable, casterId, aggronorLightningPlateHpKey);
+        if (hp > 0) {
+          SetTextTagTextBJ(texttag, I2S(R2I(hp)), 10);
+          SetTextTagPosUnit(texttag, caster, 10);
+          ticks = endTick;
+        } else {
+          SetTextTagVisibility(texttag, false);
+        }
+      }
+      if (ticks > endTick || !UnitHelper.isUnitAlive(caster)) {
+        DestroyEffect(sfx);
+        DestroyTextTag(texttag);
+        DestroyEffect(AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", GetUnitX(caster), GetUnitY(caster)));
+        SaveInteger(Globals.genericDDSHashtable, casterId, aggronorLightningPlateTicksKey, 0);
+        SaveReal(Globals.genericDDSHashtable, casterId, aggronorLightningPlateHpKey, 0);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      SaveInteger(Globals.genericDDSHashtable, casterId, aggronorLightningPlateTicksKey, ticks+1);
+    });
+  }
+
+  export function doAggronorAvatar(spellId: number) {
+    const hpHealPct = -1 * 0.1;
+    const caster = GetTriggerUnit();
+    UnitHelper.payHPPercentCost(caster, hpHealPct, UNIT_STATE_MAX_LIFE);
   }
 
   export function createTatsumakiRock(caster: unit, x: number, y: number) {

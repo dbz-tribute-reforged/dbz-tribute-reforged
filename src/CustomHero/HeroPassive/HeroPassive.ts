@@ -146,6 +146,9 @@ export class HeroPassiveManager {
       case Id.cheongMyeong:
         cheongMyeongPassive(customHero);
         break;
+      case Id.aggronor:
+        aggronorPassive(customHero);
+        break;
       default:
         break;
     }
@@ -3844,6 +3847,48 @@ export function cheongMyeongPassive(customHero: CustomHero) {
       const attacked = GetTriggerUnit();
       if (UnitHelper.isUnitRealHero(attacked)) {
         Globals.DDSAddUnit(attacked);
+      }
+      return false;
+    })
+  );
+}
+
+export function aggronorPassive(customHero: CustomHero) {
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+  TimerStart(timer, 0.03, true, () => {
+    const rCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.aggronorDwarvenStrengthActive);
+    if (rCD == 0) {
+      const player = GetOwningPlayer(customHero.unit);
+      SetPlayerAbilityAvailable(player, Id.aggronorDwarvenStrengthPassive, true);
+      SetPlayerAbilityAvailable(player, Id.aggronorDwarvenStrengthActive, false);
+    } else if (!UnitHelper.isUnitAlive(customHero.unit)) {
+      BlzEndUnitAbilityCooldown(customHero.unit, Id.aggronorDwarvenStrengthPassive);
+    }
+
+    const fCD = BlzGetUnitAbilityCooldownRemaining(customHero.unit, Id.aggronorLightningBashActive);
+    if (fCD == 0) {
+      const player = GetOwningPlayer(customHero.unit);
+      SetPlayerAbilityAvailable(player, Id.aggronorLightningBashPassive, true);
+      SetPlayerAbilityAvailable(player, Id.aggronorLightningBashActive, false);
+    }
+  });
+  
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacked = GetTriggerUnit();
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      const player = GetOwningPlayer(attacker);
+      if (UnitHelper.isUnitTargetableForPlayer(attacked, player)) {
+        SimpleSpellSystem.doLightningBash(attacker, attacked);
       }
       return false;
     })

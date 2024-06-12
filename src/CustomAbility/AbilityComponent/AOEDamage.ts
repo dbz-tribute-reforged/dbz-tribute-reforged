@@ -114,7 +114,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     spellPower: number,
     damageDataMultiplier: number,
     damageMult: number,
-    stat: number // bj_HEROSTAT_INT
+    stat: number = bj_HEROSTAT_INT, // bj_HEROSTAT_INT
   ): number {
     return (
       damageMult 

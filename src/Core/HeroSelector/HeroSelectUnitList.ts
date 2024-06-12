@@ -814,6 +814,17 @@ const linkTwilightData = {
     HeroSelectCategory.VIDEOGAME 
   )
 }
+const aggronorData = {
+  unitCode: Id.aggronor,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME 
+  )
+}
 const cheongMyeongData = {
   unitCode: Id.cheongMyeong,
   onlyRandom: false,
@@ -1165,9 +1176,9 @@ export const HeroSelectUnitList = [
   lucarioData,
   dartFeldData,
   leonSKennedyData,
-  cheongMyeongData,
+  aggronorData,
   // 85
-  emptySpace,
+  cheongMyeongData,
   emptySpace,
   donkeyKongData,
   kkrData,

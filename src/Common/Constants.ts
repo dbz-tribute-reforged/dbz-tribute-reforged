@@ -165,6 +165,8 @@ export module Constants {
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 
+  export const MIN_DDS_DMG_AFTER_SHIELD = 1;
+
   export const REGEN_TICK_RATE = 0.03;
   export const BASE_SP_REGEN = 3;
   export const BASE_HP_REGEN_PCT = 0.005;
@@ -239,6 +241,14 @@ export module Constants {
       || abilityId == Id.ainzTimeStop
       || abilityId == Id.ainzWallOfSkeleton
       || abilityId == Id.ainzWish
+    );
+  }
+  
+  export function isAggronorAbility(abilityId: number) {
+    return (
+      abilityId == Id.aggronorStormBolt
+      || abilityId == Id.aggronorThunderclap
+      || abilityId == Id.aggronorDwarfToss
     );
   }
 
@@ -580,6 +590,7 @@ export module Capsules {
   export const battleArmor5 = FourCC("A0ZB");
   export const treeOfMightSapling = FourCC("A0ZC");
   export const potaraEarring = FourCC("A0ZD");
+  export const zenoButton = FourCC("A14U");
 }
 
 
@@ -647,6 +658,21 @@ export module Id {
   export const tpTimeMachineCell = FourCC("h07V");
   export const tpCarpetPopo = FourCC("h04E");
   export const tpBabidiShip = FourCC("h02E");
+
+  export const aggronor = FourCC("H032");
+  // use unused passive skill as key for basic ability
+  export const aggronorLightningPlate = FourCC("A14R");
+  export const aggronorStormBolt = FourCC("A14J");
+  export const aggronorThunderclap = FourCC("A14K");
+  export const aggronorDwarfToss = FourCC("A14L");
+  export const aggronorDwarvenStrengthActive = FourCC("A14M");
+  export const aggronorDwarvenStrengthPassive = FourCC("A14N");
+  export const aggronorAvatar = FourCC("A14O");
+  export const aggronorStormlord = FourCC("A14P");
+  export const aggronorLightningBashActive = FourCC("A14Q");
+  export const aggronorLightningBashPassive = FourCC("A14R");
+  export const aggronorStormlordPassive = FourCC("A14S");
+  export const aggronorAvatarPassive = FourCC("A14T");
 
   export const ainzOoalGown = FourCC("H00Z");
   export const ainzRealitySlash = FourCC("A0I0");
@@ -735,6 +761,13 @@ export module Id {
   export const appuleClones = FourCC("A11E");
 
   export const arak = FourCC("H02P");
+
+  export const ayla = FourCC("H0A5");
+  export const aylaBoulderToss = FourCC("A0XG");
+  export const aylaCharm = FourCC("A0XH");
+  export const aylaTailSpin = FourCC("A0XI");
+  export const aylaDinoTail = FourCC("A0XK");
+  export const aylaTripleKick = FourCC("A0XL");
 
   export const babidi = FourCC("O001");
   export const haretsu = FourCC("A02E");
@@ -885,13 +918,6 @@ export module Id {
   export const luccaNapalm = FourCC("A0X3");
   export const luccaMegaBomb = FourCC("A0X4");
   export const luccaFlare = FourCC("A0X5");
-
-  export const ayla = FourCC("H0A5");
-  export const aylaBoulderToss = FourCC("A0XG");
-  export const aylaCharm = FourCC("A0XH");
-  export const aylaTailSpin = FourCC("A0XI");
-  export const aylaDinoTail = FourCC("A0XK");
-  export const aylaTripleKick = FourCC("A0XL");
 
   export const marle = FourCC("H0A6");
   export const marleAura = FourCC("A0XA");

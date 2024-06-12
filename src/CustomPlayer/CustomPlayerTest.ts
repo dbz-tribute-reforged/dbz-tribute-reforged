@@ -187,6 +187,8 @@ export function customAbilityActivate(player: player, index: number) {
       } else if (abilName == AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX) {
         IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
         SimpleSpellSystem.doCheongMyeongEquilibriumOfSix(customHero.unit);
+      } else if (abilName == AbilityNames.Aggronor.LIGHTNING_PLATE) {
+        SimpleSpellSystem.doAggronorLightningPlate(Id.aggronorLightningPlate, customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
@@ -432,6 +434,11 @@ export function CustomPlayerTest() {
           if (GetUnitAbilityLevel(caster, Id.cheongMyeongCritPassive) > 0) {
             abilityLevel = SimpleSpellSystem.getCheungMyeongSpellLevel(abilityId, caster);
             SimpleSpellSystem.cheungMyeongOnCast(abilityId, caster);
+          } else if (abilityId == Id.cheongMyeongSwordOfSixElements) {
+            abilityLevel = SimpleSpellSystem.getCheungMyeongSpellLevel(abilityId, caster);
+          }
+          if (Constants.isAggronorAbility(abilityId)) {
+            abilityLevel = SimpleSpellSystem.getAggronorSpellLevel(abilityId, caster);
           }
 
 
@@ -1619,6 +1626,7 @@ export function SetupMysteryCapsuleBox() {
       || spellId == Capsules.battleArmor5
       || spellId == Capsules.treeOfMightSapling
       || spellId == Capsules.potaraEarring
+      || spellId == Capsules.zenoButton
     ) {
       const unit = GetTriggerUnit();
       const index = UnitHelper.getInventoryIndexOfItemType(unit, Capsules.itemMysterBox);
@@ -1661,6 +1669,9 @@ export function SetupMysteryCapsuleBox() {
 
         } else if (spellId == Capsules.potaraEarring) {
           item = CreateItem(ItemConstants.potaraEarrings, x, y);
+
+        } else if (spellId == Capsules.zenoButton) {
+          item = CreateItem(ItemConstants.ZENO_BUTTON, x, y);
         }
 
         if (item) {

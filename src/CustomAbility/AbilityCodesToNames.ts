@@ -535,6 +535,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.cheongMyeongPlumBlossomFlow, AbilityNames.CheongMyeong.PLUM_BLOSSOM_FLOW],
     [Id.cheongMyeongPlumBlossomCloudburst, AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST],
 
+    [Id.aggronorStormBolt, AbilityNames.Aggronor.STORM_BOLT],
+    [Id.aggronorThunderclap, AbilityNames.Aggronor.THUNDERCLAP],
+    [Id.aggronorDwarfToss, AbilityNames.Aggronor.DWARF_TOSS],
+    [Id.aggronorAvatar, AbilityNames.Aggronor.AVATAR],
+    [Id.aggronorStormlord, AbilityNames.Aggronor.STORMLORD],
+
 
 
 

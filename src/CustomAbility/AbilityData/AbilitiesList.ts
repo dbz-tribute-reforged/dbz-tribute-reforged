@@ -527,6 +527,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Aggronor.LIGHTNING_PLATE,
+    currentCd: 0,
+    maxCd: 35,
+    costType: CostType.SP,
+    costAmount: 50,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAggronorGuard.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNAggronorGuard.blp",
+    },
+    tooltip: {
+      title: "Lightning Plate",
+      body: 
+        "Creates a shield after a 5s delay that absorbs up to 150% " + 
+        "of damage taken during the delay.|n" +
+        "Duration: 15s|n" + 
+        "Cost: 50 SP|n" + 
+        "CD: 35"
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Goku.KAMEHAMEHA, // Goku's Kame
     currentCd: 0,
     maxCd: 1,
@@ -12713,6 +12743,149 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam cheong myeong plum blossom cloudburst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.STORM_BOLT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam aggronor storm bolt" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.THUNDERCLAP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow aggronor thunderclap" },
+      { name: "damage aggronor thunderclap explosion" },
+      { name: "sfx aggronor thunderclap" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.DWARF_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "block aggronor dwarf toss" },
+      { name: "damage aggronor dwarf toss explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.AVATAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability aggronor avatar spell immunity" },
+      { name: "sfx aggronor avatar" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.STORMLORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability aggronor stormlord evasion" },
+      { name: "sfx aggronor stormlord" },
     ],
   },
   // -------------------------------------------

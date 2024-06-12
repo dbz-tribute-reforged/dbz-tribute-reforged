@@ -605,7 +605,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
       ],
       [
-        ItemConstants.SagaDrops.DIMENSION_SWORD
+        ItemConstants.SagaDrops.DIMENSION_SWORD,
+        ItemConstants.potaraEarrings,
       ]
     )],
 
@@ -627,6 +628,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BEE_DOG_ITEM,
+        ItemConstants.potaraEarrings,
       ]
     )],
 
