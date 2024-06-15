@@ -361,6 +361,7 @@ declare var gg_trg_Commands_Init: trigger;
 declare var gg_trg_Freemode: trigger;
 declare var gg_trg_Nightmare_Mode: trigger;
 declare var gg_trg_Ultimate_Mode: trigger;
+declare var gg_trg_Ultimate_Mode_Set: trigger;
 declare var gg_trg_Lights_toggle: trigger;
 declare var gg_trg_ToggleSummonSelect: trigger;
 declare var gg_trg_Cosmetic_Clear: trigger;
@@ -842,3 +843,5 @@ declare var udg_FusionBonusAgiMult: number;
 declare var udg_FusionBonusIntMult: number;
 
 declare var udg_SummonsSelectFlagArray: boolean[];
+
+declare var udg_UltimateModeLevel: number;

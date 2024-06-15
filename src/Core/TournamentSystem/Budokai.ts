@@ -9,7 +9,8 @@ import { TournamentData } from "./TournamentData";
 import { AllianceHelper } from "Common/AllianceHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
-import { Globals } from "Common/Constants";
+import { Globals, Id } from "Common/Constants";
+import { FusionUnit } from "Core/FusionSystem/FusionUnit";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
@@ -108,23 +109,42 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
     // possible leave command
     // this.contestants.delete(playerId);
+  }
 
+  isPlayerContestantValid(player: player) {
+    const playerId = GetPlayerId(player);
+    const prevSize = BlzGroupGetSize(udg_StatMultPlayerUnits[playerId]);
+    for (let i = 0; i < prevSize; ++i) {
+      const unit = BlzGroupUnitAt(udg_StatMultPlayerUnits[playerId], i);
+      if (unit == null) continue;
+      if (GetUnitAbilityLevel(unit, Id.flagPotaraFusion) > 0) {
+        // if RIGHT fusion unit, decline
+        const unitId = GetHandleId(unit);
+        const fusionSide = LoadInteger(Globals.genericSpellHashtable, unitId, FusionUnit.FUSION_SIDE_KEY);
+        if (fusionSide == 1) {
+          DisplayTimedTextToPlayer(player, 0, 0, 3, "|cffff2222Right side of fusion cannot enter.");
+          return false;
+        }
+      }
+    }
+    return true;
   }
 
   addPlayerContestant(player: player): void {
     const playerId = GetPlayerId(player);
-    if (!this.contestants.get(playerId)) {
-      this.contestants.set(playerId, 
-        new TournamentContestant(playerId)
-      );
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 5, 
-        Colorizer.getColoredPlayerName(player) + 
-        " has joined " + this.getTournamentName()
-      );
-    } else {
-      // already registered
-    }
+    if (this.contestants.get(playerId)) return;
+
+    // check validity of contestant
+    if (!this.isPlayerContestantValid(player)) return;
+
+    this.contestants.set(playerId, 
+      new TournamentContestant(playerId)
+    );
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 5, 
+      Colorizer.getColoredPlayerName(player) + 
+      " has joined " + this.getTournamentName()
+    );
   }
 
   getTournamentName(): string {

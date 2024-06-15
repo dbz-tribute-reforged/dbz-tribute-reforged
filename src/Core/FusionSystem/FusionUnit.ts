@@ -8,6 +8,8 @@ import { TimerManager } from "Core/Utility/TimerManager";
 
 export class FusionUnit {
   public static readonly FUSION_FLAG = FourCC("A14V");
+  public static readonly FUSION_PAIR_UNIT_KEY = StringHash("fusion_pair_unit");
+  public static readonly FUSION_SIDE_KEY = StringHash("fusion_side");
 
   public static unitFusionNameMap = new Map<number, string[]>([
     [Id.goku, ["Go", "ku"]],
@@ -160,6 +162,7 @@ export class FusionUnit {
   }
 
   initialize() {
+    this.fuseNames(this.unit1, this.unit2);
     UnitAddAbility(this.unit1, FusionUnit.FUSION_FLAG);
     UnitAddAbility(this.unit2, FusionUnit.FUSION_FLAG);
 
@@ -167,17 +170,18 @@ export class FusionUnit {
     this.replaceEarring(this.unit1);
     this.replaceEarring(this.unit2);
 
-    const fusionPairUnitKey = StringHash("fusion_pair_unit");
-    SaveUnitHandle(Globals.genericDDSHashtable, GetHandleId(this.unit1), fusionPairUnitKey, this.unit2);
-    SaveUnitHandle(Globals.genericDDSHashtable, GetHandleId(this.unit2), fusionPairUnitKey, this.unit1);
+    const unit1Id = GetHandleId(this.unit1);
+    const unit2Id = GetHandleId(this.unit2);
+    SaveUnitHandle(Globals.genericDDSHashtable, unit1Id, FusionUnit.FUSION_PAIR_UNIT_KEY, this.unit2);
+    SaveUnitHandle(Globals.genericDDSHashtable, unit2Id, FusionUnit.FUSION_PAIR_UNIT_KEY, this.unit1);
+
+    SaveInteger(Globals.genericSpellHashtable, unit1Id, FusionUnit.FUSION_SIDE_KEY, 0);
+    SaveInteger(Globals.genericSpellHashtable, unit2Id, FusionUnit.FUSION_SIDE_KEY, 1);
     
     TransformationSystem.getInstance().setTransformSkin(this.unit2, Constants.dummyBeamUnitId);
-
-    this.fuseNames(this.unit1, this.unit2);
-
     TimerStart(this.updateTimer, 0.03, true, () => {
       Globals.tmpVector.setUnit(this.unit1);
-      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, this.offsetAng, 90);
+      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, this.offsetAng, 180);
       PathingCheck.moveFlyingUnitToCoord(this.unit2, Globals.tmpVector2);
 
       // continuously set invul

@@ -24,7 +24,7 @@ export class FusionManager {
   public unit1: unit = null;
   public unit2: unit = null;
 
-  public fusionUnits: FusionUnit[] = [];
+  public fusionUnits: Map<unit, FusionUnit> = new Map<unit, FusionUnit>();
 
   constructor() {
     this.delayTimer = CreateTimer();
@@ -164,6 +164,8 @@ export class FusionManager {
     BlzSetSpecialEffectScale(sfx, 5.0);
     DestroyEffect(sfx);
 
-    this.fusionUnits.push(new FusionUnit(this.unit1, this.unit2)); 
+    const fusionUnit = new FusionUnit(this.unit1, this.unit2);
+    this.fusionUnits.set(this.unit1, fusionUnit);
+    this.fusionUnits.set(this.unit2, fusionUnit);
   }
 }

@@ -39,6 +39,12 @@ export class HeroSelectorManager {
   public repickButton: Frame;
   public repickButtonTrigger: Trigger;
 
+  public ultimateButton: Frame;
+  public ultimateButtonTrigger: Trigger;
+
+  public kothButton: Frame;
+  public kothButtonTrigger: Trigger;
+
 
   public static getInstance() {
     if (this.instance == null) {
@@ -71,6 +77,12 @@ export class HeroSelectorManager {
     this.repickButton = null;
     this.repickButtonTrigger = null;
 
+    this.ultimateButton = null;
+    this.ultimateButtonTrigger = null;
+
+    this.kothButton = null;
+    this.kothButtonTrigger = null;
+
     this.init();
 
     AbilityShop.getInstance().setup();
@@ -86,6 +98,7 @@ export class HeroSelectorManager {
     this.setupHideSelectorTrigger();
     this.setupHeroes();
     this.setupGameModes();
+    this.setupOptionalModes();
     this.show(true);
     CustomUI.getInstance().show(false, false);
 
@@ -217,8 +230,8 @@ export class HeroSelectorManager {
     this.repickButton = new Frame("ScriptDialogButton", 
       Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.3000, 0.1520)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3900, 0.1760)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.3000, 0.1530)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3900, 0.1770)
       .setText("|cffFFCC00Repick|r")
       .setScale(1.00)
 
@@ -346,6 +359,10 @@ export class HeroSelectorManager {
     HeroSelector.show(flag, who);
     if (!who || who == GetLocalPlayer()) {
       this.repickButton.setVisible(!flag && !this.isGameStarted);
+      if (Globals.hostPlayer == GetLocalPlayer()) {
+        this.ultimateButton.setVisible(flag && !this.isGameStarted);
+        this.kothButton.setVisible(flag && !this.isGameStarted);
+      }
     }
   }
 
@@ -381,7 +398,7 @@ export class HeroSelectorManager {
 
   runPickPhase() {
     this.time = HeroSelectorManager.PICK_TIME;
-    HeroSelector.setTitleText("Picking: " + this.time);
+    HeroSelector.setTitleText("Pick: " + this.time);
     HeroSelector.enablePick(true);
     HeroSelector.update();
     this.show(true);
@@ -690,6 +707,53 @@ export class HeroSelectorManager {
     const pStr = SubString(this.gameModeString, 5, 7);
     print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
     this.startHeroSelection(true);
+    
+    this.kothButton.setText(
+      "|cffFFFF00KOTH(" +
+      (pStr == "" ? I2S(TournamentData.kothPointsToWin) : pStr) +
+      "):|r" + 
+      (Globals.isKOTH ? "|cff00ff00ON|r" : "|cffff2222OFF|r")
+    );
+  }
+
+  setupOptionalModes() {
+    this.ultimateButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3000, 0.2730)
+      .setText("|cffFFFF00Ultimate: " + I2S(udg_UltimateModeLevel) + "|r")
+      .setScale(1.00)
+      .setVisible(false);
+
+    this.ultimateButtonTrigger = new Trigger();
+    this.ultimateButtonTrigger.triggerRegisterFrameEvent(this.ultimateButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.ultimateButtonTrigger.addAction( () => {
+      this.ultimateButton.enabled = false;
+      this.ultimateButton.enabled = true;
+      udg_TempInt = udg_UltimateModeLevel == 0 ? 50 : 0;
+      TriggerExecute(gg_trg_Ultimate_Mode_Set);
+    });
+    TriggerAddAction(gg_trg_Ultimate_Mode_Set, () => {
+      this.ultimateButton.setText("|cffFFFF00Ultimate: " + I2S(udg_UltimateModeLevel) + "|r");
+    });
+
+    this.kothButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.4900, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6000, 0.2730)
+      .setText("|cffFFFF00KOTH():|r|cffff2222OFF|r")
+      .setScale(1.00)
+      .setVisible(false);
+
+    this.kothButtonTrigger = new Trigger();
+    this.kothButtonTrigger.triggerRegisterFrameEvent(this.kothButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.kothButtonTrigger.addAction( () => {
+      this.kothButton.enabled = false;
+      this.kothButton.enabled = true;
+      this.modeKOTH();
+    });
   }
 
 };

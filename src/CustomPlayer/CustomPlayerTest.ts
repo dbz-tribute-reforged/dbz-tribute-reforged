@@ -1268,7 +1268,7 @@ export function CustomPlayerTest() {
         );
       } else {
         SagaAIData.DELAY_TO_INTERVALS = 5;
-        SagaAIData.defaultActionInterval = 25;
+        SagaAIData.defaultActionInterval = 20;
         
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 

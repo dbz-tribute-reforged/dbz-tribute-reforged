@@ -22,8 +22,8 @@ export module SagaAIData {
     MOVE = "smart",
   };
 
-  export let DELAY_TO_INTERVALS = 4;
-  export let defaultActionInterval: number = 25;
+  export let DELAY_TO_INTERVALS = 5;
+  export let defaultActionInterval: number = 20;
 
   export const defaultSpellPowerModifier: number = -0.25;
   export const defaultConsecutiveAttacksAllowed: number = 9;
