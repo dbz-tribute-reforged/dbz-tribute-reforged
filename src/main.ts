@@ -38,6 +38,7 @@ import { PlayerProfile } from "Core/PlayerProfile/PlayerProfile";
 import { WinLossSystem } from "Core/WinLossSystem/WinLossSystem";
 import { PlayerCam } from "CustomPlayer/PlayerCam";
 import { TransformationSystem } from "Core/TransformationSystem/TransformationSystem";
+import { FusionManager } from "Core/FusionSystem/FusionManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -66,6 +67,7 @@ let damageDetectionSystem: DDS;
 let syncSaveLoad: SyncSaveLoad;
 let winLossSystem: WinLossSystem;
 let transformationSystem: TransformationSystem;
+let fusionManager: FusionManager;
 
 const musicStr = (
   + "Audio/Music/SecretOfTheForest.mp3;"
@@ -159,6 +161,7 @@ function tsPostMain() {
       tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
       dragonBallsManager = DragonBallsManager.getInstance();
       creepManager.setupCreepResearchUpgrade();
+      fusionManager = FusionManager.getInstance();
       DestroyTimer(GetExpiredTimer());
     }
   });

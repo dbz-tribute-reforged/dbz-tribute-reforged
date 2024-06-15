@@ -814,6 +814,9 @@ declare var udg_GlobalStatMultiplier: number;
 
 declare var udg_StatMultHashtable: hashtable;
 declare var udg_StatMultReal: number;
+declare var udg_StatMultStr: number;
+declare var udg_StatMultAgi: number;
+declare var udg_StatMultInt: number;
 declare var udg_StatMultUnit: unit;
 declare var udg_StatMultPlayerUnits: group[];
 // array is 0-indexed in TS side by 1-indexed on GUI, conversion is automatic
@@ -829,6 +832,13 @@ declare var udg_TransformationPlayer: player;
 declare var udg_TransformationString: string;
 declare var udg_TransformationID: number;
 // declare var udg_TransformationSkinID: number;
+declare var udg_TransformationUnitGroup: group;
 
 declare var udg_MaxTransformationStrings: number;
 declare var udg_TransformationCommands: string[];
+
+declare var udg_FusionBonusStrMult: number;
+declare var udg_FusionBonusAgiMult: number;
+declare var udg_FusionBonusIntMult: number;
+
+declare var udg_SummonsSelectFlagArray: boolean[];

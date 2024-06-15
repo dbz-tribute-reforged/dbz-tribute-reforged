@@ -127,9 +127,14 @@ export class TransformationSystem {
     TriggerAddAction(gg_trg_Transformations_Parse_String, () => {
       const playerId = GetPlayerId(udg_TransformationPlayer);
       const units = udg_StatMultPlayerUnits[playerId];
-      for (let i = 0; i < BlzGroupGetSize(units); ++i) {
+      const prevSize = BlzGroupGetSize(units);
+      for (let i = 0; i < prevSize; ++i) {
         this.transform(udg_TransformationPlayer, BlzGroupUnitAt(units, i));
       }
+    });
+
+    TriggerAddAction(gg_trg_Auto_Transform_Player_Units, () => {
+      this.autoTransformPlayer(udg_TransformationPlayer);
     });
   }
 
@@ -144,6 +149,10 @@ export class TransformationSystem {
       udg_TransformationPlayer = player;
       udg_StatMultUnit = unit;
       TriggerExecute(trig);
+      if (BlzGroupGetSize(udg_TransformationUnitGroup) == 0) {
+        this.transformFusionHook(unit);
+        this.transformDynamicMultHook(unit);
+      }
     }
   }
 
@@ -169,7 +178,8 @@ export class TransformationSystem {
     const playerProfile = Globals.playerProfiles[playerId];
 
     const units = udg_StatMultPlayerUnits[playerId];
-    for (let i = 0; i < BlzGroupGetSize(units); ++i) {
+    const prevSize = BlzGroupGetSize(units);
+    for (let i = 0; i < prevSize; ++i) {
       const unit = BlzGroupUnitAt(units, i);
       if (unit == null) continue;
       const unitTypeId = GetUnitTypeId(unit);
@@ -209,10 +219,16 @@ export class TransformationSystem {
     }
   }
 
+  setTransformSkin(unit: unit, skin: number) {
+    const unitId = GetHandleId(unit);
+    SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, skin);
+  }
+
   autoTransformPlayer(player: player) {
     const playerId = GetPlayerId(player);
     const units = udg_StatMultPlayerUnits[playerId];
-    for (let i = 0; i < BlzGroupGetSize(units); ++i) {
+    const prevSize = BlzGroupGetSize(units)
+    for (let i = 0; i < prevSize; ++i) {
       this.autoTransformPlayerUnit(player, BlzGroupUnitAt(units, i));
     }
   }
@@ -228,6 +244,40 @@ export class TransformationSystem {
         skip = true;
       }
       TriggerExecute(gg_trg_Transformations_Exit_Point);
+    }
+  }
+
+  transformFusionHook(unit: unit) {
+    if (
+      udg_StatMultReal <= 0
+      || GetUnitAbilityLevel(unit, Id.flagPotaraFusion) == 0
+    ) return;
+
+    if (udg_StatMultStr == udg_StatMultAgi && udg_StatMultStr == udg_StatMultInt) {
+      udg_StatMultStr = Math.max(udg_StatMultStr, udg_StatMultReal) + udg_FusionBonusStrMult;
+      udg_StatMultAgi = Math.max(udg_StatMultAgi, udg_StatMultReal) + udg_FusionBonusAgiMult;
+      udg_StatMultInt = Math.max(udg_StatMultInt, udg_StatMultReal) + udg_FusionBonusIntMult;
+    } else {
+      udg_StatMultStr = Math.max(udg_StatMultStr, 0.5) + udg_FusionBonusStrMult;
+      udg_StatMultAgi = Math.max(udg_StatMultAgi, 0.5) + udg_FusionBonusAgiMult;
+      udg_StatMultInt = Math.max(udg_StatMultInt, 0.5) + udg_FusionBonusIntMult;
+    }
+    udg_StatMultReal += udg_FusionBonusStrMult;
+
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult);
+  }
+
+  transformDynamicMultHook(unit: unit) {
+    if (udg_StatMultReal <= 0) return;
+    const unitTypeId = GetUnitTypeId(unit);
+    if (
+      unitTypeId == Id.roshi
+      || unitTypeId == Id.tien
+    ) {
+      const unitId = GetHandleId(unit);
+      SaveReal(udg_StatMultHashtable, unitId, 62, udg_StatMultStr);
+      SaveReal(udg_StatMultHashtable, unitId, 63, udg_StatMultAgi);
+      SaveReal(udg_StatMultHashtable, unitId, 64, udg_StatMultInt);
     }
   }
 }

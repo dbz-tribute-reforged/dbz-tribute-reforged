@@ -102,7 +102,10 @@ export module SimpleSpellSystem {
 
     // should have lowest priority possible since it saves damage to heal
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSWhisDoOver);
-
+    
+    // link fusion damage
+    DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSLinkFusionDamage);
+    
     // record information, after all modifications
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSDPSCheck);
     // log all player damage
@@ -402,7 +405,8 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.sephirothParry, SimpleSpellSystem.doSephirothParry);
     
     Globals.genericSpellMap.set(Id.genosIncinerationCannon, SimpleSpellSystem.doIncinerationCannon);
-    Globals.genericSpellMap.set(Id.genosOvercharge, SimpleSpellSystem.doGenosOvercharge);
+    Globals.genericSpellMap.set(Id.genosOverchargeOn, SimpleSpellSystem.doGenosOvercharge);
+    Globals.genericSpellMap.set(Id.genosOverchargeOff, SimpleSpellSystem.doGenosOvercharge);
     
     Globals.genericSpellMap.set(Id.tatsumakiCompress, SimpleSpellSystem.doTatsumakiCompress);
     Globals.genericSpellMap.set(Id.tatsumakiLift, SimpleSpellSystem.doTatsumakiLift);
@@ -2515,6 +2519,30 @@ export module SimpleSpellSystem {
       const sfx = LoadEffectHandle(Globals.genericSpellHashtable, targetId, 1);
       if (sfx) DestroyEffect(sfx);
     }
+  }
+
+  export function DDSLinkFusionDamage(dmg: DDSData) {
+    const fusionPairUnitKey = StringHash("fusion_pair_unit");
+    const pairUnit = LoadUnitHandle(Globals.genericDDSHashtable, dmg.targetHandleId, fusionPairUnitKey);
+    if (pairUnit == null) return;
+
+    const isInvul = BlzIsUnitInvulnerable(pairUnit);
+    if (isInvul) SetUnitInvulnerable(pairUnit, false);
+    if (GetUnitState(dmg.target, UNIT_STATE_LIFE) - dmg.dmg < 1) {
+      SetUnitState(pairUnit, UNIT_STATE_LIFE, 1);
+      UnitDamageTarget(
+        dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
+        ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+        WEAPON_TYPE_WHOKNOWS
+      );
+    } else {
+      UnitDamageTarget(
+        dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
+        ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
+        WEAPON_TYPE_WHOKNOWS
+      );
+    }
+    if (isInvul) SetUnitInvulnerable(pairUnit, true);
   }
   
   export function DDSDPSCheck(dmg: DDSData) {
@@ -7632,7 +7660,7 @@ export module SimpleSpellSystem {
     const detectionAOE = 400;
     const beamSpeed = 70;
     const beamHpMult = BASE_DMG.KAME_DPS * 3;
-    const detonationDmgMult = BASE_DMG.KAME_DPS * 20;
+    const detonationDmgMult = BASE_DMG.KAME_DPS * 18;
     const endTick = 33;
 
     const caster = GetTriggerUnit();
@@ -7747,17 +7775,26 @@ export module SimpleSpellSystem {
 
   export function doGenosOvercharge(spellId: number) {
     const caster = GetTriggerUnit();
-    const lvl = GetUnitAbilityLevel(caster, Id.genosOvercharge);
+    const player = GetOwningPlayer(caster);
+    const casterId = GetHandleId(caster);
 
-    if (lvl == 1) {
-      SetUnitAbilityLevel(caster, Id.genosOvercharge, 2);
+    if (spellId == Id.genosOverchargeOn) {
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOff, true);
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOn, false);
+      UnitAddAbility(caster, Id.genosOverchargeOff);
+      UnitAddAbility(caster, Id.genosOverchargeFlag);
+      BlzStartUnitAbilityCooldown(caster, Id.genosOverchargeOff, 3);
+
       if (Math.random() * 100 < 50) {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge2.mp3", 1500);
       } else {
         SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge3.mp3", 1000);
       }
-    } else {
-      SetUnitAbilityLevel(caster, Id.genosOvercharge, 1);
+    } else if (spellId == Id.genosOverchargeOff) {
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOff, false);
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOn, true);
+      UnitRemoveAbility(caster, Id.genosOverchargeFlag);
+
       SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Genos/Overcharge1.mp3", 1500);
     }
   }
@@ -7973,7 +8010,7 @@ export module SimpleSpellSystem {
     const vectorMaxDist = 2400;
     const sfxPathSize = 5.0;
     const sfxMarkerSize = 2.0;
-    const vectorManaCostPct = 0.1;
+    const vectorManaCostPct = 0.09;
     const sfxHeight = 100;
 
     const caster = GetTriggerUnit();

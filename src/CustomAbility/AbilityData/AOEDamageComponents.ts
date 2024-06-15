@@ -18356,7 +18356,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.4,
+      multiplier: BASE_DMG.KAME_DPS * 0.36,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -18602,7 +18602,7 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
     maxHealthDamagePercent: 0,
-    maxManaBurnPercent: 0.15,
+    maxManaBurnPercent: 0.1,
     maxManaLossPercent: 0,
     applyDamageOverTime: false,
     requireBuff: false,

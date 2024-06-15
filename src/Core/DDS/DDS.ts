@@ -36,8 +36,8 @@ export class DDS {
       const dmgRecv = LoadReal(Globals.genericDDSHashtable, playerId, DDS.PLAYER_DMG_RECV_KEY);
       data += ( 
         udg_OriginalPlayerNames[playerId] + ":" 
-        + " |cff00ff00PLAYER DMG:" + I2S(R2I(dmgSend))
-        + "|r / |cffffcc00SAGA DMG:" + I2S(R2I(dmgSendSaga))
+        + " |cff00ff00PLAYER:" + I2S(R2I(dmgSend))
+        + "|r / |cffffcc00SAGA:" + I2S(R2I(dmgSendSaga))
         + "|r / |cffff2222TANK:" + I2S(R2I(dmgRecv)) + "|r\n"
       );
     }

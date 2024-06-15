@@ -606,12 +606,12 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.DIMENSION_SWORD,
-        ItemConstants.potaraEarrings,
       ]
     )],
 
     // buu saga
-    ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-9000, 4600),
+    // ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-9000, 4600),
+    ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Buu.VANISHING_BALL,
@@ -619,7 +619,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
     )],
-    ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(-9000, 4600),
+    // ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(-9000, 4600),
+    ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Buu.VANISHING_BALL,
@@ -905,6 +906,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.TIME_RING,
+        ItemConstants.potaraEarrings,
       ]
     )],
     

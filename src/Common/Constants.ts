@@ -622,6 +622,7 @@ export module Id {
   export const ghostVisible = FourCC("Aeth");
   export const locust = FourCC("Aloc");
   export const flagArmor100k = FourCC("A00G");
+  export const flagPotaraFusion = FourCC("A14V");
 
   export const useItem = FourCC("A0VF");
   export const itemAndroidBomb = FourCC('A0NS');
@@ -1052,7 +1053,9 @@ export module Id {
   export const genosSpiralIncinerationCannon = FourCC("A04V");
   export const genosLightningEye = FourCC("A050");
   export const genosHighVoltageFist = FourCC("A05K");
-  export const genosOvercharge = FourCC("A05L");
+  export const genosOverchargeOn = FourCC("A05L");
+  export const genosOverchargeOff = FourCC("A14W");
+  export const genosOverchargeFlag = FourCC("A14X");
 
   export const getiStarHero = FourCC("H002");
   export const metalCoolerClone = FourCC("H01Z");

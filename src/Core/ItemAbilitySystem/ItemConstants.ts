@@ -120,11 +120,14 @@ export module ItemConstants {
   export const treeOfMightFruit = FourCC("I026");
 
   export const potaraEarrings = FourCC("I00L");
+  export const potaraFusion = FourCC("I04W");
 
   export const chaosEmerald = FourCC("I04Z");
   export const crystalCoconut = FourCC("I04Y");
 
   export const dragonBallItem = FourCC("I01V");
+
+  export const ginyuBodyChange = FourCC("I04N");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");

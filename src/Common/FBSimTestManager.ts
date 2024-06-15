@@ -69,7 +69,7 @@ export class FBSimTestManager {
       TriggerRegisterPlayerChatEvent(this.makeItemTrig, player, "-item", false);
     }
     TriggerAddAction(this.makeItemTrig, () => {
-      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
+      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 10));
 
       GroupClear(Globals.tmpUnitGroup);
       GroupEnumUnitsSelected(Globals.tmpUnitGroup, GetTriggerPlayer(), null);

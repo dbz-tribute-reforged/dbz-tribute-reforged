@@ -491,7 +491,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.genosSpiralIncinerationCannon, AbilityNames.Genos.SPIRAL_INCINERATION_CANNON],
     [Id.genosLightningEye, AbilityNames.Genos.LIGHTNING_EYE],
     [Id.genosHighVoltageFist, AbilityNames.Genos.HIGH_VOLTAGE_FIST],
-    [Id.genosOvercharge, AbilityNames.Genos.OVERCHARGE],
+    [Id.genosOverchargeOn, AbilityNames.Genos.OVERCHARGE],
 
     [Id.tatsumakiCompress, AbilityNames.Tatsumaki.COMPRESSS],
     [Id.tatsumakiLift, AbilityNames.Tatsumaki.LIFT],

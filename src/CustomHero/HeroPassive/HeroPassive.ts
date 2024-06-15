@@ -162,7 +162,7 @@ export function kidBuuPassive(customHero: CustomHero) {
     tapionPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, Id.vacuumWave) > 0) {
     lucarioPassive(customHero);
-  } else if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) > 0) {
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.genosOverchargeOn) > 0) {
     genosPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, Id.tatsumakiVector) > 0) {
     tatsumakiPassive(customHero);
@@ -2990,11 +2990,12 @@ export function mightGuyPassive(customHero: CustomHero) {
 
 export function genosPassive(customHero: CustomHero) {
   const heroId = GetUnitTypeId(customHero.unit);
-  const overchargeSPPerSecond = 0.05;
-  const overchargeMaxSP = 0.2;
+  const overchargeSPPerSecond = 0.04;
+  const overchargeSPPerSecond2 = 0.01;
+  const overchargeMaxSP = 0.5;
+  const overchargeInflectionSP = 0.2;
   const overchargeManaDrain = 0.05;
   const overchargeTickRate = 0.03;
-  const bonusMs = 5;
 
   const overchargeTimer = CreateTimer();
   customHero.addTimer(overchargeTimer);
@@ -3007,10 +3008,8 @@ export function genosPassive(customHero: CustomHero) {
   let overchargeSfx = null;
   TimerStart(overchargeTimer, overchargeTickRate, true, () => {
     if (overchargeState == 0) {
-      if (overChargeAbil.isInUse()) {
-        overChargeAbil.endAbility();
-      }
-      if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+      const player = GetOwningPlayer(customHero.unit);
+      if (GetUnitAbilityLevel(customHero.unit, Id.genosOverchargeFlag) > 0) {
         // do overcharge
         overchargeState = 1;
         overchargeTempSP = 0;
@@ -3029,8 +3028,8 @@ export function genosPassive(customHero: CustomHero) {
 
     if (overchargeState == 1) {
       if (
-        UnitHelper.isUnitDead(customHero.unit)
-        || GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 1
+        !UnitHelper.isUnitAlive(customHero.unit)
+        || GetUnitAbilityLevel(customHero.unit, Id.genosOverchargeFlag) == 0
         || GetUnitManaPercent(customHero.unit) < overchargeManaDrain * 100
       ) {
         overchargeState = 2;
@@ -3044,7 +3043,11 @@ export function genosPassive(customHero: CustomHero) {
           customHero.removeSpellPower(overchargeTempSP);
           overchargeTempSP = Math.min(
             overchargeMaxSP,
-            overchargeTempSP + overchargeSPPerSecond * overchargeTickRate
+            overchargeTempSP + (
+              (overchargeTempSP > overchargeInflectionSP) ?
+                overchargeSPPerSecond2 * overchargeTickRate :
+                overchargeSPPerSecond * overchargeTickRate 
+            )
           );
           customHero.addSpellPower(overchargeTempSP);
         }
@@ -3052,12 +3055,15 @@ export function genosPassive(customHero: CustomHero) {
     }
 
     if (overchargeState == 2) {
+      const player = GetOwningPlayer(customHero.unit);
       overChargeAbil.endAbility();
       overchargeState = 0;
       customHero.removeSpellPower(overchargeTempSP);
       overchargeTempSP = 0;
       DestroyEffect(overchargeSfx);
-      SetUnitAbilityLevel(customHero.unit, Id.genosOvercharge, 1);
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOff, false);
+      SetPlayerAbilityAvailable(player, Id.genosOverchargeOn, true);
+      UnitRemoveAbility(customHero.unit, Id.genosOverchargeFlag);
     }
 
     if (GetUnitLifePercent(customHero.unit) > 99) {
@@ -3079,6 +3085,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
   const bonusSpeedRatio = 2;
   const vectorAOE = 200;
   const vectorManaCostPct = 0.04;
+  const vectorManaCostPctDiscounted = 0.25;
   const shieldHpThresholdPct = 70;
 
   const caster = customHero.unit;
@@ -3179,9 +3186,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
     const targetY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey);
     if (sourceX == 0 && sourceY == 0 && targetX == 0 && targetY == 0) return;
 
-    if (GetUnitManaPercent(customHero.unit) >= vectorManaCostPct * 100 && !vectorStopState) {
-      UnitHelper.payMPPercentCost(caster, vectorManaCostPct * 0.03, UNIT_STATE_MAX_MANA);
-    } else {
+    if (GetUnitManaPercent(customHero.unit) < vectorManaCostPct * 100) {
       SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, true);
       return;
     }
@@ -3195,6 +3200,7 @@ export function tatsumakiPassive(customHero: CustomHero) {
     const intervals = Math.floor(dist / speed);
     Globals.tmpVector.setPos(sourceX, sourceY);
 
+    let isMovingHero = false;
     GroupClear(Globals.tmpUnitGroup2);
     for (let i = 0; i < intervals; ++i) {
       Globals.tmpVector.polarProjectCoords(Globals.tmpVector, ang, speed);
@@ -3219,11 +3225,22 @@ export function tatsumakiPassive(customHero: CustomHero) {
           SimpleSpellSystem.doTatsumakiBeamGroupReset(unit);
           GroupAddUnit(seenGroup, unit);
         }
+        if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+          isMovingHero = true;
+        }
         SimpleSpellSystem.addToTatsumakiMovementGroup(unit, speed, bonusSpeedRatio, ang);
         GroupAddUnit(Globals.tmpUnitGroup2, unit);
       });
     }
     GroupClear(Globals.tmpUnitGroup2);
+    
+    UnitHelper.payMPPercentCost(caster, 
+      isMovingHero ? 
+        vectorManaCostPct * 0.03 :
+        vectorManaCostPct * 0.03 * vectorManaCostPctDiscounted
+      , 
+      UNIT_STATE_MAX_MANA
+    );
   });
 }
 
@@ -3960,7 +3977,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (guyGateLvl > 1) {
       spMult += Constants.MIGHT_GUY_GATE_SP_MULTS[guyGateLvl-1]
     }
-    if (GetUnitAbilityLevel(customHero.unit, Id.genosOvercharge) == 2) {
+    if (GetUnitAbilityLevel(customHero.unit, Id.genosOverchargeFlag) > 0) {
       spMult += Constants.GENOS_OVERCHARGE_REGEN_MULT;
     }
     if (hasBeerusPassive) {

@@ -1690,7 +1690,7 @@ export const BeamComponents = [
     startTick: 0,
     endTick: -1,
     spawnDelayTicks: 0,
-    beamHpMult: BASE_DMG.KAME_DPS * 0.7,
+    beamHpMult: BASE_DMG.KAME_DPS * 0.8,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 0,
     maxMoveTicks: -1,

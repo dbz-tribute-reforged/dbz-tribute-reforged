@@ -33,7 +33,8 @@ export class PlayerProfile {
   public static KEY_BASIC_ABIL_2 = "KEY_BASIC_ABIL_2";
   public static KEY_BASIC_ABIL_3 = "KEY_BASIC_ABIL_3";
 
-  public static PREFERS_ZD = "PREFERS_ZD";
+  public static FIELD_PREFERS_ZD = "PREFERS_ZD";
+  public static FIELD_PREFERS_TSS = "PREFERS_TSS";
 
   static getSaveFileName(name: string) {
     return (
@@ -220,7 +221,8 @@ export class PlayerProfile {
       PlayerProfile.makeField(PlayerProfile.KEY_BASIC_ABIL_2, Constants.oskeyToTextMap.get(customPlayer.abilityButtons[2].key)),
       PlayerProfile.makeField(PlayerProfile.KEY_BASIC_ABIL_3, Constants.oskeyToTextMap.get(customPlayer.abilityButtons[3].key)),
 
-      PlayerProfile.makeField(PlayerProfile.PREFERS_ZD, customPlayer.prefersZD ? 1 : 0),
+      PlayerProfile.makeField(PlayerProfile.FIELD_PREFERS_ZD, customPlayer.prefersZD ? 1 : 0),
+      PlayerProfile.makeField(PlayerProfile.FIELD_PREFERS_TSS, udg_SummonsSelectFlagArray[playerId] ? 1 : 0),
     ];
 
     const saveStr = data.join(PlayerProfile.FIELD_SEPARATOR);
@@ -326,17 +328,31 @@ export class PlayerProfile {
       );
     }
 
-    if (this.fieldMap.has(PlayerProfile.PREFERS_ZD)) {
-      if (S2I(this.fieldMap.get(PlayerProfile.PREFERS_ZD)) == 1) {
+    if (this.fieldMap.has(PlayerProfile.FIELD_PREFERS_ZD)) {
+      if (S2I(this.fieldMap.get(PlayerProfile.FIELD_PREFERS_ZD)) == 1) {
         Logger.LogDebug("player prefers ZD");
         customPlayer.prefersZD = true;
-        // if player prefers ZD, 
-        // then go find zanzoken in the current selection and replace with zanzo dash
       } else {
         Logger.LogDebug("player prefers ZZ");
         customPlayer.prefersZD = false;
       }
       AbilityShop.getInstance().forceZDPref(customPlayer);
+    }
+
+    if (this.fieldMap.has(PlayerProfile.FIELD_PREFERS_TSS)) {
+      if (S2I(this.fieldMap.get(PlayerProfile.FIELD_PREFERS_TSS)) == 1) {
+        Logger.LogDebug("player prefers TSS");
+        if (!udg_SummonsSelectFlagArray[playerId]) {
+          udg_TempPlayer = this.player;
+          TriggerExecute(gg_trg_ToggleSummonSelect);
+        }
+      } else {
+        Logger.LogDebug("player prefers TSS off");
+        if (udg_SummonsSelectFlagArray[playerId]) {
+          udg_TempPlayer = this.player;
+          TriggerExecute(gg_trg_ToggleSummonSelect);
+        }
+      }
     }
   }
 }

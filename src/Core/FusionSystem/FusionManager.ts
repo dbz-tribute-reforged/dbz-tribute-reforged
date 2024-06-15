@@ -1,50 +1,169 @@
+import { Constants, Globals, Id } from "Common/Constants";
+import { Logger } from "Common/Logger";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { FusionUnit } from "./FusionUnit";
+import { UnitHelper } from "Common/UnitHelper";
+import { CoordMath } from "Common/CoordMath";
 
-// export class FusionManager {
-//   static readonly FUSION_INIT_ITEM: number = 3; 
+export class FusionManager { 
+  public static MAX_FUSE_DISTANCE = 600;
+  public static MAX_FUSE_DELAY = 0.5;
 
-//   static instance: FusionManager;
+  public static instance: FusionManager;
+  public static getInstance() {
+    if (this.instance == null) {
+      this.instance = new FusionManager();
+    }
+    return this.instance;
+  }
 
-//   public fusionInitTrigger: trigger;
+  public delayTimer: timer;
+  public delay: number;
 
-//   constructor() {
-//     this.fusionInitTrigger = CreateTrigger();
-//     this.initialize();
-//   }
+  public fusionInitTrigger: trigger;
+  public unit1: unit = null;
+  public unit2: unit = null;
 
-//   public static getInstance() {
-//     if (this.instance == null) {
-//       this.instance = new FusionManager();
-//     }
+  public fusionUnits: FusionUnit[] = [];
 
-//     return this.instance;
-//   }
+  constructor() {
+    this.delayTimer = CreateTimer();
+    this.delay = 0;
 
-//   initialize() {
-//     TriggerRegisterAnyUnitEventBJ(
-//       this.fusionInitTrigger, 
-//       EVENT_PLAYER_UNIT_USE_ITEM
-//     );
+    this.fusionInitTrigger = CreateTrigger();
 
-//     TriggerAddCondition(this.fusionInitTrigger, 
-//       Condition(() => {
-//         const item = GetManipulatedItem();
-//         const itemId = GetItemTypeId(item);
-//         const owner = GetOwningPlayer(GetTriggerUnit());
-//         if (itemId == FusionManager.FUSION_INIT_ITEM) {
-//           DisplayTimedTextToPlayer(owner, 0, 0, 5, "Fusion is not yet implemented.");
-//         }
-//         return false;
-//       })
-//     )
+    this.initialize();
+  }
 
+  initialize() {
+    TimerStart(this.delayTimer, 0.03, true, ()=> {
+      this.delay += 0.03;
+      if (this.delay > FusionManager.MAX_FUSE_DELAY * 2) {
+        this.unit1 = null;
+        this.unit2 = null;
+      }
+    });
+    PauseTimer(this.delayTimer);
 
-    
-//     // select 2 units for fusion
-//     // graft the second to the first
-//     // enforce positioning rules onto both (somehow)
-    
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerUnitEvent(this.fusionInitTrigger, player, EVENT_PLAYER_UNIT_USE_ITEM, null);
+    }
 
-//   }
+    TriggerAddCondition(this.fusionInitTrigger, Condition(() => {
+      const item = GetManipulatedItem();
+      const itemId = GetItemTypeId(item);
+      if (itemId != ItemConstants.potaraEarrings) return false;
 
+      const unit = GetTriggerUnit();
+      const unitTypeId = GetUnitTypeId(unit);
+      const player = GetOwningPlayer(unit);
 
-// }
+      // enemies cnat fuse
+
+      if (
+        !UnitHelper.isUnitRealHero(unit)
+        || unit == this.unit1
+      ) return false;
+
+      if (UnitHasItemOfTypeBJ(unit, ItemConstants.ginyuBodyChange)) {
+        DisplayTimedTextToPlayer(player, 0, 0, 3, "Cannot fuse with body change");
+        return;
+      }
+
+      if (
+        unitTypeId == Id.goten
+        || unitTypeId == Id.kidTrunks
+        || unitTypeId == Id.android13
+        || unitTypeId == Id.android14
+        || unitTypeId == Id.android15
+        || unitTypeId == Id.superBuu
+        || unitTypeId == Id.cellUnformed
+        || unitTypeId == Id.cellFirst
+        || unitTypeId == Id.cellSemi
+        || unitTypeId == Id.fourthCooler
+      ) {
+        DisplayTimedTextToPlayer(player, 0, 0, 3, GetHeroProperName(unit) + " cannot fuse");
+        return false;
+      }
+
+      this.registerFusion(unit);
+
+      if (this.unit2 == null) {
+        this.delay = 0;
+        ResumeTimer(this.delayTimer);
+      } else {
+        PauseTimer(this.delayTimer);
+      }
+
+      if (this.unit2 != null) {
+        this.fuseUnits(this.unit1, this.unit2);
+        this.unit1 = null;
+        this.unit2 = null;
+      }
+
+      return false;
+    }));
+
+    // select 2 units for fusion
+    // graft the second to the first
+    // enforce positioning rules onto both (somehow)
+  }
+
+  registerFusion(unit: unit) {
+    if (
+      this.unit1 == null 
+      || !IsUnitAlly(unit, GetOwningPlayer(this.unit1))
+      || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
+    ) {
+      this.unit1 = unit;
+    } else {
+      this.unit2 = unit;
+    }  
+  }
+
+  fuseUnits(unit1: unit, unit2: unit) {
+    if (unit1 == null) {
+      Logger.LogDebug("invalid unit1", unit1);
+      return;
+    }
+    if (unit2 == null) {
+      Logger.LogDebug("invalid unit2", unit2);
+      return;
+    }
+
+    Globals.tmpVector.setUnit(unit1);
+    Globals.tmpVector2.setUnit(unit2);
+
+    if (
+      CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > FusionManager.MAX_FUSE_DISTANCE
+      || this.delay > FusionManager.MAX_FUSE_DELAY
+    ) {
+      DestroyEffect(AddSpecialEffect(
+        "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl", 
+        Globals.tmpVector.x, Globals.tmpVector.y
+      ));
+      DestroyEffect(AddSpecialEffect(
+        "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl", 
+        Globals.tmpVector2.x, Globals.tmpVector2.y
+      ));
+      UnitHelper.payHPPercentCost(unit1, -0.1, UNIT_STATE_MAX_LIFE);
+      UnitHelper.payMPPercentCost(unit1, -0.1, UNIT_STATE_MAX_MANA);
+      UnitHelper.payHPPercentCost(unit2, -0.1, UNIT_STATE_MAX_LIFE);
+      UnitHelper.payMPPercentCost(unit2, -0.1, UNIT_STATE_MAX_MANA);
+      DisplayTimedTextToPlayer(GetOwningPlayer(unit1), 0, 0, 5, "|cffff2222Fusion failed!");
+      DisplayTimedTextToPlayer(GetOwningPlayer(unit2), 0, 0, 5, "|cffff2222Fusion failed!");
+      return;
+    }
+
+    Logger.LogDebug("Delay = ", this.delay);
+
+    const sfx = AddSpecialEffect(
+      "Abilities/Spells/Human/ReviveHuman/ReviveHuman.mdl", 
+      Globals.tmpVector.x, Globals.tmpVector.y
+    );
+    BlzSetSpecialEffectScale(sfx, 5.0);
+    DestroyEffect(sfx);
+
+    this.fusionUnits.push(new FusionUnit(this.unit1, this.unit2)); 
+  }
+}

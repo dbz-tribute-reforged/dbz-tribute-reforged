@@ -34,6 +34,10 @@ export class CustomUI {
   public skinButton: Frame;
   public skinButtonBackdrop: Frame;
   public skinButtonTrigger: Trigger;
+
+  public toggleSummonSelectButton: Frame;
+  public toggleSummonSelectButtonBackdrop: Frame;
+  public toggleSummonSelectButtonTrigger: Trigger;
   
 
   constructor() {
@@ -63,7 +67,7 @@ export class CustomUI {
     )
       .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.010, 0.1540)
       .setMinMaxValue(PlayerCam.ZOOM_MIN, PlayerCam.ZOOM_MAX)
-      .setValue(PlayerCam.ZOOM_MIN)
+      .setValue(PlayerCam.ZOOM_DEFAULT)
       .setStepSize(200)
     ;
     this.zoomDistTrigger = new Trigger();
@@ -139,6 +143,38 @@ export class CustomUI {
       TransformationSystem.getInstance().changeSkin(GetTriggerPlayer());
       return false;
     }));
+
+    
+    this.toggleSummonSelectButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1840, 0.0480)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2050, 0.0690)
+      .setText("|cffFFCC00TSS|r")
+      .setScale(1.00)
+
+    this.toggleSummonSelectButtonBackdrop = new Frame("ToggleSummonSelectButton[0]", this.toggleSummonSelectButton, 0, 0, 'BACKDROP', "")
+      .setAllPoints(this.toggleSummonSelectButton)
+      .setTexture("ReplaceableTextures/CommandButtonsDisabled/DISBTNTienMultiForm.blp", 0, true)
+
+    this.toggleSummonSelectButtonTrigger = new Trigger();
+    this.toggleSummonSelectButtonTrigger.triggerRegisterFrameEvent(this.toggleSummonSelectButton, FRAMEEVENT_CONTROL_CLICK);
+    this.toggleSummonSelectButtonTrigger.addCondition(Condition(() => {
+      this.toggleSummonSelectButton.enabled = false;
+      this.toggleSummonSelectButton.enabled = true;
+      udg_TempPlayer = GetTriggerPlayer();
+      TriggerExecute(gg_trg_ToggleSummonSelect);
+      return false;
+    }));
+    TriggerAddAction(gg_trg_ToggleSummonSelect, () => {
+      const playerId = GetPlayerId(udg_TempPlayer);
+      if (udg_TempPlayer == GetLocalPlayer()) {
+        this.toggleSummonSelectButtonBackdrop.setTexture(
+          udg_SummonsSelectFlagArray[playerId] ? 
+            "BTNTienMultiForm.blp" : 
+            "ReplaceableTextures/CommandButtonsDisabled/DISBTNTienMultiForm.blp"
+          , 0, true
+        );
+      }
+    });
   }
 
   toggleMinimapIcons(player: player) {
