@@ -27,13 +27,16 @@ export module AbilityNames {
     export const GALICK_GUN: string = "Galick Gun";
     export const BIG_BANG_ATTACK: string = "Big Bang Attack";
     export const FINAL_FLASH: string = "Final Flash";
-    export const FINAL_FLASH_2: string = "Final Flash 2";
+    export const FINAL_FLASH_GOD: string = "Final Flash God";
     export const ENERGY_BLAST_VOLLEY: string = "Energy Blast Volley";
     export const MOONLIGHT: string = "Moonlight";
     export const ANGRY_SHOUT: string = "Angry Shout";
     export const ULTRA_EGO: string = "Ultra Ego";
     export const EGO_GALICK_GUN: string = "Ego Galick Gun";
     export const HAKAI_BARRAGE: string = "Vegeta Hakai Barrage";
+    export const FINAL_SHINE_ATTACK: string = "Vegeta Hakai Barrage";
+    export const FINAL_FLASH_DARK: string = "Final Flash Dark";
+    export const LIMIT_BREAKER: string = "Vegeta Limit Breaker";
   }
 
   export module Gohan {
@@ -813,11 +816,11 @@ export module AbilityNames {
   }
 
   export module FarmerWithShotgun {
-    export const DEATH_BEAM: string = Cooler.DEATH_BEAM;
-    export const FINAL_FLASH: string = Vegeta.FINAL_FLASH;
-    export const TWIN_DRAGON_SHOT: string = Gohan.TWIN_DRAGON_SHOT;
-    export const GIGANTIC_ROAR: string = Broly.GIGANTIC_ROAR;
-    export const ENERGY_BLAST_VOLLEY: string = Vegeta.ENERGY_BLAST_VOLLEY;
+    export const RELOAD: string = "Farmer Reload";
+    export const HAYMAKER: string = "Farmer Haymaker";
+    export const CORNBLAST: string = "Farmer Cornblast";
+    export const SAIYAN_SLAYING_SHOT: string = "Farmer Saiyan Slaying Shot";
+    // export const HONEST_SHOT: string = "Farmer Honest Shot";
   }
 
   export module SuperJanemba {

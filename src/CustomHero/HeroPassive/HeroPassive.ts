@@ -74,6 +74,9 @@ export class HeroPassiveManager {
       case HeroPassiveData.KID_BUU:
         kidBuuPassive(customHero);
         break;
+      case Id.farmerWithShotgun:
+        farmerPassive(customHero);
+        break;
       case HeroPassiveData.SUPER_JANEMBA:
         superJanembaPassive(customHero);
         break;
@@ -171,6 +174,22 @@ export function kidBuuPassive(customHero: CustomHero) {
   } else if (GetUnitAbilityLevel(customHero.unit, Id.cheongMyeongReturnActive) > 0) {
     cheongMyeongPassive(customHero);
   }
+}
+
+export function farmerPassive(customHero: CustomHero) {
+  const manaCostPct = 0.1;
+
+  const spellDamageTimer = CreateTimer();
+  customHero.addTimer(spellDamageTimer);
+
+  TimerStart(spellDamageTimer, 0.03, true, () => {
+    const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
+    const prevCost = BlzGetUnitAbilityManaCost(customHero.unit, Id.plantWheat, 0);
+    const manaCost = R2I(Math.max(prevCost, Math.floor(manaCostPct * maxMana)));
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.plantWheat, 0, manaCost);
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.plantCorn, 0, manaCost);
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.plantRice, 0, manaCost);
+  });
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
@@ -3990,6 +4009,15 @@ export function setupRegenTimer(customHero: CustomHero) {
     );
     customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
     
+    if (
+      (
+        GetUnitAbilityLevel(customHero.unit, Id.gokuLimitBreakerPassive) > 0
+        || GetUnitAbilityLevel(customHero.unit, Id.vegetaLimitBreakerPassive) > 0
+      )
+      && customHero.getCurrentSP() < Constants.LIMIT_BREAKER_MIN_SP
+    ) {
+      customHero.setCurrentSP(Constants.LIMIT_BREAKER_MIN_SP)
+    }
 
 
     

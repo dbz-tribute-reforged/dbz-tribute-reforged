@@ -19,13 +19,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.galickGun, AbilityNames.Vegeta.GALICK_GUN],
     [Id.bigBangAttack, AbilityNames.Vegeta.BIG_BANG_ATTACK],
     [Id.finalFlash, AbilityNames.Vegeta.FINAL_FLASH],
-    [Id.finalFlash2, AbilityNames.Vegeta.FINAL_FLASH_2],
+    [Id.finalFlashGod, AbilityNames.Vegeta.FINAL_FLASH_GOD],
     [Id.energyBlastVolley, AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY],
     [Id.moonlight, AbilityNames.Vegeta.MOONLIGHT],
     [Id.angryShout, AbilityNames.Vegeta.ANGRY_SHOUT],
     [Id.ultraEgo, AbilityNames.Vegeta.ULTRA_EGO],
     [Id.egoGalickGun, AbilityNames.Vegeta.EGO_GALICK_GUN],
     [Id.vegetaHakaiBarrage, AbilityNames.Vegeta.HAKAI_BARRAGE],
+    [Id.vegetaFinalShineAttack, AbilityNames.Vegeta.FINAL_SHINE_ATTACK],
+    [Id.vegetaFinalFlashDark, AbilityNames.Vegeta.FINAL_FLASH_DARK],
+    [Id.vegetaLimitBreaker, AbilityNames.Vegeta.LIMIT_BREAKER],
 
     // gohan
     [Id.masenko, AbilityNames.Gohan.MASENKO],
@@ -74,6 +77,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.kyodaika, AbilityNames.Piccolo.KYODAIKA],
     // clones version
     [Id.piccoloCloneSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],
+
+
+    [Id.farmerHaymaker, AbilityNames.FarmerWithShotgun.HAYMAKER],
+    [Id.farmerCornblast, AbilityNames.FarmerWithShotgun.CORNBLAST],
+    [Id.farmerSaiyanSlayingShot, AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT],
 
     // bardock
     [Id.futureSight, AbilityNames.Bardock.FUTURE_SIGHT],

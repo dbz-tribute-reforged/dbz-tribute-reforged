@@ -164,6 +164,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi vegeta final shine attack", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    forceMinDistance: 400,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    replaceSourceWithTargetUnit: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam vegeta final shine attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi super masenko", 
     repeatInterval: 1, 
     startTick: 0,

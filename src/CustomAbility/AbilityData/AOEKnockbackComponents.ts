@@ -101,6 +101,26 @@ export const AOEKnockbackComponents = [
     isPersistent: true,
     isFixedAngle: false,
   },
+  // final shine attack
+  {
+    name: "knockback beam vegeta final shine attack",
+    repeatInterval: 1, 
+    startTick: 72,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+  },
   // super dragon flight
   {
     name: "knockback super dragon flight",

@@ -189,6 +189,8 @@ export module Constants {
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
   export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
   export const BEERUS_REGEN_MULT = 0.2;
+  
+  export const LIMIT_BREAKER_MIN_SP = 25;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
@@ -389,6 +391,7 @@ export module DebuffAbilities {
   export const CURSE_WALUIGI_SPIN = FourCC("A11X");
   export const CURSE_LEON_FLASHBANG = FourCC("A03F");
   export const CURSE_CELL_MAX_WINGS = FourCC("A04F");
+  export const CURSE_DARK_FINAL_FLASH = FourCC("A152");
 
   // slow
   export const HEROS_SONG = FourCC("A0I6");
@@ -452,6 +455,7 @@ export module DebuffAbilities {
   export const AINZ_GREATER_MAGIC_SHIELD = FourCC('A12M');
   export const AINZ_MAGIC_BOOST = FourCC('A12N');
   export const CHEONG_MYEONG_SCATTERED_BLOSSOMFALL_DMG_DEBUFF = FourCC('A14E');
+  export const FARMER_RICE_DMG_BUFF = FourCC("A0DB");
 
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
@@ -763,6 +767,8 @@ export module Id {
 
   export const arak = FourCC("H02P");
 
+  export const atropos = FourCC("H03A");
+
   export const ayla = FourCC("H0A5");
   export const aylaBoulderToss = FourCC("A0XG");
   export const aylaCharm = FourCC("A0XH");
@@ -996,6 +1002,11 @@ export module Id {
   export const plantWheat = FourCC("A0ZN");
   export const plantCorn = FourCC("A0ZO");
   export const plantRice = FourCC("A0ZP");
+  export const farmerHaymaker = FourCC("A153");
+  export const farmerCornblast = FourCC("A154");
+  export const farmerSaiyanSlayingShot = FourCC("A155");
+  export const farmerHonestShot = FourCC("A156");
+  export const farmerHonestShotPassive = FourCC("A157");
   export const farmerWarehouse = FourCC("h0AC");
   export const farmerSuperWarehouse = FourCC("h0AF");
   export const farmerHarvester = FourCC("h0AD");
@@ -1003,6 +1014,7 @@ export module Id {
   export const farmerDisableWarehousing = FourCC("A0ZV");
   export const farmerEnableWarehousing = FourCC("A0ZW");
   export const farmerAdvancedHarvester = FourCC("h0AE");
+  export const farmerUpgradeAutoHarvest = FourCC("R00R");
 
   export const frieza = FourCC("H06X");
   export const deathBeamFrieza = FourCC("A0PZ");
@@ -1389,6 +1401,7 @@ export module Id {
   export const meguminInvul = FourCC("A05X");
 
   export const nappa = FourCC("H08W");
+  export const saibamen = FourCC("H08X");
   export const giantStorm = FourCC("A0MI");
   export const blazingStorm = FourCC("A0MJ");
   export const plantSaibamen = FourCC("A0MK");
@@ -1584,7 +1597,7 @@ export module Id {
   export const galickGun = FourCC("A03N");
   export const bigBangAttack = FourCC("A0GO");
   export const finalFlash = FourCC("A01B");
-  export const finalFlash2 = FourCC("A0L4");
+  export const finalFlashGod = FourCC("A0L4");
   export const energyBlastVolley = FourCC("A0L3");
   export const moonlight = FourCC("A035");
   export const angryShout = FourCC("A0LS");
@@ -1593,6 +1606,10 @@ export module Id {
   export const vegetaHakai = FourCC("A0GK");
   export const vegetaHakaiBarrage = FourCC("A0GL");
   export const vegetaFightingSpirit = FourCC("A0GM");
+  export const vegetaFinalShineAttack = FourCC("A14Y");
+  export const vegetaFinalFlashDark = FourCC("A14Z");
+  export const vegetaLimitBreaker = FourCC("A150");
+  export const vegetaLimitBreakerPassive = FourCC("A151");
 
   export const vegetaMajin = FourCC("H019");
   export const vegetaMajinGalickGun = FourCC("A13N");

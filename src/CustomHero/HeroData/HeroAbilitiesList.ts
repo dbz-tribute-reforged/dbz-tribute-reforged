@@ -32,13 +32,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.GALICK_GUN, 
       AbilityNames.Vegeta.BIG_BANG_ATTACK, 
       AbilityNames.Vegeta.FINAL_FLASH, 
-      AbilityNames.Vegeta.FINAL_FLASH_2, 
+      AbilityNames.Vegeta.FINAL_FLASH_GOD, 
       AbilityNames.Vegeta.MOONLIGHT, 
       AbilityNames.Vegeta.ANGRY_SHOUT, 
       AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
       AbilityNames.Vegeta.ULTRA_EGO,
       AbilityNames.Vegeta.EGO_GALICK_GUN, 
       AbilityNames.Vegeta.HAKAI_BARRAGE, 
+      AbilityNames.Vegeta.FINAL_SHINE_ATTACK, 
+      AbilityNames.Vegeta.FINAL_FLASH_DARK, 
+      AbilityNames.Vegeta.LIMIT_BREAKER, 
     ]],
     
     // gohan
@@ -883,7 +886,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Shalltear.PURIFYING_JAVELIN, AbilityNames.Shalltear.EINHERJAR,
       AbilityNames.Demiurge.HELLFIRE_WALL,
 
-      AbilityNames.Magus.DARK_MATTER
+      AbilityNames.Magus.DARK_MATTER,
+      AbilityNames.RustTyranno.TYRANNO_FLAME,
     ]],
 
     // broly
@@ -946,19 +950,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
 
     // farmer with shotgun
-    [FourCC("H08S"), [
-      AbilityNames.Cooler.DEATH_BEAM, 
-      AbilityNames.Vegeta.FINAL_FLASH, 
-      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
-      // AbilityNames.Broly.GIGANTIC_ROAR, 
-      AbilityNames.SuperJanemba.HELLS_GATE, 
-      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
+    [Id.farmerWithShotgun, [
+      AbilityNames.FarmerWithShotgun.HAYMAKER,
+      AbilityNames.FarmerWithShotgun.CORNBLAST,
+      AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT,
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
 
     // raditz
-    [FourCC("H08U"), [
+    [Id.raditz, [
       AbilityNames.Raditz.DOUBLE_SUNDAY, 
       AbilityNames.Raditz.SATURDAY_CRASH, 
       AbilityNames.Raditz.BEHIND_YOU, 
@@ -967,7 +968,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Raditz.DOUBLE_SUNDAE
     ]],
     // nappa
-    [FourCC("H08W"), [
+    [Id.nappa, [
       AbilityNames.Nappa.GIANT_STORM, 
       AbilityNames.Nappa.BLAZING_STORM, 
       AbilityNames.Nappa.PLANT_SAIBAMEN, 
@@ -976,7 +977,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Nappa.BREAK_CANNON
     ]],
     // saibaman
-    [FourCC("H08X"), [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
+    [Id.saibamen, [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
 
     // moro
     [Id.moro, [AbilityNames.Moro.ENERGY_DRAIN, AbilityNames.Moro.ENERGY_BALL, AbilityNames.Moro.LAVA_BURST, AbilityNames.Moro.LAVA_PILLARS, AbilityNames.Moro.POWER_LEVEL_SHARING]],

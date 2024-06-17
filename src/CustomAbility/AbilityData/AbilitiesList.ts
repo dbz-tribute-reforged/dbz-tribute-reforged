@@ -899,7 +899,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Vegeta.FINAL_FLASH_2,
+    name: AbilityNames.Vegeta.FINAL_FLASH_GOD,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,
@@ -916,9 +916,9 @@ export const AbilitiesList = [
       disabled: "BTNFinalFlash2.blp",
     },
     tooltip: {
-      title: AbilityNames.Vegeta.FINAL_FLASH_2,
+      title: AbilityNames.Vegeta.FINAL_FLASH_GOD,
       body: 
-        AbilityNames.Vegeta.FINAL_FLASH_2
+        AbilityNames.Vegeta.FINAL_FLASH_GOD
     },
     components: [
       { name: "sfx final flash 2 caster" },
@@ -1061,6 +1061,93 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi vegeta hakai barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.FINAL_SHINE_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi vegeta final shine attack" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx vegeta final shine attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.FINAL_FLASH_DARK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam vegeta final flash dark" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.LIMIT_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+      { name: "damage goku limit breaker dps" },
+      { name: "temp ability vegeta limit breaker passive" },
+      { name: "sfx goku limit breaker" },
     ],
   },
   // -------------------------------------------

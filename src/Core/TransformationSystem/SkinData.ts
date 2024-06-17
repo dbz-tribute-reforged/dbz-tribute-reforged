@@ -59,6 +59,11 @@ export class SkinData {
         [SkinData.CONDITION_GAMES, 10],
       ]),
     ]],
+    [Id.robo, [
+      new SkinData(Id.atropos, [
+        [SkinData.CONDITION_WINS, 25],
+      ]),
+    ]],
     [Id.albedo, [
       new SkinData(SkinData.SKIN_ALTERNATE, [
         [SkinData.CONDITION_WINS, 10],

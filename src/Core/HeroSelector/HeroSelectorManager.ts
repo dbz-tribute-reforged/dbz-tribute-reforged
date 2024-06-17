@@ -741,8 +741,8 @@ export class HeroSelectorManager {
     this.kothButton = new Frame("ScriptDialogButton", 
       Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.4900, 0.2430)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6000, 0.2730)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.5000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6100, 0.2730)
       .setText("|cffFFFF00KOTH():|r|cffff2222OFF|r")
       .setScale(1.00)
       .setVisible(false);

@@ -227,9 +227,10 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.gokuKaiokenOn, SimpleSpellSystem.doGokuKaiokenOn);
     Globals.genericSpellMap.set(Id.gokuKaiokenOff, SimpleSpellSystem.doGokuKaiokenOff);
-    Globals.genericSpellMap.set(Id.gokuLimitBreaker, SimpleSpellSystem.doGokuLimitBreaker);
+    Globals.genericSpellMap.set(Id.gokuLimitBreaker, SimpleSpellSystem.doGokuLimitBreakerSpellPower);
 
     Globals.genericSpellMap.set(Id.vegetaHakai, SimpleSpellSystem.doVegetaHakai);
+    Globals.genericSpellMap.set(Id.vegetaLimitBreaker, SimpleSpellSystem.doGokuLimitBreakerSpellPower);
     Globals.genericSpellMap.set(Id.toppoHakai, SimpleSpellSystem.doVegetaHakai);
     Globals.genericSpellMap.set(Id.beerusHakai, SimpleSpellSystem.doVegetaHakai);
 
@@ -912,7 +913,7 @@ export module SimpleSpellSystem {
     SaveInteger(Globals.genericSpellHashtable, casterId, key, 2);
   }
 
-  export function doGokuLimitBreaker(spellId: number) {
+  export function doGokuLimitBreakerSpellPower(spellId: number) {
     const unit = GetTriggerUnit();
     const player = GetOwningPlayer(unit);
     const playerId = GetPlayerId(player);
@@ -929,6 +930,7 @@ export module SimpleSpellSystem {
         && pId >= 0 
         && pId < Constants.maxActivePlayers
         && IsPlayerSlotState(p, PLAYER_SLOT_STATE_PLAYING)
+        && GetPlayerController(p) == MAP_CONTROL_USER
       ) {
         spellAmp += 0.03;
       }

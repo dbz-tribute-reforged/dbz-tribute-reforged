@@ -2494,4 +2494,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff curse vegeta final flash dark",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.CURSE_DARK_FINAL_FLASH,
+    orderId: OrderIds.CURSE,
+    aoe: 500,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

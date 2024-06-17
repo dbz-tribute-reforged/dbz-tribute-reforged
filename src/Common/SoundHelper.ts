@@ -3038,7 +3038,8 @@ export module SoundHelper {
         break;
 
       case Id.finalFlash:
-      case Id.finalFlash2:
+      case Id.finalFlashGod:
+      case Id.vegetaFinalFlashDark:
       case Id.vegetaMajinFinalFlash:
         if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);

@@ -53,7 +53,7 @@ export class FarmingManager {
   initialize() {
     this.setupFarmingComponentMap();
     this.setupUpdateCrops();
-    this.setupHarvester();
+    this.setupWarehouseHarvester();
   }
 
   setupFarmingComponentMap() {
@@ -144,7 +144,7 @@ export class FarmingManager {
     ForGroup(this.harvesterUnitGroup, () => {
       const unit = GetEnumUnit();
 
-      if (UnitHelper.isUnitDead(unit)) {
+      if (!UnitHelper.isUnitAlive(unit)) {
         GroupRemoveUnit(this.harvesterUnitGroup, unit);
         return;
       }
@@ -225,7 +225,56 @@ export class FarmingManager {
           }
         });
       }
+    });
+  }
 
+  setupWarehouseHarvester() {
+    TriggerRegisterAnyUnitEventBJ(this.harvesterBuildTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH);
+
+    TriggerAddCondition(this.harvesterBuildTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      if (
+        GetUnitTypeId(unit) == Id.farmerWarehouse
+        || GetUnitTypeId(unit) == Id.farmerSuperWarehouse
+      ) {
+        GroupAddUnit(this.harvesterUnitGroup, unit);
+      }
+      return false;
+    }));
+
+    TimerStart(this.harvesterTimer, 0.25, true, () => {
+      const groupSize = BlzGroupGetSize(this.harvesterUnitGroup);
+      for (let i = 0; i < groupSize; ++i) {
+        const unit = BlzGroupUnitAt(this.harvesterUnitGroup, i);
+  
+        if (!UnitHelper.isUnitAlive(unit)) {
+          GroupRemoveUnit(this.harvesterUnitGroup, unit);
+          return;
+        }
+
+        const player = GetOwningPlayer(unit);
+        if (!GetPlayerTechResearched(player, Id.farmerUpgradeAutoHarvest, true)) return;
+  
+        // aoe pickup crops
+        const unitX = GetUnitX(unit);
+        const unitY = GetUnitY(unit);
+        MoveRectTo(this.harvesterRect, unitX, unitY);
+        
+        const items: item[] = [];
+        EnumItemsInRect(this.harvesterRect, null, () => {
+          const item = GetEnumItem();
+          if (IsItemVisible(item) && GetItemCharges(item) == 1) {
+            items.push(item);
+          }
+        });
+
+        for (const item of items) {
+          const itemId = GetItemTypeId(item);
+          const spellId = this.cropAbilityMap.get(itemId);
+          if (!spellId) continue;
+          UnitAddItem(unit, item);
+        }
+      }
     });
   }
 }
