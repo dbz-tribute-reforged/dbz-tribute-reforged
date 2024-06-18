@@ -388,6 +388,12 @@ STRING 62
 Vegeta
 }
 
+STRING 63
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
+}
+
 STRING 64
 // Abilities: A0JQ (Babidi's Magic), Ubertip (Tooltip - Normal - Extended)
 {
@@ -395,11 +401,11 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 65
-// Items: I050 (Wheat), Description (Description)
+// Abilities: A0CK (Kaioken x10 On), Ubertip (Tooltip - Normal - Extended)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.25 STR each.
-Grants Farmer +10 armor for 10s.
+Increases spell damage by +10% and attack damage by +40% at the cost of draining 1.5% of max hp per second. Cannot be deactivated in the first 5 seconds.
+
+|cff00ffffCooldown: <A0CK,Cool1>s|r
 }
 
 STRING 66
@@ -9361,16 +9367,8 @@ Transformations:
 }
 
 STRING 1443
-// Abilities: A0CM (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
 {
-The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
-|cffffff00+0.1x stat multiplier
-+<A0CR,DataA1,%>% attack damage
-+3% spell amp per allied player
-Prevents stamina from dropping below 25
-|cff00ff00Damage: [Int] 90u/s|r
-|cff00ff00Duration: <A0CM,Dur1> seconds
-|cff00ffffCooldown: <A0CM,Cool1>s
+[|cff00ff00Eat Multiple Crops On|r]
 }
 
 STRING 1444
@@ -9408,17 +9406,8 @@ Pecorine
 }
 
 STRING 1449
-// Abilities: A150 (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
 {
-The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
-|cffffff00+0.1x stat multiplier
-+10 armor
-+66ms
-+3% spell amp per allied player
-Prevents stamina from dropping below 25
-|cff00ff00Damage: [Int] 90u/s|r
-|cff00ff00Duration: <A150,Dur1> seconds
-|cff00ffffCooldown: <A150,Cool1>s
+[|cffff2222Eat Multiple Crops Off|r]
 }
 
 STRING 1450
@@ -10104,6 +10093,12 @@ STRING 1547
 // Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 1548
+// Abilities: A0JP (Spirit Bomb), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Spirit Bomb - [|cffffcc00Level %d|r]
 }
 
 STRING 1549
@@ -11075,6 +11070,18 @@ Restores 10% of Max HP.
 Reduces effectiveness of non-combat consumable healing items by 25%|r
 }
 
+STRING 1696
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 1697
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 3|r]
+}
+
 STRING 1698
 // Items: I03E (Battle Armor [|cffFFFF005/5|r]), Name (Name)
 {
@@ -11087,6 +11094,18 @@ STRING 1699
 The owner of this item will convert 15% of auto attack damage into life.
 
 |cffffff00Increases the effectiveness of non-combat consumable healing items by 20%
+}
+
+STRING 1700
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 1701
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 5|r]
 }
 
 STRING 1702
@@ -11607,6 +11626,18 @@ STRING 1784
 // Items: I046 (Sorbet's Ring), Tip (Tooltip - Basic)
 {
 Sorbet's Ring
+}
+
+STRING 1785
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 1786
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
 }
 
 STRING 1787
@@ -23957,51 +23988,6 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 |cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-}
-
-STRING 3689
-// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
-{
-Increases STR.
-|cff8888ffMana Cost: 10% of Max Mana.
-|cff00ffffSpecial: Wheat planted in farmland is 50% more effective.
-|cffffff00Growth Multipliers:
-2.00x Farmland
-1.00x Grass
-1.00x Dirt
-0.75x Water
-0.50x Snow
-0.25x Blight/Rocky
-}
-
-STRING 3690
-// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
-{
-Increases AGI.
-|cff8888ffMana Cost: 10% of Max Mana.
-|cff00ffffSpecial: Corn planted in farmland is 50% more effective.
-|cffffff00Growth Multipliers:
-1.50x Farmland
-1.50x Grass
-1.50x Dirt
-0.50x Water
-0.50x Snow
-0.25x Blight/Rocky
-}
-
-STRING 3691
-// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
-{
-Increases INT.
-|cff8888ffMana Cost: 10% of Max Mana.
-|cff00ffffSpecial: Rice planted in snow is 50% more effective.
-|cffffff00Growth Multipliers:
-0.75x Farmland
-0.25x Grass
-0.50x Dirt
-2.00x Water
-1.50x Snow
-0.20x Blight/Rocky
 }
 
 STRING 3692
@@ -36625,18 +36611,18 @@ Transformations:
 [lvl 85]  2.00x "ss2"
 
 |cff00ff00Pick ONE of the following:|r
-[lvl 150] 2.50x "|cff00ffffsuper|r" [Unlocks |cff00ffffGod Final Flash|r]
+[lvl 150] 2.50x "|cff00ffffsuper|r" [Unlocks [|cff00ff00W|r] |cff00ffffGod Final Flash|r]
 [lvl 150] 2.50x "|cffffcc00gt|r" [Unlocks [|cff00ff00R|r] |cffffcc00Final Shine Attack|r]
 
-[lvl 200] 2.60x "|cff00ffffssb|r" or "|cffffcc00ss4|r" [Unlocks |cffffcc00Dark Final Flash|r]
-[lvl 225] 2.65x "|cff00ffffssbe|r" or "|cffffcc00ss4|r" [Unlocks |cffffcc00Limit Breaker|r]
-[lvl 300] 2.8/2.6/2.6x "|cff00ffffultra ego|r" [Unlocks |cff00ffffUltra Ego|r]
+[lvl 200] 2.60x "|cff00ffffssb|r" or "|cffffcc00ss4|r" [Unlocks [|cff00ff00W|r] |cffffcc00Dark Final Flash|r]
+[lvl 225] 2.65x "|cff00ffffssbe|r" or "|cffffcc00ss4|r" [Unlocks [|cff00ff00D|r] |cffffcc00Limit Breaker|r]
+[lvl 300] 2.8/2.6/2.6x "|cff00ffffultra ego|r" [Unlocks [|cff00ff00D|r] |cff00ffffUltra Ego|r]
 }
 
 STRING 5691
 {
 [lvl 30]  1.50x "ss"
-[lvl 70]  2.00x "ss2" [unlocks Father-Son kame]
+[lvl 70]  2.00x "ss2" [unlocks [|cff00ff00F|r] Father-Son kame]
 [lvl 110] 2.10x "saiyaman"
 [lvl 120] 2.20x "ss"
 [lvl 130] 2.30x "ss2"
@@ -39579,11 +39565,9 @@ Beerus Devotion Aura
 }
 
 STRING 6123
-// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+// Abilities: A0ZM (Farming Book), EditorSuffix (Editor Suffix)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.25 STR each.
-Grants Farmer +10 armor for 10s.
+(farmer)
 }
 
 STRING 6124
@@ -39599,19 +39583,15 @@ R
 }
 
 STRING 6126
-// Items: I051 (Corn), Description (Description)
+// Abilities: A0ZN (Plant Wheat), EditorSuffix (Editor Suffix)
 {
-Nutritious corn.
-|cffffff00Consume for +0.25 AGI each.
-Grants Farmer +50% hp/mp/sp regen for 10s.
+(farmer)
 }
 
 STRING 6127
-// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+// Abilities: A0ZO (Plant Corn), EditorSuffix (Editor Suffix)
 {
-Nutritious corn.
-|cffffff00Consume for +0.25 AGI each.
-Grants Farmer +50% hp/mp/sp regen for 10s.
+(farmer)
 }
 
 STRING 6128
@@ -65652,11 +65632,18 @@ STRING 10029
 }
 
 STRING 10030
-// Abilities: A0CK (Kaioken x10 On), Ubertip (Tooltip - Normal - Extended)
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
 {
-Increases spell damage by +10% and attack damage by +20% at the cost of draining 1.5% of max hp per second. Cannot be deactivated in the first 10 seconds.
+A farmer with a shotgun that has the ability to farm crops to provide bonus experience and stats.
 
-|cff00ffffCooldown: <A0CK,Cool1>s|r
+|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
+|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
 STRING 10031
@@ -71103,7 +71090,7 @@ The user leaps into the air with a kick as they fly towards the targetted area. 
 }
 
 STRING 10831
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
 }
@@ -71115,9 +71102,12 @@ This unit is being influenced by Babidi. It has enhanced attack power, and anyth
 }
 
 STRING 10833
-// Abilities: A0JP (Spirit Bomb), Researchtip (Tooltip - Learn)
+// Items: I050 (Wheat), Description (Description)
 {
-[|cffFFFF00W|r] Learn Spirit Bomb - [|cffffcc00Level %d|r]
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.25 STR each.
+Grants Farmer +10 armor for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 10834
@@ -71127,31 +71117,31 @@ Belmod
 }
 
 STRING 10835
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 2|r]
 }
 
 STRING 10836
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 3|r]
 }
 
 STRING 10837
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 4|r]
 }
 
 STRING 10838
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 5|r]
 }
 
 STRING 10839
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
 }
@@ -71187,7 +71177,7 @@ Q
 }
 
 STRING 10845
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
 }
@@ -71199,7 +71189,7 @@ W
 }
 
 STRING 10847
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
 }
@@ -71229,15 +71219,18 @@ W
 }
 
 STRING 10852
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 9|r]
 }
 
 STRING 10853
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 10|r]
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.25 STR each.
+Grants Farmer +10 armor for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 10854
@@ -104547,19 +104540,27 @@ Transformations:
 }
 
 STRING 15622
-// Items: I052 (Rice), Description (Description)
+// Abilities: A0L4 (God Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +0.25 INT each.
-Grants Farmer +50% damage on their next auto attack.
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!
+
+|cff00ff00Damage: [Int] 120u x 8t + 120u (x2)|r
+|cff00ffffCooldown: <A0L4,Cool10> seconds|r
 }
 
 STRING 15623
-// Items: I052 (Rice), Ubertip (Tooltip - Extended)
+// Abilities: A0ZN (Plant Wheat), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +0.25 INT each.
-Grants Farmer +50% damage on their next auto attack.
+Increases STR.
+|cff8888ffMana Cost: 10% of Max Mana.
+|cff00ffffSpecial: Wheat planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+2.00x Farmland
+1.00x Grass
+1.00x Dirt
+0.75x Water
+0.50x Snow
+0.25x Blight/Rocky/City
 }
 
 STRING 15624
@@ -117435,6 +117436,12 @@ STRING 17372
 (rust tyranno)
 }
 
+STRING 17373
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
+}
+
 STRING 17374
 // Abilities: A030 (Jet Drive Arrow), Hotkey (Hotkey - Normal)
 {
@@ -127291,19 +127298,19 @@ STRING 18773
 }
 
 STRING 18774
-// Abilities: A0ZM (Farming Book), EditorSuffix (Editor Suffix)
+// Abilities: A0ZP (Plant Rice), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
 
 STRING 18775
-// Abilities: A0ZN (Plant Wheat), EditorSuffix (Editor Suffix)
+// Abilities: A0ZQ (Inventory Buildings), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
 
 STRING 18776
-// Abilities: A0ZO (Plant Corn), EditorSuffix (Editor Suffix)
+// Abilities: A0ZR (Toggle Harvest Engine), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -129235,9 +129242,12 @@ F
 }
 
 STRING 19039
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I051 (Corn), Description (Description)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
+Nutritious corn.
+|cffffff00Consume for +0.25 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19040
@@ -129274,33 +129284,48 @@ Frieza leaps into the air and accelerates to an extreme speed before crashing do
 }
 
 STRING 19045
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I051 (Corn), Ubertip (Tooltip - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 2|r]
+Nutritious corn.
+|cffffff00Consume for +0.25 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19046
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I052 (Rice), Description (Description)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 3|r]
+Nutritious grains of rice.
+|cffffff00Consume for +0.25 INT each.
+Grants Farmer +50% damage on their next auto attack.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19047
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I052 (Rice), Ubertip (Tooltip - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 4|r]
+Nutritious grains of rice.
+|cffffff00Consume for +0.25 INT each.
+Grants Farmer +50% damage on their next auto attack.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19048
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I053 (Snow Rice), Description (Description)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 5|r]
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.375 INT each.
+Grants Farmer +50% damage on their next auto attack.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19049
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.375 INT each.
+Grants Farmer +50% damage on their next auto attack.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19050
@@ -129355,9 +129380,12 @@ STRING 19055
 }
 
 STRING 19056
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I002 (Super Corn), Description (Description)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
+Nutritious corn.
+|cffffff00Consume for +0.375 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19057
@@ -129370,9 +129398,12 @@ Frieza leaps into the air and accelerates to an extreme speed before crashing do
 }
 
 STRING 19058
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
+Nutritious corn.
+|cffffff00Consume for +0.375 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19059
@@ -129409,9 +129440,12 @@ Goku throws a Spirit Bomb at the target area, causing it to explode and deal dam
 }
 
 STRING 19063
-// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+// Items: I005 (Tegridy Wheat), Description (Description)
 {
-[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 9|r]
+A nutritious bundle of tegridy wheat.
+|cffffff00Consume for +0.375 STR each.
+Grants Farmer +10 armor for 10s.
+Type -eat to toggle between eating 1 or multiple.
 }
 
 STRING 19064
@@ -130455,7 +130489,7 @@ W
 }
 
 STRING 19209
-// Abilities: A0ZP (Plant Rice), EditorSuffix (Editor Suffix)
+// Abilities: A0ZS (Self Destruct), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -131040,11 +131074,18 @@ Schala calls down lightning from the sky that bombards the target area.
 }
 
 STRING 19293
-// Items: I053 (Snow Rice), Description (Description)
+// Abilities: A0ZO (Plant Corn), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +0.375 INT each.
-Grants Farmer +100% damage on their next auto attack.
+Increases AGI.
+|cff8888ffMana Cost: 10% of Max Mana.
+|cff00ffffSpecial: Corn planted in farmland is 50% more effective.
+|cffffff00Growth Multipliers:
+1.50x Farmland
+1.50x Grass
+1.50x Dirt
+0.50x Water
+0.50x Snow
+0.25x Blight/Rocky/City
 }
 
 STRING 19294
@@ -131091,35 +131132,48 @@ Dyspo forms a ring of energy in his hand and fires it at his opponent, rooting t
 }
 
 STRING 19299
-// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
+// Abilities: A0ZP (Plant Rice), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +0.375 INT each.
-Grants Farmer +100% damage on their next auto attack.
+Increases INT.
+|cff8888ffMana Cost: 10% of Max Mana.
+|cff00ffffSpecial: Rice planted in snow is 50% more effective.
+|cffffff00Growth Multipliers:
+0.75x Farmland
+0.25x Grass
+0.50x Dirt
+2.00x Water
+1.50x Snow
+0.20x Blight/Rocky/City
 }
 
 STRING 19300
-// Items: I002 (Super Corn), Description (Description)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious corn.
-|cffffff00Consume for +0.375 AGI each.
-Grants Farmer +50% hp/mp/sp regen for 10s.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool1> seconds|r
 }
 
 STRING 19301
-// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-Nutritious corn.
-|cffffff00Consume for +0.375 AGI each.
-Grants Farmer +50% hp/mp/sp regen for 10s.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool3> seconds|r
 }
 
 STRING 19302
-// Items: I005 (Tegridy Wheat), Description (Description)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-A nutritious bundle of tegridy wheat.
-|cffffff00Consume for +0.375 STR each.
-Grants Farmer +10 armor for 10s.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool4> seconds|r
 }
 
 STRING 19303
@@ -131383,11 +131437,13 @@ STRING 19337
 }
 
 STRING 19338
-// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-A nutritious bundle of tegridy wheat.
-|cffffff00Consume for +0.375 STR each.
-Grants Farmer +10 armor for 10s.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool5> seconds|r
 }
 
 STRING 19339
@@ -131689,7 +131745,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19374
-// Abilities: A0ZQ (Inventory Buildings), EditorSuffix (Editor Suffix)
+// Abilities: A0ZT (Self Repair), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -137126,7 +137182,7 @@ Destroys this building.
 }
 
 STRING 20141
-// Abilities: A0ZR (Toggle Harvest Engine), EditorSuffix (Editor Suffix)
+// Abilities: A0ZU (Drop Items), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -138476,7 +138532,7 @@ F
 }
 
 STRING 20325
-// Abilities: A0ZS (Self Destruct), EditorSuffix (Editor Suffix)
+// Abilities: A0ZV (Disable Warehousing), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -138693,13 +138749,13 @@ Teleports the first crop inside the warehouse to the targetted unit or location.
 }
 
 STRING 20357
-// Abilities: A0ZT (Self Repair), EditorSuffix (Editor Suffix)
+// Abilities: A0ZW (Enable Warehousing), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
 
 STRING 20358
-// Abilities: A0ZU (Drop Items), EditorSuffix (Editor Suffix)
+// Abilities: A100 (Warehousing), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -138711,7 +138767,7 @@ STRING 20359
 }
 
 STRING 20360
-// Abilities: A0ZV (Disable Warehousing), EditorSuffix (Editor Suffix)
+// Abilities: A101 (Super Warehousing), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -138870,7 +138926,7 @@ Disables warehousing.
 }
 
 STRING 20380
-// Abilities: A0ZW (Enable Warehousing), EditorSuffix (Editor Suffix)
+// Abilities: A102 (Crop Circles), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -138894,7 +138950,7 @@ Enables warehousing. The harvester will resupply nearby warehouses.
 }
 
 STRING 20384
-// Abilities: A100 (Warehousing), EditorSuffix (Editor Suffix)
+// Abilities: A153 (Haymaker), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -139012,7 +139068,7 @@ Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion s
 }
 
 STRING 20402
-// Abilities: A101 (Super Warehousing), EditorSuffix (Editor Suffix)
+// Abilities: A154 (Cornblast), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -139088,7 +139144,7 @@ Tapion jumps above his enemies and slams into the ground. Upon landing, Tapion s
 }
 
 STRING 20412
-// Abilities: A102 (Crop Circles), EditorSuffix (Editor Suffix)
+// Abilities: A155 (Saiyan Slaying Shot), EditorSuffix (Editor Suffix)
 {
 (farmer)
 }
@@ -145044,6 +145100,12 @@ STRING 21225
 // Abilities: A11J (Armor Piccolo Orange), EditorSuffix (Editor Suffix)
 {
 (piccolo)
+}
+
+STRING 21226
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 9|r]
 }
 
 STRING 21227
@@ -153953,12 +154015,13 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 22337
-// Abilities: A0L4 (God Final Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
-|cff00ff00Damage: [Int] 120u x 8t + 120u (x2)|r
-|cff00ffffCooldown: <A01B,Cool10> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool6> seconds|r
 }
 
 STRING 22338
@@ -153970,44 +154033,48 @@ A Dark version of Final Flash that blinds enemies it hits. Vegeta charges with h
 |cff00ffffCooldown: <A14Z,Cool10> seconds|r
 }
 
-STRING 22343
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+STRING 22339
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool1> seconds|r
+[|cff00FF00W|r] Spirit Bomb - [|cffffcc00Level 10|r]
 }
 
-STRING 22344
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+STRING 22340
+// Abilities: A0CM (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
 {
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool3> seconds|r
+The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
+|cffffff00+0.1x stat multiplier
++<A0CR,DataA1,%>% attack damage
++3% spell amp per allied player
+Prevents stamina from dropping below 30
+|cff00ff00Damage: [Int] 90u/s|r
+|cff00ff00Duration: <A0CM,Dur1> seconds
+|cff00ffffCooldown: <A0CM,Cool1>s
 }
 
-STRING 22345
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+STRING 22341
+// Abilities: A150 (Limit Breaker), Ubertip (Tooltip - Normal - Extended)
 {
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool4> seconds|r
+The SS4 Limit Breaker transformation is achieved when other strong Saiyans transfer their energy into one. Enemies in 500 AOE are continuously damaged.
+|cffffff00+0.1x stat multiplier
++10 armor
++66ms
++3% spell amp per allied player
+Prevents stamina from dropping below 30
+|cff00ff00Damage: [Int] 90u/s|r
+|cff00ff00Duration: <A150,Dur1> seconds
+|cff00ffffCooldown: <A150,Cool1>s
 }
 
-STRING 22346
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+STRING 22342
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
 
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool5> seconds|r
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool1> seconds|r
 }
 
 STRING 22347
@@ -168221,16 +168288,6 @@ STRING 24196
 [|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
 }
 
-STRING 24197
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool6> seconds|r
-}
-
 STRING 24198
 // Units: h02C (Popo's Magic Carpet), Name (Name)
 {
@@ -172235,16 +172292,6 @@ STRING 24702
 W
 }
 
-STRING 24703
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool7> seconds|r
-}
-
 STRING 24704
 {
 [|cffffcc00Unlock|r] |cff8844ddDark Final Flash|r
@@ -172295,6 +172342,17 @@ STRING 24710
 [|cff00ff00R|r] Final Shine Attack - [|cffffcc00Level 10|r]
 }
 
+STRING 24711
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA3>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool3> seconds|r
+}
+
 STRING 24712
 // Abilities: A14Y (Final Shine Attack), EditorSuffix (Editor Suffix)
 {
@@ -172317,6 +172375,28 @@ STRING 24715
 // Abilities: A14Z (Dark Final Flash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dark Final Flash - [|cffffcc00Level 10|r]
+}
+
+STRING 24716
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA4>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool4> seconds|r
+}
+
+STRING 24717
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA5>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool5> seconds|r
 }
 
 STRING 24718
@@ -172367,6 +172447,28 @@ STRING 24725
 W
 }
 
+STRING 24726
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA6>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool6> seconds|r
+}
+
+STRING 24727
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA7>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool7> seconds|r
+}
+
 STRING 24728
 // Abilities: A151 (Vegeta Limit Breaker Armor Bonus), Name (Name)
 {
@@ -172415,60 +172517,84 @@ STRING 24735
 Dark Final Flash Blind
 }
 
-STRING 24743
+STRING 24736
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA8>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool8> seconds|r
+}
+
+STRING 24737
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA9>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool9> seconds|r
+}
+
+STRING 24738
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA10>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool10> seconds|r
+}
+
+STRING 24739
+// Abilities: A155 (Saiyan Slaying Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool1> - <A155,Cool10> seconds|r
+}
+
+STRING 24740
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 1s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA2>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 100u x 4t + 1400u|r
+|cff00ffffCooldown: <A155,Cool2> seconds|r
+}
+
+STRING 24741
+// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
+{
+A nutritious bundle of tegridy wheat.
+|cffffff00Consume for +0.375 STR each.
+Grants Farmer +10 armor for 10s.
+Type -eat to toggle between eating 1 or multiple.
+}
+
+STRING 24742
 // Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
 Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
 |cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool8> seconds|r
-}
-
-STRING 24744
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool9> seconds|r
-}
-
-STRING 24745
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool10> seconds|r
-}
-
-STRING 24746
-// Abilities: A153 (Haymaker), Researchubertip (Tooltip - Learn - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool1> - <A153,Cool10> seconds|r
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool7> seconds|r
 }
 
 STRING 24747
-// Abilities: A153 (Haymaker), EditorSuffix (Editor Suffix)
+// Abilities: A156 (Honest Shot), EditorSuffix (Editor Suffix)
 {
 (granolah)
-}
-
-STRING 24748
-// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 1500u|r
-|cff00ffffCooldown: <A153,Cool2> seconds|r
 }
 
 STRING 24749
@@ -172644,9 +172770,13 @@ Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer 
 }
 
 STRING 24771
-// Abilities: A154 (Cornblast), EditorSuffix (Editor Suffix)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-(granolah)
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool8> seconds|r
 }
 
 STRING 24772
@@ -172660,69 +172790,43 @@ Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer 
 }
 
 STRING 24773
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 30% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool1> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool9> seconds|r
 }
 
 STRING 24774
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 30% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool3> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool10> seconds|r
 }
 
 STRING 24775
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A153 (Haymaker), Researchubertip (Tooltip - Learn - Extended)
 {
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 40% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool4> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool1> - <A153,Cool10> seconds|r
 }
 
 STRING 24776
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
 {
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
 
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 50% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool5> seconds|r
-}
-
-STRING 24777
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 60% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool6> seconds|r
-}
-
-STRING 24778
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 70% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool7> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1200u|r
+|cff00ffffCooldown: <A153,Cool2> seconds|r
 }
 
 STRING 24779
@@ -172795,67 +172899,6 @@ STRING 24790
 // Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 10|r]
-}
-
-STRING 24791
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 80% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool8> seconds|r
-}
-
-STRING 24792
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 90% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool9> seconds|r
-}
-
-STRING 24793
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 100% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool10> seconds|r
-}
-
-STRING 24794
-// Abilities: A155 (Saiyan Slaying Shot), Researchubertip (Tooltip - Learn - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 30% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool1> - <A155,Cool10> seconds|r
-}
-
-STRING 24795
-// Abilities: A155 (Saiyan Slaying Shot), EditorSuffix (Editor Suffix)
-{
-(granolah)
-}
-
-STRING 24796
-// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
-{
-After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
-
-|cffff2222Channel Duration: <A155,DataA1>s
-|cff8888ffMana Cost: 30% of max mana
-|cff00ff00Damage: [Int] 2000u|r
-|cff00ffffCooldown: <A155,Cool2> seconds|r
 }
 
 STRING 24797
@@ -173020,12 +173063,6 @@ Grants the next attack true strike and 2x critical damage, or causes the next cr
 |cff00ffffCooldown: <A156,Cool1> - <A156,Cool10> seconds|r
 }
 
-STRING 24819
-// Abilities: A156 (Honest Shot), EditorSuffix (Editor Suffix)
-{
-(granolah)
-}
-
 STRING 24820
 // Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -173069,22 +173106,6 @@ STRING 24826
 // Buffs/Effects: B06U (Inner Fire Farmer Corn), EditorName (Name (Editor Only))
 {
 Inner Fire Farmer Corn
-}
-
-STRING 24827
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
-{
-A farmer with a shotgun that has the ability to farm crops to provide bonus experience and stats. His abilities deal more damage for holding more crops.
-
-|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
-
-|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
 STRING 24828

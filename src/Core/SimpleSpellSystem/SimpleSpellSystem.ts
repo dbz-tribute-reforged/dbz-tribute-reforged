@@ -505,12 +505,6 @@ export module SimpleSpellSystem {
       spellCDEndFinishLogic(spellId);
     });
 
-    // Globals.linkedSpellsMap.set(Id.leonShotgun, SimpleSpellSystem.linkLeonSpellbook);
-    // Globals.linkedSpellsMap.set(Id.leonAssaultRifle, SimpleSpellSystem.linkLeonSpellbook);
-    // Globals.linkedSpellsMap.set(Id.leonSniperRifle, SimpleSpellSystem.linkLeonSpellbook);
-    // Globals.linkedSpellsMap.set(Id.leonRocketLauncher, SimpleSpellSystem.linkLeonSpellbook);
-    // Globals.linkedSpellsMap.set(Id.leonFlashbang, SimpleSpellSystem.linkLeonSpellbook);
-    // Globals.linkedSpellsMap.set(Id.leonHeavyGrenade, SimpleSpellSystem.linkLeonSpellbook);
     Globals.linkedSpellsMap.set(Id.fleshAttack, SimpleSpellSystem.linkBuuFleshCD);
     Globals.linkedSpellsMap.set(Id.fleshAttackAbsorbTarget, SimpleSpellSystem.linkBuuFleshCD);
 
@@ -897,7 +891,7 @@ export module SimpleSpellSystem {
 
       UnitAddAbility(caster, Id.gokuKaiokenOff);
       UnitAddAbility(caster, Id.gokuKaiokenPassive);
-      BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOff, 10);
+      BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOff, 5);
       BlzUnitHideAbility(caster, Id.gokuKaiokenOn, true);
       BlzUnitHideAbility(caster, Id.gokuKaiokenPassive, true);
       BlzUnitHideAbility(caster, Id.gokuKaiokenOff, false);
@@ -918,7 +912,7 @@ export module SimpleSpellSystem {
           // hiding kaioken off doesnt seem to work
           UnitRemoveAbility(caster, Id.gokuKaiokenOff);
           UnitRemoveAbility(caster, Id.gokuKaiokenPassive);
-          BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOn, 10);
+          BlzStartUnitAbilityCooldown(caster, Id.gokuKaiokenOn, 5);
           BlzUnitHideAbility(caster, Id.gokuKaiokenOn, false);
           if (ch) ch.removeSpellPower(spellAmp);
           DestroyEffect(sfx);
@@ -2705,6 +2699,8 @@ export module SimpleSpellSystem {
       targetPlayerId >= Constants.maxActivePlayers
       && targetPlayerId != Constants.sagaPlayerId
     ) return;
+
+    if (!UnitHelper.isUnitRealHero(dmg.target)) return;
 
     // player damage dealt
     // player damage recv
@@ -11766,28 +11762,78 @@ export module SimpleSpellSystem {
     }
   }
 
+  export function getFarmerSpellCropMult(unit: unit, spellId: number) {
+    let targetItemCategory = 0;
+    if (spellId == Id.farmerHaymaker) {
+      targetItemCategory = 1;
+    } else if (spellId == Id.farmerCornblast) {
+      targetItemCategory = 2;
+    } else if (spellId == Id.farmerSaiyanSlayingShot) {
+      targetItemCategory = 3;
+    }
+    if (targetItemCategory == 0) return 1;
+
+    const multPerCrop = 0.001;
+    let result = 1;
+    for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+      const it = UnitItemInSlot(unit, i);
+      const itemTypeId = GetItemTypeId(it);
+
+      if (targetItemCategory == 1) {
+        if (
+          itemTypeId == ItemConstants.Farming.WHEAT 
+          || itemTypeId == ItemConstants.Farming.TEGRIDY_WHEAT
+        ) {
+          result += multPerCrop * GetItemCharges(it);
+        }
+      } else if (targetItemCategory == 2) {
+        if (
+          itemTypeId == ItemConstants.Farming.CORN 
+          || itemTypeId == ItemConstants.Farming.SUPER_CORN
+        ) {
+          result += multPerCrop * GetItemCharges(it);
+        }
+      } else if (targetItemCategory == 3) {
+        if (
+          itemTypeId == ItemConstants.Farming.RICE 
+          || itemTypeId == ItemConstants.Farming.RICE_SNOW
+        ) {
+          result += multPerCrop * GetItemCharges(it);
+        }
+      }
+    }
+    return result;
+  }
+
   export function doFarmerReload(spellId: number, caster: unit) {
     const manaCostPct = -0.3;
     UnitHelper.payMPPercentCost(caster, manaCostPct, UNIT_STATE_MAX_MANA);
-    DestroyEffect(AddSpecialEffect(
-      "Abilities/Weapons/Mortar/MortarMissile.mdl",
-      GetUnitX(caster), GetUnitY(caster)
-    ));
+    SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Farmer/Reload.mp3", 522);
   }
 
   export function doFarmerHonestShot(spellId: number) {
-    const farmerHonestShotKey = StringHash("farmer_r_active");
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
-    SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 1);
+    // const farmerHonestShotKey = StringHash("farmer_r_active");
+    // SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 1);
+    UnitAddAbility(caster, Id.farmerHonestShotPassive);
   }
 
   export function doFarmerEatRice(spellId: number) {
     const caster = GetTriggerUnit();
     if (GetUnitAbilityLevel(caster, Id.plantWheat) == 0) return;
-    const farmerRiceShotKey = StringHash("farmer_rice_active");
-    const casterId = GetHandleId(caster);
-    SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 1);
+    // const farmerRiceShotKey = StringHash("farmer_rice_active");
+    // const casterId = GetHandleId(caster);
+    // SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 1);
+    const player = GetOwningPlayer(caster);
+    Globals.tmpVector.setUnit(caster);
+    const dummyUnit = CreateUnit(
+      player, Constants.dummyCasterId,
+      Globals.tmpVector.x, Globals.tmpVector.y, 0
+    );
+    UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_RICE_DMG_BUFF);
+    IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, caster);
+    RemoveUnit(dummyUnit);
   }
 
   export function doFarmerEatWheat(spellId: number) {
@@ -11918,15 +11964,6 @@ export module SimpleSpellSystem {
         GetUnitX(target), GetUnitY(target)
       )
     );
-  }
-
-  export function linkLeonSpellbook(unit: unit, cd: number) {
-    BlzStartUnitAbilityCooldown(unit, Id.leonShotgun, cd);
-    BlzStartUnitAbilityCooldown(unit, Id.leonAssaultRifle, cd);
-    BlzStartUnitAbilityCooldown(unit, Id.leonSniperRifle, cd);
-    BlzStartUnitAbilityCooldown(unit, Id.leonRocketLauncher, cd);
-    BlzStartUnitAbilityCooldown(unit, Id.leonFlashbang, cd);
-    BlzStartUnitAbilityCooldown(unit, Id.leonHeavyGrenade, cd);
   }
 
   export function spellCDStartLogic(spellId: number) {

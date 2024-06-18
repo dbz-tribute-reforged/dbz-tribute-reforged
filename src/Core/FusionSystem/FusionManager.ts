@@ -46,7 +46,9 @@ export class FusionManager {
     PauseTimer(this.delayTimer);
 
     for (const player of Constants.activePlayers) {
-      TriggerRegisterPlayerUnitEvent(this.fusionInitTrigger, player, EVENT_PLAYER_UNIT_USE_ITEM, null);
+      TriggerRegisterPlayerUnitEvent(
+        this.fusionInitTrigger, player, EVENT_PLAYER_UNIT_USE_ITEM, null
+      );
     }
 
     TriggerAddCondition(this.fusionInitTrigger, Condition(() => {
@@ -55,6 +57,7 @@ export class FusionManager {
       if (itemId != ItemConstants.potaraEarrings) return false;
 
       const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
       const unitTypeId = GetUnitTypeId(unit);
       const player = GetOwningPlayer(unit);
 
@@ -66,7 +69,9 @@ export class FusionManager {
       ) return false;
 
       if (UnitHasItemOfTypeBJ(unit, ItemConstants.ginyuBodyChange)) {
-        DisplayTimedTextToPlayer(player, 0, 0, 3, "Cannot fuse with body change");
+        DisplayTimedTextToPlayer(player, 0, 0, 3, 
+          "|cffff2222Cannot fuse with body change|r"
+        );
         return;
       }
 
@@ -82,8 +87,18 @@ export class FusionManager {
         || unitTypeId == Id.cellSemi
         || unitTypeId == Id.fourthCooler
       ) {
-        DisplayTimedTextToPlayer(player, 0, 0, 3, GetHeroProperName(unit) + " cannot fuse");
+        DisplayTimedTextToPlayer(player, 0, 0, 3, 
+          "|cffff2222" + GetHeroProperName(unit) + " cannot fuse|r"
+        );
         return false;
+      }
+
+      const transformTime = LoadReal(udg_StatMultHashtable, unitId, 9);
+      if (transformTime > 0) {
+        DisplayTimedTextToPlayer(player, 0, 0, 3, 
+          "|cffff2222Cannot fuse while transformed|r"
+        );
+        return;
       }
 
       this.registerFusion(unit);
@@ -135,7 +150,8 @@ export class FusionManager {
     Globals.tmpVector2.setUnit(unit2);
 
     if (
-      CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) > FusionManager.MAX_FUSE_DISTANCE
+      CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) 
+      > FusionManager.MAX_FUSE_DISTANCE
       || this.delay > FusionManager.MAX_FUSE_DELAY
     ) {
       DestroyEffect(AddSpecialEffect(
@@ -150,8 +166,12 @@ export class FusionManager {
       UnitHelper.payMPPercentCost(unit1, -0.1, UNIT_STATE_MAX_MANA);
       UnitHelper.payHPPercentCost(unit2, -0.1, UNIT_STATE_MAX_LIFE);
       UnitHelper.payMPPercentCost(unit2, -0.1, UNIT_STATE_MAX_MANA);
-      DisplayTimedTextToPlayer(GetOwningPlayer(unit1), 0, 0, 5, "|cffff2222Fusion failed!");
-      DisplayTimedTextToPlayer(GetOwningPlayer(unit2), 0, 0, 5, "|cffff2222Fusion failed!");
+      DisplayTimedTextToPlayer(
+        GetOwningPlayer(unit1), 0, 0, 5, "|cffff2222Fusion failed!"
+      );
+      DisplayTimedTextToPlayer(
+        GetOwningPlayer(unit2), 0, 0, 5, "|cffff2222Fusion failed!"
+      );
       return;
     }
 

@@ -1452,7 +1452,7 @@ export const BeamComponents = [
   { 
     name: "beam farmer saiyan slaying shot",
     repeatInterval: 1,
-    startTick: 66,
+    startTick: 33,
     endTick: -1,
     spawnDelayTicks: 0,
     beamHpMult: BASE_DMG.KAME_DPS * 2,

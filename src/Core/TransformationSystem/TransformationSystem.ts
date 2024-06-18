@@ -204,6 +204,12 @@ export class TransformationSystem {
             SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, skin.targetId);
             found = true;
             break;
+          } else {
+            DisplayTimedTextToPlayer(player, 0, 0, 1, 
+              GetHeroProperName(unit) + 
+              " Skin[" + I2S(i) + "]" + 
+              " requires" + skin.getConditionStr()
+            );
           }
         } else if (currentSkin == skin.targetId) {
           foundPrev = true;

@@ -2,6 +2,7 @@ import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { Constants, Globals, OrderIds } from "./Constants";
 import { VisionHelper } from "./VisionHelper";
+import { UnitHelper } from "./UnitHelper";
 
 export class FBSimTestManager {
   private static instance: FBSimTestManager;
@@ -9,6 +10,7 @@ export class FBSimTestManager {
   protected freeModeTrig: trigger;
   protected patrolTPTrig: trigger;
   protected makeItemTrig: trigger;
+  protected resetTrig: trigger;
 
   public static getInstance() {
     if (this.instance == null) {
@@ -39,6 +41,7 @@ export class FBSimTestManager {
 
     this.patrolTPTrig = CreateTrigger();
     this.makeItemTrig = CreateTrigger();
+    this.resetTrig = CreateTrigger();
   }
 
   activate() {
@@ -69,6 +72,7 @@ export class FBSimTestManager {
       TriggerRegisterPlayerChatEvent(this.makeItemTrig, player, "-item", false);
     }
     TriggerAddAction(this.makeItemTrig, () => {
+      if (!Globals.isFBSimTest) return;
       const value = FourCC(SubString(GetEventPlayerChatString(), 6, 10));
 
       GroupClear(Globals.tmpUnitGroup);
@@ -78,6 +82,28 @@ export class FBSimTestManager {
         CreateItem(value, GetUnitX(target), GetUnitY(target));
       });
       GroupClear(Globals.tmpUnitGroup);
+    });
+
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerChatEvent(this.resetTrig, player, "-reset", false);
+    }
+    TriggerAddAction(this.resetTrig, () => {
+      if (!Globals.isFBSimTest) return;
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      for (const customHero of Globals.customPlayers[playerId].allHeroes) {
+        if (!customHero || !UnitHelper.isUnitAlive(customHero.unit)) continue;
+
+        SetUnitLifePercentBJ(customHero.unit, 100);
+        SetUnitManaPercentBJ(customHero.unit, 100);
+        UnitResetCooldown(customHero.unit);
+        customHero.setCurrentSP(customHero.getMaxSP());
+        for (const [name, abil] of customHero.abilities.abilities) {
+          if (abil) {
+            abil.currentCd = 0;
+          }
+        }
+      }
     });
   }
 
