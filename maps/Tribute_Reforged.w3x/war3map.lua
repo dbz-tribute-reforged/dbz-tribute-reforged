@@ -31648,7 +31648,7 @@ return true
 end
 
 function Trig_Base_Armor_Set_Func026C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A150"), udg_StatMultUnit) > 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A151"), udg_StatMultUnit) > 0)) then
 return false
 end
 return true
@@ -46695,7 +46695,7 @@ function Trig_Transformations_Goku_Func018Func006Func003C()
 if (not (udg_TransformationString == "ss5")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 350)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 500)) then
 return false
 end
 return true
@@ -47311,7 +47311,7 @@ function Trig_Transformations_Vegeta_Func015Func001Func006Func005C()
 if (not (udg_TransformationString == "ss5")) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 350)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 500)) then
 return false
 end
 return true

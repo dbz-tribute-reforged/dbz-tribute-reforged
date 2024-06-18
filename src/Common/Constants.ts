@@ -348,6 +348,20 @@ export module Constants {
     [OSKEY_OEM_PERIOD, "."],
   ]);
   export const textToOsKeyMap = new Map<string, oskeytype>();
+
+  export function getNumberWithCommas(x: number) {
+    let str = "";
+    let isFirst = true;
+    let divider = 1;
+    while (true) {
+      const part = (x / divider) % 1000;
+      str = I2S(R2I(Math.floor(part))) + (isFirst ? "" : ",") + str;
+      isFirst = false;
+      divider *= 1000;
+      if (divider > x) break;
+    }
+    return str;
+  }
 }
 
 export enum CostType {

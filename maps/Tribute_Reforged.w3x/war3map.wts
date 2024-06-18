@@ -401,14 +401,6 @@ STRING 64
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur1> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool1> seconds)|r
 }
 
-STRING 65
-// Abilities: A0CK (Kaioken x10 On), Ubertip (Tooltip - Normal - Extended)
-{
-Increases spell damage by +10% and attack damage by +40% at the cost of draining 1.5% of max hp per second. Cannot be deactivated in the first 5 seconds.
-
-|cff00ffffCooldown: <A0CK,Cool1>s|r
-}
-
 STRING 66
 // Units: n00D (Dinosaur), Name (Name)
 {
@@ -9379,13 +9371,11 @@ Pecorine can now swing her sword to cripple nearby enemy units, dealing massive 
 }
 
 STRING 1445
-// Abilities: A14Y (Final Shine Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CK (Kaioken x10 On), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta charges a high powered energy beam for 2s before unleashing it to obliterate his enemies.
+Increases spell damage by +10% and attack damage by +30% at the cost of draining 1.5% of max hp per second. Cannot be deactivated in the first 5 seconds.
 
-|cffff2222Channel Duration: <A014Y,DataA10,.>s|r
-|cff00ff00Damage: [Int] 42u x 99t + 1200u
-|cff00ffffCooldown: <A14Y,Cool10> seconds|r
+|cff00ffffCooldown: <A0CK,Cool1>s|r
 }
 
 STRING 1446
@@ -140963,6 +140953,12 @@ STRING 20653
 [|cff00ff00Q|r] Appule Blaster - [|cffffcc00Level 10|r]
 }
 
+STRING 20654
+// Abilities: A03N (Galick Gun), EditorSuffix (Editor Suffix)
+{
+(vegeta)
+}
+
 STRING 20655
 // Abilities: A0C6 (Namekian Healing), Tip (Tooltip - Normal)
 {
@@ -153913,7 +153909,7 @@ STRING 22323
 }
 
 STRING 22324
-// Abilities: A03N (Galick Gun), EditorSuffix (Editor Suffix)
+// Abilities: A14Y (Final Shine Attack), EditorSuffix (Editor Suffix)
 {
 (vegeta)
 }
@@ -154089,6 +154085,22 @@ After a 1s channel, fires a fast moving bullet capable of even killing powerful 
 |cff8888ffMana Cost: 30% of max mana
 |cff00ff00Damage: [Int] 100u x 4t + 1400u|r
 |cff00ffffCooldown: <A155,Cool1> seconds|r
+}
+
+STRING 22343
+// Abilities: A156 (Honest Shot), EditorSuffix (Editor Suffix)
+{
+(farmer)
+}
+
+STRING 22344
+// Abilities: A14Y (Final Shine Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges a high powered energy beam for 2s before unleashing it to obliterate his enemies.
+
+|cffff2222Channel Duration: <A14Y,DataA10,.>s|r
+|cff00ff00Damage: [Int] 42u x 99t + 1200u
+|cff00ffffCooldown: <A14Y,Cool10> seconds|r
 }
 
 STRING 22347
@@ -172361,7 +172373,7 @@ After a 1s channel, fires a fast moving bullet capable of even killing powerful 
 }
 
 STRING 24712
-// Abilities: A14Y (Final Shine Attack), EditorSuffix (Editor Suffix)
+// Abilities: A14Z (Dark Final Flash), EditorSuffix (Editor Suffix)
 {
 (vegeta)
 }
@@ -172373,7 +172385,7 @@ Dark Final Flash
 }
 
 STRING 24714
-// Abilities: A14Z (Dark Final Flash), EditorSuffix (Editor Suffix)
+// Abilities: A150 (Limit Breaker), EditorSuffix (Editor Suffix)
 {
 (vegeta)
 }
@@ -172413,7 +172425,7 @@ STRING 24718
 }
 
 STRING 24719
-// Abilities: A150 (Limit Breaker), EditorSuffix (Editor Suffix)
+// Abilities: A151 (Vegeta Limit Breaker Armor Bonus), EditorSuffix (Editor Suffix)
 {
 (vegeta)
 }
@@ -172480,12 +172492,6 @@ STRING 24728
 // Abilities: A151 (Vegeta Limit Breaker Armor Bonus), Name (Name)
 {
 Vegeta Limit Breaker Armor Bonus
-}
-
-STRING 24729
-// Abilities: A151 (Vegeta Limit Breaker Armor Bonus), EditorSuffix (Editor Suffix)
-{
-(piccolo)
 }
 
 STRING 24730
@@ -172596,12 +172602,6 @@ Throws a hay bundle at the target location that explodes after 2s. Deals +1% bon
 |cff8888ffMana Cost: 10% of max mana
 |cff00ff00Damage: [Int] 1200u|r
 |cff00ffffCooldown: <A153,Cool7> seconds|r
-}
-
-STRING 24747
-// Abilities: A156 (Honest Shot), EditorSuffix (Editor Suffix)
-{
-(granolah)
 }
 
 STRING 24749

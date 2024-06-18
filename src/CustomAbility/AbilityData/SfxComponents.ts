@@ -2228,7 +2228,7 @@ export const SfxComponents = [
         extraRoll: 0,
         animSpeed: 1.0,
         color: {
-          x: 155,
+          x: 55,
           y: 255,
           z: 155,
         },
