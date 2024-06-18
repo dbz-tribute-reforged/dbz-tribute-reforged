@@ -78,20 +78,32 @@ export class FarmingManager {
     if (fc) {
       this.plantCrop(fc, x, y);
     }
-    const unitId = GetHandleId(unit);
-    const farmerHonestShotKey = StringHash("farmer_r_active");
-    if (1 == LoadInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey)) {
+    if (GetUnitAbilityLevel(unit, Id.farmerHonestShotPassive) > 0) {
       if (spellId != Id.plantWheat) {
-        this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 32, y);
+        this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 128, y);
       }
       if (spellId != Id.plantCorn) {
-        this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 32);
+        this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 128);
       }
       if (spellId != Id.plantRice) {
-        this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 32, y + 32);
+        this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 128, y + 128);
       }
-      SaveInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey, 0);
+      UnitRemoveAbility(unit, Id.farmerHonestShotPassive);
     }
+    // const unitId = GetHandleId(unit);
+    // const farmerHonestShotKey = StringHash("farmer_r_active");
+    // if (1 == LoadInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey)) {
+    //   if (spellId != Id.plantWheat) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 32, y);
+    //   }
+    //   if (spellId != Id.plantCorn) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 32);
+    //   }
+    //   if (spellId != Id.plantRice) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 32, y + 32);
+    //   }
+    //   SaveInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey, 0);
+    // }
   }
 
   plantCrop(fc: FarmingComponent, x: number, y: number) {

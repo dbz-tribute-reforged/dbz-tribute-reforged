@@ -191,7 +191,7 @@ export module Constants {
   export const BEERUS_REGEN_MULT = 0.2;
   export const CORN_REGEN_MULT = 0.5;
   
-  export const LIMIT_BREAKER_MIN_SP = 25;
+  export const LIMIT_BREAKER_MIN_SP = 30;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
@@ -252,6 +252,14 @@ export module Constants {
       abilityId == Id.aggronorStormBolt
       || abilityId == Id.aggronorThunderclap
       || abilityId == Id.aggronorDwarfToss
+    );
+  }
+
+  export function isFarmerAbility(abilityId: number) {
+    return (
+      abilityId == Id.farmerHaymaker
+      || abilityId == Id.farmerCornblast
+      || abilityId == Id.farmerSaiyanSlayingShot
     );
   }
 
@@ -608,6 +616,7 @@ export module Terrain {
   export const any = -1;
   export const dirt = FourCC("Ldrt");
   export const grass = FourCC("Lgrs");
+  export const darkGrass = FourCC("Lgrd");
   export const grassyDirt = FourCC("Ldrg");
   export const sand = FourCC("Zsan");
   export const darkDesert = FourCC("Bdsd");
@@ -622,6 +631,16 @@ export module Terrain {
   export const crops = FourCC("Vcrp");
   export const snow = 1665753905;
   export const winterGrass = 1666671410;
+
+  // red dirt
+  export const barrensDirt = FourCC("Bdrt");
+  export const barrensDirtRough = FourCC("Bdrh");
+  
+  // namek grass
+  export const lordaeronWinterRoughDirt = FourCC("Wdro");
+
+  // roads
+  export const northrendRock = FourCC("Nrck");
 }
 
 export module Id {

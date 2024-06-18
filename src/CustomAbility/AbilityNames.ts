@@ -34,7 +34,7 @@ export module AbilityNames {
     export const ULTRA_EGO: string = "Ultra Ego";
     export const EGO_GALICK_GUN: string = "Ego Galick Gun";
     export const HAKAI_BARRAGE: string = "Vegeta Hakai Barrage";
-    export const FINAL_SHINE_ATTACK: string = "Vegeta Hakai Barrage";
+    export const FINAL_SHINE_ATTACK: string = "Vegeta Final Shine Attack";
     export const FINAL_FLASH_DARK: string = "Final Flash Dark";
     export const LIMIT_BREAKER: string = "Vegeta Limit Breaker";
   }

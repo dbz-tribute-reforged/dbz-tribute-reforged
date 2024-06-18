@@ -1176,6 +1176,35 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
       
+      // farmer with shotgun
+      case Id.farmerHaymaker:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
+        }
+        break;
+
+      case Id.farmerCornblast:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/FarmerProtectMeGun.mp3", 1697);
+        }
+        break;
+      
+      case Id.farmerSaiyanSlayingShot:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/Farmer/Shoot.mp3", 1890);
+        }
+        break;
+      
+      case Id.farmerHonestShot:
+        if (unitId == Id.farmerWithShotgun) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Farmer/ThisJob.mp3", 3611);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Farmer/MyProperty.mp3", 2438);
+          }
+        }
+        break;
+      
       // frieza
       case Id.deathBeamFrieza:
         playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
@@ -1460,7 +1489,7 @@ export module SoundHelper {
             playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
           }
         } else if (unitId == Id.gohan) {
-          if (GetHeroLevel(unit) < 115) {
+          if (GetHeroLevel(unit) < 110) {
             playSoundOnUnit(unit, "Audio/Voice/GohanTeenKamehameha.mp3", 1201);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/GohanAdultKamehameha.mp3", 1440);
@@ -1571,8 +1600,6 @@ export module SoundHelper {
       // gohan
       case Id.twinDragonShot:
         if (unitId == Id.gohan) {
-        } else if (unitId == Id.farmerWithShotgun) {
-          playSoundOnUnit(unit, "Audio/Voice/FarmerProtectMeGun.mp3", 1697);
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam1.mp3", 10919);
         break;
@@ -1580,7 +1607,7 @@ export module SoundHelper {
       case Id.masenko:
       case Id.cellMasenko:
         if (unitId == Id.gohan) {
-          if (GetHeroLevel(unit) < 115) {
+          if (GetHeroLevel(unit) < 110) {
             playSoundOnUnit(unit, "Audio/Voice/GohanTeenMasenko.mp3", 960);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/GohanAdultMasenko.mp3", 1128);
@@ -3025,7 +3052,11 @@ export module SoundHelper {
       case Id.egoGalickGun:
       case Id.vegetaMajinGalickGun:
         if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
-          playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+          if (GetUnitAbilityLevel(unit, Id.vegetaFinalShineAttack) > 0 && rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Vegeta/EatThis.mp3", 915);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+          }
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
@@ -3043,8 +3074,6 @@ export module SoundHelper {
       case Id.vegetaMajinFinalFlash:
         if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);
-        } else if (unitId == Id.farmerWithShotgun) {
-          playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
         }
         playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
         break;
@@ -3054,7 +3083,21 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalExplosion.mp3", 5000);
         }
         break;
-
+      
+      case Id.vegetaFinalShineAttack:
+        if (unitId == Id.vegeta) {
+          playSoundOnUnit(unit, "Audio/Voice/Vegeta/FinalShineAttack.mp3", 4679);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+        
+      case Id.vegetaLimitBreaker:
+        if (unitId == Id.vegeta) {
+          playSoundOnUnit(unit, "Audio/Voice/Vegeta/LimitBreaker.mp3", 2224);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
       case Id.energyBlastVolley:
         playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
         break;

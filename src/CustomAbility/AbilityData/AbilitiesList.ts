@@ -571,7 +571,7 @@ export const AbilitiesList = [
     animation: "spell",
     icon: {
       enabled: "BTNFarmerBasic.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBTNFarmerBasic.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFarmerBasic.blp",
     },
     tooltip: {
       title: "Reload",
@@ -2127,7 +2127,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2145,7 +2145,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi farmer cornblast" },
-      { name: "dash ground point cornblast pushback" },
+      { name: "dash ground point farmer cornblast pushback" },
     ],
   },
   // -------------------------------------------
@@ -2155,7 +2155,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 133,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2172,7 +2172,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "channel caster 2s" },
+      { name: "channel caster 1s" },
       { name: "multi farmer saiyan slaying shot" },
       { name: "sfx farmer saiyan slaying shot" },
     ],

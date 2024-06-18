@@ -178,9 +178,10 @@ export function kidBuuPassive(customHero: CustomHero) {
 
 export function farmerPassive(customHero: CustomHero) {
   const farmingManaCostPct = 0.1;
+  const saiyanSlayingShotManaCostMult = 3;
 
-  const farmerHonestShotKey = StringHash("farmer_r_active");
-  const farmerRiceShotKey = StringHash("farmer_rice_active");
+  // const farmerHonestShotKey = StringHash("farmer_r_active");
+  // const farmerRiceShotKey = StringHash("farmer_rice_active");
 
   const spellDamageTimer = CreateTimer();
   customHero.addTimer(spellDamageTimer);
@@ -192,49 +193,64 @@ export function farmerPassive(customHero: CustomHero) {
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantWheat, 0, manaCost);
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantCorn, 0, manaCost);
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantRice, 0, manaCost);
+
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.farmerHaymaker, 
+      GetUnitAbilityLevel(customHero.unit, Id.farmerHaymaker)-1, manaCost);
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.farmerCornblast, 
+      GetUnitAbilityLevel(customHero.unit, Id.farmerCornblast)-1, manaCost);
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.farmerHonestShot, 
+      GetUnitAbilityLevel(customHero.unit, Id.farmerHonestShot)-1, manaCost);
+
+    const prevRCost = BlzGetUnitAbilityManaCost(customHero.unit, Id.farmerSaiyanSlayingShot, 
+      GetUnitAbilityLevel(customHero.unit, Id.farmerSaiyanSlayingShot)-1
+    );
+    BlzSetUnitAbilityManaCost(customHero.unit, Id.farmerSaiyanSlayingShot, 
+      GetUnitAbilityLevel(customHero.unit, Id.farmerSaiyanSlayingShot)-1, 
+      Math.max(saiyanSlayingShotManaCostMult * manaCost, prevRCost)
+    );
   });
   
-  const onHitTrigger = CreateTrigger();
-  customHero.addPassiveTrigger(onHitTrigger);
-  TriggerRegisterAnyUnitEventBJ(
-    onHitTrigger,
-    EVENT_PLAYER_UNIT_ATTACKED,
-  );
-  TriggerAddCondition(
-    onHitTrigger,
-    Condition(() => {
-      const attacked = GetTriggerUnit();
-      const attacker = GetAttacker();
-      if (attacker != customHero.unit) return false;
-      const player = GetOwningPlayer(attacker);
-      const casterId = GetHandleId(attacker);
-      const isHonestShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey);
-      const isRiceShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey);
-      if (
-        UnitHelper.isUnitTargetableForPlayer(attacked, player)
-        && IsUnitType(attacked, UNIT_TYPE_HERO)
-      ) {
-        if (isHonestShot) {
-          UnitAddAbility(attacker, Id.farmerHonestShotPassive);
-          SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 0);
-        }
+  // const onHitTrigger = CreateTrigger();
+  // customHero.addPassiveTrigger(onHitTrigger);
+  // TriggerRegisterAnyUnitEventBJ(
+  //   onHitTrigger,
+  //   EVENT_PLAYER_UNIT_ATTACKED,
+  // );
+  // TriggerAddCondition(
+  //   onHitTrigger,
+  //   Condition(() => {
+  //     const attacked = GetTriggerUnit();
+  //     const attacker = GetAttacker();
+  //     if (attacker != customHero.unit) return false;
+  //     const player = GetOwningPlayer(attacker);
+  //     const casterId = GetHandleId(attacker);
+  //     const isHonestShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey);
+  //     const isRiceShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey);
+  //     if (
+  //       UnitHelper.isUnitTargetableForPlayer(attacked, player)
+  //       && IsUnitType(attacked, UNIT_TYPE_HERO)
+  //     ) {
+  //       if (isHonestShot) {
+  //         UnitAddAbility(attacker, Id.farmerHonestShotPassive);
+  //         SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 0);
+  //       }
         
-        if (isRiceShot) {
-          const player = GetOwningPlayer(attacker);
-          Globals.tmpVector.setUnit(attacker);
-          const dummyUnit = CreateUnit(
-            player, Constants.dummyCasterId,
-            Globals.tmpVector.x, Globals.tmpVector.y, 0
-          );
-          UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_RICE_DMG_BUFF);
-          IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, attacker);
-          RemoveUnit(dummyUnit);
-          SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 0);
-        }
-      }
-      return false;
-    })
-  );
+  //       if (isRiceShot) {
+  //         const player = GetOwningPlayer(attacker);
+  //         Globals.tmpVector.setUnit(attacker);
+  //         const dummyUnit = CreateUnit(
+  //           player, Constants.dummyCasterId,
+  //           Globals.tmpVector.x, Globals.tmpVector.y, 0
+  //         );
+  //         UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_RICE_DMG_BUFF);
+  //         IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, attacker);
+  //         RemoveUnit(dummyUnit);
+  //         SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 0);
+  //       }
+  //     }
+  //     return false;
+  //   })
+  // );
 }
 
 export function superJanembaPassive(customHero: CustomHero) {

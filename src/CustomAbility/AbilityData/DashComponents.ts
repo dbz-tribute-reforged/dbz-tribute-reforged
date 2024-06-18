@@ -2044,7 +2044,7 @@ export const DashComponents = [
     distance: 30,
   },
   {
-    name: "dash ground point gigantic roar pushback",
+    name: "dash ground point farmer cornblast pushback",
     repeatInterval: 1, 
     startTick: 0,
     endTick: 16,

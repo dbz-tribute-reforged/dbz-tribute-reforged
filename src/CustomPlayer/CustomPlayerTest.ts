@@ -442,6 +442,9 @@ export function CustomPlayerTest() {
           if (Constants.isAggronorAbility(abilityId)) {
             abilityLevel = SimpleSpellSystem.getAggronorSpellLevel(abilityId, caster);
           }
+          if (Constants.isFarmerAbility(abilityId)) {
+            damageMult *= SimpleSpellSystem.getFarmerSpellCropMult(caster, abilityId);
+          }
 
 
           let spellTargetUnit = undefined;

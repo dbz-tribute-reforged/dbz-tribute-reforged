@@ -14,6 +14,16 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
     ]
   ],
   [
+    Id.farmerWithShotgun, [
+      [
+        AbilityNames.FarmerWithShotgun.RELOAD,
+      ],
+      [
+        AbilityNames.BasicAbility.MAX_CHARGE,
+      ]
+    ]
+  ],
+  [
     Id.cellUnformed, [
       [
         AbilityNames.Cell.SUPER_CHARGE,

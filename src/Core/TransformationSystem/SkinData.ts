@@ -104,4 +104,16 @@ export class SkinData {
     }
     return true;
   }
+
+  getConditionStr() {
+    let str = "";
+    for (const condition of this.conditions) {
+      if (condition[0] == SkinData.CONDITION_GAMES) {
+        str += I2S(condition[1]) + " games ";
+      } else if (condition[0] == SkinData.CONDITION_WINS) {
+        str += I2S(condition[1]) + " wins ";
+      }
+    }
+    return str;
+  }
 }
