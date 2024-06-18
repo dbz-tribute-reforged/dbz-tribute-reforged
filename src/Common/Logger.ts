@@ -9,7 +9,7 @@ import { Vector3D } from "./Vector3D";
 /** @noSelf **/
 export class Logger {
     public static doLogVerbose = false;
-    public static doLogDebug = true;
+    public static doLogDebug = false;
     public static doLogWarning = true;
     public static doLogCritical = true;
 

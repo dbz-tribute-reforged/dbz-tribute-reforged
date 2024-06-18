@@ -200,16 +200,17 @@ export class TransformationSystem {
         const isValid = skin.isValid(playerProfile);
 
         if (currentSkin == 0 || foundPrev) {
+          DisplayTimedTextToPlayer(player, 0, 0, 3, 
+            (isValid ? "|cff00ff00" : "|cffff2222") +
+            GetHeroProperName(unit) + 
+            " Skin[" + I2S(i) + "]" + 
+            " requires " + skin.getConditionStr() +
+            "|r"
+          );
           if (isValid) {
             SaveInteger(udg_StatMultHashtable, unitId, TransformationSystem.KEY_SKIN_ID, skin.targetId);
             found = true;
             break;
-          } else {
-            DisplayTimedTextToPlayer(player, 0, 0, 1, 
-              GetHeroProperName(unit) + 
-              " Skin[" + I2S(i) + "]" + 
-              " requires" + skin.getConditionStr()
-            );
           }
         } else if (currentSkin == skin.targetId) {
           foundPrev = true;

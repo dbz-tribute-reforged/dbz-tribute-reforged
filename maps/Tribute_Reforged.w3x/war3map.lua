@@ -8398,7 +8398,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2176.0, 20736.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 1408.0, -1024.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer0()
+local p = Player(0)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 1407.6, -1023.4, 154.143, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer1()
@@ -8409,7 +8418,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2496.0, 20736.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 1792.0, -1024.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer1()
+local p = Player(1)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 1791.4, -1019.0, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer2()
@@ -8420,7 +8438,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2176.0, 20416.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 2176.0, -1024.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer2()
+local p = Player(2)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 2175.3, -1019.7, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer3()
@@ -8431,7 +8458,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2496.0, 20416.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 1600.0, -1408.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer3()
+local p = Player(3)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 1603.7, -1410.2, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer4()
@@ -8442,7 +8478,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2176.0, 20096.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 1984.0, -1408.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer4()
+local p = Player(4)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 1988.8, -1416.1, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer5()
@@ -8453,7 +8498,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 20736.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 16640.0, 320.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer5()
+local p = Player(5)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16641.3, 313.1, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -8464,7 +8518,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 20736.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 16064.0, -64.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer6()
+local p = Player(6)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16246.8, 320.5, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer7()
@@ -8475,7 +8538,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 20416.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 15872.0, 320.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer7()
+local p = Player(7)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 15860.0, 308.4, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer8()
@@ -8486,7 +8558,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 20416.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 16256.0, 320.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer8()
+local p = Player(8)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16063.5, -68.6, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer9()
@@ -8497,7 +8578,16 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 20096.0, 270.000, FourCC("n001"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 16448.0, -64.0, 270.000, FourCC("n02L"))
+end
+
+function CreateUnitsForPlayer9()
+local p = Player(9)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16449.7, -72.3, 338.070, FourCC("h065"))
 end
 
 function CreateNeutralHostile()
@@ -10751,6 +10841,16 @@ CreateBuildingsForPlayer9()
 end
 
 function CreatePlayerUnits()
+CreateUnitsForPlayer0()
+CreateUnitsForPlayer1()
+CreateUnitsForPlayer2()
+CreateUnitsForPlayer3()
+CreateUnitsForPlayer4()
+CreateUnitsForPlayer5()
+CreateUnitsForPlayer6()
+CreateUnitsForPlayer7()
+CreateUnitsForPlayer8()
+CreateUnitsForPlayer9()
 end
 
 function CreateAllUnits()
@@ -32186,7 +32286,7 @@ TriggerRegisterTimerEventSingle(gg_trg_Stat_Mod_Init, 0.30)
 TriggerAddAction(gg_trg_Stat_Mod_Init, Trig_Stat_Mod_Init_Actions)
 end
 
-function Trig_Stat_Mod_Train_Stats_Func003C()
+function Trig_Stat_Mod_Train_Stats_Func002C()
 if (GetSpellAbilityId() == FourCC("A0BY")) then
 return true
 end
@@ -32203,44 +32303,41 @@ return false
 end
 
 function Trig_Stat_Mod_Train_Stats_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n02L"))) then
-return false
-end
-if (not Trig_Stat_Mod_Train_Stats_Func003C()) then
+if (not Trig_Stat_Mod_Train_Stats_Func002C()) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func006C()
+function Trig_Stat_Mod_Train_Stats_Func005C()
 if (not (GetSpellAbilityId() == FourCC("A0BY"))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func007Func001Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func006Func001Func001Func001C()
 if (not (udg_PlayerStatModAgi[udg_TempInt] < udg_PlayerStatModInt[udg_TempInt])) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func007Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func006Func001Func001C()
 if (not (udg_PlayerStatModStr[udg_TempInt] <= (udg_TempReal - udg_StatModIncrement))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func007Func001C()
+function Trig_Stat_Mod_Train_Stats_Func006Func001C()
 if (not (udg_PlayerStatModStr[udg_TempInt] <= (udg_TempReal - (2.00 * udg_StatModIncrement)))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func007C()
+function Trig_Stat_Mod_Train_Stats_Func006C()
 if (not (GetSpellAbilityId() == FourCC("A0BH"))) then
 return false
 end
@@ -32253,28 +32350,28 @@ end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func008Func001Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func007Func001Func001Func001C()
 if (not (udg_PlayerStatModStr[udg_TempInt] < udg_PlayerStatModInt[udg_TempInt])) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func008Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func007Func001Func001C()
 if (not (udg_PlayerStatModAgi[udg_TempInt] <= (udg_TempReal - udg_StatModIncrement))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func008Func001C()
+function Trig_Stat_Mod_Train_Stats_Func007Func001C()
 if (not (udg_PlayerStatModAgi[udg_TempInt] <= (udg_TempReal - (2.00 * udg_StatModIncrement)))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func008C()
+function Trig_Stat_Mod_Train_Stats_Func007C()
 if (not (GetSpellAbilityId() == FourCC("A0BI"))) then
 return false
 end
@@ -32287,28 +32384,28 @@ end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func009Func001Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func008Func001Func001Func001C()
 if (not (udg_PlayerStatModStr[udg_TempInt] < udg_PlayerStatModAgi[udg_TempInt])) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func009Func001Func001C()
+function Trig_Stat_Mod_Train_Stats_Func008Func001Func001C()
 if (not (udg_PlayerStatModInt[udg_TempInt] <= (udg_TempReal - udg_StatModIncrement))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func009Func001C()
+function Trig_Stat_Mod_Train_Stats_Func008Func001C()
 if (not (udg_PlayerStatModInt[udg_TempInt] <= (udg_TempReal - (2.00 * udg_StatModIncrement)))) then
 return false
 end
 return true
 end
 
-function Trig_Stat_Mod_Train_Stats_Func009C()
+function Trig_Stat_Mod_Train_Stats_Func008C()
 if (not (GetSpellAbilityId() == FourCC("A0BJ"))) then
 return false
 end
@@ -32325,25 +32422,44 @@ function Trig_Stat_Mod_Train_Stats_Actions()
 udg_TempPlayer = GetOwningPlayer(GetTriggerUnit())
 udg_TempInt = GetConvertedPlayerId(udg_TempPlayer)
 udg_TempReal = (udg_PlayerStatModTotal[udg_TempInt] * 0.50)
-if (Trig_Stat_Mod_Train_Stats_Func006C()) then
+if (Trig_Stat_Mod_Train_Stats_Func005C()) then
 udg_TempReal2 = (udg_PlayerStatModTotal[udg_TempInt] / 3.00)
 udg_PlayerStatModStr[udg_TempInt] = udg_TempReal2
 udg_PlayerStatModAgi[udg_TempInt] = udg_TempReal2
 udg_PlayerStatModInt[udg_TempInt] = udg_TempReal2
 else
 end
-if (Trig_Stat_Mod_Train_Stats_Func007C()) then
-if (Trig_Stat_Mod_Train_Stats_Func007Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func006C()) then
+if (Trig_Stat_Mod_Train_Stats_Func006Func001C()) then
 udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] + (2.00 * udg_StatModIncrement))
 udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] - udg_StatModIncrement)
 udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
 else
-if (Trig_Stat_Mod_Train_Stats_Func007Func001Func001C()) then
-if (Trig_Stat_Mod_Train_Stats_Func007Func001Func001Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func006Func001Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func006Func001Func001Func001C()) then
 udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] + udg_StatModIncrement)
 udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] - udg_StatModIncrement)
 else
 udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] + udg_StatModIncrement)
+udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
+end
+else
+end
+end
+else
+end
+if (Trig_Stat_Mod_Train_Stats_Func007C()) then
+if (Trig_Stat_Mod_Train_Stats_Func007Func001C()) then
+udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
+udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + (2.00 * udg_StatModIncrement))
+udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
+else
+if (Trig_Stat_Mod_Train_Stats_Func007Func001Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func007Func001Func001Func001C()) then
+udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
+udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + udg_StatModIncrement)
+else
+udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + udg_StatModIncrement)
 udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
 end
 else
@@ -32354,30 +32470,11 @@ end
 if (Trig_Stat_Mod_Train_Stats_Func008C()) then
 if (Trig_Stat_Mod_Train_Stats_Func008Func001C()) then
 udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
-udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + (2.00 * udg_StatModIncrement))
-udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
-else
-if (Trig_Stat_Mod_Train_Stats_Func008Func001Func001C()) then
-if (Trig_Stat_Mod_Train_Stats_Func008Func001Func001Func001C()) then
-udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
-udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + udg_StatModIncrement)
-else
-udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] + udg_StatModIncrement)
-udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] - udg_StatModIncrement)
-end
-else
-end
-end
-else
-end
-if (Trig_Stat_Mod_Train_Stats_Func009C()) then
-if (Trig_Stat_Mod_Train_Stats_Func009Func001C()) then
-udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
 udg_PlayerStatModAgi[udg_TempInt] = (udg_PlayerStatModAgi[udg_TempInt] - udg_StatModIncrement)
 udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] + (2.00 * udg_StatModIncrement))
 else
-if (Trig_Stat_Mod_Train_Stats_Func009Func001Func001C()) then
-if (Trig_Stat_Mod_Train_Stats_Func009Func001Func001Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func008Func001Func001C()) then
+if (Trig_Stat_Mod_Train_Stats_Func008Func001Func001Func001C()) then
 udg_PlayerStatModStr[udg_TempInt] = (udg_PlayerStatModStr[udg_TempInt] - udg_StatModIncrement)
 udg_PlayerStatModInt[udg_TempInt] = (udg_PlayerStatModInt[udg_TempInt] + udg_StatModIncrement)
 else
@@ -32410,7 +32507,7 @@ TriggerAddAction(gg_trg_Stat_Mod_Print, Trig_Stat_Mod_Print_Actions)
 end
 
 function Trig_Revive_Point_Init_Func002Func003Func001C()
-if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("n02L"))) then
+if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("h065"))) then
 return false
 end
 return true
@@ -32448,11 +32545,14 @@ TriggerRegisterTimerEventSingle(gg_trg_Revive_Point_Init, 0.06)
 TriggerAddAction(gg_trg_Revive_Point_Init, Trig_Revive_Point_Init_Actions)
 end
 
-function Trig_Revive_Point_Move_Func007C()
+function Trig_Revive_Point_Move_Func006C()
 if (GetSpellAbilityId() == FourCC("A0CI")) then
 return true
 end
 if (GetSpellAbilityId() == FourCC("A0OF")) then
+return true
+end
+if (GetSpellAbilityId() == FourCC("A14F")) then
 return true
 end
 if (GetSpellAbilityId() == FourCC("A10N")) then
@@ -32462,10 +32562,7 @@ return false
 end
 
 function Trig_Revive_Point_Move_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n02L"))) then
-return false
-end
-if (not Trig_Revive_Point_Move_Func007C()) then
+if (not Trig_Revive_Point_Move_Func006C()) then
 return false
 end
 return true
@@ -32479,7 +32576,7 @@ return true
 end
 
 function Trig_Revive_Point_Move_Func003C()
-if (not (GetSpellAbilityId() == FourCC("A0CI"))) then
+if (not (GetSpellAbilityId() == FourCC("A14F"))) then
 return false
 end
 return true
@@ -37747,6 +37844,13 @@ end
 return true
 end
 
+function Trig_Hero_Respawn_Revive_Ticket_Func001Func012C()
+if (not (LoadRealBJ(0, udg_ID, udg_HeroRespawnHashtable) <= 0.00)) then
+return false
+end
+return true
+end
+
 function Trig_Hero_Respawn_Revive_Ticket_Func001C()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
@@ -37767,7 +37871,7 @@ udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_HeroRespawnUnit))
         udg_ID = GetHandleId(udg_HeroRespawnUnit)
 if (Trig_Hero_Respawn_Revive_Ticket_Func001Func007C()) then
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10100")
-SaveRealBJ(1.00, 0, udg_ID, udg_HeroRespawnHashtable)
+SaveRealBJ(0.00, 0, udg_ID, udg_HeroRespawnHashtable)
 udg_HeroRespawnTicketFlag[udg_TempInt] = (udg_HeroRespawnTicketFlag[udg_TempInt] + 1)
 AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -37783,6 +37887,12 @@ udg_TempString = ("|cffff00ffRespawn CD: " .. (I2S(R2I(LoadRealBJ(0, udg_ID, udg
 TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
+if (Trig_Hero_Respawn_Revive_Ticket_Func001Func012C()) then
+udg_HeroRespawnUnit = GetTriggerUnit()
+udg_TempPlayer = GetTriggerPlayer()
+ConditionalTriggerExecute(gg_trg_Hero_Respawn_To_Earth)
+else
+end
 else
 end
 RemoveItem(GetManipulatedItem())
@@ -75062,20 +75172,20 @@ SetStartLocPrio(4, 0, 1, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(4, 1, 2, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(4, 2, 3, MAP_LOC_PRIO_HIGH)
 SetStartLocPrioCount(5, 2)
-SetStartLocPrio(5, 0, 8, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(5, 0, 6, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(5, 1, 9, MAP_LOC_PRIO_HIGH)
-SetStartLocPrioCount(6, 3)
-SetStartLocPrio(6, 0, 7, MAP_LOC_PRIO_HIGH)
-SetStartLocPrio(6, 1, 8, MAP_LOC_PRIO_HIGH)
-SetStartLocPrio(6, 2, 9, MAP_LOC_PRIO_HIGH)
+SetStartLocPrioCount(6, 4)
+SetStartLocPrio(6, 0, 5, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(6, 1, 7, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(6, 2, 8, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(6, 3, 9, MAP_LOC_PRIO_HIGH)
 SetStartLocPrioCount(7, 2)
 SetStartLocPrio(7, 0, 6, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(7, 1, 8, MAP_LOC_PRIO_HIGH)
-SetStartLocPrioCount(8, 4)
-SetStartLocPrio(8, 0, 5, MAP_LOC_PRIO_HIGH)
-SetStartLocPrio(8, 1, 6, MAP_LOC_PRIO_HIGH)
-SetStartLocPrio(8, 2, 7, MAP_LOC_PRIO_HIGH)
-SetStartLocPrio(8, 3, 9, MAP_LOC_PRIO_HIGH)
+SetStartLocPrioCount(8, 3)
+SetStartLocPrio(8, 0, 6, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(8, 1, 7, MAP_LOC_PRIO_HIGH)
+SetStartLocPrio(8, 2, 9, MAP_LOC_PRIO_HIGH)
 SetStartLocPrioCount(9, 3)
 SetStartLocPrio(9, 0, 5, MAP_LOC_PRIO_HIGH)
 SetStartLocPrio(9, 1, 6, MAP_LOC_PRIO_HIGH)
@@ -75112,9 +75222,9 @@ DefineStartLocation(2, 2176.0, -1024.0)
 DefineStartLocation(3, 1600.0, -1408.0)
 DefineStartLocation(4, 1984.0, -1408.0)
 DefineStartLocation(5, 16640.0, 320.0)
-DefineStartLocation(6, 16064.0, -64.0)
+DefineStartLocation(6, 16256.0, 320.0)
 DefineStartLocation(7, 15872.0, 320.0)
-DefineStartLocation(8, 16256.0, 320.0)
+DefineStartLocation(8, 16064.0, -64.0)
 DefineStartLocation(9, 16448.0, -64.0)
 InitCustomPlayerSlots()
 InitCustomTeams()

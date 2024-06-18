@@ -19,6 +19,7 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
         AbilityNames.FarmerWithShotgun.RELOAD,
       ],
       [
+        AbilityNames.BasicAbility.DEFLECT,
         AbilityNames.BasicAbility.MAX_CHARGE,
       ]
     ]

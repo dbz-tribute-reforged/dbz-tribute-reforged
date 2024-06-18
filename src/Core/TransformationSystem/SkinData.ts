@@ -89,7 +89,7 @@ export class SkinData {
 
   constructor(
     public targetId: number,
-    public conditions: any[],
+    public conditions: [string, number][],
   ) {
   }
 

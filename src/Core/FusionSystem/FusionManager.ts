@@ -60,9 +60,7 @@ export class FusionManager {
       const unitId = GetHandleId(unit);
       const unitTypeId = GetUnitTypeId(unit);
       const player = GetOwningPlayer(unit);
-
-      // enemies cnat fuse
-
+      
       if (
         !UnitHelper.isUnitRealHero(unit)
         || unit == this.unit1

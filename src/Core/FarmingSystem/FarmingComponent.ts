@@ -64,7 +64,7 @@ export class FarmingComponent implements Serializable<FarmingComponent> {
     this.x = x;
     this.y = y;
     this.terrainId = GetTerrainType(x, y);
-    BJDebugMsg("terrainId: " + this.terrainId);
+    // BJDebugMsg("terrainId: " + this.terrainId);
     // determine growth multiplier based on terrainId and mults
     this.growthSpeed = 1.0;
     

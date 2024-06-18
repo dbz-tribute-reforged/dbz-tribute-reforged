@@ -296,15 +296,27 @@ export class PlayerProfile {
     }
     if (this.fieldMap.has(PlayerProfile.FIELD_NUM_FINISH_GAMES)) {
       this.numFinishGames = S2I(this.fieldMap.get(PlayerProfile.FIELD_NUM_FINISH_GAMES));
+      if (GetLocalPlayer() == this.player) {
+        print("Games Played: ", this.numGames);
+      }
     }
     if (this.fieldMap.has(PlayerProfile.FIELD_NUM_WINS)) {
       this.numWins = S2I(this.fieldMap.get(PlayerProfile.FIELD_NUM_WINS));
+      if (GetLocalPlayer() == this.player) {
+        print("Games Won: ", this.numWins);
+      }
     }
     if (this.fieldMap.has(PlayerProfile.FIELD_NUM_LOSS)) {
       this.numLoss = S2I(this.fieldMap.get(PlayerProfile.FIELD_NUM_LOSS));
+      if (GetLocalPlayer() == this.player) {
+        print("Games Lost: ", this.numLoss);
+      }
     }
     if (this.fieldMap.has(PlayerProfile.FIELD_MMR)) {
       this.mmr = S2I(this.fieldMap.get(PlayerProfile.FIELD_MMR));
+      if (GetLocalPlayer() == this.player) {
+        print("Pseudo MMR: ", this.mmr);
+      }
     }
 
     if (this.fieldMap.has(PlayerProfile.KEY_BASIC_ABIL_0)) {

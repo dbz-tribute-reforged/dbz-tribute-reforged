@@ -29,7 +29,8 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced action-packed hero arena based on the Dragon Ball series. Features 86+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced PvPvE hero arena based on the Dragon Ball series with many crossover heroes from other popular anime and videogames.
+Features 86+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -23988,6 +23989,25 @@ A bulky, short-ranged hero who excels at sticking on his opponents with constant
 |cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+}
+
+STRING 3689
+// Items: I00O (|cffff00ffRevive Ticket|r), Ubertip (Tooltip - Extended)
+{
+|cffffff00Immediately revives the target regardless of revive cooldown.|r
+|cffff2222Can only be used ONCE per player.|r
+}
+
+STRING 3690
+// Units: n02L (Revive Point), EditorSuffix (Name - Editor Suffix)
+{
+(large, spawn loc, deprecated)
+}
+
+STRING 3691
+// Units: h065 (Revive Point), EditorSuffix (Name - Editor Suffix)
+{
+(new in use)
 }
 
 STRING 3692
@@ -140943,12 +140963,6 @@ STRING 20653
 [|cff00ff00Q|r] Appule Blaster - [|cffffcc00Level 10|r]
 }
 
-STRING 20654
-// Units: n02L (Revive Point), EditorSuffix (Name - Editor Suffix)
-{
-(large, spawn loc, in use)
-}
-
 STRING 20655
 // Abilities: A0C6 (Namekian Healing), Tip (Tooltip - Normal)
 {
@@ -169928,13 +169942,6 @@ STRING 24392
 STRING 24393
 {
 |cffff2222One Day on Earth expired.|r
-}
-
-STRING 24394
-// Items: I00O (|cffff00ffRevive Ticket|r), Ubertip (Tooltip - Extended)
-{
-|cffffff00Reduces the player's revive cooldown to 1 second.|r
-|cffff2222Can only be used ONCE per player.|r
 }
 
 STRING 24395
