@@ -189,6 +189,7 @@ export module Constants {
   export const MIGHT_GUY_SUNSET_OF_YOUTH_REGEN_MULT = 0.25;
   export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
   export const BEERUS_REGEN_MULT = 0.2;
+  export const CORN_REGEN_MULT = 0.5;
   
   export const LIMIT_BREAKER_MIN_SP = 25;
 
@@ -456,6 +457,8 @@ export module DebuffAbilities {
   export const AINZ_MAGIC_BOOST = FourCC('A12N');
   export const CHEONG_MYEONG_SCATTERED_BLOSSOMFALL_DMG_DEBUFF = FourCC('A14E');
   export const FARMER_RICE_DMG_BUFF = FourCC("A0DB");
+  export const FARMER_WHEAT_ARMOR_BUFF = FourCC("A159");
+  export const FARMER_CORN_REGEN_BUFF = FourCC("A158");
 
   // soul burn
   export const MAFUBA_SEALED = FourCC("A10R");
@@ -500,6 +503,9 @@ export module Buffs {
 
   export const INNER_FIRE_AINZ_GREATER_MAGIC_SHIELD = FourCC("B05Z");
   export const INNER_FIRE_AINZ_MAGIC_BOOST = FourCC("B060");
+  export const INNER_FIRE_FARMER_RICE_DMG_BUFF = FourCC("B06S");
+  export const INNER_FIRE_FARMER_WHEAT_ARMOR_BUFF = FourCC("B06T");
+  export const INNER_FIRE_FARMER_CORN_REGEN_BUFF = FourCC("B06U");
 
   export const SLOW_KROWN_TOSS = FourCC("B02W");
   export const SLOW_ZAMASU_BLEED = FourCC("B01G");

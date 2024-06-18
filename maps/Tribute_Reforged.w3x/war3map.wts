@@ -388,12 +388,6 @@ STRING 62
 Vegeta
 }
 
-STRING 63
-// Units: E003 (Prince of all Saiyans), Awakentip (Tooltip - Awaken)
-{
-[|cffffff00W|r] Choose Vegeta
-}
-
 STRING 64
 // Abilities: A0JQ (Babidi's Magic), Ubertip (Tooltip - Normal - Extended)
 {
@@ -401,9 +395,11 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 65
-// Units: E003 (Prince of all Saiyans), Tip (Tooltip - Basic)
+// Items: I050 (Wheat), Description (Description)
 {
-[|cffffff00W|r] Choose Vegeta
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.25 STR each.
+Grants Farmer +10 armor for 10s.
 }
 
 STRING 66
@@ -11030,19 +11026,15 @@ Geti Star Fragment
 
 STRING 1689
 {
-Type "r" to revert.
-Transformations:
-[lvl 15]  1.25x "kao"
-[lvl 30]  1.50x "ss"
-[lvl 85]  2.00x "ss2"
-[lvl 125] 2.25x "ss3"
-[lvl 150] 2.40x "ssg"
-[lvl 200] 2.45x "ssb"
-[lvl 225] 2.50x "ssbkao"
-[lvl 250] 2.50x "ui" [unlocks |cff00ffffUltra Instinct|r]
-[lvl 400] [MUI (Reuseable]
+|cffffff00Transformations:|r
+|cffffcc00Gains +0.011x mult every level up to 2.5x|r
+|cffffff00
+[Level 250] Unlocks [|r|cff00ff00D|r|cffffff00] Ultra Instinct
+[Level 300] Unlocks [|r|cff00ff00D|r|cffffff00] Mastered Ultra Instinct
 
-|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
+|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
+
+|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
 }
 
 STRING 1690
@@ -23648,7 +23640,7 @@ R
 }
 
 STRING 3644
-// Abilities: A0DB (Beerus Inner Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -23672,7 +23664,7 @@ STRING 3647
 }
 
 STRING 3648
-// Abilities: A0DB (Beerus Inner Fire), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -24566,7 +24558,7 @@ STRING 3783
 }
 
 STRING 3784
-// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -24584,7 +24576,7 @@ STRING 3786
 }
 
 STRING 3787
-// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -26335,7 +26327,7 @@ STRING 4047
 }
 
 STRING 4048
-// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -26359,7 +26351,7 @@ STRING 4051
 }
 
 STRING 4052
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -26482,7 +26474,7 @@ STRING 4070
 }
 
 STRING 4071
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -26536,7 +26528,7 @@ STRING 4079
 }
 
 STRING 4080
-// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
+// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -28013,7 +28005,7 @@ STRING 4317
 }
 
 STRING 4318
-// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -28249,7 +28241,7 @@ STRING 4355
 }
 
 STRING 4356
-// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -28941,7 +28933,7 @@ STRING 4465
 }
 
 STRING 4466
-// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -28967,7 +28959,7 @@ The caster drains the enemy's life force to greatly empower their own abilities.
 }
 
 STRING 4470
-// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -29712,7 +29704,7 @@ Goten and Trunks perform the fusion dance. They must be touching each other for 
 }
 
 STRING 4580
-// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -29858,13 +29850,13 @@ Hirudegarn fires a barrage of flaming energy balls at his enemies that explode t
 }
 
 STRING 4603
-// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 4604
-// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30432,7 +30424,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4696
-// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -30546,7 +30538,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4715
-// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30624,7 +30616,7 @@ STRING 4727
 }
 
 STRING 4728
-// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30648,7 +30640,7 @@ Trunks teleports behind the enemy and punches it with all of his might.
 }
 
 STRING 4732
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -30863,7 +30855,7 @@ Tien blinds his opponents with a solar flare before splitting into copies of him
 }
 
 STRING 4767
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -30900,7 +30892,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 4771
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -31038,7 +31030,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 4794
-// Abilities: A0JC (Capsule: Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -32246,7 +32238,7 @@ STRING 4994
 }
 
 STRING 4995
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -32264,7 +32256,7 @@ STRING 4997
 }
 
 STRING 4998
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -32660,7 +32652,7 @@ STRING 5063
 }
 
 STRING 5064
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -32678,7 +32670,7 @@ STRING 5066
 }
 
 STRING 5067
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -33104,7 +33096,7 @@ Transforms Yamcha back to normal.
 }
 
 STRING 5138
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -33128,7 +33120,7 @@ Creates an artificial moon, it starts out as a sphere within the users hand that
 }
 
 STRING 5142
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -33326,13 +33318,13 @@ STRING 5174
 }
 
 STRING 5175
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 5176
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -34172,7 +34164,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 5310
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -34286,7 +34278,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 5329
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -34360,7 +34352,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5341
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -34746,7 +34738,7 @@ You receive +0.01x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 5403
-// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -34781,7 +34773,7 @@ Gains |cffffcc00+0.05x|r for holding the cleansed dragon ball
 }
 
 STRING 5407
-// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -35502,7 +35494,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5525
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -36235,7 +36227,7 @@ STRING 5627
 }
 
 STRING 5628
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -36265,7 +36257,7 @@ STRING 5632
 }
 
 STRING 5633
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37101,7 +37093,7 @@ Shoots a beam of negative energy from the fingertip.
 }
 
 STRING 5748
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -37858,7 +37850,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 5862
-// Units: H000 (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H02G (Superhero Android), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities. Can choose between the two different paths of Super Saiyan 4 / Limit Breaker and Super Saiyan Blue / Ultra Instinct.
 
@@ -38696,7 +38688,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5982
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39545,7 +39537,7 @@ STRING 6115
 }
 
 STRING 6116
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39569,7 +39561,7 @@ Enhances the target hero with a cybernetic augmentation. Grants one beneficial e
 }
 
 STRING 6120
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39587,34 +39579,39 @@ Beerus Devotion Aura
 }
 
 STRING 6123
-// Abilities: A0DB (Beerus Inner Fire), Name (Name)
+// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
 {
-Beerus Inner Fire
+A nutritious bundle of wheat.
+|cffffff00Consume for +0.25 STR each.
+Grants Farmer +10 armor for 10s.
 }
 
 STRING 6124
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6125
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6126
-// Abilities: A0DB (Beerus Inner Fire), Tip (Tooltip - Normal)
+// Items: I051 (Corn), Description (Description)
 {
-[|cff00FF00R|r] Enrage
+Nutritious corn.
+|cffffff00Consume for +0.25 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
 }
 
 STRING 6127
-// Abilities: A0DB (Beerus Inner Fire), Ubertip (Tooltip - Normal - Extended)
+// Items: I051 (Corn), Ubertip (Tooltip - Extended)
 {
-Cast on self.
-Causes Beerus to go into a rage, increasing his attack damage by 100%.
+Nutritious corn.
+|cffffff00Consume for +0.25 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
 }
 
 STRING 6128
@@ -39637,13 +39634,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 6131
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6132
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39655,7 +39652,7 @@ Beerus Fart
 }
 
 STRING 6134
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -40969,7 +40966,7 @@ Removes 60 armor from nearby enemies.
 }
 
 STRING 6331
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40987,7 +40984,7 @@ E
 }
 
 STRING 6334
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -41888,7 +41885,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 6463
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42495,7 +42492,7 @@ STRING 6555
 }
 
 STRING 6556
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42519,7 +42516,7 @@ STRING 6559
 }
 
 STRING 6560
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43860,7 +43857,7 @@ STRING 6758
 }
 
 STRING 6759
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43878,7 +43875,7 @@ Change Now
 }
 
 STRING 6762
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44137,7 +44134,7 @@ STRING 6802
 }
 
 STRING 6803
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44166,13 +44163,13 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 6807
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OK (Last Stand), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44765,7 +44762,7 @@ STRING 6894
 }
 
 STRING 6895
-// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0OK (Last Stand), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44791,7 +44788,7 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 }
 
 STRING 6899
-// Abilities: A0OK (Last Stand), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P4 (Ice Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45019,7 +45016,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0OK (Last Stand), Hotkey (Hotkey - Normal)
+// Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45055,7 +45052,7 @@ F
 }
 
 STRING 6943
-// Abilities: A0P4 (Ice Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45662,7 +45659,7 @@ Creates 3 explosive mines near the target location that detonate on contact with
 }
 
 STRING 7035
-// Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0PE (Justice Hold), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45704,7 +45701,7 @@ STRING 7040
 }
 
 STRING 7041
-// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PM (Justice Hold 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -47120,7 +47117,7 @@ STRING 7250
 }
 
 STRING 7251
-// Abilities: A0PE (Justice Hold), Hotkey (Hotkey - Normal)
+// Abilities: A0PM (Justice Hold 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47619,7 +47616,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0PM (Justice Hold 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PS (Ginyu Pose Ultimate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47643,7 +47640,7 @@ Death Blow
 }
 
 STRING 7331
-// Abilities: A0PM (Justice Hold 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -47770,7 +47767,7 @@ Q
 }
 
 STRING 7351
-// Abilities: A0PS (Ginyu Pose Ultimate), Hotkey (Hotkey - Normal)
+// Abilities: A0Q2 (Supernova Frieza), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -48588,7 +48585,7 @@ Damage Block: Str * lvl * 0.3 @ 40%|r
 }
 
 STRING 7477
-// Abilities: A0PS (Ginyu Pose Ultimate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q2 (Supernova Frieza), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49616,7 +49613,7 @@ D
 }
 
 STRING 7640
-// Abilities: A0Q2 (Supernova Frieza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q4 (Death Storm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50434,7 +50431,7 @@ STRING 7760
 }
 
 STRING 7761
-// Abilities: A0Q2 (Supernova Frieza), Hotkey (Hotkey - Normal)
+// Abilities: A0Q4 (Death Storm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51431,7 +51428,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0Q4 (Death Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0Q6 (Death Beam Barrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51449,7 +51446,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0Q4 (Death Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q6 (Death Beam Barrage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -52712,7 +52709,7 @@ STRING 8115
 }
 
 STRING 8116
-// Abilities: A0Q6 (Death Beam Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q8 (Death Ball), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52800,7 +52797,7 @@ STRING 8129
 }
 
 STRING 8130
-// Abilities: A0Q6 (Death Beam Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0Q8 (Death Ball), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54002,7 +53999,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0Q8 (Death Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q9 (Supernova Frieza 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54308,7 +54305,7 @@ Q
 }
 
 STRING 8364
-// Abilities: A0Q8 (Death Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0Q9 (Supernova Frieza 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54776,7 +54773,7 @@ STRING 8421
 }
 
 STRING 8422
-// Abilities: A0Q9 (Supernova Frieza 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QG (Earth Breaker), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54812,7 +54809,7 @@ STRING 8427
 }
 
 STRING 8428
-// Abilities: A0Q9 (Supernova Frieza 2), Hotkey (Hotkey - Normal)
+// Abilities: A0QG (Earth Breaker), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55903,7 +55900,7 @@ Kannonblast
 }
 
 STRING 8572
-// Abilities: A0QG (Earth Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55927,7 +55924,7 @@ Monkey Smasher
 }
 
 STRING 8576
-// Abilities: A0QG (Earth Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57369,7 +57366,7 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 8782
-// Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0QR (Dragon Thunder), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57401,7 +57398,7 @@ Temporal Warp
 }
 
 STRING 8786
-// Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QR (Dragon Thunder), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -57671,7 +57668,7 @@ STRING 8830
 }
 
 STRING 8831
-// Abilities: A0QR (Dragon Thunder), Hotkey (Hotkey - Normal)
+// Abilities: A0R0 (Circle Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -57695,7 +57692,7 @@ Dende links all units near him for 5s, causing all damage received by linked uni
 }
 
 STRING 8835
-// Abilities: A0QR (Dragon Thunder), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0R0 (Circle Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57731,13 +57728,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8840
-// Abilities: A0R0 (Circle Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R5 (Circle Flash 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 8841
-// Abilities: A0R0 (Circle Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0R5 (Circle Flash 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58030,7 +58027,7 @@ VegetaSSB2
 }
 
 STRING 8881
-// Abilities: A0R5 (Circle Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SB (Sparking!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58054,7 +58051,7 @@ STRING 8884
 }
 
 STRING 8885
-// Abilities: A0R5 (Circle Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SF (Time Stop), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58168,7 +58165,7 @@ Overcharge
 }
 
 STRING 8904
-// Abilities: A0SB (Sparking!), Hotkey (Hotkey - Normal)
+// Abilities: A0SF (Time Stop), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58192,7 +58189,7 @@ STRING 8907
 }
 
 STRING 8908
-// Abilities: A0SF (Time Stop), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SL (Heatwave 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58422,7 +58419,7 @@ Bio Broly
 }
 
 STRING 8940
-// Abilities: A0SF (Time Stop), Hotkey (Hotkey - Normal)
+// Abilities: A0SL (Heatwave 2), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58542,7 +58539,7 @@ Ginyu Pose Fighting Armor Aura
 }
 
 STRING 8954
-// Abilities: A0SL (Heatwave 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SU (Heavenly Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58683,7 +58680,7 @@ Genos discharges a wave of blinding light from his eye, causing nearby enemies t
 }
 
 STRING 8970
-// Abilities: A0SL (Heatwave 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SU (Heavenly Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58707,7 +58704,7 @@ Genos discharges a wave of blinding light from his eye, causing nearby enemies t
 }
 
 STRING 8973
-// Abilities: A0SU (Heavenly Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T2 (United States of Smash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58835,7 +58832,7 @@ Dypso's signature flying kick.
 }
 
 STRING 8987
-// Abilities: A0SU (Heavenly Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0T2 (United States of Smash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58874,13 +58871,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8993
-// Abilities: A0T2 (United States of Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0T6 (New Hampshire Smash), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8994
-// Abilities: A0T2 (United States of Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TB (Black Materia), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58998,7 +58995,7 @@ Saiyan Blood - [|cffffcc00Level 9|r]
 }
 
 STRING 9013
-// Abilities: A0T6 (New Hampshire Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0TB (Black Materia), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59124,7 +59121,7 @@ all
 }
 
 STRING 9034
-// Abilities: A0TB (Black Materia), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TO (Power Up Block), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59215,7 +59212,7 @@ STRING 9047
 }
 
 STRING 9048
-// Abilities: A0TB (Black Materia), Hotkey (Hotkey - Normal)
+// Abilities: A0TO (Power Up Block), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -59463,7 +59460,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 9080
-// Abilities: A0TO (Power Up Block), Hotkey (Hotkey - Normal)
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -59502,7 +59499,7 @@ Mafuba
 }
 
 STRING 9086
-// Abilities: A0TO (Power Up Block), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59817,7 +59814,7 @@ Follow-Up
 }
 
 STRING 9134
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60473,7 +60470,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60497,7 +60494,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60800,13 +60797,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Hotkey (Hotkey - Normal)
+// Abilities: A0UU (Madness Hero), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0UU (Madness Hero), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60818,7 +60815,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0UU (Madness Hero), Hotkey (Hotkey - Normal)
+// Abilities: A0V0 (Final Burst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60829,7 +60826,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0UU (Madness Hero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V0 (Final Burst), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64282,13 +64279,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0V0 (Final Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0VT (Cleave), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0V0 (Final Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VT (Cleave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64922,7 +64919,7 @@ STRING 9919
 }
 
 STRING 9920
-// Abilities: A0VT (Cleave), Hotkey (Hotkey - Normal)
+// Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66010,7 +66007,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0VT (Cleave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -67163,7 +67160,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0WJ (Uzzi Punch), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -67181,7 +67178,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WJ (Uzzi Punch), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69380,7 +69377,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0WJ (Uzzi Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WQ (Water 2), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69446,7 +69443,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0WJ (Uzzi Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (Dark Mist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69868,7 +69865,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 16 June 2024
+This map is under active development - 19 June 2024
 }
 
 STRING 10653
@@ -70148,7 +70145,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0WQ (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (Dark Mist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -70413,7 +70410,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0WR (Dark Mist), Hotkey (Hotkey - Normal)
+// Abilities: A0X3 (Napalm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -70434,7 +70431,7 @@ Fires a beam of energy from the users palm.
 }
 
 STRING 10734
-// Abilities: A0WR (Dark Mist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X3 (Napalm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -71706,7 +71703,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0X3 (Napalm), Hotkey (Hotkey - Normal)
+// Abilities: A0X4 (Mega Bomb), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -72453,7 +72450,7 @@ STRING 11047
 }
 
 STRING 11048
-// Abilities: A0X3 (Napalm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X4 (Mega Bomb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -77067,7 +77064,7 @@ STRING 11706
 }
 
 STRING 11707
-// Abilities: A0X4 (Mega Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0XE (Cure), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -77997,7 +77994,7 @@ Lucca throws a bomb at the target area that explodes on impact, dealing damage t
 }
 
 STRING 11844
-// Abilities: A0X4 (Mega Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XE (Cure), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78060,13 +78057,13 @@ Reduces the sight radius of all other heroes for a brief period of time.|n|cffff
 }
 
 STRING 11854
-// Abilities: A0XE (Cure), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XX (Aura Sphere), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 11855
-// Abilities: A0XE (Cure), Hotkey (Hotkey - Normal)
+// Abilities: A0XX (Aura Sphere), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79471,7 +79468,7 @@ Bee
 }
 
 STRING 12058
-// Abilities: A0XX (Aura Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A011 (Table Flip), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79872,7 +79869,7 @@ STRING 12115
 }
 
 STRING 12116
-// Abilities: A0XX (Aura Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79920,7 +79917,7 @@ STRING 12123
 }
 
 STRING 12124
-// Abilities: A011 (Table Flip), Hotkey (Hotkey - Normal)
+// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81238,7 +81235,7 @@ STRING 12320
 }
 
 STRING 12321
-// Abilities: A011 (Table Flip), Researchhotkey (Hotkey - Learn)
+// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81266,7 +81263,7 @@ Zamasu channels his godly energy to deflect the attacks of lesser beings and pun
 }
 
 STRING 12325
-// Abilities: A069 (Barrel Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81342,7 +81339,7 @@ Zamasu swiftly slashes nearby enemies.
 }
 
 STRING 12335
-// Abilities: A06A (Banana Slamma), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84098,7 +84095,7 @@ Kid UI
 }
 
 STRING 12731
-// Abilities: A06A (Banana Slamma), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84116,7 +84113,7 @@ Q
 }
 
 STRING 12734
-// Abilities: A0CP (Chou Makousen), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -85121,7 +85118,7 @@ STRING 12880
 }
 
 STRING 12881
-// Abilities: A0EM (Heavy Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -85166,7 +85163,7 @@ STRING 12885
 }
 
 STRING 12886
-// Abilities: A0ET (Dark Transformation), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -85463,7 +85460,7 @@ Toppo's God of Destruction form.
 }
 
 STRING 12922
-// Abilities: A0G6 (Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86594,13 +86591,13 @@ STRING 13087
 }
 
 STRING 13088
-// Abilities: A0G7 (Deactivate Enrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 13089
-// Abilities: A0GM (Fighting Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87280,7 +87277,7 @@ STRING 13187
 }
 
 STRING 13188
-// Abilities: A0YF (Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87316,7 +87313,7 @@ STRING 13193
 }
 
 STRING 13194
-// Abilities: A0YF (Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88759,7 +88756,7 @@ STRING 13405
 }
 
 STRING 13406
-// Abilities: A0YM (Empowered Skygate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88777,7 +88774,7 @@ STRING 13408
 }
 
 STRING 13409
-// Abilities: A0YM (Empowered Skygate), Hotkey (Hotkey - Normal)
+// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89004,7 +89001,7 @@ STRING 13443
 }
 
 STRING 13444
-// Abilities: A0YU (Flashfreeze Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89046,7 +89043,7 @@ Magus spawns giant chunks of jagged ice to crush his enemies for 3s. Afflicts en
 }
 
 STRING 13450
-// Abilities: A0YU (Flashfreeze Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89455,7 +89452,7 @@ STRING 13508
 }
 
 STRING 13509
-// Abilities: A0YY (Heaven Piercing Ice Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89473,7 +89470,7 @@ STRING 13511
 }
 
 STRING 13512
-// Abilities: A0YY (Heaven Piercing Ice Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -89830,7 +89827,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 13562
-// Abilities: A0YZ (Flashfire Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -89851,7 +89848,7 @@ STRING 13564
 }
 
 STRING 13565
-// Abilities: A0YZ (Flashfire Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -90027,7 +90024,7 @@ STRING 13587
 }
 
 STRING 13588
-// Abilities: A0Z4 (The Mirror Never Lies), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -90045,7 +90042,7 @@ STRING 13590
 }
 
 STRING 13591
-// Abilities: A0Z4 (The Mirror Never Lies), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -91248,7 +91245,7 @@ Mario throws a fireball to burn his enemies.
 }
 
 STRING 13754
-// Abilities: A0ZK (Light Speed Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -91341,7 +91338,7 @@ STRING 13764
 }
 
 STRING 13765
-// Abilities: A0ZK (Light Speed Dash), Hotkey (Hotkey - Normal)
+// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92568,7 +92565,7 @@ STRING 13919
 }
 
 STRING 13920
-// Abilities: A0ZT (Self Repair), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92604,7 +92601,7 @@ STRING 13925
 }
 
 STRING 13926
-// Abilities: A102 (Crop Circles), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -92878,7 +92875,7 @@ STRING 13966
 }
 
 STRING 13967
-// Abilities: A10B (Rage), Hotkey (Hotkey - Normal)
+// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -92900,7 +92897,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 13970
-// Abilities: A10B (Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -93929,7 +93926,7 @@ STRING 14119
 }
 
 STRING 14120
-// Abilities: A10C (Berserk), Hotkey (Hotkey - Normal)
+// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -93947,7 +93944,7 @@ Q
 }
 
 STRING 14123
-// Abilities: A10C (Berserk), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -94101,7 +94098,7 @@ STRING 14145
 }
 
 STRING 14146
-// Abilities: A10Z (Super Elite Combo), Hotkey (Hotkey - Normal)
+// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -94805,7 +94802,7 @@ STRING 14240
 }
 
 STRING 14241
-// Abilities: A10Z (Super Elite Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -94823,7 +94820,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A11E (Appule Clones), Researchhotkey (Hotkey - Learn)
+// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -99872,7 +99869,7 @@ The user fires two beams of energy that will hunt down the enemy and deal massiv
 }
 
 STRING 14981
-// Abilities: A11E (Appule Clones), Hotkey (Hotkey - Normal)
+// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -101091,7 +101088,7 @@ STRING 15154
 }
 
 STRING 15155
-// Abilities: A11Q (Bob-omb), Hotkey (Hotkey - Normal)
+// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -101115,7 +101112,7 @@ STRING 15158
 }
 
 STRING 15159
-// Abilities: A11Q (Bob-omb), Researchhotkey (Hotkey - Learn)
+// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -104199,7 +104196,7 @@ STRING 15569
 }
 
 STRING 15570
-// Abilities: A00X (Roundhouse Kick), Hotkey (Hotkey - Normal)
+// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -104217,7 +104214,7 @@ STRING 15572
 }
 
 STRING 15573
-// Abilities: A00X (Roundhouse Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -104550,15 +104547,19 @@ Transformations:
 }
 
 STRING 15622
-// Units: H08S (Slayer of Raditz), Awakentip (Tooltip - Awaken)
+// Items: I052 (Rice), Description (Description)
 {
-[|cffffff00Q|r] Choose Farmer with Shotgun
+Nutritious grains of rice.
+|cffffff00Consume for +0.25 INT each.
+Grants Farmer +50% damage on their next auto attack.
 }
 
 STRING 15623
-// Units: H08S (Slayer of Raditz), Tip (Tooltip - Basic)
+// Items: I052 (Rice), Ubertip (Tooltip - Extended)
 {
-[|cffffff00Q|r] Choose Farmer with Shotgun
+Nutritious grains of rice.
+|cffffff00Consume for +0.25 INT each.
+Grants Farmer +50% damage on their next auto attack.
 }
 
 STRING 15624
@@ -104622,7 +104623,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 15633
-// Abilities: A037 (Rocket Launcher), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Princess Strike), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -105837,7 +105838,7 @@ Fire Arrow
 }
 
 STRING 15797
-// Abilities: A04A (Explosion 4), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Princess Strike), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -106101,7 +106102,7 @@ E
 }
 
 STRING 15841
-// Abilities: A0A2 (Princess Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Unlock Potential), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -106578,7 +106579,7 @@ STRING 15908
 }
 
 STRING 15909
-// Abilities: A0A2 (Princess Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Unlock Potential), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -107367,7 +107368,7 @@ Q
 }
 
 STRING 16008
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A153 (Haymaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -107782,7 +107783,7 @@ STRING 16066
 }
 
 STRING 16067
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A153 (Haymaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -108449,7 +108450,7 @@ STRING 16156
 }
 
 STRING 16157
-// Abilities: A0EK (Unlock Potential), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FX (Bow), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -108467,7 +108468,7 @@ Power Up Block
 }
 
 STRING 16160
-// Abilities: A0EK (Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0FX (Bow), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -111315,7 +111316,7 @@ STRING 16539
 }
 
 STRING 16540
-// Abilities: A0FX (Bow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GF (Lightning Arrow), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -111333,7 +111334,7 @@ STRING 16542
 }
 
 STRING 16543
-// Abilities: A0FX (Bow), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Max Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -111485,7 +111486,7 @@ Donkey Kong winds up for a brief moment before unleashing a mighty punch.
 }
 
 STRING 16566
-// Abilities: A0GF (Lightning Arrow), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Max Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -112517,7 +112518,7 @@ Mugetsu
 }
 
 STRING 16695
-// Abilities: A0HM (Max Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HY (Max Barrier: Burst), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -114827,7 +114828,7 @@ STRING 17005
 }
 
 STRING 17006
-// Abilities: A0HM (Max Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Max Barrier: Burst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -114937,7 +114938,7 @@ STRING 17023
 }
 
 STRING 17024
-// Abilities: A0HY (Max Barrier: Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (Explode Mine), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115578,7 +115579,7 @@ STRING 17116
 }
 
 STRING 17117
-// Abilities: A0HY (Max Barrier: Burst), Hotkey (Hotkey - Normal)
+// Abilities: A11Y (Greater Magic Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -115715,7 +115716,7 @@ STRING 17133
 }
 
 STRING 17134
-// Abilities: A0J0 (Explode Mine), Hotkey (Hotkey - Normal)
+// Abilities: A125 (Remote Viewing), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119117,7 +119118,7 @@ STRING 17594
 }
 
 STRING 17595
-// Abilities: A11Y (Greater Magic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A12B (Summon: Pandora's Actor), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119237,7 +119238,7 @@ STRING 17612
 }
 
 STRING 17613
-// Abilities: A125 (Remote Viewing), Hotkey (Hotkey - Normal)
+// Abilities: A12F (Spells: Summoning), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119549,7 +119550,7 @@ STRING 17658
 }
 
 STRING 17659
-// Abilities: A12B (Summon: Pandora's Actor), Hotkey (Hotkey - Normal)
+// Abilities: A12Q (Time Stop), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -121006,7 +121007,7 @@ STRING 17879
 }
 
 STRING 17880
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A155 (Saiyan Slaying Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -121064,7 +121065,7 @@ STRING 17888
 }
 
 STRING 17889
-// Abilities: A12F (Spells: Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A12W (Aegis), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -121204,7 +121205,7 @@ STRING 17906
 }
 
 STRING 17907
-// Abilities: A12Q (Time Stop), Hotkey (Hotkey - Normal)
+// Abilities: A12W (Aegis), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -121550,7 +121551,7 @@ STRING 17954
 }
 
 STRING 17955
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A155 (Saiyan Slaying Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -122350,7 +122351,7 @@ STRING 18074
 }
 
 STRING 18075
-// Abilities: A12W (Aegis), Researchhotkey (Hotkey - Learn)
+// Abilities: A136 (Negative Impact Shield), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -122368,7 +122369,7 @@ STRING 18077
 }
 
 STRING 18078
-// Abilities: A12W (Aegis), Hotkey (Hotkey - Normal)
+// Abilities: A136 (Negative Impact Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -123150,7 +123151,7 @@ STRING 18178
 }
 
 STRING 18179
-// Abilities: A136 (Negative Impact Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A13F (Meteor Fall), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -123216,7 +123217,7 @@ STRING 18187
 }
 
 STRING 18188
-// Abilities: A136 (Negative Impact Shield), Hotkey (Hotkey - Normal)
+// Abilities: A13F (Meteor Fall), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -123427,7 +123428,7 @@ This unit is affected by Dark Mist. It will miss when it attacks.
 }
 
 STRING 18216
-// Abilities: A13F (Meteor Fall), Researchhotkey (Hotkey - Learn)
+// Abilities: A13Q (Final Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -124740,7 +124741,7 @@ STRING 18401
 }
 
 STRING 18402
-// Abilities: A13F (Meteor Fall), Hotkey (Hotkey - Normal)
+// Abilities: A13Q (Final Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -125337,13 +125338,13 @@ F
 }
 
 STRING 18495
-// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A157 (Honest Shot), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 18496
-// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00C (Magic Sentry), Hotkey (Hotkey)
 {
 F
 }
@@ -130948,7 +130949,7 @@ Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android
 }
 
 STRING 19282
-// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -130979,7 +130980,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 19286
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -131039,18 +131040,11 @@ Schala calls down lightning from the sky that bombards the target area.
 }
 
 STRING 19293
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+// Items: I053 (Snow Rice), Description (Description)
 {
-A farmer with a shotgun. A low cooldown nuker that relies on spacing himself far away from his enemies due to his lack of mobility. Has access to a unique farming system to grow highly rewarding crops.
-
-|cffffcc00Honest Work|r: Consuming crops provides 20% of the experience to the next level (1% after level 150).
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.375 INT each.
+Grants Farmer +100% damage on their next auto attack.
 }
 
 STRING 19294
@@ -131097,31 +131091,35 @@ Dyspo forms a ring of energy in his hand and fires it at his opponent, rooting t
 }
 
 STRING 19299
-// Items: I050 (Wheat), Description (Description)
+// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.5 STR each.
+Nutritious grains of snow rice.
+|cffffff00Consume for +0.375 INT each.
+Grants Farmer +100% damage on their next auto attack.
 }
 
 STRING 19300
-// Items: I050 (Wheat), Ubertip (Tooltip - Extended)
+// Items: I002 (Super Corn), Description (Description)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.5 STR each.
+Nutritious corn.
+|cffffff00Consume for +0.375 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
 }
 
 STRING 19301
-// Items: I051 (Corn), Description (Description)
+// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
 {
 Nutritious corn.
-|cffffff00Consume for +0.5 AGI each.
+|cffffff00Consume for +0.375 AGI each.
+Grants Farmer +50% hp/mp/sp regen for 10s.
 }
 
 STRING 19302
-// Items: I051 (Corn), Ubertip (Tooltip - Extended)
+// Items: I005 (Tegridy Wheat), Description (Description)
 {
-Nutritious corn.
-|cffffff00Consume for +0.5 AGI each.
+A nutritious bundle of tegridy wheat.
+|cffffff00Consume for +0.375 STR each.
+Grants Farmer +10 armor for 10s.
 }
 
 STRING 19303
@@ -131207,7 +131205,7 @@ STRING 19313
 }
 
 STRING 19314
-// Abilities: A13Q (Final Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -131225,7 +131223,7 @@ STRING 19316
 }
 
 STRING 19317
-// Abilities: A13Q (Final Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -131385,10 +131383,11 @@ STRING 19337
 }
 
 STRING 19338
-// Items: I052 (Rice), Description (Description)
+// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +0.5 INT each.
+A nutritious bundle of tegridy wheat.
+|cffffff00Consume for +0.375 STR each.
+Grants Farmer +10 armor for 10s.
 }
 
 STRING 19339
@@ -131715,10 +131714,9 @@ Schala channels an unbreakable barrier at the target location that lasts until s
 }
 
 STRING 19377
-// Items: I052 (Rice), Ubertip (Tooltip - Extended)
+// Abilities: A11J (Armor Piccolo Orange), Name (Name)
 {
-Nutritious grains of rice.
-|cffffff00Consume for +0.5 INT each.
+Armor Piccolo Orange
 }
 
 STRING 19378
@@ -131795,10 +131793,9 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 19387
-// Items: I053 (Snow Rice), Description (Description)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +0.75 INT each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 2|r]
 }
 
 STRING 19388
@@ -131808,10 +131805,9 @@ Schala can now channel the power of Lavos through her pendant, restoring her man
 }
 
 STRING 19389
-// Items: I053 (Snow Rice), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-Nutritious grains of snow rice.
-|cffffff00Consume for +0.75 INT each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 3|r]
 }
 
 STRING 19390
@@ -132028,10 +132024,9 @@ Waluigi winds up a deadly Bob-omb to blow up his enemies and stun them for <A11W
 }
 
 STRING 19423
-// Items: I002 (Super Corn), Description (Description)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-Nutritious corn.
-|cffffff00Consume for +0.75 AGI each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 4|r]
 }
 
 STRING 19424
@@ -132284,10 +132279,9 @@ Melee Damage: [Int] 750u
 }
 
 STRING 19453
-// Items: I002 (Super Corn), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-Nutritious corn.
-|cffffff00Consume for +0.75 AGI each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 5|r]
 }
 
 STRING 19454
@@ -132319,17 +132313,15 @@ STRING 19457
 }
 
 STRING 19458
-// Items: I005 (Tegridy Wheat), Description (Description)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.75 STR each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 6|r]
 }
 
 STRING 19459
-// Items: I005 (Tegridy Wheat), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-A nutritious bundle of wheat.
-|cffffff00Consume for +0.75 STR each.
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 1|r]
 }
 
 STRING 19460
@@ -132495,7 +132487,7 @@ STRING 19480
 }
 
 STRING 19481
-// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0XK (Dino Tail), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -132513,7 +132505,7 @@ STRING 19483
 }
 
 STRING 19484
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XK (Dino Tail), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -132722,7 +132714,7 @@ Melee Damage: [Int] 750u
 }
 
 STRING 19511
-// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00J (Cannibalize), Hotkey (Hotkey)
 {
 E
 }
@@ -132954,7 +132946,7 @@ Increases warehousing yield by +1 crops (total +3/+4).
 }
 
 STRING 19540
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -132972,7 +132964,7 @@ STRING 19542
 }
 
 STRING 19543
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -133344,13 +133336,13 @@ E
 }
 
 STRING 19598
-// Abilities: A0XK (Dino Tail), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 19599
-// Abilities: A0XK (Dino Tail), Hotkey (Hotkey - Normal)
+// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134628,7 +134620,7 @@ STRING 19772
 }
 
 STRING 19773
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Researchhotkey (Hotkey - Learn)
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -134646,7 +134638,7 @@ STRING 19775
 }
 
 STRING 19776
-// Abilities: A003 (Hiraishin no Jutsu: Third Stage), Hotkey (Hotkey - Normal)
+// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134700,7 +134692,7 @@ Fat Thin (Tavern)
 }
 
 STRING 19785
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Reverse Lotus), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -134747,7 +134739,7 @@ Cooling Down
 }
 
 STRING 19793
-// Abilities: A00D (Hiraishin no Jutsu: Spiral Flash), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Reverse Lotus), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134963,7 +134955,7 @@ STRING 19826
 }
 
 STRING 19827
-// Abilities: A015 (Reverse Lotus), Researchhotkey (Hotkey - Learn)
+// Abilities: A01R (Eighth Gate: Gate of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -134981,7 +134973,7 @@ STRING 19829
 }
 
 STRING 19830
-// Abilities: A015 (Reverse Lotus), Hotkey (Hotkey - Normal)
+// Abilities: A024 (Yagai: Night Guy), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -135820,7 +135812,7 @@ STRING 19952
 }
 
 STRING 19953
-// Abilities: A01R (Eighth Gate: Gate of Death), Hotkey (Hotkey - Normal)
+// Abilities: A024 (Yagai: Night Guy), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -135838,7 +135830,7 @@ STRING 19955
 }
 
 STRING 19956
-// Abilities: A024 (Yagai: Night Guy), Researchhotkey (Hotkey - Learn)
+// Abilities: A04V (Spiral Incineration Cannon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -137110,7 +137102,7 @@ Sonic jumps into the air before crashing down on his enemies.
 }
 
 STRING 20137
-// Abilities: A024 (Yagai: Night Guy), Hotkey (Hotkey - Normal)
+// Abilities: A04V (Spiral Incineration Cannon), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -138058,7 +138050,7 @@ STRING 20271
 }
 
 STRING 20272
-// Abilities: A04V (Spiral Incineration Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B6 (Multi Form Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -138076,7 +138068,7 @@ STRING 20274
 }
 
 STRING 20275
-// Abilities: A04V (Spiral Incineration Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -138641,7 +138633,7 @@ Warehouse
 }
 
 STRING 20348
-// Abilities: A0B6 (Multi Form Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A05P (Tornado of Terror), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -138844,7 +138836,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20375
-// Abilities: A0B6 (Multi Form Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A05P (Tornado of Terror), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -139312,7 +139304,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 20440
-// Abilities: A05P (Tornado of Terror), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CE (Mass Move Order), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -139867,13 +139859,13 @@ STRING 20512
 }
 
 STRING 20513
-// Abilities: A05P (Tornado of Terror), Hotkey (Hotkey - Normal)
+// Abilities: A0EW (Final Shot), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 20514
-// Abilities: A0CE (Mass Move Order), Hotkey (Hotkey - Normal)
+// Abilities: A0EW (Final Shot), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -139897,7 +139889,7 @@ STRING 20517
 }
 
 STRING 20518
-// Abilities: A0EW (Final Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -139927,19 +139919,19 @@ STRING 20522
 }
 
 STRING 20523
-// Abilities: A0EW (Final Shot), Hotkey (Hotkey - Normal)
+// Abilities: A13W (Domain Expansion: Unlimited Void), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20524
-// Abilities: A0D1 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A145 (Plum Blossom Cleave), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20525
-// Abilities: A13W (Domain Expansion: Unlimited Void), Hotkey (Hotkey - Normal)
+// Abilities: A146 (Plum Blossom Tempest), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -142270,7 +142262,7 @@ Increases the attack range of Geti Star Defense buildings by +200, HP by 8000 an
 }
 
 STRING 20838
-// Abilities: A145 (Plum Blossom Cleave), Hotkey (Hotkey - Normal)
+// Abilities: A147 (Celestial Falling Petals), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -144851,7 +144843,7 @@ STRING 21194
 }
 
 STRING 21195
-// Abilities: A146 (Plum Blossom Tempest), Hotkey (Hotkey - Normal)
+// Abilities: A148 (Plum Blossom Palisade), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -144869,7 +144861,7 @@ STRING 21197
 }
 
 STRING 21198
-// Abilities: A147 (Celestial Falling Petals), Hotkey (Hotkey - Normal)
+// Abilities: A149 (Plum Blossom Flow), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -145049,15 +145041,9 @@ Orange Piccolo Attack Damage
 }
 
 STRING 21225
-// Abilities: A11J (Orange Piccolo Armor Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A11J (Armor Piccolo Orange), EditorSuffix (Editor Suffix)
 {
 (piccolo)
-}
-
-STRING 21226
-// Abilities: A11J (Orange Piccolo Armor Bonus), Name (Name)
-{
-Orange Piccolo Armor Bonus
 }
 
 STRING 21227
@@ -149144,7 +149130,7 @@ E
 }
 
 STRING 21784
-// Abilities: A148 (Plum Blossom Palisade), Hotkey (Hotkey - Normal)
+// Abilities: A14A (Plum Blossom Cloudburst), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -149290,13 +149276,13 @@ Moro manipulates the life force of living things into a powerful ball of energy 
 }
 
 STRING 21803
-// Abilities: A149 (Plum Blossom Flow), Hotkey (Hotkey - Normal)
+// Abilities: A14M (Dwarven Strength), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 21804
-// Abilities: A14A (Plum Blossom Cloudburst), Hotkey (Hotkey - Normal)
+// Abilities: A14Y (Final Shine Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -152675,7 +152661,7 @@ Q
 }
 
 STRING 22196
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A154 (Cornblast), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -152687,13 +152673,13 @@ Q
 }
 
 STRING 22198
-// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+// Abilities: A154 (Cornblast), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 22199
-// Abilities: A14M (Dwarven Strength), Hotkey (Hotkey - Normal)
+// Abilities: A14Y (Final Shine Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -152731,13 +152717,13 @@ Domain Expansion: Unlimited Void
 }
 
 STRING 22204
-// Abilities: A14Y (Final Shine Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A156 (Honest Shot), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 22205
-// Abilities: A14Y (Final Shine Attack), Hotkey (Hotkey - Normal)
+// Abilities: A156 (Honest Shot), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -153982,6 +153968,46 @@ A Dark version of Final Flash that blinds enemies it hits. Vegeta charges with h
 
 |cff00ff00Damage: [Int] 160u x 8t + 160u|r
 |cff00ffffCooldown: <A14Z,Cool10> seconds|r
+}
+
+STRING 22343
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool1> seconds|r
+}
+
+STRING 22344
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool3> seconds|r
+}
+
+STRING 22345
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool4> seconds|r
+}
+
+STRING 22346
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool5> seconds|r
 }
 
 STRING 22347
@@ -166293,15 +166319,9 @@ STRING 23939
 }
 
 STRING 23940
-// Units: E003 (Prince of all Saiyans), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
 {
-An offense-oriented hero who struggles in the early and mid game but becomes one of the strongest PVP heroes after unlocking Super Saiyan Blue and Ultra Ego.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 7|r]
 }
 
 STRING 23941
@@ -166755,7 +166775,7 @@ F
 }
 
 STRING 23998
-// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+// Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
 }
@@ -168201,6 +168221,16 @@ STRING 24196
 [|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
 }
 
+STRING 24197
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool6> seconds|r
+}
+
 STRING 24198
 // Units: h02C (Popo's Magic Carpet), Name (Name)
 {
@@ -169531,7 +169561,7 @@ STRING 24344
 }
 
 STRING 24345
-// Units: H02G (Superhero Android), Ubertip (Tooltip - Extended)
+// Units: H02H (Superhero Android), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities. Can choose between the two different paths of Super Saiyan 4 / Limit Breaker and Super Saiyan Blue / Ultra Instinct.
 
@@ -169573,7 +169603,7 @@ STRING 24350
 }
 
 STRING 24351
-// Units: H02H (Superhero Android), Ubertip (Tooltip - Extended)
+// Units: H02I (Omni-King), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities. Can choose between the two different paths of Super Saiyan 4 / Limit Breaker and Super Saiyan Blue / Ultra Instinct.
 
@@ -169673,7 +169703,7 @@ STRING 24365
 }
 
 STRING 24366
-// Units: H02I (Omni-King), Ubertip (Tooltip - Extended)
+// Units: H02J (Omni-King Attendant), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities. Can choose between the two different paths of Super Saiyan 4 / Limit Breaker and Super Saiyan Blue / Ultra Instinct.
 
@@ -169715,15 +169745,9 @@ STRING 24371
 }
 
 STRING 24372
-// Units: H02J (Omni-King Attendant), Ubertip (Tooltip - Extended)
+// Abilities: A153 (Haymaker), Name (Name)
 {
-A well-rounded hero who has strong offensive and defensive capabilities. Can choose between the two different paths of Super Saiyan 4 / Limit Breaker and Super Saiyan Blue / Ultra Instinct.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+Haymaker
 }
 
 STRING 24373
@@ -170347,13 +170371,13 @@ GokuSS5
 }
 
 STRING 24459
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 24460
-// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
@@ -171256,7 +171280,7 @@ STRING 24578
 }
 
 STRING 24579
-// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
 {
 Q
 }
@@ -171272,7 +171296,7 @@ Genos rapidly punches 200 units in front of him towards the targetted direction.
 }
 
 STRING 24581
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -171743,7 +171767,7 @@ Genos rapidly punches 200 units in front of him towards the targetted direction.
 }
 
 STRING 24647
-// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R000 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
 {
 W
 }
@@ -172211,6 +172235,16 @@ STRING 24702
 W
 }
 
+STRING 24703
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool7> seconds|r
+}
+
 STRING 24704
 {
 [|cffffcc00Unlock|r] |cff8844ddDark Final Flash|r
@@ -172304,7 +172338,7 @@ Limit Breaker
 }
 
 STRING 24721
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
@@ -172328,7 +172362,7 @@ D
 }
 
 STRING 24725
-// Upgrades: R00R (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R00D (Magic Sentry), Hotkey (Hotkey)
 {
 W
 }
@@ -172379,5 +172413,1071 @@ STRING 24735
 // Buffs/Effects: B06R (Dark Final Flash Blind), EditorName (Name (Editor Only))
 {
 Dark Final Flash Blind
+}
+
+STRING 24743
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool8> seconds|r
+}
+
+STRING 24744
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool9> seconds|r
+}
+
+STRING 24745
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool10> seconds|r
+}
+
+STRING 24746
+// Abilities: A153 (Haymaker), Researchubertip (Tooltip - Learn - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool1> - <A153,Cool10> seconds|r
+}
+
+STRING 24747
+// Abilities: A153 (Haymaker), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 24748
+// Abilities: A153 (Haymaker), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a hay bundle at the target location that explodes after 2s. Deals +1% bonus damage for every 10 wheat held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 1500u|r
+|cff00ffffCooldown: <A153,Cool2> seconds|r
+}
+
+STRING 24749
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool1> seconds|r
+}
+
+STRING 24750
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool3> seconds|r
+}
+
+STRING 24751
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool4> seconds|r
+}
+
+STRING 24752
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool5> seconds|r
+}
+
+STRING 24753
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool6> seconds|r
+}
+
+STRING 24754
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool7> seconds|r
+}
+
+STRING 24755
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 2|r]
+}
+
+STRING 24756
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 3|r]
+}
+
+STRING 24757
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 4|r]
+}
+
+STRING 24758
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 5|r]
+}
+
+STRING 24759
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 6|r]
+}
+
+STRING 24760
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 1|r]
+}
+
+STRING 24761
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 7|r]
+}
+
+STRING 24762
+// Abilities: A154 (Cornblast), Name (Name)
+{
+Cornblast
+}
+
+STRING 24763
+// Abilities: A154 (Cornblast), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Cornblast - [|cffffcc00Level %d|r]
+}
+
+STRING 24764
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 9|r]
+}
+
+STRING 24765
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 8|r]
+}
+
+STRING 24766
+// Abilities: A154 (Cornblast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Cornblast - [|cffffcc00Level 10|r]
+}
+
+STRING 24767
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool8> seconds|r
+}
+
+STRING 24768
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool9> seconds|r
+}
+
+STRING 24769
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool10> seconds|r
+}
+
+STRING 24770
+// Abilities: A154 (Cornblast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool1> - <A154,Cool10> seconds|r
+}
+
+STRING 24771
+// Abilities: A154 (Cornblast), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 24772
+// Abilities: A154 (Cornblast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast of corn in an arc that slows enemies by 25% for 1s. Pushes Farmer in the opposite direction of cast. Deals +1% bonus damage for every 10 corn held.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 100u (x8)|r
+|cff00ffffCooldown: <A154,Cool2> seconds|r
+}
+
+STRING 24773
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool1> seconds|r
+}
+
+STRING 24774
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool3> seconds|r
+}
+
+STRING 24775
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 40% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool4> seconds|r
+}
+
+STRING 24776
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 50% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool5> seconds|r
+}
+
+STRING 24777
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 60% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool6> seconds|r
+}
+
+STRING 24778
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 70% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool7> seconds|r
+}
+
+STRING 24779
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 2|r]
+}
+
+STRING 24780
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 3|r]
+}
+
+STRING 24781
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 4|r]
+}
+
+STRING 24782
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 5|r]
+}
+
+STRING 24783
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 6|r]
+}
+
+STRING 24784
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 1|r]
+}
+
+STRING 24785
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 7|r]
+}
+
+STRING 24786
+// Abilities: A155 (Saiyan Slaying Shot), Name (Name)
+{
+Saiyan Slaying Shot
+}
+
+STRING 24787
+// Abilities: A155 (Saiyan Slaying Shot), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Saiyan Slaying Shot - [|cffffcc00Level %d|r]
+}
+
+STRING 24788
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 9|r]
+}
+
+STRING 24789
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 8|r]
+}
+
+STRING 24790
+// Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 24791
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 80% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool8> seconds|r
+}
+
+STRING 24792
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 90% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool9> seconds|r
+}
+
+STRING 24793
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 100% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool10> seconds|r
+}
+
+STRING 24794
+// Abilities: A155 (Saiyan Slaying Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool1> - <A155,Cool10> seconds|r
+}
+
+STRING 24795
+// Abilities: A155 (Saiyan Slaying Shot), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 24796
+// Abilities: A155 (Saiyan Slaying Shot), Ubertip (Tooltip - Normal - Extended)
+{
+After a 2s channel, fires a fast moving bullet capable of even killing powerful saiyans. Deals +1% bonus damage for every 10 rice held.
+
+|cffff2222Channel Duration: <A155,DataA1>s
+|cff8888ffMana Cost: 30% of max mana
+|cff00ff00Damage: [Int] 2000u|r
+|cff00ffffCooldown: <A155,Cool2> seconds|r
+}
+
+STRING 24797
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool1> seconds|r
+}
+
+STRING 24798
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool3> seconds|r
+}
+
+STRING 24799
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool4> seconds|r
+}
+
+STRING 24800
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool5> seconds|r
+}
+
+STRING 24801
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool6> seconds|r
+}
+
+STRING 24802
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool7> seconds|r
+}
+
+STRING 24803
+// Abilities: A153 (Haymaker), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Haymaker - [|cffffcc00Level %d|r]
+}
+
+STRING 24804
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 9|r]
+}
+
+STRING 24805
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 8|r]
+}
+
+STRING 24806
+// Abilities: A153 (Haymaker), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Haymaker - [|cffffcc00Level 10|r]
+}
+
+STRING 24807
+// Abilities: A0DB (Debuff Inner Fire Farmer Rice Shot), Name (Name)
+{
+Debuff Inner Fire Farmer Rice Shot
+}
+
+STRING 24808
+// Abilities: A159 (Debuff Inner Fire Farmer Wheat Armor), Name (Name)
+{
+Debuff Inner Fire Farmer Wheat Armor
+}
+
+STRING 24809
+// Abilities: A158 (Debuff Inner Fire Farmer Corn Regen), Name (Name)
+{
+Debuff Inner Fire Farmer Corn Regen
+}
+
+STRING 24810
+// Buffs/Effects: B06T (Inner Fire Farmer Wheat), Bufftip (Tooltip)
+{
+Wheat Shielding
+}
+
+STRING 24811
+// Buffs/Effects: B06T (Inner Fire Farmer Wheat), Buffubertip (Tooltip - Extended)
+{
+This unit has enhanced wheat shielding; it has increased armor.
+}
+
+STRING 24812
+// Buffs/Effects: B06T (Inner Fire Farmer Wheat), EditorName (Name (Editor Only))
+{
+Inner Fire Farmer Wheat
+}
+
+STRING 24813
+// Buffs/Effects: B06U (Inner Fire Farmer Corn), Bufftip (Tooltip)
+{
+Corn Regeneration
+}
+
+STRING 24814
+// Buffs/Effects: B06U (Inner Fire Farmer Corn), Buffubertip (Tooltip - Extended)
+{
+This unit has corn regeneration; it has increased HP/MP/SP regeneration.
+}
+
+STRING 24815
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool8> seconds|r
+}
+
+STRING 24816
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool9> seconds|r
+}
+
+STRING 24817
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool10> seconds|r
+}
+
+STRING 24818
+// Abilities: A156 (Honest Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool1> - <A156,Cool10> seconds|r
+}
+
+STRING 24819
+// Abilities: A156 (Honest Shot), EditorSuffix (Editor Suffix)
+{
+(granolah)
+}
+
+STRING 24820
+// Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Grants the next attack true strike and 2x critical damage, or causes the next crop planted to also plant the other 2 crops as well.
+
+|cff8888ffMana Cost: 10% of max mana
+|cff00ffffCooldown: <A156,Cool2> seconds|r
+}
+
+STRING 24821
+// Upgrades: R00B (Magic Sentry), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24822
+// Upgrades: R00H (Cannibalize), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24823
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24824
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 24825
+// Upgrades: R00N (Cannibalize), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 24826
+// Buffs/Effects: B06U (Inner Fire Farmer Corn), EditorName (Name (Editor Only))
+{
+Inner Fire Farmer Corn
+}
+
+STRING 24827
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+{
+A farmer with a shotgun that has the ability to farm crops to provide bonus experience and stats. His abilities deal more damage for holding more crops.
+
+|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
+
+|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+}
+
+STRING 24828
+// Upgrades: R00R (Magic Sentry), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24829
+// Units: H000 (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities. Can choose between two different paths: Super Saiyan 4 / Limit Breaker or Super Saiyan Blue / Ultra Instinct.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+}
+
+STRING 24830
+// Units: E003 (Prince of all Saiyans), Ubertip (Tooltip - Extended)
+{
+An offense-oriented hero who struggles in the early and mid game but becomes one of the strongest PVP heroes after unlocking all of their spells. Can choose between two different paths: Super Saiyan 4 / Limit Breaker or Super Saiyan Blue / Ultra Ego.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+}
+
+STRING 24832
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 2|r]
+}
+
+STRING 24833
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 3|r]
+}
+
+STRING 24834
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 4|r]
+}
+
+STRING 24835
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 5|r]
+}
+
+STRING 24836
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 6|r]
+}
+
+STRING 24837
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 1|r]
+}
+
+STRING 24838
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 7|r]
+}
+
+STRING 24839
+// Abilities: A156 (Honest Shot), Name (Name)
+{
+Honest Shot
+}
+
+STRING 24840
+// Abilities: A156 (Honest Shot), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Honest Shot - [|cffffcc00Level %d|r]
+}
+
+STRING 24841
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 9|r]
+}
+
+STRING 24842
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 8|r]
+}
+
+STRING 24843
+// Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Honest Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 24845
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Farmer takes an honest shot. The next auto attack has true strike and deals bonus critical damage or the next crop planted will plant the other 2 crops as well.
+
+|cffffcc00Evasion|r - <A157,DataD1,%>% 
+|cffffcc00Critical|r - <A157,DataA1>% 
+|cffffcc00Damage|r - <A157,DataB1,.> times
+}
+
+STRING 24846
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 24847
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 24848
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 24849
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 24850
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 24851
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 24852
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 24853
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 24854
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 24855
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 24856
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 24857
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 24858
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 24859
+// Abilities: A157 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 24860
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 24861
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+|cffffcc00Honest Shot|r
+}
+
+STRING 24862
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
+STRING 24863
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 24864
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 24865
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 24866
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 24867
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 24868
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 24869
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 24870
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 24871
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 24872
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 24873
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 24874
+// Abilities: A157 (Honest Shot), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 24875
+// Abilities: A157 (Honest Shot), Name (Name)
+{
+Honest Shot
+}
+
+STRING 24876
+// Abilities: A157 (Honest Shot), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 24877
+// Abilities: A157 (Honest Shot), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 24878
+// Abilities: A157 (Honest Shot), EditorSuffix (Editor Suffix)
+{
+(farmer passive)
+}
+
+STRING 24879
+// Buffs/Effects: B06S (Inner Fire Farmer Rice), Bufftip (Tooltip)
+{
+Rice Shot
+}
+
+STRING 24880
+// Buffs/Effects: B06S (Inner Fire Farmer Rice), Buffubertip (Tooltip - Extended)
+{
+This unit is about to take a rice shot; it has increased attack damage.
+}
+
+STRING 24881
+// Buffs/Effects: B06S (Inner Fire Farmer Rice), EditorName (Name (Editor Only))
+{
+Inner Fire Farmer Rice
+}
+
+STRING 24882
+// Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
+{
+F
 }
 

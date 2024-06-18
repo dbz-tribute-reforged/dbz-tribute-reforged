@@ -394,4 +394,15 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump beam farmer haymaker",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    startTimeRatio: 0.2,
+    duration: 0,
+    maxHeight: 300,
+    useSpeedToCastPoint: true,
+    speed: 50,
+  },
 ]

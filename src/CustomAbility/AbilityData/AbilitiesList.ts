@@ -557,6 +557,34 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.FarmerWithShotgun.RELOAD,
+    currentCd: 0,
+    maxCd: 10,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFarmerBasic.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBTNFarmerBasic.blp",
+    },
+    tooltip: {
+      title: "Reload",
+      body: 
+        "Restores 30% of max mana.|n" + 
+        "Cost: 30 SP|n" +
+        "CD: 10"
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Goku.KAMEHAMEHA, // Goku's Kame
     currentCd: 0,
     maxCd: 1,
@@ -2063,6 +2091,90 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward max power" },
       { name: "block kyodaika" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.HAYMAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam farmer haymaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.CORNBLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi farmer cornblast" },
+      { name: "dash ground point cornblast pushback" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 2s" },
+      { name: "multi farmer saiyan slaying shot" },
+      { name: "sfx farmer saiyan slaying shot" },
     ],
   },
   // -------------------------------------------

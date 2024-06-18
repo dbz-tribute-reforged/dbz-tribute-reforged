@@ -92,6 +92,7 @@ export module SimpleSpellSystem {
     });
 
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSAggronorDamageDeal);
+    DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSFarmerDamageDeal);
 
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSAggronorDamageBlock);
     DDS.getInstance().addCallback(DDSHandler.DDS_DAMAGED, DDSWhisDamageBlock);
@@ -442,6 +443,8 @@ export module SimpleSpellSystem {
     
     Globals.genericSpellMap.set(Id.aggronorAvatar, SimpleSpellSystem.doAggronorAvatar);
     
+    Globals.genericSpellMap.set(Id.farmerHonestShot, SimpleSpellSystem.doFarmerHonestShot);
+    
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
     Globals.genericSpellMap.set(Id.itemSacredWaterAbility, SimpleSpellSystem.doAinzResistance);
@@ -455,6 +458,27 @@ export module SimpleSpellSystem {
     // Globals.genericSpellMap.set(Id.schalaSkygate, SimpleSpellSystem.doSchalaLinkChannels);
     // Globals.genericSpellMap.set(Id.schalaSkygate2, SimpleSpellSystem.doSchalaLinkChannels);
     
+    TriggerAddAction(gg_trg_Farmer_Eat_Food, () => {
+      const item = GetManipulatedItem();
+      const itemTypeId = GetItemTypeId(item);
+      if (
+        itemTypeId == ItemConstants.Farming.RICE
+        || itemTypeId == ItemConstants.Farming.RICE_SNOW
+      ) {
+        SimpleSpellSystem.doFarmerEatRice(Id.plantRice);
+      } else if (
+        itemTypeId == ItemConstants.Farming.WHEAT
+        || itemTypeId == ItemConstants.Farming.TEGRIDY_WHEAT
+      ) {
+        SimpleSpellSystem.doFarmerEatWheat(Id.plantWheat);
+      } else if (
+        itemTypeId == ItemConstants.Farming.CORN
+        || itemTypeId == ItemConstants.Farming.SUPER_CORN
+      ) {
+        SimpleSpellSystem.doFarmerEatCorn(Id.plantCorn);
+      }
+
+    });
     
   }
 
@@ -4820,9 +4844,10 @@ export module SimpleSpellSystem {
   }
 
   export function farmingPlantCrops(spellId: number) {
-    const x = GetUnitX(GetTriggerUnit());
-    const y = GetUnitY(GetTriggerUnit());
-    FarmingManager.getInstance().plantCropFromSpell(spellId, x, y);
+    const caster = GetTriggerUnit();
+    const x = GetUnitX(caster);
+    const y = GetUnitY(caster);
+    FarmingManager.getInstance().plantCropFromSpell(caster, spellId, x, y);
     
     return false;
   }
@@ -11690,6 +11715,109 @@ export module SimpleSpellSystem {
         x, y
       )
     );
+  }
+
+  export function DDSFarmerDamageDeal(dmg: DDSData) {
+    if (
+      dmg.sourceTypeId != Id.farmerWithShotgun
+      || dmg.dmg <= 0
+    ) return;
+    const farmerGunThumbDmgPct = 0.02;
+    const farmerGunThumbCostPct = 0.04;
+    const farmerGunThumbSpellAmp = 0.02;
+
+    if (dmg.isAttack && IsUnitType(dmg.target, UNIT_TYPE_HERO)) {
+      if (GetUnitAbilityLevel(dmg.source, Id.farmerHonestShotPassive) > 0) {
+        const farmer = dmg.source;
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, 0.03, false, () => {
+          UnitRemoveAbility(farmer, Id.farmerHonestShotPassive);
+          TimerManager.getInstance().recycle(timer);
+        });
+      }
+
+      if (GetUnitAbilityLevel(dmg.source, Buffs.INNER_FIRE_FARMER_RICE_DMG_BUFF) > 0) {
+        const farmer = dmg.source;
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, 0.03, false, () => {
+          UnitRemoveAbility(farmer, Buffs.INNER_FIRE_FARMER_RICE_DMG_BUFF);
+          TimerManager.getInstance().recycle(timer);
+        });
+      }
+
+      const timer = TimerManager.getInstance().get();
+      const player = GetOwningPlayer(dmg.source);
+      const playerId = GetPlayerId(player);
+      const ch = Globals.customPlayers[playerId].getCustomHero(dmg.source);
+      if (ch) {
+        ch.addSpellPower(farmerGunThumbSpellAmp);
+        TimerStart(timer, 5, false, () => {
+          ch.removeSpellPower(farmerGunThumbSpellAmp);
+          TimerManager.getInstance().recycle(timer);
+        });
+      }
+
+      dmg.setDamage(dmg.dmg + 
+        farmerGunThumbDmgPct 
+        * GetUnitState(dmg.source, UNIT_STATE_MANA)
+        * (ch ? ch.spellPower : 1)
+      );
+      UnitHelper.payMPPercentCost(dmg.source, farmerGunThumbCostPct, UNIT_STATE_MANA);
+    }
+  }
+
+  export function doFarmerReload(spellId: number, caster: unit) {
+    const manaCostPct = -0.3;
+    UnitHelper.payMPPercentCost(caster, manaCostPct, UNIT_STATE_MAX_MANA);
+    DestroyEffect(AddSpecialEffect(
+      "Abilities/Weapons/Mortar/MortarMissile.mdl",
+      GetUnitX(caster), GetUnitY(caster)
+    ));
+  }
+
+  export function doFarmerHonestShot(spellId: number) {
+    const farmerHonestShotKey = StringHash("farmer_r_active");
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 1);
+  }
+
+  export function doFarmerEatRice(spellId: number) {
+    const caster = GetTriggerUnit();
+    if (GetUnitAbilityLevel(caster, Id.plantWheat) == 0) return;
+    const farmerRiceShotKey = StringHash("farmer_rice_active");
+    const casterId = GetHandleId(caster);
+    SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 1);
+  }
+
+  export function doFarmerEatWheat(spellId: number) {
+    const caster = GetTriggerUnit();
+    if (GetUnitAbilityLevel(caster, Id.plantWheat) == 0) return;
+    const player = GetOwningPlayer(caster);
+    Globals.tmpVector.setUnit(caster);
+    const dummyUnit = CreateUnit(
+      player, Constants.dummyCasterId,
+      Globals.tmpVector.x, Globals.tmpVector.y, 0
+    );
+    UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_WHEAT_ARMOR_BUFF);
+    IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, caster);
+    RemoveUnit(dummyUnit);
+    udg_StatMultUnit = caster;
+    TriggerExecute(gg_trg_Base_Armor_Set);
+  }
+
+  export function doFarmerEatCorn(spellId: number) {
+    const caster = GetTriggerUnit();
+    if (GetUnitAbilityLevel(caster, Id.plantWheat) == 0) return;
+    const player = GetOwningPlayer(caster);
+    Globals.tmpVector.setUnit(caster);
+    const dummyUnit = CreateUnit(
+      player, Constants.dummyCasterId,
+      Globals.tmpVector.x, Globals.tmpVector.y, 0
+    );
+    UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_CORN_REGEN_BUFF);
+    IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, caster);
+    RemoveUnit(dummyUnit);
   }
 
   export function doCellMaxWings(spellId: number) {

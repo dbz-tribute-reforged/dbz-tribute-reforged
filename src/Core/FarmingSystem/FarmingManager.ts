@@ -73,21 +73,39 @@ export class FarmingManager {
     });
   }
 
-  plantCropFromSpell(spellId: number, x: number, y: number) {
+  plantCropFromSpell(unit: unit, spellId: number, x: number, y: number) {
     const fc = this.farmingComponentMap.get(spellId);
     if (fc) {
-      const fcCopy = fc.clone();
-      fcCopy.init(x, y);
-      this.plantedCropsMap.set(this.numCrops, fcCopy);
-      this.numCrops += 1;
-      // BJDebugMsg("numCrops: " + this.numCrops);
+      this.plantCrop(fc, x, y);
+    }
+    const unitId = GetHandleId(unit);
+    const farmerHonestShotKey = StringHash("farmer_r_active");
+    if (1 == LoadInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey)) {
+      if (spellId != Id.plantWheat) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 32, y);
+      }
+      if (spellId != Id.plantCorn) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 32);
+      }
+      if (spellId != Id.plantRice) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 32, y + 32);
+      }
+      SaveInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey, 0);
     }
   }
 
-  plantCropFromItem(itemId: number, x: number, y: number) {
+  plantCrop(fc: FarmingComponent, x: number, y: number) {
+    if (fc == null) return;
+    const fcCopy = fc.clone();
+    fcCopy.init(x, y);
+    this.plantedCropsMap.set(this.numCrops, fcCopy);
+    this.numCrops += 1;
+  }
+
+  plantCropFromItem(unit: unit, itemId: number, x: number, y: number) {
     const spellId = this.cropAbilityMap.get(itemId);
     if (spellId) {
-      this.plantCropFromSpell(spellId, x, y)
+      this.plantCropFromSpell(unit, spellId, x, y)
     }
   }
 
@@ -187,7 +205,7 @@ export class FarmingManager {
           if (prng < req) {
             const itemX = GetItemX(item);
             const itemY = GetItemY(item);
-            this.plantCropFromSpell(spellId, itemX, itemY);
+            this.plantCropFromSpell(unit, spellId, itemX, itemY);
             // BJDebugMsg("Hit " + prng);
             prngOffset = 0;
           } else {

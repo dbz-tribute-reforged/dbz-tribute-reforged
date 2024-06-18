@@ -177,7 +177,10 @@ export function kidBuuPassive(customHero: CustomHero) {
 }
 
 export function farmerPassive(customHero: CustomHero) {
-  const manaCostPct = 0.1;
+  const farmingManaCostPct = 0.1;
+
+  const farmerHonestShotKey = StringHash("farmer_r_active");
+  const farmerRiceShotKey = StringHash("farmer_rice_active");
 
   const spellDamageTimer = CreateTimer();
   customHero.addTimer(spellDamageTimer);
@@ -185,11 +188,53 @@ export function farmerPassive(customHero: CustomHero) {
   TimerStart(spellDamageTimer, 0.03, true, () => {
     const maxMana = GetUnitState(customHero.unit, UNIT_STATE_MANA);
     const prevCost = BlzGetUnitAbilityManaCost(customHero.unit, Id.plantWheat, 0);
-    const manaCost = R2I(Math.max(prevCost, Math.floor(manaCostPct * maxMana)));
+    const manaCost = R2I(Math.max(prevCost, Math.floor(farmingManaCostPct * maxMana)));
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantWheat, 0, manaCost);
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantCorn, 0, manaCost);
     BlzSetUnitAbilityManaCost(customHero.unit, Id.plantRice, 0, manaCost);
   });
+  
+  const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacked = GetTriggerUnit();
+      const attacker = GetAttacker();
+      if (attacker != customHero.unit) return false;
+      const player = GetOwningPlayer(attacker);
+      const casterId = GetHandleId(attacker);
+      const isHonestShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey);
+      const isRiceShot = 1 == LoadInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey);
+      if (
+        UnitHelper.isUnitTargetableForPlayer(attacked, player)
+        && IsUnitType(attacked, UNIT_TYPE_HERO)
+      ) {
+        if (isHonestShot) {
+          UnitAddAbility(attacker, Id.farmerHonestShotPassive);
+          SaveInteger(Globals.genericSpellHashtable, casterId, farmerHonestShotKey, 0);
+        }
+        
+        if (isRiceShot) {
+          const player = GetOwningPlayer(attacker);
+          Globals.tmpVector.setUnit(attacker);
+          const dummyUnit = CreateUnit(
+            player, Constants.dummyCasterId,
+            Globals.tmpVector.x, Globals.tmpVector.y, 0
+          );
+          UnitAddAbility(dummyUnit, DebuffAbilities.FARMER_RICE_DMG_BUFF);
+          IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, attacker);
+          RemoveUnit(dummyUnit);
+          SaveInteger(Globals.genericSpellHashtable, casterId, farmerRiceShotKey, 0);
+        }
+      }
+      return false;
+    })
+  );
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
@@ -3969,6 +4014,7 @@ export function setupRegenTimer(customHero: CustomHero) {
     const hasBuuFat = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.MAJIN_BUU_FAT);
     const hasSuper17Gen = UnitHasItemOfTypeBJ(customHero.unit, ItemConstants.SagaDrops.SUPER_17_GENERATOR);
     const hasBeerusPassive = GetUnitAbilityLevel(customHero.unit, Id.beerusPassive) > 0;
+    const hasCornRegen = GetUnitAbilityLevel(customHero.unit, Buffs.INNER_FIRE_FARMER_CORN_REGEN_BUFF) > 0;
 
     // agi has flat 3 regen
     let spAgi = Math.max(
@@ -4001,6 +4047,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (hasBeerusPassive) {
       spMult += Constants.BEERUS_REGEN_MULT;
+    }
+    if (hasCornRegen) {
+      spMult += Constants.CORN_REGEN_MULT;
     }
     const incSp = (
       Constants.REGEN_TICK_RATE
@@ -4062,6 +4111,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (hasSuper17Gen) {
       hpMult += Constants.SUPER_17_GEN_REGEN_MULT;
     }
+    if (hasCornRegen) {
+      hpMult += Constants.CORN_REGEN_MULT;
+    }
     incHp += (
       Constants.REGEN_TICK_RATE
       * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 
@@ -4098,6 +4150,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     }
     if (hasBuuFat) {
       mpMult += Constants.MAJIN_BUU_FAT_MP_REGEN_MULT;
+    }
+    if (hasCornRegen) {
+      mpMult += Constants.CORN_REGEN_MULT;
     }
     const incMp = (
       Constants.REGEN_TICK_RATE

@@ -2508,4 +2508,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff slow farmer cornblast",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: DebuffAbilities.SLOW_GENERIC_25_PCT_1S,
+    orderId: OrderIds.SLOW,
+    aoe: 250,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

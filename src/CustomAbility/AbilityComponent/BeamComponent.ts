@@ -79,6 +79,7 @@ export class BeamComponent implements
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
+  public isStopped: boolean = false;
 
   public spawnDelay: number = 0;
   public moveTicks: number = 0;
@@ -109,6 +110,7 @@ export class BeamComponent implements
     public isSticky: boolean = true,
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
+    public stopAtCastPoint: boolean = false,
     public explodeAtCastPoint: boolean = false,
     public explodeOnDeath: boolean = false,
     public explodeOnContact: boolean = false,
@@ -232,6 +234,7 @@ export class BeamComponent implements
       if (
         ability.currentTick >= this.nextMoveTick 
         && (this.maxMoveTicks == -1 || this.moveTicks < this.maxMoveTicks)
+        && !this.isStopped
       ) {
         if (!this.isFixedAngle) {
           this.angle = GetUnitFacing(this.beamUnit);
@@ -264,6 +267,14 @@ export class BeamComponent implements
         CoordMath.distance(this.beamCoord, this.explodePosition) < this.explodeMinDistance
       ) {
         this.forcedExplode = true;
+      }
+
+      if (
+        this.stopAtCastPoint 
+        && !this.isStopped
+        && CoordMath.distance(this.beamCoord, this.explodePosition) < this.speed * 1.1
+      ) {
+        this.isStopped = true;
       }
 
       if (
@@ -402,6 +413,8 @@ export class BeamComponent implements
         CoordMath.distance(this.beamCoord, input.castPoint) / Math.floor(this.speed)
       )
       endHeightTick = this.explodeTick;
+    } else if (this.stopAtCastPoint) {
+      this.explodePosition.setPos(input.castPoint.x, input.castPoint.y);
     }
 
     // SetUnitFlyHeight(
@@ -507,6 +520,7 @@ export class BeamComponent implements
     if (ability.isFinishedUsing(this)) {
       this.isStarted = false;
       this.isFinished = true;
+      this.isStopped = false;
 
       if (!this.hasExploded) {
         if (this.explodeOnDeath) {
@@ -554,7 +568,9 @@ export class BeamComponent implements
       this.isFixedAngle, this.isGroundPathing, 
       this.isSticky,
       this.canClashWithHero, 
-      this.useLastCastPoint, this.explodeAtCastPoint,
+      this.useLastCastPoint, 
+      this.stopAtCastPoint,
+      this.explodeAtCastPoint,
       this.explodeOnDeath,
       this.explodeOnContact,
       this.setAsSpawnedBeam,
@@ -594,6 +610,7 @@ export class BeamComponent implements
       isSticky: boolean;
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
+      stopAtCastPoint: boolean;
       explodeAtCastPoint: boolean;
       explodeOnDeath: boolean;
       explodeOnContact: boolean;
@@ -630,6 +647,7 @@ export class BeamComponent implements
     this.isSticky = input.isSticky;
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
+    this.stopAtCastPoint = input.stopAtCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.explodeOnDeath = input.explodeOnDeath;
     this.explodeOnContact = input.explodeOnContact;

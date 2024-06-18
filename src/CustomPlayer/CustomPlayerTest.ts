@@ -189,6 +189,8 @@ export function customAbilityActivate(player: player, index: number) {
         SimpleSpellSystem.doCheongMyeongEquilibriumOfSix(customHero.unit);
       } else if (abilName == AbilityNames.Aggronor.LIGHTNING_PLATE) {
         SimpleSpellSystem.doAggronorLightningPlate(Id.aggronorLightningPlate, customHero.unit);
+      } else if (abilName == AbilityNames.FarmerWithShotgun.RELOAD) {
+        SimpleSpellSystem.doFarmerReload(Id.farmerWithShotgun, customHero.unit);
       }
 
       customHero.useAbility(abilName, abilityInput);
