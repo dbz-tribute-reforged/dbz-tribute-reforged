@@ -645,7 +645,7 @@ export module SimpleSpellSystem {
         GetUnitAbilityLevel(dmg.source, Id.aggronorStormlord) > 0
         && LoadReal(udg_StatMultHashtable, dmg.sourceHandleId, 9) > 0
       ) {
-        doAggronorChainLightning(dmg.source, dmg.target, 0.2);
+        doAggronorChainLightning(dmg.source, dmg.target, 2);
       }
     }
   }
@@ -11291,7 +11291,7 @@ export module SimpleSpellSystem {
   export function doLightningBash(source: unit, target: unit) {
     if (BlzGetUnitAbilityCooldownRemaining(source, Id.aggronorLightningBashActive) > 0) return;
 
-    const mpCostPct = 0.15;
+    const mpCostPct = 0.1;
     const player = GetOwningPlayer(source);
 
     const mp = GetUnitState(source, UNIT_STATE_MANA);
@@ -11315,7 +11315,7 @@ export module SimpleSpellSystem {
       );
     }
 
-    doAggronorChainLightning(source, target, 0.5);
+    doAggronorChainLightning(source, target, 5);
   }
 
   export function doAggronorChainLightning(source: unit, target: unit, dmgDataMult: number) {
@@ -11359,7 +11359,7 @@ export module SimpleSpellSystem {
         );
         const dmg = AOEDamage.calculateDamageRaw(
           source,
-          10,
+          getAggronorSpellLevel(Id.aggronorLightningBashPassive, source),
           ch ? ch.spellPower : 1.0,
           dmgData,
           1.0,
