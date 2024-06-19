@@ -76,4 +76,15 @@ export const BarrierComponents = [
     canWalkOut: false,
     canZanzoOut: true,
   },
+  {
+    name: "barrier cheong myeong plum blossom palisade", 
+    repeatInterval: 1, 
+    startTick: 2,
+    endTick: -1,
+    aoe: 250,
+    repelOutsidersSpeed: 15,
+    affectAllies: false,
+    canWalkOut: true,
+    canZanzoOut: true,
+  },
 ];

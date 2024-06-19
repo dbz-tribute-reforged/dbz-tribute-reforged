@@ -20,6 +20,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     public enableAbility: boolean = false,
     public disableAbility: boolean = false,
     public addAbility: boolean = false,
+    public hideAbility: boolean = false,
     public tempPermanence: boolean = false,
     public equalizeLevels: boolean = false,
     public linkCooldowns: number = -1,
@@ -44,6 +45,9 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       }
       if (this.addAbility) {
         this.abilityWasAdded = UnitAddAbility(source, this.newAbility);
+      }
+      if (this.hideAbility) {
+        BlzUnitHideAbility(source, this.newAbility, true);
       }
       if (this.tempPermanence) {
         UnitMakeAbilityPermanent(source, true, this.newAbility);
@@ -120,6 +124,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       this.enableAbility,
       this.disableAbility,
       this.addAbility,
+      this.hideAbility,
       this.tempPermanence,
       this.equalizeLevels,
       this.linkCooldowns,
@@ -138,6 +143,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       enableAbility: boolean;
       disableAbility: boolean;
       addAbility: boolean;
+      hideAbility: boolean;
       tempPermanence: boolean;
       equalizeLevels: boolean;
       linkCooldowns: number;
@@ -153,6 +159,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     this.enableAbility = input.enableAbility;
     this.disableAbility = input.disableAbility;
     this.addAbility = input.addAbility;
+    this.hideAbility = input.hideAbility;
     this.tempPermanence = input.tempPermanence;
     this.equalizeLevels = input.equalizeLevels;
     this.linkCooldowns = input.linkCooldowns;

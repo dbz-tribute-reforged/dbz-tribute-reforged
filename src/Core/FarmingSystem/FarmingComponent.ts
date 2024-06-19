@@ -78,6 +78,8 @@ export class FarmingComponent implements Serializable<FarmingComponent> {
         break;
 
       case Terrain.grass:
+      case Terrain.darkGrass:
+      case Terrain.lordaeronWinterRoughDirt:
         // BJDebugMsg("Grass");
         this.growthSpeed *= this.growthGrass;
         break;
@@ -89,6 +91,8 @@ export class FarmingComponent implements Serializable<FarmingComponent> {
         break;
 
       case Terrain.dirt:
+      case Terrain.barrensDirt:
+      case Terrain.barrensDirtRough:
         // BJDebugMsg("Dirt");
         this.growthSpeed *= this.growthDirt;
         break;
@@ -111,12 +115,14 @@ export class FarmingComponent implements Serializable<FarmingComponent> {
       case Terrain.abyss:
       case Terrain.lavaCracks:
       case Terrain.darkDesert:
+      case Terrain.northrendRock:
         // BJDebugMsg("Rocky");
         this.growthSpeed *= this.growthBlightRocky;
         break;
 
       default:
         BJDebugMsg("invalid terrain type");
+        this.growthSpeed *= this.growthBlightRocky;
         break;
     }
 

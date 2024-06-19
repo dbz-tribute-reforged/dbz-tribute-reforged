@@ -1,4 +1,4 @@
-import { Constants, Globals } from "Common/Constants";
+import { Constants, Globals, Id } from "Common/Constants";
 import { CustomCreep } from "./CustomCreep";
 import { Vector2D } from "Common/Vector2D";
 import { DefaultCreepUpgradeConfig, CreepUpgradeConfig, CreepResearchUpgrade } from "./CreepUpgradeConfig";
@@ -47,46 +47,73 @@ export class CreepManager {
     SetCreepCampFilterState(false);
 
     // pikkon
-    let x = CreateUnit(Constants.sagaPlayer, FourCC("U01N"), -6100, 21300, 135);
+    let x = CreateUnit(Constants.sagaPlayer, FourCC("U01N"), -8000, 23000, 315);
     SetHeroLevel(x, 10, false);
     SetHeroStr(x, 400, true);
     SetHeroAgi(x, 400, true);
     SetHeroInt(x, 400, true);
 
     // yamcha
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01O"), -7800, 21300, 45);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01O"), -8000, 20900, 45);
     SetHeroLevel(x, 3, false);
     SetHeroStr(x, 30, true);
     SetHeroAgi(x, 30, true);
     SetHeroInt(x, 30, true);
 
     // olibu
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01M"), -6100, 23000, 225);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01M"), -6000, 20900, 135);
     SetHeroLevel(x, 6, false);
     SetHeroStr(x, 100, true);
     SetHeroAgi(x, 100, true);
     SetHeroInt(x, 100, true);
 
     // annin
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01L"), 2900, 21200, 45);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01L"), -13000, 16200, 135);
     SetHeroLevel(x, 10, false);
     SetHeroStr(x, 400, true);
     SetHeroAgi(x, 400, true);
     SetHeroInt(x, 400, true);
 
     // mez
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01K"), 4500, 21200, 135);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01K"), -13000, 18200, 225);
     SetHeroLevel(x, 3, false);
     SetHeroStr(x, 30, true);
     SetHeroAgi(x, 30, true);
     SetHeroInt(x, 30, true);
 
     // goz
-    x = CreateUnit(Constants.sagaPlayer, FourCC("U01J"), 2900, 22700, 315);
+    x = CreateUnit(Constants.sagaPlayer, FourCC("U01J"), -15000, 18200, 315);
     SetHeroLevel(x, 6, false);
     SetHeroStr(x, 100, true);
     SetHeroAgi(x, 100, true);
     SetHeroInt(x, 100, true);
+
+
+
+
+    // special creeps
+
+    // princess snake
+    x = CreateUnit(Constants.sagaPlayer, Id.princessSnake, -14800, 22200, 315);
+    SetHeroLevel(x, 20, false);
+    SetHeroStr(x, 2000, true);
+    SetHeroAgi(x, 2000, true);
+    SetHeroInt(x, 2000, true);
+    UnitAddAbility(x, Constants.evilFightingSkills);
+
+    x = CreateUnit(Constants.sagaPlayer, Id.cellPerfect, -6000, 16200, 135);
+    SetHeroLevel(x, 20, false);
+    SetHeroStr(x, 2000, true);
+    SetHeroAgi(x, 2000, true);
+    SetHeroInt(x, 2000, true);
+    UnitAddAbility(x, Constants.evilFightingSkills);
+
+    x = CreateUnit(Constants.sagaPlayer, Id.janembaFat, -11000, 19600, 270);
+    SetHeroLevel(x, 40, false);
+    SetHeroStr(x, 5000, true);
+    SetHeroAgi(x, 5000, true);
+    SetHeroInt(x, 5000, true);
+    UnitAddAbility(x, Constants.evilFightingSkills);
 
     this.setupCreepPlayers();
     this.setupCustomCreeps().setupCustomCreepRespawn();
@@ -151,9 +178,12 @@ export class CreepManager {
 
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
       let player = Player(i);
-      SetPlayerName(player, "Creeps");
       SetPlayerColorBJ(player, PLAYER_COLOR_COAL, false);
-      if (i == Constants.heavenHellCreepPlayerId) continue;
+      if (i == Constants.heavenHellCreepPlayerId) {
+        SetPlayerName(player, "Heaven/Hell");
+        continue;
+      }
+      SetPlayerName(player, "Creeps");
 
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
@@ -173,13 +203,30 @@ export class CreepManager {
     // distribute creeps into neutral aggressive as well
     // this.creepPlayers.push(Constants.sagaPlayer);
 
+    
+    // FogModifierStart(
+    //   CreateFogModifierRadius(
+    //     Constants.sagaPlayer,
+    //     FOG_OF_WAR_FOGGED,
+    //     (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
+    //     (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
+    //     CoordMath.distance(Constants.heavenHellBottomLeft, Constants.heavenHellTopRight) / 2,
+    //     true, false
+    //   )
+    // );
     FogModifierStart(
-      CreateFogModifierRadius(
+      CreateFogModifierRect(
         Constants.sagaPlayer,
         FOG_OF_WAR_FOGGED,
-        (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
-        (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
-        CoordMath.distance(Constants.heavenHellBottomLeft, Constants.heavenHellTopRight) / 2,
+        Constants.heavenHellRect,
+        true, false
+      )
+    );
+    FogModifierStart(
+      CreateFogModifierRect(
+        Constants.heavenHellCreepPlayer,
+        FOG_OF_WAR_VISIBLE,
+        Constants.heavenHellRect,
         true, false
       )
     );
@@ -211,6 +258,9 @@ export class CreepManager {
         y < Constants.heavenHellTopRight.y
       ) {
         creepPlayer = Constants.heavenHellCreepPlayer;
+        // if (!IsUnitType(creepUnit, UNIT_TYPE_HERO)) {
+          
+        // }
       }
       SetUnitOwner(creepUnit, creepPlayer, false);
 
@@ -236,25 +286,24 @@ export class CreepManager {
 
   doCreepRespawn(oldCreep: unit, customCreep: CustomCreep) {
     if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
-      if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
-        SetHeroLevel(oldCreep, GetHeroLevel(oldCreep) + 1, false);
+      const lvl = GetHeroLevel(oldCreep);
+      if (lvl < Constants.heavenHellMaxHeroLevel) {
+        SetHeroLevel(oldCreep, lvl + 1, false);
       } else {
         if (
-          GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel + 1 
-          && (
-            udg_ScoreboardTimeMinutes > 15 
-            || udg_ScoreboardTimeHours > 0
-          )
+          lvl < Constants.heavenHellMaxHeroLevel + 1 
+          && (udg_ScoreboardTimeMinutes > 15 || udg_ScoreboardTimeHours > 0)
         ) {
           SetHeroLevel(oldCreep, Constants.heavenHellMaxHeroLevel + 1, false);
         } else {
-          SetHeroLevel(oldCreep, GetHeroLevel(oldCreep), false);
+          SetHeroLevel(oldCreep, lvl, false);
         }
       }
-      SetHeroStr(oldCreep, Math.floor(GetHeroStr(oldCreep, false) * 1.06 + 60), false);
-      SetHeroAgi(oldCreep, Math.floor(GetHeroAgi(oldCreep, false) * 1.06 + 60), false);
-      SetHeroInt(oldCreep, Math.floor(GetHeroInt(oldCreep, false) * 1.06 + 60), false);
-    
+
+      const statExp = lvl <= Constants.heavenHellMaxHeroLevel + 1 ? 1.06 : 1.12;
+      SetHeroStr(oldCreep, Math.floor(GetHeroStr(oldCreep, false) * statExp + 60), false);
+      SetHeroAgi(oldCreep, Math.floor(GetHeroAgi(oldCreep, false) * statExp + 60), false);
+      SetHeroInt(oldCreep, Math.floor(GetHeroInt(oldCreep, false) * statExp + 60), false);
       ReviveHero(oldCreep, customCreep.posX, customCreep.posY, false);
     } else {
       const newCreepUnit = CreateUnit(
@@ -298,12 +347,27 @@ export class CreepManager {
         const creepUnit = GetTriggerUnit();
         const customCreep = this.customCreeps.get(creepUnit);
         if (customCreep) {
+
+          const x = GetUnitX(creepUnit);
+          const y = GetUnitY(creepUnit);
+          const isInHeavenHell = (
+            x > Constants.heavenHellBottomLeft.x &&
+            y > Constants.heavenHellBottomLeft.y &&
+            x < Constants.heavenHellTopRight.x &&
+            y < Constants.heavenHellTopRight.y
+          );
+
           let wait = Constants.creepRespawnReviveDelay;
-          if (
-            GetPlayerId(customCreep.owner) == Constants.heavenHellCreepPlayerId
-          ) {
-            wait = Constants.creepHeavenHellHeroRespawnDelay;
+          // override wait
+          if (isInHeavenHell) {
+            const isHero = IsUnitType(creepUnit, UNIT_TYPE_HERO);
+            if (!isHero || GetHeroLevel(creepUnit) <= Constants.heavenHellMaxHeroLevel + 1) {
+              wait = Constants.creepHeavenHellHeroRespawnDelay;
+            } else {
+              wait = Constants.creepHeavenHellSpecialHeroRespawnDelay + GetHeroLevel(creepUnit);
+            }
           }
+
           if (customCreep.isUpgrading) {
             customCreep.isUpgrading = false;
             wait = 1.5;

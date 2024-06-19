@@ -7,6 +7,23 @@ export module MinimapHelper {
   export const genericHeroIcon = "MM_hero.mdl";
   export const minimapIDIconMap: Map<number, string> = new Map(
     [
+      [Id.vendorKorin, "MM_shop.mdl"],
+      [Id.vendorChefSatan, "MM_shop.mdl"],
+      [Id.vendorRoshi, "MM_shop.mdl"],
+      [Id.vendorElHermano, "MM_shop.mdl"],
+      [Id.vendorSaitama, "MM_shop.mdl"],
+      [Id.vendorAinz, "MM_shop.mdl"],
+      [Id.vendorKrustyKrab, "MM_shop.mdl"],
+
+      [Id.tpLookoutUpa, "MM_tp_lookout.mdl"],
+      [Id.tpLookoutPopo, "MM_tp_lookout.mdl"],
+      [Id.tpNamekPod, "MM_tp_namek_pod.mdl"],
+      [Id.tpNamekFrieza, "MM_tp_namek_frieza.mdl"],
+      [Id.tpTimeMachine, "MM_tp_future_trunks.mdl"],
+      [Id.tpTimeMachineCell, "MM_tp_future_cell.mdl"],
+      [Id.tpCarpetPopo, "MM_tp_carpet.mdl"],
+      [Id.tpBabidiShip, "MM_tp_babidi.mdl"],
+
       [Id.goku, "MM_goku.mdl"],
       [Id.vegeta, "MM_vegeta.mdl"],
       [Id.vegetaMajin, "MM_vegeta_majin.mdl"],
@@ -106,6 +123,12 @@ export module MinimapHelper {
       [Id.mightGuy, "MM_might_guy.mdl"],
       [Id.genos, "MM_genos.mdl"],
       [Id.tatsumaki, "MM_tatsumaki.mdl"],
+      [Id.whis, "MM_whis.mdl"],
+      [Id.beerus, "MM_beerus.mdl"],
+      [Id.granolah, "MM_granolah.mdl"],
+      [Id.gojo, "MM_gojo.mdl"],
+      [Id.cheongMyeong, "MM_cheong_myeong.mdl"],
+      [Id.aggronor, "MM_aggronor.mdl"],
     ]
   );
 

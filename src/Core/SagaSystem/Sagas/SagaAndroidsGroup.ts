@@ -22,7 +22,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     this.delay = 45;
     this.stats = 100;
     this.isRunningAway = false;
-    this.runCoord = new Vector2D(14000, 7500);
+    this.runCoord = new Vector2D(16400, 11000);
     this.sagaCoord = new Vector2D(0, 0);
   }
 

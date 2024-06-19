@@ -14,11 +14,10 @@ const gokuData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const vegetaData = {
@@ -31,7 +30,7 @@ const vegetaData = {
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER +
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const vegetaMajinData = {
@@ -43,7 +42,7 @@ const vegetaMajinData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const gohanData = {
@@ -54,7 +53,7 @@ const gohanData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const gotenksData = {
@@ -65,8 +64,8 @@ const gotenksData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const futureTrunksData = {
@@ -77,7 +76,8 @@ const futureTrunksData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const piccoloData = {
@@ -89,7 +89,8 @@ const piccoloData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const bardockData = {
@@ -97,10 +98,11 @@ const bardockData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.DBZ
   )
 }
 const panData = {
@@ -110,7 +112,8 @@ const panData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
   )
 }
 const farmerData = {
@@ -120,10 +123,11 @@ const farmerData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.BEAMER + 
     HeroSelectCategory.SUPPORT + 
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ +
+    HeroSelectCategory.MEME 
   )
 }
 const android17DbsData = {
@@ -134,7 +138,8 @@ const android17DbsData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
   )
 }
 const videlData = {
@@ -143,9 +148,9 @@ const videlData = {
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const roshiData = {
@@ -155,7 +160,8 @@ const roshiData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
   )
 }
 const krillinData = {
@@ -166,7 +172,8 @@ const krillinData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
   )
 }
 const tienData = {
@@ -179,7 +186,8 @@ const tienData = {
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER + 
     HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const yamchaRData = {
@@ -190,11 +198,12 @@ const yamchaRData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.AGI + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.BRUISER + 
     HeroSelectCategory.ASSASSIN + 
     HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ +
+    HeroSelectCategory.MEME
   )
 }
 const upaData = {
@@ -205,7 +214,8 @@ const upaData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const tapionData = {
@@ -213,10 +223,10 @@ const tapionData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER + 
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const toppoData = {
@@ -224,12 +234,10 @@ const toppoData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER + 
-    HeroSelectCategory.CARRY +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.DBZ
   )
 }
 const dyspoData = {
@@ -238,8 +246,10 @@ const dyspoData = {
   requirement: null,
   category: (
     HeroSelectCategory.AGI +
+    HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.DBZ
   )
 }
 const jirenData = {
@@ -251,7 +261,7 @@ const jirenData = {
     HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BRUISER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const jacoData = {
@@ -259,11 +269,11 @@ const jacoData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI +
+    HeroSelectCategory.STR +
     HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const dendeData = {
@@ -274,7 +284,44 @@ const dendeData = {
     HeroSelectCategory.INT +
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
+  )
+}
+const whisData = {
+  unitCode: Id.whis,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER + 
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
+  )
+}
+const beerusData = {
+  unitCode: Id.beerus,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI +
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
+  )
+}
+const granolahData = {
+  unitCode: Id.granolah,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT +
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
   )
 }
 const android13Data = {
@@ -286,7 +333,8 @@ const android13Data = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BRUISER +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const babidiData = {
@@ -297,7 +345,8 @@ const babidiData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const fatBuuData = {
@@ -308,7 +357,7 @@ const fatBuuData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BRUISER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const brolyData = {
@@ -318,7 +367,8 @@ const brolyData = {
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const cellData = {
@@ -329,8 +379,8 @@ const cellData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const cellMaxData = {
@@ -340,7 +390,8 @@ const cellMaxData = {
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const coolerData = {
@@ -348,11 +399,10 @@ const coolerData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const getiStarData = {
@@ -362,9 +412,10 @@ const getiStarData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.CARRY + 
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ +
+    HeroSelectCategory.MEME
   )
 }
 const janembaData = {
@@ -372,11 +423,10 @@ const janembaData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const hirudegarnData = {
@@ -387,7 +437,8 @@ const hirudegarnData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const super17Data = {
@@ -398,7 +449,8 @@ const super17Data = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
   )
 }
 const omegaShenronData = {
@@ -410,8 +462,8 @@ const omegaShenronData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN + 
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.DBZ
   )
 }
 const eisShenronData = {
@@ -419,9 +471,10 @@ const eisShenronData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.DBZ
   )
 }
 const friezaData = {
@@ -433,7 +486,7 @@ const friezaData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const ginyuData = {
@@ -443,9 +496,10 @@ const ginyuData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ +
+    HeroSelectCategory.MEME 
   )
 }
 const guldoData = {
@@ -456,7 +510,8 @@ const guldoData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
   )
 }
 const appuleData = {
@@ -464,13 +519,13 @@ const appuleData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY +
-    HeroSelectCategory.MICRO  
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ +
+    HeroSelectCategory.MEME 
   )
 }
 const raditzData = {
@@ -481,7 +536,8 @@ const raditzData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.DBZ
   )
 }
 const nappaData = {
@@ -493,7 +549,8 @@ const nappaData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.MICRO
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.DBZ
   )
 }
 const zamasuData = {
@@ -505,7 +562,7 @@ const zamasuData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const gokuBlackData = {
@@ -513,11 +570,10 @@ const gokuBlackData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.DBZ
   )
 }
 const hitData = {
@@ -525,10 +581,10 @@ const hitData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI +
     HeroSelectCategory.INT +
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.DBZ
   )
 }
 const moroData = {
@@ -539,7 +595,8 @@ const moroData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.BEAMER + 
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.DBZ
   )
 }
 const cronoData = {
@@ -547,12 +604,10 @@ const cronoData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.CRONO
   )
 }
 const frogData = {
@@ -562,9 +617,8 @@ const frogData = {
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.BRUISER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.CRONO
   )
 }
 const roboData = {
@@ -575,8 +629,8 @@ const roboData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.CRONO
   )
 }
 const luccaData = {
@@ -586,9 +640,8 @@ const luccaData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.CRONO
   )
 }
 const aylaData = {
@@ -596,11 +649,10 @@ const aylaData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.STR + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.CRONO
   )
 }
 const marleData = {
@@ -610,9 +662,9 @@ const marleData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.CRONO
   )
 }
 const magusData = {
@@ -623,9 +675,8 @@ const magusData = {
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.CRONO
   )
 }
 const schalaData = {
@@ -635,10 +686,9 @@ const schalaData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.CRONO + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.CARRY +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.CRONO
   )
 }
 const rustyData = {
@@ -649,140 +699,9 @@ const rustyData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BRUISER +
     HeroSelectCategory.CRONO + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
-  )
-}
-const donkeyKongData = {
-  unitCode: Id.donkeyKong,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
-  )
-}
-const kkrData = {
-  unitCode: Id.kkr,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
-  )
-}
-const skurvyData = {
-  unitCode: Id.skurvy,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN
-  )
-}
-const saitamaData = {
-  unitCode: Id.saitama,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
-  )
-}
-const genosData = {
-  unitCode: Id.genos,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN
-  )
-}
-const tatsumakiData = {
-  unitCode: Id.tatsumaki,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BEAMER
-  )
-}
-const ichigoData = {
-  unitCode: Id.ichigo,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.CARRY
-  )
-}
-const gutsData = {
-  unitCode: Id.guts,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.CARRY
-  )
-}
-const allMightData = {
-  unitCode: Id.allMight,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
-  )
-}
-const shotoTodorokiData = {
-  unitCode: Id.shotoTodoroki,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN + 
-    HeroSelectCategory.BEAMER
-  )
-}
-const meguminData = {
-  unitCode: Id.megumin,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.MEME
   )
 }
 const pecorineData = {
@@ -792,8 +711,8 @@ const pecorineData = {
   category: (
     HeroSelectCategory.STR + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME
   )
 }
 const lucarioData = {
@@ -804,10 +723,9 @@ const lucarioData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.BRUISER + 
-    HeroSelectCategory.ASSASSIN + 
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.VIDEOGAME
   )
 }
 const sephirothData = {
@@ -818,9 +736,8 @@ const sephirothData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN + 
-    HeroSelectCategory.CARRY
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.VIDEOGAME
   )
 }
 const dartFeldData = {
@@ -831,8 +748,8 @@ const dartFeldData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME
   )
 }
 const leonSKennedyData = {
@@ -840,12 +757,12 @@ const leonSKennedyData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
+    HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.VIDEOGAME +
+    HeroSelectCategory.MEME
   )
 }
 const marioData = {
@@ -854,10 +771,10 @@ const marioData = {
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME +
+    HeroSelectCategory.MEME
   )
 }
 const waluigiData = {
@@ -865,12 +782,12 @@ const waluigiData = {
   onlyRandom: false,
   requirement: null,
   category: (
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
     HeroSelectCategory.BEAMER +
-    HeroSelectCategory.SUPPORT
+    HeroSelectCategory.SUPPORT +
+    HeroSelectCategory.VIDEOGAME +
+    HeroSelectCategory.MEME
   )
 }
 const sonicData = {
@@ -879,9 +796,11 @@ const sonicData = {
   requirement: null,
   category: (
     HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.VIDEOGAME + 
+    HeroSelectCategory.MEME
   )
 }
 const linkTwilightData = {
@@ -891,8 +810,66 @@ const linkTwilightData = {
   category: (
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.VIDEOGAME 
+  )
+}
+const aggronorData = {
+  unitCode: Id.aggronor,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME 
+  )
+}
+const cheongMyeongData = {
+  unitCode: Id.cheongMyeong,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME +
+    HeroSelectCategory.MEME
+  )
+}
+const donkeyKongData = {
+  unitCode: Id.donkeyKong,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME 
+  )
+}
+const kkrData = {
+  unitCode: Id.kkr,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.VIDEOGAME 
+  )
+}
+const skurvyData = {
+  unitCode: Id.skurvy,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.VIDEOGAME 
   )
 }
 const ainzData = {
@@ -903,8 +880,9 @@ const ainzData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BEAMER
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.MICRO +
+    HeroSelectCategory.ANIME
   )
 }
 const albedoData = {
@@ -913,10 +891,9 @@ const albedoData = {
   requirement: null,
   category: (
     HeroSelectCategory.STR + 
-    HeroSelectCategory.AGI + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
   )
 }
 const shalltearData = {
@@ -927,8 +904,8 @@ const shalltearData = {
     HeroSelectCategory.STR + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
   )
 }
 const demiurgeData = {
@@ -939,8 +916,105 @@ const demiurgeData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.EVIL + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME
+  )
+}
+const saitamaData = {
+  unitCode: Id.saitama,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
+  )
+}
+const genosData = {
+  unitCode: Id.genos,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME
+  )
+}
+const tatsumakiData = {
+  unitCode: Id.tatsumaki,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.ANIME
+  )
+}
+const ichigoData = {
+  unitCode: Id.ichigo,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME
+  )
+}
+const gutsData = {
+  unitCode: Id.guts,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
+  )
+}
+const allMightData = {
+  unitCode: Id.allMight,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
+  )
+}
+const shotoTodorokiData = {
+  unitCode: Id.shotoTodoroki,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.ANIME
+  )
+}
+const meguminData = {
+  unitCode: Id.megumin,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.ANIME +
+    HeroSelectCategory.MEME
   )
 }
 const minatoData = {
@@ -951,8 +1025,8 @@ const minatoData = {
     HeroSelectCategory.AGI + 
     HeroSelectCategory.INT + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.ASSASSIN
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME 
   )
 }
 const mightGuyData = {
@@ -960,10 +1034,23 @@ const mightGuyData = {
   onlyRandom: false,
   requirement: null,
   category: (
+    HeroSelectCategory.STR + 
     HeroSelectCategory.AGI + 
     HeroSelectCategory.GOOD + 
-    HeroSelectCategory.MEME + 
-    HeroSelectCategory.BRUISER
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME 
+  )
+}
+const gojoData = {
+  unitCode: Id.gojo,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BEAMER +
+    HeroSelectCategory.ANIME 
   )
 }
 
@@ -988,10 +1075,10 @@ export const HeroSelectUnitList = [
   tienData,
   farmerData,
   // yamchaRData,
-
   // ====
   // 15
   // ====
+
   upaData,
   tapionData,
   toppoData,
@@ -1000,16 +1087,15 @@ export const HeroSelectUnitList = [
   // 20
   jacoData,
   dendeData,
-  emptySpace,
-  emptySpace,
-  emptySpace,
+  beerusData,
+  whisData,
+  granolahData,
   // 25
   emptySpace,
   emptySpace,
   emptySpace,
   emptySpace,
   emptySpace,
-
   // ====
   // 30
   // ====
@@ -1031,7 +1117,6 @@ export const HeroSelectUnitList = [
   eisShenronData,
   emptySpace,
   emptySpace,
-
   // ====
   // 45
   // ====
@@ -1072,50 +1157,49 @@ export const HeroSelectUnitList = [
   // 70
   emptySpace,
   emptySpace,
-  donkeyKongData,
-  kkrData,
-  skurvyData,
-
-  // ====
-  // 75
-  // ====
-
-  ainzData,
-  albedoData,
-  shalltearData,
-  demiurgeData,
-  saitamaData,
-  // 80
-  genosData,
-  tatsumakiData,
-  meguminData,
-  allMightData,
-  shotoTodorokiData,
-  // 85
-  gutsData,
-  ichigoData,
-  minatoData,
-  mightGuyData,
+  emptySpace,
+  emptySpace,
   emptySpace,
 
   // ====
-  // 90
+  // 75
   // ====
   pecorineData,
   linkTwilightData,
   marioData,
   waluigiData,
   sonicData,
-  // 95
+  // 80
   sephirothData,
   lucarioData,
   dartFeldData,
   leonSKennedyData,
+  aggronorData,
+  // 85
+  cheongMyeongData,
   emptySpace,
+  donkeyKongData,
+  kkrData,
+  skurvyData,
+
+  // ====
+  // 90
+  // ====
+  ainzData,
+  albedoData,
+  shalltearData,
+  demiurgeData,
+  saitamaData,
+  // 95
+  genosData,
+  tatsumakiData,
+  meguminData,
+  allMightData,
+  shotoTodorokiData,
   // 100
-  emptySpace,
-  emptySpace,
-  emptySpace,
-  emptySpace,
-  emptySpace,
+  gutsData,
+  ichigoData,
+  minatoData,
+  mightGuyData,
+  gojoData,
 ];

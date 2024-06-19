@@ -32,6 +32,38 @@ export class Vector3D implements Serializable<Vector3D> {
     this.z = blue;
   }
 
+  set(x: number, y: number, z: number) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+
+  public static textString(color: Vector3D, ...input: any[]) {
+    const colorer = "|cFF" + string.format('%02x', color.r)
+      + string.format('%02x', color.g)
+      + string.format('%02x', color.b);
+
+    let ret = colorer;
+    for (let i = 0; i < input.length; i++) {
+      ret += tostring(input[i]);
+      if (i != input.length - 1) ret += " ";
+    }
+    // ret = ret.replaceAll("|r", colorer);
+    ret += "|r";
+    return ret
+  }
+  
+  public static textStringSolo(color: Vector3D, input: any) {
+    const colorer = "|cFF" + string.format('%02x', color.r)
+      + string.format('%02x', color.g)
+      + string.format('%02x', color.b);
+
+    return colorer
+      + String(input)
+      // + (tostring(input).replaceAll("|r", colorer)) //Re add tip color
+      + "|r"
+  }
+
   deserialize(
     input: {
       x: number;

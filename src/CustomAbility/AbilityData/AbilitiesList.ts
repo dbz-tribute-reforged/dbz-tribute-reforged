@@ -25,12 +25,12 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Zanzo Dash",
+      title: "Zanzo Dash",
       body: 
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for moving within 500 range of an enemy hero.|n" +
-        "|nCost: 45 SP|nCD: 8 (varies)",
+        "Cost: 45 SP|nCD: 8 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -54,11 +54,11 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "",
     icon: {
-      enabled: "BTNBasicZanzo.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo.blp",
+      enabled: "BTNBasicZanzo2.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicZanzo2.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Zanzoken",
+      title: "Zanzoken",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -91,7 +91,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMinatoZanzo.blp",
     },
     tooltip: {
-      title: "(Z) or (Y) Hiraishin Zanzo",
+      title: "Hiraishin Zanzo",
       body: 
         "Teleports to your next right click. " + 
         "Can be used to cross cliffs. " + 
@@ -105,6 +105,64 @@ export const AbilitiesList = [
       { name: "sfx minato hiraishin start" },
       { name: "dash zanzoken" },
       { name: "sfx minato hiraishin end" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.INSTANT_TRANSMISSION,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 30,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNGokuIT.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGokuIT.blp",
+    },
+    tooltip: {
+      title: "Instant Transmission",
+      body: 
+        "Teleport to the next enemy hero that damages you within 2.5s. " + 
+        "Deals 10% of the damage received.|n" + 
+        "Cost: 30 SP|n" + 
+        "CD: 15",
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_COUNTER,
+    currentCd: 0,
+    maxCd: 20,
+    costType: CostType.SP,
+    costAmount: 65,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "BTNBeerusCounter.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBeerusCounter.blp",
+    },
+    tooltip: {
+      title: "Beerus Counter",
+      body: 
+        "Teleport to the next enemy hero that damages you within 2.5s and stun them for 1s. " + 
+        "Deals 15% of the damage received.|n" + 
+        "Cost: 65 SP|n" + 
+        "CD: 20",
+    },
+    components: [
     ],
   },
   // -------------------------------------------
@@ -128,7 +186,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicGuard.blp",
     },
     tooltip: {
-      title: "(X) Guard",
+      title: "Guard",
       body: 
         "Block 70% of incoming damage until more than 3 * STR damage is blocked for 1.5s.|n" +
         "After a 0.3s delay, damage is reduced by 95% up to 3 * STR for the next 0.3s.|n" +  
@@ -138,6 +196,37 @@ export const AbilitiesList = [
     components: [
       { name: "block basic guard" },
       { name: "block perfect basic guard" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SHIELD,
+    currentCd: 0,
+    maxCd: 10,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGranolahShield.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGranolahShield.blp",
+    },
+    tooltip: {
+      title: "Cerelian Shield",
+      body: 
+        "Creates a barrier for 2s that restricts movement and reduces incoming damage.|n" +
+        "Blocks 70% of incoming damage up to 3 * STR.|n" +
+        "Cost: 40 SP|n" + 
+        "CD: 10"
+    },
+    components: [
+      { name: "beam granolah cerelian shield" },
+      { name: "block basic guard" },
     ],
   },
   // -------------------------------------------
@@ -161,11 +250,11 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicMaxPower.blp",
     },
     tooltip: {
-      title: "(C) Max Power",
+      title: "Max Power",
       body: 
         "+20% ability damage, +50% attack damage, +132 ms.|n" + 
-        "Cost: 40 SP|n" +
         "Duration: 5s|n" + 
+        "Cost: 40 SP|n" +
         "CD: 5s"
     },
     components: [
@@ -181,7 +270,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 2,
     costType: CostType.SP,
-    costAmount: 33,
+    costAmount: 25,
     duration: 19,
     updateRate: 0.03,
     castTime: 0.0,
@@ -196,12 +285,11 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicDeflect.blp",
     },
     tooltip: {
-      title: "(V) Deflect",
+      title: "Deflect",
       body: 
         "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
-        "Nearby enemies are repelled and incoming minor beams are deflected during this period.|n" +
-        "Enemies in 450 AOE are slowed 50% for 1s|n" +
-        "Cost: 33 SP|nCD: 2"
+        "Deflects incoming beams and slows nearby enemies by 50% for 1s.|n" +
+        "Cost: 25 SP|nCD: 2"
     },
     components: [
       { name: "block perfect basic guard" },
@@ -209,6 +297,40 @@ export const AbilitiesList = [
       { name: "knockback deflect" },
       { name: "knockback deflect hero pushback" },
       { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.BasicAbility.SPARKING_BLAST,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 60,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBasicSparking.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicSparking.blp",
+    },
+    tooltip: {
+      title: "Sparking Blast",
+      body: 
+        "Instantly purges all debuffs.|n" + 
+        "Becomes invulnerable for 0.03s.|n" +
+        "Enemy heroes are repelled over 0.5s.|n" +
+        "Can be used while stunned.|n" +
+        "Cost: 60 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "hide unit sparking" },
+      { name: "knockback sparking hero pushback" },
+      { name: "sfx sparking" },
     ],
   },
   // -------------------------------------------
@@ -230,7 +352,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDK.blp",
     },
     tooltip: {
-      title: "(V) Thrilla Gorilla",
+      title: "Thrilla Gorilla",
       body: 
         "Instantly purges all debuffs from Donkey Kong.|n" + 
         "Becomes invulnerable for 0.03s.|n" +
@@ -264,7 +386,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGenosStand.blp",
     },
     tooltip: {
-      title: "(V) Stand Up",
+      title: "Stand Up",
       body: 
         "Stand up after any attack, purging all negative debuffs.|n" + 
         "Becomes invulnerable for 0.03s.|n" +
@@ -277,6 +399,188 @@ export const AbilitiesList = [
       { name: "hide unit dk thrilla gorilla" },
       { name: "debuff slow genos stand up" },
       { name: "sfx genos stand up" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.BasicAbility.MAX_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.SP,
+    costAmount: 5,
+    duration: 999999,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBasicCharge.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicCharge.blp",
+    },
+    tooltip: {
+      title: "Max Charge",
+      body: 
+        "Stand still to recover MP over time. After 7s HP is also restored.|n" + 
+        "Restores Agi/Int x 2% max mana per second.|n" +
+        "Restores Agi/Str x 0.5% max hp per second after 7s.|n" +
+        "Cost: 5 SP|n" +
+        "CD: 1"
+    },
+    components: [
+      { name: "channel caster fake channel" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.BLACK_FLASH,
+    currentCd: 0,
+    maxCd: 6,
+    costType: CostType.SP,
+    costAmount: 20,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGojoBlackFlash.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGojoBlackFlash.blp",
+    },
+    tooltip: {
+      title: "Black Flash",
+      body: 
+        "Activate within 0.12s after damaging an enemy hero with an auto attack " + 
+        "to deal 0.8 x Int damage and restore 20% of max mana. " + 
+        "A successful hit will reset the cooldown of Black Flash.|n" +
+        "Cost: 20 SP (10 if missed)|n" + 
+        "CD: 6"
+    },
+    components: [
+      
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.LIMITLESS_GUARD,
+    currentCd: 0,
+    maxCd: 12,
+    costType: CostType.SP,
+    costAmount: 35,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGojoGuard.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGojoGuard.blp",
+    },
+    tooltip: {
+      title: "Limitless Guard",
+      body: 
+        "Increases limitless distance reduction to 95% and " + 
+        "causes limitless to have 100% effect on heroes.|n" +
+        "Blocks 70% of incoming damage up to 3 * STR.|n" +
+        "Duration: 3s|n" + 
+        "Cost: 35 SP|n" + 
+        "CD: 12"
+    },
+    components: [
+      { name: "block basic guard" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
+    currentCd: 0,
+    maxCd: 15,
+    costType: CostType.SP,
+    costAmount: 45,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCheongMyeongBasic.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNCheongMyeongBasic.blp",
+    },
+    tooltip: {
+      title: "Equilibrium of Six",
+      body: 
+        "Stand still to recover MP over 4s. Clears all debuffs.|n" + 
+        "Restores Agi/Int x 10% max mana per second.|n" +
+        "Cost: 45 SP|n" +
+        "CD: 15"
+    },
+    components: [
+      { name: "channel caster fake channel" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.LIGHTNING_PLATE,
+    currentCd: 0,
+    maxCd: 35,
+    costType: CostType.SP,
+    costAmount: 50,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAggronorGuard.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNAggronorGuard.blp",
+    },
+    tooltip: {
+      title: "Lightning Plate",
+      body: 
+        "Creates a shield after a 5s delay that absorbs up to 150% " + 
+        "of damage taken during the delay.|n" +
+        "Duration: 15s|n" + 
+        "Cost: 50 SP|n" + 
+        "CD: 35"
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.RELOAD,
+    currentCd: 0,
+    maxCd: 10,
+    costType: CostType.SP,
+    costAmount: 40,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFarmerBasic.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFarmerBasic.blp",
+    },
+    tooltip: {
+      title: "Reload",
+      body: 
+        "Restores 30% of max mana.|n" + 
+        "Cost: 30 SP|n" +
+        "CD: 10"
+    },
+    components: [
     ],
   },
   // -------------------------------------------
@@ -313,7 +617,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -321,16 +625,43 @@ export const AbilitiesList = [
     canUseWhenStunned: false,
     animation: "spell",
     icon: {
-      enabled: "BTNKameGod.blp",
-      disabled: "BTNKameGod.blp",
+      enabled: "",
+      disabled: "",
     },
     tooltip: {
-      title: AbilityNames.Goku.GOD_KAMEHAMEHA,
+      title: "",
       body: 
-        "God Kame"
+        ""
     },
     components: [
       { name: "beam god kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.KAMEHAMEHA_X10,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam goku kamehameha x10" },
     ],
   },
   // -------------------------------------------
@@ -415,7 +746,7 @@ export const AbilitiesList = [
         "Dragon Fisto"
     },
     components: [
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage super dragon fist dps" },
       { name: "damage super dragon fist explosion" },
       { name: "knockback dfist" },
@@ -456,9 +787,9 @@ export const AbilitiesList = [
     name: AbilityNames.Goku.ULTRA_INSTINCT,
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.MP,
     costAmount: 0,
-    duration: 495,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -485,9 +816,9 @@ export const AbilitiesList = [
     name: AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.MP,
     costAmount: 0,
-    duration: 495,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -509,6 +840,35 @@ export const AbilitiesList = [
       { name: "dodge ultra instinct" },
       { name: "block mastered ultra instinct" },
       { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.LIMIT_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage goku limit breaker dps" },
+      { name: "temp ability goku limit breaker passive" },
+      { name: "sfx goku limit breaker" },
     ],
   },
   // -------------------------------------------
@@ -567,7 +927,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Vegeta.FINAL_FLASH_2,
+    name: AbilityNames.Vegeta.FINAL_FLASH_GOD,
     currentCd: 0,
     maxCd: 1,
     costType: CostType.MP,
@@ -584,9 +944,9 @@ export const AbilitiesList = [
       disabled: "BTNFinalFlash2.blp",
     },
     tooltip: {
-      title: AbilityNames.Vegeta.FINAL_FLASH_2,
+      title: AbilityNames.Vegeta.FINAL_FLASH_GOD,
       body: 
-        AbilityNames.Vegeta.FINAL_FLASH_2
+        AbilityNames.Vegeta.FINAL_FLASH_GOD
     },
     components: [
       { name: "sfx final flash 2 caster" },
@@ -729,6 +1089,93 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi vegeta hakai barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.FINAL_SHINE_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi vegeta final shine attack" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx vegeta final shine attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.FINAL_FLASH_DARK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam vegeta final flash dark" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Vegeta.LIMIT_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+      { name: "damage goku limit breaker dps" },
+      { name: "temp ability vegeta limit breaker passive" },
+      { name: "sfx goku limit breaker" },
     ],
   },
   // -------------------------------------------
@@ -1644,6 +2091,90 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward max power" },
       { name: "block kyodaika" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.HAYMAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam farmer haymaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.CORNBLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi farmer cornblast" },
+      { name: "dash ground point farmer cornblast pushback" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1s" },
+      { name: "multi farmer saiyan slaying shot" },
+      { name: "sfx farmer saiyan slaying shot" },
     ],
   },
   // -------------------------------------------
@@ -3357,7 +3888,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5049,7 +5580,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 40,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -6385,6 +6916,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
+      { name: "jump crono lumi" },
       { name: "damage crono lumi explosion" },
       { name: "sfx crono lumi" },
       { name: "sfx crono lumi explode" },
@@ -11626,6 +12158,937 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Whis.PRELUDE_TO_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam whis prelude" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward mastered ultra instinct" },
+      { name: "spell amp mastered ultra instinct" },
+      { name: "dodge ultra instinct" },
+      { name: "block mastered ultra instinct" },
+      { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Whis.SYMPHONIC_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi whis sym" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.SPHERE_OF_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 116,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 0.5s" },
+      { name: "multi beerus sphere of destruction" },
+      { name: "sfx beerus sphere of destruction caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.AURA_OF_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow beerus aura of destruction" },
+      { name: "damage beerus aura of destruction dps" },
+      { name: "knockback beerus aura of destruction" },
+      { name: "sfx beerus aura of destruction" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi beerus god of destruction wrath" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_FURY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 833,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability beerus fury cdr flag" },
+      { name: "dash ground forward 3dist" },
+      { name: "spell amp 10 persistent" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_SUSHI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward 2dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_PIZZA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "buff inner fire beerus pizza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_ICE_CREAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 500,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability beerus ice cream cdr flag" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_TAKOYAKI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "hide unit iframe pause" },
+      { name: "sfx beerus takoyaki" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Beerus.BEERUS_PUDDING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "buff anti magic shell beerus pudding" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 30,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam granolah snipe" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam granolah snipe 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_CHARGED,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 65,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster granolah snipe charged" },
+      { name: "multi granolah snipe charged" },
+      { name: "sfx granolah snipe charged caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.SNIPE_VOLLEY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi granolah snipe volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.ENERGY_VOLLEY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 166,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi granolah energy volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.EVOLVED_EYES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "spell amp 15 persistent" },
+      { name: "temp ability granolah snipe 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.PRESSURE_POINT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "debuff stun granolah pressure point" },
+      { name: "debuff stun granolah pressure point bonus" },
+      { name: "damage granolah pressure point explosion" },
+      { name: "sfx granolah pressure point" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Granolah.FINAL_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster 1.5s" },
+      { name: "multi granolah final shot" },
+      { name: "sfx granolah final shot caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gojo.UNLIMITED_VOID,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam gojo unlimited void barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi cheong myeong sword of six elements" },
+      { name: "spell amp 10 persistent" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.FALLING_PETAL_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "damage cheong myeong falling petal sword" },
+      { name: "block cheong myeong falling petal sword" },
+      { name: "sfx cheong myeong falling petal sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground forward 3dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong plum blossom cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong celestial falling petals" },
+      { name: "sfx cheong myeong celestial falling petals" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi cheong myeong plum blossom palisade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam cheong myeong plum blossom cloudburst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.STORM_BOLT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam aggronor storm bolt" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.THUNDERCLAP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "debuff slow aggronor thunderclap" },
+      { name: "damage aggronor thunderclap explosion" },
+      { name: "sfx aggronor thunderclap" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.DWARF_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point 25dist" },
+      { name: "block aggronor dwarf toss" },
+      { name: "damage aggronor dwarf toss explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.AVATAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability aggronor avatar spell immunity" },
+      { name: "sfx aggronor avatar" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Aggronor.STORMLORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "temp ability aggronor stormlord evasion" },
+      { name: "sfx aggronor stormlord" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -15285,6 +16748,7 @@ export const AbilitiesList = [
       { name: "dash ground forward 5dist" },
       { name: "spell amp one winged angel" },
       { name: "sfx one winged angel" },
+      { name: "sfx sephiroth one winged angel initial" },
     ],
   },
   // -------------------------------------------
@@ -18077,6 +19541,90 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Saga.SYMPHONIC_DESTRUCTION_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi whis sym" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.SPHERE_OF_DESTRUCTION_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 116,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi beerus sphere of destruction" },
+      { name: "sfx beerus sphere of destruction caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.GOD_OF_DESTRUCTION_WRATH_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 266,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi beerus god of destruction wrath" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Items.ANDROID_BOMB,
     currentCd: 0,
     maxCd: 1,
@@ -18312,7 +19860,7 @@ export const AbilitiesList = [
     name: "Test Ability",
     currentCd: 0,
     maxCd: 1,
-    costType: "HP",
+    costType: CostType.HP,
     costAmount: 25,
     duration: 150,
     updateRate: 0.03,

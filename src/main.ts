@@ -10,7 +10,6 @@ import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 import { ExperienceManager } from 'Core/ExperienceSystem/ExperienceManager';
-import { CameraZoom } from 'Common/CameraZoom';
 import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
 import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
@@ -33,6 +32,13 @@ import { FBSimTestManager } from "Common/FBSimTestManager";
 import { PauseManager } from "Core/PauseSystem/PauseManager";
 import { ItemShopManager } from "Core/ItemShop/ItemShopManager";
 import { PreloadModels } from "Common/PreloadModels";
+import { DDS } from "Core/DDS/DDS";
+import { SyncSaveLoad } from "Core/SyncSaveLoad/SyncSaveLoad";
+import { PlayerProfile } from "Core/PlayerProfile/PlayerProfile";
+import { WinLossSystem } from "Core/WinLossSystem/WinLossSystem";
+import { PlayerCam } from "CustomPlayer/PlayerCam";
+import { TransformationSystem } from "Core/TransformationSystem/TransformationSystem";
+import { FusionManager } from "Core/FusionSystem/FusionManager";
 
 const BUILD_DATE = compiletime(() => new Date().toUTCString());
 const TS_VERSION = compiletime(() => require("typescript").version);
@@ -57,6 +63,11 @@ let timerManager: TimerManager;
 let keyInputManager: KeyInputManager;
 let smartPingManager: SmartPingManager;
 let pauseManager: PauseManager;
+let damageDetectionSystem: DDS;
+let syncSaveLoad: SyncSaveLoad;
+let winLossSystem: WinLossSystem;
+let transformationSystem: TransformationSystem;
+let fusionManager: FusionManager;
 
 const musicStr = (
   + "Audio/Music/SecretOfTheForest.mp3;"
@@ -76,21 +87,32 @@ function tsPostMain() {
   print(`Transpiler: v${TSTL_VERSION}`);
 
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
+  PreloadModels.doPreload();
   
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));
+    if (i < Constants.maxActivePlayers) {
+      Globals.playerProfiles.push(new PlayerProfile(Player(i)));
+    }
+  }
+  
+  for (const [key,value] of Constants.oskeyToTextMap.entries()) {
+    Constants.textToOsKeyMap.set(value, key);
   }
   
   // preload custom abilities
+  syncSaveLoad = SyncSaveLoad.getInstance();
+  damageDetectionSystem = DDS.getInstance();
   PathingCheck.Init();
+  keyInputManager = KeyInputManager.getInstance();
   customAbilityManager = CustomAbilityManager.getInstance();
   timerManager = TimerManager.getInstance();
   SetCreepCampFilterState(false);
   CustomUiTest();
-  CameraZoom.onInit();
-  PreloadModels.doPreload();
+  transformationSystem = TransformationSystem.getInstance();
 
   setupHostPlayerTransfer();
+  
 
   TimerStart(CreateTimer(), 0, false, () => {
     castTimeHelper = CastTimeHelper.getInstance();
@@ -105,13 +127,14 @@ function tsPostMain() {
     transferHostPlayer();
     CustomPlayerTest();
     heroSelectorManager = HeroSelectorManager.getInstance();
+    PlayerProfile.Init();
+    PlayerCam.Init();
     DestroyTimer(GetExpiredTimer());
   });
 
   // delay init
   TimerStart(CreateTimer(), 5, false, () => {
     // initialize some systems
-    keyInputManager = KeyInputManager.getInstance();
     smartPingManager = SmartPingManager.getInstance();
     creepManager = CreepManager.getInstance();
     DestroyTimer(GetExpiredTimer());
@@ -127,19 +150,18 @@ function tsPostMain() {
     DestroyTimer(GetExpiredTimer());
   })
 
-  const checkUnit = CreateUnit(
-    Player(PLAYER_NEUTRAL_PASSIVE), 
-    Constants.gameStartIndicatorUnit,
-    DragonBallsConstants.shenronWaitingRoom.x, DragonBallsConstants.shenronWaitingRoom.y, 0
-  );
   TimerStart(CreateTimer(), 1, true, () => {
-    if (!UnitHelper.isUnitAlive(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
+    if (HeroSelectorManager.getInstance().checkIsGameStarted()) {
       // anything that happens after hero picking is done, should be placed here
       Globals.isMainGameStarted = true;
+      if (!Globals.isSinglePlayer) PlayerProfile.startGame();
+      winLossSystem = WinLossSystem.getInstance();
+      winLossSystem.start();
       sagaManager = SagaManager.getInstance();
       tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
       dragonBallsManager = DragonBallsManager.getInstance();
       creepManager.setupCreepResearchUpgrade();
+      fusionManager = FusionManager.getInstance();
       DestroyTimer(GetExpiredTimer());
     }
   });

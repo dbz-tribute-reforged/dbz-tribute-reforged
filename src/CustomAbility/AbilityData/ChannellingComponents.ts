@@ -1,10 +1,27 @@
 export const ChannellingComponents = [
   {
+    name: "channel caster fake channel", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    ticksFromEnd: 0,
+    fakeChannel: true,
+  },
+  {
     name: "channel caster default", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     ticksFromEnd: 0,
+    fakeChannel: false,
+  },
+  {
+    name: "channel caster 0.5s", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 16,
+    ticksFromEnd: 0,
+    fakeChannel: false,
   },
   {
     name: "channel caster 1s", 
@@ -12,6 +29,15 @@ export const ChannellingComponents = [
     startTick: 0,
     endTick: 33,
     ticksFromEnd: 0,
+    fakeChannel: false,
+  },
+  {
+    name: "channel caster 1.5s", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 50,
+    ticksFromEnd: 0,
+    fakeChannel: false,
   },
   {
     name: "channel caster 2s", 
@@ -19,6 +45,7 @@ export const ChannellingComponents = [
     startTick: 0,
     endTick: 66,
     ticksFromEnd: 0,
+    fakeChannel: false,
   },
   {
     name: "channel caster cero fire", 
@@ -26,5 +53,14 @@ export const ChannellingComponents = [
     startTick: 0,
     endTick: -1,
     ticksFromEnd: 12,
+    fakeChannel: false,
+  },
+  {
+    name: "channel caster granolah snipe charged", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    ticksFromEnd: 0,
+    fakeChannel: false,
   },
 ];

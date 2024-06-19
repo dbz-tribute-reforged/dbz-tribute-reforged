@@ -32,6 +32,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     public maxEnemies: number = 3,
     public addRandomAngle: boolean = false,
     public ignoreHeroes: boolean = false,
+    public heroesOnly: boolean = true,
   ) {
     this.sourceCoord = new Vector2D();
     this.dodgeCoord = new Vector2D();
@@ -62,7 +63,11 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       const enemy = GetEnumUnit();
       if (UnitHelper.isUnitAlive(enemy) && UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(enemy))) {
         if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
-          if (!IsUnitType(enemy, UNIT_TYPE_HERO) || !this.ignoreHeroes) {
+          const isHero = IsUnitType(enemy, UNIT_TYPE_HERO)
+          if (
+            (!isHero || !this.ignoreHeroes)
+            && (isHero || !this.heroesOnly)
+          ) {
             const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
             let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, this.sourceCoord);
             if (this.addRandomAngle) {
@@ -107,7 +112,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.groundOnly, this.knockbackData, 
       this.maxEnemies, this.addRandomAngle,
-      this.ignoreHeroes,
+      this.ignoreHeroes, this.heroesOnly,
     );
   }
   
@@ -126,6 +131,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       maxEnemies: number;
       addRandomAngle: boolean;
       ignoreHeroes: boolean;
+      heroesOnly: boolean;
     }
   ) {
     this.name = input.name;
@@ -137,6 +143,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     this.maxEnemies = input.maxEnemies;
     this.addRandomAngle = input.addRandomAngle;
     this.ignoreHeroes = input.ignoreHeroes;
+    this.heroesOnly = input.heroesOnly;
     return this;
   }
 }

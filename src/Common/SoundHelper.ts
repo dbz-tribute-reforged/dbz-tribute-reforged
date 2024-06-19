@@ -40,7 +40,29 @@ export module SoundHelper {
       TimerManager.getInstance().recycle(tim);
     });
   }
-  
+
+  export function playNSoundsWithDelay(
+    unit: unit, str: string[], dur: number[], delayMs: number
+  ) {
+    if (str.length <= 0 || dur.length <= 0) return 
+    let time = 0;
+    let targetTime = 0;
+    let counter = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, ()=> {
+      if (counter >= str.length) {
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      if (time >= targetTime) {
+        SoundHelper.playSoundOnUnit(unit, str[counter], dur[counter]);
+        targetTime += (delayMs + dur[counter]) * 0.001;
+        ++counter;
+      }
+      time += 0.03;
+    });
+  }
+
   export function playUnitSpellSound(unit: unit, spellId: number) {
     const unitId = GetUnitTypeId(unit);
     let rng = Math.random() * 100;
@@ -560,6 +582,136 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
         break;
       
+      // beerus
+      case Id.beerusCataclysmicOrb:
+        if (unitId == Id.beerus) {
+          if (rng < 4) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sneeze.mp3", 654);
+          } else if (rng < 8) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bored.mp3", 1264);
+          } else if (rng < 16) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bye1.mp3", 1264);
+          } else if (rng < 24) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Bye2.mp3", 1264);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Beerus/Q.mp3", 1865);
+        break;
+      
+      case Id.beerusSphereOfDestruction:
+        if (unitId == Id.beerus) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/BeforeCreation1.mp3", 2612);
+          } else if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/NotDone.mp3", 1277);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Destroy1.mp3", 2262);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Destroy2.mp3", 1552);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Beerus/W.mp3", 1299);
+        break;
+
+      case Id.beerusAuraOfDestruction:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Angry1.mp3", 1605);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Angry2.mp3", 1294);
+          } 
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+        break;
+
+      case Id.beerusGodWrath:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Seathe.mp3", 2797);
+          }
+        }
+        break;
+
+      case Id.beerusFury:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Underestimate.mp3", 2637);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+        break;
+      
+      case Id.beerusFoodSushi:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sushi1.mp3", 711);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Sushi2.mp3", 3901);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodPizza:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pizza1.mp3", 5040);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pizza2.mp3", 3145);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodRamen:
+        if (unitId == Id.beerus) {
+          if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Heal.mp3", 2186);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Voice/Beerus/Ramen.mp3", 4760);
+        break;
+      
+      case Id.beerusFoodIceCream:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/IceCream1.mp3", 1202);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/IceCream2.mp3", 5107);
+          }
+        }
+        break;
+
+      case Id.beerusFoodTakoyaki:
+        if (unitId == Id.beerus) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Takoyaki1.mp3", 2296);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Takoyaki2.mp3", 4175);
+          }
+        }
+        break;
+      
+      case Id.beerusFoodPudding:
+        if (unitId == Id.beerus) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding4.mp3", 2752);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding1.mp3", 2567);
+          } else if (rng < 70) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding2.mp3", 1292);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Pudding3.mp3", 2506);
+          }
+        }
+        break;
+        
+      case Id.beerusHakai:
+        if (unitId == Id.beerus) {
+          if (rng < 100) {
+            playSoundOnUnit(unit, "Audio/Voice/Beerus/Hakai.mp3", 1048);
+          }
+        }
+        break;
+
       // broly
       case Id.energyPunch:
         if (unitId == Id.broly) {
@@ -1024,6 +1176,35 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
       
+      // farmer with shotgun
+      case Id.farmerHaymaker:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
+        }
+        break;
+
+      case Id.farmerCornblast:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/FarmerProtectMeGun.mp3", 1697);
+        }
+        break;
+      
+      case Id.farmerSaiyanSlayingShot:
+        if (unitId == Id.farmerWithShotgun) {
+          playSoundOnUnit(unit, "Audio/Voice/Farmer/Shoot.mp3", 1890);
+        }
+        break;
+      
+      case Id.farmerHonestShot:
+        if (unitId == Id.farmerWithShotgun) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Farmer/ThisJob.mp3", 3611);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Farmer/MyProperty.mp3", 2438);
+          }
+        }
+        break;
+      
       // frieza
       case Id.deathBeamFrieza:
         playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
@@ -1279,14 +1460,36 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/GinyuBodyChange3.mp3", 1752);
         }
         break;
+      
+      // gojo
+      case Id.gojoUnlimitedVoid:
+        if (unitId == Id.gojo) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Gojo/UnlimitedVoid1.mp3", 8081);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Gojo/UnlimitedVoid2.mp3", 8406);
+          }
+        }
+        break;
+      
+      case Id.gojoTeleport:
+        if (unitId == Id.gojo) {
+          playSoundOnUnit(unit, "Audio/Voice/Gojo/Teleport.mp3", 889);
+        }
+        break;
 
       // goku
       case Id.kamehameha:
       case Id.kamehamehaGod:
+      case Id.kamehamehaX10:
         if (unitId == Id.goku) {
-          playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
+          if (GetUnitAbilityLevel(unit, Id.kamehamehaX10) > 0) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/Kame10.mp3", 1816);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
+          }
         } else if (unitId == Id.gohan) {
-          if (GetHeroLevel(unit) < 115) {
+          if (GetHeroLevel(unit) < 110) {
             playSoundOnUnit(unit, "Audio/Voice/GohanTeenKamehameha.mp3", 1201);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/GohanAdultKamehameha.mp3", 1440);
@@ -1306,7 +1509,11 @@ export module SoundHelper {
       case Id.dragonFist:
       case Id.superDragonFist:
         if (unitId == Id.goku) {
-          playSoundOnUnit(unit, "Audio/Voice/GokuDragonFist.mp3", 3552);
+          if (GetUnitAbilityLevel(unit, Id.kamehamehaX10) > 0) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/DragonFistSS4.mp3", 1912);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/GokuDragonFist.mp3", 3552);
+          }
         }
         playSoundOnUnit(unit, "Audio/Effects/DragonFist.mp3", 5093);
         break;
@@ -1331,7 +1538,18 @@ export module SoundHelper {
       case Id.masteredUltraInstinct:
         playSoundOnUnit(unit, "Audio/Effects/UltraInstinct.mp3", 9534);
         break;
-
+        
+      case Id.gokuLimitBreaker:
+        if (unitId == Id.goku) {
+          if (rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/LimitBreaker1.mp3", 1697);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Goku/LimitBreaker2.mp3", 1736);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
       // goku black
       case Id.gokuBlackKamehameha:
         if (unitId == Id.gokuBlack) {
@@ -1382,8 +1600,6 @@ export module SoundHelper {
       // gohan
       case Id.twinDragonShot:
         if (unitId == Id.gohan) {
-        } else if (unitId == Id.farmerWithShotgun) {
-          playSoundOnUnit(unit, "Audio/Voice/FarmerProtectMeGun.mp3", 1697);
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam1.mp3", 10919);
         break;
@@ -1391,7 +1607,7 @@ export module SoundHelper {
       case Id.masenko:
       case Id.cellMasenko:
         if (unitId == Id.gohan) {
-          if (GetHeroLevel(unit) < 115) {
+          if (GetHeroLevel(unit) < 110) {
             playSoundOnUnit(unit, "Audio/Voice/GohanTeenMasenko.mp3", 960);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/GohanAdultMasenko.mp3", 1128);
@@ -1426,6 +1642,42 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
         break;
       
+      // granolah
+      case Id.granolahSnipe:
+      case Id.granolahSnipe2:
+      case Id.granolahSnipeCharged:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+        break;
+      
+      case Id.granolahEnergyVolley:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
+
+      case Id.granolahPressurePoint:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      
+      case Id.granolahFinalShot:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+      
+      case Id.granolahEvolvedEyes:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      
+      case Id.granolahSnipeVolley:
+        if (unitId == Id.granolah) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/DeathBeam.mp3", 2768);
+        break;
+
+      // guldo
       case Id.psychoJavelin:
         if (unitId == Id.guldo) {
           playSoundOnUnit(unit, "Audio/Voice/GuldoTakeThis.mp3", 1071);
@@ -2800,7 +3052,11 @@ export module SoundHelper {
       case Id.egoGalickGun:
       case Id.vegetaMajinGalickGun:
         if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
-          playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+          if (GetUnitAbilityLevel(unit, Id.vegetaFinalShineAttack) > 0 && rng < 50) {
+            playSoundOnUnit(unit, "Audio/Voice/Vegeta/EatThis.mp3", 915);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
+          }
         }
         playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
         break;
@@ -2813,12 +3069,11 @@ export module SoundHelper {
         break;
 
       case Id.finalFlash:
-      case Id.finalFlash2:
+      case Id.finalFlashGod:
+      case Id.vegetaFinalFlashDark:
       case Id.vegetaMajinFinalFlash:
         if (unitId == Id.vegeta || unitId == Id.vegetaMajin) {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);
-        } else if (unitId == Id.farmerWithShotgun) {
-          playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
         }
         playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
         break;
@@ -2828,7 +3083,21 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/VegetaFinalExplosion.mp3", 5000);
         }
         break;
-
+      
+      case Id.vegetaFinalShineAttack:
+        if (unitId == Id.vegeta) {
+          playSoundOnUnit(unit, "Audio/Voice/Vegeta/FinalShineAttack.mp3", 4679);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+        break;
+        
+      case Id.vegetaLimitBreaker:
+        if (unitId == Id.vegeta) {
+          playSoundOnUnit(unit, "Audio/Voice/Vegeta/LimitBreaker.mp3", 2224);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+        break;
+      
       case Id.energyBlastVolley:
         playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
         break;
@@ -2913,6 +3182,79 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Waluigi/F1.mp3", 2455);
           if (rng < 10) {
             playSoundOnUnit(unit, "Audio/Voice/Waluigi/F2.mp3", 1872);
+          }
+        }
+        break;
+        
+      // whis
+      case Id.whisPreludeToDestruction:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/NiceTry.mp3", 783);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/OhMy.mp3", 1515);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Whis/WhisQ.mp3", 653);
+        break;
+      
+      case Id.whisTemporalDoOver:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/ReverseTheTime.mp3", 783);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/OnlyDoOver.mp3", 1071);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Whis/WhisW.mp3", 3030);
+        break;
+      
+      case Id.whisAngelicShield:
+        if (unitId == Id.whis) {
+          if (rng < 25) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Laugh.mp3", 1593);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Remarkable.mp3", 1227);
+          }
+        }
+        break;
+
+      case Id.whisTemporalWarp:
+        if (unitId == Id.whis) {
+          if (rng < 66) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/TravelComplicated.mp3", 2089);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/NullRealm.mp3", 3056);
+          }
+        }
+        break;
+      
+      case Id.whisAngelicUltraInstinct:
+        if (unitId == Id.whis) {
+          if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/Think.mp3", 5224);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/VeryWellThen.mp3", 940);
+          }
+        }
+        break;
+      
+      case Id.whisSymphonicDestruction:
+        if (unitId == Id.whis) {
+          if (rng < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingRapGod.mp3", 15621);
+          } else if (rng < 10) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingAllStar.mp3", 17815);
+          } else if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingBarbie.mp3", 14759);
+          } else if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingLetItGo2.mp3", 17214);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingLetItGo1.mp3", 10344);
+          } else if (rng < 80) {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingRickRoll.mp3", 12146);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Whis/SingYoureWelcome.mp3", 10840);
           }
         }
         break;

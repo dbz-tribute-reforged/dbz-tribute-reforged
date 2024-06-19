@@ -7,7 +7,6 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
-import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
 import { ExperienceManager } from "Core/ExperienceSystem/ExperienceManager";
@@ -25,6 +24,16 @@ import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { DualTechManager } from "CustomAbility/DualTech/DualTechManager";
 import { FBSimTestManager } from "Common/FBSimTestManager";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { KeyInputManager } from "Core/KeyInputSystem/KeyInputManager";
+import { KeyInput } from "Core/KeyInputSystem/KeyInput";
+import { CustomAbilityButton } from "./AbilityButton";
+import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
+import { MinimapHelper } from "Common/MinimapHelper";
+import { SagaManager } from "Core/SagaSystem/SagaManager";
+import { DDS } from "Core/DDS/DDS";
+import { SyncSaveLoad } from "Core/SyncSaveLoad/SyncSaveLoad";
+import { FilePromise } from "Core/SyncSaveLoad/FilePromise";
+import { PlayerCam } from "./PlayerCam";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -89,6 +98,8 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
             name == AbilityNames.BasicAbility.ZANZO_DASH
             || name == AbilityNames.BasicAbility.ZANZOKEN
             || name == AbilityNames.Minato.HIRAISHIN_ZANZO
+            || name == AbilityNames.Goku.INSTANT_TRANSMISSION
+            || name == AbilityNames.Beerus.BEERUS_COUNTER
           ) && Globals.barrierBlockUnits.has(customHero.unit)
         ) {
           continue;
@@ -105,6 +116,92 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
       }
     }
   });
+}
+
+export function createCustomAbilityButtonTrigger(i: number) {
+  const trig = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(trig, BlzGetFrameByName("abilityButton" + I2S(i), i), FRAMEEVENT_CONTROL_CLICK);
+  TriggerAddAction(trig, () => {
+    customAbilityActivate(GetTriggerPlayer(), i);
+  });
+}
+
+export function customAbilityActivateButton(player: player, ki: KeyInput) {
+  const playerId = GetPlayerId(player);
+  const customPlayer = Globals.customPlayers[playerId];
+  customPlayer.abilityButtons.forEach((button: CustomAbilityButton, i: number) => {
+    if (ki.oskey == button.key && ki.isDown) {
+      customAbilityActivate(player, i);
+    }
+  });
+}
+
+export function customAbilityActivate(player: player, index: number) {
+  const playerId = GetPlayerId(player);
+  // const abilName = Globals.customPlayers[playerId].abilityButtons[index].name;
+
+  // const customHero = Globals.customPlayers[playerId].getCurrentlySelectedCustomHero();
+  for (const customHero of Globals.customPlayers[playerId].allHeroes) {
+    if (!customHero || !IsUnitSelected(customHero.unit, player)) continue;
+    const abilName = customHero.getAbilityByIndex(index).name;
+
+    const abilityInput = new CustomAbilityInput(
+      0,
+      customHero,
+      player,
+      1,
+      Globals.customPlayers[playerId].orderPoint,
+      Globals.customPlayers[playerId].mouseData,
+      Globals.customPlayers[playerId].lastCastPoint.clone(),
+      Globals.customPlayers[playerId].targetUnit,
+      Globals.customPlayers[playerId].lastCastUnit,
+    );
+    
+    // cant cast zanzo if inside barrier
+    if (
+      (
+        abilName == AbilityNames.BasicAbility.ZANZO_DASH
+        || abilName == AbilityNames.BasicAbility.ZANZOKEN
+        || abilName == AbilityNames.Minato.HIRAISHIN_ZANZO
+        || abilName == AbilityNames.Goku.INSTANT_TRANSMISSION
+        || abilName == AbilityNames.Beerus.BEERUS_COUNTER
+      ) && Globals.barrierBlockUnits.has(customHero.unit)
+    ) {
+      continue;
+    }
+
+    if (customHero.canCastAbility(abilName, abilityInput)) {
+      // show custom ability name on activation, if castable
+
+      if (abilName == AbilityNames.BasicAbility.MAX_POWER) {
+        SoundHelper.playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      } else if (abilName == AbilityNames.BasicAbility.MAX_CHARGE) {
+        IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
+        SimpleSpellSystem.doUltimateChargeUnit(customHero.unit, 0.02, 0.005);
+      } else if (abilName == AbilityNames.Goku.INSTANT_TRANSMISSION) {
+        SimpleSpellSystem.DoJirenGlare(Id.gokuInstantTransmission, customHero.unit);
+      } else if (abilName == AbilityNames.Beerus.BEERUS_COUNTER) {
+        SimpleSpellSystem.DoJirenGlare(Id.beerusCounter, customHero.unit);
+      } else if (abilName == AbilityNames.Gojo.LIMITLESS_GUARD) {
+        SimpleSpellSystem.doGojoLimitlessGuard(Id.gojoLimitlessGuard, customHero.unit);
+      } else if (abilName == AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX) {
+        IssueImmediateOrderById(customHero.unit, OrderIds.HOLD_POSITION);
+        SimpleSpellSystem.doCheongMyeongEquilibriumOfSix(customHero.unit);
+      } else if (abilName == AbilityNames.Aggronor.LIGHTNING_PLATE) {
+        SimpleSpellSystem.doAggronorLightningPlate(Id.aggronorLightningPlate, customHero.unit);
+      } else if (abilName == AbilityNames.FarmerWithShotgun.RELOAD) {
+        SimpleSpellSystem.doFarmerReload(Id.farmerWithShotgun, customHero.unit);
+      }
+
+      customHero.useAbility(abilName, abilityInput);
+
+      if (abilName == AbilityNames.Gojo.BLACK_FLASH) {
+        SimpleSpellSystem.doGojoBlackFlash(Id.gojoBlackFlash, customHero.unit);
+      } else {
+        TextTagHelper.showPlayerColorTextOnUnit(abilName, playerId, customHero.unit);
+      }
+    }
+  }
 }
 
 export function addKeyEvent(trigger: trigger, oskey: oskeytype, metaKey: number, keyDown: boolean) {
@@ -224,22 +321,22 @@ export function CustomPlayerTest() {
 
   // // update mouse positions for now
   // // might be a bit laggy?
-  // const updatePlayerMouseData = CreateTrigger();
-	// for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-  //   TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
-	// }
-	// TriggerAddAction(updatePlayerMouseData, () => {
-  //   const player = GetTriggerPlayer();
-  //   const playerId = GetPlayerId(player);
-  //   if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
-  //     const x = BlzGetTriggerPlayerMouseX();
-  //     const y = BlzGetTriggerPlayerMouseY();
-  //     if (x != 0 && y != 0) {
-  //       Globals.customPlayers[playerId].mouseData.x = x;
-  //       Globals.customPlayers[playerId].mouseData.y = y;
-  //     }
-  //   }
-  // });
+  const updatePlayerMouseData = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
+	}
+	TriggerAddAction(updatePlayerMouseData, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
+      const x = BlzGetTriggerPlayerMouseX();
+      const y = BlzGetTriggerPlayerMouseY();
+      if (x != 0 && y != 0) {
+        Globals.customPlayers[playerId].mouseData.x = x;
+        Globals.customPlayers[playerId].mouseData.y = y;
+      }
+    }
+  });
 
 
   const updatePlayerOrderPoint = CreateTrigger();
@@ -335,6 +432,18 @@ export function CustomPlayerTest() {
           }
           if (unitTypeId == Id.ainzOoalGown && Constants.isAinzAbility(abilityId)) {
             abilityLevel *= Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
+          }
+          if (GetUnitAbilityLevel(caster, Id.cheongMyeongCritPassive) > 0) {
+            abilityLevel = SimpleSpellSystem.getCheungMyeongSpellLevel(abilityId, caster);
+            SimpleSpellSystem.cheungMyeongOnCast(abilityId, caster);
+          } else if (abilityId == Id.cheongMyeongSwordOfSixElements) {
+            abilityLevel = SimpleSpellSystem.getCheungMyeongSpellLevel(abilityId, caster);
+          }
+          if (Constants.isAggronorAbility(abilityId)) {
+            abilityLevel = SimpleSpellSystem.getAggronorSpellLevel(abilityId, caster);
+          }
+          if (Constants.isFarmerAbility(abilityId)) {
+            damageMult *= SimpleSpellSystem.getFarmerSpellCropMult(caster, abilityId);
           }
 
 
@@ -432,80 +541,39 @@ export function CustomPlayerTest() {
     return false;
   });
 
-  // zanzo activation trigger
-  // tied to z for now
-  const abil0 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
-  // replace key events with more organized method of key reading
-  addKeyEvent(abil0, OSKEY_Z, 0, true);
-  addKeyEvent(abil0, OSKEY_Y, 0, true);
-  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
-  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
-  addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
+  for (let i = 0; i < 4; ++i) {
+    createCustomAbilityButtonTrigger(i);
+  }
+  KeyInputManager.getInstance().callbacks.push(customAbilityActivateButton);
 
-  const abil1 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil1, OSKEY_X, 0, true);
-  addAbilityAction(abil1, AbilityNames.BasicAbility.GUARD);
+  // // zanzo activation trigger
+  // // tied to z for now
+  // const abil0 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
+  // // replace key events with more organized method of key reading
+  // addKeyEvent(abil0, OSKEY_Z, 0, true);
+  // addKeyEvent(abil0, OSKEY_Y, 0, true);
+  // addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
+  // addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZOKEN);
+  // addAbilityAction(abil0, AbilityNames.Minato.HIRAISHIN_ZANZO);
 
-  const abil2 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil2, OSKEY_C, 0, true);
-  addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
-  addAbilityAction(abil2, AbilityNames.Cell.SUPER_CHARGE);
+  // const abil1 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil1, OSKEY_X, 0, true);
+  // addAbilityAction(abil1, AbilityNames.BasicAbility.GUARD);
 
-  const abil3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_V, 0, true);
-  addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
-  addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
-  addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
-  
+  // const abil2 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil2, OSKEY_C, 0, true);
+  // addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
+  // addAbilityAction(abil2, AbilityNames.Cell.SUPER_CHARGE);
 
-  /*
-
-  const abil3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, AbilityNames.Bardock.FUTURE_SIGHT);
-
-  const abil4 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, AbilityNames.Bardock.TYRANT_LANCER);
-
-  const abil5 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, AbilityNames.Bardock.RIOT_JAVELIN);
-
-  const abil6 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, AbilityNames.Bardock.REBELLION_SPEAR);
-
-  const abil7 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, AbilityNames.Vegeta.ANGRY_SHOUT);
-
-  const abil8 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, AbilityNames.Bardock.SAIYAN_SPIRIT);
-
-
-
-
-
-
-
-
-  const abil9 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil9, OSKEY_V, 0, true);
-  addAbilityAction(abil9, "SS Rage");
-  */
+  // const abil3 = CreateTrigger();
+  // BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  // addKeyEvent(abil3, OSKEY_V, 0, true);
+  // addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
+  // addAbilityAction(abil3, AbilityNames.DonkeyKong.THRILLA_GORILLA); // hack to give DK Thrilla Gorilla
+  // addAbilityAction(abil3, AbilityNames.Genos.STAND_UP); // hack to give DK Thrilla Gorilla
  
   // hack for qwertz keyboard integration
   // const alreadyQwertzed: boolean[] = [];
@@ -643,6 +711,8 @@ export function CustomPlayerTest() {
                   heroAbility.name == AbilityNames.BasicAbility.ZANZO_DASH
                   || heroAbility.name == AbilityNames.BasicAbility.ZANZOKEN
                   || heroAbility.name == AbilityNames.Minato.HIRAISHIN_ZANZO
+                  || heroAbility.name == AbilityNames.Goku.INSTANT_TRANSMISSION
+                  || heroAbility.name == AbilityNames.Beerus.BEERUS_COUNTER
                 ) && Globals.barrierBlockUnits.has(ownedHero.unit)
               )
             );
@@ -837,6 +907,7 @@ export function CustomPlayerTest() {
         }
         for (const customHero of Globals.customPlayers[playerId].allHeroes) {
           customHero.resetMinimapIconBG();
+          customHero.resetTeamSfx();
         }
       }
     }
@@ -879,6 +950,7 @@ export function CustomPlayerTest() {
   // BJDebugMsg("Num players detected: " + numActivePlayers);
 
   if (numActivePlayers == 1) {
+    Globals.isSinglePlayer = true;
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
@@ -998,16 +1070,18 @@ export function CustomPlayerTest() {
     // force set unit skin
     const setUnitSkin = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(setUnitSkin, Player(i), "-skin", false);
+      TriggerRegisterPlayerChatEvent(setUnitSkin, Player(i), "-setskin", false);
     };
     TriggerAddAction(setUnitSkin, () => {
-      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
-      const group = GetUnitsSelectedAll(GetTriggerPlayer());
-      ForGroup(group, () => {
-        const target = GetEnumUnit();
-        BlzSetUnitSkin(target, value);
-      });
-      DestroyGroup(group);
+      const value = FourCC(SubString(GetEventPlayerChatString(), 9, 13));
+      if (value) {
+        const group = GetUnitsSelectedAll(GetTriggerPlayer());
+        ForGroup(group, () => {
+          const target = GetEnumUnit();
+          BlzSetUnitSkin(target, value);
+        });
+        DestroyGroup(group);
+      }
     });
 
     
@@ -1070,6 +1144,21 @@ export function CustomPlayerTest() {
       const frame = FrameHelper.getFrameFromString(input, 17, true);
       if (GetLocalPlayer() == player && frame) {
         BlzFrameSetSize(frame, x, y);
+      }
+    });
+
+    
+    const sagaDelayTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(sagaDelayTrig, Player(i), "-nodelay", true);
+    }
+    TriggerAddAction(sagaDelayTrig, () => {
+      if (SagaManager.delayOverride < 0) {
+        print("disable saga delay");
+        SagaManager.setDelayOverride(0);
+      } else {
+        print("enable saga delay");
+        SagaManager.setDelayOverride(-1);
       }
     });
   }
@@ -1184,7 +1273,7 @@ export function CustomPlayerTest() {
         );
       } else {
         SagaAIData.DELAY_TO_INTERVALS = 5;
-        SagaAIData.defaultActionInterval = 25;
+        SagaAIData.defaultActionInterval = 20;
         
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
@@ -1228,14 +1317,14 @@ export function CustomPlayerTest() {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
           5, 
-          "Old sagas activated"
+          "Saga Mode: Full"
         );
       } else {
         Globals.sagaSystemMode = 0;
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 
           5, 
-          "Fast sagas activated"
+          "Saga Mode: Fast"
         );
       }
     }
@@ -1253,43 +1342,6 @@ export function CustomPlayerTest() {
         print("DT: " + R2S(Globals.ddsTimeoutSeconds));
       }
     }
-  });
-
-
-  const zanzoToggleTrigger = CreateTrigger();
-  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zanzo", true);
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zd", true);
-    TriggerRegisterPlayerChatEvent(zanzoToggleTrigger, Player(i), "-zz", true);
-  }
-  TriggerAddAction(zanzoToggleTrigger, () => {
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
-      Globals.customPlayers[playerId].useZanzoDash = !Globals.customPlayers[playerId].useZanzoDash;
-
-      if (Globals.customPlayers[playerId].useZanzoDash) {
-        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Enabled|r");
-      } else {
-        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5, "|cffffcc00Zanzo Dash Disabled|r");
-      }
-    }
-  });
-  TimerStart(CreateTimer(), 15, false, () => {
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 
-      10, 
-      "|cffffff00Last chance to change to zanzo dash! (Requires repick)|r"
-    );
-    DestroyTimer(GetExpiredTimer());
-  });
-  TimerStart(CreateTimer(), 60, false, () => {
-    // DisplayTimedTextToForce(
-    //   bj_FORCE_ALL_PLAYERS, 
-    //   10, 
-    //   "|cffff2020Zanzo Dash Toggle Disabled|r"
-    // );
-    DisableTrigger(zanzoToggleTrigger);
-    DestroyTimer(GetExpiredTimer());
   });
 
   const dualTechToggleTrigger = CreateTrigger();
@@ -1391,7 +1443,71 @@ export function CustomPlayerTest() {
 
   SetupCustomAbilityRefresh();
   SoundHelper.SetupSpellSoundEffects();
+
+
+  // give neutral passive buildings minimap icon
+  GroupEnumUnitsOfPlayer(Globals.tmpUnitGroup, Constants.neutralPassivePlayer, null);
+  ForGroup(Globals.tmpUnitGroup, () => {
+    const unit = GetEnumUnit();
+    const unitId = GetUnitTypeId(unit);
+    if (
+      unitId == Id.vendorKorin
+      || unitId == Id.vendorChefSatan
+      || unitId == Id.vendorRoshi
+      || unitId == Id.vendorElHermano
+      || unitId == Id.vendorSaitama
+      || unitId == Id.vendorAinz
+      || unitId == Id.vendorKrustyKrab
+      || unitId == Id.tpLookoutUpa
+      || unitId == Id.tpLookoutPopo
+      || unitId == Id.tpNamekPod
+      || unitId == Id.tpNamekFrieza
+      || unitId == Id.tpTimeMachine
+      || unitId == Id.tpTimeMachineCell
+      || unitId == Id.tpCarpetPopo
+      || unitId == Id.tpBabidiShip
+    ) {
+      const x = GetUnitX(unit)
+      const y = GetUnitY(unit)
+      const icon = MinimapHelper.getMinimapIcon(unit);
+      const mm = CreateMinimapIcon(
+        x, y, 255, 255, 255, 
+        icon, 
+        FOG_OF_WAR_FOGGED
+      );
+      SetMinimapIconVisible(mm, true);
+      Globals.minimapIcons.push(mm);
+      
+      // shows up for fogged now, so not needed
+      // if (unitId != Id.vendorKorin) {
+      //   for (const player of Constants.activePlayers) {
+      //     const fm = CreateFogModifierRadius(
+      //       player, FOG_OF_WAR_VISIBLE, 
+      //       x, y, 128, 
+      //       false, false
+      //     );
+      //     FogModifierStart(fm);
+          
+      //     const playerId = GetPlayerId(player);
+      //     Globals.customPlayers[playerId].addMMFogModifier(fm);
+      //   }
+      // }
+    }
+  });
+
+  const dmgStatsTrigger = CreateTrigger();
+  for (const player of Constants.activePlayers) {
+    TriggerRegisterPlayerChatEvent(dmgStatsTrigger, player, "-dmg", true);
+  }
+  TriggerAddCondition(dmgStatsTrigger, Condition(() => {
+    const showPlayer = GetTriggerPlayer();
+    DisplayTimedTextToPlayer(showPlayer, 0, 0, 15, 
+      DDS.getInstance().getDamageDataStr()
+    );
+    return false;
+  }));
 }
+
 
 export function skurvyMirrorProcessOrder() {
   const unit = GetTriggerUnit();
@@ -1515,6 +1631,7 @@ export function SetupMysteryCapsuleBox() {
       || spellId == Capsules.battleArmor5
       || spellId == Capsules.treeOfMightSapling
       || spellId == Capsules.potaraEarring
+      || spellId == Capsules.zenoButton
     ) {
       const unit = GetTriggerUnit();
       const index = UnitHelper.getInventoryIndexOfItemType(unit, Capsules.itemMysterBox);
@@ -1557,6 +1674,9 @@ export function SetupMysteryCapsuleBox() {
 
         } else if (spellId == Capsules.potaraEarring) {
           item = CreateItem(ItemConstants.potaraEarrings, x, y);
+
+        } else if (spellId == Capsules.zenoButton) {
+          item = CreateItem(ItemConstants.ZENO_BUTTON, x, y);
         }
 
         if (item) {
@@ -1664,7 +1784,12 @@ export function getSwordOfHopeMult(player: player): number {
   ForForce(playerAllies, () => {
     const p = GetEnumPlayer();
     const pId = GetPlayerId(p);
-    if (p != player && pId >= 0 && pId < Constants.maxActivePlayers) {
+    if (
+      p != player 
+      && pId >= 0 
+      && pId < Constants.maxActivePlayers 
+      && IsPlayerSlotState(p, PLAYER_SLOT_STATE_PLAYING)
+    ) {
       result += 0.2;
     }
   });

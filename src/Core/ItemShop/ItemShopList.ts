@@ -520,4 +520,17 @@ export const ItemShopList = [
     recipe: [
     ],
   },
+  {
+    id: ItemConstants.potaraEarrings,
+    lumberCost: 1600,
+    category: [
+      ItemShopCategory.PASSIVE,
+      ItemShopCategory.STR,
+      ItemShopCategory.AGI,
+      ItemShopCategory.INT,
+      ItemShopCategory.UTILITY,
+    ],
+    recipe: [
+    ],
+  },
 ];

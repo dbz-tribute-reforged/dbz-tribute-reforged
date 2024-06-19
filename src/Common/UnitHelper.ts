@@ -1,5 +1,5 @@
 import { Vector2D } from "./Vector2D";
-import { Buffs, Constants, Id } from "./Constants";
+import { Buffs, Constants, DebuffAbilities, Id } from "./Constants";
 
 export module UnitHelper {
   export function isUnitStunned(unit: unit): boolean {
@@ -265,5 +265,30 @@ export module UnitHelper {
         - costPct * GetUnitState(unit, unitStatePct)
       )
     );
+  }
+
+  export function createDummyCasterStun(
+    player: player,
+    x: number, y: number,
+    duration: number
+  ): unit {
+    const unit = CreateUnit(
+      player, Constants.dummyCasterId,
+      x, y, 0
+    );
+    if (duration == 0.03) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_MICRO);
+    } else if (duration == 0.5) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_HALF_SECOND);
+    } else if (duration == 1) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_ONE_SECOND);
+    } else if (duration == 1.5) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_ONE_AND_A_HALF_SECOND);
+    } else if (duration == 2) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_TWO_SECOND);
+    } else if (duration == 3) {
+      UnitAddAbility(unit, DebuffAbilities.STUN_THREE_SECOND);
+    }
+    return unit;
   }
 }

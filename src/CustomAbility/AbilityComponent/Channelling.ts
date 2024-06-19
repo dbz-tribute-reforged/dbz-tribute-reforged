@@ -3,6 +3,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Trigger } from "w3ts";
 import { UnitHelper } from "Common/UnitHelper";
+import { OrderIds } from "Common/Constants";
 
 // this component cannot be transferred to another unit
 // for performance reasons
@@ -20,6 +21,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     public startTick: number = 0,
     public endTick: number = -1,
     public ticksFromEnd: number = 1,
+    public fakeChannel: boolean = false,
   ) {
     this.isChannelling = false;
     this.finishedChannel = false;
@@ -38,6 +40,10 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       this.isFinished = false;
       this.isChannelling = true;
       this.finishedChannel = false;
+      
+      if (this.fakeChannel) {
+        input.caster.setIsChanneling(true); // pretend to channel
+      }
     }
 
     if (!ability.isFinishedUsing(this)) {
@@ -46,11 +52,13 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
         || UnitHelper.isUnitDead(input.caster.unit)
       ) {
         this.finishedChannel = true;
-      } else {
+      } else if (!this.fakeChannel) {
         this.finishedChannel = (
           !input.caster.isChanneling() 
           || input.caster.channelAbilityId != input.abilityId
         );
+      } else {
+        this.finishedChannel = !input.caster.isChanneling();
       }
   
       if (this.isChannelling && this.finishedChannel) {
@@ -72,7 +80,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   clone(): AbilityComponent {
     return new Channelling(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.ticksFromEnd,
+      this.ticksFromEnd, this.fakeChannel,
     );
   }
   
@@ -84,6 +92,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       startTick: number;
       endTick: number;
       ticksFromEnd: number;
+      fakeChannel: boolean;
     }
   ) {
     this.name = input.name;
@@ -91,6 +100,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.ticksFromEnd = input.ticksFromEnd;
+    this.fakeChannel = input.fakeChannel;
     return this;
   }
 }

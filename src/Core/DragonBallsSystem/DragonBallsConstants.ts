@@ -10,7 +10,7 @@ export module DragonBallsConstants {
   export const shenronUnitDummy: number = FourCC("z000");
   export const shenronUnit: number = FourCC("z001");
   // export const shenronUnit: number = FourCC("n03O");
-  export const shenronWaitingRoom: Vector2D = new Vector2D(10500, 22000);
+  export const shenronWaitingRoom: Vector2D = new Vector2D(2500, 17700);
   export const shenronVisionRadius: number = 800;
   export const shenronSfxInterval: number = 2;
   export const shenronDelay: number = 7.7;
@@ -20,39 +20,37 @@ export module DragonBallsConstants {
   export const immortalDelay: number = 4.1;
   export const startingDBPos: Vector2D = new Vector2D(5000, 3500);
   export const dbSpawns: Vector2D[] = [
-    new Vector2D(14000, 17000),
-    new Vector2D(30500, 7700),
-    new Vector2D(6000, 18000),
-    new Vector2D(5000, 3500),
-    new Vector2D(8200, -1500),
-    new Vector2D(16512, 12267),
-    new Vector2D(29300, -4500),
-    new Vector2D(-4600, 3200),
-    new Vector2D(2500, 10300),
-    new Vector2D(13775, 9720),
-    new Vector2D(11890, -2650),
-    new Vector2D(8500, -5870),
-    new Vector2D(16000, 2500),
-    new Vector2D(13000, 17730),
-    new Vector2D(23000, 8300),
-    new Vector2D(2500, -7250),
-    new Vector2D(-5500, -6000),
-    new Vector2D(21156, 380),
-    new Vector2D(23700, 15600),
-    new Vector2D(4741, -861),
-    new Vector2D(17000, 7500),
-    new Vector2D(8433, 10206),
-    new Vector2D(20000, 16000),
-    new Vector2D(28100, 11100),
-    new Vector2D(-4000, 5800),
-    new Vector2D(18500, -3600),
-    new Vector2D(4800, 7600),
-    new Vector2D(16200, -6500),
-    new Vector2D(1000, 14400),
-    new Vector2D(10450, 4000),
-    new Vector2D(5788, 15164),
-    new Vector2D(27050, 1900),
-    new Vector2D(-5500, 18000),
-    new Vector2D(17500, 18300),
+    // 1
+    new Vector2D(-11000, 0), // lookout
+    new Vector2D(2500, 10500), // top middle island
+    new Vector2D(26000, 10000), // android 8 ice area
+    new Vector2D(24200, 1000), // satan city
+    new Vector2D(22400, -10200), // kame house
+    new Vector2D(5000, -7000), // gohan training mtns
+
+    // 2
+    new Vector2D(1800, 0), // capsule corp
+    new Vector2D(-7700, -15000), // baba's palace
+    new Vector2D(-10000, 10000), // top left ice area
+    new Vector2D(10000, 11400), // top ice mtn
+    new Vector2D(20500, 6500), // el hermano
+    new Vector2D(23900, -5500), // grandpa gohan house
+    new Vector2D(29000, -13500), // bottom right island 
+
+    // 3
+    new Vector2D(3260, 6870), // cell's arena
+    new Vector2D(10000, 1000), // center desert
+    new Vector2D(19500, 10000), // top of top right river
+    new Vector2D(27000, 0), // middle right popo carpet 
+    new Vector2D(-5500, 3000), // middle left mtns
+    new Vector2D(-5000, -7000), // bottom left mtns
+    new Vector2D(-3000, 12000), // right of top left ice area
+
+    // 4
+    new Vector2D(15000, 1000), // middle right near pod
+    new Vector2D(5500, 2100), // middle mtns 
+    new Vector2D(-12000, -11000), // bottom left desert
+    new Vector2D(14000, -7000), // bottom middle mountain
+    new Vector2D(8000, -4000), // middle river down
   ];
 }

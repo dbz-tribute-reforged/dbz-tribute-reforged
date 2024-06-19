@@ -22,9 +22,14 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
   static readonly BEAM_UNIT_SPAWN_BEAM = 4;
   static readonly BEAM_UNIT_SPAWN_TARGET_TO_CASTER = 5;
+  static readonly BEAM_UNIT_SPAWN_SOURCE_FACING = 6;
 
   static readonly BEAM_HP_MODIFIER = 0.4;
 
+  static readonly BEAM_SPEED_5 = 5;
+  static readonly BEAM_SPEED_10 = 10;
+  static readonly BEAM_SPEED_15 = 15;
+  static readonly BEAM_SPEED_20 = 20;
   static readonly BEAM_SPEED_ULTRA_SLOW = 25;
   static readonly BEAM_SPEED_SUPER_SLOW = 30;
   static readonly BEAM_SPEED_VERY_SLOW = 35;
@@ -74,21 +79,28 @@ export class BeamComponent implements
 
   public isStarted: boolean = false;
   public isFinished: boolean = true;
+  public isStopped: boolean = false;
+
+  public spawnDelay: number = 0;
+  public moveTicks: number = 0;
 
   constructor(
     public name: string = "BeamComponent",
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public spawnDelayTicks: number = 0,
     public beamHpMult: number = 0.5,
     public beamHpAttribute: number = bj_HEROSTAT_INT,
     public speed: number = 16,
+    public maxMoveTicks: number = -1,
     public aoe: number = 250,
     public clashingDelayTicks: number = 1,
     public maxDelayTicks: number = 8,
     public durationIncPerDelay: number = 15,
     public boundaryRemoveDelay: number = 1,
     public turnSpeed: number = 0.1,
+    public angleOffset: number = 0,
     public heightVariation: HeightVariation = new HeightVariation(
       250, 0, HeightVariation.LINEAR_VARIATION
     ),
@@ -98,6 +110,7 @@ export class BeamComponent implements
     public isSticky: boolean = true,
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
+    public stopAtCastPoint: boolean = false,
     public explodeAtCastPoint: boolean = false,
     public explodeOnDeath: boolean = false,
     public explodeOnContact: boolean = false,
@@ -160,7 +173,10 @@ export class BeamComponent implements
       
       const numEnemyHeroes = UnitHelper.countEnemyHeroes(Globals.tmpUnitGroup, input.casterPlayer, false);
       
-      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(Globals.tmpUnitGroup) > 0);
+      const beamClashTest = (
+        currentHp < this.previousHp 
+        && BlzGroupGetSize(Globals.tmpUnitGroup) > 0
+      );
       
       if (
         this.explodeOnContact && 
@@ -215,7 +231,11 @@ export class BeamComponent implements
     }
 
     if (this.delayTicks <= 0) {
-      if (ability.currentTick >= this.nextMoveTick) {
+      if (
+        ability.currentTick >= this.nextMoveTick 
+        && (this.maxMoveTicks == -1 || this.moveTicks < this.maxMoveTicks)
+        && !this.isStopped
+      ) {
         if (!this.isFixedAngle) {
           this.angle = GetUnitFacing(this.beamUnit);
         }
@@ -230,6 +250,8 @@ export class BeamComponent implements
 
         if (!hasMoved) {
           this.nextMoveTick = ability.currentTick + BeamComponent.BEAM_STUCK_DELAY_TICKS;
+        } else {
+          ++this.moveTicks;
         }
 
         if (!PathingCheck.isFlyingWalkable(this.targetCoord)) {
@@ -245,6 +267,14 @@ export class BeamComponent implements
         CoordMath.distance(this.beamCoord, this.explodePosition) < this.explodeMinDistance
       ) {
         this.forcedExplode = true;
+      }
+
+      if (
+        this.stopAtCastPoint 
+        && !this.isStopped
+        && CoordMath.distance(this.beamCoord, this.explodePosition) < this.speed * 1.1
+      ) {
+        this.isStopped = true;
       }
 
       if (
@@ -342,10 +372,15 @@ export class BeamComponent implements
         this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
       }
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
-    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_TO_CASTER) {
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_TO_CASTER) {
       this.beamCoord.setVector(this.beamTargetPoint);
       this.beamTargetPoint.setUnit(input.caster.unit);
       this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
+    } 
+    else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_SOURCE_FACING) {
+      this.angle = GetUnitFacing(source);
+      this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     }
 
     this.beamUnit = CreateUnit(
@@ -353,7 +388,7 @@ export class BeamComponent implements
       this.beamUnitType, 
       this.beamCoord.x, 
       this.beamCoord.y, 
-      this.angle,
+      this.angle + this.angleOffset,
     );
     BlzSetUnitSkin(this.beamUnit, this.beamUnitSkin);
 
@@ -378,6 +413,8 @@ export class BeamComponent implements
         CoordMath.distance(this.beamCoord, input.castPoint) / Math.floor(this.speed)
       )
       endHeightTick = this.explodeTick;
+    } else if (this.stopAtCastPoint) {
+      this.explodePosition.setPos(input.castPoint.x, input.castPoint.y);
     }
 
     // SetUnitFlyHeight(
@@ -446,7 +483,9 @@ export class BeamComponent implements
       this.stickyTarget = null;
     }
     
-    if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {
+    if (this.spawnDelay < this.spawnDelayTicks) {
+      ++this.spawnDelay;
+    } else if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
       this.nextMoveTick = ability.currentTick;
@@ -481,6 +520,7 @@ export class BeamComponent implements
     if (ability.isFinishedUsing(this)) {
       this.isStarted = false;
       this.isFinished = true;
+      this.isStopped = false;
 
       if (!this.hasExploded) {
         if (this.explodeOnDeath) {
@@ -492,6 +532,8 @@ export class BeamComponent implements
       this.forcedExplode = false;
       this.hasExploded = false;
       this.stickyTarget = null;
+      this.spawnDelay = 0;
+      this.moveTicks = 0;
     }
   }
 
@@ -515,16 +557,20 @@ export class BeamComponent implements
   clone(): AbilityComponent {
     return new BeamComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.spawnDelayTicks,
       this.beamHpMult, this.beamHpAttribute, 
-      this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
+      this.speed, this.maxMoveTicks, this.aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, 
       this.boundaryRemoveDelay,
       this.turnSpeed,
+      this.angleOffset,
       this.heightVariation, this.isTracking,
       this.isFixedAngle, this.isGroundPathing, 
       this.isSticky,
       this.canClashWithHero, 
-      this.useLastCastPoint, this.explodeAtCastPoint,
+      this.useLastCastPoint, 
+      this.stopAtCastPoint,
+      this.explodeAtCastPoint,
       this.explodeOnDeath,
       this.explodeOnContact,
       this.setAsSpawnedBeam,
@@ -541,15 +587,18 @@ export class BeamComponent implements
       repeatInterval: number;
       startTick: number;
       endTick: number;
+      spawnDelayTicks: number;
       beamHpMult: number;
       beamHpAttribute: number;
       speed: number;
+      maxMoveTicks: number;
       aoe: number;
       clashingDelayTicks: number;
       maxDelayTicks: number;
       durationIncPerDelay: number;
       boundaryRemoveDelay: number;
       turnSpeed: number;
+      angleOffset: number;
       heightVariation: {
         start: number;
         finish: number;
@@ -561,6 +610,7 @@ export class BeamComponent implements
       isSticky: boolean;
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
+      stopAtCastPoint: boolean;
       explodeAtCastPoint: boolean;
       explodeOnDeath: boolean;
       explodeOnContact: boolean;
@@ -578,15 +628,18 @@ export class BeamComponent implements
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.spawnDelayTicks = input.spawnDelayTicks;
     this.beamHpMult = input.beamHpMult;
     this.beamHpAttribute = input.beamHpAttribute;
     this.speed = input.speed;
+    this.maxMoveTicks = input.maxMoveTicks;
     this.aoe = input.aoe;
     this.clashingDelayTicks = input.clashingDelayTicks;
     this.maxDelayTicks = input.maxDelayTicks;
     this.durationIncPerDelay = input.durationIncPerDelay;
     this.boundaryRemoveDelay = input.boundaryRemoveDelay;
     this.turnSpeed = input.turnSpeed;
+    this.angleOffset = input.angleOffset;
     this.heightVariation = new HeightVariation().deserialize(input.heightVariation);
     this.isTracking = input.isTracking;
     this.isFixedAngle = input.isFixedAngle;
@@ -594,6 +647,7 @@ export class BeamComponent implements
     this.isSticky = input.isSticky;
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
+    this.stopAtCastPoint = input.stopAtCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.explodeOnDeath = input.explodeOnDeath;
     this.explodeOnContact = input.explodeOnContact;

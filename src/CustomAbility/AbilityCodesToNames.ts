@@ -6,24 +6,29 @@ export const abilityCodesToNames = new Map<number, string>(
     // goku
     [Id.kamehameha, AbilityNames.Goku.KAMEHAMEHA],
     [Id.kamehamehaGod, AbilityNames.Goku.GOD_KAMEHAMEHA],
+    [Id.kamehamehaX10, AbilityNames.Goku.KAMEHAMEHA_X10],
     [Id.spiritBomb, AbilityNames.Goku.SPIRIT_BOMB],
     [Id.dragonFist, AbilityNames.Goku.DRAGON_FIST],
     [Id.superDragonFist, AbilityNames.Goku.SUPER_DRAGON_FIST],
     [Id.solarFlare, AbilityNames.Goku.SOLAR_FLARE],
     [Id.ultraInstinct, AbilityNames.Goku.ULTRA_INSTINCT],
     [Id.masteredUltraInstinct, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
+    [Id.gokuLimitBreaker, AbilityNames.Goku.LIMIT_BREAKER],
 
     // vegeta
     [Id.galickGun, AbilityNames.Vegeta.GALICK_GUN],
     [Id.bigBangAttack, AbilityNames.Vegeta.BIG_BANG_ATTACK],
     [Id.finalFlash, AbilityNames.Vegeta.FINAL_FLASH],
-    [Id.finalFlash2, AbilityNames.Vegeta.FINAL_FLASH_2],
+    [Id.finalFlashGod, AbilityNames.Vegeta.FINAL_FLASH_GOD],
     [Id.energyBlastVolley, AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY],
     [Id.moonlight, AbilityNames.Vegeta.MOONLIGHT],
     [Id.angryShout, AbilityNames.Vegeta.ANGRY_SHOUT],
     [Id.ultraEgo, AbilityNames.Vegeta.ULTRA_EGO],
     [Id.egoGalickGun, AbilityNames.Vegeta.EGO_GALICK_GUN],
     [Id.vegetaHakaiBarrage, AbilityNames.Vegeta.HAKAI_BARRAGE],
+    [Id.vegetaFinalShineAttack, AbilityNames.Vegeta.FINAL_SHINE_ATTACK],
+    [Id.vegetaFinalFlashDark, AbilityNames.Vegeta.FINAL_FLASH_DARK],
+    [Id.vegetaLimitBreaker, AbilityNames.Vegeta.LIMIT_BREAKER],
 
     // gohan
     [Id.masenko, AbilityNames.Gohan.MASENKO],
@@ -72,6 +77,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.kyodaika, AbilityNames.Piccolo.KYODAIKA],
     // clones version
     [Id.piccoloCloneSBC, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON],
+
+
+    [Id.farmerHaymaker, AbilityNames.FarmerWithShotgun.HAYMAKER],
+    [Id.farmerCornblast, AbilityNames.FarmerWithShotgun.CORNBLAST],
+    [Id.farmerSaiyanSlayingShot, AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT],
 
     // bardock
     [Id.futureSight, AbilityNames.Bardock.FUTURE_SIGHT],
@@ -489,7 +499,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.genosSpiralIncinerationCannon, AbilityNames.Genos.SPIRAL_INCINERATION_CANNON],
     [Id.genosLightningEye, AbilityNames.Genos.LIGHTNING_EYE],
     [Id.genosHighVoltageFist, AbilityNames.Genos.HIGH_VOLTAGE_FIST],
-    [Id.genosOvercharge, AbilityNames.Genos.OVERCHARGE],
+    [Id.genosOverchargeOn, AbilityNames.Genos.OVERCHARGE],
 
     [Id.tatsumakiCompress, AbilityNames.Tatsumaki.COMPRESSS],
     [Id.tatsumakiLift, AbilityNames.Tatsumaki.LIFT],
@@ -497,6 +507,47 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.tatsumakiTornado, AbilityNames.Tatsumaki.TORNADO_OF_TERROR],
     [Id.tatsumakiVector, AbilityNames.Tatsumaki.VECTOR],
     [Id.tatsumakiGiantSpear, AbilityNames.Tatsumaki.GIANT_SPEAR],
+
+    [Id.whisPreludeToDestruction, AbilityNames.Whis.PRELUDE_TO_DESTRUCTION],
+    [Id.whisAngelicUltraInstinct, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT],
+    [Id.whisSymphonicDestruction, AbilityNames.Whis.SYMPHONIC_DESTRUCTION],
+
+    [Id.beerusSphereOfDestruction, AbilityNames.Beerus.SPHERE_OF_DESTRUCTION],
+    [Id.beerusAuraOfDestruction, AbilityNames.Beerus.AURA_OF_DESTRUCTION],
+    [Id.beerusGodWrath, AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH],
+    [Id.beerusFury, AbilityNames.Beerus.BEERUS_FURY],
+    [Id.beerusFoodSushi, AbilityNames.Beerus.BEERUS_SUSHI],
+    [Id.beerusFoodPizza, AbilityNames.Beerus.BEERUS_PIZZA],
+    [Id.beerusFoodIceCream, AbilityNames.Beerus.BEERUS_ICE_CREAM],
+    [Id.beerusFoodTakoyaki, AbilityNames.Beerus.BEERUS_TAKOYAKI],
+    [Id.beerusFoodPudding, AbilityNames.Beerus.BEERUS_PUDDING],
+
+    [Id.granolahSnipe, AbilityNames.Granolah.SNIPE],
+    [Id.granolahSnipe2, AbilityNames.Granolah.SNIPE_2],
+    [Id.granolahEnergyVolley, AbilityNames.Granolah.ENERGY_VOLLEY],
+    [Id.granolahPressurePoint, AbilityNames.Granolah.PRESSURE_POINT],
+    [Id.granolahFinalShot, AbilityNames.Granolah.FINAL_SHOT],
+    [Id.granolahEvolvedEyes, AbilityNames.Granolah.EVOLVED_EYES],
+    [Id.granolahSnipeVolley, AbilityNames.Granolah.SNIPE_VOLLEY],
+    [Id.granolahSnipeCharged, AbilityNames.Granolah.SNIPE_CHARGED],
+
+    [Id.gojoUnlimitedVoid, AbilityNames.Gojo.UNLIMITED_VOID],
+
+    [Id.cheongMyeongSwordOfSixElements, AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS],
+    [Id.cheongMyeongFallingPetalSword, AbilityNames.CheongMyeong.FALLING_PETAL_SWORD],
+    [Id.cheongMyeongFlutteringShadowPetals, AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS],
+    [Id.cheongMyeongPlumBlossomCleave, AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE],
+    [Id.cheongMyeongPlumBlossomTempest, AbilityNames.CheongMyeong.PLUM_BLOSSOM_TEMPEST],
+    [Id.cheongMyeongCelestialFallingPetals, AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS],
+    [Id.cheongMyeongPlumBlossomPalisade, AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE],
+    [Id.cheongMyeongPlumBlossomFlow, AbilityNames.CheongMyeong.PLUM_BLOSSOM_FLOW],
+    [Id.cheongMyeongPlumBlossomCloudburst, AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST],
+
+    [Id.aggronorStormBolt, AbilityNames.Aggronor.STORM_BOLT],
+    [Id.aggronorThunderclap, AbilityNames.Aggronor.THUNDERCLAP],
+    [Id.aggronorDwarfToss, AbilityNames.Aggronor.DWARF_TOSS],
+    [Id.aggronorAvatar, AbilityNames.Aggronor.AVATAR],
+    [Id.aggronorStormlord, AbilityNames.Aggronor.STORMLORD],
 
 
 

@@ -2,7 +2,6 @@ import { AdvancedTournament } from "./AdvancedTournament";
 import { TournamentState, Tournament } from "./Tournament";
 import { Constants, Globals } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
-import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
@@ -10,6 +9,7 @@ import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { TournamentManager } from "./TournamentManager";
 import { VisionHelper } from "Common/VisionHelper";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { WinLossSystem } from "Core/WinLossSystem/WinLossSystem";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -39,7 +39,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
 
   complete(): void {
     super.complete();
-    WinLossHelper.forceTeamWin(this.winTeam);
+    WinLossSystem.getInstance().forceTeamWin(this.winTeam);
     for (const unit of this.unitsTeam1) {
       SetUnitX(unit, 0);
       SetUnitY(unit, 0);
@@ -59,6 +59,10 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       this.toStartDelay + " seconds!"
     );
     
+    TournamentData.finalBattleDetector.setPos(
+      GetRectCenterX(gg_rct_Final_Battle_Detector_Region),
+      GetRectCenterY(gg_rct_Final_Battle_Detector_Region),
+    );
     // tell gui respawn system final battle is happening
     const dummyCaster = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE), 

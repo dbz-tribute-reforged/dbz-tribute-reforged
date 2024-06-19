@@ -28,6 +28,8 @@ export class CustomHero {
   public minimapIconBG: minimapicon;
   public minimapIcon: minimapicon;
 
+  public teamSfx: effect;
+
   constructor(
     public readonly unit: unit,
   ) {
@@ -87,34 +89,46 @@ export class CustomHero {
     // then read some data and apply special abilities for
     // relevant heroes
     const playerId = GetPlayerId(GetOwningPlayer(unit));
-    if (id == Id.minato) {
-      this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
-    } else {
-      if (
-        playerId >= 0 
-        && playerId < Constants.maxActivePlayers 
-        && Globals.customPlayers[playerId].useZanzoDash
-      ) {
-        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
-      } else {
-        this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+
+    if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+      for (let i = 0; i < Globals.customPlayers[playerId].abilityButtons.length; ++i) {
+        this.addAbilityFromAll(Globals.customPlayers[playerId].abilityButtons[i].name);
       }
-    }
-    this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
-
-    if (id == Id.cellPerfect) {
-      this.addAbilityFromAll(AbilityNames.Cell.SUPER_CHARGE);
     } else {
+      this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+      this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
       this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
-    }
-
-    if (id == Id.donkeyKong) {
-      this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
-    } else if (id == Id.genos) {
-      this.addAbilityFromAll(AbilityNames.Genos.STAND_UP);
-    } else {
       this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
     }
+
+    // if (id == Id.minato) {
+    //   this.addAbilityFromAll(AbilityNames.Minato.HIRAISHIN_ZANZO);
+    // } else {
+    //   if (
+    //     playerId >= 0 
+    //     && playerId < Constants.maxActivePlayers 
+    //     && Globals.customPlayers[playerId].useZanzoDash
+    //   ) {
+    //     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    //   } else {
+    //     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZOKEN);
+    //   }
+    // }
+    // this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
+
+    // if (id == Id.cellPerfect) {
+    //   this.addAbilityFromAll(AbilityNames.Cell.SUPER_CHARGE);
+    // } else {
+    //   this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    // }
+
+    // if (id == Id.donkeyKong) {
+    //   this.addAbilityFromAll(AbilityNames.DonkeyKong.THRILLA_GORILLA);
+    // } else if (id == Id.genos) {
+    //   this.addAbilityFromAll(AbilityNames.Genos.STAND_UP);
+    // } else {
+    //   this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
+    // }
     
     // TODO: fix item abilities for heroes... 
     // item workaround.... for now
@@ -155,6 +169,38 @@ export class CustomHero {
       this.minimapIconBG = null;
       this.minimapIcon = null;
     }
+
+    this.teamSfx = null;
+    this.setTeamSfx();
+  }
+
+  public resetTeamSfx() {
+    if (this.teamSfx) DestroyEffect(this.teamSfx);
+    this.setTeamSfx();
+  }
+
+  public setTeamSfx() {
+    const player = GetOwningPlayer(this.unit);
+    const playerId = GetPlayerId(player);
+    if (playerId >= Constants.maxActivePlayers) return;
+
+    let isTeam1 = false;
+    for (const p of Constants.defaultTeam1) {
+      if (p == player) isTeam1 = true;
+    }
+    this.teamSfx = AddSpecialEffect(
+      isTeam1 ? 
+        "Spell_Marker_Red.mdl" : 
+        "Spell_Marker_Blue.mdl"
+      ,
+      GetUnitX(this.unit),
+      GetUnitY(this.unit),
+    );
+    BlzSetSpecialEffectScale(this.teamSfx,
+      Math.max(1, Math.min(4, 
+        BlzGetUnitRealField(this.unit, UNIT_RF_SELECTION_SCALE)
+      ))
+    );
   }
 
   public addAbilityFromAll(name: string) {
@@ -318,5 +364,9 @@ export class CustomHero {
     FlushChildHashtable(Globals.simpleSpellCDHashtable, unitId);
     if (this.minimapIconBG) DestroyMinimapIcon(this.minimapIconBG);
     if (this.minimapIcon) DestroyMinimapIcon(this.minimapIcon);
+    if (this.teamSfx) {
+      DestroyEffect(this.teamSfx);
+      this.teamSfx = null;
+    }
   }
 }

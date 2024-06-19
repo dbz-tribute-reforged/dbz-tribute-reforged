@@ -12,6 +12,7 @@ import { SagaAbility } from "../SagaAbility";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { doTimeRingSwap } from "Core/ItemAbilitySystem/ItemActiveAbilitiesConfig";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { Logger } from "Common/Logger";
 
 
 // TODO:
@@ -221,7 +222,7 @@ export class SagaHeroAI {
   }
 
   public thinkAttack() {
-    if (this.aggroTarget == undefined || UnitHelper.isUnitDead(this.aggroTarget)) {
+    if (this.aggroTarget == undefined || !UnitHelper.isUnitAlive(this.aggroTarget)) {
       this.currentAction = SagaAIData.Action.REAGGRO;
     } else if (this.numAttacks < this.consecutiveAttacksAllowed) {
       this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
@@ -578,7 +579,7 @@ export class SagaHeroAI {
       if (
         GetUnitTypeId(beam) == Constants.dummyBeamUnitId &&
         IsUnitEnemy(beam, bossPlayer) &&
-        !UnitHelper.isUnitDead(beam)
+        UnitHelper.isUnitAlive(beam)
       ) {
         if (
           beamsAccountedFor < this.maxBeamsToDodge || 
@@ -672,13 +673,23 @@ export class SagaHeroAI {
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
     this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
-    GroupEnumUnitsInRange(
-      this.nearbyEnemies,
-      this.bossPos.x,
-      this.bossPos.y,
-      acquireRange,
-      null
-    );
+    if (acquireRange == Constants.sagaMaxAcquisitionRange) {
+      GroupClear(this.nearbyEnemies);
+      for (const player of Constants.activePlayers) {
+        const playerId = GetPlayerId(player);
+        // NOTE: the function parameters are inverted
+        BlzGroupAddGroupFast(udg_StatMultPlayerUnits[playerId], this.nearbyEnemies);
+      }
+    } else {
+      GroupEnumUnitsInRange(
+        this.nearbyEnemies,
+        this.bossPos.x,
+        this.bossPos.y,
+        acquireRange,
+        null
+      );
+    }
+
 
     let closestUnit = undefined;
     let closestNonSummonUnit = undefined;

@@ -125,7 +125,7 @@ export module SagaHelper {
   ) {
     const currentHp = GetUnitState(unit, UNIT_STATE_LIFE);
     const maxHp = GetUnitState(unit, UNIT_STATE_MAX_LIFE);
-    const isDead = UnitHelper.isUnitDead(unit);
+    const isDead = !UnitHelper.isUnitAlive(unit);
     return (
       (
         (

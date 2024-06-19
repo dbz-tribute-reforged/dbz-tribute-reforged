@@ -7,6 +7,8 @@ import { HeroSelectUnitList } from "./HeroSelectUnitList";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
+import { AbilityShop } from "Core/AbilityShop/AbilityShop";
+import { Frame, Trigger } from "w3ts";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -33,6 +35,15 @@ export class HeroSelectorManager {
   public timerText: texttag;
 
   public heroSelectUnits: HeroSelectUnit[];
+
+  public repickButton: Frame;
+  public repickButtonTrigger: Trigger;
+
+  public ultimateButton: Frame;
+  public ultimateButtonTrigger: Trigger;
+
+  public kothButton: Frame;
+  public kothButtonTrigger: Trigger;
 
 
   public static getInstance() {
@@ -63,7 +74,18 @@ export class HeroSelectorManager {
 
     this.heroSelectUnits = [];
 
+    this.repickButton = null;
+    this.repickButtonTrigger = null;
+
+    this.ultimateButton = null;
+    this.ultimateButtonTrigger = null;
+
+    this.kothButton = null;
+    this.kothButtonTrigger = null;
+
     this.init();
+
+    AbilityShop.getInstance().setup();
   }
 
   init() {
@@ -71,14 +93,16 @@ export class HeroSelectorManager {
     TeamViewer.Init();
     this.setupPlayerSpawns();
     this.setupUnitCreatedFunction();
-    this.setupRepickTrigger();
+    this.hookHeroSelectorHeroButton();
+    this.setupRepick();
     this.setupHideSelectorTrigger();
     this.setupHeroes();
     this.setupGameModes();
-    HeroSelector.show(true);
-    CustomUI.show(false, false);
+    this.setupOptionalModes();
+    this.show(true);
+    CustomUI.getInstance().show(false, false);
 
-    SetTextTagPos(this.timerText, 29676, 21905, 10);
+    SetTextTagPos(this.timerText, GetRectCenterX(gg_rct_HeroPickRegion), GetRectMaxY(gg_rct_HeroPickRegion), 10);
     SetTextTagColor(this.timerText, 255, 255, 255, 255);
     SetTextTagVisibility(this.timerText, true);
     SetTextTagPermanent(this.timerText, true);
@@ -94,6 +118,10 @@ export class HeroSelectorManager {
         });
       }
     })
+  }
+
+  public checkIsGameStarted(): boolean {
+    return this.isGameStarted;
   }
 
   enableFBSimTest(state: boolean) {
@@ -153,6 +181,9 @@ export class HeroSelectorManager {
   setupUnitCreatedFunction() {
     // override unitCreated function
     HeroSelector["unitCreated"] = function(player: player, unitCode: number, isRandom: boolean) {
+      // enforce correct abilities for unit   
+      AbilityShop.getInstance().setPlayerShop(player, unitCode); 
+      
       const unit = this.heroPickSpawnUnitForPlayer(unitCode, player);
       
       this.spawnExtraUnitsForPlayer(unitCode, player);
@@ -165,8 +196,8 @@ export class HeroSelectorManager {
 
       SelectUnitForPlayerSingle(unit, player)
       HeroSelector.enablePick(false, player)
-      HeroSelector.show(false, player);
-      CustomUI.show(true, false, player);
+      this.show(false, player);
+      CustomUI.getInstance().show(true, false, player);
 
       if (Globals.pecorinePickVoiceFlag && GetUnitTypeId(unit) == Id.pecorine) {
         SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Pecorine/Pick.mp3", 5355);
@@ -185,38 +216,68 @@ export class HeroSelectorManager {
     };
   }
 
-  setupRepickTrigger() {
+  hookHeroSelectorHeroButton() {
+    const func = HeroSelector["buttonSelected"];
+    HeroSelector["buttonSelected"] = function(player: player, unitCode: number) {
+      func(player, unitCode);
+      AbilityShop.getInstance().setPlayerShop(player, unitCode);
+    }
+  }
+
+  setupRepick() {
+    // create ui for repick
+    
+    this.repickButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.3000, 0.1530)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3900, 0.1770)
+      .setText("|cffFFCC00Repick|r")
+      .setScale(1.00)
+
+    this.repickButtonTrigger = new Trigger();
+    this.repickButtonTrigger.triggerRegisterFrameEvent(this.repickButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.repickButtonTrigger.addAction( () => {
+      this.repickButton.enabled = false;
+      this.repickButton.enabled = true;
+      if (!this.isGameStarted) {
+        this.initRepick(GetTriggerPlayer(), true);
+      }
+    });
+
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       // TriggerRegisterPlayerEventEndCinematic(this.repickTrigger, Player(i));
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick", true);
       TriggerRegisterPlayerChatEvent(this.repickTrigger, Player(i), "-repick2", true);
     }
     TriggerAddCondition(this.repickTrigger, Condition(() => {
-      if (this.allowRepick) {
-        const player = GetTriggerPlayer();
-        if (
-          !Globals.isFBSimTest
-          || GetEventPlayerChatString() == "-repick"
-        ) {
-          this.doRepickForPlayer(player);
-        }
-
-        if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
-          HeroSelector.show(false, player);
-          HeroSelector.forceRandom(player);
-        } else {
-          // remove gold
-          SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
-          HeroSelector.show(true, player);
-          HeroSelector.enablePick(true, player);
-          CustomUI.show(false, false, player);
-        }
-
-        udg_TempInt = GetConvertedPlayerId(player);
-        TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
-      }
+      this.initRepick(
+        GetTriggerPlayer(),
+        !Globals.isFBSimTest || GetEventPlayerChatString() == "-repick",
+      );
       return false;
     }));
+  }
+
+  initRepick(player: player, removeUnits: boolean) {
+    if (!this.allowRepick) return;
+    if (removeUnits) {
+      this.doRepickForPlayer(player);
+    }
+
+    if (!Globals.isFBSimTest && this.gameModeString.substring(0, 3) == "-ar") {
+      this.show(false, player);
+      HeroSelector.forceRandom(player);
+    } else {
+      // remove gold
+      SetPlayerState(player, PLAYER_STATE_RESOURCE_GOLD, 0);
+      this.show(true, player);
+      HeroSelector.enablePick(true, player);
+      CustomUI.getInstance().show(false, false, player);
+    }
+
+    udg_TempInt = GetConvertedPlayerId(player);
+    TriggerExecute(gg_trg_Hero_Pick_Reset_Abilities);
   }
 
   doRepickForPlayer(player: player, dropItems: boolean = false) {
@@ -267,9 +328,9 @@ export class HeroSelectorManager {
       if (this.allowRepick) {
         const str = GetEventPlayerChatString();
         if (str == "-hide") {
-          HeroSelector.show(false, GetTriggerPlayer());
+          this.show(false, GetTriggerPlayer());
         } else if (str == "-show") {
-          HeroSelector.show(true, GetTriggerPlayer());
+          this.show(true, GetTriggerPlayer());
         }
       }
       return false;
@@ -294,7 +355,16 @@ export class HeroSelectorManager {
 
 
 
-
+  show(flag: boolean, who?: any) {
+    HeroSelector.show(flag, who);
+    if (!who || who == GetLocalPlayer()) {
+      this.repickButton.setVisible(!flag && !this.isGameStarted);
+      if (Globals.hostPlayer == GetLocalPlayer()) {
+        this.ultimateButton.setVisible(flag && !this.isGameStarted);
+        this.kothButton.setVisible(flag && !this.isGameStarted);
+      }
+    }
+  }
 
   startHeroSelection(doBans: boolean = false) {
     HeroSelector.deselectButtons();
@@ -302,7 +372,7 @@ export class HeroSelectorManager {
     HeroSelector.deselectButtons();
     this.forceAllRepick();
     this.resetBansAndPicks();
-    if (doBans) {
+    if (doBans && !Globals.isFBSimTest) {
       this.runBanPhase();
     } else {
       this.runPickPhase();
@@ -328,12 +398,13 @@ export class HeroSelectorManager {
 
   runPickPhase() {
     this.time = HeroSelectorManager.PICK_TIME;
-    HeroSelector.setTitleText("Picking: " + this.time);
+    HeroSelector.setTitleText("Pick: " + this.time);
     HeroSelector.enablePick(true);
     HeroSelector.update();
-    HeroSelector.show(true);
-    CustomUI.show(false, false);
+    this.show(true);
+    CustomUI.getInstance().show(false, false);
     this.isPicking = true;
+    AbilityShop.getInstance().setCanSwap(true);
   }
 
   runBanPhase() {
@@ -341,9 +412,10 @@ export class HeroSelectorManager {
     HeroSelector.setTitleText(GetLocalizedString(HeroSelector.BanButtonText) + ": " + this.time);
     HeroSelector.enableBan(true);
     HeroSelector.update();
-    HeroSelector.show(true);
-    CustomUI.show(false, false);
+    this.show(true);
+    CustomUI.getInstance().show(false, false);
     this.isPicking = false;
+    AbilityShop.getInstance().setCanSwap(false);
   }
 
   runHeroSelectTimer() {
@@ -376,8 +448,8 @@ export class HeroSelectorManager {
     DisableTrigger(this.gameModeTrigger);
     PauseTimer(this.selectTimer);
 
-    HeroSelector.show(false);
-    CustomUI.show(true, false);
+    this.show(false);
+    CustomUI.getInstance().show(true, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       udg_TempPlayer = Player(i);
@@ -429,6 +501,8 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-ar2", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-crono", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-anime", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-vg", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-meme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-antimeme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
@@ -478,6 +552,14 @@ export class HeroSelectorManager {
           this.modeCrono();
           break;
 
+        case "-anime":
+          this.modeAnime();
+          break;
+
+        case "-vg":
+          this.modeVG();
+          break;
+
         case "-ar":
           this.modeAllRandom(false);
           break;
@@ -519,8 +601,8 @@ export class HeroSelectorManager {
     } else {
 
     }
-    HeroSelector.show(false);
-    CustomUI.show(true, false);
+    this.show(false);
+    CustomUI.getInstance().show(true, false);
     this.time = 15;
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -534,16 +616,16 @@ export class HeroSelectorManager {
   modeOriginal() {
     for (const hsUnit of this.heroSelectUnits) {
       if (
-        hsUnit.hasCategory(HeroSelectCategory.MEME)
+        hsUnit.hasCategory(HeroSelectCategory.DBZ)
         || hsUnit.hasCategory(HeroSelectCategory.CRONO)
       ) {
-        hsUnit.setUnitReq(RACE_DEMON);
-      } else {
         if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
           hsUnit.setUnitReq(0);
         } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
           hsUnit.setUnitReq(1);
         }
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
       }
     }
     this.startHeroSelection();
@@ -551,14 +633,14 @@ export class HeroSelectorManager {
 
   modeClassic() {
     for (const hsUnit of this.heroSelectUnits) {
-      if (hsUnit.hasCategory(HeroSelectCategory.MEME)) {
-        hsUnit.setUnitReq(RACE_DEMON);
-      } else {
+      if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
         if (hsUnit.hasCategory(HeroSelectCategory.GOOD)) {
           hsUnit.setUnitReq(0);
         } else if (hsUnit.hasCategory(HeroSelectCategory.EVIL)) {
           hsUnit.setUnitReq(1);
         }
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
       }
     }
     this.startHeroSelection();
@@ -566,10 +648,10 @@ export class HeroSelectorManager {
 
   modeMeme() {
     for (const hsUnit of this.heroSelectUnits) {
-      if (hsUnit.hasCategory(HeroSelectCategory.MEME)) {
-        hsUnit.setUnitReq(null);
-      } else {
+      if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
         hsUnit.setUnitReq(RACE_DEMON);
+      } else {
+        hsUnit.setUnitReq(null);
       }
     }
     this.startHeroSelection();
@@ -587,11 +669,31 @@ export class HeroSelectorManager {
   }
 
   modeCrono() {
-    let sum = 0;
     for (const hsUnit of this.heroSelectUnits) {
       if (hsUnit.hasCategory(HeroSelectCategory.CRONO)) {
         hsUnit.setUnitReq(null);
-        ++sum;
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
+      }
+    }
+    this.startHeroSelection();
+  }
+
+  modeAnime() {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.ANIME)) {
+        hsUnit.setUnitReq(null);
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
+      }
+    }
+    this.startHeroSelection();
+  }
+
+  modeVG() {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.VIDEOGAME)) {
+        hsUnit.setUnitReq(null);
       } else {
         hsUnit.setUnitReq(RACE_DEMON);
       }
@@ -605,6 +707,53 @@ export class HeroSelectorManager {
     const pStr = SubString(this.gameModeString, 5, 7);
     print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
     this.startHeroSelection(true);
+    
+    this.kothButton.setText(
+      "|cffFFFF00KOTH(" +
+      (pStr == "" ? I2S(TournamentData.kothPointsToWin) : pStr) +
+      "):|r" + 
+      (Globals.isKOTH ? "|cff00ff00ON|r" : "|cffff2222OFF|r")
+    );
+  }
+
+  setupOptionalModes() {
+    this.ultimateButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3000, 0.2730)
+      .setText("|cffFFFF00Ultimate: " + I2S(udg_UltimateModeLevel) + "|r")
+      .setScale(1.00)
+      .setVisible(false);
+
+    this.ultimateButtonTrigger = new Trigger();
+    this.ultimateButtonTrigger.triggerRegisterFrameEvent(this.ultimateButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.ultimateButtonTrigger.addAction( () => {
+      this.ultimateButton.enabled = false;
+      this.ultimateButton.enabled = true;
+      udg_TempInt = udg_UltimateModeLevel == 0 ? 50 : 0;
+      TriggerExecute(gg_trg_Ultimate_Mode_Set);
+    });
+    TriggerAddAction(gg_trg_Ultimate_Mode_Set, () => {
+      this.ultimateButton.setText("|cffFFFF00Ultimate: " + I2S(udg_UltimateModeLevel) + "|r");
+    });
+
+    this.kothButton = new Frame("ScriptDialogButton", 
+      Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
+    )
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.5000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6100, 0.2730)
+      .setText("|cffFFFF00KOTH():|r|cffff2222OFF|r")
+      .setScale(1.00)
+      .setVisible(false);
+
+    this.kothButtonTrigger = new Trigger();
+    this.kothButtonTrigger.triggerRegisterFrameEvent(this.kothButton, FRAMEEVENT_CONTROL_CLICK) 
+    this.kothButtonTrigger.addAction( () => {
+      this.kothButton.enabled = false;
+      this.kothButton.enabled = true;
+      this.modeKOTH();
+    });
   }
 
 };

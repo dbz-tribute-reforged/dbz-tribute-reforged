@@ -7,12 +7,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [Id.goku, [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.KAMEHAMEHA_X10, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.SUPER_DRAGON_FIST, 
       AbilityNames.Goku.SOLAR_FLARE, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+      AbilityNames.Goku.LIMIT_BREAKER,
     ]],
     [FourCC("H08J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
@@ -30,13 +32,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.GALICK_GUN, 
       AbilityNames.Vegeta.BIG_BANG_ATTACK, 
       AbilityNames.Vegeta.FINAL_FLASH, 
-      AbilityNames.Vegeta.FINAL_FLASH_2, 
+      AbilityNames.Vegeta.FINAL_FLASH_GOD, 
       AbilityNames.Vegeta.MOONLIGHT, 
       AbilityNames.Vegeta.ANGRY_SHOUT, 
       AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
       AbilityNames.Vegeta.ULTRA_EGO,
       AbilityNames.Vegeta.EGO_GALICK_GUN, 
       AbilityNames.Vegeta.HAKAI_BARRAGE, 
+      AbilityNames.Vegeta.FINAL_SHINE_ATTACK, 
+      AbilityNames.Vegeta.FINAL_FLASH_DARK, 
+      AbilityNames.Vegeta.LIMIT_BREAKER, 
     ]],
     
     // gohan
@@ -684,6 +689,60 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
     ]],
     
+    [Id.whis, [
+      AbilityNames.Whis.PRELUDE_TO_DESTRUCTION,
+      AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+      AbilityNames.Whis.SYMPHONIC_DESTRUCTION,
+    ]],
+    
+    [Id.beerus, [
+      AbilityNames.Beerus.SPHERE_OF_DESTRUCTION,
+      AbilityNames.Beerus.AURA_OF_DESTRUCTION,
+      AbilityNames.Beerus.GOD_OF_DESTRUCTION_WRATH,
+      AbilityNames.Beerus.BEERUS_FURY,
+      AbilityNames.Beerus.BEERUS_SUSHI,
+      AbilityNames.Beerus.BEERUS_PIZZA,
+      AbilityNames.Beerus.BEERUS_ICE_CREAM,
+      AbilityNames.Beerus.BEERUS_TAKOYAKI,
+      AbilityNames.Beerus.BEERUS_PUDDING,
+    ]],
+
+    [Id.granolah, [
+      AbilityNames.Granolah.SNIPE,
+      AbilityNames.Granolah.SNIPE_2,
+      AbilityNames.Granolah.ENERGY_VOLLEY,
+      AbilityNames.Granolah.PRESSURE_POINT,
+      AbilityNames.Granolah.FINAL_SHOT,
+      AbilityNames.Granolah.EVOLVED_EYES,
+      AbilityNames.Granolah.SNIPE_VOLLEY,
+      AbilityNames.Granolah.SNIPE_CHARGED,
+    ]],
+    
+    [Id.gojo, [
+      AbilityNames.Gojo.UNLIMITED_VOID,
+    ]],
+
+    [Id.cheongMyeong, [
+      AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS,
+      AbilityNames.CheongMyeong.FALLING_PETAL_SWORD,
+      AbilityNames.CheongMyeong.FLUTTERING_SHADOW_PETALS,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLEAVE,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_TEMPEST,
+      AbilityNames.CheongMyeong.CELESTIAL_FALLING_PETALS,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_PALISADE,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_FLOW,
+      AbilityNames.CheongMyeong.PLUM_BLOSSOM_CLOUDBURST,
+    ]],
+    
+    [Id.aggronor, [
+      AbilityNames.Aggronor.STORM_BOLT,
+      AbilityNames.Aggronor.THUNDERCLAP,
+      AbilityNames.Aggronor.DWARF_TOSS,
+      AbilityNames.Aggronor.AVATAR,
+      AbilityNames.Aggronor.STORMLORD,
+    ]],
+
+
 
 
 
@@ -749,6 +808,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
       AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
+      AbilityNames.FarmerWithShotgun.HAYMAKER,
       AbilityNames.Bardock.TYRANT_BREAKER, AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
       AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE,
       AbilityNames.Videl.PUNCH,
@@ -789,6 +849,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.MightGuy.SEVENTH_GATE, AbilityNames.MightGuy.EIGHTH_GATE,
       AbilityNames.Genos.MACHINE_GUN_BLOWS, AbilityNames.Genos.OVERCHARGE,
       AbilityNames.Tatsumaki.COMPRESSS, AbilityNames.Tatsumaki.TELEKINETIC_SHIELD,
+      AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT,
+      AbilityNames.Beerus.BEERUS_FURY, 
+      AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
+      AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS, 
+      AbilityNames.Aggronor.STORM_BOLT, AbilityNames.Aggronor.AVATAR, AbilityNames.Aggronor.STORMLORD, 
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
@@ -822,7 +887,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Shalltear.PURIFYING_JAVELIN, AbilityNames.Shalltear.EINHERJAR,
       AbilityNames.Demiurge.HELLFIRE_WALL,
 
-      AbilityNames.Magus.DARK_MATTER
+      AbilityNames.Magus.DARK_MATTER,
+      AbilityNames.RustTyranno.TYRANNO_FLAME,
     ]],
 
     // broly
@@ -885,19 +951,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
 
     // farmer with shotgun
-    [FourCC("H08S"), [
-      AbilityNames.Cooler.DEATH_BEAM, 
-      AbilityNames.Vegeta.FINAL_FLASH, 
-      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
-      // AbilityNames.Broly.GIGANTIC_ROAR, 
-      AbilityNames.SuperJanemba.HELLS_GATE, 
-      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
+    [Id.farmerWithShotgun, [
+      AbilityNames.FarmerWithShotgun.HAYMAKER,
+      AbilityNames.FarmerWithShotgun.CORNBLAST,
+      AbilityNames.FarmerWithShotgun.SAIYAN_SLAYING_SHOT,
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
 
     // raditz
-    [FourCC("H08U"), [
+    [Id.raditz, [
       AbilityNames.Raditz.DOUBLE_SUNDAY, 
       AbilityNames.Raditz.SATURDAY_CRASH, 
       AbilityNames.Raditz.BEHIND_YOU, 
@@ -906,7 +969,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Raditz.DOUBLE_SUNDAE
     ]],
     // nappa
-    [FourCC("H08W"), [
+    [Id.nappa, [
       AbilityNames.Nappa.GIANT_STORM, 
       AbilityNames.Nappa.BLAZING_STORM, 
       AbilityNames.Nappa.PLANT_SAIBAMEN, 
@@ -915,7 +978,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Nappa.BREAK_CANNON
     ]],
     // saibaman
-    [FourCC("H08X"), [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
+    [Id.saibamen, [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
 
     // moro
     [Id.moro, [AbilityNames.Moro.ENERGY_DRAIN, AbilityNames.Moro.ENERGY_BALL, AbilityNames.Moro.LAVA_BURST, AbilityNames.Moro.LAVA_PILLARS, AbilityNames.Moro.POWER_LEVEL_SHARING]],

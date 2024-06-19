@@ -5,30 +5,38 @@ export module AbilityNames {
     export const GUARD: string = "Guard";
     export const MAX_POWER: string = "Max Power";
     export const DEFLECT: string = "Deflect";
+    export const SPARKING_BLAST: string = "Sparking Blast";
+    export const MAX_CHARGE: string = "Max Charge";
   }
 
   export module Goku {
+    export const INSTANT_TRANSMISSION: string = "Instant Transmission";
     export const KAMEHAMEHA: string = "Kamehameha";
     export const GOD_KAMEHAMEHA: string = "God Kamehameha";
+    export const KAMEHAMEHA_X10: string = "Kamehameha x10";
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
     export const SUPER_DRAGON_FIST: string = "Super Dragon Fist";
     export const SOLAR_FLARE: string = "Goku Solar Flare";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
     export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
+    export const LIMIT_BREAKER: string = "Limit Breaker";
   }
 
   export module Vegeta {
     export const GALICK_GUN: string = "Galick Gun";
     export const BIG_BANG_ATTACK: string = "Big Bang Attack";
     export const FINAL_FLASH: string = "Final Flash";
-    export const FINAL_FLASH_2: string = "Final Flash 2";
+    export const FINAL_FLASH_GOD: string = "Final Flash God";
     export const ENERGY_BLAST_VOLLEY: string = "Energy Blast Volley";
     export const MOONLIGHT: string = "Moonlight";
     export const ANGRY_SHOUT: string = "Angry Shout";
     export const ULTRA_EGO: string = "Ultra Ego";
     export const EGO_GALICK_GUN: string = "Ego Galick Gun";
     export const HAKAI_BARRAGE: string = "Vegeta Hakai Barrage";
+    export const FINAL_SHINE_ATTACK: string = "Vegeta Final Shine Attack";
+    export const FINAL_FLASH_DARK: string = "Final Flash Dark";
+    export const LIMIT_BREAKER: string = "Vegeta Limit Breaker";
   }
 
   export module Gohan {
@@ -623,6 +631,66 @@ export module AbilityNames {
     export const TELEKINETIC_SHIELD: string = "Telekinetic Shield!";
   }
 
+  export module Whis {
+    export const PRELUDE_TO_DESTRUCTION: string = "Whis Prelude To Destruction";
+    export const ANGELIC_ULTRA_INSTINCT: string = "Whis Angelic Ultra Instinct";
+    export const SYMPHONIC_DESTRUCTION: string = "Whis Symphonic Destruction";
+  }
+
+  export module Beerus {
+    export const BEERUS_COUNTER: string = "Beerus Counter";
+    export const SPHERE_OF_DESTRUCTION: string = "Beerus Sphere Of Destruction";
+    export const AURA_OF_DESTRUCTION: string = "Beerus Aura Of Destruction";
+    export const GOD_OF_DESTRUCTION_WRATH: string = "Beerus God Of Destruction Wrath";
+    export const BEERUS_FURY: string = "Beerus Fury";
+    export const BEERUS_SUSHI: string = "Beerus Sushi";
+    export const BEERUS_PIZZA: string = "Beerus Pizza";
+    // export const BEERUS_RAMEN: string = "Beerus Ramen";
+    export const BEERUS_ICE_CREAM: string = "Beerus Ice Cream";
+    export const BEERUS_TAKOYAKI: string = "Beerus Takoyaki";
+    export const BEERUS_PUDDING: string = "Beerus Pudding";
+  }
+
+  export module Granolah {
+    export const SHIELD: string = "Cerelian Shield";
+    export const SNIPE: string = "Granolah Snipe";
+    export const SNIPE_2: string = "Granolah Snipe 2";
+    export const ENERGY_VOLLEY: string = "Granolah Energy Volley";
+    export const PRESSURE_POINT: string = "Granolah Pressure Point";
+    export const FINAL_SHOT: string = "Granolah Final Shot";
+    export const EVOLVED_EYES: string = "Granolah Evolved Eyes";
+    export const SNIPE_VOLLEY: string = "Granolah Snipe Volley";
+    export const SNIPE_CHARGED: string = "Granolah Snipe Charged";
+  }
+
+  export module Gojo {
+    export const BLACK_FLASH: string = "Black Flash";
+    export const LIMITLESS_GUARD: string = "Limitless Guard";
+    export const UNLIMITED_VOID: string = "Gojo Domain Expansion: Unlimited Void";
+  }
+
+  export module CheongMyeong {
+    export const EQUILIBRIUM_OF_SIX: string = "Equilibrium of Six";
+    export const SWORD_OF_SIX_ELEMENTS: string = "Cheong Myeong Sword Of Six Elements";
+    export const FALLING_PETAL_SWORD: string = "Cheong Myeong Falling Petal Sword";
+    export const FLUTTERING_SHADOW_PETALS: string = "Cheong Myeong Fluttering Shadow Petals";
+    export const PLUM_BLOSSOM_CLEAVE: string = "Cheong Myeong Plum Blossom Cleave";
+    export const PLUM_BLOSSOM_TEMPEST: string = "Cheong Myeong Plum Blossom Tempest";
+    export const CELESTIAL_FALLING_PETALS: string = "Cheong Myeong Celestial Falling Petals";
+    export const PLUM_BLOSSOM_PALISADE: string = "Cheong Myeong Plum Blossom Palisade";
+    export const PLUM_BLOSSOM_FLOW: string = "Cheong Myeong Plum Blossom Flow";
+    export const PLUM_BLOSSOM_CLOUDBURST: string = "Cheong Myeong Plum Blossom Cloudburst";
+  }
+
+  export module Aggronor {
+    export const LIGHTNING_PLATE: string = "Lightning Plate";
+    export const STORM_BOLT: string = "Aggronor Storm Bolt";
+    export const THUNDERCLAP: string = "Aggronor Thunderclap";
+    export const DWARF_TOSS: string = "Aggronor Dwarf Toss";
+    export const AVATAR: string = "Aggronor Avatar";
+    export const STORMLORD: string = "Aggronor Stormlord";
+  }
+
 
 
 
@@ -748,11 +816,11 @@ export module AbilityNames {
   }
 
   export module FarmerWithShotgun {
-    export const DEATH_BEAM: string = Cooler.DEATH_BEAM;
-    export const FINAL_FLASH: string = Vegeta.FINAL_FLASH;
-    export const TWIN_DRAGON_SHOT: string = Gohan.TWIN_DRAGON_SHOT;
-    export const GIGANTIC_ROAR: string = Broly.GIGANTIC_ROAR;
-    export const ENERGY_BLAST_VOLLEY: string = Vegeta.ENERGY_BLAST_VOLLEY;
+    export const RELOAD: string = "Farmer Reload";
+    export const HAYMAKER: string = "Farmer Haymaker";
+    export const CORNBLAST: string = "Farmer Cornblast";
+    export const SAIYAN_SLAYING_SHOT: string = "Farmer Saiyan Slaying Shot";
+    // export const HONEST_SHOT: string = "Farmer Honest Shot";
   }
 
   export module SuperJanemba {
@@ -1012,6 +1080,9 @@ export module AbilityNames {
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
     export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";
     export const NOVA_STAR_OMEGA_CUSTOM: string = "Omega Nova Star!";
+    export const SYMPHONIC_DESTRUCTION_CUSTOM: string = "Symphonic Destruction!";
+    export const SPHERE_OF_DESTRUCTION_CUSTOM: string = "Sphere of Destruction!";
+    export const GOD_OF_DESTRUCTION_WRATH_CUSTOM: string = "God of Destruction's Wrath!";
   }
 
   export module Items {

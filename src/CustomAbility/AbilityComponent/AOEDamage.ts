@@ -27,7 +27,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected damageCoords: Vector2D;
 
-  protected damagedTargets: Map<unit, number>;
+  protected damagedTargets: unit[];
+  protected damagedTargetsHits: number[];
   protected damagedGroup: group;
 
   public isStarted: boolean = false;
@@ -63,7 +64,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public buffId: number = 0,
   ) {
     this.damageCoords = new Vector2D(0, 0);
-    this.damagedTargets = new Map();
+    this.damagedTargets = [];
+    this.damagedTargetsHits = [];
     this.damagedGroup = CreateGroup();
   }
 
@@ -112,7 +114,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     spellPower: number,
     damageDataMultiplier: number,
     damageMult: number,
-    stat: number // bj_HEROSTAT_INT
+    stat: number = bj_HEROSTAT_INT, // bj_HEROSTAT_INT
   ): number {
     return (
       damageMult 
@@ -183,7 +185,45 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         );
       }
     });
+  }
 
+  static genericDealDamageToGroupExclude(
+    targetGroup: group,
+    excludeGroup: group,
+    caster: unit,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    const player = GetOwningPlayer(caster);
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat
+    );
+    ForGroup(targetGroup, () => {
+      const target = GetEnumUnit();
+      if (
+        !IsUnitInGroup(target, excludeGroup)
+        && UnitHelper.isUnitTargetableForPlayer(target, player)
+      ) {
+        UnitDamageTarget(
+          caster, 
+          target,
+          dmg,
+          true, false,
+          ATTACK_TYPE_HERO,
+          DAMAGE_TYPE_NORMAL,
+          WEAPON_TYPE_WHOKNOWS
+        );
+        GroupAddUnit(excludeGroup, target);
+      }
+    });
   }
 
   static genericDealAOEDamage(
@@ -208,6 +248,39 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
     AOEDamage.genericDealDamageToGroup(
       targetGroup,
+      caster,
+      spellLevel,
+      spellPower,
+      damageDataMultiplier,
+      damageMult,
+      damageStat,
+    );
+  }
+
+  static genericDealAOEDamageExclude(
+    targetGroup: group,
+    excludeGroup: group,
+    caster: unit,
+    x: number,
+    y: number,
+    aoe: number,
+    spellLevel: number,
+    spellPower: number,
+    damageDataMultiplier: number,
+    damageMult: number,
+    damageStat: number,
+  ) {
+    GroupClear(targetGroup);
+    GroupEnumUnitsInRange(
+      targetGroup,
+      x,
+      y,
+      aoe,
+      null
+    );
+    AOEDamage.genericDealDamageToGroupExclude(
+      targetGroup,
+      excludeGroup,
       caster,
       spellLevel,
       spellPower,
@@ -251,6 +324,23 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return damage;
   }
 
+  protected getDamageTargetsHits(unit: unit) {
+    for (let i = 0; i < this.damagedTargets.length; ++i) {
+      if (this.damagedTargets[i] == unit) return this.damagedTargetsHits[i];
+    }
+    return null;
+  }
+
+  protected setDamageTargets(unit: unit, val: number) {
+    this.damagedTargets.push(unit);
+    this.damagedTargetsHits.push(val);
+  }
+
+  protected clearDamageTargets() {
+    this.damagedTargets.splice(0, this.damagedTargets.length);
+    this.damagedTargetsHits.splice(0, this.damagedTargetsHits.length);
+  }
+
   protected dealDamageToUnit(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
     if (
       (
@@ -270,14 +360,21 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
           (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
         ) {
-          const damageCount = this.damagedTargets.get(target);
-          if (damageCount) {
-            if (damageCount < this.maxDamageTicks) {
-              this.damagedTargets.set(target, damageCount + 1);
+          let dmgIndex = -1;
+          for (let i = 0; i < this.damagedTargets.length; ++i) {
+            if (this.damagedTargets[i] == target) {
+              dmgIndex = i;
+              break;
+            }
+          }
+          if (dmgIndex >= 0) {
+            if (this.damagedTargetsHits[dmgIndex] < this.maxDamageTicks) {
+              ++this.damagedTargetsHits[dmgIndex];
               this.performDamage(input, target, damage, sourceHPPercent);
             }
           } else {
-            this.damagedTargets.set(target, 1);
+            this.damagedTargets.push(target);
+            this.damagedTargetsHits.push(1);
             this.performDamage(input, target, damage, sourceHPPercent);
           }
         } else {    
@@ -353,7 +450,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.isStarted = true;
       this.isFinished = false;
       
-      this.damagedTargets.clear();
+      this.clearDamageTargets();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
       }
@@ -408,7 +505,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     const damage = this.calculateDamage(input, source, sourceHPPercent);
 
     if (this.applyDamageOverTime) {
-      for (const target of this.damagedTargets.keys()) {
+      for (const target of this.damagedTargets) {
         this.dealDamageToUnit(input, target, damage, sourceHPPercent);
       }
     }
@@ -428,7 +525,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   reset() {
     this.isStarted = false;
     this.isFinished = true;
-    this.damagedTargets.clear();
+    this.clearDamageTargets();
   }
 
   cleanup() {

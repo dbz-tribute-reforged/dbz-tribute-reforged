@@ -361,6 +361,7 @@ declare var gg_trg_Commands_Init: trigger;
 declare var gg_trg_Freemode: trigger;
 declare var gg_trg_Nightmare_Mode: trigger;
 declare var gg_trg_Ultimate_Mode: trigger;
+declare var gg_trg_Ultimate_Mode_Set: trigger;
 declare var gg_trg_Lights_toggle: trigger;
 declare var gg_trg_ToggleSummonSelect: trigger;
 declare var gg_trg_Cosmetic_Clear: trigger;
@@ -607,6 +608,7 @@ declare var gg_trg_Transformations_Item_Check_Manipulated_Item: trigger;
 declare var gg_trg_Transformations_Init_Commands_Non_Auto: trigger;
 declare var gg_trg_Transformations_Init_Commands: trigger;
 declare var gg_trg_Transformations_Entry_Point: trigger;
+declare var gg_trg_Transformations_Run_Command: trigger;
 declare var gg_trg_Transformations_Parse_String: trigger;
 declare var gg_trg_Transformations_Exit_Point: trigger;
 declare var gg_trg_Set_Transformation_Stat_Mult: trigger;
@@ -754,6 +756,14 @@ declare var gg_trg_Transformations_Demiurge: trigger;
 declare var gg_trg_Transformations_Majin_Vegeta: trigger;
 declare var gg_trg_Transformations_Minato: trigger;
 declare var gg_trg_Transformations_Might_Guy: trigger;
+declare var gg_trg_Transformations_Genos: trigger;
+declare var gg_trg_Transformations_Tatsumaki: trigger;
+declare var gg_trg_Transformations_Granolah: trigger;
+declare var gg_trg_Transformations_Whis: trigger;
+declare var gg_trg_Transformations_Beerus: trigger;
+declare var gg_trg_Transformations_Gojo: trigger;
+declare var gg_trg_Transformations_Cheong_Myeong: trigger;
+declare var gg_trg_Transformations_Aggronor: trigger;
 declare var gg_trg_Saga_Unit_Init: trigger;
 declare var gg_trg_Saga_Unit_Capsule_Unlock: trigger;
 declare var gg_trg_Saga_Unit_Loop: trigger;
@@ -805,9 +815,33 @@ declare var udg_GlobalStatMultiplier: number;
 
 declare var udg_StatMultHashtable: hashtable;
 declare var udg_StatMultReal: number;
+declare var udg_StatMultStr: number;
+declare var udg_StatMultAgi: number;
+declare var udg_StatMultInt: number;
 declare var udg_StatMultUnit: unit;
 declare var udg_StatMultPlayerUnits: group[];
 // array is 0-indexed in TS side by 1-indexed on GUI, conversion is automatic
 declare var udg_PlayerPickedHeroesUnitGroup: group[];
 declare var udg_HeroPickTimer: timer;
 declare var udg_HeroPickTimerWindow: timerdialog;
+
+declare var udg_HeroRespawnHashtable: hashtable;
+
+declare var udg_OriginalPlayerNames: string[];
+
+declare var udg_TransformationPlayer: player;
+declare var udg_TransformationString: string;
+declare var udg_TransformationID: number;
+// declare var udg_TransformationSkinID: number;
+declare var udg_TransformationUnitGroup: group;
+
+declare var udg_MaxTransformationStrings: number;
+declare var udg_TransformationCommands: string[];
+
+declare var udg_FusionBonusStrMult: number;
+declare var udg_FusionBonusAgiMult: number;
+declare var udg_FusionBonusIntMult: number;
+
+declare var udg_SummonsSelectFlagArray: boolean[];
+
+declare var udg_UltimateModeLevel: number;

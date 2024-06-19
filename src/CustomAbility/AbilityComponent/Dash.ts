@@ -23,7 +23,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly MINIMUM_AGI_SPEED_RATIO = 0.8;
   static readonly MAXIMUM_AGI_SPEED_RATIO = 3.0;
 
-  static readonly MIN_DISTANCE_FROM_PREVIOUS = 10;
+  static readonly MIN_DISTANCE_FROM_PREVIOUS = 7;
 
   static readonly DASH_TYPE_GROUND = 0;
   static readonly DASH_TYPE_FLYING = 1;

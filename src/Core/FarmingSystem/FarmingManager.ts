@@ -53,7 +53,7 @@ export class FarmingManager {
   initialize() {
     this.setupFarmingComponentMap();
     this.setupUpdateCrops();
-    this.setupHarvester();
+    this.setupWarehouseHarvester();
   }
 
   setupFarmingComponentMap() {
@@ -73,21 +73,51 @@ export class FarmingManager {
     });
   }
 
-  plantCropFromSpell(spellId: number, x: number, y: number) {
+  plantCropFromSpell(unit: unit, spellId: number, x: number, y: number) {
     const fc = this.farmingComponentMap.get(spellId);
     if (fc) {
-      const fcCopy = fc.clone();
-      fcCopy.init(x, y);
-      this.plantedCropsMap.set(this.numCrops, fcCopy);
-      this.numCrops += 1;
-      // BJDebugMsg("numCrops: " + this.numCrops);
+      this.plantCrop(fc, x, y);
     }
+    if (GetUnitAbilityLevel(unit, Id.farmerHonestShotPassive) > 0) {
+      if (spellId != Id.plantWheat) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 128, y);
+      }
+      if (spellId != Id.plantCorn) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 128);
+      }
+      if (spellId != Id.plantRice) {
+        this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 128, y + 128);
+      }
+      UnitRemoveAbility(unit, Id.farmerHonestShotPassive);
+    }
+    // const unitId = GetHandleId(unit);
+    // const farmerHonestShotKey = StringHash("farmer_r_active");
+    // if (1 == LoadInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey)) {
+    //   if (spellId != Id.plantWheat) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantWheat), x + 32, y);
+    //   }
+    //   if (spellId != Id.plantCorn) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantCorn), x, y + 32);
+    //   }
+    //   if (spellId != Id.plantRice) {
+    //     this.plantCrop(this.farmingComponentMap.get(Id.plantRice), x + 32, y + 32);
+    //   }
+    //   SaveInteger(Globals.genericSpellHashtable, unitId, farmerHonestShotKey, 0);
+    // }
   }
 
-  plantCropFromItem(itemId: number, x: number, y: number) {
+  plantCrop(fc: FarmingComponent, x: number, y: number) {
+    if (fc == null) return;
+    const fcCopy = fc.clone();
+    fcCopy.init(x, y);
+    this.plantedCropsMap.set(this.numCrops, fcCopy);
+    this.numCrops += 1;
+  }
+
+  plantCropFromItem(unit: unit, itemId: number, x: number, y: number) {
     const spellId = this.cropAbilityMap.get(itemId);
     if (spellId) {
-      this.plantCropFromSpell(spellId, x, y)
+      this.plantCropFromSpell(unit, spellId, x, y)
     }
   }
 
@@ -144,7 +174,7 @@ export class FarmingManager {
     ForGroup(this.harvesterUnitGroup, () => {
       const unit = GetEnumUnit();
 
-      if (UnitHelper.isUnitDead(unit)) {
+      if (!UnitHelper.isUnitAlive(unit)) {
         GroupRemoveUnit(this.harvesterUnitGroup, unit);
         return;
       }
@@ -187,7 +217,7 @@ export class FarmingManager {
           if (prng < req) {
             const itemX = GetItemX(item);
             const itemY = GetItemY(item);
-            this.plantCropFromSpell(spellId, itemX, itemY);
+            this.plantCropFromSpell(unit, spellId, itemX, itemY);
             // BJDebugMsg("Hit " + prng);
             prngOffset = 0;
           } else {
@@ -225,7 +255,56 @@ export class FarmingManager {
           }
         });
       }
+    });
+  }
 
+  setupWarehouseHarvester() {
+    TriggerRegisterAnyUnitEventBJ(this.harvesterBuildTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH);
+
+    TriggerAddCondition(this.harvesterBuildTrigger, Condition(() => {
+      const unit = GetTriggerUnit();
+      if (
+        GetUnitTypeId(unit) == Id.farmerWarehouse
+        || GetUnitTypeId(unit) == Id.farmerSuperWarehouse
+      ) {
+        GroupAddUnit(this.harvesterUnitGroup, unit);
+      }
+      return false;
+    }));
+
+    TimerStart(this.harvesterTimer, 0.25, true, () => {
+      const groupSize = BlzGroupGetSize(this.harvesterUnitGroup);
+      for (let i = 0; i < groupSize; ++i) {
+        const unit = BlzGroupUnitAt(this.harvesterUnitGroup, i);
+  
+        if (!UnitHelper.isUnitAlive(unit)) {
+          GroupRemoveUnit(this.harvesterUnitGroup, unit);
+          return;
+        }
+
+        const player = GetOwningPlayer(unit);
+        if (!GetPlayerTechResearched(player, Id.farmerUpgradeAutoHarvest, true)) return;
+  
+        // aoe pickup crops
+        const unitX = GetUnitX(unit);
+        const unitY = GetUnitY(unit);
+        MoveRectTo(this.harvesterRect, unitX, unitY);
+        
+        const items: item[] = [];
+        EnumItemsInRect(this.harvesterRect, null, () => {
+          const item = GetEnumItem();
+          if (IsItemVisible(item) && GetItemCharges(item) == 1) {
+            items.push(item);
+          }
+        });
+
+        for (const item of items) {
+          const itemId = GetItemTypeId(item);
+          const spellId = this.cropAbilityMap.get(itemId);
+          if (!spellId) continue;
+          UnitAddItem(unit, item);
+        }
+      }
     });
   }
 }
