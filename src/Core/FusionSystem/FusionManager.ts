@@ -132,7 +132,7 @@ export class FusionManager {
     if (
       this.unit1 == null 
       || !IsUnitAlly(unit, GetOwningPlayer(this.unit1))
-      // || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
+      || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
     ) {
       this.unit1 = unit;
     } else {
