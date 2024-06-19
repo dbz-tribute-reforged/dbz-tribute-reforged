@@ -401,6 +401,12 @@ STRING 64
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur1> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool1> seconds)|r
 }
 
+STRING 65
+{
+[|cffffcc00Unlock|r] |cff00ffffUltra Instinct|r
+Goku has unlocked the first step towards mastering Ultra Instinct.
+}
+
 STRING 66
 // Units: n00D (Dinosaur), Name (Name)
 {

@@ -49684,16 +49684,32 @@ return true
 end
 
 function Trig_Transformations_Farmer_with_Shotgun_MUI_Func013C()
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+return false
+end
+if (not (LoadIntegerBJ(30, udg_ID, udg_StatMultHashtable) < 1)) then
+return false
+end
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0KR"), udg_StatMultUnit) == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
 return false
 end
 if (not (LoadIntegerBJ(30, udg_ID, udg_StatMultHashtable) <= 2)) then
 return false
 end
+if (not (GetUnitAbilityLevelSwapped(FourCC("A0MZ"), udg_StatMultUnit) == 0)) then
+return false
+end
 return true
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func001C()
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func001C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -49703,14 +49719,14 @@ end
 return false
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func002C()
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func002C()
 if (not (udg_TransformationID == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func009Func002C()
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func009Func002C()
 if (not (udg_TransformationString == "ui")) then
 return false
 end
@@ -49723,21 +49739,21 @@ end
 return true
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func009C()
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func009C()
 if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002C()
-if (not Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func001C()) then
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002C()
+if (not Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Farmer_with_Shotgun_MUI_Func014C()
+function Trig_Transformations_Farmer_with_Shotgun_MUI_Func015C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -49772,6 +49788,15 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func013C()) then
+SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
+UnitAddAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
+        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0KR'))
+udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_065")
+        DestroyForce(udg_TempPlayerGroup)
+else
+end
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014C()) then
 SaveIntegerBJ(3, 30, udg_ID, udg_StatMultHashtable)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(true, FourCC("A0MZ"), udg_TransformationPlayer)
@@ -49779,9 +49804,9 @@ UnitAddAbilityBJ(FourCC("A0MZ"), udg_StatMultUnit)
         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MZ'))
 else
 end
-if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014C()) then
-if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002C()) then
-if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func002C()) then
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func015C()) then
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002C()) then
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func002C()) then
                 udg_TransformationID = FourCC('H08S')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
@@ -49792,8 +49817,8 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TransformationPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
-if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func009C()) then
-if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func014Func002Func009Func002C()) then
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func009C()) then
+if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func015Func002Func009Func002C()) then
 SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
 UnitAddAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
                     UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0KR'))
@@ -72615,6 +72640,7 @@ udg_StatMultInt = 0.00
 if (Trig_Transformations_Aggronor_Func010C()) then
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_24474")
+DisplayTextToForce(udg_TempPlayerGroup, ("[|cffffcc00Dwarven Strength: " .. (R2S(RMinBJ(0.50, LoadRealBJ(47, udg_ID, udg_StatMultHashtable))) .. "x|r]")))
         DestroyForce(udg_TempPlayerGroup)
 else
 end

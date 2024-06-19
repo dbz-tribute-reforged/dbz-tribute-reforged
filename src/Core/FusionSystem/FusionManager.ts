@@ -4,6 +4,7 @@ import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { FusionUnit } from "./FusionUnit";
 import { UnitHelper } from "Common/UnitHelper";
 import { CoordMath } from "Common/CoordMath";
+import { TimerManager } from "Core/Utility/TimerManager";
 
 export class FusionManager { 
   public static MAX_FUSE_DISTANCE = 600;
@@ -17,7 +18,6 @@ export class FusionManager {
     return this.instance;
   }
 
-  public delayTimer: timer;
   public delay: number;
 
   public fusionInitTrigger: trigger;
@@ -27,7 +27,6 @@ export class FusionManager {
   public fusionUnits: Map<unit, FusionUnit> = new Map<unit, FusionUnit>();
 
   constructor() {
-    this.delayTimer = CreateTimer();
     this.delay = 0;
 
     this.fusionInitTrigger = CreateTrigger();
@@ -36,15 +35,6 @@ export class FusionManager {
   }
 
   initialize() {
-    TimerStart(this.delayTimer, 0.03, true, ()=> {
-      this.delay += 0.03;
-      if (this.delay > FusionManager.MAX_FUSE_DELAY * 2) {
-        this.unit1 = null;
-        this.unit2 = null;
-      }
-    });
-    PauseTimer(this.delayTimer);
-
     for (const player of Constants.activePlayers) {
       TriggerRegisterPlayerUnitEvent(
         this.fusionInitTrigger, player, EVENT_PLAYER_UNIT_USE_ITEM, null
@@ -66,9 +56,16 @@ export class FusionManager {
         || unit == this.unit1
       ) return false;
 
+      if (GetUnitAbilityLevel(unit, Id.flagPotaraFusion) > 0) {
+        DisplayTimedTextToPlayer(player, 0, 0, 3, 
+          "|cffff2222Error: Already fused.|r"
+        );
+        return;
+      }
+
       if (UnitHasItemOfTypeBJ(unit, ItemConstants.ginyuBodyChange)) {
         DisplayTimedTextToPlayer(player, 0, 0, 3, 
-          "|cffff2222Cannot fuse with body change|r"
+          "|cffff2222Error: Cannot fuse with body change|r"
         );
         return;
       }
@@ -86,7 +83,7 @@ export class FusionManager {
         || unitTypeId == Id.fourthCooler
       ) {
         DisplayTimedTextToPlayer(player, 0, 0, 3, 
-          "|cffff2222" + GetHeroProperName(unit) + " cannot fuse|r"
+          "|cffff2222Error: " + GetHeroProperName(unit) + " cannot fuse|r"
         );
         return false;
       }
@@ -94,18 +91,27 @@ export class FusionManager {
       const transformTime = LoadReal(udg_StatMultHashtable, unitId, 9);
       if (transformTime > 0) {
         DisplayTimedTextToPlayer(player, 0, 0, 3, 
-          "|cffff2222Cannot fuse while transformed|r"
+          "|cffff2222Error: Cannot fuse while transformed|r"
         );
         return;
       }
 
       this.registerFusion(unit);
 
-      if (this.unit2 == null) {
-        this.delay = 0;
-        ResumeTimer(this.delayTimer);
-      } else {
-        PauseTimer(this.delayTimer);
+      if (this.unit2 == null && this.delay == 0) {
+        const timer = TimerManager.getInstance().get();
+        TimerStart(timer, 0.03, true, ()=> {
+          this.delay += 0.03;
+          if (this.delay > FusionManager.MAX_FUSE_DELAY) {
+            this.failFuse(this.unit1);
+            this.failFuse(this.unit2);
+            this.unit1 = null;
+            this.unit2 = null;
+            this.delay = 0;
+            TimerManager.getInstance().recycle(timer);
+            return;
+          }
+        });
       }
 
       if (this.unit2 != null) {
@@ -126,12 +132,26 @@ export class FusionManager {
     if (
       this.unit1 == null 
       || !IsUnitAlly(unit, GetOwningPlayer(this.unit1))
-      || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
+      // || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
     ) {
       this.unit1 = unit;
     } else {
       this.unit2 = unit;
     }  
+  }
+
+  failFuse(unit: unit) {
+    if (unit == null) return;
+    Globals.tmpVector.setUnit(unit);
+    UnitHelper.payHPPercentCost(unit, 0.15, UNIT_STATE_MAX_LIFE);
+    UnitHelper.payMPPercentCost(unit, 0.15, UNIT_STATE_MAX_MANA);
+    DestroyEffect(AddSpecialEffect(
+      "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl", 
+      Globals.tmpVector.x, Globals.tmpVector.y
+    ));
+    DisplayTimedTextToPlayer(
+      GetOwningPlayer(unit), 0, 0, 5, "|cffff2222Fusion failed!"
+    );
   }
 
   fuseUnits(unit1: unit, unit2: unit) {
@@ -147,29 +167,10 @@ export class FusionManager {
     Globals.tmpVector.setUnit(unit1);
     Globals.tmpVector2.setUnit(unit2);
 
-    if (
-      CoordMath.distance(Globals.tmpVector, Globals.tmpVector2) 
-      > FusionManager.MAX_FUSE_DISTANCE
-      || this.delay > FusionManager.MAX_FUSE_DELAY
-    ) {
-      DestroyEffect(AddSpecialEffect(
-        "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl", 
-        Globals.tmpVector.x, Globals.tmpVector.y
-      ));
-      DestroyEffect(AddSpecialEffect(
-        "Abilities/Spells/Orc/FeralSpirit/feralspirittarget.mdl", 
-        Globals.tmpVector2.x, Globals.tmpVector2.y
-      ));
-      UnitHelper.payHPPercentCost(unit1, -0.1, UNIT_STATE_MAX_LIFE);
-      UnitHelper.payMPPercentCost(unit1, -0.1, UNIT_STATE_MAX_MANA);
-      UnitHelper.payHPPercentCost(unit2, -0.1, UNIT_STATE_MAX_LIFE);
-      UnitHelper.payMPPercentCost(unit2, -0.1, UNIT_STATE_MAX_MANA);
-      DisplayTimedTextToPlayer(
-        GetOwningPlayer(unit1), 0, 0, 5, "|cffff2222Fusion failed!"
-      );
-      DisplayTimedTextToPlayer(
-        GetOwningPlayer(unit2), 0, 0, 5, "|cffff2222Fusion failed!"
-      );
+    const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+    if (dist > FusionManager.MAX_FUSE_DISTANCE) {
+      this.failFuse(unit1);
+      this.failFuse(unit2);
       return;
     }
 
