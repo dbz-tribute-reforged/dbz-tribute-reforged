@@ -25551,7 +25551,6 @@ TriggerExecute(gg_trg_Shaggy_Init)
 TriggerExecute(gg_trg_Commands_Init)
 TriggerExecute(gg_trg_Setup_StatMult_Initial_Units)
 TriggerExecute(gg_trg_Setup_Auto_Transform)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_745")
 end
 
 function InitTrig_Setup_Map_Setup()
@@ -32630,18 +32629,21 @@ end
 function Trig_Revive_Point_Move_Actions()
 udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))
 if (Trig_Revive_Point_Move_Func002C()) then
-        SetUnitX(udg_RevivePointUnit[udg_TempInt], 8200)
-        SetUnitY(udg_RevivePointUnit[udg_TempInt], 0)
+        udg_TempLoc = Location(8200, 0)
+SetUnitPositionLoc(udg_RevivePointUnit[udg_TempInt], udg_TempLoc)
+        RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Revive_Point_Move_Func003C()) then
-        SetUnitX(udg_RevivePointUnit[udg_TempInt], -12300)
-        SetUnitY(udg_RevivePointUnit[udg_TempInt], 26500)
+        udg_TempLoc = Location(-12300, 26500)
+SetUnitPositionLoc(udg_RevivePointUnit[udg_TempInt], udg_TempLoc)
+        RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Revive_Point_Move_Func004C()) then
-        SetUnitX(udg_RevivePointUnit[udg_TempInt], udg_OriginalSpawnX[udg_TempInt])
-        SetUnitY(udg_RevivePointUnit[udg_TempInt], udg_OriginalSpawnY[udg_TempInt])
+        udg_TempLoc = Location(udg_OriginalSpawnX[udg_TempInt], udg_OriginalSpawnY[udg_TempInt])
+SetUnitPositionLoc(udg_RevivePointUnit[udg_TempInt], udg_TempLoc)
+        RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Revive_Point_Move_Func005C()) then
@@ -38885,6 +38887,13 @@ end
 return true
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func030Func002C()
+if (not (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]) > 1)) then
+return false
+end
+return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func030C()
 if (not (udg_UltimateModeLevel > 0)) then
 return false
@@ -39143,9 +39152,12 @@ end
 else
 end
 if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func030C()) then
-udg_TempInt4 = (udg_UltimateModeLevel // CountUnitsInGroup(udg_StatMultPlayerUnits[udg_TempInt]))
+udg_TempInt4 = (udg_UltimateModeLevel // CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]))
+if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func030Func002C()) then
+udg_TempInt4 = (((udg_UltimateModeLevel * 3) // 2) // CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]))
+else
+end
 SetHeroLevelBJ(udg_StatMultUnit, udg_TempInt4, false)
-ModifyHeroSkillPoints(udg_StatMultUnit, bj_MODIFYMETHOD_ADD, (udg_TempInt4 // 3))
 udg_StatMultReal = (I2R(udg_UltimateModeStatsPerLevel) * I2R(udg_TempInt4))
 TriggerExecute(gg_trg_Add_To_Base_Stats)
 TriggerExecute(gg_trg_Update_Current_Stats)
@@ -53429,28 +53441,28 @@ end
 return true
 end
 
-function Trig_Transformations_Super_Buu_Func014Func001Func002Func001Func001C()
-if (not (udg_StatMultReal > 2.60)) then
+function Trig_Transformations_Super_Buu_Func014Func002Func001Func001Func001C()
+if (not (udg_StatMultReal >= 2.40)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Buu_Func014Func001Func002Func001C()
-if (not (udg_StatMultReal > 2.50)) then
+function Trig_Transformations_Super_Buu_Func014Func002Func001Func001C()
+if (not (udg_StatMultReal >= 2.50)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Buu_Func014Func001Func002C()
-if (not (udg_StatMultReal > 2.40)) then
+function Trig_Transformations_Super_Buu_Func014Func002Func001C()
+if (not (udg_StatMultReal >= 2.60)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Super_Buu_Func014Func001C()
+function Trig_Transformations_Super_Buu_Func014Func002C()
 if (not (udg_TransformationID == 0)) then
 return false
 end
@@ -53499,16 +53511,16 @@ SaveIntegerBJ((udg_KidBuuTimer + 1), 15, udg_ID, udg_StatMultHashtable)
 else
 end
 if (Trig_Transformations_Super_Buu_Func014C()) then
-if (Trig_Transformations_Super_Buu_Func014Func001C()) then
 udg_StatMultReal = (2.40 + (0.05 * RMaxBJ(0.50, I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable)))))
-if (Trig_Transformations_Super_Buu_Func014Func001Func002C()) then
-                udg_TransformationID = FourCC('O00U')
+if (Trig_Transformations_Super_Buu_Func014Func002C()) then
+if (Trig_Transformations_Super_Buu_Func014Func002Func001C()) then
+                udg_TransformationID = FourCC('O00W')
 else
-if (Trig_Transformations_Super_Buu_Func014Func001Func002Func001C()) then
+if (Trig_Transformations_Super_Buu_Func014Func002Func001Func001C()) then
                     udg_TransformationID = FourCC('O00V')
 else
-if (Trig_Transformations_Super_Buu_Func014Func001Func002Func001Func001C()) then
-                        udg_TransformationID = FourCC('O00W')
+if (Trig_Transformations_Super_Buu_Func014Func002Func001Func001Func001C()) then
+                        udg_TransformationID = FourCC('O00U')
 else
 end
 end

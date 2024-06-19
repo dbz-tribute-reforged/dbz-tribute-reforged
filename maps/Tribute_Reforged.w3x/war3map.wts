@@ -30,7 +30,7 @@ STRING 5
 |cffffcc00discord.gg/vayXJSZ|r
 
 A fast-paced PvPvE hero arena based on the Dragon Ball series with many crossover heroes from other popular anime and videogames.
-Features 86+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+Features 87+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 }
 
@@ -4760,11 +4760,6 @@ STRING 744
 // Units: n033 (Primal Demon King), Name (Name)
 {
 Primal Demon King
-}
-
-STRING 745
-{
-Setup Complete
 }
 
 STRING 746

@@ -1075,10 +1075,10 @@ export const HeroSelectUnitList = [
   tienData,
   farmerData,
   // yamchaRData,
-
   // ====
   // 15
   // ====
+
   upaData,
   tapionData,
   toppoData,
@@ -1096,7 +1096,6 @@ export const HeroSelectUnitList = [
   emptySpace,
   emptySpace,
   emptySpace,
-
   // ====
   // 30
   // ====
@@ -1118,7 +1117,6 @@ export const HeroSelectUnitList = [
   eisShenronData,
   emptySpace,
   emptySpace,
-
   // ====
   // 45
   // ====
