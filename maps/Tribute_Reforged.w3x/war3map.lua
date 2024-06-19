@@ -39216,7 +39216,6 @@ TriggerExecute(gg_trg_TS_Game_Start_Indicator_Unit_Removal)
 TriggerExecute(gg_trg_Unstuck_Init)
 TriggerExecute(gg_trg_Auto_Free_Mode_SP)
 TriggerExecute(gg_trg_Ultimate_Mode_Setup_After_Pick)
-TriggerExecute(gg_trg_Ultimate_Mode_Setup_After_Pick)
 end
 
 function InitTrig_Hero_Pick_Completion()

@@ -128,6 +128,7 @@ export module MinimapHelper {
       [Id.granolah, "MM_granolah.mdl"],
       [Id.gojo, "MM_gojo.mdl"],
       [Id.cheongMyeong, "MM_cheong_myeong.mdl"],
+      [Id.aggronor, "MM_aggronor.mdl"],
     ]
   );
 

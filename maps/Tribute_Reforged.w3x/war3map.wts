@@ -36,7 +36,7 @@ Features 87+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 STRING 6
 {
-randomkilla
+phone+randomkilla
 }
 
 STRING 7
@@ -66411,9 +66411,8 @@ STRING 10147
 -cam <zoom distance>
 -ang <angle>
 -tss (toggle summon selection)
--tft (host: toggle ability text)
--saga (host: change saga line pre-game)
 -dmg (see damage dealt / received)
+-tft (host: toggle ability text)
 }
 
 STRING 10148
@@ -69857,7 +69856,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 19 June 2024
+This map is under active development - 20 June 2024
 }
 
 STRING 10653
@@ -69942,6 +69941,7 @@ STRING 10661
 -original (good v evil + no memes/crono)
 -ultimate
 -clown
+-saga (changes saga line)
 }
 
 STRING 10662

@@ -638,7 +638,6 @@ export module SimpleSpellSystem {
         )
       ) {
         const cd = BlzGetUnitAbilityCooldownRemaining(dmg.source, Id.aggronorDwarvenStrengthActive);
-        print(dmg.dmg, (GetUnitState(dmg.source, UNIT_STATE_LIFE) * cd * 0.0002));
         dmg.setDamage(dmg.dmg + (GetUnitState(dmg.source, UNIT_STATE_LIFE) * cd * 0.0002));
       }
 
@@ -11432,12 +11431,12 @@ export module SimpleSpellSystem {
         if (hp > 0) {
           SetTextTagTextBJ(texttag, I2S(R2I(hp)), 10);
           SetTextTagPosUnit(texttag, caster, 10);
-          ticks = endTick;
         } else {
           SetTextTagVisibility(texttag, false);
+          ticks = endTick;
         }
       }
-      if (ticks > endTick || !UnitHelper.isUnitAlive(caster)) {
+      if (ticks >= endTick || !UnitHelper.isUnitAlive(caster)) {
         DestroyEffect(sfx);
         DestroyTextTag(texttag);
         DestroyEffect(AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl", GetUnitX(caster), GetUnitY(caster)));
