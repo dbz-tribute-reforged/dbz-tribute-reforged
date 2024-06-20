@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100DBZ Tribute Reforged 2.0
+|cffaf1100DBZ Tribute Reforged 2.0a
 }
 
 STRING 4
@@ -2024,12 +2024,9 @@ Makyo-Jin
 }
 
 STRING 321
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15A (Book Fake Channel), Name (Name)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool1> seconds|r
+Book Fake Channel
 }
 
 STRING 322
@@ -2069,12 +2066,9 @@ Mustard
 }
 
 STRING 328
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Name (Name)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool3> seconds|r
+Fake Channel
 }
 
 STRING 329
@@ -2090,21 +2084,15 @@ Dead Zone
 }
 
 STRING 331
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool4> seconds|r
+[|cff00FF00D|r] Super Android 17
 }
 
 STRING 332
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool5> seconds|r
+[|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
 STRING 333
@@ -3257,21 +3245,21 @@ Augment: Spell Power
 }
 
 STRING 514
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
+Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool6> seconds|r
+|cffffff00Regenerate +2% max mana per second
+|cff00ffffCooldown: <A0H7,Cool2>s
 }
 
 STRING 515
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
+Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool7> seconds|r
+|cffffff00Regenerate +3% max mana per second
+|cff00ffffCooldown: <A0H7,Cool2>s
 }
 
 STRING 516
@@ -3281,12 +3269,9 @@ Ginger
 }
 
 STRING 517
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool8> seconds|r
+Channel
 }
 
 STRING 518
@@ -3295,28 +3280,10 @@ STRING 518
 Nicky
 }
 
-STRING 519
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool9> seconds|r
-}
-
 STRING 520
 // Units: H02X (Makyo-seijin), Propernames (Proper Names)
 {
 Sansho
-}
-
-STRING 521
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool10> seconds|r
 }
 
 STRING 522
@@ -4766,6 +4733,15 @@ STRING 744
 // Units: n033 (Primal Demon King), Name (Name)
 {
 Primal Demon King
+}
+
+STRING 745
+// Abilities: A0JJ (Temporal Do-Over), Ubertip (Tooltip - Normal - Extended)
+{
+Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
+|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
+Heals |cffFFFF0050%|r of damage taken over 4s.|r
+|cff00FFFFCooldown: <A0JJ,Cool1>s|r
 }
 
 STRING 746
@@ -9940,12 +9916,14 @@ Might Guy
 }
 
 STRING 1525
-// Items: I00M (Cell Max Wings), Ubertip (Tooltip - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Activate to heal 1% of max HP/s and gain +10% spell amp for 10s. For the first 5s, enemies in 500 AOE are continuously knocked back, 100% blinded and lose 10% spell amp for 10s.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: 90s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool1> seconds|r
 }
 
 STRING 1526
@@ -37668,23 +37646,25 @@ Granolah fires multiple snipes from his fingers. After 0.3s the beam stuns enemi
 }
 
 STRING 5841
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool1>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool3> seconds|r
 }
 
 STRING 5842
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool2>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool4> seconds|r
 }
 
 STRING 5843
@@ -37918,93 +37898,101 @@ Augment: Cooldown Reduction
 }
 
 STRING 5872
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool3>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool5> seconds|r
 }
 
 STRING 5873
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool4>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool6> seconds|r
 }
 
 STRING 5874
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool5>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool7> seconds|r
 }
 
 STRING 5875
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool6>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool8> seconds|r
 }
 
 STRING 5876
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool7>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool9> seconds|r
 }
 
 STRING 5877
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool8>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool10> seconds|r
 }
 
 STRING 5878
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EW (Final Shot), Researchubertip (Tooltip - Learn - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool9>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool1> - <A0EW,Cool10> seconds|r
 }
 
 STRING 5879
-// Abilities: A0DF (Cataclysmic Orb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool1> - <A0DF,Cool10>s|r
+|cffff2222Costs 10% of Max HP
+Channel Duration: <A0EW,DataA1,.>s|r
+|cff00ff00Damage: [Int] 6u x 100t + 1700u
+|cff00ffffCooldown: <A0EW,Cool2> seconds|r
 }
 
 STRING 5880
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. The orb deals double damage when moving.
+Whis channels a symphony of destruction, that damages, silences and knocks back enemies in a wide arc in front of him.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool10>s|r
+|cffff2222Channel Duration: <A0JO,DataA1>s
+|cff00ff00Damage: [Int] 50u (x5.5) per second
+|cff00ffffCooldown: <A0JO,Cool1>s
 }
 
 STRING 5881
@@ -39146,17 +39134,6 @@ STRING 6058
 F
 }
 
-STRING 6059
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA1,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool1> seconds|r
-}
-
 STRING 6060
 // Abilities: A0CY (Sample Pizza), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39223,17 +39200,6 @@ STRING 6070
 |cffffcc00D|rodon Ray
 }
 
-STRING 6071
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA2,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool2> seconds|r
-}
-
 STRING 6072
 // Abilities: A0IF (Transform - Mecha), Tip (Tooltip - Normal)
 {
@@ -39244,17 +39210,6 @@ STRING 6073
 // Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 6074
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA3,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool3> seconds|r
 }
 
 STRING 6075
@@ -39273,17 +39228,6 @@ STRING 6077
 // Units: E01A (At least 1 living clone), Hotkey (Hotkey)
 {
 Z
-}
-
-STRING 6078
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA4,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool4> seconds|r
 }
 
 STRING 6079
@@ -39352,17 +39296,6 @@ STRING 6089
 |cffffcc00D|rodon Ray
 }
 
-STRING 6090
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA5,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool5> seconds|r
-}
-
 STRING 6091
 // Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
 {
@@ -39373,17 +39306,6 @@ STRING 6092
 // Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 6093
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA6,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool6> seconds|r
 }
 
 STRING 6094
@@ -39402,39 +39324,6 @@ STRING 6096
 // Units: H05U (Demon God), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 6097
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA7,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool7> seconds|r
-}
-
-STRING 6098
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA8,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool8> seconds|r
-}
-
-STRING 6099
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA9,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool9> seconds|r
 }
 
 STRING 6100
@@ -39664,28 +39553,6 @@ STRING 6137
 // Abilities: A0DE (Book Beerus Invul), Name (Name)
 {
 Book Beerus Invul
-}
-
-STRING 6138
-// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA10,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool10> seconds|r
-}
-
-STRING 6139
-// Abilities: A0CU (Sphere of Destruction), Researchubertip (Tooltip - Learn - Extended)
-{
-Beerus summons a massive flaming energy sphere to destroy his enemies.
-
-|cff8888ffMana Cost: 15% Max Mana
-|cffff2222Channel Duration: <A0CU,DataA1,.>s
-|cff00ff00Damage: [Int] 50u x 8t + 2400u
-|cff00ffffCooldown: <A0CU,Cool1> - <A0CU,Cool10> seconds|r
 }
 
 STRING 6140
@@ -64153,15 +64020,6 @@ STRING 9806
 [|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 10|r]
 }
 
-STRING 9807
-// Abilities: A0DV (Pressure Point Attack), Researchubertip (Tooltip - Learn - Extended)
-{
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool1> - <A0DV,Cool10> seconds|r
-}
-
 STRING 9808
 // Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
@@ -65642,21 +65500,6 @@ STRING 10029
 [|cffffff00D|r] Choose Ichigo
 }
 
-STRING 10030
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
-{
-A farmer with a shotgun that has the ability to farm crops to provide bonus experience and stats.
-
-|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
-|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-}
-
 STRING 10031
 // Units: H05L (Changling (Golden Final Form)), Name (Name)
 {
@@ -66074,15 +65917,6 @@ STRING 10098
 // Abilities: A11M (Special Beast Cannon), EditorSuffix (Editor Suffix)
 {
 (gohan)
-}
-
-STRING 10099
-// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s.
-
-|cff00ff00Damage: [Int] 500u + 1% Max HP|r
-|cff00ffffCooldown: <A0DV,Cool2> seconds|r
 }
 
 STRING 10100
@@ -69862,7 +69696,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 20 June 2024
+This map is under active development - 21 June 2024
 }
 
 STRING 10653
@@ -77218,13 +77052,18 @@ it's Nappa!
 }
 
 STRING 11732
-// Abilities: A0JO (Symphonic Destruction), Ubertip (Tooltip - Normal - Extended)
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
 {
-Whis channels a symphony of destruction, that damages, silences and knocks back enemies in a wide arc in front of him.
+A farmer with a shotgun that cultivates crops that provide stats.
 
-|cffff2222Channel Duration: <A0JO,DataA1>s
-|cff00ff00Damage: [Int] 30u (x9) per second
-|cff00ffffCooldown: <A0JO,Cool1>s
+|cffffcc00Honest Work|r: Consuming crops provides 10% of the experience to the next level (1% after level 150).
+|cff00ff00Gun Thumb|r: Auto attacks drain 4% of current mana and deal 2% of current mana as bonus damage. Successsful auto attacks increase spell amp by 2% for 5s.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cffFFcc00I|r|cff00ff00IIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
 STRING 11733
@@ -91842,20 +91681,6 @@ Mario throws a fireball to burn his enemies.
 |cff00ffffCooldown: <A0YX,Cool2,.> seconds|r
 }
 
-STRING 13825
-// Units: H033 (Mountain King), Ubertip (Tooltip - Extended)
-{
-A powerful close-range tank that has multiple ways to stun his opponents.
-
-|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 10 hero levels.|r
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-}
-
 STRING 13826
 // Units: H032 (Mountain King), Name (Name)
 {
@@ -91872,20 +91697,6 @@ STRING 13828
 // Units: H02G (Superhero Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Goku
-}
-
-STRING 13829
-// Units: H034 (Mountain King), Ubertip (Tooltip - Extended)
-{
-A powerful close-range tank that has multiple ways to stun his opponents.
-
-|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 10 hero levels.|r
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 }
 
 STRING 13830
@@ -91922,16 +91733,6 @@ STRING 13835
 // Units: H02H (Superhero Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Goku
-}
-
-STRING 13836
-// Abilities: A14Q (Lightning Bash), Ubertip (Tooltip - Normal - Extended)
-{
-The next auto attack creates a chain lightning that bounces up to 8 additional nearby enemies. If the target is an enemy hero, Aggronor bashes them for 1s and gains +0.01x str multiplier up to +0.5x.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 500u
-|cff00ffffCooldown: <A14Q,Cool1>s|r
 }
 
 STRING 13837
@@ -152757,20 +152558,6 @@ STRING 22199
 R
 }
 
-STRING 22200
-// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
-{
-The Limitless technique grants users near absolute control over space through cursed energy manipulation. The user distorts space to dodge incoming auto attacks and allow their own auto attacks to deal critical damage.
-
-All enemies in 1200 range travel up to 33% less distance depending on how close they are to Gojo with closer units moving slower. When Six Eyes is activated above level 150, the maximum slow is increased to 66%. This slowing effect is halved on heroes. Has reduced effect on units that travel faster than 4000 units per second. Does not affect spell immune units. 
-
-|cff8888ffMana Cost: 1% of max mana per second while actively slowing enemies
-
-|cffffcc00Evasion|r - <A140,DataD1,%>% 
-|cffffcc00Critical|r - <A140,DataA1>% 
-|cffffcc00Damage|r - <A140,DataB1,.> times
-}
-
 STRING 22201
 {
 [|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r
@@ -154102,6 +153889,25 @@ Vegeta charges a high powered energy beam for 2s before unleashing it to obliter
 |cffff2222Channel Duration: <A14Y,DataA10,.>s|r
 |cff00ff00Damage: [Int] 42u x 99t + 1200u
 |cff00ffffCooldown: <A14Y,Cool10> seconds|r
+}
+
+STRING 22345
+// Abilities: A0JJ (Temporal Do-Over), Researchubertip (Tooltip - Learn - Extended)
+{
+Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
+|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
+Heals |cffFFFF0050%|r of damage taken over 4s.|r
+|cff00FFFFCooldown: <A0JJ,Cool1>s|r
+}
+
+STRING 22346
+// Abilities: A148 (Plum Blossom Palisade), Ubertip (Tooltip - Normal - Extended)
+{
+Launches multiple sword slashes to create a giant plum blossomg tree that damages enemies. The branches of the tree deal less damage. The tree branches pierce everything and bypass beam clashes.
+
+|cff00ff00Main Damage: [Int] 50u x 8t + 400u
+Branch Damage: [Int] 9u x 8t + 45u (x18)
+|cff00ffffCooldown: <A148,Cool1>s|r
 }
 
 STRING 22347
@@ -164723,28 +164529,33 @@ Genos rapidly punches 200 units in front of him towards the targetted direction.
 }
 
 STRING 23699
-// Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Both the left and right earring wearer must use this item at the same time to trigger the fusion, both users must stand close to each other as well. Fusion cannot be reverted.|r
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool1>s|r
 }
 
 STRING 23700
-// Items: I00L (Potara Earing), Description (Description)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Both the left and right earring wearer must use this item at the same time to trigger the fusion, both users must stand close to each other as well. Fusion cannot be reverted.|r
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool2>s|r
 }
 
 STRING 23701
-// Items: I04W (Potara Fusion), Ubertip (Tooltip - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00The fusion of two heroes is stronger than the sum of their parts.
-+1.0x str mult
-+0.5x agi mult
-+0.25x int mult
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
 
-|cffff2020!WARNING!|r
-|cffffff00Fusion system is in BETA.
-You accept all responsibility for bugs, crashes, inadvertent loss of life and any other problems that may arise from fusing two heroes. Post any bugs you may find to the discord.|r
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool3>s|r
 }
 
 STRING 23702
@@ -166344,12 +166155,17 @@ STRING 23929
 }
 
 STRING 23930
-// Abilities: A0JJ (Temporal Do-Over), Ubertip (Tooltip - Normal - Extended)
+// Units: H032 (Mountain King), Ubertip (Tooltip - Extended)
 {
-Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
-|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
-Heals |cffFFFF00100%|r of damage taken over 4s.|r
-|cff00FFFFCooldown: <A0JJ,Cool1>s|r
+A powerful close-range tank that has multiple ways to stun his opponents.
+
+|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 9 hero levels.|r
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 }
 
 STRING 23931
@@ -166365,12 +166181,16 @@ STRING 23932
 }
 
 STRING 23933
-// Abilities: A0JJ (Temporal Do-Over), Researchubertip (Tooltip - Learn - Extended)
+// Units: H02A (Special Grade Sorcerer), Ubertip (Tooltip - Extended)
 {
-Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to their previous state.
-|cff00FF00Moves back 3 seconds in time, resetting their position and converting damage taken while the buff is active  into a Heal for the character. |r
-Heals |cffFFFF00100%|r of damage taken over 4s.|r
-|cff00FFFFCooldown: <A0JJ,Cool1>s|r
+A hero with limitless capability that focuses on timing his cursed techniques for massive damage.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 23934
@@ -167098,135 +166918,119 @@ Automatically moves away from enemies.|r
 }
 
 STRING 24030
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Units: H033 (Mountain King), Ubertip (Tooltip - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+A powerful close-range tank that has multiple ways to stun his opponents.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA1,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool1> seconds|r
+|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 9 hero levels.|r
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 }
 
 STRING 24031
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Units: H034 (Mountain King), Ubertip (Tooltip - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+A powerful close-range tank that has multiple ways to stun his opponents.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA3,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool3> seconds|r
+|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 9 hero levels.|r
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 }
 
 STRING 24032
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A140 (Limitless), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+The Limitless technique grants users near absolute control over space through cursed energy manipulation. The user distorts space to dodge incoming auto attacks and allow their own auto attacks to deal critical damage.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA4,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool4> seconds|r
+All enemies in 1200 range travel up to 33% less distance depending on how close they are to Gojo with closer units moving slower. When Six Eyes is activated above level 150, the maximum slow is increased to 66%. This slowing effect is halved on heroes. Has reduced effect on units that travel faster than 4000 units per second. Does not affect spell immune units. 
+
+|cff8888ffMana Cost: Agi/Int * 1% of max mana per second while actively slowing enemies, costs 50% less when not affecting heroes.
+
+|cffffcc00Evasion|r - <A140,DataD1,%>% 
+|cffffcc00Critical|r - <A140,DataA1>% 
+|cffffcc00Damage|r - <A140,DataB1,.> times
 }
 
 STRING 24033
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14Q (Lightning Bash), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+The next auto attack creates a chain lightning that bounces up to 8 additional nearby enemies. If the target is an enemy hero, Aggronor bashes them for 1s and gains +0.01x str multiplier up to +0.5x. Starts at level 3 worth of damage and scales up to level 10.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA5,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool5> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A14Q,Cool1>s|r
 }
 
 STRING 24034
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14R (Lightning Bash), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+The next auto attack creates a chain lightning that bounces up to 8 additional nearby enemies. If the target is an enemy hero, Aggronor bashes them for 1s and gains +0.01x str multiplier up to +0.5x. Starts at level 3 worth of damage and scales up to level 10.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA6,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool6> seconds|r
+|cff8888ffMana Cost: 10% of max mana
+|cff00ff00Damage: [Int] 500u
+|cff00ffffCooldown: <A14Q,Cool1>s|r
 }
 
 STRING 24035
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA7,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool7> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool1> seconds|r
 }
 
 STRING 24036
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA8,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool8> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool3> seconds|r
 }
 
 STRING 24037
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA9,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool9> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool4> seconds|r
 }
 
 STRING 24038
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA10,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool10> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool5> seconds|r
 }
 
 STRING 24039
-// Abilities: A0EW (Final Shot), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA1,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool1> - <A0EW,Cool10> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool6> seconds|r
 }
 
 STRING 24040
-// Abilities: A0EW (Final Shot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
 {
-Granolah overcharges a high powered energy blast in a last ditch effort to destroy his enemies.
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
 
-|cffff2222Costs 5% of Max HP
-Warning: Can damage the caster!
-Channel Duration: <A0EW,DataA2,.>s|r
-|cff00ff00Damage: [Int] 6u x 100t + 1700u
-|cff00ffffCooldown: <A0EW,Cool2> seconds|r
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool7> seconds|r
 }
 
 STRING 24041
@@ -168060,34 +167864,6 @@ STRING 24161
 [|cff00ff00W|r] Falling Petal Sword
 }
 
-STRING 24162
-// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
-{
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
-
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 3% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 160% Blue + 160% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
-}
-
-STRING 24163
-// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
-{
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
-
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 3% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 160% Blue + 160% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
-}
-
 STRING 24164
 // Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
@@ -168313,6 +168089,15 @@ STRING 24196
 // Abilities: A14A (Plum Blossom Cloudburst), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] 7 Blossom Blades: Plum Blossom Cloudburst
+}
+
+STRING 24197
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
+
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool8> seconds|r
 }
 
 STRING 24198
@@ -169101,13 +168886,13 @@ Creates a plum blossom at the target location that falls to the ground after 1s.
 }
 
 STRING 24296
-// Abilities: A148 (Plum Blossom Palisade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-Launches multiple sword slashes to create a giant plum blossomg tree that damages enemies. The branches of the tree deal less damage.
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
 
-|cff00ff00Main Damage: [Int] 50u x 8t + 400u
-Branch Damage: [Int] 9u x 8t + 45u (x20)
-|cff00ffffCooldown: <A148,Cool1>s|r
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool4>s|r
 }
 
 STRING 24297
@@ -169458,19 +169243,6 @@ A high durability bruiser that uses HP to cast powerful abilities and can open t
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 }
 
-STRING 24320
-// Units: H02A (Special Grade Sorcerer), Ubertip (Tooltip - Extended)
-{
-A hero with limitless capability that focuses on timing his cursed techniques for massive damage.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 24321
 // Units: H02B (Divine Dragon of Mount Hua), Ubertip (Tooltip - Extended)
 {
@@ -169765,19 +169537,23 @@ DBO Grandpa Gohan Hut
 }
 
 STRING 24363
-// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 4s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-Passively provides +20% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool5>s|r
 }
 
 STRING 24364
-// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 4s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-Passively provides +20% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool6>s|r
 }
 
 STRING 24365
@@ -169955,6 +169731,21 @@ STRING 24392
 STRING 24393
 {
 |cffff2222One Day on Earth expired.|r
+}
+
+STRING 24394
+// Items: I04W (Potara Fusion), Ubertip (Tooltip - Extended)
+{
+|cffffff00The fusion of two heroes is stronger than the sum of their parts.
++1.0x str mult
++0.5x agi mult
++0.25x int mult
+
+Only the left earring wearer (the one in control of the body) can be damaged. The right earring user only takes damage when the left earring user does.
+
+|cffff2020!WARNING!|r
+|cffffff00Fusion system is in BETA.
+You accept all responsibility for bugs, crashes, inadvertent loss of life and any other problems that may arise from fusing two heroes. Post any bugs you may find to the discord.|r
 }
 
 STRING 24395
@@ -170575,7 +170366,7 @@ STRING 24474
 |cffffff00Transformations:|r
 |cffffcc00Gains +0.011x mult every level up to 2.4x|r
 
-|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 10 hero levels.|r
+|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 9 hero levels.|r
 
 |cffffff00[Level 50] Unlocks [|cff00ff00R|cffffff00] Dwarven Strength
 
@@ -170588,16 +170379,6 @@ STRING 24475
 {
 [|cffffcc00Unlock|r] |cffffff00Dwarven Strength|r
 Aggronor has unlocked his Dwarven Strength
-}
-
-STRING 24476
-// Abilities: A14R (Lightning Bash), Ubertip (Tooltip - Normal - Extended)
-{
-The next auto attack creates a chain lightning that bounces up to 8 additional nearby enemies. If the target is an enemy hero, Aggronor bashes them for 1s and gains +0.01x str multiplier up to +0.5x.
-
-|cff8888ffMana Cost: 10% of max mana
-|cff00ff00Damage: [Int] 500u
-|cff00ffffCooldown: <A14Q,Cool1>s|r
 }
 
 STRING 24477
@@ -171055,17 +170836,13 @@ STRING 24539
 }
 
 STRING 24540
-// Units: H032 (Mountain King), Ubertip (Tooltip - Extended)
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful close-range tank that has multiple ways to stun his opponents.
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
 
-|cffffcc00All of Aggronor's abilities automatically gain +1 level for damage purposes every 10 hero levels.|r
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool7>s|r
 }
 
 STRING 24541
@@ -172312,6 +172089,14 @@ STRING 24702
 W
 }
 
+STRING 24703
+// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+Passively provides +20% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
 STRING 24704
 {
 [|cffffcc00Unlock|r] |cff8844ddDark Final Flash|r
@@ -172495,6 +172280,14 @@ STRING 24728
 Vegeta Limit Breaker Armor Bonus
 }
 
+STRING 24729
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+Passively provides +20% cooldown reduction.
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
 STRING 24730
 // Abilities: A152 (Debuff Curse Vegeta Dark Final Flash), Name (Name)
 {
@@ -172603,6 +172396,60 @@ Throws a hay bundle at the target location that explodes after 2s. Deals +1% bon
 |cff8888ffMana Cost: 10% of max mana
 |cff00ff00Damage: [Int] 1200u|r
 |cff00ffffCooldown: <A153,Cool7> seconds|r
+}
+
+STRING 24743
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool8>s|r
+}
+
+STRING 24744
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool9>s|r
+}
+
+STRING 24745
+// Abilities: A0DF (Cataclysmic Orb), Researchubertip (Tooltip - Learn - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool1> - <A0DF,Cool10>s|r
+}
+
+STRING 24746
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff8888ffMana Cost: 4% Max Mana
+|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool10>s|r
+}
+
+STRING 24747
+// Items: I00L (Potara Earing), Ubertip (Tooltip - Extended)
+{
+|cffffff00Both the left and right earring wearer must use this item at the same time to trigger the fusion, both users must stand close to each other as well. The user on the left has control of the movement. The right earring user only takes damage when the left earring user does.
+Fusion cannot be reverted.|r
+}
+
+STRING 24748
+// Items: I00L (Potara Earing), Description (Description)
+{
+|cffffff00Both the left and right earring wearer must use this item at the same time to trigger the fusion, both users must stand close to each other as well. The user on the left has control of the movement.
+Fusion cannot be reverted.|r
 }
 
 STRING 24749
@@ -172837,6 +172684,24 @@ Throws a hay bundle at the target location that explodes after 2s. Deals +1% bon
 |cff00ffffCooldown: <A153,Cool2> seconds|r
 }
 
+STRING 24777
+// Items: I00M (Cell Max Wings), Ubertip (Tooltip - Extended)
+{
+|cffffff00Activate to heal 1% of max HP/s and gain +10% spell amp for 10s. For the first 5s, enemies in 500 AOE are continuously knocked back, 100% blinded and lose 20% spell amp for 10s.
+
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: 90s|r
+}
+
+STRING 24778
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
+
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool9> seconds|r
+}
+
 STRING 24779
 // Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
 {
@@ -172907,6 +172772,72 @@ STRING 24790
 // Abilities: A155 (Saiyan Slaying Shot), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Saiyan Slaying Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 24791
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
+
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool10> seconds|r
+}
+
+STRING 24792
+// Abilities: A0DV (Pressure Point Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
+
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool1> - <A0DV,Cool10> seconds|r
+}
+
+STRING 24793
+// Abilities: A0DV (Pressure Point Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced armor from Granolah's snipes are stunned for 2s and take extra damage equal to 10% of their max HP.
+
+|cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
+|cff00ffffCooldown: <A0DV,Cool2> seconds|r
+}
+
+STRING 24794
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 160% Blue + 160% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
+STRING 24795
+// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 160% Blue + 160% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
+STRING 24796
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA1,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool1> seconds|r
 }
 
 STRING 24797
@@ -173071,6 +173002,17 @@ Grants the next attack true strike and 2x critical damage, or causes the next cr
 |cff00ffffCooldown: <A156,Cool1> - <A156,Cool10> seconds|r
 }
 
+STRING 24819
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA2,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool2> seconds|r
+}
+
 STRING 24820
 // Abilities: A156 (Honest Shot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -173116,6 +173058,17 @@ STRING 24826
 Inner Fire Farmer Corn
 }
 
+STRING 24827
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA3,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool3> seconds|r
+}
+
 STRING 24828
 // Upgrades: R00R (Magic Sentry), Hotkey (Hotkey)
 {
@@ -173144,6 +173097,17 @@ An offense-oriented hero who struggles in the early and mid game but becomes one
 |cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+}
+
+STRING 24831
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA4,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool4> seconds|r
 }
 
 STRING 24832
@@ -173216,6 +173180,17 @@ STRING 24843
 // Abilities: A156 (Honest Shot), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Honest Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 24844
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA5,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool5> seconds|r
 }
 
 STRING 24845
@@ -173508,5 +173483,71 @@ STRING 24882
 // Upgrades: R00Q (Long Rifles), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 24883
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA6,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool6> seconds|r
+}
+
+STRING 24884
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA7,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool7> seconds|r
+}
+
+STRING 24885
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA8,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool8> seconds|r
+}
+
+STRING 24886
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA9,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool9> seconds|r
+}
+
+STRING 24887
+// Abilities: A0CU (Sphere of Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA10,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool10> seconds|r
+}
+
+STRING 24888
+// Abilities: A0CU (Sphere of Destruction), Researchubertip (Tooltip - Learn - Extended)
+{
+Beerus summons a massive flaming energy sphere to destroy his enemies.
+
+|cff8888ffMana Cost: 15% Max Mana
+|cffff2222Channel Duration: <A0CU,DataA1,.>s
+|cff00ff00Damage: [Int] 100u x 8t + 2000u
+|cff00ffffCooldown: <A0CU,Cool1> - <A0CU,Cool10> seconds|r
 }
 

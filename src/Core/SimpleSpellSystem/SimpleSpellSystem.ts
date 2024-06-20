@@ -13,6 +13,7 @@ import { DDSHandler } from "Core/DDS/DDSHandler";
 import { DragonBallsConstants } from "Core/DragonBallsSystem/DragonBallsConstants";
 import { DragonBallsManager } from "Core/DragonBallsSystem/DragonBallsManager";
 import { FarmingManager } from "Core/FarmingSystem/FarmingManager";
+import { FusionUnit } from "Core/FusionSystem/FusionUnit";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
 import { KeyInput } from "Core/KeyInputSystem/KeyInput";
@@ -51,7 +52,7 @@ export module SimpleSpellSystem {
   const gojoPurpleAOE = 500;
   const gojoPurpleBeamSpeed = 50;
   const gojoPurpleKBRelativeSpeed = 20;
-  const gojoPurpleLesserMPCostPct = 0.03 * 0.03;
+  const gojoPurpleLesserMPCostPct = 0.03 * 0.02;
   const gojoPurpleBeamExistTicks = 40;
   const gojoPurpleSoundStrings = [
     "Audio/Voice/Gojo/BlueCharge1.mp3",
@@ -715,7 +716,47 @@ export module SimpleSpellSystem {
 
     const healKey = StringHash("whis_w_heal");
     const healAmt = LoadReal(Globals.genericDDSHashtable, dmg.targetHandleId, healKey);
-    SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, healKey, healAmt + dmg.dmg);
+    SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, healKey, healAmt + dmg.dmg * 0.5);
+  }
+
+  export function doBeerusCataclysmicOrbKick(
+    caster: unit,
+    beam: unit,
+  ) {
+    const timerDDSKey = StringHash("beerus_q_timer_dds");
+    const motionTimerKey = StringHash("beerus_q_motion");
+    const motionAngleKey = StringHash("beerus_q_motion_ang");
+
+    const beamId = GetHandleId(beam);
+    const timerId = LoadInteger(Globals.genericDDSHashtable, beamId, timerDDSKey);
+    SaveBoolean(Globals.genericSpellHashtable, timerId, motionTimerKey, true);
+
+    // note: cannot allow possibility for beerus to adjust tmpVector
+    // prior to triggering this
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setUnit(beam);
+    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
+    SaveReal(Globals.genericSpellHashtable, timerId, motionAngleKey, ang);
+    IssueImmediateOrderById(caster, OrderIds.STOP);
+
+    if (GetUnitTypeId(caster) == Id.beerus) {
+      const rng = Math.random() * 100;
+      if (rng < 20) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/Grunt1.mp3", 600);
+      } else if (rng < 40) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/Grunt2.mp3", 193);
+      } else if (rng < 60) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/Grunt3.mp3", 262);
+      } else if (rng < 75) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/This1.mp3", 931);
+      } else if (rng < 90) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/This2.mp3", 568);
+      } else if (rng < 95) {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/This3.mp3", 762);
+      } else {
+        SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Beerus/OnTheHouse.mp3", 1240);
+      }
+    }
   }
 
   export function DDSBeerusCataclysmicOrb(dmg: DDSData) {
@@ -723,41 +764,7 @@ export module SimpleSpellSystem {
       dmg.targetTypeId != Id.beerusCataclysmicOrbUnitId
       || dmg.targetPlayer != dmg.sourcePlayer
     ) return;
-
-    const timerDDSKey = StringHash("beerus_q_timer_dds");
-    const motionTimerKey = StringHash("beerus_q_motion");
-    const motionAngleKey = StringHash("beerus_q_motion_ang");
-
-    const beamId = GetHandleId(dmg.target);
-    const timerId = LoadInteger(Globals.genericDDSHashtable, beamId, timerDDSKey);
-    SaveBoolean(Globals.genericSpellHashtable, timerId, motionTimerKey, true);
-
-    // note: cannot allow possibility for beerus to adjust tmpVector
-    // prior to triggering this
-    Globals.tmpVector.setUnit(dmg.source);
-    Globals.tmpVector2.setUnit(dmg.target);
-    const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
-    SaveReal(Globals.genericSpellHashtable, timerId, motionAngleKey, ang);
-    IssueImmediateOrderById(dmg.source, OrderIds.STOP);
-
-    if (dmg.sourceTypeId == Id.beerus) {
-      const rng = Math.random() * 100;
-      if (rng < 20) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/Grunt1.mp3", 600);
-      } else if (rng < 40) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/Grunt2.mp3", 193);
-      } else if (rng < 60) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/Grunt3.mp3", 262);
-      } else if (rng < 75) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/This1.mp3", 931);
-      } else if (rng < 90) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/This2.mp3", 568);
-      } else if (rng < 95) {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/This3.mp3", 762);
-      } else {
-        SoundHelper.playSoundOnUnit(dmg.source, "Audio/Voice/Beerus/OnTheHouse.mp3", 1240);
-      }
-    }
+    doBeerusCataclysmicOrbKick(dmg.source, dmg.target);
     dmg.setDamage(1);
   }
 
@@ -820,10 +827,16 @@ export module SimpleSpellSystem {
     const cd = BlzGetUnitAbilityCooldownRemaining(dmg.target, Id.cheongMyeongReturnActive);
     if (cd != 0) return;
 
-    BlzSetEventDamage(0);
-    SetUnitState(dmg.target, UNIT_STATE_LIFE, 100);
+    dmg.setDamage(0);
 
     startCooldown(dmg.target, Id.cheongMyeongReturnActive);
+
+    const manaToHealRatio = 0.33;
+    const enemyHealPct = 0.5;
+    const currentMana = GetUnitState(dmg.target, UNIT_STATE_MANA);
+    const heal = manaToHealRatio * currentMana;
+    SetUnitState(dmg.target, UNIT_STATE_LIFE, heal);
+    SetUnitState(dmg.target, UNIT_STATE_MANA, currentMana - heal);
 
     const player = GetOwningPlayer(dmg.target);
     SetPlayerAbilityAvailable(player, Id.cheongMyeongReturnActive, true);
@@ -838,14 +851,7 @@ export module SimpleSpellSystem {
     SetUnitAnimationByIndex(dmg.target, 6);
 
     const timer = TimerManager.getInstance().get();
-    TimerStart(timer, 4, false, () => {
-      const manaToHealRatio = 0.33;
-      const enemyHealPct = 0.5;
-      const currentMana = GetUnitState(dmg.target, UNIT_STATE_MANA);
-      const heal = manaToHealRatio * currentMana;
-      SetUnitState(dmg.target, UNIT_STATE_LIFE, heal);
-      SetUnitState(dmg.target, UNIT_STATE_MANA, currentMana - heal);
-
+    TimerStart(timer, 3, false, () => {
       if (UnitHelper.isUnitAlive(dmg.source)) {
         SetUnitState(dmg.source, UNIT_STATE_LIFE, 
           enemyHealPct * heal + GetUnitState(dmg.source, UNIT_STATE_LIFE)
@@ -2541,27 +2547,36 @@ export module SimpleSpellSystem {
   }
 
   export function DDSLinkFusionDamage(dmg: DDSData) {
-    const fusionPairUnitKey = StringHash("fusion_pair_unit");
-    const pairUnit = LoadUnitHandle(Globals.genericDDSHashtable, dmg.targetHandleId, fusionPairUnitKey);
+    const pairUnit = LoadUnitHandle(Globals.genericDDSHashtable, dmg.targetHandleId, FusionUnit.FUSION_PAIR_UNIT_KEY);
     if (pairUnit == null) return;
-
-    const isInvul = BlzIsUnitInvulnerable(pairUnit);
-    if (isInvul) SetUnitInvulnerable(pairUnit, false);
-    if (GetUnitState(dmg.target, UNIT_STATE_LIFE) - dmg.dmg < 1) {
-      SetUnitState(pairUnit, UNIT_STATE_LIFE, 1);
-      UnitDamageTarget(
-        dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
-        ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
-        WEAPON_TYPE_WHOKNOWS
-      );
-    } else {
-      UnitDamageTarget(
-        dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
-        ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
-        WEAPON_TYPE_WHOKNOWS
-      );
+    const pairUnitId = GetHandleId(pairUnit);
+    const targetSide = LoadInteger(Globals.genericSpellHashtable, dmg.targetHandleId, FusionUnit.FUSION_SIDE_KEY);
+    const pairSide = LoadInteger(Globals.genericSpellHashtable, pairUnitId, FusionUnit.FUSION_SIDE_KEY);
+    
+    if (targetSide == 1) {
+      // target is right side
+      if (dmg.damageType != DAMAGE_TYPE_UNKNOWN) {
+        // the dmg isnt pair-link damage, reduce it to 0
+        dmg.setDamage(0);
+      }
     }
-    if (isInvul) SetUnitInvulnerable(pairUnit, true);
+    if (pairSide == 1) {
+      // deal dmg to the left pair i.e. dmg the right side
+      if (GetUnitState(dmg.target, UNIT_STATE_LIFE) - dmg.dmg < 1) {
+        SetUnitState(pairUnit, UNIT_STATE_LIFE, 1);
+        UnitDamageTarget(
+          dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
+          ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN,
+          WEAPON_TYPE_WHOKNOWS
+        );
+      } else {
+        UnitDamageTarget(
+          dmg.source, pairUnit, dmg.dmg, dmg.isAttack, false,
+          ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN,
+          WEAPON_TYPE_WHOKNOWS
+        );
+      }
+    }
   }
   
   export function DDSDPSCheck(dmg: DDSData) {
@@ -3504,6 +3519,7 @@ export module SimpleSpellSystem {
     );
     const schalaTpAOE = 600;
     const schalaTpMaxDist = 6000;
+    const maxIntervalDist = 128;
 
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
@@ -3531,12 +3547,7 @@ export module SimpleSpellSystem {
       Globals.tmpVector, direction, maxDist
     );
 
-    let beamSpeed = maxDist;
-    if (spellId == Id.schalaTeleportation) {
-      beamSpeed /= tpDelayTicks;
-    } else {
-      beamSpeed /= tpDelayTicks;
-    }
+    let beamSpeed = maxDist / Math.max(1, tpDelayTicks);
     beamSpeed = Math.min(maxDist, beamSpeed * 2);
     const sfxCast = AddSpecialEffect(
       "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl", 
@@ -3562,20 +3573,26 @@ export module SimpleSpellSystem {
         return;
       }
 
-      Globals.tmpVector.setPos(casterX, casterY);
+      Globals.tmpVector.setUnit(tpUnit);
       Globals.tmpVector2.setPos(x, y);
-
       const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-      if (distToTarget > 0 && distToTarget < maxDist && tick < tpDelayTicks) {
-        Globals.tmpVector2.polarProjectCoords(Globals.tmpVector2, 
-          direction, Math.min(distToTarget, beamSpeed)
-        );
-        PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, Globals.tmpVector2);
+      if (distToTarget > 0 && tick < tpDelayTicks) {
+        const minDist = Math.min(distToTarget, beamSpeed);
+        for (let i = 0; i <= minDist; i += maxIntervalDist) {
+          Globals.tmpVector.polarProjectCoords(Globals.tmpVector, 
+            direction, Math.min(minDist, maxIntervalDist)
+          );
+          PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, Globals.tmpVector);
+          Globals.tmpVector.setUnit(tpUnit);
+        }
         BlzSetSpecialEffectX(sfxBeam, GetUnitX(tpUnit));
         BlzSetSpecialEffectY(sfxBeam, GetUnitY(tpUnit));
       }
 
       if (tick >= tpDelayTicks) {
+        Globals.tmpVector.setPos(casterX, casterY);
+        Globals.tmpVector2.setUnit(tpUnit);
+
         GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
           Globals.tmpVector.x, Globals.tmpVector.y, 
           schalaTpAOE, null
@@ -5205,7 +5222,7 @@ export module SimpleSpellSystem {
     const hookMaxStuckTicks = 16;
     const hookStuckPercent = 0.4;
     const hookMaxDist = 1600;
-    const hookBreakDist = hookMaxDist * 1.25;
+    const hookBreakDist = hookMaxDist * 1.5;
     const hookUnitRadius = 150;
     const hookMaxActiveTicks = 166;
 
@@ -8579,12 +8596,19 @@ export module SimpleSpellSystem {
     const ch = Globals.customPlayers[playerId].getCustomHero(caster);
     if (!ch) return;
 
-    const x = GetSpellTargetX();
-    const y = GetSpellTargetY();
+    let x = GetSpellTargetX();
+    let y = GetSpellTargetY();
+
+    const maxDist = 1500 + 500 * GetUnitAbilityLevel(caster, spellId);
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(x, y);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, maxDist);
+    x = Globals.tmpVector2.x;
+    y = Globals.tmpVector2.y;
     
     const sfx = AddSpecialEffect(
       "WhisTeleport3.mdl",
-      GetUnitX(caster), GetUnitY(caster)
+      Globals.tmpVector.x, Globals.tmpVector.y
     );
 
     SetUnitTimeScale(caster, 0.5);
@@ -8599,7 +8623,7 @@ export module SimpleSpellSystem {
 
         if (ticks > 0) {
           // createGateTeleporter(spellId, caster, x, y);
-          SchalaTeleportation(spellId, caster, x, y, 3, 3);
+          SchalaTeleportation(spellId, caster, x, y, 2, 2);
         }
         return;
       }
@@ -8675,6 +8699,7 @@ export module SimpleSpellSystem {
     const dmgAOE = 350;
     const dmgDataMult = BASE_DMG.KAME_DPS * 3;
     const manaToDmgPct = 0.04;
+    const nonHeroMaxHpPctDmg = 0.5;
 
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
@@ -8742,7 +8767,12 @@ export module SimpleSpellSystem {
         const unit = GetEnumUnit();
         if (UnitHelper.isUnitTargetableForPlayer(unit, player)) {
           UnitDamageTarget(
-            caster, unit, dmg, 
+            caster, unit, 
+            dmg + 
+            (!IsUnitType(unit, UNIT_TYPE_HERO) ? 
+              nonHeroMaxHpPctDmg * GetUnitState(unit, UNIT_STATE_MAX_LIFE) : 
+              0
+            ), 
             false, false,
             ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL,
             WEAPON_TYPE_WHOKNOWS
@@ -8916,13 +8946,13 @@ export module SimpleSpellSystem {
   }
 
   export function doGranolahFinalShot(spellId: number) {
-    UnitHelper.payHPPercentCost(GetTriggerUnit(), 0.05, UNIT_STATE_MAX_LIFE);
+    UnitHelper.payHPPercentCost(GetTriggerUnit(), 0.1, UNIT_STATE_MAX_LIFE);
   }
 
   export function doGojoBlackFlash(spellId: number, caster: unit) {
     const dmgDataMult = BASE_DMG.KAME_DPS * 8;
     const mpHealPct = -1 * 0.2;
-    const reqDelay = 6;
+    const reqDelay = 7;
 
     const gojoBlackFlashTargetKey = StringHash("gojo_black_flash_target");
     const gojoBlackFlashTicksKey = StringHash("gojo_black_flash_ticks");
@@ -10597,6 +10627,7 @@ export module SimpleSpellSystem {
     const speed = 100;
     const aoe = 500;
     const manaCostPct = 0.01;
+    const maxDist = 1400;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -10611,6 +10642,7 @@ export module SimpleSpellSystem {
 
     Globals.tmpVector.setUnit(caster);
     Globals.tmpVector2.setPos(targetX, targetY);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, maxDist);
     const ang = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
     let distance = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
 
@@ -11285,7 +11317,10 @@ export module SimpleSpellSystem {
   }
 
   export function getAggronorSpellLevel(spellId: number, caster: unit) {
-    return Math.min(10, 1 + GetHeroLevel(caster) * 0.1);
+    if (spellId == Id.aggronorLightningBashPassive) {
+      return Math.min(10, 3 + GetHeroLevel(caster) * 0.11);
+    }
+    return Math.min(10, 1 + GetHeroLevel(caster) * 0.11);
   }
 
   export function doLightningBash(source: unit, target: unit) {
@@ -11334,10 +11369,12 @@ export module SimpleSpellSystem {
     let prevTarget = source;
     let nextTarget = target;
     let lightning = null;
+    let prevX = GetUnitX(source);
+    let prevY = GetUnitY(source);
     let ticks = 0;
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
-      if (ticks > endTick || prevTarget == nextTarget) {
+      if (ticks > endTick) {
         if (lightning != null) DestroyLightning(lightning);
         DestroyGroup(excludeGroup);
         TimerManager.getInstance().recycle(timer);
@@ -11346,54 +11383,71 @@ export module SimpleSpellSystem {
 
       if (ticks % dmgTickRate == 0) {
         if (ticks > 0) DestroyLightning(lightning);
-        GroupAddUnit(excludeGroup, nextTarget);
 
-        lightning = AddLightningEx(
-          ticks == 0  ? "CLPB" : "CLSB", true, 
-          GetUnitX(prevTarget), GetUnitY(prevTarget), 50 + BlzGetUnitZ(prevTarget) + GetUnitFlyHeight(prevTarget),
-          GetUnitX(nextTarget), GetUnitY(nextTarget), 50 + BlzGetUnitZ(nextTarget) + GetUnitFlyHeight(nextTarget),
-        );
-        DestroyEffect(
-          AddSpecialEffect("Abilities/Weapons/Bolt/BoltImpact.mdl", 
-          GetUnitX(nextTarget), GetUnitY(nextTarget))
-        );
-        const dmg = AOEDamage.calculateDamageRaw(
-          source,
-          getAggronorSpellLevel(Id.aggronorLightningBashPassive, source),
-          ch ? ch.spellPower : 1.0,
-          dmgData,
-          1.0,
-          bj_HEROSTAT_INT
-        );
-        UnitDamageTarget(
-          source, nextTarget, 
-          dmg, 
-          false, false, 
-          ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
-          WEAPON_TYPE_WHOKNOWS
-        );
-
-        // go find a new target
-        prevTarget = nextTarget;
-        let minDist = 999999;
-        Globals.tmpVector.setUnit(nextTarget);
-        GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
-          Globals.tmpVector.x, Globals.tmpVector.y, 
-          bounceAOE, null
-        );
-        for (let i = 0; i < BlzGroupGetSize(Globals.tmpUnitGroup); ++i) {
-          const unit = BlzGroupUnitAt(Globals.tmpUnitGroup, i);
-          if (
-            unit == null
-            || !UnitHelper.isUnitTargetableForPlayer(unit, player)
-            || IsUnitInGroup(unit, excludeGroup)
-          ) continue;
-          Globals.tmpVector2.setUnit(unit);
-          const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-          if (dist < minDist) {
-            nextTarget = unit;
-            minDist = dist;
+        // when not the first call
+        if (prevTarget != source) {
+          let minDist = 999999;
+          Globals.tmpVector.setPos(prevX, prevY);
+          GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+            Globals.tmpVector.x, Globals.tmpVector.y, 
+            bounceAOE, null
+          );
+          for (let i = 0; i < BlzGroupGetSize(Globals.tmpUnitGroup); ++i) {
+            const unit = BlzGroupUnitAt(Globals.tmpUnitGroup, i);
+            if (
+              unit == null
+              || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+              || IsUnitInGroup(unit, excludeGroup)
+              || !UnitHelper.isUnitAlive(unit)
+            ) continue;
+            Globals.tmpVector2.setUnit(unit);
+            const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+            if (dist < minDist) {
+              nextTarget = unit;
+              minDist = dist;
+            }
           }
+        }
+
+        if (prevTarget == nextTarget) {
+          ticks = endTick;
+        } else if (prevTarget != nextTarget) {
+          // new target found
+          GroupAddUnit(excludeGroup, nextTarget);
+
+          Globals.tmpVector.setUnit(prevTarget);
+          Globals.tmpVector2.setUnit(nextTarget);
+          CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, bounceAOE);
+  
+          lightning = AddLightningEx(
+            ticks == 0  ? "CLPB" : "CLSB", true, 
+            prevX, prevY, 50 + BlzGetUnitZ(prevTarget) + GetUnitFlyHeight(prevTarget),
+            Globals.tmpVector2.x, Globals.tmpVector2.y, 50 + BlzGetUnitZ(nextTarget) + GetUnitFlyHeight(nextTarget),
+          );
+          DestroyEffect(
+            AddSpecialEffect("Abilities/Weapons/Bolt/BoltImpact.mdl", 
+            Globals.tmpVector2.x, Globals.tmpVector2.y)
+          );
+          const dmg = AOEDamage.calculateDamageRaw(
+            source,
+            getAggronorSpellLevel(Id.aggronorLightningBashPassive, source),
+            ch ? ch.spellPower : 1.0,
+            dmgData,
+            1.0,
+            bj_HEROSTAT_INT
+          );
+          UnitDamageTarget(
+            source, nextTarget, 
+            dmg, 
+            false, false, 
+            ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+            WEAPON_TYPE_WHOKNOWS
+          );
+  
+          // go find a new target
+          prevTarget = nextTarget;
+          prevX = GetUnitX(prevTarget);
+          prevY = GetUnitY(prevTarget);
         }
       }
 

@@ -14076,7 +14076,7 @@ export const BeamComponents = [
     startTick: 16,
     endTick: -1,
     spawnDelayTicks: 0,
-    beamHpMult: BASE_DMG.KAME_DPS * 2.75,
+    beamHpMult: BASE_DMG.KAME_DPS * 3,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_VERY_SLOW,
     maxMoveTicks: -1,
@@ -14701,6 +14701,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 l" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 r" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -14747,6 +14748,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 l" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 r" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -14793,6 +14795,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 l" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 r" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -14839,6 +14842,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 l" },
       // { name: "beam cheong myeong plum blossom palisade branch 3 r" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -14885,6 +14889,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
       { name: "damage beam cheong myeong plum blossom palisade branch explosion" },
       { name: "sfx beam cheong myeong plum blossom palisade branch 2" },
@@ -14929,6 +14934,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       { name: "beam cheong myeong plum blossom palisade branch 2 l 1" },
       { name: "beam cheong myeong plum blossom palisade branch 2 r 1" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -14975,6 +14981,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       { name: "beam cheong myeong plum blossom palisade branch 2 l 1" },
       { name: "beam cheong myeong plum blossom palisade branch 2 r 1" },
       { name: "damage beam cheong myeong plum blossom palisade branch dps" },
@@ -15021,6 +15028,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       { name: "beam cheong myeong plum blossom palisade branch 2 l 1" },
       { name: "beam cheong myeong plum blossom palisade branch 2 r 1" },
       { name: "beam cheong myeong plum blossom palisade branch 2 l 2" },
@@ -15069,6 +15077,7 @@ export const BeamComponents = [
     beamUnitType: Constants.dummyBeamUnitId,
     beamUnitSkin: Constants.dummyBeamUnitId,
     components: [
+      { name: "hide unit allow movement" },
       { name: "damage beam cheong myeong plum blossom palisade dps" },
       { name: "damage beam cheong myeong plum blossom palisade explosion" },
       { name: "sfx beam cheong myeong plum blossom palisade" },

@@ -3,7 +3,8 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Trigger } from "w3ts";
 import { UnitHelper } from "Common/UnitHelper";
-import { OrderIds } from "Common/Constants";
+import { Id, OrderIds } from "Common/Constants";
+import { CustomHero } from "CustomHero/CustomHero";
 
 // this component cannot be transferred to another unit
 // for performance reasons
@@ -42,7 +43,9 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       this.finishedChannel = false;
       
       if (this.fakeChannel) {
-        input.caster.setIsChanneling(true); // pretend to channel
+        UnitAddAbility(input.caster.unit, Id.fakeChannelSpell);
+        IssueImmediateOrderById(input.caster.unit, OrderIds.STONE_FORM);
+        this.isChannelling = input.caster.isChanneling();
       }
     }
 
@@ -58,7 +61,11 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
           || input.caster.channelAbilityId != input.abilityId
         );
       } else {
-        this.finishedChannel = !input.caster.isChanneling();
+        if (!this.isChannelling) {
+          this.isChannelling = input.caster.isChanneling();
+        } else {
+          this.finishedChannel = !input.caster.isChanneling();
+        }
       }
   
       if (this.isChannelling && this.finishedChannel) {

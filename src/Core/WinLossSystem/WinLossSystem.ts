@@ -6,7 +6,7 @@ import { TimerManager } from "Core/Utility/TimerManager";
 
 export class WinLossSystem {
   public static WINNING_TEAM: number = 0;
-  public static WIN_DELAY: number = 5;
+  public static WIN_DELAY: number = 10;
   public static MAX_STUCK_TIME: number = 20;
 
   private static instance: WinLossSystem;
@@ -44,14 +44,16 @@ export class WinLossSystem {
     if (!t1Stuck) {
       if (this.t1StuckTime > 0) {
         this.t1StuckTime = 0;
-        print("|cffff2222Team 1 are safe.");
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 2, 
+          "|cffff2222Team 1 are safe.");
       }
     } else {
       if (this.t1StuckTime > WinLossSystem.MAX_STUCK_TIME) {
         this.forceTeamWin(Constants.team2Value);
       } else {
-        print("|cffff2222Team 1 will lose in " 
-         + I2S(WinLossSystem.MAX_STUCK_TIME - this.t1StuckTime) + " seconds|r"
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 2,
+          "|cffff2222Team 1 will lose in " 
+          + I2S(WinLossSystem.MAX_STUCK_TIME - this.t1StuckTime) + " seconds|r"
         );
         ++this.t1StuckTime;
       }
@@ -60,13 +62,15 @@ export class WinLossSystem {
     if (!t2Stuck) {
       if (this.t2StuckTime > 0) {
         this.t2StuckTime = 0;
-        print("|cffff2222Team 2 are safe.");
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 2, 
+          "|cffff2222Team 2 are safe.");
       }
     } else {
       if (this.t2StuckTime > WinLossSystem.MAX_STUCK_TIME) {
         this.forceTeamWin(Constants.team1Value);
       } else {
-        print("|cffff2222Team 2 will lose in " 
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 2,
+          "|cffff2222Team 2 will lose in " 
           + I2S(WinLossSystem.MAX_STUCK_TIME - this.t2StuckTime) + " seconds|r"
         );
         ++this.t2StuckTime;

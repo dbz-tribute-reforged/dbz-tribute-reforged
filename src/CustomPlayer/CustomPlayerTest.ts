@@ -490,6 +490,7 @@ export function CustomPlayerTest() {
         && abilityId != Id.yamchaRLightPunch
         && abilityId != Id.yamchaRMediumPunch 
         && abilityId != Id.yamchaRHeavyPunch
+        && abilityId != Id.fakeChannelSpell
       ) {
         // show ability name on activation
         TextTagHelper.showPlayerColorTextOnUnit(

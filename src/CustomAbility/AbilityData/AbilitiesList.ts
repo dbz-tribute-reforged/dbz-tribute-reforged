@@ -436,7 +436,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Gojo.BLACK_FLASH,
     currentCd: 0,
-    maxCd: 6,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 20,
     duration: 1,
@@ -453,11 +453,11 @@ export const AbilitiesList = [
     tooltip: {
       title: "Black Flash",
       body: 
-        "Activate within 0.12s after damaging an enemy hero with an auto attack " + 
+        "Activate within 0.15s after damaging an enemy hero with an auto attack " + 
         "to deal 0.8 x Int damage and restore 20% of max mana. " + 
         "A successful hit will reset the cooldown of Black Flash.|n" +
         "Cost: 20 SP (10 if missed)|n" + 
-        "CD: 6"
+        "CD: 5"
     },
     components: [
       
@@ -12692,6 +12692,7 @@ export const AbilitiesList = [
       { name: "debuff stun granolah pressure point" },
       { name: "debuff stun granolah pressure point bonus" },
       { name: "damage granolah pressure point explosion" },
+      { name: "damage granolah pressure point explosion bonus" },
       { name: "sfx granolah pressure point" },
     ],
   },

@@ -57,7 +57,7 @@ export module ExperienceConstants {
   export const nearbyPlayerXPMult = 0.15;
   export const bonusXPToNextLevel = 0.025;
   // legacy range: 3000
-  export const expRange = 2500;
+  export const expRange = 3000;
 }
 
 export class ExperienceManager {

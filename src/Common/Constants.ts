@@ -96,6 +96,13 @@ export module Constants {
   export const dummyCasterId = FourCC("h054");
   export const korinFlag = FourCC("h09A");
 
+
+  // CoordMath.isInsideMapBounds
+  export const mapBoundsMinX = -16896;
+  export const mapBoundsMinY = -16896;
+  export const mapBoundsMaxX = 32256;
+  export const mapBoundsMaxY = 32256;
+
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
@@ -355,7 +362,13 @@ export module Constants {
     let divider = 1;
     while (true) {
       const part = (x / divider) % 1000;
-      str = I2S(R2I(Math.floor(part))) + (isFirst ? "" : ",") + str;
+      str = (
+        (part < 100 ? "0" : "") 
+        + (part < 10 ? "0" : "") 
+        + I2S(R2I(Math.floor(part))) 
+        + (isFirst ? "" : ",") 
+        + str
+      );
       isFirst = false;
       divider *= 1000;
       if (divider > x) break;
@@ -601,6 +614,7 @@ export module OrderIds {
   export const PATROL = 851990;
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
+  export const STONE_FORM = 852206;
   export const MOVE_SLOT_1 = 852002;
   export const MOVE_SLOT_6 = 852007;
   export const PICK_UP_ITEM = 851981;
@@ -666,6 +680,8 @@ export module Id {
   export const locust = FourCC("Aloc");
   export const flagArmor100k = FourCC("A00G");
   export const flagPotaraFusion = FourCC("A14V");
+  export const fakeChannelBook = FourCC("A15A");
+  export const fakeChannelSpell = FourCC("A15B");
 
   export const useItem = FourCC("A0VF");
   export const itemAndroidBomb = FourCC('A0NS');

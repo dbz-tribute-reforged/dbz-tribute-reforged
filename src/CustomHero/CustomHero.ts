@@ -12,6 +12,8 @@ import { UnitHelper } from "Common/UnitHelper";
 import { MinimapHelper } from "Common/MinimapHelper";
 
 export class CustomHero {
+  static readonly FAKE_CHANNEL_ABILITY_ID = Id.fakeChannelSpell;
+
   public abilities: CustomHeroAbilityManager;
   public isCasting: Map<CustomAbility, boolean>;
 
@@ -314,6 +316,11 @@ export class CustomHero {
     return this;
   }
 
+  public setChannelingAbilityId(id: number): this {
+    this.channelAbilityId = id;
+    return this;
+  }
+
   public forceEndAllAbilities() {
     for (const ability of this.abilities.getCustomAbilities()) {
       if (ability.isInUse()) {
@@ -346,7 +353,7 @@ export class CustomHero {
     this.minimapIconBG = CreateMinimapIconOnUnit(
       this.unit, 255, 255, 255, 
       MinimapHelper.getMinimapIconBG(this.unit),
-      FOG_OF_WAR_FOGGED 
+      FOG_OF_WAR_VISIBLE 
     );
   }
 

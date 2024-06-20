@@ -89,6 +89,7 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
         AbilityNames.Beerus.BEERUS_COUNTER,
       ],
       [
+        AbilityNames.BasicAbility.DEFLECT,
       ]
     ]
   ],
@@ -106,11 +107,12 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
   [
     Id.gojo, [
       [
-        AbilityNames.Gojo.BLACK_FLASH,
         AbilityNames.Gojo.LIMITLESS_GUARD,
+        AbilityNames.Gojo.BLACK_FLASH,
       ],
       [
         AbilityNames.BasicAbility.GUARD,
+        AbilityNames.BasicAbility.DEFLECT,
         AbilityNames.BasicAbility.MAX_CHARGE,
       ]
     ]
@@ -121,6 +123,7 @@ export const AbilityShopData: Map<number, [string[], string[]]> = new Map([
         AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
       ],
       [
+        AbilityNames.BasicAbility.DEFLECT,
         AbilityNames.BasicAbility.MAX_CHARGE,
       ]
     ]

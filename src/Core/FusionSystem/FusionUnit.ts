@@ -131,7 +131,7 @@ export class FusionUnit {
   }
   
   public updateTimer: timer = TimerManager.getInstance().get();
-  public offsetAng: number = 90;
+  public offsetAng: number = 0;
 
   constructor(
     public unit1: unit,
@@ -178,14 +178,11 @@ export class FusionUnit {
     SaveInteger(Globals.genericSpellHashtable, unit1Id, FusionUnit.FUSION_SIDE_KEY, 0);
     SaveInteger(Globals.genericSpellHashtable, unit2Id, FusionUnit.FUSION_SIDE_KEY, 1);
     
-    TransformationSystem.getInstance().setTransformSkin(this.unit2, Constants.dummyBeamUnitId);
     TimerStart(this.updateTimer, 0.03, true, () => {
       Globals.tmpVector.setUnit(this.unit1);
-      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, this.offsetAng, 180);
+      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, this.offsetAng, 128);
       PathingCheck.moveFlyingUnitToCoord(this.unit2, Globals.tmpVector2);
 
-      // continuously set invul
-      SetUnitInvulnerable(this.unit2, true);
       SetUnitPathing(this.unit2, false);
       if (UnitHelper.isUnitAlive(this.unit1)) {
         SetUnitLifePercentBJ(this.unit2, GetUnitLifePercent(this.unit1));
@@ -195,6 +192,7 @@ export class FusionUnit {
     TransformationSystem.getInstance().autoTransformPlayerUnit(
       GetOwningPlayer(this.unit1), this.unit1
     );
+    TransformationSystem.getInstance().setTransformSkin(this.unit2, Constants.dummyBeamUnitId);
     TransformationSystem.getInstance().autoTransformPlayerUnit(
       GetOwningPlayer(this.unit2), this.unit2
     );
