@@ -19315,7 +19315,7 @@ export const AOEDamageComponents = [
     maxManaBurnPercent: 0,
     maxManaLossPercent: 0,
     applyDamageOverTime: false,
-    requireBuff: false,
+    requireBuff: true,
     buffId: Buffs.GRANOLAH_DEBUFF,
   },
   // granolah final shot
