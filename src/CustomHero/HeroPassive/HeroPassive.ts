@@ -146,6 +146,9 @@ export class HeroPassiveManager {
       case Id.gojo:
         gojoPassive(customHero);
         break;
+      case Id.beerus:
+        beerusPassive(customHero);
+        break;
       case Id.cheongMyeong:
         cheongMyeongPassive(customHero);
         break;
@@ -3333,6 +3336,7 @@ export function gojoPassive(customHero: CustomHero) {
   const limitlessGuardDistPct = 0.95;
   const limitlessHeroEffectPct = 0.5;
   const limitlessMPCostPct = 0.03 * 0.01;
+  const limitlessMPCostNoHeroPct = 0.5 * limitlessMPCostPct;
 
   const gojoBlackFlashTicksKey = StringHash("gojo_black_flash_ticks");
   const gojoLimitlessGuardTicksKey = StringHash("gojo_limitless_guard_ticks");
@@ -3637,6 +3641,7 @@ export function gojoPassive(customHero: CustomHero) {
       Globals.tmpVector.setUnit(customHero.unit);
 
       let isLimitless = false;
+      let isLimitlessHero = false;
       const limitlessUpg = isSixEyes && GetHeroLevel(customHero.unit) >= 150;
       GroupEnumUnitsInRange(Globals.tmpUnitGroup3, 
         Globals.tmpVector.x, Globals.tmpVector.y, limitlessAOE, null
@@ -3646,6 +3651,7 @@ export function gojoPassive(customHero: CustomHero) {
         if (
           UnitHelper.isUnitTargetableForPlayer(unit, player)
           && !IsUnitType(unit, UNIT_TYPE_MAGIC_IMMUNE)
+          && UnitHelper.isUnitAlive(unit)
         ) {
           isLimitless = true;
           GroupAddUnit(gojoLimitlessGroup, unit);
@@ -3679,6 +3685,7 @@ export function gojoPassive(customHero: CustomHero) {
                 )
               );
               if (isHero) {
+                isLimitlessHero = true;
                 PathingCheck.moveGroundUnitToCoord(unit, Globals.tmpVector2);
               } else {
                 PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(unit, Globals.tmpVector2);
@@ -3708,7 +3715,16 @@ export function gojoPassive(customHero: CustomHero) {
       }
 
       if (isLimitless) {
-        UnitHelper.payMPPercentCost(customHero.unit, limitlessMPCostPct, UNIT_STATE_MAX_MANA);
+        const agiRatio = (
+          GetHeroAgi(customHero.unit, true) 
+          / Math.max(1, GetHeroInt(customHero.unit, true))
+        );
+        UnitHelper.payMPPercentCost(customHero.unit, 
+          isLimitlessHero ? 
+            limitlessMPCostPct * agiRatio : 
+            limitlessMPCostNoHeroPct * agiRatio, 
+          UNIT_STATE_MAX_MANA
+        );
       }
     }
   });
@@ -3838,22 +3854,25 @@ export function buuGojoPassive(customHero: CustomHero) {
       TimerStart(blueBeamTimer, 0.03, true, SimpleSpellSystem.gojoBlueBeamLoop);
     }
   });
+}
 
+export function beerusPassive(customHero: CustomHero) {
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
-  TriggerRegisterAnyUnitEventBJ(
-    onHitTrigger,
-    EVENT_PLAYER_UNIT_ATTACKED,
-  );
+  TriggerRegisterUnitEvent(onHitTrigger, customHero.unit, EVENT_UNIT_ISSUED_TARGET_ORDER);
   TriggerAddCondition(
     onHitTrigger,
     Condition(() => {
-      const attacker = GetAttacker();
-      if (attacker != customHero.unit) return false;
-      // mark it for dds
-      const attacked = GetTriggerUnit();
-      if (UnitHelper.isUnitRealHero(attacked)) {
-        Globals.DDSAddUnit(attacked);
+      const caster = GetTriggerUnit();
+      if (caster != customHero.unit) return false;
+      const orderId = GetIssuedOrderId();
+      const beam = GetOrderTargetUnit();
+      if (
+        orderId == OrderIds.SMART
+        && beam != null
+        && GetUnitTypeId(beam) == Id.beerusCataclysmicOrbUnitId
+      ) {
+        IssueTargetOrderById(caster, OrderIds.ATTACK, beam);
       }
       return false;
     })
@@ -3926,28 +3945,7 @@ export function cheongMyeongPassive(customHero: CustomHero) {
         );
       }
     }
-
   });
-
-  const onHitTrigger = CreateTrigger();
-  customHero.addPassiveTrigger(onHitTrigger);
-  TriggerRegisterAnyUnitEventBJ(
-    onHitTrigger,
-    EVENT_PLAYER_UNIT_ATTACKED,
-  );
-  TriggerAddCondition(
-    onHitTrigger,
-    Condition(() => {
-      const attacker = GetAttacker();
-      if (attacker != customHero.unit) return false;
-      // mark it for dds
-      const attacked = GetTriggerUnit();
-      if (UnitHelper.isUnitRealHero(attacked)) {
-        Globals.DDSAddUnit(attacked);
-      }
-      return false;
-    })
-  );
 }
 
 export function aggronorPassive(customHero: CustomHero) {
@@ -3997,7 +3995,6 @@ export function setupRegenTimer(customHero: CustomHero) {
   customHero.addTimer(regenTimer);
 
   TimerStart(regenTimer, Constants.REGEN_TICK_RATE, true, () => {
-    // visibility should be done automatically
     // if (customHero.minimapIcon) {
     //   const mmVisible = MinimapHelper.isUnitMinimapVisible(customHero.unit);
     //   SetMinimapIconVisible(customHero.minimapIconBG, mmVisible);

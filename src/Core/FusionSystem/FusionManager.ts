@@ -132,7 +132,10 @@ export class FusionManager {
     if (
       this.unit1 == null 
       || !IsUnitAlly(unit, GetOwningPlayer(this.unit1))
-      || GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
+      || (
+        GetOwningPlayer(this.unit1) == GetOwningPlayer(unit)
+        && !Globals.isFBSimTest
+      )
     ) {
       this.unit1 = unit;
     } else {
@@ -183,7 +186,11 @@ export class FusionManager {
     BlzSetSpecialEffectScale(sfx, 5.0);
     DestroyEffect(sfx);
 
-    const fusionUnit = new FusionUnit(this.unit1, this.unit2);
+    // determine which unit has the lower X to become left side
+    const fusionUnit = new FusionUnit(
+      Globals.tmpVector.x < Globals.tmpVector2.x ? this.unit1 : this.unit2,
+      Globals.tmpVector.x < Globals.tmpVector2.x ? this.unit2 : this.unit1
+    );
     this.fusionUnits.set(this.unit1, fusionUnit);
     this.fusionUnits.set(this.unit2, fusionUnit);
   }

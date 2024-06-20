@@ -346,7 +346,7 @@ export class CustomHero {
     this.minimapIconBG = CreateMinimapIconOnUnit(
       this.unit, 255, 255, 255, 
       MinimapHelper.getMinimapIconBG(this.unit),
-      FOG_OF_WAR_FOGGED 
+      FOG_OF_WAR_VISIBLE 
     );
   }
 

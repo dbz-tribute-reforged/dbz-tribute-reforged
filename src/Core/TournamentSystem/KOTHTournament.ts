@@ -49,6 +49,15 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
       EnableTrigger(gg_trg_Teleport_Future_Trunks_2);
       EnableTrigger(gg_trg_Teleport_Future_Cell);
       EnableTrigger(gg_trg_Teleport_Future_Cell_2);
+
+      EnableTrigger(gg_trg_Teleport_Namek_Frieza_Copy);
+      EnableTrigger(gg_trg_Teleport_Namek_Frieza_2_Copy);
+      EnableTrigger(gg_trg_Teleport_Namek_Pod_Copy);
+      EnableTrigger(gg_trg_Teleport_Namek_Pod_2_Copy);
+      EnableTrigger(gg_trg_Teleport_Future_Trunks_Copy);
+      EnableTrigger(gg_trg_Teleport_Future_Trunks_2_Copy);
+      EnableTrigger(gg_trg_Teleport_Future_Cell_Copy);
+      EnableTrigger(gg_trg_Teleport_Future_Cell_2_Copy);
     }
 
     EnableTrigger(gg_trg_Auto_Transform_Loop);
@@ -86,9 +95,20 @@ export class KOTHTournament extends AdvancedTournament implements Tournament {
       DisableTrigger(gg_trg_Teleport_Future_Trunks_2);
       DisableTrigger(gg_trg_Teleport_Future_Cell);
       DisableTrigger(gg_trg_Teleport_Future_Cell_2);
+
+      DisableTrigger(gg_trg_Teleport_Namek_Frieza_Copy);
+      DisableTrigger(gg_trg_Teleport_Namek_Frieza_2_Copy);
+      DisableTrigger(gg_trg_Teleport_Namek_Pod_Copy);
+      DisableTrigger(gg_trg_Teleport_Namek_Pod_2_Copy);
+      DisableTrigger(gg_trg_Teleport_Future_Trunks_Copy);
+      DisableTrigger(gg_trg_Teleport_Future_Trunks_2_Copy);
+      DisableTrigger(gg_trg_Teleport_Future_Cell_Copy);
+      DisableTrigger(gg_trg_Teleport_Future_Cell_2_Copy);
+
       DisableTrigger(gg_trg_Auto_Transform_Loop);
       DisableTrigger(gg_trg_Auto_Transform_Turn_On);
     }
+
 
     TriggerExecute(gg_trg_Catchup_Turn_Off);
 

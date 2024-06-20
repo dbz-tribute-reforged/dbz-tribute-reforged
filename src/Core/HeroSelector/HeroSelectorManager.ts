@@ -484,7 +484,7 @@ export class HeroSelectorManager {
     if (Globals.isKOTH) {
       let points = TournamentData.kothPointsToWin;
       if (StringLength(this.gameModeString) > 5) {
-        const pStr = SubString(this.gameModeString, 5, 7);
+        const pStr = SubString(this.gameModeString, 6, 8);
         if (pStr) points = S2I(pStr);
       }
       TournamentManager.getInstance().addKOTH(points);
@@ -704,7 +704,7 @@ export class HeroSelectorManager {
   modeKOTH() {
     Globals.isKOTH = !Globals.isKOTH;
     const str = Globals.isKOTH ? "|cff00ff00ON" : "|cffff0000OFF";
-    const pStr = SubString(this.gameModeString, 5, 7);
+    const pStr = SubString(this.gameModeString, 6, 8);
     print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
     this.startHeroSelection(true);
     

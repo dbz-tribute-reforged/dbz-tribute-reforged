@@ -96,6 +96,13 @@ export module Constants {
   export const dummyCasterId = FourCC("h054");
   export const korinFlag = FourCC("h09A");
 
+
+  // CoordMath.isInsideMapBounds
+  export const mapBoundsMinX = -16896;
+  export const mapBoundsMinY = -16896;
+  export const mapBoundsMaxX = 32256;
+  export const mapBoundsMaxY = 32256;
+
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
@@ -355,7 +362,13 @@ export module Constants {
     let divider = 1;
     while (true) {
       const part = (x / divider) % 1000;
-      str = I2S(R2I(Math.floor(part))) + (isFirst ? "" : ",") + str;
+      str = (
+        (part < 100 ? "0" : "") 
+        + (part < 10 ? "0" : "") 
+        + I2S(R2I(Math.floor(part))) 
+        + (isFirst ? "" : ",") 
+        + str
+      );
       isFirst = false;
       divider *= 1000;
       if (divider > x) break;
