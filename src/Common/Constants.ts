@@ -614,6 +614,7 @@ export module OrderIds {
   export const PATROL = 851990;
   export const PHASE_SHIFT_OFF = 852516;
   export const PHASE_SHIFT_ON = 852515;
+  export const STONE_FORM = 852206;
   export const MOVE_SLOT_1 = 852002;
   export const MOVE_SLOT_6 = 852007;
   export const PICK_UP_ITEM = 851981;
@@ -679,6 +680,8 @@ export module Id {
   export const locust = FourCC("Aloc");
   export const flagArmor100k = FourCC("A00G");
   export const flagPotaraFusion = FourCC("A14V");
+  export const fakeChannelBook = FourCC("A15A");
+  export const fakeChannelSpell = FourCC("A15B");
 
   export const useItem = FourCC("A0VF");
   export const itemAndroidBomb = FourCC('A0NS');

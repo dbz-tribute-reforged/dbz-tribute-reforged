@@ -12,6 +12,8 @@ import { UnitHelper } from "Common/UnitHelper";
 import { MinimapHelper } from "Common/MinimapHelper";
 
 export class CustomHero {
+  static readonly FAKE_CHANNEL_ABILITY_ID = Id.fakeChannelSpell;
+
   public abilities: CustomHeroAbilityManager;
   public isCasting: Map<CustomAbility, boolean>;
 
@@ -311,6 +313,11 @@ export class CustomHero {
 
   public setIsChanneling(b: boolean): this {
     this.channelFlag = b;
+    return this;
+  }
+
+  public setChannelingAbilityId(id: number): this {
+    this.channelAbilityId = id;
     return this;
   }
 

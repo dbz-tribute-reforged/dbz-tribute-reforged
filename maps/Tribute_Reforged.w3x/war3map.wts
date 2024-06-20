@@ -2023,6 +2023,12 @@ STRING 320
 Makyo-Jin
 }
 
+STRING 321
+// Abilities: A15A (Book Fake Channel), Name (Name)
+{
+Book Fake Channel
+}
+
 STRING 322
 // Units: U00F (Makyo-Jin), Name (Name)
 {
@@ -2059,6 +2065,12 @@ STRING 327
 Mustard
 }
 
+STRING 328
+// Abilities: A15B (Fake Channel), Name (Name)
+{
+Fake Channel
+}
+
 STRING 329
 // Units: U00H (Makyo-Jin), Propernames (Proper Names)
 {
@@ -2069,6 +2081,18 @@ STRING 330
 // Units: h01X (Dead Zone), Name (Name)
 {
 Dead Zone
+}
+
+STRING 331
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Super Android 17
+}
+
+STRING 332
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
 STRING 333
@@ -3220,10 +3244,34 @@ STRING 513
 Augment: Spell Power
 }
 
+STRING 514
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
+{
+Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
+
+|cffffff00Regenerate +2% max mana per second
+|cff00ffffCooldown: <A0H7,Cool2>s
+}
+
+STRING 515
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
+{
+Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
+
+|cffffff00Regenerate +3% max mana per second
+|cff00ffffCooldown: <A0H7,Cool2>s
+}
+
 STRING 516
 // Units: H02V (Makyo-seijin), Propernames (Proper Names)
 {
 Ginger
+}
+
+STRING 517
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
+{
+Channel
 }
 
 STRING 518
