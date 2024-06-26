@@ -34,7 +34,7 @@ export class TransformationSystem {
       [Id.android13, gg_trg_Transformations_Androids_13],
       [Id.android14, gg_trg_Transformations_Androids_13_14_15],
       [Id.android15, gg_trg_Transformations_Androids_13_14_15],
-      [Id.superAndroid13, gg_trg_Transform_to_Super_13],
+      [Id.superAndroid13, gg_trg_Transformations_Androids_Super_13],
       [Id.babidi, gg_trg_Transformations_Babidi],
       [Id.fatBuu, gg_trg_Transformations_Fat_Buu],
       [Id.superBuu, gg_trg_Transformations_Super_Buu],

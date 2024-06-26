@@ -184,7 +184,10 @@ export class FusionUnit {
       PathingCheck.moveFlyingUnitToCoord(this.unit2, Globals.tmpVector2);
 
       SetUnitPathing(this.unit2, false);
-      if (UnitHelper.isUnitAlive(this.unit1)) {
+      if (
+        UnitHelper.isUnitAlive(this.unit1)
+        && UnitHelper.isUnitAlive(this.unit2)
+      ) {
         SetUnitLifePercentBJ(this.unit2, GetUnitLifePercent(this.unit1));
       }
     });

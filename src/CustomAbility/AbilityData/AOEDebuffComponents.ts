@@ -2435,7 +2435,7 @@ export const AOEDebuffComponents = [
     aoe: 250,
     keepCasting: false, 
     onlyAffectHeroes: true,
-    requireBuff: false,
+    requireBuff: true,
     buffId: Buffs.GRANOLAH_DEBUFF,
   },
   {

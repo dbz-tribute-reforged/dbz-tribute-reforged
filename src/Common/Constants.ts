@@ -11,6 +11,7 @@ export module Globals {
   export let isFreemode: boolean = false;
   export let isNightmare: boolean = false;
   export let isKOTH: boolean = false;
+  export let isFusionMode: boolean = false;
   export let numPVPKills: number = 0;
   export let clownValue: number = 0;
   export let showAbilityFloatingText: boolean = true;
@@ -114,7 +115,7 @@ export module Constants {
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
   export const creepHeavenHellHeroRespawnDelay: number = 15;
-  export const creepHeavenHellSpecialHeroRespawnDelay: number = 60;
+  export const creepHeavenHellSpecialHeroRespawnDelay: number = 40;
   export const sagaPlayerId = PLAYER_NEUTRAL_AGGRESSIVE;
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const neutralPassivePlayer: player = Player(PLAYER_NEUTRAL_PASSIVE);

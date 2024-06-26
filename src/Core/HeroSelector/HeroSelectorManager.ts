@@ -9,6 +9,7 @@ import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
 import { AbilityShop } from "Core/AbilityShop/AbilityShop";
 import { Frame, Trigger } from "w3ts";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class HeroSelectorManager {
   private static instance: HeroSelectorManager;
@@ -490,6 +491,26 @@ export class HeroSelectorManager {
       TournamentManager.getInstance().addKOTH(points);
       TournamentManager.getInstance().startTournament(Constants.KOTHName);
     }
+
+    if (Globals.isFusionMode) {
+      for (const player of Constants.activePlayers) {
+        if (
+          GetPlayerController(player) != MAP_CONTROL_USER
+          || GetPlayerSlotState(player) != PLAYER_SLOT_STATE_PLAYING
+        ) {
+          continue;
+        }
+
+        const playerId = GetPlayerId(player);
+        for (let i = 0; i < BlzGroupGetSize(udg_StatMultPlayerUnits[playerId]) && i < 1; ++i) {
+          const unit = BlzGroupUnitAt(udg_StatMultPlayerUnits[playerId], i);
+          if (UnitHelper.isUnitRealHero(unit)) {
+            const it = CreateItem(ItemConstants.potaraEarrings, GetUnitX(unit), GetUnitY(unit));
+            UnitAddItem(unit, it);
+          }
+        }
+      }
+    }
   }
 
 
@@ -508,6 +529,7 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-original", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-koth", false);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-fusion", false);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "rush", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "rrr", true);
     }
@@ -528,6 +550,11 @@ export class HeroSelectorManager {
 
       if (SubString(this.gameModeString, 0, 5) == "-koth") {
         this.modeKOTH();
+        return;
+      }
+
+      if (SubString(this.gameModeString, 0, 7) == "-fusion") {
+        this.modeFusion();
         return;
       }
 
@@ -713,6 +740,14 @@ export class HeroSelectorManager {
       (pStr == "" ? I2S(TournamentData.kothPointsToWin) : pStr) +
       "):|r" + 
       (Globals.isKOTH ? "|cff00ff00ON|r" : "|cffff2222OFF|r")
+    );
+  }
+
+  modeFusion() {
+    Globals.isFusionMode = !Globals.isFusionMode;
+    const str = Globals.isFusionMode ? "|cff00ff00ON" : "|cffff0000OFF";
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 1,
+      "|cff00ffffFusion Mode: " + str + "|r"
     );
   }
 

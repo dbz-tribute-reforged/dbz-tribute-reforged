@@ -1813,7 +1813,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 250,
     damageHeroes: true,
-    onlyDamageCapHeroes: true,
+    onlyDamageCapHeroes: false,
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
@@ -19315,7 +19315,7 @@ export const AOEDamageComponents = [
     maxManaBurnPercent: 0,
     maxManaLossPercent: 0,
     applyDamageOverTime: false,
-    requireBuff: false,
+    requireBuff: true,
     buffId: Buffs.GRANOLAH_DEBUFF,
   },
   // granolah final shot
@@ -19725,7 +19725,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 6,
+      multiplier: BASE_DMG.KAME_DPS * 8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

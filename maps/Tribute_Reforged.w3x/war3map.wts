@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100DBZ Tribute Reforged 2.0a
+|cffaf1100DBZ Tribute Reforged 2.0b
 }
 
 STRING 4
@@ -2084,13 +2084,13 @@ Dead Zone
 }
 
 STRING 331
-// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
+// Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 332
-// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
+// Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -3245,7 +3245,7 @@ Augment: Spell Power
 }
 
 STRING 514
-// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KQ (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -3254,7 +3254,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 515
-// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Scan for Androids), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -3280,10 +3280,33 @@ STRING 518
 Nicky
 }
 
+STRING 519
+// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
+{
+The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2000. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active but costs 75% less when not directly moving a hero. Can be cancelled by pressing S. If Tatsumaki is more than twice the max distance from the start or end point, the vector is cancelled.
+
+|cff88ffffMana Cost: 9% of Max Mana + 4% max mana/s|r
+|cff00ffffCooldown: 0s|r
+}
+
 STRING 520
 // Units: H02X (Makyo-seijin), Propernames (Proper Names)
 {
 Sansho
+}
+
+STRING 521
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 180% Blue + 180% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 180% Blue + 180% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
 }
 
 STRING 522
@@ -6080,7 +6103,7 @@ Transformations:
 [lvl 150] 2.10x "frieza"
 [lvl 200] 2.20x "golden" [Golden Frieza]
 [lvl 300] 2.30x "golden" [Mastered Golden Frieza]
-[lvl 400] 2.40x "black frieza" [50% Golden Mana Drain]
+[lvl 350] 2.40x "black frieza" [50% Golden Mana Drain]
 
 Frieza can modify his stat mult with [|cff00ff00D|r] Transform. 
 Gains Full Power 100% when less than 75% hp in Fourth Form. 
@@ -29228,13 +29251,13 @@ STRING 4508
 }
 
 STRING 4509
-// Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
+// Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 4510
-// Abilities: A0H7 (Scan for Androids), Tip (Tooltip - Normal)
+// Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -30759,7 +30782,7 @@ W
 }
 
 STRING 4756
-// Abilities: A0KQ (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -30858,7 +30881,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 4770
-// Abilities: A0H7 (Scan for Androids), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KQ (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -39134,6 +39157,20 @@ STRING 6058
 F
 }
 
+STRING 6059
+// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 180% Blue + 180% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
+Damage: [Int] 180% Blue + 180% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
 STRING 6060
 // Abilities: A0CY (Sample Pizza), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39200,6 +39237,15 @@ STRING 6070
 |cffffcc00D|rodon Ray
 }
 
+STRING 6071
+// Abilities: A13W (Domain Expansion: Unlimited Void), Ubertip (Tooltip - Normal - Extended)
+{
+Unlimited Void brings the user and their targets inside the Limitless itself. Boundless raw information floods into the target's mind, overwhelming them to the point where they're completely immobilized. Creates a 600 AOE barrier that continuously damages enemies. Every 2s, all enemies are stunned for 1s. Activating Black Flash inside Unlimited Void will cause it to instead hit all trapped enemies, however, the cooldown of Black Flash will not refresh. If Gojo leaves the Domain or becomes stunned the Domain Expansion will immediately dissipate and all trapped units will be released. Drains 2% of current mana per second. 
+
+|cff00ff00Damage: [Int] 100u/s + 2% of Current Mana/s
+|cff00ffffCooldown: <A13W,Cool1>s (120s)|r
+}
+
 STRING 6072
 // Abilities: A0IF (Transform - Mecha), Tip (Tooltip - Normal)
 {
@@ -39210,6 +39256,15 @@ STRING 6073
 // Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 6074
+// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
+{
+Launches a fast moving sword slash that deals damage in a line.
+
+|cff00ff00Damage: [Int] 100u x 8t + 800u
+|cff00ffffCooldown: <A145,Cool1>s|r
 }
 
 STRING 6075
@@ -39228,6 +39283,15 @@ STRING 6077
 // Units: E01A (At least 1 living clone), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 6078
+// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Launches a sword slash in a straight line that deals damage after a 1s delay. Then a second sword slash appears behind the first to deal damage after another 0.5s delay.
+
+|cff00ff00Damage: [Int] 1250u (+1250u)
+|cff00ffffCooldown: <A146,Cool1>s|r
 }
 
 STRING 6079
@@ -39296,6 +39360,14 @@ STRING 6089
 |cffffcc00D|rodon Ray
 }
 
+STRING 6090
+// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 40% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+|cffffff00Passively provides +20% cooldown reduction.|r
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
 STRING 6091
 // Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
 {
@@ -39306,6 +39378,14 @@ STRING 6092
 // Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 6093
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 40% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+|cffffff00Passively provides +20% cooldown reduction.|r
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
 }
 
 STRING 6094
@@ -43668,7 +43748,7 @@ STRING 6750
 }
 
 STRING 6751
-// Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
+// Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -45501,7 +45581,7 @@ STRING 7032
 }
 
 STRING 7033
-// Abilities: A0KQ (Supercharged Sensors), Tip (Tooltip - Normal)
+// Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -45523,7 +45603,7 @@ R
 }
 
 STRING 7036
-// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -45532,7 +45612,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 7037
-// Abilities: A0KQ (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -51695,13 +51775,13 @@ Summons a black hole that pulls enemies in and deals extra damage to those close
 }
 
 STRING 7985
-// Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
+// Abilities: A0Y9 (Supercharged Sensors), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 7986
-// Abilities: A0P8 (Absorption), Tip (Tooltip - Normal)
+// Abilities: A0Y9 (Supercharged Sensors), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -53521,15 +53601,6 @@ STRING 8262
 [|cff00ff00W|r] Cursed Technique Reversal: Red
 }
 
-STRING 8263
-// Abilities: A13W (Domain Expansion: Unlimited Void), Ubertip (Tooltip - Normal - Extended)
-{
-Unlimited Void brings the user and their targets inside the Limitless itself. Boundless raw information floods into the target's mind, overwhelming them to the point where they're completely immobilized. Creates a 600 AOE barrier that continuously damages enemies. Every 2s, all enemies are stunned for 1s. Activating Black Flash inside Unlimited Void will cause it to instead hit all trapped enemies, however, the cooldown of Black Flash will not refresh. If Gojo is stunned the Domain Expansion will immediately dissipate and all trapped units will be released. Drains 2% of current mana per second. 
-
-|cff00ff00Damage: [Int] 100u/s + 2% of Current Mana/s
-|cff00ffffCooldown: <A13W,Cool1>s (120s)|r
-}
-
 STRING 8264
 // Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -54463,7 +54534,7 @@ Deals lightning damage at the target location stunning enemies that are hit for 
 }
 
 STRING 8398
-// Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I0 (Reality Slash), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -54478,7 +54549,7 @@ E
 }
 
 STRING 8400
-// Abilities: A0P8 (Absorption), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -54517,7 +54588,7 @@ STRING 8405
 }
 
 STRING 8406
-// Abilities: A0Y9 (Supercharged Sensors), Tip (Tooltip - Normal)
+// Abilities: A0I0 (Reality Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -54550,7 +54621,7 @@ Leon shoots his pistol. Deals 100% bonus damage to |cffff8800staggered|r enemies
 }
 
 STRING 8411
-// Abilities: A0Y9 (Supercharged Sensors), Tip (Tooltip - Normal)
+// Abilities: A0I0 (Reality Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -54827,7 +54898,7 @@ After a brief channel kill all creeps in <A12I,Area1> AOE around the caster and 
 }
 
 STRING 8448
-// Abilities: A0I0 (Reality Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IQ (Black Hole), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -54872,7 +54943,7 @@ STRING 8454
 }
 
 STRING 8455
-// Abilities: A0Y9 (Supercharged Sensors), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I0 (Reality Slash), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -55545,13 +55616,13 @@ STRING 8539
 }
 
 STRING 8540
-// Abilities: A0I0 (Reality Slash), Tip (Tooltip - Normal)
+// Abilities: A0IQ (Black Hole), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 8541
-// Abilities: A0I0 (Reality Slash), Tip (Tooltip - Normal)
+// Abilities: A0IQ (Black Hole), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -55566,7 +55637,7 @@ Grabs the target's heart and crushes it to deal massive damage. Creeps are insta
 }
 
 STRING 8543
-// Abilities: A0IQ (Black Hole), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IT (Call Greater Thunder), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -55575,7 +55646,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 8544
-// Abilities: A0I0 (Reality Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IQ (Black Hole), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -55680,7 +55751,7 @@ STRING 8558
 }
 
 STRING 8559
-// Abilities: A0IQ (Black Hole), Tip (Tooltip - Normal)
+// Abilities: A0IT (Call Greater Thunder), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -55823,7 +55894,7 @@ STRING 8581
 }
 
 STRING 8582
-// Abilities: A0IQ (Black Hole), Tip (Tooltip - Normal)
+// Abilities: A0IT (Call Greater Thunder), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -55865,7 +55936,7 @@ STRING 8588
 }
 
 STRING 8589
-// Abilities: A0IT (Call Greater Thunder), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0J0 (Explode Mine), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -55886,7 +55957,7 @@ STRING 8591
 }
 
 STRING 8592
-// Abilities: A0IQ (Black Hole), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0IT (Call Greater Thunder), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -58041,7 +58112,7 @@ STRING 8906
 }
 
 STRING 8907
-// Abilities: A0IT (Call Greater Thunder), Tip (Tooltip - Normal)
+// Abilities: A0J0 (Explode Mine), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -58068,7 +58139,7 @@ Compresses all beams and enemy units in the target area to the center of the are
 }
 
 STRING 8911
-// Abilities: A0IT (Call Greater Thunder), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0J0 (Explode Mine), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -60234,13 +60305,13 @@ Goku Black's Fighting Style
 }
 
 STRING 9216
-// Abilities: A0IT (Call Greater Thunder), Tip (Tooltip - Normal)
+// Abilities: A0J0 (Explode Mine), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 9217
-// Abilities: A0J0 (Explode Mine), Tip (Tooltip - Normal)
+// Abilities: A0JY (Grasp Heart), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -60847,7 +60918,7 @@ E
 }
 
 STRING 9311
-// Abilities: A0J0 (Explode Mine), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JY (Grasp Heart), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -60894,7 +60965,7 @@ Roshi skillfully avoids incoming attacks by performing a handstand on his staff.
 }
 
 STRING 9318
-// Abilities: A0J0 (Explode Mine), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JY (Grasp Heart), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -60921,7 +60992,7 @@ STRING 9321
 }
 
 STRING 9322
-// Abilities: A0J0 (Explode Mine), Tip (Tooltip - Normal)
+// Abilities: A0JY (Grasp Heart), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -60933,7 +61004,7 @@ STRING 9323
 }
 
 STRING 9324
-// Abilities: A0JY (Grasp Heart), Tip (Tooltip - Normal)
+// Abilities: A0K5 (Energy Drain), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -65024,7 +65095,7 @@ Broly
 }
 
 STRING 9956
-// Abilities: A0JY (Grasp Heart), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K5 (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -65033,7 +65104,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 9957
-// Abilities: A0JY (Grasp Heart), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K5 (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -65692,13 +65763,13 @@ STRING 10060
 }
 
 STRING 10061
-// Abilities: A0JY (Grasp Heart), Tip (Tooltip - Normal)
+// Abilities: A0K5 (Energy Drain), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 10062
-// Abilities: A0K5 (Energy Drain), Tip (Tooltip - Normal)
+// Abilities: A0KN (Body of Effulgent Beryl), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -65957,7 +66028,7 @@ E
 }
 
 STRING 10106
-// Abilities: A0K5 (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KN (Body of Effulgent Beryl), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -66150,7 +66221,7 @@ For all your energy needs!
 }
 
 STRING 10134
-// Abilities: A0K5 (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KN (Body of Effulgent Beryl), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -66559,13 +66630,13 @@ F
 }
 
 STRING 10190
-// Abilities: A0K5 (Energy Drain), Tip (Tooltip - Normal)
+// Abilities: A0KN (Body of Effulgent Beryl), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 10191
-// Abilities: A0KN (Body of Effulgent Beryl), Tip (Tooltip - Normal)
+// Abilities: A0KZ (Greater Hardening), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -67281,7 +67352,7 @@ STRING 10293
 }
 
 STRING 10294
-// Abilities: A0KN (Body of Effulgent Beryl), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KZ (Greater Hardening), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -67389,7 +67460,7 @@ STRING 10309
 }
 
 STRING 10310
-// Abilities: A0KN (Body of Effulgent Beryl), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KZ (Greater Hardening), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -67521,7 +67592,7 @@ STRING 10329
 }
 
 STRING 10330
-// Abilities: A0KN (Body of Effulgent Beryl), Tip (Tooltip - Normal)
+// Abilities: A0KZ (Greater Hardening), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -69050,7 +69121,7 @@ King K Rool calls down a barrage of cannonballs in a line, dealing damage to uni
 }
 
 STRING 10557
-// Abilities: A0KZ (Greater Hardening), Tip (Tooltip - Normal)
+// Abilities: A11Y (Greater Magic Shield), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -69070,7 +69141,7 @@ Grasp Heart
 }
 
 STRING 10559
-// Abilities: A0KZ (Greater Hardening), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11Y (Greater Magic Shield), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -69079,7 +69150,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 10560
-// Abilities: A0KZ (Greater Hardening), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11Y (Greater Magic Shield), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -69716,7 +69787,7 @@ E
 }
 
 STRING 10656
-// Abilities: A0KZ (Greater Hardening), Tip (Tooltip - Normal)
+// Abilities: A11Y (Greater Magic Shield), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -72098,13 +72169,13 @@ STRING 11014
 }
 
 STRING 11015
-// Abilities: A11Y (Greater Magic Shield), Tip (Tooltip - Normal)
+// Abilities: A11Z (Greater Full Potential), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 11016
-// Abilities: A11Y (Greater Magic Shield), Tip (Tooltip - Normal)
+// Abilities: A11Z (Greater Full Potential), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -72735,7 +72806,7 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 11112
-// Abilities: A11Y (Greater Magic Shield), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11Z (Greater Full Potential), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -72855,7 +72926,7 @@ Raditz
 }
 
 STRING 11131
-// Abilities: A11Y (Greater Magic Shield), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A11Z (Greater Full Potential), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -74014,7 +74085,7 @@ E
 }
 
 STRING 11292
-// Abilities: A11Z (Greater Full Potential), Tip (Tooltip - Normal)
+// Abilities: A120 (Magic Boost), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -74029,7 +74100,7 @@ Increase mana regeneration by 25%.
 }
 
 STRING 11294
-// Abilities: A11Z (Greater Full Potential), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A120 (Magic Boost), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -74050,7 +74121,7 @@ Moro
 }
 
 STRING 11297
-// Abilities: A11Z (Greater Full Potential), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A120 (Magic Boost), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -74897,13 +74968,13 @@ STRING 11416
 }
 
 STRING 11417
-// Abilities: A11Z (Greater Full Potential), Tip (Tooltip - Normal)
+// Abilities: A120 (Magic Boost), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 11418
-// Abilities: A120 (Magic Boost), Tip (Tooltip - Normal)
+// Abilities: A121 (Penetrate Up), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -74923,7 +74994,7 @@ Gate
 }
 
 STRING 11420
-// Abilities: A120 (Magic Boost), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A121 (Penetrate Up), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -77289,7 +77360,7 @@ D
 }
 
 STRING 11767
-// Abilities: A120 (Magic Boost), Tip (Tooltip - Normal)
+// Abilities: A121 (Penetrate Up), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -77577,7 +77648,7 @@ Buu gets so angry he makes himself explode after a brief delay dealing damage to
 }
 
 STRING 11805
-// Abilities: A120 (Magic Boost), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A121 (Penetrate Up), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -77648,7 +77719,7 @@ old
 }
 
 STRING 11815
-// Abilities: A121 (Penetrate Up), Tip (Tooltip - Normal)
+// Abilities: A122 (Hold of Ribs), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -78454,7 +78525,7 @@ When activated, the next hero to damage Jiren will be countered. Jiren will tele
 }
 
 STRING 11934
-// Abilities: A121 (Penetrate Up), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A122 (Hold of Ribs), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -78535,7 +78606,7 @@ STRING 11946
 }
 
 STRING 11947
-// Abilities: A121 (Penetrate Up), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A122 (Hold of Ribs), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -80802,7 +80873,7 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12281
-// Abilities: A121 (Penetrate Up), Tip (Tooltip - Normal)
+// Abilities: A122 (Hold of Ribs), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -82019,7 +82090,7 @@ STRING 12445
 }
 
 STRING 12446
-// Abilities: A122 (Hold of Ribs), Tip (Tooltip - Normal)
+// Abilities: A123 (Wall of Skeleton), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -82039,7 +82110,7 @@ Penetrate Up
 }
 
 STRING 12448
-// Abilities: A122 (Hold of Ribs), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A123 (Wall of Skeleton), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -82048,7 +82119,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 12449
-// Abilities: A122 (Hold of Ribs), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A123 (Wall of Skeleton), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -82075,13 +82146,13 @@ Guardian Overseer
 }
 
 STRING 12453
-// Abilities: A122 (Hold of Ribs), Tip (Tooltip - Normal)
+// Abilities: A123 (Wall of Skeleton), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 12454
-// Abilities: A123 (Wall of Skeleton), Tip (Tooltip - Normal)
+// Abilities: A124 (Perfect Unknowable), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -82093,7 +82164,7 @@ Albedo
 }
 
 STRING 12456
-// Abilities: A123 (Wall of Skeleton), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -82102,7 +82173,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 12457
-// Abilities: A123 (Wall of Skeleton), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -82540,7 +82611,7 @@ STRING 12527
 }
 
 STRING 12528
-// Abilities: A123 (Wall of Skeleton), Tip (Tooltip - Normal)
+// Abilities: A124 (Perfect Unknowable), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -89640,19 +89711,19 @@ Sacred Water
 }
 
 STRING 13558
-// Abilities: A124 (Perfect Unknowable), Tip (Tooltip - Normal)
+// Abilities: A126 (Greater Teleportation), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 13559
-// Abilities: A124 (Perfect Unknowable), Tip (Tooltip - Normal)
+// Abilities: A126 (Greater Teleportation), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
 STRING 13560
-// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A126 (Greater Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -89661,7 +89732,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 13561
-// Abilities: A124 (Perfect Unknowable), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A126 (Greater Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -92272,7 +92343,7 @@ Gains +0.02x for each pride trooper on his team.
 }
 
 STRING 13905
-// Abilities: A126 (Greater Teleportation), Tip (Tooltip - Normal)
+// Abilities: A127 (Gate), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -113719,7 +113790,7 @@ A hero who has to catch and absorb neutral enemies to obtain multiplier. He has 
 }
 
 STRING 16889
-// Abilities: A126 (Greater Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A127 (Gate), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -113734,7 +113805,7 @@ F
 }
 
 STRING 16891
-// Abilities: A126 (Greater Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A127 (Gate), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -117225,7 +117296,7 @@ STRING 17368
 }
 
 STRING 17369
-// Abilities: A126 (Greater Teleportation), Tip (Tooltip - Normal)
+// Abilities: A127 (Gate), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -121428,7 +121499,7 @@ STRING 17962
 }
 
 STRING 17963
-// Abilities: A127 (Gate), Tip (Tooltip - Normal)
+// Abilities: A128 (Summon: Albedo), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -125196,7 +125267,7 @@ Each offensive spell cast by Schala will reduce her bonus multiplier by 30%.|r
 }
 
 STRING 18501
-// Abilities: A127 (Gate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -125205,7 +125276,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 18502
-// Abilities: A127 (Gate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -126883,13 +126954,13 @@ STRING 18743
 }
 
 STRING 18744
-// Abilities: A127 (Gate), Tip (Tooltip - Normal)
+// Abilities: A128 (Summon: Albedo), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 18745
-// Abilities: A128 (Summon: Albedo), Tip (Tooltip - Normal)
+// Abilities: A129 (Summon: Shalltear), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -126919,7 +126990,7 @@ Duration: 35s|r
 }
 
 STRING 18748
-// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -126952,19 +127023,19 @@ Duration: 35s|r
 }
 
 STRING 18752
-// Abilities: A129 (Summon: Shalltear), Tip (Tooltip - Normal)
+// Abilities: A12A (Summon: Demiurge), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
 
 STRING 18753
-// Abilities: A128 (Summon: Albedo), Tip (Tooltip - Normal)
+// Abilities: A129 (Summon: Shalltear), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 18754
-// Abilities: A12A (Summon: Demiurge), Tip (Tooltip - Normal)
+// Abilities: A12B (Summon: Pandora's Actor), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -126982,7 +127053,7 @@ Duration: 35s|r
 }
 
 STRING 18756
-// Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -126991,7 +127062,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 18757
-// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -127140,7 +127211,7 @@ STRING 18778
 }
 
 STRING 18779
-// Abilities: A129 (Summon: Shalltear), Tip (Tooltip - Normal)
+// Abilities: A12A (Summon: Demiurge), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -127251,7 +127322,7 @@ Dart dashes a short distance and slashes his enemies twice in quick succession. 
 }
 
 STRING 18793
-// Abilities: A12B (Summon: Pandora's Actor), Tip (Tooltip - Normal)
+// Abilities: A12G (The Goal of All Life is Death), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -127356,7 +127427,7 @@ Duration: 35s|r
 }
 
 STRING 18806
-// Abilities: A129 (Summon: Shalltear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -128112,7 +128183,7 @@ Book Eis Passives
 }
 
 STRING 18906
-// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -128810,7 +128881,7 @@ STRING 19002
 }
 
 STRING 19003
-// Abilities: A12A (Summon: Demiurge), Tip (Tooltip - Normal)
+// Abilities: A12B (Summon: Pandora's Actor), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -130012,7 +130083,7 @@ This unit is under the effects of |cffffff00Iron Defense|r; it has increased arm
 }
 
 STRING 19172
-// Abilities: A12G (The Goal of All Life is Death), Tip (Tooltip - Normal)
+// Abilities: A12H (Fallen Down), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -130761,7 +130832,7 @@ STRING 19277
 }
 
 STRING 19278
-// Abilities: A12B (Summon: Pandora's Actor), Tip (Tooltip - Normal)
+// Abilities: A12G (The Goal of All Life is Death), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -130777,7 +130848,7 @@ Super 17 places his hands forward and forms a sphere of deep black energy. It is
 }
 
 STRING 19280
-// Abilities: A12A (Summon: Demiurge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -130786,7 +130857,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 19281
-// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12G (The Goal of All Life is Death), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -132524,7 +132595,7 @@ Dart dashes back and forth slashing his opponents before slamming the area for m
 }
 
 STRING 19505
-// Abilities: A12B (Summon: Pandora's Actor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12G (The Goal of All Life is Death), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -132984,13 +133055,13 @@ STRING 19567
 }
 
 STRING 19568
-// Abilities: A12G (The Goal of All Life is Death), Tip (Tooltip - Normal)
+// Abilities: A12H (Fallen Down), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 19569
-// Abilities: A12H (Fallen Down), Tip (Tooltip - Normal)
+// Abilities: A12I (La Shub-Niggurath), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -133004,7 +133075,7 @@ Instantly teleport to the target location.
 }
 
 STRING 19571
-// Abilities: A12G (The Goal of All Life is Death), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12H (Fallen Down), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -133013,7 +133084,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 19572
-// Abilities: A12G (The Goal of All Life is Death), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12H (Fallen Down), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -135529,7 +135600,7 @@ Pecorine's Princess Sword - [|cffffcc00Level 15|r]
 }
 
 STRING 19929
-// Abilities: A12H (Fallen Down), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12I (La Shub-Niggurath), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -148749,13 +148820,13 @@ STRING 21745
 }
 
 STRING 21746
-// Abilities: A12H (Fallen Down), Tip (Tooltip - Normal)
+// Abilities: A12I (La Shub-Niggurath), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 21747
-// Abilities: A12I (La Shub-Niggurath), Tip (Tooltip - Normal)
+// Abilities: A12J (Wish Upon A Star), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -148773,7 +148844,7 @@ Pandora's Actor
 }
 
 STRING 21749
-// Abilities: A12H (Fallen Down), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12I (La Shub-Niggurath), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -148782,7 +148853,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 21750
-// Abilities: A12I (La Shub-Niggurath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12J (Wish Upon A Star), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -149485,13 +149556,13 @@ STRING 21841
 }
 
 STRING 21842
-// Abilities: A12I (La Shub-Niggurath), Tip (Tooltip - Normal)
+// Abilities: A12J (Wish Upon A Star), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 21843
-// Abilities: A12J (Wish Upon A Star), Tip (Tooltip - Normal)
+// Abilities: A12Q (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -149503,7 +149574,7 @@ STRING 21844
 }
 
 STRING 21845
-// Abilities: A12I (La Shub-Niggurath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12J (Wish Upon A Star), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -149512,7 +149583,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 21846
-// Abilities: A12J (Wish Upon A Star), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12Q (Time Stop), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -149649,7 +149720,7 @@ STRING 21866
 }
 
 STRING 21867
-// Abilities: A12J (Wish Upon A Star), Tip (Tooltip - Normal)
+// Abilities: A12Q (Time Stop), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
@@ -152255,7 +152326,7 @@ Duration: <A0EU,Dur1>
 }
 
 STRING 22157
-// Abilities: A12Q (Time Stop), Tip (Tooltip - Normal)
+// Abilities: A12S (Racial Skill: Resistance), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -152291,7 +152362,7 @@ STRING 22162
 }
 
 STRING 22163
-// Abilities: A12J (Wish Upon A Star), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12Q (Time Stop), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -152354,7 +152425,7 @@ STRING 22172
 }
 
 STRING 22173
-// Abilities: A12Q (Time Stop), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12S (Racial Skill: Resistance), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -152381,13 +152452,13 @@ STRING 22176
 }
 
 STRING 22177
-// Abilities: A12Q (Time Stop), Tip (Tooltip - Normal)
+// Abilities: A12S (Racial Skill: Resistance), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22178
-// Abilities: A12S (Racial Skill: Resistance), Tip (Tooltip - Normal)
+// Abilities: A137 (Einherjar), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -152514,7 +152585,7 @@ The unique skill of the Eclipse class: The Goal of All Life is Death is combined
 }
 
 STRING 22193
-// Abilities: A12Q (Time Stop), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12S (Racial Skill: Resistance), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -154886,7 +154957,7 @@ Cell Max blocks an incoming attack with his arm.
 }
 
 STRING 22453
-// Abilities: A12S (Racial Skill: Resistance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A137 (Einherjar), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -154913,13 +154984,13 @@ STRING 22456
 }
 
 STRING 22457
-// Abilities: A12S (Racial Skill: Resistance), Tip (Tooltip - Normal)
+// Abilities: A137 (Einherjar), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22458
-// Abilities: A137 (Einherjar), Tip (Tooltip - Normal)
+// Abilities: A138 (Valhalla), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -154931,7 +155002,7 @@ Soul Burn Demiurge Command
 }
 
 STRING 22460
-// Abilities: A12S (Racial Skill: Resistance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A137 (Einherjar), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156129,7 +156200,7 @@ Leon launches a high powered rocket at the target location. Nearby enemies are |
 }
 
 STRING 22594
-// Abilities: A137 (Einherjar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156330,13 +156401,13 @@ STRING 22624
 }
 
 STRING 22625
-// Abilities: A137 (Einherjar), Tip (Tooltip - Normal)
+// Abilities: A138 (Valhalla), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22626
-// Abilities: A138 (Valhalla), Tip (Tooltip - Normal)
+// Abilities: A13G (Jaldabaoth), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156348,7 +156419,7 @@ STRING 22627
 }
 
 STRING 22628
-// Abilities: A137 (Einherjar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156357,7 +156428,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 22629
-// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13G (Jaldabaoth), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156384,13 +156455,13 @@ STRING 22632
 }
 
 STRING 22633
-// Abilities: A138 (Valhalla), Tip (Tooltip - Normal)
+// Abilities: A13G (Jaldabaoth), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22634
-// Abilities: A13G (Jaldabaoth), Tip (Tooltip - Normal)
+// Abilities: A13H (Hellfire Mantle), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156402,7 +156473,7 @@ Racial Skill: Resistance
 }
 
 STRING 22636
-// Abilities: A138 (Valhalla), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13G (Jaldabaoth), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156411,7 +156482,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 22637
-// Abilities: A13G (Jaldabaoth), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156438,13 +156509,13 @@ STRING 22640
 }
 
 STRING 22641
-// Abilities: A13G (Jaldabaoth), Tip (Tooltip - Normal)
+// Abilities: A13S (Final Explosion), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22642
-// Abilities: A13H (Hellfire Mantle), Tip (Tooltip - Normal)
+// Abilities: A13S (Final Explosion), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156456,7 +156527,7 @@ STRING 22643
 }
 
 STRING 22644
-// Abilities: A13G (Jaldabaoth), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13S (Final Explosion), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156465,7 +156536,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 22645
-// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13S (Final Explosion), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156486,19 +156557,19 @@ Wish Upon A Star
 }
 
 STRING 22648
-// Abilities: A13S (Final Explosion), Tip (Tooltip - Normal)
-{
-[|cff00FF00D|r] Super Android 17
-}
-
-STRING 22649
 // Abilities: A13U (Ultimate Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
+STRING 22649
+// Abilities: A01I (Fifth Gate: Gate of Limit), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Super Android 17
+}
+
 STRING 22650
-// Abilities: A13S (Final Explosion), Tip (Tooltip - Normal)
+// Abilities: A13U (Ultimate Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156513,7 +156584,7 @@ Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
 }
 
 STRING 22652
-// Abilities: A13S (Final Explosion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156522,7 +156593,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 22653
-// Abilities: A13S (Final Explosion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156818,7 +156889,7 @@ Creates a bi-directional gate near the caster that teleports units to the target
 }
 
 STRING 22697
-// Abilities: A13U (Ultimate Charge), Tip (Tooltip - Normal)
+// Abilities: A01I (Fifth Gate: Gate of Limit), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156868,7 +156939,7 @@ Demiurge
 }
 
 STRING 22705
-// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01I (Fifth Gate: Gate of Limit), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156883,7 +156954,7 @@ STRING 22706
 }
 
 STRING 22707
-// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01I (Fifth Gate: Gate of Limit), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -156969,13 +157040,13 @@ STRING 22717
 }
 
 STRING 22718
-// Abilities: A01I (Fifth Gate: Gate of Limit), Tip (Tooltip - Normal)
+// Abilities: A01M (Sixth Gate: Gate of View), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 22719
-// Abilities: A01I (Fifth Gate: Gate of Limit), Tip (Tooltip - Normal)
+// Abilities: A01M (Sixth Gate: Gate of View), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -156989,7 +157060,7 @@ All enemies in 1200 AOE are stopped in time for 5s but they are invulnerable unt
 }
 
 STRING 22721
-// Abilities: A01I (Fifth Gate: Gate of Limit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01M (Sixth Gate: Gate of View), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -156998,7 +157069,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 22722
-// Abilities: A01I (Fifth Gate: Gate of Limit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01M (Sixth Gate: Gate of View), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -159306,13 +159377,13 @@ STRING 23037
 }
 
 STRING 23038
-// Abilities: A01M (Sixth Gate: Gate of View), Tip (Tooltip - Normal)
+// Abilities: A01O (Seventh Gate: Gate of Wonder), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 23039
-// Abilities: A01M (Sixth Gate: Gate of View), Tip (Tooltip - Normal)
+// Abilities: A01O (Seventh Gate: Gate of Wonder), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -159328,7 +159399,7 @@ Duration: <A0EU,Dur1>
 }
 
 STRING 23041
-// Abilities: A01M (Sixth Gate: Gate of View), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01O (Seventh Gate: Gate of Wonder), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -159337,7 +159408,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 23042
-// Abilities: A01M (Sixth Gate: Gate of View), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01O (Seventh Gate: Gate of Wonder), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -159364,13 +159435,13 @@ STRING 23045
 }
 
 STRING 23046
-// Abilities: A01O (Seventh Gate: Gate of Wonder), Tip (Tooltip - Normal)
+// Abilities: A01R (Eighth Gate: Gate of Death), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 23047
-// Abilities: A01O (Seventh Gate: Gate of Wonder), Tip (Tooltip - Normal)
+// Abilities: A01R (Eighth Gate: Gate of Death), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -159385,7 +159456,7 @@ The user leaps into the air with a kick as they fly towards the targetted area. 
 }
 
 STRING 23049
-// Abilities: A01O (Seventh Gate: Gate of Wonder), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -159394,7 +159465,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 23050
-// Abilities: A01O (Seventh Gate: Gate of Wonder), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -160525,13 +160596,13 @@ STRING 23202
 }
 
 STRING 23203
-// Abilities: A01R (Eighth Gate: Gate of Death), Tip (Tooltip - Normal)
+// Abilities: A05R (Vector), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 23204
-// Abilities: A01R (Eighth Gate: Gate of Death), Tip (Tooltip - Normal)
+// Abilities: A05L (Overcharge), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -160543,7 +160614,7 @@ STRING 23205
 }
 
 STRING 23206
-// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -160552,7 +160623,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 23207
-// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A05L (Overcharge), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -160585,7 +160656,7 @@ STRING 23211
 }
 
 STRING 23212
-// Abilities: A05L (Overcharge), Tip (Tooltip - Normal)
+// Abilities: A05R (Vector), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -160603,7 +160674,7 @@ STRING 23214
 }
 
 STRING 23215
-// Abilities: A05L (Overcharge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -161326,13 +161397,13 @@ A weak and useless hero that should not be picked by anyone.
 }
 
 STRING 23305
-// Abilities: A05R (Vector), Tip (Tooltip - Normal)
+// Abilities: A062 (Giant Spear), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 23306
-// Abilities: A05R (Vector), Tip (Tooltip - Normal)
+// Abilities: A062 (Giant Spear), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -161347,7 +161418,7 @@ Nappa powers up and opens his mouth to charge a energy sphere. Then, he fires th
 }
 
 STRING 23308
-// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -161356,7 +161427,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 23309
-// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -162038,13 +162109,13 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 23402
-// Abilities: A062 (Giant Spear), Tip (Tooltip - Normal)
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17
 }
 
 STRING 23403
-// Abilities: A062 (Giant Spear), Tip (Tooltip - Normal)
+// Abilities: A14W (Overcharge Off), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -162056,7 +162127,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 23405
-// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 has infinite energy, like his counterpart Android 17. For an even stronger upgrade, Super 17 can detect and absorb Android 18.
 
@@ -162065,7 +162136,7 @@ Super Android 17 has infinite energy, like his counterpart Android 17. For an ev
 }
 
 STRING 23406
-// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14W (Overcharge Off), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -165683,15 +165754,6 @@ STRING 23854
 [|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 10|r]
 }
 
-STRING 23855
-// Abilities: A145 (Plum Blossom Cleave), Ubertip (Tooltip - Normal - Extended)
-{
-Launches a fast moving sword slash that deals damage in a line.
-
-|cff00ff00Damage: [Int] 100u x 8t + 600u
-|cff00ffffCooldown: <A145,Cool1>s|r
-}
-
 STRING 23856
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -165729,15 +165791,6 @@ Gojo teleports all non-invulnerable allies within 500 AOE of himself to the targ
 
 |cff8888ffMana Cost: 1% of Current Mana per 100 units travelled.
 |cff00ffffCooldown: <A13Z,Cool1>s|r
-}
-
-STRING 23862
-// Abilities: A146 (Plum Blossom Tempest), Ubertip (Tooltip - Normal - Extended)
-{
-Launches a sword slash in a straight line that deals damage after a 1s delay. Then a second sword slash appears behind the first to deal damage after another 0.5s delay.
-
-|cff00ff00Damage: [Int] 1000u (+1000u)
-|cff00ffffCooldown: <A146,Cool1>s|r
 }
 
 STRING 23863
@@ -171686,7 +171739,7 @@ STRING 24654
 }
 
 STRING 24655
-// Abilities: A14W (Overcharge Off), Tip (Tooltip - Normal)
+// Abilities: A14X (Overcharge Flag), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -171714,7 +171767,7 @@ Drains 5% of max mana per second.
 }
 
 STRING 24658
-// Abilities: A14W (Overcharge Off), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A14X (Overcharge Flag), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -171753,7 +171806,7 @@ STRING 24663
 }
 
 STRING 24664
-// Abilities: A14X (Overcharge Flag), Tip (Tooltip - Normal)
+// Abilities: A15B (Fake Channel), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Super Android 17 (Absorbed 18)
 }
@@ -171781,7 +171834,7 @@ Drains 5% of max mana per second.
 }
 
 STRING 24667
-// Abilities: A14X (Overcharge Flag), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15B (Fake Channel), Ubertip (Tooltip - Normal - Extended)
 {
 Super Android 17 (absorbed 18) has infinite energy, like his counterpart Android 17. His upgraded components now allow him to detect all enemy heroes.
 
@@ -171880,15 +171933,6 @@ Tatsumaki infuses nearby debris with telekinetic energy turning them into explos
 
 |cff00ff00Damage: [Int] 500u (x3)
 |cff00ffffCooldown: <A05O,Cool2,.> seconds|r
-}
-
-STRING 24679
-// Abilities: A05R (Vector), Ubertip (Tooltip - Normal - Extended)
-{
-The first cast creates the starting point of a vector. The second cast creates the ending point of a vector. Any units between the two points will be moved from the start towards the end. The maximum distance of a vector is 2000. The speed applied to units inside the vector ranges from 165-1650ms and is inversely proportional to the length of the vector. Tatsumaki's beams travel faster than other units. Continuously drains mana when active but costs 75% less when not directly moving a hero. Can be cancelled by pressing S. 
-
-|cff88ffffMana Cost: 9% of Max Mana + 4% max mana/s|r
-|cff00ffffCooldown: 0s|r
 }
 
 STRING 24680
@@ -172089,14 +172133,6 @@ STRING 24702
 W
 }
 
-STRING 24703
-// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-Passively provides +20% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
-}
-
 STRING 24704
 {
 [|cffffcc00Unlock|r] |cff8844ddDark Final Flash|r
@@ -172278,14 +172314,6 @@ STRING 24728
 // Abilities: A151 (Vegeta Limit Breaker Armor Bonus), Name (Name)
 {
 Vegeta Limit Breaker Armor Bonus
-}
-
-STRING 24729
-// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
-{
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 33% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-Passively provides +20% cooldown reduction.
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
 }
 
 STRING 24730
@@ -172799,34 +172827,6 @@ Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced 
 
 |cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
 |cff00ffffCooldown: <A0DV,Cool2> seconds|r
-}
-
-STRING 24794
-// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
-{
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
-
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 160% Blue + 160% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
-}
-
-STRING 24795
-// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
-{
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10.
-
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 160% Blue + 160% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 160% Blue + 160% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
 }
 
 STRING 24796

@@ -673,7 +673,7 @@ export class SagaHeroAI {
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
     this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
-    if (acquireRange == Constants.sagaMaxAcquisitionRange) {
+    if (acquireRange >= Constants.sagaMaxAcquisitionRange) {
       GroupClear(this.nearbyEnemies);
       for (const player of Constants.activePlayers) {
         const playerId = GetPlayerId(player);
