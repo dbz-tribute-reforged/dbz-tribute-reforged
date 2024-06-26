@@ -53,7 +53,7 @@ export module SimpleSpellSystem {
   const gojoPurpleBeamSpeed = 50;
   const gojoPurpleKBRelativeSpeed = 20;
   const gojoPurpleLesserMPCostPct = 0.03 * 0.02;
-  const gojoPurpleBeamExistTicks = 40;
+  const gojoPurpleBeamExistTicks = 50;
   const gojoPurpleSoundStrings = [
     "Audio/Voice/Gojo/BlueCharge1.mp3",
     "Audio/Voice/Gojo/BlueFire1.mp3",
@@ -66,6 +66,7 @@ export module SimpleSpellSystem {
     1015,
     329,
   ];
+  const gojoPurpleCDRecoveryPct = 0.5;
   const gojoVoiceTick = 2;
 
   export function initialize () {
@@ -831,7 +832,7 @@ export module SimpleSpellSystem {
 
     startCooldown(dmg.target, Id.cheongMyeongReturnActive);
 
-    const manaToHealRatio = 0.33;
+    const manaToHealRatio = 0.4;
     const enemyHealPct = 0.5;
     const currentMana = GetUnitState(dmg.target, UNIT_STATE_MANA);
     const heal = manaToHealRatio * currentMana;
@@ -2547,6 +2548,8 @@ export module SimpleSpellSystem {
   }
 
   export function DDSLinkFusionDamage(dmg: DDSData) {
+    if (GetUnitAbilityLevel(dmg.target, Id.flagPotaraFusion) == 0) return;
+    
     const pairUnit = LoadUnitHandle(Globals.genericDDSHashtable, dmg.targetHandleId, FusionUnit.FUSION_PAIR_UNIT_KEY);
     if (pairUnit == null) return;
     const pairUnitId = GetHandleId(pairUnit);
@@ -9534,6 +9537,11 @@ export module SimpleSpellSystem {
           SetPlayerAbilityAvailable(player, Id.gojoPurplePassive, false);
           startCooldown(caster, Id.gojoPurpleActive);
 
+          BlzStartUnitAbilityCooldown(caster, Id.gojoBlueActive, 
+            gojoPurpleCDRecoveryPct * getCooldownDefault(caster, Id.gojoBlueActive));
+          BlzStartUnitAbilityCooldown(caster, Id.gojoRedActive, 
+            gojoPurpleCDRecoveryPct * getCooldownDefault(caster, Id.gojoRedActive));
+
           SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Gojo/Purple1.mp3", 1638);
         }
       });
@@ -10251,6 +10259,11 @@ export module SimpleSpellSystem {
       BlzSetSpecialEffectTimeScale(sfx4, 1.5);
       SaveEffectHandle(Globals.genericSpellHashtable, timerId, gojoPurpleBeamSfx4Key, sfx4);
       
+      BlzStartUnitAbilityCooldown(caster, Id.gojoBlueActive, 
+        gojoPurpleCDRecoveryPct * getCooldownDefault(caster, Id.gojoBlueActive));
+      BlzStartUnitAbilityCooldown(caster, Id.gojoRedActive, 
+        gojoPurpleCDRecoveryPct * getCooldownDefault(caster, Id.gojoRedActive));
+
       dmgGroup = CreateGroup();
       SaveGroupHandle(Globals.genericSpellHashtable, timerId, gojoPurpleDmgGroupKey, dmgGroup);
       
@@ -10959,7 +10972,7 @@ export module SimpleSpellSystem {
   }
 
   export function cheongMyeongTempestLoop() {
-    const dmgDataMult = BASE_DMG.KAME_DPS * 10;
+    const dmgDataMult = BASE_DMG.KAME_DPS * 12.5;
     const dmgAOE = 256;
     const speed = 100;
     const maxDist = 1280;

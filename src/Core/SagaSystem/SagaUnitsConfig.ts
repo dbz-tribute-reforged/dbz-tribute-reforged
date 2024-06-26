@@ -610,8 +610,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // buu saga
-    // ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-9000, 4600),
-    ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-3500, 21100),
+    ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-9000, 4600),
+    // ["Super Buu", new SagaUnit(FourCC("O006"), 100, 14000, 400, 13000, new Vector2D(-3500, 21100),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Buu.VANISHING_BALL,
@@ -921,8 +921,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // zen exhibition match
 
     // spawn inside babidi's ship
-    // ["Iwan", new SagaUnit(Id.iwan, 100, 1, 1, 1, new Vector2D(-3500, 21000),
-    ["Iwan", new SagaUnit(Id.iwan, 125, 1, 1, 1, new Vector2D(500, 7000),
+    ["Iwan", new SagaUnit(Id.iwan, 100, 1, 1, 1, new Vector2D(-3500, 21000),
+    // ["Iwan", new SagaUnit(Id.iwan, 125, 1, 1, 1, new Vector2D(500, 7000),
       [
         SagaAbilities.NuovaShenron.BURNING_ATTACK,
         SagaAbilities.Android13.NUKE,
@@ -931,8 +931,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
       ]
     )],
-    // ["Giin", new SagaUnit(Id.giin, 100, 1, 1, 1, new Vector2D(-3000, 21000),
-    ["Giin", new SagaUnit(Id.giin, 125, 1, 1, 1, new Vector2D(500, 6500),
+    ["Giin", new SagaUnit(Id.giin, 100, 1, 1, 1, new Vector2D(-3000, 21000),
+    // ["Giin", new SagaUnit(Id.giin, 125, 1, 1, 1, new Vector2D(500, 6500),
       [
         SagaAbilities.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
@@ -943,8 +943,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // spawn at lookout
-    // ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(-12300, 27700),
-    ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(2500, 8000),
+    ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(-12300, 27700),
+    // ["Mule", new SagaUnit(Id.mule, 100, 1, 1, 1, new Vector2D(2500, 8000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -954,8 +954,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
       ]
     )],
-    // ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(-12000, 27700),
-    ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(4000, 6000),
+    ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(-12000, 27700),
+    // ["Rumsshi", new SagaUnit(Id.rumsshi, 100, 1, 1, 1, new Vector2D(4000, 6000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Broly.PLANET_CRUSHER,
@@ -967,8 +967,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // spawns near kame house
-    // ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(22000, -10500),
-    ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(4500, 9500),
+    ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(22000, -10500),
+    // ["Quitela", new SagaUnit(Id.quitela, 75, 1, 1, 1, new Vector2D(4500, 9500),
       [
         SagaAbilities.Cell.MASENKO,
         SagaAbilities.Guldo.TELEKINESIS,
@@ -977,8 +977,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
       ]
     )],
-    // ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(22500, -10500),
-    ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(6000, 9500),
+    ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(22500, -10500),
+    // ["Sidra", new SagaUnit(Id.sidra, 75, 1, 1, 1, new Vector2D(6000, 9500),
       [
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -1024,9 +1024,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ]
     )],
 
-    // ice area
-    // ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(-12000, 10500),
-    ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(6000, 5000),
+    // top right ice area
+    ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(26000, 9000),
+    // ["Arak", new SagaUnit(Id.arak, 75, 1, 1, 1, new Vector2D(6000, 5000),
       [
         SagaAbilities.Hit.TIME_CAGE,
         SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
@@ -1037,8 +1037,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
       ]
     )],
-    // ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(-12500, 10500),
-    ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(5500, 5000),
+    ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(26000, 9500),
+    // ["Liquiir", new SagaUnit(Id.liquiir, 75, 1, 1, 1, new Vector2D(5500, 5000),
       [
         SagaAbilities.Hit.TIME_SKIP,
         SagaAbilities.Cooler.NOVA_CHARIOT,

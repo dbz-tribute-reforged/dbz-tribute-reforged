@@ -95,24 +95,26 @@ export class CreepManager {
 
     // princess snake
     x = CreateUnit(Constants.sagaPlayer, Id.princessSnake, -14800, 22200, 315);
-    SetHeroLevel(x, 20, false);
-    SetHeroStr(x, 2000, true);
-    SetHeroAgi(x, 2000, true);
-    SetHeroInt(x, 2000, true);
+    SetHeroLevel(x, 25, false);
+    SetHeroStr(x, 1000, true);
+    SetHeroAgi(x, 1000, true);
+    SetHeroInt(x, 1000, true);
     UnitAddAbility(x, Constants.evilFightingSkills);
 
+    // cell
     x = CreateUnit(Constants.sagaPlayer, Id.cellPerfect, -6000, 16200, 135);
-    SetHeroLevel(x, 20, false);
-    SetHeroStr(x, 2000, true);
-    SetHeroAgi(x, 2000, true);
-    SetHeroInt(x, 2000, true);
+    SetHeroLevel(x, 25, false);
+    SetHeroStr(x, 1000, true);
+    SetHeroAgi(x, 1000, true);
+    SetHeroInt(x, 1000, true);
     UnitAddAbility(x, Constants.evilFightingSkills);
 
+    // janemba
     x = CreateUnit(Constants.sagaPlayer, Id.janembaFat, -11000, 19600, 270);
-    SetHeroLevel(x, 40, false);
-    SetHeroStr(x, 5000, true);
-    SetHeroAgi(x, 5000, true);
-    SetHeroInt(x, 5000, true);
+    SetHeroLevel(x, 50, false);
+    SetHeroStr(x, 2500, true);
+    SetHeroAgi(x, 2500, true);
+    SetHeroInt(x, 2500, true);
     UnitAddAbility(x, Constants.evilFightingSkills);
 
     this.setupCreepPlayers();
@@ -300,7 +302,7 @@ export class CreepManager {
         }
       }
 
-      const statExp = lvl <= Constants.heavenHellMaxHeroLevel + 1 ? 1.06 : 1.12;
+      const statExp = lvl <= Constants.heavenHellMaxHeroLevel + 1 ? 1.06 : 1.15;
       SetHeroStr(oldCreep, Math.floor(GetHeroStr(oldCreep, false) * statExp + 60), false);
       SetHeroAgi(oldCreep, Math.floor(GetHeroAgi(oldCreep, false) * statExp + 60), false);
       SetHeroInt(oldCreep, Math.floor(GetHeroInt(oldCreep, false) * statExp + 60), false);

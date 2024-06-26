@@ -311,10 +311,15 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 if (uPlayerId == contestant.id
                   // && !contestant.hasUnit(unit)
                 ) {
-                  SetUnitX(unit, unitContestant.oldPosition.x);
-                  SetUnitY(unit, unitContestant.oldPosition.y);
-                  PauseUnit(unit, false);
-                  SetUnitInvulnerable(unit, false);
+                  if (IsUnitType(unit, UNIT_TYPE_SUMMONED)) {
+                    KillUnit(unit);
+                    RemoveUnit(unit);
+                  } else {
+                    SetUnitX(unit, unitContestant.oldPosition.x);
+                    SetUnitY(unit, unitContestant.oldPosition.y);
+                    PauseUnit(unit, false);
+                    SetUnitInvulnerable(unit, false);
+                  }
                 }
               });
               GroupClear(Globals.tmpUnitGroup2);

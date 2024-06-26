@@ -3269,7 +3269,16 @@ export function tatsumakiPassive(customHero: CustomHero) {
     const targetY = LoadReal(Globals.genericSpellHashtable, casterId, vectorYTargetKey);
     if (sourceX == 0 && sourceY == 0 && targetX == 0 && targetY == 0) return;
 
-    if (GetUnitManaPercent(customHero.unit) < vectorManaCostPct * 100) {
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(sourceX, sourceY);
+    Globals.tmpVector3.setPos(targetX, targetY);
+    const distToSource = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+    const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector3);
+    if (
+      GetUnitManaPercent(customHero.unit) < vectorManaCostPct * 100
+      || distToSource > maxDist * 2
+      || distToTarget > maxDist * 2
+    ) {
       SaveBoolean(Globals.genericSpellHashtable, casterId, vectorStop, true);
       return;
     }
