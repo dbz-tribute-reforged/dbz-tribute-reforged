@@ -28,7 +28,7 @@ function performBraveSword() {
         damagedGroup, 
         position.x, 
         position.y, 
-        ItemConstants.BIO_LAB_AOE, 
+        ItemConstants.BRAVE_SWORD_AOE, 
         null
       );
 
@@ -36,7 +36,8 @@ function performBraveSword() {
         const target = GetEnumUnit();
         if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
           const mana = GetUnitState(target, UNIT_STATE_MANA)
-          const newMana = mana - mana * ItemConstants.BRAVE_SWORD_MANA_LOSS;
+          const maxMana = GetUnitState(target, UNIT_STATE_MAX_MANA)
+          const newMana = mana - maxMana * ItemConstants.BRAVE_SWORD_MANA_LOSS;
           if (newMana > 1) {
             SetUnitState(target, UNIT_STATE_MANA, newMana);
           }

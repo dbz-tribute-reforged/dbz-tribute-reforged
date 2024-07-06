@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100DBZ Tribute Reforged 2.0b
+|cffaf1100DBZ Tribute Reforged 2.0c
 }
 
 STRING 4
@@ -3296,17 +3296,11 @@ Sansho
 }
 
 STRING 521
-// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+// Items: I006 (Broly's Shock Collar), Description (Description)
 {
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+|cffffff00Target enemy is silenced for 5s.|r
 
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 180% Blue + 180% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 180% Blue + 180% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
+|cff00ffffCooldown: 90s|r
 }
 
 STRING 522
@@ -4142,13 +4136,13 @@ Pan calls for her best friend, Giru, that helps her when needed. Giru has a powe
 }
 
 STRING 655
-// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Tatsumaki creates a giant spear that continously fuses together all rocks and telekinetic bombs within 800 AOE of the spear. The giant spear detonates on contact with enemy heroes dealing damage in 900 AOE. The damage dealt increases for each beam that was fused into it. The spear cannot move during the first 2s but afterwards can be moved by affecting the center of the spear.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Duration: 20s|r
-|cff00ff00Damage: [Int] 400u + 400u per beam|r
-|cff00ffffCooldown: <A062,Cool1,.>s|r
+|cffffcc00Evasion|r - <A0CW,DataD1,%>% 
+|cffffcc00Critical|r - <A0CW,DataA1>% 
+|cffffcc00Damage|r - <A0CW,DataB1,.> times
 }
 
 STRING 656
@@ -9158,12 +9152,13 @@ Schala channels for 1s and then transports nearby allies to the target location.
 }
 
 STRING 1419
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 3 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool3> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD2,%>% 
+|cffffcc00Critical|r - <A0CW,DataA2>% 
+|cffffcc00Damage|r - <A0CW,DataB2,.> times
 }
 
 STRING 1420
@@ -10708,16 +10703,13 @@ STRING 1642
 }
 
 STRING 1643
-// Abilities: A024 (Yagai: Night Guy), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Guy emits an enourmous amount of the red steam of blood to manifest a giant burning dragon, then he dashes forward with such speed that space becomes distorted, preventing enemies from escaping. The attack ends with a fatal kick that burns himself and his enemies to ash. Nearby enemies are slowed 25% for 3s.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cffff0000Warning: Damages the caster!
-|cffff2222Hard Cast Time: 3s
-|cff00ff00Duration: 7s
-|cff00ff00Damage Block: [Str] 3000u @ 80%
-|cff00ff00Damage: [Int] 500u/s + 5% max hp/s
-|cff00ffffCooldown: <A024,Cool10,.> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD3,%>% 
+|cffffcc00Critical|r - <A0CW,DataA3>% 
+|cffffcc00Damage|r - <A0CW,DataB3,.> times
 }
 
 STRING 1644
@@ -16200,12 +16192,13 @@ Guts' immense strength is imbued into each swing of ultra heavy sword |cffffcc00
 }
 
 STRING 2499
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 4 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool4> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD4,%>% 
+|cffffcc00Critical|r - <A0CW,DataA4>% 
+|cffffcc00Damage|r - <A0CW,DataB4,.> times
 }
 
 STRING 2500
@@ -16719,30 +16712,33 @@ An attack made up of the heavily condensed Negative Energy of the Dragon Balls a
 }
 
 STRING 2571
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 5 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool5> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD5,%>% 
+|cffffcc00Critical|r - <A0CW,DataA5>% 
+|cffffcc00Damage|r - <A0CW,DataB5,.> times
 }
 
 STRING 2572
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 6 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool6> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD6,%>% 
+|cffffcc00Critical|r - <A0CW,DataA6>% 
+|cffffcc00Damage|r - <A0CW,DataB6,.> times
 }
 
 STRING 2573
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 7 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool7> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD7,%>% 
+|cffffcc00Critical|r - <A0CW,DataA7>% 
+|cffffcc00Damage|r - <A0CW,DataB7,.> times
 }
 
 STRING 2574
@@ -16764,30 +16760,33 @@ E
 }
 
 STRING 2577
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 8 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool8> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD8,%>% 
+|cffffcc00Critical|r - <A0CW,DataA8>% 
+|cffffcc00Damage|r - <A0CW,DataB8,.> times
 }
 
 STRING 2578
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 9 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool9> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD9,%>% 
+|cffffcc00Critical|r - <A0CW,DataA9>% 
+|cffffcc00Damage|r - <A0CW,DataB9,.> times
 }
 
 STRING 2579
-// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 10 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
-|cff00ffffCooldown: <A081,Cool10> seconds|r
+|cffffcc00Evasion|r - <A0CW,DataD10,%>% 
+|cffffcc00Critical|r - <A0CW,DataA10>% 
+|cffffcc00Damage|r - <A0CW,DataB10,.> times
 }
 
 STRING 2580
@@ -16824,12 +16823,13 @@ Hirudegarn fires a barrage of flaming energy balls at his enemies that explode t
 }
 
 STRING 2584
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A083,Cool3,.>s|r
+|cffffcc00Evasion|r - <A0CW,DataD11,%>% 
+|cffffcc00Critical|r - <A0CW,DataA11>% 
+|cffffcc00Damage|r - <A0CW,DataB11,.> times
 }
 
 STRING 2585
@@ -17796,12 +17796,13 @@ D
 }
 
 STRING 2740
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A084,Cool4,.>s|r
+|cffffcc00Evasion|r - <A0CW,DataD12,%>% 
+|cffffcc00Critical|r - <A0CW,DataA12>% 
+|cffffcc00Damage|r - <A0CW,DataB12,.> times
 }
 
 STRING 2741
@@ -18171,13 +18172,11 @@ STRING 2798
 }
 
 STRING 2799
-// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
+// Items: I006 (Broly's Shock Collar), Ubertip (Tooltip - Extended)
 {
-The caster charges up and restores mana. Also restores health after channelling for 7s.
+|cffffff00Target enemy is silenced for 5s.|r
 
-|cffffff00Restores Agi/Int x 4% max mana per second.
-Restores Agi/Str x 1% max hp per second after 7s.
-|cff00ffffCooldown: 0.1s|r
+|cff00ffffCooldown: 90s|r
 }
 
 STRING 2800
@@ -19179,11 +19178,13 @@ W
 }
 
 STRING 2957
-// Items: I006 (Broly's Shock Collar), Description (Description)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Target enemy is slowed 25% and silenced for 5s.|r
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ffffCooldown: 90s|r
+|cffffcc00Evasion|r - <A0CW,DataD13,%>% 
+|cffffcc00Critical|r - <A0CW,DataA13>% 
+|cffffcc00Damage|r - <A0CW,DataB13,.> times
 }
 
 STRING 2958
@@ -20055,11 +20056,13 @@ R
 }
 
 STRING 3096
-// Items: I006 (Broly's Shock Collar), Ubertip (Tooltip - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Target enemy is slowed 25% and silenced for 5s.|r
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cff00ffffCooldown: 90s|r
+|cffffcc00Evasion|r - <A0CW,DataD14,%>% 
+|cffffcc00Critical|r - <A0CW,DataA14>% 
+|cffffcc00Damage|r - <A0CW,DataB14,.> times
 }
 
 STRING 3097
@@ -23915,22 +23918,13 @@ Current HP cannot exceed 33% of Max HP|r
 }
 
 STRING 3681
-// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-The Gate of Death increases its users power, durability and speed. A steam of blood is emitted from the user's pores creating a red aura around the user.
-Unlocks [|cff00ff00Q|r] Asa Kujaku: Morning Peacock.
-Unlocks [|cff00ff00W|r] Hirudora: Daytime Tiger.
-Unlocks [|cff00ff00E|r] Sekizo: Evening Elephant.
-Unlocks [|cff00ff00R|r] Yagai: Night Guy.
+Beerus' fights as one of the most powerful Gods of Destruction. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate.
 
-|cffffff00+0.2x stat mult
-+165ms
-+30 armor
-+16% stamina regen
-+600% HP regen
-Current HP cannot exceed 20% of Max HP|r
-|cff00ff00Duration: 30s|r
-|cff00ffffCooldown: <A01R,Cool1>s|r
+|cffffcc00Evasion|r - <A0CW,DataD15,%>% 
+|cffffcc00Critical|r - <A0CW,DataA15>% 
+|cffffcc00Damage|r - <A0CW,DataB15,.> times
 }
 
 STRING 3682
@@ -25607,53 +25601,36 @@ Hit travels forward in time a fraction of a second, striking the target unit and
 }
 
 STRING 3953
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+A hero with one extremely powerful spell: |cffff4422Explosion|r.
 
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+|cffff2222Explosion:|r Spells deal +20% Max HP damage.
+|cffffcc00Anime Protagonist:|r Gain +900 armor when chanelling spells.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cffFFcc00I|r|cff00FF00IIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 }
 
 STRING 3954
-// Abilities: A0FV (Flash Fist), Researchubertip (Tooltip - Learn - Extended)
+// Items: I03F (Brave Sword), Ubertip (Tooltip - Extended)
 {
-Hit releases an invisible wave of energy that deals damage to units struck. Deals bonus damage to enemies further than 800 units.
+|cffffff00+400 damage. 
+Reduces the mana of enemy units in 750 AOE by 2% of max mana per second.|r
 
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int] 150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 3955
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+// Items: I03F (Brave Sword), Description (Description)
 {
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+|cffffff00+400 damage. 
+Reduces the mana of enemy units in 750 AOE by 2% of max mana per second.|r
 
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool2,.>s|r
-}
-
-STRING 3956
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool3,.>s|r
-}
-
-STRING 3957
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool4,.>s|r
+|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 3958
@@ -25758,16 +25735,6 @@ STRING 3974
 [|cff00ff00W|r] Incineration Cannon - [|cffffcc00Level 5|r]
 }
 
-STRING 3975
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool5,.>s|r
-}
-
 STRING 3976
 {
 Type "r" to revert.
@@ -25851,12 +25818,13 @@ Namekians have developed their own fighting style. Most Namekians are healers, b
 }
 
 STRING 3986
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A085,Cool5,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
 }
 
 STRING 3987
@@ -28892,12 +28860,13 @@ Royal Slash
 }
 
 STRING 4460
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A086,Cool6,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
 }
 
 STRING 4461
@@ -28960,56 +28929,6 @@ STRING 4470
 // Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 4471
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool6,.>s|r
-}
-
-STRING 4472
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool7,.>s|r
-}
-
-STRING 4473
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool8,.>s|r
-}
-
-STRING 4474
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool9,.>s|r
-}
-
-STRING 4475
-// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
-{
-Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
-
-|cffffff00Costs 1 Time Skip charges.
-|cff00FF00Damage: [Int]150 x 3t + 4.5% Max HP (+150u)
-|cff00FFFFCooldown: <A0FV,Cool10,.>s|r
 }
 
 STRING 4476
@@ -29839,12 +29758,13 @@ Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy'
 }
 
 STRING 4602
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A087,Cool7,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
 }
 
 STRING 4603
@@ -33463,70 +33383,73 @@ Fleet-Footed
 }
 
 STRING 5199
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A088,Cool8,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
 }
 
 STRING 5200
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A089,Cool9,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
 }
 
 STRING 5201
-// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
-|cff00FFFFCooldown: <A0810,Cool10,.>s|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
 }
 
 STRING 5202
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cffff2020Channel Duration: <A0CP,Dur1> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool1> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
 }
 
 STRING 5203
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cffff2020Channel Duration: <A0CP,Dur2> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool2> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
 }
 
 STRING 5204
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cffff2020Channel Duration: <A0CP,Dur3> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool3> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool1,.> - <A0FM,Cool10,.> seconds|r
 }
 
 STRING 5205
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cffff2020Channel Duration: <A0CP,Dur4> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool4> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
 }
 
 STRING 5206
@@ -34444,12 +34367,13 @@ Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy'
 }
 
 STRING 5355
-// Abilities: A0QP (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Omega Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
-|cff00ff00Damage: [Int] 180u x 8t + 4.8% Max HP dmg
-|cff00ffffCooldown: <A0QP,Cool1> seconds|r
+|cffff0000Warning: Can damage the caster.
+|cff00ff00Damage: [Int] 2500u
+|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
 }
 
 STRING 5356
@@ -34482,12 +34406,16 @@ STRING 5360
 }
 
 STRING 5361
-// Abilities: A0QQ (Nova Star), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Omega Shenron charges a powerful flaming energy beam in his hands before unleashing it to deal devastating damage against his enemies.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cff00ff00Damage: [Int] 30u x 120t + 900u
-|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool3,.> seconds|r
 }
 
 STRING 5362
@@ -36586,13 +36514,16 @@ A hero that can gather gold to purchase clones, upgrades, and towers.
 }
 
 STRING 5687
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cffff2020Channel Duration: <A0CP,Dur5> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool5> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool4,.> seconds|r
 }
 
 STRING 5688
@@ -37708,16 +37639,6 @@ STRING 5845
 (Tavern)
 }
 
-STRING 5846
-// Abilities: A0CX (Sample Sushi), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus tries some sushi with too much wasabi.
-|cffffff00+66ms
-Restores 15% of max stamina|r
-|cff00ff00Duration: 15s
-|cff00FFFFCooldown: 30s|r
-}
-
 STRING 5847
 // Abilities: A0DG (God of Destruction's Wrath), Ubertip (Tooltip - Normal - Extended)
 {
@@ -38018,66 +37939,6 @@ Whis channels a symphony of destruction, that damages, silences and knocks back 
 |cff00ffffCooldown: <A0JO,Cool1>s
 }
 
-STRING 5881
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD1,%>% 
-|cffffcc00Critical|r - <A0CW,DataA1>% 
-|cffffcc00Damage|r - <A0CW,DataB1,.> times
-}
-
-STRING 5882
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD2,%>% 
-|cffffcc00Critical|r - <A0CW,DataA2>% 
-|cffffcc00Damage|r - <A0CW,DataB2,.> times
-}
-
-STRING 5883
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD3,%>% 
-|cffffcc00Critical|r - <A0CW,DataA3>% 
-|cffffcc00Damage|r - <A0CW,DataB3,.> times
-}
-
-STRING 5884
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD4,%>% 
-|cffffcc00Critical|r - <A0CW,DataA4>% 
-|cffffcc00Damage|r - <A0CW,DataB4,.> times
-}
-
-STRING 5885
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD5,%>% 
-|cffffcc00Critical|r - <A0CW,DataA5>% 
-|cffffcc00Damage|r - <A0CW,DataB5,.> times
-}
-
-STRING 5886
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD6,%>% 
-|cffffcc00Critical|r - <A0CW,DataA6>% 
-|cffffcc00Damage|r - <A0CW,DataB6,.> times
-}
-
 STRING 5887
 // Abilities: A0CW (God of Destruction), Tip (Tooltip - Normal)
 {
@@ -38168,30 +38029,10 @@ STRING 5901
 Beerus' Fighting Style - [|cffffcc00Level 15|r]
 }
 
-STRING 5902
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD7,%>% 
-|cffffcc00Critical|r - <A0CW,DataA7>% 
-|cffffcc00Damage|r - <A0CW,DataB7,.> times
-}
-
 STRING 5903
 // Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 5904
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD8,%>% 
-|cffffcc00Critical|r - <A0CW,DataA8>% 
-|cffffcc00Damage|r - <A0CW,DataB8,.> times
 }
 
 STRING 5905
@@ -38204,16 +38045,6 @@ STRING 5906
 // Abilities: A0CW (God of Destruction), Researchubertip (Tooltip - Learn - Extended)
 {
 Beerus is on a completely different level from any other fighter in the Universe. He can dodge attacks with ease and deal a large amount of damage.
-}
-
-STRING 5907
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD9,%>% 
-|cffffcc00Critical|r - <A0CW,DataA9>% 
-|cffffcc00Damage|r - <A0CW,DataB9,.> times
 }
 
 STRING 5908
@@ -38282,16 +38113,6 @@ STRING 5918
 |cffffcc00D|rodon Ray
 }
 
-STRING 5919
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD10,%>% 
-|cffffcc00Critical|r - <A0CW,DataA10>% 
-|cffffcc00Damage|r - <A0CW,DataB10,.> times
-}
-
 STRING 5920
 // Abilities: A0CX (Sample Sushi), Tip (Tooltip - Normal)
 {
@@ -38302,16 +38123,6 @@ STRING 5921
 // Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 5922
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD11,%>% 
-|cffffcc00Critical|r - <A0CW,DataA11>% 
-|cffffcc00Damage|r - <A0CW,DataB11,.> times
 }
 
 STRING 5923
@@ -38330,16 +38141,6 @@ STRING 5925
 // Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
-}
-
-STRING 5926
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD12,%>% 
-|cffffcc00Critical|r - <A0CW,DataA12>% 
-|cffffcc00Damage|r - <A0CW,DataB12,.> times
 }
 
 STRING 5927
@@ -38408,16 +38209,6 @@ STRING 5937
 |cffffcc00D|rodon Ray
 }
 
-STRING 5938
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD13,%>% 
-|cffffcc00Critical|r - <A0CW,DataA13>% 
-|cffffcc00Damage|r - <A0CW,DataB13,.> times
-}
-
 STRING 5939
 // Abilities: A0E1 (Transform - First), Tip (Tooltip - Normal)
 {
@@ -38428,16 +38219,6 @@ STRING 5940
 // Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 5941
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD14,%>% 
-|cffffcc00Critical|r - <A0CW,DataA14>% 
-|cffffcc00Damage|r - <A0CW,DataB14,.> times
 }
 
 STRING 5942
@@ -38456,16 +38237,6 @@ STRING 5944
 // Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 5945
-// Abilities: A0CW (God of Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus' fights as one of the most powerful Gods of Destruction but is also quite lazy. Passively grants +20% max stamina, +20% hp/mp/stamina regen rate, and -132 max movement speed.
-
-|cffffcc00Evasion|r - <A0CW,DataD15,%>% 
-|cffffcc00Critical|r - <A0CW,DataA15>% 
-|cffffcc00Damage|r - <A0CW,DataB15,.> times
 }
 
 STRING 5946
@@ -39158,17 +38929,11 @@ F
 }
 
 STRING 6059
-// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+// Items: I00E (Bebi's Crush), Description (Description)
 {
-This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+|cffffff00Target enemy is rooted for 2s.|r
 
-If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 110% Blue + 110% Red damage.
-If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 180% Blue + 180% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
-If this ability is on cooldown Blue and Red cannot fuse together.
-
-|cff00ff00Damage (Unstable): [Int] 110% Blue + 110% Red
-Damage: [Int] 180% Blue + 180% Red
-|cff00ffffCooldown: <A13V,Cool1>s|r
+|cff00ffffCooldown: 90s|r
 }
 
 STRING 6060
@@ -39361,11 +39126,11 @@ STRING 6089
 }
 
 STRING 6090
-// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Items: I00E (Bebi's Crush), Ubertip (Tooltip - Extended)
 {
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 40% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-|cffffff00Passively provides +20% cooldown reduction.|r
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+|cffffff00Target enemy is rooted for 2s.|r
+
+|cff00ffffCooldown: 90s|r
 }
 
 STRING 6091
@@ -39381,11 +39146,14 @@ E
 }
 
 STRING 6093
-// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
 {
-When off cooldown, the next instance of lethal damage is negated and Cheong Myeong and turns invulnerable for 3s and is prevented from acting. Afterwards, 40% of current mana is converted into health. The unit that killed Cheong Myeong also restores 50% of the amount healed.
-|cffffff00Passively provides +20% cooldown reduction.|r
-|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+Demiurge covers his body with hellfire, absorbing 25% of incoming damage with his mana. Periodically burns nearby enemies and inflicts |cffff8800Hellfire|r.
+
+|cff2080ffMana Cost: 1.5% max mana/s
+|cffffff00Spell Amp: +15%
+|cff00ff00Damage: [Int] 150u/s
+|cff00ffffCooldown: <A13H,Cool1>s
 }
 
 STRING 6094
@@ -39404,6 +39172,33 @@ STRING 6096
 // Units: H05U (Demon God), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 6097
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool1>s|r
+}
+
+STRING 6098
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool2>s|r
+}
+
+STRING 6099
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool3>s|r
 }
 
 STRING 6100
@@ -39633,6 +39428,24 @@ STRING 6137
 // Abilities: A0DE (Book Beerus Invul), Name (Name)
 {
 Book Beerus Invul
+}
+
+STRING 6138
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool4>s|r
+}
+
+STRING 6139
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool5>s|r
 }
 
 STRING 6140
@@ -40264,15 +40077,24 @@ Shoots a beam of negative energy from the fingertip.
 }
 
 STRING 6227
+// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ffff[Hyperbolic Time Chamber]|r
-Mr. Popo has repaired the Hyperbolic Time Chamber.
+Demiurge covers his body with hellfire, absorbing 25% of incoming damage with his mana. Periodically burns nearby enemies and inflicts |cffff8800Hellfire|r.
+
+|cff2080ffMana Cost: 1.5% max mana/s
+|cffffff00Spell Amp: +15%
+|cff00ff00Damage: [Int] 150u/s
+|cff00ffffCooldown: <A13H,Cool1>s
 }
 
 STRING 6228
+// Abilities: A062 (Giant Spear), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ffff[Hyperbolic Time Chamber]|r
-Mr. Popo has upgraded the Hyperbolic Time Chamber.
+Tatsumaki creates a giant spear that continously fuses together all rocks and telekinetic bombs within 800 AOE of the spear. The giant spear detonates on contact with enemy heroes dealing damage in 900 AOE. The damage dealt increases for each beam that was fused into it. The spear cannot move during the first 2s but afterwards can be moved by affecting the center of the spear.
+
+|cff00ff00Duration: 20s|r
+|cff00ff00Damage: [Int] 500u + 500u per beam|r
+|cff00ffffCooldown: <A062,Cool1,.>s|r
 }
 
 STRING 6229
@@ -44078,11 +43900,16 @@ R
 }
 
 STRING 6804
-// Items: I00E (Bebi's Crush), Description (Description)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Target enemy is rooted for 1s.|r
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cff00ffffCooldown: 90s|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool5,.> seconds|r
 }
 
 STRING 6805
@@ -47419,13 +47246,16 @@ Duration: <A0XI,Dur6>s
 }
 
 STRING 7307
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cffff2020Channel Duration: <A0CP,Dur6> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool6> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool6,.> seconds|r
 }
 
 STRING 7308
@@ -50049,9 +49879,9 @@ An ancient jewel of extraordinary magic and power. Collect all seven to have a w
 }
 
 STRING 7719
+// Buffs/Effects: B06I (), Buffubertip (Tooltip - Extended)
 {
-|cff00ffff[Hyperbolic Time Chamber]|r
-Mr. Popo has upgraded the Hyperbolic Time Chamber again.
+This unit has been hit by Bebi's Crush; it cannot move.
 }
 
 STRING 7720
@@ -51684,7 +51514,7 @@ Transformations:
 [lvl 200] 2.60x "fp" [unlocks Explosion 5]
 
 |cffff2222Explosion:|r Spells deal +20% Max HP damage.
-|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
+|cffffcc00Anime Protagonist:|r Gain +900 armor when chanelling spells.
 }
 
 STRING 7973
@@ -52683,9 +52513,11 @@ STRING 8121
 }
 
 STRING 8122
+// Items: I02E (Bio Lab Research), Description (Description)
 {
-|cff00ffff[Hyperbolic Time Chamber]|r
-Mr. Popo has perfected the Hyperbolic Time Chamber.
+|cffffff00Reduces the health of enemies in 750 AOE by 2.5% of their current health per second and prevents them from using items to regenerate over time.|r
+
+A sample of the substance |cffff8c00Bio Broly|r was covered in.
 }
 
 STRING 8123
@@ -53599,6 +53431,15 @@ STRING 8262
 // Abilities: A0OE (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Cursed Technique Reversal: Red
+}
+
+STRING 8263
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool6>s|r
 }
 
 STRING 8264
@@ -58767,11 +58608,16 @@ R
 }
 
 STRING 8988
-// Items: I00E (Bebi's Crush), Ubertip (Tooltip - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Target enemy is rooted for 1s.|r
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cff00ffffCooldown: 90s|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool7,.> seconds|r
 }
 
 STRING 8989
@@ -60773,13 +60619,16 @@ Revive - Original Respawn
 }
 
 STRING 9290
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cffff2020Channel Duration: <A0CP,Dur7> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool7> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool8,.> seconds|r
 }
 
 STRING 9291
@@ -64091,6 +63940,15 @@ STRING 9806
 [|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 10|r]
 }
 
+STRING 9807
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool7>s|r
+}
+
 STRING 9808
 // Abilities: A0Z1 (Kannon Fire), Researchhotkey (Hotkey - Learn)
 {
@@ -65571,6 +65429,15 @@ STRING 10029
 [|cffffff00D|r] Choose Ichigo
 }
 
+STRING 10030
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool8>s|r
+}
+
 STRING 10031
 // Units: H05L (Changling (Golden Final Form)), Name (Name)
 {
@@ -65988,6 +65855,15 @@ STRING 10098
 // Abilities: A11M (Special Beast Cannon), EditorSuffix (Editor Suffix)
 {
 (gohan)
+}
+
+STRING 10099
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool9>s|r
 }
 
 STRING 10100
@@ -66564,21 +66440,29 @@ STRING 10179
 }
 
 STRING 10180
-// Items: I03F (Brave Sword), Ubertip (Tooltip - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+400 damage. 
-Reduces the mana of nearby enemy units by 2% of current mana per second.|r
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cff999999"Sharp and Shiny!"|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool9,.> seconds|r
 }
 
 STRING 10181
-// Items: I03F (Brave Sword), Description (Description)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+400 damage. 
-Reduces the mana of nearby enemy units by 2% of current mana per second.|r
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cff999999"Sharp and Shiny!"|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool10,.> seconds|r
 }
 
 STRING 10182
@@ -67152,9 +67036,16 @@ Bebi's Crush
 }
 
 STRING 10266
-// Buffs/Effects: B06I (), Buffubertip (Tooltip - Extended)
+// Abilities: A0FX (Bow), Researchubertip (Tooltip - Learn - Extended)
 {
-This unit has been hit by Bebi's Crush; it cannot move and takes damage over time.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
+
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool1,.> - <A0FX,Cool10,.> seconds|r
 }
 
 STRING 10267
@@ -69504,13 +69395,16 @@ Can type "upg" to convert half your stat multiplier above 2.00x into bonus base 
 }
 
 STRING 10611
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cffff2020Channel Duration: <A0CP,Dur8> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool8> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool2,.> seconds|r
 }
 
 STRING 10612
@@ -69767,7 +69661,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 21 June 2024
+This map is under active development - 7 July 2024
 }
 
 STRING 10653
@@ -75299,13 +75193,16 @@ STRING 11458
 }
 
 STRING 11459
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link knocks an arrow into his bow and aims it at his target. While aiming, movement speed is reduced to 100ms. Deals +100% damage after 2s of aiming. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory. Unlocks [|cff00ff00R|r] Shoot to fire the arrow.
 
-|cffff2020Channel Duration: <A0CP,Dur9> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool9> seconds|r
+|cff00ff00Normal Arrow: [Int] 1000u
+Fire Arrow: 3% max HP for 5s
+Ice Arrow: [Int] 600u (Stun + Slow)
+Lightning Arrow: [Int] 400u (Stun + Mana Drain)
+Bomb Arrow: [Int] 600u (AOE detonation)
+|cff00ffffCooldown: <A0FX,Cool1,.> seconds|r
 }
 
 STRING 11460
@@ -75315,13 +75212,11 @@ Power Level Sharing
 }
 
 STRING 11461
-// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GB (Normal Arrow), Ubertip (Tooltip - Normal - Extended)
 {
-Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+Link selects to use his normal arrow with no special effects. Has increased speed.
 
-|cffff2020Channel Duration: <A0CP,Dur10> seconds|r
-|cff00ff00Damage: [Int] 24u x 120t + 500u
-|cff00ffffCooldown: <A0CP,Cool10> seconds|r
+|cff00ff00Damage: [Int] 1000u|r
 }
 
 STRING 11462
@@ -82326,7 +82221,7 @@ STRING 12481
 }
 
 STRING 12482
-// Abilities: A0OM (Summon Blast-o-Matic), EditorSuffix (Editor Suffix)
+// Abilities: A0IW (Kharge), EditorSuffix (Editor Suffix)
 {
 (king k rool)
 }
@@ -82365,7 +82260,7 @@ STRING 12487
 }
 
 STRING 12488
-// Abilities: A0OT (Belly Armor), EditorSuffix (Editor Suffix)
+// Abilities: A0IX (Monkey Smasher), EditorSuffix (Editor Suffix)
 {
 (king k rool)
 }
@@ -82527,7 +82422,7 @@ Zamasu charges towards the targetted location dealing damage to any enemy he com
 }
 
 STRING 12514
-// Abilities: A0OU (Blast-o-Matic), EditorSuffix (Editor Suffix)
+// Abilities: A0OM (Summon Blast-o-Matic), EditorSuffix (Editor Suffix)
 {
 (king k rool)
 }
@@ -82563,7 +82458,7 @@ Perfect Unknowable
 }
 
 STRING 12520
-// Abilities: A0OV (King's Throne), EditorSuffix (Editor Suffix)
+// Abilities: A0OT (Belly Armor), EditorSuffix (Editor Suffix)
 {
 (king k rool)
 }
@@ -85947,24 +85842,19 @@ Sacred Water
 }
 
 STRING 13004
-// Abilities: A020 (Asa Kujaku: Morning Peacock), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GE (Ice Arrow), Ubertip (Tooltip - Normal - Extended)
 {
-Guy throws out multiple rapid fire punches in the target area for 3s.
+Link selects to use his ice arrows that freezes enemies for 0.5s and afflicts them with |cff0088ffFrostbite|r slowing them by <A0P5,DataA1,%>% for <A0P5,Dur1>s.
 
-|cffff2222Costs 8% of Max HP
-|cff00ff00Damage: [Int] 1100u/s
-|cff00ffffCooldown: <A020,Cool10,.> seconds|r
+|cff00ff00Damage: [Int] 600u|r
 }
 
 STRING 13005
-// Abilities: A021 (Hirudora: Daytime Tiger), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GF (Lightning Arrow), Ubertip (Tooltip - Normal - Extended)
 {
-Guy launches air pressure through a tiger-shaped hand seal to create a giant vacuum of wind that pulls enemies along with it before detonating for massive damage.
+Link selects to use his lightning arrows that stun enemies for 1s and drain 20% of their max mana.
 
-|cffff2222Costs 10% of Max HP
-Channel Duration: 1s
-|cff00ff00Damage: [Int] 100u x 8t + 1200u
-|cff00ffffCooldown: <A021,Cool10,.> seconds|r
+|cff00ff00Damage: [Int] 400u
 }
 
 STRING 13006
@@ -85986,15 +85876,11 @@ STRING 13008
 }
 
 STRING 13009
-// Abilities: A023 (Sekizo: Evening Elephant), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H2 (Bomb Arrow), Ubertip (Tooltip - Normal - Extended)
 {
-Guy launches an extremely powerful punch that creates a cannon of pressurised air bearing the appearance of an elephant's leg. The column of pressure traps enemies inside it, slowing them by 90% for 3s.
+Link selects to use his bomb arrows that deals explosive AOE damage to enemies at the targetted location.
 
-|cffff2222Costs 8% of Max HP
-|cff00ff00Damage: [Int] 600u x 2t
-|cff00ffffCooldown: <A023,Cool10,.> seconds|r
-
-|cff888888Guy's Sekizo was powerful enough to shatter a truth-seeking orb.
+|cff00ff00Damage: [Int] 600u
 }
 
 STRING 13010
@@ -91752,6 +91638,15 @@ Mario throws a fireball to burn his enemies.
 |cff00ffffCooldown: <A0YX,Cool2,.> seconds|r
 }
 
+STRING 13825
+// Abilities: A0DF (Cataclysmic Orb), Researchubertip (Tooltip - Learn - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool1> - <A0DF,Cool10>s|r
+}
+
 STRING 13826
 // Units: H032 (Mountain King), Name (Name)
 {
@@ -91768,6 +91663,15 @@ STRING 13828
 // Units: H02G (Superhero Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Goku
+}
+
+STRING 13829
+// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 5% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+
+|cff00FF00Damage: [Int] 300u (+5% Beerus Current Mana) (x2)|r
+|cff00FFFFCooldown: <A0DF,Cool10>s|r
 }
 
 STRING 13830
@@ -91804,6 +91708,20 @@ STRING 13835
 // Units: H02H (Superhero Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Goku
+}
+
+STRING 13836
+// Abilities: A0YQ (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 100% Blue + 100% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 150% Blue + 150% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 100% Blue + 100% Red
+Damage: [Int] 150% Blue + 150% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
 }
 
 STRING 13837
@@ -118055,18 +117973,6 @@ STRING 17460
 [|cff00ff00Q|r] Galick Gun - [|cffffcc00Level 3|r]
 }
 
-STRING 17461
-// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
-{
-Hit develops improved skills and techniques by fighting stronger enemies.
-|cffffff00+0.1x stat mult
-+5% spell amp per second up to +15%
-x1.12 restore rate of time skip charges (multiplicative)
-+1 time skip charge (cannot exceed max)|r
-|cff00FF00Duration: <A0TH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
-}
-
 STRING 17462
 // Abilities: A13N (Galick Gun), Tip (Tooltip - Normal)
 {
@@ -125152,7 +125058,7 @@ STRING 18481
 STRING 18482
 {
 [|cffffcc00Talent|r] Turboshot
-Attack rate greatly increased.
+Base attack time set to 1.3
 }
 
 STRING 18483
@@ -126505,22 +126411,6 @@ Dart spins his blade at maximum speed, dealing damage to enemies as he moves.
 |cff00FFFFCooldown: <A0US,Cool9,.>s|r
 }
 
-STRING 18681
-// Abilities: A0GE (Ice Arrow), Ubertip (Tooltip - Normal - Extended)
-{
-Link selects to use his ice arrows that freezes enemies for 0.5s and afflicts them with |cff0088ffFrostbite|r slowing them by <A0P5,DataA1,%>% for <A0P5,Dur1>s.
-
-|cff00ff00Damage: [Int] 800u|r
-}
-
-STRING 18682
-// Abilities: A0GF (Lightning Arrow), Ubertip (Tooltip - Normal - Extended)
-{
-Link selects to use his lightning arrows that stun enemies for 1s and drain 20% of their max mana.
-
-|cff00ff00Damage: [Int] 600u
-}
-
 STRING 18683
 // Abilities: A0HQ (Sword Damage 1), EditorSuffix (Editor Suffix)
 {
@@ -126534,14 +126424,6 @@ Have Shenron increase your hero's power.
 |cffffff00Before 20 mins: +100 base stats / +5 lvls
 After 20 mins: +200 base stats / +10 lvls
 After 30 mins: +300 base stats / +15 lvls
-}
-
-STRING 18685
-// Abilities: A0H2 (Bomb Arrow), Ubertip (Tooltip - Normal - Extended)
-{
-Link selects to use his bomb arrows that deals explosive AOE damage to enemies at the targetted location.
-
-|cff00ff00Damage: [Int] 800u
 }
 
 STRING 18686
@@ -130971,21 +130853,6 @@ Increases AGI.
 0.25x Blight/Rocky/City
 }
 
-STRING 19294
-// Units: H00L (|cffff4422Arch-Wizard|r), Ubertip (Tooltip - Extended)
-{
-A hero with one extremely powerful spell: |cffff4422Explosion|r.
-
-|cffff2222Explosion:|r Spells deal +20% Max HP damage.
-|cffffcc00Anime Protagonist:|r Gain +600 armor when chanelling spells.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cffFFcc00I|r|cff00FF00IIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-}
-
 STRING 19295
 {
 Siege attacks deal 100% damage to all armor types.
@@ -131434,7 +131301,7 @@ Super 17 places his hands forward and forms a sphere of deep black energy. It is
 }
 
 STRING 19353
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131444,7 +131311,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19354
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131454,7 +131321,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19355
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131464,7 +131331,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19356
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131474,7 +131341,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19357
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131484,7 +131351,7 @@ Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thro
 }
 
 STRING 19358
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131590,7 +131457,7 @@ F
 }
 
 STRING 19370
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131618,7 +131485,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 19373
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -131981,7 +131848,7 @@ Empowered Protect
 }
 
 STRING 19426
-// Abilities: A0FM (Bomb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -135341,7 +135208,7 @@ STRING 19893
 }
 
 STRING 19894
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -137782,7 +137649,7 @@ STRING 20242
 }
 
 STRING 20243
-// Abilities: A0FM (Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
 
@@ -137825,16 +137692,6 @@ STRING 20249
 // Abilities: A0ZJ (Spin Dash), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Spin Dash - [|cffffcc00Level 9|r]
-}
-
-STRING 20250
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool3,.> seconds|r
 }
 
 STRING 20251
@@ -139042,16 +138899,6 @@ STRING 20414
 // Abilities: A101 (Super Warehousing), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Super Warehousing - [|cffffcc00Level 3|r]
-}
-
-STRING 20415
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool4,.> seconds|r
 }
 
 STRING 20416
@@ -142615,16 +142462,6 @@ STRING 20888
 [|cff00ff00Q|r] Galick Gun - [|cffffcc00Level 8|r]
 }
 
-STRING 20889
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool5,.> seconds|r
-}
-
 STRING 20890
 // Abilities: A0K0 (Cursed Technique Lapse: Blue), Tip (Tooltip - Normal)
 {
@@ -142911,26 +142748,6 @@ STRING 20933
 [|cff00ff00W|r] |cffffff00Hiraishin no Jutsu: First Flash|r - [|cffffcc00Level 3|r]
 }
 
-STRING 20934
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool6,.> seconds|r
-}
-
-STRING 20935
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool7,.> seconds|r
-}
-
 STRING 20936
 // Items: I00N (Zeno's Button), Ubertip (Tooltip - Extended)
 {
@@ -142991,30 +142808,10 @@ The user charges with one hand behind the other above the head. The hands are th
 |cff00ffffCooldown: <A0GD,Cool1> seconds|r
 }
 
-STRING 20945
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool8,.> seconds|r
-}
-
 STRING 20946
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
 Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 2200|r|n|cff00FFFFCooldown: <A0LL,Cool3> seconds|r
-}
-
-STRING 20947
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool9,.> seconds|r
 }
 
 STRING 20948
@@ -143100,16 +142897,6 @@ STRING 20958
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
 Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 2000|r|n|cff00FFFFCooldown: <A0LL,Cool2> seconds|r
-}
-
-STRING 20959
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool10,.> seconds|r
 }
 
 STRING 20960
@@ -143592,36 +143379,6 @@ STRING 21033
 // Abilities: A0CC (Emergency Cloning), EditorSuffix (Editor Suffix)
 {
 (geti star)
-}
-
-STRING 21034
-// Abilities: A0FN (Throw Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool1,.> - <A0FM,Cool10,.> seconds|r
-}
-
-STRING 21035
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool2,.> seconds|r
-}
-
-STRING 21036
-// Abilities: A0FN (Throw Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Link pulls out and ignites a bomb that will detonate in 3s. The bomb can be thrown with [|cff00ff00E|r] Throw Bomb.
-
-|cffff0000Warning: Can damage the caster.
-|cff00ff00Damage: [Int] 3000u
-|cff00ffffCooldown: <A0FM,Cool1,.> seconds|r
 }
 
 STRING 21037
@@ -146800,19 +146557,6 @@ Frieza fires an immensely powerful golden energy wave at the target.
 |cff00ffffCooldown: <A0QE,Cool5> seconds|r
 }
 
-STRING 21463
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool3,.> seconds|r
-}
-
 STRING 21464
 // Abilities: A0QE (Golden Death Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -148267,58 +148011,6 @@ The user raises his right hand with his index and middle fingers up. Then, he br
 |cff00ffffCooldown: <A0MJ,Cool1> seconds|r
 }
 
-STRING 21677
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool4,.> seconds|r
-}
-
-STRING 21678
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool5,.> seconds|r
-}
-
-STRING 21679
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool6,.> seconds|r
-}
-
-STRING 21680
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool7,.> seconds|r
-}
-
 STRING 21681
 // Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
@@ -148331,47 +148023,8 @@ STRING 21682
 Debuff Stun Bob-omb
 }
 
-STRING 21683
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool8,.> seconds|r
-}
-
-STRING 21684
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool9,.> seconds|r
-}
-
-STRING 21685
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool10,.> seconds|r
-}
-
 STRING 21686
-// Abilities: A0FX (Bow), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A15C (Bow Shoot), Researchubertip (Tooltip - Learn - Extended)
 {
 Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
 
@@ -148381,40 +148034,6 @@ Ice Arrow: [Int] 800u (Stun + Slow)
 Lightning Arrow: [Int] 600u (Stun + Mana Drain)
 Bomb Arrow: [Int] 800u (AOE detonation)
 |cff00ffffCooldown: <A0FX,Cool1,.> - <A0FX,Cool10,.> seconds|r
-}
-
-STRING 21687
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool2,.> seconds|r
-}
-
-STRING 21688
-// Abilities: A0FX (Bow), Ubertip (Tooltip - Normal - Extended)
-{
-Link fires an arrow with his trusty bow. The arrow can be infused with special properties from [|cff00ff00F|r] Inventory.
-
-|cff00ff00Normal Arrow: [Int] 1200u
-Fire Arrow: 3% max HP for 5s
-Ice Arrow: [Int] 800u (Stun + Slow)
-Lightning Arrow: [Int] 600u (Stun + Mana Drain)
-Bomb Arrow: [Int] 800u (AOE detonation)
-|cff00ffffCooldown: <A0FX,Cool1,.> seconds|r
-}
-
-STRING 21689
-// Abilities: A0GB (Normal Arrow), Ubertip (Tooltip - Normal - Extended)
-{
-Link selects to use his normal arrow with no special effects. Has increased speed.
-
-|cff00ff00Damage: [Int] 1200u|r
 }
 
 STRING 21690
@@ -152629,6 +152248,20 @@ STRING 22199
 R
 }
 
+STRING 22200
+// Abilities: A13V (Hollow Technique: Purple), Ubertip (Tooltip - Normal - Extended)
+{
+This technique brings the concepts of motion and reversal into reality. Hollow Technique: Purple is created when applying the repulsive forces of Red with the attractive forces of Blue. These violent forces annihilate anything it comes into contact with, ripping apart matter at the molecular scale. This ability is always at level 10. Sets the cooldown of Red and Blue to 50% of their usual cooldown.
+
+If Six Eyes is deactivated, the collision between Blue and Red forms an unstable Hollow Technique: Purple that drains 2% of Gojo's max mana per second and causes the ability to only deal 100% Blue + 100% Red damage.
+If Six Eyes is activated, the Hollow Technique: Purple will be stable and deal 150% Blue + 150% Red damage. If Red and Blue are charging while Six Eyes is activated, the Blue and Red will automatically collide before the beams are launched.
+If this ability is on cooldown Blue and Red cannot fuse together.
+
+|cff00ff00Damage (Unstable): [Int] 100% Blue + 100% Red
+Damage: [Int] 150% Blue + 150% Red
+|cff00ffffCooldown: <A13V,Cool1>s|r
+}
+
 STRING 22201
 {
 [|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r
@@ -153385,7 +153018,7 @@ Dart summons the Red-Eyed Dragon causing a massive explosion in the target area.
 }
 
 STRING 22280
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A15C (Bow Shoot), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -153400,102 +153033,6 @@ STRING 22282
 // Upgrades: R00M (Cannibalize), Hotkey (Hotkey)
 {
 F
-}
-
-STRING 22283
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur1>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool1,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22284
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur2>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool2,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22285
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur3>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool3,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22286
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur4>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool4,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22287
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur5>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool5,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22288
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur6>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool6,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22289
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur7>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool7,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22290
-// Abilities: A0HG (Max Block), Researchubertip (Tooltip - Learn - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur1>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool1,.> - <A0HG,Cool10,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
 }
 
 STRING 22291
@@ -154920,42 +154457,6 @@ Frog stretches his tongue out and licks himself and nearby allies to heal them. 
 |cff00ffffCooldown: <A0WB,Cool10> seconds|r
 }
 
-STRING 22450
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur8>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool8,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22451
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur9>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool9,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
-STRING 22452
-// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
-{
-Cell Max blocks an incoming attack with his arm.
-
-|cffff0000Channel Duration: <A0HG,Dur10>s
-|cff00ff00Damage Block: [Str] 80% @ 4000u
-|cff00FFFFCooldown: <A0HG,Cool10,.>s|r
-
-|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
-}
-
 STRING 22453
 // Abilities: A137 (Einherjar), Ubertip (Tooltip - Normal - Extended)
 {
@@ -156243,7 +155744,7 @@ STRING 22599
 }
 
 STRING 22600
-// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A15C (Bow Shoot), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -156575,12 +156076,11 @@ STRING 22650
 }
 
 STRING 22651
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+Fires the knocked arrow.
 
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool1,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool3,.> seconds|r
 }
 
 STRING 22652
@@ -156997,12 +156497,11 @@ Albedo's advanced management skills increases allies' life and mana regeneration
 }
 
 STRING 22712
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+Fires the knocked arrow.
 
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool3,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool4,.> seconds|r
 }
 
 STRING 22713
@@ -157169,21 +156668,19 @@ Dark Young
 }
 
 STRING 22737
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+Fires the knocked arrow.
 
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool4,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool5,.> seconds|r
 }
 
 STRING 22738
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+Fires the knocked arrow.
 
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool5,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool6,.> seconds|r
 }
 
 STRING 22739
@@ -157286,21 +156783,17 @@ Waluigi rapidly spins knocking away enemies and deflecting beams. Provides +33ms
 }
 
 STRING 22750
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+Fires the knocked arrow.
 
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool6,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool7,.> seconds|r
 }
 
 STRING 22751
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
-
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool7,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 2|r]
 }
 
 STRING 22752
@@ -157376,30 +156869,21 @@ STRING 22763
 }
 
 STRING 22764
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
-
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool8,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 3|r]
 }
 
 STRING 22765
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
-
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool9,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 4|r]
 }
 
 STRING 22766
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
-
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool10,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 5|r]
 }
 
 STRING 22767
@@ -157418,28 +156902,21 @@ STRING 22768
 }
 
 STRING 22769
-// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
-
-|cff00ff00Damage: [Int] 300u + 6% Max HP|r
-|cff00ffffCooldown: <A12T,Cool2,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 6|r]
 }
 
 STRING 22770
-// Items: I02E (Bio Lab Research), Description (Description)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-|cffffff00Reduces the health of enemies in 600 AOE by 2.5% of their current health per second and prevents them from using items to regenerate over time.|r
-
-A sample of the substance |cffff8c00Bio Broly|r was covered in.
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 1|r]
 }
 
 STRING 22771
-// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-|cffffff00Reduces the health of enemies in 600 AOE by 2.5% of their current health per second and prevents them from using items to regenerate over time.|r
-
-A sample of the substance |cffff8c00Bio Broly|r was covered in.
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 7|r]
 }
 
 STRING 22772
@@ -161317,25 +160794,15 @@ Debuff Slow Dragon Thunder
 }
 
 STRING 23297
-// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Name (Name)
 {
-Demiurge covers his body with hellfire, absorbing 25% of incoming damage with his mana. Periodically burns nearby enemies. Applies |cffff8800Hellfire|r.
-
-|cff2080ffMana Cost: 1.5% max mana/s
-|cffffff00Spell Amp: +15%
-|cff00ff00Damage: [Int] 150u/s
-|cff00ffffCooldown: <A13H,Cool1>s
+Bow Shoot
 }
 
 STRING 23298
-// Abilities: A13H (Hellfire Mantle), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Researchtip (Tooltip - Learn)
 {
-Demiurge covers his body with hellfire, absorbing 25% of incoming damage with his mana. Periodically burns nearby enemies. Applies |cffff8800Hellfire|r.
-
-|cff2080ffMana Cost: 1.5% max mana/s
-|cffffff00Spell Amp: +15%
-|cff00ff00Damage: [Int] 150u/s
-|cff00ffffCooldown: <A13H,Cool1>s
+[|cff00ff00R|r] Learn Bow - [|cffffcc00Level %d|r]
 }
 
 STRING 23299
@@ -163995,113 +163462,79 @@ Guy kicks the enemy into the air and then piledrives them into the ground.
 }
 
 STRING 23626
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool1,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 9|r]
 }
 
 STRING 23627
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool3,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 8|r]
 }
 
 STRING 23628
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Tip (Tooltip - Normal)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool4,.> seconds|r
+[|cff00ff00R|r] Bow Shoot - [|cffffcc00Level 10|r]
 }
 
 STRING 23629
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+Fires the knocked arrow.
 
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool5,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool8,.> seconds|r
 }
 
 STRING 23630
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+Fires the knocked arrow.
 
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool6,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool9,.> seconds|r
 }
 
 STRING 23631
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+Fires the knocked arrow.
 
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool7,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool10,.> seconds|r
 }
 
 STRING 23632
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), EditorSuffix (Editor Suffix)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool8,.> seconds|r
+(link)
 }
 
 STRING 23633
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+Fires the knocked arrow.
 
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool9,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool2,.> seconds|r
 }
 
 STRING 23634
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A15C (Bow Shoot), Ubertip (Tooltip - Normal - Extended)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+Fires the knocked arrow.
 
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool10,.> seconds|r
+|cff00ffffCooldown: <A15C,Cool1,.> seconds|r
 }
 
 STRING 23635
-// Abilities: A015 (Reverse Lotus), Researchubertip (Tooltip - Learn - Extended)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool1,.> - <A015,Cool10,.> seconds|r
+R
 }
 
 STRING 23636
-// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R00E (Magic Sentry), Hotkey (Hotkey)
 {
-The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
-
-|cffff2222Costs 10% of Max HP|r
-|cff00ff00Damage: [Int] 1000u
-|cff00ffffCooldown: <A015,Cool2,.> seconds|r
+R
 }
 
 STRING 23637
@@ -164600,33 +164033,11 @@ Genos rapidly punches 200 units in front of him towards the targetted direction.
 }
 
 STRING 23699
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+|cffffff00Reduces the health of enemies in 750 AOE by 2.5% of their current health per second and prevents them from using items to regenerate over time.|r
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool1>s|r
-}
-
-STRING 23700
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
-
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool2>s|r
-}
-
-STRING 23701
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
-
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool3>s|r
+A sample of the substance |cffff8c00Bio Broly|r was covered in.
 }
 
 STRING 23702
@@ -165754,6 +165165,23 @@ STRING 23854
 [|cff00FF00E|r] Angelic Shield - [|cffffcc00Level 10|r]
 }
 
+STRING 23855
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD1,%>% 
+|cffffcc00Critical|r - <A0BB,DataA1>% 
+|cffffcc00Damage|r - <A0BB,DataB1,.> times
+}
+
 STRING 23856
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -165791,6 +165219,23 @@ Gojo teleports all non-invulnerable allies within 500 AOE of himself to the targ
 
 |cff8888ffMana Cost: 1% of Current Mana per 100 units travelled.
 |cff00ffffCooldown: <A13Z,Cool1>s|r
+}
+
+STRING 23862
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD2,%>% 
+|cffffcc00Critical|r - <A0BB,DataA2>% 
+|cffffcc00Damage|r - <A0BB,DataB2,.> times
 }
 
 STRING 23863
@@ -167917,6 +167362,40 @@ STRING 24161
 [|cff00ff00W|r] Falling Petal Sword
 }
 
+STRING 24162
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD3,%>% 
+|cffffcc00Critical|r - <A0BB,DataA3>% 
+|cffffcc00Damage|r - <A0BB,DataB3,.> times
+}
+
+STRING 24163
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD4,%>% 
+|cffffcc00Critical|r - <A0BB,DataA4>% 
+|cffffcc00Damage|r - <A0BB,DataB4,.> times
+}
+
 STRING 24164
 // Abilities: A0K0 (Cursed Technique Lapse: Blue), Ubertip (Tooltip - Normal - Extended)
 {
@@ -168427,9 +167906,9 @@ The blood of the Saiyan race flows through your veins. Saiyan blood can cause th
 }
 
 STRING 24231
-// Abilities: A0BB (Master of the Blossoming Blade), EditorSuffix (Editor Suffix)
+// Abilities: A0OU (Blast-o-Matic), EditorSuffix (Editor Suffix)
 {
-(basic)
+(king k rool)
 }
 
 STRING 24232
@@ -168439,7 +167918,7 @@ Scattered Blossomfall
 }
 
 STRING 24233
-// Abilities: A14B (Scattered Blossomfall), EditorSuffix (Editor Suffix)
+// Abilities: A0BB (Master of the Blossoming Blade), EditorSuffix (Editor Suffix)
 {
 (cheong myeong)
 }
@@ -168939,13 +168418,9 @@ Creates a plum blossom at the target location that falls to the ground after 1s.
 }
 
 STRING 24296
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OV (King's Throne), EditorSuffix (Editor Suffix)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
-
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool4>s|r
+(king k rool)
 }
 
 STRING 24297
@@ -168967,173 +168442,93 @@ Launches a plum blossom at the target location that detonates after 0.5s. Enemie
 }
 
 STRING 24299
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QP (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Omega Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD1,%>% 
-|cffffcc00Critical|r - <A0BB,DataA1>% 
-|cffffcc00Damage|r - <A0BB,DataB1,.> times
+|cff00ff00Damage: [Int] 200u x 8t + 4.8% Max HP dmg
+|cff00ffffCooldown: <A0QP,Cool1> seconds|r
 }
 
 STRING 24300
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QQ (Nova Star), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Omega Shenron charges a powerful flaming energy beam in his hands before unleashing it to deal devastating damage against his enemies.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD2,%>% 
-|cffffcc00Critical|r - <A0BB,DataA2>% 
-|cffffcc00Damage|r - <A0BB,DataB2,.> times
+|cff00ff00Damage: [Int] 36u x 120t + 1000u
+|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
 }
 
 STRING 24301
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD3,%>% 
-|cffffcc00Critical|r - <A0BB,DataA3>% 
-|cffffcc00Damage|r - <A0BB,DataB3,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool3> seconds|r
 }
 
 STRING 24302
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD4,%>% 
-|cffffcc00Critical|r - <A0BB,DataA4>% 
-|cffffcc00Damage|r - <A0BB,DataB4,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool4> seconds|r
 }
 
 STRING 24303
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD5,%>% 
-|cffffcc00Critical|r - <A0BB,DataA5>% 
-|cffffcc00Damage|r - <A0BB,DataB5,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool5> seconds|r
 }
 
 STRING 24304
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD6,%>% 
-|cffffcc00Critical|r - <A0BB,DataA6>% 
-|cffffcc00Damage|r - <A0BB,DataB6,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool6> seconds|r
 }
 
 STRING 24305
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD7,%>% 
-|cffffcc00Critical|r - <A0BB,DataA7>% 
-|cffffcc00Damage|r - <A0BB,DataB7,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool7> seconds|r
 }
 
 STRING 24306
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD8,%>% 
-|cffffcc00Critical|r - <A0BB,DataA8>% 
-|cffffcc00Damage|r - <A0BB,DataB8,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool8> seconds|r
 }
 
 STRING 24307
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD9,%>% 
-|cffffcc00Critical|r - <A0BB,DataA9>% 
-|cffffcc00Damage|r - <A0BB,DataB9,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool9> seconds|r
 }
 
 STRING 24308
-// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A081 (Flame Breath), Ubertip (Tooltip - Normal - Extended)
 {
-The legendary sword style of the Mount Hua sect. 
-|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
-Critical strike increases by 0.05x for each 10% of remaining mana. 
-Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
-[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+Hirudegarn unleashes an inferno of deadly fire from his mouth. Can be used 2 times before going on cooldown.
 
-|cff8888ffQWE Mana Cost: 5% of max mana
-R Mana Cost: 25% of max mana
-
-|cffffcc00Evasion|r - <A0BB,DataD10,%>% 
-|cffffcc00Critical|r - <A0BB,DataA10>% 
-|cffffcc00Damage|r - <A0BB,DataB10,.> times
+|cff00ff00Damage: [Int] 70u x 8t + 70u + 0.8% Max HP
+|cff00ffffCooldown: <A081,Cool10> seconds|r
 }
 
 STRING 24309
@@ -169294,6 +168689,23 @@ A high durability bruiser that uses HP to cast powerful abilities and can open t
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+}
+
+STRING 24320
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD5,%>% 
+|cffffcc00Critical|r - <A0BB,DataA5>% 
+|cffffcc00Damage|r - <A0BB,DataB5,.> times
 }
 
 STRING 24321
@@ -169590,23 +169002,21 @@ DBO Grandpa Gohan Hut
 }
 
 STRING 24363
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool5>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool3,.>s|r
 }
 
 STRING 24364
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool6>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool4,.>s|r
 }
 
 STRING 24365
@@ -170434,6 +169844,23 @@ STRING 24475
 Aggronor has unlocked his Dwarven Strength
 }
 
+STRING 24476
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD6,%>% 
+|cffffcc00Critical|r - <A0BB,DataA6>% 
+|cffffcc00Damage|r - <A0BB,DataB6,.> times
+}
+
 STRING 24477
 // Units: H034 (Mountain King), Name (Name)
 {
@@ -170889,13 +170316,12 @@ STRING 24539
 }
 
 STRING 24540
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool7>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool5,.>s|r
 }
 
 STRING 24541
@@ -171935,6 +171361,23 @@ Tatsumaki infuses nearby debris with telekinetic energy turning them into explos
 |cff00ffffCooldown: <A05O,Cool2,.> seconds|r
 }
 
+STRING 24679
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD7,%>% 
+|cffffcc00Critical|r - <A0BB,DataA7>% 
+|cffffcc00Damage|r - <A0BB,DataB7,.> times
+}
+
 STRING 24680
 // Abilities: A00P (Incinerate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -172133,6 +171576,23 @@ STRING 24702
 W
 }
 
+STRING 24703
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD8,%>% 
+|cffffcc00Critical|r - <A0BB,DataA8>% 
+|cffffcc00Damage|r - <A0BB,DataB8,.> times
+}
+
 STRING 24704
 {
 [|cffffcc00Unlock|r] |cff8844ddDark Final Flash|r
@@ -172316,6 +171776,23 @@ STRING 24728
 Vegeta Limit Breaker Armor Bonus
 }
 
+STRING 24729
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD9,%>% 
+|cffffcc00Critical|r - <A0BB,DataA9>% 
+|cffffcc00Damage|r - <A0BB,DataB9,.> times
+}
+
 STRING 24730
 // Abilities: A152 (Debuff Curse Vegeta Dark Final Flash), Name (Name)
 {
@@ -172427,43 +171904,39 @@ Throws a hay bundle at the target location that explodes after 2s. Deals +1% bon
 }
 
 STRING 24743
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool8>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool6,.>s|r
 }
 
 STRING 24744
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool9>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool7,.>s|r
 }
 
 STRING 24745
-// Abilities: A0DF (Cataclysmic Orb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool1> - <A0DF,Cool10>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool8,.>s|r
 }
 
 STRING 24746
-// Abilities: A0DF (Cataclysmic Orb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb to send it flying. The orb deals an additional 4% of Beerus' current mana as bonus damage. When moving, the orb deals double damage and an additional 50% of enemy's max HP to non-heroes.
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
 
-|cff8888ffMana Cost: 4% Max Mana
-|cff00FF00Damage: [Int] 300u (+4% Beerus Mana) (x2)|r
-|cff00FFFFCooldown: <A0DF,Cool10>s|r
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool9,.>s|r
 }
 
 STRING 24747
@@ -172827,6 +172300,29 @@ Granolah dashes forward and stuns enemies for 1s. Enemies debuffed with reduced 
 
 |cff00ff00Damage: [Int] 100u + 5% Max HP (+10% Max HP)|r
 |cff00ffffCooldown: <A0DV,Cool2> seconds|r
+}
+
+STRING 24794
+// Abilities: A0BB (Master of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+The legendary sword style of the Mount Hua sect. 
+|cffffff00Auto attacks against heroes restore mana equal to the damage dealt.
+Critical strike increases by 0.05x for each 10% of remaining mana. 
+Casting [|r|cff00ff00QWE|r|cffffff00] abilities will unlock up to 6 different [|r|cff00ff00R|r|cffffff00] abilities based on cast order.
+[|r|cff00ff00QWER|r|cffffff00] abilities gain +1 level every 9 hero levels.|r
+
+|cff8888ffQWE Mana Cost: 2% of max mana
+R Mana Cost: 23% of max mana
+
+|cffffcc00Evasion|r - <A0BB,DataD10,%>% 
+|cffffcc00Critical|r - <A0BB,DataA10>% 
+|cffffcc00Damage|r - <A0BB,DataB10,.> times
+}
+
+STRING 24795
+// Abilities: A14B (Scattered Blossomfall), EditorSuffix (Editor Suffix)
+{
+(cheong myeong)
 }
 
 STRING 24796
@@ -173549,5 +173045,675 @@ Beerus summons a massive flaming energy sphere to destroy his enemies.
 |cffff2222Channel Duration: <A0CU,DataA1,.>s
 |cff00ff00Damage: [Int] 100u x 8t + 2000u
 |cff00ffffCooldown: <A0CU,Cool1> - <A0CU,Cool10> seconds|r
+}
+
+STRING 24889
+// Abilities: A0CX (Sample Sushi), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus tries some sushi with too much wasabi.
+|cffffff00+33ms
+Restores 15% of max stamina|r
+|cff00ff00Duration: 15s
+|cff00FFFFCooldown: 30s|r
+}
+
+STRING 24890
+// Abilities: A01R (Eighth Gate: Gate of Death), Ubertip (Tooltip - Normal - Extended)
+{
+The Gate of Death increases its users power, durability and speed. A steam of blood is emitted from the user's pores creating a red aura around the user.
+Unlocks [|cff00ff00Q|r] Asa Kujaku: Morning Peacock.
+Unlocks [|cff00ff00W|r] Hirudora: Daytime Tiger.
+Unlocks [|cff00ff00E|r] Sekizo: Evening Elephant.
+Unlocks [|cff00ff00R|r] Yagai: Night Guy.
+
+|cffffff00+0.2x stat mult
++165ms
++50 armor
++16% stamina regen
++600% HP regen
+Current HP cannot exceed 23% of Max HP|r
+|cff00ff00Duration: 30s|r
+|cff00ffffCooldown: <A01R,Cool1>s|r
+}
+
+STRING 24891
+// Abilities: A082 (Flame Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn fires a barrage of flaming energy balls at his enemies that explode to deal massive damage. Can be used 3 times before going on cooldown.
+
+|cff00FF00Damage: [Int] 40u x 8t + 300u + 1% Max HP|r
+|cff00FFFFCooldown: <A082,Cool10,.>s|r
+}
+
+STRING 24892
+{
+|cff00ffff[Hyperbolic Time Chamber]|r
+Mr. Popo has repaired the Hyperbolic Time Chamber.
+}
+
+STRING 24893
+// Abilities: A13U (Ultimate Charge), Ubertip (Tooltip - Normal - Extended)
+{
+The caster charges up and restores mana. Also restores health after channelling for 7s.
+
+|cffffff00Restores Agi/Int x 5% max mana per second.
+Restores Agi/Str x 1% max hp per second after 7s.
+|cff00ffffCooldown: 0.1s|r
+}
+
+STRING 24894
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur1> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool1> seconds|r
+}
+
+STRING 24895
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur2> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool2> seconds|r
+}
+
+STRING 24896
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur3> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool3> seconds|r
+}
+
+STRING 24897
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur4> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool4> seconds|r
+}
+
+STRING 24898
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur5> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool5> seconds|r
+}
+
+STRING 24899
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur6> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool6> seconds|r
+}
+
+STRING 24900
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur7> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool7> seconds|r
+}
+
+STRING 24901
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur8> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool8> seconds|r
+}
+
+STRING 24902
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur9> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool9> seconds|r
+}
+
+STRING 24903
+// Abilities: A0CP (Chou Makousen), Ubertip (Tooltip - Normal - Extended)
+{
+Hirudegarn charges up a massive red energy beam from his mouth, before firing it to destroy everything in its path.
+
+|cffff2020Channel Duration: <A0CP,Dur10> seconds|r
+|cff00ff00Damage: [Int] 30u x 120t + 750u
+|cff00ffffCooldown: <A0CP,Cool10> seconds|r
+}
+
+STRING 24904
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool1,.> seconds|r
+}
+
+STRING 24905
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool3,.> seconds|r
+}
+
+STRING 24906
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool4,.> seconds|r
+}
+
+STRING 24907
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool5,.> seconds|r
+}
+
+STRING 24908
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool6,.> seconds|r
+}
+
+STRING 24909
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool7,.> seconds|r
+}
+
+STRING 24910
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool8,.> seconds|r
+}
+
+STRING 24911
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool9,.> seconds|r
+}
+
+STRING 24912
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool10,.> seconds|r
+}
+
+STRING 24913
+// Abilities: A12T (Decapitate), Ubertip (Tooltip - Normal - Extended)
+{
+Albedo slams 3F onto her enemies, stunning them for 1s and dealing high damage.
+
+|cff00ff00Damage: [Int] 500u + 6% Max HP|r
+|cff00ffffCooldown: <A12T,Cool2,.> seconds|r
+}
+
+STRING 24914
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool1,.> seconds|r
+}
+
+STRING 24915
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool3,.> seconds|r
+}
+
+STRING 24916
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool4,.> seconds|r
+}
+
+STRING 24917
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool5,.> seconds|r
+}
+
+STRING 24918
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool6,.> seconds|r
+}
+
+STRING 24919
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool7,.> seconds|r
+}
+
+STRING 24920
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool8,.> seconds|r
+}
+
+STRING 24921
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool9,.> seconds|r
+}
+
+STRING 24922
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool10,.> seconds|r
+}
+
+STRING 24923
+// Abilities: A015 (Reverse Lotus), Researchubertip (Tooltip - Learn - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool1,.> - <A015,Cool10,.> seconds|r
+}
+
+STRING 24924
+// Abilities: A015 (Reverse Lotus), Ubertip (Tooltip - Normal - Extended)
+{
+The user opens at least three of the Eight Gates to remove their body's limitations on their maximum speed. Then they quickly attack all nearby enemies in 400 AOE, launching them into the air and repeatedly assaulting them while they remain suspended.
+
+|cffff2222Costs 5% of Max HP|r
+|cff00ff00Damage: [Int] 1000u
+|cff00ffffCooldown: <A015,Cool2,.> seconds|r
+}
+
+STRING 24926
+// Abilities: A020 (Asa Kujaku: Morning Peacock), Ubertip (Tooltip - Normal - Extended)
+{
+Guy throws out multiple rapid fire punches in the target area for 3s.
+
+|cffff2222Costs 4% of Max HP
+|cff00ff00Damage: [Int] 1100u/s
+|cff00ffffCooldown: <A020,Cool10,.> seconds|r
+}
+
+STRING 24927
+// Abilities: A021 (Hirudora: Daytime Tiger), Ubertip (Tooltip - Normal - Extended)
+{
+Guy launches air pressure through a tiger-shaped hand seal to create a giant vacuum of wind that pulls enemies along with it before detonating for massive damage.
+
+|cffff2222Costs 5% of Max HP
+Channel Duration: 1s
+|cff00ff00Damage: [Int] 100u x 8t + 1200u
+|cff00ffffCooldown: <A021,Cool10,.> seconds|r
+}
+
+STRING 24928
+// Abilities: A023 (Sekizo: Evening Elephant), Ubertip (Tooltip - Normal - Extended)
+{
+Guy launches an extremely powerful punch that creates a cannon of pressurised air bearing the appearance of an elephant's leg. The column of pressure traps enemies inside it, slowing them by 90% for 3s.
+
+|cffff2222Costs 4% of Max HP
+|cff00ff00Damage: [Int] 600u x 2t
+|cff00ffffCooldown: <A023,Cool10,.> seconds|r
+
+|cff888888Guy's Sekizo was powerful enough to shatter a truth-seeking orb.
+}
+
+STRING 24929
+// Abilities: A024 (Yagai: Night Guy), Ubertip (Tooltip - Normal - Extended)
+{
+Guy emits an enourmous amount of the red steam of blood to manifest a giant burning dragon, then he dashes forward with such speed that space becomes distorted, preventing enemies from escaping. The attack ends with a fatal kick that burns himself and his enemies to ash. Nearby enemies are slowed 25% for 3s.
+
+|cffff0000Warning: Damages the caster!
+|cffff2222Hard Cast Time: 3s
+|cff00ff00Duration: 7s
+|cff00ff00Damage Block: [Str] 4000u @ 90%
+|cff00ff00Damage: [Int] 500u/s + 5% max hp/s
+|cff00ffffCooldown: <A024,Cool10,.> seconds|r
+}
+
+STRING 24930
+// Abilities: A14C (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong instantly converts 50% of current mana into health and purges all negative debuffs. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+|cffffff00Passively provides +20% cooldown reduction.|r
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
+STRING 24931
+// Abilities: A14D (Return of the Blossoming Blade), Ubertip (Tooltip - Normal - Extended)
+{
+When off cooldown, the next instance of lethal damage is negated and Cheong Myeong instantly converts 50% of current mana into health and purges all negative debuffs. The unit that killed Cheong Myeong also restores 50% of the amount healed.
+|cffffff00Passively provides +20% cooldown reduction.|r
+|cff00FFFFCooldown: <A14C,Cool1> seconds|r
+}
+
+STRING 24932
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+}
+
+STRING 24933
+// Abilities: A0FV (Flash Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit releases an invisible wave of energy that deals damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool1,.>s|r
+}
+
+STRING 24934
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool2,.>s|r
+}
+
+STRING 24935
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool3,.>s|r
+}
+
+STRING 24936
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool4,.>s|r
+}
+
+STRING 24937
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool5,.>s|r
+}
+
+STRING 24938
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool6,.>s|r
+}
+
+STRING 24939
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool7,.>s|r
+}
+
+STRING 24940
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool8,.>s|r
+}
+
+STRING 24941
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool9,.>s|r
+}
+
+STRING 24942
+// Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Hit releases an invisible wave of energy that deals pure damage to units struck. Deals bonus damage to enemies further than 800 units.
+
+|cffffff00Costs 1 Time Skip charges.
+|cff00FF00Damage: [Int] 150u x 3t + 4.5% Max HP (+300u)
+|cff00FFFFCooldown: <A0FV,Cool10,.>s|r
+}
+
+STRING 24943
+// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+{
+Hit develops improved skills and techniques by fighting stronger enemies.
+|cffffff00+0.1x stat mult
++10% spell amp per second up to +20%
+x1.12 restore rate of time skip charges (multiplicative)
++1 time skip charge (cannot exceed max)|r
+|cff00FF00Duration: <A0TH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
+}
+
+STRING 24944
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur1>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool1,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24945
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur2>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool2,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24946
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur3>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool3,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24947
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur4>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool4,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24948
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur5>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool5,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24949
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur6>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool6,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24950
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur7>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool7,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24951
+// Abilities: A0HG (Max Block), Researchubertip (Tooltip - Learn - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur1>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool1,.> - <A0HG,Cool10,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24952
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur8>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool8,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24953
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur9>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool9,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
+}
+
+STRING 24954
+// Abilities: A0HG (Max Block), Ubertip (Tooltip - Normal - Extended)
+{
+Cell Max blocks incoming attacks with his arm. Enemy non-hero units in 800 AOE are pulled towards Cell Max.
+
+|cffff0000Channel Duration: <A0HG,Dur10>s
+|cff00ff00Damage Block: [Str] 90% @ 3000u
+|cff00FFFFCooldown: <A0HG,Cool10,.>s|r
+
+|cff888888Cell Max raised his arm just in time to block Gamma 2's Core Breaker.|r
 }
 

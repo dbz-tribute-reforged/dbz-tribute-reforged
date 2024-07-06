@@ -2629,10 +2629,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 80,
+    blockPerDamage: 90,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.3,
+    multiplier: 0.4,
     sfxList: [
       {
         model: "Objects/Spawnmodels/Undead/UCancelDeath/UCancelDeath.mdl",
@@ -3085,10 +3085,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 80,
+    blockPerDamage: 90,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.3,
+    multiplier: 0.4,
     sfxList: [
       {
         model: "Abilities/Spells/Orc/FeralSpirit/feralspiritdone.mdl",

@@ -93,16 +93,8 @@ export class FBSimTestManager {
       const playerId = GetPlayerId(player);
       for (const customHero of Globals.customPlayers[playerId].allHeroes) {
         if (!customHero || !UnitHelper.isUnitAlive(customHero.unit)) continue;
-
-        SetUnitLifePercentBJ(customHero.unit, 100);
-        SetUnitManaPercentBJ(customHero.unit, 100);
-        UnitResetCooldown(customHero.unit);
-        customHero.setCurrentSP(customHero.getMaxSP());
-        for (const [name, abil] of customHero.abilities.abilities) {
-          if (abil) {
-            abil.currentCd = 0;
-          }
-        }
+        customHero.heal();
+        customHero.resetCooldowns();
       }
     });
   }

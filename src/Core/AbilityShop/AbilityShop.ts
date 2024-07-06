@@ -61,6 +61,8 @@ export class AbilityShop {
 
   highlightSprite: Frame;
 
+  public abilKeyTexts: Frame[] = [];
+
   constructor() {
     let t: Trigger;
 
@@ -338,6 +340,39 @@ export class AbilityShop {
       .setScale(0.024 / 0.039)
       .setEnabled(false)
     
+
+    const prevX = 0.2060;
+    const yStart = 0.1140;
+    const yEnd = 0.1340;
+
+    this.abilKeyTexts.push(
+      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 0, yStart)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 1, yEnd)
+      .setText("Z")
+      .setScale(1.00)
+    );
+    this.abilKeyTexts.push(
+      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 1, yStart)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 2, yEnd)
+      .setText("X")
+      .setScale(1.00)
+    );
+    this.abilKeyTexts.push(
+      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 2, yStart)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 3, yEnd)
+      .setText("C")
+      .setScale(1.00)
+    );
+    this.abilKeyTexts.push(
+      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 3, yStart)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 4, yEnd)
+      .setText("V")
+      .setScale(1.00)
+    );
   }
 
   public setCanSwap(b: boolean) {
@@ -449,7 +484,10 @@ export class AbilityShop {
     
     let keyText = Constants.oskeyToTextMap.get(oskey);
     if (!keyText) keyText = "?";
-    if (customPlayer.player == GetLocalPlayer()) this.AbilityKeyT[index].setText(keyText); 
+    if (customPlayer.player == GetLocalPlayer()) {
+      this.AbilityKeyT[index].setText(keyText);
+      this.abilKeyTexts[index].setText(keyText);
+    }
   }
 
   public registerSelectPress(index: number) {

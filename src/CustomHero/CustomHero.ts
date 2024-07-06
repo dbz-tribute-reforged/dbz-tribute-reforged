@@ -357,6 +357,20 @@ export class CustomHero {
     );
   }
 
+  public heal() {
+    SetUnitLifePercentBJ(this.unit, 100);
+    SetUnitManaPercentBJ(this.unit, 100);
+    this.setCurrentSP(this.getMaxSP());
+  }
+
+  public resetCooldowns() {
+    UnitResetCooldown(this.unit);
+    for (const [name, abil] of this.abilities.abilities) {
+      if (abil) abil.currentCd = 0;
+    }
+  }
+
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();

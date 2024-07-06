@@ -41,6 +41,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     public reflectBeams: boolean = false,
     public affectAllies: boolean = false,
     public onlyHeroes: boolean = false,
+    public onlyNonHeroes: boolean = false,
     public isPersistent: boolean = false,
     public isFixedAngle: boolean = false,
   ) {
@@ -100,7 +101,9 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   }
 
   doKnockback(input: CustomAbilityInput, target: unit) {
-    if (this.onlyHeroes && !IsUnitType(target, UNIT_TYPE_HERO)) return;
+    const isHero = IsUnitType(target, UNIT_TYPE_HERO);
+    if (this.onlyHeroes && !isHero) return;
+    if (this.onlyNonHeroes && isHero) return;
 
     if (
       UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)
@@ -203,6 +206,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.useLastCastPoint,
       this.reflectBeams, this.affectAllies,
       this.onlyHeroes,
+      this.onlyNonHeroes,
       this.isPersistent,
       this.isFixedAngle,
     );
@@ -225,6 +229,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       reflectBeams: boolean;
       affectAllies: boolean; 
       onlyHeroes: boolean;
+      onlyNonHeroes: boolean;
       isPersistent: boolean;
       isFixedAngle: boolean;
     }
@@ -240,6 +245,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.reflectBeams = input.reflectBeams;
     this.affectAllies = input.affectAllies;
     this.onlyHeroes = input.onlyHeroes;
+    this.onlyNonHeroes = input.onlyNonHeroes;
     this.isPersistent = input.isPersistent;
     this.isFixedAngle = input.isFixedAngle;
     return this;

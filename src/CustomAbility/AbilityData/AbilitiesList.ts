@@ -423,8 +423,8 @@ export const AbilitiesList = [
       title: "Max Charge",
       body: 
         "Stand still to recover MP over time. After 7s HP is also restored.|n" + 
-        "Restores Agi/Int x 2% max mana per second.|n" +
-        "Restores Agi/Str x 0.5% max hp per second after 7s.|n" +
+        "Restores Agi/Int x 2.5% max mana per second.|n" +
+        "Restores Agi/Str x 1% max hp per second after 7s.|n" +
         "Cost: 5 SP|n" +
         "CD: 1"
     },
@@ -499,10 +499,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.CheongMyeong.EQUILIBRIUM_OF_SIX,
     currentCd: 0,
-    maxCd: 15,
+    maxCd: 20,
     costType: CostType.SP,
     costAmount: 45,
-    duration: 100,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -516,10 +516,10 @@ export const AbilitiesList = [
     tooltip: {
       title: "Equilibrium of Six",
       body: 
-        "Stand still to recover MP over 4s. Clears all debuffs.|n" + 
-        "Restores Agi/Int x 10% max mana per second.|n" +
+        "Stand still to recover MP over 2s. Clears all debuffs.|n" + 
+        "Restores Agi/Int x 15% max mana per second.|n" +
         "Cost: 45 SP|n" +
-        "CD: 15"
+        "CD: 20"
     },
     components: [
       { name: "channel caster fake channel" },
@@ -12221,7 +12221,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 333,
+    duration: 300,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -12382,7 +12382,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "dash ground forward 2dist" },
+      { name: "dash ground forward 1dist" },
     ],
   },
   // -------------------------------------------
@@ -14139,6 +14139,7 @@ export const AbilitiesList = [
     components: [
       { name: "channel caster default" },
       { name: "block cell max max block" },
+      { name: "knockback cell max max block" },
       { name: "sfx cell max max block" },
     ],
   },

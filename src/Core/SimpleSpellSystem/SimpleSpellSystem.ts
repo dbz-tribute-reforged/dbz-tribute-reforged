@@ -45,10 +45,10 @@ export module SimpleSpellSystem {
   const gojoBlueDPSDmgDataMult = BASE_DMG.KAME_DPS * 0.012;
   const gojoRedBurstDmgDataMult = BASE_DMG.KAME_DPS * 3;
   const gojoRedDPSDmgDataMult = BASE_DMG.KAME_DPS * 0.005;
-  const gojoPurpleBlueDmgMult = 1.6;
-  const gojoPurpleRedDmgMult = 1.6;
-  const gojoPurpleBlueLesserDmgMult = 1.1;
-  const gojoPurpleRedLesserDmgMult = 1.1;
+  const gojoPurpleBlueDmgMult = 1.5;
+  const gojoPurpleRedDmgMult = 1.5;
+  const gojoPurpleBlueLesserDmgMult = 1.02;
+  const gojoPurpleRedLesserDmgMult = 1.02;
   const gojoPurpleAOE = 500;
   const gojoPurpleBeamSpeed = 50;
   const gojoPurpleKBRelativeSpeed = 20;
@@ -351,7 +351,8 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.linkBombCharge, SimpleSpellSystem.doLinkBombCharge);
     Globals.genericSpellMap.set(Id.linkBombThrow, SimpleSpellSystem.doLinkBombThrow);
     
-    Globals.genericSpellMap.set(Id.linkBow, SimpleSpellSystem.doLinkBowShoot);
+    Globals.genericSpellMap.set(Id.linkBow, SimpleSpellSystem.doLinkBowCharge);
+    Globals.genericSpellMap.set(Id.linkBowShoot, SimpleSpellSystem.doLinkBowShoot);
     Globals.genericSpellMap.set(Id.linkArrowNormal, SimpleSpellSystem.doLinkArrowSelect);
     Globals.genericSpellMap.set(Id.linkArrowFire, SimpleSpellSystem.doLinkArrowSelect);
     Globals.genericSpellMap.set(Id.linkArrowIce, SimpleSpellSystem.doLinkArrowSelect);
@@ -823,7 +824,7 @@ export module SimpleSpellSystem {
     if (dmg.source == dmg.target) return;
 
     const hp = GetUnitState(dmg.target, UNIT_STATE_LIFE);
-    if (dmg.dmg + 1 < hp) return;
+    if (dmg.dmg + 1000 < hp) return;
 
     const cd = BlzGetUnitAbilityCooldownRemaining(dmg.target, Id.cheongMyeongReturnActive);
     if (cd != 0) return;
@@ -832,12 +833,13 @@ export module SimpleSpellSystem {
 
     startCooldown(dmg.target, Id.cheongMyeongReturnActive);
 
-    const manaToHealRatio = 0.4;
+    const manaToHealRatio = 0.5;
     const enemyHealPct = 0.5;
     const currentMana = GetUnitState(dmg.target, UNIT_STATE_MANA);
     const heal = manaToHealRatio * currentMana;
     SetUnitState(dmg.target, UNIT_STATE_LIFE, heal);
     SetUnitState(dmg.target, UNIT_STATE_MANA, currentMana - heal);
+    UnitRemoveBuffs(dmg.target, false, true);
 
     const player = GetOwningPlayer(dmg.target);
     SetPlayerAbilityAvailable(player, Id.cheongMyeongReturnActive, true);
@@ -848,35 +850,56 @@ export module SimpleSpellSystem {
       GetUnitX(dmg.target), GetUnitY(dmg.target)
     );
 
-    PauseManager.getInstance().pause(dmg.target, true);
-    SetUnitAnimationByIndex(dmg.target, 6);
-
-    const timer = TimerManager.getInstance().get();
-    TimerStart(timer, 3, false, () => {
-      if (UnitHelper.isUnitAlive(dmg.source)) {
-        SetUnitState(dmg.source, UNIT_STATE_LIFE, 
-          enemyHealPct * heal + GetUnitState(dmg.source, UNIT_STATE_LIFE)
-        );
-        const sfx3 = AddSpecialEffect(
-          "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
-          GetUnitX(dmg.source), GetUnitY(dmg.source)
-        );
-        BlzSetSpecialEffectScale(sfx3, 2.0);
-        DestroyEffect(sfx3);
-      }
-
-      const sfx2 = AddSpecialEffect(
-        "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
-        GetUnitX(dmg.target), GetUnitY(dmg.target)
+    if (UnitHelper.isUnitAlive(dmg.source)) {
+      SetUnitState(dmg.source, UNIT_STATE_LIFE, 
+        enemyHealPct * heal + GetUnitState(dmg.source, UNIT_STATE_LIFE)
       );
-      BlzSetSpecialEffectScale(sfx2, 2.0);
-      DestroyEffect(sfx2);
+      const sfx3 = AddSpecialEffect(
+        "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
+        GetUnitX(dmg.source), GetUnitY(dmg.source)
+      );
+      BlzSetSpecialEffectScale(sfx3, 2.0);
+      DestroyEffect(sfx3);
+    }
 
-      DestroyEffect(sfx);
-      ResetUnitAnimation(dmg.target);
-      PauseManager.getInstance().unpause(dmg.target, true);
-      TimerManager.getInstance().recycle(timer);
-    });
+    const sfx2 = AddSpecialEffect(
+      "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
+      GetUnitX(dmg.target), GetUnitY(dmg.target)
+    );
+    BlzSetSpecialEffectScale(sfx2, 2.0);
+    DestroyEffect(sfx2);
+    DestroyEffect(sfx);
+    ResetUnitAnimation(dmg.target);
+    
+    // PauseManager.getInstance().pause(dmg.target, true);
+    // SetUnitAnimationByIndex(dmg.target, 6);
+
+    // const timer = TimerManager.getInstance().get();
+    // TimerStart(timer, 3, false, () => {
+    //   if (UnitHelper.isUnitAlive(dmg.source)) {
+    //     SetUnitState(dmg.source, UNIT_STATE_LIFE, 
+    //       enemyHealPct * heal + GetUnitState(dmg.source, UNIT_STATE_LIFE)
+    //     );
+    //     const sfx3 = AddSpecialEffect(
+    //       "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
+    //       GetUnitX(dmg.source), GetUnitY(dmg.source)
+    //     );
+    //     BlzSetSpecialEffectScale(sfx3, 2.0);
+    //     DestroyEffect(sfx3);
+    //   }
+
+    //   const sfx2 = AddSpecialEffect(
+    //     "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
+    //     GetUnitX(dmg.target), GetUnitY(dmg.target)
+    //   );
+    //   BlzSetSpecialEffectScale(sfx2, 2.0);
+    //   DestroyEffect(sfx2);
+
+    //   DestroyEffect(sfx);
+    //   ResetUnitAnimation(dmg.target);
+    //   PauseManager.getInstance().unpause(dmg.target, true);
+    //   TimerManager.getInstance().recycle(timer);
+    // });
   }
   
   export function doGokuKaiokenOn(spellId: number) {
@@ -2308,8 +2331,6 @@ export module SimpleSpellSystem {
     }
     SaveEffectHandle(Globals.genericSpellHashtable, unitId, 1, effect);
     SaveInteger(Globals.genericSpellHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
-    
-    Globals.DDSAddUnit(unit);
     
     let timerDuration = glareDuration;
     if (spellId == Id.hirudegarnDarkEyes) {
@@ -5466,14 +5487,104 @@ export module SimpleSpellSystem {
     });
   }
 
+  export function doLinkBowCharge(spellId: number) {
+    const maxTicks = 66;
+    const sfxHeight = 125;
+    const sfxScale = 2.0;
+    const sfxScaleRate = 0.03;
+    const sfxDist = 100;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+
+    if (GetUnitAbilityLevel(caster, Id.linkBowShoot) > 0) return;
+
+    const keyArrowSelected = StringHash("link|arrow|selection");
+    const keyBowTicks = StringHash("link|bow|ticks");
+
+    UnitAddAbility(caster, Id.linkBowShoot);
+    SetPlayerAbilityAvailable(player, Id.linkBow, false);
+    SetPlayerAbilityAvailable(player, Id.linkBowShoot, true);
+    SetUnitAbilityLevel(caster, Id.linkBowShoot, GetUnitAbilityLevel(caster, Id.linkBow));
+
+    const sfx = AddSpecialEffect("StarSFX.mdl", GetUnitX(caster), GetUnitY(caster));
+    BlzSetSpecialEffectScale(sfx, 3.0);
+
+    SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, 0);
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (GetUnitAbilityLevel(caster, Id.linkBowShoot) == 0) {
+        DestroyEffect(sfx);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      // max charge rate is 2s
+      BlzSetSpecialEffectScale(sfx, sfxScale + sfxScaleRate * Math.min(maxTicks, ticks));
+
+      const arrowSelected = LoadInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected);
+      switch (arrowSelected) {
+        case 0: // normal
+          BlzSetSpecialEffectColor(sfx, 255, 255, 255);
+          break;
+        case 1: // fire
+          BlzSetSpecialEffectColor(sfx, 255, 125, 55);
+          break;
+        case 2: // ice
+          BlzSetSpecialEffectColor(sfx, 55, 55, 255);
+          break;
+        case 3: // lightning
+          BlzSetSpecialEffectColor(sfx, 255, 255, 55);
+          break;
+        case 4: // bomb
+          BlzSetSpecialEffectColor(sfx, 255, 55, 55);
+          break;
+      }
+
+      Globals.tmpVector.setUnit(caster);
+      const ang = GetUnitFacing(caster);
+      Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, GetUnitFacing(caster), sfxDist);
+      BlzSetSpecialEffectX(sfx, Globals.tmpVector2.x);
+      BlzSetSpecialEffectY(sfx, Globals.tmpVector2.y);
+      MoveLocation(Globals.tmpLoc, Globals.tmpVector2.x, Globals.tmpVector2.y);
+      BlzSetSpecialEffectZ(sfx, sfxHeight + GetLocationZ(Globals.tmpLoc));
+
+      if (ticks == maxTicks) {
+        DestroyEffect(AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
+          Globals.tmpVector2.x, Globals.tmpVector2.y
+        ));
+      }
+
+      ++ticks;
+      SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, ticks);
+    });
+
+    // set ms to 100
+    udg_TempUnit = caster;
+    TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit);
+  }
+
   export function doLinkBowShoot(spellId: number) {
+    const bonusDmgPerTick = 0.015;
+    const maxChargeTicks = 66;
+
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
 
+    const keyBowTicks = StringHash("link|bow|ticks");
     const keyArrowSelected = StringHash("link|arrow|selection");
     const arrowSelected = LoadInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected);
+
+    SetPlayerAbilityAvailable(player, Id.linkBow, true);
+    UnitRemoveAbility(caster, Id.linkBowShoot);
+
+    const ticks = LoadInteger(Globals.genericSpellHashtable, casterId, keyBowTicks);
+    const dmgRatio = 1 + bonusDmgPerTick * Math.min(ticks, maxChargeTicks);
 
     let abilityName = AbilityNames.Link.BOW_ARROW_NORMAL;
     switch (arrowSelected) {
@@ -5504,10 +5615,17 @@ export module SimpleSpellSystem {
         GetUnitAbilityLevel(customHero.unit, Id.linkBow),
         Globals.customPlayers[playerId].orderPoint,
         Globals.customPlayers[playerId].mouseData,
-        Globals.customPlayers[playerId].lastCastPoint.clone()
+        Globals.customPlayers[playerId].lastCastPoint.clone(),
+        Globals.customPlayers[playerId].targetUnit,
+        Globals.customPlayers[playerId].lastCastUnit,
+        dmgRatio,
       );
       customHero.useAbility(abilityName, abilityInput);
     }
+
+    // reset ms to above 100
+    udg_TempUnit = caster;
+    TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit);
   }
 
   export function doLinkArrowSelect(spellId: number) {
@@ -6396,7 +6514,7 @@ export module SimpleSpellSystem {
 
   export function doUltimateCharge(spellId: number) {
     const caster = GetTriggerUnit();
-    doUltimateChargeUnit(caster, 0.04, 0.01);
+    doUltimateChargeUnit(caster, 0.05, 0.01);
   }
 
   export function doUltimateChargeUnit(caster: unit, mpPct: number, hpPct: number) {
@@ -6435,6 +6553,12 @@ export module SimpleSpellSystem {
         return;
       }
 
+      Globals.tmpVector.setUnit(caster);
+      BlzSetSpecialEffectX(dustWaveSfx, Globals.tmpVector.x);
+      BlzSetSpecialEffectY(dustWaveSfx, Globals.tmpVector.y);
+      MoveLocation(Globals.tmpLoc, Globals.tmpVector.x, Globals.tmpVector.y);
+      BlzSetSpecialEffectZ(dustWaveSfx, GetLocationZ(Globals.tmpLoc) + 10);
+
       const maxMp = GetUnitState(caster, UNIT_STATE_MAX_MANA);
       const currentMp = GetUnitState(caster, UNIT_STATE_MANA);
       const agi = GetHeroAgi(caster, true);
@@ -6466,7 +6590,7 @@ export module SimpleSpellSystem {
       // if (GetUnitCurrentOrder(caster) != OrderIds.PHASE_SHIFT_OFF) {
       //   tick += endTick;
       // }
-      if (tick > 1 && !ch.isChanneling()) {
+      if (tick > 1 && (!ch.isChanneling() || IsUnitPaused(ch.unit) )) {
         tick += endTick;
       }
       ++tick;
@@ -7187,7 +7311,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuyAsaKujaku(spellId: number) {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.08;
+    const lifePctCost = 0.06;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -7196,7 +7320,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuyHirudora(spellId: number) {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.1;
+    const lifePctCost = 0.05;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -7221,7 +7345,7 @@ export module SimpleSpellSystem {
 
   export function doMightGuySekizo(spellId: number) {
     const caster = GetTriggerUnit();
-    const lifePctCost = 0.08;
+    const lifePctCost = 0.04;
     UnitHelper.payHPPercentCost(
       caster, lifePctCost, 
       UNIT_STATE_MAX_LIFE
@@ -8172,8 +8296,8 @@ export module SimpleSpellSystem {
     const fuseTick = 66;
     const endTick = 500;
     const beamDuration = 20;
-    const dmgMult = BASE_DMG.KAME_DPS * 4;
-    const dmgMultPerBeam = BASE_DMG.KAME_DPS * 4;
+    const dmgMult = BASE_DMG.KAME_DPS * 5;
+    const dmgMultPerBeam = BASE_DMG.KAME_DPS * 5;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -8352,8 +8476,6 @@ export module SimpleSpellSystem {
       BlzStartUnitAbilityCooldown(caster, spellId, 1);
       return;
     }
-
-    Globals.DDSAddUnit(target);
 
     const timer = TimerManager.getInstance().get();
     const timerId = GetHandleId(timer);
@@ -8553,6 +8675,7 @@ export module SimpleSpellSystem {
     if (ticks < endTick) {
       SetTextTagPos(texttag, x, y, 10);
       SetTextTagTextBJ(texttag, I2S(R2I(shieldHp)), 10);
+      SetTextTagVisibility(texttag, IsUnitVisible(target, GetLocalPlayer()));
     }
 
     if (ticks >= endTick || !UnitHelper.isUnitAlive(target) || shieldHp <= 0) {
@@ -8683,8 +8806,6 @@ export module SimpleSpellSystem {
 
     UnitApplyTimedLife(beam, Buffs.TIMED_LIFE, beamDuration);
 
-    Globals.DDSAddUnit(beam);
-
     const timer = TimerManager.getInstance().get();
     const timerId = GetHandleId(timer);
 
@@ -8701,7 +8822,7 @@ export module SimpleSpellSystem {
     const detonateAOE = 250;
     const dmgAOE = 350;
     const dmgDataMult = BASE_DMG.KAME_DPS * 3;
-    const manaToDmgPct = 0.04;
+    const manaToDmgPct = 0.05;
     const nonHeroMaxHpPctDmg = 0.5;
 
     const timer = GetExpiredTimer();
@@ -8799,12 +8920,7 @@ export module SimpleSpellSystem {
   }
 
   export function doBeerusCataclysmicOrb(spellId: number) {
-    const mpCostPct = 0.04;
-
     const caster = GetTriggerUnit();
-
-    UnitHelper.payMPPercentCost(caster, mpCostPct, UNIT_STATE_MAX_MANA);
-
     beerusCreateOrb(caster, GetSpellTargetX(), GetSpellTargetY());
   }
 
@@ -11290,8 +11406,8 @@ export module SimpleSpellSystem {
 
   export function doCheongMyeongEquilibriumOfSix(caster: unit) {
     const tickRate = 0.1;
-    const mpPct = 0.1;
-    const endTick = 40;
+    const mpPct = 0.15;
+    const endTick = 20;
 
     UnitRemoveBuffs(caster, false, true);
 

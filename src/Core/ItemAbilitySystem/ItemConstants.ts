@@ -3,7 +3,7 @@ export module ItemConstants {
   export const ABILITY_TIME_RING = FourCC("A0NU");
   export const BIO_LAB_AOE = 750;
   export const BIO_LAB_DAMAGE = 0.025;
-  export const BRAVE_SWORD_AOE = 900;
+  export const BRAVE_SWORD_AOE = 750;
   export const BRAVE_SWORD_MANA_LOSS = 0.02;
 
   export const battleArmor = [

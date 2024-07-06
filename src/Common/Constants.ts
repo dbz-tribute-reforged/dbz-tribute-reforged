@@ -52,12 +52,12 @@ export module Globals {
   export const DDSUnitMap = new Map<unit, boolean>();
   export const DDSTrigger = CreateTrigger();
 
-  export function DDSAddUnit(unit: unit) {
-    // if (!Globals.DDSUnitMap.has(unit)) {
-    //   Globals.DDSUnitMap.set(unit, true);
-    //   TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
-    // }
-  }
+  // export function DDSAddUnit(unit: unit) {
+  //   // if (!Globals.DDSUnitMap.has(unit)) {
+  //   //   Globals.DDSUnitMap.set(unit, true);
+  //   //   TriggerRegisterUnitEvent(Globals.DDSTrigger, unit, EVENT_UNIT_DAMAGED);
+  //   // }
+  // }
 
   export const tatsumakiBeamGroup = CreateGroup();
 
@@ -183,6 +183,7 @@ export module Constants {
   export const BASE_STAMINA = 100.0;
   export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
   export const STAMINA_REGEN_MULT_MIN_BONUS = 0.5;
+  export const MIN_AGI_RATIO = 0.66;
 
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;
@@ -201,7 +202,7 @@ export module Constants {
   
   export const LIMIT_BREAKER_MIN_SP = 30;
 
-  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 20];
+  export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 23];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
   export const MIGHT_GUY_GATE_SP_MULTS = [0, 0.04, 0.08, 0.12, 0.16];
 
@@ -1366,6 +1367,7 @@ export module Id {
   export const linkBombCharge = FourCC("A0FM");
   export const linkBombThrow = FourCC("A0FN");
   export const linkBow = FourCC("A0FX");
+  export const linkBowShoot = FourCC("A15C");
   export const linkHookshot = FourCC("A0G4");
   export const linkHookshotPullTowards = FourCC("A0G5");
   export const linkHookshotPullIn = FourCC("A0G9");

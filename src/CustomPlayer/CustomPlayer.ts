@@ -221,4 +221,13 @@ export class CustomPlayer {
   public performZoom() {
     this.playerCam.update();
   }
+
+  public setDualTechFlag(b: boolean) {
+    this.dualTechSendFlag = b;
+    this.dualTechReceiveFlag = b;
+  }
+
+  public isUsingDualTech(): boolean {
+    return this.dualTechSendFlag && this.dualTechReceiveFlag;
+  }
 }

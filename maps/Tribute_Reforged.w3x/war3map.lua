@@ -31780,6 +31780,13 @@ end
 return true
 end
 
+function Trig_Base_Armor_Set_Func037Func002C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) >= 5)) then
+return false
+end
+return true
+end
+
 function Trig_Base_Armor_Set_Func037C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit) > 0)) then
 return false
@@ -32254,6 +32261,10 @@ else
 end
 if (Trig_Base_Armor_Set_Func037C()) then
 udg_BaseArmorReal = (udg_BaseArmorReal + ((5.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_StatMultUnit))) + 5.00))
+if (Trig_Base_Armor_Set_Func037Func002C()) then
+udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
+else
+end
 else
 end
 if (Trig_Base_Armor_Set_Func038C()) then
@@ -32261,7 +32272,7 @@ udg_BaseArmorReal = (udg_BaseArmorReal - 10.00)
 else
 end
 if (Trig_Base_Armor_Set_Func039C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 600.00)
+udg_BaseArmorReal = (udg_BaseArmorReal + 900.00)
 else
 end
 if (Trig_Base_Armor_Set_Func040C()) then
@@ -32956,39 +32967,27 @@ udg_CatchupThreshold = 0.70
 udg_CatchupIncrement = 0.50
 TriggerExecute(gg_trg_Catchup_Turn_On)
 udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6227")
+PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 3.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
+DisplayTimedTextToForce(GetPlayersAll(), 3.00, "TRIGSTR_24892")
                 RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Catchup_Settings_Automatic_Func001Func001Func002C()) then
-udg_CatchupThreshold = 0.73
-udg_CatchupIncrement = 0.50
+udg_CatchupThreshold = 0.74
+udg_CatchupIncrement = 0.60
 TriggerExecute(gg_trg_Catchup_Turn_On)
-udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6228")
-                RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Catchup_Settings_Automatic_Func001Func001Func003C()) then
-udg_CatchupThreshold = 0.76
-udg_CatchupIncrement = 0.50
+udg_CatchupThreshold = 0.79
+udg_CatchupIncrement = 0.66
 TriggerExecute(gg_trg_Catchup_Turn_On)
-udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_7719")
-                RemoveLocation(udg_TempLoc)
 else
 end
 if (Trig_Catchup_Settings_Automatic_Func001Func001Func004C()) then
-udg_CatchupThreshold = 0.79
-udg_CatchupIncrement = 0.50
+udg_CatchupThreshold = 0.82
+udg_CatchupIncrement = 0.70
 TriggerExecute(gg_trg_Catchup_Turn_On)
-udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-DisplayTextToForce(GetPlayersAll(), "TRIGSTR_8122")
-                RemoveLocation(udg_TempLoc)
 else
 end
 end
@@ -37075,7 +37074,7 @@ return true
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Func012C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A0CW"), udg_TempUnit) > 0)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A15C"), udg_TempUnit) > 0)) then
 return false
 end
 return true
@@ -37133,7 +37132,7 @@ end
 end
 udg_TempReal = RMaxBJ((udg_MinMS - udg_TempReal2), (udg_TempReal - udg_TempReal2))
 if (Trig_Set_HP_scaled_MS_for_TempUnit_Func012C()) then
-udg_TempReal = RMaxBJ((udg_MinMS - 132.00), (udg_TempReal - 132.00))
+udg_TempReal = 100.00
 else
 end
 SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
@@ -38098,7 +38097,7 @@ if (Trig_Hero_Respawn_One_Day_on_Earth_Func001Func009C()) then
 DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Baba: Spend your one day wisely " .. (GetPlayerName(udg_TempPlayer) .. "|r")))
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_24392")
 SaveRealBJ(udg_HeroRespawnDayDuration, 5, udg_ID, udg_HeroRespawnHashtable)
-AddSpecialEffectTargetUnitBJ("overhead", udg_HeroRespawnUnit, "Halo3.mdx")
+AddSpecialEffectTargetUnitBJ("overhead", udg_HeroRespawnUnit, "Halo.mdx")
 SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 6, udg_ID, udg_HeroRespawnHashtable)
             SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
 AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl")
@@ -63901,7 +63900,7 @@ DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18481")
 else
 end
 if (Trig_Transformations_Lucca_Func020Func002C()) then
-BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.40, R2I(0.00))
+BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.30, R2I(0.00))
 SetUnitAbilityLevelSwapped(FourCC("A0X8"), udg_StatMultUnit, 3)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18482")
