@@ -7,8 +7,8 @@ import { CoordMath } from "Common/CoordMath";
 import { TimerManager } from "Core/Utility/TimerManager";
 
 export class FusionManager { 
-  public static MAX_FUSE_DISTANCE = 600;
-  public static MAX_FUSE_DELAY = 0.5;
+  public static MAX_FUSE_DISTANCE = 800;
+  public static MAX_FUSE_DELAY = 1;
 
   public static instance: FusionManager;
   public static getInstance() {

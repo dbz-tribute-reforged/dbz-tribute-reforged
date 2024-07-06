@@ -2866,7 +2866,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
     },
     { 
       id: Id.vegetaMajinGalaxyBreaker,
-      manaCost: 15
+      manaCost: 10
     },
     { 
       id: Id.vegetaMajinBigBangAttack2,
@@ -2874,7 +2874,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
     },
     { 
       id: Id.vegetaMajinFinalFlash,
-      manaCost: 30
+      manaCost: 25
     },
     { 
       id: Id.vegetaMajinGalaxyDonut,
@@ -2882,7 +2882,7 @@ export function vegetaMajinPassive(customHero: CustomHero) {
     },
     { 
       id: Id.vegetaMajinFinalExplosion,
-      manaCost: 200
+      manaCost: 150
     },
   ];
 
@@ -3737,26 +3737,6 @@ export function gojoPassive(customHero: CustomHero) {
       }
     }
   });
-
-  const onHitTrigger = CreateTrigger();
-  customHero.addPassiveTrigger(onHitTrigger);
-  TriggerRegisterAnyUnitEventBJ(
-    onHitTrigger,
-    EVENT_PLAYER_UNIT_ATTACKED,
-  );
-  TriggerAddCondition(
-    onHitTrigger,
-    Condition(() => {
-      const attacker = GetAttacker();
-      if (attacker != customHero.unit) return false;
-      // mark it for dds
-      const attacked = GetTriggerUnit();
-      if (UnitHelper.isUnitRealHero(attacked)) {
-        Globals.DDSAddUnit(attacked);
-      }
-      return false;
-    })
-  );
 }
 
 export function buuGojoPassive(customHero: CustomHero) {
@@ -3889,8 +3869,8 @@ export function beerusPassive(customHero: CustomHero) {
 }
 
 export function cheongMyeongPassive(customHero: CustomHero) {
-  const basicManaCostPct = 0.05;
-  const specialManaCostPct = 0.25;
+  const basicManaCostPct = 0.02;
+  const specialManaCostPct = 0.23;
 
   const basicAbils = [
     Id.cheongMyeongSwordOfSixElements,
@@ -3915,9 +3895,6 @@ export function cheongMyeongPassive(customHero: CustomHero) {
     UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomFlow);
     UnitAddAbility(customHero.unit, Id.cheongMyeongPlumBlossomCloudburst);
   }
-
-  // return passive
-  Globals.DDSAddUnit(customHero.unit);
 
   const timer = CreateTimer();
   customHero.addTimer(timer);
@@ -4046,7 +4023,9 @@ export function setupRegenTimer(customHero: CustomHero) {
         heroAgi / sumStats
       )
     );
-    spAgi = Pow(spAgi, Constants.AGILITY_REGEN_EXPONENT);
+    spAgi = Math.max(Constants.MIN_AGI_RATIO, 
+      Pow(spAgi, Constants.AGILITY_REGEN_EXPONENT)
+    );
     
     let spMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
@@ -4096,7 +4075,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     // at 1:1, 0.5% of max hp/s
     let incHp = 0;
     let hpMult = 1.0;
-    let hpAgi = Pow(heroAgi / heroStr, Constants.AGILITY_REGEN_EXPONENT);
+    let hpAgi = Math.max(Constants.MIN_AGI_RATIO, 
+      Pow(heroAgi / heroStr, Constants.AGILITY_REGEN_EXPONENT)
+    );
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       hpMult += Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
@@ -4150,7 +4131,9 @@ export function setupRegenTimer(customHero: CustomHero) {
 
     // 1 agi gives 0.1 mana regen
     // at 1:1, 1% of max MP/s
-    let mpAgi = Pow(heroAgi / heroInt, Constants.AGILITY_REGEN_EXPONENT);
+    let mpAgi = Math.max(Constants.MIN_AGI_RATIO,
+      Pow(heroAgi / heroInt, Constants.AGILITY_REGEN_EXPONENT)
+    );
     let mpMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       mpMult += Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;

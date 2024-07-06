@@ -35,6 +35,7 @@ export class PlayerProfile {
 
   public static FIELD_PREFERS_ZD = "PREFERS_ZD";
   public static FIELD_PREFERS_TSS = "PREFERS_TSS";
+  public static FIELD_PREFERS_DT = "PREFERS_DT";
 
   static getSaveFileName(name: string) {
     return (
@@ -223,6 +224,7 @@ export class PlayerProfile {
 
       PlayerProfile.makeField(PlayerProfile.FIELD_PREFERS_ZD, customPlayer.prefersZD ? 1 : 0),
       PlayerProfile.makeField(PlayerProfile.FIELD_PREFERS_TSS, udg_SummonsSelectFlagArray[playerId] ? 1 : 0),
+      PlayerProfile.makeField(PlayerProfile.FIELD_PREFERS_DT, customPlayer.dualTechSendFlag && customPlayer.dualTechReceiveFlag),
     ];
 
     const saveStr = data.join(PlayerProfile.FIELD_SEPARATOR);
@@ -364,6 +366,16 @@ export class PlayerProfile {
           udg_TempPlayer = this.player;
           TriggerExecute(gg_trg_ToggleSummonSelect);
         }
+      }
+    }
+
+    if (this.fieldMap.has(PlayerProfile.FIELD_PREFERS_DT)) {
+      if (S2I(this.fieldMap.get(PlayerProfile.FIELD_PREFERS_DT)) == 1) {
+        Logger.LogDebug("player prefers DT");
+        customPlayer.setDualTechFlag(true);
+      } else {
+        Logger.LogDebug("player prefers DT off");
+        customPlayer.setDualTechFlag(false);
       }
     }
   }

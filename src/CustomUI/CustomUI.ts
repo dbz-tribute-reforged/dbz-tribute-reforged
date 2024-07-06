@@ -38,13 +38,16 @@ export class CustomUI {
   public toggleSummonSelectButton: Frame;
   public toggleSummonSelectButtonBackdrop: Frame;
   public toggleSummonSelectButtonTrigger: Trigger;
-  
+
+  public dualTechButton: Frame;
+  public dualTechButtonBackdrop: Frame;
+  public dualTechButtonTrigger: Trigger;
 
   constructor() {
     this.toggleMinimapButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
       .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1560, 0.0020)
       .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.1770, 0.0230)
-      .setText("|cffFFCC00M|r")
+      .setText("M")
       .setScale(1.00)
 
     this.toggleMinimapButtonBackdrop = new Frame("ToggleMinimapButton[0]", this.toggleMinimapButton, 0, 0, 'BACKDROP', "")
@@ -89,9 +92,9 @@ export class CustomUI {
     this.helpSkillsButton = new Frame("ScriptDialogButton", 
       Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2300, 0.1100)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2800, 0.1305)
-      .setText("|cffFFFFFFInfo|r")
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1800, 0.0950)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2240, 0.1160)
+      .setText("|cffFFFFFFHelp|r")
       .setScale(1.00)
 
     this.helpSkillsTrigger = new Trigger();
@@ -148,7 +151,7 @@ export class CustomUI {
     this.toggleSummonSelectButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
       .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1840, 0.0480)
       .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2050, 0.0690)
-      .setText("|cffFFCC00TSS|r")
+      .setText("TSS")
       .setScale(1.00)
 
     this.toggleSummonSelectButtonBackdrop = new Frame("ToggleSummonSelectButton[0]", this.toggleSummonSelectButton, 0, 0, 'BACKDROP', "")
@@ -175,6 +178,43 @@ export class CustomUI {
         );
       }
     });
+
+    
+    this.dualTechButton = new Frame("IconButtonTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.1840, 0.0710)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2050, 0.0920)
+      .setText("DT")
+      .setScale(1.00)
+
+    this.dualTechButtonBackdrop = new Frame("DualTechButton[0]", this.dualTechButton, 0, 0, 'BACKDROP', "")
+      .setAllPoints(this.dualTechButton)
+      .setTexture("ReplaceableTextures/CommandButtonsDisabled/DISBTNHSCrono.blp", 0, true)
+
+    this.dualTechButtonTrigger = new Trigger();
+    this.dualTechButtonTrigger.triggerRegisterFrameEvent(this.dualTechButton, FRAMEEVENT_CONTROL_CLICK);
+    this.dualTechButtonTrigger.addCondition(Condition(() => {
+      this.dualTechButton.enabled = false;
+      this.dualTechButton.enabled = true;
+
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      const customPlayer = Globals.customPlayers[playerId];
+      customPlayer.setDualTechFlag(!customPlayer.isUsingDualTech());
+      if (player == GetLocalPlayer()) {
+        this.dualTechButtonBackdrop.setTexture(
+          customPlayer.isUsingDualTech() ? 
+            "BTNHSCrono.blp" : 
+            "ReplaceableTextures/CommandButtonsDisabled/DISBTNHSCrono.blp"
+          , 0, true
+        );
+      }
+      if (Globals.customPlayers[playerId].dualTechSendFlag) {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 3, "|cff00ff00Dual Techs Enabled|r");
+      } else {
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 3, "|cffff2222Dual Techs Disabled|r");
+      }
+      return false;
+    }));
   }
 
   toggleMinimapIcons(player: player) {

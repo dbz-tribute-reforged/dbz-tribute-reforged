@@ -127,7 +127,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.superBuu && this.kidBuu && !this.isKid && 
-      SagaHelper.checkUnitHp(this.superBuu, 0.1, false, true, false) &&
+      SagaHelper.checkUnitHp(this.superBuu, 0.6, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.kidBuu)
     ) {
       this.isKid = true;
