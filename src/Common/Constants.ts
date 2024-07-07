@@ -183,7 +183,7 @@ export module Constants {
   export const BASE_STAMINA = 100.0;
   export const STAMINA_REGEN_MULT_MAX_BONUS = 2.0;
   export const STAMINA_REGEN_MULT_MIN_BONUS = 0.5;
-  export const MIN_AGI_RATIO = 0.66;
+  export const AGI_RATIO_LINEAR_THRESHOLD = 1.0;
 
   export const FARMING_TICK_INTERVAL = 0.05;
   export const FARMING_STANDARD_DURATION = 200;

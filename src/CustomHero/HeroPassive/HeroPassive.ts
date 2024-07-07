@@ -4023,9 +4023,10 @@ export function setupRegenTimer(customHero: CustomHero) {
         heroAgi / sumStats
       )
     );
-    spAgi = Math.max(Constants.MIN_AGI_RATIO, 
+    spAgi = spAgi > Constants.AGI_RATIO_LINEAR_THRESHOLD ?
+      spAgi : 
       Pow(spAgi, Constants.AGILITY_REGEN_EXPONENT)
-    );
+    ;
     
     let spMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
@@ -4075,9 +4076,10 @@ export function setupRegenTimer(customHero: CustomHero) {
     // at 1:1, 0.5% of max hp/s
     let incHp = 0;
     let hpMult = 1.0;
-    let hpAgi = Math.max(Constants.MIN_AGI_RATIO, 
-      Pow(heroAgi / heroStr, Constants.AGILITY_REGEN_EXPONENT)
-    );
+    let hpAgi = heroAgi / heroStr;
+    if (hpAgi > Constants.AGI_RATIO_LINEAR_THRESHOLD) {
+      hpAgi = Pow(hpAgi, Constants.AGILITY_REGEN_EXPONENT);
+    }
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       hpMult += Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
     }
@@ -4131,9 +4133,10 @@ export function setupRegenTimer(customHero: CustomHero) {
 
     // 1 agi gives 0.1 mana regen
     // at 1:1, 1% of max MP/s
-    let mpAgi = Math.max(Constants.MIN_AGI_RATIO,
-      Pow(heroAgi / heroInt, Constants.AGILITY_REGEN_EXPONENT)
-    );
+    let mpAgi = heroAgi / heroInt;
+    if (mpAgi > Constants.AGI_RATIO_LINEAR_THRESHOLD) {
+      mpAgi = Pow(mpAgi, Constants.AGILITY_REGEN_EXPONENT);
+    }
     let mpMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Buffs.OMEGA_SHENRON_ENVOY_AGI_PASSIVE) > 0) {
       mpMult += Constants.OMEGA_SHENRON_PASSIVE_REGEN_MULT;
