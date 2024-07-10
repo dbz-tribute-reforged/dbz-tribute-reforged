@@ -22,6 +22,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // to here, and replace with unique name
   // kame light knockback
@@ -44,13 +45,14 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // knockback deflect
   {
     name: "knockback deflect",
     repeatInterval: 1, 
-    startTick: 9,
-    endTick: 18,
+    startTick: 3,
+    endTick: 13,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -65,11 +67,12 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback deflect hero pushback",
     repeatInterval: 1, 
-    startTick: 9,
+    startTick: 3,
     endTick: -1,
     knockbackData: {
       speed: 35, 
@@ -85,6 +88,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback sparking hero pushback",
@@ -105,6 +109,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // final shine attack
   {
@@ -126,6 +131,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // super dragon flight
   {
@@ -147,6 +153,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // heat dome attack
   {
@@ -168,6 +175,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // hellzone grenade
   // {
@@ -202,6 +210,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // videl punch
   {
@@ -223,6 +232,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // videl kick
   {
@@ -244,6 +254,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // videl flying kick
   {
@@ -265,6 +276,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // javelin throw
   {
@@ -286,6 +298,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // ss deadly hammer reverse knockback
   {
@@ -307,6 +320,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // android barrier knockback
   {
@@ -328,6 +342,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // broly energy punch
   {
@@ -349,6 +364,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback energy punch",
@@ -369,6 +385,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: true,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback energy punch hero",
@@ -389,6 +406,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // broly power level rising
   {
@@ -410,6 +428,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // big bang attack reverse knockback
   {
@@ -431,6 +450,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback 1tick 25speed 180angle 250aoe",
@@ -451,6 +471,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // dfist knock-in
   {
@@ -472,6 +493,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // energy blast volley minor knockback
   {
@@ -493,6 +515,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tyrant breaker knockback
   {
@@ -514,6 +537,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // angry shout large aoe knockback
   {
@@ -535,6 +559,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // reliable friend
   {
@@ -556,6 +581,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // babidi barrier knockback
   {
@@ -577,6 +603,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // evil spear knock in
   {
@@ -598,6 +625,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // cooler deafening wave
   {
@@ -619,6 +647,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // solar kame
   {
@@ -640,6 +669,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // raditz behind you
   {
@@ -661,6 +691,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // power blitz
   {
@@ -682,6 +713,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // power blitz barrage
   {
@@ -703,6 +735,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // super electric strike
   {
@@ -724,6 +757,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // belly armor
   {
@@ -745,6 +779,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // hand kannon
   {
@@ -766,6 +801,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback hand kannon deflect",
@@ -786,6 +822,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // blast-o-matic
   {
@@ -807,6 +844,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // beam power impact
   {
@@ -828,6 +866,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // beam power impact
   {
@@ -849,6 +888,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // beam jiren meditate 2 barrier
   {
@@ -870,6 +910,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // justice tornado
   {
@@ -891,6 +932,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // justice tornado 2
   {
@@ -912,6 +954,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // death storm
   {
@@ -933,6 +976,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback death storm explosion",
@@ -953,6 +997,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback death storm end",
@@ -973,6 +1018,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // nova star omega
   {
@@ -994,6 +1040,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // justice kick 2
   {
@@ -1015,6 +1062,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // circle flash
   {
@@ -1036,6 +1084,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // yamcha r super spirit ball
   {
@@ -1057,6 +1106,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // yamcha r wolf fang hurricane
   {
@@ -1078,6 +1128,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // yamcha r batter up
   {
@@ -1099,6 +1150,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // yamcha r sparking
   {
@@ -1120,6 +1172,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // psycho javelin knock in
   {
@@ -1141,6 +1194,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // telekinesis knock in
   {
@@ -1162,6 +1216,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // kame super roshi
   {
@@ -1183,6 +1238,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // lightning surprise
   {
@@ -1204,6 +1260,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // mafuba
   {
@@ -1225,6 +1282,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // divine authority
   {
@@ -1246,6 +1304,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback divine authority knock-in",
@@ -1266,6 +1325,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // detroit smash
   {
@@ -1287,6 +1347,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // united states of smash
   {
@@ -1308,6 +1369,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback beam united states of smash inner",
@@ -1328,6 +1390,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback beam united states of smash outer",
@@ -1348,6 +1411,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // oklahoma smash
   {
@@ -1369,6 +1433,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback oklahoma smash release",
@@ -1389,6 +1454,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // new hampshire smash
   {
@@ -1410,6 +1476,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // black materia
   {
@@ -1431,6 +1498,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // mario cape
   {
@@ -1452,6 +1520,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tri beam
   {
@@ -1473,6 +1542,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tien kiai
   {
@@ -1494,6 +1564,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tyranno roar knockback / deflect
   {
@@ -1515,6 +1586,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // water 2
   {
@@ -1536,6 +1608,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // cyclone knock-in
   {
@@ -1557,6 +1630,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // cyclone knock-in
   {
@@ -1578,6 +1652,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tail spin knock-in
   {
@@ -1599,6 +1674,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // ayla fire whirl knock-in
   {
@@ -1620,6 +1696,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // aura storm
   {
@@ -1641,6 +1718,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback giga sphere",
@@ -1661,6 +1739,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // saitama serious punch
   {
@@ -1682,6 +1761,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // saitama serious sideways jumps
   {
@@ -1703,6 +1783,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // dk jungle rush
   {
@@ -1724,6 +1805,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // chou makousen
   {
@@ -1745,6 +1827,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // tail sweep
   {
@@ -1766,6 +1849,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // shocking death ball
   {
@@ -1787,6 +1871,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback super 17 shocking death ball 2",
@@ -1807,6 +1892,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback super 17 shocking death ball 3",
@@ -1827,6 +1913,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // flashfreeze heatwave
   {
@@ -1848,6 +1935,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // skurvy kannon
   {
@@ -1869,6 +1957,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // skurvy pirate scorn cannon
   {
@@ -1890,6 +1979,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // jaco super elite combo
   {
@@ -1911,6 +2001,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // waluigi spin
   {
@@ -1932,6 +2023,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // leon kick
   {
@@ -1953,6 +2045,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback leon kick hero",
@@ -1973,6 +2066,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // sephiroth octoslash
   {
@@ -1994,6 +2088,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // megumin explosion 1
   {
@@ -2015,6 +2110,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // megumin explosion 2
   {
@@ -2036,6 +2132,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // megumin explosion 3
   {
@@ -2057,6 +2154,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // megumin explosion 4
   {
@@ -2078,6 +2176,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // megumin explosion 5
   {
@@ -2099,6 +2198,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // ainz black hole
   {
@@ -2120,6 +2220,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback ainz black hole 2",
@@ -2140,6 +2241,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback ainz black hole 3",
@@ -2160,6 +2262,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   {
     name: "knockback hell flame",
@@ -2180,6 +2283,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // majin vegeta final flash
   {
@@ -2201,6 +2305,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // majin vegeta final explosion
   {
@@ -2222,6 +2327,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // minato rasengan
   {
@@ -2243,6 +2349,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: true,
     isFixedAngle: true,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // might guy hirudora
   {
@@ -2264,6 +2371,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // whis sym
   {
@@ -2285,6 +2393,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // beerus aura of destruction
   {
@@ -2306,6 +2415,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // final shot
   {
@@ -2327,6 +2437,7 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // cell max max block
   {
@@ -2348,6 +2459,72 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: true,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
+  },
+  // omniman punch
+  {
+    name: "knockback omniman punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 0, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: true,
+    onlyNonHeroes: false,
+    isPersistent: true,
+    isFixedAngle: true,
+    isFixedSourceUnitToTargetAngle: true,
+  },
+  {
+    name: "knockback omniman punch deflect",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 0, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+    onlyHeroes: false,
+    onlyNonHeroes: true,
+    isPersistent: true,
+    isFixedAngle: true,
+    isFixedSourceUnitToTargetAngle: true,
+  },
+  // omniman train
+  {
+    name: "knockback beam omniman train",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 35, 
+      angle: 180, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    knockbackTarget: AOEKnockback.TARGET_AOE,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+    onlyHeroes: false,
+    onlyNonHeroes: false,
+    isPersistent: false,
+    isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
   // item cell max wings
   {
@@ -2369,5 +2546,6 @@ export const AOEKnockbackComponents = [
     onlyNonHeroes: false,
     isPersistent: false,
     isFixedAngle: false,
+    isFixedSourceUnitToTargetAngle: false,
   },
 ];

@@ -8,7 +8,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 8,
+    maxCd: 4,
     costType: CostType.SP,
     costAmount: 45,
     duration: 20,
@@ -30,7 +30,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for moving within 500 range of an enemy hero.|n" +
-        "Cost: 45 SP|nCD: 8 (varies)",
+        "Cost: 45 SP|nCD: 4 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -43,7 +43,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZOKEN,
     currentCd: 0,
-    maxCd: 8,
+    maxCd: 4,
     costType: CostType.SP,
     costAmount: 50,
     duration: 1,
@@ -64,7 +64,7 @@ export const AbilitiesList = [
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
         "Cost: 50 SP|n" + 
-        "CD: 8 (varies)",
+        "CD: 4 (varies)",
     },
     components: [
       { name: "sfx shunpo start" },
@@ -76,7 +76,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Minato.HIRAISHIN_ZANZO,
     currentCd: 0,
-    maxCd: 8,
+    maxCd: 4,
     costType: CostType.SP,
     costAmount: 50,
     duration: 2,
@@ -98,7 +98,7 @@ export const AbilitiesList = [
         "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
         "Drops a Kunai at the start of the ability.|n" + 
         "Cost: 50 SP|n" + 
-        "CD: 8 (varies)",
+        "CD: 4 (varies)",
     },
     components: [
       // { name: "sfx minato hiraishin attach" },
@@ -140,9 +140,9 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Beerus.BEERUS_COUNTER,
     currentCd: 0,
-    maxCd: 20,
+    maxCd: 15,
     costType: CostType.SP,
-    costAmount: 65,
+    costAmount: 40,
     duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
@@ -158,9 +158,9 @@ export const AbilitiesList = [
       title: "Beerus Counter",
       body: 
         "Teleport to the next enemy hero that damages you within 2.5s and stun them for 1s. " + 
-        "Deals 15% of the damage received.|n" + 
-        "Cost: 65 SP|n" + 
-        "CD: 20",
+        "Deals 20% of the damage received.|n" + 
+        "Cost: 40 SP|n" + 
+        "CD: 15",
     },
     components: [
     ],
@@ -169,7 +169,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 2,
     costType: CostType.SP,
     costAmount: 30,
     duration: 50,
@@ -191,7 +191,7 @@ export const AbilitiesList = [
         "Block 70% of incoming damage until more than 3 * STR damage is blocked for 1.5s.|n" +
         "After a 0.3s delay, damage is reduced by 95% up to 3 * STR for the next 0.3s.|n" +  
         "Cost: 30 SP|n" + 
-        "CD: 4"
+        "CD: 2"
     },
     components: [
       { name: "block basic guard" },
@@ -202,7 +202,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Granolah.SHIELD,
     currentCd: 0,
-    maxCd: 10,
+    maxCd: 6,
     costType: CostType.SP,
     costAmount: 40,
     duration: 66,
@@ -222,7 +222,7 @@ export const AbilitiesList = [
         "Creates a barrier for 2s that restricts movement and reduces incoming damage.|n" +
         "Blocks 70% of incoming damage up to 3 * STR.|n" +
         "Cost: 40 SP|n" + 
-        "CD: 10"
+        "CD: 6"
     },
     components: [
       { name: "beam granolah cerelian shield" },
@@ -271,7 +271,7 @@ export const AbilitiesList = [
     maxCd: 2,
     costType: CostType.SP,
     costAmount: 25,
-    duration: 19,
+    duration: 14,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -285,9 +285,9 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBasicDeflect.blp",
     },
     tooltip: {
-      title: "Deflect",
+      title: "Deflect", 
       body: 
-        "After a 0.3s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
+        "After a 0.1s delay, damage is reduced by 95% up to 4 * STR for the next 0.3s.|n" +
         "Deflects incoming beams and slows nearby enemies by 50% for 1s.|n" +
         "Cost: 25 SP|nCD: 2"
     },
@@ -12249,7 +12249,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 116,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -12266,8 +12266,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "channel caster 0.5s" },
-      { name: "multi beerus sphere of destruction" },
+      { name: "beam beerus sphere of destruction" },
       { name: "sfx beerus sphere of destruction caster" },
     ],
   },
@@ -13090,6 +13089,256 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Omniman.PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi omniman punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.PUNCH_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi omniman punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.GUT_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "multi omniman punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.DASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground point 50dist" },
+      { name: "damage omniman dash explosion" },
+      { name: "sfx omniman dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.DRAG,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "dash ground point 50dist" },
+      { name: "damage omniman dash explosion" },
+      { name: "sfx omniman dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.SLICE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi omniman slice 1" },
+      { name: "multi omniman slice 2" },
+      { name: "sfx omniman slice" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.IMPALE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi omniman impale 1" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.PLEASE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "temp ability omniman please armor" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Omniman.TRAIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: CostType.MP,
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    canUseWhenStunned: false,
+    animation: "spell",
+    icon: {
+      enabled: "",
+      disabled: "",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        "",
+    },
+    components: [
+      { name: "multi omniman train" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Skurvy.KANNON_FIRE,
     currentCd: 0,
     maxCd: 1,
@@ -13196,7 +13445,7 @@ export const AbilitiesList = [
         AbilityNames.Skurvy.EXTRAORDINARY_POWER,
     },
     components: [
-      { name: "spell amp 30 persistent" },
+      { name: "spell amp 20 persistent" },
       { name: "dash ground forward extraordinary power" },
       { name: "sfx unlock potential" },
     ],

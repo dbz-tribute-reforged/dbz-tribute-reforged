@@ -117,6 +117,7 @@ export class TransformationSystem {
       [Id.gojo, gg_trg_Transformations_Gojo],
       [Id.cheongMyeong, gg_trg_Transformations_Cheong_Myeong],
       [Id.aggronor, gg_trg_Transformations_Aggronor],
+      [Id.omniman, gg_trg_Transformations_Omni_Man],
     ]);
     
     this.init();

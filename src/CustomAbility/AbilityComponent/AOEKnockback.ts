@@ -27,6 +27,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   public isStarted: boolean = false;
   public isFinished: boolean = true;
 
+  public fixedSourceToTargetAngle: number = 0;
+
   constructor(
     public name: string = "AOEKnockback",
     public repeatInterval: number = 1,
@@ -44,6 +46,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     public onlyNonHeroes: boolean = false,
     public isPersistent: boolean = false,
     public isFixedAngle: boolean = false,
+    public isFixedSourceUnitToTargetAngle: boolean = false,
   ) {
     this.sourceCoord = new Vector2D();
     this.targetCoord = new Vector2D();
@@ -110,7 +113,10 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       && !IsUnitType(target, UNIT_TYPE_STRUCTURE)
     ) {
       this.targetCoord.setUnit(target);
-      const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
+      const sourceToTargetAngle = this.isFixedSourceUnitToTargetAngle ?
+        this.fixedSourceToTargetAngle : 
+        CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord)
+      ;
       if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
         // SetUnitFacing(target, sourceToTargetAngle);
         BlzSetUnitFacingEx(target, sourceToTargetAngle);
@@ -142,6 +148,15 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
         && input.targetUnit
       ) {
         GroupAddUnit(this.affectedGroup, input.targetUnit);
+      }
+      if (this.isFixedSourceUnitToTargetAngle) {
+        this.sourceCoord.setUnit(source);
+        if (this.useLastCastPoint) {
+          this.targetCoord.setVector(input.castPoint);
+        } else {
+          this.targetCoord.setVector(input.targetPoint);
+        }
+        this.fixedSourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
       }
       if (this.isFixedAngle) {
         this.getSourceCoord(input, source);
@@ -209,6 +224,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.onlyNonHeroes,
       this.isPersistent,
       this.isFixedAngle,
+      this.isFixedSourceUnitToTargetAngle,
     );
   }
 
@@ -232,6 +248,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       onlyNonHeroes: boolean;
       isPersistent: boolean;
       isFixedAngle: boolean;
+      isFixedSourceUnitToTargetAngle: boolean;
     }
   ) {
     this.name = input.name;
@@ -248,6 +265,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.onlyNonHeroes = input.onlyNonHeroes;
     this.isPersistent = input.isPersistent;
     this.isFixedAngle = input.isFixedAngle;
+    this.isFixedSourceUnitToTargetAngle = input.isFixedSourceUnitToTargetAngle;
     return this;
   }
 }

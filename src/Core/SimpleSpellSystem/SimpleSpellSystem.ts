@@ -26,6 +26,7 @@ import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
 import { AOEHeal } from "CustomAbility/AbilityComponent/AOEHeal";
 import { AOEKnockback } from "CustomAbility/AbilityComponent/AOEKnockback";
+import { Barrier } from "CustomAbility/AbilityComponent/Barrier";
 import { BeamComponent } from "CustomAbility/AbilityComponent/BeamComponent";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -447,6 +448,14 @@ export module SimpleSpellSystem {
     Globals.genericSpellMap.set(Id.aggronorAvatar, SimpleSpellSystem.doAggronorAvatar);
     
     Globals.genericSpellMap.set(Id.farmerHonestShot, SimpleSpellSystem.doFarmerHonestShot);
+
+    Globals.genericSpellMap.set(Id.omnimanPlease, SimpleSpellSystem.doOmnimanPlease);
+    Globals.genericSpellMap.set(Id.omnimanGrab, SimpleSpellSystem.doOmnimanGrab);
+    Globals.genericSpellMap.set(Id.omnimanGutPunch, SimpleSpellSystem.doOmnimanGrabAbils);
+    Globals.genericSpellMap.set(Id.omnimanDrag, SimpleSpellSystem.doOmnimanGrabAbils);
+    Globals.genericSpellMap.set(Id.omnimanImpale, SimpleSpellSystem.doOmnimanGrabAbils);
+    Globals.genericSpellMap.set(Id.omnimanCrush, SimpleSpellSystem.doOmnimanGrabAbils);
+    Globals.genericSpellMap.set(Id.omnimanTrain, SimpleSpellSystem.doOmnimanTrain);
     
     Globals.genericSpellMap.set(Id.getiStarItemReplicator, SimpleSpellSystem.doGetiStarItemReplicator);
 
@@ -716,9 +725,11 @@ export module SimpleSpellSystem {
     const healActiveKey = StringHash("whis_w_heal_active");
     if (!LoadBoolean(Globals.genericDDSHashtable, dmg.targetHandleId, healActiveKey)) return;
 
+    const healPct = 0.75;
     const healKey = StringHash("whis_w_heal");
     const healAmt = LoadReal(Globals.genericDDSHashtable, dmg.targetHandleId, healKey);
-    SaveReal(Globals.genericDDSHashtable, dmg.targetHandleId, healKey, healAmt + dmg.dmg * 0.5);
+    SaveReal(Globals.genericDDSHashtable, 
+      dmg.targetHandleId, healKey, healAmt + dmg.dmg * healPct);
   }
 
   export function doBeerusCataclysmicOrbKick(
@@ -1246,7 +1257,9 @@ export module SimpleSpellSystem {
           BlzSetSpecialEffectYaw(sfx, ang * CoordMath.degreesToRadians);
           DestroyEffect(sfx);
   
-          const dummy = CreateUnit(player, Constants.dummyCasterId, Globals.tmpVector.x, Globals.tmpVector.y, 0);
+          const dummy = CreateUnit(player, Constants.dummyCasterId, 
+            Globals.tmpVector.x, Globals.tmpVector.y, 0
+          );
           UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1.0);
           UnitAddAbility(dummy, DebuffAbilities.STUN_HALF_SECOND);
           IssueTargetOrderById(dummy, OrderIds.THUNDERBOLT, target);
@@ -2307,6 +2320,7 @@ export module SimpleSpellSystem {
     const darkEyesDuration = 4.0;
     const negativeImpactShieldDuration = 3.0;
     const minatoSecondStepDuration = 1.5;
+    const omnimanPleaseDuration = 3.0;
 
     const unitId = GetHandleId(unit);
     SaveInteger(Globals.genericSpellHashtable, unitId, 0, spellId);
@@ -2339,6 +2353,8 @@ export module SimpleSpellSystem {
       timerDuration = negativeImpactShieldDuration;
     } else if (spellId == Id.minatoSecondStep) {
       timerDuration = minatoSecondStepDuration;
+    } else if (spellId == Id.omnimanPlease) {
+      timerDuration = omnimanPleaseDuration;
     }
 
     const timer = TimerManager.getInstance().get();
@@ -2373,6 +2389,7 @@ export module SimpleSpellSystem {
         && spellId != Id.minatoSecondStep
         && spellId != Id.gokuInstantTransmission
         && spellId != Id.beerusCounter
+        && spellId != Id.omnimanPlease
       )
     ) return;
 
@@ -2389,6 +2406,10 @@ export module SimpleSpellSystem {
     const darkEyesPunishDamageMult = 0.25;
     const minatoPunishDamageMult = 0.1;
     const gokuITPunishDamageMult = 0.1;
+    const beerusCounterPunishMult = 0.2;
+    const omnimanPleaseDamageMult = 1.5;
+
+    const targetUnitTypeId = GetUnitTypeId(target);
 
     SaveInteger(Globals.genericSpellHashtable, targetId, 0, 0);
 
@@ -2404,8 +2425,10 @@ export module SimpleSpellSystem {
       if (CoordMath.distance(Globals.ddsVector, Globals.ddsVector2) > maxGlareDistance) return;
     }
 
-    SetUnitX(target, Globals.ddsVector2.x);
-    SetUnitY(target, Globals.ddsVector2.y);
+    if (spellId != Id.omnimanPlease) {
+      SetUnitX(target, Globals.ddsVector2.x);
+      SetUnitY(target, Globals.ddsVector2.y);
+    }
     
     if (spellId != Id.gokuInstantTransmission) {
       const castDummy = CreateUnit(
@@ -2429,6 +2452,10 @@ export module SimpleSpellSystem {
       punishMult = minatoPunishDamageMult;
     } else if (spellId == Id.gokuInstantTransmission) {
       punishMult = gokuITPunishDamageMult;
+    } else if (spellId == Id.beerusCounter) {
+      punishMult = beerusCounterPunishMult;
+    } else if (spellId == Id.omnimanPlease) {
+      punishMult = 0;
     }
 
     let damageMult = glareDamageMult;
@@ -2439,6 +2466,8 @@ export module SimpleSpellSystem {
     } else if (spellId == Id.minatoSecondStep) {
       damageMult = minatoSecondStepDamageMult;
     } else if (spellId == Id.gokuInstantTransmission || spellId == Id.beerusCounter) {
+      damageMult = 0;
+    } else if (spellId == Id.omnimanPlease) {
       damageMult = 0;
     }
 
@@ -2511,7 +2540,7 @@ export module SimpleSpellSystem {
 
         TimerManager.getInstance().recycle(dmgTimer);
       });
-    } else {
+    } else if (punishMult > 0 || damageMult > 0) {
       const damage = (
         (AOEDamage.getIntDamageMult(target) * abilityLevel * spellPower * damageMult * damageBase) +
         GetEventDamage() * punishMult
@@ -2528,6 +2557,34 @@ export module SimpleSpellSystem {
       );
     }
     
+    if (spellId == Id.omnimanPlease) {
+      const ang = CoordMath.angleBetweenCoords(Globals.ddsVector, Globals.ddsVector2);
+      Globals.ddsVector.polarProjectCoords(Globals.ddsVector2, ang, 200);
+      PathingCheck.moveGroundUnitToCoord(target, Globals.ddsVector);
+      // cast punch at source
+      const playerId = GetPlayerId(player);
+      const dx = Globals.ddsVector2.x;
+      const dy = Globals.ddsVector2.y;
+      const tmpTimer = TimerManager.getInstance().get();
+      TimerStart(tmpTimer, 0.03, false, () => {
+        Globals.customPlayers[playerId].orderPoint.setPos(dx, dy);
+        const abilityInput = new CustomAbilityInput(
+          Id.omnimanPunch,
+          customHero,
+          player,
+          GetUnitAbilityLevel(target, Id.omnimanPunch),
+          Globals.customPlayers[playerId].orderPoint,
+          Globals.customPlayers[playerId].mouseData,
+          Globals.customPlayers[playerId].orderPoint.clone(),
+          Globals.customPlayers[playerId].targetUnit,
+          target,
+          omnimanPleaseDamageMult,
+        );
+        customHero.useAbility(AbilityNames.Omniman.PUNCH_2, abilityInput);
+        TimerManager.getInstance().recycle(tmpTimer);
+      });
+    }
+
     if (spellId == Id.shalltearNegativeImpactShield) {
       DestroyEffect(
         AddSpecialEffect(
@@ -2545,7 +2602,7 @@ export module SimpleSpellSystem {
       );
     }
     
-    if (targetId == Id.jiren) {
+    if (targetUnitTypeId == Id.jiren) {
       if (Math.random() * 100 < 5) {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
       } else {
@@ -2553,7 +2610,7 @@ export module SimpleSpellSystem {
       }
     }
 
-    if (targetId == Id.beerus) {
+    if (targetUnitTypeId == Id.beerus) {
       if (Math.random() * 100 < 50) {
         SoundHelper.playSoundOnUnit(target, "Audio/Voice/Beerus/Counter1.mp3", 1073);
       } else {
@@ -2561,10 +2618,19 @@ export module SimpleSpellSystem {
       }
     }
 
+    if (targetUnitTypeId == Id.omniman) {
+      SoundHelper.playSoundOnUnit(target, "Audio/Voice/OmniMan/DCounter.mp3", 731);
+    }
+
     if (spellId != Id.minatoSecondStep) {
       SoundHelper.playSoundOnUnit(target, "Audio/Effects/Zanzo.mp3", 1149);
       const sfx = LoadEffectHandle(Globals.genericSpellHashtable, targetId, 1);
       if (sfx) DestroyEffect(sfx);
+    }
+
+    if (spellId == Id.omnimanPlease) {
+      customHero.setIsChanneling(false);
+      // deal punch 1.5x
     }
   }
 
@@ -3483,7 +3549,7 @@ export module SimpleSpellSystem {
     const boostGroup = CreateGroup();
     const debuffDuration = 10;
     const debuffAOE = 1000;
-    const debuffSpellAmp = 0.05;
+    const debuffSpellAmp = 0.1;
 
     GroupClear(Globals.tmpUnitGroup);
     GroupEnumUnitsInRange(Globals.tmpUnitGroup, GetUnitX(caster), GetUnitY(caster), debuffAOE, null);
@@ -3543,7 +3609,7 @@ export module SimpleSpellSystem {
     );
     const schalaTpAOE = 600;
     const schalaTpMaxDist = 6000;
-    const maxIntervalDist = 128;
+    const maxIntervalDist = 100;
 
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
@@ -3601,10 +3667,12 @@ export module SimpleSpellSystem {
       Globals.tmpVector2.setPos(x, y);
       const distToTarget = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
       if (distToTarget > 0 && tick < tpDelayTicks) {
+        const tmpAngle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
         const minDist = Math.min(distToTarget, beamSpeed);
         for (let i = 0; i <= minDist; i += maxIntervalDist) {
+          const distToTarget2 = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
           Globals.tmpVector.polarProjectCoords(Globals.tmpVector, 
-            direction, Math.min(minDist, maxIntervalDist)
+            tmpAngle, Math.min(distToTarget2, maxIntervalDist)
           );
           PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(tpUnit, Globals.tmpVector);
           Globals.tmpVector.setUnit(tpUnit);
@@ -8593,7 +8661,7 @@ export module SimpleSpellSystem {
 
   export function doWhisAngelicShield(spellId: number) {
     const shieldHpMult = BASE_DMG.KAME_DPS * 10;
-    const maxHpPctPerLevel = 0.015;
+    const maxHpPctPerLevel = 0.02;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -8651,7 +8719,7 @@ export module SimpleSpellSystem {
   export function angelicShieldHook() {
     const endTick = 200;
     const dmgAOE = 500;
-    const shieldToDmgPct = 0.9;
+    const shieldToDmgPct = 1;
 
     const timer = GetExpiredTimer();
     const timerId = GetHandleId(timer);
@@ -8770,7 +8838,7 @@ export module SimpleSpellSystem {
     const tickRate = 0.03;
     const beamHpMult = BASE_DMG.KAME_DPS * 0.7;
     const beamDuration = 60.0;
-    const maxDist = 300;
+    const maxDist = 250;
 
     const beamTimerKey = StringHash("beerus_q_beam");
     const beamCasterTimerKey = StringHash("beerus_q_caster");
@@ -8821,8 +8889,8 @@ export module SimpleSpellSystem {
     const beamSpeed = 50;
     const detonateAOE = 250;
     const dmgAOE = 350;
-    const dmgDataMult = BASE_DMG.KAME_DPS * 3;
-    const manaToDmgPct = 0.05;
+    const dmgDataMult = BASE_DMG.KAME_DPS * 5;
+    const manaToDmgPct = 0.08;
     const nonHeroMaxHpPctDmg = 0.5;
 
     const timer = GetExpiredTimer();
@@ -9381,7 +9449,7 @@ export module SimpleSpellSystem {
     const blueKBRelativeSpeed = 15;
     const blueChargeToKBRatio = 0.5;
     // const blueBeamMaxMoveTicks = 40;
-    const blueBeamMaxExistTicks = 166;
+    const blueBeamMaxExistTicks = 133;
     const blueBeamHpMult = BASE_DMG.KAME_DPS * 0.8;
     const blueBeamDuration = 15;
     const blueMaxChargeTicks = 133;
@@ -9962,7 +10030,7 @@ export module SimpleSpellSystem {
     const redBonusDmgMult = 2;
     const dmgAOE = 375;
     const kbAOE = 250;
-    const redBeamSpeed = 35;
+    const redBeamSpeed = 40;
     const redKBRelativeSpeed = 15;
     const redKBDetoSpeed = 250;
     // const redBeamMaxMoveTicks = 40;
@@ -10781,7 +10849,7 @@ export module SimpleSpellSystem {
 
     let distTravelled = 0;
     Globals.tmpVector3.setVector(Globals.tmpVector);
-    while (distance > 16 && PathingCheck.isGroundWalkable(Globals.tmpVector3)) {
+    while (distance > 16 && PathingCheck.isFlyingWalkableExcludingDeepWater(Globals.tmpVector3)) {
       const adjSpeed = Math.min(speed, distance);
       Globals.tmpVector3.polarProjectCoords(
         Globals.tmpVector3, ang, adjSpeed
@@ -12047,6 +12115,568 @@ export module SimpleSpellSystem {
     IssueTargetOrderById(dummyUnit, OrderIds.INNER_FIRE, caster);
     RemoveUnit(dummyUnit);
   }
+
+  export function doOmnimanPlease(spellId: number) {
+    const maxDist = 3000;
+
+    const caster = GetTriggerUnit();
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    // stop self movement
+    // wait till please times out / channel break
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const originalX = GetUnitX(caster);
+    const originalY = GetUnitY(caster);
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      Globals.tmpVector.setUnit(caster);
+      Globals.tmpVector2.setPos(originalX, originalY);
+      const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+      if (dist >= maxDist || !customHero.isChanneling()) {
+        // disables DDS counter logic
+        SaveInteger(Globals.genericSpellHashtable, GetHandleId(caster), 0, 0);
+
+        udg_StatMultUnit = caster;
+        TriggerExecute(gg_trg_Base_Armor_Set);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+      PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector2);
+    });
+
+    DoJirenGlare(spellId, caster);
+    
+    udg_StatMultUnit = caster;
+    TriggerExecute(gg_trg_Base_Armor_Set);
+  }
+
+  export function omnimanSwapGrabAbils(player: player, b: boolean) {
+    SetPlayerAbilityAvailable(player, Id.omnimanPunch, b);
+    SetPlayerAbilityAvailable(player, Id.omnimanDash, b);
+    SetPlayerAbilityAvailable(player, Id.omnimanSlice, b);
+    SetPlayerAbilityAvailable(player, Id.omnimanGrab, b);
+    SetPlayerAbilityAvailable(player, Id.omnimanGutPunch, !b);
+    SetPlayerAbilityAvailable(player, Id.omnimanDrag, !b);
+    SetPlayerAbilityAvailable(player, Id.omnimanImpale, !b);
+    SetPlayerAbilityAvailable(player, Id.omnimanCrush, !b);
+  }
+
+  export function doOmnimanGrab(spellId: number) {
+    const initGrabTicks = 5;
+    const endTick = 66;
+    const grabDist = 250;
+    const grabAOE = 400;
+    const maxDist = 2500;
+
+    const omnimanGrabUnitKey = StringHash("omniman_grab_target");
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, grabDist);
+
+    const grabX = Globals.tmpVector2.x;
+    const grabY = Globals.tmpVector2.y;
+
+    UnitAddAbility(caster, Id.ghostVisible);
+    AddUnitAnimationProperties(caster, "alternate", true);
+    omnimanSwapGrabAbils(player, false);
+
+    UnitAddAbility(caster, Id.omnimanGutPunch);
+    UnitAddAbility(caster, Id.omnimanDrag);
+    UnitAddAbility(caster, Id.omnimanImpale);
+    UnitAddAbility(caster, Id.omnimanCrush);
+    SetUnitAbilityLevel(caster, Id.omnimanGutPunch, GetUnitAbilityLevel(caster, Id.omnimanPunch));
+    SetUnitAbilityLevel(caster, Id.omnimanDrag, GetUnitAbilityLevel(caster, Id.omnimanDash));
+    SetUnitAbilityLevel(caster, Id.omnimanImpale, GetUnitAbilityLevel(caster, Id.omnimanSlice));
+    SetUnitAbilityLevel(caster, Id.omnimanCrush, GetUnitAbilityLevel(caster, Id.omnimanGrab));
+
+    let grabUnit = null;
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (
+        ticks > endTick 
+        || GetUnitAbilityLevel(caster, Id.ghostVisible) == 0
+        || (grabUnit != null && (
+          !UnitHelper.isUnitAlive(grabUnit)
+          || !UnitHelper.isUnitAlive(caster)
+          || !UnitHelper.isUnitTargetableForPlayer(grabUnit, player)
+        ))
+      ) {
+        UnitRemoveAbility(caster, Id.ghostVisible);
+        AddUnitAnimationProperties(caster, "alternate", false);
+
+        if (grabUnit != null) Barrier.removeUnitBarrierBlock(grabUnit);
+
+        omnimanSwapGrabAbils(player, true);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      if (grabUnit == null) {
+        if (ticks < initGrabTicks) {
+          // grab a unit
+          Globals.tmpVector2.setPos(grabX, grabY);
+          if (grabUnit == null) {
+            GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+              Globals.tmpVector2.x, Globals.tmpVector2.y,
+              grabAOE, null
+            );
+            let closestDist = maxDist;
+            for (let i = 0; i < BlzGroupGetSize(Globals.tmpUnitGroup); ++i) {
+              const unit = BlzGroupUnitAt(Globals.tmpUnitGroup, i);
+              if (
+                unit == null
+                || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+              ) continue;
+              Globals.tmpVector.setUnit(unit);
+              const dist = CoordMath.distance(Globals.tmpVector2, Globals.tmpVector);
+              if (dist < closestDist) {
+                grabUnit = unit;
+                closestDist = dist;
+              }
+            }
+          }
+          if (grabUnit != null) {
+            Barrier.addUnitBarrierBlock(grabUnit);
+            SaveUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey, grabUnit);
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/OmniMan/R.mp3", 720);
+          }
+        } else {
+          // failed grab
+          ticks = endTick;
+          TextTagHelper.showPlayerColorTextOnUnit("Miss!", playerId, caster);
+        }
+      }
+
+      if (grabUnit != null) {
+        Globals.tmpVector.setUnit(caster);
+        Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, GetUnitFacing(caster), grabDist);
+
+        Globals.tmpVector.setUnit(grabUnit);
+        const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+        if (dist >= maxDist) {
+          ticks = endTick;
+        } else {
+          PathingCheck.moveGroundUnitToCoord(grabUnit, Globals.tmpVector2);
+        }
+      }
+
+      ++ticks;
+    });
+  }
+
+  export function doOmnimanGrabAbils(spellId: number) {
+    if (spellId == Id.omnimanGutPunch) {
+      doOmnimanGutPunch(spellId);
+    } else if (spellId == Id.omnimanDrag) {
+      doOmnimanDrag(spellId);
+    } else if (spellId == Id.omnimanImpale) {
+      doOmnimanImpale(spellId);
+    } else if (spellId == Id.omnimanCrush) {
+      doOmnimanCrush(spellId);
+    }
+  }
+
+  export function doOmnimanGutPunch(spellId: number) {
+    const gutPunchDmgMult = 2;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    UnitRemoveAbility(caster, Id.ghostVisible);
+
+    const omnimanGrabUnitKey = StringHash("omniman_grab_target");
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    Globals.customPlayers[playerId].orderPoint.setUnit(grabUnit);
+
+    const sfx = AddSpecialEffect("Blood6.mdl", 
+      Globals.customPlayers[playerId].orderPoint.x, 
+      Globals.customPlayers[playerId].orderPoint.y
+    );
+    BlzSetSpecialEffectScale(sfx, 2.0);
+    BlzSetSpecialEffectTimeScale(sfx, 2.5);
+    DestroyEffect(sfx);
+    DestroyEffect(AddSpecialEffectTarget(
+      "Blood5.mdl",
+      grabUnit, "origin"
+    ));
+
+    const abilityInput = new CustomAbilityInput(
+      spellId,
+      customHero,
+      player,
+      GetUnitAbilityLevel(caster, spellId),
+      Globals.customPlayers[playerId].orderPoint,
+      Globals.customPlayers[playerId].mouseData,
+      Globals.customPlayers[playerId].orderPoint.clone(),
+      Globals.customPlayers[playerId].targetUnit,
+      caster,
+      gutPunchDmgMult,
+    );
+    customHero.useAbility(AbilityNames.Omniman.GUT_PUNCH, abilityInput);
+  }
+
+  export function doOmnimanDrag(spellId: number) {
+    const endTick = 16;
+    const dmgDataMult = BASE_DMG.KAME_DPS * 4;
+    const dmgAOE = 500;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    omnimanSwapGrabAbils(player, true);
+
+    const omnimanGrabUnitKey = StringHash("omniman_grab_target");
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    const group = CreateGroup();
+    GroupAddUnit(group, grabUnit);
+    
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (ticks >= endTick || !UnitHelper.isUnitAlive(caster)) {
+        DestroyGroup(group);
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      // deal aoe damage
+      Globals.tmpVector.setUnit(grabUnit);
+      GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+        Globals.tmpVector.x, Globals.tmpVector.y,
+        dmgAOE, null
+      );
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const unit = GetEnumUnit();
+        if (
+          unit == null 
+          || !IsUnitType(unit, UNIT_TYPE_HERO)
+          || IsUnitInGroup(unit, group)
+          || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+        ) return;
+
+        GroupAddUnit(group, unit);
+        AOEDamage.genericDealAOEDamage(Globals.tmpUnitGroup2, 
+          caster, 
+          Globals.tmpVector.x, Globals.tmpVector.y,
+          dmgAOE,
+          GetUnitAbilityLevel(caster, spellId),
+          customHero.spellPower,
+          dmgDataMult,
+          1.0,
+          bj_HEROSTAT_INT,
+        );
+        DestroyEffect(
+          AddSpecialEffect("Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl", 
+          Globals.tmpVector.x, Globals.tmpVector.y
+        ));
+      });
+
+      ticks++;
+    });
+  }
+
+  export function doOmnimanImpale(spellId: number) {
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    UnitRemoveAbility(caster, Id.ghostVisible);
+
+    const omnimanGrabUnitKey = StringHash("omniman_grab_target");
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    Globals.customPlayers[playerId].orderPoint.setUnit(grabUnit);
+
+    const abilityInput = new CustomAbilityInput(
+      spellId,
+      customHero,
+      player,
+      GetUnitAbilityLevel(caster, spellId),
+      Globals.customPlayers[playerId].orderPoint,
+      Globals.customPlayers[playerId].mouseData,
+      Globals.customPlayers[playerId].orderPoint.clone(),
+      Globals.customPlayers[playerId].targetUnit,
+      grabUnit,
+      1.0,
+    );
+    customHero.useAbility(AbilityNames.Omniman.IMPALE, abilityInput);
+  }
+
+  export function doOmnimanCrush(spellId: number) {
+    const dmgDataMult = BASE_DMG.KAME_DPS * 14;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    omnimanSwapGrabAbils(player, true);
+
+    const omnimanGrabUnitKey = StringHash("omniman_grab_target");
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+    const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    Globals.tmpVector.setUnit(grabUnit);
+    const sfx = AddSpecialEffect("Blood7.mdl", 
+      Globals.tmpVector.x, Globals.tmpVector.y
+    );
+    BlzSetSpecialEffectScale(sfx, 3.0);
+    BlzSetSpecialEffectTimeScale(sfx, 2.5);
+    DestroyEffect(sfx);
+
+    const dummy = CreateUnit(player, Constants.dummyCasterId, 
+      Globals.tmpVector.x, Globals.tmpVector.y, 0
+    );
+    UnitApplyTimedLife(dummy, Buffs.TIMED_LIFE, 1.0);
+    UnitAddAbility(dummy, DebuffAbilities.STUN_ONE_SECOND);
+    IssueTargetOrderById(dummy, OrderIds.THUNDERBOLT, grabUnit);
+
+    const dmg = AOEDamage.calculateDamageRaw(
+      caster, GetUnitAbilityLevel(caster, spellId), 
+      customHero.spellPower, 
+      dmgDataMult, 1.0, bj_HEROSTAT_INT
+    );
+    UnitDamageTarget(
+      caster, grabUnit, 
+      dmg, 
+      false, false, 
+      ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, 
+      WEAPON_TYPE_WHOKNOWS
+    );
+  }
+
+  export function doOmnimanTrain(spellId: number) {
+    const endTick = 99;
+    const initGrabTicks = 5;
+    const grabDist = 250;
+    const grabAOE = 400;
+    const maxDist = 2500;
+    const trainOffset = 800;
+
+    const caster = GetTriggerUnit();
+    const casterId = GetHandleId(caster);
+    const player = GetOwningPlayer(caster);
+    const playerId = GetPlayerId(player);
+
+    // const keyOmnimanTrainTicksKey = StringHash("omniman_train_ticks");
+    // const keyOmnimanTrainCasterKey = StringHash("omniman_train_caster");
+    // const keyOmnimanTrainWagonKey = StringHash("omniman_train_wagon");
+    // const keyOmnimanTrainAngleKey = StringHash("omniman_train_angle");
+    // const keyOmnimanTrainXKey = StringHash("omniman_train_x");
+    // const keyOmnimanTrainYKey = StringHash("omniman_train_y");
+
+    const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    CoordMath.extendToMaxDist(Globals.tmpVector, Globals.tmpVector2, grabDist);
+    const grabX = Globals.tmpVector2.x;
+    const grabY = Globals.tmpVector2.y;
+
+    let grabUnit = null;
+
+    let ticks = 0;
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 0.03, true, () => {
+      if (
+        ticks > endTick 
+        || !customHero.isChanneling()
+        || !UnitHelper.isUnitAlive(caster)
+        || (grabUnit != null && (
+          !UnitHelper.isUnitAlive(grabUnit)
+          || !UnitHelper.isUnitAlive(caster)
+          || !UnitHelper.isUnitTargetableForPlayer(grabUnit, player)
+        ))
+      ) {
+        if (grabUnit != null) {
+          Barrier.removeUnitBarrierBlock(grabUnit);
+          const abil = customHero.getAbility(AbilityNames.Omniman.TRAIN);
+          if (abil.isInUse()) abil.endAbility();
+        }
+        TimerManager.getInstance().recycle(timer);
+        return;
+      }
+
+      if (grabUnit == null) {
+        if (ticks < initGrabTicks) {
+          // grab a unit
+          Globals.tmpVector2.setPos(grabX, grabY);
+          if (grabUnit == null) {
+            GroupEnumUnitsInRange(Globals.tmpUnitGroup, 
+              Globals.tmpVector2.x, Globals.tmpVector2.y,
+              grabAOE, null
+            );
+            let closestDist = maxDist;
+            for (let i = 0; i < BlzGroupGetSize(Globals.tmpUnitGroup); ++i) {
+              const unit = BlzGroupUnitAt(Globals.tmpUnitGroup, i);
+              if (
+                unit == null
+                || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+              ) continue;
+              Globals.tmpVector.setUnit(unit);
+              const dist = CoordMath.distance(Globals.tmpVector2, Globals.tmpVector);
+              if (dist < closestDist) {
+                grabUnit = unit;
+                closestDist = dist;
+              }
+            }
+          }
+          if (grabUnit != null) {
+            Barrier.addUnitBarrierBlock(grabUnit);
+            SoundHelper.playSoundOnUnit(caster, "Audio/Voice/OmniMan/F.mp3", 3178);
+          }
+        } else {
+          // failed grab
+          ticks = endTick;
+          TextTagHelper.showPlayerColorTextOnUnit("Miss!", playerId, caster);
+          IssueImmediateOrderById(caster, OrderIds.STOP);
+        }
+      }
+
+      if (grabUnit != null) {
+        if (ticks == initGrabTicks) {
+          Globals.customPlayers[playerId].orderPoint.setUnit(grabUnit);
+          const abilityInput = new CustomAbilityInput(
+            spellId,
+            customHero,
+            player,
+            10,
+            Globals.customPlayers[playerId].orderPoint,
+            Globals.customPlayers[playerId].mouseData,
+            Globals.customPlayers[playerId].orderPoint.clone(),
+            grabUnit,
+            caster,
+            1.0,
+          );
+          customHero.useAbility(AbilityNames.Omniman.TRAIN, abilityInput);
+        }
+
+        Globals.tmpVector.setUnit(caster);
+        Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, GetUnitFacing(caster), grabDist);
+
+        Globals.tmpVector.setUnit(grabUnit);
+        const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+        if (dist >= maxDist) {
+          ticks = endTick;
+        } else {
+          PathingCheck.moveGroundUnitToCoord(grabUnit, Globals.tmpVector2);
+        }
+      }
+
+      // if (grabUnit != null) {
+      //   Globals.tmpVector.setUnit(grabUnit);
+      //   Globals.tmpVector2.setUnit(caster);
+      //   const ang = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
+      //   Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, trainOffset);
+
+      //   if (ticks % 8 == 0) {
+      //     const sfxWagon = AddSpecialEffect("TrainWagon2.mdl", 
+      //       Globals.tmpVector2.x, Globals.tmpVector2.y
+      //     );
+      //     BlzSetSpecialEffectScale(sfxWagon, 4.0);
+      //     BlzSetSpecialEffectYaw(sfxWagon, ang * CoordMath.degreesToRadians);
+
+      //     const timer2 = CreateTimer();
+      //     const timer2Handle = GetHandleId(timer2);
+
+      //     SaveInteger(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainTicksKey, 0);
+      //     SaveUnitHandle(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainCasterKey, caster);
+      //     SaveEffectHandle(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainWagonKey, sfxWagon);
+      //     SaveReal(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainAngleKey, (ang + 180) % 360);
+      //     SaveReal(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainXKey, Globals.tmpVector2.x);
+      //     SaveReal(Globals.genericSpellHashtable, 
+      //       timer2Handle, keyOmnimanTrainYKey, Globals.tmpVector2.y);
+
+      //     TimerStart(timer2, 0.03, true, doOmnimanTrainWagon);
+      //     // DestroyEffect(sfx);
+      //   }
+      // }
+
+      ++ticks;
+    });
+  }
+
+  // export function doOmnimanTrainWagon() {
+  //   const speed = 60;
+  //   const endTick = 33;
+  //   const sfxHeight = 50;
+
+  //   const timer = GetExpiredTimer();
+  //   const timerId = GetHandleId(timer);
+
+  //   const keyOmnimanTrainTicksKey = StringHash("omniman_train_ticks");
+  //   const keyOmnimanTrainCasterKey = StringHash("omniman_train_caster");
+  //   const keyOmnimanTrainWagonKey = StringHash("omniman_train_wagon");
+  //   const keyOmnimanTrainAngleKey = StringHash("omniman_train_angle");
+  //   const keyOmnimanTrainXKey = StringHash("omniman_train_x");
+  //   const keyOmnimanTrainYKey = StringHash("omniman_train_y");
+
+  //   const caster = LoadUnitHandle(Globals.genericSpellHashtable, timerId, keyOmnimanTrainCasterKey);
+  //   const player = GetOwningPlayer(caster);
+  //   const playerId = GetPlayerId(player);
+
+  //   const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
+
+  //   const ticks = LoadInteger(Globals.genericSpellHashtable, timerId, keyOmnimanTrainTicksKey);
+  //   const sfx = LoadEffectHandle(Globals.genericSpellHashtable, timerId, keyOmnimanTrainWagonKey);
+  //   const ang = LoadReal(Globals.genericSpellHashtable, timerId, keyOmnimanTrainAngleKey);
+  //   const x = LoadReal(Globals.genericSpellHashtable, timerId, keyOmnimanTrainXKey);
+  //   const y = LoadReal(Globals.genericSpellHashtable, timerId, keyOmnimanTrainYKey);
+
+  //   if (
+  //     !customHero.isChanneling()
+  //     || ticks > endTick
+  //   ) {
+  //     DestroyEffect(sfx);
+  //     DestroyTimer(timer);
+  //     return;
+  //   }
+
+  //   Globals.tmpVector.setPos(x, y);
+  //   Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, ang, speed);
+  //   MoveLocation(Globals.tmpLoc, Globals.tmpVector2.x, Globals.tmpVector2.y);
+  //   BlzSetSpecialEffectPosition(sfx, 
+  //     Globals.tmpVector2.x, Globals.tmpVector2.y, sfxHeight + GetLocationZ(Globals.tmpLoc)
+  //   );
+
+  //   GroupEnumUnitsInRange()
+
+  //   SaveInteger(Globals.genericSpellHashtable, timerId, keyOmnimanTrainTicksKey, ticks+1);
+  // }
 
   export function doCellMaxWings(spellId: number) {
     const caster = GetTriggerUnit();

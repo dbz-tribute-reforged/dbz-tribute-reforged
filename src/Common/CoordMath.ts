@@ -59,6 +59,13 @@ export module CoordMath {
     )
   }
 
+  /**
+   * Extends target vector to maxDist from src based on angle between src to target
+   * @param src 
+   * @param target 
+   * @param maxDist 
+   * @returns 
+   */
   export function extendToMaxDist(
     src: Vector2D, 
     target: Vector2D, 

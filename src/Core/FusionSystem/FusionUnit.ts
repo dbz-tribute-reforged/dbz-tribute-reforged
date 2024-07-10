@@ -100,6 +100,7 @@ export class FusionUnit {
     [Id.gojo, ["Goj", "jo Satoru"]],
     [Id.cheongMyeong, ["Cheong", "myeong"]],
     [Id.aggronor, ["Aggro", "ggronor"]],
+    [Id.omniman, ["Omni", "-Man"]],
   ])
   public static getSpecialFusionName(unit1: unit, unit2: unit) {
     const unit1Id = GetUnitTypeId(unit1);
@@ -108,6 +109,7 @@ export class FusionUnit {
     if (unit1Id == Id.vegeta && unit2Id == Id.goku) return "Vegito";
     if (unit1Id == Id.cellPerfect && unit2Id == Id.frieza) return "Cellza";
     if (unit1Id == Id.cellMax && unit2Id == Id.frieza) return "Cellza Max";
+    if (unit1Id == Id.donkeyKong && unit2Id == Id.skurvy) return "Donkey Kroc";
     return "";
   }
   public static getUnitFusionName(unit: unit, index: number) {
@@ -132,6 +134,7 @@ export class FusionUnit {
   
   public updateTimer: timer = TimerManager.getInstance().get();
   public offsetAng: number = 0;
+  public fusionName: string = "";
 
   constructor(
     public unit1: unit,
@@ -159,6 +162,7 @@ export class FusionUnit {
     const p2 = GetOwningPlayer(unit2);
     SetPlayerName(p1, fusedName + " (" + udg_OriginalPlayerNames[GetPlayerId(p1)] + ")");
     SetPlayerName(p2, fusedName + " (" + udg_OriginalPlayerNames[GetPlayerId(p2)] + ")");
+    this.fusionName = fusedName;
   }
 
   initialize() {
@@ -179,6 +183,17 @@ export class FusionUnit {
     SaveInteger(Globals.genericSpellHashtable, unit2Id, FusionUnit.FUSION_SIDE_KEY, 1);
     
     TimerStart(this.updateTimer, 0.03, true, () => {
+      if (
+        GetUnitTypeId(this.unit1) == 0 
+        || GetUnitTypeId(this.unit2) == 0
+      ) {
+        // defuse
+        this.unfuseUnit(this.unit1);
+        this.unfuseUnit(this.unit2);
+        this.unfuse();
+        return;
+      }
+
       Globals.tmpVector.setUnit(this.unit1);
       Globals.tmpVector2.polarProjectCoords(Globals.tmpVector, this.offsetAng, 128);
       PathingCheck.moveFlyingUnitToCoord(this.unit2, Globals.tmpVector2);
@@ -199,6 +214,35 @@ export class FusionUnit {
     TransformationSystem.getInstance().autoTransformPlayerUnit(
       GetOwningPlayer(this.unit2), this.unit2
     );
+  }
+
+  unfuseUnit(unit: unit) {
+    if (GetUnitTypeId(unit) == 0) return;
+
+    UnitRemoveAbility(unit, FusionUnit.FUSION_FLAG);
+
+    let it = GetItemOfTypeFromUnitBJ(unit, ItemConstants.potaraFusion);
+    if (it) RemoveItem(it);
+    it = CreateItem(ItemConstants.potaraEarrings, GetUnitX(unit), GetUnitY(unit));
+    UnitAddItem(unit, it);
+
+    TransformationSystem.getInstance().setTransformSkin(unit, 0);
+    TransformationSystem.getInstance().autoTransformPlayerUnit(
+      GetOwningPlayer(unit), unit
+    );
+
+    Globals.tmpVector.setUnit(unit);
+    const sfx = AddSpecialEffect(
+      "Abilities/Spells/Human/ReviveHuman/ReviveHuman.mdl", 
+      Globals.tmpVector.x, Globals.tmpVector.y
+    );
+    BlzSetSpecialEffectScale(sfx, 5.0);
+    DestroyEffect(sfx);
+  }
+
+  unfuse() {
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 1, this.fusionName + " Potara Fusion has come undone!");
+    this.recycle();
   }
 
   recycle() {

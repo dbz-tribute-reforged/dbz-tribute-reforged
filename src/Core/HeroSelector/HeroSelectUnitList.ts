@@ -838,6 +838,18 @@ const cheongMyeongData = {
     HeroSelectCategory.MEME
   )
 }
+const omnimanData = {
+  unitCode: Id.omniman,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
+  )
+}
 const donkeyKongData = {
   unitCode: Id.donkeyKong,
   onlyRandom: false,
@@ -1177,7 +1189,7 @@ export const HeroSelectUnitList = [
   aggronorData,
   // 85
   cheongMyeongData,
-  emptySpace,
+  omnimanData,
   donkeyKongData,
   kkrData,
   skurvyData,
