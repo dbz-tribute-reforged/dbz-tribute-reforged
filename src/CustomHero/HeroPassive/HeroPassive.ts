@@ -4023,10 +4023,9 @@ export function setupRegenTimer(customHero: CustomHero) {
         heroAgi / sumStats
       )
     );
-    spAgi = spAgi > Constants.AGI_RATIO_LINEAR_THRESHOLD ?
-      spAgi : 
-      Pow(spAgi, Constants.AGILITY_REGEN_EXPONENT)
-    ;
+    if (spAgi > Constants.AGI_RATIO_LINEAR_THRESHOLD) {
+      spAgi = Pow(spAgi, Constants.AGILITY_REGEN_EXPONENT);
+    }
     
     let spMult = 1.0;
     if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
