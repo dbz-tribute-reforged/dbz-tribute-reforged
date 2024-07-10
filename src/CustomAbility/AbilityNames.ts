@@ -691,6 +691,20 @@ export module AbilityNames {
     export const STORMLORD: string = "Aggronor Stormlord";
   }
 
+  export module Omniman {
+    export const PUNCH: string = "Omniman Punch";
+    export const PUNCH_2: string = "Omniman Punch 2";
+    export const DASH: string = "Omniman Dash";
+    export const SLICE: string = "Omniman Slice";
+    export const PLEASE: string = "Omniman Please";
+    export const GUT_PUNCH: string = "Omniman Gut Punch";
+    export const DRAG: string = "Omniman Drag";
+    export const IMPALE: string = "Omniman Impale";
+    export const TRAIN: string = "Omniman Train";
+  }
+
+
+
 
 
 

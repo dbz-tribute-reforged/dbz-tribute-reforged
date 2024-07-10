@@ -742,6 +742,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Aggronor.STORMLORD,
     ]],
 
+    [Id.omniman, [
+      AbilityNames.Omniman.PUNCH,
+      AbilityNames.Omniman.PUNCH_2,
+      AbilityNames.Omniman.DASH,
+      AbilityNames.Omniman.SLICE,
+      AbilityNames.Omniman.PLEASE,
+      AbilityNames.Omniman.GUT_PUNCH,
+      AbilityNames.Omniman.DRAG,
+      AbilityNames.Omniman.IMPALE,
+      AbilityNames.Omniman.TRAIN,
+    ]],
+
 
 
 

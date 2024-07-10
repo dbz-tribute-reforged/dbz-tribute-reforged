@@ -3,7 +3,7 @@ import { Vector2D } from "./Vector2D";
 import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
-  export let versionStr: string = "2.0";
+  export let versionStr: string = "2.1";
 
   export let isMainGameStarted: boolean = false;
   export let isSinglePlayer: boolean = false;
@@ -199,8 +199,9 @@ export module Constants {
   export const GENOS_OVERCHARGE_REGEN_MULT = 0.1;
   export const BEERUS_REGEN_MULT = 0.2;
   export const CORN_REGEN_MULT = 0.5;
+  export const OMNIMAN_REGEN_MULT = 1;
   
-  export const LIMIT_BREAKER_MIN_SP = 30;
+  export const LIMIT_BREAKER_MIN_SP = 40;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 23];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
@@ -1419,6 +1420,21 @@ export module Id {
   export const minatoKuramaModeFlag = FourCC("A00A");
 
   export const mule = FourCC("H02T");
+
+  export const omniman = FourCC("H03C");
+  export const omnimanPunch = FourCC("A15D");
+  export const omnimanDash = FourCC("A15E");
+  export const omnimanSlice = FourCC("A15F");
+  export const omnimanGrab = FourCC("A15G");
+  export const omnimanPlease = FourCC("A15H");
+  export const omnimanPleaseArmor = FourCC("A15J");
+  export const omnimanTrain = FourCC("A15I");
+  export const omnimanGutPunch = FourCC("A15K");
+  export const omnimanDrag = FourCC("A15L");
+  export const omnimanImpale = FourCC("A15M");
+  export const omnimanCrush = FourCC("A15N");
+  // export const omnimanViltrumMight = FourCC("A15O");
+  export const omnimanViltrumBlood = FourCC("A15P");
 
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");

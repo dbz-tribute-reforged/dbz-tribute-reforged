@@ -2569,6 +2569,68 @@ export module SoundHelper {
         playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
         break;
 
+      // omni-man
+      case Id.omnimanPunch:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/Q.mp3", 1347);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+        break;
+
+      case Id.omnimanDash:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/W.mp3", 1498);
+        }
+        break;
+      
+      case Id.omnimanSlice:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/E.mp3", 1265);
+        }
+        break;
+
+      // case Id.omnimanGrab:
+      //   if (unitId == Id.omniman) {
+      //     playSoundOnUnit(unit, "Audio/Voice/OmniMan/R.mp3", 720);
+      //   }
+      //   break;
+
+      case Id.omnimanGutPunch:
+        if (unitId == Id.omniman) {
+        }
+        playSoundOnUnit(unit, "Audio/Effects/OmniMan/Q2.mp3", 1242);
+        break;
+
+      case Id.omnimanDrag:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/W2.mp3", 2380);
+        }
+        break;
+      
+      case Id.omnimanImpale:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/E.mp3", 1265);
+        }
+        break;
+      
+      case Id.omnimanCrush:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/R2.mp3", 1509);
+        }
+        break;
+      
+      case Id.omnimanPlease:
+        if (unitId == Id.omniman) {
+          playSoundOnUnit(unit, "Audio/Voice/OmniMan/D.mp3", 813);
+        }
+        break;
+      
+      // case Id.omnimanTrain:
+      //   if (unitId == Id.omniman) {
+      //     playSoundOnUnit(unit, "Audio/Voice/OmniMan/F.mp3", 3178);
+      //   }
+      //   break;
+
       // pan
       case Id.honeyBeeCostume:
         if (unitId == Id.pan) {

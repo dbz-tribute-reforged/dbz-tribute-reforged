@@ -549,6 +549,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.aggronorAvatar, AbilityNames.Aggronor.AVATAR],
     [Id.aggronorStormlord, AbilityNames.Aggronor.STORMLORD],
 
+    [Id.omnimanPunch, AbilityNames.Omniman.PUNCH],
+    [Id.omnimanDash, AbilityNames.Omniman.DASH],
+    [Id.omnimanSlice, AbilityNames.Omniman.SLICE],
+    [Id.omnimanPlease, AbilityNames.Omniman.PLEASE],
+    [Id.omnimanDrag, AbilityNames.Omniman.DRAG],
+    [Id.omnimanImpale, AbilityNames.Omniman.IMPALE],
+
 
 
 

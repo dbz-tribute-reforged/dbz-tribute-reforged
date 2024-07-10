@@ -129,6 +129,7 @@ export module MinimapHelper {
       [Id.gojo, "MM_gojo.mdl"],
       [Id.cheongMyeong, "MM_cheong_myeong.mdl"],
       [Id.aggronor, "MM_aggronor.mdl"],
+      [Id.omniman, "MM_omniman.mdl"],
     ]
   );
 

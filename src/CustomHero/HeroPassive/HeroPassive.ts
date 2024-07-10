@@ -4119,6 +4119,9 @@ export function setupRegenTimer(customHero: CustomHero) {
     if (hasCornRegen) {
       hpMult += Constants.CORN_REGEN_MULT;
     }
+    if (GetUnitAbilityLevel(customHero.unit, Id.omnimanViltrumBlood) > 0) {
+      hpMult += Constants.OMNIMAN_REGEN_MULT;
+    }
     incHp += (
       Constants.REGEN_TICK_RATE
       * GetUnitState(customHero.unit, UNIT_STATE_MAX_LIFE) 

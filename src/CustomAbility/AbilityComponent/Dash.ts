@@ -29,8 +29,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DASH_TYPE_FLYING = 1;
   static readonly DASH_TYPE_ZANZO = 2;
 
-  static readonly ZANZO_DYNAMIC_CD = 5;
-  static readonly ZANZO_STATIC_CD = 3;
+  static readonly ZANZO_DYNAMIC_CD = 2;
+  static readonly ZANZO_STATIC_CD = 2;
 
   protected previousCoord: Vector2D;
   protected currentCoord: Vector2D;
@@ -292,7 +292,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         });
         
         const zz_distanceRatio = Math.min(1.0, this.distanceTravelled / (this.distance * this.distanceMult));
-        let stamina_refund_ratio = 1.0-zz_distanceRatio;
+        let stamina_refund_ratio = 1.0 - (Math.min(1, 3 * zz_distanceRatio));
         if (isNearby) {
           stamina_refund_ratio += 0.4;
         }

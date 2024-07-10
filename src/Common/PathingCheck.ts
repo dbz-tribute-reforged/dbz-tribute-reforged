@@ -76,6 +76,10 @@ export module PathingCheck {
     return !IsTerrainPathable(target.x, target.y, PATHING_TYPE_FLYABILITY);
   }
 
+  export function isFlyingWalkableExcludingDeepWater(target: Vector2D): boolean {
+    return isFlyingWalkable(target) && !isDeepWater(target);
+  }
+
   export function isDeepWater(target: Vector2D): boolean {
     return (
       !IsTerrainPathable(target.x, target.y, PATHING_TYPE_AMPHIBIOUSPATHING) &&

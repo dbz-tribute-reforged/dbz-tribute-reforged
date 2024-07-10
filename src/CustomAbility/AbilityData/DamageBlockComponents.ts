@@ -62,8 +62,8 @@ export const DamageBlockComponents = [
   {
     name: "block perfect basic guard",
     repeatInterval: 1,
-    startTick: 9,
-    endTick: 18,
+    startTick: 3,
+    endTick: 13,
     blockPerDamage: 95,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
