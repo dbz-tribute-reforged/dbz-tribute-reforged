@@ -526,6 +526,11 @@ export module SimpleSpellSystem {
     Globals.linkedSpellsMap.set(Id.beerusFoodIceCream, SimpleSpellSystem.linkBeerusFoodCD);
     Globals.linkedSpellsMap.set(Id.beerusFoodTakoyaki, SimpleSpellSystem.linkBeerusFoodCD);
     Globals.linkedSpellsMap.set(Id.beerusFoodPudding, SimpleSpellSystem.linkBeerusFoodCD);
+    
+    Globals.linkedSpellsMap.set(Id.omnimanGutPunch, SimpleSpellSystem.linkOmnimanCD);
+    Globals.linkedSpellsMap.set(Id.omnimanDrag, SimpleSpellSystem.linkOmnimanCD);
+    Globals.linkedSpellsMap.set(Id.omnimanImpale, SimpleSpellSystem.linkOmnimanCD);
+    Globals.linkedSpellsMap.set(Id.omnimanCrush, SimpleSpellSystem.linkOmnimanCD);
 
     // Globals.genericSpellEndMap.set(Id.vegetaHakai, endVegetaHakai);
     // Globals.genericSpellFinishMap.set(Id.vegetaHakai, endVegetaHakai);
@@ -12908,6 +12913,13 @@ export module SimpleSpellSystem {
     BlzStartUnitAbilityCooldown(unit, Id.beerusFoodIceCream, cd);
     BlzStartUnitAbilityCooldown(unit, Id.beerusFoodTakoyaki, cd);
     BlzStartUnitAbilityCooldown(unit, Id.beerusFoodPudding, cd);
+  }
+
+  export function linkOmnimanCD(unit: unit, cd: number) {
+    BlzStartUnitAbilityCooldown(unit, Id.omnimanGutPunch, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.omnimanDrag, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.omnimanImpale, cd);
+    BlzStartUnitAbilityCooldown(unit, Id.omnimanCrush, cd);
   }
 
 }

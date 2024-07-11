@@ -3121,7 +3121,7 @@ HeroSelector = {}
 --Box
 HeroSelector.BoxFrameName           = "HeroSelectorRaceBox" --this is the background box being created
 HeroSelector.BoxPosX                = 0.4
-HeroSelector.BoxPosY                = 0.4
+HeroSelector.BoxPosY                = 0.44
 HeroSelector.BoxPosPoint            = FRAMEPOINT_CENTER
 HeroSelector.AutoShow               = false --(true) shows the box and the Selection at 0.0 for all players
 --Unique Picks
@@ -3528,7 +3528,7 @@ function HeroSelector.addCategory(icon, text)
         newObject.Button = button
 
         if not lastButton then
-            local titleSize = 0.015
+            local titleSize = 0.01
             local borderSize = HeroSelector.BorderSize[GetPlayerRace(GetLocalPlayer())]
             local y = -borderSize - titleSize - 0.01
             local x = borderSize
@@ -4111,7 +4111,7 @@ HeroSelector.CategoryButton = {}
 HeroSelector.Frames = {}
 
 
-    local titleSize = 0.015
+    local titleSize = 0.01
     local buttonSize = HeroSelector.ButtonSize
     local borderSize = HeroSelector.BorderSize[GetPlayerRace(GetLocalPlayer())]
     local colCount = HeroSelector.ButtonColCount
@@ -4607,9 +4607,9 @@ HeroInfo = {}
 -- TextArea
 HeroInfo.DescHeroNamePrefix     = "|cffffcc00"   --added before the Units Name
 HeroInfo.DescHeroNameSufix      = "|r"           --added after the units Name
-HeroInfo.TextAreaSizeX          = 0.4
-HeroInfo.TextAreaSizeY          = 0.24
-HeroInfo.TextAreaOffsetX        = 0
+HeroInfo.TextAreaSizeX          = 0.5
+HeroInfo.TextAreaSizeY          = 0.34
+HeroInfo.TextAreaOffsetX        = 0.2
 HeroInfo.TextAreaOffsetY        = 0
 HeroInfo.TextAreaPoint          = FRAMEPOINT_TOP --pos the Tooltip with which Point
 HeroInfo.TextAreaRelativePoint  = FRAMEPOINT_BOTTOM --pos the Tooltip to which Point of the Relative

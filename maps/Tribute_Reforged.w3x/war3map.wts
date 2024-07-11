@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100DBZ Tribute Reforged 2.1
+|cffaf1100DBZ Tribute Reforged 2.1a
 }
 
 STRING 4
@@ -39354,6 +39354,44 @@ STRING 6096
 X
 }
 
+STRING 6097
+// Units: H0AO (Tennis Player), Ubertip (Tooltip - Extended)
+{
+A powerful early game hero with many crowd control spells.
+
+|cffff00ffLean:|r +1000 vision range, 25% evasion.
+|cffff00ffMean:|r 25% crit for 2x damage.
+|cffff2222Hates Greens:|r -0.2x Str mult
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+|cff808080"I'M-A NUMBER ONE! Heh, hehehehe!"|r
+}
+
+STRING 6098
+// Units: H00Z (Supreme One), Ubertip (Tooltip - Extended)
+{
+The strongest spellcaster with with near limitless utility. He can deal massive damage, control the battlefield, and summon multiple minions.
+|cffff2222Warning: Very difficult to play.
+
+|cff00ffffMagic Caster:|r Spells cost 25% of max mana. Non-offensive spells cost less at high HP.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+}
+
+STRING 6099
+{
+Revive Point (|Cfffed312F8|R)
+}
+
 STRING 6100
 // Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
@@ -39581,6 +39619,11 @@ STRING 6137
 // Abilities: A0DE (Book Beerus Invul), Name (Name)
 {
 Book Beerus Invul
+}
+
+STRING 6138
+{
+Change revive point and level up stat modification.
 }
 
 STRING 6140
@@ -146442,12 +146485,6 @@ STRING 21424
 Waluigi
 }
 
-STRING 21425
-// Units: H0AO (Tennis Player), Awakentip (Tooltip - Awaken)
-{
-[|cffffff00Z|r] Choose Mario
-}
-
 STRING 21426
 // Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
@@ -146456,12 +146493,6 @@ Ginyu strikes a powerful fighting pose that increases his combat abilities. Prov
 Spell Amp: +5% per second up to +15%
 Armor Aura: 7|r
 |cff00ffffCooldown: <A0PT,Cool7> seconds|r
-}
-
-STRING 21427
-// Units: H0AO (Tennis Player), Tip (Tooltip - Basic)
-{
-[|cffffff00Z|r] Choose Mario
 }
 
 STRING 21428
@@ -163789,21 +163820,6 @@ STRING 23660
 Summon spells cost 3% less max mana. Summons gain +10% stats.
 }
 
-STRING 23661
-// Units: H00Z (Supreme One), Ubertip (Tooltip - Extended)
-{
-The strongest spellcaster with with near limitless utility. He can deal massive damage, control the battlefield, and summon multiple minions.
-
-|cff00ffffMagic Caster:|r Spells cost 25% of max mana. Non-offensive spells cost less at high HP.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 23662
 // Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
 {
@@ -168642,24 +168658,6 @@ Pan fires a beam that forces Giru to charge at the target location, stunning nea
 
 |cff00ff00Damage: [Int] 90u x 8t + 120u + 2% Max HP|r
 |cff00FFFFCooldown: <A0LV,Cool9,.>s|r
-}
-
-STRING 24315
-// Units: H0AO (Tennis Player), Ubertip (Tooltip - Extended)
-{
-A powerful trickster hero during the early game with access to strong disabling spells.
-
-|cffff00ffLean:|r +1000 vision range, 25% evasion.
-|cffff00ffMean:|r 25% crit for 2x damage.
-|cffff2222Hates Greens:|r -0.2x Str mult
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-|cff808080"I'M-A NUMBER ONE! Heh, hehehehe!"|r
 }
 
 STRING 24316

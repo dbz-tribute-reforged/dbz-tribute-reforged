@@ -29,11 +29,14 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
 
   public fixedSourceToTargetAngle: number = 0;
 
+  public numKnockbackAddTicks: number = 0;
+
   constructor(
     public name: string = "AOEKnockback",
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public knockbackAddTicks: number = -1,
     public knockbackData: KnockbackData = new KnockbackData(
       16, 0, 250,
     ),
@@ -161,6 +164,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       if (this.isFixedAngle) {
         this.getSourceCoord(input, source);
       }
+      this.numKnockbackAddTicks = 0;
     }
     
 
@@ -168,7 +172,14 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       this.getSourceCoord(input, source);
     }
     
-    if (this.knockbackTarget == AOEKnockback.TARGET_AOE) {
+    if (
+      this.knockbackTarget == AOEKnockback.TARGET_AOE
+      && (
+        this.numKnockbackAddTicks < this.knockbackAddTicks
+        || this.knockbackAddTicks < 0
+      )
+    ) {
+      ++this.numKnockbackAddTicks;
       if (!this.isPersistent) {
         GroupEnumUnitsInRange(
           this.affectedGroup, 
@@ -215,6 +226,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   clone(): AbilityComponent {
     return new AOEKnockback(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.knockbackAddTicks,
       this.knockbackData, 
       this.knockbackSource, 
       this.knockbackTarget,
@@ -234,6 +246,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      knockbackAddTicks: number;
       knockbackData: {
         speed: number; 
         angle: number; 
@@ -255,6 +268,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.knockbackAddTicks = input.knockbackAddTicks;
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
     this.knockbackSource = input.knockbackSource;
     this.knockbackTarget = input.knockbackTarget;

@@ -825,31 +825,6 @@ const aggronorData = {
     HeroSelectCategory.VIDEOGAME 
   )
 }
-const cheongMyeongData = {
-  unitCode: Id.cheongMyeong,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.ANIME +
-    HeroSelectCategory.MEME
-  )
-}
-const omnimanData = {
-  unitCode: Id.omniman,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.ANIME
-  )
-}
 const donkeyKongData = {
   unitCode: Id.donkeyKong,
   onlyRandom: false,
@@ -882,6 +857,31 @@ const skurvyData = {
     HeroSelectCategory.EVIL + 
     HeroSelectCategory.ASSASSIN +
     HeroSelectCategory.VIDEOGAME 
+  )
+}
+const cheongMyeongData = {
+  unitCode: Id.cheongMyeong,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME +
+    HeroSelectCategory.MEME
+  )
+}
+const omnimanData = {
+  unitCode: Id.omniman,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
   )
 }
 const ainzData = {
@@ -1188,11 +1188,11 @@ export const HeroSelectUnitList = [
   leonSKennedyData,
   aggronorData,
   // 85
-  cheongMyeongData,
-  omnimanData,
   donkeyKongData,
   kkrData,
   skurvyData,
+  cheongMyeongData,
+  omnimanData,
 
   // ====
   // 90
