@@ -857,3 +857,4 @@ declare var udg_SummonsSelectFlagArray: boolean[];
 declare var udg_UltimateModeLevel: number;
 
 declare var udg_HitHashtable: hashtable;
+declare var udg_SummonsHashtable: hashtable;

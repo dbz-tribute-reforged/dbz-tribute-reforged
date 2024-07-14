@@ -5575,20 +5575,24 @@ export module SimpleSpellSystem {
 
     const keyArrowSelected = StringHash("link|arrow|selection");
     const keyBowTicks = StringHash("link|bow|ticks");
+    const keyBowActive = StringHash("link|bow|active");
 
     UnitAddAbility(caster, Id.linkBowShoot);
     SetPlayerAbilityAvailable(player, Id.linkBow, false);
     SetPlayerAbilityAvailable(player, Id.linkBowShoot, true);
     SetUnitAbilityLevel(caster, Id.linkBowShoot, GetUnitAbilityLevel(caster, Id.linkBow));
+    SaveBoolean(Globals.genericSpellHashtable, casterId, keyBowActive, true);
 
     const sfx = AddSpecialEffect("StarSFX.mdl", GetUnitX(caster), GetUnitY(caster));
     BlzSetSpecialEffectScale(sfx, 3.0);
 
     const specialBar = Frame.fromName("MySpecialBar", 0);
+    const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
     const specialBarText = Frame.fromName("MySpecialBarText", 0);
 
     if (player == GetLocalPlayer()) {
       specialBar.setMinMaxValue(0, maxTicks).setVisible(true);
+      specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor27.blp", 0, true);
     }
 
     SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, 1);
@@ -5596,7 +5600,12 @@ export module SimpleSpellSystem {
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
       const ticks = LoadInteger(Globals.genericSpellHashtable, casterId, keyBowTicks);
-      if (ticks == 0) {
+      const isActive = LoadBoolean(Globals.genericSpellHashtable, casterId, keyBowActive);
+      if (!isActive) {
+        UnitRemoveAbility(caster, Id.linkBowShoot);
+        SetPlayerAbilityAvailable(player, Id.linkBow, true);
+        SetPlayerAbilityAvailable(player, Id.linkBowShoot, false);
+
         DestroyEffect(sfx);
         TimerManager.getInstance().recycle(timer);
         return;
@@ -5662,12 +5671,14 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
 
-    const keyBowTicks = StringHash("link|bow|ticks");
     const keyArrowSelected = StringHash("link|arrow|selection");
+    const keyBowTicks = StringHash("link|bow|ticks");
+    const keyBowActive = StringHash("link|bow|active");
     const arrowSelected = LoadInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected);
 
     SetPlayerAbilityAvailable(player, Id.linkBow, true);
     SetPlayerAbilityAvailable(player, Id.linkBowShoot, false);
+    SaveBoolean(Globals.genericSpellHashtable, casterId, keyBowActive, false);
 
     const specialBar = Frame.fromName("MySpecialBar", 0);
     if (player == GetLocalPlayer()) {
