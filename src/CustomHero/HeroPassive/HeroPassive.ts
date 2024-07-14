@@ -88,6 +88,9 @@ export class HeroPassiveManager {
       case Id.hit:
         hitPassive(customHero);
         break;
+      case Id.tien:
+        tienPassive(customHero);
+        break;
       case Id.ichigo:
         ichigoPassive(customHero);
         break;
@@ -102,6 +105,9 @@ export class HeroPassiveManager {
         break;
       case Id.super17:
         super17Passive(customHero);
+        break;
+      case Id.schala:
+        schalaPassive(customHero);
         break;
       case Id.shotoTodoroki:
         shotoTodorokiPassive(customHero);
@@ -636,6 +642,50 @@ export function hitPassive(customHero: CustomHero) {
         Math.min(maxCharges, charges + Math.max(0, chargeRatio))
       ).setVisible(true);
       specialBarText.setText(chargeStr);
+    }
+  });
+}
+
+
+export function tienPassive(customHero: CustomHero) {
+  const maxMult = 0.5;
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  let player = Constants.sagaPlayer;
+
+  const casterId = GetHandleId(customHero.unit);
+
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (player == GetLocalPlayer()) specialBar.setVisible(false);
+
+      PauseTimer(timer);
+      return;
+    }
+
+    if (GetOwningPlayer(customHero.unit) != player) {
+      player = GetOwningPlayer(customHero.unit);
+
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, 100)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
+    }
+
+    const mult = LoadReal(udg_SummonsHashtable, casterId, 2);
+    const str = R2S(mult);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(Math.round(100 * mult / maxMult)).setVisible(true);
+      specialBarText.setText(str);
     }
   });
 }
@@ -1342,6 +1392,48 @@ export function super17Passive(customHero: CustomHero) {
       return false;
     })
   );
+}
+
+export function schalaPassive(customHero: CustomHero) {
+  const maxMult = 0.5;
+
+  const timer = CreateTimer();
+  customHero.addTimer(timer);
+
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  let player = Constants.sagaPlayer;
+
+  const casterId = GetHandleId(customHero.unit);
+
+  TimerStart(timer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (player == GetLocalPlayer()) specialBar.setVisible(false);
+
+      PauseTimer(timer);
+      return;
+    }
+    if (GetOwningPlayer(customHero.unit) != player) {
+      player = GetOwningPlayer(customHero.unit);
+
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, 100)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
+    }
+
+    const prayMult = LoadReal(udg_SummonsHashtable, casterId, 0);
+    const prayStr = R2S(prayMult);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(Math.round(100 * prayMult / maxMult)).setVisible(true);
+      specialBarText.setText(prayStr);
+    }
+  });
 }
 
 export function shotoTodorokiPassive(customHero: CustomHero) {

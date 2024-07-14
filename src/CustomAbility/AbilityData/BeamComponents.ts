@@ -4306,7 +4306,7 @@ export const BeamComponents = [
     spawnDelayTicks: 0,
     beamHpMult: BASE_DMG.KAME_DPS * 0.8,
     beamHpAttribute: bj_HEROSTAT_INT,
-    speed: BeamComponent.BEAM_SPEED_MEDIUM_FAST,
+    speed: BeamComponent.BEAM_SPEED_SUPER_FAST,
     maxMoveTicks: -1,
     aoe: 300,
     clashingDelayTicks: 2,
