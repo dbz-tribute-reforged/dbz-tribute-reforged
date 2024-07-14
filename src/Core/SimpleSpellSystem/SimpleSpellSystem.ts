@@ -2247,6 +2247,7 @@ export module SimpleSpellSystem {
       }
 
       if (counter < duration) {
+        Globals.tmpVector3.setPos(GetItemX(movedItem), GetItemY(movedItem));
         Globals.tmpVector3.polarProjectCoords(
           Globals.tmpVector3,
           direction,
@@ -12152,9 +12153,10 @@ export module SimpleSpellSystem {
     const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     const originalX = GetUnitX(caster);
     const originalY = GetUnitY(caster);
-    const timer = TimerManager.getInstance().get();
-    const isUpg = GetUnitAbilityLevel(caster, spellId) < 2;
+    const isUpg = GetUnitAbilityLevel(caster, spellId) > 1;
+
     let ticks = 0;
+    const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
       if (!isUpg) {
         Globals.tmpVector.setUnit(caster);

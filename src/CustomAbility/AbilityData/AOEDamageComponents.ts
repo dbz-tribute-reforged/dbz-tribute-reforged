@@ -9955,7 +9955,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 7.5,
+      multiplier: BASE_DMG.KAME_DPS * 10,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -10889,40 +10889,10 @@ export const AOEDamageComponents = [
   },
   // guts cannon slash
   {
-    name: "damage guts cannon slash dps",
-    repeatInterval: 1,
-    startTick: 4,
-    endTick: 16,
-    damageAddTicks: -1,
-    damageSource: AOEDamage.SOURCE_UNIT,
-    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
-    sourceHPDamageScale: 0,
-    useInverseDamageScale: true,
-    useLastCastPoint: false,
-    aoe: 500,
-    damageHeroes: true,
-    onlyDamageCapHeroes: true,
-    canDamageCaster: false,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
-    damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.1,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 4,
-      weaponType: 0,
-    },
-    maxHealthDamagePercent: 0,
-    maxManaBurnPercent: 0,
-    maxManaLossPercent: 0,
-    applyDamageOverTime: true,
-    requireBuff: false,
-    buffId: 0,
-  },
-  {
     name: "damage guts cannon slash explosion",
     repeatInterval: 1,
-    startTick: 4,
-    endTick: 4,
+    startTick: 0,
+    endTick: 0,
     damageAddTicks: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
@@ -10935,7 +10905,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 8,
+      multiplier: BASE_DMG.KAME_DPS * 9,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -13287,7 +13257,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 2.1,
+      multiplier: BASE_DMG.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -13317,7 +13287,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 4.2,
+      multiplier: BASE_DMG.KAME_DPS * 10,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -14792,7 +14762,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 7.2,
+      multiplier: BASE_DMG.KAME_DPS * 8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -14823,7 +14793,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 1,
+      multiplier: BASE_DMG.KAME_DPS * 1.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -14853,7 +14823,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 0.5,
+      multiplier: BASE_DMG.KAME_DPS * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -20199,8 +20169,8 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      // 0.25
-      multiplier: BASE_DMG.KAME_DPS * 2.5,
+      // 0.35
+      multiplier: BASE_DMG.KAME_DPS * 3.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -20230,8 +20200,8 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      // 0.25
-      multiplier: BASE_DMG.KAME_DPS * 2.5,
+      // 0.35
+      multiplier: BASE_DMG.KAME_DPS * 3.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

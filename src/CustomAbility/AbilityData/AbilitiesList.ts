@@ -10294,7 +10294,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage guts cannon slash explosion" },
-      { name: "damage guts cannon slash dps" },
       { name: "dash ground forward videl speed boost" },
       { name: "sfx guts cannon slash" },
     ],

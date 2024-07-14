@@ -25585,23 +25585,25 @@ Demiurge disguises himself as Jaldabaoth, a master of trickery. Gains +66ms and 
 }
 
 STRING 3950
-// Abilities: A15H (Please), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Omni-Man gains +100 bonus armor for 3s. If damaged, Omni-Man counters with a [|cff00ff00Q|r] Punch that deals 50% extra damage.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Duration: 3s
-|cff00ff00Damage: [Int] 1200u
-|cff00FFFFCooldown: <A15H,Cool1>s|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool1,.> seconds|r
 }
 
 STRING 3951
-// Abilities: A15H (Please), Tip (Tooltip - Normal)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00D|r] Please
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool2,.> seconds|r
 }
 
 STRING 3952
-// Abilities: A15Q (Attack Passive Omni-Man), EditorSuffix (Editor Suffix)
+// Abilities: A15D (Punch), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -37718,27 +37720,21 @@ A powerful punch that deflects incoming beams and knockbacks enemy heroes.
 }
 
 STRING 5847
-// Abilities: A0DG (God of Destruction's Wrath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus unleashes his wrath and fires a massive amount of ki blasts in all directions around him.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cffffff00+1% spell amp for every 3% of current mana.
-|cff8888ffMana Cost: 20% Max Mana
-|cffff2222Channel Duration: <A0DG,DataA1,.>s|r
-|cff00ff00Damage: [Int] 50u (x132)
-|cff00ffffCooldown: <A0DG,Cool1> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool3,.> seconds|r
 }
 
 STRING 5848
-// Abilities: A0DG (God of Destruction's Wrath), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Beerus unleashes his wrath and fires a massive amount of ki blasts in all directions around him.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cffffff00+1% spell amp for every 3% of current mana.
-|cff8888ffMana Cost: 20% Max Mana
-|cffff2222Channel Duration: <A0DG,DataA1,.>s|r
-|cff00ff00Damage: [Int] 50u (x132)
-|cff00ffffCooldown: <A0DG,Cool1> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool4,.> seconds|r
 }
 
 STRING 5849
@@ -53632,6 +53628,16 @@ STRING 8262
 // Abilities: A0OE (Cursed Technique Reversal: Red), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Cursed Technique Reversal: Red
+}
+
+STRING 8263
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool1> seconds|r
 }
 
 STRING 8264
@@ -102623,60 +102629,6 @@ Beam Damage: [Int] 60u x 8t + 60u + 2.4% Max HP |r
 |cff00ffffCooldown: <A0OX,Cool1> seconds|r
 }
 
-STRING 15374
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool1,.> seconds|r
-}
-
-STRING 15375
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool2,.> seconds|r
-}
-
-STRING 15376
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool3,.> seconds|r
-}
-
-STRING 15377
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool4,.> seconds|r
-}
-
-STRING 15378
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool5,.> seconds|r
-}
-
-STRING 15379
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool6,.> seconds|r
-}
-
 STRING 15380
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
 {
@@ -102684,15 +102636,6 @@ Unlocks Gohan's hidden potential.
 |cffffff00+10% spell amp.
 |cff00ff00Duration: <A0L6,Dur1>s
 |cff00ffffCooldown: <A0L6,Cool1>s
-}
-
-STRING 15381
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool7,.> seconds|r
 }
 
 STRING 15382
@@ -102715,33 +102658,6 @@ Marle Attack Passive
 STRING 15385
 {
 Unarmored takes 100% damage from all damage types.
-}
-
-STRING 15386
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool8,.> seconds|r
-}
-
-STRING 15387
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool9,.> seconds|r
-}
-
-STRING 15388
-// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool10,.> seconds|r
 }
 
 STRING 15389
@@ -103090,15 +103006,6 @@ STRING 15437
 // Abilities: A0UX (Dragoon Flourish), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 7|r]
-}
-
-STRING 15438
-// Abilities: A0P1 (Frost Claws), Researchubertip (Tooltip - Learn - Extended)
-{
-Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 150u + 0.5% Max HP (x4)
-|cff00ffffCooldown: <A0P1,Cool1,.> - <A0P1,Cool10,.> seconds|r
 }
 
 STRING 15439
@@ -104232,12 +104139,12 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 15580
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool1> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool5,.> seconds|r
 }
 
 STRING 15581
@@ -104305,12 +104212,12 @@ Zamasu's Immortality
 }
 
 STRING 15591
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool2> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool6,.> seconds|r
 }
 
 STRING 15592
@@ -104574,12 +104481,12 @@ STRING 15629
 }
 
 STRING 15630
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool3> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool7,.> seconds|r
 }
 
 STRING 15631
@@ -104589,12 +104496,12 @@ STRING 15631
 }
 
 STRING 15632
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool4> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool8,.> seconds|r
 }
 
 STRING 15633
@@ -104622,12 +104529,12 @@ STRING 15636
 }
 
 STRING 15637
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool5> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool9,.> seconds|r
 }
 
 STRING 15638
@@ -104864,21 +104771,12 @@ Auto Attack Damage: [Int] 110u
 }
 
 STRING 15669
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool6> seconds|r
-}
-
-STRING 15670
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool1> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool10,.> seconds|r
 }
 
 STRING 15671
@@ -105005,15 +104903,6 @@ Spawns 3 Super Ghost Kamikazes around Gotenks.
 |cff808080"The Mack Daddy of Justice"|r
 }
 
-STRING 15686
-// Abilities: A0P2 (Ice Slash), Researchubertip (Tooltip - Learn - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool1> seconds|r
-}
-
 STRING 15687
 // Abilities: A0FT (Time Skip), Tip (Tooltip - Normal)
 {
@@ -105081,33 +104970,6 @@ STRING 15695
 {
 [|cffffcc00Upgrade|r] |cffff2020R|r|cffff8820a|r|cffffff00i|r|cff00ff00n|r|cff00ffffb|r|cffff44ffo|r|cff882288w|r
 Crono receives an upgraded sword with a 70% chance for a 2.2x crit and +30% base damage.
-}
-
-STRING 15696
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool2> seconds|r
-}
-
-STRING 15697
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool3> seconds|r
-}
-
-STRING 15698
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool4> seconds|r
 }
 
 STRING 15699
@@ -105504,12 +105366,12 @@ Leon S. Kennedy's signature roundhouse kick. Stuns nearby enemies for 0.5s and a
 }
 
 STRING 15751
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Researchubertip (Tooltip - Learn - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool7> seconds|r
+|cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
+|cff00ffffCooldown: <A0P1,Cool1,.> - <A0P1,Cool10,.> seconds|r
 }
 
 STRING 15752
@@ -106771,33 +106633,6 @@ STRING 15937
 [|cff00ff00F|r] Parry - [|cffffcc00Level 6|r]
 }
 
-STRING 15938
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool5> seconds|r
-}
-
-STRING 15939
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool6> seconds|r
-}
-
-STRING 15940
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool7> seconds|r
-}
-
 STRING 15941
 // Abilities: A0TF (Book Sephiroth Crit), Name (Name)
 {
@@ -106826,15 +106661,6 @@ STRING 15945
 // Abilities: A0FT (Time Skip), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Time Skip - [|cffffcc00Level %d|r]
-}
-
-STRING 15946
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool8> seconds|r
 }
 
 STRING 15947
@@ -107090,24 +106916,6 @@ Proudly bankrolled by |cff00ffffCestroq|r.
 STRING 15976
 {
 |cffff2020Error: Cannot target there.
-}
-
-STRING 15977
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool9> seconds|r
-}
-
-STRING 15978
-// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
-
-|cff00ff00Damage: [Int] 720u
-|cff00ffffCooldown: <A0P2,Cool10> seconds|r
 }
 
 STRING 15979
@@ -109936,51 +109744,6 @@ STRING 16365
 Cell Max
 }
 
-STRING 16366
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool1>s|r
-}
-
-STRING 16367
-// Abilities: A011 (Table Flip), Researchubertip (Tooltip - Learn - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool1> - <A011,Cool10>s|r
-}
-
-STRING 16368
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool2>s|r
-}
-
-STRING 16369
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool3>s|r
-}
-
-STRING 16370
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool4>s|r
-}
-
 STRING 16371
 // Abilities: A0EO (Dark Eyes), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -109989,51 +109752,6 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 |cff00FFFFCooldown: <A0K6,Cool1> - <A0K6,Cool10>s
 |cffFFFF00Duration:|r 2.5s
 |cffFFFF00Empowered:|r +40% damage and deals additional bonus damage based on the difference between Jiren and the enemy's STR
-}
-
-STRING 16372
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool5>s|r
-}
-
-STRING 16373
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool6>s|r
-}
-
-STRING 16374
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool7>s|r
-}
-
-STRING 16375
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool8>s|r
-}
-
-STRING 16376
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool9>s|r
 }
 
 STRING 16377
@@ -110241,15 +109959,6 @@ A perpetually peckish princess who excels in both offense and defense on the fro
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 16400
-// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
-{
-Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
-
-|cff00FF00Damage: [Int] 750u
-|cff00FFFFCooldown: <A011,Cool10>s|r
 }
 
 STRING 16401
@@ -111483,12 +111192,12 @@ R
 }
 
 STRING 16567
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool8> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool1> seconds|r
 }
 
 STRING 16568
@@ -115782,12 +115491,12 @@ STRING 17143
 }
 
 STRING 17144
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Researchubertip (Tooltip - Learn - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool9> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool1> seconds|r
 }
 
 STRING 17145
@@ -115910,12 +115619,12 @@ Final Burst Burn
 }
 
 STRING 17164
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool10> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool2> seconds|r
 }
 
 STRING 17165
@@ -115961,12 +115670,12 @@ STRING 17171
 }
 
 STRING 17172
-// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 210u x 8t + 420u
-|cff00ffffCooldown: <A0H6,Cool1> - <A0H6,Cool10> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool3> seconds|r
 }
 
 STRING 17173
@@ -126595,7 +126304,7 @@ Dart spins his blade at maximum speed, dealing damage to enemies as he moves.
 }
 
 STRING 18681
-// Abilities: A15D (Punch), EditorSuffix (Editor Suffix)
+// Abilities: A15E (Dash), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -131881,13 +131590,12 @@ This unit is protected; it has additional armor
 }
 
 STRING 19397
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool1> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool4> seconds|r
 }
 
 STRING 19398
@@ -131903,13 +131611,12 @@ This unit is protected; it has additional armor
 }
 
 STRING 19400
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool2> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool5> seconds|r
 }
 
 STRING 19401
@@ -132187,83 +131894,75 @@ STRING 19440
 }
 
 STRING 19441
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool3> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool6> seconds|r
 }
 
 STRING 19442
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool4> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool7> seconds|r
 }
 
 STRING 19443
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool5> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool8> seconds|r
 }
 
 STRING 19444
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool6> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool9> seconds|r
 }
 
 STRING 19445
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool7> seconds|r
+|cff00ff00Damage: [Int] 800u
+|cff00ffffCooldown: <A0P2,Cool10> seconds|r
 }
 
 STRING 19446
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool8> seconds|r
+|cff00ff00Damage: [Int] 130u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool1> seconds|r
 }
 
 STRING 19447
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool9> seconds|r
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool2> seconds|r
 }
 
 STRING 19448
-// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool10> seconds|r
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool3> seconds|r
 }
 
 STRING 19449
@@ -132283,13 +131982,12 @@ Dart dashes back and forth slashing his opponents before slamming the area for m
 }
 
 STRING 19451
-// Abilities: A108 (Dragon Cannon Slash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
-Upgrades to [|cff00ff00W|r] Bursting Flame.
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
 
-|cff00ff00Damage: [Int] 10u x 12t + 800u
-|cff00ffffCooldown: <A108,Cool1> - <A108,Cool10> seconds|r
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool4> seconds|r
 }
 
 STRING 19452
@@ -132438,33 +132136,6 @@ Dart dashes back and forth slashing his opponents before slamming the area for m
 |cff00FFFFCooldown: <A0UV,Cool1,.> - <A0UV,Cool10,.> s|r
 }
 
-STRING 19471
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool1> seconds|r
-}
-
-STRING 19472
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool2> seconds|r
-}
-
-STRING 19473
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool3> seconds|r
-}
-
 STRING 19474
 // Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
 {
@@ -132493,15 +132164,6 @@ STRING 19478
 // Abilities: A0Z6 (Pirate's Scorn), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Skygate - [|cffffcc00Level 6|r]
-}
-
-STRING 19479
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool4> seconds|r
 }
 
 STRING 19480
@@ -132552,79 +132214,16 @@ STRING 19487
 [|cff00ff00R|r] Skygate - [|cffffcc00Level 10|r]
 }
 
-STRING 19488
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool5> seconds|r
-}
-
-STRING 19489
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool6> seconds|r
-}
-
 STRING 19490
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 19491
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool7> seconds|r
-}
-
 STRING 19492
 // Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
 {
 Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 3s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
-}
-
-STRING 19493
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool8> seconds|r
-}
-
-STRING 19494
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool9> seconds|r
-}
-
-STRING 19495
-// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool10> seconds|r
-}
-
-STRING 19496
-// Abilities: A0P4 (Ice Cannon), Researchubertip (Tooltip - Learn - Extended)
-{
-Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
-
-|cff00ff00Damage: [Int] 100u x 8t (+50u x 8t)
-|cff00ffffCooldown: <A0P4,Cool1> - <A0P4,Cool10> seconds|r
 }
 
 STRING 19497
@@ -133622,9 +133221,12 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 19631
-// Abilities: A0OT (Belly Armor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-King K Rool sticks out his gold-plated stomach armor and deflects any beams in front of him.|n|cff00ff00Duration: 1s|nDamage Block: [Str] 2000u @ 100%|r|n|cff00ffffCooldown: <A0OT,Cool1>s
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool5> seconds|r
 }
 
 STRING 19632
@@ -136623,16 +136225,6 @@ STRING 20063
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Super Ghost Kamikaze Attack x20 - [|cffffcc00Level 10|r]
-}
-
-STRING 20064
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Ubertip (Tooltip - Normal - Extended)
-{
-An enhanced version of Gotenks's signature move. Gotenks expels 20 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: [Int] 120u (x20)
-|cff00ffffCooldown: <A0U4,Cool10> seconds|r
 }
 
 STRING 20065
@@ -147709,6 +147301,16 @@ STRING 21582
 [|cff00ff00F|r] Jump - [|cffffcc00Level 6|r]
 }
 
+STRING 21583
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool2> seconds|r
+}
+
 STRING 21584
 // Abilities: A0FT (Time Skip), Ubertip (Tooltip - Normal - Extended)
 {
@@ -148413,7 +148015,7 @@ Omni-Man flies through his enemies dealing damage through anyone in his way.
 }
 
 STRING 21688
-// Abilities: A15E (Dash), EditorSuffix (Editor Suffix)
+// Abilities: A15F (Slice), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -148932,6 +148534,26 @@ STRING 21761
 // Buffs/Effects: B06V (), Buffubertip (Tooltip - Extended)
 {
 Viltrumite's have increased attack damage.
+}
+
+STRING 21762
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool3> seconds|r
+}
+
+STRING 21763
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool4> seconds|r
 }
 
 STRING 21764
@@ -151199,6 +150821,56 @@ Waluigi uses his long legs to jump over his enemies and avoid danger.
 |cff00FFFFCooldown: <A11S,Cool10,.> seconds|r
 }
 
+STRING 22030
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool5> seconds|r
+}
+
+STRING 22031
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool6> seconds|r
+}
+
+STRING 22032
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool7> seconds|r
+}
+
+STRING 22033
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool8> seconds|r
+}
+
+STRING 22034
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool9> seconds|r
+}
+
 STRING 22035
 // Abilities: A00M (Pistol), Ubertip (Tooltip - Normal - Extended)
 {
@@ -151729,6 +151401,113 @@ Cell Max sends out a burst of energy dealing +0.5% damage for every 1% remaining
 
 |cff00ff00Damage: [Int] 1600u (+800u)|r
 |cff00FFFFCooldown: <A0HY,Cool8,.>s|r
+}
+
+STRING 22100
+// Abilities: A108 (Dragon Cannon Slash), Ubertip (Tooltip - Normal - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool10> seconds|r
+}
+
+STRING 22101
+// Abilities: A108 (Dragon Cannon Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+A combo attack where Guts uses the momentum of his cannon arm to propel his |cffffcc00Dragon Slayer|r to slice through his enemies.
+Upgrades to [|cff00ff00W|r] Bursting Flame.
+
+|cff00ff00Damage: [Int] 900u
+|cff00ffffCooldown: <A108,Cool1> - <A108,Cool10> seconds|r
+}
+
+STRING 22102
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool6> seconds|r
+}
+
+STRING 22103
+// Abilities: A0DG (God of Destruction's Wrath), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus unleashes his wrath and fires a massive amount of ki blasts in all directions around him.
+
+|cffffff00+1% spell amp for every 3% of current mana.
+|cff8888ffMana Cost: 20% Max Mana
+|cffff2222Channel Duration: <A0DG,DataA1,.>s|r
+|cff00ff00Damage: [Int] 1155u/s
+|cff00ffffCooldown: <A0DG,Cool1> seconds|r
+}
+
+STRING 22104
+// Abilities: A0DG (God of Destruction's Wrath), Researchubertip (Tooltip - Learn - Extended)
+{
+Beerus unleashes his wrath and fires a massive amount of ki blasts in all directions around him.
+
+|cffffff00+1% spell amp for every 3% of current mana.
+|cff8888ffMana Cost: 20% Max Mana
+|cffff2222Channel Duration: <A0DG,DataA1,.>s|r
+|cff00ff00Damage: [Int] 1155u/s
+|cff00ffffCooldown: <A0DG,Cool1> seconds|r
+}
+
+STRING 22105
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool1> seconds|r
+}
+
+STRING 22106
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool2> seconds|r
+}
+
+STRING 22107
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool3> seconds|r
+}
+
+STRING 22108
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool4> seconds|r
+}
+
+STRING 22109
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool5> seconds|r
+}
+
+STRING 22110
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool6> seconds|r
 }
 
 STRING 22111
@@ -157759,6 +157538,24 @@ STRING 22849
 This unit has increased life and mana regeneration.
 }
 
+STRING 22850
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool7> seconds|r
+}
+
+STRING 22851
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool8> seconds|r
+}
+
 STRING 22852
 // Abilities: A12X (Skill Boost), Tip (Tooltip - Normal)
 {
@@ -159388,6 +159185,41 @@ STRING 23074
 [|cff00FF00W|r] Learn Charm - [|cffffcc00Level %d|r]
 }
 
+STRING 23075
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool9> seconds|r
+}
+
+STRING 23076
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool10> seconds|r
+}
+
+STRING 23077
+// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.
+
+|cff00ff00Damage: [Int] 150u x 8t + 1000u
+|cff00ffffCooldown: <A0H6,Cool1> - <A0H6,Cool10> seconds|r
+}
+
+STRING 23078
+// Abilities: A0OT (Belly Armor), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool sticks out his gold-plated stomach armor and deflects any beams in front of him.
+
+|cff00ff00Duration: 1s|nDamage Block: [Str] 2000u @ 100%|r|n|cff00ffffCooldown: <A0OT,Cool1>s
+}
+
 STRING 23079
 // Abilities: A003 (Hiraishin no Jutsu: Third Stage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -160863,6 +160695,16 @@ STRING 23271
 [|cff00ff00E|r] Fire 2 - [|cffffcc00Level 2|r]
 }
 
+STRING 23272
+// Abilities: A15H (Please), Ubertip (Tooltip - Normal - Extended)
+{
+Omni-Man gains +100 armor and stands stationary, becoming immune to most knockback effects. If damaged, Omni-Man counters with a [|cff00ff00Q|r] Punch that deals 50% extra damage.
+
+|cffff2222Channel Duration: <A15H,DataA1>s
+|cff00ff00Damage: [Int] 1200u
+|cff00FFFFCooldown: <A15H,Cool1>s|r
+}
+
 STRING 23273
 // Abilities: A03N (Galick Gun), Tip (Tooltip - Normal)
 {
@@ -162334,6 +162176,28 @@ STRING 23465
 [|cffffff00Q|r] Choose Goku
 }
 
+STRING 23466
+// Abilities: A15H (Please), Ubertip (Tooltip - Normal - Extended)
+{
+Omni-Man gains +100 bonus armor for 3s. Omni-Man counters the first instance of damage with a [|cff00ff00Q|r] Punch that deals 50% extra damage.
+
+|cff00ff00Duration: 3s
+|cff00ff00Damage: [Int] 1200u
+|cff00FFFFCooldown: <A15H,Cool1>s|r
+}
+
+STRING 23467
+// Abilities: A15H (Please), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Please - [|cffffcc00Level 2|r]
+}
+
+STRING 23468
+// Abilities: A15H (Please), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Please - [|cffffcc00Level 1|r]
+}
+
 STRING 23469
 // Abilities: A13O (Galaxy Breaker), Ubertip (Tooltip - Normal - Extended)
 {
@@ -162431,6 +162295,79 @@ Vegeta charges in the target direction, damaging enemies he collides with.
 
 |cff00ff00Damage: [Int] 400u x 2t
 |cff00ffffCooldown: <A13O,Cool2,.> seconds|r
+}
+
+STRING 23480
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool7> seconds|r
+}
+
+STRING 23481
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool8> seconds|r
+}
+
+STRING 23482
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool9> seconds|r
+}
+
+STRING 23483
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool10> seconds|r
+}
+
+STRING 23484
+// Abilities: A0P4 (Ice Cannon), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. 
+
+|cff00ff00Damage: [Int] 120u x 8t (+60u x 8t)
+|cff00ffffCooldown: <A0P4,Cool1> - <A0P4,Cool10> seconds|r
+}
+
+STRING 23485
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x20), Ubertip (Tooltip - Normal - Extended)
+{
+An enhanced version of Gotenks's signature move. Gotenks expels 20 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: [Int] 120u (x20)
+|cff00ffffCooldown: <A0U5,Cool10> seconds|r
+}
+
+STRING 23486
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool1>s|r
+}
+
+STRING 23487
+// Abilities: A011 (Table Flip), Researchubertip (Tooltip - Learn - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool1> - <A011,Cool10>s|r
 }
 
 STRING 23488
@@ -163891,6 +163828,15 @@ STRING 23660
 Summon spells cost 3% less max mana. Summons gain +10% stats.
 }
 
+STRING 23661
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool2>s|r
+}
+
 STRING 23662
 // Abilities: A128 (Summon: Albedo), Ubertip (Tooltip - Normal - Extended)
 {
@@ -164550,6 +164496,15 @@ STRING 23752
 // Abilities: A150 (Limit Breaker), Name (Name)
 {
 Limit Breaker
+}
+
+STRING 23753
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool3>s|r
 }
 
 STRING 23754
@@ -167508,6 +167463,15 @@ R Mana Cost: 23% of max mana
 |cffffcc00Damage|r - <A0BB,DataB4,.> times
 }
 
+STRING 24164
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool4>s|r
+}
+
 STRING 24165
 // Units: H02R (U9 God of Destruction), Name (Name)
 {
@@ -167518,6 +167482,15 @@ STRING 24166
 // Abilities: A144 (Fluttering Shadow Petals), Name (Name)
 {
 Fluttering Shadow Petals
+}
+
+STRING 24167
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool5>s|r
 }
 
 STRING 24168
@@ -168696,6 +168669,15 @@ Pan fires a beam that forces Giru to charge at the target location, stunning nea
 
 |cff00ff00Damage: [Int] 90u x 8t + 120u + 2% Max HP|r
 |cff00FFFFCooldown: <A0LV,Cool9,.>s|r
+}
+
+STRING 24315
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool6>s|r
 }
 
 STRING 24316
@@ -173832,7 +173814,7 @@ Omni-Man slices an arc in front of him inflicting enemies with bleed that slows 
 }
 
 STRING 24963
-// Abilities: A15F (Slice), EditorSuffix (Editor Suffix)
+// Abilities: A15G (Grab), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174008,7 +173990,7 @@ Omni-Man grabs the closest enemy hero in the target direction and holds them sta
 }
 
 STRING 24987
-// Abilities: A15G (Grab), EditorSuffix (Editor Suffix)
+// Abilities: A15H (Please), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174219,13 +174201,12 @@ Omni-Man drags his target towards the target location. Deals bonus damage in 400
 }
 
 STRING 25014
-// Abilities: A15H (Please), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
 {
-Omni-Man stands stationary and gains +100 bonus armor. If damaged, Omni-Man counters with a [|cff00ff00Q|r] Punch that deals 50% extra damage.
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
 
-|cffff2222Channel Duration: <A15H,DataA1>s
-|cff00ff00Damage: [Int] 1200u
-|cff00FFFFCooldown: <A15H,Cool1>s|r
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool7>s|r
 }
 
 STRING 25015
@@ -174252,7 +174233,7 @@ Omni-Man's viltrumite blood improves his defenses and allows him to recover fast
 }
 
 STRING 25018
-// Abilities: A15H (Please), EditorSuffix (Editor Suffix)
+// Abilities: A15I (Maybe This Time You'll Learn), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174264,7 +174245,7 @@ Viltrum Might
 }
 
 STRING 25020
-// Abilities: A15I (Maybe This Time You'll Learn), EditorSuffix (Editor Suffix)
+// Abilities: A15J (Armor Omni-Man Please), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174285,7 +174266,7 @@ Omni-Man slices an arc in front of him inflicting enemies with bleed that slows 
 }
 
 STRING 25023
-// Abilities: A15J (Armor Omni-Man Please), EditorSuffix (Editor Suffix)
+// Abilities: A15K (Gut Punch), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174420,9 +174401,12 @@ STRING 25040
 }
 
 STRING 25041
-// Abilities: A15H (Please), Tip (Tooltip - Normal)
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00D|r] Please
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool8>s|r
 }
 
 STRING 25042
@@ -174456,7 +174440,7 @@ STRING 25046
 }
 
 STRING 25047
-// Abilities: A15K (Gut Punch), EditorSuffix (Editor Suffix)
+// Abilities: A15L (Drag), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174476,6 +174460,15 @@ Schala calls down lightning from the sky to bombard the target area.
 |cffff2020Channel Duration: <A0YF,Dur5> seconds|r
 |cff00ff00Damage: [Int] 700u/s
 |cff00ffffCooldown: <A0YF,Cool5> seconds|r
+}
+
+STRING 25050
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool9>s|r
 }
 
 STRING 25051
@@ -174539,6 +174532,15 @@ A powerful punch that deflects incoming beams and knockbacks enemy heroes.
 
 |cff00ff00Damage: [Int] 1300u
 |cff00FFFFCooldown: <A15D,Cool9>s|r
+}
+
+STRING 25058
+// Abilities: A011 (Table Flip), Ubertip (Tooltip - Normal - Extended)
+{
+Saitama grabs a piece of the ground and lifts up half the battlefield, dealing massive damage to those caught in the attack and slowing them.
+
+|cff00FF00Damage: [Int] 1000u
+|cff00FFFFCooldown: <A011,Cool10>s|r
 }
 
 STRING 25059
@@ -174611,7 +174613,7 @@ A powerful punch that deflects incoming beams and knockbacks enemy heroes.
 }
 
 STRING 25070
-// Abilities: A15L (Drag), EditorSuffix (Editor Suffix)
+// Abilities: A15M (Impale), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174808,7 +174810,7 @@ A powerful punch that deflects incoming beams and knockbacks enemy heroes.
 }
 
 STRING 25096
-// Abilities: A15M (Impale), EditorSuffix (Editor Suffix)
+// Abilities: A15N (Crush), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -174985,7 +174987,7 @@ Beerus summons a massive flaming energy sphere to destroy his enemies.
 }
 
 STRING 25120
-// Abilities: A15N (Crush), EditorSuffix (Editor Suffix)
+// Abilities: A15O (Viltrum Might), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -175164,7 +175166,7 @@ Beerus summons a massive flaming energy sphere to destroy his enemies.
 }
 
 STRING 25144
-// Abilities: A15O (Viltrum Might), EditorSuffix (Editor Suffix)
+// Abilities: A15P (Viltrum Blood), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
@@ -175261,7 +175263,7 @@ STRING 25158
 }
 
 STRING 25159
-// Abilities: A15P (Viltrum Blood), EditorSuffix (Editor Suffix)
+// Abilities: A15Q (Attack Passive Omni-Man), EditorSuffix (Editor Suffix)
 {
 (omni-man)
 }
