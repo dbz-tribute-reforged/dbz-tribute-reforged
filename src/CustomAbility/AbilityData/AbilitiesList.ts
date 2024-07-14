@@ -305,7 +305,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 15,
     costType: CostType.SP,
-    costAmount: 60,
+    costAmount: 50,
     duration: 15,
     updateRate: 0.03,
     castTime: 0.0,
@@ -324,7 +324,7 @@ export const AbilitiesList = [
         "Becomes invulnerable for 0.03s.|n" +
         "Enemy heroes are repelled over 0.5s.|n" +
         "Can be used while stunned.|n" +
-        "Cost: 60 SP|n" +
+        "Cost: 50 SP|n" +
         "CD: 15"
     },
     components: [
@@ -712,7 +712,7 @@ export const AbilitiesList = [
     tooltip: {
       title: AbilityNames.Goku.DRAGON_FIST,
       body: 
-        "Dragon Fisto"
+        ""
     },
     components: [
       { name: "dash ground point dragon fist" },
@@ -2761,7 +2761,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: CostType.MP,
     costAmount: 0,
-    duration: 33,
+    duration: 24,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2779,7 +2779,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim videl flying kick" },
-      { name: "dash ground point videl flying kick" },
+      { name: "dash ground point 50dist" },
       { name: "damage videl flying kick dps" },
       { name: "damage videl flying kick explosion" },
       { name: "knockback videl flying kick" },
@@ -3877,7 +3877,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward super maximum light speed mode" },
-      { name: "temp ability disable light bullet" },
       { name: "sfx super maximum light speed mode" },
     ],
   },
@@ -10295,7 +10294,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage guts cannon slash explosion" },
-      { name: "damage guts cannon slash dps" },
       { name: "dash ground forward videl speed boost" },
       { name: "sfx guts cannon slash" },
     ],
@@ -13282,34 +13280,34 @@ export const AbilitiesList = [
       { name: "multi omniman impale 1" },
     ],
   },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Omniman.PLEASE,
-    currentCd: 0,
-    maxCd: 1,
-    costType: CostType.MP,
-    costAmount: 0,
-    duration: 100,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    canUseWhenStunned: false,
-    animation: "spell",
-    icon: {
-      enabled: "",
-      disabled: "",
-    },
-    tooltip: {
-      title: "",
-      body: 
-        "",
-    },
-    components: [
-      { name: "channel caster default" },
-      { name: "temp ability omniman please armor" },
-    ],
-  },
+  // // -------------------------------------------
+  // {
+  //   name: AbilityNames.Omniman.PLEASE,
+  //   currentCd: 0,
+  //   maxCd: 1,
+  //   costType: CostType.MP,
+  //   costAmount: 0,
+  //   duration: 100,
+  //   updateRate: 0.03,
+  //   castTime: 0.0,
+  //   canMultiCast: true,
+  //   waitsForNextClick: false,
+  //   canUseWhenStunned: false,
+  //   animation: "spell",
+  //   icon: {
+  //     enabled: "",
+  //     disabled: "",
+  //   },
+  //   tooltip: {
+  //     title: "",
+  //     body: 
+  //       "",
+  //   },
+  //   components: [
+  //     { name: "channel caster default" },
+  //     { name: "temp ability omniman please armor" },
+  //   ],
+  // },
   // -------------------------------------------
   {
     name: AbilityNames.Omniman.TRAIN,

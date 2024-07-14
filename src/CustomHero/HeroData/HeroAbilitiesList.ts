@@ -747,7 +747,6 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Omniman.PUNCH_2,
       AbilityNames.Omniman.DASH,
       AbilityNames.Omniman.SLICE,
-      AbilityNames.Omniman.PLEASE,
       AbilityNames.Omniman.GUT_PUNCH,
       AbilityNames.Omniman.DRAG,
       AbilityNames.Omniman.IMPALE,
@@ -866,6 +865,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Granolah.SNIPE, AbilityNames.Granolah.SNIPE_2, AbilityNames.Granolah.EVOLVED_EYES,
       AbilityNames.CheongMyeong.SWORD_OF_SIX_ELEMENTS, 
       AbilityNames.Aggronor.STORM_BOLT, AbilityNames.Aggronor.AVATAR, AbilityNames.Aggronor.STORMLORD, 
+      AbilityNames.Omniman.PUNCH, AbilityNames.Omniman.PUNCH_2,
 
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

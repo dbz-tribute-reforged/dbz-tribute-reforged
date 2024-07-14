@@ -109,6 +109,7 @@ export class AdvancedSaga {
   // }
 
   addHeroListToSaga(names: string[], mustKill: boolean) {
+    SagaHelper.calculateSagaAvgStats();
     for (const name of names) {
       SagaHelper.addHeroToAdvancedSaga(this, name, mustKill);
     }

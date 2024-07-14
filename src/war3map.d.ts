@@ -855,3 +855,5 @@ declare var udg_FusionBonusIntMult: number;
 declare var udg_SummonsSelectFlagArray: boolean[];
 
 declare var udg_UltimateModeLevel: number;
+
+declare var udg_HitHashtable: hashtable;

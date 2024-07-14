@@ -1174,6 +1174,7 @@ gg_trg_Transformations_Omni_Man = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Capsule_Unlock = nil
 gg_trg_Saga_Unit_Loop = nil
+gg_trg_Saga_Unit_Setup_Stats = nil
 gg_trg_Saga_Unit_Get_Saga_Min_Base = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
 gg_trg_Check_Walkability = nil
@@ -3121,7 +3122,7 @@ HeroSelector = {}
 --Box
 HeroSelector.BoxFrameName           = "HeroSelectorRaceBox" --this is the background box being created
 HeroSelector.BoxPosX                = 0.4
-HeroSelector.BoxPosY                = 0.4
+HeroSelector.BoxPosY                = 0.42
 HeroSelector.BoxPosPoint            = FRAMEPOINT_CENTER
 HeroSelector.AutoShow               = false --(true) shows the box and the Selection at 0.0 for all players
 --Unique Picks
@@ -3154,7 +3155,7 @@ HeroSelector.IndicatorPathBan       = "war3mapImported\\HeroSelectorBan.mdl" --t
 HeroSelector.SpaceBetweenX          = 0.004 --space between 2 buttons in one row
 HeroSelector.SpaceBetweenY          = 0.004 --space between 2 rows
 HeroSelector.ButtonColCount         = 15 --amount of buttons in one row
-HeroSelector.ButtonRowCount         = 7 --amount of rows
+HeroSelector.ButtonRowCount         = 8 --amount of rows
 HeroSelector.ChainedButtons         = true --(true) connect to the previous button/ or row, (false) have a offset to the box topLeft in this moving a button has no effect on other buttons.
 --Button
 HeroSelector.ButtonSize             = 0.026 --size of each button
@@ -4607,9 +4608,9 @@ HeroInfo = {}
 -- TextArea
 HeroInfo.DescHeroNamePrefix     = "|cffffcc00"   --added before the Units Name
 HeroInfo.DescHeroNameSufix      = "|r"           --added after the units Name
-HeroInfo.TextAreaSizeX          = 0.4
-HeroInfo.TextAreaSizeY          = 0.24
-HeroInfo.TextAreaOffsetX        = 0
+HeroInfo.TextAreaSizeX          = 0.5
+HeroInfo.TextAreaSizeY          = 0.34
+HeroInfo.TextAreaOffsetX        = 0.2
 HeroInfo.TextAreaOffsetY        = 0
 HeroInfo.TextAreaPoint          = FRAMEPOINT_TOP --pos the Tooltip with which Point
 HeroInfo.TextAreaRelativePoint  = FRAMEPOINT_BOTTOM --pos the Tooltip to which Point of the Relative
@@ -8512,7 +8513,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16641.3, 313.1, 338.070, FourCC("h065"))
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 11329.3, -4166.9, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -8532,7 +8533,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16246.8, 320.5, 338.070, FourCC("h065"))
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 10934.8, -4159.5, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer7()
@@ -8552,7 +8553,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h065"), 15860.0, 308.4, 338.070, FourCC("h065"))
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 10548.0, -4171.6, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer8()
@@ -8572,7 +8573,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16063.5, -68.6, 338.070, FourCC("h065"))
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 10751.5, -4548.6, 338.070, FourCC("h065"))
 end
 
 function CreateBuildingsForPlayer9()
@@ -8592,7 +8593,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h065"), 16449.7, -72.3, 338.070, FourCC("h065"))
+u = BlzCreateUnitWithSkin(p, FourCC("h065"), 11137.7, -4552.3, 338.070, FourCC("h065"))
 end
 
 function CreateNeutralHostile()
@@ -8636,10 +8637,11 @@ SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n038"), 26323.8, -5046.3, 200.112, FourCC("n038"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 24726.2, -1030.9, 292.806, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 25249.6, -435.6, 271.453, FourCC("n02F"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 16044.6, 11945.7, 266.523, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 16981.0, 11876.5, 290.603, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 17311.1, -9783.8, 177.117, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 18622.7, -9249.4, 261.732, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 15443.3, 11777.7, 295.495, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n031"), 16045.3, 11990.6, 250.511, FourCC("n031"))
+SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 25084.3, 1587.5, 246.760, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 19619.0, -8376.8, 152.473, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 10556.9, 8224.5, 284.382, FourCC("n01A"))
@@ -8653,10 +8655,10 @@ SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), 26354.7, -5446.8, 205.529, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10148.4, -6111.2, 213.162, FourCC("n019"))
-u = BlzCreateUnitWithSkin(p, FourCC("n031"), 10524.2, -3512.8, 247.015, FourCC("n031"))
+u = BlzCreateUnitWithSkin(p, FourCC("n031"), 14081.1, -1990.5, 40.813, FourCC("n031"))
 SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 12211.3, -6742.9, 233.132, FourCC("n03G"))
-u = BlzCreateUnitWithSkin(p, FourCC("n015"), 9323.6, -4482.2, 249.043, FourCC("n015"))
+u = BlzCreateUnitWithSkin(p, FourCC("n015"), 9304.7, -1778.8, 302.627, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 6034.0, 5711.4, 113.891, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15417.3, 3985.5, 214.654, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 24801.5, 2124.7, 357.759, FourCC("n02F"))
@@ -8668,7 +8670,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15804.1, -3392.6, 255.628, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 14810.2, -3632.1, 59.575, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 4371.3, -7305.7, 72.627, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), -9629.9, 447.6, 105.884, FourCC("n020"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 9655.8, -7135.3, 182.752, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 9671.6, -7018.2, 182.752, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 25095.0, 16.0, 19.914, FourCC("n02E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 26068.1, -1088.8, 129.315, FourCC("n03A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 8144.3, -7409.9, 2.153, FourCC("n01U"))
@@ -8683,7 +8685,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18595.0, -7017.9, 229.804, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12000.6, -6543.4, 223.688, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 16187.3, -5857.4, 30.795, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 8803.3, 6995.1, 228.926, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 7900.4, -6996.2, 298.458, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 7833.4, -7586.3, 92.300, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 24695.6, -13403.5, 50.975, FourCC("n02E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10871.5, 10081.1, 253.322, FourCC("n01D"))
@@ -8706,14 +8708,14 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 7592.6, -2403.8, 298.458, FourCC("n
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15267.8, -1789.3, 68.842, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14124.2, 7225.8, 283.484, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 6458.5, -2370.8, 298.458, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 6457.9, -2270.7, 220.843, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9677.5, 7.2, 283.577, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 11229.8, -9643.9, 45.989, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 9871.6, -7223.9, 235.871, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10881.8, -6901.9, 91.429, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18304.6, -3869.4, 291.786, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 11338.4, 893.6, 226.334, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 11882.5, -2349.2, -34.745, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 27175.3, 83.9, 135.821, FourCC("n02E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16701.2, -7332.5, 242.972, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16634.4, 8591.0, 251.107, FourCC("n015"))
@@ -8723,8 +8725,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11401.5, -5758.9, 328.325, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 5421.7, -6902.0, 96.860, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11618.1, -5805.3, 245.245, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 8921.5, 12565.6, 138.786, FourCC("n02E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9346.4, 430.4, 136.296, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9578.0, 2236.0, 167.370, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9637.9, 2285.3, 129.165, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9320.2, 587.0, 98.847, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -10844.0, -9714.3, 285.578, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 21132.6, -8999.7, 352.263, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
@@ -8803,7 +8805,6 @@ u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 29412.0, 30226.4, 229.898, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10368.1, 7877.2, 234.871, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7863.0, 7577.7, 229.604, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7767.8, 7846.7, 166.997, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n015"), 7769.4, 9131.6, 239.457, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 8002.9, 7788.3, 203.560, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 23148.5, 26966.6, 164.549, FourCC("n02P"))
 u = BlzCreateUnitWithSkin(p, FourCC("n028"), 30956.1, 20653.6, 335.026, FourCC("n028"))
@@ -9284,8 +9285,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14216.7, -9379.5, 150.852, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 14839.8, -8561.8, 53.922, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 10813.2, -8008.6, 243.500, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13240.4, -2492.0, 188.772, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12201.5, -4861.8, 141.104, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12459.0, -4968.3, 129.126, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12529.9, -4920.1, 189.612, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12622.5, -5200.0, 142.745, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 22727.8, -2095.2, 344.204, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 22147.2, -2238.7, 331.093, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 21742.1, -2027.3, 103.025, FourCC("n020"))
@@ -9299,9 +9300,9 @@ u = BlzCreateUnitWithSkin(p, FourCC("n020"), 21652.2, -2205.5, 94.911, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10443.1, -6168.1, 265.857, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24760.3, -6550.9, 97.714, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9160.4, -4204.1, 146.606, FourCC("n019"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11459.6, -3553.9, 278.837, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10460.6, -4918.3, 123.701, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 8873.4, -3131.0, 273.056, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11197.0, 987.8, 247.945, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9165.5, -4511.5, 205.262, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11831.3, -6992.9, 165.380, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -2797.4, -9987.3, 97.612, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), 24502.6, -6451.1, 347.157, FourCC("n014"))
@@ -9313,19 +9314,19 @@ u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 14858.0, -7110.5, 142.439, FourCC("
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6542.3, -1518.2, 303.086, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 8994.3, -1950.9, 226.334, FourCC("n019"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9343.5, -1864.3, 309.715, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11483.7, -436.5, 261.755, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10268.6, -816.9, 359.355, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 8672.9, -2780.8, 176.216, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11315.1, -463.9, 261.755, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10188.0, -896.6, 313.668, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15058.4, -1684.9, 188.513, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11442.1, -130.5, 207.252, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11340.4, -222.0, 207.252, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -4629.8, -7642.4, 35.233, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13042.9, -8181.5, 250.698, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 12727.7, -809.9, 264.883, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12262.0, -960.8, 282.201, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 13422.1, -2915.0, 274.072, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 12123.1, -2713.3, 55.389, FourCC("n02E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 12056.3, -1952.0, 309.682, FourCC("n02F"))
-u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 11888.3, -2317.3, 11.657, FourCC("n02F"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 15201.7, -201.9, 55.389, FourCC("n02E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 16325.3, 1007.0, 309.682, FourCC("n02F"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 16058.5, 748.0, 268.102, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 14074.9, -6217.6, 85.715, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14113.8, -5421.0, 90.828, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 14391.7, -3984.4, 268.415, FourCC("n03B"))
@@ -9376,6 +9377,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -12466.3, 20951.3, 17.075, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -10604.5, 20936.8, 100.373, FourCC("n01X"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -9197.8, 17925.9, 253.828, FourCC("n01X"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -14229.4, 22926.0, 295.909, FourCC("n01X"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11110.3, -1909.9, 80.336, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14594.5, -3011.4, 186.146, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 9809.1, 12509.8, 235.723, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n038"), 11332.2, 13332.8, 278.494, FourCC("n038"))
 u = BlzCreateUnitWithSkin(p, FourCC("n038"), 9241.0, 13423.9, 278.494, FourCC("n038"))
@@ -9447,9 +9450,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17953.1, 7451.9, 260.443, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 28721.3, 9194.2, 253.876, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 17441.8, 10531.5, 45.289, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 17509.7, 9322.2, 252.233, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17116.9, 11746.4, 295.495, FourCC("n019"))
-u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14217.6, 10706.4, 251.107, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14483.5, 10690.7, 295.989, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n015"), 13178.1, 10111.3, 274.499, FourCC("n015"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14583.6, 11694.8, 237.192, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14902.8, 8654.1, 240.805, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13904.7, 11550.4, 294.704, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14101.0, 11684.2, 161.866, FourCC("n020"))
@@ -9566,8 +9568,8 @@ SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n031"), 29298.5, 7946.7, 142.738, FourCC("n031"))
 SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 26527.5, 10102.7, 325.258, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 27831.6, 10435.5, 207.325, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 25247.7, 8373.6, 59.408, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 25406.5, 8159.6, 66.438, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 27868.5, 10406.4, 241.017, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 28039.6, 6807.4, 234.262, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 26547.8, 8686.8, 91.380, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 27289.9, 7436.9, 234.262, FourCC("n019"))
@@ -9579,7 +9581,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n019"), 24330.2, 11198.4, 209.791, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 24196.3, 12060.9, 259.467, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 29015.2, 9288.8, 222.954, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 18563.6, -7585.8, 5.854, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 24923.3, 8820.2, 40.296, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 25062.1, 8534.1, 40.296, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n031"), -9025.2, -16120.2, 68.377, FourCC("n031"))
 SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 24699.1, 10246.0, 26.424, FourCC("n01A"))
@@ -9611,8 +9613,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n020"), 25705.0, 2792.4, 151.740, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 24120.5, 10222.2, 355.175, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 13861.2, 28215.6, 238.555, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 13254.8, 27143.2, 57.809, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 24257.8, 9014.7, 21.836, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 25084.3, 7838.1, 40.653, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 24837.3, 8004.7, 21.836, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -5719.2, 3029.0, 57.746, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 26382.4, 7326.9, 87.775, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 26626.6, 6582.8, 287.732, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 26482.7, 6667.4, 287.732, FourCC("n01D"))
@@ -9725,21 +9727,21 @@ u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -8322.4, -4101.1, 167.111, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -8772.6, -4723.8, 175.938, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), -1212.7, -1733.8, 308.628, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -1510.2, -1799.1, 291.301, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n015"), -255.9, -52.4, 240.714, FourCC("n015"))
+u = BlzCreateUnitWithSkin(p, FourCC("n015"), -420.7, 73.6, 245.503, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6089.5, 25887.4, 279.097, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18055.6, 27364.3, 190.023, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -1387.5, -1520.3, 47.765, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6991.2, 27701.0, 285.863, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12438.3, 25436.1, 59.473, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6198.3, 31122.4, 285.974, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 277.8, -2659.7, 269.097, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -319.4, -1071.7, 8.644, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15674.8, 21158.8, 152.162, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11648.9, 19924.7, 94.864, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 388.1, -2352.7, 278.611, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 397.0, -2380.9, 161.602, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 9286.2, 30664.5, 288.397, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 17452.1, 19931.3, 105.415, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 6031.3, 31048.3, 318.298, FourCC("n03G"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 82.5, -2373.2, 339.114, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 305.7, -2645.7, 132.158, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -2005.1, -410.2, 278.611, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2194.7, -134.9, 339.114, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2223.5, 2260.0, 339.114, FourCC("n01E"))
@@ -9808,6 +9810,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -5412.1, -7623.6, 8.698, FourCC("n0
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -4240.5, -6952.4, 265.138, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), -6623.6, -4860.1, 236.459, FourCC("n02E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02E"), -7017.9, -6113.4, 72.026, FourCC("n02E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), 23366.8, 12409.0, 246.442, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -5420.1, -6457.8, 133.158, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -4526.2, -8463.1, 87.230, FourCC("n02F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02F"), -5439.3, -9714.4, 317.768, FourCC("n02F"))
@@ -9981,6 +9984,8 @@ SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -7269.7, 1071.6, 237.210, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -5921.5, 98.5, 339.114, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -7189.9, 2286.2, 339.114, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 12398.8, 3816.9, 199.427, FourCC("n01U"))
+SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -5310.8, 2096.7, 238.009, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -4494.9, 2028.1, 278.611, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -3179.9, 2499.2, 278.611, FourCC("n01D"))
@@ -9989,7 +9994,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -5334.2, 3855.6, 125.881, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -6751.9, 5027.9, 278.611, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -4298.6, 3015.9, 339.114, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -3768.6, 3899.0, 339.114, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -5558.7, 3083.1, 55.401, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -5312.8, 3003.4, 104.276, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -5086.2, 2249.6, 223.035, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -7206.0, 3717.6, 215.085, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -7307.3, 3992.2, 211.556, FourCC("n01D"))
@@ -10010,7 +10015,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -13219.9, 22935.2, 243.174, FourCC(
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 5876.8, 26186.6, 331.022, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14644.1, 25979.4, 59.760, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2210.9, 4450.9, 347.080, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -5992.5, 3723.1, 175.365, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -6175.7, 3702.8, 175.365, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -7544.4, 17805.6, 145.090, FourCC("n01X"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -10629.5, 18266.6, 296.769, FourCC("n01X"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -3269.4, 6284.2, 0.829, FourCC("n01E"))
@@ -10018,17 +10023,17 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -2315.7, 8971.0, 23.599, FourCC("n0
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -3683.8, 8387.4, 354.933, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -4862.8, 7827.1, 188.420, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -4693.4, 7648.1, 188.420, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -4498.9, 7715.4, 175.200, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -3416.8, 8234.2, 175.200, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -6761.4, 7536.4, 285.141, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -6550.8, 7714.4, 240.066, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -6063.8, 7828.7, 267.775, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -5448.6, 7966.8, 229.878, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -8944.6, 7169.4, 190.791, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -8771.2, 7038.9, 137.475, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -7769.3, 7309.4, 298.458, FourCC("n01U"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -7504.8, 7306.9, 352.280, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -11644.9, 7352.8, 0.846, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
@@ -10037,8 +10042,6 @@ SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -10951.4, 7472.8, 317.090, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -9969.6, 7440.0, 254.699, FourCC("n01U"))
-SetUnitColor(u, ConvertPlayerColor(0))
-u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -5420.9, 7341.9, 127.199, FourCC("n01U"))
 SetUnitColor(u, ConvertPlayerColor(0))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -3138.7, 4125.6, 4.486, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -13926.8, -5173.9, 298.770, FourCC("n01E"))
@@ -10090,14 +10093,14 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -12568.1, 10045.2, 358.077, FourCC(
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), -10136.7, 9678.6, 234.020, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -12723.0, 10327.6, 345.357, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2134.3, 12140.7, 228.109, FourCC("n01E"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -3582.1, 12893.2, 265.620, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -3631.2, 13025.8, 265.620, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -2113.8, 11125.1, 191.182, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -3806.6, 12967.8, 279.966, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -4559.2, 12874.4, 310.957, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), -9906.4, 12602.5, 297.605, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), -6850.3, 13223.2, 305.820, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), -8860.4, 11654.9, 218.071, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n019"), -8550.5, 9174.1, 86.089, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n038"), -10046.0, 12231.1, 259.640, FourCC("n038"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6684.3, 11797.5, 324.147, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -9353.7, 12054.2, 233.382, FourCC("n015"))
@@ -10110,8 +10113,6 @@ SetUnitColor(u, ConvertPlayerColor(12))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), -7822.5, 11453.8, 275.136, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n019"), -7151.7, 11763.7, 312.307, FourCC("n019"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -6939.6, 11234.0, 288.758, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n014"), -4515.2, 12967.8, 289.161, FourCC("n014"))
-SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -9750.9, 11212.9, 217.443, FourCC("n015"))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), -12569.8, 11311.5, 306.379, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
@@ -10119,8 +10120,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n014"), -12746.5, 11243.4, 272.005, FourCC(
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n014"), -11336.2, 10160.4, 200.666, FourCC("n014"))
 SetUnitColor(u, ConvertPlayerColor(8))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -8544.2, 9105.8, 62.612, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n019"), -8509.6, 9970.7, 164.654, FourCC("n019"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -8896.4, 11748.1, 244.013, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 9667.4, -5283.6, 200.372, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2216.6, 10853.4, 235.432, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n020"), -10465.6, 11842.9, 284.068, FourCC("n020"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -9174.9, 9901.5, 253.863, FourCC("n015"))
@@ -10152,9 +10153,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n014"), -5542.7, 12225.1, 337.651, FourCC("
 SetUnitColor(u, ConvertPlayerColor(8))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -5781.4, 11257.2, 324.458, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5233.0, 10268.1, 280.545, FourCC("n015"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -3514.0, 12622.8, 279.966, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -3400.5, 12971.7, 279.966, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n03G"), -1909.7, 12415.9, 219.253, FourCC("n03G"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -3321.0, 12912.3, 239.478, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n03G"), -2025.4, 12487.8, 219.253, FourCC("n03G"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2294.5, 12393.7, 213.281, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -1721.7, 12217.2, 245.050, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -2321.9, 11223.6, 142.518, FourCC("n01E"))
@@ -10185,10 +10185,10 @@ u = BlzCreateUnitWithSkin(p, FourCC("n019"), -60.5, 184.3, 326.678, FourCC("n019
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -752.3, 3431.0, 305.530, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 23074.7, 1446.4, 207.348, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 23153.7, -67.3, 229.114, FourCC("n01A"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 13167.1, 10152.1, 278.396, FourCC("n01A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 14481.0, 10499.2, 221.040, FourCC("n01A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -10571.4, -4113.1, 288.511, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -12467.4, -4437.0, 278.498, FourCC("n01D"))
-u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11648.5, -586.5, 256.441, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11127.3, -246.2, 256.441, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 10852.6, -1719.2, 13.743, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 10717.0, -1489.7, 67.033, FourCC("n01E"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 7937.4, -1442.9, 227.590, FourCC("n01E"))
@@ -10238,6 +10238,15 @@ u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7857.5, 29471.2, 246.433, FourCC("n
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 12578.4, 28994.4, 358.112, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11788.6, 31042.2, 262.875, FourCC("n01D"))
 u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 23281.4, 10794.9, 159.450, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 9891.8, -2502.6, 223.846, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 11799.4, -3082.2, 240.301, FourCC("n01D"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12801.5, -1709.2, 232.473, FourCC("n01E"))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 8089.1, -6411.4, 233.244, FourCC("n01U"))
+SetUnitColor(u, ConvertPlayerColor(0))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 6157.7, -2462.9, 298.458, FourCC("n01U"))
+SetUnitColor(u, ConvertPlayerColor(0))
+u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -364.9, -4912.6, 317.894, FourCC("n01U"))
+SetUnitColor(u, ConvertPlayerColor(0))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -17807,7 +17816,6 @@ SaveIntegerBJ(10000, 2, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(3, 3, udg_ID, udg_HitHashtable)
 SaveIntegerBJ(3, 11, udg_ID, udg_StatMultHashtable)
 end
-TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
 EnableTrigger(gg_trg_Hit_Charges_Loop)
 SaveStringBJ("|cff00ff00IIIII", 46, udg_ID, udg_StatMultHashtable)
 end
@@ -25763,6 +25771,7 @@ SetPlayerAbilityAvailableBJ(false, FourCC("A11H"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A11T"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0EH"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A02S"), udg_TempPlayer)
+SetPlayerAbilityAvailableBJ(false, FourCC("A15R"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A0T4"), udg_TempPlayer)
@@ -32386,9 +32395,9 @@ else
 end
 if (Trig_Base_Armor_Set_Func031C()) then
 if (Trig_Base_Armor_Set_Func031Func001C()) then
-udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
-else
 udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
+else
+udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
 end
 else
 end
@@ -39946,12 +39955,6 @@ return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func037Func001C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E01P")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09H")) then
-return true
-end
 if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Y")) then
 return true
 end
@@ -40018,76 +40021,83 @@ return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func045C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06M"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H001"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func046C()
-if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H02A"))) then
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06M"))) then
 return false
 end
 return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func047C()
+if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H02A"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func048C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H032"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func049C()
+function Trig_Add_Unit_To_StatMult_Func001Func050C()
 if (not (udg_IsAOEFlyingVision == true)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func050C()
+function Trig_Add_Unit_To_StatMult_Func001Func051C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func051C()
+function Trig_Add_Unit_To_StatMult_Func001Func052C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08S"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func052Func007C()
+function Trig_Add_Unit_To_StatMult_Func001Func053Func007C()
 if (not (GetPlayerState(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func052C()
+function Trig_Add_Unit_To_StatMult_Func001Func053C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H002"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func053Func012C()
+function Trig_Add_Unit_To_StatMult_Func001Func054Func012C()
 if (not (udg_TempInt2 > 200)) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func053C()
+function Trig_Add_Unit_To_StatMult_Func001Func054C()
 if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
 return false
 end
 return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func055C()
+function Trig_Add_Unit_To_StatMult_Func001Func056C()
 if (not (true == false)) then
 return false
 end
@@ -40178,6 +40188,8 @@ SaveRealBJ((LoadRealBJ(36, udg_ID, udg_StatMultHashtable) + 0.50), 36, udg_ID, u
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func028C()) then
+UnitAddAbilityBJ(FourCC("A0FT"), udg_StatMultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A0FT"), udg_StatMultUnit, 1)
 UnitAddAbilityBJ(FourCC("A0G0"), udg_StatMultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_StatMultUnit, 1)
 SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.25), 34, udg_ID, udg_StatMultHashtable)
@@ -40276,19 +40288,24 @@ UnitAddAbilityBJ(FourCC("A0KH"), udg_StatMultUnit)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func045C()) then
-UnitAddAbilityBJ(FourCC("A0CW"), udg_StatMultUnit)
+UnitAddAbilityBJ(FourCC("A001"), udg_StatMultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A001"), udg_StatMultUnit, 1)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func046C()) then
-AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
+UnitAddAbilityBJ(FourCC("A0CW"), udg_StatMultUnit)
 else
 end
 if (Trig_Add_Unit_To_StatMult_Func001Func047C()) then
+AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
+else
+end
+if (Trig_Add_Unit_To_StatMult_Func001Func048C()) then
 SetUnitTimeScalePercent(udg_StatMultUnit, 150.00)
 else
 end
 GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
-if (Trig_Add_Unit_To_StatMult_Func001Func049C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func050C()) then
 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
 udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * 0.66)))
 CreateFogModifierRadiusLocBJ(true, GetOwningPlayer(udg_StatMultUnit), FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -40296,28 +40313,28 @@ SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHas
             RemoveLocation(udg_TempLoc)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func050C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func051C()) then
 TriggerExecute(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func051C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func052C()) then
 TriggerExecute(gg_trg_Farmer_Enable_All)
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func052C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func053C()) then
 TriggerExecute(gg_trg_Geti_Star_Enable)
 SetPlayerTechMaxAllowedSwap(FourCC("u001"), 1, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("H01Z"), 20, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("u003"), 30, GetOwningPlayer(udg_StatMultUnit))
 SetPlayerTechMaxAllowedSwap(FourCC("h03O"), 5, GetOwningPlayer(udg_StatMultUnit))
 udg_GetiStarHeroArr[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))] = udg_StatMultUnit
-if (Trig_Add_Unit_To_StatMult_Func001Func052Func007C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func053Func007C()) then
 SetPlayerStateBJ(GetOwningPlayer(udg_StatMultUnit), PLAYER_STATE_RESOURCE_GOLD, (udg_GetiStarFragmentBaseCost + udg_GetiStarBonuStartingGold))
 else
 end
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func053C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func054C()) then
 SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
 GroupAddUnitSimple(udg_StatMultUnit, udg_FriezaTransformationUnitGroup)
 EnableTrigger(gg_trg_Frieza_Transformation_Loop)
@@ -40329,7 +40346,7 @@ SetPlayerAbilityAvailableBJ(true, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUn
 SetPlayerAbilityAvailableBJ(true, FourCC("A0QA"), GetOwningPlayer(udg_StatMultUnit))
 UnitAddAbilityBJ(FourCC("A0Q8"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0Q8'))
-if (Trig_Add_Unit_To_StatMult_Func001Func053Func012C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func054Func012C()) then
 SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUnit))
 SetPlayerAbilityAvailableBJ(true, FourCC("A0Q9"), GetOwningPlayer(udg_StatMultUnit))
 UnitAddAbilityBJ(FourCC("A0Q9"), udg_StatMultUnit)
@@ -40340,7 +40357,7 @@ UnitAddAbilityBJ(FourCC("A0QA"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0QA'))
 else
 end
-if (Trig_Add_Unit_To_StatMult_Func001Func055C()) then
+if (Trig_Add_Unit_To_StatMult_Func001Func056C()) then
 AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
 SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
 else
@@ -43107,7 +43124,7 @@ end
 return true
 end
 
-function Trig_Goku_Limit_Breaker_Func009Func002C()
+function Trig_Goku_Limit_Breaker_Func009Func003C()
 if (udg_TempInt5 == 0) then
 return true
 end
@@ -43118,7 +43135,7 @@ return false
 end
 
 function Trig_Goku_Limit_Breaker_Func009C()
-if (not Trig_Goku_Limit_Breaker_Func009Func002C()) then
+if (not Trig_Goku_Limit_Breaker_Func009Func003C()) then
 return false
 end
 return true
@@ -43133,7 +43150,6 @@ if (Trig_Goku_Limit_Breaker_Func005C()) then
 udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
 SetPlayerAbilityAvailableBJ(false, FourCC("A14G"), udg_TempPlayer)
 SetPlayerAbilityAvailableBJ(false, FourCC("A14I"), udg_TempPlayer)
-SetPlayerAbilityAvailableBJ(true, FourCC("A14H"), udg_TempPlayer)
 TriggerExecute(gg_trg_Get_Stat_Multiplier)
 udg_TempReal4 = 0.10
 udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
@@ -43151,6 +43167,7 @@ if (Trig_Goku_Limit_Breaker_Func009C()) then
         udg_TransformationID = FourCC('H030')
 else
         udg_TransformationID = 0
+SetPlayerAbilityAvailableBJ(true, FourCC("A14H"), udg_TempPlayer)
 end
 TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
 end
@@ -52683,7 +52700,14 @@ end
 return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func087C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func086C()
+if (not (udg_TempUnitType == FourCC("H03C"))) then
+return false
+end
+return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func088C()
 if (not (udg_TempBool == false)) then
 return false
 end
@@ -53382,7 +53406,16 @@ UnitAddAbilityBJ(FourCC("A14P"), udg_TransformationResultUnit)
 end
 else
 end
-if (Trig_Kid_Buu_Bonus_Ability_Func002Func087C()) then
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func086C()) then
+udg_TempBool = true
+UnitAddAbilityBJ(FourCC("A15D"), udg_TransformationResultUnit)
+SetUnitAbilityLevelSwapped(FourCC("A15D"), udg_TransformationResultUnit, 10)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A15D'))
+UnitAddAbilityBJ(FourCC("A15H"), udg_TransformationResultUnit)
+            UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A15H'))
+else
+end
+if (Trig_Kid_Buu_Bonus_Ability_Func002Func088C()) then
 UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
 SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 10)
             UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
@@ -71145,73 +71178,30 @@ return true
 end
 
 function Trig_Transformations_Minato_Func012C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
 end
 
 function Trig_Transformations_Minato_Func013C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Minato_Func014C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Minato_Func015C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Minato_Func016C()
-if (not (udg_TransformationString == "fp")) then
-return false
-end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-return false
-end
-return true
-end
-
-function Trig_Transformations_Minato_Func017C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A009"), udg_StatMultUnit) == 0)) then
 return false
 end
-if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Minato_Func019Func006Func001C()
+function Trig_Transformations_Minato_Func015Func006Func001C()
 if (not (udg_TransformationID == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Minato_Func019Func006Func004C()
+function Trig_Transformations_Minato_Func015Func006Func004C()
 if (udg_TransformationAbility ~= FourCC("ANcl")) then
 return true
 end
@@ -71221,14 +71211,14 @@ end
 return false
 end
 
-function Trig_Transformations_Minato_Func019Func006C()
-if (not Trig_Transformations_Minato_Func019Func006Func004C()) then
+function Trig_Transformations_Minato_Func015Func006C()
+if (not Trig_Transformations_Minato_Func015Func006Func004C()) then
 return false
 end
 return true
 end
 
-function Trig_Transformations_Minato_Func019C()
+function Trig_Transformations_Minato_Func015C()
 if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
 return false
 end
@@ -71257,44 +71247,24 @@ udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Minato_Func012C()) then
-udg_StatMultReal = 1.25
+udg_StatMultReal = RMinBJ(2.40, (1 + ((0.11 * 0.10) * I2R(GetHeroLevel(udg_StatMultUnit)))))
 udg_TransformationAbility = FourCC("AUan")
 else
 end
 if (Trig_Transformations_Minato_Func013C()) then
-udg_StatMultReal = 1.50
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Minato_Func014C()) then
-udg_StatMultReal = 2.00
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Minato_Func015C()) then
-udg_StatMultReal = 2.25
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Minato_Func016C()) then
-udg_StatMultReal = 2.40
-udg_TransformationAbility = FourCC("AUan")
-else
-end
-if (Trig_Transformations_Minato_Func017C()) then
 UnitAddAbilityBJ(FourCC("A009"), udg_StatMultUnit)
 udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_23561")
         DestroyForce(udg_TempPlayerGroup)
 else
 end
-if (Trig_Transformations_Minato_Func019C()) then
+if (Trig_Transformations_Minato_Func015C()) then
 udg_StatMultStr = udg_StatMultReal
 udg_StatMultAgi = udg_StatMultReal
 udg_StatMultInt = udg_StatMultReal
 udg_StatMultStr = (udg_StatMultStr - 0.20)
-if (Trig_Transformations_Minato_Func019Func006C()) then
-if (Trig_Transformations_Minato_Func019Func006Func001C()) then
+if (Trig_Transformations_Minato_Func015Func006C()) then
+if (Trig_Transformations_Minato_Func015Func006Func001C()) then
                 udg_TransformationID = FourCC('H001')
 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
 else
@@ -72185,7 +72155,7 @@ return true
 end
 
 function Trig_Transformations_Whis_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
@@ -72546,7 +72516,7 @@ return true
 end
 
 function Trig_Transformations_Gojo_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
@@ -72715,7 +72685,7 @@ return true
 end
 
 function Trig_Transformations_Cheong_Myeong_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
@@ -72853,7 +72823,7 @@ return true
 end
 
 function Trig_Transformations_Aggronor_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
@@ -73032,7 +73002,7 @@ return true
 end
 
 function Trig_Transformations_Omni_Man_Func012C()
-if (not (udg_TransformationString == "fp")) then
+if (not (udg_TransformationString ~= "r")) then
 return false
 end
 return true
@@ -73083,7 +73053,7 @@ return false
 end
 
 function Trig_Transformations_Omni_Man_Func015C()
-if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
 return false
 end
 if (not (GetUnitAbilityLevelSwapped(FourCC("A15O"), udg_StatMultUnit) == 0)) then
@@ -73175,7 +73145,7 @@ if (Trig_Transformations_Omni_Man_Func015Func002C()) then
 UnitAddAbilityBJ(FourCC("A15O"), udg_StatMultUnit)
             UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A15O'))
 DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_25016")
-BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.20, R2I(0.00))
+SetUnitAbilityLevelSwapped(FourCC("A15H"), udg_StatMultUnit, 2)
 else
 end
 if (Trig_Transformations_Omni_Man_Func015Func003C()) then
@@ -73207,633 +73177,6 @@ end
 function InitTrig_Transformations_Omni_Man()
 gg_trg_Transformations_Omni_Man = CreateTrigger()
 TriggerAddAction(gg_trg_Transformations_Omni_Man, Trig_Transformations_Omni_Man_Actions)
-end
-
-function Trig_Saga_Unit_Init_Conditions()
-if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
-return false
-end
-if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
-return false
-end
-if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) == false)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Init_Func001C()
-if (not (GetHeroProperName(GetTriggerUnit()) ~= "Test Dummy")) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Init_Actions()
-if (Trig_Saga_Unit_Init_Func001C()) then
-GroupAddUnitSimple(GetTriggerUnit(), udg_SagaStatsUnitGroup)
-SetUnitInvulnerable(GetTriggerUnit(), true)
-EnableTrigger(gg_trg_Saga_Unit_Loop)
-udg_TempUnit = GetTriggerUnit()
-TriggerExecute(gg_trg_Saga_Unit_Capsule_Unlock)
-else
-end
-end
-
-function InitTrig_Saga_Unit_Init()
-gg_trg_Saga_Unit_Init = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Saga_Unit_Init, GetPlayableMapRect())
-TriggerAddCondition(gg_trg_Saga_Unit_Init, Condition(Trig_Saga_Unit_Init_Conditions))
-TriggerAddAction(gg_trg_Saga_Unit_Init, Trig_Saga_Unit_Init_Actions)
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func002Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0GQ"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func002C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08U"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func003Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0IH"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func003C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("U006"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func004Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0ZC"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func004C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H01H"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func005Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0JB"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func005C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("U00E"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func006Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0JB"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func006C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09E"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func007Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0IK"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func007C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H01A"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func009Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0JA"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func009C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H062"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func010Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0IJ"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func010C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H05U"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func011Func001A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0II"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func011C()
-if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E012"))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func012Func001C()
-if (GetUnitTypeId(udg_TempUnit) == FourCC("O006")) then
-return true
-end
-if (GetUnitTypeId(udg_TempUnit) == FourCC("E012")) then
-return true
-end
-return false
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func012Func002A()
-SetPlayerAbilityAvailableBJ(true, FourCC("A0ZD"), GetEnumPlayer())
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001Func012C()
-if (not Trig_Saga_Unit_Capsule_Unlock_Func001Func012Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03Z"), udg_TempUnit) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Capsule_Unlock_Actions()
-if (Trig_Saga_Unit_Capsule_Unlock_Func001C()) then
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func002C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func002Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func003C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func003Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func004C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func004Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func005C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func005Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func006C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func006Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func007C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func007Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func009C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func009Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func010C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func010Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func011C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func011Func001A)
-else
-end
-if (Trig_Saga_Unit_Capsule_Unlock_Func001Func012C()) then
-ForForce(udg_ActivePlayerGroup, Trig_Saga_Unit_Capsule_Unlock_Func001Func012Func002A)
-else
-end
-else
-end
-end
-
-function InitTrig_Saga_Unit_Capsule_Unlock()
-gg_trg_Saga_Unit_Capsule_Unlock = CreateTrigger()
-TriggerAddAction(gg_trg_Saga_Unit_Capsule_Unlock, Trig_Saga_Unit_Capsule_Unlock_Actions)
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001Func004C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016")) then
-return true
-end
-return false
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001C()
-if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001Func004C()) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func005C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01S")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01T")) then
-return true
-end
-return false
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004C()
-if (not Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func006C()
-if (not (udg_TempReal4 < (udg_SagaStatsSum * 0.66))) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003A()
-udg_TempInt3 = (udg_TempInt3 + 1)
-udg_StatMultUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Get_Base_Stats)
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004C()) then
-udg_StatMultStr = (udg_StatMultStr * 3.00)
-udg_StatMultAgi = (udg_StatMultAgi * 3.00)
-udg_StatMultInt = (udg_StatMultInt * 3.00)
-else
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func004Func001C()) then
-udg_StatMultStr = (udg_StatMultStr * 2.00)
-udg_StatMultAgi = (udg_StatMultAgi * 2.00)
-udg_StatMultInt = (udg_StatMultInt * 2.00)
-else
-end
-end
-udg_TempReal4 = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003Func006C()) then
-udg_StatMultStr = (udg_SagaStatsStr * 0.66)
-udg_StatMultAgi = (udg_SagaStatsAgi * 0.66)
-udg_StatMultInt = (udg_SagaStatsInt * 0.66)
-else
-end
-udg_TempReal = (udg_TempReal + udg_StatMultStr)
-udg_TempReal2 = (udg_TempReal2 + udg_StatMultAgi)
-udg_TempReal3 = (udg_TempReal3 + udg_StatMultInt)
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func012Func002C()
-if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func001C()
-if (not (udg_TempReal < 100.00)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func002C()
-if (not (udg_TempReal < 120.00)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002Func002C()
-if (not (GetHeroLevel(udg_TempUnit) >= 150)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002C()
-if (not (GetHeroLevel(udg_TempUnit) >= 100)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003C()
-if (not (GetHeroLevel(udg_TempUnit) >= 50)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func005C()
-if (not (GetHeroLevel(udg_TempUnit) >= 30)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002Func002C()
-if (not (udg_TempInt2 >= 10)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002C()
-if (not (udg_TempInt2 >= 8)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020Func006C()
-if (not (udg_TempInt2 >= 6)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func020C()
-if (not (GetHeroLevel(udg_TempUnit) >= 10)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002Func021C()
-if (not (udg_IsNightmareMode == true)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001Func002C()
-if (not (IsUnitHiddenBJ(udg_TempUnit) == false)) then
-return false
-end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03Z"), udg_TempUnit) > 0)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Func001A()
-udg_TempUnit = GetEnumUnit()
-if (Trig_Saga_Unit_Loop_Func001Func002C()) then
-TriggerExecute(gg_trg_Saga_Unit_Get_Saga_Min_Base)
-udg_TempReal = 30.00
-udg_TempReal2 = 30.00
-udg_TempReal3 = 30.00
-udg_TempReal4 = 90.00
-udg_TempInt2 = 0
-udg_TempInt3 = 0
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-if (Trig_Saga_Unit_Loop_Func001Func002Func012Func002C()) then
-udg_TempInt2 = (udg_TempInt2 + 1)
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func001Func002Func012Func002Func003A)
-else
-end
-udg_TempInt = udg_TempInt + 1
-end
-udg_TempInt2 = IMaxBJ(udg_TempInt2, 2)
-udg_TempInt2 = IMinBJ(udg_TempInt2, 8)
-udg_TempInt3 = IMaxBJ(1, udg_TempInt3)
-udg_TempReal = (udg_TempReal / I2R(udg_TempInt3))
-udg_TempReal2 = (udg_TempReal2 / I2R(udg_TempInt3))
-udg_TempReal3 = (udg_TempReal3 / I2R(udg_TempInt3))
-if (Trig_Saga_Unit_Loop_Func001Func002Func020C()) then
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func002C()) then
-udg_TempReal = 120.00
-udg_TempReal2 = 120.00
-udg_TempReal3 = 120.00
-else
-end
-udg_TempReal4 = (((0.50 + (0.11 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.10)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.20)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.20)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func005Func003Func002Func002C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.20)
-else
-end
-else
-end
-else
-end
-else
-end
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.40)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.30)
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func006Func002Func002C()) then
-udg_TempReal4 = (udg_TempReal4 + 0.30)
-else
-end
-else
-end
-else
-end
-else
-if (Trig_Saga_Unit_Loop_Func001Func002Func020Func001C()) then
-udg_TempReal = 120.00
-udg_TempReal2 = 120.00
-udg_TempReal3 = 120.00
-else
-end
-udg_TempReal4 = (((0.00 + (0.01 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.07)) * 1)
-end
-if (Trig_Saga_Unit_Loop_Func001Func002Func021C()) then
-udg_TempReal4 = (udg_TempReal4 + 1.00)
-else
-end
-udg_TempReal4 = RMaxBJ(udg_TempReal4, 0.10)
-udg_TempReal = ((udg_TempReal4 * 0.33) * (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))
-ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
-ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
-ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
-udg_SagaLvlInt = (GetHeroLevel(udg_TempUnit) - 70)
-udg_TempReal5 = (I2R(udg_TempInt2) * ((0.50 * Pow(I2R(udg_SagaLvlInt), 0.33)) + (I2R(udg_SagaLvlInt) * 0.01)))
-udg_TempReal5 = RMaxBJ(-99.00, udg_TempReal5)
-BlzSetUnitMaxHP(udg_TempUnit, (IMaxBJ(1, R2I(((1 + (0.01 * udg_TempReal5)) * (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit) * 0.02)))) * 50))
-SetUnitLifePercentBJ(udg_TempUnit, 100)
-SetUnitMoveSpeed(udg_TempUnit, RMinBJ(400.00, (350.00 + (0.50 * I2R(GetHeroLevel(udg_TempUnit))))))
-udg_StatMultUnit = udg_TempUnit
-TriggerExecute(gg_trg_Base_Armor_Set)
-BlzSetUnitArmor(udg_StatMultUnit, (BlzGetUnitArmor(udg_StatMultUnit) + (1.00 * I2R(udg_TempInt2))))
-GroupRemoveUnitSimple(udg_StatMultUnit, udg_SagaStatsUnitGroup)
-GroupAddUnitSimple(udg_StatMultUnit, udg_SagaStatsInvulUnitGroup)
-EnableTrigger(gg_trg_Saga_Unit_Spawn_Protection)
-else
-end
-end
-
-function Trig_Saga_Unit_Loop_Func002C()
-if (not (CountUnitsInGroup(udg_SagaStatsUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Loop_Actions()
-ForGroupBJ(udg_SagaStatsUnitGroup, Trig_Saga_Unit_Loop_Func001A)
-if (Trig_Saga_Unit_Loop_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Saga_Unit_Loop()
-gg_trg_Saga_Unit_Loop = CreateTrigger()
-DisableTrigger(gg_trg_Saga_Unit_Loop)
-TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Unit_Loop, 0.06)
-TriggerAddAction(gg_trg_Saga_Unit_Loop, Trig_Saga_Unit_Loop_Actions)
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004Func004C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016")) then
-return true
-end
-return false
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004C()
-if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004Func004C()) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func005C()
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01S")) then
-return true
-end
-if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01T")) then
-return true
-end
-return false
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003C()
-if (not Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func005C()
-if (not (udg_TempReal > udg_SagaStatsSum)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002A()
-udg_StatMultUnit = GetEnumUnit()
-TriggerExecute(gg_trg_Get_Base_Stats)
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003C()) then
-udg_StatMultStr = (udg_StatMultStr * 3.00)
-udg_StatMultAgi = (udg_StatMultAgi * 3.00)
-udg_StatMultInt = (udg_StatMultInt * 3.00)
-else
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func003Func004C()) then
-udg_StatMultStr = (udg_StatMultStr * 2.00)
-udg_StatMultAgi = (udg_StatMultAgi * 2.00)
-udg_StatMultInt = (udg_StatMultInt * 2.00)
-else
-end
-end
-udg_TempReal = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002Func005C()) then
-udg_SagaStatsStr = udg_StatMultStr
-udg_SagaStatsAgi = udg_StatMultAgi
-udg_SagaStatsInt = udg_StatMultInt
-else
-end
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002C()
-if (not (IsPlayerInForce(udg_TempPlayer, udg_ConnectedPlayers) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Get_Saga_Min_Base_Actions()
-udg_TempReal = 0.00
-udg_SagaStatsStr = 30.00
-udg_SagaStatsAgi = 30.00
-udg_SagaStatsInt = 30.00
-udg_SagaStatsSum = 90.00
-udg_TempInt = 1
-while (true) do
-if (udg_TempInt > udg_MaxNumPlayers) then break end
-udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-if (Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002C()) then
-ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Get_Saga_Min_Base_Func007Func002Func002A)
-else
-end
-udg_TempInt = udg_TempInt + 1
-end
-end
-
-function InitTrig_Saga_Unit_Get_Saga_Min_Base()
-gg_trg_Saga_Unit_Get_Saga_Min_Base = CreateTrigger()
-TriggerAddAction(gg_trg_Saga_Unit_Get_Saga_Min_Base, Trig_Saga_Unit_Get_Saga_Min_Base_Actions)
-end
-
-function Trig_Saga_Unit_Spawn_Protection_Func001A()
-udg_TempUnit = GetEnumUnit()
-SetUnitInvulnerable(udg_TempUnit, false)
-GroupRemoveUnitSimple(udg_TempUnit, udg_SagaStatsInvulUnitGroup)
-end
-
-function Trig_Saga_Unit_Spawn_Protection_Func002C()
-if (not (CountUnitsInGroup(udg_SagaStatsInvulUnitGroup) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Saga_Unit_Spawn_Protection_Actions()
-ForGroupBJ(udg_SagaStatsInvulUnitGroup, Trig_Saga_Unit_Spawn_Protection_Func001A)
-if (Trig_Saga_Unit_Spawn_Protection_Func002C()) then
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Saga_Unit_Spawn_Protection()
-gg_trg_Saga_Unit_Spawn_Protection = CreateTrigger()
-DisableTrigger(gg_trg_Saga_Unit_Spawn_Protection)
-TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Unit_Spawn_Protection, 0.30)
-TriggerAddAction(gg_trg_Saga_Unit_Spawn_Protection, Trig_Saga_Unit_Spawn_Protection_Actions)
 end
 
 function Trig_Check_Walkability_Func006A()
@@ -75502,11 +74845,6 @@ InitTrig_Transformations_Gojo()
 InitTrig_Transformations_Cheong_Myeong()
 InitTrig_Transformations_Aggronor()
 InitTrig_Transformations_Omni_Man()
-InitTrig_Saga_Unit_Init()
-InitTrig_Saga_Unit_Capsule_Unlock()
-InitTrig_Saga_Unit_Loop()
-InitTrig_Saga_Unit_Get_Saga_Min_Base()
-InitTrig_Saga_Unit_Spawn_Protection()
 InitTrig_Check_Walkability()
 InitTrig_Regen_Items_Use()
 InitTrig_Regen_Items_All_Looper()
@@ -75764,11 +75102,11 @@ DefineStartLocation(1, 1792.0, -1024.0)
 DefineStartLocation(2, 2176.0, -1024.0)
 DefineStartLocation(3, 1600.0, -1408.0)
 DefineStartLocation(4, 1984.0, -1408.0)
-DefineStartLocation(5, 16640.0, 320.0)
-DefineStartLocation(6, 16256.0, 320.0)
-DefineStartLocation(7, 15872.0, 320.0)
-DefineStartLocation(8, 16064.0, -64.0)
-DefineStartLocation(9, 16448.0, -64.0)
+DefineStartLocation(5, 11328.0, -4160.0)
+DefineStartLocation(6, 10944.0, -4160.0)
+DefineStartLocation(7, 10560.0, -4160.0)
+DefineStartLocation(8, 10752.0, -4544.0)
+DefineStartLocation(9, 11136.0, -4544.0)
 InitCustomPlayerSlots()
 InitCustomTeams()
 InitAllyPriorities()

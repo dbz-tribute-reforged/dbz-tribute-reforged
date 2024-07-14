@@ -581,6 +581,8 @@ export class SagaHeroAI {
         IsUnitEnemy(beam, bossPlayer) &&
         UnitHelper.isUnitAlive(beam)
       ) {
+        const beamName = GetUnitName(beam);
+        if (beamName == "Hiraishin Kunai" || beamName == "Tatsumkai Rock") return;
         if (
           beamsAccountedFor < this.maxBeamsToDodge || 
           this.maxBeamsToDodge == SagaAIData.UNLIMITED_BEAM_DODGES)

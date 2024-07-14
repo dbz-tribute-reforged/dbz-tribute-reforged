@@ -7,7 +7,7 @@ import { Button } from './Button';
 import { FrameTrigger } from './FrameTrigger';
 import { Colorizer } from 'Common/Colorizer';
 import { SliderData } from './SliderData';
-import { Timer } from 'w3ts';
+import { Frame, Timer } from 'w3ts';
 import { ButtonMenu } from './ButtonMenu';
 import { BasicButton } from './BasicButton';
 import { BasicTitledSlider } from './BasicTitledSlider';
@@ -317,6 +317,13 @@ export function CustomUiTest() {
 		new FramePosition(FRAMEPOINT_TOPLEFT, mpBar.frameHandle, FRAMEPOINT_TOPRIGHT, 0.0, 0.0),
 		new StatusBarData(0, 0, 100)
 	)
+
+	let specialBar = new Frame("MySpecialBar", Frame.fromHandle(hpBar.frameHandle), 0)
+		.setSize(bar_width, bar_height)
+		.setPoint(FRAMEPOINT_BOTTOMLEFT, Frame.fromHandle(hpBar.frameHandle), FRAMEPOINT_TOPLEFT, 0, 0)
+		.setMinMaxValue(0, 100)
+		.setValue(50)
+		.setVisible(false)
 
 	// fix for string desync
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), 0);

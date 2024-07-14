@@ -67,24 +67,28 @@ export class AbilityShop {
     let t: Trigger;
 
       this.AbilitySelectBase = new Frame("QuestButtonDisabledBackdropTemplate", Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.124000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.130000)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142000, 0.00000)
     
       this.AbilityShopBG = new Frame("QuestButtonPushedBackdropTemplate", this.AbilitySelectBase, 0, 0)
-        .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectBase, FRAMEPOINT_TOPLEFT, 0.0000, -0.064000)
+        .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectBase, FRAMEPOINT_TOPLEFT, 0.0000, -0.070000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectBase, FRAMEPOINT_BOTTOMRIGHT, 0.0000, 0.0000)
     
       this.AbilitySelectBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.0000900000, 0.126000)
-        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142090, 0.0620000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.0000900000, 0.132000)
+        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142090, 0.0680000)
         
       this.AbilityTooltipBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.240000)
-        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.200000, 0.120000)
+        // .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.240000)
+        // .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.200000, 0.120000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.14200, 0.132000)
+        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.350000, 0.000000)
   
       this.AbilityTooltip = new Frame("name", this.AbilityTooltipBG, 0, 0, "Text", "")
-        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00800, 0.232000)
-        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.198000, 0.120000)
+        // .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00800, 0.232000)
+        // .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.198000, 0.120000)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.15000, 0.124000)
+        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.346000, 0.000000)
         .setText("|cffFFCC00|r")
         .setEnabled(true)
         .setScale(1.0)

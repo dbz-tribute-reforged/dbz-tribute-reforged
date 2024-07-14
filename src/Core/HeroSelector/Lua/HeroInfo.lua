@@ -6,9 +6,9 @@ HeroInfo = {}
 -- TextArea
 HeroInfo.DescHeroNamePrefix     = "|cffffcc00"   --added before the Units Name
 HeroInfo.DescHeroNameSufix      = "|r"           --added after the units Name
-HeroInfo.TextAreaSizeX          = 0.4
-HeroInfo.TextAreaSizeY          = 0.2
-HeroInfo.TextAreaOffsetX        = 0.05
+HeroInfo.TextAreaSizeX          = 0.5
+HeroInfo.TextAreaSizeY          = 0.34
+HeroInfo.TextAreaOffsetX        = 0.2
 HeroInfo.TextAreaOffsetY        = 0
 HeroInfo.TextAreaPoint          = FRAMEPOINT_TOPLEFT --pos the Tooltip with which Point
 HeroInfo.TextAreaRelativePoint  = FRAMEPOINT_BOTTOMLEFT --pos the Tooltip to which Point of the Relative

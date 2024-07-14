@@ -17,6 +17,8 @@ export class CustomUI {
     return this.instance;
   }
 
+  public specialBar: Frame;
+
   public toggleMinimapButton: Frame;
   public toggleMinimapButtonBackdrop: Frame;
   public toggleMinimapIconsTrigger: Trigger;

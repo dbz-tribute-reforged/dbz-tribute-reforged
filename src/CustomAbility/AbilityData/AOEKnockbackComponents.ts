@@ -8,6 +8,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 12, 
       angle: 180, 
@@ -31,6 +32,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 8, 
       angle: 180, 
@@ -53,6 +55,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 3,
     endTick: 13,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -74,6 +77,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 3,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 35, 
       angle: 0, 
@@ -95,6 +99,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 80, 
       angle: 0, 
@@ -117,6 +122,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 72,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 60, 
       angle: 180, 
@@ -139,6 +145,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 10,
     endTick: 30,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -161,6 +168,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 9,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 23, 
       angle: 0, 
@@ -196,6 +204,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 36,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 60, 
       angle: 180, 
@@ -218,6 +227,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 4,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -240,6 +250,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 7,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -262,6 +273,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: -1,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 50, 
       angle: 0, 
@@ -284,6 +296,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 60, 
       angle: 180, 
@@ -306,6 +319,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 25,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 180, 
@@ -328,6 +342,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 99,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 45, 
       angle: 0, 
@@ -350,6 +365,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 19,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: -30, 
       angle: 0, 
@@ -371,6 +387,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 19,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -383,7 +400,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: true,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -392,6 +409,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 19,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -404,7 +422,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: false,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -414,6 +432,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 1,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -426,7 +445,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: false,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -436,6 +455,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -457,6 +477,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -479,6 +500,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 180, 
@@ -501,6 +523,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 0, 
@@ -523,6 +546,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 25,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 4, 
       angle: 0, 
@@ -545,6 +569,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -567,6 +592,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -589,6 +615,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -611,6 +638,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 60, 
       angle: 180, 
@@ -633,6 +661,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -655,6 +684,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 111,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 45, 
       angle: 180, 
@@ -677,6 +707,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 9,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 35, 
       angle: 0, 
@@ -699,6 +730,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 4, 
       angle: 180, 
@@ -721,6 +753,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 1.5, 
       angle: 180, 
@@ -743,6 +776,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 2, 
       angle: 180, 
@@ -765,6 +799,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 0, 
@@ -787,6 +822,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -808,6 +844,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 29,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 0, 
       angle: 180, 
@@ -830,6 +867,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 72,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 43, 
       angle: 180, 
@@ -852,6 +890,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: -1,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 50, 
       angle: 0, 
@@ -874,6 +913,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: -1,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 75, 
       angle: 0, 
@@ -896,6 +936,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -918,6 +959,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 3, 
       angle: 180, 
@@ -940,6 +982,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 4.5, 
       angle: 180, 
@@ -962,6 +1005,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 33,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 180, 
@@ -982,7 +1026,8 @@ export const AOEKnockbackComponents = [
     name: "knockback death storm explosion",
     repeatInterval: 1, 
     startTick: 33,
-    endTick: 39,
+    endTick: 44,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 5, 
       angle: 0, 
@@ -995,7 +1040,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: false,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -1004,6 +1049,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 33,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 7, 
       angle: 0, 
@@ -1016,7 +1062,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: false,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -1026,6 +1072,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 75,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 45, 
       angle: 180, 
@@ -1048,6 +1095,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 6,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -1070,6 +1118,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 180, 
@@ -1092,6 +1141,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 4, 
       angle: 180, 
@@ -1114,6 +1164,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 4, 
       angle: 180, 
@@ -1136,6 +1187,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -1158,6 +1210,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 200, 
       angle: 0, 
@@ -1180,6 +1233,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -1202,6 +1256,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 90, 
       angle: 180, 
@@ -1224,6 +1279,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 7,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 49, 
       angle: 180, 
@@ -1246,6 +1302,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 3, 
       angle: 180, 
@@ -1268,6 +1325,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 45, 
       angle: 180, 
@@ -1290,6 +1348,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 0, 
@@ -1311,6 +1370,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 180, 
@@ -1333,6 +1393,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 2,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 36, 
       angle: 180, 
@@ -1355,6 +1416,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 50,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 12, 
       angle: 180, 
@@ -1376,6 +1438,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -1397,6 +1460,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -1419,6 +1483,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 50,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 9, 
       angle: 180, 
@@ -1440,10 +1505,11 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 50,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 39, 
       angle: 0, 
-      aoe: 900,
+      aoe: 750,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     knockbackTarget: AOEKnockback.TARGET_AOE,
@@ -1452,7 +1518,7 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
     onlyHeroes: false,
     onlyNonHeroes: false,
-    isPersistent: false,
+    isPersistent: true,
     isFixedAngle: false,
     isFixedSourceUnitToTargetAngle: false,
   },
@@ -1462,6 +1528,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -1484,6 +1551,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 100,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 6, 
       angle: 180, 
@@ -1506,6 +1574,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -1528,6 +1597,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 7, 
       angle: 180, 
@@ -1550,6 +1620,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -1572,6 +1643,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -1594,6 +1666,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 44,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 45, 
       angle: 180, 
@@ -1616,6 +1689,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 180, 
@@ -1638,6 +1712,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 180, 
@@ -1660,6 +1735,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 6, 
       angle: 180, 
@@ -1682,6 +1758,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 132,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 6, 
       angle: 180, 
@@ -1704,6 +1781,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 44,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 43, 
       angle: 180, 
@@ -1725,6 +1803,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -1747,6 +1826,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -1769,6 +1849,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
@@ -1791,6 +1872,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -1813,6 +1895,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 52,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 40, 
       angle: 180, 
@@ -1835,6 +1918,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 6,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 35, 
       angle: 0, 
@@ -1857,6 +1941,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 6, 
       angle: 180, 
@@ -1878,6 +1963,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 2, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 180, 
@@ -1899,6 +1985,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 3, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 3, 
       angle: 180, 
@@ -1921,6 +2008,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 16,
     endTick: 33,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 45, 
       angle: 0, 
@@ -1943,6 +2031,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 1,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 50, 
       angle: 180, 
@@ -1965,6 +2054,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: -1,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -1987,6 +2077,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 22,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 150, 
       angle: 0, 
@@ -2009,6 +2100,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -2031,6 +2123,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 10,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
@@ -2052,6 +2145,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 10,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 45, 
       angle: 0, 
@@ -2074,6 +2168,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -2096,6 +2191,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 33,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -2118,6 +2214,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 66,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 27, 
       angle: 180, 
@@ -2140,6 +2237,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 100,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 30, 
       angle: 180, 
@@ -2162,6 +2260,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 133,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 32, 
       angle: 180, 
@@ -2184,6 +2283,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 166,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 35, 
       angle: 180, 
@@ -2206,6 +2306,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 66,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 9, 
       angle: 180, 
@@ -2227,6 +2328,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 2, 
     startTick: 33,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 7, 
       angle: 180, 
@@ -2248,6 +2350,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 3, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 5, 
       angle: 180, 
@@ -2269,6 +2372,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 8, 
       angle: 180, 
@@ -2291,6 +2395,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 105, 
       angle: 180, 
@@ -2313,6 +2418,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 20, 
       angle: 180, 
@@ -2335,6 +2441,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -2357,6 +2464,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 90, 
       angle: 180, 
@@ -2379,6 +2487,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 22, 
       angle: 180, 
@@ -2401,6 +2510,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 33,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 1, 
       angle: 0, 
@@ -2423,6 +2533,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 53,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 65, 
       angle: 180, 
@@ -2445,6 +2556,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 30, 
       angle: 180, 
@@ -2467,10 +2579,11 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 60, 
       angle: 0, 
-      aoe: 300,
+      aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     knockbackTarget: AOEKnockback.TARGET_AOE,
@@ -2488,10 +2601,11 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: 5,
     knockbackData: {
       speed: 60, 
       angle: 0, 
-      aoe: 300,
+      aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     knockbackTarget: AOEKnockback.TARGET_AOE,
@@ -2510,6 +2624,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 35, 
       angle: 180, 
@@ -2532,6 +2647,7 @@ export const AOEKnockbackComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 166,
+    knockbackAddTicks: -1,
     knockbackData: {
       speed: 40, 
       angle: 0, 
