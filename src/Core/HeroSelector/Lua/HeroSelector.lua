@@ -131,7 +131,7 @@ HeroSelector = {}
 --Box
 HeroSelector.BoxFrameName           = "HeroSelectorRaceBox" --this is the background box being created
 HeroSelector.BoxPosX                = 0.4
-HeroSelector.BoxPosY                = 0.4
+HeroSelector.BoxPosY                = 0.42
 HeroSelector.BoxPosPoint            = FRAMEPOINT_CENTER
 HeroSelector.AutoShow               = false --(true) shows the box and the Selection at 0.0 for all players
 --Unique Picks
@@ -164,7 +164,7 @@ HeroSelector.IndicatorPathBan       = "war3mapImported\\HeroSelectorBan.mdl" --t
 HeroSelector.SpaceBetweenX          = 0.004 --space between 2 buttons in one row
 HeroSelector.SpaceBetweenY          = 0.004 --space between 2 rows
 HeroSelector.ButtonColCount         = 15 --amount of buttons in one row
-HeroSelector.ButtonRowCount         = 5 --amount of rows
+HeroSelector.ButtonRowCount         = 8 --amount of rows
 HeroSelector.ChainedButtons         = true --(true) connect to the previous button/ or row, (false) have a offset to the box topLeft in this moving a button has no effect on other buttons.
 --Button
 HeroSelector.ButtonSize             = 0.03 --size of each button

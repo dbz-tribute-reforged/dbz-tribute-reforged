@@ -201,7 +201,7 @@ export module Constants {
   export const CORN_REGEN_MULT = 0.5;
   export const OMNIMAN_REGEN_MULT = 1;
   
-  export const LIMIT_BREAKER_MIN_SP = 40;
+  export const LIMIT_BREAKER_MIN_SP = 35;
 
   export const MIGHT_GUY_GATE_HP_THRESHOLD = [100, 75, 66, 33, 23];
   export const MIGHT_GUY_GATE_HP_MULTS = [0, 1.5, 3, 4.5, 6];
@@ -1541,6 +1541,8 @@ export module Id {
   export const saitamaSeriousPunch = FourCC("A02U");
   export const saitamaSeriousSidewaysJumps = FourCC("A032");
 
+  export const saltSaga = FourCC("U00E");
+
   export const schala = FourCC("H05W");
   export const schalaMagicOrbs = FourCC("A0YC");
   export const schalaMagicOrbs2 = FourCC("A0YK");
@@ -1661,6 +1663,8 @@ export module Id {
   export const toppoGodOfDestruction = FourCC("A0PC");
   export const toppoHakai = FourCC("A0PH");
 
+  export const turlesSaga = FourCC("H01H");
+
   export const upa = FourCC("H099");
   export const javelinThrow = FourCC("A0OH");
   export const whirlwindTempest = FourCC("A0OI");
@@ -1708,6 +1712,8 @@ export module Id {
   export const waluigiBomb = FourCC("A11Q");
   export const waluigiSpin = FourCC("A11R");
   export const waluigiJump = FourCC("A11S");
+
+  export const drWheelo = FourCC("U006");
 
   export const whis = FourCC("E01I");
   export const whisPreludeToDestruction = FourCC("A0JI");

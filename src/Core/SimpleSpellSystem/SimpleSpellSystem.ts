@@ -33,6 +33,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CastTimeHelper } from "CustomHero/CastTimeHelper";
 import { CustomHero } from "CustomHero/CustomHero";
+import { Frame } from "w3ts";
 
 export module SimpleSpellSystem {
   const darkMatterDamage: DamageData = new DamageData(
@@ -2337,7 +2338,7 @@ export module SimpleSpellSystem {
     } else if (spellId == Id.shalltearNegativeImpactShield) {
       effect = AddSpecialEffectTarget("AuraKaox10.mdl", unit, "origin");
     } else if (spellId == Id.minatoSecondStep) {
-      effect = AddSpecialEffectTarget("Rasengan4.mdl", unit, "right hand");
+      effect = AddSpecialEffectTarget("AuraLightBlue.mdl", unit, "origin");
     } else {
       // if (
       //   spellId == Id.glare 
@@ -3015,7 +3016,7 @@ export module SimpleSpellSystem {
             GetUnitAbilityLevel(caster, Buffs.DRAGOON_TRANSFORMATION) == 0
           ) {
             abil.setCd(0);
-            abil.setCurrentTick(abil.getDuration());
+            abil.endAbility();
             DestroyTimer(GetExpiredTimer());
           }
         });
@@ -5571,8 +5572,6 @@ export module SimpleSpellSystem {
     const casterId = GetHandleId(caster);
     const player = GetOwningPlayer(caster);
 
-    if (GetUnitAbilityLevel(caster, Id.linkBowShoot) > 0) return;
-
     const keyArrowSelected = StringHash("link|arrow|selection");
     const keyBowTicks = StringHash("link|bow|ticks");
 
@@ -5584,12 +5583,19 @@ export module SimpleSpellSystem {
     const sfx = AddSpecialEffect("StarSFX.mdl", GetUnitX(caster), GetUnitY(caster));
     BlzSetSpecialEffectScale(sfx, 3.0);
 
-    SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, 0);
+    const specialBar = Frame.fromName("MySpecialBar", 0);
+    const specialBarText = Frame.fromName("MySpecialBarText", 0);
 
-    let ticks = 0;
+    if (player == GetLocalPlayer()) {
+      specialBar.setMinMaxValue(0, maxTicks).setVisible(true);
+    }
+
+    SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, 1);
+
     const timer = TimerManager.getInstance().get();
     TimerStart(timer, 0.03, true, () => {
-      if (GetUnitAbilityLevel(caster, Id.linkBowShoot) == 0) {
+      const ticks = LoadInteger(Globals.genericSpellHashtable, casterId, keyBowTicks);
+      if (ticks == 0) {
         DestroyEffect(sfx);
         TimerManager.getInstance().recycle(timer);
         return;
@@ -5625,14 +5631,20 @@ export module SimpleSpellSystem {
       MoveLocation(Globals.tmpLoc, Globals.tmpVector2.x, Globals.tmpVector2.y);
       BlzSetSpecialEffectZ(sfx, sfxHeight + GetLocationZ(Globals.tmpLoc));
 
+      if (ticks <= maxTicks) {
+        const chargeStr = I2S(Math.floor(100 * ticks / maxTicks));
+        if (player == GetLocalPlayer()) {
+          specialBar.setValue(ticks);
+          specialBarText.setText(chargeStr);
+        }
+      }
+
       if (ticks == maxTicks) {
         DestroyEffect(AddSpecialEffect("Abilities/Spells/Human/Thunderclap/ThunderClapCaster.mdl",
           Globals.tmpVector2.x, Globals.tmpVector2.y
         ));
       }
-
-      ++ticks;
-      SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, ticks);
+      SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, ticks+1);
     });
 
     // set ms to 100
@@ -5654,9 +5666,15 @@ export module SimpleSpellSystem {
     const arrowSelected = LoadInteger(Globals.genericSpellHashtable, casterId, keyArrowSelected);
 
     SetPlayerAbilityAvailable(player, Id.linkBow, true);
-    UnitRemoveAbility(caster, Id.linkBowShoot);
+    SetPlayerAbilityAvailable(player, Id.linkBowShoot, false);
+
+    const specialBar = Frame.fromName("MySpecialBar", 0);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(0);
+    }
 
     const ticks = LoadInteger(Globals.genericSpellHashtable, casterId, keyBowTicks);
+    SaveInteger(Globals.genericSpellHashtable, casterId, keyBowTicks, 0);
     const dmgRatio = 1 + bonusDmgPerTick * Math.min(ticks, maxChargeTicks);
 
     let abilityName = AbilityNames.Link.BOW_ARROW_NORMAL;
@@ -6872,7 +6890,7 @@ export module SimpleSpellSystem {
     const maxDistance = 1000;
     const dmgAOE = 300;
     const dmgSpeed = 100;
-    const dmgMult = BASE_DMG.KAME_DPS * 5;
+    const dmgMult = BASE_DMG.KAME_DPS * 6;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -12123,6 +12141,7 @@ export module SimpleSpellSystem {
 
   export function doOmnimanPlease(spellId: number) {
     const maxDist = 3000;
+    const endTick = 100;
 
     const caster = GetTriggerUnit();
     const player = GetOwningPlayer(caster);
@@ -12134,24 +12153,40 @@ export module SimpleSpellSystem {
     const originalX = GetUnitX(caster);
     const originalY = GetUnitY(caster);
     const timer = TimerManager.getInstance().get();
+    const isUpg = GetUnitAbilityLevel(caster, spellId) < 2;
+    let ticks = 0;
     TimerStart(timer, 0.03, true, () => {
-      Globals.tmpVector.setUnit(caster);
-      Globals.tmpVector2.setPos(originalX, originalY);
-      const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
-      if (dist >= maxDist || !customHero.isChanneling()) {
+      if (!isUpg) {
+        Globals.tmpVector.setUnit(caster);
+        Globals.tmpVector2.setPos(originalX, originalY);
+        const dist = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+        if (
+          !customHero.isChanneling()
+          || dist >= maxDist
+        ) {
+          ticks = endTick;
+        } else {
+          PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector2);
+        }
+      }
+
+      if (ticks >= endTick) {
         // disables DDS counter logic
         SaveInteger(Globals.genericSpellHashtable, GetHandleId(caster), 0, 0);
 
+        UnitRemoveAbility(caster, Id.omnimanPleaseArmor);
         udg_StatMultUnit = caster;
         TriggerExecute(gg_trg_Base_Armor_Set);
         TimerManager.getInstance().recycle(timer);
         return;
       }
-      PathingCheck.moveGroundUnitToCoord(caster, Globals.tmpVector2);
+
+      ++ticks;
     });
 
     DoJirenGlare(spellId, caster);
     
+    UnitAddAbility(caster, Id.omnimanPleaseArmor);
     udg_StatMultUnit = caster;
     TriggerExecute(gg_trg_Base_Armor_Set);
   }
@@ -12243,6 +12278,7 @@ export module SimpleSpellSystem {
               if (
                 unit == null
                 || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+                || !IsUnitType(unit, UNIT_TYPE_HERO)
               ) continue;
               Globals.tmpVector.setUnit(unit);
               const dist = CoordMath.distance(Globals.tmpVector2, Globals.tmpVector);
@@ -12330,8 +12366,8 @@ export module SimpleSpellSystem {
       Globals.customPlayers[playerId].orderPoint,
       Globals.customPlayers[playerId].mouseData,
       Globals.customPlayers[playerId].orderPoint.clone(),
-      Globals.customPlayers[playerId].targetUnit,
-      caster,
+      grabUnit,
+      grabUnit,
       gutPunchDmgMult,
     );
     customHero.useAbility(AbilityNames.Omniman.GUT_PUNCH, abilityInput);
@@ -12347,12 +12383,12 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
 
-    omnimanSwapGrabAbils(player, true);
-
     const omnimanGrabUnitKey = StringHash("omniman_grab_target");
 
     const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    omnimanSwapGrabAbils(player, true);
 
     const group = CreateGroup();
     GroupAddUnit(group, grabUnit);
@@ -12393,7 +12429,7 @@ export module SimpleSpellSystem {
           bj_HEROSTAT_INT,
         );
         DestroyEffect(
-          AddSpecialEffect("Objects/Spawnmodels/Undead/ImpaleTargetDust/ImpaleTargetDust.mdl", 
+          AddSpecialEffect("Slam.mdl", 
           Globals.tmpVector.x, Globals.tmpVector.y
         ));
       });
@@ -12408,15 +12444,14 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
 
-    UnitRemoveAbility(caster, Id.ghostVisible);
-
     const omnimanGrabUnitKey = StringHash("omniman_grab_target");
 
     const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
 
-    Globals.customPlayers[playerId].orderPoint.setUnit(grabUnit);
+    UnitRemoveAbility(caster, Id.ghostVisible);
 
+    Globals.customPlayers[playerId].orderPoint.setUnit(grabUnit);
     const abilityInput = new CustomAbilityInput(
       spellId,
       customHero,
@@ -12425,7 +12460,7 @@ export module SimpleSpellSystem {
       Globals.customPlayers[playerId].orderPoint,
       Globals.customPlayers[playerId].mouseData,
       Globals.customPlayers[playerId].orderPoint.clone(),
-      Globals.customPlayers[playerId].targetUnit,
+      grabUnit,
       grabUnit,
       1.0,
     );
@@ -12440,12 +12475,12 @@ export module SimpleSpellSystem {
     const player = GetOwningPlayer(caster);
     const playerId = GetPlayerId(player);
 
-    omnimanSwapGrabAbils(player, true);
-
     const omnimanGrabUnitKey = StringHash("omniman_grab_target");
 
     const customHero = Globals.customPlayers[playerId].getCustomHero(caster);
     const grabUnit = LoadUnitHandle(Globals.genericSpellHashtable, casterId, omnimanGrabUnitKey);
+
+    omnimanSwapGrabAbils(player, true);
 
     Globals.tmpVector.setUnit(grabUnit);
     const sfx = AddSpecialEffect("Blood7.mdl", 
@@ -12482,7 +12517,6 @@ export module SimpleSpellSystem {
     const grabDist = 250;
     const grabAOE = 400;
     const maxDist = 2500;
-    const trainOffset = 800;
 
     const caster = GetTriggerUnit();
     const casterId = GetHandleId(caster);
@@ -12546,6 +12580,7 @@ export module SimpleSpellSystem {
               if (
                 unit == null
                 || !UnitHelper.isUnitTargetableForPlayer(unit, player)
+                || !IsUnitType(unit, UNIT_TYPE_HERO)
               ) continue;
               Globals.tmpVector.setUnit(unit);
               const dist = CoordMath.distance(Globals.tmpVector2, Globals.tmpVector);
@@ -12579,7 +12614,7 @@ export module SimpleSpellSystem {
             Globals.customPlayers[playerId].mouseData,
             Globals.customPlayers[playerId].orderPoint.clone(),
             grabUnit,
-            caster,
+            grabUnit,
             1.0,
           );
           customHero.useAbility(AbilityNames.Omniman.TRAIN, abilityInput);

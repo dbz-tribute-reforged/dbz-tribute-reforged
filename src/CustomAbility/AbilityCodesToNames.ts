@@ -554,7 +554,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.omnimanSlice, AbilityNames.Omniman.SLICE],
     [Id.omnimanPlease, AbilityNames.Omniman.PLEASE],
     [Id.omnimanDrag, AbilityNames.Omniman.DRAG],
-    [Id.omnimanImpale, AbilityNames.Omniman.IMPALE],
 
 
 

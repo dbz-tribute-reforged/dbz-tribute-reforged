@@ -299,7 +299,7 @@ export class CellMaxSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 10;
+    this.delay = 30;
     this.isDamaged = false;
     this.auraSfx = null
   }

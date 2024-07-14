@@ -4506,7 +4506,7 @@ export const MultiComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    angleDifference: 1,
+    angleDifference: 0,
     angleMin: 0,
     angleMax: 1,
     forceMinDistance: 225,

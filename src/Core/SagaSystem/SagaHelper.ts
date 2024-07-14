@@ -1,7 +1,7 @@
 import { Saga } from "./Sagas/BaseSaga";
 import { AdvancedSaga } from "./Sagas/AdvancedSaga";
 import { sagaUnitsConfig } from "./SagaUnitsConfig";
-import { Constants } from "Common/Constants";
+import { Capsules, Constants, Globals, Id } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { SagaHeroAI } from "./SagaAISystem/SagaHeroAI";
 import { AbilityNames } from "CustomAbility/AbilityNames";
@@ -10,6 +10,9 @@ import { Players } from "w3ts/globals";
 import { TimerManager } from "Core/Utility/TimerManager";
 
 export module SagaHelper {
+  export let NUM_PLAYERS: number = 0;
+  export let SAGA_AVG_STATS: number = 100;
+
   export function areAllBossesDead(bosses: unit[]): boolean {
     for (const boss of bosses) {
       if (UnitHelper.isUnitAlive(boss)) {
@@ -19,77 +22,181 @@ export module SagaHelper {
     return true;
   }
 
-  export function addHeroToAdvancedSaga(saga: AdvancedSaga, name: string, mustKill: boolean) {
-    const sagaUnitConfig = sagaUnitsConfig.get(name);
-    if (sagaUnitConfig) {
-      let x = sagaUnitConfig.spawnPos.x;
-      let y = sagaUnitConfig.spawnPos.y;
-      if (
-        sagaUnitConfig.spawnPos.x > GetRectMaxX(GetPlayableMapRect()) || 
-        sagaUnitConfig.spawnPos.x < GetRectMinX(GetPlayableMapRect()) || 
-        sagaUnitConfig.spawnPos.y > GetRectMaxY(GetPlayableMapRect()) || 
-        sagaUnitConfig.spawnPos.y < GetRectMinY(GetPlayableMapRect()) 
-      ) {
-        x = 0;
-        y = 0;
-      }
-      const sagaUnit = CreateUnit(
-        Player(PLAYER_NEUTRAL_AGGRESSIVE), 
-        sagaUnitConfig.unitId, 
-        x, 
-        y, 
-        0
-      );
-      SetHeroLevel(sagaUnit, sagaUnitConfig.lvl, false);
-      // -> gui automatic stats setting
-      // SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
-      if (mustKill) {
-        saga.bosses.push(sagaUnit);
-      }
-      if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
-        UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
-      }
-      /*
-      saga.bossesAI.set(
-        sagaUnit,
-        new SagaHeroAI(
-          sagaUnit
-        ).addWeakBeams(
-          sagaUnitConfig.weakBeams
-        ).addStrongBeams(
-          sagaUnitConfig.strongBeams
-        )
-      )
-      */
-      // saga.bossesAI.push(
-      //   new SagaHeroAI(
-      //     sagaUnit
-      //   ).addAbilities(
-      //     sagaUnitConfig.abilities
-      //   )
-      // )
-      saga.bossesAI.set(
-        sagaUnit,
-        new SagaHeroAI(
-          sagaUnit
-        ).addAbilities(
-          sagaUnitConfig.abilities
-        )
-      );
+  export function calculateSagaMinMult(level: number, numPlayers: number) {
+    let mult: number = 0.1;
 
-      if (sagaUnitConfig.itemDrops.length > 0) {
-        saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
-        for (const itemId of sagaUnitConfig.itemDrops) {
-          UnitAddItemById(sagaUnit, itemId);
-        }
+    if (level >= 10) {
+      mult = 0.5 + 0.11 * numPlayers + level * 0.01;
+
+      if (level >= 30) {
+        mult += 0.1;
       }
+      if (level >= 50) {
+        mult += 0.2;
+      }
+      if (level >= 100) {
+        mult += 0.2;
+      }
+      if (level >= 150) {
+        mult += 0.2;
+      }
+  
+      if (numPlayers >= 6) {
+        mult += 0.4;
+      }
+      if (numPlayers >= 8) {
+        mult += 0.3;
+      }
+      if (numPlayers >= 10) {
+        mult += 0.3;
+      }
+  
+      if (Globals.isNightmare) {
+        mult += 1.0;
+      }
+    } else {
+      mult = 0.01 * numPlayers + level * 0.07;
     }
+
+    return Math.max(0.1, mult);
   }
 
-  export function setAllStats(hero: unit, str: number, agi: number, int: number) {
-    SetHeroStr(hero, str, true);
-    SetHeroAgi(hero, agi, true);
-    SetHeroInt(hero, int, true);
+  export function calculateSagaAvgStats() {
+    SagaHelper.NUM_PLAYERS = 0;
+    let numUnits = 0;
+    let sumStats = 0;
+
+    for (const player of Constants.activePlayers) {
+      const playerId = GetPlayerId(player);
+      const size = BlzGroupGetSize(udg_StatMultPlayerUnits[playerId]);
+      if (size <= 0) continue;
+      ++SagaHelper.NUM_PLAYERS;
+
+      for (let i = 0; i < size; ++i) {
+        const unit = BlzGroupUnitAt(udg_StatMultPlayerUnits[playerId], i);
+        const unitId = GetHandleId(unit);
+        const unitTypeId = GetUnitTypeId(unit);
+        let baseStr = LoadReal(udg_StatMultHashtable, unitId, 0);
+        let baseAgi = LoadReal(udg_StatMultHashtable, unitId, 1);
+        let baseInt = LoadReal(udg_StatMultHashtable, unitId, 2);
+
+        if (
+          unitTypeId == Id.android14 
+          || unitTypeId == Id.android15
+        ) {
+          baseStr *= 3;
+          baseAgi *= 3;
+          baseInt *= 3;
+        }
+
+        if (
+          unitTypeId == Id.goten 
+          || unitTypeId == Id.kidTrunks
+        ) {
+          baseStr *= 2;
+          baseAgi *= 2;
+          baseInt *= 2;
+        }
+
+        sumStats += baseStr + baseAgi + baseInt;
+        ++numUnits;
+      }
+    }
+
+    SagaHelper.NUM_PLAYERS = Math.max(2, Math.min(8, SagaHelper.NUM_PLAYERS));
+    SagaHelper.SAGA_AVG_STATS = Math.max(120, (sumStats * 0.33) / numUnits);
+  }
+
+  // must calculate saga avg stats beforehand
+  export function getSagaStats(unit: unit) {
+    const mult = calculateSagaMinMult(GetHeroLevel(unit), SagaHelper.NUM_PLAYERS);
+    const stats = mult * SagaHelper.SAGA_AVG_STATS;
+    return stats;
+  }
+
+  export function setSagaStats(unit: unit) {
+    const stats = Math.floor(getSagaStats(unit));
+    SetHeroStr(unit, stats, true);
+    SetHeroAgi(unit, stats, true);
+    SetHeroInt(unit, stats, true);
+  }
+
+  export function setupSagaUnit(unit: unit) {
+    SagaHelper.setSagaStats(unit);
+    SetUnitMoveSpeed(unit, Math.min(400, 350 + 0.5 * GetHeroLevel(unit)));
+    
+    udg_StatMultUnit = unit;
+    TriggerExecute(gg_trg_Base_Armor_Set);
+
+    BlzSetUnitArmor(unit, BlzGetUnitArmor(unit) + SagaHelper.NUM_PLAYERS);
+  }
+
+  export function addHeroToAdvancedSaga(saga: AdvancedSaga, name: string, mustKill: boolean) {
+    const sagaUnitConfig = sagaUnitsConfig.get(name);
+    if (!sagaUnitConfig) return;
+
+    let x = sagaUnitConfig.spawnPos.x;
+    let y = sagaUnitConfig.spawnPos.y;
+    if (
+      sagaUnitConfig.spawnPos.x > GetRectMaxX(GetPlayableMapRect()) || 
+      sagaUnitConfig.spawnPos.x < GetRectMinX(GetPlayableMapRect()) || 
+      sagaUnitConfig.spawnPos.y > GetRectMaxY(GetPlayableMapRect()) || 
+      sagaUnitConfig.spawnPos.y < GetRectMinY(GetPlayableMapRect()) 
+    ) {
+      x = 0;
+      y = 0;
+    }
+    const sagaUnit = CreateUnit(
+      Player(PLAYER_NEUTRAL_AGGRESSIVE), 
+      sagaUnitConfig.unitId, 
+      x, 
+      y, 
+      0
+    );
+    SetHeroLevel(sagaUnit, sagaUnitConfig.lvl, false);
+
+    if (mustKill) {
+      saga.bosses.push(sagaUnit);
+    }
+    if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
+      UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
+    }
+    /*
+    saga.bossesAI.set(
+      sagaUnit,
+      new SagaHeroAI(
+        sagaUnit
+      ).addWeakBeams(
+        sagaUnitConfig.weakBeams
+      ).addStrongBeams(
+        sagaUnitConfig.strongBeams
+      )
+    )
+    */
+    // saga.bossesAI.push(
+    //   new SagaHeroAI(
+    //     sagaUnit
+    //   ).addAbilities(
+    //     sagaUnitConfig.abilities
+    //   )
+    // )
+    saga.bossesAI.set(
+      sagaUnit,
+      new SagaHeroAI(
+        sagaUnit
+      ).addAbilities(
+        sagaUnitConfig.abilities
+      )
+    );
+
+    if (sagaUnitConfig.itemDrops.length > 0) {
+      saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
+      for (const itemId of sagaUnitConfig.itemDrops) {
+        UnitAddItemById(sagaUnit, itemId);
+      }
+    }
+
+    SagaHelper.setupSagaUnit(sagaUnit);
   }
 
   export function pingMinimap(bosses: unit[]) {
@@ -168,7 +275,9 @@ export module SagaHelper {
     unit: unit | undefined
   ) {
     if (unit) {
-      // SetUnitInvulnerable(unit, false);
+      SagaHelper.calculateSagaAvgStats();
+      
+      SetUnitInvulnerable(unit, false);
       PauseUnit(unit, false);
       ShowUnitShow(unit);
     }
@@ -236,5 +345,45 @@ export module SagaHelper {
         TimerManager.getInstance().recycle(timer);
       }
     })
+  }
+
+  export function unlockSagaCapsule(abilId: number) {
+    for (const player of Constants.activePlayers) {
+      SetPlayerAbilityAvailable(player, abilId, true);
+    }
+  }
+
+  export function checkSagaCapsule(unitTypeId: number) {
+    switch (unitTypeId) {
+      // case Id.raditz:
+      //   unlockSagaCapsule(Capsules.saibamenSeeds)
+      //   break;
+      case Id.drWheelo:
+        unlockSagaCapsule(Capsules.wheeloResearch)
+        break;
+      case Id.turlesSaga:
+        unlockSagaCapsule(Capsules.treeOfMightSapling)
+        break;
+      case Id.saltSaga:
+        unlockSagaCapsule(Capsules.deadZone)
+        break;
+      case Id.ginyu:
+        unlockSagaCapsule(Capsules.scouter2)
+        break;
+      case Id.metalCooler:
+        unlockSagaCapsule(Capsules.getiStarFragment)
+        break;
+      case Id.zamasu:
+        unlockSagaCapsule(Capsules.timeRing)
+      case Id.superBuu:
+        unlockSagaCapsule(Capsules.potaraEarring)
+        break;
+      case Id.janemba:
+        unlockSagaCapsule(Capsules.dimensionSword)
+        break;
+      case Id.hirudegarn:
+        unlockSagaCapsule(Capsules.braveSword)
+        break;
+    }
   }
 }

@@ -2583,7 +2583,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 60, 
       angle: 0, 
-      aoe: 300,
+      aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     knockbackTarget: AOEKnockback.TARGET_AOE,
@@ -2605,7 +2605,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 60, 
       angle: 0, 
-      aoe: 300,
+      aoe: 350,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     knockbackTarget: AOEKnockback.TARGET_AOE,

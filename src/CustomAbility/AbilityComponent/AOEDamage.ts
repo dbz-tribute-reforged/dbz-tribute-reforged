@@ -34,11 +34,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   public isStarted: boolean = false;
   public isFinished: boolean = false;
 
+  public numActiveDamageTicks = 0;
+
   constructor(
     public name: string = "AOEDamage",
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public damageAddTicks: number = -1,
     public damageSource: number = AOEDamage.SOURCE_UNIT,
     public scaleSourceHPType: number = AOEDamage.SCALE_HP_SOURCE_UNIT,
     public sourceHPDamageScale: number = -1,
@@ -357,8 +360,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ) {
       if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
         if (
-          this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
-          (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
+          this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS 
+          && (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
         ) {
           let dmgIndex = -1;
           for (let i = 0; i < this.damagedTargets.length; ++i) {
@@ -377,8 +380,22 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
             this.damagedTargetsHits.push(1);
             this.performDamage(input, target, damage, sourceHPPercent);
           }
-        } else {    
-          this.performDamage(input, target, damage, sourceHPPercent);
+        } else {
+          if (this.applyDamageOverTime) {
+            let dmgIndex = -1;
+            for (let i = 0; i < this.damagedTargets.length; ++i) {
+              if (this.damagedTargets[i] == target) {
+                dmgIndex = i;
+                break;
+              }
+            }
+            if (dmgIndex < 0) {
+              this.damagedTargets.push(target);
+            }
+            this.performDamage(input, target, damage, sourceHPPercent);
+          } else {
+            this.performDamage(input, target, damage, sourceHPPercent);
+          }
         }
       }
     }
@@ -449,6 +466,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ) {
       this.isStarted = true;
       this.isFinished = false;
+      this.numActiveDamageTicks = 0;
       
       this.clearDamageTargets();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
@@ -474,49 +492,65 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       }
     }
     // TextTagHelper.showTempText(
-    //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + "Damage!", 
+    //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + "!", 
     //   this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
     // );
-
-    GroupClear(this.damagedGroup);
-    GroupEnumUnitsInRange(
-      this.damagedGroup, 
-      this.damageCoords.x, 
-      this.damageCoords.y, 
-      this.aoe,
-      null
-    );
-
-    if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
-      if (input.castUnit) {
-        GroupAddUnit(this.damagedGroup, input.castUnit);
-      }
-    }
-
-    let sourceHPPercent = 0;
-    if (this.scaleSourceHPType == AOEDamage.SCALE_HP_SOURCE_UNIT) {
-      sourceHPPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-    } else if (this.scaleSourceHPType == AOEDamage.SCALE_HP_CASTER_UNIT) {
-      sourceHPPercent = (
-        GetUnitState(input.caster.unit, UNIT_STATE_LIFE) 
-        / GetUnitState(input.caster.unit, UNIT_STATE_MAX_LIFE)
-      );
-    }
-    const damage = this.calculateDamage(input, source, sourceHPPercent);
-
-    if (this.applyDamageOverTime) {
-      for (const target of this.damagedTargets) {
-        this.dealDamageToUnit(input, target, damage, sourceHPPercent);
-      }
-    }
-
-    ForGroup(this.damagedGroup, () => {
-      const target = GetEnumUnit();
-      this.dealDamageToUnit(input, target, damage, sourceHPPercent);
-    });
-
-    GroupClear(this.damagedGroup);
+    // print("dmg", 
+    //   this.name, ability.currentTick, this.numActiveDamageTicks, 
+    //   this.damagedTargets.length
+    // );
     
+    GroupClear(this.damagedGroup);
+    if (
+      this.damageAddTicks < 0 
+      || this.numActiveDamageTicks < this.damageAddTicks
+    ) {
+      GroupEnumUnitsInRange(
+        this.damagedGroup, 
+        this.damageCoords.x, 
+        this.damageCoords.y, 
+        this.aoe,
+        null
+      );
+
+      if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
+        if (input.castUnit) {
+          GroupAddUnit(this.damagedGroup, input.castUnit);
+        }
+      }
+    }
+
+    if (
+      this.damageAddTicks < 0 
+      || this.numActiveDamageTicks < this.damageAddTicks
+      || (this.applyDamageOverTime && this.damagedTargets.length > 0)
+    ) {
+      let sourceHPPercent = 0;
+      if (this.scaleSourceHPType == AOEDamage.SCALE_HP_SOURCE_UNIT) {
+        sourceHPPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+      } else if (this.scaleSourceHPType == AOEDamage.SCALE_HP_CASTER_UNIT) {
+        sourceHPPercent = (
+          GetUnitState(input.caster.unit, UNIT_STATE_LIFE) 
+          / GetUnitState(input.caster.unit, UNIT_STATE_MAX_LIFE)
+        );
+      }
+      const damage = this.calculateDamage(input, source, sourceHPPercent);
+  
+      if (this.applyDamageOverTime) {
+        for (const target of this.damagedTargets) {
+          this.dealDamageToUnit(input, target, damage, sourceHPPercent);
+        }
+      }
+
+      ForGroup(this.damagedGroup, () => {
+        const target = GetEnumUnit();
+        this.dealDamageToUnit(input, target, damage, sourceHPPercent);
+      });
+      GroupClear(this.damagedGroup);
+
+      ++this.numActiveDamageTicks;
+    }
+
     if (ability.isFinishedUsing(this)) {
       this.reset();
     }
@@ -536,6 +570,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   clone(): AbilityComponent {
     return new AOEDamage(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.damageAddTicks,
       this.damageSource, 
       this.scaleSourceHPType,
       this.sourceHPDamageScale,
@@ -562,6 +597,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      damageAddTicks: number;
       damageSource: number;
       scaleSourceHPType: number;
       sourceHPDamageScale: number;
@@ -591,6 +627,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.damageAddTicks = input.damageAddTicks;
     this.damageSource = input.damageSource;
     this.scaleSourceHPType = input.scaleSourceHPType;
     this.sourceHPDamageScale = input.sourceHPDamageScale;

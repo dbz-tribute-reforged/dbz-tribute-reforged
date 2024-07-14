@@ -859,31 +859,6 @@ const skurvyData = {
     HeroSelectCategory.VIDEOGAME 
   )
 }
-const cheongMyeongData = {
-  unitCode: Id.cheongMyeong,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.AGI + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.ASSASSIN +
-    HeroSelectCategory.ANIME +
-    HeroSelectCategory.MEME
-  )
-}
-const omnimanData = {
-  unitCode: Id.omniman,
-  onlyRandom: false,
-  requirement: null,
-  category: (
-    HeroSelectCategory.STR + 
-    HeroSelectCategory.INT + 
-    HeroSelectCategory.GOOD + 
-    HeroSelectCategory.BRUISER +
-    HeroSelectCategory.ANIME
-  )
-}
 const ainzData = {
   unitCode: Id.ainzOoalGown,
   onlyRandom: false,
@@ -1065,6 +1040,32 @@ const gojoData = {
     HeroSelectCategory.ANIME 
   )
 }
+const cheongMyeongData = {
+  unitCode: Id.cheongMyeong,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.AGI + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.ASSASSIN +
+    HeroSelectCategory.ANIME +
+    HeroSelectCategory.MEME
+  )
+}
+const omnimanData = {
+  unitCode: Id.omniman,
+  onlyRandom: false,
+  requirement: null,
+  category: (
+    HeroSelectCategory.STR + 
+    HeroSelectCategory.INT + 
+    HeroSelectCategory.GOOD + 
+    HeroSelectCategory.EVIL + 
+    HeroSelectCategory.BRUISER +
+    HeroSelectCategory.ANIME
+  )
+}
 
 
 // order matters
@@ -1188,11 +1189,11 @@ export const HeroSelectUnitList = [
   leonSKennedyData,
   aggronorData,
   // 85
+  emptySpace,
+  emptySpace,
   donkeyKongData,
   kkrData,
   skurvyData,
-  cheongMyeongData,
-  omnimanData,
 
   // ====
   // 90
@@ -1214,4 +1215,25 @@ export const HeroSelectUnitList = [
   minatoData,
   mightGuyData,
   gojoData,
+
+  // ====
+  // 105
+  // ====
+  cheongMyeongData,
+  omnimanData,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  // 110
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  // 115
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
+  emptySpace,
 ];

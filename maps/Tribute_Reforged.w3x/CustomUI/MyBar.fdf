@@ -188,6 +188,31 @@ Frame "SIMPLESTATUSBAR" "MySpellPowerBar" {
    }
 }
 
+
+Frame "SIMPLESTATUSBAR" "MySpecialBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor03.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MySpecialBarBackground"{ //the BACKGROUND Texture named "MySpecialBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MySpecialBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MySpecialBarFrame" { //Child of "MySpecialBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MySpecialBar"
+       Layer "ARTWORK" {
+           Texture "MySpecialBarBorder" {
+               File "SimpleXpBarBorder",
+           }
+           String "MySpecialBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MySpecialBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+
 Frame "SIMPLESTATUSBAR" "MyAbilityIconBar" {
    Width 0.04,
    Height 0.04,

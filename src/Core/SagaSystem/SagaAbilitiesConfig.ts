@@ -400,7 +400,7 @@ export module SagaAbilities {
       AbilityNames.Whis.PRELUDE_TO_DESTRUCTION, 10, 12, 20, SHORT_CAST_TIME
     );
     export const SYMPHONIC_DESTRUCTION = new SagaAbility(
-      AbilityNames.Saga.SYMPHONIC_DESTRUCTION_CUSTOM, 10, 120, 10, MEDIUM_CAST_TIME
+      AbilityNames.Saga.SYMPHONIC_DESTRUCTION_CUSTOM, 1, 120, 10, MEDIUM_CAST_TIME
     );
     export const ANGELIC_ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Whis.ANGELIC_ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
@@ -421,7 +421,7 @@ export module SagaAbilities {
       AbilityNames.Beerus.BEERUS_TAKOYAKI, 1, 60, 5, SHORT_CAST_TIME
     );
     export const GOD_OF_DESTRUCTION_WRATH = new SagaAbility(
-      AbilityNames.Saga.GOD_OF_DESTRUCTION_WRATH_CUSTOM, 10, 120, 10, LONG_CAST_TIME
+      AbilityNames.Saga.GOD_OF_DESTRUCTION_WRATH_CUSTOM, 1, 120, 10, LONG_CAST_TIME
     );
     export const BEERUS_FURY = new SagaAbility(
       AbilityNames.Beerus.BEERUS_FURY, 1, 120, 2, SHORT_CAST_TIME

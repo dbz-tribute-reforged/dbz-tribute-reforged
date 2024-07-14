@@ -15,23 +15,19 @@ import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";
 import { MinimapHelper } from "Common/MinimapHelper";
 import { BeamComponent } from "CustomAbility/AbilityComponent/BeamComponent";
+import { Frame } from "w3ts";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
   export const RAKSHASA_CLAW_ABILITY = FourCC("A0NY");
   export const DEVIL_CLAW_ABILITY = FourCC("A0NZ");
 
-  export const KID_BUU = FourCC("O00C");
-
-  export const TAPION = FourCC("E014");
   export const BRAVE_SLASH = FourCC("A0I9");
   export const TAPION_STYLE = FourCC("A0ID");
   export const HEROS_SONG = FourCC("B01H");
   export const TAPION_MANA_BURN_PERCENT = 0.003;
 
-  export const DYSPO = FourCC("H09H");
   export const JUSTICE_KICK_ABILITY = FourCC("A0QZ");
-
   
   export const HIRUDEGARN_MANA_BURN_PERCENT = 0.015;
   export const HIRUDEGARN_MANA_HEAL_PERCENT = 0.015;
@@ -71,20 +67,26 @@ export class HeroPassiveManager {
     setupRegenTimer(customHero);
     const unitTypeId = GetUnitTypeId(customHero.unit);
     switch (unitTypeId) {
-      case HeroPassiveData.KID_BUU:
+      case Id.kidBuu:
         kidBuuPassive(customHero);
         break;
       case Id.farmerWithShotgun:
         farmerPassive(customHero);
         break;
-      case HeroPassiveData.SUPER_JANEMBA:
+      case Id.janemba:
         superJanembaPassive(customHero);
         break;
-      case HeroPassiveData.TAPION:
+      case Id.tapion:
         tapionPassive(customHero);
         break;
-      case HeroPassiveData.DYSPO:
+      case Id.dyspo:
         dyspoPassive(customHero);
+        break;
+      case Id.jiren:
+        jirenPassive(customHero);
+        break;
+      case Id.hit:
+        hitPassive(customHero);
         break;
       case Id.ichigo:
         ichigoPassive(customHero);
@@ -386,7 +388,7 @@ export function tapionPassive(customHero: CustomHero) {
         const attackedMaxMana = GetUnitState(attacked, UNIT_STATE_MAX_MANA);
         let manaBurn = 25; 
         
-        if (heroId == HeroPassiveData.TAPION) {
+        if (heroId == Id.tapion) {
           manaBurn += attackedMana * 
             (
               GetUnitAbilityLevel(attacker, HeroPassiveData.TAPION_STYLE) * 
@@ -436,9 +438,51 @@ export function tapionPassive(customHero: CustomHero) {
 
 
 export function dyspoPassive(customHero: CustomHero) {
+  const maxCharges = 5;
+
   // const player = GetOwningPlayer(customHero.unit);
   const targetPos = new Vector2D();
   const heroId = GetUnitTypeId(customHero.unit);
+
+  const chargeTimer = CreateTimer();
+  customHero.addTimer(chargeTimer);
+
+  let player = Constants.sagaPlayer;
+  const unitId = GetHandleId(customHero.unit);
+
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  TimerStart(chargeTimer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (player == GetLocalPlayer()) {
+        specialBar.setVisible(false);
+      }
+      PauseTimer(chargeTimer);
+      return;
+    }
+    const charges = LoadInteger(udg_StatMultHashtable, unitId, 11);
+
+    if (player != GetOwningPlayer(customHero.unit)) {
+      player = GetOwningPlayer(customHero.unit);
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, maxCharges)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
+    }
+
+    const chargeStr = I2S(charges);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(Math.min(maxCharges, charges)).setVisible(true);
+      specialBarText.setText(chargeStr);
+    }
+  });
+
+
   const onHitTrigger = CreateTrigger();
   customHero.addPassiveTrigger(onHitTrigger);
 
@@ -499,6 +543,102 @@ export function dyspoPassive(customHero: CustomHero) {
   );
 }
 
+export function jirenPassive(customHero: CustomHero) {
+  const maxCharges = 4;
+
+  const chargeTimer = CreateTimer();
+  customHero.addTimer(chargeTimer);
+
+  let player = Constants.sagaPlayer;
+  const unitId = GetHandleId(customHero.unit);
+
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  TimerStart(chargeTimer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (player == GetLocalPlayer()) {
+        specialBar.setVisible(false);
+      }
+      PauseTimer(chargeTimer);
+      return;
+    }
+    const charges = LoadInteger(udg_StatMultHashtable, unitId, 11);
+
+    if (player != GetOwningPlayer(customHero.unit)) {
+      player = GetOwningPlayer(customHero.unit);
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, maxCharges)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
+    }
+
+    const chargeStr = I2S(charges);
+    if (player == GetLocalPlayer()) {
+      if (charges > maxCharges) {
+        specialBar.setMinMaxValue(0, charges)
+        specialBar.setValue(charges).setVisible(true);
+      } else {
+        specialBar.setMinMaxValue(0, maxCharges);
+        specialBar.setValue(Math.min(maxCharges, charges)).setVisible(true);
+      }
+      specialBarText.setText(chargeStr);
+    }
+  });
+}
+
+export function hitPassive(customHero: CustomHero) {
+  const maxCharges = 5;
+
+  const chargeTimer = CreateTimer();
+  customHero.addTimer(chargeTimer);
+
+  let player = Constants.sagaPlayer;
+  const unitId = GetHandleId(customHero.unit);
+
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  TimerStart(chargeTimer, 0.03, true, () => {
+    if (GetUnitTypeId(customHero.unit) == 0) {
+      if (player == GetLocalPlayer()) {
+        specialBar.setVisible(false);
+      }
+      PauseTimer(chargeTimer);
+      return;
+    }
+    const charges = LoadInteger(udg_StatMultHashtable, unitId, 11);
+    const chargeRatio = Math.min(1,
+      LoadInteger(udg_HitHashtable, unitId, 0) / LoadInteger(udg_HitHashtable, unitId, 2)
+    );
+
+    if (player != GetOwningPlayer(customHero.unit)) {
+      player = GetOwningPlayer(customHero.unit);
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, maxCharges)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
+    }
+
+    const chargeStr = R2S(
+      Math.min(maxCharges, charges + Math.max(0, chargeRatio))
+    ).substring(0, 3);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(
+        Math.min(maxCharges, charges + Math.max(0, chargeRatio))
+      ).setVisible(true);
+      specialBarText.setText(chargeStr);
+    }
+  });
+}
 
 export function ichigoPassive(customHero: CustomHero) {
   // const player = GetOwningPlayer(customHero.unit);
@@ -1204,66 +1344,6 @@ export function super17Passive(customHero: CustomHero) {
   );
 }
 
-export function getHeatString(
-  heat: number, 
-  heatSpeed: number,
-  isHeatingUp: boolean, 
-  isCoolingDown: boolean
-): string {
-  // return R2S(heat);
-  // let result = "|cffff2222";
-  // let i = 0;
-  // for (; i < heat * 0.1 - 1; ++i) {
-  //   result += "I";
-  // }
-
-  // if (i < 10 && heat != 0) {
-  //   let mod = heat;
-  //   while (mod > 10) {
-  //     mod -= 10;
-  //   }
-
-  //   if (mod <= 5) {
-  //     result += ".";
-  //   } else {
-  //     result += ":";
-  //   }
-  //   ++i;
-  // }
-
-  // if (i < 10) {
-  //   result += "|cff00ffff";
-  //   for (; i < 10; ++i) {
-  //     result += "I";
-  //   }
-  // } else if (isCoolingDown) {
-  //   result += "|cff00ffff";
-  // }
-  let result = "      ";
-  if (heat <= 50) {
-    result += "|cff00ffff" + I2S(Math.round(heat));
-  } else {
-    result += "|cffff2222" + I2S(Math.round(heat));
-  }
-  
-  if (heatSpeed < 0) {
-    result += "|cff00ffff";
-  } else if (heatSpeed > 0) {
-    result += "|cffff2222";
-  } else {
-    result += "|cffffcc00";
-  }
-  if (isHeatingUp) {
-    result += "^";
-  } else if (isCoolingDown) {
-    result += "v";
-  } else {
-    result += "-";
-  }
-
-  return result + "|r";
-}
-
 export function shotoTodorokiPassive(customHero: CustomHero) {
   const unitHandle = GetHandleId(customHero.unit);
   if (unitHandle == 0) return;
@@ -1289,7 +1369,6 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   const timer = CreateTimer();
   customHero.addTimer(timer);
 
-  const textTag = CreateTextTag();
   let heat = 50;
   let heatSpeed = 0;
   let isHeatingUp = false;
@@ -1297,25 +1376,39 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
   let penaltyTick = 0;
   let ultMode = 0;
 
-  let player = GetOwningPlayer(customHero.unit);
-  let playerForce: force | undefined = CreateForce();
-  ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
-  SetTextTagPermanent(textTag, true);
-  SetTextTagVisibility(textTag, true);
-  ShowTextTagForceBJ(false, textTag, bj_FORCE_ALL_PLAYERS);
-  ShowTextTagForceBJ(true, textTag, playerForce);
+  let player = Constants.sagaPlayer;
 
   let coldSfx: effect | undefined;
   let hotSfx: effect | undefined;
   let hotSfx2: effect | undefined;
   let hotSfx3: effect | undefined;
 
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
   TimerStart(timer, 0.03, true, () => {
     if (GetUnitTypeId(customHero.unit) == 0) {
-      if (playerForce) {
-        DestroyForce(playerForce);
-        playerForce = undefined;
+      if (hotSfx) {
+        DestroyEffect(hotSfx);
+        hotSfx = undefined;
       }
+      if (hotSfx2) {
+        DestroyEffect(hotSfx2);
+        hotSfx2 = undefined;
+      }
+      if (hotSfx3) {
+        DestroyEffect(hotSfx3);
+        hotSfx3 = undefined;
+      }
+      if (coldSfx) {
+        DestroyEffect(coldSfx);
+        coldSfx = undefined;
+      }
+      if (player == GetLocalPlayer()) specialBar.setVisible(false);
+
+      FlushChildHashtable(Globals.genericSpellHashtable, unitHandle);
+      PauseTimer(timer);
       return;
     }
     if (UnitHelper.isUnitDead(customHero.unit)) {
@@ -1328,10 +1421,13 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
 
     if (GetOwningPlayer(customHero.unit) != player) {
       player = GetOwningPlayer(customHero.unit);
-      if (playerForce) {
-        ForceClear(playerForce);
-        ForceAddPlayer(playerForce, GetOwningPlayer(customHero.unit));
-        ShowTextTagForceBJ(true, textTag, playerForce);
+
+      if (player == GetLocalPlayer()) {
+        specialBar.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor12.blp", 0, true)
+          .setMinMaxValue(0, 100)
+          .setVisible(true);
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor14.blp", 0, true);
       }
     }
     
@@ -1357,8 +1453,16 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
       SaveReal(Globals.genericSpellHashtable, unitHandle, 0, heat);
     }
 
-    SetTextTagPos(textTag, GetUnitX(customHero.unit), GetUnitY(customHero.unit), 25);
-    SetTextTagTextBJ(textTag, getHeatString(heat, heatSpeed, isHeatingUp, isCoolingDown), 15);
+    const heatStr = I2S(Math.floor(heat)) + " " + (
+      isHeatingUp ? "+" : (
+        isCoolingDown ? "-" : ""
+      )
+    );
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(Math.floor(heat)).setVisible(true);
+      specialBarText.setText(heatStr);
+    }
+
 
     // if (GetUnitAbilityLevel(customHero.unit, Id.shotoTodorokiHeavenPiercingIceWall) > 0) {
     //   if ((ultMode == 1 && heat >= 50) || (ultMode == 2 && heat <= 50)) {
@@ -1572,32 +1676,6 @@ export function shotoTodorokiPassive(customHero: CustomHero) {
 
     return false;
   }));
-
-  TimerStart(CreateTimer(), 0.3, true, () => {
-    // cleanup text tag and self hashtable
-    if (GetUnitTypeId(customHero.unit) != 0) return
-
-    if (hotSfx) {
-      DestroyEffect(hotSfx);
-      hotSfx = undefined;
-    }
-    if (hotSfx2) {
-      DestroyEffect(hotSfx2);
-      hotSfx2 = undefined;
-    }
-    if (hotSfx3) {
-      DestroyEffect(hotSfx3);
-      hotSfx3 = undefined;
-    }
-    if (coldSfx) {
-      DestroyEffect(coldSfx);
-      coldSfx = undefined;
-    }
-
-    DestroyTextTag(textTag);
-    FlushChildHashtable(Globals.genericSpellHashtable, unitHandle);
-    DestroyTimer(GetExpiredTimer());
-  });
 }
 
 export function sonicPassive(customHero: CustomHero) {
@@ -2318,31 +2396,6 @@ function doGutsAbilitySwap(
   }
 }
 
-
-export function getJacoEliteBeamChargeString(
-  currentTick: number,
-  bonusTick: number,
-  maxTick: number,
-) {
-  const max = 10;
-  const currentIndex = Math.floor(max * (currentTick) / maxTick);
-  const bonusIndex = Math.floor(max * (bonusTick) / maxTick);
-  
-  let str = "|cff00ffff";
-  for (let i = 0; i < max; ++i) {
-    if (i == bonusIndex + 1 && currentIndex < bonusIndex + 1) {
-      str += "|cff00ff00";
-    } else if (i == bonusIndex + 2 && currentIndex < bonusIndex + 2) {
-      str += "|cff00ff00";
-    } else if (i == currentIndex + 1 || i == bonusIndex + 3) {
-      str += "|cffffffff";
-    }
-    
-    str += "I";
-  }
-  return str;
-}
-
 export function jacoPassive(customHero: CustomHero) {
   const eliteBeamMaxTicks = 100;
 
@@ -2351,41 +2404,43 @@ export function jacoPassive(customHero: CustomHero) {
 
   const jacoId = GetHandleId(customHero.unit);
 
-  const textTag = CreateTextTag();
-  let isTextShown = false;
-  let player = GetOwningPlayer(customHero.unit);
-  let playerId = GetPlayerId(player);
-  SetTextTagPermanent(textTag, true);
-  SetTextTagVisibility(textTag, false);
-  SetTextTagText(textTag, "IIIIIIIIII", 13);
+  const specialBar = Frame.fromName("MySpecialBar", 0);
+  const specialBarBg = Frame.fromName("MySpecialBarBackground", 0);
+  const specialBarText = Frame.fromName("MySpecialBarText", 0);
+
+  let player = Constants.sagaPlayer;
 
   UnitAddAbility(customHero.unit, Id.jacoEliteBeamPrime);
   UnitAddAbility(customHero.unit, Id.jacoEliteBeamFire);
 
   TimerStart(eliteBeamTimer, 0.03, true, () => {
     if (GetUnitTypeId(customHero.unit) == 0) {
-      DestroyTextTag(textTag);
+      if (player == GetLocalPlayer()) specialBar.setVisible(false);
+      PauseTimer(eliteBeamTimer);
       return;
     }
 
     if (player != GetOwningPlayer(customHero.unit)) {
       player = GetOwningPlayer(customHero.unit);
-      playerId = GetPlayerId(player);
-      SetTextTagVisibility(textTag, false);
+      if (player == GetLocalPlayer()) {
+        specialBar
+          .setTexture("Replaceabletextures\\Teamcolor\\Teamcolor05.blp", 0, true)
+          .setMinMaxValue(0, 100)
+          .setVisible(true)
+        
+        specialBarBg.setTexture("Replaceabletextures\\Teamcolor\\Teamcolor08.blp", 0, true);
+      }
     }
 
     const beamState = LoadInteger(Globals.genericSpellHashtable, jacoId, 0);
     if (beamState == 0) {
-      if (isTextShown) {
-        SetTextTagVisibility(textTag, false);
-        isTextShown = false;
-      }
+      if (player == GetLocalPlayer()) specialBar.setValue(0);
       return;
     }
 
     const currentTick = LoadInteger(Globals.genericSpellHashtable, jacoId, 1);
     const bonusTick = LoadInteger(Globals.genericSpellHashtable, jacoId, 2);
-    const beamStr = getJacoEliteBeamChargeString(currentTick, bonusTick, eliteBeamMaxTicks);
+    // const beamStr = getJacoEliteBeamChargeString(currentTick, bonusTick, eliteBeamMaxTicks);
     // print(
     //   "tick:", 
     //   currentTick, 
@@ -2413,14 +2468,14 @@ export function jacoPassive(customHero: CustomHero) {
       }
     }
 
-    if (!isTextShown) {
-      if (player == GetLocalPlayer()) {
-        SetTextTagVisibility(textTag, true);
-      }
-      isTextShown = true;
+    const beamStr = (currentTick >= bonusTick && currentTick < bonusTick + 33 ?
+      "|cff00ff00" :
+      ""
+    ) + I2S(currentTick) + "(" + I2S(bonusTick) + ")" + " / " + I2S(eliteBeamMaxTicks);
+    if (player == GetLocalPlayer()) {
+      specialBar.setValue(currentTick).setVisible(true);
+      specialBarText.setText(beamStr);
     }
-    SetTextTagPos(textTag, GetUnitX(customHero.unit) - 256, GetUnitY(customHero.unit) - 128, 25);
-    SetTextTagTextBJ(textTag, beamStr, 25);
   });
 }
 

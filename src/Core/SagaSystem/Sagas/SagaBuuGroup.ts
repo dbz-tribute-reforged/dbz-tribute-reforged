@@ -12,7 +12,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 10;
+    this.delay = 30;
   }
 
   spawnSagaUnits(): void {

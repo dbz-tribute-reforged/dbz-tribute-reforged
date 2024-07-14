@@ -842,6 +842,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.CellMax.MAX_BARRIER,
         SagaAbilities.CellMax.MAX_BARRIER_BURST,
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Hirudgarn.FLIGHT,
       ],
       [
         ItemConstants.SagaDrops.CELL_MAX_WINGS,

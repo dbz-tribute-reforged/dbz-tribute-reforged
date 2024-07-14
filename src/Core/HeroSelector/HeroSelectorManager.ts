@@ -488,7 +488,7 @@ export class HeroSelectorManager {
         const pStr = SubString(this.gameModeString, 6, 8);
         if (pStr) points = S2I(pStr);
       }
-      TournamentManager.getInstance().addKOTH(points);
+      TournamentManager.getInstance().addKOTH(Math.max(3, points));
       TournamentManager.getInstance().startTournament(Constants.KOTHName);
     }
 
@@ -634,7 +634,10 @@ export class HeroSelectorManager {
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       const player = Player(i);
-      if (IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING)) {
+      if (
+        IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING)
+        && GetPlayerController(player) == MAP_CONTROL_USER
+      ) {
         HeroSelector.forceRandom(player);
       }
     }
@@ -732,12 +735,13 @@ export class HeroSelectorManager {
     Globals.isKOTH = !Globals.isKOTH;
     const str = Globals.isKOTH ? "|cff00ff00ON" : "|cffff0000OFF";
     const pStr = SubString(this.gameModeString, 6, 8);
-    print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(" + pStr + ")|r");
+    const points = Math.max(3, S2I(pStr));
+    print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(p=" + I2S(points) + ")|r");
     this.startHeroSelection(true);
     
     this.kothButton.setText(
       "|cffFFFF00KOTH(" +
-      (pStr == "" ? I2S(TournamentData.kothPointsToWin) : pStr) +
+      (pStr == "" ? I2S(TournamentData.kothPointsToWin) : I2S(points)) +
       "):|r" + 
       (Globals.isKOTH ? "|cff00ff00ON|r" : "|cffff2222OFF|r")
     );
@@ -755,8 +759,8 @@ export class HeroSelectorManager {
     this.ultimateButton = new Frame("ScriptDialogButton", 
       Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2000, 0.2830)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3000, 0.3130)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.3000, 0.2730)
       .setText("|cffFFFF00Ultimate: " + I2S(udg_UltimateModeLevel) + "|r")
       .setScale(1.00) 
       .setVisible(false);
@@ -776,8 +780,8 @@ export class HeroSelectorManager {
     this.kothButton = new Frame("ScriptDialogButton", 
       Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0
     )
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.5000, 0.2830)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6100, 0.3130)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.5000, 0.2430)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.6100, 0.2730)
       .setText("|cffFFFF00KOTH():|r|cffff2222OFF|r")
       .setScale(1.00)
       .setVisible(false);

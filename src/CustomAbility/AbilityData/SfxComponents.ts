@@ -43087,7 +43087,7 @@ export const SfxComponents = [
         model: "Abilities/Spells/Human/Resurrect/ResurrectTarget.mdl",
         repeatInterval: 66,
         group: 0,
-        scale: 4.0,
+        scale: 4.5,
         endScale: -1,
         startHeight: 0,
         endHeight: 0,
