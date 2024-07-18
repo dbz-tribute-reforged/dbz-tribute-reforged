@@ -207,6 +207,11 @@ export class FusionUnit {
       }
     });
 
+    if (GetHeroProperName(this.unit1) == "Vegito") {
+      TransformationSystem.getInstance().setTransformSkin(this.unit1, Id.vegito);
+    } else if (GetHeroProperName(this.unit1) == "Gogeta") {
+      TransformationSystem.getInstance().setTransformSkin(this.unit1, Id.gogeta);
+    }
     TransformationSystem.getInstance().autoTransformPlayerUnit(
       GetOwningPlayer(this.unit1), this.unit1
     );
@@ -225,6 +230,8 @@ export class FusionUnit {
     if (it) RemoveItem(it);
     it = CreateItem(ItemConstants.potaraEarrings, GetUnitX(unit), GetUnitY(unit));
     UnitAddItem(unit, it);
+    // create another one to drop
+    it = CreateItem(ItemConstants.potaraEarrings, GetUnitX(unit), GetUnitY(unit));
 
     TransformationSystem.getInstance().setTransformSkin(unit, 0);
     TransformationSystem.getInstance().autoTransformPlayerUnit(

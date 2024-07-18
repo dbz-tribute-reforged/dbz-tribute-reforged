@@ -138,10 +138,6 @@ export class DragonBallsManager {
             }
 
             this.summonShenron(unitX, unitY);
-            TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay + 1, false, () => {
-              SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
-              DestroyTimer(GetExpiredTimer())
-            })
 
             SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Piccolo/SummonShenron.mp3", 2040);
           } else {
@@ -614,6 +610,7 @@ export class DragonBallsManager {
       stats = 200;
     }
     udg_StatMultUnit = unit;
+    udg_StatMultReal = stats;
 
     TriggerExecute(gg_trg_Add_To_Base_Stats);
     TriggerExecute(gg_trg_Add_To_Power_Wish_Stats_Data);

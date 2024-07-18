@@ -1145,6 +1145,8 @@ export module Id {
   export const ginyuChangeNow = FourCC("A0PO");
   export const ginyuChangeNowConfirm = FourCC("A0PN");
 
+  export const gogeta = FourCC("H01D");
+
   export const gohan = FourCC("H00K");
   export const masenko = FourCC("A0H8");
   export const superMasenko = FourCC("A0TU");
@@ -1696,6 +1698,8 @@ export module Id {
   export const vegetaMajinFinalFlash = FourCC("A13Q");
   export const vegetaMajinGalaxyDonut = FourCC("A13R");
   export const vegetaMajinFinalExplosion = FourCC("A13S");
+
+  export const vegito = FourCC("E00T");
 
   export const videl = FourCC("H085");
   export const videlLongHair = FourCC("H00S");

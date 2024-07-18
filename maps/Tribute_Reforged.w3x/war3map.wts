@@ -11583,15 +11583,6 @@ STRING 1779
 Adds 8000 bonus damage to the carrier and attacks reduce the target's armor by 80.|n|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points|r)
 }
 
-STRING 1780
-// Items: I008 (Spare Parts), Description (Description)
-{
-|cffffff00-0.1x Agi mult
-10% cooldown reduction|r
-
-|cff888888"Cool!"|r
-}
-
 STRING 1781
 // Items: I03Z (Dimension Sword S [5/5]), Ubertip (Tooltip - Extended)
 {
@@ -14027,15 +14018,6 @@ Dyspo forms a ring of energy in his hand and fires it at his opponent, rooting t
 
 |cff00ff00Damage: [Int] 40u x 8t + 900u
 |cff00ffffCooldown: <A0R0,Cool2> seconds|r
-}
-
-STRING 2170
-// Items: I008 (Spare Parts), Ubertip (Tooltip - Extended)
-{
-|cffffff00-0.1x Agi mult
-10% cooldown reduction|r
-
-|cff888888"Cool!"|r
 }
 
 STRING 2171
@@ -18315,6 +18297,15 @@ Summons multiple bones out of the ground to surround a target and damage them ov
 
 |cff00ff00Damage: [Int] 300u/s
 |cff00ffffCooldown: <A122,Cool1>s
+}
+
+STRING 2821
+// Items: I008 (Spare Parts), Description (Description)
+{
+|cffffff00-0.1x Agi mult
+20% cooldown reduction|r
+
+|cff888888"Cool!"|r
 }
 
 STRING 2822
@@ -34733,14 +34724,11 @@ STRING 5405
 
 STRING 5406
 {
-Type "r" to revert.
-Transformations:
-[lvl 30]  1.50x "fp" [Unlocks [|cff00ff00D|r] Envoy of the End]
-[lvl 55]  1.75x "fp"
-[lvl 85]  1.90x "fp"
-[lvl 125] 2.25x "fp"
-[lvl 150] 2.40x "omega" [Unlocks All Shadow Dragon Abilities]
-[lvl 200] 2.50x "omega"
+|cffffff00Transformations:|r
+|cffffcc00Gains +0.01x mult every level up to 2.5x|r
+
+|cffffff00[Level 30] [Unlocks [|cff00ff00D|r|cffffff00] Envoy of the End]
+[Level 150] [Unlocks All Shadow Dragon Abilities]|r
 
 Gains |cffffcc00+0.01x|r for each dragon ball currently held
 Gains |cffffcc00+0.01x|r for the max number of previously held dragon balls
@@ -37835,15 +37823,6 @@ STRING 5863
 {
 Beerus tries some delicious ramen.
 |cffffff00Restores 15% max hp/mp.|r
-|cff00FFFFCooldown: 30s|r
-}
-
-STRING 5864
-// Abilities: A0D1 (Sample Ice Cream), Ubertip (Tooltip - Normal - Extended)
-{
-Beerus tries some ice cream.
-|cffffff00+10% cooldown reduction|r
-|cff00ff00Duration: 15s
 |cff00FFFFCooldown: 30s|r
 }
 
@@ -55417,7 +55396,7 @@ The user charges with one hand behind the other above the head. The hands are th
 STRING 8515
 {
 |cffffff00Transformations:|r
-|cffffcc00Gains +0.01x mult every level up to 2.4x|r
+|cffffcc00Gains +0.01x mult every level up to 2.5x|r
 
 |cffffff00Gains +0.02x for each Ginyu Force member on their team.
 }
@@ -102601,6 +102580,24 @@ A high damage assassin with powerful close range crowd control abilities.
 
 }
 
+STRING 15376
+// Items: I008 (Spare Parts), Ubertip (Tooltip - Extended)
+{
+|cffffff00-0.1x Agi mult
+20% cooldown reduction|r
+
+|cff888888"Cool!"|r
+}
+
+STRING 15377
+// Abilities: A0D1 (Sample Ice Cream), Ubertip (Tooltip - Normal - Extended)
+{
+Beerus tries some ice cream.
+|cffffff00+20% cooldown reduction|r
+|cff00ff00Duration: 15s
+|cff00FFFFCooldown: 30s|r
+}
+
 STRING 15380
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108599,14 +108596,10 @@ STRING 16218
 
 STRING 16219
 {
-Type "r" to revert.
-Transformations:
-[lvl 15]  1.25x "mario"
-[lvl 30]  1.50x "mario"
-[lvl 90]  2.00x "mario"
-[lvl 120] 2.25x "mario"
-[lvl 150] 2.50x "mario"
-[lvl 250] 2.60x "mario" [+1 Empty Jumps]
+|cffffff00Transformations:|r
+|cffffcc00Gains +0.01x mult every level up to 2.5x|r
+
+|cffffff00[Level 250] [+1 Empty Jumps]
 
 |cff00ff00Dash|r: +50ms.
 }
