@@ -45,6 +45,7 @@ export class FBSimTestManager {
     this.patrolTPTrig = CreateTrigger();
     this.makeItemTrig = CreateTrigger();
     this.resetTrig = CreateTrigger();
+    this.armrTrig = CreateTrigger();
   }
 
   activate() {
