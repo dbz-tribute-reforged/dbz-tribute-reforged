@@ -18,7 +18,6 @@ import { TeamManager } from 'Core/TeamSystem/TeamManager';
 import { Constants, Globals } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
 import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
-import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstants';
 import { FarmingManager } from 'Core/FarmingSystem/FarmingManager';
 import { HeroSelectorManager } from "Core/HeroSelector/HeroSelectorManager";
 import { SimpleSpellSystem } from "Core/SimpleSpellSystem/SimpleSpellSystem";

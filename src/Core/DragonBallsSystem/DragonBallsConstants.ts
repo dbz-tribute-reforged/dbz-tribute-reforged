@@ -18,6 +18,10 @@ export module DragonBallsConstants {
   export const wishImmortalityItem: number = FourCC("I042");
   export const wishImmortalityAbility: number = FourCC("A0M9");
   export const immortalDelay: number = 4.1;
+  export const wishPowerItem: number = FourCC("I043");
+  export const wishResurrectionItem: number = FourCC("I04T");
+  export const wishCapsuleItem: number = FourCC("I04U");
+  export const itemCapsuleBox: number = FourCC("I04V");
   export const startingDBPos: Vector2D = new Vector2D(5000, 3500);
   export const dbSpawns: Vector2D[] = [
     // 1

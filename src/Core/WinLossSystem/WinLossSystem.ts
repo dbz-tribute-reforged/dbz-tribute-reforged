@@ -36,7 +36,9 @@ export class WinLossSystem {
       !Globals.isMainGameStarted 
       || Globals.isKOTH
       || Globals.isFreemode
+      || udg_IsLeadingToFinalBattle
     ) return;
+    
     // check all dead
     const t1Stuck = this.checkTeamAllDead(Constants.defaultTeam1);
     const t2Stuck = this.checkTeamAllDead(Constants.defaultTeam2);

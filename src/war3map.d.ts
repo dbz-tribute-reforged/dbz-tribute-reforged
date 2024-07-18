@@ -836,6 +836,7 @@ declare var udg_HeroPickTimer: timer;
 declare var udg_HeroPickTimerWindow: timerdialog;
 
 declare var udg_HeroRespawnHashtable: hashtable;
+declare var udg_HeroRespawnUnit: unit;
 
 declare var udg_OriginalPlayerNames: string[];
 
@@ -858,3 +859,8 @@ declare var udg_UltimateModeLevel: number;
 
 declare var udg_HitHashtable: hashtable;
 declare var udg_SummonsHashtable: hashtable;
+
+
+declare var udg_LastImmortalityUser: unit;
+
+declare var udg_IsLeadingToFinalBattle: boolean;

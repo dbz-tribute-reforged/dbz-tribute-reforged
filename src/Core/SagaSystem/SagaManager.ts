@@ -88,16 +88,16 @@ export class SagaManager {
   }
 
   protected calculateMaxNumberOfConcurrentSagas() {
-    let numActivePlayers = 0;
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      const player = Player(i);
-      if (
-        IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING) && 
-        GetPlayerController(player) == MAP_CONTROL_USER
-      ) {
-        ++numActivePlayers;
-      }
-    }
+    // let numActivePlayers = 0;
+    // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    //   const player = Player(i);
+    //   if (
+    //     IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING) && 
+    //     GetPlayerController(player) == MAP_CONTROL_USER
+    //   ) {
+    //     ++numActivePlayers;
+    //   }
+    // }
     SagaManager.maxNumberConcurrentSagas = 4;
   }
 
