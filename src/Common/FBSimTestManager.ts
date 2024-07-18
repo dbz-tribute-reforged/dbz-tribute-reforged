@@ -3,6 +3,8 @@ import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { Constants, Globals, OrderIds } from "./Constants";
 import { VisionHelper } from "./VisionHelper";
 import { UnitHelper } from "./UnitHelper";
+import { DragonBallsManager } from "Core/DragonBallsSystem/DragonBallsManager";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class FBSimTestManager {
   private static instance: FBSimTestManager;
@@ -11,6 +13,7 @@ export class FBSimTestManager {
   protected patrolTPTrig: trigger;
   protected makeItemTrig: trigger;
   protected resetTrig: trigger;
+  protected armrTrig: trigger;
 
   public static getInstance() {
     if (this.instance == null) {
@@ -46,6 +49,7 @@ export class FBSimTestManager {
 
   activate() {
     HeroSelectorManager.getInstance().enableFBSimTest(true);
+    DragonBallsManager.getInstance().forceEnableWishTrigger();
     if (Globals.isFBSimTest) return;
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 
@@ -96,6 +100,21 @@ export class FBSimTestManager {
         customHero.heal();
         customHero.resetCooldowns();
       }
+    });
+
+    for (const player of Constants.activePlayers) {
+      TriggerRegisterPlayerChatEvent(this.armrTrig, player, "-a5", false);
+    }
+    TriggerAddAction(this.armrTrig, () => {
+      if (!Globals.isFBSimTest) return;
+      
+      GroupClear(Globals.tmpUnitGroup);
+      GroupEnumUnitsSelected(Globals.tmpUnitGroup, GetTriggerPlayer(), null);
+      ForGroup(Globals.tmpUnitGroup, () => {
+        const target = GetEnumUnit();
+        UnitAddItemById(target, ItemConstants.SagaDrops.BATTLE_ARMOR_5);
+      });
+      GroupClear(Globals.tmpUnitGroup);
     });
   }
 

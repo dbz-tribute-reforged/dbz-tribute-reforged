@@ -8,6 +8,7 @@ import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbility } from "./SagaAbility";
 import { Players } from "w3ts/globals";
 import { TimerManager } from "Core/Utility/TimerManager";
+import { SagaUnit } from "./SagaUnit";
 
 export module SagaHelper {
   export let NUM_PLAYERS: number = 0;
@@ -180,6 +181,25 @@ export module SagaHelper {
     //     sagaUnitConfig.abilities
     //   )
     // )
+
+    if (sagaUnitConfig.itemDrops.length > 0) {
+      saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
+      for (const itemId of sagaUnitConfig.itemDrops) {
+        UnitAddItemById(sagaUnit, itemId);
+      }
+    }
+    
+    SagaHelper.checkSagaCapsule(sagaUnitConfig.unitId);
+    SagaHelper.setupSagaUnit(sagaUnit);
+
+    const timer = TimerManager.getInstance().get();
+    TimerStart(timer, 1, false, () => {
+      SagaHelper.setupSagaAIWrapper(saga, sagaUnit, sagaUnitConfig);
+      TimerManager.getInstance().recycle(timer);
+    });
+  }
+
+  export function setupSagaAIWrapper(saga: AdvancedSaga, sagaUnit: unit, sagaUnitConfig: SagaUnit) {
     saga.bossesAI.set(
       sagaUnit,
       new SagaHeroAI(
@@ -188,15 +208,6 @@ export module SagaHelper {
         sagaUnitConfig.abilities
       )
     );
-
-    if (sagaUnitConfig.itemDrops.length > 0) {
-      saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
-      for (const itemId of sagaUnitConfig.itemDrops) {
-        UnitAddItemById(sagaUnit, itemId);
-      }
-    }
-
-    SagaHelper.setupSagaUnit(sagaUnit);
   }
 
   export function pingMinimap(bosses: unit[]) {

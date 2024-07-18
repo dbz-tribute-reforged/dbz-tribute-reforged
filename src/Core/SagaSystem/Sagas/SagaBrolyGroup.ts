@@ -31,7 +31,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
     this.broly = this.bosses[0];
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, 9000);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();
@@ -135,7 +135,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
     this.broly = this.bosses[1];
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, 9000);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     SetPlayerAbilityAvailable(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC("A0AX"), false);
@@ -298,7 +298,7 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
     this.broly = this.bosses[0];
 
     for (const boss of this.bosses) {
-      SetUnitAcquireRange(boss, 9000);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

@@ -47,7 +47,12 @@ export class DragonBallsManager {
     this.radarTrigger = CreateTrigger();
     this.numWishesGranted = 1;
     this.summonFlag = false;
-    this.minimapShenron = null;
+    this.minimapShenron = CreateMinimapIconOnUnit(
+      this.shenron,
+      255, 255, 255, 
+      "MM_dballs.mdl", 
+      FOG_OF_WAR_VISIBLE
+    );
     this.initialize();
   }
 
@@ -72,19 +77,24 @@ export class DragonBallsManager {
     SetUnitInvulnerable(this.shenron, true);
     UnitAddAbility(this.dummyShenron, Constants.locustAbility);
 
-    DisableTrigger(this.wishTrigger);
+    EnableTrigger(this.wishTrigger);
     const selectShenron = CreateTrigger();
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       TriggerRegisterPlayerChatEvent(selectShenron, Player(i), "-shenron", true);
     };
     TriggerAddCondition(selectShenron, Condition(() => {
-      if (IsTriggerEnabled(this.wishTrigger)) {
+      if (this.summonFlag && IsTriggerEnabled(this.wishTrigger)) {
         SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
       }
       return false;
     }));
 
     return this;
+  }
+
+  forceEnableWishTrigger() {
+    ShowUnitShow(this.shenron);
+    EnableTrigger(this.wishTrigger);
   }
 
   setupDragonBallsActivation() {
@@ -128,10 +138,6 @@ export class DragonBallsManager {
             }
 
             this.summonShenron(unitX, unitY);
-            TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay + 1, false, () => {
-              SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
-              DestroyTimer(GetExpiredTimer())
-            })
 
             SoundHelper.playSoundOnUnit(unit, "Audio/Voice/Piccolo/SummonShenron.mp3", 2040);
           } else {
@@ -269,57 +275,92 @@ export class DragonBallsManager {
       Condition(() => {
         const wishItem = GetSoldItem();
         const wishingUnit = GetBuyingUnit();
+        const unitId = GetHandleId(wishingUnit);
+        const wishingUnitTypeId = GetUnitTypeId(wishingUnit);
+        const wishItemTypeId = GetItemTypeId(wishItem);
+        const player = GetOwningPlayer(wishingUnit);
 
-        if (GetItemTypeId(wishItem) == DragonBallsConstants.wishImmortalityItem) {
-          const addedReincarnation = UnitAddAbility(
-            wishingUnit, 
-            DragonBallsConstants.wishImmortalityAbility
-          )
-          
-          if (addedReincarnation) {
-            UnitMakeAbilityPermanent(wishingUnit, true, DragonBallsConstants.wishImmortalityAbility);
+        if (!UnitHelper.isUnitRealHero(wishingUnit)) return;
 
-            // remove reinc when detected
-            const reincTimer = TimerManager.getInstance().get();
-            TimerStart(reincTimer, 0.5, true, () => {
-              if (UnitHelper.isUnitDead(wishingUnit)) {
-                const removeReincTimer = TimerManager.getInstance().get();
-                TimerStart(removeReincTimer, DragonBallsConstants.immortalDelay, false, () => {
-                  UnitRemoveAbility(wishingUnit, DragonBallsConstants.wishImmortalityAbility);
-                  UnitMakeAbilityPermanent(wishingUnit, false, DragonBallsConstants.wishImmortalityAbility);
-                  SetUnitManaPercentBJ(wishingUnit, 100);
-                  // SetUnitLifePercentBJ(wishingUnit, 100);
-                  // reset stamina
-                  const playerId = GetPlayerId(GetOwningPlayer(wishingUnit));
-                  const customHero = Globals.customPlayers[playerId].getCustomHero(wishingUnit);
-                  if (customHero) customHero.setCurrentSP(customHero.getMaxSP());
-                  TimerManager.getInstance().recycle(removeReincTimer);
-                });
-                TimerManager.getInstance().recycle(reincTimer);
-              }
-            })
-          }
+        PlaySoundBJ(gg_snd_ClanInvitation);
+
+        if (wishItemTypeId == DragonBallsConstants.wishPowerItem) {
+          this.doPowerWish(wishingUnit);
+        } else if (wishItemTypeId == DragonBallsConstants.wishImmortalityItem) {
+          this.doImmortalityWish(wishingUnit);
+        } else if (wishItemTypeId == DragonBallsConstants.wishResurrectionItem) {
+          this.doResurrectionWish(wishingUnit);
+        } else if (wishItemTypeId == DragonBallsConstants.wishCapsuleItem) {
+          this.doCapsuleWish(wishingUnit);
         }
         // power wish done by gui
 
-        if (this.numWishesGranted > 1) {
-          DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS,
-            15,
-            "|cffffcc00Shenron|r: Wish granted... And what is your second wish?"
+        if (this.summonFlag) {
+          if (this.numWishesGranted > 1) {
+            if (this.summonFlag) {
+              DisplayTimedTextToForce(
+                bj_FORCE_ALL_PLAYERS,
+                15,
+                "|cffffcc00Shenron|r: Wish granted... And what is your second wish?"
+              );
+            }
+            --this.numWishesGranted;
+          } else {
+            DisplayTimedTextToForce(
+              bj_FORCE_ALL_PLAYERS,
+              15,
+              "|cffffcc00Shenron|r: So be it. Your wish has been granted."
+            );
+            this.finalizeWish();
+            TimerStart(CreateTimer(), 7, false, () => {
+              this.unsummonShenron(this.summonedAtDayTime);
+              DestroyTimer(GetExpiredTimer());
+            });
+          }
+        }
+
+        if (wishingUnitTypeId == Id.piccolo) {
+          SoundHelper.playSoundOnUnit(wishingUnit, "Audio/Voice/Piccolo/Wish.mp3", 1248);
+
+          const orangeKey = StringHash("piccolo|orange|unlock");
+          if (!LoadBoolean(udg_SummonsHashtable, unitId, orangeKey)) {
+            SaveBoolean(udg_SummonsHashtable, unitId, orangeKey, true);
+            DisplayTimedTextToPlayer(player, 0, 0, 5, 
+              "[|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r|nAfter wishing to unlock his latent potential, Piccolo has discovered a |cffff8822powerful new form|r."
+            );
+          }
+        } else if (
+          wishingUnitTypeId == Id.dende 
+          && GetUnitAbilityLevel(wishingUnit, Id.dendeOrange) == 0
+        ) {
+          UnitAddAbility(wishingUnit, Id.dendeOrange);
+          UnitMakeAbilityPermanent(wishingUnit, true, Id.dendeOrange);
+          DisplayTimedTextToPlayer(player, 0, 0, 5, 
+            "[|cffffcc00Secret|r] |cffff8822All that you have... Plus a bit extra|r|nAfter wishing to unlock his latent potential, Dende has discovered a |cffff8822powerful new form|r."
           );
-          --this.numWishesGranted;
-        } else {
-          DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS,
-            15,
-            "|cffffcc00Shenron|r: So be it. Your wish has been granted."
+        } else if (
+          wishingUnitTypeId == Id.omegaShenron 
+          || wishingUnitTypeId == Id.eisShenron
+        ) {
+          const dballKey = StringHash("shadow_dragon|db|wish");
+          SaveInteger(udg_SummonsHashtable, unitId, dballKey, 
+            LoadInteger(udg_SummonsHashtable, unitId, dballKey) + 1
           );
-          this.grantWish();
-          TimerStart(CreateTimer(), 7, false, () => {
-            this.unsummonShenron(this.summonedAtDayTime);
-            DestroyTimer(GetExpiredTimer());
-          });
+          udg_StatMultUnit = wishingUnit;
+          TriggerExecute(gg_trg_Temp_Skin_Revert);
+        } else if (wishingUnitTypeId == Id.zamasu) {
+          UnitAddAbility(wishingUnit, Id.zamasuImmortalityBook);
+          UnitMakeAbilityPermanent(wishingUnit, true, Id.zamasuImmortalityBook);
+          SetPlayerAbilityAvailable(player, Id.zamasuImmortality, true);
+        } else if (
+          wishingUnitTypeId == Id.granolah
+          && GetUnitAbilityLevel(wishingUnit, Id.granolahEvolvedEyes) == 0
+        ) {
+          UnitAddAbility(wishingUnit, Id.granolahEvolvedEyes);
+          UnitMakeAbilityPermanent(wishingUnit, true, Id.granolahEvolvedEyes);
+          DisplayTimedTextToPlayer(player, 0, 0, 5, 
+            "[|cffffcc00Secret|r] |cff44ff88I want to be the strongest!|r|nAfter sacrificing his lifespan to become the strongest Granolah has unlocked a |cff44ff88powerful new form|r."
+          );
         }
 
         return false;
@@ -328,15 +369,17 @@ export class DragonBallsManager {
 
     return this;
   }
-  
-  distributeDragonBalls(): this {
+
+  removeExistingDragonBalls() {
     for (const db of this.dragonBallsItems) {
       if (db) {
         RemoveItem(db);
       }
     }
     this.dragonBallsItems.splice(0, this.dragonBallsItems.length);
-
+  }
+  
+  distributeDragonBalls(): this {
     // const startingAngle = Math.random() * 360;
     const index = Math.floor(Math.random() * (DragonBallsConstants.dbSpawns.length - 1));
     let nextIndex = index;
@@ -391,15 +434,7 @@ export class DragonBallsManager {
       this.dummyShenron,
       "birth"
     );
-    
-    if (!this.minimapShenron) {
-      this.minimapShenron = CreateMinimapIcon(
-        x, y, 
-        255, 255, 255, 
-        "MM_dballs.mdl", 
-        FOG_OF_WAR_VISIBLE
-      );
-    }
+
     const sfxTimer = TimerManager.getInstance().get();
     TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
       this.playShenronSFX(this.dummyShenron);
@@ -469,6 +504,8 @@ export class DragonBallsManager {
       TimerManager.getInstance().recycle(delayTimer);
     })
 
+    this.removeExistingDragonBalls();
+    
     return this;
   }
 
@@ -505,7 +542,7 @@ export class DragonBallsManager {
     return this;
   }
 
-  grantWish(): this {
+  finalizeWish(): this {
     SetUnitX(this.dummyShenron, GetUnitX(this.shenron));
     SetUnitY(this.dummyShenron, GetUnitY(this.shenron));
 
@@ -515,15 +552,13 @@ export class DragonBallsManager {
     this.playShenronSFX(this.dummyShenron);
     SetUnitAnimation(this.dummyShenron, "death");
 
-    DisableTrigger(this.wishTrigger);
+    if (!Globals.isFBSimTest) DisableTrigger(this.wishTrigger);
     ShowUnitHide(this.shenron);
 
     if (Constants.IS_APRIL_FOOLS_DAY) {
       BlzSetUnitSkin(this.dummyShenron, DragonBallsConstants.shenronUnitDummy);
       SetUnitScale(this.dummyShenron, 4.0, 4.0, 4.0);
     }
-    
-    if (this.minimapShenron) SetMinimapIconVisible(this.minimapShenron, false);
 
     return this;
   }
@@ -562,5 +597,113 @@ export class DragonBallsManager {
 
   isSummoned(): boolean {
     return this.summonFlag;
+  }
+
+  doPowerWish(unit: unit) {
+    let stats = 100;
+    if (
+      udg_ScoreboardTimeHours > 0
+      || udg_ScoreboardTimeMinutes > 30
+    ) {
+      stats = 300;
+    } else if (udg_ScoreboardTimeMinutes > 20) {
+      stats = 200;
+    }
+    udg_StatMultUnit = unit;
+    udg_StatMultReal = stats;
+
+    TriggerExecute(gg_trg_Add_To_Base_Stats);
+    TriggerExecute(gg_trg_Add_To_Power_Wish_Stats_Data);
+    TriggerExecute(gg_trg_Update_Current_Stats);
+
+    const heroLvl = GetHeroLevel(unit);
+    let lvlXp = 25 * (heroLvl * 5 + 15);
+    if (
+      udg_ScoreboardTimeHours > 0
+      || udg_ScoreboardTimeMinutes > 30
+    ) {
+      lvlXp = 25 * (heroLvl * 15 + 120);
+    } else if (udg_ScoreboardTimeMinutes > 20) {
+      lvlXp = 25 * (heroLvl * 10 + 55);
+    }
+    AddHeroXP(unit, lvlXp, true);
+  }
+
+  doImmortalityWish(unit: unit) {
+    const addedReincarnation = UnitAddAbility(
+      unit, 
+      DragonBallsConstants.wishImmortalityAbility
+    );
+
+    if (
+      udg_LastImmortalityUser != null
+      && udg_LastImmortalityUser != unit
+      && GetUnitAbilityLevel(unit, DragonBallsConstants.wishImmortalityAbility) > 0
+    ) {
+      // remove
+      UnitRemoveAbility(udg_LastImmortalityUser, DragonBallsConstants.wishImmortalityAbility);
+      DisplayTimedTextToPlayer(GetOwningPlayer(udg_LastImmortalityUser), 0, 0, 5, "Your immortality has been stolen by another wish.");
+    }
+    udg_LastImmortalityUser = unit;
+    
+    if (addedReincarnation) {
+      UnitMakeAbilityPermanent(unit, true, DragonBallsConstants.wishImmortalityAbility);
+
+      // remove reinc when detected
+      const reincTimer = TimerManager.getInstance().get();
+      TimerStart(reincTimer, 0.5, true, () => {
+        if (UnitHelper.isUnitDead(unit)) {
+          const removeReincTimer = TimerManager.getInstance().get();
+          TimerStart(removeReincTimer, DragonBallsConstants.immortalDelay, false, () => {
+            if (GetUnitAbilityLevel(unit, DragonBallsConstants.wishImmortalityAbility) > 0) {
+              UnitRemoveAbility(unit, DragonBallsConstants.wishImmortalityAbility);
+              SetUnitManaPercentBJ(unit, 100);
+              // SetUnitLifePercentBJ(wishingUnit, 100);
+              // reset stamina
+              const playerId = GetPlayerId(GetOwningPlayer(unit));
+              const customHero = Globals.customPlayers[playerId].getCustomHero(unit);
+              if (customHero) customHero.setCurrentSP(customHero.getMaxSP());
+              TimerManager.getInstance().recycle(removeReincTimer);
+            }
+          });
+          TimerManager.getInstance().recycle(reincTimer);
+        }
+      })
+    }
+  }
+
+  doResurrectionWish(unit: unit) {
+    const player = GetOwningPlayer(unit);
+    
+    let isT1 = false;
+    for (const p of Constants.defaultTeam1) {
+      if (p == player) {
+        isT1 = true;
+        break;
+      }
+    }
+    
+    this.forceResTeam(isT1 ? Constants.defaultTeam1 : Constants.defaultTeam2);
+  }
+
+  forceResTeam(players: player[]) {
+    for (const p of players) {
+      const pid = GetPlayerId(p);
+      const size = BlzGroupGetSize(udg_StatMultPlayerUnits[pid]);
+      for (let i = 0; i < size; ++i) {
+        const unit = BlzGroupUnitAt(udg_StatMultPlayerUnits[pid], i);
+        const unitId = GetHandleId(unit);
+        SaveReal(udg_HeroRespawnHashtable, unitId, 0, 0);
+        if (LoadInteger(udg_HeroRespawnHashtable, unitId, 3) == 1) {
+          udg_HeroRespawnUnit = unit;
+          TriggerExecute(gg_trg_Hero_Respawn_To_Earth);
+        }
+        SaveReal(udg_HeroRespawnHashtable, unitId, 0, 0);
+      }
+    }
+  }
+
+  doCapsuleWish(unit: unit) {
+    UnitAddItemById(unit, DragonBallsConstants.itemCapsuleBox);
   }
 }

@@ -12889,7 +12889,7 @@ export module SimpleSpellSystem {
       newCd *= 0.9;
     }
     if (GetUnitAbilityLevel(unit, Id.beerusIceCreamCDRFlag) > 0) {
-      newCd *= 0.9;
+      newCd *= 0.8;
     }
     if (GetUnitAbilityLevel(unit, Id.gojoSixEyesTrueSight) > 0) {
       newCd *= 0.5;
@@ -12899,7 +12899,7 @@ export module SimpleSpellSystem {
     }
 
     if (UnitHasItemOfTypeBJ(unit, ItemConstants.SagaDrops.SPARE_PARTS)) {
-      newCd *= 0.9;
+      newCd *= 0.8;
     }
     return newCd;
   }

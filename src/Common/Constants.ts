@@ -136,7 +136,7 @@ export module Constants {
   export const sagaPingInterval: number = 30;
   export const sagaAggroInterval: number = 500;
   export const sagaMinAcquisitionRange: number = 2500;
-  export const sagaMaxAcquisitionRange: number = 33333;
+  export const sagaMaxAcquisitionRange: number = 9999;
   export const reviveDelay: number = 5;
   // dont make team values 0
   export const invalidTeamValue: number = 0;
@@ -1145,6 +1145,8 @@ export module Id {
   export const ginyuChangeNow = FourCC("A0PO");
   export const ginyuChangeNowConfirm = FourCC("A0PN");
 
+  export const gogeta = FourCC("H01D");
+
   export const gohan = FourCC("H00K");
   export const masenko = FourCC("A0H8");
   export const superMasenko = FourCC("A0TU");
@@ -1697,6 +1699,8 @@ export module Id {
   export const vegetaMajinGalaxyDonut = FourCC("A13R");
   export const vegetaMajinFinalExplosion = FourCC("A13S");
 
+  export const vegito = FourCC("E00T");
+
   export const videl = FourCC("H085");
   export const videlLongHair = FourCC("H00S");
   export const punch = FourCC("A073");
@@ -1740,6 +1744,7 @@ export module Id {
 
   export const zamasu = FourCC("E012");
   export const zamasuImmortality = FourCC("A0SW");
+  export const zamasuImmortalityBook = FourCC("A0SQ");
 
 
   export const itemHealingBuff = FourCC("BIrg");
