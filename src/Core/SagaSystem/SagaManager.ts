@@ -82,10 +82,10 @@ export class SagaManager {
     PauseTimer(this.sagaPingTimer);
   }
 
-  public resume() {
-    ResumeTimer(this.sagaUpdateTimer);
-    ResumeTimer(this.sagaPingTimer);
-  }
+  // public resume() {
+  //   ResumeTimer(this.sagaUpdateTimer);
+  //   ResumeTimer(this.sagaPingTimer);
+  // }
 
   protected calculateMaxNumberOfConcurrentSagas() {
     // let numActivePlayers = 0;

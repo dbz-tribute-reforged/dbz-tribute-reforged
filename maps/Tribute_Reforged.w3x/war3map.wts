@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-|cffaf1100DBZ Tribute Reforged 2.1c
+|cffaf1100DBZ Tribute Reforged 2.1d
 }
 
 STRING 4
@@ -9334,16 +9334,6 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 |cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
 }
 
-STRING 1441
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur1>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool1> seconds|r
-}
-
 STRING 1442
 {
 |cffffff00Transformations:|r
@@ -11387,16 +11377,6 @@ STRING 1748
 Scouter 2.0
 }
 
-STRING 1749
-// Abilities: A01D (Mankind Destruction Attack), Researchubertip (Tooltip - Learn - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur1>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool1> - <A01D,Cool10> seconds|r
-}
-
 STRING 1750
 // Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
 {
@@ -11581,6 +11561,16 @@ STRING 1779
 // Items: I03Y (Dimension Sword S [4/5]), Description (Description)
 {
 Adds 8000 bonus damage to the carrier and attacks reduce the target's armor by 80.|n|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points|r)
+}
+
+STRING 1780
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur1>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool1> seconds|r
 }
 
 STRING 1781
@@ -13243,16 +13233,6 @@ STRING 2047
 (Cooler)
 }
 
-STRING 2048
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur2>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool2> seconds|r
-}
-
 STRING 2049
 // Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
 {
@@ -13565,16 +13545,6 @@ STRING 2100
 CoolerHeadFourth
 }
 
-STRING 2101
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur3>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool3> seconds|r
-}
-
 STRING 2102
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -13611,30 +13581,10 @@ STRING 2107
 [|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 5|r]
 }
 
-STRING 2108
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur4>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool4> seconds|r
-}
-
 STRING 2109
 // Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
-}
-
-STRING 2110
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur5>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool5> seconds|r
 }
 
 STRING 2111
@@ -13970,26 +13920,6 @@ STRING 2163
 Q
 }
 
-STRING 2164
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur6>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool6> seconds|r
-}
-
-STRING 2165
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur7>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool7> seconds|r
-}
-
 STRING 2166
 // Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
 {
@@ -14018,6 +13948,16 @@ Dyspo forms a ring of energy in his hand and fires it at his opponent, rooting t
 
 |cff00ff00Damage: [Int] 40u x 8t + 900u
 |cff00ffffCooldown: <A0R0,Cool2> seconds|r
+}
+
+STRING 2170
+// Abilities: A01D (Mankind Destruction Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur1>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool1> - <A01D,Cool10> seconds|r
 }
 
 STRING 2171
@@ -14533,16 +14473,6 @@ STRING 2253
 // Items: I001 (Roast Ham), Ubertip (Tooltip - Extended)
 {
 |cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 3% of max health and mana per second. Doubles the rate of stamin regen.|r|cff00ff00|nDuration: <A01G,Dur1>s|r|n|cff00ffffCooldown: <A01G,Cool1>s|r|n|cffFFAA00Double right-click to unstack.|r|n|cff808080It's not cooked all the way!|r
-}
-
-STRING 2254
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur8>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool8> seconds|r
 }
 
 STRING 2255
@@ -15425,26 +15355,6 @@ A powerful energy shield used by androids to prevent all incoming damage for 7.5
 
 |cff00ff00Damage Blocked: [Int] 3000u @ 100%|r
 |cff00ffffCooldown: <A0LB,Cool1> - <A0LB,Cool10> seconds|r
-}
-
-STRING 2394
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur9>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool9> seconds|r
-}
-
-STRING 2395
-// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
-
-|cffff0000Channel Duration: <A01D,Dur10>s
-|cff00ff00Damage: [Int] 25u x 8t + 25u (x132)
-|cff00ffffCooldown: <A01D,Cool10> seconds|r
 }
 
 STRING 2396
@@ -37826,6 +37736,16 @@ Beerus tries some delicious ramen.
 |cff00FFFFCooldown: 30s|r
 }
 
+STRING 5864
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur2>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool2> seconds|r
+}
+
 STRING 5865
 // Upgrades: R00M (Cannibalize), Name (Name)
 {
@@ -46636,22 +46556,6 @@ STRING 7193
 // Abilities: A0JQ (Babidi's Magic), Ubertip (Tooltip - Normal - Extended)
 {
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur2> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool2> seconds)|r
-}
-
-STRING 7194
-{
-Type "r" to revert.
-Transformations:
-[lvl 15]  1.25x "sega mega"
-[lvl 30]  1.50x "fp"
-[lvl 60]  1.75x "fp"
-[lvl 90]  2.00x "fp"
-[lvl 125] 2.30x "fp"
-[lvl 200] 2.50x "fp"
-
-Max speed upgrades at level 60 and 125.
-Find Chaos Emeralds by killing players or sagas above level 50.
-Collect all 7 Chaos Emeralds to unlock Super Sonic.
 }
 
 STRING 7195
@@ -69782,7 +69686,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 18 July 2024
+This map is under active development - 19 July 2024
 }
 
 STRING 10653
@@ -102598,6 +102502,26 @@ Beerus tries some ice cream.
 |cff00FFFFCooldown: 30s|r
 }
 
+STRING 15378
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur3>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool3> seconds|r
+}
+
+STRING 15379
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur4>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool4> seconds|r
+}
+
 STRING 15380
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
 {
@@ -102605,6 +102529,16 @@ Unlocks Gohan's hidden potential.
 |cffffff00+10% spell amp.
 |cff00ff00Duration: <A0L6,Dur1>s
 |cff00ffffCooldown: <A0L6,Cool1>s
+}
+
+STRING 15381
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur5>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool5> seconds|r
 }
 
 STRING 15382
@@ -102627,6 +102561,36 @@ Marle Attack Passive
 STRING 15385
 {
 Unarmored takes 100% damage from all damage types.
+}
+
+STRING 15386
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur6>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool6> seconds|r
+}
+
+STRING 15387
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur7>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool7> seconds|r
+}
+
+STRING 15388
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur8>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool8> seconds|r
 }
 
 STRING 15389
@@ -102975,6 +102939,16 @@ STRING 15437
 // Abilities: A0UX (Dragoon Flourish), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 7|r]
+}
+
+STRING 15438
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur9>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool9> seconds|r
 }
 
 STRING 15439
@@ -104745,6 +104719,16 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 
 |cff00ff00Damage: [Int] 200u + 0.5% Max HP (x4)
 |cff00ffffCooldown: <A0P1,Cool10,.> seconds|r
+}
+
+STRING 15670
+// Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Buu creates hundreds of thousands of energy beams to destroy all the earthlings. 
+
+|cffff0000Channel Duration: <A01D,Dur10>s
+|cff00ff00Damage: [Int] 990u/s
+|cff00ffffCooldown: <A01D,Cool10> seconds|r
 }
 
 STRING 15671

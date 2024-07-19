@@ -1165,6 +1165,25 @@ export function CustomPlayerTest() {
     });
   }
 
+
+  // const crashTestTrig = CreateTrigger();
+  // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  //   TriggerRegisterPlayerChatEvent(crashTestTrig, Player(i), "c", false);
+  // }
+  // TriggerAddAction(crashTestTrig, () => {
+  //   if (!Globals.isFBSimTest) return;
+  //   const player = GetTriggerPlayer();
+  //   const playerId = GetPlayerId(player);
+  //   if (udg_OriginalPlayerNames[playerId] != "Player1") return;
+  //   const max = S2I(SubString(GetEventPlayerChatString(), 1, 7));
+  //   for (let i = 0; i < max; ++i) {
+  //     TimerStart(CreateTimer(), i * 0.03, false, () => {
+  //       TriggerExecute(gg_trg_Auto_Transform_Loop);
+  //       DestroyTimer(GetExpiredTimer());
+  //     });
+  //   }
+  // });
+
   // ally/unally as necessary
   const allyTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
