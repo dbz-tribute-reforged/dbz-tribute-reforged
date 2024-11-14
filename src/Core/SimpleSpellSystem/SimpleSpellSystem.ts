@@ -929,6 +929,8 @@ export module SimpleSpellSystem {
     const key = StringHash(I2S(spellId) + "kaioken"); 
     const val = LoadInteger(Globals.genericSpellHashtable, casterId, key);
 
+
+    let ticks = 0;
     if (val == 0) {
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
@@ -965,6 +967,15 @@ export module SimpleSpellSystem {
           DestroyTimer(GetExpiredTimer());
         }
         UnitHelper.payHPPercentCost(caster, hpCost * 0.03, UNIT_STATE_MAX_LIFE);
+        if (ticks % 33 == 0) {
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+              GetUnitX(caster), GetUnitY(caster)
+            )
+          );
+        }
+        ++ticks;
       });
     }
   }

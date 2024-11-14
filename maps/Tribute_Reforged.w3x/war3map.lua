@@ -1700,6 +1700,10 @@ end
 udg_HeroRespawnDeadFlag = false
 end
 
+function R2S(num)
+    return tostring(math.floor(num * 1000 + 0.5) / 1000)
+end
+
 do; local _, codeLoc = pcall(error, "", 2) --get line number where DebugUtils begins.
 --[[
  --------------------------
