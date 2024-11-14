@@ -392,7 +392,7 @@ export class KOTHGame {
       SetPlayerStateBJ(
         player, 
         PLAYER_STATE_RESOURCE_LUMBER, 
-        TournamentData.kothLumberStart * this.getLumberModifier()
+        Math.floor(TournamentData.kothLumberStart * this.getLumberModifier())
       );
       ForGroup(udg_StatMultPlayerUnits[playerId], () => {
         const unit = GetEnumUnit();
