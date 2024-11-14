@@ -115,9 +115,6 @@ function HeroSelector.includesPlayer(who, player)
 function HeroSelector.counterChangeUnitCode(unitCode, add, player)
     increases/decreases the counter for picks of unitCode for the player's team.
     This can allow/disallow picking this unit for that team.
-function HeroSelector.counterSetUnitCode(unitCode, set, player)
-    sets the counter for picks of unitCode for the player's team.
-    This can allow/disallow picking this unit for that team.
     
 function HeroSelector.frameLoseFocus(frame)
     this disables & enables frame for the local player to free current focus (enable hotkeys, chat ...).
@@ -167,7 +164,7 @@ HeroSelector.ButtonColCount         = 15 --amount of buttons in one row
 HeroSelector.ButtonRowCount         = 8 --amount of rows
 HeroSelector.ChainedButtons         = true --(true) connect to the previous button/ or row, (false) have a offset to the box topLeft in this moving a button has no effect on other buttons.
 --Button
-HeroSelector.ButtonSize             = 0.03 --size of each button
+HeroSelector.ButtonSize             = 0.026 --size of each button
 HeroSelector.ButtonBlendAll         = false --(true) when a hero icon uses transparenzy
 HeroSelector.EmptyButtonPath        = "UI\\Widgets\\EscMenu\\Human\\blank-background.blp"
 HeroSelector.HideEmptyButtons       = true
@@ -486,7 +483,7 @@ function HeroSelector.updateTooltip(unitCode)
         elseif not HeroSelector.buttonRequirementDone(unitCode, GetLocalPlayer()) then
             BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
         else
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName)
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."|r")
         end
     end
     -- if unitData.Count > HeroSelector.UnitCount then
@@ -804,6 +801,7 @@ function HeroSelector.rollOption(player, includeRandomOnly, excludedIndex, categ
             --print("rejected requirement")
             allowed = false
         end
+	
         local filter = BlzBitAnd(category, HeroSelector.UnitData[unitCode].Category)
         if allowed and category and category > 0 and ((HeroSelector.CategoryMultiMatchAll and filter ~= category) or (not HeroSelector.CategoryMultiMatchAll and filter == 0)) then
         --when having an given an category only allow options having that category atleast partly
@@ -1111,7 +1109,8 @@ end
 
 do
 local function InitFrames()
-    BlzLoadTOCFile("CustomUI\\Templates.toc") --ex/import also "HeroSelector.fdf"
+    BlzLoadTOCFile("war3mapImported\\HeroSelector.toc") --ex/import also "HeroSelector.fdf"
+    --BlzLoadTOCFile("CustomUI\\Templates.toc") --ex/import also "HeroSelector.fdf"
     HeroSelector.HeroButtons  = {} --the clickable Buttons
 
     HeroSelector.CategoryButton = {}

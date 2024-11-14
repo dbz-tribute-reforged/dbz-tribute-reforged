@@ -109,6 +109,8 @@ export class HeroSelectorManager {
     SetTextTagPermanent(this.timerText, true);
     SetTextTagTextBJ(this.timerText, "", 10);
 
+    this.show(false);
+    this.show(true);
     TimerStart(CreateTimer(), 1.0, true, () => {
       if (this.setupFinished) {
         DestroyTimer(GetExpiredTimer());

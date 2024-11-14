@@ -3481,7 +3481,7 @@ function HeroSelector.updateTooltip(unitCode)
         elseif not HeroSelector.buttonRequirementDone(unitCode, GetLocalPlayer()) then
             BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
         else
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName)
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."|r")
         end
     end
     -- if unitData.Count > HeroSelector.UnitCount then
@@ -4109,11 +4109,11 @@ do
 local function InitFrames()
     BlzLoadTOCFile("war3mapImported\\HeroSelector.toc") --ex/import also "HeroSelector.fdf"
     --BlzLoadTOCFile("CustomUI\\Templates.toc") --ex/import also "HeroSelector.fdf"
-HeroSelector.HeroButtons  = {} --the clickable Buttons
+    HeroSelector.HeroButtons  = {} --the clickable Buttons
 
-HeroSelector.CategoryButton = {}
+    HeroSelector.CategoryButton = {}
 
-HeroSelector.Frames = {}
+    HeroSelector.Frames = {}
 
 
     local titleSize = 0.015
@@ -4535,7 +4535,8 @@ function HeroSelector.buttonSelected(player, unitCode)
     if not TeamViewer.HasPicked[player] then
         local teamNr = GetPlayerTeam(player)
         if TeamViewer.UpdateNonAllies or IsPlayerAlly(GetLocalPlayer(), player) then
-            BlzFrameSetText(TeamViewer[player].Tooltip, getHeroName(unitCode))
+            local hName = getHeroName(unitCode)
+            BlzFrameSetText(TeamViewer[player].Tooltip, hName)
             BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
             BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
             BlzFrameSetAlpha(TeamViewer[player].Button, TeamViewer.ButtonAlphaSelected)
