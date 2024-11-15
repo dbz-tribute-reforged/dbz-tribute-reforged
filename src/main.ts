@@ -85,6 +85,7 @@ function tsPostMain() {
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
 
+  ClearMapMusic();
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
   PreloadModels.doPreload();
   BlzChangeMinimapTerrainTex("war3aOriginalmapMap.blp")
@@ -189,7 +190,9 @@ function tsPostMain() {
 function playLobbyMusic() {
   // PlayMusic("Audio/Music/DBSuperOp2.mp3");
   // PlayMusic("Audio/Music/GatoSong.mp3");
-  PlayMusic(lobbyMusicStr);
+  // PlayMusic(lobbyMusicStr);
+  StopMusic(false);
+  PlaySound(lobbyMusicStr); // doesnt loop
 }
 
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsPostMain);
