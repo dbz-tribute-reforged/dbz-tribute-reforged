@@ -283,6 +283,7 @@ export class CreepManager {
           false
         )
       );
+      UnitSetUsesAltIcon(creepUnit, true);
     });
     return this;
   }
@@ -316,6 +317,7 @@ export class CreepManager {
         customCreep.posY, 
         customCreep.facing,
       );
+      UnitSetUsesAltIcon(newCreepUnit, true);
 
       SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
 
