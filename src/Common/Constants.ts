@@ -104,9 +104,8 @@ export module Constants {
   export const mapBoundsMaxX = 32256;
   export const mapBoundsMaxY = 32256;
 
-  export const shortDisplayTextDuration = 5;
-  export const mediumDisplayTextDuration = 10;
-  export const longDisplayTextDuration = 15;
+  export const shortDisplayTextDuration = 3;
+  export const mediumDisplayTextDuration = 7;
   export let jokeProbability = 0.02;
   export const sagaDisplayTextDuration = mediumDisplayTextDuration;
   export const sagaDisplayTextDelay = shortDisplayTextDuration;

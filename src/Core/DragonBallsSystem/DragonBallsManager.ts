@@ -93,7 +93,7 @@ export class DragonBallsManager {
   }
 
   forceEnableWishTrigger() {
-    ShowUnitShow(this.shenron);
+    ShowUnit(this.shenron, true);
     EnableTrigger(this.wishTrigger);
   }
 
@@ -117,7 +117,7 @@ export class DragonBallsManager {
           ) {
             DisplayTimedTextToForce(
               bj_FORCE_ALL_PLAYERS,
-              15,
+              10,
               Colorizer.getColoredPlayerName(player) + " has collected all 7 Dragon Balls."
             );
             RemoveItem(item);
@@ -129,7 +129,7 @@ export class DragonBallsManager {
             if (GetUnitTypeId(unit) == Id.dende || GetUnitAbilityLevel(unit, Id.dendeOrange) > 0) {
               DisplayTimedTextToForce(
                 bj_FORCE_ALL_PLAYERS,
-                15,
+                10,
                 Colorizer.getColoredPlayerName(player) + " has empowered Shenron to grant one more wish."
               );
               this.numWishesGranted = 2;
@@ -240,7 +240,7 @@ export class DragonBallsManager {
             ForceAddPlayer(printForce, player);
             DisplayTimedTextToForce(
               printForce,
-              15,
+              2,
               "The Dragon Balls have not been restored yet."
             );
             DestroyForce(printForce);
@@ -259,7 +259,7 @@ export class DragonBallsManager {
     UnitRemoveAbility(this.shenron, FourCC("Amov"));
     UnitRemoveAbility(this.shenron, FourCC("Aatk"));
     SetUnitInvulnerable(this.shenron, true);
-    ShowUnitHide(this.shenron);
+    ShowUnit(this.shenron, false);
     return this;
   }
 
@@ -300,7 +300,7 @@ export class DragonBallsManager {
             if (this.summonFlag) {
               DisplayTimedTextToForce(
                 bj_FORCE_ALL_PLAYERS,
-                15,
+                10,
                 "|cffffcc00Shenron|r: Wish granted... And what is your second wish?"
               );
             }
@@ -308,7 +308,7 @@ export class DragonBallsManager {
           } else {
             DisplayTimedTextToForce(
               bj_FORCE_ALL_PLAYERS,
-              15,
+              10,
               "|cffffcc00Shenron|r: So be it. Your wish has been granted."
             );
             this.finalizeWish();
@@ -411,7 +411,7 @@ export class DragonBallsManager {
     
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS,
-      15,
+      10,
       "The Dragon Balls have been restored."
     );
 
@@ -434,6 +434,10 @@ export class DragonBallsManager {
       this.dummyShenron,
       "birth"
     );
+    
+    ShowUnit(this.shenron, false);
+    SetUnitX(this.shenron, x);
+    SetUnitY(this.shenron, y);
 
     const sfxTimer = TimerManager.getInstance().get();
     TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
@@ -462,31 +466,26 @@ export class DragonBallsManager {
       // SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
       // SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
       
-      SetUnitX(this.shenron, x);
-      SetUnitY(this.shenron, y);
-
       if (Constants.IS_APRIL_FOOLS_DAY) {
         BlzSetUnitSkin(this.dummyShenron, FourCC('nech'));
         SetUnitScale(this.dummyShenron, 5.0, 5.0, 5.0);
       }
 
+      ShowUnit(this.shenron, true);
+      SetUnitAnimation(this.shenron, "stand");
+
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
-        15,
+        10,
         "|cffffcc00Shenron|r: Speak your wish and I shall grant it.|r" 
       );
-      // DisplayTimedTextToForce(
-      //   bj_FORCE_ALL_PLAYERS,
-      //   15,
-      //   "|cffb0b0b0(KNOWN BUG: Type -shenron to select shenron if you can't click him.|r"
-      // );
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS,
+        10,
+        "|cffb0b0b0(Type -shenron to select shenron if you can't click him.)|r"
+      );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
-      ShowUnitShow(this.shenron);
-      SetUnitAnimation(
-        this.shenron,
-        "stand"
-      );
 
       for (let i = 0; i < Constants.maxActivePlayers; ++i) {
         const shenronVision = CreateFogModifierRadius(
@@ -553,7 +552,7 @@ export class DragonBallsManager {
     SetUnitAnimation(this.dummyShenron, "death");
 
     if (!Globals.isFBSimTest) DisableTrigger(this.wishTrigger);
-    ShowUnitHide(this.shenron);
+    ShowUnit(this.shenron, false);
 
     if (Constants.IS_APRIL_FOOLS_DAY) {
       BlzSetUnitSkin(this.dummyShenron, DragonBallsConstants.shenronUnitDummy);

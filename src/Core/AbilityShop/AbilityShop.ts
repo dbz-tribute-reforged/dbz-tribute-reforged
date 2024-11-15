@@ -100,7 +100,7 @@ export class AbilityShop {
         .setAbsPoint(FRAMEPOINT_TOPLEFT, shopHelpX0 + shopHelpXOffset, shopHelpY0 - shopHelpYOffset)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, shopHelpX1 - shopHelpXOffset, shopHelpY1)
         .setScale(0.8)
-        .setText("|cffffcc00[Ability Shop]|r|n|cffcccccc(Optional) Swap basic abilities by selecting 1 from the top row and 1 from the bottom row. Cannot pick both zanzoken and zanzo dash.|r")
+        .setText("|cffffcc00[Ability Shop]|r|n|cffcccccc(Optional) Swap basic abilities by selecting 1 from the top row and 1 from the bottom row. Limit of 1 zanzo-like ability.|r")
       ;
 
       this.AbilityTooltipBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)

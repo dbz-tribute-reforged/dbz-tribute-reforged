@@ -123,7 +123,7 @@ export class HeroSelectorManager {
         DestroyTimer(GetExpiredTimer());
 
         // forces the default game mode
-        if (doClassicAP) {
+        if (doClassicAP && !Globals.isFBSimTest) {
           this.gameModeString = "-classicap";
           this.modeClassicAP(true);
         } else {
