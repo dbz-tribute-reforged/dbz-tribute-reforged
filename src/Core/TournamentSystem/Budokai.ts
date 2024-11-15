@@ -157,22 +157,22 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
   prepareTournament() {
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
+      bj_FORCE_ALL_PLAYERS, 10, 
       "|cffffff00" + this.getTournamentName() + " will be held in " + 
       this.toStartDelay + " seconds!|r"
     );
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
+      bj_FORCE_ALL_PLAYERS, 10, 
       "|cffffcc00Type|r |cffff2020" + TournamentData.budokaiEnterCommand + 
       "|r |cffffcc00to register.|r"
     );
-    TimerStart(CreateTimer(), 3, false, () => {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cff80ff80All tournament contestants will receive bonus stats for participating!|r"
-      );
-      DestroyTimer(GetExpiredTimer());
-    });
+    // TimerStart(CreateTimer(), 3, false, () => {
+    //   DisplayTimedTextToForce(
+    //     bj_FORCE_ALL_PLAYERS, 15, 
+    //     "|cff80ff80All tournament contestants will receive bonus stats for participating!|r"
+    //   );
+    //   DestroyTimer(GetExpiredTimer());
+    // });
     
     // enable register trigger
     EnableTrigger(this.registerTrigger);
@@ -197,7 +197,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     const numContestants = this.contestants.size;
     if (numContestants < 2) {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10, 
+        bj_FORCE_ALL_PLAYERS, 5, 
         this.getTournamentName() + 
         " has been cancelled due to lack of attendance."
       );
@@ -262,14 +262,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
       const contestant1 = this.currentBracket[i];
       const contestant2 = this.currentBracket[i+1];
       DisplayTimedTextToForce(
-        force, 15,
+        force, 10,
         Colorizer.getColoredPlayerName(Player(contestant1.id)) +  
         " vs " + 
         Colorizer.getColoredPlayerName(Player(contestant2.id))
       );
     }
     if (this.currentBracket.length > 1 && i < this.currentBracket.length) {
-      
       DisplayTimedTextToForce(
         force, 5,
         Colorizer.getColoredPlayerName(Player(this.currentBracket[i].id)) +  
@@ -378,7 +377,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
           }
           
           DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 15,
+            bj_FORCE_ALL_PLAYERS, 10,
             Colorizer.getColoredPlayerName(Player(winner.id)) +  
             " is the winner of " + 
             this.getTournamentName()
@@ -404,11 +403,11 @@ export class Budokai extends AdvancedTournament implements Tournament {
           // }
           // create new bracket with winners of previous bracket
           DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 10,
+            bj_FORCE_ALL_PLAYERS, 5,
             this.getColoredName()
           );
           DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 10,
+            bj_FORCE_ALL_PLAYERS, 5,
             "Moving on to the next round of matches."
           );
           this.setupCurrentBracket(TournamentData.seedingNone);

@@ -8,7 +8,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 45,
     duration: 20,
@@ -30,7 +30,7 @@ export const AbilitiesList = [
         "Dashes towards your next right click. " + 
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for moving within 500 range of an enemy hero.|n" +
-        "Cost: 45 SP|nCD: 4 (varies)",
+        "Cost: 45 SP|nCD: 5 (varies)",
     },
     components: [
       { name: "dash zanzo" },
@@ -43,7 +43,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.ZANZOKEN,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 50,
     duration: 1,
@@ -64,7 +64,7 @@ export const AbilitiesList = [
         "Can be used to cross cliffs. " + 
         "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
         "Cost: 50 SP|n" + 
-        "CD: 4 (varies)",
+        "CD: 5 (varies)",
     },
     components: [
       { name: "sfx shunpo start" },
@@ -76,7 +76,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Minato.HIRAISHIN_ZANZO,
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 5,
     costType: CostType.SP,
     costAmount: 50,
     duration: 2,
@@ -98,7 +98,7 @@ export const AbilitiesList = [
         "SP cost reduced for shorter distances and for teleporting within 500 range of an enemy hero.|n" + 
         "Drops a Kunai at the start of the ability.|n" + 
         "Cost: 50 SP|n" + 
-        "CD: 4 (varies)",
+        "CD: 5 (varies)",
     },
     components: [
       // { name: "sfx minato hiraishin attach" },
@@ -1853,12 +1853,8 @@ export const AbilitiesList = [
       disabled: "BTNFTShiningSwordAttack.blp"
     },
     tooltip: {
-      title: AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK,
-      body: 
-        "Performs multiple sword slashes as you move your cursor around." + 
-        "|nDeals ? * AGI per slash in 225 AOE per damage tick" + 
-        "(minimum 0.09s)" + 
-        "|nCost: ? MP |nCD: ?",
+      title: "",
+      body: "",
     },
     components: [
       { name: "slash shining sword attack" },
@@ -14147,7 +14143,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNCellPerfect.blp",
     },
     tooltip: {
-      title: "(C) Super Charge",
+      title: "Super Charge",
       body: 
         "+50% ability damage, +50% auto attack damage, +132ms.|n" + 
         "Cost: 50 SP|n"+
@@ -20068,8 +20064,8 @@ export const AbilitiesList = [
       body: 
         "The fastest attack in the universe!" + 
         "|nDeals 0.02 * AGI per tick " + 
-        "(x2 when closer," + 
-        "and another x2 over the duration of the ability)" + 
+        " x2 when closer," + 
+        "and another x2 over the duration of the ability" + 
         "|nCost: 120 MP |nCD: 10",
     },
     components: [

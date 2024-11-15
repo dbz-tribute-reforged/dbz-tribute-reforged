@@ -45,6 +45,7 @@ export class HeroSelectorManager {
 
   public kothButton: Frame;
   public kothButtonTrigger: Trigger;
+  public kothPoints: number;
 
 
   public static getInstance() {
@@ -83,6 +84,7 @@ export class HeroSelectorManager {
 
     this.kothButton = null;
     this.kothButtonTrigger = null;
+    this.kothPoints = TournamentData.kothPointsToWin;
 
     this.init();
 
@@ -109,13 +111,27 @@ export class HeroSelectorManager {
     SetTextTagPermanent(this.timerText, true);
     SetTextTagTextBJ(this.timerText, "", 10);
 
-    this.show(false);
-    this.show(true);
-    TimerStart(CreateTimer(), 1.0, true, () => {
+    let doClassicAP = true;
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      if (SubString(Globals.customPlayers[i].name, 0, 5) == "Yeran") {
+        doClassicAP = false;
+      }
+    }
+
+    TimerStart(CreateTimer(), 0.5, true, () => {
       if (this.setupFinished) {
         DestroyTimer(GetExpiredTimer());
 
-        this.startHeroSelection(true);
+        // forces the default game mode
+        if (doClassicAP) {
+          this.gameModeString = "-classicap";
+          this.modeClassicAP(true);
+        } else {
+          this.gameModeString = "-ap";
+          this.modeAllPick(true);
+        }
+
+        // this.startHeroSelection(true);
         TimerStart(this.selectTimer, 1.0, true, () => {
           this.runHeroSelectTimer();
         });
@@ -485,12 +501,7 @@ export class HeroSelectorManager {
     TriggerExecute(gg_trg_Hero_Pick_Completion);
 
     if (Globals.isKOTH) {
-      let points = TournamentData.kothPointsToWin;
-      if (StringLength(this.gameModeString) > 5) {
-        const pStr = SubString(this.gameModeString, 6, 8);
-        if (pStr) points = S2I(pStr);
-      }
-      TournamentManager.getInstance().addKOTH(Math.max(3, points));
+      TournamentManager.getInstance().addKOTH(Math.max(3, this.kothPoints));
       TournamentManager.getInstance().startTournament(Constants.KOTHName);
     }
 
@@ -529,6 +540,7 @@ export class HeroSelectorManager {
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-meme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-antimeme", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classic", true);
+      TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-classicap", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-original", true);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-koth", false);
       TriggerRegisterPlayerChatEvent(this.gameModeTrigger, Player(i), "-fusion", false);
@@ -568,7 +580,11 @@ export class HeroSelectorManager {
         case "-classic":
           this.modeClassic();
           break;
-        
+
+        case "-classicap":
+          this.modeClassicAP();
+          break;
+
         case "-antimeme":
           this.modeAntiMeme();
           break;
@@ -608,11 +624,11 @@ export class HeroSelectorManager {
   }
 
 
-  modeAllPick() {
+  modeAllPick(bans: boolean = false) {
     for (const hsUnit of this.heroSelectUnits) {
       hsUnit.setUnitReq(null);
     }
-    this.startHeroSelection();
+    this.startHeroSelection(bans);
   }
 
   modeAllRandom(repickable: boolean) {
@@ -678,6 +694,17 @@ export class HeroSelectorManager {
     this.startHeroSelection();
   }
 
+  modeClassicAP(bans: boolean = false) {
+    for (const hsUnit of this.heroSelectUnits) {
+      if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
+        hsUnit.setUnitReq(null);
+      } else {
+        hsUnit.setUnitReq(RACE_DEMON);
+      }
+    }
+    this.startHeroSelection(bans);
+  }
+
   modeMeme() {
     for (const hsUnit of this.heroSelectUnits) {
       if (hsUnit.hasCategory(HeroSelectCategory.DBZ)) {
@@ -733,17 +760,25 @@ export class HeroSelectorManager {
     this.startHeroSelection();
   }
 
-  modeKOTH() {
+  modeKOTH(setPoints: boolean = true) {
     Globals.isKOTH = !Globals.isKOTH;
+    if (Globals.isKOTH) {
+      for (const hsUnit of this.heroSelectUnits) {
+        hsUnit.setUnitReq(null);
+      }
+    }
+    
     const str = Globals.isKOTH ? "|cff00ff00ON" : "|cffff0000OFF";
-    const pStr = SubString(this.gameModeString, 6, 8);
-    const points = Math.max(3, S2I(pStr));
-    print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(p=" + I2S(points) + ")|r");
+    if (setPoints) {
+      const pStr = SubString(this.gameModeString, 6, 8);
+      this.kothPoints = Math.max(3, S2I(pStr));
+    }
+    print("|cffffcc00KOTH: " + str + "|r" + " " + "|cffffff00(p=" + I2S(this.kothPoints) + ")|r");
     this.startHeroSelection(true);
     
     this.kothButton.setText(
       "|cffFFFF00KOTH(" +
-      (pStr == "" ? I2S(TournamentData.kothPointsToWin) : I2S(points)) +
+      I2S(this.kothPoints) +
       "):|r" + 
       (Globals.isKOTH ? "|cff00ff00ON|r" : "|cffff2222OFF|r")
     );
@@ -793,7 +828,7 @@ export class HeroSelectorManager {
     this.kothButtonTrigger.addAction( () => {
       this.kothButton.enabled = false;
       this.kothButton.enabled = true;
-      this.modeKOTH();
+      this.modeKOTH(false);
     });
   }
 
