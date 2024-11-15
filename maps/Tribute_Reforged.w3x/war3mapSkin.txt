@@ -1,5 +1,7 @@
 [CustomSkin]
+HeroIntelligenceIcon=
 IdlePeon=ReplaceableTextures\PassiveButtons\PASBTNStatUp.blp
+InfoPanelIconHeroIconINT=UI\Widgets\Console\Human\infocard-heroattributes-str.blp
 MinimapNeutralTexture=Blank.blp
 
 [FrameDef]
