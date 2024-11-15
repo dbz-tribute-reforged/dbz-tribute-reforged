@@ -79,13 +79,14 @@ const lobbyMusicStr = (
   "Audio/Music/GatoSong.mp3;"
 );
 
+const lobbyMusicHandle: sound = CreateSound(lobbyMusicStr, true, false, true, 127, 127, "")
+
 function tsPostMain() {
 
   print(`Build: ${BUILD_DATE}`);
   print(`Typescript: v${TS_VERSION}`);
   print(`Transpiler: v${TSTL_VERSION}`);
 
-  ClearMapMusic();
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
   PreloadModels.doPreload();
   BlzChangeMinimapTerrainTex("war3aOriginalmapMap.blp")
@@ -116,6 +117,7 @@ function tsPostMain() {
   
 
   TimerStart(CreateTimer(), 0, false, () => {
+    StopSound(lobbyMusicHandle, true, false);
     castTimeHelper = CastTimeHelper.getInstance();
     dualTechManager = DualTechManager.getInstance();  
     FBSimTestManager.getInstance().initialize();
@@ -192,7 +194,7 @@ function playLobbyMusic() {
   // PlayMusic("Audio/Music/GatoSong.mp3");
   // PlayMusic(lobbyMusicStr);
   StopMusic(false);
-  PlaySound(lobbyMusicStr); // doesnt loop
+  StartSound(lobbyMusicHandle); // doesnt loop
 }
 
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsPostMain);
