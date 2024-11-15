@@ -11,6 +11,6 @@ export class CustomCreep {
     public facing: number,
     public isUpgrading: boolean = false,
   ) {
-
+    UnitSetUsesAltIcon(unit, true)
   }
 }

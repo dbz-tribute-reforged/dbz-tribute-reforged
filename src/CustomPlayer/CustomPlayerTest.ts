@@ -1509,6 +1509,8 @@ export function CustomPlayerTest() {
       || unitId == Id.vendorSaitama
       || unitId == Id.vendorAinz
       || unitId == Id.vendorKrustyKrab
+      || unitId == Id.vendorCapsuleCorp
+      || unitId == Id.vendorPilaf
       || unitId == Id.tpLookoutUpa
       || unitId == Id.tpLookoutPopo
       || unitId == Id.tpNamekPod

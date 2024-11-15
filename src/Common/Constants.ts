@@ -710,6 +710,8 @@ export module Id {
   export const vendorKorin = FourCC("n01P");
   export const vendorAinz = FourCC("n03R");
   export const vendorKrustyKrab = FourCC("n03V");
+  export const vendorCapsuleCorp = FourCC("n01N");
+  export const vendorPilaf = FourCC("n03N");
   export const vendorWhis = FourCC("n01G");
 
   export const tpLookoutUpa = FourCC("n007");

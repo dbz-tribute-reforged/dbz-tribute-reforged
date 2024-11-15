@@ -14,6 +14,8 @@ export module MinimapHelper {
       [Id.vendorSaitama, "MM_shop.mdl"],
       [Id.vendorAinz, "MM_shop.mdl"],
       [Id.vendorKrustyKrab, "MM_shop.mdl"],
+      [Id.vendorCapsuleCorp, "MM_shop_radar.mdl"],
+      [Id.vendorPilaf, "MM_shop_radar.mdl"],
 
       [Id.tpLookoutUpa, "MM_tp_lookout.mdl"],
       [Id.tpLookoutPopo, "MM_tp_lookout.mdl"],

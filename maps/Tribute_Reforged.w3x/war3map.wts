@@ -29,8 +29,7 @@ STRING 5
 {
 |cffffcc00discord.gg/vayXJSZ|r
 
-A fast-paced PvPvE hero arena based loosely on the Dragon Ball series with many crossover heroes from other popular anime and videogames.
-Features 88+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced PvPvE hero arena based loosely on the Dragon Ball series with many crossover heroes from other popular anime and videogames. Features 88+ unique heroes, beam clashes, Saga AI and custom UI. 15/11/2024
 
 }
 
@@ -8908,14 +8907,14 @@ Buy a Dragon ball Radar
 }
 
 STRING 1379
-// Items: I02A (Dragon Ball Radar), Ubertip (Tooltip - Extended)
+// Items: I02J (Dragon Ball Radar), Ubertip (Tooltip - Extended)
 {
 |cffffff00Locates Dragon Balls.
 |r|cff00ff00[History]The first dragon ball radar was made by Bulma to search for the dragon balls. [Item] This dragon ball radar is one of the many she has made since.|r
 }
 
 STRING 1380
-// Items: I02A (Dragon Ball Radar), Description (Description)
+// Items: I02J (Dragon Ball Radar), Description (Description)
 {
 |cffffff00Locates Dragon Balls.
 |r|cff00ff00[History]The first dragon ball radar was made by Bulma to search for the dragon balls. [Item] This dragon ball radar is one of the many she has made since.|r
@@ -9332,6 +9331,15 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 |cffee2222Super Buu: Can absorb enemy heroes with less than 2200 or 22% hp.|r
 |cff00ff00Damage: [Int] 600u
 |cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
+}
+
+STRING 1441
+// Items: I02A (Dragon Ball Radar), Ubertip (Tooltip - Extended)
+{
+|cffffff00Locates Dragon Balls.
+|cff00ffffCooldown: 5s|r
+
+|r|cff00ff00[History] The first dragon ball radar was made by Bulma to search for the dragon balls. This dragon ball radar is one of the many she has made since.|r
 }
 
 STRING 1442
@@ -10272,20 +10280,6 @@ The user charges with one hand behind the other above the head. The hands are th
 
 |cff00ff00Damage: [Int] 45u x 8t + 50u
 |cff00ffffCooldown: <A0H8,Cool1> seconds|r
-}
-
-STRING 1577
-// Items: I02J (Dragon Ball Radar), Ubertip (Tooltip - Extended)
-{
-|cffffff00Locates Dragon Balls.
-|r|cff00ff00[History]The first dragon ball radar was made by Bulma to search for the dragon balls. [Item] This dragon ball radar is one of the many she has made since.|r
-}
-
-STRING 1578
-// Items: I02J (Dragon Ball Radar), Description (Description)
-{
-|cffffff00Locates Dragon Balls.
-|r|cff00ff00[History]The first dragon ball radar was made by Bulma to search for the dragon balls. [Item] This dragon ball radar is one of the many she has made since.|r
 }
 
 STRING 1579
@@ -11375,6 +11369,15 @@ STRING 1748
 // Items: I03Q (Scouter 2.0), Tip (Tooltip - Basic)
 {
 Scouter 2.0
+}
+
+STRING 1749
+// Items: I02A (Dragon Ball Radar), Description (Description)
+{
+|cffffff00Locates Dragon Balls.
+|cff00ffffCooldown: 5s|r
+
+|r|cff00ff00[History] The first dragon ball radar was made by Bulma to search for the dragon balls. This dragon ball radar is one of the many she has made since.|r
 }
 
 STRING 1750

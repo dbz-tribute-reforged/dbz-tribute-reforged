@@ -1,7 +1,6 @@
 [CustomSkin]
 IdlePeon=ReplaceableTextures\PassiveButtons\PASBTNStatUp.blp
-MinimapCreepCampTexture=Blank.blp
-MinimapToughCreepCampTexture=Blank.blp
+MinimapNeutralTexture=Blank.blp
 
 [FrameDef]
 ARMORTIP_DIVINE=TRIGSTR_7079

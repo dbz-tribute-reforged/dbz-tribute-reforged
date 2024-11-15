@@ -87,7 +87,8 @@ function tsPostMain() {
 
   PlayMusic("Audio/Music/ChaLaHeadChaLaIntro.mp3");
   PreloadModels.doPreload();
-  
+  BlzChangeMinimapTerrainTex("war3aOriginalmapMap.blp")
+
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     Globals.customPlayers.push(new CustomPlayer(i));
     if (i < Constants.maxActivePlayers) {
