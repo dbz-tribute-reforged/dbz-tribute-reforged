@@ -1700,6 +1700,10 @@ end
 udg_HeroRespawnDeadFlag = false
 end
 
+function R2S(num)
+    return tostring(math.floor(num * 1000 + 0.5) / 1000)
+end
+
 do; local _, codeLoc = pcall(error, "", 2) --get line number where DebugUtils begins.
 --[[
  --------------------------
@@ -3477,7 +3481,7 @@ function HeroSelector.updateTooltip(unitCode)
         elseif not HeroSelector.buttonRequirementDone(unitCode, GetLocalPlayer()) then
             BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."\n|r("..GetLocalizedString(HeroSelector.TooltipRequires)..")")
         else
-            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName)
+            BlzFrameSetText(tooltipFrame, HeroSelector.TooltipPrefix..hName.."|r")
         end
     end
     -- if unitData.Count > HeroSelector.UnitCount then
@@ -4105,11 +4109,11 @@ do
 local function InitFrames()
     BlzLoadTOCFile("war3mapImported\\HeroSelector.toc") --ex/import also "HeroSelector.fdf"
     --BlzLoadTOCFile("CustomUI\\Templates.toc") --ex/import also "HeroSelector.fdf"
-HeroSelector.HeroButtons  = {} --the clickable Buttons
+    HeroSelector.HeroButtons  = {} --the clickable Buttons
 
-HeroSelector.CategoryButton = {}
+    HeroSelector.CategoryButton = {}
 
-HeroSelector.Frames = {}
+    HeroSelector.Frames = {}
 
 
     local titleSize = 0.015
@@ -4531,7 +4535,8 @@ function HeroSelector.buttonSelected(player, unitCode)
     if not TeamViewer.HasPicked[player] then
         local teamNr = GetPlayerTeam(player)
         if TeamViewer.UpdateNonAllies or IsPlayerAlly(GetLocalPlayer(), player) then
-            BlzFrameSetText(TeamViewer[player].Tooltip, getHeroName(unitCode))
+            local hName = getHeroName(unitCode)
+            BlzFrameSetText(TeamViewer[player].Tooltip, hName)
             BlzFrameSetTexture(TeamViewer[player].Icon, BlzGetAbilityIcon(unitCode), 0, true)
             BlzFrameSetTexture(TeamViewer[player].IconPushed, BlzGetAbilityIcon(unitCode), 0, true)
             BlzFrameSetAlpha(TeamViewer[player].Button, TeamViewer.ButtonAlphaSelected)
@@ -10235,6 +10240,8 @@ u = BlzCreateUnitWithSkin(p, FourCC("n03V"), -64.0, -6080.0, 270.000, FourCC("n0
 u = BlzCreateUnitWithSkin(p, FourCC("n04A"), -14272.0, 29184.0, 270.000, FourCC("n04A"))
 u = BlzCreateUnitWithSkin(p, FourCC("n00R"), -13568.0, 27712.0, 270.000, FourCC("n00R"))
 u = BlzCreateUnitWithSkin(p, FourCC("n04A"), -13760.0, 29184.0, 270.000, FourCC("n04A"))
+u = BlzCreateUnitWithSkin(p, FourCC("n02M"), 8320.0, 512.0, 270.000, FourCC("n02M"))
+SetResourceAmount(u, 100000)
 u = BlzCreateUnitWithSkin(p, FourCC("n01Q"), -10496.0, 19904.0, 270.000, FourCC("n01Q"))
 u = BlzCreateUnitWithSkin(p, FourCC("n03F"), 30208.0, 31040.0, 270.000, FourCC("n03F"))
 u = BlzCreateUnitWithSkin(p, FourCC("n02O"), 16704.0, 11072.0, 270.000, FourCC("n02O"))

@@ -929,6 +929,8 @@ export module SimpleSpellSystem {
     const key = StringHash(I2S(spellId) + "kaioken"); 
     const val = LoadInteger(Globals.genericSpellHashtable, casterId, key);
 
+
+    let ticks = 0;
     if (val == 0) {
       const player = GetOwningPlayer(caster);
       const playerId = GetPlayerId(player);
@@ -965,6 +967,15 @@ export module SimpleSpellSystem {
           DestroyTimer(GetExpiredTimer());
         }
         UnitHelper.payHPPercentCost(caster, hpCost * 0.03, UNIT_STATE_MAX_LIFE);
+        if (ticks % 33 == 0) {
+          DestroyEffect(
+            AddSpecialEffect(
+              "Abilities/Spells/Orc/WarStomp/WarStompCaster.mdl", 
+              GetUnitX(caster), GetUnitY(caster)
+            )
+          );
+        }
+        ++ticks;
       });
     }
   }
@@ -1835,16 +1846,15 @@ export module SimpleSpellSystem {
     headModel: string,
     spiralModel: string,
   ) {
-    const tickRate = 0.02;
-    const updatesPerTick = 1;
+    const tickRate = 0.03;
+    const updatesPerTick = 3;
     // const duration = 45;
-    // const duration = 0.91 * updatesPerTick/tickRate;
-    const baseDuration = 1.8 * updatesPerTick/tickRate;
+    const baseDuration = 1.8 / tickRate;
     const startingAngle = 0;
     // const anglesPerTick = -20;
     const anglesPerTick = 5;
-    const bonusUpdatesPerDistance = 0.07;
-    const distanceFromMiddle = 240;
+    // const bonusUpdatesPerDistance = 0.07;
+    const distanceFromMiddle = 312;
     const maxTimeBasedDistanceMult = 1.3;
     const heightOffset = 100 + maxTimeBasedDistanceMult * distanceFromMiddle;
     const facingAnglePerTick = 5;
@@ -1854,108 +1864,135 @@ export module SimpleSpellSystem {
     const sfxRed = 255;
     const sfxGreen = 205;
     const sfxBlue = 25;
+    const sfxTimeScale = 0.5;
+    const segmentedDistance = 10;
+    const updatesPerAngleDelta = 1/15;
 
-    let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-    let oldPos = new Vector2D(casterPos.x, casterPos.y);
-    let currentPos = new Vector2D(0, 0);
-    let newPos = new Vector2D(0, 0);
+    let oldX = GetUnitX(caster);
+    let oldY = GetUnitY(caster);
+
+    const targetX = GetSpellTargetX();
+    const targetY = GetSpellTargetY();
+    Globals.tmpVector.setUnit(caster);
+    Globals.tmpVector2.setPos(targetX, targetY);
+    // const fixedAngle = CoordMath.angleBetweenCoords(Globals.tmpVector, Globals.tmpVector2);
 
     // const targetPos = Globals.customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
-    const sfxList: effect[] = [];
-    let sfxIndex = 0;
-    const sfxHead = AddSpecialEffect(headModel, casterPos.x, casterPos.y);
+    const sfxHead = AddSpecialEffect(headModel, oldX, oldY);
     BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
     BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
-    sfxList.push(sfxHead);  
-    ++sfxIndex;
+    BlzSetSpecialEffectTimeScale(sfxHead, sfxTimeScale * 0.24);
 
     let duration = baseDuration;
+    let oldAngle = GetUnitFacing(caster);
 
-    let time = 0; 
+    let time = 0;
+    let radiusRatio = 1;
+
     TimerStart(CreateTimer(), tickRate, true, () => {
-      oldPos.setVector(casterPos);
-      casterPos.setUnit(caster);
-      const distanceTravelled = CoordMath.distance(casterPos, oldPos);
-      let facingAngle = GetUnitFacing(caster);
-      // if (distanceTravelled < 1) {
-      //   facingAngle = GetUnitFacing(caster);
-      // } else {
-      //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
-      // }
-      const bonusUpdates = Math.min(
-        25,
-        Math.floor(distanceTravelled * bonusUpdatesPerDistance)
+      Globals.tmpVector2.setPos(oldX, oldY);
+      Globals.tmpVector.setUnit(caster);
+      oldX = Globals.tmpVector.x;
+      oldY = Globals.tmpVector.y;
+      
+      const oldToNewAngle = CoordMath.angleBetweenCoords(Globals.tmpVector2, Globals.tmpVector);
+      const distanceTravelled = CoordMath.distance(Globals.tmpVector, Globals.tmpVector2);
+
+      let targetAngle = oldToNewAngle;
+      const angleDelta = Math.abs((targetAngle + 360) % 360 - (oldAngle + 360) % 360);
+      if (distanceTravelled >= 1) {
+        oldAngle = targetAngle;
+      } else {
+        targetAngle = oldAngle;
+      }
+      // let targetAngle = fixedAngle;
+
+      const extraUpdates = (
+        Math.max(updatesPerTick, Math.floor(distanceTravelled / segmentedDistance))
+        + Math.min(10, Math.floor(angleDelta * updatesPerAngleDelta))
       );
-      const updatesThisTick = updatesPerTick + bonusUpdates;
-      const segmentedDistance = distanceTravelled / updatesThisTick;
+      const updatesThisTick = extraUpdates + 1;
 
-      duration += updatesThisTick - 1;
-      for (let i = 0; i < updatesThisTick; ++i) {    
+      duration += extraUpdates;
+      for (let i = 0; i < updatesThisTick; ++i) {
         if (time > duration) {
-          for (const removeSfx of sfxList) {
-            DestroyEffect(removeSfx);
-          }
+          DestroyEffect(sfxHead);
           DestroyTimer(GetExpiredTimer());
-        } else {
-          const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
-          const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
-          // const timeRatio = (maxTimeBasedDistanceMult);
-          const x = timeRatio * distanceFromMiddle * Math.cos(angle);
-          const y = timeRatio * distanceFromMiddle * Math.sin(angle);
-          const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
+          break;
+        }
+        
+        const rawAngle = (startingAngle + time * anglesPerTick);
+        const angle = rawAngle * CoordMath.degreesToRadians;
+        // const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
+        const timeRatio = radiusRatio;
+        const x = timeRatio * distanceFromMiddle * Math.cos(angle);
+        const y = timeRatio * distanceFromMiddle * Math.sin(angle);
+        const height = (
+          GetUnitFlyHeight(caster) + BlzGetUnitZ(caster)
+          + heightOffset + y
+        );
+
+        // current pos
+        // offset old pos towards new pos
+        Globals.tmpVector
+          .polarProjectCoords(Globals.tmpVector2,
+            targetAngle, 
+            (i+1) * segmentedDistance,
+          );
+        
+        // new pos
+        // offset for disc
+        Globals.tmpVector3.polarProjectCoords(
+          Globals.tmpVector,
+          targetAngle - 90,
+          x
+        );
+
+        let yaw = (targetAngle + 90) * CoordMath.degreesToRadians;
+        let pitch = (
           (
-            heightOffset + y
-          );
+            startingAngle - startingPitch 
+            + rawAngle
+          )
+        ) * CoordMath.degreesToRadians;
 
-          currentPos.polarProjectCoords(
-            oldPos, 
-            facingAngle, 
-            (i+1) * distanceTravelled / updatesThisTick
-          );
-          newPos.polarProjectCoords(
-            currentPos, 
-            facingAngle - 90, 
-            x
-          );
-          let yawModifier = 1;
-          if (y < 0) {
-            yawModifier = 1;
+        const sfx = AddSpecialEffect(spiralModel, Globals.tmpVector3.x, Globals.tmpVector3.y);
+        BlzSetSpecialEffectScale(sfx, sfxScale);
+        BlzSetSpecialEffectHeight(sfx, height);
+        BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
+        BlzSetSpecialEffectTimeScale(sfx, sfxTimeScale);
+        BlzSetSpecialEffectYaw(sfx, yaw);
+        BlzSetSpecialEffectPitch(sfx, pitch);
+        DestroyEffect(sfx);
+
+        // update dragon head on last tick
+        if (i >= updatesThisTick - 1) {
+          BlzSetSpecialEffectX(sfxHead, Globals.tmpVector3.x);
+          BlzSetSpecialEffectY(sfxHead, Globals.tmpVector3.y);
+          BlzSetSpecialEffectHeight(sfxHead, height);
+
+          if (y >= 0) {
+            BlzSetSpecialEffectYaw(sfxHead, yaw);
+          } else {
+            BlzSetSpecialEffectYaw(sfxHead, yaw + 180 * CoordMath.degreesToRadians);
           }
-          const yaw = CoordMath.degreesToRadians * (
-            facingAngle + yawModifier * (
-              90 - Math.min(90, segmentedDistance)
-            )
+
+          // pitch only works from -90 to 90
+          const adjAngle = y >= 0 ?
+            (rawAngle % 360) - startingPitch:
+            startingPitch - ((rawAngle % 360) - 180)
+          ;
+          BlzSetSpecialEffectPitch(
+            sfxHead, adjAngle * CoordMath.degreesToRadians
           );
-          // const targetYaw = facingAngle * CoordMath.degreesToRadians;
 
-          const pitch = (
-            startingAngle - startingPitch + yawModifier *  time * anglesPerTick
-          ) * CoordMath.degreesToRadians;
-
-          const sfx = AddSpecialEffect(spiralModel, newPos.x, newPos.y);
-          // sfxList.push(sfx);
-          // ++sfxIndex;
-          DestroyEffect(sfx);
-          BlzSetSpecialEffectScale(sfx, sfxScale);
-          BlzSetSpecialEffectHeight(sfx, height);
-          BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
-          // BlzSetSpecialEffectYaw(sfx, targetYaw);
-          BlzSetSpecialEffectYaw(sfx, yaw);
-          BlzSetSpecialEffectPitch(sfx, pitch);
-          //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
-          //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
-          //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
-          // );
-
-          // update dragon head
-          if (i >= updatesThisTick - 1) {
-            BlzSetSpecialEffectX(sfxHead, newPos.x);
-            BlzSetSpecialEffectY(sfxHead, newPos.y);
-            BlzSetSpecialEffectHeight(sfxHead, height);
-            BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
-            // BlzSetSpecialEffectPitch(sfxHead, pitch);
+          if (y >= 0) {
+            BlzSetSpecialEffectRoll(sfxHead, 0);
+          } else {
+            BlzSetSpecialEffectRoll(sfxHead, 180 * CoordMath.degreesToRadians);
           }
         }
+        radiusRatio = radiusRatio > 0.66 ? (radiusRatio - 0.005) : radiusRatio;
         ++time;
       }
     });

@@ -34,6 +34,7 @@ import { DDS } from "Core/DDS/DDS";
 import { SyncSaveLoad } from "Core/SyncSaveLoad/SyncSaveLoad";
 import { FilePromise } from "Core/SyncSaveLoad/FilePromise";
 import { PlayerCam } from "./PlayerCam";
+import { CoordMath } from "Common/CoordMath";
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -1163,6 +1164,35 @@ export function CustomPlayerTest() {
         SagaManager.setDelayOverride(-1);
       }
     });
+
+    
+    // const testSfx = AddSpecialEffect(
+    //   "DragonHead2.mdl", 
+    //   TournamentData.finalBattleCenter.x, TournamentData.finalBattleCenter.y
+    // );
+    // BlzSetSpecialEffectScale(testSfx, 2.0);
+    // BlzSetSpecialEffectHeight(testSfx, 200);
+    
+    // const sfxYaw = CreateTrigger();
+    // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    //   TriggerRegisterPlayerChatEvent(sfxYaw, Player(i), "-yaw", false);
+    // }
+    // TriggerAddAction(sfxYaw, () => {
+    //   const value = S2I(SubString(GetEventPlayerChatString(), 5, 10));
+    //   print("yaw:", value);
+    //   BlzSetSpecialEffectYaw(testSfx, value * CoordMath.degreesToRadians);
+    // });
+
+    // const sfxPitch = CreateTrigger();
+    // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    //   TriggerRegisterPlayerChatEvent(sfxPitch, Player(i), "-pit", false);
+    // }
+    // TriggerAddAction(sfxPitch, () => {
+    //   const value = S2I(SubString(GetEventPlayerChatString(), 5, 10));
+    //   print("pitch:", value);
+    //   BlzSetSpecialEffectPitch(testSfx, value * CoordMath.degreesToRadians);
+    // });
+
   }
 
 
@@ -1479,6 +1509,8 @@ export function CustomPlayerTest() {
       || unitId == Id.vendorSaitama
       || unitId == Id.vendorAinz
       || unitId == Id.vendorKrustyKrab
+      || unitId == Id.vendorCapsuleCorp
+      || unitId == Id.vendorPilaf
       || unitId == Id.tpLookoutUpa
       || unitId == Id.tpLookoutPopo
       || unitId == Id.tpNamekPod

@@ -50,16 +50,24 @@ export class AbilityShop {
 
   AbilitySelectBase: Frame
   AbilitySelectBG: Frame
+
+  AbilityShopHelpText: Frame
+  AbilityShopHelpBG: Frame
+
   AbilitySelectButtonT: Frame[] = []
   BackdropAbilitySelectButtonT: Frame[] = [] 
   AbilityShopBG: Frame
   AbilityKeyT: Frame[] = []
+  // AbilityKeyEdit: Frame
   AbilityShopButtonT: Frame[] = []
   BackdropAbilityShopButtonT: Frame[] = [] 
   AbilityTooltipBG: Frame
   AbilityTooltip: Frame
+  
 
   highlightSprite: Frame;
+
+  AbilityKeyEditExternal: Frame;
 
   public abilKeyTexts: Frame[] = [];
 
@@ -69,7 +77,7 @@ export class AbilityShop {
       this.AbilitySelectBase = new Frame("QuestButtonDisabledBackdropTemplate", Frame.fromOrigin(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
         .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.130000)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142000, 0.00000)
-    
+
       this.AbilityShopBG = new Frame("QuestButtonPushedBackdropTemplate", this.AbilitySelectBase, 0, 0)
         .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectBase, FRAMEPOINT_TOPLEFT, 0.0000, -0.070000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectBase, FRAMEPOINT_BOTTOMRIGHT, 0.0000, 0.0000)
@@ -77,7 +85,24 @@ export class AbilityShop {
       this.AbilitySelectBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
         .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.0000900000, 0.132000)
         .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.142090, 0.0680000)
+
+      const shopHelpX0 = 0.00000;
+      const shopHelpX1 = 0.156000;
+      const shopHelpY0 = 0.189000;
+      const shopHelpY1 = 0.135000;
+      const shopHelpXOffset = 0.007;
+      const shopHelpYOffset = 0.007;
+      this.AbilityShopHelpBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, shopHelpX0, shopHelpY0)
+        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, shopHelpX1, shopHelpY1)
         
+      this.AbilityShopHelpText = new Frame("AbilityShopHelpText", this.AbilitySelectBase, 0, 0, "Text", "")
+        .setAbsPoint(FRAMEPOINT_TOPLEFT, shopHelpX0 + shopHelpXOffset, shopHelpY0 - shopHelpYOffset)
+        .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, shopHelpX1 - shopHelpXOffset, shopHelpY1)
+        .setScale(0.8)
+        .setText("|cffffcc00[Ability Shop]|r|n|cffcccccc(Optional) Swap basic abilities by selecting 1 from the top row and 1 from the bottom row. Limit of 1 zanzo-like ability.|r")
+      ;
+
       this.AbilityTooltipBG = new Frame("QuestButtonBaseTemplate", this.AbilitySelectBase, 0, 0)
         // .setAbsPoint(FRAMEPOINT_TOPLEFT, 0.00000, 0.240000)
         // .setAbsPoint(FRAMEPOINT_BOTTOMRIGHT, 0.200000, 0.120000)
@@ -289,12 +314,14 @@ export class AbilityShop {
     this.AbilitySelectButtonT[3].enabled = false 
     this.AbilitySelectButtonT[3].enabled = true 
     })
-    
-      this.AbilityKeyT[0] = new Frame("ScriptDialogButton", this.AbilitySelectButtonT[0], 0, 0)
+
+      this.AbilityKeyT[0] = new Frame("ScriptDialogButton", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
         .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectButtonT[0], FRAMEPOINT_TOPLEFT, -0.00010000, -0.026000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectButtonT[0], FRAMEPOINT_BOTTOMRIGHT, -0.00010000, -0.026000)
         .setText("|cffFCD20DZ|r")
         .setScale(1.00)
+        .setEnabled(false)
+        .setVisible(false)
     t = new Trigger() 
     t.triggerRegisterFrameEvent(this.AbilityKeyT[0], FRAMEEVENT_CONTROL_CLICK) 
     t.addAction( () => {
@@ -302,11 +329,13 @@ export class AbilityShop {
     this.AbilityKeyT[0].enabled = true 
     })
     
-      this.AbilityKeyT[1] = new Frame("ScriptDialogButton", this.AbilitySelectButtonT[1], 0, 0)
+      this.AbilityKeyT[1] = new Frame("ScriptDialogButton", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
         .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectButtonT[1], FRAMEPOINT_TOPLEFT, -0.00010000, -0.026000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectButtonT[1], FRAMEPOINT_BOTTOMRIGHT, -0.00010000, -0.026000)
         .setText("|cffFCD20DX|r")
         .setScale(1.00)
+        .setEnabled(false)
+        .setVisible(false)
     t = new Trigger() 
     t.triggerRegisterFrameEvent(this.AbilityKeyT[1], FRAMEEVENT_CONTROL_CLICK) 
     t.addAction( () => {
@@ -314,11 +343,13 @@ export class AbilityShop {
     this.AbilityKeyT[1].enabled = true 
     })
     
-      this.AbilityKeyT[2] = new Frame("ScriptDialogButton", this.AbilitySelectButtonT[2], 0, 0)
+      this.AbilityKeyT[2] = new Frame("ScriptDialogButton", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
         .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectButtonT[2], FRAMEPOINT_TOPLEFT, -0.00010000, -0.026000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectButtonT[2], FRAMEPOINT_BOTTOMRIGHT, -0.00010000, -0.026000)
         .setText("|cffFCD20DC|r")
         .setScale(1.00)
+        .setEnabled(false)
+        .setVisible(false)
     t = new Trigger() 
     t.triggerRegisterFrameEvent(this.AbilityKeyT[2], FRAMEEVENT_CONTROL_CLICK) 
     t.addAction( () => {
@@ -326,16 +357,57 @@ export class AbilityShop {
     this.AbilityKeyT[2].enabled = true 
     })
     
-      this.AbilityKeyT[3] = new Frame("ScriptDialogButton", this.AbilitySelectButtonT[3], 0, 0)
+      this.AbilityKeyT[3] = new Frame("ScriptDialogButton", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
         .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectButtonT[3], FRAMEPOINT_TOPLEFT, -0.00010000, -0.026000)
         .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectButtonT[3], FRAMEPOINT_BOTTOMRIGHT, -0.00010000, -0.026000)
         .setText("|cffFCD20DV|r")
         .setScale(1.00)
+        .setEnabled(false)
+        .setVisible(false)
     t = new Trigger() 
     t.triggerRegisterFrameEvent(this.AbilityKeyT[3], FRAMEEVENT_CONTROL_CLICK) 
     t.addAction( () => {
     this.AbilityKeyT[3].enabled = false 
     this.AbilityKeyT[3].enabled = true 
+    })
+
+    // const tmpScale = 0.4;
+    // this.AbilityKeyEdit = new Frame("ScriptDialogButton", this.AbilitySelectButtonT[3], 0, 0)
+    //   .setPoint(FRAMEPOINT_TOPLEFT, this.AbilitySelectButtonT[3], FRAMEPOINT_BOTTOMRIGHT, 0.001, -0.001)
+    //   .setPoint(FRAMEPOINT_BOTTOMRIGHT, this.AbilitySelectButtonT[3], FRAMEPOINT_BOTTOMRIGHT, 0.026 / tmpScale, -0.026 / tmpScale)
+    //   .setText("Change Hotkeys")
+    //   .setScale(tmpScale)
+    // ;
+    // t = new Trigger() 
+    // t.triggerRegisterFrameEvent(this.AbilityKeyEdit, FRAMEEVENT_CONTROL_CLICK) 
+    // t.addAction( () => {
+    //   this.AbilityKeyEdit.enabled = false 
+    //   this.AbilityKeyEdit.enabled = true
+    //   if (GetTriggerPlayer() == GetLocalPlayer()) {
+    //     for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+    //       this.AbilityKeyT[i].setVisible(this.AbilityKeyEdit.visible)
+    //       this.AbilityKeyT[i].setEnabled(!this.AbilityKeyT[i].enabled)
+    //     }
+    //   }
+    // })
+
+    this.AbilityKeyEditExternal = new Frame("ScriptDialogButton", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, 0.2060 - 0.024 * 1, 0.1320)
+      .setAbsPoint(FRAMEPOINT_TOPRIGHT, 0.2060 - 0.024 * 0, 0.1560)
+      .setText("Change Hotkeys")
+      .setScale(0.4)
+    ;
+    t = new Trigger() 
+    t.triggerRegisterFrameEvent(this.AbilityKeyEditExternal, FRAMEEVENT_CONTROL_CLICK) 
+    t.addAction( () => {
+      this.AbilityKeyEditExternal.enabled = false 
+      this.AbilityKeyEditExternal.enabled = true
+      if (GetTriggerPlayer() == GetLocalPlayer()) {
+        for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+          this.AbilityKeyT[i].setEnabled(!this.AbilityKeyT[i].enabled)
+          this.AbilityKeyT[i].setVisible(this.AbilityKeyT[i].enabled)
+        }
+      }
     })
 
     this.highlightSprite = new Frame("SpriteName", this.AbilitySelectBase, 0, 0, "SPRITE", "")
@@ -349,34 +421,26 @@ export class AbilityShop {
     const yStart = 0.1140;
     const yEnd = 0.1340;
 
-    this.abilKeyTexts.push(
-      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 0, yStart)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 1, yEnd)
-      .setText("Z")
-      .setScale(1.00)
-    );
-    this.abilKeyTexts.push(
-      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 1, yStart)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 2, yEnd)
-      .setText("X")
-      .setScale(1.00)
-    );
-    this.abilKeyTexts.push(
-      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 2, yStart)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 3, yEnd)
-      .setText("C")
-      .setScale(1.00)
-    );
-    this.abilKeyTexts.push(
-      new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
-      .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * 3, yStart)
-      .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * 4, yEnd)
-      .setText("V")
-      .setScale(1.00)
-    );
+    for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+      this.abilKeyTexts[i] = (
+        new Frame("EscMenuLabelTextTemplate", Frame.fromOrigin(ORIGIN_FRAME_MINIMAP, 0), 0, 0)
+        .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * i, yStart)
+        .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * (i+1), yEnd)
+        .setScale(1.00)
+      );
+    }
+    this.abilKeyTexts[0].setText("Z")
+    this.abilKeyTexts[1].setText("X")
+    this.abilKeyTexts[2].setText("C")
+    this.abilKeyTexts[3].setText("V")
+
+    for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+      this.AbilityKeyT[i].clearPoints();
+      this.AbilityKeyT[i]
+        .setAbsPoint(FRAMEPOINT_BOTTOMLEFT, prevX + 0.024 * i, yStart + 0.048 - 0.004)
+        .setAbsPoint(FRAMEPOINT_TOPRIGHT, prevX + 0.024 * (i+1), yEnd + 0.048)
+      ;
+    }
   }
 
   public setCanSwap(b: boolean) {
@@ -441,6 +505,16 @@ export class AbilityShop {
     const playerId = GetPlayerId(player);
 
     if (this.playerKeyFlag[playerId]) return;
+    DisplayTimedTextToPlayer(player, 0, 0, 2, "|cffffcc00INPUT NEW KEY|r");
+
+    if (player == GetLocalPlayer()) {
+      for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+        if (i != index) {
+          this.AbilityKeyT[i].setEnabled(false);
+        }
+      }
+    }
+
     this.playerKeyFlag[playerId] = true;
 
     const customPlayer = Globals.customPlayers[playerId];
@@ -468,8 +542,18 @@ export class AbilityShop {
           Constants.oskeyToTextMap.get(newKey) + "|r"
         );
       } else {
+        DisplayTimedTextToPlayer(player, 0, 0, 2, 
+          "|cff22ff22VALID KEY: " + 
+          Constants.oskeyToTextMap.get(newKey) + "|r"
+        );
         const ki = customPlayer.getOsKeyInput(newKey);
         this.setAbilityKey(player, index, ki.oskey);
+      }
+
+      if (player == GetLocalPlayer()) {
+        for (let i = 0; i < this.AbilityKeyT.length; ++i) {
+          this.AbilityKeyT[i].setEnabled(true);
+        }
       }
 
       this.playerKeyFlag[playerId] = false;
@@ -568,8 +652,18 @@ export class AbilityShop {
     const selectIndex = this.playerSelectIndex[playerId];
     const selectIndex2 = this.playerSelectIndex2[playerId];
     const shopIndex = this.playerShopIndex[playerId];
+    const shopAbils = this.playerShopMap.get(playerId);
 
     const customPlayer = Globals.customPlayers[playerId];
+
+    if (
+      selectIndex >= this.AbilitySelectButtonT.length
+      || selectIndex2 >= this.AbilitySelectButtonT.length
+      || shopIndex >= shopAbils.length
+    ) {
+      this.resetIndex(playerId);
+      return;
+    }
 
     if (
       selectIndex == AbilityShop.INVALID_INDEX

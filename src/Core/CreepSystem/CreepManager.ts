@@ -45,6 +45,7 @@ export class CreepManager {
 
   initialize(): this {
     SetCreepCampFilterState(false);
+    SetAltMinimapIcon("Blank.blp");
 
     // pikkon
     let x = CreateUnit(Constants.sagaPlayer, FourCC("U01N"), -8000, 23000, 315);
@@ -282,6 +283,7 @@ export class CreepManager {
           false
         )
       );
+      UnitSetUsesAltIcon(creepUnit, true);
     });
     return this;
   }
@@ -315,6 +317,7 @@ export class CreepManager {
         customCreep.posY, 
         customCreep.facing,
       );
+      UnitSetUsesAltIcon(newCreepUnit, true);
 
       SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
 

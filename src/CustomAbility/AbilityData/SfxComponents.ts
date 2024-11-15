@@ -42478,9 +42478,9 @@ export const SfxComponents = [
         extraRoll: 0,
         animSpeed: 0.5,
         color: {
-          x: 255,
-          y: 255,
-          z: 255,
+          x: 175,
+          y: 175,
+          z: 175,
         },
         updateCoordsOnly: true,
         persistent: true,

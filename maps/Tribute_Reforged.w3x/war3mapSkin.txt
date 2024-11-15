@@ -1,7 +1,8 @@
 [CustomSkin]
+HeroIntelligenceIcon=
 IdlePeon=ReplaceableTextures\PassiveButtons\PASBTNStatUp.blp
-MinimapCreepCampTexture=Blank.blp
-MinimapToughCreepCampTexture=Blank.blp
+InfoPanelIconHeroIconINT=UI\Widgets\Console\Human\infocard-heroattributes-str.blp
+MinimapNeutralTexture=Blank.blp
 
 [FrameDef]
 ARMORTIP_DIVINE=TRIGSTR_7079
